@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   Shield, Cloud, Server, ShieldCheck, Settings, Database, 
   Zap, Building, ArrowRight, Star, CheckCircle, 
   Lock, Network, Cpu, BarChart3
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-} from 'lucide-react';
+} from 'lucide-react' 
 
 const enterpriseServices = [
   {
@@ -59,7 +59,7 @@ const enterpriseServices = [
     badge: 'Premium',
     color: 'from-yellow-500 to-orange-600'
   }
-];
+] 
 
 const benefits = [
   {
@@ -83,7 +83,7 @@ const benefits = [
     description: 'Built for large-scale deployments with enterprise-grade reliability'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 export default function EnterpriseIT() {
   return (
@@ -103,7 +103,7 @@ export default function EnterpriseIT() {
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
   Server, Database, Network, Lock, Cpu, BarChart3
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function EnterpriseIT() {
   const services = [
@@ -197,7 +197,7 @@ export default function EnterpriseIT() {
       color: 'from-yellow-500 to-orange-600',
       link: '/enterprise-integration'
     }
-  ];
+  ] 
 
   const solutions = [
     {
@@ -224,7 +224,7 @@ export default function EnterpriseIT() {
       icon: <BarChart3 className="w-6 h-6" />,
       benefits: ['Data Insights', 'Decision Making', 'Performance Metrics', 'Predictive Analytics']
     }
-  ];
+  ] 
 
   const industries = [
     {
@@ -247,7 +247,7 @@ export default function EnterpriseIT() {
       solutions: ['E-commerce Platforms', 'Inventory Management', 'Customer Analytics', 'Omnichannel Integration'],
       icon: <Globe className="w-6 h-6" />
     }
-  ];
+  ] 
 
   const enterpriseBenefits = [
     {
@@ -268,7 +268,7 @@ export default function EnterpriseIT() {
       icon: <Target className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-600'
     }
-  ];
+  ] 
 
   return (
     <>

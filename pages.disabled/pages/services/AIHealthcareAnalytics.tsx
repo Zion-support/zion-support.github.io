@@ -79,8 +79,8 @@ import: {}
 
                 <div className='flex flex-wrap gap-2'>
                   {technicalSpecs.technology.map(tech => ('
-                    <span';
-                      key={tech};
+                    <span' 
+                      key={tech} 
                       className='px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}
 
 
@@ -106,15 +106,15 @@ import: {}
             </div>
           </div>
 
-            <a'';
-              href='mailto:kleber@ziontechgroup.com'';
+            <a'' 
+              href='mailto:kleber@ziontechgroup.com'' 
               className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'>              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com'
             </a>''
           </div>'''
           <div className='mt-4><a''              href='http,
-    s://ziontechgroup.com'';
-              target='_blank'';
-              rel='noreferrer'';
+    s://ziontechgroup.com'' 
+              target='_blank'' 
+              rel='noreferrer'' 
               className='inline-flex items-center text-zion-cyan hove,
     r:text-zion-cyan-dark>'
               Learn More <ExternalLink className='w-4 h-4 ml-2'  />            </a>

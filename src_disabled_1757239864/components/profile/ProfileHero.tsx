@@ -1,37 +1,37 @@
-avatarUrl?: string;
-  coverImageUrl?: string;
-  location?: string;
-  rating?: number;
-  reviewCount?: number;
-  aiScore?: number;
+avatarUrl?: string 
+  coverImageUrl?: string 
+  location?: string 
+  rating?: number 
+  reviewCount?: number 
+  aiScore?: number 
 
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar" 
+import { AspectRatio } from "@/components/ui/aspect-ratio" 
+import { Badge } from "@/components/ui/badge" 
 import { Star } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils" 
 interface ProfileHeroProps {
   name: string,
   title: string,
-  avatarUrl?: string;
-  coverImageUrl?: string;
-  location?: string;
-  rating?: number;
-  reviewCount?: number;
-  aiScore?: number;
+  avatarUrl?: string 
+  coverImageUrl?: string 
+  location?: string 
+  rating?: number 
+  reviewCount?: number 
+  aiScore?: number 
   profileType: 'service' | 'talent'
 }
 
 export function ProfileHero({
-  name;
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
+  name 
+  title 
+  avatarUrl 
+  coverImageUrl 
+  location 
+  rating 
+  reviewCount 
+  aiScore 
   profileType
 }: ProfileHeroProps) {
   return (
@@ -68,7 +68,7 @@ export function ProfileHero({
                 <Badge 
                   variant="outline" 
                   className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan";
+                    "ml-2 border-zion-purple/50 text-zion-cyan" 
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >
@@ -88,16 +88,16 @@ export function ProfileHero({
                     <Star className=w-4 h-4 fill-zion-cyan text-zion-cyan' />
                     <span className='text-white font-medium>
                       {rating.toFixed(1)}
-                    </span>;
-                    {reviewCount && (<span className=text-zion-slate-light text-sm'>;
-                        ({reviewCount})</span>;
-                {rating && (<div className='flex items-center gap-1>;
-                    <Star className=w-4 h-4 fill-zion-cyan text-zion-cyan' />;
-                    <span className='text-white font-medium>;
+                    </span> 
+                    {reviewCount && (<span className=text-zion-slate-light text-sm'> 
+                        ({reviewCount})</span> 
+                {rating && (<div className='flex items-center gap-1> 
+                    <Star className=w-4 h-4 fill-zion-cyan text-zion-cyan' /> 
+                    <span className='text-white font-medium> 
                       {rating && rating.toFixed(1)}
-                    </span>;
-                    {reviewCount && (<span className=text-zion-slate-light text-sm'>;
-                        ({reviewCount})</span>;
+                    </span> 
+                    {reviewCount && (<span className=text-zion-slate-light text-sm'> 
+                        ({reviewCount})</span> 
                   <div className=flex items-center gap-1">
                     <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan />
                     <span className=text-white font-medium">{rating.toFixed(1)}</span>
@@ -120,5 +120,5 @@ export function ProfileHero({
     </div>
   )
 }
-  );
-};
+  ) 
+} 

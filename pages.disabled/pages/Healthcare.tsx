@@ -2,8 +2,8 @@
         </p>
       </section>
     </div>
-  );
-:pages.disabled/pages/Healthcare.tsx;
+  ) 
+:pages.disabled/pages/Healthcare.tsx 
 
 
 

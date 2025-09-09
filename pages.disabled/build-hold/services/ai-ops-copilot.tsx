@@ -1,16 +1,16 @@
-import: React from;
-  'react';';
-import: type { NextPage } from;
-  'next';';
-import: MainLayout from;
-  '../../components/layout/MainLayout';';
-import: Link from;
-  'next/link';';
+import: React from 
+  'react';' 
+import: type { NextPage } from 
+  'next';' 
+import: MainLayout from 
+  '../../components/layout/MainLayout';' 
+import: Link from 
+  'next/link';' 
 const: AIOpsCopilot: NextPage: = () => {
   return(
 
             </span>
-            <span className='px-3 py-1 rounded bg-white/10'>';
+            <span className='px-3 py-1 rounded bg-white/10'>' 
               Prometheus/OpenTelemetry: </span>
           </div>
         </div>

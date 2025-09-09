@@ -1,7 +1,7 @@
-;
+ 
 
           Reduce response times and improve CSAT with an AI responder that drafts context-aware replies,
-          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options;
+          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options 
 
             <ul className='space-y-2 text-sm text-zion-slate-light'>
               <li>• Intent/sentiment detection, priority triage</li>
@@ -18,7 +18,7 @@
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/AIAutoEmailResponder.tsx;
+:pages.disabled/pages/services/AIAutoEmailResponder.tsx 
 
 
 

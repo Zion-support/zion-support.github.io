@@ -1,13 +1,13 @@
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+import: React from 'react';' 
+import: { motion } from 'framer-motion';' 
 import: {
   Settings,
   Brain,
   Target,
   BarChart3,
-=;
+= 
 import: {
 import {}
   Settings,
@@ -36,8 +36,8 @@ import {}
 
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
             </div>
-<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-=;
+<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+= 
             '>            transition={{ duration: 0.8 }}
           >'''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-blue-500/20 border border-teal-500/30 text-teal-400 text-sm font-medium mb-6>''
@@ -50,11 +50,11 @@ import {}
 
             </h1>
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-=;
+<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+= 
 
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Revolutionize your business operations with our AI-powered autonomous platform.;
+              Revolutionize your business operations with our AI-powered autonomous platform. 
               Optimize processes, automate workflows, and maximize operational efficiency.
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
             </p>
@@ -69,17 +69,17 @@ import {}
       </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-            transition={{ duration: 0.8 }};
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+            transition={{ duration: 0.8 }} 
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
+            viewport={{ once: true }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
 
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our AI platform provides comprehensive business operations capabilities for modern enterprises
@@ -87,18 +87,18 @@ import {}
             </p>
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx: </motion.div>
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-=;
+<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+= 
 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-          '';
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
+          '' 
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -111,23 +111,23 @@ import {}
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
       </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-            transition={{ duration: 0.8 }};
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+            transition={{ duration: 0.8 }} 
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
+            viewport={{ once: true }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
 
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Experience measurable improvements in operational efficiency and business performance
@@ -135,15 +135,15 @@ import {}
             </p>
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx: </motion.div>
 :pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
-=;
+<:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
+= 
 
-            <motion.div;
+            <motion.div 
               initial={{ opacit,
     y: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
 
               viewport={{ once: true }}
             >'''
@@ -157,11 +157,11 @@ import {}
                 ))}
               </div>
             </motion.div>
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx: <motion.div;
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx: <motion.div 
               initial={{ opacity:  ,0, x: 20 }}
               whileInView={{ opacity:  ,1, x: 0 }}
-              transition={{ duration: 0.8 }}';';
-            <motion.div;
+              transition={{ duration: 0.8 }}';' 
+            <motion.div 
 
                 Get Started Today
 
@@ -172,12 +172,12 @@ import {}
       </section>
 
         <div className='max-w-4xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
             viewport={{ once: true }}>'''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
               Ready to Revolutionize Business Operations?''
@@ -188,7 +188,7 @@ import {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
               <button className='px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg font-semibold hover:from-teal-600 hove,
     r:to-blue-600 transition-all duration-300>
-                Start Free Trial';
+                Start Free Trial' 
             viewport={{ onc,
     e: true }}
           >'''
@@ -207,6 +207,6 @@ import {}
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx;
+:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx 
 
 

@@ -1,12 +1,12 @@
 type: { NextPage } from,
-  next';';
-import: Layout from;
-  '../components/Layout';Link: from;';
-  'next/link';';
-import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
-  'lucide-react'';const: Careers: NextPage: = () => {';
+  next';' 
+import: Layout from 
+  '../components/Layout';Link: from;' 
+  'next/link';' 
+import: { Users, Briefcase, Heart, Zap, CheckCircle } from 
+  'lucide-react'';const: Careers: NextPage: = () => {' 
   return(
-    <Layout;
+    <Layout 
 
           </div>
         </div>

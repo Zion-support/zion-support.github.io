@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/AI5GNetwork.tsx;
+:pages.disabled/pages/services/AI5GNetwork.tsx 
 
         </div>
       </section>'
@@ -34,7 +34,7 @@
                   <div className='text-lg font-semibold mb-1'>{t.name}</div>'''
                   <div className='text-2xl font-bold text-blue-600 mb-2'>{t.price}</div>'''
                   <ul className='text-sm text-gray-600 space-y-1'>
-                    {t.details.map((d (<li key={d}>{d}</li>));
+                    {t.details.map((d (<li key={d}>{d}</li>)) 
                   </ul>
                 </div>'
 :pages.disabled/pages/services/AI5GNetwork.tsx))}
@@ -53,41 +53,41 @@
           </div>
 
         </div>
-''';
-        <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
-          <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
-          <div: className='grid md:grid-cols-2: gap-6'>';
-            {useCases.map((useCase) => (''';
-              <div: key={useCas,e} className='flex items-center p-4 bg-white rounded-lg border border-gray-200'>''';
-                <Target: className='w-5 h-5 text-blue-600 mr-3'  />'                <span className='text-gray-700'>{useCase}</span>';
+''' 
+        <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''' 
+          <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''' 
+          <div: className='grid md:grid-cols-2: gap-6'>' 
+            {useCases.map((useCase) => (''' 
+              <div: key={useCas,e} className='flex items-center p-4 bg-white rounded-lg border border-gray-200'>''' 
+                <Target: className='w-5 h-5 text-blue-600 mr-3'  />'                <span className='text-gray-700'>{useCase}</span>' 
               </div>
             ))}
           </div>
 
         </div>
-''';
-        <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
-          <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable 5G Impact</h3>''';
-          <div: className='grid md:grid-cols-2: lg:grid-cols-3: gap-6'>';
-            {benefits.map((benefit) => (''';
-              <div: key={benefi,t} className='flex items-start p-4 bg-white rounded-lg border border-blue-200'>''';
-                <Zap: className='w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0'  />'                <span className='text-gray-700'>{benefit}</span>';
+''' 
+        <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''' 
+          <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable 5G Impact</h3>''' 
+          <div: className='grid md:grid-cols-2: lg:grid-cols-3: gap-6'>' 
+            {benefits.map((benefit) => (''' 
+              <div: key={benefi,t} className='flex items-start p-4 bg-white rounded-lg border border-blue-200'>''' 
+                <Zap: className='w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0'  />'                <span className='text-gray-700'>{benefit}</span>' 
               </div>
             ))}
           </div>
 
         </div>
-''';
-        <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
-          <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
-          <div: className='grid md:grid-cols-2: lg:grid-cols-3: gap-6'>';
-            {industries.map((industry) => (''';
-              <div: key={industr,y} className='flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200'>''';
-                <FileText: className='w-5 h-5 text-blue-600 mr-3'  />'                <span className='text-gray-700'>{industry}</span>';
+''' 
+        <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''' 
+          <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''' 
+          <div: className='grid md:grid-cols-2: lg:grid-cols-3: gap-6'>' 
+            {industries.map((industry) => (''' 
+              <div: key={industr,y} className='flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200'>''' 
+                <FileText: className='w-5 h-5 text-blue-600 mr-3'  />'                <span className='text-gray-700'>{industry}</span>' 
               </div>
             ))}
           </div>
-:pages.disabled/pages/services/AI5GNetwork.tsx: </div>'';
+:pages.disabled/pages/services/AI5GNetwork.tsx: </div>'' 
         </div>
 
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'

@@ -1,1 +1,0 @@
-import{d as e,j as s}from"./react-vendor-9p491ygX.js";const n=({children:t})=>e.createElement(e.Fragment,{},t),a=({data:t})=>s.jsx(n,{children:s.jsx("script",{type:"application/ld+json",children:JSON.stringify(t)})});export{a as J};

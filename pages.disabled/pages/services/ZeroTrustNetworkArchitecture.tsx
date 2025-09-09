@@ -1,16 +1,16 @@
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
 
-        title='Zero Trust Network Architecture - Zion Tech Group'';
+        title='Zero Trust Network Architecture - Zion Tech Group'' 
         description='Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions.''/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20>''
         <div className='absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20'></div>'''
         <div className='container mx-auto px-4 relative z-10'>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-  y: 20;
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+  y: 20 
 
               <span className='block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>
                 Network Architecture'
@@ -20,20 +20,20 @@
 
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button'
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600 hove,
-    r:to-pink-600 transition-all duration-300';
-                Get Started;
+    r:to-pink-600 transition-all duration-300' 
+                Get Started 
               </motion.button>
               <motion.button'
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
-    r:bg-slate-800/50 transition-all duration-300';
-                Learn More;
-              Zero Trust'';
+    r:bg-slate-800/50 transition-all duration-300' 
+                Learn More 
+              Zero Trust'' 
               <span className='block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>
                 Network Architecture
               </span>'
@@ -43,18 +43,18 @@
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600 hove,
-    r:to-pink-600 transition-all duration-300'';
-                Get Started;
+    r:to-pink-600 transition-all duration-300'' 
+                Get Started 
               </motion.button>
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
-    r:bg-slate-800/50 transition-all duration-300'';
-                Learn More;
+    r:bg-slate-800/50 transition-all duration-300'' 
+                Learn More 
 
               </motion.button>
             </div>
@@ -76,16 +76,16 @@
     g:grid-cols-3 gap-8'>
             {features.map((feature, index)  => (
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-  y: 20;
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+  y: 20 
 
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>'''
@@ -112,25 +112,25 @@
     g:grid-cols-4 gap-6'>
             {services.map((service, index)  => (
 
-              <motion.div;
+              <motion.div 
                 key={service.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-  y: 20;
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+  y: 20 
 
                   {service.features.map((feature, featureIndex) => (''
-                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>;
-  delay: index * 0.1 '}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300> 
+  delay: index * 0.1 '}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'' 
 '''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
                 <p className='text-slate-300 mb-4'>{service.description}</p>'''
                 <div className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>'''
                 <ul className='space-y-2>{service.features.map((feature, featureIndex) => ('''
-                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>';
-  delay: index * 0.1}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>' 
+  delay: index * 0.1}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'' 
 '''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
                 <p className='text-slate-300 mb-4'>{service.description}</p>'''
@@ -166,16 +166,16 @@
     g:grid-cols-6 gap-8'>
             {benefits.map((benefit, index)  => (
 
-              <motion.div;
+              <motion.div 
                 key={benefit.name}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx;
-  scale: 0.8;
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+:pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx 
+  scale: 0.8 
 
                   <benefit.icon className='w-8 h-8 text-pink-400' />'
                 </div>'''
-                <h3 className='text-lg font-semibold text-white mb-2'>{benefit.name}</h3>'';
+                <h3 className='text-lg font-semibold text-white mb-2'>{benefit.name}</h3>'' 
 
                   <benefit.icon className='w-8 h-8 text-pink-400' />
                 </div>'''
@@ -189,22 +189,22 @@
 
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button'
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600 hove,
-    r:to-pink-600 transition-all duration-300';
-                Schedule Consultation;
+    r:to-pink-600 transition-all duration-300' 
+                Schedule Consultation 
               </motion.button>
               <motion.button'
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500 hove,
-    r:bg-slate-800/50 transition-all duration-300';
+    r:bg-slate-800/50 transition-all duration-300' 
   ,
     y: 0}}
             transition={{ duration: 0.6 }}
-'';
+'' 
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Secure Your Network?'
             </h2>'''
@@ -215,15 +215,15 @@
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600 hove,
-    r:to-pink-600 transition-all duration-300'';
-                Schedule Consultation;
+    r:to-pink-600 transition-all duration-300'' 
+                Schedule Consultation 
               </motion.button>
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
     r:bg-slate-800/50 transition-all duration-300''>
                 View Case Studies

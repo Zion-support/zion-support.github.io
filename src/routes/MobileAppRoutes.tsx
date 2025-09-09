@@ -1,1 +1,8 @@
-import React from 'react'; import { Route, Routes    } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes() {; return (; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" );"";" }";"";"
+// Routes have been converted to Next.js pages structure
+// This component is no longer needed since Next.js uses file-based routing
+
+const MobileAppRoutes = () => {
+  return null;
+};
+
+export default MobileAppRoutes;

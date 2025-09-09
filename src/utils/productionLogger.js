@@ -1,97 +1,30 @@
-// Production logger - minimal logging for production builds
-export const logger = {
-  info: () => {},
-  warn: () => {},
-  error: () => {},
-  debug: () => {},
-  log: () => {}
-};
-
-export const logErrorToProduction = (error, context = '') => {
-  // In production, we might want to send errors to a monitoring service
-  // For now, just log to console in development
+// Production logger utility
+export const logWarn = (message, ...args) => {
   if (process.env.NODE_ENV === 'development') {
-    console.error(`Production Error in ${context}:`, error);
+    console.warn(message, ...args);
   }
 };
 
-  log(message, data = null) {
-    if (this.enabled) {
-      console.log(`[Zion Production] ${message}`, data || '');
-    }
+export const logError = (message, ...args) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.error(message, ...args);
   }
+};
 
-  error(message, error = null) {
-    if (this.enabled) {
-      console.error(`[Zion Production Error] ${message}`, error || '');
-      
-      // In production, you might want to send this to an error tracking service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'exception', {
-          description: message,
-          fatal: false
-        });
-      }
-    }
+export const logInfo = (message, ...args) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.info(message, ...args);
   }
+};
 
-  warn(message, data = null) {
-    if (this.enabled) {
-      console.warn(`[Zion Production Warning] ${message}`, data || '');
-    }
+export const logErrorToProduction = (message, ...args) => {
+  if (process.env.NODE_ENV === 'production') {
+    console.error(message, ...args);
   }
+};
 
-  info(message, data = null) {
-    if (this.enabled) {
-      console.info(`[Zion Production Info] ${message}`, data || '');
-    }
+export const logDebug = (message, ...args) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.debug(message, ...args);
   }
-
-  // Track user actions for analytics
-  track(eventName, parameters = {}) {
-    if (this.enabled && typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  }
-
-  // Performance monitoring
-  measure(name, fn) {
-    if (this.enabled) {
-      const start = performance.now();
-      const result = fn();
-      const duration = performance.now() - start;
-      
-      this.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-      
-      // Track performance metrics
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'timing_complete', {
-          name: name,
-          value: Math.round(duration)
-        });
-      }
-      
-      return result;
-    }
-    return fn();
-  }
-
-  // Log error to production (alias for error method)
-  logErrorToProduction(message, error = null) {
-    this.error(message, error);
-  }
-}
-
-// Create singleton instance
-const productionLogger = new ProductionLogger();
-
-export default productionLogger;
-
-// Export individual methods for convenience
-export const log = (message, data) => productionLogger.log(message, data);
-export const error = (message, error) => productionLogger.error(message, error);
-export const warn = (message, data) => productionLogger.warn(message, data);
-export const info = (message, data) => productionLogger.info(message, data);
-export const track = (eventName, parameters) => productionLogger.track(eventName, parameters);
-export const measure = (name, fn) => productionLogger.measure(name, fn);
-export const logErrorToProduction = (message, error) => productionLogger.logErrorToProduction(message, error);
+};

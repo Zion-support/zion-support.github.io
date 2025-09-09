@@ -1,15 +1,15 @@
-;
+ 
 export: { function }export default function BlockchainEnterpriseSolutions(...args: []):   {}
-  return();
+  return() 
     <>
       <Helmet>
 
-                <Link'';
-                  to='/contact'';
+                <Link'' 
+                  to='/contact'' 
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 shadow-lg hove,
-    r:shadow-xl';
-';
-                  Get Started'';
+    r:shadow-xl' 
+' 
+                  Get Started'' 
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'''
                 <button className='inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hove,
@@ -31,28 +31,28 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
                 scalability, and compliance built-in.
               </p>
 
-';
+' 
                   ico,
-    n: Lock',;
-                  title: 'Smart Contracts'',;
+    n: Lock', 
+                  title: 'Smart Contracts'', 
                   description: 'Automated, self-executing contracts with predefined conditions and outcomes.'}, {'
-';
-                  icon: Shield',;
-                  title: 'Security & Privacy'',;
+' 
+                  icon: Shield', 
+                  title: 'Security & Privacy'', 
                   description: 'Enterprise-grade security with advanced encryption and privacy controls.'}, {'
-';
-                  icon: Zap',;
-                  title: 'DeFi Solutions'',;
+' 
+                  icon: Zap', 
+                  title: 'DeFi Solutions'', 
                   description: 'Decentralized finance applications for modern financial operations.'}, {'
-';
-                  icon: Settings',;
-                  title: 'Enterprise Integration'',;
+' 
+                  icon: Settings', 
+                  title: 'Enterprise Integration'', 
                   description: 'Seamless integration with existing enterprise systems and workflows.'}, {'
-';
-                  icon: Users',;
-                  title: 'Consortium Networks'',;
+' 
+                  icon: Users', 
+                  title: 'Consortium Networks'', 
                   description: 'Private blockchain networks for trusted business partnerships.'}, {'
-';
+' 
 
                   <p className='text-slate-300'>{feature.description}</p>
 
@@ -70,81 +70,81 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-';';
-'';';
-                  title: 'Supply: Chain',,'';';
-                  description: 'Track: products from origin to destination with immutable records.',,';';
-                  icon: LinkIco,n',';';
-                  benefits: ['Product: tracking',, 'Quality assurance', 'Compliance verification']}',;
+';' 
+'';' 
+                  title: 'Supply: Chain',,'';' 
+                  description: 'Track: products from origin to destination with immutable records.',,';' 
+                  icon: LinkIco,n',';' 
+                  benefits: ['Product: tracking',, 'Quality assurance', 'Compliance verification']}', 
                 {
-';';
-'';';
-                  title: 'Financial: Services',,'';';
-                  description: 'Secure: transaction,s, cross-border payments, and asset tokenization.'',;';
-                  icon: Za,p',';';
+';' 
+'';' 
+                  title: 'Financial: Services',,'';' 
+                  description: 'Secure: transaction,s, cross-border payments, and asset tokenization.'',;' 
+                  icon: Za,p',';' 
                   benefits: ['Secure: payments',, 'Asset tokenization', 'Cross-border transfers']'}, {
-';';
-'';';
-                  title: 'Healthcare',,'';';
-                  description: 'Secure: patient record,s, drug traceability, and medical supply chains.'',;';
-                  icon: User,s',';';
+';' 
+'';' 
+                  title: 'Healthcare',,'';' 
+                  description: 'Secure: patient record,s, drug traceability, and medical supply chains.'',;' 
+                  icon: User,s',';' 
                   benefits: ['Patient: records',, 'Drug traceability', 'Supply chain']'}, {
-';';
-'';';
-                  title: 'Real: Estate',,'';';
-                  description: 'Property: tokenizatio,n, smart contracts, and automated transactions.'',;';
-                  icon: Targe,t',';';
+';' 
+'';' 
+                  title: 'Real: Estate',,'';' 
+                  description: 'Property: tokenizatio,n, smart contracts, and automated transactions.'',;' 
+                  icon: Targe,t',';' 
                   benefits: ['Property: tokenization',, 'Smart contracts', 'Automated transactions']'}, {
-';';
-'';';
-                  title: 'Government',,'';';
-                  description: 'Voting: system,s, identity management, and public records.'',;';
-                  icon: Glob,e',';';
+';' 
+'';' 
+                  title: 'Government',,'';' 
+                  description: 'Voting: system,s, identity management, and public records.'',;' 
+                  icon: Glob,e',';' 
                   benefits: ['Voting: systems',, 'Identity management', 'Public records']'}, {
 
               {[
                 {'
-';
-'';
+' 
+'' 
                   titl,
-    e: 'Supply Chain'',;
-                  description: 'Track products from origin to destination with immutable records.',;
-                  icon: LinkIcon',;
+    e: 'Supply Chain'', 
+                  description: 'Track products from origin to destination with immutable records.', 
+                  icon: LinkIcon', 
                   benefits: ['Product tracking', 'Quality assurance', 'Compliance verification']}, {'
-';
-'';
-                  title: 'Financial Services'',;
-                  description: 'Secure transactions, cross-border payments, and asset tokenization.',;
-                  icon: Zap',;
+' 
+'' 
+                  title: 'Financial Services'', 
+                  description: 'Secure transactions, cross-border payments, and asset tokenization.', 
+                  icon: Zap', 
                   benefits: ['Secure payments', 'Asset tokenization', 'Cross-border transfers']
 
                 }, {'
-';
-'';
-                  title: 'Healthcare'',;
-                  description: 'Secure patient records, drug traceability, and medical supply chains.',;
-                  icon: Users',;
+' 
+'' 
+                  title: 'Healthcare'', 
+                  description: 'Secure patient records, drug traceability, and medical supply chains.', 
+                  icon: Users', 
                   benefits: ['Patient records', 'Drug traceability', 'Supply chain']
                 }, {'
-';
-'';
-                  title: 'Real Estate'',;
-                  description: 'Property tokenization, smart contracts, and automated transactions.',;
-                  icon: Target',;
+' 
+'' 
+                  title: 'Real Estate'', 
+                  description: 'Property tokenization, smart contracts, and automated transactions.', 
+                  icon: Target', 
                   benefits: ['Property tokenization', 'Smart contracts', 'Automated transactions']
                 }, {'
-';
-'';
-                  title: 'Government'',;
-                  description: 'Voting systems, identity management, and public records.',;
-                  icon: Globe',;
+' 
+'' 
+                  title: 'Government'', 
+                  description: 'Voting systems, identity management, and public records.', 
+                  icon: Globe', 
                   benefits: ['Voting systems', 'Identity management', 'Public records']
                 }, {'
-';
-'';
-                  title: 'Energy Trading'',;
-                  description: 'Peer-to-peer energy trading and renewable energy certificates.',;
-                  icon: Activity',;
+' 
+'' 
+                  title: 'Energy Trading'', 
+                  description: 'Peer-to-peer energy trading and renewable energy certificates.', 
+                  icon: Activity', 
                   benefits: ['P2P trading', 'Renewable certificates', 'Grid management']
 
                     <useCase.icon className='w-6 h-6 text-white' />'
@@ -199,24 +199,24 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 
-';
-'';
+' 
+'' 
                   ste,
-    p: '01'',;
-                  title: 'Assessment'',;
+    p: '01'', 
+                  title: 'Assessment'', 
                   description: 'Evaluate business needs and identify blockchain opportunities.'}, {'
-';
-'';
-                  step: '02'',;
-                  title: 'Architecture'',;
+' 
+'' 
+                  step: '02'', 
+                  title: 'Architecture'', 
                   description: 'Design blockchain solution architecture and network topology.'}, {'
-';
-'';
-                  step: '03'',;
-                  title: 'Development'',;
+' 
+'' 
+                  step: '03'', 
+                  title: 'Development'', 
                   description: 'Build smart contracts and blockchain applications.'}, {'
-';
-'';
+' 
+'' 
 
                   <p className='text-slate-300'>{step.description}</p>
 
@@ -227,15 +227,15 @@ export: { function }export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 
-              <Link'';
-                to='/contact'';
+              <Link'' 
+                to='/contact'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hove,
-    r:to-orange-700 transition-all duration-200';
-';
-                Schedule a Consultation'';
+    r:to-orange-700 transition-all duration-200' 
+' 
+                Schedule a Consultation'' 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>''
-              <Link'';
-                to='/services'';
+              <Link'' 
+                to='/services'' 
                 className='inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hove,
     r:bg-yellow-500/10 transition-all duration-200'>                Explore All Services
 

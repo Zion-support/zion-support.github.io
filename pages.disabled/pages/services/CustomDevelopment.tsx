@@ -21,42 +21,42 @@
   Rocket,
   Building2,
   Cpu,
-  Network'} from 'lucide-react';';
+  Network'} from 'lucide-react';' 
 export: { function }
 export default function CustomDevelopment(...args[]):  {}
     }, {}
-      title: 'Mobile: Applications',,';
-      description: 'Native: and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',,';
+      title: 'Mobile: Applications',,' 
+      description: 'Native: and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',,' 
       icon: Smartphon,e,
-      features['iOS: Development',Android Development',Cross-platform Apps',App Store Optimization']}',;
+      features['iOS: Development',Android Development',Cross-platform Apps',App Store Optimization']}', 
     {}
 
-              <Link'';
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold';
-                Start Your Project;
+              <Link'' 
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold' 
+                Start Your Project 
               </Link>''
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold';
-                View All Services;
+    r:text-white transition-all duration-300 font-semibold' 
+                View All Services 
   ,
     y: 0}}
             transition={{ duration: 0.8 }}
-'';
+'' 
             <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6'>
 
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'';
-                Start Your Project;
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'' 
+                Start Your Project 
               </Link>'
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hove,
     r:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold'';
-                View All Services;
+    r:text-white transition-all duration-300 font-semibold'' 
+                View All Services 
 
               </Link>
             </div>
@@ -76,33 +76,33 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 30;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 30 
   ,
-    y: 30;
+    y: 30 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 l,
     g:grid-cols-2 gap-8'>
             {services.map((service, index
-              <motion.div;
-                key={index};
+              <motion.div 
+                key={index} 
                 className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover: border-zion-cyan/40 transition-all duration-300 hove,
     r:shadow-lg hove,
-    r:shadow-zion-cyan/10'';
+    r:shadow-zion-cyan/10'' 
                 initial = {}, { opacity: 0,
   y: 30}}
                 animate = {}, { opacity: 1,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 0;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
   delay: index * 0.1}}
 
                     <service.icon className='w-8 h-8 text-white' />
@@ -150,33 +150,33 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 30;
-  y: 30;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 30 
+  y: 30 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8'>
             {technologies.map(tec,
     h: unknown, index: unknown
-              <motion.div;
-                key={index};
+              <motion.div 
+                key={index} 
                 className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover: border-zion-cyan/40 transition-all duration-300 hove,
     r:shadow-lg hove,
-    r:shadow-zion-cyan/10 group'';
+    r:shadow-zion-cyan/10 group'' 
                 initial = {}, { opacity: 0,
   y: 30}}
                 animate = {}, { opacity: 1,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 0;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
   delay: index * 0.1}}
 
   delay: index * 0.1}}
@@ -208,36 +208,36 @@ export default function CustomDevelopment(...args[]):  {}
               Custom development offers unique advantages that off-the-shelf solutions cannot provide.
             </p>
 
-                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300';
+                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300' 
                 initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 30;
-  y: 30;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 30 
+  y: 30 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 l,
     g:grid-cols-2 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300'';
+              <motion.div 
+                key={index} 
+                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300'' 
                 initial = {}, { opacity: 0,
   y: 30}}
                 animate = {}, { opacity: 1,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 0;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  delay: index * 0.1;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  delay: index * 0.1 
   dela,
     y: index * 0.1}}
               >'''
@@ -252,7 +252,7 @@ export default function CustomDevelopment(...args[]):  {}
                 <p className='text-zion-slate-light leading-relaxed'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -268,50 +268,50 @@ export default function CustomDevelopment(...args[]):  {}
 
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {industries.map(industr,
-    y: unknown, index: unknown();
+    y: unknown, index: unknown() 
               <motion.div''
-                key={index};
+                key={index} 
                 className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover: border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hove,
-    r:shadow-zion-cyan/10';
+    r:shadow-zion-cyan/10' 
                 initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 20;
-  y: 20;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 20 
+  y: 20 
           </motion.div>'
 '''
           <div className='grid grid-cols-2 m,
     d:grid-cols-4 gap-6'>
             {industries.map(industr,
     y: unknown, index: unknown(
-              <motion.div;
-                key={index};
+              <motion.div 
+                key={index} 
                 className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover: border-zion-cyan/40 transition-all duration-300 hove,
     r:shadow-lg hove,
-    r:shadow-zion-cyan/10'';
+    r:shadow-zion-cyan/10'' 
                 initial = {}, { opacity: 0,
   y: 20}}
                 animate = {}, { opacity: 1,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 0;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
   delay: index * 0.1}}
-              >';
+              >' 
 
   delay: index * 0.1}}
               >'''
                 <div className='text-zion-cyan font-semibold'>{industry}</div>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -324,12 +324,12 @@ export default function CustomDevelopment(...args[]):  {}
               A proven agile development methodology that ensures successful project delivery and client satisfaction.
             </p>
 
-                className='text-center';
+                className='text-center' 
                 initial = {
   { opacity: 0,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 30;
-  y: 30;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 30 
+  y: 30 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 m,
@@ -337,22 +337,22 @@ export default function CustomDevelopment(...args[]):  {}
             {['{ ste,
     p: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' }, { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' }, { step: '03', title: 'Development', description: 'Build the application using agile development practices' }, { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map(phase: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='text-center'';
+              <motion.div 
+                key={index} 
+                className='text-center'' 
                 initial = {}, { opacity: 0,
   y: 30}}
                 animate = {}, { opacity: 1,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-  y: 0;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/CustomDevelopment.tsx;
-:pages.disabled/pages/services/CustomDevelopment.tsx;
+:pages.disabled/pages/services/CustomDevelopment.tsx 
+:pages.disabled/pages/services/CustomDevelopment.tsx 
   delay: index * 0.1}}
 
   delay: index * 0.1}}
@@ -364,39 +364,39 @@ export default function CustomDevelopment(...args[]):  {}
                 <p className='text-zion-slate-light leading-relaxed'>{phase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-              <Link'';
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold';
-                Start Your Project;
+              <Link'' 
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold' 
+                Start Your Project 
               </Link>''
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold';
-                Explore Services;
+    r:text-white transition-all duration-300 font-semibold' 
+                Explore Services 
   ,
     y: 0}}
             transition={{ duration: 0.8 }}
-'';
+'' 
             <h2 className='text-4xl lg: text-5xl font-bold text-white mb-6'>
               Ready to Build Your Custom Solution?'
             </h2>'''
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
 
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'';
-                Start Your Project;
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'' 
+                Start Your Project 
               </Link>'
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hove,
     r:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold'';
-                Explore Services;
+    r:text-white transition-all duration-300 font-semibold'' 
+                Explore Services 
 
               </Link>
             </div>

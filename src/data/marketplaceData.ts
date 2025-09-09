@@ -1,1 +1,23 @@
-export interface MarketplaceItem { id: string; title: string; category: 'products' | 'talent' | 'equipment' | 'services'; description: string; price: number; rating: number; reviews: number; views: number; likes: number; image: string; tags: string[]; featured: boolean; seller: { name: string; rating: number; verified: boolean;  }; location: string; availability: 'available' | 'limited' | 'out-of-stock'; deliveryTime: string; warranty: string; createdAt: Date; updatedAt: Date; } export const marketplaceItems: MarketplaceItem[] = [ { id: 'ai-server-cluster', title: 'AI-Powered Server Cluster', category: 'products', description: 'High-performance computing cluster optimized for AI workloads with GPU acceleration and scalable architecture.', price: 25000, rating: 4.9, reviews: 127, views: 2847, likes: 156, image: 'https:
+export interface SearchSuggestion {
+  id: string;
+  text: string;
+  type: 'content' | 'product' | 'page' | 'service' | 'recent';
+  category?: string;
+}
+
+export const generateSearchSuggestions = (): SearchSuggestion[] => {
+  return [
+    { id: '1', text: 'AI Development', type: 'service' },
+    { id: '2', text: 'Web Development', type: 'service' },
+    { id: '3', text: 'Mobile Apps', type: 'service' },
+    { id: '4', text: 'Data Analytics', type: 'service' },
+    { id: '5', text: 'Cloud Solutions', type: 'service' },
+    { id: '6', text: 'About Us', type: 'page' },
+    { id: '7', text: 'Contact', type: 'page' },
+    { id: '8', text: 'Blog', type: 'page' },
+    { id: '9', text: 'Services', type: 'page' },
+    { id: '10', text: 'Products', type: 'page' }
+  ];
+};
+
+export const MARKETPLACE_LISTINGS = [];

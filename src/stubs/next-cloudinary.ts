@@ -1,7 +1,8 @@
 // Next.js Cloudinary stub for Vite compatibility
 import React from 'react';
 
-export const CldImage = ({ src, alt, width, height, ...props }: any) => {
+// Define components first
+const CldImage = ({ src, alt, width, height, ...props }: any) => {
   return React.createElement('img', {
     src,
     alt,
@@ -11,18 +12,18 @@ export const CldImage = ({ src, alt, width, height, ...props }: any) => {
   });
 };
 
-export const CldVideo = ({ src, ...props }: any) => {
+const CldVideo = ({ src, ...props }: any) => {
   return React.createElement('video', {
     src,
     ...props,
   });
 };
 
-export const CldUploadWidget = ({ children, ...props }: any) => {
+const CldUploadWidget = ({ children, ...props }: any) => {
   return children({ cloudinary: { open: () => {} } });
 };
 
-export const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: any) => {
+const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: any) => {
   const handleClick = () => {
     // Mock upload functionality
     const mockResult = {
@@ -39,6 +40,10 @@ export const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: 
   }, children);
 };
 
+// Export individually for named imports
+export { CldImage, CldVideo, CldUploadWidget, CldUploadButton };
+
+// Also export as default for compatibility
 export default {
   CldImage,
   CldVideo,

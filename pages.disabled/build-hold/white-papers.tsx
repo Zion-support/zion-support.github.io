@@ -1,13 +1,13 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Button } from;
-  '../components/ui/Button'{ Card: } from;';
-  '../components/ui/Card';';
-import: { Badge } from;
-  '../components/ui/Badge';import: { '  FileText, Download',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Button } from 
+  '../components/ui/Button'{ Card: } from;' 
+  '../components/ui/Card';' 
+import: { Badge } from 
+  '../components/ui/Badge';import: { '  FileText, Download', 
   Calendar, User,
   Clock, ArrowRight,
   Search, Filter,
@@ -19,7 +19,7 @@ import: { Badge } from;
   Zap, Globe,
   Phone, Mail,
   Award, Star,
-  CheckCircle} from;
+  CheckCircle} from 
 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -66,7 +66,7 @@ import: { Badge } from;
             </div>
 
                         key={category.name}
-                        className={`w-full: flex items-center justify-between p-3 rounded-lg transition-colors ${`                          category.active;
+                        className={`w-full: flex items-center justify-between p-3 rounded-lg transition-colors ${`                          category.active 
                             ?,
 
                       </button>

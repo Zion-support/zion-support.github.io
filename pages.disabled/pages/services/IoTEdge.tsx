@@ -1,12 +1,12 @@
-:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx 
 
         <div className='container-responsive relative z-10'>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  y: 20;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  y: 20 
 
               Connect, Process','
               <span className='text-gradient'> Transform</span>
@@ -31,12 +31,12 @@
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  y: 20;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  y: 20 
 
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -46,7 +46,7 @@
                 <p className='text-zion-slate-light'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -61,28 +61,28 @@
     g:grid-cols-4 gap-6'>
             {services.map(servic,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={service.title}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  x: index % 2 === 0 ? -20 : 20;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  x: index % 2 === 0 ? -20 : 20 
   ,
-    x: index % 2 === 0 ? -20 : 20;
+    x: index % 2 === 0 ? -20 : 20 
   ,
     x: index % 2 === 0 ? -20 : 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  x: 0;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  x: 0 
   ,
-    x: 0;
+    x: 0 
   ,
     x: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  delay: index * 0.1;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  delay: index * 0.1 
 
                       <div className='w-2 h-2 bg-emerald-400 rounded-full mr-3'></div>
 
@@ -97,11 +97,11 @@
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  y: 20;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  y: 20 
 
             <h2 className='text-4xl font-bold text-white mb-4'>
               Industries We Serve'
@@ -113,17 +113,17 @@
           </motion.div>'
 
 
-              <motion.div;
+              <motion.div 
                 key={industry.nam,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  scale: 0.8;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  scale: 0.8 
 
                   <industry.icon className='w-8 h-8 text-emerald-400' />
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/IoTEdge.tsx'
@@ -133,11 +133,11 @@
       <section className='py-20>'
         <div className='container-responsive'>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/IoTEdge.tsx;
-:pages.disabled/pages/services/IoTEdge.tsx;
-  y: 20;
+:pages.disabled/pages/services/IoTEdge.tsx 
+:pages.disabled/pages/services/IoTEdge.tsx 
+  y: 20 
 
                 Ready to Build the Future?'
               </h2>'''

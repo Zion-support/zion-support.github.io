@@ -4,7 +4,7 @@ const fs = require('fs');
 // Function to fix JSX syntax errors;
 function fixJSXSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
     // Fix JSX attribute semicolons;
@@ -22,22 +22,23 @@ function fixJSXSyntaxErrors(filePath) {
       // Fix JSX opening tag semicolons;
       { pattern: /(>);/g, replacement: '$1' },
       // Fix array element semicolons in JSX;
-      { pattern: /'([^']*);',/g, replacement: "'$1'"}, { pattern: /"([^"]*);",/g, replacement: '"$1"'} ];
+      { pattern: /"([^"]*);",/g, replacement: ""$1"," },;
+      { pattern: /"([^"]*);",/g, replacement: ""$1"," },;
+    ];
 
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+  const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
-        content = newContent;
-        modified = true}
+  content = newContent;
+        modified = true;}
     });
-
     if (modified) {
-      fs.writeFileSync(filePath, content, `utf8`);
+  fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed JSX syntax errors in: ${filePath}`);
-      return true}
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+      return true;}
+    return false;} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
+    return false;}
 }
 
 // Files that need JSX syntax fixes;
@@ -50,11 +51,10 @@ const filesToFix = [
 
 console.log('🔧 Fixing JSX syntax errors...');
 let fixedCount = 0;
-
 filesToFix.forEach(file => {
   if (fs.existsSync(file)) {
-    if (fixJSXSyntaxErrors(file)) {
-      fixedCount++}
+  if (fixJSXSyntaxErrors(file)) {
+  fixedCount++;}
   }
 });
 

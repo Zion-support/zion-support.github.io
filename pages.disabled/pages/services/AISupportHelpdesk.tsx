@@ -1,32 +1,32 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
 export: default function AISupportHelpdesk(...args[]):  {
 export: default function AISupportHelpdesk(...args[]):  {}
     }, {
 
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-        'Custom: integrations';';
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+        'Custom: integrations';' 
         'Custom: integrations'';'] ],
       popular: fals,e}
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
 
-  return();
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+  return() 
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
     <>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-<:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+      <SEO 
+= 
 
-      <SEO '';
-        title = 'AI Support Helpdesk - Zion Tech Group'';
-        description='Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service.'';
+      <SEO '' 
+        title = 'AI Support Helpdesk - Zion Tech Group'' 
+        description='Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service.'' 
         canonical='/services/ai-support-helpdesk'/>'
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO '''
-        title = 'AI Support Helpdesk - Zion Tech Group'';
-        description='Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service.'';
+        title = 'AI Support Helpdesk - Zion Tech Group'' 
+        description='Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service.'' 
         canonical='/services/ai-support-helpdesk''/>
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
         {/* Hero Section */}'
@@ -35,10 +35,10 @@ export: default function AISupportHelpdesk(...args[]):  {}
           <div className='relative max-w-7xl mx-auto px-6>''
             <div className='text-center'>
 
-              <motion.div;
+              <motion.div 
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-  y: 20;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+  y: 20 
 
                   </Link>
                 </div>
@@ -53,18 +53,18 @@ export: default function AISupportHelpdesk(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx: </div>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-<:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-=;
+<:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-  y: 20;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+  y: 20 
 
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -73,7 +73,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
                   <p className='text-gray-300'>{feature.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -84,19 +84,19 @@ export: default function AISupportHelpdesk(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx: </div>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-<:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-=;
+<:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{aiCapabilities.map(capabilit,
     y: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-  y: 20;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+  y: 20 
 
                     <capability.icon className='w-6 h-6 text-white' />'
                     <capability.icon className='w-6 h-6 text-white' />
@@ -105,7 +105,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
                   <p className='text-gray-300'>{capability.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -116,19 +116,19 @@ export: default function AISupportHelpdesk(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx: </div>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-<:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-=;
+<:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{supportChannels.map(channe,
     l: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-  y: 20;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+  y: 20 
 
                     <channel.icon className='w-6 h-6 text-white' />'
                     <channel.icon className='w-6 h-6 text-white' />
@@ -137,7 +137,7 @@ export: default function AISupportHelpdesk(...args[]):  {}
                   <p className='text-gray-300'>{channel.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -148,26 +148,26 @@ export: default function AISupportHelpdesk(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx: </div>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-<:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-=;
+<:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+= 
 
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-2 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
 
                   </div>
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -178,23 +178,23 @@ export: default function AISupportHelpdesk(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx: </div>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-<:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-=;
+<:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+= 
 
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-  y: 20;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+  y: 20 
 
                       </span>
 
@@ -209,21 +209,21 @@ export: default function AISupportHelpdesk(...args[]):  {}
                     ))}
                   </ul>
 
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover: from-teal-600 hove,
     r:to-cyan-700'''`;`
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'``;`
-                  <Link'';
+                  <Link'' 
                     to='/request-quote'`;`
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                      plan.popular';
+                      plan.popular' 
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover: from-teal-600 hove,
-    r:to-cyan-700'';
+    r:to-cyan-700'' 
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}
-                    Get Started;
+                    Get Started 
 
                   </Link>
                 </motion.div>
@@ -235,15 +235,15 @@ export: default function AISupportHelpdesk(...args[]):  {}
           <div className='max-w-4xl mx-auto text-center px-6'>
             <motion.div
               initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
-  y: 20;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
+  y: 20 
   ,
     y: 20}}
               whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx 
   y: 0}}
-              transition={{ duration: 0.6 }};
-'';
+              transition={{ duration: 0.6 }} 
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white>
                 Ready to Transform Your Support?''
               </h2>'''
@@ -251,20 +251,20 @@ export: default function AISupportHelpdesk(...args[]):  {}
                 Join thousands of businesses using our AI platform to deliver exceptional customer service.''
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-                <Link'';
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105';
-                  Start Free Trial;
+                <Link'' 
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105' 
+                  Start Free Trial 
                 </Link>''
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hove,
-    r:text-white transition-all duration-300';
-                  Contact Sales;
+    r:text-white transition-all duration-300' 
+                  Contact Sales 
   ,
     y: 0}}
               transition={{ duration: 0.6 }}
-'';
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Transform Your Support?'
               </h2>'''
@@ -273,16 +273,16 @@ export: default function AISupportHelpdesk(...args[]):  {}
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>
                 <Link'''
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'';
-                  Start Free Trial;
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'' 
+                  Start Free Trial 
                 </Link>'
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hove,
     r:bg-teal-500 hove,
-    r:text-white transition-all duration-300'';
-                  Contact Sales;
+    r:text-white transition-all duration-300'' 
+                  Contact Sales 
 
                 </Link>
               </div>

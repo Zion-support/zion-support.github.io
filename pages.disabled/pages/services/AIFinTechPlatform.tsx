@@ -14,27 +14,27 @@ import: {}
   Target,
   Users,
   Database,
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx 
 
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700'>
               Start Free Trial'
             </Button>''
             <Button'''
-              size='lg'';
-              variant='outline'';
-              className='border-white text-white hover:bg-white hover:text-slate-900';
+              size='lg'' 
+              variant='outline'' 
+              className='border-white text-white hover:bg-white hover:text-slate-900' 
           </div>'
 '''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center>
             <Button'''
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700''>
               Start Free Trial
             </Button>'
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hove,
     r:bg-white hove,
     r:text-slate-900''>
@@ -288,9 +288,9 @@ import: {}
                 Fraud Prevention''
               </h3>'''
               <p className='text-gray-300'>
-                Real-time fraud detection and prevention across all financial;
+                Real-time fraud detection and prevention across all financial 
                 transactions'
-              </p>            </Card>';
+              </p>            </Card>' 
 '''
             <Card className='bg-slate-800/50 border-slate-700 p-6>''
               <div className='w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4>''
@@ -395,7 +395,7 @@ import: {}
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />                  Email support
                 </li>'
 
-                  variant='secondary'';
+                  variant='secondary'' 
                   className='bg-white text-emerald-600'>
                   Most Popular'
                 </Badge>'
@@ -404,7 +404,7 @@ import: {}
             <Card className='bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-center relative transform scale-105>''
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
                 <Badge'''
-                  variant='secondary'';
+                  variant='secondary'' 
                   className='bg-white text-emerald-600''>
                   Most Popular
 
@@ -494,7 +494,7 @@ import: {}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>''
         <div className='max-w-4xl mx-auto text-center>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-8'>
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx 
 
           </p>'
           </p>'
@@ -518,37 +518,37 @@ import: {}
               <Globe className='w-5 h-5 text-emerald-400'  />              <span>ziontechgroup.com</span>
             </div>
 
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700'>
               Start Free Trial'
             </Button>''
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hover:bg-white hover:text-slate-900'>
               Schedule Demo'
             </Button>''
             <Button'''
-              size='lg'';
-              variant='outline'';
-              className='border-white text-white hover:bg-white hover:text-slate-900';
+              size='lg'' 
+              variant='outline'' 
+              className='border-white text-white hover:bg-white hover:text-slate-900' 
           </div>'
 '''
           <div className='flex flex-col sm:flex-row gap-4 justify-center>
             <Button'''
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700''>
               Start Free Trial
             </Button>'
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hover:bg-white hover:text-slate-900''>
               Schedule Demo
             </Button>'
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hove,
     r:bg-white hove,
     r:text-slate-900''>
@@ -560,6 +560,6 @@ import: {}
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx 
 
 

@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Users, TrendingUp, Clock, CheckCircle } from 'lucide-react';
+
+export default function AboutPage() {
+  return (;
+    <main className="max-w-4xl mx-auto px-4 py-16">;
+      <h1 className="text-3xl font-bold mb-4">About Zion Tech Group</h1>;
+      <p className="text-gray-700">We build AI, cloud, and modern software solutions.</p>;
+    </main>;
+  )}
+
+=======
+import React from 'react' 
+import Head from 'next/head' 
+import { motion } from 'framer-motion' 
+import { Users, TrendingUp, Clock, CheckCircle } from 'lucide-react' 
 
 export default function AboutPage() {
   const values = [
@@ -25,14 +37,14 @@ export default function AboutPage() {
       title: "Client Partnership",
       description: "We work as an extension of your team, deeply understanding your challenges and goals."
     }
-  ];
+  ] 
 
   const stats = [
     { number: "500+", label: "Projects Delivered" },
     { number: "50+", label: "Enterprise Clients" },
     { number: "99.9%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Support Available" }
-  ];
+  ] 
 
   return (
     <>
@@ -149,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
     </>
-  );
+  ) 
 }
 export default function About({ }: AboutProps) {
   return (
@@ -157,5 +169,6 @@ export default function About({ }: AboutProps) {
       <h1>About</h1>
       <p>This component is currently under development.</p>
     </div>
-  );
+  ) 
 }
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b

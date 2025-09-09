@@ -21,7 +21,7 @@
                 <a className='text-cyan-400 hover: underline' href='https://developer.salesforce.com/' target='_blank' rel='noreferrer'>Salesforce Developer</a>
               </li>
 
-export { AiLeadScoring };
+export { AiLeadScoring } 
 
 export default AiLeadScoring}
   '''""

@@ -1,11 +1,17 @@
-import { Header } from '../components/Header";
-import { Footer } from '../components/Footer";
-export function AppLayout(...args: any[]): any {;
-	return (;
-		<div className = "min-h-screen bg-black text-white">;
-			<main className="pt-20">;
-				{children};
-			</main>;
-		</div>;
-	);
+import React, { ReactNode } from "react";
+import Navigation from '../components/Navigation';
+
+interface AppLayoutProps {
+  children?: React.ReactNode;
+}
+
+export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Navigation />
+      <main className="container mx-auto px-4 py-8">
+        {children}
+      </main>
+    </div>
+  );
 };

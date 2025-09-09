@@ -9,9 +9,9 @@ import {}
   Lightbulb,
   Database,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/green-it.tsx;
+:pages.disabled/pages/services/green-it.tsx 
 
 :pages.disabled/pages/services/green-it.tsx
               <Globe className="w-4 h-4 mr-2"  />              Sustainable Technology"
@@ -23,8 +23,8 @@ import {}
               Transform your IT infrastructure with sustainable, eco-friendly
               solutions that reduce environmental impact while improving
 
-              Transform your IT infrastructure with sustainable, eco-friendly;
-              solutions that reduce environmental impact while improving;
+              Transform your IT infrastructure with sustainable, eco-friendly 
+              solutions that reduce environmental impact while improving 
               performance and lowering costs.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -41,18 +41,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/green-it.tsx;
+:pages.disabled/pages/services/green-it.tsx 
 
-              Our Green IT solutions combine environmental responsibility with;
-              cutting-edge technology to deliver sustainable, high-performance;
+              Our Green IT solutions combine environmental responsibility with 
+              cutting-edge technology to deliver sustainable, high-performance 
               IT infrastructure.
             </p>
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-6 h-6 text-green-400' />'
@@ -69,18 +69,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/green-it.tsx;
+:pages.disabled/pages/services/green-it.tsx 
 
-              From data centers to cloud migration, we offer end-to-end;
-              sustainable IT solutions that align with your environmental and;
+              From data centers to cloud migration, we offer end-to-end 
+              sustainable IT solutions that align with your environmental and 
               business objectives.
             </p>
 
             {solutions.map((solution, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <solution.icon className='w-8 h-8 text-green-400' />'
@@ -100,7 +100,7 @@ import {}
         </div>
       </section>
 
-                Our Green IT solutions deliver measurable benefits for both the;
+                Our Green IT solutions deliver measurable benefits for both the 
 
 
                   </div>
@@ -108,7 +108,7 @@ import {}
               </div>
             </motion.div>
 
-            <motion.div;
+            <motion.div 
 
                     <Lightbulb className='w-10 h-10 text-white'  />'
                   </div>'''
@@ -129,9 +129,9 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/green-it.tsx;
+:pages.disabled/pages/services/green-it.tsx 
 
 :pages.disabled/pages/services/green-it.tsx
               Ready to Go Green?"
@@ -139,7 +139,7 @@ import {}
             <p className="text-xl text-slate-300 mb-8">
               Join the sustainable technology revolution and make a positive
 
-              Join the sustainable technology revolution and make a positive;
+              Join the sustainable technology revolution and make a positive 
               impact on the environment while improving your IT infrastructure.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''

@@ -317,17 +317,17 @@ import {}
   CloudHail10,
   CloudSnow10,
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-indigo-700: transition-all duration-200''>''';
-                <Play: className='w-5 h-5 mr-2'  />                Watch Demo';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-indigo-700: transition-all duration-200''>''' 
+                <Play: className='w-5 h-5 mr-2'  />                Watch Demo' 
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''';
-                <Settings: className='w-5 h-5 mr-2'  />                Start Free Trial</motion.button>            </div>';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''' 
+                <Settings: className='w-5 h-5 mr-2'  />                Start Free Trial</motion.button>            </div>' 
           </motion.div>
         </div>
       </section>
@@ -337,21 +337,21 @@ import {}
               </span>''
             </h1>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
-              Automate financial compliance, reduce risks, and ensure regulatory;
+              Automate financial compliance, reduce risks, and ensure regulatory 
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-600 hove,
     r:to-indigo-700 transition-all duration-200>'
                 <Play className='w-5 h-5 mr-2'  />                Watch Demo
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>'
                 <Settings className='w-5 h-5 mr-2'  />                Start Free Trial</motion.button>            </div>
@@ -367,7 +367,7 @@ import {}
 
             {keyMetrics.map((item, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -381,7 +381,7 @@ import {}
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -398,7 +398,7 @@ import {}
 
             {benefits.map((benefit, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -410,7 +410,7 @@ import {}
 
             {useCases.map((useCase, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -422,7 +422,7 @@ import {}
 
             {regulations.map((regulation, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}, {regulation}
 
                 </span>
@@ -434,13 +434,13 @@ import {}
 
             {pricing.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                     </span>
-:pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx)}'';
-                </div>''';
-                <ul: className='space-y-3 mb-6'>';
+:pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx)}'' 
+                </div>''' 
+                <ul: className='space-y-3 mb-6'>' 
                   {plan.features.map((feature, featureIndex) => (
 
 
@@ -453,7 +453,7 @@ import {}
 
             {integrations.map((integration, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}, {integration}
 
                 </span>
@@ -463,33 +463,33 @@ import {}
         </div>
       </section>
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-indigo-700: transition-all duration-200''>''';
-                <ArrowRight: className='w-5 h-5 mr-2'  />                Start Free Trial';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-indigo-700: transition-all duration-200''>''' 
+                <ArrowRight: className='w-5 h-5 mr-2'  />                Start Free Trial' 
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''';
-                <MessageSquare: className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''' 
+                <MessageSquare: className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>' 
           </motion.div>
         </div>
       </section>
 
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-600 hove,
     r:to-indigo-700 transition-all duration-200>'
                 <ArrowRight className='w-5 h-5 mr-2'  />                Start Free Trial
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>'
                 <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>
@@ -500,11 +500,11 @@ import {}
 '{/* Contact Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-zion-slate-dark/50>''
         <div className='max-w-4xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx 
             transition={{ duration: 0.8 }}>'''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
               Get in Touch''

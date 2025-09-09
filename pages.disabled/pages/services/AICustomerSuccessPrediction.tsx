@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
 
   Brain,
   TrendingUp,
@@ -29,16 +29,16 @@
   MessageCircle,
   Calendar,
   AlertTriangle,
-  Star'} from 'lucide-react';';
+  Star'} from 'lucide-react';' 
 const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
     }, {
 
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
 
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+      <SEO 
+= 
 
                 Schedule Demo
 
@@ -58,11 +58,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
           </div>'
           </div>'
           <div className='grid md:grid-cols-3 gap-8'>
-            <motion.div;
+            <motion.div 
               initial={{ opacit,
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
 
               transition={{ duration: 0.6 }}
               className='text-center p-6''
@@ -74,10 +74,10 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
               <p className='text-slate-300'>Identify at-risk customers before they leave and take proactive action</p>
             </motion.div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-            <motion.div;
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }};
+              transition={{ duration: 0.6, delay: 0.2 }} 
               className='text-center p-6>'
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>
             <motion.div
@@ -92,10 +92,10 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
               <p className='text-slate-300'>Uncover expansion opportunities and increase customer lifetime value</p>
             </motion.div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-            <motion.div;
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }};
+              transition={{ duration: 0.6, delay: 0.4 }} 
               className='text-center p-6>'
               <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>
             <motion.div
@@ -119,7 +119,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
         <div className='container mx-auto px-4>''
           <div className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
 
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Everything you need to predict, prevent, and optimize customer success outcomes
@@ -127,23 +127,23 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-=;
+<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 20 
 
                   <feature.icon className='w-8 h-8 text-purple-400' />'
                 </div>'''
-                <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>'';
+                <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-8 h-8 text-purple-400' />
                 </div>'''
@@ -151,7 +151,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -165,47 +165,47 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-=;
+<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+= 
 
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 0;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index * 0.1}};
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  delay: index * 0.1}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove,
-    r:scale-105';
-';
+    r:scale-105' 
+' 
 
                   <h3 className='text-2xl font-semibold text-white'>{capability.title}</h3>'
                 </div>'''
                 <p className='text-gray-300 mb-6'>{capability.description}</p>'''
                 <div className='space-y-2>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{capability.benefits.map((benefit, benefitIndex) => (''
-                    <div key={benefitIndex} className='flex items-center text-sm text-gray-400>;
-  delay: index * 0.1 '}};
+                    <div key={benefitIndex} className='flex items-center text-sm text-gray-400> 
+  delay: index * 0.1 '}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hove,
-    r:scale-105'';
+    r:scale-105'' 
 '''
                 <div className='flex items-center space-x-4 mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>''
@@ -223,19 +223,19 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
                 </ul>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
                 <a ''
-                  href='/contact';
+                  href='/contact' 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${`
-                    plan.popular';
+                    plan.popular' 
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: from-green-600 hove,
-    r:to-emerald-600'';
+    r:to-emerald-600'' 
                       : 'bg-slate-700 text-white hove,
-    r:bg-slate-600'`;
+    r:bg-slate-600'` 
                 <a;`
-                  href='/contact'';
+                  href='/contact'' 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
                     plan.popular;`
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: from-green-600 hove,
-    r:to-emerald-600';
+    r:to-emerald-600' 
                       : 'bg-slate-700 text-white hove,
     r:bg-slate-600'}`}
 
@@ -256,47 +256,47 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-=;
+<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+= 
 
           <div className='grid md: grid-cols-3 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 0;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index * 0.1}};
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  delay: index * 0.1}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove,
-    r:scale-105';
-';
+    r:scale-105' 
+' 
 
                   <h3 className='text-2xl font-semibold text-white'>{useCase.industry}</h3>'
                 </div>'''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>'''
                 <div className='space-y-2>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{useCase.metrics.map((metric, metricIndex) => (''
-                    <div key={metricIndex} className='flex items-center text-sm text-gray-400>;
-  delay: index * 0.1 '}};
+                    <div key={metricIndex} className='flex items-center text-sm text-gray-400> 
+  delay: index * 0.1 '}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hove,
-    r:scale-105'';
+    r:scale-105'' 
 '''
                 <div className='flex items-center space-x-4 mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>''
@@ -328,24 +328,24 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-=;
+<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-2 md: grid-cols-4 l,
     g:grid-cols-6 gap-6'>{integrations.map(integratio,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 20 
 
                   <benefit.icon className='w-8 h-8 text-purple-400' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>'' 
 
                   <benefit.icon className='w-8 h-8 text-purple-400' />
                 </div>'''
@@ -353,7 +353,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
                 <p className='text-gray-300'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -367,7 +367,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -376,12 +376,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
             {pricing.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 20 
 
                     </span>
 
@@ -395,17 +395,17 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
                     </li>
                   ))}
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'''`;`
                     : 'border border-purple-400 text-purple-400 hove,
     r:bg-purple-400 hove,
-    r:text-white'``;
+    r:text-white'`` 
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                   plan.popular''
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'';
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'' 
                     : 'border border-purple-400 text-purple-400 hove,
     r:bg-purple-400 hove,
     r:text-white'`}`}>{plan.cta}
@@ -427,20 +427,20 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {'
-';
+' 
                 ste,
-    p: '01',;
-                title: 'Assessment',;
+    p: '01', 
+                title: 'Assessment', 
                 description: 'Evaluate your current customer success processes and data infrastructure'}, {'
-';
-                step: '02',;
-                title: 'Integration',;
+' 
+                step: '02', 
+                title: 'Integration', 
                 description: 'Connect your existing systems and configure data pipelines'}, {'
-';
-                step: '03',;
-                title: 'Training',;
+' 
+                step: '03', 
+                title: 'Training', 
                 description: 'Train your team on the platform and best practices'}, {'
-';
+' 
 
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[]{}
@@ -449,19 +449,19 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
                 description: 'Evaluate your current customer success processes and data infrastructure'},
 
               {}
-                step: '02',,';
-                title: 'Integration',,';
-                description: 'Connect: your existing systems and configure data pipelines'},';
+                step: '02',,' 
+                title: 'Integration',,' 
+                description: 'Connect: your existing systems and configure data pipelines'},' 
               {}
-                step: '03',,';
-                title: 'Training',,';
-                description: 'Train: your team on the platform and best practices'},';
+                step: '03',,' 
+                title: 'Training',,' 
+                description: 'Train: your team on the platform and best practices'},' 
               {}
 
                 initial = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx 
+  y: 20 
 
                 <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>
                   {phase.step}
@@ -470,20 +470,20 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
                 <p className='text-gray-300'>{phase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
 
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: Start Free Trial;
-                <ArrowRight: className='ml-2 w-5 h-5' />';
+<:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: Start Free Trial 
+                <ArrowRight: className='ml-2 w-5 h-5' />' 
               </a>
-              <a;
-=;
+              <a 
+= 
 
-              <a '';
-                href='tel:+13024640950'';
+              <a '' 
+                href='tel:+13024640950'' 
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600>'
                 <Phone className='w-5 h-5 mr-2'  />
                 Call Us
@@ -497,15 +497,15 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: =>  {}
 
             ''
             <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400>'
-              <div className='flex items-center>;
+              <div className='flex items-center> 
             '''
             <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400>''
               <div className='flex items-center>''
                 <CheckCircle className='w-5 h-5 text-green-500 mr-2'  />
 >                <span>14-day free trial</span>
 
-              <a '';
-                href='tel:+13024640950'';
+              <a '' 
+                href='tel:+13024640950'' 
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove,
     r:bg-slate-700 transition-all duration-200 border border-slate-600>'
                 <Phone className='w-5 h-5 mr-2'  />

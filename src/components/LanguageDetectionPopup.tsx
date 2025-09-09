@@ -1,57 +1,78 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-export const LanguageDetectionPopup: React.FC = () => {
-  return null;
-};
+const LanguageDetectionPopup: React.FC = () => {
+  const [showPopup, setShowPopup] = useState(false);
 
-export default LanguageDetectionPopup;
-
-    // Mark as visited
-    safeStorage.setItem('zion_has_visited', 'true');
+  useEffect(() => {
+    // Check if user has already made a language choice
+    const hasChosenLanguage = localStorage.getItem('languageChosen');
     
-    // Get browser language
-    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
-    
-    // Check if browser language is supported and different from current language
-    const isSupported = supportedLanguages.some(lang => lang.code === browserLang);
-    if (isSupported && browserLang !== currentLanguage) {
-      setDetectedLanguage(browserLang);
-      setOpen(true);
+    if (!hasChosenLanguage) {
+      setShowPopup(true);
     }
-  }, [currentLanguage, supportedLanguages]); // Added dependencies
+  }, []);
 
-  if (!detectedLanguage) return null;
-
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage;
-
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
+  const handleLanguageChoice = (language: string) => {
+    localStorage.setItem('languageChosen', 'true');
+    localStorage.setItem('preferredLanguage', language);
+    setShowPopup(false);
   };
 
+  if (!showPopup) return null;
+
   return (
-    <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
-        <AlertDialogHeader>
-          <AlertDialogTitle className="text-white">
-            {t('language.switch_to_detected', { language: languageName })}
-          </AlertDialogTitle>
-          <AlertDialogDescription className="text-zion-slate-light">
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-            {t('general.no')}
-          </AlertDialogCancel>
-          <AlertDialogAction 
-            onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 9999
+    }}>
+      <div style={{
+        backgroundColor: 'white',
+        padding: '20px',
+        borderRadius: '8px',
+        textAlign: 'center',
+        maxWidth: '400px'
+      }}>
+        <h3>Choose Your Language</h3>
+        <p>Please select your preferred language:</p>
+        <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '20px' }}>
+          <button
+            onClick={() => handleLanguageChoice('en')}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
           >
-            {t('general.yes')}
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
+            English
+          </button>
+          <button
+            onClick={() => handleLanguageChoice('es')}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#28a745',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Español
+          </button>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export { LanguageDetectionPopup };

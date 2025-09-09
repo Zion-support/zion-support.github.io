@@ -1,5 +1,71 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube, Github } from 'lucide-react';
+import { ;
+  Mail, ;
+  Phone, ;
+  MapPin, ;
+  Linkedin, ;
+  Twitter, ;
+  Github, ;
+  Facebook,;
+  ArrowUp} from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })}
+  const currentYear = new Date().getFullYear();
+
+  return (;
+    <footer className="bg-black border-t border-white/10">;
+      <div className="container mx-auto px-4">;
+        {/* Main Footer Content */}
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+          {/* Company Info */}
+          <div className="lg:col-span-1">;
+            <Link href="/" className="flex items-center space-x-2 mb-6">;
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">;
+                <span className="text-white font-bold text-lg">Z</span>;
+              </div>;
+              <span className="text-white font-bold text-2xl">Zion Tech</span>;
+            </Link>;
+            <p className="text-gray-400 mb-6 leading-relaxed">;
+              Leading technology solutions provider helping businesses transform their digital presence ;
+              with cutting-edge AI, cloud architecture, and innovative development services.;
+            </p>;
+            <div className="flex space-x-4">;
+              <a;
+                href="https://linkedin.com/company/ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300";
+                aria-label="LinkedIn">;
+                <Linkedin className="w-5 h-5" />;
+              </a>;
+              <a;
+                href="https://twitter.com/ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-400 transition-all duration-300";
+                aria-label="Twitter">;
+                <Twitter className="w-5 h-5" />;
+              </a>;
+              <a;
+                href="https://github.com/ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-600 transition-all duration-300";
+                aria-label="GitHub">;
+                <Github className="w-5 h-5" />;
+              </a>;
+              <a;
+                href="https://facebook.com/ziontechgroup";
+                target="_blank";
+                rel="noopener noreferrer";
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300";
+                aria-label="Facebook">;
+                <Facebook className="w-5 h-5" />;
+              </a>;
+            </div>;
+          </div>;
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -184,94 +250,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {supportLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="bg-gray-800 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="md:flex md:items-center md:justify-between">
-            <div className="md:w-1/2 mb-4 md:mb-0">
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400">Get the latest insights on AI, cloud computing, and emerging technologies.</p>
-            </div>
-            <div className="md:w-1/2">
-              <form className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Footer */}
-      <div className="bg-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="md:flex md:items-center md:justify-between">
-            <div className="flex items-center mb-4 md:mb-0">
-              <p className="text-gray-400">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-            </div>
-            
-            {/* Legal Links */}
-            <div className="flex flex-wrap items-center space-x-6">
-              {legalLinks.map((link, index) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+      {/* Scroll to Top Button */}
+      <button;
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50";
+        aria-label="Scroll to top">;
+        <ArrowUp className="w-6 h-6" />;
+      </button>;
+    </footer>;
+  )}
+export default Footer;

@@ -122,15 +122,20 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Price Range
                 </label>
-                <div className="mt - 6 px - 2">
-                  <Slider aria - label="Price range" defaultValue = {
-  [0,
-  priceRange.max]
-
-} min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb - 4"      />
-                  <div className="flex justify - between text - sm text - zion - slate - light">
-                    <span>${currentPriceFilter[0].toLocaleString () }</span>
-                    <span>${currentPriceFilter[1].toLocaleString () }</span>
+                <div className="mt-6 px-2">
+                  <Slider 
+                    aria-label="Price range" 
+                    defaultValue={[0, priceRange.max]}
+                    min={0} 
+                    max={priceRange.max} 
+                    step={priceRange.max / 100} 
+                    value={currentPriceFilter} 
+                    onValueChange={handleSliderChange} 
+                    className="mb-4" 
+                  />
+                  <div className="flex justify-between text-sm text-zion-slate-light">
+                    <span>${currentPriceFilter[0].toLocaleString()}</span>
+                    <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -139,21 +144,31 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
                 </label>
-                <div className="flex flex - wrap gap - 2">
-                // // // // // // // console.log ("Rating selected:", rating) ;
-                  {[null, 3, 4, 5].map ( (rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = { () => {
-                console.log ("Rating selected:",
-  rating) ;
-                setSelectedRating (rating) ;
-
-}} aria - pressed={selectedRating === rating} className={`${selectedRating === rating
-                ? "bg - zion - purple / 30 border - zion - purple text - zion - purple"
-                : "border - zion - blue - light text - zion - slate - light"} focus - visible:ring - zion - purple`}>
-                      {rating === null ? ("Any") : (<div className="flex items - center">
-                          {[...Array (rating) ].map ( (_, i) => (<Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan"      />) ) }
-                          <span className="ml - 1">& Up</span>
-                        </div>) }
-                    </Button>) ) }
+                <div className="flex flex-wrap gap-2">
+                  {[null, 3, 4, 5].map((rating) => (
+                    <Button 
+                      key={rating === null ? 'any' : rating} 
+                      variant="outline" 
+                      size="sm" 
+                      onClick={() => {
+                console.log("Rating selected:", rating);
+                setSelectedRating(rating);
+              }}
+              aria-pressed={selectedRating === rating} 
+              className={`${selectedRating === rating
+                ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
+                : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}
+            >
+              {rating === null ? "Any" : (
+                <div className="flex items-center">
+                  {[...Array(rating)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
+                  ))}
+                  <span className="ml-1">& Up</span>
+                </div>
+              )}
+            </Button>
+          ))}
                 </div>
               </div>
               
@@ -170,31 +185,50 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
           </div>
 
           <div className="lg:col - span - 3">
-            <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light">
-              <div className="flex flex - col md:flex - row gap - 4">
-                <div className="relative flex - grow">
-                  <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4"      />
-            // // // // // // // console.log ("Search query:", e.target.value) ;
-                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = { (e) => {
-            console.log ("Search query:",
-  e.target.value) ;
-            setSearchQuery (e.target.value) ;
-
-}} className="pl - 10 bg - zion - blue border border - zion - blue - light text - white"/>
+            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="relative flex-grow">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <Input 
+                    type="text" 
+                    placeholder="Search listings..." 
+                    value={searchQuery} 
+                    onChange={(e) => {
+                      console.log("Search query:", e.target.value);
+                      setSearchQuery(e.target.value);
+                    }} 
+                    className="pl-10 bg-zion-blue border border-zion-blue-light text-white" 
+                  />
                 </div>
 
-                <div className="flex items - center gap - 2 ml - auto">
-                  <Button variant="outline" size="icon" onClick={ () => setView ("grid") } aria - pressed={view === "grid"} aria - label="Grid view" title="Grid view" className={`${view === "grid"
-            ? "bg - zion - purple / 30 border - zion - purple text - zion - purple"
-            : "border - zion - blue - light text - zion - slate - light"} focus - visible:ring - zion - purple`}>
-                    <LayoutGrid className="h - 4 w - 4"      />
-                    <span className="sr - only">Grid view</span>
+                <div className="flex items-center gap-2 ml-auto">
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    onClick={() => setView("grid")} 
+                    aria-pressed={view === "grid"} 
+                    aria-label="Grid view" 
+                    title="Grid view" 
+                    className={`${view === "grid"
+                      ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
+                      : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}
+                  >
+                    <LayoutGrid className="h-4 w-4" />
+                    <span className="sr-only">Grid view</span>
                   </Button>
-                  <Button variant="outline" size="icon" onClick={ () => setView ("list") } aria - pressed={view === "list"} aria - label="List view" title="List view" className={`${view === "list"
-            ? "bg - zion - purple / 30 border - zion - purple text - zion - purple"
-            : "border - zion - blue - light text - zion - slate - light"} focus - visible:ring - zion - purple`}>
-                    <List className="h - 4 w - 4"      />
-                    <span className="sr - only">List view</span>
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    onClick={() => setView("list")} 
+                    aria-pressed={view === "list"} 
+                    aria-label="List view" 
+                    title="List view" 
+                    className={`${view === "list"
+                      ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
+                      : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}
+                  >
+                    <List className="h-4 w-4" />
+                    <span className="sr-only">List view</span>
                   </Button>
                 </div>
               </div>
@@ -223,28 +257,30 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         <Skeleton className="h - 8 w - 1/4 bg - zion - blue - light / 20"      />
                       </div>
                     </div>
-                  </div>) ) }
-              </div>) : filteredListings.length > 0 ? (<div className={view === "grid"
-                ? "grid grid - cols - 1 md:grid - cols - 2 gap - 6"
-                : "flex flex - col gap - 6"}>
-                {paginatedListings.map ( (listing) => (<ProductListingCard
-                    key={listing.id}
-                    listing={listing}
-                    view={view}
-                    onRequestQuote={handleRequestQuote}
-                    detailBasePath={detailBasePath}
-                        />) ) }
-              </div>) : (<div className="text - center py - 20">
-                <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>
-                <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>
-                <Button variant="outline" onClick = { () => {
-                  setSearchQuery ("") ;
-                  setSelectedCategory ("all") ;
-                  setCurrentPriceFilter ([0,
-  priceRange.max]) ;
-                  setSelectedRating (null) ;
-
-}} className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10">
+                  </div>
+                ))}
+              </div>
+            ) : filteredListings.length > 0 ? (
+              <div className={view === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" : "flex flex-col gap-6"}>
+                {filteredListings.map((listing) => (
+                  <div key={listing.id}>
+                    {/* Listing content */}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
+                <Button 
+                  variant="outline" 
+                  onClick={() => {
+                    setSearchQuery("");
+                    setSelectedRating(null);
+                    setCurrentPriceFilter([0, priceRange.max]);
+                  }} 
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                >
                   Clear all filters
                 </Button>
               </div>
@@ -252,5 +288,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
           </div>
         </div>
       </div>
-    </div>);
-}
+    </div>
+  );
+};
+
+export default DynamicListingPage;

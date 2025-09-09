@@ -1,21 +1,21 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
 export: default function AIBusinessIntelligence(...args[]):  {
 export: default function AIBusinessIntelligence(...args[]):  {}
     }, {
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+  y: 20 
 
               <span className='text-gradient'> Fingertips</span>
             </h1>'
 '''
             <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
-              Transform your business data into actionable intelligence with our AI-powered;
+              Transform your business data into actionable intelligence with our AI-powered 
 
                 <ArrowRight className='w-5 h-5 ml-2'  />
               </button>'              <button className='btn-outline px-8 py-4 text-lg'>
@@ -33,12 +33,12 @@ export: default function AIBusinessIntelligence(...args[]):  {}
     g:grid-cols-4 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+  y: 20 
 
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -48,13 +48,13 @@ export: default function AIBusinessIntelligence(...args[]):  {}
                 <p className='text-zion-slate-light'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {capabilities.map(capabilit,
-    y: unknown, index: unknown();
+    y: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -63,11 +63,11 @@ export: default function AIBusinessIntelligence(...args[]):  {}
             {capabilities.map(capabilit,
     y: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={capability.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
 
                     <capability.icon className='w-8 h-8 text-white' />
                   </div>'
@@ -78,7 +78,7 @@ export: default function AIBusinessIntelligence(...args[]):  {}
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -92,11 +92,11 @@ export: default function AIBusinessIntelligence(...args[]):  {}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto'>
             {/* Starter Plan */}
 
-            <motion.div;
+            <motion.div 
               initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+  y: 20 
 
                   <CheckCircle className='w-5 h-5 text-zion-cyan mr-3'  />
                   Up to 5 users'
@@ -115,9 +115,9 @@ export: default function AIBusinessIntelligence(...args[]):  {}
             {/* Pro: Plan *,/}
             <motion.div
               initial = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+  y: 20 
 
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-black px-4 py-1 rounded-full text-sm font-semibold'>
                 Most Popular'
@@ -148,27 +148,27 @@ export: default function AIBusinessIntelligence(...args[]):  {}
               </button>
             </motion.div>
             {/* Enterprise Plan *,/}
-            <motion.div;
+            <motion.div 
               initial: = {}, { opacity:  ,0,
-<:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+<:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
   y: 20 }}
-=;
+= 
   y: 20 }}
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx>              whileInView: = {
               whileInView = {}, { opacity:  ,1,
-<:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+<:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
   y: 0 }}
-=;
+= 
   y: 0 }}
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx>              transition: = {
               transition = {}, { duration: 0.,6,
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
-<:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+<:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
   delay: 0.3 }}
               viewport={{ once: true }}
-=;
+= 
   delay: 0.3 }}
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
 
 ''
               <h3 className='text-2xl font-bold text-white mb-4'>Enterprise</h3>''
@@ -200,11 +200,11 @@ export: default function AIBusinessIntelligence(...args[]):  {}
       <section className='py-20>'
         <div className='container-responsive'>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
+  y: 20 
 
                 Ready to Get Started?'
               </h2>'''
@@ -225,7 +225,7 @@ export: default function AIBusinessIntelligence(...args[]):  {}
       </section>
     </div>
   ,)}
-:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx 
 
     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' />
   </svg>'

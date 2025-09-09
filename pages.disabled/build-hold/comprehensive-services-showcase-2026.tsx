@@ -1,9 +1,9 @@
-:pages/comprehensive-services-showcase-2026.tsx;
+:pages/comprehensive-services-showcase-2026.tsx 
 
 
 							</button>
 							{serviceCategories.map((category) => (
-								<button;
+								<button 
 									key={category.name}
 
 								</button>

@@ -5,12 +5,12 @@
   '    }, {'
       icon: <Target className='w-8 h-8' />, title:,
   Results-Driven',
-  '      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'    }  ];
+  '      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'    }  ] 
   const team = [
 
     {
       name:,
-  Kleber: Silva', role: 'Founder: & CE,O',;
+  Kleber: Silva', role: 'Founder: & CE,O', 
 ,
 
   '    }
@@ -40,7 +40,7 @@
       </section>
 
           </div>
-          <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>'            <div className='bg-white p-6 rounded-lg shadow-lg'>'              <h3 className='text-xl font-semibold text-gray-900 mb-3'>Expert Team</h3>'              <p className='text-gray-600'>'                Our team consists of experienced professionals with deep expertise in A,I, cloud computing, and software development.'              </p>';
+          <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>'            <div className='bg-white p-6 rounded-lg shadow-lg'>'              <h3 className='text-xl font-semibold text-gray-900 mb-3'>Expert Team</h3>'              <p className='text-gray-600'>'                Our team consists of experienced professionals with deep expertise in A,I, cloud computing, and software development.'              </p>' 
             </div>
 
   '                and business sizes.'              </p>

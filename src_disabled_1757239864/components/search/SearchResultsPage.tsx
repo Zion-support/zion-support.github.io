@@ -1,64 +1,64 @@
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props) 
+    this.state = { hasError: false } 
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true } 
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo) 
   }
   
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+      return <div>Something went wrong.</div> 
     }
     
-    return this.props.children;
+    return this.props.children 
   }
 }
-import React, { useState, useEffect, useMemo } from 'react';
-import { useRouter } from 'next/router';
-import {;
-  Search,;
-  Filter,;
-  X,;
-  SortAsc,;
-  SortDesc,;
-  GridIcon,;
-  List,;
-  Loader2,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Slider } from '@/components/ui/slider';
-import { Separator } from '@/components/ui/separator';
-import {;
-  Sheet,;
-  SheetContent,;
-  SheetHeader,;
-  SheetTitle,;
-  SheetTrigger,;
-} from '@/components/ui/sheet';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-interface SearchResult {;
-import React, { useState, useEffect, useMemo } from 'react';
-import { use_router } from 'next / router';
+import React, { useState, useEffect, useMemo } from 'react' 
+import { useRouter } from 'next/router' 
+import { 
+  Search, 
+  Filter, 
+  X, 
+  SortAsc, 
+  SortDesc, 
+  GridIcon, 
+  List, 
+  Loader2, 
+} from 'lucide-react' 
+import { Button } from '@/components/ui/button' 
+import { Input } from '@/components/ui/input' 
+import { Badge } from '@/components/ui/badge' 
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue, 
+} from '@/components/ui/select' 
+import { Checkbox } from '@/components/ui/checkbox' 
+import { Slider } from '@/components/ui/slider' 
+import { Separator } from '@/components/ui/separator' 
+import { 
+  Sheet, 
+  SheetContent, 
+  SheetHeader, 
+  SheetTitle, 
+  SheetTrigger, 
+} from '@/components/ui/sheet' 
+import { EnhancedSearchInput } from './EnhancedSearchInput' 
+import { generateSearchSuggestions } from '@/data/marketplaceData' 
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger' 
+interface SearchResult { 
+import React, { useState, useEffect, useMemo } from 'react' 
+import { use_router } from 'next / router' 
 import {
   Search,
   Filter,
@@ -68,36 +68,36 @@ import {
   GridIcon,
   List,
   Loader2,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Badge } from '@/components / ui / badge';
+} from 'lucide-react' 
+import { Button } from '@/components / ui / button' 
+import { Input } from '@/components / ui / input' 
+import { Badge } from '@/components / ui / badge' 
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components / ui / select';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Slider } from '@/components / ui / slider';
-import { Separator } from '@/components / ui / separator';
+} from '@/components / ui / select' 
+import { Checkbox } from '@/components / ui / checkbox' 
+import { Slider } from '@/components / ui / slider' 
+import { Separator } from '@/components / ui / separator' 
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components / ui / sheet';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data / marketplace_data';
-import { logErrorToProduction, log_info } from '@/utils / production_logger';
+} from '@/components / ui / sheet' 
+import { EnhancedSearchInput } from './EnhancedSearchInput' 
+import { generateSearchSuggestions } from '@/data / marketplace_data' 
+import { logErrorToProduction, log_info } from '@/utils / production_logger' 
 
-  category?: string;
-  url?: string;
-  image?: string;
-  price?: number;
-  currency?: string;
-  rating?: number;
-  tags?: string[];
+  category?: string 
+  url?: string 
+  image?: string 
+  price?: number 
+  currency?: string 
+  rating?: number 
+  tags?: string[] 
 
 
     <span className={className}>
@@ -125,19 +125,19 @@ import { logErrorToProduction, log_info } from '@/utils / production_logger';
             {result.category && (
               <Badge variant="outline" className="text-xs">
 
-  },;
-  const cardClass = viewMode === 'grid';
-    ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer";
-    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",;
-  return (;
-    <div onClick={handleClick} className={cardClass}>;
-      {result.image && (;
-        <div className={viewMode === 'grid' ? "mb-3" : "flex-shrink-0"}>;
-          <img;
-            src={result.image} ;
+  }, 
+  const cardClass = viewMode === 'grid' 
+    ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer" 
+    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4", 
+  return ( 
+    <div onClick={handleClick} className={cardClass}> 
+      {result.image && ( 
+        <div className={viewMode === 'grid' ? "mb-3" : "flex-shrink-0"}> 
+          <img 
+            src={result.image}  
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
-          />;
+          /> 
 
               <Badge key={index} variant="outline" className="text-xs">
                 <HighlightText text={tag} searchTerm={searchTerm} />
@@ -153,21 +153,21 @@ import { logErrorToProduction, log_info } from '@/utils / production_logger';
           )}
 
 
-        </div>;
-      </div>;
-    </div>;
-  );
-},;
-// Filter Sidebar Component;
-const FilterSidebar: React.FC<{;
-  filters: SearchFilters,;
-  onFiltersChange: (filters: SearchFilters) => void,;
-  availableCategories: string[];
-}> = ({ filters, onFiltersChange, availableCategories }) => {;
-  const typeOptions = [;
-    { id: 'product', label: 'Products' },;
-    { id: 'talent', label: 'Talent' },;
-    { id: 'service', label: 'Services' },;
+        </div> 
+      </div> 
+    </div> 
+  ) 
+}, 
+// Filter Sidebar Component 
+const FilterSidebar: React.FC<{ 
+  filters: SearchFilters, 
+  onFiltersChange: (filters: SearchFilters) => void, 
+  availableCategories: string[] 
+}> = ({ filters, onFiltersChange, availableCategories }) => { 
+  const typeOptions = [ 
+    { id: 'product', label: 'Products' }, 
+    { id: 'talent', label: 'Talent' }, 
+    { id: 'service', label: 'Services' }, 
     { id: 'blog', label: 'Blog Posts' }
   ],
 
@@ -288,21 +288,21 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 variant="outline"
                 size="sm"
 
-            className="mb-2";
-          />;
-          <div className="flex justify-between text-sm text-muted-foreground">;
-            <span>${filters.minPrice}</span>;
-            <span>${filters.maxPrice}</span>;
-          </div>;
-        </div>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className="font-semibold mb-3">Minimum Rating</h3>;
-        <Select value={filters.minRating.toString()} onValueChange={(value) =>;
-          onFiltersChange({ ...filters, minRating: parseFloat(value) });
-        }>;
-          <SelectTrigger>;
+            className="mb-2" 
+          /> 
+          <div className="flex justify-between text-sm text-muted-foreground"> 
+            <span>${filters.minPrice}</span> 
+            <span>${filters.maxPrice}</span> 
+          </div> 
+        </div> 
+      </div> 
+      <Separator /> 
+      <div> 
+        <h3 className="font-semibold mb-3">Minimum Rating</h3> 
+        <Select value={filters.minRating.toString()} onValueChange={(value) => 
+          onFiltersChange({ ...filters, minRating: parseFloat(value) }) 
+        }> 
+          <SelectTrigger> 
 
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
@@ -427,59 +427,59 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 </SelectContent>
               </Select>
 
-              >;
-                <SelectTrigger className='w-40'>                  <SelectValue />;
-  // Active filters count;
-  const activeFiltersCount =;
-    filters.types.length +;
-    (filters.category ? 1 : 0) +;
-    (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) +;
-    (filters.min_rating > 0 ? 1 : 0);
+              > 
+                <SelectTrigger className='w-40'>                  <SelectValue /> 
+  // Active filters count 
+  const activeFiltersCount = 
+    filters.types.length + 
+    (filters.category ? 1 : 0) + 
+    (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + 
+    (filters.min_rating > 0 ? 1 : 0) 
   return (
-    <div className='container mx - auto px - 4 py - 6'>;
+    <div className='container mx - auto px - 4 py - 6'> 
       {/* Search Header */}
-      <div className='mb - 6'>;
-        <div className='flex gap - 4 mb - 4'>;
-          <div className='flex - 1'>;
-            <EnhancedSearchInput;
+      <div className='mb - 6'> 
+        <div className='flex gap - 4 mb - 4'> 
+          <div className='flex - 1'> 
+            <EnhancedSearchInput 
               value={search_term}
               on_change={setSearchTerm}
               onSelectSuggestion={suggestion => handle_search (suggestion.text)}
               search_suggestions={suggestions}
-              placeholder='Search products, talent, services, and more...'            />;
-          </div>;
-          <Button;
+              placeholder='Search products, talent, services, and more...'            /> 
+          </div> 
+          <Button 
             on_click={() => handle_search (search_term)}
             disabled={!search_term.trim ()}
-          >;
-            <Search className='h - 4 w - 4' />;
-          </Button>;
-        </div>;
+          > 
+            <Search className='h - 4 w - 4' /> 
+          </Button> 
+        </div> 
         {search_term && (
-          <div className='flex items - center justify - between'>;
-            <div>;
-              <h1 className='text - 2xl font - bold'>Search Results</h1>;
-              <p className='text - muted - foreground'>;
-                {loading;
-                  ? 'Searching...';
+          <div className='flex items - center justify - between'> 
+            <div> 
+              <h1 className='text - 2xl font - bold'>Search Results</h1> 
+              <p className='text - muted - foreground'> 
+                {loading 
+                  ? 'Searching...' 
                   : `${total_count} results for "${search_term}"`}
-              </p>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
+              </p> 
+            </div> 
+            <div className='flex items - center gap - 2'> 
               {/* Sort Options */}
-              <Select;
+              <Select 
                 value={filters.sort}
                 onValueChange={value => set_filters ({ ...filters, sort: value })}
-              >;
-                <SelectTrigger className='w - 40'>                  <SelectValue />;
-                </SelectTrigger>;
-                <SelectContent>;
-                  <SelectItem value='relevance'>Relevance</SelectItem>;
-                  <SelectItem value='price_asc'>Price: Low to High</SelectItem>;
-                  <SelectItem value='price_desc'>Price: High to Low</SelectItem>;
-                  <SelectItem value='rating'>Highest Rated</SelectItem>;
-                </SelectContent>;
-              </Select>;
+              > 
+                <SelectTrigger className='w - 40'>                  <SelectValue /> 
+                </SelectTrigger> 
+                <SelectContent> 
+                  <SelectItem value='relevance'>Relevance</SelectItem> 
+                  <SelectItem value='price_asc'>Price: Low to High</SelectItem> 
+                  <SelectItem value='price_desc'>Price: High to Low</SelectItem> 
+                  <SelectItem value='rating'>Highest Rated</SelectItem> 
+                </SelectContent> 
+              </Select> 
 
 
                   size="sm"
@@ -524,12 +524,12 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                       sort: 'relevance'
                     })}
 
-                  >;
-                    Clear All;
-                  </Button>;
+                  > 
+                    Clear All 
+                  </Button> 
                 )}
-              </div>;
-              <FilterSidebar;
+              </div> 
+              <FilterSidebar 
                 filters={filters}
                 onFiltersChange={handleFiltersChange}
                 availableCategories={availableCategories}
