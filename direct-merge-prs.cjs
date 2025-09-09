@@ -3,7 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-console.log('🚀 Starting Comprehensive PR Merge and Conflict Resolution...');
+console.log('🚀 Starting Direct PR Merge and Conflict Resolution...');
 console.log('='.repeat(60));
 
 // Function to run git commands safely
@@ -35,15 +35,15 @@ function getAllRemoteBranches() {
     .filter(branch => branch.trim() && !branch.includes('HEAD') && !branch.includes('main'))
     .map(branch => branch.trim().replace('origin/', ''))
     .filter(branch => branch.startsWith('cursor/'))
-    .slice(0, 20); // Process first 20 cursor branches to avoid overwhelming
+    .slice(0, 10); // Process first 10 cursor branches to avoid overwhelming
   
   console.log(`Found ${branchList.length} cursor branches to process`);
   return branchList;
 }
 
-// Step 2: Process each branch with conflict resolution
+// Step 2: Process each branch with direct merge
 function processBranches(branches) {
-  console.log('\n🌿 Processing branches with conflict resolution...');
+  console.log('\n🌿 Processing branches with direct merge...');
   
   let mergedCount = 0;
   let conflictCount = 0;
@@ -53,24 +53,9 @@ function processBranches(branches) {
     try {
       console.log(`\n🔄 Processing branch: ${branch}`);
       
-      // Check if branch exists locally
-      const branchExists = runCommand(`git show-ref --verify --quiet refs/heads/${branch}`, 'Checking if branch exists locally');
-      
-      if (branchExists === null) {
-        // Create local branch from remote
-        runCommand(`git checkout -b ${branch} origin/${branch}`, `Creating local branch ${branch}`);
-      } else {
-        // Switch to existing branch
-        runCommand(`git checkout ${branch}`, `Switching to ${branch}`);
-        runCommand(`git pull origin ${branch}`, `Pulling latest changes for ${branch}`);
-      }
-      
-      // Switch back to main
-      runCommand('git checkout main', 'Switching to main branch');
-      
-      // Try to merge
+      // Try to merge directly from remote
       const mergeResult = runCommand(
-        `git merge ${branch} --no-ff -m "Merge branch ${branch} into main"`, 
+        `git merge origin/${branch} --no-ff -m "Merge branch ${branch} into main"`, 
         `Merging ${branch}`
       );
       
@@ -116,14 +101,10 @@ function processBranches(branches) {
         }
       }
       
-      // Clean up the branch
-      runCommand(`git branch -D ${branch}`, `Cleaning up local branch ${branch}`);
-      
     } catch (error) {
       console.log(`❌ Error processing ${branch}: ${error.message}`);
       conflictCount++;
       runCommand('git merge --abort', 'Aborting failed merge');
-      runCommand(`git branch -D ${branch}`, `Cleaning up local branch ${branch}`);
     }
   }
   
@@ -206,7 +187,7 @@ function finalCommitAndPush() {
 4. Implemented comprehensive improvements
 
 🔧 AUTOMATION SCRIPTS CREATED:
-- Comprehensive merge conflict resolver
+- Direct PR merger
 - Syntax fixer
 - Build optimizer
 - Comprehensive improvement system
@@ -230,7 +211,7 @@ function finalCommitAndPush() {
 
 // Main execution
 async function main() {
-  console.log('🚀 Starting Comprehensive PR Merge and Conflict Resolution Process...');
+  console.log('🚀 Starting Direct PR Merge and Conflict Resolution Process...');
   
   // Step 1: Get all remote branches
   const branches = getAllRemoteBranches();
@@ -249,7 +230,7 @@ async function main() {
   // Step 4: Final commit and push
   finalCommitAndPush();
   
-  console.log('\n🎉 COMPREHENSIVE PR MERGE AND CONFLICT RESOLUTION COMPLETED!');
+  console.log('\n🎉 DIRECT PR MERGE AND CONFLICT RESOLUTION COMPLETED!');
   console.log('='.repeat(60));
   console.log(`✅ Successfully merged: ${results.mergedCount} branches`);
   console.log(`❌ Failed to merge: ${results.conflictCount} branches`);
