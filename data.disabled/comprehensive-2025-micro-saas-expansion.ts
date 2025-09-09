@@ -5,7 +5,7 @@ import { ServiceVariant } from '../types/service-variants',
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
-
+;
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' ;
 };
 
@@ -21,7 +21,7 @@ import { ServiceVariant } from '../types/service-variants',
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
-
+;
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' ;
 };
 
@@ -405,7 +405,7 @@ launch_date: '2024 - 03 - 10';
 
 import { ServiceVariant } from '../types/service-variants',
 
-
+;
 ;
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
@@ -1144,7 +1144,7 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     rating: 4.7,
     reviews: 67,
     benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'],
-    capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'],
+    capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'],;
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveMicroSaasService {;
