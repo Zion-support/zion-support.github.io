@@ -8,3 +8,8 @@ export const getStripe = () => {
   }
   return stripePromise;
 };
+
+export const isProdDomain = () => {
+  return window.location.hostname === 'ziontechgroup.com' || 
+         window.location.hostname === 'www.ziontechgroup.com';
+};

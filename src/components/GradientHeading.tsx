@@ -3,6 +3,7 @@ import React from "react";
 interface GradientHeadingProps {
   children: React.ReactNode;
   className?: string;
+  level?: string;
 }
 
 export function GradientHeading({ children, className = "" }: GradientHeadingProps) {

@@ -20,9 +20,12 @@ const Form = React.forwardRef<HTMLFormElement, FormProps>(
 );
 Form.displayName = "Form";
 
-interface FormFieldProps {
+interface FormFieldProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
+  control?: any;
+  name?: string;
+  render?: (props: any) => React.ReactNode;
 }
 
 const FormField = React.forwardRef<HTMLDivElement, FormFieldProps>(

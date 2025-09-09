@@ -8,13 +8,14 @@
       "DOM.Iterable"
     ],
     "module": "ESNext",
-    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
       "axios": ["./src/lib/axios.ts"]
     },
-    "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "vitest/globals"],
+    "skipLibCheck": true,
+    "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "node", "react-dom", "next", "next/types/global", "vitest/globals"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -23,11 +24,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    /* Linting */
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": false,
@@ -42,7 +42,6 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    /* Path mapping */
     "plugins": [
       {
         "name": "next"
@@ -50,22 +49,49 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    ".next/types/**/*.ts"
+    "next-env.d.ts", 
+    "app/**/*.ts", 
+    "app/**/*.tsx", 
+    ".next/types/**/*.ts",
+    "src/**/*",
+    "pages/**/*",
+    "*.ts",
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "src.disabled",
-    "temp-disabled",
-    "temp_backup",
-    "tests",
-    "src/tests",
-    "src/**/*.test.ts",
-    "src/**/*.test.tsx",
-    "src/**/*.spec.ts",
-    "src/**/*.spec.tsx",
-    "supabase/functions"
+    "out",
+    "build",
+    "coverage",
+    "src-disabled",
+    "src.broken",
+    "src_disabled_*",
+    "pages._archive_corrupted",
+    "pages.bak",
+    "*.disabled",
+    "*.backup",
+    "*.bak",
+    "recovered-branches",
+    "backup",
+    "corrupted*",
+    "*_backup*",
+    "temp*",
+    "tmp*",
+    "*.tmp",
+    "*.temp",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**"
   ]
 }

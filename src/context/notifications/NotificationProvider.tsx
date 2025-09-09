@@ -1,6 +1,19 @@
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-import React, { createContext, useContext, useState } from 'react';
-import { Notification, NotificationContextType } from '../notifications';
+export interface Notification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
+  message: string;
+  duration?: number;
+}
+
+interface NotificationContextType {
+  notifications: Notification[];
+  addNotification: (notification: Omit<Notification, 'id'>) => void;
+  removeNotification: (id: string) => void;
+  clearAll: () => void;
+}
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
@@ -16,22 +29,11 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
       setTimeout(() => {
         removeNotification(id);
       }, notification.duration || 5000);
-    }  };
+    }
+  };
 
   const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
-  };
-
-  const markAsRead = (id: string) => {
-    setNotifications(prev => 
-      prev.map(n => n.id === id ? { ...n, read: true } : n)
-    );
-  };
-
-  const markAllAsRead = () => {
-    setNotifications(prev => 
-      prev.map(n => ({ ...n, read: true }))
-    );
   };
 
   const clearAll = () => {
@@ -42,9 +44,7 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
     <NotificationContext.Provider value={{ 
       notifications, 
       addNotification, 
-      removeNotification,
-      markAsRead,
-      markAllAsRead,
+      removeNotification, 
       clearAll 
     }}>
       {children}
@@ -58,5 +58,4 @@ export const useNotifications = () => {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
-
 };

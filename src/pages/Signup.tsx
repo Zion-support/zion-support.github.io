@@ -54,7 +54,7 @@ const signupSchema = z
 type SignupFormValues = z.infer<typeof signupSchema>;
 
 export default function Signup() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isAuthenticated, user, login, setUser, setTokens } = useAuth();
+  const { user, login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
@@ -498,4 +498,4 @@ export default function Signup() {
   );
 };
 
-export default Signup;
+// export default Signup; // Removed duplicate export

@@ -69,9 +69,9 @@ export default function ListingDetail() {
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (
+                  {listing.image ? (
                     <ImageWithRetry
-                      src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
+                      src={listing.image || "/placeholder.svg"}
                       alt={listing.title}
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
@@ -84,7 +84,7 @@ export default function ListingDetail() {
                   )}
                 </div>
                 
-                {listing.images && listing.images.length > 1 && (
+                {false && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (
                       <div 

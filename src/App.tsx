@@ -21,7 +21,29 @@ import OptimizedSuspense from './components/OptimizedSuspense';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
+import { PrivateRoute } from './components/PrivateRoute';
+import { CommunityProvider } from './context/CommunityContext';
 import './App.css';
+
+// Service worker registration
+const registerServiceWorker = () => {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+};
+
+// Type definitions
+interface FallbackProps {
+  resetErrorBoundary: () => void;
+}
 
 function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
   return (
@@ -34,57 +56,6 @@ function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
   );
 }
 
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/categories/all', element: <AllCategoriesPage /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/register', element: <Signup /> },
-  { path: '/signup', element: <SimpleSignup /> },
-  { path: '/oauth', element: <OAuthCallback /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/more-talents', element: <MoreTalentsPage /> },
-  { path: '/additional-talents', element: <AdditionalTalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/it-onsite-services/:country', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  {
-    path: '/community',
-    element: (
-      <CommunityProvider>
-        <CommunityPage />
-      </CommunityProvider>
-    ),
-  },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <Help /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/favorites', element: <FavoritesPage /> },
-  { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <PrivateRoute><CartPage /></PrivateRoute> },
-  { path: '/wallet', element: <PrivateRoute><Wallet /></PrivateRoute> },
-  { path: '/profile', element: <PrivateRoute><Profile /></PrivateRoute> },
-  { path: '/recommendations', element: <PrivateRoute><RecommendationsPage /></PrivateRoute> },
-  { path: '/checkout', element: <PrivateRoute><Checkout /></PrivateRoute> },
-  { path: '/forgot-password', element: <ForgotPassword /> },
-  { path: '/reset-password/:token', element: <ResetPassword /> },
-];
-
-// Removed duplicate App declaration (un-memoized version)
 
 // Create QueryClient instance with optimized settings
 const queryClient = new QueryClient({
@@ -152,6 +123,28 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Support = lazy(() => import('./pages/Support'));
 
+// Missing components that are referenced in routes
+const AllCategoriesPage = lazy(() => import('./pages/AllCategoriesPage'));
+const SimpleSignup = lazy(() => import('./pages/SimpleSignup'));
+const OAuthCallback = lazy(() => import('./pages/OAuthCallback'));
+const MoreTalentsPage = lazy(() => import('./pages/MoreTalentsPage'));
+const AdditionalTalentsPage = lazy(() => import('./pages/AdditionalTalentsPage'));
+const NewProductsPage = lazy(() => import('./pages/NewProductsPage'));
+const OpenAppRedirect = lazy(() => import('./pages/OpenAppRedirect'));
+const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+const Help = lazy(() => import('./pages/Help'));
+const FavoritesPage = lazy(() => import('./pages/Favorites'));
+const WishlistPage = lazy(() => import('./pages/Wishlist'));
+const CartPage = lazy(() => import('./pages/Cart'));
+const Wallet = lazy(() => import('./pages/Wallet'));
+const Profile = lazy(() => import('./pages/Profile'));
+const RecommendationsPage = lazy(() => import('./pages/RecommendationsPage'));
+const Checkout = lazy(() => import('./pages/Checkout'));
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
+const ResetPassword = lazy(() => import('./pages/ResetPassword'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+
 const App = memo(() => {
   // Setup global error handling
   useEffect(() => {
@@ -194,9 +187,13 @@ const App = memo(() => {
                             {/* Comprehensive Service Routes */}
                             <Route path="/match" element={<AIMatcherPage />} />
                             <Route path="/login" element={<Login />} />
-                            <Route path="/signup" element={<Signup />} />
+                            <Route path="/register" element={<Signup />} />
+                            <Route path="/signup" element={<SimpleSignup />} />
+                            <Route path="/oauth" element={<OAuthCallback />} />
                             <Route path="/talent" element={<TalentDirectory />} />
                             <Route path="/talents" element={<TalentsPage />} />
+                            <Route path="/more-talents" element={<MoreTalentsPage />} />
+                            <Route path="/additional-talents" element={<AdditionalTalentsPage />} />
                             <Route path="/services-page" element={<ServicesPage />} />
                             <Route path="/expanded-services" element={<ExpandedServicesPage />} />
                             <Route path="/all-services" element={<AllServicesOverviewPage />} />
@@ -205,19 +202,37 @@ const App = memo(() => {
                             <Route path="/service-analytics" element={<ServiceAnalyticsDashboard />} />
                             <Route path="/service-marketplace" element={<ServiceMarketplace />} />
                             <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
+                            <Route path="/it-onsite-services/:country" element={<ITOnsiteServicesPage />} />
                             <Route path="/categories" element={<Categories />} />
+                            <Route path="/categories/all" element={<AllCategoriesPage />} />
                             <Route path="/equipment" element={<EquipmentPage />} />
                             <Route path="/equipment/:id" element={<EquipmentDetail />} />
+                            <Route path="/new-products" element={<NewProductsPage />} />
                             <Route path="/analytics" element={<Analytics />} />
                             <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-                            {/* <Route path="/open-app" element={<OpenAppRedirect />} /> */}
-                            {/* <Route path="/community" element={<CommunityPage />} /> */}
+                            <Route path="/open-app" element={<OpenAppRedirect />} />
+                            <Route path="/community" element={
+                              <CommunityProvider>
+                                <CommunityPage />
+                              </CommunityProvider>
+                            } />
                             <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/sitemap" element={<Sitemap />} />
+                            <Route path="/help" element={<Help />} />
                             <Route path="/zion-hire-ai" element={<ZionHireAI />} />
                             <Route path="/hire-ai" element={<ZionHireAI />} />
                             <Route path="/request-quote" element={<RequestQuotePage />} />
                             <Route path="/blog" element={<Blog />} />
-                            {/* <Route path="/blog/:slug" element={<BlogPost />} /> */}
+                            <Route path="/blog/:slug" element={<BlogPost />} />
+                            <Route path="/favorites" element={<FavoritesPage />} />
+                            <Route path="/wishlist" element={<WishlistPage />} />
+                            <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
+                            <Route path="/wallet" element={<PrivateRoute><Wallet /></PrivateRoute>} />
+                            <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+                            <Route path="/recommendations" element={<PrivateRoute><RecommendationsPage /></PrivateRoute>} />
+                            <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
+                            <Route path="/forgot-password" element={<ForgotPassword />} />
+                            <Route path="/reset-password/:token" element={<ResetPassword />} />
                             
                             {/* Service Routes */}
                             <Route path="/services/ai-services" element={<AIServices />} />
