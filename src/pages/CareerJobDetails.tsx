@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';

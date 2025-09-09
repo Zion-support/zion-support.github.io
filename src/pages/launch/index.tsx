@@ -3,7 +3,7 @@ import JSZip from 'jszip';
 import { saveAs } from '@/utils/file-saver-stub';
 import { AppLayout } from '@/layout/AppLayout';
 import { NextSeo } from '@/components/NextSeo';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';

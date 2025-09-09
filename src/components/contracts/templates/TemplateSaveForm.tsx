@@ -8,7 +8,7 @@ import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 import { ContractTemplate } from "@/types/contracts";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";

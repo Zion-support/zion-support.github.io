@@ -5,7 +5,7 @@ import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { TALENT_PROFILES } from '@/data/talentData';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { TalentCard } from '@/components/talent/TalentCard';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';

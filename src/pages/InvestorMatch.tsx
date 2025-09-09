@@ -3,7 +3,7 @@ import { Header } from '@/components/Header';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { getInvestorMatches, InvestorMatch, generatePitchEmail } from '@/lib/investor-matching';
 

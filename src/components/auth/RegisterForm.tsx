@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'; // Changed from react-router-dom
 import Link from 'next/link'; // Changed from react-router-dom
 import axios from 'axios';
 import { toast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/input';
 import {
   Form,

@@ -4,7 +4,7 @@ import { mutate } from 'swr';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import PostForm from "@/components/community/PostForm";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";

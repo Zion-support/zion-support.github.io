@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextSeo } from '@/components/NextSeo';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { generateStorybookPdf, StoryPage } from '@/utils/generateStorybookPdf';
 import { generateStorybookEpub } from '@/utils/generateStorybookEpub';
 

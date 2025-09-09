@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";

@@ -2,7 +2,7 @@ import React from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
 

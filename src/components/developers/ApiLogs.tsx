@@ -6,7 +6,7 @@ import { List, RefreshCw } from 'lucide-react';
 
 import { useApiKeys } from "@/hooks/useApiKeys";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";

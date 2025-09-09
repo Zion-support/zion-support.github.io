@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Popover, PopoverContent } from '@/components/ui/popover';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { safeStorage } from '@/utils/safeStorage';
 
 interface Step {

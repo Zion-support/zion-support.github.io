@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 // Enhanced service card component with animations and better UX
 const ServiceCard = memo<{ 
@@ -13,7 +13,7 @@ const ServiceCard = memo<{
 
   return (
     <Link 
-      to={link}
+      href={link}
       className="group block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -147,18 +147,18 @@ const Home: React.FC = memo(() => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Link 
-            to="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-          >
-            Get Started Today
-          </Link>
-          <Link 
-            to="/services" 
-            className="border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Explore Services
-          </Link>
+        <Link 
+          href="/contact" 
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+        >
+          Get Started Today
+        </Link>
+        <Link 
+          href="/services" 
+          className="border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+        >
+          Explore Services
+        </Link>
         </div>
       </div>
 

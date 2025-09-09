@@ -1,7 +1,7 @@
 
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 import { ChevronDown, ChevronUp } from 'lucide-react';

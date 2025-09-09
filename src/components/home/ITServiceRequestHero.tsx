@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";

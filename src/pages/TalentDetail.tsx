@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { getTalentBySlug } from '@/api/talent';
 import Skeleton from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { SEO } from '@/components/SEO';
 import type { TalentProfile } from '@/types/talent';
 

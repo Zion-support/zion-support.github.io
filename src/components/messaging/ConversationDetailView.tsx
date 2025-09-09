@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
 
 import { useMessaging } from '@/context/MessagingContext';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';

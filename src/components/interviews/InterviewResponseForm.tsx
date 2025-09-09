@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
 

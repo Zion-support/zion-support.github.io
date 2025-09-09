@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface EmptyStateProps {

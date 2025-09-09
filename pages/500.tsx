@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { captureException } from '@/utils/sentry';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { logInfo } from '@/utils/productionLogger';
 
 export default function Custom500() {

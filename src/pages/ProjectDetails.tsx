@@ -7,7 +7,7 @@ import { useProjects } from "@/hooks/useProjects";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react';
 import {

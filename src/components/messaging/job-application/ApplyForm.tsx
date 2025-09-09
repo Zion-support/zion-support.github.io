@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Loader2 } from 'lucide-react';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

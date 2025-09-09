@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Form } from "@/components/ui/form";
 import { useJobForm } from './useJobForm';
 import { BasicInfoFields } from './BasicInfoFields';

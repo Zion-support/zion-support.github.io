@@ -4,7 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { fetchRecommendations } from '@/api/recommendations';
 import type { ProductListing } from '@/types/listings';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Loader2 } from 'lucide-react';
 
 import Link from 'next/link';

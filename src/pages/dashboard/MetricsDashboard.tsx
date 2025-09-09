@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { ExportPanel } from "@/components/analytics/ExportPanel";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 import AdminLayout from "@/components/admin/AdminLayout";

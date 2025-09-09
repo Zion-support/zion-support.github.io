@@ -5,7 +5,7 @@ import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import { ROADMAP_ITEMS, RoadmapItem } from '@/data/roadmap';

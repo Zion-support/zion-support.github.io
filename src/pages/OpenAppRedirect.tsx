@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Link from 'next/link';
 
 // This component handles deep linking to the mobile app

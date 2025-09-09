@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "@/services/apiClient";
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Loader2, Sparkles } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";

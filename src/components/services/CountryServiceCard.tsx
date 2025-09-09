@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Link from 'next/link';
 import { Badge } from "@/components/ui/badge";
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';

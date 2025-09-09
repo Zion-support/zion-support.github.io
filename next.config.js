@@ -271,6 +271,9 @@ const nextConfig = {
     'remark-parse',
     'remark-rehype',
     'formik',
+    'socket.io',
+    'unist-util-visit-parents',
+    'vfile-message',
     // UI libraries that need transpilation
     '@chakra-ui/react',
     '@radix-ui/react-accordion',
@@ -911,7 +914,7 @@ const nextConfig = {
 
   // Handle ESM modules
   experimental: {
-    esmExternals: 'loose',
+    esmExternals: false,
   },
 
 

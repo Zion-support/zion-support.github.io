@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Smartphone } from 'lucide-react';
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { AppStoreButtons } from "./AppStoreButtons";
 import { Card, CardContent } from "@/components/ui/card";
 

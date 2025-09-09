@@ -4,7 +4,7 @@ import { Handshake, MessageSquare, Star } from 'lucide-react';
 
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 import { HireNowCTA } from "./HireNowCTA";
 import { ProfileHero } from "./ProfileHero";

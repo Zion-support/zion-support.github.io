@@ -8,7 +8,7 @@ import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 
 
 
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
