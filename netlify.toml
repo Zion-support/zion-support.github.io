@@ -72,16 +72,4 @@
 [[headers]]
   for = "/_next/image/*"
   [headers.values]
-<<<<<<< HEAD
-    Cache-Control = "public, max-age=300"
-
-# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-# trigger: 2025-09-09T19:25:00Z
-=======
     Cache-Control = "public, max-age=31536000, immutable"
-# trigger: 2025-09-09T19:10:00Z
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a6ac
