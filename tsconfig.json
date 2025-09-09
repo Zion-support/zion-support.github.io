@@ -23,27 +23,30 @@
         "./src/lib/axios.ts"
       ]
     },
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "allowJs": true,
-    "incremental": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "allowJs": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "next-env.d.ts", 
-    "app/**/*.ts", 
-    "app/**/*.tsx", 
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts",
     "src/**/*",
     "pages/**/*",
