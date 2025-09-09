@@ -1,0 +1,1 @@
+import{e as c}from"./react-vendor-b8kf7aCi.js";const p=({src:o,alt:a,width:e,height:t,className:m,style:r,...i})=>{const s={width:e?`${e}px`:void 0,height:t?`${t}px`:void 0,...r};return c.createElement("img",{src:o,alt:a,className:m,style:s,...i})};export{p as I};

@@ -1,58 +1,47 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-<<<<<<< HEAD
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "axios": [
+        "./src/lib/axios.ts"
+      ]
     },
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["src"],
-=======
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
+    "noEmit": true,
     "jsx": "preserve",
     /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "allowJs": false,
-    "incremental": true,
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "outDir": "dist",
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": true
+    "allowJs": true,
+    "incremental": true
   },
   "include": [
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "next-env.d.ts", 
+    "app/**/*.ts", 
+    "app/**/*.tsx", 
     ".next/types/**/*.ts",
     "src/**/*",
     "pages/**/*",
@@ -64,46 +53,7 @@
       "path": "./tsconfig.node.json"
     }
   ],
->>>>>>> cursor/check-fix-push-and-merge-to-main-73b8
   "exclude": [
-    "node_modules",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "temp_working",
-    "supabase/functions",
-    "src/routes",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "components",
-    "contracts",
-    "cypress",
-    "**/*.backup",
-    "**/*.disabled",
-    "temp_working",
-    "supabase/functions",
-    "src/utils/generateRandomListing.ts",
-    "src/utils/linkChecker.ts",
-    "src/utils/mimeTypeFallback.ts",
-    "src/utils/passwordStrength.tsx",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/seoOptimizer.tsx",
-    "src/utils/serviceWorkerRegistration.ts",
-    "src/utils/unitConversion.ts",
-    "src/utils/withErrorLogging.ts",
-    "src/utils/generateRandomBlogPost.ts",
-    "src/pages/solutions/EnterpriseSolutions.tsx",
-    "src/utils/sitemapGenerator.tsx",
-    "src/pages/zion-hire-ai.tsx",
-    "src/pages/webinars.tsx",
-    "src/routes/*Routes.tsx",
-    "src/pages/services/**",
-    "src/pages/solutions/**",
-    "src/pages/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/types/**",
-    "src/utils/**"
+    "node_modules"
   ]
 }

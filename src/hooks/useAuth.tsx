@@ -1,72 +1,87 @@
-import React, { useState, useEffect } from 'react';
-;
-interface AuthState {};
-  isLoading: boolean}
+import { useState, useEffect, useContext, createContext } from 'react'
+
+interface User {
+  id: string
+  email: string
+  name: string
+  avatar?: string
 }
-;
-interface AuthState {;
-  user: User | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-};
-;
-  useEffect(: unknown {};
-            isLoading: false})} catch(error) {};
-})} catch(error) {};
-            isLoading: false})}
-            isLoading: false,;,
-})}
-      } else {};
-          isLoading: false})}
+
+interface AuthContextType {
+  user: User | null
+  isLoading: boolean
+  login: (email: string, password: string) => Promise<void>
+  logout: () => void
+  register: (email: string, password: string, name: string) => Promise<void>
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Check for existing session
+    const savedUser = localStorage.getItem('user')
+    if (savedUser) {
+      setUser(JSON.parse(savedUser))
     }
-    checkAuth()}, []);
+    setIsLoading(false)
+  }, [])
 
-          isLoading: false})}
+  const login = async (email: string, password: string) => {
+    setIsLoading(true)
+    try {
+      // Mock login - replace with actual API call
+      const mockUser: User = {
+        id: '1',
+        email,
+        name: email.split('@')[0],
+        avatar: `https://ui-avatars.com/api/?name=${email.split('@')[0]}&background=random`
+      }
+      
+      setUser(mockUser)
+      localStorage.setItem('user', JSON.stringify(mockUser))
+    } catch (error) {
+      throw new Error('Login failed')
+    } finally {
+      setIsLoading(false)
     }
-    checkAuth()}, []);
-;
-    setAuthState({};
-      isLoading: false});
+  }
 
-    // Store user data in localStorage';
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken',mock-jwt-token');
+  const register = async (email: string, password: string, name: string) => {
+    setIsLoading(true)
+    try {
+      // Mock registration - replace with actual API call
+      const mockUser: User = {
+        id: '1',
+        email,
+        name,
+        avatar: `https://ui-avatars.com/api/?name=${name}&background=random`
+      }
+      
+      setUser(mockUser)
+      localStorage.setItem('user', JSON.stringify(mockUser))
+    } catch (error) {
+      throw new Error('Registration failed')
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
-:src/hooks/useAuth.tsx;
-    return { success: true, user: mockUser }}
-    // Clear localStorage';
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')}
-    return { success: true, user: mockUser }}
-    // Clear localStorage;
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
-;
-    setAuthState({};
-      isLoading: false});
+  const logout = () => {
+    setUser(null)
+    localStorage.removeItem('user')
+  }
 
-    // Store user data in localStorage';
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken',mock-jwt-token');
+  return (
+    <AuthContext.Provider value={{ user, isLoading, login, logout, register }}>
+      {children}
+    </AuthContext.Provider>
+  )
+}
 
-<<<<<<< HEAD
-    return { success: true, user: mockUser }}
-:src/hooks/useAuth.tsx;
-  ;
-      setAuthState(prev => ({};
-        user: updatedUser}));
-
-      // Update localStorage';
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-      // Update localStorage;
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-  };
-;
-  return {};
-    updateProfile}}
-';
-    updateProfile}}
-=======
 export function useAuth() {
   const context = useContext(AuthContext)
   if (context === undefined) {
@@ -74,4 +89,5 @@ export function useAuth() {
   }
   return context
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-73b8
+  );
+};

@@ -1,103 +1,39 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Partners = () => {};
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const Partners: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Partners - Zion Tech Group" 
+        description="Strategic partnerships and collaborations with leading technology companies."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Partners
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Strategic partnerships and collaborations with leading technology companies.
+              Together, we're building the future of technology.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our partners page is currently under development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
-  return (;
-    <>;
-      <Head>;
-        <title>Partners - Zion Tech Group</title>;
-        <meta name="description" content="Professional Partners services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Partners;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Partners services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>;
-  )}
+
 export default Partners;
-;
-;
-const Partners = () => {;
-  return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white pt - 24">;
-      <div className="container mx - auto px - 4 py - 16">;
-        <div className="text - center mb - 16">;
-          <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
-            Our{' '};
-            <span className="text - transparent bg - clip - text bg - gradient - to - r from - blue - 400 to - cyan - 400">;
-              {' '};
-              Partners;
-            </span>;
-          </h1>;
-          <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-            Strategic partnerships that drive innovation and deliver exceptional;
-            value to our clients;
-          </p>;
-        </div>;
-;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-          <div className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - bold text - white mb - 4">;
-              Technology Partners;
-            </h3>;
-            <p className="text - gray - 300">;
-              Leading technology companies that provide cutting - edge solutions;
-              and infrastructure.;
-            </p>;
-          </div>;
-;
-          <div className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - bold text - white mb - 4">;
-              Consulting Partners;
-            </h3>;
-            <p className="text - gray - 300">;
-              Expert consulting firms that help us deliver comprehensive;
-              business solutions.;
-            </p>;
-          </div>;
-;
-          <div className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - bold text - white mb - 4">;
-              Industry Partners;
-            </h3>;
-            <p className="text - gray - 300">;
-              Industry leaders across various sectors who share our vision for;
-              digital transformation.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>) ;
-};

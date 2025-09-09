@@ -1,8 +1,9 @@
 
 import { useState } from "react";
-import { Star } from "lucide-react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { Button } from "@/components/ui/button";
+import { Star } from 'lucide-react';
+
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
@@ -91,7 +92,7 @@ export function ReviewForm({
           control={form.control}
           name="rating"
           rules={{ required: "Rating is required" }}
-          render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "rating">}) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="block text-center mb-2">
                 How was your experience with {revieweeName}?
@@ -137,7 +138,7 @@ export function ReviewForm({
               message: "Review must be at least 20 characters",
             },
           }}
-          render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "review_text">}) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
               <FormControl>
@@ -153,7 +154,7 @@ export function ReviewForm({
         />
         
         {/* Additional Rating Categories (only shown if main rating is provided) */}
-        {(watchRating || 0) > 0 && (
+        {(watchRating ?? 0) > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
             
@@ -161,7 +162,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="communication_rating"
-              render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "communication_rating">}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Communication</FormLabel>
                   <FormControl>
@@ -194,7 +195,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="quality_rating"
-              render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "quality_rating">}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Quality of Work</FormLabel>
                   <FormControl>
@@ -227,7 +228,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="timeliness_rating"
-              render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "timeliness_rating">}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Timeliness</FormLabel>
                   <FormControl>
@@ -260,7 +261,7 @@ export function ReviewForm({
             <FormField
               control={form.control}
               name="would_work_again"
-              render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "would_work_again">}) => (
+              render={({ field }: { field: any }) => (
                 <FormItem>
                   <div className="flex items-center gap-2">
                     <FormLabel>Would you work with {revieweeName} again?</FormLabel>
@@ -288,7 +289,7 @@ export function ReviewForm({
         <FormField
           control={form.control}
           name="is_anonymous"
-          render={({ field }: { field: ControllerRenderProps<ReviewFormValues, "is_anonymous">}) => (
+          render={({ field }: { field: any }) => (
             <FormItem>
               <div className="flex items-center gap-2">
                 <FormControl>

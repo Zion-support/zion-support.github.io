@@ -1,339 +1,112 @@
-import { Link } from 'react - router - dom';
-import React, { useState, useEffect } from 'react';
-import { cn } from '@/lib / utils';
-export /**;
-import {;
-import { MainNavigation } from './header / MainNavigation';
-import { motion, AnimatePresence } from 'framer - motion';
-;
-;
- * Header function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;
- */;
-function Header(...args: any[]): any {;
-;
-  Menu,;
-  X,;
-  Search,;
-  User,;
-  Bell,;
-  Settings,;
-  LogOut,;
-  ChevronDown,;
-  Globe,;
-  Sun,;
-  Moon,;
-  Zap,;
-  Brain,;
-  Shield,;
-  Users,;
-  HardDrive,;
-  TrendingUp,;
-  Building2,;
-  FileText,;
-  HelpCircle,;
-  BarChart3,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Play,;
-  ChevronLeft,;
-  ChevronRight,;
-  Rocket,;
-  Target,;
-  Handshake,;
-  Lightbulb,;
-  Cpu,;
-  Database,;
-  Network,;
-  Smartphone,;
-  Lock,;
-  Code,;
-  Server,;
-  Chip,;
-  Wifi,;
-  ShieldCheck,;
-  Bot,;
-  Workflow,;
-  Eye,;
-  Sparkles,;
-  Atom,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Activity,;
-  MessageCircle,;
-  BarChart,;
-  Users2,;
-  Settings as SettingsIcon,;
-  Palette,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  Cloud,;
-} from 'lucide - react';
-;
-interface HeaderProps {;
-  className?: string;
-};
-;
-  const [isScrolled, setIsScrolled] = useState (false) ;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false) ;
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState (false) ;
-  const [isSearchOpen, setIsSearchOpen] = useState (false) ;
-  const [theme, setTheme] = useState<'light' | 'dark'> ('dark') ;
-  const [searchQuery, setSearchQuery] = useState ('') ;
-;
-  const navigation = [;
-    {;
-      name: 'Services',;
-      href: '/services',;
-      icon: Zap,;
-      dropdown: [;
-        { name: 'AI Solutions', href: '/services / ai - solutions', icon: Brain },;
-        {;
-          name: 'Quantum Computing',;
-          href: '/services / quantum - computing',;
-          icon: Atom,;
-        },;
-        {;
-          name: 'Cybersecurity',;
-          href: '/services / cybersecurity',;
-          icon: Shield,;
-        },;
-        { name: 'Cloud & DevOps', href: '/services / cloud - devops', icon: Cpu },;
-        {;
-          name: 'Digital Transformation',;
-          href: '/services / digital - transformation',;
-          icon: Rocket,;
-        },;
-        {;
-          name: 'Data Analytics',;
-          href: '/services / data - analytics',;
-          icon: BarChart3,;
-        },;
-        {;
-          name: 'IoT & Edge Computing',;
-          href: '/services / iot - edge - computing',;
-          icon: Activity,;
-        },;
-        {;
-          name: 'Space Technology',;
-          href: '/services / space - technology',;
-          icon: Rocket,;
-        },;
-        {;
-          name: 'Comprehensive Services',;
-          href: '/comprehensive - services',;
-          icon: Globe,;
-        },;
-        {;
-          name: 'Revolutionary Services',;
-          href: '/revolutionary - services',;
-          icon: Sparkles,;
-        },;
-        { name: 'New Services 2025', href: '/new - services - 2025', icon: Star },;
-        {;
-          name: 'Enhanced Services 2025',;
-          href: '/enhanced - new - services - 2025',;
-          icon: Star,;
-        },;
-        { name: 'Pricing', href: '/pricing', icon: DollarSign },;
-      ],;
-    },;
-    {;
-      name: 'Solutions',;
-      href: '/solutions',;
-      icon: Target,;
-      dropdown: [;
-        {;
-          name: 'Enterprise Solutions',;
-          href: '/solutions / enterprise',;
-          icon: Building,;
-        },;
-        {;
-          name: 'AI Business Intelligence',;
-          href: '/solutions / ai - business - intelligence',;
-          icon: Brain,;
-        },;
-        {;
-          name: 'Quantum AI Platform',;
-          href: '/solutions / quantum - ai - platform',;
-          icon: Atom,;
-        },;
-        {;
-          name: 'Digital Twin Solutions',;
-          href: '/solutions / digital - twin',;
-          icon: Eye,;
-        },;
-        {;
-          name: 'Zero Trust Security',;
-          href: '/solutions / zero - trust - security',;
-          icon: Shield,;
-        },;
-      ],;
-    },;
-    {;
-      name: 'About',;
-      href: '/about',;
-      icon: Users,;
-      dropdown: [;
-        { name: 'Our Story', href: '/about / story', icon: FileText },;
-        { name: 'Team', href: '/about / team', icon: Users },;
-        { name: 'Careers', href: '/careers', icon: Briefcase },;
-        { name: 'Partners', href: '/partners', icon: Network },;
-        { name: 'Press', href: '/press', icon: Newspaper },;
-      ],;
-    },;
-    {;
-      name: 'Resources',;
-      href: '/resources',;
-      icon: FileText,;
-      dropdown: [;
-        { name: 'Blog', href: '/blog', icon: Newspaper },;
-        { name: 'Case Studies', href: '/case - studies', icon: FileText },;
-        {;
-          name: 'Research & Development',;
-          href: '/research - development',;
-          icon: Activity,;
-        },;
-        { name: 'Documentation', href: '/docs', icon: FileText },;
-        { name: 'API Reference', href: '/api', icon: Cpu },;
-        { name: 'Sitemap', href: '/sitemap', icon: FileText },;
-        { name: 'Support', href: '/support', icon: FileText },;
-        { name: 'Training', href: '/training', icon: FileText },;
-        { name: 'Helpdesk', href: '/help', icon: FileText },;
-      ],;
-    },;
-    {;
-      name: 'Contact',;
-      href: '/contact',;
-      icon: Phone,;
-    },;
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+export const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' },
   ];
 
-  return (;
-    <header className="bg-white shadow-lg sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center py-4">;
+  const isActive = (path: string) => location.pathname === path;
+
+  return (
+    <header className="bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">;
-            <Link href="/" className="flex items-center">;
-              <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
-                <span className="text-white font-bold text-lg">Z</span>;
-              </div>;
-              <span className="ml-2 text-xl font-bold text-gray-900">Zion Tech Group</span>;
-            </Link>;
-          </div>;
-;
-          {/* Right Side Actions */};
-          <div role="button" className="flex items - center space - x-4">;
-            {/* Search Button */};
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsSearchOpen (!isSearchOpen) };
-              className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors";
-              aria - label="Search";
-            >;
-              <Search className="w - 5 h - 5"       />;
-            </button>;
-;
-            {/* Theme Toggle */};
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleTheme};
-              className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors";
-              aria - label="Toggle theme";
-            >;
-              {theme === 'dark' ? (<Sun className="w - 5 h - 5"       />) : (<Moon className="w - 5 h - 5"       />) };
-            </button>;
-;
-            {/* Notifications */};
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 300 hover:text - blue - 400 transition - colors relative">;
-              <Bell className="w - 5 h - 5"       />;
-              <span className="absolute - top - 1 -right - 1 w - 3 h - 3 bg - red - 500 rounded - full animate - pulse"></span>;
-            </button>;
-;
-            {/* User Menu */};
-            <div role="button" className="relative">;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsUserMenuOpen (!isUserMenuOpen) };
-                className="flex items - center space - x-2 p - 2 text - gray - 300 hover:text - blue - 400 transition - colors rounded - lg hover:bg - gray - 800 / 50";
-              >;
-                <div role="button" className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full flex items - center justify - center">;
-                  <User className="w - 4 h - 4 text - white"       />;
-                </div>;
-                <ChevronDown className="w - 4 h - 4"       />;
-              </button>;
-;
-              <AnimatePresence>;
-                {isUserMenuOpen && (<motion.div;
-                    initial={{ opacity: 0, y: -10 }};
-                    animate={{ opacity: 1, y: 0 }};
-                    exit={{ opacity: 0, y: -10 }};
-                    className="absolute right - 0 mt - 2 w - 64 bg - gray - 900 border border - gray - 700 rounded - lg shadow - xl z - 50";
-                  >;
-                    <div role="button" className="p - 4 border - b border - gray - 700">;
-                      <div role="button" className="flex items - center space - x-3">;
-                        <div role="button" className="w - 10 h - 10 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full flex items - center justify - center">;
-                          <User className="w - 5 h - 5 text - white"       />;
-                        </div>;
-                        <div>;
-                          <p className="text - white font - medium">John Doe</p>;
-                          <p className="text - gray - 400 text - sm">;
-                            john@ziontech.com;
-                          </p>;
-                        </div>;
-                      </div>;
-                    </div>;
-                    <div role="button" className="py - 2">;
-                      <Link;
-                        to="/profile";
-                        className="flex items - center space - x-3 px - 4 py - 2 text - gray - 300 hover:text - blue - 400 hover:bg - gray - 800 transition - colors";
-                        onClick={ () => setIsUserMenuOpen (false) };
-                      >;
-                        <User className="w - 4 h - 4"       />;
-                        <span > Profile</span>;
-                      </Link>;
-                      <Link;
-                        to="/dashboard";
-                        className="flex items - center space - x-3 px - 4 py - 2 text - gray - 300 hover:text - blue - 400 hover:bg - gray - 800 transition - colors";
-                        onClick={ () => setIsUserMenuOpen (false) };
-                      >;
-                        <BarChart3 className="w - 4 h - 4"       />;
-                        <span > Dashboard</span>;
-                      </Link>;
-                      <Link;
-                        to="/settings";
-                        className="flex items - center space - x-3 px - 4 py - 2 text - gray - 300 hover:text - blue - 400 hover:bg - gray - 800 transition - colors";
-                        onClick={ () => setIsUserMenuOpen (false) };
-                      >;
-                        <Settings className="w - 4 h - 4"       />;
-                        <span > Settings</span>;
-                      </Link>;
-                      <div role="button" className="border - t border - gray - 700 my - 2"></div>;
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-3 px - 4 py - 2 text - gray - 300 hover:text - red - 400 hover:bg - gray - 800 transition - colors w - full text - left";
-                        onClick={ () => {;
-                          // Add logout logic here;
-                          setIsUserMenuOpen (false) ;
-                        }};
-                      >;
-                        <LogOut className="w - 4 h - 4"       />;
-                        <span > Logout</span>;
-                      </button>;
-                    </div>;
-                  </motion.div>) };
-              </AnimatePresence>;
-            </div>;
-;
-            {/* Mobile Menu Button */};
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMobileMenu};
-              className="lg:hidden p - 2 text - gray - 300 hover:text - blue - 400 transition - colors";
-              aria - label="Toggle mobile menu";
-            >;
-              {isMobileMenuOpen ? (<X className="w - 6 h - 6"       />) : (<Menu className="w - 6 h - 6"       />) };
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </header>;
-  )}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.href)
+                    ? 'text-blue-300 bg-blue-500/20'
+                    : 'text-white hover:text-blue-300 hover:bg-white/10'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex">
+            <Link
+              to="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white hover:text-blue-300 focus:outline-none focus:text-blue-300"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/5 backdrop-blur-md rounded-lg mt-2">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    isActive(item.href)
+                      ? 'text-blue-300 bg-blue-500/20'
+                      : 'text-white hover:text-blue-300 hover:bg-white/10'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
 export default Header;

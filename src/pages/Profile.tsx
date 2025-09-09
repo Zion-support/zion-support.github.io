@@ -1,232 +1,93 @@
-import React, { useState } from 'react.ts';
-export default Profile;}}}}}}}}};
-import { motion  } from 'framer - motion.ts';
-import { User, ;
-;
-;
-  Mail, ;
-  Phone, ;
-  Building, ;
-  Globe, ;
-  MapPin, ;
-  Camera, ;
-  Save, ;
-  Edit, ;
-  X,;
-  Shield,;
-  Bell,;
-  Palette,;
-  Key,;
-  Trash2,;
-  Download,;
-  Upload,;
-  Eye,;
-  EyeOff,;
-  CheckCircle,;
-  AlertCircle,;
-  Settings,;
-  UserCheck,;
-  CreditCard,;
-  Activity,;
-  BarChart3,;
-  Calendar,;
-  Star,;
-  Award,;
-  Zap,;
-  Brain,;
-  Cloud,;
-  Rocket;
- } from 'lucide - react';
-;
-interface UserProfile {;
-;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  comp: string;
-  position: string;
-  industry: string;
-  location: string;
-  website: string;
+import { useState } from 'react';
+import type { GetServerSideProps } from 'next';
+import { ProfileForm, ProfileValues } from '@/components/profile/ProfileForm';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import type { Order } from '@/hooks/useOrders';
+import Link from 'next/link';
+import OrdersPage from './Orders';
+import AccountSettings from './AccountSettings';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components/ui/tabs';
+
+interface User {
+  id: string;
+  name: string;
   bio: string;
-  avatar: string};
-;
-interface NotificationSettings {;
-;
-  emailNotifications: boolean;
-  pushNotifications: boolean;
-  marketingEmails: boolean;
-  securityAlerts: boolean;
-  projectUpdates: boolean;
-  weeklyReports: boolean};
-;
-interface SecuritySettings {;
-;
-  twoFactorEnabled: boolean;
-  sessionTimeout: number;
-  passwordLastChanged: string;
-  lastLogin: string;
-loginHistory: Array < any>};
-;
-const Profile: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'> ('profile') ;
-  const [isEditing, setIsEditing] = useState (false) ;
-  const [isLoading, setIsLoading] = useState (false) ;
-  const [success, setSuccess] = useState ('') ;
-  const [error, setError] = useState ('') ;
-;
-  const [profile, setProfile] = useState < any> ({;
-    firstName: 'John',;
-    lastName: 'Doe',;
-    email: 'john.doe@ziontechgroup.com',;
-    phone: '+1 (555) 123 - 4567',;
-    comp: 'Zion Tech Group',;
-    position: 'Senior Developer',;
-    industry: 'Technology',;
-    location: 'San Francisco, CA',;
-    website: 'https://ziontechgroup.com',;
-    bio: 'Passionate technology professional with expertise in AI, cloud computing, and digital transformation. Committed to delivering innovative solutions that drive business growth.',;
-    avatar: '/api / placeholder / 150 / 150';
-  }) ;
-;
-  const [notifications, setNotifications] = useState < any> ({;
-    emailNotifications: true,;
-    pushNotifications: true,;
-    marketingEmails: false,;
-    securityAlerts: true,;
-    projectUpdates: true,;
-    weeklyReports: false;
-  }) ;
-;
-  const [security, setSecurity] = useState < any> ({;
-    twoFactorEnabled: true,;
-    sessionTimeout: 30,;
-    passwordLastChanged: '2024 - 01 - 15',;
-    lastLogin: '2024 - 01 - 20 14:30:00',;
-    loginHistory[;
-      { date: '2024 - 01 - 20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },;
-      { date: '2024 - 01 - 19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },;
-      { date: '2024 - 01 - 18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },;
-      { date: '2024 - 01 - 17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' };
-    ];
-  }) ;
-;
-  const [currentPassword, setCurrentPassword] = useState ('') ;
-  const [newPassword, setNewPassword] = useState ('') ;
-  const [confirmPassword, setConfirmPassword] = useState ('') ;
-  const [showPasswords, setShowPasswords] = useState ({;
-    current: false,;
-    new: false,;
-    confirm: false;
-  }) ;
-;
-  const industries = [;
-    'Technology',;
-    'Healthcare',;
-    'Finance',;
-    'Manufacturing',;
-    'Retail',;
-    'Education',;
-    'Government',;
-    'Non - profit',;
-    'Other';
-  ];
-;
-  const handleProfileUpdate = async () => {;
-    setIsLoading (true) ;
-    setError ('') ;
-    setSuccess ('') ;
-;
-    try {;
-      // Simulate API call;
-      await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-;
-      setSuccess ('Profile updated successfully!') ;
-      setIsEditing (false) } catch (err) {;
-      setError ('Failed to update profile. Please try again.') } finally {;
-      setIsLoading (false) };
+  avatarUrl: string;
+  points: number;
+}
+
+interface ProfileProps {
+  user: User;
+  orders?: Order[];
+}
+
+export default function Profile({ user: initialUser, orders = [] }: ProfileProps) {
+  const [user, setUser] = useState(initialUser);
+
+  const handleSubmit = async (values: ProfileValues) => {
+    const res = await fetch(`/api/users/${user.id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(values),
+    });
+    const data = await res.json();
+    setUser(data);
   };
-;
-  const handlePasswordChange = async () => {;
-    if (!currentPassword || !newPassword || !confirmPassword) {;
-      setError ('Please fill in all password fields') ;
-      return};
-    if (newPassword.length < 8) {;
-      setError ('New password must be at least 8 characters long') ;
-      return};
-    if (newPassword !== confirmPassword) {;
-      setError ('New passwords do not match') ;
-      return};
-;
-    setIsLoading (true) ;
-    setError ('') ;
-    setSuccess ('') ;
-;
-    try {;
-      // Simulate API call;
-      await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-;
-      setSuccess ('Password changed successfully!') ;
-      setCurrentPassword ('') ;
-      setNewPassword ('') ;
-      setConfirmPassword ('') } catch (err) {;
-      setError ('Failed to change password. Please try again.') } finally {;
-      setIsLoading (false) };
-  };
-;
-  const handleNotificationToggle = useCallback ( (key: keyof NotificationSettings) => {;
-setNotifications (prev: > ({;
-      ...prev,;
-      [key]: !prev[key];
-    }) ) ;
-  };
-;
-  const getPasswordStrength = (password: string) => {;
-    if (password.length === 0) return { score: 0, label: '', color: '' };
-    if (password.length < 8) return { score: 1, label: 'Weak', color: 'text - red - 400' };
-    if (password.length < 12) return { score: 2, label: 'Fair', color: 'text - yellow - 400' };
-    if (password.length < 16) return { score: 3, label: 'Good', color: 'text - blue - 400' };
-    return { score: 4, label: 'Strong', color: 'text - green - 400' }};
-;
-  const passwordStrength = getPasswordStrength (newPassword) ;
-;
-  const stats = [;
-    { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w - 5 h - 5"       /> },;
-    { label: 'Active Projects', value: '3', icon: <Activity className="w - 5 h - 5"       /> },;
-    { label: 'Days Active', value: '156', icon: <Calendar className="w - 5 h - 5"       /> },;
-    { label: 'Rating', value: '4.9', icon: <Star className="w - 5 h - 5"       /> };
-  ];
-;
-  const achievements = [;
-    { title: 'First Project', description: 'Completed your first project', icon: <Award className="w - 6 h - 6"       />, earned: true },;
-    { title: 'Team Player', description: 'Collaborated on 5 + projects', icon: <UserCheck className="w - 6 h - 6"       />, earned: true },;
-    { title: 'Innovator', description: 'Implemented AI solutions', icon: <Brain className="w - 6 h - 6"       />, earned: true },;
-    { title: 'Cloud Master', description: 'Deployed 10 + cloud solutions', icon: <Cloud className="w - 6 h - 6"       />, earned: false },;
-    { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w - 6 h - 6"       />, earned: false };
-  ];
-;
-  const renderProfileTab = () => (<motion.div;
-      initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-      animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-      transition={{ duration: 0.6 }};
-      className="space - y-8";
-;
-      {/* Profile Header */};
-      <div role="button" className="bg - white / 5 border border - slate - 600 / 30 rounded - 2xl p - 8 backdrop - blur - md">;
-        <div role="button" className="flex items - center gap - 6 mb - 8">;
-          <div role="button" className="relative">;
-            <div role="button" className="w - 24 h - 24 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - full flex items - center justify - center text - white text - 2xl font - bold">;
-              {profile.firstName.charAt (0) }{profile.lastName.charAt (0) };
-            </div>;
-    </>;
-  )}
-export default Profile;
+
+  return (
+    <div className="container mx-auto p-4 space-y-6">
+      <h1 className="text-2xl font-bold">Account</h1>
+      <Tabs defaultValue="profile" className="space-y-4">
+        <TabsList>
+          <TabsTrigger value="profile">Profile</TabsTrigger>
+          <TabsTrigger value="orders">Orders</TabsTrigger>
+          <TabsTrigger value="settings">Settings</TabsTrigger>
+        </TabsList>
+        <TabsContent value="profile" className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold">Profile</h2>
+            <PointsBadge />
+          </div>
+          <ProfileForm defaultValues={user} onSubmit={handleSubmit} />
+        </TabsContent>
+        <TabsContent value="orders">
+          {orders.length > 0 ? (
+            <OrdersPage />
+          ) : (
+            <p>No orders found.</p>
+          )}
+        </TabsContent>
+        <TabsContent value="settings">
+          <AccountSettings />
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+}
+
+export const getServerSideProps: GetServerSideProps<ProfileProps> = async ({ params, req }: { params: { [key: string]: string | string[] | undefined }, req: any }, res: any, query: any, resolvedUrl: any ) => {
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  
+  const [userRes, ordersRes] = await Promise.all([
+    fetch(`${base}/api/users/me`, { headers: { cookie: req?.headers.cookie || '' } }),
+    fetch(`${base}/api/orders?user_id=me`, { headers: { cookie: req?.headers.cookie || '' } })
+  ]);
+
+  if (userRes.status === 401) {
+    return { redirect: { destination: '/login', permanent: false } };
+  }
+
+  const user = await userRes.json();
+  let orders: Order[] = [];
+  if (ordersRes.ok) {
+    orders = await ordersRes.json();
+    orders = orders.slice(0, 3);
+  }
+
+  return { props: { user, orders } };
+};

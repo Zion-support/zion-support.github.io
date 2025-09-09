@@ -1,362 +1,358 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+
+  keywords?: string[] | string;
   author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
   canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article' | 'product' | 'profile';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  structuredData?: object;
+  noIndex?: boolean;
+  noFollow?: boolean;
+  language?: string;
+  themeColor?: string;
+  viewport?: string;
+  robots?: string;
+  additionalMeta?: Array<{ name: string; content: string }>;
+  additionalLinks?: Array<{ rel: string; href: string }>;
+  additionalScripts?: Array<{ type: string; content: string }>;
 }
 
-      {/* Performance monitoring */}
-      <script>`;
-        {};
-                    value: Math.round (loadTime) }) }
-              }
-            }) }
+const defaultSEO = {
+  title: 'Zion Tech Group - Leading Technology Solutions',
+  description: 'Zion Tech Group provides cutting-edge technology solutions including AI, machine learning, cloud computing, cybersecurity, and digital transformation services.',
+  keywords: ['technology', 'AI', 'machine learning', 'cloud computing', 'cybersecurity', 'digital transformation', 'software development'],
+  author: 'Zion Tech Group',
+  ogType: 'website' as const,
+  twitterCard: 'summary_large_image' as const,
+  language: 'en',
+  themeColor: '#0ea5e9',
+  viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+  robots: 'index, follow'
+};
 
-          // Core Web Vitals monitoring;
-          if('web - vital' in window) {};
-}) ;,
-}        `}
-      </script>;
-    </Helmet>) }
-'"`;
+export function SEO({
+  title,
+  description,
+  keywords,
+  author,
+  canonical,
+  ogImage,
+  ogType,
+  twitterCard,
+  structuredData,
+  noIndex = false,
+  noFollow = false,
+  language,
+  themeColor,
+  viewport,
+  robots,
+  additionalMeta = [],
+  additionalLinks = [],
+  additionalScripts = []
+}: SEOProps) {
+  const seoTitle = title ? `${title} | Zion Tech Group` : defaultSEO.title;
+  const seoDescription = description || defaultSEO.description;
+  const seoKeywords = keywords 
+    ? [...defaultSEO.keywords, ...(Array.isArray(keywords) ? keywords : [keywords])].join(', ') 
+    : defaultSEO.keywords.join(', ');
+  const seoAuthor = author || defaultSEO.author;
+  const seoOgType = ogType || defaultSEO.ogType;
+  const seoTwitterCard = twitterCard || defaultSEO.twitterCard;
+  const seoLanguage = language || defaultSEO.language;
+  const seoThemeColor = themeColor || defaultSEO.themeColor;
+  const seoViewport = viewport || defaultSEO.viewport;
+  const seoRobots = noIndex || noFollow ? 
+    `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}` : 
+    defaultSEO.robots;
+
+  // Default OG image
+  const defaultOgImage = ogImage || '/images/zion-tech-group-og.jpg';
+  
+  // Canonical URL
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+
+  // Default structured data
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+    description: seoDescription,
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'San Francisco',
+      addressRegion: 'CA'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+      email: 'info@ziontechgroup.com'
+    },
+    sameAs: [
+      'https://www.linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
+      'https://www.facebook.com/ziontechgroup'
+    ],
+    ...structuredData
+  };
+
+  // Update document title and meta tags
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      // Update document title
+      document.title = seoTitle;
+      
+      // Update meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', seoDescription);
+
+      // Update meta keywords
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', seoKeywords);
+
+      // Update meta author
+      let metaAuthor = document.querySelector('meta[name="author"]');
+      if (!metaAuthor) {
+        metaAuthor = document.createElement('meta');
+        metaAuthor.setAttribute('name', 'author');
+        document.head.appendChild(metaAuthor);
+      }
+      metaAuthor.setAttribute('content', seoAuthor);
+
+      // Update robots meta
+      let metaRobots = document.querySelector('meta[name="robots"]');
+      if (!metaRobots) {
+        metaRobots = document.createElement('meta');
+        metaRobots.setAttribute('name', 'robots');
+        document.head.appendChild(metaRobots);
+      }
+      metaRobots.setAttribute('content', seoRobots);
+
+      // Update viewport meta
+      let metaViewport = document.querySelector('meta[name="viewport"]');
+      if (!metaViewport) {
+        metaViewport = document.createElement('meta');
+        metaViewport.setAttribute('name', 'viewport');
+        document.head.appendChild(metaViewport);
+      }
+      metaViewport.setAttribute('content', seoViewport);
+
+      // Update theme color meta
+      let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (!metaThemeColor) {
+        metaThemeColor = document.createElement('meta');
+        metaThemeColor.setAttribute('name', 'theme-color');
+        document.head.appendChild(metaThemeColor);
+      }
+      metaThemeColor.setAttribute('content', seoThemeColor);
+
+      // Update language
+      document.documentElement.lang = seoLanguage;
+
+      // Add structured data
+      let structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+      if (!structuredDataScript) {
+        structuredDataScript = document.createElement('script');
+        structuredDataScript.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(structuredDataScript);
+      }
+      structuredDataScript.textContent = JSON.stringify(defaultStructuredData);
+    }
+  }, [
+    seoTitle,
+    seoDescription,
+    seoKeywords,
+    seoAuthor,
+    seoRobots,
+    seoViewport,
+    seoThemeColor,
+    seoLanguage,
+    defaultStructuredData
+  ]);
+
+  return (
+    <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonical || url} />
-
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <title>{seoTitle}</title>
+      <meta name="description" content={seoDescription} />
+      <meta name="keywords" content={seoKeywords} />
+      <meta name="author" content={seoAuthor} />
+      <meta name="robots" content={seoRobots} />
+      <meta name="viewport" content={seoViewport} />
+      <meta name="theme-color" content={seoThemeColor} />
+      <meta name="language" content={seoLanguage} />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
+      <meta property="og:type" content={seoOgType} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={defaultOgImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
-
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:site" content="@ziontechgroup" />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-
-      {/* Additional SEO */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />;
-
-      {/* Structured Data */}
-      <script type="application/ld+json">;
-        {};
-}
-        })}
-import Head from "next/head";
-import React from "react";
-import { Helmet  } from "react - helmet-async", SEOProps {};
-   type?: string}
-;
-export const SEO: React.FC<SEOProps> = ({};
-    <Helmet>      {/* comment */}
-
-      <title>{title}</title>;";
-      <meta name = "description" content="{description}"  />"      <meta name="keywords" content="{keywords}"  />"      <meta name="author" content="Zion Tech Group"  />"      <meta name="robots" content="index, follow"  />"      <link rel="canonical" href="{url}"  />"      {/* comment */}";
-      <meta property="og: type" content="{type}"  />"      <meta property="og:url" content="{url}"  />"      <meta property="og:title" content="{title}"  />"      <meta property="og:description" content="{description}"  />"      <meta property="og:image" content="{image}"  />"      <meta property="og:site_name" content="Zion Tech Group"  />"      {/* comment */}";";
-      <meta property = "twitter:card" content="summary_large_image"  />"      <meta property="twitter:url" content="{url}"  />"      <meta property="twitter:title" content="{title}"  />"      <meta property="twitter:description" content="{description}"  />"      <meta property="twitter:image" content="{image}"  />"      {/* comment */}";
-      <meta name="viewport" content="width="device - width," initial-scale=1.0"  />"      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"      "      {/* comment */}",;
-      <script type = "application/ld+json">"        {};
-export {};
-  return null;
-}
-;
-export default function Page() {};
-  return null;
-}
-  type?: string}
-
-";
-export const SEO: React.FC<SEOProps> = ({};
-  type = "website"}) => {};
-  const structuredData = {}
-
-";
-export const SEO: React.FC<SEOProps> = ({};
-}) => {const structuredData = {}: SEOProps) {};
-}
-  const canonicalUrl = url || "https: // comment;
-export const SEO: React.FC<SEOProps> = ({};
-}) => {};
-      {/* comment */}
-
-      <title>{title}</title>";
-title = "Zion Tech Group - Leading Technology Solutions", description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.", keywords = "AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group", image = "/og-image.svg","  url = "https: // comment;
-    <Helmet>;
-      {/* comment */}
-
-      <title>{title}</title>";
-      <meta name=`description" content="{description}"  />"      <meta name="keywords" content="{keywords}"  />"      <meta name="author" content="Zion Tech Group"  />"      <meta name="robots" content="index, follow"  />"      <link rel="canonical" href="{url}"  />""      {/* comment */}";
-      <meta property="og: type" content="{type}"  />"      <meta property="og:url" content="{url}"  />"      <meta property="og:title" content="{title}"  />"      <meta property="og:description" content="{description}"  />"      <meta property="og:image" content="{image}"  />"      <meta property="og:site_name" content="Zion Tech Group"  />""      {/* comment */}
-      <meta property="twitter:card" content="summary_large_image"  />"      <meta property="twitter:url" content="{url}"  />"      <meta property="twitter:title" content="{title}"  />"      <meta property="twitter:description" content="{description}"  />"      <meta property="twitter:image" content="{image}"  />""      {/* comment */}";
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"  />"      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"      "      {/* comment */}
-      <script type="application/ld+json">"        {};
-ursor/automate-test-fix-improve-and-merge-code-48f3}
-
-    <Helmet>      {/* comment */}
-
-      <title>{title}</title>";
-      <;<meta name="&apos;description&apos;" content="{description}"  />&apos;&apos,      <meta name="&apos;keywords&apos;" content="{keywords}"  />&apos;&apos,      <meta name="&apos;author&apos;" content="&apos;Zion" Tech Group&apos;       />&apos;&apos,      <meta name="&apos;robots&apos;" content="&apos;index," follow&apos;       />&apos;&apos,      <link rel="&apos;canonical&apos;" href="{url}"  />&apos;&apos;      {/* comment */}&apos;&apos;";
-      <meta property="&apos;og:" type&apos, content="{type}"  />&apos;&apos,      <meta property="&apos;og:" url&apos, content="{url}"  />&apos;&apos,      <meta property="&apos;og:" title&apos, content="{title}"  />&apos;&apos,      <meta property="&apos;og:" description&apos, content="{description}"  />&apos;&apos,      <meta property="&apos;og:" image&apos, content="{image}"  />&apos;&apos,      <meta property="&apos;og: " site_name&apos, content="&apos,Zion" Tech Group&apos,       />&apos,&apos,      {/* comment */}&apos;&apos,";
-      <meta property="&apos;twitter: " card&apos; content="&apos,summary_large_image&apos,"  />&apos,&apos,"      <meta property="&apos,twitte,r:" url&apos, content="{url}"  />&apos;&apos,      <meta property="&apos;twitter:" title&apos, content="{title}"  />&apos;&apos,      <meta property="&apos;twitter:" description&apos, content="{description}"  />&apos;&apos,      <meta property="&apos;twitter:" image&apos, content="{image}"  />&apos;&apos;      {/* comment */}&apos;&apos;";
-      <meta name="&apos;viewport&apos;" content="&apos;width=device-width," initial-scale="1.0&apos;"  />&apos;&apos,      <meta httpEquiv="&apos;X-UA-Compatible&apos;" content="&apos;IE=edge&apos;"  />&apos;      &apos;      {/* comment */}&apos;&apos,";
-      <script type="&apos;application/ld+json&apos;">&apos;        {};
-  type = "website"}) => {};
-  const structuredData = {},";
-    "address": {};
-      "contactType": "customer service"}
-}
-
-  return (;
-<Head>;
-      {/* comment */}";
-      <title>{title}</title>";
-      <meta name = "description" content="{description}"  />;
-      <meta name="keywords" content="{keywords}"  />;
-      <meta name="author" content="Zion Tech Group"  />;
-      <meta name="robots" content="index, follow"  />;
-      <link rel="canonical" href="{url}"  />;
-      ";
-      {/* comment */}
-      <meta property="og:type" content="{type}"  />;
-      <meta property="og:url" content="{url}"  />;
-      <meta property="og:title" content="{title}"  />;
-      <meta property="og:description" content="{description}"  />;
-      <meta property="og:image" content="{image}"  />;
-      <title>{title}</title>";
-      <meta name="description" content="{description}" /">;
-      <meta name="keywords" content="{keywords}" /">;
-      <meta name="author" content="Zion Tech Group" /">;
-      <meta name="robots" content="index, follow" /">;
-      <link rel="canonical" href="{url}" /">";
-      ";
-      {/* comment */}";
-      <meta property="og: type" content="{type}" /">;
-      <meta property="og:url" content="{url}" /">;
-      <meta property="og:title" content="{title}" /">;
-      <meta property="og:description" content="{description}" /">;
-      <meta property="og:image" content="{image}" /">;
-      <meta property="og: site_name" content="Zion Tech Group" /">";
-      ",;
-      {/* comment */}";
-      <meta property="twitter: card" content="summary_large_image" /">",;
-      <meta property="twitter:url" content="{url}" /">;
-      <meta property="twitter:title" content="{title}" /">;
-      <meta property="twitter:description" content="{description}" /">;
-      <meta property="twitter:image" content="{image}" /">";
-      ";
-      {/* comment */}";
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /">;
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /">";
-      ";
-      {/* comment */}
-      <title>{title}</title>";
-      <meta name="description" content="{description}"  />";
-      <meta name="keywords" content="{keywords}"  />";
-      <meta name="author" content="Zion Tech Group"  />";
-      <meta name="robots" content="index, follow"  />";
-      <link rel="canonical" href="{url}"  />;
-
-      {/* comment */}";
-      <meta property="og:type" content="{type}"  />";
-      <meta property="og:url" content="{url}"  />";
-      <meta property="og:title" content="{title}"  />";
-      <meta property="og:description" content="{description}"  />";
-      <meta property="og:image" content="{image}"  />";
-      <meta property="og: site_name" content="Zion Tech Group"  />;
-,;
-      {/* comment */}";
-      <meta property="twitter: card" content="summary_large_image"  />",;
-      <meta property="twitter:url" content="{url}"  />";
-      <meta property="twitter:title" content="{title}"  />";
-      <meta property="twitter:description" content="{description}"  />";
-      <meta property="twitter:image" content="{image}"  />;
-
-      {/* comment */}";
-      <meta property="og: type" content="{type}"  />";
-      <meta property="og: url" content="{url}"  />";
-      <meta property="og: title" content="{title}"  />";
-      <meta property="og: description" content="{description}"  />";
-      <meta property="og: image" content="{image}"  />";
-      <meta property="og: site_name" content="Zion Tech Group"  />",;
-      <meta property="og: type" content="{type}"  />";
-      <meta property="og:url" content="{canonicalUrl}"  />";
-      <meta property="og:type" content="{type}"  />";
-      <meta property="og:url" content="{url}"  />";
-      <meta property="og:title" content="{title}"  />";
-      <meta property="og:description" content="{description}"  />";
-      <meta property="og:image" content="{image}"  />";
-      <meta property="og: site_name" content="Zion Tech Group"  />;
-      ",;
-      {/* comment */}
-      <meta property="twitter: card" content="summary_large_image"  />",;
-      <div>Broken JSX</div>
-    r:url" content="{url}"  />;
-      <meta property="twitter:title" content="{title}"  />;
-      <meta property="twitter:description" content="{description}"  />;
-      <meta property="twitter:image" content="{image}"  />;
-      ";
-      {/* comment */}
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"  />;
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />;
-      ";
-      {/* comment */}";
-      <meta name="twitter: card" content="summary_large_image"  />",;
-      <meta name="twitter:url" content="{url}"  />";
-      <meta name="twitter:title" content="{title}"  />";
-      <meta name="twitter:description" content="{description}"  />";
-      <meta name="twitter:image" content="{image}"  />";
-      <meta name="twitter: site" content="@ziontechgroup"  />;
-      ,;
-      {/* comment */}";
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />";
-      <meta name="theme-color" content="#3B82F6"  />;
-
-      {/* comment */}";
-      <div>Broken JSX</div>
-            />";
-      <meta property="twitter: card" content="summary_large_image"  />",;
-      <meta property="twitter:url" content="{url}"  />";
-      <meta property="twitter: title" content="{title}"  />";
-      <meta property="twitter: description" content="{description}"  />";
-      <meta property="twitter: image" content="{image}"  />;
-
-      {/* comment */}";
-      <meta name="robots" content="{noindex" ? "noindex, nofollow" : "index,follow"}       />";
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />";
-      <meta name="theme-color" content="#2563eb"  />";
-      <meta name="msapplication-TileColor" content="#2563eb"  />;
-
-      {/* Article specific meta tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {};
-        <meta key={tag} property="article:tag" content={tag} />;
+      <meta property="og:locale" content={seoLanguage} />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={seoTwitterCard} />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
+      <meta name="twitter:image" content={defaultOgImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      {additionalMeta.map((meta, index) => (
+        <meta key={index} name={meta.name} content={meta.content} />
       ))}
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />;
-      <meta name="twitter:title" content={title} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={image} />;
-      <meta name="twitter:site" content="@ziontechgroup" />;
-      <meta name="twitter:creator" content="@ziontechgroup" />      ;
-      {/* comment */}";
-      <script type="application/ld+json">;
-        {};
-})}
-
-      </script>;
-    </Helmet>";
-      <script type = "application/ld+json">;
-        {JSON.stringify(structuredData)}
-
-      </script>;
-    </Head>;
-  )}  );"};";
-  title = "Zion Tech Group - Advanced AI Solutions",";
-  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.",";
-  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation",";
-  image = "/og-image.jpg",";
-  url = "https: // comment;
-  type = "website;,
-}) => {};
-  )};";
-  title = "Zion Tech Group - Advanced AI Solutions", ";
-  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.",";
-  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation", ";
-  image = "/og-image.jpg",";
-  url = "https: // comment;
-  type = "website"}) => {};
-      <title>{title}</title>';
-      <meta name = "description" content="{description}"  />;
-      <meta name="keywords" content="{keywords}"  />;
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />;
-      ";
-      {/* comment */}
-      <meta property="og:title" content="{title}"  />;
-      <meta property="og:description" content="{description}"  />;
-      <meta property="og:image" content="{image}"  />;
-      <meta property="og:url" content="{url}"  />;
-      <meta property="og:type" content="{type}"  />;
-      ";
-      {/* comment */}
-      <meta name="twitter: card" content="summary_large_image"  />",;
-      <div>Broken JSX</div>
-    r:title" content="{title}"  />;
-      <meta name="twitter:description" content="{description}"  />;
-      <meta name="twitter:image" content="{image}"  />;
-      ";
-      {/* comment */}
-      <link rel="canonical" href="{url}"  />;
-      <meta name="robots" content="index, follow"  />;
-      <meta name="author" content="Zion Tech Group"  />";
-      <title>{title}</title>";
-      <meta name="description" content="{description}" /">;
-      <meta name="keywords" content="{keywords}" /">;
-      <meta name="viewport" content="width="device-width," initial-scale=1" /">";
-      {/* comment */}";
-      <meta property="og: title" content="{title}"  />";
-      <meta property="og: description" content="{description}"  />";
-      <meta property="og: image" content="{image}"  />";
-      <meta property="og: url" content="{url}"  />";
-      <meta property="og: type" content="{type}"  />;
-
-      {/* comment */}";
-      <meta name="twitter: card" content="summary_large_image"  />",;
-      <meta name="twitter:title" content="{title}"  />";
-      <meta name="twitter: description" content="{description}"  />";
-      <meta name="twitter: image" content="{image}"  />";
-      {/* comment */}";
-      <meta property="og: title" content="{title}" /">;
-      <meta property="og:description" content="{description}" /">;
-      <meta property="og:image" content="{image}" /">;
-      <meta property="og:url" content="{url}" /">;
-      <meta property="og:type" content="{type}" /">";
-      ";
-      {/* comment */}";
-      <meta name="twitter: card" content="summary_large_image" /">",;
-      <meta name="twitter:title" content="{title}" /">;
-      <meta name="twitter:description" content="{description}" /">;
-      <meta name="twitter:image" content="{image}" /">";
-      ";
-      {/* comment */}";
-      <link rel="canonical" href="{url}" /">;
-      <meta name="robots" content="index, follow" /">;
-      <meta name="author" content="Zion Tech Group" /">";
-    </Head>;
-  )}
-
-";
-export default SEO;";
-
+      
+      {/* Additional Links */}
+      {additionalLinks.map((link, index) => (
+        <link key={index} rel={link.rel} href={link.href} />
+      ))}
+      
+      {/* Additional Scripts */}
+      {additionalScripts.map((script, index) => (
+        <script key={index} type={script.type}>
+          {script.content}
+        </script>
+      ))}
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+      
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+        {JSON.stringify(defaultStructuredData)}
       </script>
     </Helmet>
   );
-};
+}
 
-export default SEO;
+// Specialized SEO components for different page types
+export function HomePageSEO() {
+  return (
+    <SEO
+      title="Home"
+      description="Discover Zion Tech Group's innovative technology solutions. We specialize in AI, machine learning, cloud computing, and digital transformation services."
+      keywords={['home', 'technology solutions', 'AI services', 'digital transformation']}
+      ogType="website"
+      structuredData={{
+        '@type': 'WebSite',
+        name: 'Zion Tech Group',
+        url: 'https://ziontechgroup.com',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://ziontechgroup.com/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
+        }
+      }}
+    />
+  );
+}
+
+export function ServicePageSEO({ serviceName, serviceDescription }: { serviceName: string; serviceDescription: string }) {
+  return (
+    <SEO
+      title={serviceName}
+      description={serviceDescription}
+      keywords={[serviceName.toLowerCase(), 'service', 'technology']}
+      ogType="service"
+      structuredData={{
+        '@type': 'Service',
+        name: serviceName,
+        description: serviceDescription,
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group'
+        },
+        serviceType: serviceName
+      }}
+    />
+  );
+}
+
+export function BlogPostSEO({ 
+  title, 
+  description, 
+  author, 
+  publishedDate, 
+  imageUrl 
+}: { 
+  title: string; 
+  description: string; 
+  author: string; 
+  publishedDate: string; 
+  imageUrl?: string; 
+}) {
+  return (
+    <SEO
+      title={title}
+      description={description}
+      author={author}
+      ogType="article"
+      ogImage={imageUrl}
+      structuredData={{
+        '@type': 'BlogPosting',
+        headline: title,
+        description: description,
+        author: {
+          '@type': 'Person',
+          name: author
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png'
+          }
+        },
+        datePublished: publishedDate,
+        dateModified: publishedDate,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+        }
+      }
+    }
+  />
+  );
+}
+
+

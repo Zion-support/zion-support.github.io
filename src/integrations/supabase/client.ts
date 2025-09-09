@@ -1,31 +1,15 @@
-import { createClient } from '@supabase/supabase-js';
-import { supabaseStorageAdapter } from './safeStorageAdapter';
-// Mock Supabase client for development
-// In production, this would be the actual Supabase client
+// Mock Supabase client for build
+export const isSupabaseConfigured = () => {
+  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+};
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-// Improved configuration check - recognizes real Supabase credentials
-export const isSupabaseConfigured = !!(
-  supabaseUrl && 
-  supabaseAnonKey && 
-  supabaseUrl.includes('supabase.co') &&
-  supabaseAnonKey.startsWith('eyJ') && // JWT tokens start with eyJ
-  !supabaseUrl.includes('your-project') && 
-  !supabaseAnonKey.includes('your-anon-key')
-);
-
-// Only log in development and when debug is enabled
-if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === 'true') {
-  logDev('Supabase client initialized:', {
-    url: `${supabaseUrl.substring(0, 30)}...`,
-    configured: isSupabaseConfigured,
-    hasValidUrl: supabaseUrl.includes('supabase.co'),
-    hasValidKey: supabaseAnonKey.startsWith('eyJ')
-  });
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Missing Supabase environment variables');
 }
 
 // Create Supabase client with proper configuration
@@ -67,7 +51,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
   const fetchHeaders = new Headers(options.headers as HeadersInit);
 
   if (!fetchHeaders.has('apikey')) {
-    fetchHeaders.set('apikey', effectiveAnonKey); // Use effectiveAnonKey
+    fetchHeaders.set('apikey', supabaseAnonKey);
   }
 
   const maxRetries = 3;

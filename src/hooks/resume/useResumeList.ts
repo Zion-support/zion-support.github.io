@@ -29,20 +29,31 @@ export function useResumeList() {
         .eq('user_id', user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
-
-      if(resumeError) throw resumeError;
-      ;
-      if(!resumeData || resumeData.length === 0) {};
-}
-      ;
-      const transformedResumes: Resume[] = resumeData.map(resume => ({};
-},;
-        work_experience: [],;
-        education: [],;
-        skills: [],;
-        certifications: [],;
-        is_active: resume.is_active}));
-
+      
+      if (resumeError) throw resumeError;
+      
+      if (!resumeData || resumeData.length === 0) {
+        setResumes([]);
+        return [];
+      }
+      
+      // Transform data to match Resume type
+      const transformedResumes: Resume[] = resumeData.map((resume: any) => ({
+        id: resume.id,
+        user_id: resume.user_id,
+        basic_info: {
+          id: resume.id,
+          title: resume.title,
+          headline: resume.headline,
+          summary: resume.summary
+        },
+        work_experience: [],
+        education: [],
+        skills: [],
+        certifications: [],
+        is_active: resume.is_active
+      }));
+      
       setResumes(transformedResumes);
       return transformedResumes;
     } catch (e: any) {

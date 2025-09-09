@@ -1,0 +1,1 @@
+import{r as t,j as p}from"./react-vendor-b8kf7aCi.js";import{c as e}from"./main-Mr28Ox1N.js";const i=t.forwardRef(({className:r,orientation:a="horizontal",...o},s)=>p.jsx("div",{ref:s,className:e("shrink-0 bg-border",a==="horizontal"?"h-[1px] w-full":"h-full w-[1px]",r),...o}));i.displayName="Separator";export{i as S};

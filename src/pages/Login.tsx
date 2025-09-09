@@ -1,226 +1,38 @@
-import React, { useState } from 'react';
-export default React.memo (function Login(...args: any[]): any {;
-import {;
-import { motion } from 'framer - motion';
-;
-;
-  Mail,;
-  Lock,;
-  Eye,;
-  EyeOff,;
-  User,;
-  Building,;
-  Globe,;
-  ArrowRight,;
-  CheckCircle,;
-  AlertCircle,;
-  Shield,;
-  Zap,;
-  Brain,;
-  Cloud,;
-  Server,;
-  BarChart3,;
-  Code,;
-  Network,;
-  Atom,;
-  TrendingUp,;
-  Heart,;
-  MessageCircle,;
-  ExternalLink,;
-  Github,;
-  Linkedin,;
-  Twitter,;
-  Facebook,;
-  Chrome,;
-  Apple,;
-  Smartphone,;
-  Monitor,;
-  Tablet,;
-  Laptop,;
-} from 'lucide - react';
-;
-  const [isLogin, setIsLogin] = useState (true) ;
-  const [showPassword, setShowPassword] = useState (false) ;
-  const [showConfirmPassword, setShowConfirmPassword] = useState (false) ;
-  const [formData, setFormData] = useState ({;
-    email: '',;
-    password: '',;
-    confirmPassword: '',;
-    firstName: '',;
-    lastName: '',;
-    company: '',;
-    phone: '',;
-    acceptTerms: false,;
-    acceptMarketing: false,;
-  }) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [submitted, setSubmitted] = useState (false) ;
-;
-  const handleInputChange = useCallback ( (e: React.ChangeEvent < HTMLInputElement>) => {;
-    const { name, value, type, checked } = e.target;
-    setFormData (prev => ({;
-      ...prev,;
-      [name]: type === 'checkbox' ? checked : value,;
-    }) ) ;
-  };
-;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault () ;
-    setIsSubmitting (true) ;
-;
-    // Simulate form submission;
-    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-;
-    setIsSubmitting (false) ;
-    setSubmitted (true) ;
-;
-    // Reset form after 5 seconds;
-    setTimeout ( () => {;
-      setSubmitted (false) ;
-      setFormData ({;
-        email: '',;
-        password: '',;
-        confirmPassword: '',;
-        firstName: '',;
-        lastName: '',;
-        company: '',;
-        phone: '',;
-        acceptTerms: false,;
-        acceptMarketing: false,;
-      }) ;
-    }, 5000) ;
-  };
-;
-  const toggleForm = () => {;
-    setIsLogin (!isLogin) ;
-    setFormData ({;
-      email: '',;
-      password: '',;
-      confirmPassword: '',;
-      firstName: '',;
-      lastName: '',;
-      company: '',;
-      phone: '',;
-      acceptTerms: false,;
-      acceptMarketing: false,;
-    }) ;
-  };
-;
-  const isFormValid = () => {;
-    if (isLogin) {;
-      return formData.email && formData.password;
-    } else {;
-      return (formData.email &&;
-        formData.password &&;
-        formData.confirmPassword &&;
-        formData.firstName &&;
-        formData.lastName &&;
-        formData.acceptTerms) ;
-    };
-  };
-;
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - indigo - 900 flex items - center justify - center p - 4">;
-      <div role="button" className="w - full max - w-md">;
-        {/* Logo and Header */};
-        <motion.div;
-          initial={{ opacity: 0, y: -20 }};
-          animate={{ opacity: 1, y: 0 }};
-          transition={{ duration: 0.6 }};
-          className="text - center mb - 8";
-        >;
-          <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center mx - auto mb - 4">;
-            <span className="text - white font - bold text - 2xl">Z</span>;
-          </div>;
-          <h1 className="text - 3xl font - bold text - white mb - 2">;
-            {isLogin ? 'Welcome Back' : 'Create Account'};
-          </h1>;
-          <p className="text - gray - 300">;
-            {isLogin ? 'Sign in to your account' : 'Join Zion Tech Group today'};
-          </p>;
-        </motion.div>;
-;
-        {/* Form Card */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};
-          animate={{ opacity: 1, y: 0 }};
-          transition={{ duration: 0.6, delay: 0.2 }};
-          className="bg - white / 10 backdrop - blur - lg rounded - 2xl p - 8 border border - white / 20";
-        >;
-          {/* Success Message */};
-          {submitted && (<motion.div;
-              initial={{ opacity: 0, scale: 0.9 }};
-              animate={{ opacity: 1, scale: 1 }};
-              className="mb - 6 p - 4 bg - green - 500 / 20 border border - green - 500 / 50 rounded - lg flex items - center space - x-3";
-            >;
-              <CheckCircle className="w - 6 h - 6 text - green - 400"       />;
-              <span className="text - green - 400">;
-                {isLogin;
-                  ? 'Successfully logged in!';
-                  : 'Account created successfully!'};
-              </span>;
-            </motion.div>) };
-;
-          <form onSubmit={handleSubmit} className="space - y-6">;
-            {!isLogin && (<div role="button" className="grid grid - cols - 2 gap - 4">;
-                <div>;
-                  <label;
-                    htmlFor="firstName";
-                    className="block text - white font - medium mb - 2";
-                  >;
-                    <User className="w - 4 h - 4 inline mr - 2"       />;
-                    First Name *;
-                  </label>;
-                  <input;
-                    type="text";
-                    id="firstName";
-                    name="firstName";
-                    value={formData.firstName};
-                    onChange={handleInputChange};
-                    required;
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent";
-                    placeholder="Enter first name";
-                        />;
-                </div>;
-                <div>;
-                  <label;
-                    htmlFor="lastName";
-                    className="block text - white font - medium mb - 2";
-                  >;
-                    <User className="w - 4 h - 4 inline mr - 2"       />;
-                    Last Name *;
-                  </label>;
-                  <input;
-                    type="text";
-                    id="lastName";
-                    name="lastName";
-                    value={formData.lastName};
-                    onChange={handleInputChange};
-                    required;
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent";
-                    placeholder="Enter last name";
-                        />;
-                </div>;
-              </div>) };
-;
-            <div>;
-              <label;
-                htmlFor="email";
-                className="block text - white font - medium mb - 2";
-              >;
-                <Mail className="w - 4 h - 4 inline mr - 2"       />;
-                Email Address *;
-              </label>;
-              <input;
-                type="email";
-                id="email";
-                name="email";
-                value={formData.email};
-                onChange={handleInputChange};
-                required;
-                className="w - full px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent";
-                placeholder="Enter your email";
-                    />;
-            </div>;
-    </>;
-  )}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const Login: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Login - Zion Tech Group" 
+        description="Sign in to your Zion Tech Group account to access your dashboard and services."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Login
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Sign in to your Zion Tech Group account to access your dashboard and services.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our login system is currently under development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default Login;

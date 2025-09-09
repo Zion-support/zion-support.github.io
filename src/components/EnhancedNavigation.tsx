@@ -1,440 +1,247 @@
-import { Link, useLocation  } from 'react - router - dom.ts';
-import React, { useState, useEffect, useCallback } from 'react.ts';
-export const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({ ;
-import { Menu, ;
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-;
-;
-  X, ;
-  ChevronDown, ;
-  Search, ;
-  User, ;
-  Settings,;
-  Bell,;
-  Sun,;
-  Moon,;
-  Monitor,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Atom,;
-  ShoppingCart,;
-  BarChart3,;
-  Users,;
-  Building,;
-  Rocket,;
-  Star;
- } from 'lucide - react.ts';
-;
-interface NavigationItem {;
-;
-  label: anystring;
+import React, { memo, useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
+interface NavItem {
+  label: string;
   href: string;
-  icon?: React.ReactNode;
-  children?: NavigationItem[];
-  featured?: boolean;
-;
-};
-;
-interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {;
-;
-  className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system') => void;
-;
-};
-;
-const navigationItems: NavigationItem[] = [;
-  { label: 'Home', href: '/' },;
-  { ;
-    label: 'AI & Machine Learning', ;
-    href: '/ai - services',;
-    icon: <Brain className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'AI Workflow Orchestrator', href: '/services / ai - workflow - orchestrator' },;
-      { label: 'AI Data Governance Platform', href: '/services / ai - data - governance - platform' },;
-      { label: 'AI Customer Experience Analytics', href: '/services / ai - customer - experience - analytics' },;
-      { label: 'AI Financial Risk Management', href: '/services / ai - financial - risk - management' },;
-      { label: 'AI Code Review Security Scanner', href: '/services / ai - code - review - security - scanner' },;
-      { label: 'AI Quantum Hybrid Platform', href: '/services / ai - quantum - hybrid - platform' },;
-      { label: 'AI Autonomous Supply Chain', href: '/services / ai - autonomous - supply - chain' },;
-      { label: 'AI Cybersecurity Threat Intelligence', href: '/services / ai - cybersecurity - threat - intelligence' },;
-      { label: 'AI Business Intelligence Analytics', href: '/services / ai - business - intelligence - analytics' },;
-      { label: 'AI Compliance Assistant', href: '/services / ai - compliance - assistant' },;
-      { label: 'AI Sales Copilot', href: '/services / ai - sales - copilot' },;
-      { label: 'AI - Powered SEO', href: '/services / ai - powered - seo' },;
-      { label: 'Interview Assessment AI', href: '/services / interview - assessment - ai' },;
-      { label: 'AI Content Marketing Suite', href: '/services / ai - content - marketing - suite' },;
-      { label: 'AI Customer Support Automation', href: '/services / ai - customer - support - automation' },;
-      { label: 'AI Project Management', href: '/services / ai - project - management' },;
-      { label: 'AI Financial Analytics', href: '/services / ai - financial - analytics' },;
-      { label: 'AI Marketing Automation', href: '/services / ai - marketing - automation' },;
-      { label: 'AI Legal Document Automation', href: '/services / ai - legal - document - automation' },;
-      { label: 'AI Healthcare Analytics', href: '/services / ai - healthcare - analytics' },;
-      { label: 'AI Financial Trading', href: '/services / ai - financial - trading' },;
-      { label: 'AI Content Creation Suite', href: '/services / ai - content - creation - suite' };
-    ];
-  },;
-  { ;
-    label: 'Cloud & Infrastructure', ;
-    href: '/it - services',;
-    icon: <Cloud className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'Cloud DevOps', href: '/services / cloud - devops' },;
-      { label: 'IT Infrastructure', href: '/services / it - infrastructure' },;
-      { label: 'FinOps Advisor', href: '/services / finops - advisor' },;
-      { label: 'Cloud FinOps Optimizer', href: '/services / cloud - finops - optimizer' },;
-      { label: 'IT Consulting', href: '/it - consulting' },;
-      { label: 'Enterprise Solutions', href: '/solutions / enterprise' },;
-      { label: 'Healthcare Solutions', href: '/solutions / healthcare' },;
-      { label: 'Digital Twin', href: '/services / digital - twin' },;
-      { label: 'Data Analytics', href: '/services / data - analytics' },;
-      { label: 'Digital Transformation', href: '/services / digital - transformation' };
-    ];
-  },;
-  { ;
-    label: 'Cybersecurity & Privacy', ;
-    href: '/services / cybersecurity',;
-    icon: <Shield className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'AI Cybersecurity Platform', href: '/services / ai - cybersecurity - platform' },;
-      { label: 'Security Headers & CSP', href: '/services / security - headers - csp' },;
-      { label: 'DSR Privacy Portal', href: '/services / dsr - portal' },;
-      { label: 'Zero Trust Network Access', href: '/services / zero - trust - network - access' },;
-      { label: 'AI Compliance Assistant', href: '/services / ai - compliance - assistant' };
-    ];
-  },;
-  { ;
-    label: 'Emerging Technologies', ;
-    href: '/emerging - tech',;
-    icon: <Atom className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'Quantum Computing', href: '/services / quantum - computing' },;
-      { label: 'IoT Edge Computing', href: '/services / iot - edge - computing' },;
-      { label: 'AI Quantum Hybrid Platform', href: '/services / ai - quantum - hybrid - platform' },;
-      { label: 'Space Technology', href: '/space - tech' },;
-      { label: 'Quantum Machine Learning', href: '/services / quantum - machine - learning' },;
-      { label: 'AI Predictive Maintenance', href: '/services / ai - predictive - maintenance' },;
-      { label: 'Sustainable Technology', href: '/services / sustainable - technology' };
-    ];
-  },;
-  { ;
-    label: 'Micro SaaS Solutions', ;
-    href: '/micro - saas',;
-    icon: <ShoppingCart className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'Micro CRM', href: '/services / micro - crm' },;
-      { label: 'Helpdesk Platform', href: '/services / helpdesk - platform' },;
-      { label: 'Website Analytics', href: '/services / website - analytics' },;
-      { label: 'IT Helpdesk', href: '/services / it - helpdesk' },;
-      { label: 'Affiliate Tracking', href: '/services / affiliate - tracking' },;
-      { label: 'Mobile Survey', href: '/services / mobile - survey' },;
-      { label: 'Podcast Transcription', href: '/services / podcast - transcription' },;
-      { label: 'Email Sequencer', href: '/services / email - sequencer' },;
-      { label: 'Returns Management', href: '/services / returns - management' },;
-      { label: 'LLM Content Studio', href: '/services / llm - content - studio' };
-    ];
-  },;
-  { ;
-    label: 'Solutions', ;
-    href: '/solutions',;
-    icon: <Building className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'Enterprise Solutions', href: '/solutions / enterprise' },;
-      { label: 'Healthcare Solutions', href: '/solutions / healthcare' },;
-      { label: 'Manufacturing Solutions', href: '/manufacturing - solutions' },;
-      { label: 'Financial Solutions', href: '/financial - solutions' },;
-      { label: '5G Enterprise Solutions', href: '/5g - enterprise - solutions' },;
-      { label: 'Industry Solutions', href: '/industry - solutions' };
-    ];
-  },;
-  { ;
-    label: 'Comp', ;
-    href: '/about',;
-    icon: <Users className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'About Us', href: '/about' },;
-      { label: 'Team', href: '/team' },;
-      { label: 'Leadership', href: '/leadership' },;
-      { label: 'Careers', href: '/careers' },;
-      { label: 'Partners', href: '/partners' },;
-      { label: 'News', href: '/news' },;
-      { label: 'Case Studies', href: '/case - studies' },;
-      { label: 'Blog', href: '/blog' };
-    ];
-  },;
-  { ;
-    label: 'Resources', ;
-    href: '/resources',;
-    icon: <BarChart3 className="w - 4 h - 4"       />,;
-    children: [;
-      { label: 'Pricing', href: '/pricing' },;
-      { label: 'FAQ', href: '/faq' },;
-      { label: 'Help Center', href: '/help' },;
-      { label: 'Documentation', href: '/documentation' },;
-      { label: 'API Documentation', href: '/api - docs' },;
-      { label: 'Developer Portal', href: '/developer' },;
-      { label: 'Training', href: '/training' },;
-      { label: 'Webinars', href: '/webinars' },;
-      { label: 'White Papers', href: '/white-papers' },;
-      { label: 'Sitemap', href: '/sitemap' }
-    ]},;
-  { label: 'Contact', href: '/contact' }
-];
-;
-className:  '',;
-  onThemeChange ;
-}) => {;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [activeDropdown, setActiveDropdown] = useState < any> (null) ;
-  const [theme, setTheme] = useState < any> ('system') ;
-  const [isScrolled, setIsScrolled] = useState (false) ;
-  const location = useLocation () ;
-;
-  useEffect ( () => {;
-    const handleScroll = () => {;
-      setIsScrolled (window.scrollY > 10) ;
+  children?: NavItem[];
+  external?: boolean;
+}
+
+const EnhancedNavigation = memo(() => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navRef = useRef<HTMLElement>(null);
+
+  const navItems: NavItem[] = [
+    {
+      label: 'Home',
+      href: '/'
+    },
+    {
+      label: 'Services',
+      href: '/services',
+      children: [
+        { label: 'AI Solutions', href: '/services/ai-services' },
+        { label: 'IT Services', href: '/services/it-services' },
+        { label: 'Cybersecurity', href: '/services/cybersecurity' },
+        { label: 'Cloud Migration', href: '/services/cloud-solutions' },
+        { label: 'Mobile Development', href: '/services/mobile-development' },
+        { label: 'Micro SaaS', href: '/services/micro-saas' }
+      ]
+    },
+    {
+      label: 'Solutions',
+      href: '/solutions',
+      children: [
+        { label: 'AI Matcher', href: '/match' },
+        { label: 'Talent Directory', href: '/talent' },
+        { label: 'Request Quote', href: '/request-quote' },
+        { label: 'Service Calculator', href: '/service-calculator' }
+      ]
+    },
+    {
+      label: 'About',
+      href: '/about'
+    },
+    {
+      label: 'Contact',
+      href: '/contact'
+    }
+  ];
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
     };
-;
-    window.addEventListener ('scroll', handleScroll) ;
-    return () => window.removeEventListener ('scroll', handleScroll) ;
-  }, []) ;
-;
-  useEffect ( () => {;
-    setIsOpen (false) ;
-    setActiveDropdown (null) ;
-  }, [location]) ;
-;
-  const handleThemeChange = useCallback ( (newTheme: any'light' | 'dark' | 'system') => {;
-    setTheme (newTheme) ;
-    onThemeChange?. (newTheme) ;
-    ;
-    const root = document.documentElement;
-    root.classList.remove ('light', 'dark') ;
-    ;
-    if (newTheme = == 'system') {;
-      const systemTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
-      root.classList.add (systemTheme) ;
-    } else {;
-      root.classList.add (newTheme) ;
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [location]);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        setActiveDropdown(null);
+      }
     };
-    ;
-    localStorage.setItem ('zion - theme', newTheme) ;
-  }, [onThemeChange]) ;
-;
-  const toggleDropdown = (label: anystring) => {;
-    setActiveDropdown (activeDropdown === label ? null : label) ;
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
+  // Handle click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
   };
-;
-  const closeDropdown = () => {;
-    setActiveDropdown (null) ;
-  };
-;
-  const contactInfo = {;
-    phone: "+1 302 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    website: "https://ziontechgroup.com",;
-    address: "364 E Main St STE 1008 Middletown DE 19709";
-  };
-;
-  return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${;
-      isScrolled ;
-        ? 'bg - white / 95 dark:bg - slate - 900 / 95 backdrop - blur - md shadow - lg' ;
-        : 'bg - transparent';
-    } ${className}`}>;
-      <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div role="button" className="flex justify - between items - center h - 16">;
-          {/* Logo */};
-          <div role="button" className="flex - shrink - 0">;
-            <Link to="/" className="flex items - center space - x-2">;
-              <div role="button" className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;
-                <Zap className="w - 5 h - 5 text - white"       />;
-              </div>;
-              <span className="text - xl font - bold text - gray - 900 dark:text - white">;
-                Zion Tech Group;
-              </span>;
-            </Link>;
-          </div>;
 
-          {/* Desktop Navigation */}";
-          <div className="hidden lg: unknownflex items-center space-x-8">;
-            {};
-              <div key={item.label} className="relative group">;
-                {};
-                    onClick={() => toggleDropdown(item.label)}";
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
-                    <span>{item.label}</span>";
-                    <ChevronDown className="w-4 h-4"  />                  </button>;
-                ) : (;
-                  <div>Broken JSX</div>
-                    className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
-                    {item.label}
-                  </Link>) }
+  const NavLink = memo<{ item: NavItem; isMobile?: boolean }>(({ item, isMobile = false }) => {
+    const isActive = location.pathname === item.href;
+    
+    if (item.children) {
+      return (
+        <div className="relative">
+          <button
+            onClick={() => toggleDropdown(item.label)}
+            className={`
+              flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors
+              ${isMobile 
+                ? 'text-white hover:bg-white/10 w-full justify-between' 
+                : 'text-white hover:text-blue-200'
+              }
+              ${isActive ? 'text-blue-200' : ''}
+            `}
+            aria-expanded={activeDropdown === item.label}
+            aria-haspopup="true"
+          >
+            <span>{item.label}</span>
+            <ChevronDown className={`w-4 h-4 transition-transform ${
+              activeDropdown === item.label ? 'rotate-180' : ''
+            }`} />
+          </button>
+          
+          {(activeDropdown === item.label || isMobile) && (
+            <div className={`
+              ${isMobile 
+                ? 'mt-2 space-y-1' 
+                : 'absolute top-full left-0 mt-1 w-48 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg z-50'
+              }
+            `}>
+              {item.children.map((child) => (
+                <Link
+                  key={child.href}
+                  to={child.href}
+                  className={`
+                    block px-3 py-2 text-sm transition-colors
+                    ${isMobile 
+                      ? 'text-white hover:bg-white/10 rounded-md' 
+                      : 'text-white hover:bg-white/10 hover:text-blue-200 rounded-md'
+                    }
+                    ${location.pathname === child.href ? 'text-blue-200 bg-white/10' : ''}
+                  `}
+                >
+                  {child.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
 
-                {/* Dropdown Menu */}
-                {};
-                            {item.icon}
-                            <span>{item.label}</span>;
-                          </h3>;
-                        </div>;
-                        <div role="button" className="max - h-96 overflow - y-auto">;
-                          {item.children.map ( (child) => (<Link;
-                              key={child.href};
-                              to={child.href};
-                              className="flex items - center space - x-3 px - 4 py - 3 text - slate - 300 hover:text - white hover:bg - slate - 700 / 50 transition - colors duration - 200 group";
-                            >;
-                              <div role="button" className="w - 2 h - 2 bg - slate - 500 rounded - full group - hover:bg - cyan - 400 transition - colors duration - 200"></div>;
-                              <span className="text - sm font - medium">{child.label}</span>;
-                            </Link>) ) };
-                        </div>;
-                      </motion.div>) };
-                  </AnimatePresence>) };
-              </div>) ) };
-          </div>;
-;
-          {/* Right Side Actions */};
-          <div role="button" className="hidden lg:flex items - center space - x-4">;
-            {/* Theme Toggle */};
-            <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 800 rounded - lg p - 1">;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('light') };
-                className={`p - 2 rounded - md transition - colors ${;
-                  theme === 'light' ;
-                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' ;
-                    : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300';
-                }`};
-              >;
-                <Sun className="w - 4 h - 4"       />;
-              </button>;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('dark') };
-                className={`p - 2 rounded - md transition - colors ${;
-                  theme === 'dark' ;
-                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' ;
-                    : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300';
-                }`};
-              >;
-                <Moon className="w - 4 h - 4"       />;
-              </button>;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleThemeChange ('system') };
-                className={`p - 2 rounded - md transition - colors ${;
-                  theme === 'system' ;
-                    ? 'bg - white dark:bg - slate - 700 text - blue - 600 shadow - sm' ;
-                    : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300';
-                }`};
-              >;
-                <Monitor className="w - 4 h - 4"       />;
-              </button>;
-            </div>;
-;
-            {/* Contact Button */};
-            <Link;
-              to="/contact";
-              className="inline - flex items - center px - 4 py - 2 border border - transparent text - sm font - medium rounded - md text - white bg - blue - 600 hover:bg - blue - 700 transition - colors";
-            >;
-              <Phone className="w - 4 h - 4 mr - 2"       />;
-              Get Quote;
-            </Link>;
-          </div>;
-;
-          {/* Mobile menu button */};
-          <div role="button" className="lg:hidden">;
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) };
-              className="inline - flex items - center justify - center p - 2 rounded - md text - gray - 400 hover:text - gray - 500 hover:bg - gray - 100 dark:hover:bg - slate - 800 transition - colors";
-            >;
-              {isOpen ? <X className="w - 6 h - 6"       /> : <Menu className="w - 6 h - 6"       />};
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-;
-                    {/* Mobile Menu */};
-              <AnimatePresence>;
-                {isOpen && (<motion.div;
-                    initial={{ opacity: 0, height: 0 }};
-                    animate={{ opacity: 1, height: 'auto' }};
-                    exit={{ opacity: 0, height: 0 }};
-                    transition={{ duration: 0.3 }};
-                    className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - slate - 700 / 50";
-                  >;
-                    <div role="button" className="px - 4 py - 6 space - y-4">;
-                      {navigationItems.map ( (item) => (<div role="button" key={item.label}>;
-                          {item.children ? (<div>;
-                              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.label) };
-                                className="flex items - center justify - between w - full text - left text - slate - 300 hover:text - white px - 3 py - 2 rounded - md text - base font - medium transition - colors duration - 200 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:ring - offset - 2 focus:ring - offset - slate - 900";
-                                aria - expanded={activeDropdown === item.label};
-                                aria - haspopup="true";
-                              >;
-                                <div role="button" className="flex items - center space - x-2">;
-                                  {item.icon};
-                                  <span>{item.label}</span>;
-                                </div>;
-                                <ChevronDown className={`w - 5 h - 5 transition - transform duration - 200 ${;
-                                  activeDropdown === item.label ? 'rotate - 180' : '';
-                                }`}       />;
-                              </button>;
-                              ;
-                              {activeDropdown === item.label && (<motion.div;
-                                  initial={{ opacity: 0, y: -10 }};
-                                  animate={{ opacity: 1, y: 0 }};
-                                  exit={{ opacity: 0, y: -10 }};
-                                  transition={{ duration: 0.2 }};
-                                  className="ml - 4 mt - 2 space - y-2 border - l border - slate - 700 / 50 pl - 4";
-                                >;
-                                  {item.children.map ( (child) => (<Link;
-                                      key={child.href};
-                                      to={child.href};
-                                      className="block text - slate - 400 hover:text - white px - 3 py - 2 rounded - md text - sm transition - colors duration - 200 flex items - center space - x-2";
-                                    >;
-                                      <div role="button" className="w - 1.5 h - 1.5 bg - slate - 500 rounded - full"></div>;
-                                      <span>{child.label}</span>;
-                                    </Link>;
-                                  ))}
-                                </motion.div>;
-                              )}
-                            </div>;
-                          ) : (;
-                            <div>Broken JSX</div>
-                              className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900">;
-                              {item.label}
-                            </Link>) }
-                        </div>) ) }
+    return (
+      <Link
+        to={item.href}
+        className={`
+          px-3 py-2 rounded-md text-sm font-medium transition-colors
+          ${isMobile 
+            ? 'text-white hover:bg-white/10 block' 
+            : 'text-white hover:text-blue-200'
+          }
+          ${isActive ? 'text-blue-200' : ''}
+        `}
+      >
+        {item.label}
+      </Link>
+    );
+  });
 
-              {/* Mobile Actions */}";
-              <div className="pt-4 border-t border-slate-700/50 space-y-3">";
-                <div className="flex items-center space-x-4 text-slate-400">";
-                  <Phone className="w-4 h-4"  />;
-                  <span>+1(555) 123-4567</span>;
-                </div>";
-                <div className="flex items-center space-x-4 text-slate-400">";
-                  <Mail className="w-4 h-4"  />;
-                  <span>info@ziontechgroup.com</span>;
-                </div>";
-                <div className="flex items-center space-x-4 text-slate-400">";
-                  <MapPin className="w-4 h-4"  />                  <span>123 Tech Street, Digital City</span>;
-                </div>;
-                <div role="button" className="flex items - center space - x-4 text - slate - 400">;
-                  <Mail className="w - 4 h - 4"       />;
-                  <span > info@ziontechgroup.com</span>;
-                </div>;
-                <div role="button" className="flex items - center space - x-4 text - slate - 400">;
-                  <MapPin className="w - 4 h - 4"       />;
-                  <span > 123 Tech Street, Digital City</span>;
-                </div>;
-                <Link;
-                  to="/contact";
-                  className="mt - 4 inline - flex items - center justify - center w - full px - 4 py - 2 border border - transparent text - sm font - medium rounded - md text - white bg - blue - 600 hover:bg - blue - 700 transition - colors";
-                >;
-                  <Phone className="w - 4 h - 4 mr - 2"       />;
-                  Get Quote;
-                </Link>;
-              </div>;
-            </div>;
-          </motion.div>) };
-      </AnimatePresence>;
-    </nav>;
-  )};'"`;
+  return (
+    <nav 
+      ref={navRef}
+      id="navigation"
+      className={`
+        fixed top-0 left-0 right-0 z-40 transition-all duration-300
+        ${isScrolled 
+          ? 'bg-black/80 backdrop-blur-md border-b border-white/20' 
+          : 'bg-transparent'
+        }
+      `}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          </Link>
 
-;,"});})";
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <NavLink key={item.label} item={item} />
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-md text-white hover:bg-white/10 transition-colors"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 backdrop-blur-md rounded-lg mt-2 border border-white/20">
+              {navItems.map((item) => (
+                <NavLink key={item.label} item={item} isMobile />
+              ))}
+              <div className="pt-4 border-t border-white/20">
+                <Link
+                  to="/contact"
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium text-center transition-colors"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+});
+
+EnhancedNavigation.displayName = 'EnhancedNavigation';
+
+export default EnhancedNavigation;

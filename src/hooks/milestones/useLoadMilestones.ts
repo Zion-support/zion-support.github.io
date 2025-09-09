@@ -28,27 +28,29 @@ export const useLoadMilestones = (projectId?: string) => {
         .select('*')
         .eq('project_id', projectId)
         .order('due_date', { ascending: true });
-
-      if(milestonesError) throw milestonesError;
-
-      setMilestones(milestonesData || []); // Ensure milestonesData is not null;
-      ;
+      
+      if (milestonesError) throw milestonesError;
+      
+      setMilestones(milestonesData);
+      
+      // Fetch activities for each milestone
       const activitiesMap: Record<string, MilestoneActivity[]> = {};
-      ;
-      if(milestonesData) {};
-          const { data: activitiesData, error: activitiesError } = await supabase;
-            .from('milestone_activities');
-            .select(`;
-              *,;
-              created_by_profile:profiles!user_id(display_name, avatar_url);
-            `);
-            .eq('milestone_id', milestone.id);
-            .order('created_at', { ascending: false });
-
-          if(activitiesError) throw activitiesError;
-
-          activitiesMap[milestone.id] = activitiesData || []}
+      
+      for (const milestone of milestonesData) {
+        const { data: activitiesData, error: activitiesError } = await supabase
+          .from('milestone_activities')
+          .select(`
+            *,
+            created_by_profile:profiles!user_id(display_name, avatar_url)
+          `)
+          .eq('milestone_id', milestone.id)
+          .order('created_at', { ascending: false });
+          
+        if (activitiesError) throw activitiesError;
+        
+        activitiesMap[milestone.id] = activitiesData || [];
       }
+      
       setActivities(activitiesMap);
       setError(null);
     } catch (err: any) {

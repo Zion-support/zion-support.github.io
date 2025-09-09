@@ -6,7 +6,10 @@ import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { format, isPast, parseISO } from "date-fns";
 import Link from "next/link";
-import { Calendar, Clock, Video } from "lucide-react";
+import { Calendar, Clock, Video } from 'lucide-react';
+
+
+
 import { Avatar } from "@/components/ui/avatar";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -142,19 +145,21 @@ export function UpcomingInterviewsCard() {
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1" />
                     {formattedDate} at {formattedTime}
-                  </div>;
-                </div>;
-              </div>;
-            )})}
-        </div>;
-
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
-          <Button asChild size="sm" variant="outline" className="w-full">;
-            <Link to="/interviews">;
-              View All Interviews;
-            </Link>;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
+          <Button asChild size="sm" variant="outline" className="w-full">
+            <Link href="/interviews">
+              View All Interviews
+            </Link>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

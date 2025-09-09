@@ -1,60 +1,39 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Team = () => {};
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+const Team: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark to-zion-blue-darker">
+      <SEO 
+        title="Our Team - Zion Tech Group"
+        description="Meet the expert team behind Zion Tech Group's innovative technology solutions and AI-powered services."
+        keywords="team, experts, technology, AI, professionals"
+      />
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Our Team</h1>
+          <p className="text-xl text-zion-blue-light max-w-3xl mx-auto">
+            Meet the expert team behind our innovative technology solutions and AI-powered services.
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-bold text-white mb-6">Expert Professionals</h2>
+            <p className="text-lg text-zion-blue-light mb-6">
+              Our team consists of industry experts, AI specialists, and technology professionals 
+              who are passionate about delivering exceptional solutions.
+            </p>
+            <p className="text-lg text-zion-blue-light">
+              With years of experience in AI, machine learning, cybersecurity, and IT infrastructure, 
+              we're equipped to tackle the most complex technological challenges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
-  return (;
-    <>;
-      <Head>;
-        <title>Team - Zion Tech Group</title>;
-        <meta name="description" content="Professional Team services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Team;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Team services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>;
-  )}
+
 export default Team;
-;
-;
-const Team: React.FC = () => (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center">;
-    <div className="text - center text - white">;
-      <h1 className="text - 4xl font - bold mb - 4">Our Team</h1>;
-      <p className="text - xl text - gray - 300">;
-        Meet the people behind Zion Tech Group.;
-      </p>;
-    </div>;
-  </div>) ;

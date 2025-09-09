@@ -1,77 +1,66 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-export default function Page() {};
-  return null;
-}
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
-  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
-];
-;
-const defaultLanguageContext: LanguageContextType = {};
-  changeLanguage: async () => {},;
-  isRTL: false,;
-  supportedLanguages}
-const LanguageContext = createContext(defaultLanguageContext);
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-;
-interface LanguageProviderProps {};
-    user: { id?: string } | null;,
-};,
+export type SupportedLanguage = 'en' | 'es' | 'fr';
+
+interface LanguageContextType {
+  currentLanguage: SupportedLanguage;
+  setLanguage: (lang: SupportedLanguage) => void;
+  supportedLanguages: SupportedLanguage[];
+  translateText: (text: string, targetLanguage: string) => Promise<string>;
+  t: (key: string) => string;
+  translateContent: (content: string) => Promise<string>;
+  isTranslating: boolean;
 }
-;
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({};
-  authState = { isAuthenticated: false, user: null } ;,
-}) => {};
-  const { i18n, t } = useTranslation();
-  const { isAuthenticated, user } = authState;
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
-    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
-  );
-  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');
-  ;
-  useEffect(() => {};
-};,
-}, []);, []);
-    const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
-    if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {};
-}
-      setCurrentLanguage(savedLang);,
-}
-  }, [i18n]); // i18n is a dependency here;
-  ;
-  useEffect(() => {};
-};,
-}, []);, []);
-    setIsRTL(i18n.dir() === 'rtl');
-    document.documentElement.dir = i18n.dir();
-    document.documentElement.lang = currentLanguage;
-    ;
-    if(i18n.dir() === 'rtl') {};
-} else {};
-}
-  }, [currentLanguage, i18n]); // Correct: i18n and currentLanguage;
-  ;
-  useEffect(() => {};
-};,
-}, []);, []);
-    const syncLanguageWithProfile = async () => {};
-          const { error } = await supabase;
-            .from('profiles');
-            .update({ preferred_language: currentLanguage });
-            .eq('id', user.id);
-            ;
-          if(error) {};
-}
-        } catch(err) {};
-}
-      }
-    };
-    const t = (key) => {
-        return translations[language]?.[key] || key;
-    };
-    const isRTL = language === 'ar' || language === 'he';
-    return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [currentLanguage, setLanguage] = useState<SupportedLanguage>('en');
+  const [isTranslating, setIsTranslating] = useState(false);
+
+  const supportedLanguages: SupportedLanguage[] = ['en', 'es', 'fr'];
+
+  const translateText = async (text: string, targetLanguage: string): Promise<string> => {
+    setIsTranslating(true);
+    try {
+      // Stub implementation - in real app, this would call a translation API
+      await new Promise(resolve => setTimeout(resolve, 100));
+      return text; // Return original text for now
+    } finally {
+      setIsTranslating(false);
+    }
+  };
+
+  const t = (key: string): string => {
+    // Stub implementation - in real app, this would use i18n
+    return key;
+  };
+
+  const translateContent = async (content: string): Promise<string> => {
+    return translateText(content, currentLanguage);
+  };
+
+  const value: LanguageContextType = {
+    currentLanguage,
+    setLanguage,
+    supportedLanguages,
+    translateText,
+    t,
+    translateContent,
+    isTranslating,
+  };
+
+  return (
+    <LanguageContext.Provider value={value}>
       {children}
-    </LanguageContext.Provider>;
-  )}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};

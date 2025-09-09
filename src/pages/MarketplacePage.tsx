@@ -1,91 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {};
-} from 'lucide-react';
-;
-export function MarketplacePage() {};
-  return null;
-}
-    { id: 'all', name: 'All Products', icon: Globe },;
-    { id: 'ai', name: 'AI Solutions', icon: Brain },;
-    { id: 'security', name: 'Security', icon: Shield },;
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },;
-    { id: 'data', name: 'Data Analytics', icon: Database },;
-    { id: 'development', name: 'Development Tools', icon: Code },;
-    { id: 'automation', name: 'Automation', icon: Settings },;
-    { id: 'analytics', name: 'Analytics', icon: BarChart3 }
-  ];
-
-  const marketplaceProducts = [;
-    {};
-},;
-    {};
-},;
-    {};
-},;
-    {};
-},;
-    {};
-},;
-    {};
-}
-  ];
-;
-  const filteredProducts = marketplaceProducts.filter(product => {};
-});
-;
-  return (;
-    <div className="min-h-screen bg-zion-slate-dark">;
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker py-16">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center max-w-4xl mx-auto">;
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Technology Marketplace;
-            </h1>;
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">;
-              Discover, purchase, and deploy cutting-edge technology solutions from our curated marketplace. ;
-              All products are enterprise-ready and backed by our support team.;
-            </p>;
-
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">;
-              <div className="relative">;
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />;
-                <div>Broken JSX</div>
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
-                />;
-              </div>;
-            </div>;
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
 
 
 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {};
-              <div key={product.id} className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 group">;
-                {/* Product Image/Icon */}
-                <div className="relative p-6 bg-gradient-to-br from-zion-blue-dark to-zion-slate-darker">;
-                  <div className="text-6xl text-center mb-4">{product.image}</div>;
-
-                  {/* Badges */}
-                  <div className="absolute top-4 left-4 flex flex-col space-y-2">;
-                    {};
-                    )}
-                    {};
-                    )}
-                  </div>;
 
 
 
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">;
-                    {product.title}
-                  </h3>;
-
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
-                    {product.description}
-                  </p>;
 
 
 import { NextSeo } from '@/components/NextSeo';
@@ -493,62 +417,27 @@ function MarketplacePageContent() {
         </motion.div>
       )}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            <div className="text-center">;
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Shield className="w-8 h-8 text-zion-cyan" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Ready</h3>;
-              <p className="text-zion-slate-light">;
-                All products are tested, secure, and ready for enterprise deployment with full compliance support.;
-              </p>;
-            </div>;
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button 
+            onClick={scrollToTop} 
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            initial={{ opacity: 0, scale: 0 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }} 
+            whileTap={{ scale: 0.9 }}
+          >
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </div>
+    </>
+  );
+}
 
-            <div className="text-center">;
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Award className="w-8 h-8 text-zion-cyan" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Quality Guaranteed</h3>;
-              <p className="text-zion-slate-light">;
-                Every product is vetted by our technical team and comes with a satisfaction guarantee.;
-              </p>;
-            </div>;
-
-            <div className="text-center">;
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Users className="w-8 h-8 text-zion-cyan" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>;
-              <p className="text-zion-slate-light">;
-                Get dedicated support from our technical experts to help you implement and optimize solutions.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-blue">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-            Can't Find What You're Looking For?;
-          </h2>;
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">;
-            Our team can help you find the perfect solution or create a custom solution tailored to your needs.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <div>Broken JSX</div>
-              className="bg-white text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">;
-              Contact Our Experts;
-            </Link>;
-            <div>Broken JSX</div>
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-colors">;
-              Request Custom Solution;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
-  )}
-
-export default MarketplacePage;
+// Main export
+export default function MarketplacePage() {
+  return <MarketplacePageContent />;
+}
