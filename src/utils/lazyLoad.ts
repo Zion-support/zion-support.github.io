@@ -1,4 +1,4 @@
-import { lazy, ComponentType } from 'react';
+import React, { lazy, ComponentType } from 'react';
 
 /**
  * Enhanced lazy loading utility with error boundaries and retry logic
@@ -11,24 +11,24 @@ export function createLazyComponent<T extends ComponentType<any>>(
     importFn().catch((error) => {
       console.error('Failed to load component:', error);
       return {
-        default: fallback || (() => (
-          <div className="flex items-center justify-center p-8">
-            <div className="text-center">
-              <h3 className="text-lg font-semibold text-red-600 mb-2">
-                Failed to load component
-              </h3>
-              <p className="text-gray-600 mb-4">
-                There was an error loading this page. Please try refreshing.
-              </p>
-              <button
-                onClick={() => window.location.reload()}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-              >
-                Refresh Page
-              </button>
-            </div>
-          </div>
-        )),
+        default: fallback || (() => {
+          return React.createElement('div', { className: "flex items-center justify-center p-8" },
+            React.createElement('div', { className: "text-center" },
+              React.createElement('h3', { className: "text-lg font-semibold text-red-600 mb-2" },
+                "Failed to load component"
+              ),
+              React.createElement('p', { className: "text-gray-600 mb-4" },
+                "There was an error loading this page. Please try refreshing."
+              ),
+              React.createElement('button', {
+                onClick: () => window.location.reload(),
+                className: "px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              },
+                "Refresh Page"
+              )
+            )
+          );
+        }),
       };
     })
   );
