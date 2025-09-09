@@ -1,20 +1,20 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from "@/components/Header";
-import Footer from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+import React, { useState } from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { HelpCircle, Users, ShoppingCart, Shield, Zap, Globe, Search } from 'lucide-react';
+
 export default function FAQ() {
-    const faqData = [
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const faqCategories = [
+    {
+      title: "Getting Started",
+      icon: Zap,
+      questions: [
         {
             question: "What is Zion Tech Group?",
 <<<<<<< HEAD
@@ -64,10 +64,15 @@ export default function FAQ() {
             question: "Is my data secure on Zion?",
             answer: "Yes, we take data security very seriously. We implement enterprise-grade security measures, comply with international data protection standards, and never share your personal information without consent."
         }
-    ];
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "FAQ - Frequently Asked Questions | Zion Tech Group", description: "Find answers to common questions about Zion Tech Group's AI and technology marketplace platform.", keywords: "FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support", canonical: "https://ziontechgroup.com/faq" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue pt-24 pb-20", children: _jsxs("div", { className: "container mx-auto px-4 sm:px-6 lg:px-8", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Frequently Asked Questions" }), _jsx("p", { className: "mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto", children: "Everything you need to know about Zion Tech Group's AI and technology marketplace" })] }), _jsx("div", { className: "max-w-4xl mx-auto", children: _jsx(Accordion, { type: "single", collapsible: true, className: "w-full", children: faqData.map((faq, index) => (_jsxs(AccordionItem, { value: `item-${index}`, className: "border-zion-blue-light", children: [_jsx(AccordionTrigger, { className: "text-left text-white hover:text-zion-cyan transition-colors", children: faq.question }), _jsx(AccordionContent, { className: "text-zion-slate-light", children: faq.answer })] }, index))) }) }), _jsx("div", { className: "mt-16 text-center", children: _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-4", children: "Still have questions?" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Can't find what you're looking for? Our support team is here to help." }), _jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [_jsx("a", { href: "mailto:support@ziontechgroup.com", className: "inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-medium rounded-lg transition-all", children: "Contact Support" }), _jsx("a", { href: "/contact", className: "inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white font-medium rounded-lg transition-all", children: "Visit Contact Page" })] })] }) })] }) }), _jsx(Footer, {})] }));
-=======
-            answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with innovative companies, offering a comprehensive platform for AI services, tech talent, and specialized equipment."
+      ]
+    },
+    {
+      title: "For Talent & Creators",
+      icon: Users,
+      questions: [
+        {
+          question: "How do I create a talent profile?",
+          answer: "After signing up, navigate to your dashboard and click 'Create Profile'. You can add your skills, experience, portfolio, and set your rates. Make sure to include relevant certifications and examples of your work."
         },
         {
             question: "How does the marketplace work?",
@@ -113,10 +118,96 @@ export default function FAQ() {
             question: "How can I get started on Zion?",
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
         }
-    ];
-    return (<>
-      <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
-      <Header />
+      ]
+    },
+    {
+      title: "For Clients & Employers",
+      icon: ShoppingCart,
+      questions: [
+        {
+          question: "How do I find the right talent for my project?",
+          answer: "You can search for talent using our AI-powered matching system, browse categories, or post a job listing. Our platform will suggest the best matches based on your requirements, budget, and timeline."
+        },
+        {
+          question: "What services can I find on Zion?",
+          answer: "Zion offers a wide range of services including AI development, web and mobile app development, data science, UI/UX design, IT consulting, equipment rentals, and specialized AI solutions for various industries."
+        },
+        {
+          question: "How do I ensure quality when hiring talent?",
+          answer: "All talent on Zion are verified professionals with portfolios, reviews, and ratings. You can review their work history, read client testimonials, and communicate directly before making a decision."
+        }
+      ]
+    },
+    {
+      title: "Platform Features",
+      icon: Globe,
+      questions: [
+        {
+          question: "What is the AI Matcher feature?",
+          answer: "Our AI Matcher uses advanced algorithms to connect clients with the perfect talent based on project requirements, skills, availability, and budget. It saves time and ensures better matches."
+        },
+        {
+          question: "How does the marketplace work?",
+          answer: "The marketplace allows you to browse and purchase pre-built AI solutions, equipment, and services. You can also request custom quotes for specific projects or needs."
+        },
+        {
+          question: "What community features are available?",
+          answer: "Join our community forums to connect with other professionals, share knowledge, ask questions, and stay updated on the latest AI and tech trends."
+        }
+      ]
+    },
+    {
+      title: "Security & Trust",
+      icon: Shield,
+      questions: [
+        {
+          question: "How does Zion protect my data and privacy?",
+          answer: "We implement enterprise-grade security measures including encryption, secure payment processing, and strict privacy policies. Your data is never shared with third parties without consent."
+        },
+        {
+          question: "What happens if there's a dispute with a client or talent?",
+          answer: "Zion provides dispute resolution services and mediation support. We have clear terms of service and can help resolve conflicts to ensure fair outcomes for all parties."
+        },
+        {
+          question: "Are payments secure on the platform?",
+          answer: "Yes, all payments are processed through secure, encrypted channels. We use industry-standard payment processors and never store your payment information on our servers."
+        }
+      ]
+    }
+  ];
+
+  const contactMethods = [
+    {
+      title: "Email Support",
+      description: "Get help via email",
+      contact: "support@ziontechgroup.com",
+      icon: HelpCircle
+    },
+    {
+      title: "Commercial Inquiries",
+      description: "For business partnerships",
+      contact: "commercial@ziontechgroup.com",
+      icon: Users
+    }
+  ];
+
+  // Filter FAQ based on search term
+  const filteredCategories = faqCategories.map(category => ({
+    ...category,
+    questions: category.questions.filter(q => 
+      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  })).filter(category => category.questions.length > 0);
+
+  return (
+    <>
+      <SEO
+        title="FAQ - Frequently Asked Questions | Zion Tech Group"
+        description="Find answers to common questions about Zion's AI and tech marketplace platform, services, and how to get started."
+        keywords="FAQ, help, support, Zion marketplace, AI services, tech talent"
+        canonical="https://ziontechgroup.com/faq"
+      />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -124,42 +215,123 @@ export default function FAQ() {
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Find answers to the most common questions about Zion Tech Group and our marketplace platform
             </p>
+            
+            {/* Search Bar */}
+            <div className="mt-8 max-w-md mx-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search FAQ..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
+              </div>
+            </div>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-              {faqData.map((item, index) => (<AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
-                  <AccordionTrigger className="text-left text-white hover:text-zion-cyan px-6 py-4">
-                    <span className="text-lg font-medium">{item.question}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
-                    <p className="text-zion-slate-light leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>))}
-            </Accordion>
+          {/* FAQ Categories */}
+          <div className="space-y-12 mb-16">
+            {filteredCategories.map((category, categoryIndex) => (
+              <Card key={categoryIndex} className="bg-zion-blue-dark border-zion-blue-light">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <category.icon className="h-6 w-6 text-zion-cyan" />
+                    <CardTitle className="text-white text-2xl">{category.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <Accordion type="single" collapsible className="w-full">
+                    {category.questions.map((item, questionIndex) => (
+                      <AccordionItem key={questionIndex} value={`item-${categoryIndex}-${questionIndex}`}>
+                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-zion-cyan">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-zion-slate-light">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          
-          <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
-              <p className="text-zion-slate-light mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark text-white font-medium rounded-lg transition-colors">
-                  Contact Support
-                </a>
-                <a href="/help" className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light hover:border-zion-purple text-white font-medium rounded-lg transition-colors">
-                  Help Center
-                </a>
+
+          {/* Contact Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Still Need Help?</h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+              Can't find the answer you're looking for? Our support team is here to help you get the most out of Zion.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+              {contactMethods.map((method, index) => (
+                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <method.icon className="h-5 w-5 text-zion-cyan" />
+                      <CardTitle className="text-white">{method.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-zion-slate-light">
+                      {method.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <a 
+                      href={`mailto:${method.contact}`}
+                      className="text-zion-cyan hover:text-zion-purple transition-colors font-medium"
+                    >
+                      {method.contact}
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+                <Link to="/contact">Contact Support</Link>
+              </Button>
+              <Button asChild variant="outline" className="border-zion-blue-light text-white hover:bg-zion-blue-light hover:text-zion-blue">
+                <Link to="/help-center">Visit Help Center</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Navigation</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <h4 className="text-white font-semibold mb-3">Getting Started</h4>
+                <div className="space-y-2">
+                  <Link to="/signup" className="block text-zion-cyan hover:text-zion-purple transition-colors">Create Account</Link>
+                  <Link to="/about" className="block text-zion-cyan hover:text-zion-purple transition-colors">About Zion</Link>
+                  <Link to="/how-it-works" className="block text-zion-cyan hover:text-zion-purple transition-colors">How It Works</Link>
+                </div>
+              </div>
+              <div className="text-center">
+                <h4 className="text-white font-semibold mb-3">Services</h4>
+                <div className="space-y-2">
+                  <Link to="/marketplace" className="block text-zion-cyan hover:text-zion-purple transition-colors">Marketplace</Link>
+                  <Link to="/services" className="block text-zion-cyan hover:text-zion-purple transition-colors">Services</Link>
+                  <Link to="/talent" className="block text-zion-cyan hover:text-zion-purple transition-colors">Find Talent</Link>
+                </div>
+              </div>
+              <div className="text-center">
+                <h4 className="text-white font-semibold mb-3">Support</h4>
+                <div className="space-y-2">
+                  <Link to="/contact" className="block text-zion-cyan hover:text-zion-purple transition-colors">Contact Us</Link>
+                  <Link to="/terms" className="block text-zion-cyan hover:text-zion-purple transition-colors">Terms of Service</Link>
+                  <Link to="/privacy" className="block text-zion-cyan hover:text-zion-purple transition-colors">Privacy Policy</Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <Footer />
-    </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+    </>
+  );
 }

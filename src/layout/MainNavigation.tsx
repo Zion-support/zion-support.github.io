@@ -5,21 +5,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { 
-  MessageSquare, 
-  ChevronDown, 
-  Users, 
-  Briefcase, 
-  Settings, 
-  BarChart3,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  HelpCircle,
-  FileText
-} from "lucide-react";
+import { ChevronDown, Brain, Shield, Cloud, Zap, Store, Users, Building, Rocket } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useState, useRef, useEffect } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -51,51 +39,63 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const baseLinks: NavigationLink[] = [
+  const navigationLinks: NavigationLink[] = [
     {
       key: 'home',
       href: '/',
+      name: 'Home',
       matches: (path: string) => path === '/'
     },
     {
       key: 'services',
       href: '/services',
+      name: 'Services',
       matches: (path: string) => path.startsWith('/services'),
       dropdown: [
-        { href: '/ai-services', name: 'AI Services' },
-        { href: '/it-services', name: 'IT Services' },
-        { href: '/cloud-services', name: 'Cloud Services' },
-        { href: '/cybersecurity', name: 'Cybersecurity' }
+        { href: '/services/ai', name: 'AI & Analytics' },
+        { href: '/services/cybersecurity', name: 'Cybersecurity' },
+        { href: '/services/cloud', name: 'Cloud & DevOps' },
+        { href: '/services/infrastructure', name: 'IT Infrastructure' },
+        { href: '/services/transformation', name: 'Digital Transformation' },
+        { href: '/services/consulting', name: 'IT Consulting' }
       ]
     },
     {
       key: 'marketplace',
       href: '/marketplace',
+      name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace'),
       dropdown: [
-        { href: '/marketplace/talent', name: 'Talent' },
-        { href: '/marketplace/equipment', name: 'Equipment' },
-        { href: '/marketplace/services', name: 'Services' }
+        { href: '/marketplace', name: 'All Products' },
+        { href: '/categories', name: 'Categories' },
+        { href: '/equipment', name: 'Equipment' },
+        { href: '/green-it', name: 'Green IT' }
       ]
     },
     {
-      key: 'micro-saas',
-      href: '/micro-saas',
-      matches: (path: string) => path.startsWith('/micro-saas')
-    },
-    {
-      key: 'company',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about') || path.startsWith('/team'),
+      key: 'talent',
+      href: '/talent',
+      name: 'Talent',
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
       dropdown: [
-        { href: '/about', name: 'About Us' },
-        { href: '/team', name: 'Our Team' },
-        { href: '/careers', name: 'Careers' }
+        { href: '/talent', name: 'Browse Talent' },
+        { href: '/talents', name: 'Talent Directory' },
+        { href: '/hire-ai', name: 'Hire AI' }
       ]
+    },
+    {
+      key: 'about',
+      href: '/about',
+      name: 'About',
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      name: 'Contact',
+      matches: (path: string) => path.startsWith('/contact')
     }
   ];
-
-  const isActive = (link: NavigationLink) => link.matches(location.pathname);
 
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
@@ -103,112 +103,59 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
   return (
     <nav className={cn("flex items-center space-x-8", className)} ref={dropdownRef}>
-      {baseLinks.map((link) => (
-        <div key={link.key} className="relative">
-          {link.dropdown ? (
-            <div className="relative">
-              <button
-                onClick={() => handleDropdownToggle(link.key)}
-                className={cn(
-                  "flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200",
-                  isActive(link)
-                    ? "text-zion-cyan bg-zion-cyan/10"
-                    : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/10"
-                )}
-              >
-                <span>{link.name}</span>
-                <ChevronDown className={cn(
-                  "w-4 h-4 transition-transform duration-200",
-                  activeDropdown === link.key ? "rotate-180" : ""
-                )} />
-              </button>
+      {navigationLinks.map((link) => {
+        const isActive = link.matches(location.pathname);
+        const isDropdownOpen = activeDropdown === link.key;
 
-              {activeDropdown === link.key && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg shadow-lg backdrop-blur-sm z-50">
-                  <div className="py-2">
-                    {link.dropdown.map((item) => (
+        return (
+          <div key={link.key} className="relative">
+            {link.dropdown ? (
+              <DropdownMenu open={isDropdownOpen} onOpenChange={() => handleDropdownToggle(link.key)}>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className={cn(
+                      "flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                      isActive
+                        ? "text-zion-cyan bg-zion-purple/20"
+                        : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                    )}
+                  >
+                    {link.name}
+                    <ChevronDown className={cn("w-4 h-4 transition-transform", isDropdownOpen && "rotate-180")} />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="start"
+                  className="w-56 bg-zion-blue-dark border border-zion-purple/30"
+                >
+                  {link.dropdown.map((item) => (
+                    <DropdownMenuItem key={item.href} asChild>
                       <Link
-                        key={item.href}
                         to={item.href}
-                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-200"
-                        onClick={() => setActiveDropdown(null)}
+                        className="flex items-center gap-3 px-3 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 cursor-pointer"
                       >
                         {item.name}
                       </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
-            <Link
-              to={link.href}
-              className={cn(
-                "px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200",
-                isActive(link)
-                  ? "text-zion-cyan bg-zion-cyan/10"
-                  : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/10"
-              )}
-            >
-              {link.name}
-            </Link>
-          )}
-        </div>
-      ))}
-
-      {/* Admin Navigation */}
-      {isAdmin && (
-        <div className="relative">
-          <button
-            onClick={() => handleDropdownToggle('admin')}
-            className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-zion-purple hover:text-zion-purple-light hover:bg-zion-purple/10 rounded-md transition-colors duration-200"
-          >
-            <Settings className="w-4 h-4" />
-            <span>Admin</span>
-            <ChevronDown className={cn(
-              "w-4 h-4 transition-transform duration-200",
-              activeDropdown === 'admin' ? "rotate-180" : ""
-            )} />
-          </button>
-
-          {activeDropdown === 'admin' && (
-            <div className="absolute top-full left-0 mt-1 w-48 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-lg backdrop-blur-sm z-50">
-              <div className="py-2">
-                <Link
-                  to="/admin/dashboard"
-                  className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-purple hover:bg-zion-purple/10 transition-colors duration-200"
-                  onClick={() => setActiveDropdown(null)}
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  to="/admin/users"
-                  className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-purple hover:bg-zion-purple/10 transition-colors duration-200"
-                  onClick={() => setActiveDropdown(null)}
-                >
-                  Users
-                </Link>
-                <Link
-                  to="/admin/settings"
-                  className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-purple hover:bg-zion-purple/10 transition-colors duration-200"
-                  onClick={() => setActiveDropdown(null)}
-                >
-                  Settings
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* Help & Support */}
-      <Link
-        to="/help"
-        className="px-3 py-2 text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-md transition-colors duration-200"
-      >
-        <HelpCircle className="w-4 h-4 inline mr-1" />
-        Help
-      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                to={link.href}
+                className={cn(
+                  "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                  isActive
+                    ? "text-zion-cyan bg-zion-purple/20"
+                    : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                )}
+              >
+                {link.name}
+              </Link>
+            )}
+          </div>
+        );
+      })}
     </nav>
   );
 };

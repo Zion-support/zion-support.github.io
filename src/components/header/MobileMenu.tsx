@@ -1,92 +1,121 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import Search from 'lucide-react/dist/esm/icons/search';
-import User from 'lucide-react/dist/esm/icons/user';
-import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
-import Home from 'lucide-react/dist/esm/icons/home';
-import Store from 'lucide-react/dist/esm/icons/store';
-import Users from 'lucide-react/dist/esm/icons/users';
-import Settings from 'lucide-react/dist/esm/icons/settings';
+import { Menu, X, Search, User, MessageSquare, Home, Store, Users, Settings } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 
-export interface MobileMenuProps {
-  unreadCount?: number;
+interface MobileMenuProps {
+  isOpen: boolean;
   onClose: () => void;
+  className?: string;
 }
 
-export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, className }: MobileMenuProps) {
+  const { user, isAuthenticated } = useAuth();
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const { t } = useTranslation();
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   const navigationItems = [
-    { href: '/', label: t('nav.home'), icon: Home, matches: (path: string) => path === '/' },
-    { href: '/marketplace', label: t('nav.marketplace'), icon: Store, matches: (path: string) => path.startsWith('/marketplace') },
-    { href: '/talent', label: t('nav.talent'), icon: Users, matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
-    { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
-    { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
-    { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+    { href: '/', label: t('nav.home', 'Home'), icon: Home, matches: (path: string) => path === '/' },
+    { href: '/marketplace', label: t('nav.marketplace', 'Marketplace'), icon: Store, matches: (path: string) => path.startsWith('/marketplace') },
+    { href: '/talent', label: t('nav.talent', 'Talent'), icon: Users, matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
+    { href: '/categories', label: t('nav.categories', 'Categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
+    { href: '/equipment', label: t('nav.equipment', 'Equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
+    { href: '/community', label: t('nav.community', 'Community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
+    { href: '/services', label: t('nav.services', 'Services'), icon: Store, matches: (path: string) => path.startsWith('/services') },
+    { href: '/about', label: t('nav.about', 'About'), icon: Users, matches: (path: string) => path.startsWith('/about') },
+    { href: '/contact', label: t('nav.contact', 'Contact'), icon: MessageSquare, matches: (path: string) => path.startsWith('/contact') },
   ];
 
-  const navItems = baseItems.map(item => ({
-    ...item,
-    name:
-      item.key === 'explore'
-        ? t('general.explore')
-        : t(`nav.${item.key}`)
-  }));
+  if (isAuthenticated) {
+    navigationItems.push(
+      { href: '/dashboard', label: t('nav.dashboard', 'Dashboard'), icon: Settings, matches: (path: string) => path.startsWith('/dashboard') }
+    );
+  }
 
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  );
+  if (!isOpen) return null;
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold">Menu</h2>
-        <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close menu" title="Close menu">
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-      
-      <nav className="space-y-1">
-        {visibleItems.map(item => (
-          <Link
-            key={item.name}
-            to={item.href}
-            className={cn(
-              "flex items-center px-6 py-3 text-base font-medium transition-colors", // Added transition-colors
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-background", // Added focus state, assuming mobile menu background is --background
-              item.matches(location.pathname)
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan" // Active state - already good
-                : "text-slate-200 hover:bg-zion-purple/30 hover:text-white" // Default and Hover states
+    <div className={cn("md:hidden", className)}>
+      {/* Mobile menu overlay */}
+      <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
+        <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
+            <h2 className="text-lg font-semibold text-white">Menu</h2>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onClose}
+              className="p-2 text-white hover:bg-zion-purple/20"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </div>
+
+          {/* Navigation items */}
+          <nav className="p-4 space-y-2">
+            {navigationItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = item.matches(location.pathname);
+              
+              return (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={onClose}
+                  className={cn(
+                    "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+                    isActive
+                      ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
+                      : "hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  )}
+                >
+                  <Icon className="w-5 h-5" />
+                  <span className="font-medium">{item.label}</span>
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* User section */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
+            {isAuthenticated ? (
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-zion-purple/20 rounded-full flex items-center justify-center">
+                  <User className="w-4 h-4 text-zion-cyan" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-white">{user?.name || 'User'}</p>
+                  <p className="text-xs text-zion-slate-light">{user?.email}</p>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <Link
+                  to="/login"
+                  onClick={onClose}
+                  className="block w-full px-4 py-2 text-center bg-zion-purple/20 text-zion-cyan rounded-lg border border-zion-purple/40 hover:bg-zion-purple/30 transition-colors"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/signup"
+                  onClick={onClose}
+                  className="block w-full px-4 py-2 text-center bg-zion-cyan text-zion-blue-dark rounded-lg hover:bg-zion-cyan/90 transition-colors"
+                >
+                  Sign Up
+                </Link>
+              </div>
             )}
-            onClick={onClose}
-          >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
-            </div>
-            {item.name}
-          </Link>
-        ))}
-      </nav>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

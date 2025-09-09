@@ -1,123 +1,152 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { MapPin, Clock, DollarSign, Users, Zap, Heart, Globe, Shield, BookOpen, Award } from 'lucide-react';
+
 export default function Careers() {
-    // Sample job listings
-    const jobs = {
-        engineering: [
-            {
-                title: "Senior Frontend Engineer",
-                location: "Remote",
-                type: "Full-time",
-                department: "Engineering",
-                description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
-            },
-            {
-                title: "AI Research Engineer",
-                location: "San Francisco, CA",
-                type: "Full-time",
-                department: "Engineering",
-                description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-            },
-            {
-                title: "Full Stack Developer",
-                location: "Remote",
-                type: "Full-time",
-                department: "Engineering",
-                description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
-            }
-        ],
-        product: [
-            {
-                title: "Product Manager",
-                location: "New York, NY",
-                type: "Full-time",
-                department: "Product",
-                description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
-            },
-            {
-                title: "UX/UI Designer",
-                location: "Remote",
-                type: "Full-time",
-                department: "Product",
-                description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
-            }
-        ],
-        marketing: [
-            {
-                title: "Growth Marketing Manager",
-                location: "Remote",
-                type: "Full-time",
-                department: "Marketing",
-                description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
-            },
-            {
-                title: "Content Strategist",
-                location: "London, UK",
-                type: "Full-time",
-                department: "Marketing",
-                description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
-            }
-        ],
-        operations: [
-            {
-                title: "Community Manager",
-                location: "Remote",
-                type: "Full-time",
-                department: "Operations",
-                description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
-            },
-            {
-                title: "Talent Acquisition Specialist",
-                location: "Remote",
-                type: "Full-time",
-                department: "Operations",
-                description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
-            }
-        ]
-    };
-    // Benefits list
-    const benefits = [
-        {
-            title: "Flexible Work",
-            description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
-            icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-        </svg>)
-        },
-        {
-            title: "Health & Wellness",
-            description: "Comprehensive health insurance and wellness programs to keep you at your best.",
-            icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-        </svg>)
-        },
-        {
-            title: "Continuous Learning",
-            description: "Education stipends and dedicated learning time to help you grow professionally.",
-            icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-        </svg>)
-        },
-        {
-            title: "Competitive Compensation",
-            description: "Salary packages that recognize your value, plus equity options to share in our success.",
-            icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>)
-        }
-    ];
-    return (<>
-      <SEO title="Careers at Zion - Join Our Team" description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs" canonical="https://ziontechgroup.com/careers"/>
+  // Sample job listings
+  const jobs = {
+    engineering: [
+      {
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
+      },
+      {
+        title: "AI Research Engineer",
+        location: "San Francisco, CA",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
+      },
+      {
+        title: "Full Stack Developer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
+      }
+    ],
+    product: [
+      {
+        title: "Product Manager",
+        location: "New York, NY",
+        type: "Full-time",
+        department: "Product",
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
+      },
+      {
+        title: "UX/UI Designer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Product",
+        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
+      }
+    ],
+    marketing: [
+      {
+        title: "Growth Marketing Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
+      },
+      {
+        title: "Content Strategist",
+        location: "London, UK",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
+      }
+    ],
+    operations: [
+      {
+        title: "Community Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
+      },
+      {
+        title: "Talent Acquisition Specialist",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
+      }
+    ]
+  };
+
+  // Benefits list
+  const benefits = [
+    {
+      title: "Flexible Work",
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
+      icon: <Zap className="w-10 h-10 text-zion-cyan" />
+    },
+    {
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
+      icon: <Heart className="w-10 h-10 text-zion-purple" />
+    },
+    {
+      title: "Continuous Learning",
+      description: "Education stipends and dedicated learning time to help you grow professionally.",
+      icon: <BookOpen className="w-10 h-10 text-zion-cyan" />
+    },
+    {
+      title: "Competitive Compensation",
+      description: "Salary packages that recognize your value, plus equity options to share in our success.",
+      icon: <Award className="w-10 h-10 text-zion-purple" />
+    },
+    {
+      title: "Team Events",
+      description: "Regular team building activities and company retreats to foster connections.",
+      icon: <Users className="w-10 h-10 text-zion-cyan" />
+    },
+    {
+      title: "Global Team",
+      description: "Work with talented people from around the world in a diverse environment.",
+      icon: <Globe className="w-10 h-10 text-zion-purple" />
+    }
+  ];
+
+  return (
+    <>
+      <SEO
+        title="Careers at Zion - Join Our Team"
+        description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+        canonical="https://ziontechgroup.com/careers"
+      />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Join Our Team</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Help us build the future of AI and technology
+              Help us build the world's first free marketplace dedicated to high-tech and artificial intelligence. 
+              We're looking for passionate individuals who want to make a difference.
             </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Badge variant="secondary" className="text-zion-cyan bg-zion-cyan/10">
+                Remote First
+              </Badge>
+              <Badge variant="secondary" className="text-zion-purple bg-zion-purple/10">
+                AI & Tech
+              </Badge>
+              <Badge variant="secondary" className="text-zion-cyan bg-zion-cyan/10">
+                Growth Mindset
+              </Badge>
+              <Badge variant="secondary" className="text-zion-purple bg-zion-purple/10">
+                Innovation
+              </Badge>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
@@ -144,14 +173,20 @@ export default function Careers() {
           
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (<div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
-                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-zion-slate-light">{benefit.description}</p>
-                </div>))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-4">
+                      {benefit.icon}
+                    </div>
+                    <CardTitle className="text-zion-cyan">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-zion-slate-light">{benefit.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
           
@@ -199,6 +234,21 @@ export default function Careers() {
               Send General Application
             </Button>
           </div>
+
+          {/* Contact Information */}
+          <section className="mt-20 text-center">
+            <h2 className="text-2xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light max-w-2xl mx-auto">
+              <p className="text-zion-slate-light mb-4">
+                Questions about working at Zion Tech Group? We'd love to hear from you.
+              </p>
+              <div className="space-y-2 text-zion-slate-light">
+                <p><strong>Email:</strong> careers@ziontechgroup.com</p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/zion-tech-group" className="text-zion-cyan hover:underline">Follow us on LinkedIn</a></p>
+                <p><strong>Location:</strong> Remote-first, with offices in major tech hubs</p>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </>);

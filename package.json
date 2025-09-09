@@ -13,8 +13,14 @@
     "build": "vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "type-check": "tsc --noEmit",
+    "security:scan": "npm audit --audit-level moderate",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",

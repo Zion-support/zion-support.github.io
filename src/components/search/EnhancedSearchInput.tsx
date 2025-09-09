@@ -1,54 +1,47 @@
 
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions"; 
-import { SearchSuggestion } from "@/types/search";
+interface SearchSuggestion {
+  id: string;
+  text: string;
+  category: string;
+  type: 'service' | 'product' | 'talent' | 'equipment';
+}
 
 interface EnhancedSearchInputProps {
   value: string;
   onChange: (value: string) => void;
-  /**
-   * Optional callback when a suggestion is selected. This allows parent
-   * components to perform actions such as navigation.
-   */
-  onSelectSuggestion?: (value: string) => void;
-  placeholder?: string;
+  onSelectSuggestion?: (text: string) => void;
   searchSuggestions: SearchSuggestion[];
+  placeholder?: string;
+  className?: string;
 }
 
-export function EnhancedSearchInput({
+export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
   value,
   onChange,
   onSelectSuggestion,
-  placeholder = "Search...",
-  searchSuggestions
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
+  searchSuggestions,
+  placeholder = "Search for services, talent, or equipment...",
+  className = ""
+}) => {
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Filter suggestions based on input value
   useEffect(() => {
-    if (!value) {
-      // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
-      return;
+    if (value.trim()) {
+      const filtered = searchSuggestions.filter(suggestion =>
+        suggestion.text.toLowerCase().includes(value.toLowerCase()) ||
+        suggestion.category.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredSuggestions(filtered.slice(0, 5));
+      setShowSuggestions(true);
+      setSelectedIndex(-1);
+    } else {
+      setFilteredSuggestions([]);
+      setShowSuggestions(false);
     }
-    
-    const filtered = searchSuggestions.filter(suggestion => 
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
-    );
-    
-    // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith;
-    });
-    
-    setFilteredSuggestions(filtered.slice(0, 8)); // Limit to 8 suggestions
   }, [value, searchSuggestions]);
 
   // Handle clicks outside the component to close suggestions
@@ -63,46 +56,99 @@ export function EnhancedSearchInput({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion);
-    if (onSelectSuggestion) {
-      onSelectSuggestion(suggestion);
-    }
-    setIsFocused(false);
-    inputRef.current?.blur();
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
   };
-  
+
+  const handleClear = () => {
+    onChange('');
+    setShowSuggestions(false);
+    inputRef.current?.focus();
+  };
+
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    onChange(suggestion.text);
+    setShowSuggestions(false);
+    if (onSelectSuggestion) {
+      onSelectSuggestion(suggestion.text);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showSuggestions) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex(prev => 
+          prev < filteredSuggestions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
+          handleSuggestionClick(filteredSuggestions[selectedIndex]);
+        }
+        break;
+      case 'Escape':
+        setShowSuggestions(false);
+        setSelectedIndex(-1);
+        break;
+    }
+  };
+
   return (
-    <div className="relative w-full" ref={containerRef}>
+    <div className={`relative ${className}`} ref={suggestionsRef}>
       <div className="relative">
-        <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />
-        <Input
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+        <input
           ref={inputRef}
           type="text"
           value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={() => setIsFocused(true)}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+          onFocus={() => value.trim() && setShowSuggestions(true)}
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          className="w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple/50 transition-all duration-200"
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
+            onClick={handleClear}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
           >
-            <X className="h-4 w-4" />
+            <X className="w-4 h-4" />
           </button>
         )}
       </div>
-      
-      <AutocompleteSuggestions
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-      />
+
+      {/* Search Suggestions */}
+      {showSuggestions && filteredSuggestions.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto">
+          {filteredSuggestions.map((suggestion, index) => (
+            <button
+              key={suggestion.id}
+              onClick={() => handleSuggestionClick(suggestion)}
+              className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-zion-purple/10 transition-colors ${
+                index === selectedIndex
+                  ? 'bg-zion-purple/20 text-zion-cyan'
+                  : 'text-zion-slate-light hover:text-zion-cyan'
+              }`}
+            >
+              <div className="flex-1">
+                <div className="font-medium">{suggestion.text}</div>
+                <div className="text-xs text-zion-slate-light">{suggestion.category}</div>
+              </div>
+              <div className="text-xs px-2 py-1 bg-zion-purple/20 text-zion-cyan rounded">
+                {suggestion.type}
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
