@@ -150,11 +150,8 @@ export default defineConfig(({ mode }) => ({
     // Optimize for production
     emptyOutDir: true,
   },
-  // Reduce module preload generation on CI which can appear to hang
-  experimental: {
-    renderBuiltUrl(filename) {
-      return { relative: true };
-    },
+  css: {
+    postcss: './postcss.config.cjs'
   },
   esbuild: {
     target: 'esnext',
