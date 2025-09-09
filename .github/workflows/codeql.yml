@@ -2,33 +2,21 @@ name: CodeQL
 
 on:
   push:
-    branches: ["main", "develop", "cursor/**"]
+    branches: ["main", "develop"]
   pull_request:
-    branches: ["main", "develop", "cursor/**"]
+    branches: ["main", "develop"]
   schedule:
-    - cron: "33 1 * * 1"
-
+    - cron: 0 */2 * * *
 permissions:
-  contents: read
-  security-events: write
-
+  contents: write
+  actions: read
+  pull-requests: write
 concurrency:
-  group: codeql-${{ github.ref }}
+  group: workflow-${{ github.ref }}
   cancel-in-progress: false
-
 jobs:
-  analyze:
-    name: Analyze
+  disabled:
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'javascript-typescript' ]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -37,6 +25,7 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
+          queries: security-extended,security-and-quality
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3

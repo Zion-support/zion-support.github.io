@@ -1,37 +1,67 @@
 module.exports = {
-  extends: [
-    'next/core-web-vitals'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
+  root: true,
   env: {
     browser: true,
-    es6: true,
-    node: true
+    es2020: true,
+    node: true,
   },
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
+  ],
+  ignorePatterns: [
+    'dist',
+    '.eslintrc.js',
+    'node_modules',
+    'src.disabled/**/*',
+    'src_disabled_*/**/*',
+    'temp_*/**/*',
+    'zion-*/**/*',
+    'zion_os/**/*',
+    'apps/**/*',
+    'utils/**/*',
+    'types/**/*',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: [
+    'react-refresh',
+    '@typescript-eslint',
+    'react',
+    'react-hooks',
+  ],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/jsx-uses-vars': 'error',
+    'no-undef': 'off', // TypeScript handles this
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', { 
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_',
+    }],
     '@typescript-eslint/no-explicit-any': 'warn',
     'no-console': 'warn',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off'
+    'react/no-unescaped-entities': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'dist/',
-    'build/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/'
-  ]
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };

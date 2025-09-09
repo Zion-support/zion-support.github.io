@@ -1,122 +1,88 @@
 #!/usr/bin/env python3
 """
-Comprehensive Merge Conflict Resolution Script
-Resolves all merge conflicts in the repository by cleaning up conflict markers
+Resolve merge conflicts systematically
 """
-
+import subprocess
+import sys
 import os
-import re
-import glob
-from pathlib import Path
 
-def resolve_conflicts_in_file(file_path):
-    """Resolve conflicts in a single file by removing conflict markers"""
+def run_cmd(cmd, check=True):
+    """Run command and return success, output"""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Check if file has conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        print(f"Resolving conflicts in: {file_path}")
-        
-        # Remove all conflict markers and their content
-        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*\n?', '', content, flags=re.DOTALL)
-        
-        # Remove any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*', '', content, flags=re.DOTALL)
-        
-        # Clean up any double newlines that might have been created
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        
-        # Write the cleaned content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        return True
-        
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=60)
+        if check and result.returncode != 0:
+            return False, f"Command failed: {cmd}\n{result.stderr}\n{result.stdout}"
+        return True, result.stdout
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        return False, f"Error: {str(e)}"
+
+def resolve_conflicts():
+    """Resolve merge conflicts"""
+    print("🔧 Resolving merge conflicts...")
+    
+    # For package-lock.json, use theirs (origin/main version)
+    print("📦 Resolving package-lock.json...")
+    success, _ = run_cmd("git checkout --theirs package-lock.json")
+    if success:
+        run_cmd("git add package-lock.json")
+        print("✅ Resolved package-lock.json")
+    
+    # For source files, prefer ours (our improvements)
+    source_files = [
+        "src/App.tsx",
+        "src/components/AdvancedAnalytics.tsx", 
+        "src/pages/Home.tsx",
+        "src/pages/Services.tsx",
+        "src/pages/ServicesPage.tsx",
+        "src/pages/Sitemap.tsx",
+        "src/pages/services/AISupplyChainOptimization.tsx"
+    ]
+    
+    for file in source_files:
+        print(f"🔧 Resolving {file}...")
+        success, _ = run_cmd(f"git checkout --ours '{file}'")
+        if success:
+            run_cmd(f"git add '{file}'")
+            print(f"✅ Resolved {file}")
+    
+    # For files that were both added, use ours
+    both_added_files = [
+        "src/components/EnhancedSearch.tsx",
+        "src/pages/services/AICustomerExperienceAnalytics.tsx",
+        "src/pages/services/AIWorkflowOrchestrator.tsx"
+    ]
+    
+    for file in both_added_files:
+        print(f"🔧 Resolving both-added {file}...")
+        success, _ = run_cmd(f"git checkout --ours '{file}'")
+        if success:
+            run_cmd(f"git add '{file}'")
+            print(f"✅ Resolved {file}")
+    
+    print("✅ All conflicts resolved!")
+    return True
+
+def commit_merge():
+    """Commit the merge resolution"""
+    print("💾 Committing merge resolution...")
+    success, output = run_cmd('git commit -m "Resolve merge conflicts - integrate all improvements"')
+    if success:
+        print("✅ Merge committed successfully!")
+        return True
+    else:
+        print(f"❌ Failed to commit: {output}")
         return False
 
-def find_files_with_conflicts():
-    """Find all files that contain merge conflicts"""
-    conflict_files = []
-    
-    # File extensions to check
-    extensions = ['*.tsx', '*.ts', '*.js', '*.jsx', '*.md', '*.txt', '*.json']
-    
-    for ext in extensions:
-        for file_path in glob.glob(f"**/{ext}", recursive=True):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '<<<<<<< HEAD' in content:
-                        conflict_files.append(file_path)
-            except Exception:
-                continue
-    
-    return conflict_files
-
 def main():
-    print("🚀 Starting comprehensive merge conflict resolution...")
+    print("🚀 Starting conflict resolution...")
     
-    # Find all files with conflicts
-    conflict_files = find_files_with_conflicts()
+    if resolve_conflicts():
+        if commit_merge():
+            print("🎉 Merge conflicts resolved and committed!")
+            return 0
     
-    if not conflict_files:
-        print("✅ No merge conflicts found!")
-        return
-    
-    print(f"📁 Found {len(conflict_files)} files with conflicts")
-    
-    # Resolve conflicts in each file
-    resolved_count = 0
-    for file_path in conflict_files:
-        if resolve_conflicts_in_file(file_path):
-            resolved_count += 1
-    
-    print(f"✅ Resolved conflicts in {resolved_count} files")
-    
-    # Check if any conflicts remain
-    remaining_conflicts = find_files_with_conflicts()
-    if remaining_conflicts:
-        print(f"⚠️  {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts[:10]:  # Show first 10
-            print(f"  - {file_path}")
-        if len(remaining_conflicts) > 10:
-            print(f"  ... and {len(remaining_conflicts) - 10} more")
-    else:
-        print("🎉 All conflicts resolved successfully!")
-        
-        # Create a summary file
-        summary = f"""
-# Merge Conflict Resolution Summary
-
-## Files Processed: {len(conflict_files)}
-## Conflicts Resolved: {resolved_count}
-## Status: ✅ Complete
-
-## Resolution Method
-- Removed all merge conflict markers (<<<<<<< HEAD, =======, >>>>>>>)
-- Kept the most recent content from the incoming branch
-- Cleaned up formatting and removed duplicate content
-
-## Next Steps
-1. Review the resolved files to ensure content is correct
-2. Run tests to verify functionality
-3. Commit the resolved changes
-4. Push to the remote branch
-
-Generated on: {os.popen('date').read().strip()}
-"""
-        
-        with open('CONFLICT_RESOLUTION_SUMMARY.md', 'w') as f:
-            f.write(summary)
-        
-        print("📝 Created CONFLICT_RESOLUTION_SUMMARY.md")
+    print("❌ Failed to resolve conflicts")
+    return 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

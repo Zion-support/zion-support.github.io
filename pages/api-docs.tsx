@@ -1,261 +1,353 @@
-import React from 'react';
-import Head from 'next/head';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  Code, 
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Zap,
+  BookOpen,
+  Terminal,
+  Download,
+  Play
+} from 'lucide-react';
 
-const APIDocumentationPage: React.FC = () => {
-  const endpoints = [
-    {
-      method: 'GET',
-      path: '/api/health',
-      description: 'Get system health status',
-      response: {
-        status: 'healthy',
-        timestamp: '2025-01-18T12:00:00Z',
-        uptime: '99.9%'
-      }
-    },
-    {
-      method: 'GET',
-      path: '/api/automations',
-      description: 'List all active automations',
-      response: {
-        count: 227,
-        automations: ['sync-branches', 'health-check', 'content-generation']
-      }
-    },
-    {
-      method: 'GET',
-      path: '/api/automations/{id}/status',
-      description: 'Get status of specific automation',
-      response: {
-        id: 'sync-branches',
-        status: 'running',
-        lastRun: '2025-01-18T11:55:00Z',
-        nextRun: '2025-01-18T12:00:00Z'
-      }
-    },
-    {
-      method: 'POST',
-      path: '/api/automations/{id}/trigger',
-      description: 'Manually trigger an automation',
-      response: {
-        success: true,
-        message: 'Automation triggered successfully',
-        runId: 'run_12345'
+const apiFeatures = [
+  {
+    name: 'AI Email Responder',
+    method: 'POST',
+    path: '/api/ai/email-responder',
+    description: 'Generate intelligent email responses using AI',
+    parameters: [
+      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' },
+      { name: 'context', type: 'object', required: false, description: 'Additional context for the response' }
+    ],
+    response: {
+      status: 200,
+      data: {
+        response: 'string',
+        confidence: 'number',
+        suggestions: 'array'
       }
     }
-  ];
-
-  const codeExamples = [
-    {
-      language: 'JavaScript',
-      code: `// Check system health
-fetch('/api/health')
-  .then(response => response.json())
-  .then(data => console.log(data));
-
-// List automations
-fetch('/api/automations')
-  .then(response => response.json())
-  .then(data => console.log(\`Active automations: \${data.count}\`));`
-    },
-    {
-      language: 'Python',
-      code: `import requests
-
-# Check system health
-response = requests.get('https://bolt.new.zion.app/api/health')
-health_data = response.json()
-print(f"Status: {health_data['status']}")
-
-# List automations
-response = requests.get('https://bolt.new.zion.app/api/automations')
-automations = response.json()
-print(f"Active automations: {automations['count']}")`
-    },
-    {
-      language: 'cURL',
-      code: `# Check system health
-curl -X GET https://bolt.new.zion.app/api/health
-
-# List automations
-curl -X GET https://bolt.new.zion.app/api/automations
-
-# Trigger automation
-curl -X POST https://bolt.new.zion.app/api/automations/sync-branches/trigger`
+  },
+  {
+    name: 'Predictive Analytics',
+    method: 'POST',
+    path: '/api/ai/predictive-analytics',
+    description: 'Generate business predictions and forecasts',
+    parameters: [
+      { name: 'data', type: 'array', required: true, description: 'Historical data for analysis' },
+      { name: 'period', type: 'string', required: true, description: 'Time period for prediction' }
+    ],
+    response: {
+      status: 200,
+      data: {
+        predictions: 'array',
+        accuracy: 'number',
+        trends: 'array'
+      }
     }
-  ];
+  },
+  {
+    name: 'Content Generation',
+    method: 'POST',
+    path: '/api/ai/content-generation',
+    description: 'Generate AI-powered content for various purposes',
+    parameters: [
+      { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' },
+      { name: 'type', type: 'string', required: true, description: 'Type of content to generate' }
+    ],
+    response: {
+      status: 200,
+      data: {
+        content: 'string',
+        metadata: 'object'
+      }
+    }
+  }
+];
 
+const codeExamples = [
+  {
+    language: 'JavaScript',
+    code: `// AI Email Responder
+const response = await fetch('/api/ai/email-responder', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+    message: 'I need help with my account',
+    context: { userId: '12345' }
+  })
+});
+
+const data = await response.json();
+console.log(data.response);`
+  },
+  {
+    language: 'Python',
+    code: `# Predictive Analytics
+import requests
+
+response = requests.post(
+    'https://api.ziontechgroup.com/ai/predictive-analytics',
+    headers={
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'data': historical_data,
+        'period': '30_days'
+    }
+)
+
+predictions = response.json()
+print(predictions['predictions'])`
+  },
+  {
+    language: 'cURL',
+    code: `# Content Generation
+curl -X POST https://api.ziontechgroup.com/ai/content-generation \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "prompt": "Write a blog post about AI trends",
+    "type": "blog_post"
+  }'`
+  }
+];
+
+const endpoints = [
+  {
+    name: 'Authentication API',
+    description: 'Secure authentication and authorization endpoints',
+    icon: 'Lock',
+    method: 'POST',
+    path: '/api/auth',
+    parameters: [
+      { name: 'username', type: 'string', required: true },
+      { name: 'password', type: 'string', required: true }
+    ]
+  },
+  {
+    name: 'AI Services API',
+    description: 'AI-powered services and machine learning endpoints',
+    icon: 'Brain',
+    method: 'POST',
+    path: '/api/ai',
+    parameters: [
+      { name: 'prompt', type: 'string', required: true },
+      { name: 'model', type: 'string', required: false }
+    ]
+  },
+  {
+    name: 'Cloud Services API',
+    description: 'Cloud infrastructure and deployment endpoints',
+    icon: 'Cloud',
+    method: 'GET',
+    path: '/api/cloud',
+    parameters: [
+      { name: 'region', type: 'string', required: false },
+      { name: 'service', type: 'string', required: true }
+    ]
+  }
+];
+
+export default function APIDocs() {
   return (
-    <>
-      <Head>
-        <title>API Documentation - Zion App</title>
-        <meta name="description" content="Comprehensive API documentation for Zion App's autonomous automation system" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="relative">
-          {/* Background Effects */}
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-fuchsia-500/10" />
-          
-          {/* Header */}
-          <header className="relative pt-16 pb-8">
-            <div className="mx-auto max-w-7xl px-6">
-              <nav className="flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">
-                  Zion App
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API <span className="text-blue-600">Documentation</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Integrate our AI services into your applications with our comprehensive REST API. 
+                Get started with our easy-to-use endpoints and code examples.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get API Key
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-                <div className="flex items-center gap-6">
-                  <Link href="/docs" className="text-white/70 hover:text-white transition-colors">
-                    Docs
-                  </Link>
-                  <Link href="/features" className="text-white/70 hover:text-white transition-colors">
-                    Features
-                  </Link>
-                  <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </div>
-              </nav>
-            </div>
-          </header>
-
-          {/* Main Content */}
-          <main className="relative">
-            {/* Hero Section */}
-            <section className="mx-auto max-w-7xl px-6 pb-14">
-              <div className="text-center">
-                <h1 className="text-5xl font-bold tracking-tight text-white mb-6">
-                  API Documentation
-                </h1>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-                  Integrate with Zion App's autonomous automation system through our comprehensive REST API. 
-                  Monitor, control, and extend the capabilities of your autonomous workflows.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <a href="#endpoints" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white font-semibold transition-colors">
-                    View Endpoints
-                  </a>
-                  <a href="#examples" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                    Code Examples
-                  </a>
-                </div>
+                <Link
+                  href="/micro-saas"
+                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  View Micro SaaS
+                </Link>
               </div>
-            </section>
+            </motion.div>
+          </div>
+        </section>
 
-            {/* API Endpoints */}
-            <section id="endpoints" className="mx-auto max-w-7xl px-6 pb-14">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-wide text-white/90 mb-4">API Endpoints</h2>
-                <p className="text-lg text-white/70">
-                  Explore all available API endpoints for interacting with Zion App
-                </p>
-              </div>
-              
-              <div className="space-y-6">
-                {endpoints.map((endpoint, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                    <div className="flex items-start gap-4">
-                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
-                        endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
-                        'bg-yellow-500/20 text-yellow-400'
-                      }`}>
-                        {endpoint.method}
-                      </span>
-                      <div className="flex-1">
-                        <code className="text-lg font-mono text-cyan-400">{endpoint.path}</code>
-                        <p className="text-white/70 mt-2">{endpoint.description}</p>
-                        <div className="mt-4">
-                          <h4 className="text-sm font-semibold text-white/90 mb-2">Response Example:</h4>
-                          <pre className="bg-black/30 rounded-lg p-4 overflow-x-auto">
-                            <code className="text-sm text-green-400">
-                              {JSON.stringify(endpoint.response, null, 2)}
-                            </code>
-                          </pre>
-                        </div>
+        {/* API Endpoints */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">API Endpoints</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive API endpoints for AI services.
+              </p>
+            </motion.div>
+            <div className="space-y-8">
+              {endpoints.map((endpoint, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold">{endpoint.name}</h3>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      endpoint.method === 'POST' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                    }`}>
+                      {endpoint.method}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
+                    <code className="text-sm font-mono">{endpoint.path}</code>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3">Parameters</h4>
+                      <div className="space-y-2">
+                        {endpoint.parameters.map((param, paramIndex) => (
+                          <div key={paramIndex} className="flex items-center justify-between text-sm">
+                            <span className="font-mono">{param.name}</span>
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              param.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'
+                            }`}>
+                              {param.type}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3">Response</h4>
+                      <div className="bg-gray-100 rounded-lg p-3">
+                        <pre className="text-sm font-mono">
+                          {JSON.stringify(endpoint.response, null, 2)}
+                        </pre>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            {/* Code Examples */}
-            <section id="examples" className="mx-auto max-w-7xl px-6 pb-14">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-wide text-white/90 mb-4">Code Examples</h2>
-                <p className="text-lg text-white/70">
-                  Get started quickly with these code examples in multiple languages
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {codeExamples.map((example, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                    <h3 className="text-xl font-semibold text-white mb-4">{example.language}</h3>
-                    <pre className="bg-black/30 rounded-lg p-4 overflow-x-auto">
-                      <code className="text-sm text-green-400">{example.code}</code>
-                    </pre>
-                  </div>
-                ))}
-              </div>
-            </section>
+        {/* API Endpoints Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                API Endpoints
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive API documentation for all our services and integrations.
+              </p>
+            </motion.div>
 
-            {/* Authentication & Rate Limits */}
-            <section className="mx-auto max-w-7xl px-6 pb-14">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Authentication</h3>
-                    <p className="text-white/70 mb-4">
-                      Currently, our API is open for public use. In the future, we'll implement 
-                      API key authentication for enhanced security and rate limiting.
-                    </p>
-                    <div className="bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-4">
-                      <p className="text-yellow-400 text-sm">
-                        <strong>Note:</strong> API is currently in public beta. Authentication will be required in future versions.
-                      </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'Authentication API',
+                  description: 'Secure authentication and authorization endpoints',
+                  icon: 'Lock',
+                  methods: ['POST', 'GET', 'PUT', 'DELETE'],
+                  endpoint: '/api/auth'
+                },
+                {
+                  title: 'AI Services API',
+                  description: 'AI-powered services and machine learning endpoints',
+                  icon: 'Brain',
+                  methods: ['POST', 'GET'],
+                  endpoint: '/api/ai'
+                },
+                {
+                  title: 'Cloud Services API',
+                  description: 'Cloud infrastructure and deployment endpoints',
+                  icon: 'Cloud',
+                  methods: ['POST', 'GET', 'PUT', 'DELETE'],
+                  endpoint: '/api/cloud'
+                }
+              ].map((endpoint, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <Code className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">{endpoint.title}</h3>
+                      <p className="text-sm text-gray-600">{endpoint.endpoint}</p>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Rate Limits</h3>
-                    <p className="text-white/70 mb-4">
-                      To ensure fair usage and system stability, we implement the following rate limits:
-                    </p>
-                    <ul className="text-white/70 space-y-2">
-                      <li>• <strong>Health checks:</strong> 100 requests per minute</li>
-                      <li>• <strong>Automation status:</strong> 60 requests per minute</li>
-                      <li>• <strong>Automation triggers:</strong> 10 requests per minute</li>
-                    </ul>
+                  <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {endpoint.methods.map((method, methodIndex) => (
+                      <span
+                        key={methodIndex}
+                        className={`px-2 py-1 text-xs font-semibold rounded ${
+                          method === 'POST' ? 'bg-green-100 text-green-800' :
+                          method === 'GET' ? 'bg-blue-100 text-blue-800' :
+                          method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-red-100 text-red-800'
+                        }`}
+                      >
+                        {method}
+                      </span>
+                    ))}
                   </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Support Section */}
-            <section className="mx-auto max-w-7xl px-6 pb-14">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-wide text-white/90 mb-4">Need Help?</h2>
-                <p className="text-lg text-white/70 mb-8">
-                  Can't find what you're looking for? Our team is here to help.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/docs" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                    View Full Documentation
+                  <Link
+                    href={`/docs/api/${endpoint.endpoint.replace('/api/', '')}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
+                  >
+                    View Documentation
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
-                  <Link href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white font-semibold transition-colors">
-                    Contact Support
-                  </Link>
-                </div>
-              </div>
-            </section>
-          </main>
-        </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
-    </>
+    </Layout>
   );
-};
-
-export default APIDocumentationPage;
+}
