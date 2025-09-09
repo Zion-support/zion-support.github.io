@@ -1,93 +1,165 @@
-import React, { useEffect, useRef } from 'react';
-;
-interface AccessibilityEnhancerProps {;
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-  role?: string;
-  'aria-label'?: string;
-  'aria-describedby'?: string;
-  'aria-expanded'?: boolean;
-  'aria-controls'?: string;
-  'aria-haspopup'?: boolean;
-  tabIndex?: number;
-  onKeyDown?: (event: React.KeyboardEvent) => void;
-  className?: string;
-  focusable?: boolean;
-  skipToContent?: boolean;
-};
-;
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
-  children,;
-  role,;
-  'aria-label': ariaLabel,;
-  'aria-describedby': ariaDescribedby,;
-  'aria-expanded': ariaExpanded,;
-  'aria-controls': ariaControls,;
-  'aria-haspopup': ariaHaspopup,;
-  tabIndex,;
-  onKeyDown,;
-  className = '',;
-  focusable = true,;
-  skipToContent = false;
-}) => {;
-  const ref = useRef<HTMLDivElement>(null);
-;
-  useEffect(() => {;
-    if (skipToContent && ref.current) {;
-      ref.current.focus();
-    };
-  }, [skipToContent]);
-;
-  const handleKeyDown = (event: React.KeyboardEvent) => {;
-    // Handle common keyboard interactions;
-    switch (event.key) {;
-      case 'Enter':;
-      case ' ':;
-        if (role === 'button' || role === 'link') {;
-          event.preventDefault();
-          // Trigger click event;
-          const clickEvent = new MouseEvent('click', {;
-            bubbles: true,;
-            cancelable: true,;
-            view: window;
-          });
-          event.currentTarget.dispatchEvent(clickEvent);
-        };
-        break;
-      case 'Escape':;
-        if (ariaExpanded !== undefined) {;
-          // Close dropdown or modal;
-          event.preventDefault();
-          // You can add custom close logic here;
-        };
-        break;
-      default:;
-        break;
-    };
-;
-    // Call custom onKeyDown handler;
-    if (onKeyDown) {;
-      onKeyDown(event);
-    };
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    // Check for user's motion preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(prefersReducedMotion);
+
+    // Apply accessibility settings from localStorage
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    
+    setIsHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
+  }, []);
+
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+    const root = document.documentElement;
+    
+    // High contrast mode
+    if (highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Font size adjustment
+    root.style.setProperty('--font-size-base', fontSize === 'large' ? '18px' : fontSize === 'small' ? '14px' : '16px');
+
+    // Reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
   };
-;
-  const accessibilityProps = {;
-    role,;
-    'aria-label': ariaLabel,;
-    'aria-describedby': ariaDescribedby,;
-    'aria-expanded': ariaExpanded,;
-    'aria-controls': ariaControls,;
-    'aria-haspopup': ariaHaspopup,;
-    tabIndex: focusable ? tabIndex : -1,;
-    onKeyDown: handleKeyDown,;
-    className: `${className} ${focusable ? 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' : ''}`,;
-    ref;
+
+  useEffect(() => {
+    applyAccessibilityStyles(isHighContrast, fontSize, reducedMotion);
+  }, [isHighContrast, fontSize, reducedMotion]);
+
+  const toggleHighContrast = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('highContrast', newValue.toString());
   };
-;
-  return (;
-    <div {...accessibilityProps}>;
-      {children};
-    </div>;
+
+  const changeFontSize = (newSize: string) => {
+    setFontSize(newSize);
+    localStorage.setItem('fontSize', newSize);
+  };
+
+  const toggleReducedMotion = () => {
+    const newValue = !reducedMotion;
+    setReducedMotion(newValue);
+    localStorage.setItem('reducedMotion', newValue.toString());
+  };
+
+  return (
+    <div className="accessibility-enhancer">
+      {children}
+      
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls" style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 1000,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '10px'
+      }}>
+        <button
+          onClick={toggleHighContrast}
+          className={`accessibility-btn ${isHighContrast ? 'active' : ''}`}
+          style={{
+            padding: '10px',
+            border: 'none',
+            borderRadius: '5px',
+            backgroundColor: isHighContrast ? '#000' : '#f0f0f0',
+            color: isHighContrast ? '#fff' : '#000',
+            cursor: 'pointer'
+          }}
+          aria-label="Toggle high contrast mode"
+        >
+          High Contrast
+        </button>
+        
+        <div style={{ display: 'flex', gap: '5px' }}>
+          <button
+            onClick={() => changeFontSize('small')}
+            className={`accessibility-btn ${fontSize === 'small' ? 'active' : ''}`}
+            style={{
+              padding: '5px 10px',
+              border: 'none',
+              borderRadius: '3px',
+              backgroundColor: fontSize === 'small' ? '#007bff' : '#f0f0f0',
+              color: fontSize === 'small' ? '#fff' : '#000',
+              cursor: 'pointer'
+            }}
+            aria-label="Small font size"
+          >
+            A-
+          </button>
+          <button
+            onClick={() => changeFontSize('normal')}
+            className={`accessibility-btn ${fontSize === 'normal' ? 'active' : ''}`}
+            style={{
+              padding: '5px 10px',
+              border: 'none',
+              borderRadius: '3px',
+              backgroundColor: fontSize === 'normal' ? '#007bff' : '#f0f0f0',
+              color: fontSize === 'normal' ? '#fff' : '#000',
+              cursor: 'pointer'
+            }}
+            aria-label="Normal font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('large')}
+            className={`accessibility-btn ${fontSize === 'large' ? 'active' : ''}`}
+            style={{
+              padding: '5px 10px',
+              border: 'none',
+              borderRadius: '3px',
+              backgroundColor: fontSize === 'large' ? '#007bff' : '#f0f0f0',
+              color: fontSize === 'large' ? '#fff' : '#000',
+              cursor: 'pointer'
+            }}
+            aria-label="Large font size"
+          >
+            A+
+          </button>
+        </div>
+        
+        <button
+          onClick={toggleReducedMotion}
+          className={`accessibility-btn ${reducedMotion ? 'active' : ''}`}
+          style={{
+            padding: '10px',
+            border: 'none',
+            borderRadius: '5px',
+            backgroundColor: reducedMotion ? '#28a745' : '#f0f0f0',
+            color: reducedMotion ? '#fff' : '#000',
+            cursor: 'pointer'
+          }}
+          aria-label="Toggle reduced motion"
+        >
+          Reduce Motion
+        </button>
+      </div>
+    </div>
   );
 };
-;
+
 export default AccessibilityEnhancer;

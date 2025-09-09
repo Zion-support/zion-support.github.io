@@ -236,62 +236,32 @@ export default function ServicesIndex() {
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Core Services Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Core Technology Services
-              </h2>
-              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                Cutting-edge solutions that drive innovation and business transformation.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {serviceCategories.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-zion-slate-light mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-zion-cyan mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-zion-slate-light">
-                          <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Link
-                    to={service.href}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </motion.div>
+;
+            </ul>;
+            <div className="mt-6 text-sm text-gray-600">;
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
+            </div>;
+            <div className="mt-6">;
+              <Link ;
+                href="/services/comprehensive-micro-saas-showcase" ;
+                className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">;
+                View All 15+ AI Services <ArrowRight className="w-4 h-4 ml-2" />;
+              </Link>;
+            </div>;
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;
+            <div className="grid md:grid-cols-3 gap-4">;
+              {pricing.map((tier, index) => (;
+                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">;
+                  <div className="text-lg font-semibold mb-1">{tier.name}</div>;
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>;
+                  <ul className="text-sm text-gray-600 space-y-1">;
+                    {tier.details.map((detail, detailIndex) => (;
+                      <li key={detailIndex}>{detail}</li>;
+                    ))}
+;
+                  </ul>;
+                </div>;
               ))}
             </div>
           </div>
