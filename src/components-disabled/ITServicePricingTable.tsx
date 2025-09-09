@@ -7,7 +7,7 @@ import { Globe, Search, ArrowUpDown } from 'lucide-react';
 
 
 
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState("");

@@ -70,13 +70,14 @@ async function initializeSentryOrMock() {
       Sentry = mockSentry.default;
       onRequestError = mockSentry.onRequestError;
       console.log('Using Sentry mock (Smart Detection)');
-    } else {
-      // Dynamic imports to replace require() calls
-      const sentryModule = await import("@sentry/nextjs");
-      Sentry = sentryModule;
-      const sentryConfig = await import('./sentry');
-      onRequestError = sentryConfig.onRequestError;
     }
+  } else {
+    // Dynamic imports to replace require() calls
+    const sentryModule = await import("@sentry/nextjs");
+    Sentry = sentryModule;
+    const sentryConfig = await import('./sentry');
+    onRequestError = sentryConfig.onRequestError;
+  }
   } catch (error) {
     console.warn('Sentry import failed, using mock:', error);
     // Fallback to mock if import fails

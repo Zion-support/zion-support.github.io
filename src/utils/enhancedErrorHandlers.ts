@@ -1,7 +1,7 @@
 import { enhancedGlobalErrorHandler, ToastType, ToastPriority } from './globalToastManager';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { isPublicRoute } from '../config/publicRoutes';
-import { logDebug } from '@/utils/productionLogger';
+import { log } from '@/utils/productionLogger';
 
 
 /**
@@ -40,7 +40,7 @@ export class EnhancedApiErrorHandler {
 
     const shouldFailSilently = silentPatterns.some(pattern => url.includes(pattern));
     if (shouldFailSilently) {
-      logDebug('Silent API error (${status} ${method}): ${url}', { data: error.response?.data });
+      log('Silent API error (${status} ${method}): ${url}', { data: error.response?.data });
       return;
     }
 
