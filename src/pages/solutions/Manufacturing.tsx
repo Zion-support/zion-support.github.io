@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
+  Factory, 
+  Cpu, 
   Brain, 
+  Cloud, 
   CheckCircle,
   ArrowRight,
   Database,
@@ -18,8 +18,8 @@ import {
   Shield,
   Star,
   Award,
-  Cpu,
   Network,
+  Globe,
   FileText,
   Search,
   Eye,
@@ -37,76 +37,60 @@ import {
   Package,
   BarChart,
   PieChart,
-  LineChart,
-  Users,
-  Heart,
-  ShoppingCart,
-  Building,
-  Atom,
-  Infinity,
-  Planet,
-  Telescope,
-  Orbit,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary
+  LineChart
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const SpaceTech = () => {
+const Manufacturing = () => {
   const features = [
     {
-      icon: Rocket,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems and space infrastructure solutions',
+      icon: Factory,
+      title: 'Industry 4.0',
+      description: 'Smart manufacturing solutions for the fourth industrial revolution',
       color: 'from-blue-500 to-indigo-500'
     },
     {
       icon: Brain,
-      title: 'AI Space Analytics',
-      description: 'Intelligent analytics for space data and satellite operations',
+      title: 'AI-Powered Analytics',
+      description: 'Intelligent insights for manufacturing optimization and quality control',
       color: 'from-purple-500 to-cyan-500'
     },
     {
-      icon: Globe,
-      title: 'Earth Observation',
-      description: 'Satellite imagery and environmental monitoring solutions',
+      icon: Cloud,
+      title: 'IoT Integration',
+      description: 'Connected devices and real-time monitoring for smart factories',
       color: 'from-green-500 to-blue-500'
     },
     {
       icon: Shield,
-      title: 'Space Security',
-      description: 'Cybersecurity and protection for space-based systems',
+      title: 'Quality Assurance',
+      description: 'Advanced quality control and compliance monitoring systems',
       color: 'from-red-500 to-orange-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'Satellite Operations Platform',
-      description: 'Comprehensive platform for satellite management and operations',
-      features: ['Mission Control', 'Telemetry Analysis', 'Orbital Planning', 'System Monitoring'],
-      href: '/services/space-tech'
+      title: 'Smart Factory Platform',
+      description: 'Comprehensive IoT and AI platform for manufacturing optimization',
+      features: ['Real-time Monitoring', 'Predictive Maintenance', 'Quality Control', 'Supply Chain Integration'],
+      href: '/services/ai-predictive-maintenance'
     },
     {
-      title: 'Space Data Analytics',
-      description: 'AI-powered analytics for space data and satellite imagery',
-      features: ['Image Processing', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],
-      href: '/services/ai-business-intelligence'
+      title: 'Manufacturing Analytics',
+      description: 'AI-powered insights for production optimization and efficiency',
+      features: ['Performance Analytics', 'Quality Metrics', 'Cost Optimization', 'Process Improvement'],
+      href: '/services/data-analytics'
     }
   ];
 
   const benefits = [
-    'Enhanced satellite operations and mission success',
-    'Improved space data analysis and insights',
-    'Advanced Earth observation capabilities',
-    'Secure and reliable space infrastructure',
-    'Real-time monitoring and control systems',
-    'Innovative space technology solutions'
+    'Increase production efficiency by 25-40%',
+    'Reduce downtime through predictive maintenance',
+    'Improve quality control and reduce defects',
+    'Optimize supply chain and inventory management',
+    'Real-time monitoring and alerting systems',
+    'Data-driven decision making for operations'
   ];
 
   return (
@@ -122,19 +106,19 @@ const SpaceTech = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full px-4 py-2 mb-6">
-              <Rocket className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-medium">Space Technology</span>
+              <Factory className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">Manufacturing Solutions</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Advancing Space Technology with
+              Revolutionizing Manufacturing with
               <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}AI & Innovation
+                {' '}AI & IoT
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Zion Tech Group delivers cutting-edge space technology solutions that drive 
-              innovation in satellite operations, space analytics, and Earth observation. 
-              We're helping humanity explore and understand space.
+              Zion Tech Group delivers cutting-edge manufacturing technology solutions that drive 
+              Industry 4.0 transformation. From smart factories to predictive maintenance, 
+              we're helping manufacturers thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -166,10 +150,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Features
+              Manufacturing Technology Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our space technology solutions are built with innovation, reliability, and performance in mind
+              Our manufacturing solutions are built with efficiency, quality, and innovation in mind
             </p>
           </motion.div>
           
@@ -205,10 +189,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Solutions
+              Manufacturing Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive space technology solutions designed for modern space operations
+              Comprehensive technology solutions designed specifically for manufacturing operations
             </p>
           </motion.div>
           
@@ -258,10 +242,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Benefits
+              Manufacturing Benefits
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Measurable improvements in space operations, data analysis, and mission success
+              Measurable improvements in efficiency, quality, and operational excellence
             </p>
           </motion.div>
           
@@ -294,10 +278,10 @@ const SpaceTech = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Advance Space Technology?
+              Ready to Transform Manufacturing?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how Zion Tech Group can help you achieve your space technology goals
+              Let's discuss how Zion Tech Group can help you achieve your Industry 4.0 goals
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -322,4 +306,4 @@ const SpaceTech = () => {
   );
 };
 
-export default SpaceTech;
+export default Manufacturing;

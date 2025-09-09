@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Rocket, 
-  Satellite, 
-  Globe, 
+  Users, 
   Brain, 
+  Cloud, 
   CheckCircle,
   ArrowRight,
   Database,
@@ -12,6 +12,7 @@ import {
   BarChart3,
   Workflow,
   Calendar,
+  DollarSign,
   Target,
   Zap,
   TrendingUp,
@@ -20,100 +21,77 @@ import {
   Award,
   Cpu,
   Network,
+  Globe,
   FileText,
   Search,
   Eye,
   CheckSquare,
   Clipboard,
   AlertTriangle,
-  Settings,
-  Gauge,
-  Activity,
-  Monitor,
-  Cog,
-  Wrench,
-  HardHat,
-  Truck,
-  Package,
-  BarChart,
-  PieChart,
-  LineChart,
-  Users,
-  Heart,
-  ShoppingCart,
-  Building,
-  Atom,
-  Infinity,
-  Planet,
-  Telescope,
-  Orbit,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary
+  Lightbulb,
+  Sparkles,
+  Flame,
+  Infinity
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const SpaceTech = () => {
+const Startup = () => {
   const features = [
     {
       icon: Rocket,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems and space infrastructure solutions',
-      color: 'from-blue-500 to-indigo-500'
+      title: 'Rapid Scaling',
+      description: 'Technology solutions designed for explosive startup growth',
+      color: 'from-orange-500 to-red-500'
     },
     {
       icon: Brain,
-      title: 'AI Space Analytics',
-      description: 'Intelligent analytics for space data and satellite operations',
+      title: 'AI-First Approach',
+      description: 'Cutting-edge AI solutions to give startups a competitive edge',
       color: 'from-purple-500 to-cyan-500'
     },
     {
-      icon: Globe,
-      title: 'Earth Observation',
-      description: 'Satellite imagery and environmental monitoring solutions',
-      color: 'from-green-500 to-blue-500'
+      icon: Cloud,
+      title: 'Cloud-Native',
+      description: 'Modern cloud infrastructure built for startup agility',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Shield,
-      title: 'Space Security',
-      description: 'Cybersecurity and protection for space-based systems',
-      color: 'from-red-500 to-orange-500'
+      title: 'Enterprise Security',
+      description: 'Professional-grade security from day one',
+      color: 'from-green-500 to-blue-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'Satellite Operations Platform',
-      description: 'Comprehensive platform for satellite management and operations',
-      features: ['Mission Control', 'Telemetry Analysis', 'Orbital Planning', 'System Monitoring'],
-      href: '/services/space-tech'
+      title: 'AI-Powered MVP Platform',
+      description: 'Rapidly build and deploy AI-enhanced minimum viable products',
+      features: ['Quick Development', 'AI Integration', 'Scalable Architecture', 'Cost Optimization'],
+      href: '/services/ai-business-intelligence'
     },
     {
-      title: 'Space Data Analytics',
-      description: 'AI-powered analytics for space data and satellite imagery',
-      features: ['Image Processing', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],
-      href: '/services/ai-business-intelligence'
+      title: 'Startup Cloud Infrastructure',
+      description: 'Pay-as-you-grow cloud solutions optimized for startup budgets',
+      features: ['Auto-scaling', 'Cost Management', 'Security Hardening', '24/7 Support'],
+      href: '/services/cloud-devops'
     }
   ];
 
   const benefits = [
-    'Enhanced satellite operations and mission success',
-    'Improved space data analysis and insights',
-    'Advanced Earth observation capabilities',
-    'Secure and reliable space infrastructure',
-    'Real-time monitoring and control systems',
-    'Innovative space technology solutions'
+    'Accelerate time-to-market by 60-80%',
+    'Reduce development costs through AI automation',
+    'Build scalable architecture from day one',
+    'Access enterprise-grade technology at startup prices',
+    'Focus on core business while we handle tech',
+    'Grow without technical debt or limitations'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -121,32 +99,32 @@ const SpaceTech = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full px-4 py-2 mb-6">
-              <Rocket className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-medium">Space Technology</span>
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full px-4 py-2 mb-6">
+              <Rocket className="w-5 h-5 text-orange-400" />
+              <span className="text-orange-400 font-medium">Startup Solutions</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Advancing Space Technology with
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}AI & Innovation
+              Accelerate Startup Growth with
+              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+                {' '}AI & Technology
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Zion Tech Group delivers cutting-edge space technology solutions that drive 
-              innovation in satellite operations, space analytics, and Earth observation. 
-              We're helping humanity explore and understand space.
+              Zion Tech Group delivers cutting-edge technology solutions designed specifically 
+              for startups. Build faster, scale smarter, and compete with established players 
+              from day one.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
-                className="inline-flex items-center space-x-2 border border-blue-400/30 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center space-x-2 border border-orange-400/30 text-orange-400 hover:bg-orange-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 <span>Schedule Demo</span>
                 <Calendar className="w-5 h-5" />
@@ -166,10 +144,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Features
+              Startup Technology Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our space technology solutions are built with innovation, reliability, and performance in mind
+              Our startup solutions are built with speed, scalability, and innovation in mind
             </p>
           </motion.div>
           
@@ -182,7 +160,7 @@ const SpaceTech = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="relative p-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl hover:border-blue-400/30 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="relative p-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl hover:border-orange-400/30 transition-all duration-300 hover:transform hover:scale-105">
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -205,10 +183,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Solutions
+              Startup Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive space technology solutions designed for modern space operations
+              Comprehensive technology solutions designed specifically for startup growth
             </p>
           </motion.div>
           
@@ -221,14 +199,14 @@ const SpaceTech = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="p-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl hover:border-blue-400/30 transition-all duration-300">
+                <div className="p-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl hover:border-orange-400/30 transition-all duration-300">
                   <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
                   <p className="text-slate-300 mb-6 leading-relaxed">{solution.description}</p>
                   
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" />
                         <span className="text-sm text-slate-300">{feature}</span>
                       </div>
                     ))}
@@ -236,7 +214,7 @@ const SpaceTech = () => {
                   
                   <Link
                     to={solution.href}
-                    className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                    className="inline-flex items-center space-x-2 text-orange-400 hover:text-orange-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
@@ -258,10 +236,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Benefits
+              Startup Benefits
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Measurable improvements in space operations, data analysis, and mission success
+              Measurable improvements in speed, efficiency, and competitive advantage
             </p>
           </motion.div>
           
@@ -274,7 +252,7 @@ const SpaceTech = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <p className="text-slate-300 leading-relaxed">{benefit}</p>
@@ -285,7 +263,7 @@ const SpaceTech = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10">
+      <section className="py-20 relative bg-gradient-to-r from-orange-500/10 via-red-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -294,22 +272,22 @@ const SpaceTech = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Advance Space Technology?
+              Ready to Accelerate Growth?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how Zion Tech Group can help you achieve your space technology goals
+              Let's discuss how Zion Tech Group can help you achieve your startup growth goals
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
-                className="inline-flex items-center space-x-2 border border-blue-400/30 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center space-x-2 border border-orange-400/30 text-orange-400 hover:bg-orange-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 <span>Schedule Demo</span>
                 <Calendar className="w-5 h-5" />
@@ -322,4 +300,4 @@ const SpaceTech = () => {
   );
 };
 
-export default SpaceTech;
+export default Startup;
