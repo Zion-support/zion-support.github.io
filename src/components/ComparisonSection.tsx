@@ -1,6 +1,6 @@
 
 import { GradientHeading } from "./GradientHeading";
-import { Button } from "@/components/ui/Button";
+import { Button } from "./ui/Button";
 import { CheckCircle2 } from 'lucide-react';
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";

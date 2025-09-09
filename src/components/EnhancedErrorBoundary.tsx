@@ -1,7 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from '@/components/ui/Button';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, ArrowLeft, Home, Send } from 'lucide-react';
+import { Button } from './ui/Button';
 
 interface Props {
   children: ReactNode;
