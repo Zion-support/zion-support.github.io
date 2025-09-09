@@ -37,8 +37,17 @@ export default defineConfig(({ mode }) => ({
     minify: 'esbuild',
     // Use esbuild for CSS minification to avoid heavy PostCSS/CSSNano work on CI
     cssMinify: 'esbuild',
-    // Disable module preload generation which can be slow for very large graphs on CI
-    modulePreload: false,
+    // Enable module preload with proper configuration
+    modulePreload: {
+      polyfill: true,
+      resolveDependencies: (filename, deps, { hostId, hostType }) => {
+        // Only preload critical dependencies
+        return deps.filter(dep => {
+          // Preload only essential chunks
+          return dep.includes('react') || dep.includes('react-dom') || dep.includes('main');
+        });
+      }
+    },
     // Chunk size warning limit
     chunkSizeWarningLimit: 500,
     // Assets inline limit - smaller for better caching
