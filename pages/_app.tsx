@@ -1,5 +1,17 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+<<<<<<< HEAD
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <EnhancedNavigation />
+      <Component {...pageProps} />
+      <EnhancedFooter />
+    </>
+=======
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -305,5 +317,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
+>>>>>>> 56433e5950f86f3612ddbdabb654ab3429763be2
   );
-};
+}

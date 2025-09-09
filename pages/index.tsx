@@ -1,96 +1,65 @@
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Phone, Mail, MapPin } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Star, Users, Code, Cloud, Brain, Shield, Zap, Globe } from 'lucide-react';
-import AdvancedHero from '../components/AdvancedHero';
-import AdvancedServicesShowcase from '../components/AdvancedServicesShowcase';
-import AdvancedTestimonials from '../components/AdvancedTestimonials';
-import AdvancedContactForm from '../components/AdvancedContactForm';
-import AdvancedStats from '../components/AdvancedStats';
-import AdvancedFeaturesShowcase from '../components/AdvancedFeaturesShowcase';
-import AdvancedPricing from '../components/AdvancedPricing';
-import AdvancedTeamShowcase from '../components/AdvancedTeamShowcase';
-import AdvancedCaseStudies from '../components/AdvancedCaseStudies';
-import AdvancedNewsletter from '../components/AdvancedNewsletter';
-import AdvancedFAQ from '../components/AdvancedFAQ';
-import AdvancedBlog from '../components/AdvancedBlog';
-import AdvancedAnalytics from '../components/AdvancedAnalytics';
-import AdvancedCustomerSuccess from '../components/AdvancedCustomerSuccess';
-import AdvancedProjectManagement from '../components/AdvancedProjectManagement';
-import AdvancedClientPortal from '../components/AdvancedClientPortal';
-import AdvancedTimeTracking from '../components/AdvancedTimeTracking';
-import AdvancedInvoiceManagement from '../components/AdvancedInvoiceManagement';
-import AdvancedTeamScheduling from '../components/AdvancedTeamScheduling';
-import AdvancedPerformanceDashboard from '../components/AdvancedPerformanceDashboard';
-import AdvancedWorkflowAutomation from '../components/AdvancedWorkflowAutomation';
-import AdvancedAnalyticsDashboard from '../components/AdvancedAnalyticsDashboard';
-import AdvancedProjectHub from '../components/AdvancedProjectHub';
-import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
-import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
-import FinalIntegrationHub from '../components/FinalIntegrationHub';
-import EnhancedPerformanceMetrics from '../components/EnhancedPerformanceMetrics';
-import EnhancedSecurityDashboard from '../components/EnhancedSecurityDashboard';
-import AdvancedDataVisualization from '../components/AdvancedDataVisualization';
-import AdvancedNotificationCenter from '../components/AdvancedNotificationCenter';
-;
-export default function HomePage(...args: any[]): any {;
-  const [_isMenuOpen, _setIsMenuOpen] = useState(false);
-  const [_activeSection, _setActiveSection] = useState('hero');
-  const [_isLoaded, _setIsLoaded] = useState(false);
-;
-  useEffect(() => {;
-    _setIsLoaded(true);
+import { ArrowRight, CheckCircle, Star, Users, Code, Cloud, Brain, Shield, Zap, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
+
+const HomePage: NextPage = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
   }, []);
-;
-;
-;
-export default function Index(...args[]):  {;
-	const features = [;
-		{;
-			icon: Brain,;
-			title: 'AI & Machine Learning',;
-			description: 'Multi-agent workflows, RAG systems, and intelligent automation platforms.',;
-			href: '/services#ai',;
-			color: 'from-purple-600 to-indigo-700';
-		},;
-		{;
-			icon: Cloud,;
-			title: 'Cloud & DevOps',;
-			description: 'Serverless infrastructure, Kubernetes orchestration, and DevOps automation.',;
-			href: '/services#cloud',;
-			color: 'from-cyan-600 to-blue-700';
-		},;
-		{;
-			icon: Shield,;
-			title: 'Cybersecurity Platform',;
-			description: 'Enterprise-grade security with AI threat detection and zero-trust architecture',;
-			href: '/services/ai-cybersecurity-platform',;
-			color: 'from-red-500 to-orange-600';
-		},;
-		{;
-			icon: Rocket,;
-			title: 'Micro SAAS Platform',;
-			description: 'Build and launch micro SAAS applications in weeks with our comprehensive platform',;
-			href: '/services/micro-saas-platform',;
-			color: 'from-purple-500 to-indigo-600';
-		};
-	];
-;
-;
-  const technologies = [;
-    { name: 'React & Next.js', icon: '⚛️' },;
-    { name: 'Node.js & Python', icon: '🐍' },;
-    { name: 'AWS & Azure', icon: '☁️' },;
-    { name: 'Docker & Kubernetes', icon: '🐳' },;
-    { name: 'TensorFlow & PyTorch', icon: '🤖' },;
-    { name: 'Blockchain & Web3', icon: '⛓️' };
+
+  const stats = [
+    { icon: Users, number: '500+', label: 'Projects Completed' },
+    { icon: Star, number: '99.9%', label: 'Client Satisfaction' },
+    { icon: Clock, number: '24/7', label: 'Support Available' },
+    { icon: Shield, number: '100%', label: 'Secure Solutions' }
+  ];
+
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      description: 'Multi-agent workflows, RAG systems, and intelligent automation platforms.',
+      href: '/services#ai',
+      color: 'from-purple-600 to-indigo-700'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud & DevOps',
+      description: 'Serverless infrastructure, Kubernetes orchestration, and DevOps automation.',
+      href: '/services#cloud',
+      color: 'from-cyan-600 to-blue-700'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity Platform',
+      description: 'Enterprise-grade security with AI threat detection and zero-trust architecture',
+      href: '/services/ai-cybersecurity-platform',
+      color: 'from-red-500 to-orange-600'
+    },
+    {
+      icon: Zap,
+      title: 'Micro SAAS Platform',
+      description: 'Build and launch micro SAAS applications in weeks with our comprehensive platform',
+      href: '/services/micro-saas-platform',
+      color: 'from-purple-500 to-indigo-600'
+    }
+  ];
+
+  const technologies = [
+    { name: 'React & Next.js', icon: '⚛️' },
+    { name: 'Node.js & Python', icon: '🐍' },
+    { name: 'AWS & Azure', icon: '☁️' },
+    { name: 'Docker & Kubernetes', icon: '🐳' },
+    { name: 'TensorFlow & PyTorch', icon: '🤖' },
+    { name: 'Blockchain & Web3', icon: '⛓️' }
   ];
 
   return (
-    <MainLayout>
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -316,10 +285,13 @@ export default function Index(...args[]):  {;
           </motion.div>
         </div>
       </section>
-    </MainLayout>
+    </div>
   );
 };
 
+<<<<<<< HEAD
+export default HomePage;
+=======
         {/* Services Section */}
         <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -402,3 +374,4 @@ export default function Index(...args[]):  {;
 Home.displayName = 'Home';
 
 export default Home;
+>>>>>>> 56433e5950f86f3612ddbdabb654ab3429763be2

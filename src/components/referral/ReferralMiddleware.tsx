@@ -1,38 +1,18 @@
-import { useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React, { useEffect } from 'react';
 
-
-interface Props { children: React.ReactNode }
-
-export function ReferralMiddleware({ children }: Props) {
-  const { user } = useAuth();
-
+const ReferralMiddleware: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const code = params.get('ref');
-    if (code) {
-      safeStorage.setItem('referralCode', code);
+    // Handle referral logic here if needed
+    const urlParams = new URLSearchParams(window.location.search);
+    const referralCode = urlParams.get('ref');
+    
+    if (referralCode) {
+      // Store referral code in localStorage or send to analytics
+      localStorage.setItem('referralCode', referralCode);
     }
   }, []);
 
-  useEffect(() => {
-    async function sendReferral() {
-      const code = safeStorage.getItem('referralCode');
-      if (!code || !user?.id) return;
-      try {
-        await supabase.functions.invoke('track-referral', {
-          body: { refCode: code, userId: user.id, email: user.email },
-        });
-        safeStorage.removeItem('referralCode');
-      } catch (err) {
-        logErrorToProduction('Error tracking referral', { data: err });
-      }
-    }
-    sendReferral();
-  }, [user?.id]);
-
   return <>{children}</>;
-}
+};
+
+export { ReferralMiddleware };
