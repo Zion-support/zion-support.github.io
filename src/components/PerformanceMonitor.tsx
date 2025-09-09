@@ -11,145 +11,149 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export function PerformanceMonitor() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+  });
+
+  useEffect(() => {
+    // First Contentful Paint (FCP)
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      }
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    // Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      if (lastEntry) {
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      }
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'first-input') {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        }
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    // Time to First Byte (TTFB)
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    }
+
+    // Cleanup
+    return () => {
+      fcpObserver.disconnect();
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+    };
+  }, []);
+
+  // Send metrics to analytics when they're available
+  useEffect(() => {
+    const allMetricsAvailable = Object.values(metrics).every(metric => metric !== null);
+    
+    if (allMetricsAvailable) {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'core_web_vitals', {
+          event_category: 'Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_parameter_1: Math.round(metrics.fcp || 0),
+          custom_parameter_2: Math.round(metrics.fid || 0),
+          custom_parameter_3: Math.round((metrics.cls || 0) * 1000),
+          custom_parameter_4: Math.round(metrics.ttfb || 0),
+        });
+      }
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Core Web Vitals:', {
+          FCP: `${Math.round(metrics.fcp || 0)}ms`,
+          LCP: `${Math.round(metrics.lcp || 0)}ms`,
+          FID: `${Math.round(metrics.fid || 0)}ms`,
+          CLS: (metrics.cls || 0).toFixed(3),
+          TTFB: `${Math.round(metrics.ttfb || 0)}ms`,
+        });
+      }
+    }
+  }, [metrics]);
+
+  // Performance score calculation
+  const getPerformanceScore = () => {
+    let score = 100;
+    
+    // LCP scoring (0-2500ms = good, 2500-4000ms = needs improvement, >4000ms = poor)
+    if (metrics.lcp && metrics.lcp > 4000) score -= 30;
+    else if (metrics.lcp && metrics.lcp > 2500) score -= 15;
+    
+    // FID scoring (0-100ms = good, 100-300ms = needs improvement, >300ms = poor)
+    if (metrics.fid && metrics.fid > 300) score -= 20;
+    else if (metrics.fid && metrics.fid > 100) score -= 10;
+    
+    // CLS scoring (0-0.1 = good, 0.1-0.25 = needs improvement, >0.25 = poor)
+    if (metrics.cls && metrics.cls > 0.25) score -= 20;
+    else if (metrics.cls && metrics.cls > 0.1) score -= 10;
+    
+    return Math.max(0, score);
+  };
+
+  const performanceScore = getPerformanceScore();
+
+  // Don't render anything in production, just monitor
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
   return (
-    <>
-      {/* Performance Monitor Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-24 z-50 p-4 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-blue/50"
-        aria-label="Open performance monitor"
-        aria-expanded={isOpen}
-        aria-controls="performance-panel"
-      >
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Activity className="w-6 h-6 text-white" />
-        </motion.div>
-      </button>
-
-      {/* Performance Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            id="performance-panel"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed bottom-24 right-6 z-50 w-96 bg-zinc-900/95 backdrop-blur-md border border-zion-blue/30 rounded-2xl shadow-2xl shadow-zion-blue/20"
-            role="dialog"
-            aria-label="Performance monitoring"
-            tabIndex={-1}
-          >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                  <BarChart3 className="w-5 h-5 text-zion-blue" />
-                  Performance
-                </h3>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setIsMonitoring(!isMonitoring)}
-                    className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                      isMonitoring 
-                        ? 'bg-green-600 text-white' 
-                        : 'bg-zinc-700 text-zion-slate-light hover:bg-zinc-600'
-                    }`}
-                  >
-                    {isMonitoring ? 'Monitoring' : 'Start'}
-                  </button>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="text-zion-slate-light hover:text-white transition-colors"
-                    aria-label="Close performance monitor"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Performance Score */}
-              <div className="mb-6 p-4 bg-zinc-800/50 rounded-xl border border-zion-blue/20">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-400">
-                    A
-                  </div>
-                  <div className="text-2xl font-bold text-white">
-                    95/100
-                  </div>
-                  <div className="text-sm text-zion-slate-light">
-                    Performance Score
-                  </div>
-                </div>
-              </div>
-
-              {/* Metrics */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <Zap className="w-4 h-4 text-green-400" />
-                    <div>
-                      <div className="text-sm text-white font-medium">First Contentful Paint</div>
-                      <div className="text-xs text-zion-slate-light">1.2s</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <TrendingUp className="w-4 h-4 text-green-400" />
-                    <div>
-                      <div className="text-sm text-white font-medium">Largest Contentful Paint</div>
-                      <div className="text-xs text-zion-slate-light">2.1s</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-4 h-4 text-green-400" />
-                    <div>
-                      <div className="text-sm text-white font-medium">First Input Delay</div>
-                      <div className="text-xs text-zion-slate-light">45ms</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <Activity className="w-4 h-4 text-green-400" />
-                    <div>
-                      <div className="text-sm text-white font-medium">Cumulative Layout Shift</div>
-                      <div className="text-xs text-zion-slate-light">0.05</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
-              </div>
-
-              {/* Status */}
-              <div className="mt-6 p-4 bg-green-900/20 border border-green-500/30 rounded-xl">
-                <h4 className="text-green-400 font-semibold mb-2 flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4" />
-                  Excellent Performance
-                </h4>
-                <p className="text-sm text-green-200">
-                  Your website is performing exceptionally well! All Core Web Vitals are in the green zone.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
+      <div className="font-bold mb-2">Performance Monitor</div>
+      <div className="space-y-1">
+        <div>Score: <span className={performanceScore >= 90 ? 'text-green-400' : performanceScore >= 70 ? 'text-yellow-400' : 'text-red-400'}>{performanceScore}</span></div>
+        <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : '...'}</div>
+        <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : '...'}</div>
+        <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : '...'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : '...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : '...'}</div>
+      </div>
+    </div>
   );
+};
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
 }
