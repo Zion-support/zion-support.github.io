@@ -32,13 +32,22 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
 
-  const services = [
-    { 
-      name: 'AI & Machine Learning', 
-      href: '/services/ai', 
-      description: 'Advanced AI Solutions & ML Models',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
+  const navigationItems = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        { name: 'All Services', href: '/services-overview', icon: Code },
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+      ]
     },
     { 
       name: 'Cybersecurity', 
@@ -59,7 +68,19 @@ export function AppHeader() {
       href: '/services/web', 
       description: 'Modern Web Applications',
       icon: Code,
-      color: 'from-green-500 to-emerald-500'
+      dropdown: [
+        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
+        { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
+        { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
+        { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
+        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
+        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
+        { name: 'Content Creation', href: '/micro-saas/content-creation' },
+        { name: 'HR Platform', href: '/micro-saas/hr-platform' },
+        { name: 'AI Quantum Finance', href: '/micro-saas/ai-quantum-finance' },
+        { name: 'AI Healthcare Analytics', href: '/micro-saas/ai-healthcare-analytics' },
+        { name: 'AI Smart City Solutions', href: '/micro-saas/ai-smart-city-solutions' }
+      ]
     },
     { 
       name: 'Data Analytics', 
