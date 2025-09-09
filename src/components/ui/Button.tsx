@@ -45,10 +45,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading && (
-          <LoadingSpinner
-            size="sm"
-            className="mr-2"
-          />
+          <Suspense fallback={<div className="w-4 h-4 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin mr-2" />}>
+            <LoadingSpinner
+              size="sm"
+              className="mr-2"
+            />
+          </Suspense>
         )}
         {children}
       </Comp>

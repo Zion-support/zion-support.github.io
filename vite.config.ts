@@ -26,15 +26,52 @@ export default defineConfig(({ mode }) => ({
       },
       output: {
         // Manual chunk splitting for better caching
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          query: ['@tanstack/react-query'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
-          utils: ['axios', 'date-fns', 'lodash.debounce'],
-          forms: ['react-hook-form', 'formik', 'yup', 'zod'],
-          motion: ['framer-motion'],
-          icons: ['lucide-react'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            // React ecosystem
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            // Router
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            // Query library
+            if (id.includes('@tanstack/react-query')) {
+              return 'query';
+            }
+            // UI libraries
+            if (id.includes('@radix-ui') || id.includes('lucide-react')) {
+              return 'ui';
+            }
+            // Forms
+            if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
+              return 'forms';
+            }
+            // Animation
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            // Utilities
+            if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash')) {
+              return 'utils';
+            }
+            // Large libraries
+            if (id.includes('@stripe') || id.includes('@supabase') || id.includes('ethers')) {
+              return 'external';
+            }
+            // Everything else
+            return 'vendor';
+          }
+          // Component chunks
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
+          // Page chunks
+          if (id.includes('/src/pages/')) {
+            return 'pages';
+          }
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
