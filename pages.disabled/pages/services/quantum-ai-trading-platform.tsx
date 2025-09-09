@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx 
 import: {}
   Brain,
   Zap,
@@ -87,9 +87,9 @@ import: {}
   X,
   Check,
   AlertTriangle,
-  Info} from 'lucide-react';';
+  Info} from 'lucide-react';' 
 export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {): any: {}
-  return();
+  return() 
 
               <Sparkles className='w-4 h-4 mr-2'  />              Revolutionary Quantum AI Trading'
             </div>'''
@@ -97,17 +97,17 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
               Quantum AI Trading Platform'
             </h1>'''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Experience the future of trading with our quantum-powered AI;
+              Experience the future of trading with our quantum-powered AI 
               platform. Get 1000x faster execution and superior market
               predictions.'
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
               <Link'''
-                to='/contact'';
+                to='/contact'' 
 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
               <Link'''
-                to='/pricing'';
+                to='/pricing'' 
 
                 View Pricing
 
@@ -117,7 +117,7 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
         </div>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -133,11 +133,11 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
     g:grid-cols-3 gap-8'>
             {features.map(featur,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-                whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx 
+                whileInView={{ opacity: 1, y: 0 }} 
                 whileInView={{ opacity: 1, y: 0 }}
 
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -148,9 +148,9 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
                 <ul className='space-y-2'>
                   {feature.benefits.map((benefit, idx) => (
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
-                    <li';
-                    <li;
-                      key={idx};
+                    <li' 
+                    <li 
+                      key={idx} 
                       className='flex items-center text-sm text-gray-300>'
                       <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                      {benefit}
 
@@ -162,12 +162,12 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
           </div>
         </div>
 
-              From portfolio optimization to high-frequency trading, our'';
+              From portfolio optimization to high-frequency trading, our'' 
               platform provides everything you need to succeed in today's
 
               markets.
 
-              From portfolio optimization to high-frequency trading, our';
+              From portfolio optimization to high-frequency trading, our' 
               platform provides everything you need to succeed in today's
               markets.
             </p>
@@ -176,11 +176,11 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {tradingFeatures.map(featur,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-                whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx 
+                whileInView={{ opacity: 1, y: 0 }} 
                 whileInView={{ opacity: 1, y: 0 }}
 
                     <feature.icon className='w-6 h-6 text-white' />'
@@ -198,9 +198,9 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
                     <ul className='space-y-2'>
                       {feature.benefits.map((benefit, idx) => (
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
-                        <li';
-                        <li;
-                          key={idx};
+                        <li' 
+                        <li 
+                          key={idx} 
                           className='flex items-center text-sm text-gray-300>'
                           <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                          {benefit}
 
@@ -227,17 +227,17 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={plan.nam,e}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx 
 
                     : 'border-gray-700'`}`}
-              >{plan.popular: && (''';
-                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
-                    <span: className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
+              >{plan.popular: && (''' 
+                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''' 
+                    <span: className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>' 
                       Most: Popular
                     </span>
                   </div>
@@ -256,18 +256,18 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
                 <Link''``
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}``;`
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
-';
-                    plan.popular'';
+' 
+                    plan.popular'' 
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700'''`;`
                       : 'border border-cyan-500 text-cyan-400 hove,
     r:bg-cyan-500 hove,
-    r:text-white'``;
+    r:text-white'`` 
                 </ul>`
                 <Link''
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}`;`
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                    plan.popular';
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700'';
+                    plan.popular' 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700'' 
                       : 'border border-cyan-500 text-cyan-400 hove,
     r:bg-cyan-500 hove,
     r:text-white'`}`}
@@ -279,12 +279,12 @@ export: function QuantumAITradingPlatform(function QuantumAITradingPlatform() {)
           </div>
         </div>
 
-                to='/contact'';
+                to='/contact'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
                 Start Your Free Trial'''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
               <Link'''
-                to='/pricing'';
+                to='/pricing'' 
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-300''>

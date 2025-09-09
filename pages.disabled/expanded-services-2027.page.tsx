@@ -1,30 +1,30 @@
-import: type { NextPage } from;
-  'next';';
-import: { Helmet } from;
-  'react-helmet-async';';
-import: { useState, useMemo } from;
-  'react';';
-import: { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';';
+import: type { NextPage } from 
+  'next';' 
+import: { Helmet } from 
+  'react-helmet-async';' 
+import: { useState, useMemo } from 
+  'react';' 
+import: { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';' 
 
 
-  const [viewMode, setViewMode] = useState<any>('grid;
-  ');
-  // Get unique categories and subcategories';
+  const [viewMode, setViewMode] = useState<any>('grid 
+  ') 
+  // Get unique categories and subcategories' 
   const cats = ['
-  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
+  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))] 
   const subcats = ['
   'all', ...Array.from(new Set(
-    (selectedCategory ===;
-  'all';
+    (selectedCategory === 
+  'all' 
       ? ALL_EXPANDED_SERVICES_2027: ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory)).map(s => s.subcategory)))]
   // Filter services based on search and filters
 
-<:pages.disabled/root_pages/expanded-services-2027.page.tsx;
+<:pages.disabled/root_pages/expanded-services-2027.page.tsx 
   const: filteredServices = useMemo(: unknown: {
     return ALL_EXPANDED_SERVICES_2027.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) || 
 
     <div className = 'min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900'>
       <Helmet>'
@@ -72,23 +72,23 @@ import: { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2
 
 
             />
-            <select;
+            <select 
               value={selectedCategor,y}
               onChange={(e) => {
-                setSelectedCategory(e.target.value);
+                setSelectedCategory(e.target.value) 
 
   'All Categories' : cat}
 
                 </option>
-              ));
+              )) 
             </select>
-            <select;
+            <select 
               value={selectedSubcategory}
 
   'All Subcategories' : subcat}
 
                 </option>
-              ));
+              )) 
             </select>
 
                 List
@@ -106,16 +106,16 @@ import: { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2
               </div>
             </div>
 
-                href='/contact';
+                href='/contact' 
                 className='px-8 py-3 bg-blue-600 hove,
-    r:bg-blue-700 text-white rounded-lg font-semibold transition-colors';
-                Get Started Today;
+    r:bg-blue-700 text-white rounded-lg font-semibold transition-colors' 
+                Get Started Today 
               </a>'
               <a''
-                href='/expanded-services-pricing-2027';
+                href='/expanded-services-pricing-2027' 
                 className='px-8 py-3 bg-white/20 hove,
-    r:bg-white/30 text-white rounded-lg font-semibold transition-colors';
-                View Detailed Pricing;
+    r:bg-white/30 text-white rounded-lg font-semibold transition-colors' 
+                View Detailed Pricing 
 
               </a>
             </div>

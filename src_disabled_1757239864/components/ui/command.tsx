@@ -9,9 +9,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 
 
-  />;
-));
-Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayName;
+  /> 
+)) 
+Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayName 
 
 
 
@@ -25,10 +25,10 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
-interface CommandDialogProps;
+interface CommandDialogProps 
   extends React && React.ComponentPropsWithoutRef<typeof Dialog> {}
 
-const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
+const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => { 
   return (
 
 
@@ -39,10 +39,10 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
         </DialogHeader>
 
 
-        </Command>;
-      </DialogContent>;
-    </Dialog>;
-  );
+        </Command> 
+      </DialogContent> 
+    </Dialog> 
+  ) 
 }
 
 
@@ -58,97 +58,97 @@ const CommandInput = React.forwardRef<
 
 >((props, ref) => (
   <CommandPrimitive.Empty
-  />;
-));
-CommandList.displayName = CommandPrimitive.List.displayName;
+  /> 
+)) 
+CommandList.displayName = CommandPrimitive.List.displayName 
 
-const CommandEmpty = React.forwardRef<;
+const CommandEmpty = React.forwardRef< 
 
-  React.ElementRef<typeof CommandPrimitive.Empty>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>;
->((props, ref) => (;
-  <CommandPrimitive.Empty;
+  React.ElementRef<typeof CommandPrimitive.Empty>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty> 
+>((props, ref) => ( 
+  <CommandPrimitive.Empty 
     ref={ref}
-    className="py-6 text-center text-sm";
+    className="py-6 text-center text-sm" 
     {...props}
-  />;
-));
-CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
-const CommandGroup = React.forwardRef<;
-  React.ElementRef<typeof CommandPrimitive.Group>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive.Group;
+  /> 
+)) 
+CommandEmpty.displayName = CommandPrimitive.Empty.displayName 
+const CommandGroup = React.forwardRef< 
+  React.ElementRef<typeof CommandPrimitive.Group>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group> 
+>(({ className, ...props }, ref) => ( 
+  <CommandPrimitive.Group 
     ref={ref}
-    className={cn(;
-      "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground",;
-      className;
+    className={cn( 
+      "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground", 
+      className 
     )}
     {...props}
-  />;
-));
-CommandGroup.displayName = CommandPrimitive.Group.displayName;
-const CommandSeparator = React.forwardRef<;
-  React.ElementRef<typeof CommandPrimitive.Separator>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive.Separator;
+  /> 
+)) 
+CommandGroup.displayName = CommandPrimitive.Group.displayName 
+const CommandSeparator = React.forwardRef< 
+  React.ElementRef<typeof CommandPrimitive.Separator>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator> 
+>(({ className, ...props }, ref) => ( 
+  <CommandPrimitive.Separator 
     ref={ref}
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
 
 
 
-  />));
-CommandEmpty.display_name = CommandPrimitive.Empty.display_name;
-const CommandGroup = React.forward_ref<;
+  />)) 
+CommandEmpty.display_name = CommandPrimitive.Empty.display_name 
+const CommandGroup = React.forward_ref< 
   React.ElementRef < typeof CommandPrimitive.Group>,
-  React.ComponentPro</typeof > psWithoutRef < typeof CommandPrimitive.Group>;
+  React.ComponentPro</typeof > psWithoutRef < typeof CommandPrimitive.Group> 
 >(({ class_name, ...props }, ref) => (
-  <CommandPrimitive.Group;
+  <CommandPrimitive.Group 
     ref={ref}
     className={cn('-mx-1 h-px bg-border', className)}
     {...props}
 
 
-  />;
-));
-CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
-const CommandItem = React.forwardRef<;
-  React.ElementRef<typeof CommandPrimitive.Item>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive.Item;
+  /> 
+)) 
+CommandSeparator.displayName = CommandPrimitive.Separator.displayName 
+const CommandItem = React.forwardRef< 
+  React.ElementRef<typeof CommandPrimitive.Item>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> 
+>(({ className, ...props }, ref) => ( 
+  <CommandPrimitive.Item 
 
     ref={ref}
-    className="py-6 text-center text-sm";
+    className="py-6 text-center text-sm" 
     {...props}
-  />;
-));
-CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
+  /> 
+)) 
+CommandEmpty.displayName = CommandPrimitive.Empty.displayName 
 
-const CommandGroup = React.forwardRef<;
+const CommandGroup = React.forwardRef< 
 
-  React.ElementRef<typeof CommandPrimitive.Group>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive.Group;
+  React.ElementRef<typeof CommandPrimitive.Group>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group> 
+>(({ className, ...props }, ref) => ( 
+  <CommandPrimitive.Group 
     ref={ref}
-    className={cn(;
-      "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground",;
-      className;
+    className={cn( 
+      "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground", 
+      className 
     )}
     {...props}
-  />;
-));
-CommandGroup.displayName = CommandPrimitive.Group.displayName;
+  /> 
+)) 
+CommandGroup.displayName = CommandPrimitive.Group.displayName 
 
-const CommandSeparator = React.forwardRef<;
+const CommandSeparator = React.forwardRef< 
 
-  React.ElementRef<typeof CommandPrimitive.Separator>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive.Separator;
+  React.ElementRef<typeof CommandPrimitive.Separator>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator> 
+>(({ className, ...props }, ref) => ( 
+  <CommandPrimitive.Separator 
 
 
 
@@ -157,29 +157,29 @@ const CommandSeparator = React.forwardRef<;
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
 
-  />;
-));
-CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
+  /> 
+)) 
+CommandSeparator.displayName = CommandPrimitive.Separator.displayName 
 
-const CommandItem = React.forwardRef<;
+const CommandItem = React.forwardRef< 
 
-  React.ElementRef<typeof CommandPrimitive.Item>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive.Item;
+  React.ElementRef<typeof CommandPrimitive.Item>, 
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> 
+>(({ className, ...props }, ref) => ( 
+  <CommandPrimitive.Item 
 
     ref={ref}
 
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50"
       className
     )}
-  />));
-CommandSeparator.display_name = CommandPrimitive.Separator.display_name;
-const CommandItem = React.forward_ref<;
+  />)) 
+CommandSeparator.display_name = CommandPrimitive.Separator.display_name 
+const CommandItem = React.forward_ref< 
   React.ElementRef < typeof CommandPrimitive.Item>,
-</typeof> React.ComponentPropsWithoutRef < typeof CommandPrimitive.Item>;
+</typeof> React.ComponentPropsWithoutRef < typeof CommandPrimitive.Item> 
 >(({ class_name, ...props }, ref) => (
-  <CommandPrimitive.Item;
+  <CommandPrimitive.Item 
     ref={ref}
     className={cn (
       "relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none data-[disabled = true]:pointer - events - none data-[selected='true']:bg - accent data-[selected = true]:text - accent - foreground data-[disabled = true]:opacity - 50",
@@ -187,26 +187,26 @@ const CommandItem = React.forward_ref<;
     {...props}
 
   class_name,
-  ...props;
+  ...props 
 }: React.HTMLAttributes < HTMLSpanElement>) => {
-    />);
+    />) 
 
 }
-CommandShortcut.display_name = 'CommandShortcut';
+CommandShortcut.display_name = 'CommandShortcut' 
 export {
 
-    />;
-  </div>;
-));
+    /> 
+  </div> 
+)) 
   />
 ))
 
 
-CommandInput && CommandInput.displayName = CommandPrimitive && CommandPrimitive.Input.displayName;
+CommandInput && CommandInput.displayName = CommandPrimitive && CommandPrimitive.Input.displayName 
 
 
-    />;
-  );
+    /> 
+  ) 
 }
 CommandShortcut.displayName = "CommandShortcut"
 

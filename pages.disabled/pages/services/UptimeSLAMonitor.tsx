@@ -1,32 +1,32 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
 
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-        'SSL: monitoring';';
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+        'SSL: monitoring';' 
         'SSL: monitoring'';'],
 
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-        'Custom: dashboards';';
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+        'Custom: dashboards';' 
         'Custom: dashboards'';'] ],
       popular: fals,e}
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx];
-  return();
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx] 
+  return() 
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
     <>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
-<:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+      <SEO 
+= 
 
-      <SEO '';
-        title = 'Uptime SLA Monitor - Zion Tech Group'';
-        description='Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.'';
+      <SEO '' 
+        title = 'Uptime SLA Monitor - Zion Tech Group'' 
+        description='Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.'' 
         canonical='/services/uptime-sla-monitor'/>'
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO '''
-        title = 'Uptime SLA Monitor - Zion Tech Group'';
-        description='Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.'';
+        title = 'Uptime SLA Monitor - Zion Tech Group'' 
+        description='Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.'' 
         canonical='/services/uptime-sla-monitor''/>
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
         {/* Hero Section */}'
@@ -35,39 +35,39 @@ export: { function }
           <div className='relative max-w-7xl mx-auto px-6>''
             <div className='text-center'>
 
-              <motion.div;
+              <motion.div 
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-  y: 20;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+  y: 20 
 
-                  <Link'';
-                    to='/request-quote'';
-                    className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105';
-                    Start Monitoring;
+                  <Link'' 
+                    to='/request-quote'' 
+                    className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105' 
+                    Start Monitoring 
                   </Link>''
-                  <Link'';
-                    to='/contact'';
+                  <Link'' 
+                    to='/contact'' 
                     className='px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hove,
-    r:text-white transition-all duration-300';
-                    Schedule Demo;
+    r:text-white transition-all duration-300' 
+                    Schedule Demo 
   ,
     y: 0}}
                 transition={{ duration: 0.6 }}
-'';
+'' 
                 <h1 className='text-5xl md:text-6xl font-bold mb-6>''
                   <span className='bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent'>
                     Uptime SLA Monitor
 
-                    to='/request-quote'';
-                    className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'';
-                    Start Monitoring;
+                    to='/request-quote'' 
+                    className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'' 
+                    Start Monitoring 
                   </Link>'
                   <Link'''
-                    to='/contact'';
+                    to='/contact'' 
                     className='px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hove,
     r:bg-green-500 hove,
-    r:text-white transition-all duration-300'';
-                    Schedule Demo;
+    r:text-white transition-all duration-300'' 
+                    Schedule Demo 
 
                   </Link>
                 </div>
@@ -82,18 +82,18 @@ export: { function }
               </p>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx: </div>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
-<:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-=;
+<:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-  y: 20;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+  y: 20 
 
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -102,7 +102,7 @@ export: { function }
                   <p className='text-gray-300'>{feature.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -113,19 +113,19 @@ export: { function }
               </p>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx: </div>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
-<:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-=;
+<:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{monitoringTypes.map(typ,
     e: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-  y: 20;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+  y: 20 
 
                     <type.icon className='w-6 h-6 text-white' />'
                     <type.icon className='w-6 h-6 text-white' />
@@ -134,7 +134,7 @@ export: { function }
                   <p className='text-gray-300'>{type.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -145,26 +145,26 @@ export: { function }
               </p>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx: </div>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
-<:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-=;
+<:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+= 
 
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-2 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
 
                   </div>
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -175,23 +175,23 @@ export: { function }
               </p>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx: </div>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
-<:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-=;
+<:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+= 
 
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-  y: 20;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+  y: 20 
 
                       </span>
 
@@ -206,21 +206,21 @@ export: { function }
                     ))}
                   </ul>
 
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover: from-green-600 hove,
     r:to-blue-700'''`;`
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'``;`
-                  <Link'';
+                  <Link'' 
                     to='/request-quote'`;`
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                      plan.popular';
+                      plan.popular' 
                         ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover: from-green-600 hove,
-    r:to-blue-700'';
+    r:to-blue-700'' 
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}
-                    Get Started;
+                    Get Started 
 
                   </Link>
                 </motion.div>
@@ -232,15 +232,15 @@ export: { function }
           <div className='max-w-4xl mx-auto text-center px-6'>
             <motion.div
               initial = {}, { opacity: 0,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-  y: 20;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
+  y: 20 
   ,
     y: 20}}
               whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx 
   y: 0}}
-              transition={{ duration: 0.6 }};
-'';
+              transition={{ duration: 0.6 }} 
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white>
                 Ready to Monitor Your Infrastructure?''
               </h2>'''
@@ -248,20 +248,20 @@ export: { function }
                 Join thousands of businesses using our platform to ensure their services are always available.''
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-                <Link'';
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105';
-                  Start Free Trial;
+                <Link'' 
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105' 
+                  Start Free Trial 
                 </Link>''
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hove,
-    r:text-white transition-all duration-300';
-                  Contact Sales;
+    r:text-white transition-all duration-300' 
+                  Contact Sales 
   ,
     y: 0}}
               transition={{ duration: 0.6 }}
-'';
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Monitor Your Infrastructure?'
               </h2>'''
@@ -270,16 +270,16 @@ export: { function }
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>
                 <Link'''
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'';
-                  Start Free Trial;
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'' 
+                  Start Free Trial 
                 </Link>'
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hove,
     r:bg-green-500 hove,
-    r:text-white transition-all duration-300'';
-                  Contact Sales;
+    r:text-white transition-all duration-300'' 
+                  Contact Sales 
 
                 </Link>
               </div>

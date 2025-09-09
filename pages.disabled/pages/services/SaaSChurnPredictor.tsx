@@ -1,4 +1,4 @@
-;
+ 
 
         <ul className='list-disc ml-5 text-slate-300 space-y-1'>
 
@@ -15,9 +15,9 @@
     </section>
   </div>
 
-);
+) 
 export: { SaaSChurnPredictor }
-export default SaaSChurnPredictor;
+export default SaaSChurnPredictor 
 
 
 

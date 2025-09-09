@@ -23,32 +23,32 @@ import {}
 
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30'></div>'''        <div className='container-responsive relative z-10'>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx 
 
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6'>
               Space Technology'
             </h1>'''            <p className='text-xl m,
     d:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto'>
 
-              Pioneering the future of space exploration with cutting-edge;
-              technology, AI-powered operations, and revolutionary space;
+              Pioneering the future of space exploration with cutting-edge 
+              technology, AI-powered operations, and revolutionary space 
 
             <div className='flex flex-wrap justify-center gap-4'>
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+              <motion.button 
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover: from-blue-600 hove,
     r:to-purple-700 transition-all duration-300'>                Explore Services
               </motion.button>
 :pages.disabled/pages/services/space-tech.tsx
 
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300'>                Contact Us
 
               </motion.button>
@@ -57,13 +57,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx 
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
 
                   <feature.icon className='w-8 h-8 text-blue-400' />'
@@ -86,13 +86,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx 
 
             {applications.map((app, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={app.category}
 
                       <div className='w-2 h-2 bg-blue-400 rounded-full mr-3'></div>
@@ -108,13 +108,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx 
 
             {technologies.map((tech, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={tech.name}
 
                     <tech.icon className='w-6 h-6 text-blue-400' />'
@@ -130,23 +130,23 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx 
 
               <div className='flex flex-wrap justify-center gap-4'>
-                <motion.button;
-                  whileHover={{ scale: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+                <motion.button 
+                  whileHover={{ scale: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover: from-blue-600 hove,
     r:to-purple-700 transition-all duration-300'>                  Get Started
                 </motion.button>
 :pages.disabled/pages/services/space-tech.tsx
 
-                <motion.button;
+                <motion.button 
                   whileHover={{ scal,
-    e: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300'>                  Learn More
 
                 </motion.button>

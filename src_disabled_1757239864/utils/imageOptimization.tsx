@@ -1,5 +1,5 @@
 
-const imgRef = useRef<HTMLDivElement>(null);
+const imgRef = useRef<HTMLDivElement>(null) 
 
 
 
@@ -71,39 +71,39 @@ export function OptimizedImage({
   }
     >
       {isInView && !hasError && (
-  // Intersection Observer for lazy loading;
-  useEffect(() => {;
-    if (!lazy || priority || isInView) return;
-    const observer = new IntersectionObserver(;
-      ([entry],) => {;
-        if (entry && entry.isIntersecting) {;
-          setIsInView(true);
-          observer && observer.disconnect();
+  // Intersection Observer for lazy loading 
+  useEffect(() => { 
+    if (!lazy || priority || isInView) return 
+    const observer = new IntersectionObserver( 
+      ([entry],) => { 
+        if (entry && entry.isIntersecting) { 
+          setIsInView(true) 
+          observer && observer.disconnect() 
         }
-      },;
-      {;
-        rootMargin: '50px', // Start loading 50px before the image enters viewport;
+      }, 
+      { 
+        rootMargin: '50px', // Start loading 50px before the image enters viewport 
       }
-    );
+    ) 
 
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
+    if (imgRef && imgRef.current) { 
+      observer && observer.observe(imgRef && imgRef.current) 
     }
 
-    return () => observer && observer.disconnect();
-  }, [lazy, priority, isInView]);
+    return () => observer && observer.disconnect() 
+  }, [lazy, priority, isInView]) 
 
-  // Generate WebP-compatible src;
-  const getOptimizedSrc = (originalSrc: string,) => {;
-    // If it's already optimized or external, return as-is;
-    if (;
-      originalSrc && originalSrc.startsWith('http') ||;
-      originalSrc && originalSrc.includes('/_next/image');
-    ) {;
-      return originalSrc;
+  // Generate WebP-compatible src 
+  const getOptimizedSrc = (originalSrc: string,) => { 
+    // If it's already optimized or external, return as-is 
+    if ( 
+      originalSrc && originalSrc.startsWith('http') || 
+      originalSrc && originalSrc.includes('/_next/image') 
+    ) { 
+      return originalSrc 
     }
 
-    // For internal images, Next && Next.js will handle optimization;
+    // For internal images, Next && Next.js will handle optimization 
 
           alt={alt}
           width={width}

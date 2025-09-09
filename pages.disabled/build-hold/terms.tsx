@@ -1,18 +1,18 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Card } from;
-  '../components/ui/Card'{ Badge: } from;';
-  '../components/ui/Badge';';
-import: { '  FileText, Scale',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Card } from 
+  '../components/ui/Card'{ Badge: } from;' 
+  '../components/ui/Badge';' 
+import: { '  FileText, Scale', 
   AlertTriangle, CheckCircle,
   Calendar, Globe,
   Mail, Phone,
   ArrowRight, Shield,
   Users, DollarSign,
-  Clock, BookOpen} from;
+  Clock, BookOpen} from 
 
   '{/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 l,
@@ -34,7 +34,7 @@ import: { '  FileText, Scale',;
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-8''          >'            <h2 className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>'            <div className='flex flex-wrap justify-center gap-4>              {sections.map((section, index) => ('                <a;
+            className='text-center mb-8''          >'            <h2 className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>'            <div className='flex flex-wrap justify-center gap-4>              {sections.map((section, index) => ('                <a 
                   key={section.id}
                   href={`#${section.id}`}`                  className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hove,
     r:text-white transition-colors text-sm''                >'                  {section.title}

@@ -1,15 +1,15 @@
-;
+ 
 export: { function }export default function AIEnterpriseOrchestrator(...args: []):   {}
-  return();
+  return() 
     <>
       <Helmet>
 
-                <Link'';
-                  to='/contact'';
+                <Link'' 
+                  to='/contact'' 
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hove,
-    r:shadow-xl';
-';
-                  Get Started'';
+    r:shadow-xl' 
+' 
+                  Get Started'' 
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'''
                 <button className='inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hove,
@@ -31,28 +31,28 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
 
-';
+' 
                   ico,
-    n: Brain',;
-                  title: 'Multi-Agent Coordination'',;
+    n: Brain', 
+                  title: 'Multi-Agent Coordination'', 
                   description: 'Intelligent AI agents work together to coordinate complex workflows across departments and systems.'}, {'
-';
-                  icon: Zap',;
-                  title: 'Real-time Optimization'',;
+' 
+                  icon: Zap', 
+                  title: 'Real-time Optimization'', 
                   description: 'Continuously optimize processes based on real-time data and performance metrics.'}, {'
-';
-                  icon: Settings',;
-                  title: 'Workflow Automation'',;
+' 
+                  icon: Settings', 
+                  title: 'Workflow Automation'', 
                   description: 'Automate repetitive tasks and complex business processes with intelligent decision-making.'}, {'
-';
-                  icon: Users',;
-                  title: 'Cross-functional Integration'',;
+' 
+                  icon: Users', 
+                  title: 'Cross-functional Integration'', 
                   description: 'Seamlessly integrate with existing systems, databases, and third-party applications.'}, {'
-';
-                  icon: TrendingUp',;
-                  title: 'Performance Analytics'',;
+' 
+                  icon: TrendingUp', 
+                  title: 'Performance Analytics'', 
                   description: 'Comprehensive insights into process efficiency, bottlenecks, and optimization opportunities.'}, {'
-';
+' 
 
                   <p className='text-slate-300'>{feature.description}</p>
 
@@ -63,24 +63,24 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
           </div>
         </section>
 
-';
-'';
+' 
+'' 
                   ste,
-    p: '01'',;
-                  title: 'Process Analysis'',;
+    p: '01'', 
+                  title: 'Process Analysis'', 
                   description: 'AI analyzes your current business processes and identifies optimization opportunities.'}, {'
-';
-'';
-                  step: '02'',;
-                  title: 'Agent Deployment'',;
+' 
+'' 
+                  step: '02'', 
+                  title: 'Agent Deployment'', 
                   description: 'Intelligent AI agents are deployed to coordinate and optimize specific workflows.'}, {'
-';
-'';
-                  step: '03'',;
-                  title: 'Real-time Coordination'',;
+' 
+'' 
+                  step: '03'', 
+                  title: 'Real-time Coordination'', 
                   description: 'Agents work together in real-time to coordinate tasks and optimize resource allocation.'}, {'
-';
-'';
+' 
+'' 
 
                   <p className='text-slate-300'>{step.description}</p>
 
@@ -107,15 +107,15 @@ export: { function }export default function AIEnterpriseOrchestrator(...args: []
           </div>
         </section>
 
-              <Link'';
-                to='/contact'';
+              <Link'' 
+                to='/contact'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hove,
-    r:to-blue-700 transition-all duration-200';
-';
-                Schedule a Consultation'';
+    r:to-blue-700 transition-all duration-200' 
+' 
+                Schedule a Consultation'' 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>''
-              <Link'';
-                to='/services'';
+              <Link'' 
+                to='/services'' 
                 className='inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500/10 transition-all duration-200'>                Explore All Services
 

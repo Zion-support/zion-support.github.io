@@ -1,33 +1,33 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
 
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-        'Up: to 50 users';';
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+        'Up: to 50 users';' 
         'Up: to 50 users'';'],
 
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-        'API: access';';
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+        'API: access';' 
         'API: access'';'] ],
       popular: fals,e}
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
 
-  return();
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+  return() 
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
     <>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+      <SEO 
+= 
 
-      <SEO '';
-        title = 'SOC2 Compliance Tracker - Zion Tech Group'';
-        description='Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.'';
+      <SEO '' 
+        title = 'SOC2 Compliance Tracker - Zion Tech Group'' 
+        description='Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.'' 
         canonical='/services/soc2-compliance-tracker'/>'
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO '''
-        title = 'SOC2 Compliance Tracker - Zion Tech Group'';
-        description='Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.'';
+        title = 'SOC2 Compliance Tracker - Zion Tech Group'' 
+        description='Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.'' 
         canonical='/services/soc2-compliance-tracker''/>
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
         {/* Hero Section */}'
@@ -36,10 +36,10 @@ export: { function }
           <div className='relative max-w-7xl mx-auto px-6>''
             <div className='text-center'>
 
-              <motion.div;
+              <motion.div 
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+  y: 20 
 
                   </Link>
                 </div>
@@ -54,18 +54,18 @@ export: { function }
               </p>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx: </div>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-=;
+<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+  y: 20 
 
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -74,7 +74,7 @@ export: { function }
                   <p className='text-gray-300'>{feature.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -85,19 +85,19 @@ export: { function }
               </p>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx: </div>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-=;
+<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{complianceAreas.map(are,
     a: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+  y: 20 
 
                     <area.icon className='w-6 h-6 text-white' />'
                     <area.icon className='w-6 h-6 text-white' />
@@ -106,7 +106,7 @@ export: { function }
                   <p className='text-gray-300'>{area.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -117,19 +117,19 @@ export: { function }
               </p>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx: </div>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-=;
+<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{complianceSteps.map(ste,
     p: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+  y: 20 
 
                     <span className='text-white font-bold text-lg'>{step.step}</span>'
                   </div>'''
@@ -137,7 +137,7 @@ export: { function }
                   <p className='text-gray-300 text-center'>{step.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -148,26 +148,26 @@ export: { function }
               </p>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx: </div>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-=;
+<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+= 
 
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-2 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
 
                   </div>
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -177,23 +177,23 @@ export: { function }
               </p>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx: </div>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-=;
+<:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+= 
 
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+  y: 20 
 
                       </span>
 
@@ -208,21 +208,21 @@ export: { function }
                     ))}
                   </ul>
 
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover: from-indigo-600 hove,
     r:to-purple-700'''`;`
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'``;`
-                  <Link'';
+                  <Link'' 
                     to='/request-quote'`;`
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                      plan.popular';
+                      plan.popular' 
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover: from-indigo-600 hove,
-    r:to-purple-700'';
+    r:to-purple-700'' 
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}
-                    Get Started;
+                    Get Started 
 
                   </Link>
                 </motion.div>
@@ -234,15 +234,15 @@ export: { function }
           <div className='max-w-4xl mx-auto text-center px-6'>
             <motion.div
               initial = {}, { opacity: 0,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
+  y: 20 
   ,
     y: 20}}
               whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx 
   y: 0}}
-              transition={{ duration: 0.6 }};
-'';
+              transition={{ duration: 0.6 }} 
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white>
                 Ready to Achieve SOC2 Compliance?''
               </h2>'''
@@ -250,20 +250,20 @@ export: { function }
                 Join hundreds of organizations using our platform to streamline their compliance journey.''
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-                <Link'';
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
-                  Start Free Trial;
+                <Link'' 
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' 
+                  Start Free Trial 
                 </Link>''
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hove,
-    r:text-white transition-all duration-300';
-                  Contact Sales;
+    r:text-white transition-all duration-300' 
+                  Contact Sales 
   ,
     y: 0}}
               transition={{ duration: 0.6 }}
-'';
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Achieve SOC2 Compliance?'
               </h2>'''
@@ -272,16 +272,16 @@ export: { function }
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>
                 <Link'''
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'';
-                  Start Free Trial;
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'' 
+                  Start Free Trial 
                 </Link>'
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hove,
     r:bg-indigo-500 hove,
-    r:text-white transition-all duration-300'';
-                  Contact Sales;
+    r:text-white transition-all duration-300'' 
+                  Contact Sales 
 
                 </Link>
               </div>

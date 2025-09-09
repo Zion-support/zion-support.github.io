@@ -1,15 +1,15 @@
-;
+ 
 export: { function }export default function CloudDevOps(...args: []):   {}
-  return();
+  return() 
     <>
       <Helmet>
 
-                <Link'';
-                  to='/contact'';
+                <Link'' 
+                  to='/contact'' 
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hove,
-    r:shadow-xl';
-';
-                  Get Started'';
+    r:shadow-xl' 
+' 
+                  Get Started'' 
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'''
                 <button className='inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hove,
@@ -29,28 +29,28 @@ export: { function }export default function CloudDevOps(...args: []):   {}
                 and deployment workflows.
               </p>
 
-';
+' 
                   ico,
-    n: GitBranch',;
-                  title: 'CI/CD Pipelines'',;
+    n: GitBranch', 
+                  title: 'CI/CD Pipelines'', 
                   description: 'Automated build, test, and deployment pipelines for rapid delivery.'}, {'
-';
-                  icon: Cloud',;
-                  title: 'Cloud Infrastructure'',;
+' 
+                  icon: Cloud', 
+                  title: 'Cloud Infrastructure'', 
                   description: 'Scalable cloud infrastructure with infrastructure as code (IaC).'}, {'
-';
-                  icon: Settings',;
-                  title: 'Automation'',;
+' 
+                  icon: Settings', 
+                  title: 'Automation'', 
                   description: 'Comprehensive automation of development and operations processes.'}, {'
-';
-                  icon: Users',;
-                  title: 'Team Collaboration'',;
+' 
+                  icon: Users', 
+                  title: 'Team Collaboration'', 
                   description: 'Enhanced collaboration between development and operations teams.'}, {'
-';
-                  icon: Shield',;
-                  title: 'Security & Compliance'',;
+' 
+                  icon: Shield', 
+                  title: 'Security & Compliance'', 
                   description: 'Built-in security and compliance for cloud-native applications.'}, {'
-';
+' 
 
                   <p className='text-slate-300'>{feature.description}</p>
 
@@ -69,44 +69,44 @@ export: { function }export default function CloudDevOps(...args: []):   {}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-';';
-'';';
-                  title: 'Continuous: Integration',,'';';
-                  description: 'Automated: code integration and testing workflows.',,';';
-                  icon: GitBranc,h',';';
-                  benefits: ['Automated: builds',, 'Code quality checks', 'Test automation']}',;
+';' 
+'';' 
+                  title: 'Continuous: Integration',,'';' 
+                  description: 'Automated: code integration and testing workflows.',,';' 
+                  icon: GitBranc,h',';' 
+                  benefits: ['Automated: builds',, 'Code quality checks', 'Test automation']}', 
                 {
-';';
-'';';
-                  title: 'Continuous: Deployment',,'';';
-                  description: 'Automated: deployment to production environments.',,';';
-                  icon: Serve,r',';';
+';' 
+'';' 
+                  title: 'Continuous: Deployment',,'';' 
+                  description: 'Automated: deployment to production environments.',,';' 
+                  icon: Serve,r',';' 
                   benefits: ['Blue-green: deployments',, 'Rollback capabilities', 'Environment management']'}, {
-';';
-'';';
-                  title: 'Infrastructure: as Code',,'';';
-                  description: 'Manage: infrastructure through code and automation.',,';';
-                  icon: Cp,u',';';
+';' 
+'';' 
+                  title: 'Infrastructure: as Code',,'';' 
+                  description: 'Manage: infrastructure through code and automation.',,';' 
+                  icon: Cp,u',';' 
                   benefits: ['Terraform',, 'CloudFormation', 'Ansible: automation']'}, {
-';';
-'';';
-                  title: 'Containerization',,'';';
-                  description: 'Container-based: application deployment and management.',,';';
-                  icon: Clou,d',';';
+';' 
+'';' 
+                  title: 'Containerization',,'';' 
+                  description: 'Container-based: application deployment and management.',,';' 
+                  icon: Clou,d',';' 
                   benefits: ['Docker: containers',, 'Kubernetes orchestration', 'Microservices']'}, {
-';';
-'';';
-                  title: 'Monitoring: & Observability',,'';';
-                  description: 'Comprehensive: application and infrastructure monitoring.',,';';
-                  icon: BarChart,3',';';
+';' 
+'';' 
+                  title: 'Monitoring: & Observability',,'';' 
+                  description: 'Comprehensive: application and infrastructure monitoring.',,';' 
+                  icon: BarChart,3',';' 
                   benefits: ['Real-time: metrics',, 'Log aggregation', 'Alert management']'}, {
 
                       </li>
                     ))}
                   </ul>
-                </div>'';
-                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-                <p: className='text-gray-400'>{feature.description}</p>';
+                </div>'' 
+                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'' 
+                <p: className='text-gray-400'>{feature.description}</p>' 
 
               </motion.div>
             ))}
@@ -121,47 +121,47 @@ export: { function }export default function CloudDevOps(...args: []):   {}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-';';
-'';';
-                  title: 'CI/CD: Tools',,'';';
-                  description: 'Jenkin,s, GitLab: CI, GitHub Actions, and Azure DevOps.'',;';
-                  icon: GitBranc,h',';';
-                  features: ['Pipeline: automation',, 'Build automation', 'Deployment automation']}',;
+';' 
+'';' 
+                  title: 'CI/CD: Tools',,'';' 
+                  description: 'Jenkin,s, GitLab: CI, GitHub Actions, and Azure DevOps.'',;' 
+                  icon: GitBranc,h',';' 
+                  features: ['Pipeline: automation',, 'Build automation', 'Deployment automation']}', 
                 {
-';';
-'';';
-                  title: 'Container: Platforms',,'';';
-                  description: 'Docke,r, Kubernetes, and: container orchestration tools.'',;';
-                  icon: Clou,d',';';
+';' 
+'';' 
+                  title: 'Container: Platforms',,'';' 
+                  description: 'Docke,r, Kubernetes, and: container orchestration tools.'',;' 
+                  icon: Clou,d',';' 
                   features: ['Container: management',, 'Orchestration', 'Service mesh']'}, {
-';';
-'';';
-                  title: 'Infrastructure: Tools',,'';';
-                  description: 'Terrafor,m, CloudFormation, and: Ansible for IaC.'',;';
-                  icon: Cp,u',';';
+';' 
+'';' 
+                  title: 'Infrastructure: Tools',,'';' 
+                  description: 'Terrafor,m, CloudFormation, and: Ansible for IaC.'',;' 
+                  icon: Cp,u',';' 
                   features: ['Infrastructure: automation',, 'Configuration management', 'Provisioning']'}, {
-';';
-'';';
-                  title: 'Cloud: Platforms',,'';';
-                  description: 'AW,S, Azure, Google: Cloud, and multi-cloud solutions.'',;';
-                  icon: Serve,r',';';
+';' 
+'';' 
+                  title: 'Cloud: Platforms',,'';' 
+                  description: 'AW,S, Azure, Google: Cloud, and multi-cloud solutions.'',;' 
+                  icon: Serve,r',';' 
                   features: ['Multi-cloud: strategy',, 'Cloud-native services', 'Scalability']'}, {
-';';
-'';';
-                  title: 'Monitoring: Tools',,'';';
-                  description: 'Prometheu,s, Grafana, and: ELK stack for observability.'',;';
-                  icon: BarChart,3',';';
+';' 
+'';' 
+                  title: 'Monitoring: Tools',,'';' 
+                  description: 'Prometheu,s, Grafana, and: ELK stack for observability.'',;' 
+                  icon: BarChart,3',';' 
                   features: ['Metrics: collection',, 'Log aggregation', 'Visualization']'}, {
 
                       </li>
                     ))}
                   </ul>
-                </div>'';
-                <h3: className='text-xl font-semibold text-white mb-4'>{service.title}</h3>'';
-                <ul: className='space-y-2'>';
-                  {service.items.map((item, itemIndex) => ('';
-                    <li: key={itemIndex} className='text-gray-400 text-sm flex items-center gap-2'>'';
-                      <CheckCircle: className='w-4 h-4 text-blue-400'  />';
+                </div>'' 
+                <h3: className='text-xl font-semibold text-white mb-4'>{service.title}</h3>'' 
+                <ul: className='space-y-2'>' 
+                  {service.items.map((item, itemIndex) => ('' 
+                    <li: key={itemIndex} className='text-gray-400 text-sm flex items-center gap-2'>'' 
+                      <CheckCircle: className='w-4 h-4 text-blue-400'  />' 
 
                       {item}
                     </li>
@@ -190,24 +190,24 @@ export: { function }export default function CloudDevOps(...args: []):   {}
         </div>
       </section>
 
-';
-'';
+' 
+'' 
                   ste,
-    p: '01'',;
-                  title: 'Assessment'',;
+    p: '01'', 
+                  title: 'Assessment'', 
                   description: 'Evaluate current development and operations processes.'}, {'
-';
-'';
-                  step: '02'',;
-                  title: 'Strategy'',;
+' 
+'' 
+                  step: '02'', 
+                  title: 'Strategy'', 
                   description: 'Develop comprehensive DevOps strategy and roadmap.'}, {'
-';
-'';
-                  step: '03'',;
-                  title: 'Implementation'',;
+' 
+'' 
+                  step: '03'', 
+                  title: 'Implementation'', 
                   description: 'Implement DevOps tools and establish new workflows.'}, {'
-';
-'';
+' 
+'' 
 
                   <p className='text-slate-300'>{step.description}</p>
 
@@ -219,15 +219,15 @@ export: { function }export default function CloudDevOps(...args: []):   {}
         </div>
       </section>
 
-              <Link'';
-                to='/contact'';
+              <Link'' 
+                to='/contact'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hove,
-    r:to-blue-700 transition-all duration-200';
-';
-                Schedule a Consultation'';
+    r:to-blue-700 transition-all duration-200' 
+' 
+                Schedule a Consultation'' 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>''
-              <Link'';
-                to='/services'';
+              <Link'' 
+                to='/services'' 
                 className='inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500/10 transition-all duration-200'>                Explore All Services
 

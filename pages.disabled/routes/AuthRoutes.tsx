@@ -1,5 +1,5 @@
 
-;
+ 
 
           </ProtectedRoute>
 
@@ -9,8 +9,8 @@
 
       />
 
-      <Route'';
-        path='/dashboard';
+      <Route'' 
+        path='/dashboard' 
         element={<ProtectedRoute>            <div>Dashboard</div>
           </ProtectedRoute>
       />
@@ -21,6 +21,6 @@
       />
     </Routes>
   )}
-:pages.disabled/routes/AuthRoutes.tsx;
+:pages.disabled/routes/AuthRoutes.tsx 
 
 

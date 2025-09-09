@@ -98,100 +98,100 @@
       }
 
       // Send listing to moderation service
-      let imagePublicUrl: string | undefined;
-      // If we have an image, upload it;
+      let imagePublicUrl: string | undefined 
+      // If we have an image, upload it 
       // Check condition
 if ( {) {
   $2
 }
-        const image_path = `product_images/${product_record.id}/${values.image.name}`;
-        const { error: upload_error } = await supabase.storage;
-          .from ('products');
-          .upload (image_path, values.image);
+        const image_path = `product_images/${product_record.id}/${values.image.name}` 
+        const { error: upload_error } = await supabase.storage 
+          .from ('products') 
+          .upload (image_path, values.image) 
         // Check condition
 if ( {) {
   $2
 }
-          throw new Error (upload_error.message);
+          throw new Error (upload_error.message) 
         }
-        // Get the public URL for the image;
-        const { data: publicUrlData } = supabase.storage;
-          .from ('products');
-          .getPublicUrl (image_path);
-        imagePublicUrl = publicUrlData.public_url;
-        // Update the product with the image URL;
-        const { error: update_error } = await supabase;
-          .from ('product_listings');
+        // Get the public URL for the image 
+        const { data: publicUrlData } = supabase.storage 
+          .from ('products') 
+          .getPublicUrl (image_path) 
+        imagePublicUrl = publicUrlData.public_url 
+        // Update the product with the image URL 
+        const { error: update_error } = await supabase 
+          .from ('product_listings') 
           .update ({
             images: [imagePublicUrl],
-          });
-          .eq ('id', product_record.id);
+          }) 
+          .eq ('id', product_record.id) 
         // Check condition
 if ( {) {
   $2
 }
-          throw new Error (update_error.message);
+          throw new Error (update_error.message) 
         }
       }
-      // Upload video if provided;
+      // Upload video if provided 
       // Check condition
 if ( {) {
   $2
 }
-        const video_path = `product_videos/${product_record.id}/${values.video.name}`;
-        const { error: upload_error } = await supabase.storage;
-          .from ('products');
-          .upload (video_path, values.video);
+        const video_path = `product_videos/${product_record.id}/${values.video.name}` 
+        const { error: upload_error } = await supabase.storage 
+          .from ('products') 
+          .upload (video_path, values.video) 
         // Check condition
 if ( {) {
   $2
 }
-          throw new Error (upload_error.message);
+          throw new Error (upload_error.message) 
         }
-        const { data: publicUrlData } = supabase.storage;
-          .from ('products');
-          .getPublicUrl (video_path);
-        const { error: update_error } = await supabase;
-          .from ('product_listings');
-          .update ({ video_url: publicUrlData.public_url });
-          .eq ('id', product_record.id);
+        const { data: publicUrlData } = supabase.storage 
+          .from ('products') 
+          .getPublicUrl (video_path) 
+        const { error: update_error } = await supabase 
+          .from ('product_listings') 
+          .update ({ video_url: publicUrlData.public_url }) 
+          .eq ('id', product_record.id) 
         // Check condition
 if ( {) {
   $2
 }
-          throw new Error (update_error.message);
+          throw new Error (update_error.message) 
         }
       }
-      // Upload model if provided;
+      // Upload model if provided 
       // Check condition
 if ( {) {
   $2
 }
-        const model_path = `product_models/${product_record.id}/${values.model.name}`;
-        const { error: upload_error } = await supabase.storage;
-          .from ('products');
-          .upload (model_path, values.model);
+        const model_path = `product_models/${product_record.id}/${values.model.name}` 
+        const { error: upload_error } = await supabase.storage 
+          .from ('products') 
+          .upload (model_path, values.model) 
         // Check condition
 if ( {) {
   $2
 }
-          throw new Error (upload_error.message);
+          throw new Error (upload_error.message) 
         }
-        const { data: publicUrlData } = supabase.storage;
-          .from ('products');
-          .getPublicUrl (model_path);
-        const { error: update_error } = await supabase;
-          .from ('product_listings');
-          .update ({ model_url: publicUrlData.public_url });
-          .eq ('id', product_record.id);
+        const { data: publicUrlData } = supabase.storage 
+          .from ('products') 
+          .getPublicUrl (model_path) 
+        const { error: update_error } = await supabase 
+          .from ('product_listings') 
+          .update ({ model_url: publicUrlData.public_url }) 
+          .eq ('id', product_record.id) 
         // Check condition
 if ( {) {
   $2
 }
-          throw new Error (update_error.message);
+          throw new Error (update_error.message) 
         }
       }
-      // Send listing to moderation service;
+      // Send listing to moderation service 
       try {
         await supabase.functions.invoke('moderate-listing', {
           body: {
@@ -211,7 +211,7 @@ if ( {) {
             images: imagePublicUrl ? [imagePublicUrl] : [],
             seller_id: user.id,
           },
-        });
+        }) 
       } catch (err) {
         logErrorToProduction('Error invoking moderation:', { data: err })
       }
@@ -223,16 +223,16 @@ if ( {) {
         title: 'Product Published!'
         description: 'Your product has been successfully published on Zion.'
       })
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image;
-import { logErrorToProduction } from '@/utils/productionLogger';
+import React from 'react' 
+import { useForm, ControllerRenderProps } from 'react-hook-form' 
+import { zodResolver } from '@hookform/resolvers/zod' 
+import z from 'zod' 
+import { supabase } from '@/integrations/supabase/client' 
+import { useAuth } from '@/hooks/useAuth' 
+import { useToast } from '@/hooks/use-toast' 
+import { useRouter } from 'next/router' 
+import Image from 'next/image'; // Import next/image 
+import { logErrorToProduction } from '@/utils/productionLogger' 
 
 
 
@@ -245,23 +245,23 @@ import { logErrorToProduction } from '@/utils/productionLogger';
         
       if (productError) {
         throw new Error(productError.message)
-import React from "react";;
-import { useForm, ControllerRenderProps } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import z from "zod",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useToast } from "@/hooks/use-toast",;
-import { useRouter } from "next/router",;
-import Image from 'next/image', // Import next/image;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-import {;
-  Form,;
-  FormControl,;
-  FormDescription,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
+import React from "react"; 
+import { useForm, ControllerRenderProps } from "react-hook-form", 
+import { zodResolver } from "@hookform/resolvers/zod", 
+import z from "zod", 
+import { supabase } from "@/integrations/supabase/client", 
+import { useAuth } from "@/hooks/useAuth", 
+import { useToast } from "@/hooks/use-toast", 
+import { useRouter } from "next/router", 
+import Image from 'next/image', // Import next/image 
+import {logErrorToProduction} from '@/utils/productionLogger', 
+import { 
+  Form, 
+  FormControl, 
+  FormDescription, 
+  FormField, 
+  FormItem, 
+  FormLabel, 
 
       
       // Show success message
@@ -306,14 +306,14 @@ import {;
                       placeholder="Describe your product in detail..."
                       className="min-h-32"
 
-              name="description";
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues "description"> }) => (;
-                <FormItem>;
-                  <FormLabel>Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Describe your product in detail...";
-                      className="min-h-32";
+              name="description" 
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues "description"> }) => ( 
+                <FormItem> 
+                  <FormLabel>Description</FormLabel> 
+                  <FormControl> 
+                    <Textarea 
+                      placeholder="Describe your product in detail..." 
+                      className="min-h-32" 
 
                       {...field}
                     />
@@ -396,8 +396,8 @@ import {;
             <FormField
               control={form.control}
               name='video'              render={() => (
-            />;
-            <FormField;
+            /> 
+            <FormField 
               control={form.control}
 
               name="video"
@@ -418,8 +418,8 @@ import {;
             <FormField
               control={form.control}
               name='model'              render={() => (
-            />;
-            <FormField;
+            /> 
+            <FormField 
               control={form.control}
 
               name="model"
@@ -437,108 +437,108 @@ import {;
               )}
             />
 
-                <FormItem>;
-                  <FormLabel > Product Video (MP4)</FormLabel>;
-                  <FormControl>;
-                    <Input;
-                      type='file';
-                      accept='video / mp4';
+                <FormItem> 
+                  <FormLabel > Product Video (MP4)</FormLabel> 
+                  <FormControl> 
+                    <Input 
+                      type='file' 
+                      accept='video / mp4' 
                       on_change={handleVideoChange}
-                      className='cursor - pointer';
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Optional video demonstrating your product;
-                  </FormDescription>;
-                  <FormMessage />;
-            />;
+                      className='cursor - pointer' 
+                    /> 
+                  </FormControl> 
+                  <FormDescription> 
+                    Optional video demonstrating your product 
+                  </FormDescription> 
+                  <FormMessage /> 
+            /> 
             <FormField
               control={form && form.control}
-              name='model'              render={() => (;
-                <FormItem>;
-                  <FormLabel>3D Model (glb)</FormLabel>;
-                  <FormControl>;
+              name='model'              render={() => ( 
+                <FormItem> 
+                  <FormLabel>3D Model (glb)</FormLabel> 
+                  <FormControl> 
                     <Input
                       type='file'
                       accept='model/gltf-binary,.glb'
                       onChange={handleModelChange}
                       className='cursor-pointer'
                 </FormItem>)}
-            />;
-            <FormField;
+            /> 
+            <FormField 
               control={form.control}
               name='model'              render={() => (
-                <FormItem>;
-                  <FormLabel > 3D Model (glb)</FormLabel>;
-                  <FormControl>;
-                    <Input;
-                      type='file';
-                      accept='model / gltf - binary, .glb';
+                <FormItem> 
+                  <FormLabel > 3D Model (glb)</FormLabel> 
+                  <FormControl> 
+                    <Input 
+                      type='file' 
+                      accept='model / gltf - binary, .glb' 
                       on_change={handleModelChange}
-                      className='cursor - pointer';
-                    />;
-                    <Input ;
-                      type="file" ;
-                      accept="image/*" ;
+                      className='cursor - pointer' 
+                    /> 
+                    <Input  
+                      type="file"  
+                      accept="image/*"  
                       onChange={handleImageChange}
-                      className="cursor-pointer";
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Upload a high-quality image of your product (recommended size:1200x800px);
-                  </FormDescription>;
-                  <FormMessage />;
-                  ;
-                  {imagePreview && (;
-                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
-                      <AspectRatio ratio={3/2}>;
-                        <Image;
+                      className="cursor-pointer" 
+                    /> 
+                  </FormControl> 
+                  <FormDescription> 
+                    Upload a high-quality image of your product (recommended size:1200x800px) 
+                  </FormDescription> 
+                  <FormMessage /> 
+                   
+                  {imagePreview && ( 
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden"> 
+                      <AspectRatio ratio={3/2}> 
+                        <Image 
                           src={imagePreview}
-                          alt="Product image preview";
-                          width={600} // Example width, adjust as needed;
-                          height={400} // Example height, adjust as needed;
-                          className="w-full h-full object-cover";
-                          priority={false} // Preview images are not LCP;
-                          // `sizes` might not be strictly necessary for a preview of this nature,;
-                          // but can be added if responsive behavior is critical here.;
-                          // For local object URLs, optimization via loader won't occur.;
-                        />;
-                      </AspectRatio>;
+                          alt="Product image preview" 
+                          width={600} // Example width, adjust as needed 
+                          height={400} // Example height, adjust as needed 
+                          className="w-full h-full object-cover" 
+                          priority={false} // Preview images are not LCP 
+                          // `sizes` might not be strictly necessary for a preview of this nature, 
+                          // but can be added if responsive behavior is critical here. 
+                          // For local object URLs, optimization via loader won't occur. 
+                        /> 
+                      </AspectRatio> 
                     </div>;                  )}
-                </FormItem>;
+                </FormItem> 
               )}
-            />;
-;
-            <FormField;
+            /> 
+ 
+            <FormField 
               control={form.control}
-              name="video";
-              render={() => (;
-                <FormItem>;
-                  <FormLabel>Product Video (MP4)</FormLabel>;
-                  <FormControl>;
-                    <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Optional video demonstrating your product;
-                  </FormDescription>;
-                  <FormMessage />;
-                </FormItem>;
+              name="video" 
+              render={() => ( 
+                <FormItem> 
+                  <FormLabel>Product Video (MP4)</FormLabel> 
+                  <FormControl> 
+                    <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" /> 
+                  </FormControl> 
+                  <FormDescription> 
+                    Optional video demonstrating your product 
+                  </FormDescription> 
+                  <FormMessage /> 
+                </FormItem> 
               )}
-            />;
-;
-            <FormField;
+            /> 
+ 
+            <FormField 
               control={form.control}
-              name="model";
-              render={() => (;
-                <FormItem>;
-                  <FormLabel>3D Model (glb)</FormLabel>;
-                  <FormControl>;
-                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Upload a 3D model for interactive viewing;
-                  </FormDescription>;
-                  <FormMessage />;
+              name="model" 
+              render={() => ( 
+                <FormItem> 
+                  <FormLabel>3D Model (glb)</FormLabel> 
+                  <FormControl> 
+                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" /> 
+                  </FormControl> 
+                  <FormDescription> 
+                    Upload a 3D model for interactive viewing 
+                  </FormDescription> 
+                  <FormMessage /> 
 
             <div className='flex justify-end'>
               <Button
@@ -563,34 +563,34 @@ import {;
             category: form.getValues("category")
           }}
 
-        />;
-      </TabsContent>;
-    </Tabs>;
-  );
+        /> 
+      </TabsContent> 
+    </Tabs> 
+  ) 
 
 
 }
-}className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
-}";
+}className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList> 
+}" 
 }/> <FormField Describe your product in detail..." className="min - h-32" {
-  ...field ';
-}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
+  ...field ' 
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) " 
 }/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6" > <FormField <FormItem> <FormLabel > Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {
-  ...field;
-}/> ";
-}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
+  ...field 
+}/> " 
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) " 
 }/> </div> <FormField <FormItem> <FormLabel > Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
-  ...field;
-}/> ";
+  ...field 
+}/> " 
 }/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" on_change= {
-  handleImageChange ";
-}className="cursor - pointer" /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
-//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>);
-}</FormItem>) ";
+  handleImageChange " 
+}className="cursor - pointer" /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;' 
+//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>) 
+}</FormItem>) " 
 }/> <FormField <FormItem> <FormLabel > Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video / mp4" on_change= {
-  handleVideoChange ";
-}className="cursor - pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>);
-}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
-}'"  );
+  handleVideoChange " 
+}className="cursor - pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) " 
+}/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) 
+}'"  ) 
 

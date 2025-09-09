@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/AIHRTalentPlatform.tsx;
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx 
 
             Build better teams and drive organizational success.'
           </p>'''
@@ -77,7 +77,7 @@
 
           <div className='grid md:grid-cols-3 gap-8'>
             {pricing.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${`
 '`;`
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'``}`}>'
@@ -101,16 +101,16 @@
                   <div className='text-4xl font-bold text-orange-600 mb-2'>{plan.price}</div>'''
                   <p className='text-gray-600'>per month</p>
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-orange-600 text-white hover:bg-orange-700'''`;`
                     : 'bg-gray-100 text-gray-900 hove,
-    r:bg-gray-200'``;
+    r:bg-gray-200'`` 
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${}`
                   plan.popular''
-                    ? 'bg-orange-600 text-white hover:bg-orange-700'';
+                    ? 'bg-orange-600 text-white hover:bg-orange-700'' 
                     : 'bg-gray-100 text-gray-900 hove,
     r:bg-gray-200'`}`}>
                   Get Started
@@ -195,21 +195,21 @@
         <div className='mt-12 p-6 bg-gray-50 rounded-xl>''
           <h3 className='text-lg font-semibold text-gray-900 mb-2'>Visit Our Website</h3>'''
           <p className='text-gray-600 mb-4'>
-:pages.disabled/pages/services/AIHRTalentPlatform.tsx;
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx 
             Learn more about our complete suite of AI-powered business solutions
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </p>
-<:pages.disabled/pages/services/AIHRTalentPlatform.tsx;
-          <a;
-=;
-          <a '>            href='https://ziontechgroup.com';
-            target='_blank';
+<:pages.disabled/pages/services/AIHRTalentPlatform.tsx 
+          <a 
+= 
+          <a '>            href='https://ziontechgroup.com' 
+            target='_blank' 
 
-          <a '';
+          <a '' 
             href='http,
-    s://ziontechgroup.com'';
-            target='_blank'';
-            rel='noreferrer'';
+    s://ziontechgroup.com'' 
+            target='_blank'' 
+            rel='noreferrer'' 
             className='inline-flex items-center text-orange-600 hove,
     r:text-orange-700 font-semibold>
             Visit ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2'  />          </a>
@@ -218,10 +218,10 @@
 
             Learn more about our complete suite of AI-powered business solutions
           </p>`
-          <a '';
-            href='https://ziontechgroup.com'';
-            target='_blank'';
-            rel='noreferrer'';
+          <a '' 
+            href='https://ziontechgroup.com'' 
+            target='_blank'' 
+            rel='noreferrer'' 
             className='inline-flex items-center text-orange-600 hove,
     r:text-orange-700 font-semibold>'
             Visit ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2'  />          </a>

@@ -1,11 +1,11 @@
-:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx];
-  return();
+:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx] 
+  return() 
     <>
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
-<:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx 
+      <SEO 
+= 
 
                 <Globe className='w-8 h-8 text-white'  />              </div>'
             </div>'''
@@ -17,27 +17,27 @@
               Build the future of digital experiences with our cutting-edge metaverse platform.
               AI-driven 3D generation, intelligent avatars, and immersive virtual worlds.'
 
-              <a'';
-                href='https://ziontechgroup.com/contact'';
-                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200'';
-                Get Started'';
-:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx;
+              <a'' 
+                href='https://ziontechgroup.com/contact'' 
+                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200'' 
+                Get Started'' 
+:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>''
               <a'''
-                href='#pricing'';
-                className='inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200';
-                View Pricing;
+                href='#pricing'' 
+                className='inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200' 
+                View Pricing 
               </a>
             </div>
           </div>'
         </section>''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a'''
-                href='#pricing'';
+                href='#pricing'' 
                 className='inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hove,
     r:bg-indigo-400 hove,
-    r:text-white transition-all duration-200'';
-                View Pricing;
+    r:text-white transition-all duration-200'' 
+                View Pricing 
               </a>
             </div>
           </div>
@@ -84,16 +84,16 @@
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx'
                   </ul>''
                   <a'''
-                    href='https: //ziontechgroup.com/contact'';
-                    className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200';
-                    Get Started;
+                    href='https: //ziontechgroup.com/contact'' 
+                    className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200' 
+                    Get Started 
                   </ul>'
                   <a'''
-                    href='https://ziontechgroup.com/contact'';
+                    href='https://ziontechgroup.com/contact'' 
                     className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hove,
     r:from-indigo-700 hove,
-    r:to-purple-700 transition-all duration-200'';
-                    Get Started;
+    r:to-purple-700 transition-all duration-200'' 
+                    Get Started 
 
                   </a>
                 </div>
@@ -181,12 +181,12 @@
               </div>
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx'
             </div>''
-            <a'';
-              href='https://ziontechgroup.com/contact'';
+            <a'' 
+              href='https://ziontechgroup.com/contact'' 
               className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200>
             </div>'
             <a'''
-              href='https://ziontechgroup.com/contact'';
+              href='https://ziontechgroup.com/contact'' 
               className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hove,
     r:from-indigo-700 hove,
     r:to-purple-700 transition-all duration-200'>

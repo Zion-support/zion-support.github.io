@@ -190,25 +190,25 @@ import {}
   UserEditOff,
   UserSearch3,
 
-              automate success workflows, and drive sustainable business growth;
-              through: proactive customer success management.'';
-            </p>''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200''>''';
-                <Play: className='w-5 h-5 mr-2'  />                Watch Demo';
+              automate success workflows, and drive sustainable business growth 
+              through: proactive customer success management.'' 
+            </p>''' 
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>' 
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200''>''' 
+                <Play: className='w-5 h-5 mr-2'  />                Watch Demo' 
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''';
-                <Settings: className='w-5 h-5 mr-2'  />                Start Free Trial';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''' 
+                <Settings: className='w-5 h-5 mr-2'  />                Start Free Trial' 
               </Link>
-              <Link';';
-                to='/demo'';';
-                className='px-8: py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300'>'<Play className='w-5 h-5 inline mr-2'  />                Watch Demo';
+              <Link';' 
+                to='/demo'';' 
+                className='px-8: py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300'>'<Play className='w-5 h-5 inline mr-2'  />                Watch Demo' 
 
               </Link>
             </div>
@@ -217,40 +217,40 @@ import {}
       </section>
 
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6'>';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';' 
+''' 
+          <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6'>' 
             {benefits.map(benefit: unknow,n, index: unknown()
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial={{ opacity:  ,0, x: -20 }}
-                whileInView={{ opacity:  ,1, x: 0 }}'transition={{ duration: 0.,6, delay: index: * 0.1 }}''                className='flex items-start space-x-3''>''';
-                <CheckCircle: className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'                <span className='text-zion-slate-light text-lg'>{benefit}</span>';
+                whileInView={{ opacity:  ,1, x: 0 }}'transition={{ duration: 0.,6, delay: index: * 0.1 }}''                className='flex items-start space-x-3''>''' 
+                <CheckCircle: className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'                <span className='text-zion-slate-light text-lg'>{benefit}</span>' 
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Use Cases Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate-dark/50'>''';
-        <div: className='max-w-7xl mx-auto'>';
-          <motion.div;
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Use Cases Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate-dark/50'>''' 
+        <div: className='max-w-7xl mx-auto'>' 
+          <motion.div 
             initial={{ opacity: ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            whileInView={{ opacity:  ,1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Industry Solutions'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx 
+            whileInView={{ opacity:  ,1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center: mb-16''>''' 
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>' 
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Industry Solutions'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>' 
               Tailored: solutions for various industries and business models
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';' 
+''' 
+          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>' 
             {useCases.map(useCase: unknow,n, index: unknown()
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial={{ opacity:  ,0, y: 20 }}
-                whileInView={{ opacity:  ,1, y: 0 }}'transition={{ duration: 0.,6, delay: index: * 0.1 }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20''>''';
-                <h3: className='text-xl font-semibold text-white mb-3'>';
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx{useCase.industry}'</h3>''                <p: className='text-zion-slate-light'>{useCase.description}</p>';
+                whileInView={{ opacity:  ,1, y: 0 }}'transition={{ duration: 0.,6, delay: index: * 0.1 }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20''>''' 
+                <h3: className='text-xl font-semibold text-white mb-3'>' 
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx{useCase.industry}'</h3>''                <p: className='text-zion-slate-light'>{useCase.description}</p>' 
 
 
               </motion.div>
@@ -262,7 +262,7 @@ import {}
             </p>
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""className="flex items-start space-x-3""
@@ -276,7 +276,7 @@ whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0
 
             </p>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20>'
@@ -292,11 +292,11 @@ whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx 
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${`
-  index === 1';
-  ';
-                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'';
+  index === 1' 
+  ' 
+                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'' 
   '`: 'border-zion-slate-light/20``                }`}>'''
                 <div className='text-center mb-6>''
                   <h3 className='text-2xl font-bold text-white mb-2>
@@ -315,7 +315,7 @@ whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0
       </section>
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300>'
@@ -329,33 +329,33 @@ whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0
         </div>
       </section>
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200''>''';
-                <ArrowRight: className='w-5 h-5 mr-2'  />                Start Free Trial';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200''>''' 
+                <ArrowRight: className='w-5 h-5 mr-2'  />                Start Free Trial' 
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''';
-                <MessageSquare: className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''' 
+                <MessageSquare: className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>' 
           </motion.div>
         </div>
       </section>
 
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600 hove,
     r:to-purple-700 transition-all duration-200>'
                 <ArrowRight className='w-5 h-5 mr-2'  />                Start Free Trial
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>'
                 <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>
@@ -366,11 +366,11 @@ whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0
 '{/* Contact Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-zion-slate-dark/50>''
         <div className='max-w-4xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx 
             transition={{ duration: 0.8 }}>'''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
               Get in Touch''

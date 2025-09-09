@@ -1,29 +1,29 @@
-;
-:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
+ 
+:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
 const: AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: => {
     }
-  ];
+  ] 
   const: pricingPlans = [{
 const AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: =>  {}
     }
-  ];
+  ] 
 
-:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
-        'Multi-currency: support';';
+:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
+        'Multi-currency: support';' 
         'Multi-currency: support'';'],
 
-:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
-        'White-label: solutions';';
+:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
+        'White-label: solutions';' 
         'White-label: solutions'';'],
       popular: fals,e}
   ]}
-:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
+:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
 
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
 <:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-      <SEO;
-        title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group';
+      <SEO 
+        title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group' 
         description='Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management.'/>{/* Hero Section */}
       <div className='relative overflow-hidden>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
@@ -31,21 +31,21 @@ const AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: =>  {}
           <div className='text-center'>
 ='
       <SEO ''
-        title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group';
+        title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group' 
 
-      <SEO '';
+      <SEO '' 
         title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group''        description='Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management.'/>'
       <SEO '''
-        title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group'';
+        title='AI-Powered Supply Chain Optimization Platform - Zion Tech Group'' 
 
               AI-Powered Supply Chain Optimization Platform'
             </GradientHeading>'''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
+:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
               Revolutionize your supply chain with cutting-edge AI technology. Optimize logistics, reduce costs,
 
             </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center> 
               Revolutionize your supply chain with cutting-edge AI technology. Optimize logistics, reduce costs,
               and enhance customer satisfaction with intelligent supply chain management.''
             </p>'''
@@ -75,13 +75,13 @@ const AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: =>  {}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
         </div>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-<:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
+= 
 
           {benefits.map((benefit, index)   => (''
             <div key={index} className='text-center>'
               <div className='text-4xl font-bold text-zion-cyan mb-2'>{benefit.metric}</div>''
-        </div>';
+        </div>' 
         '''
         <div className='grid grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-4 gap-8>{benefits.map((benefit, index)   => ('''
@@ -90,7 +90,7 @@ const AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: =>  {}
               <p className='text-gray-300'>{benefit.description}</p>
             </div>
           </div>'
-        </section>';
+        </section>' 
         '''
         <div className='grid grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-4 gap-8>
@@ -109,8 +109,8 @@ const AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: =>  {}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
         </div>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-<:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx 
+= 
 
                   <CardTitle className='text-white'>{feature.title}</CardTitle>
                 </div>
@@ -124,7 +124,7 @@ const AISupplyChainOptimizationPlatform: React.FC: = (): JSX.Element: =>  {}
         </div>
 
               <CardHeader>''
-        </div>';
+        </div>' 
         '''
         <div className='grid grid-cols-1 m,
     d: anygrid-cols-2 gap-8>{useCases.map((useCase, index)   => ('''

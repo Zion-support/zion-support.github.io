@@ -14,26 +14,26 @@
                 <li>Enterprise: $149–$249/user/mo — SSO, DLP, VPC options</li>
               </ul>
 
-:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx;
-                    rel='noreferrer'>                    Zoom: App Marketplace';
+:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx 
+                    rel='noreferrer'>                    Zoom: App Marketplace' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx;
-                    rel='noreferrer'>                    Google: Calendar/Meet APIs';
+:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx 
+                    rel='noreferrer'>                    Google: Calendar/Meet APIs' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx;
-                    rel='noreferrer'>                    OpenAI: Platform docs';
+:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx 
+                    rel='noreferrer'>                    OpenAI: Platform docs' 
 
                   </a>
                 </li>
               </ul>
             </div>
 
-              <a'';
-                href='/contact'';
+              <a'' 
+                href='/contact'' 
                 className='mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-emerald-400 text-white hove,
     r:from-cyan-500 hove,
     r:to-emerald-500'>                Schedule

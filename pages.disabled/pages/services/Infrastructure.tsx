@@ -1,14 +1,14 @@
 
-:pages.disabled/pages/services/Infrastructure.tsx];
-:pages.disabled/pages/services/Infrastructure.tsx;
+:pages.disabled/pages/services/Infrastructure.tsx] 
+:pages.disabled/pages/services/Infrastructure.tsx 
   '{''
-      name: 'Network Security',;
-      description: 'Advanced network protection and monitoring',;
-      icon: Shield,;
+      name: 'Network Security', 
+      description: 'Advanced network protection and monitoring', 
+      icon: Shield, 
       features: ['Firewall management', 'Intrusion detection', 'VPN solutions', 'Security monitoring']}
-  ];
+  ] 
 
-              Build robust, scalable infrastructure that provides the foundation;
+              Build robust, scalable infrastructure that provides the foundation 
               for your business growth and digital transformation.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -97,6 +97,6 @@
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/Infrastructure.tsx;
+:pages.disabled/pages/services/Infrastructure.tsx 
 
 

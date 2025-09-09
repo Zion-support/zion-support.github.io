@@ -1,10 +1,10 @@
 const \"Home\": NextPage = () => {
-import React, { memo } from 'react';
-import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOHead from '../components/seo/SEOHead';
-import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
+import React, { memo } from 'react' 
+import Link from 'next/link' 
+import Navigation from '../components/Navigation' 
+import Footer from '../components/Footer' 
+import SEOHead from '../components/seo/SEOHead' 
+import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react' 
 const Home = memo(() => {
   const structuredData = {
     "@context": ""https": //schema.org",
@@ -39,12 +39,12 @@ const Home = memo(() => {
       "Cybersecurity",
       "Digital Transformation"
     ]
-  } as const;
+  } as const 
   const stats = [{ "number": '500+', "label": 'Projects Completed' },
     { "number": '50+', "label": 'Happy Clients' },
     { "number": '99.9%', "label": 'Uptime Guarantee' },
     { "number": '24/7', "label": 'Support Available' }
-  ];
+  ] 
   const services = [{
       title: \'AI Development\',
       \"description\": \'Custom AI solutions and machine learning models for your business needs.\',
@@ -73,12 +73,12 @@ const Home = memo(() => {
       "icon": Globe,
       "href": '/comprehensive-services'
     }
-  ] as const;
+  ] as const 
   const features = [{ "icon": Zap, "title": 'Fast Delivery', "description": 'Quick turnaround times without compromising quality' },
     { "icon": Shield, "title": 'Enterprise Security', "description": 'Bank-level security and compliance standards' },
     { "icon": Users, "title": 'Expert Team', "description": 'Dedicated professionals with years of experience' },
     { "icon": Globe, "title": 'Global Reach', "description": 'Serving clients worldwide with local expertise' }
-  ] as const;
+  ] as const 
   return (
     <>
       <SEOHead
@@ -194,10 +194,10 @@ const Home = memo(() => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
                 <Link href="/contact" className="inline-flex items-center text-sm font-medium text-blue-600 "hover": text-blue-500">
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Users, Award, Clock, Shield } from 'lucide-react';
+import type { NextPage } from 'next' 
+import MainLayout from '../components/layout/MainLayout' 
+import Link from 'next/link' 
+import { ArrowRight, CheckCircle, Users, Award, Clock, Shield } from 'lucide-react' 
 const "Home": NextPage = () => {
   const services = [{
       title: 'AI Development',
@@ -217,7 +217,7 @@ const "Home": NextPage = () => {
       \"icon\": \'🔒\',
       \"href\": \'/services/cybersecurity\'
     }
-  ];
+  ] 
   const features = [{
       \"title\": \'Expert Team\',
       \"description\": \'Experienced developers and consultants with deep industry knowledge.\',
@@ -238,7 +238,7 @@ const "Home": NextPage = () => {
       \"description\": \'Built-in security measures to protect your data and applications.\',
       \"icon\": Shield
     }
-  ];
+  ] 
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -406,7 +406,7 @@ const "Home": NextPage = () => {
       </main>
       <Footer />
     </>
-  );
-});
-export default Home;
-   import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout';
+  ) 
+}) 
+export default Home 
+   import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout' 

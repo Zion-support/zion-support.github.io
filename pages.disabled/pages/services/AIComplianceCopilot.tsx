@@ -1,4 +1,4 @@
-;
+ 
 
             </p>
           </div>
@@ -12,7 +12,7 @@
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/AIComplianceCopilot.tsx;
+:pages.disabled/pages/services/AIComplianceCopilot.tsx 
 
 
 

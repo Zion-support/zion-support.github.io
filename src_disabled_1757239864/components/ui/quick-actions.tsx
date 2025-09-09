@@ -1,23 +1,23 @@
 
 
-import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import React, { useState } from 'react' 
+import { useAuth } from '@/hooks/useAuth' 
+import { Button } from '@/components/ui/button' 
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card' 
+import { Badge } from '@/components/ui/badge' 
 
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {;
-  Zap,;
-  Download,;
-  Trash2,;
-  RefreshCw,;
-  Settings,;
-  Activity,;
-  Package,;
-  Monitor,;
-} from 'lucide-react';
-interface QuickAction {;
+import { logErrorToProduction } from '@/utils/productionLogger' 
+import { 
+  Zap, 
+  Download, 
+  Trash2, 
+  RefreshCw, 
+  Settings, 
+  Activity, 
+  Package, 
+  Monitor, 
+} from 'lucide-react' 
+interface QuickAction { 
 
   const actions: QuickAction[] = [
     // Performance Actions
@@ -86,8 +86,8 @@ if ( {) {
   $2
 }
           caches.keys ().then (names => {
-            names.for_each (name => caches.delete (name));
-          });
+            names.for_each (name => caches.delete (name)) 
+          }) 
         }
 
 
@@ -174,12 +174,12 @@ if ( {) {
           Quick Actions
       </div>
     )
-          className='bg-background/80 backdrop-blur-sm'        >;
-          <Settings className='w-4 h-4 mr-2' />;
-          Quick Actions;
-        </Button>;
-      </div>;
-    );
+          className='bg-background/80 backdrop-blur-sm'        > 
+          <Settings className='w-4 h-4 mr-2' /> 
+          Quick Actions 
+        </Button> 
+      </div> 
+    ) 
   }
 
   return (
@@ -238,18 +238,18 @@ if ( {) {
                           <div className="text-xs opacity-70 mt-1">
                             {action.description}
 
-                          </div>;
-                        </div>;
-                      </div>;
-                    </Button>;
-                  </div>;
+                          </div> 
+                        </div> 
+                      </div> 
+                    </Button> 
+                  </div> 
                 ))}
-              </div>;
-            </div>;
+              </div> 
+            </div> 
           ))}
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-} ;
+        </CardContent> 
+      </Card> 
+    </div> 
+  ) 
+}  
 

@@ -1,20 +1,20 @@
   }
-];
+] 
 
 const AdminSupportRequestsPage: React.FC = () => {
-  const [requests, setRequests] = useState<SupportRequest[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<'all' | 'open' | 'in_progress' | 'resolved' | 'closed'>('all');
-  const [priorityFilter, setPriorityFilter] = useState<'all' | 'low' | 'medium' | 'high' | 'urgent'>('all');
-  const [selectedRequest, setSelectedRequest] = useState<SupportRequest | null>(null);
+  const [requests, setRequests] = useState<SupportRequest[]>([]) 
+  const [loading, setLoading] = useState(true) 
+  const [filter, setFilter] = useState<'all' | 'open' | 'in_progress' | 'resolved' | 'closed'>('all') 
+  const [priorityFilter, setPriorityFilter] = useState<'all' | 'low' | 'medium' | 'high' | 'urgent'>('all') 
+  const [selectedRequest, setSelectedRequest] = useState<SupportRequest | null>(null) 
 
   useEffect(() => {
     // Simulate loading support requests
     setTimeout(() => {
-      setRequests(mockSupportRequests);
-      setLoading(false);
-    }, 1000);
-  }, []);
+      setRequests(mockSupportRequests) 
+      setLoading(false) 
+    }, 1000) 
+  }, []) 
 
   const handleStatusChange = (requestId: string, newStatus: SupportRequest['status']) => {
     setRequests(prev => 
@@ -23,8 +23,8 @@ const AdminSupportRequestsPage: React.FC = () => {
           ? { ...request, status: newStatus, updatedAt: new Date().toISOString() }
           : request
       )
-    );
-  };
+    ) 
+  } 
 
   const handleAssign = (requestId: string, assignedTo: string) => {
     setRequests(prev => 
@@ -33,38 +33,38 @@ const AdminSupportRequestsPage: React.FC = () => {
           ? { ...request, assignedTo, status: 'in_progress' as const, updatedAt: new Date().toISOString() }
           : request
       )
-    );
-  };
+    ) 
+  } 
 
   const filteredRequests = requests.filter(request => {
-    const statusMatch = filter === 'all' || request.status === filter;
-    const priorityMatch = priorityFilter === 'all' || request.priority === priorityFilter;
-    return statusMatch && priorityMatch;
-  });
+    const statusMatch = filter === 'all' || request.status === filter 
+    const priorityMatch = priorityFilter === 'all' || request.priority === priorityFilter 
+    return statusMatch && priorityMatch 
+  }) 
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'open': return 'bg-red-100 text-red-800';
-      case 'in_progress': return 'bg-yellow-100 text-yellow-800';
-      case 'resolved': return 'bg-green-100 text-green-800';
-      case 'closed': return 'bg-gray-100 text-gray-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'open': return 'bg-red-100 text-red-800' 
+      case 'in_progress': return 'bg-yellow-100 text-yellow-800' 
+      case 'resolved': return 'bg-green-100 text-green-800' 
+      case 'closed': return 'bg-gray-100 text-gray-800' 
+      default: return 'bg-gray-100 text-gray-800' 
     }
-  };
+  } 
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'urgent': return 'bg-red-200 text-red-900';
-      case 'high': return 'bg-orange-100 text-orange-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'urgent': return 'bg-red-200 text-red-900' 
+      case 'high': return 'bg-orange-100 text-orange-800' 
+      case 'medium': return 'bg-yellow-100 text-yellow-800' 
+      case 'low': return 'bg-green-100 text-green-800' 
+      default: return 'bg-gray-100 text-gray-800' 
     }
-  };
+  } 
 
-  const openRequests = requests.filter(r => r.status === 'open');
-  const inProgressRequests = requests.filter(r => r.status === 'in_progress');
-  const resolvedRequests = requests.filter(r => r.status === 'resolved');
+  const openRequests = requests.filter(r => r.status === 'open') 
+  const inProgressRequests = requests.filter(r => r.status === 'in_progress') 
+  const resolvedRequests = requests.filter(r => r.status === 'resolved') 
 
   return (
 
@@ -178,5 +178,5 @@ const AdminSupportRequestsPage: React.FC = () => {
         )}
       </main>
     </>
-  );
+  ) 
 

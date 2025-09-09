@@ -1,89 +1,89 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDebounce } from "@/hooks/useDebounce";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { useState, useEffect } from "react" 
+import Link from "next/link" 
+import { useRouter } from "next/router" 
+import { useDebounce } from "@/hooks/useDebounce" 
+import { GradientHeading } from "@/components/GradientHeading" 
+import { SEO } from "@/components/SEO" 
+import { Card, CardContent, CardFooter } from "@/components/ui/card" 
+import { Button } from "@/components/ui/button" 
+import { Input } from "@/components/ui/input" 
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select" 
+import { BlogPost } from "@/types/blog" 
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost" 
+import { BLOG_POSTS } from "@/data/blog-posts" 
 import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { fetchWithRetry } from '@/utils/fetchWithRetry' 
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger' 
 
 
 // Categories for filtering
 const CATEGORIES = [
-  "All Categories";
-  "Trends";
-  "Marketing";
-  "Sustainability";
-  "Ethics";
-  "Recruitment";
+  "All Categories" 
+  "Trends" 
+  "Marketing" 
+  "Sustainability" 
+  "Ethics" 
+  "Recruitment" 
   "Infrastructure"
-];
+] 
 
 export interface BlogProps {
   posts?: BlogPost[]
 }
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
-  const query = useDebounce(searchQuery, 300);
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState("") 
+  const [selectedCategory, setSelectedCategory] = useState("All Categories") 
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]) 
+  const query = useDebounce(searchQuery, 300) 
+  const [isLoading, setIsLoading] = useState(false) 
+  const router = useRouter() 
 
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
-      setSearchQuery("");
-      setSelectedCategory("All Categories");
+      setSearchQuery("") 
+      setSelectedCategory("All Categories") 
       setPosts([...initialPosts])
     }
-  }, [router.asPath, initialPosts]);
+  }, [router.asPath, initialPosts]) 
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]) 
   //   }, 120000), // every 2 minutes
-  //   return () => clearInterval(interval);
-  // }, []);
+  //   return () => clearInterval(interval) 
+  // }, []) 
 
   useEffect(() => {
     const fetchPosts = async () => {
-      setIsLoading(true);
+      setIsLoading(true) 
       try {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
-        );
+        ) 
         setPosts(data)
       } catch (err) {
         logErrorToProduction('Failed to fetch blog posts', { data: err })
       } finally {
         setIsLoading(false)
       }
-    };
+    } 
 
     fetchPosts()
-  }, [query]);
+  }, [query]) 
 
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory;
+      selectedCategory === "All Categories" || post.category === selectedCategory 
 
     return matchesCategory
-  });
+  }) 
   
   // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured);
+  const featuredPosts = posts.filter(post => post.isFeatured) 
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
@@ -106,8 +106,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           </div>
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0];
-            if (!featuredPost) return null;
+            const featuredPost = featuredPosts[0] 
+            if (!featuredPost) return null 
             
             return (
             <div className="mb-16">
@@ -119,7 +119,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     alt={featuredPost.featuredImageAlt || featuredPost.title}
                     className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                     onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
+                      const target = e.currentTarget as HTMLImageElement 
                       target.src = "/images/blog-placeholder.svg"
                     }}
                   />
@@ -258,7 +258,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               <Button,
   variant="outline"
                 onClick={() => {
-                  setSearchQuery("");
+                  setSearchQuery("") 
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
