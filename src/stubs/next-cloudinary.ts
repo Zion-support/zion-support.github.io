@@ -26,8 +26,30 @@ export const CldUploadWidget = ({ children, ...props }: any) => {
   return children({ cloudinary: { open: () => {} } });
 };
 
+export const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: any) => {
+  const handleClick = () => {
+    // Mock upload functionality
+    const mockResult = {
+      info: {
+        secure_url: 'https://via.placeholder.com/150'
+      }
+    };
+    onUpload?.(mockResult);
+  };
+
+  return {
+    type: 'button',
+    props: {
+      onClick: handleClick,
+      ...props,
+      children
+    }
+  };
+};
+
 export default {
   CldImage,
   CldVideo,
   CldUploadWidget,
+  CldUploadButton,
 };
