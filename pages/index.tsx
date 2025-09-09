@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function Home() {
   return (
     <>
       <Head>
@@ -153,4 +152,24 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+const IndexPage: React.FC<HomePageProps> = (props) => {
+  const router = useRouter();
+  const showDebug = router.query.debug === 'true';
+  const showButton = process.env.NODE_ENV === 'development' || showDebug;
+
+  return (
+    <>
+      {props.hasError && (
+        <div className="container mx-auto px-4 py-4">
+          <ErrorBanner msg={props.errorMessage || "Failed to load home page."} />
+        </div>
+      )}
+      <Home />
+      {showButton && <ErrorTestButton />}
+    </>
+  );
+};
+
+export default IndexPage;
