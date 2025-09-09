@@ -21,8 +21,8 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Services = React.lazy(() => import('./pages/Services'));
-const Blog = React.lazy(() => import('./pages/Blog'));
 const Careers = React.lazy(() => import('./pages/Careers'));
+const News = React.lazy(() => import('./pages/News'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
 // Lazy load service pages
@@ -120,8 +120,10 @@ function App() {
               <Route path="/enhanced-services" element={<EnhancedServices />} />
               <Route path="/micro-saas-showcase" element={<MicroSaasShowcase />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
             </Routes>
           </Suspense>
         </main>
