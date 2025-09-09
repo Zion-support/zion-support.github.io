@@ -32,7 +32,8 @@ function githubAPI(endpoint, method = 'GET', data = null) {
 }
 
 function listOpenPRs() {
-  console.log('\n🔍 Fetching open pull requests...');
+  console.log('
+🔍 Fetching open pull requests...');
   const prs = githubAPI('/pulls?state=open&per_page=100');
   
   if (prs && Array.isArray(prs)) {
@@ -45,7 +46,8 @@ function listOpenPRs() {
 }
 
 function mergePR(prNumber, title) {
-  console.log(`\n🔄 Merging PR #${prNumber}: ${title}`);
+  console.log(`
+🔄 Merging PR #${prNumber}: ${title}`);
   
   const mergeData = {
     commit_title: `Merge PR #${prNumber}: ${title}`,
@@ -75,7 +77,8 @@ function processOpenPRs() {
   let failedCount = 0;
   
   for (const pr of openPRs) {
-    console.log(`\n📋 Processing PR #${pr.number}: ${pr.title}`);
+    console.log(`
+📋 Processing PR #${pr.number}: ${pr.title}`);
     console.log(`   Author: ${pr.user.login}`);
     console.log(`   State: ${pr.state}`);
     console.log(`   Head: ${pr.head.ref} -> Base: ${pr.base.ref}`);
@@ -87,7 +90,8 @@ function processOpenPRs() {
     }
   }
   
-  console.log(`\n📊 PR Processing Summary:`);
+  console.log('
+📊 PR Processing Summary:');
   console.log(`✅ Successfully merged: ${mergedCount} PRs`);
   console.log(`❌ Failed to process: ${failedCount} PRs`);
 }
