@@ -163,10 +163,31 @@ export function PerformanceOptimizer({
           const component = entry.target as HTMLElement;
           const componentName = component.dataset.lazyComponent;
           if (componentName) {
-            // Load component dynamically
-            import(`../components/${componentName}.tsx`).then((module) => {
-              component.innerHTML = module.default;
-            });
+            // Load component dynamically based on component name
+            const componentMap: Record<string, () => Promise<any>> = {
+              'ThemeProvider': () => import('../components/ThemeProvider'),
+              'LoadingSpinner': () => import('../components/LoadingSpinner'),
+              'ErrorHandling': () => import('../components/ErrorHandling'),
+              'ScrollToTop': () => import('../components/ScrollToTop'),
+              'AccessibilityEnhancer': () => import('../components/AccessibilityEnhancer'),
+              'PerformanceWrapper': () => import('../components/PerformanceWrapper'),
+              'SEO': () => import('../components/SEO'),
+              'AccessibilityEnhancements': () => import('../components/AccessibilityEnhancements'),
+              'PerformanceOptimizations': () => import('../components/PerformanceOptimizations'),
+              'NotificationToast': () => import('../components/NotificationToast'),
+              'PerformanceMonitor': () => import('../components/PerformanceMonitor'),
+            };
+            
+            const importFn = componentMap[componentName];
+            if (importFn) {
+              importFn().then((module) => {
+                if (module.default) {
+                  component.innerHTML = module.default;
+                }
+              }).catch((error) => {
+                console.warn(`Failed to load component ${componentName}:`, error);
+              });
+            }
             componentObserver.unobserve(component);
           }
         }
