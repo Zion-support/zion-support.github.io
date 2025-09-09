@@ -4,13 +4,16 @@ const fs = require("fs");
 const path = require("path");
 class $1 {
   constructor() {
-  this.projectRoot = process.cwd();
+    // eslint-disable-next-line no-undef
+    this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];}
 
   log(message) {
-  const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);}
+    const timestamp = new Date().toISOString();
+    // eslint-disable-next-line no-console, no-undef
+    console.log(`[${timestamp}] ${message}`);
+  }
 
   fixFile(filePath) {
   try {
@@ -91,4 +94,14 @@ class $1 {
 }
 
 const fixer = new TargetedSyntaxFixer();
-fixer.run().catch(console.error);
+fixer.run().then(() => {
+  // eslint-disable-next-line no-console, no-undef
+  console.log("✅ Targeted syntax fixing completed successfully");
+  // eslint-disable-next-line no-undef
+  process.exit(0);
+}).catch(error => {
+  // eslint-disable-next-line no-console, no-undef
+  console.error("❌ Targeted syntax fixing failed:", error.message);
+  // eslint-disable-next-line no-undef
+  process.exit(1);
+});
