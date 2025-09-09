@@ -1,6 +1,6 @@
 {
-  "name": "operator-reminder-workflow",
-  "version": "1.0.0",
+  "name": "bolt.new.zion.app",
+  "version": "0.1.0",
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
@@ -604,7 +604,7 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.56.0",
+    "@supabase/supabase-js": "^2.39.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/react-datepicker": "^6.2.0",
     "axios": "^1.11.0",
@@ -658,19 +658,6 @@
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.12",
     "ts-node": "^10.9.2",
-    "typescript": "5.9.2"
-  },
-  "peerDependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "overrides": {
-    "jsdom": "^24.0.0",
-    "eslint": "^9.28.0",
-    "glob": "^11.0.2",
-    "rimraf": "^6.0.1"
-  },
-  "engines": {
-    "node": ">=20"
+    "typescript": "^4.9.5"
   }
 }
