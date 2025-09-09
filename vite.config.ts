@@ -157,7 +157,7 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize build target
+    // Optimize build target - ensure compatibility with esbuild
     target: 'es2020',
     // Enable CSS code splitting
     cssCodeSplit: true,
@@ -179,6 +179,9 @@ export default defineConfig(({ mode }) => ({
     // Strip debugging noise and mark common logging as pure
     drop: ['console', 'debugger'],
     pure: ['console.log', 'console.info', 'console.debug'],
+    // Ensure compatibility with older esbuild versions
+    format: 'esm',
+    platform: 'browser',
   },
   resolve: {
     alias: {
@@ -225,6 +228,10 @@ export default defineConfig(({ mode }) => ({
     exclude: ['@vite/client', '@vite/env'],
     // Force pre-bundling for better performance
     force: true,
+    // Ensure esbuild target compatibility
+    esbuildOptions: {
+      target: 'es2020',
+    },
   },
   // Performance optimizations
   css: {
