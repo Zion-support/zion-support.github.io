@@ -3,55 +3,93 @@ import { motion } from 'framer-motion';
 
 interface SkeletonProps {
   className?: string;
-  count?: number;
-  height?: string;
-  width?: string;
-  rounded?: string;
+  lines?: number;
 }
 
-export const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
-  count = 1, 
-  height = 'h-4', 
-  width = 'w-full', 
-  rounded = 'rounded' 
-}) => {
+export const Skeleton: React.FC<SkeletonProps> = ({ className = '', lines = 1 }) => {
   return (
-    <>
-      {Array.from({ length: count }).map((_, index) => (
-        <motion.div
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
           key={index}
-          className={`bg-zion-slate-light/20 ${height} ${width} ${rounded} ${className}`}
-          animate={{
-            background: [
-              'linear-gradient(90deg, rgba(34, 221, 210, 0.1) 25%, rgba(34, 221, 210, 0.2) 50%, rgba(34, 221, 210, 0.1) 75%)',
-              'linear-gradient(90deg, rgba(34, 221, 210, 0.1) 0%, rgba(34, 221, 210, 0.2) 25%, rgba(34, 221, 210, 0.1) 50%)',
-              'linear-gradient(90deg, rgba(34, 221, 210, 0.1) 25%, rgba(34, 221, 210, 0.2) 50%, rgba(34, 221, 210, 0.1) 75%)'
-            ]
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'ease-in-out'
+          className="h-4 bg-slate-700/50 rounded mb-2 last:mb-0"
+          style={{
+            width: `${Math.random() * 40 + 60}%`
           }}
         />
       ))}
-    </>
+    </div>
   );
 };
 
-export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <div className={`bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 ${className}`}>
-    <div className="flex items-center space-x-4 mb-4">
-      <Skeleton className="w-12 h-12 rounded-full" />
-      <div className="flex-1 space-y-2">
-        <Skeleton height="h-4" width="w-3/4" />
-        <Skeleton height="h-3" width="w-1/2" />
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 animate-pulse">
+    <div className="w-16 h-16 bg-slate-700/50 rounded-full mb-4" />
+    <div className="h-6 bg-slate-700/50 rounded mb-3" />
+    <div className="space-y-2 mb-4">
+      <div className="h-4 bg-slate-700/50 rounded" />
+      <div className="h-4 bg-slate-700/50 rounded w-3/4" />
+    </div>
+    <div className="h-4 bg-slate-700/50 rounded w-1/2" />
+  </div>
+);
+
+export const HeroSkeleton: React.FC = () => (
+  <div className="py-20 animate-pulse">
+    <div className="max-w-4xl mx-auto px-4 text-center">
+      <div className="h-16 bg-slate-700/50 rounded mb-6" />
+      <div className="h-8 bg-slate-700/50 rounded mb-8 w-3/4 mx-auto" />
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="h-12 bg-slate-700/50 rounded-lg w-48" />
+        <div className="h-12 bg-slate-700/50 rounded-lg w-32" />
       </div>
     </div>
-    <div className="space-y-3">
-      <Skeleton count={3} />
-      <Skeleton height="h-3" width="w-2/3" />
+  </div>
+);
+
+interface ListSkeletonProps {
+  className?: string;
+  items?: number;
+  showAvatar?: boolean;
+  showTitle?: boolean;
+  showSubtitle?: boolean;
+  showDescription?: boolean;
+}
+
+export function ListSkeleton({
+  className,
+  items = 3,
+  showAvatar = true,
+  showTitle = true,
+  showSubtitle = true,
+  showDescription = true
+}: ListSkeletonProps) {
+  return (
+    <div className={cn('space-y-4', className)}>
+      {Array.from({ length: items }).map((_, i) => (
+        <div key={i} className="flex gap-4 items-start">
+          {showAvatar && (
+            <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
+          )}
+          
+          <div className="flex-1 space-y-2">
+            {showTitle && (
+              <Skeleton className="h-5 w-3/4" />
+            )}
+            
+            {showSubtitle && (
+              <Skeleton className="h-4 w-1/2" />
+            )}
+            
+            {showDescription && (
+              <div className="space-y-1">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
     </div>
     <div className="flex justify-between items-center mt-6">
       <Skeleton height="h-8" width="w-24" rounded="rounded-lg" />
