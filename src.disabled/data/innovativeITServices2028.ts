@@ -1,0 +1,23 @@
+export: interface InnovativeITService2028 {
+   id: string;
+   title: string;
+   description: string;
+   category: string;
+   subcategory: string;
+   hourlyRate: number;
+   projectRate: number;
+   currency: string;
+   pricingModel: string;
+   features: string[];
+   benefits: string[];
+   useCases: string[];
+   targetAudience: string[];
+   tags: string[];
+   estimatedDelivery: string;
+   supportLevel: string;
+   marketPrice: string;
+   roi: string;
+   innovationLevel: string;
+   contactInfo: { phone: string;
+   email: string;
+}

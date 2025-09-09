@@ -1,7 +1,4 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Card from '../../components/ui/Card';
+import Head from 'next/head';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -20,37 +17,7 @@ import { realMarketAugmentations2025 } from '../../data/real-market-augmentation
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-import { realMarketServicesExtended } from '../../data/real-market-services-extended';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { added2026Q2Services } from '../../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
-import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
-import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
-import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
-import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
-import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
-import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
-import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
-import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { professionalServices } from '../../data/professional-services';
-import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
-import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
-import { real2035Q2AdditionsExtra } from '../../data/real-2035-q2-additions-extra';
-import { real2025ExtraServices } from '../../data/real-2025-extra-services';
-import { real2026Q4ExpansionsV2 } from '../../data/real-2026-q4-expansions-v2';
-import { real2036ServiceExpansions } from '../../data/real-2036-service-expansions';
-import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
+import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -72,7 +39,6 @@ export default function ServicesIndexPage() {
       newlyAddedServices as unknown[],
       curatedMarketServices as unknown[],
       realMarketServices as unknown[],
-      realMarketServicesExtended as unknown[],
       new2025Services as unknown[],
       marketValidatedServices as unknown[],
       moreRealServices2025 as unknown[],
@@ -84,37 +50,8 @@ export default function ServicesIndexPage() {
       verifiedRealServices2025Batch2 as unknown[],
       additionalLiveServices2025 as unknown[],
       real2025Q2Additions as unknown[],
-      augmentedServicesBatch3 as unknown[],
-      realServicesQ22025 as unknown[],
-      realServicesQ32025 as unknown[],
-      realQ4Services2025 as unknown[],
-      real2025Q4Additions as unknown[],
-      real2026Q1Additions as unknown[],
-      added2026Q2Services as unknown[],
-      real2026Q3Additions as unknown[],
-      real2026Q4Additions as unknown[],
-      real2026Q4NewServices as unknown[],
-      real2027Q1Additions as unknown[],
-      real2027Q2Additions as unknown[],
-      real2027Q3Additions as unknown[],
-      real2028ServiceExpansions as unknown[],
-      real2029Q1Additions as unknown[],
-      real2029Q2Additions as unknown[],
-      real2029Q3Additions as unknown[],
-      real2030Q1Additions as unknown[],
-      real2030Q2Additions as unknown[],
-      real2031MicroSaasAdditions as unknown[],
-      real2031ITServicesAdditions as unknown[],
-      real2031AIServicesAdditions as unknown[],
-      professionalServices as unknown[],
-      real2032ServiceExpansions as unknown[],
-      real2035Q1Additions as unknown[],
-      real2035Q2AdditionsExtra as unknown[],
-      real2025ExtraServices as unknown[],
-      real2026Q4ExpansionsV2 as unknown[],
-      real2026Q4ExpansionsV3 as unknown[]
-    )
-    .concat(real2036ServiceExpansions as unknown[]);
+      real2025Q3Additions as unknown[]
+    );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
@@ -148,79 +85,116 @@ export default function ServicesIndexPage() {
     'Quality & Monitoring': 'quality',
   };
 
-  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
-  const [searchQuery, setSearchQuery] = React.useState('');
-
-  const normalized = (value: unknown) => {
-    const obj = value as { id?: string; name?: string; tagline?: string; description?: string };
-    return `${obj.id || ''} ${obj.name || ''} ${obj.tagline || ''} ${obj.description || ''}`.toLowerCase();
-  };
-
-  const filteredAll = searchQuery.trim().length
-    ? all.filter((s) => normalized(s).includes(searchQuery.toLowerCase()))
-    : all;
-
   return (
-    <UltraFuturisticBackground variant="quantum" intensity="high">
-      <SEO title="Services | Zion Tech Group" description="Browse 350+ real micro SaaS, IT, and AI services with transparent pricing and fast onboarding." canonical="https://ziontechgroup.com/services/" />
-
-      <div className="container mx-auto px-4 py-16 space-y-12 text-white">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">All Services</h1>
-          <p className="text-gray-300 text-lg">Productized solutions across AI, cloud, DevOps, observability, and more. Average market prices linked in <a href="/market-pricing" className="text-cyan-400 underline">Market Pricing</a>. Contact: +1 302 464 0950 • kleber@ziontechgroup.com.</p>
-          <p className="mt-3 text-gray-400 text-sm">Prefer a tailored bundle? See <a href="/pricing" className="text-cyan-400 underline">Pricing</a> or <a href="/contact" className="text-cyan-400 underline">Contact Sales</a> for custom quotes.</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm">
-            <a href="#ai" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">AI & Data</a>
-            <a href="#developer-tools" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Developer Tools</a>
-            <a href="#cloud" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Cloud & FinOps</a>
-            <a href="#observability" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Observability</a>
-            <a href="#quality" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Quality & Monitoring</a>
-          </div>
-          <div className="mt-6 max-w-3xl mx-auto">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search services by name, feature, or use case..."
-              className="w-full px-4 py-3 rounded-xl bg-gray-900/70 border border-gray-700/70 focus:border-cyan-500/60 outline-none placeholder-gray-500"
-            />
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <Head>
+        <title>Our Services - Zion Tech Group | Comprehensive Technology Solutions</title>
+        <meta name="description" content="Explore our comprehensive range of technology services including AI development, cloud solutions, software development, data analytics, security, and automation services. Contact us at +1 302 464 0950." />
+        <meta name="keywords" content="AI services, cloud solutions, software development, data analytics, cybersecurity, automation, micro SAAS, technology consulting" />
+      </Head>
+      
+      <main className="container mx-auto px-4 py-16">
+        <div className="text-center text-white mb-16">
+          <h1 className="text-5xl font-bold mb-6">
+            Our Technology Services
+          </h1>
+          <p className="text-xl mb-8 max-w-4xl mx-auto">
+            Comprehensive technology solutions designed to accelerate your business growth. 
+            From AI-powered micro SAAS applications to enterprise-grade infrastructure, 
+            we deliver innovative solutions that drive real results.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-semibold mb-4">Ready to Transform Your Business?</h3>
+            <p className="mb-4">Contact our experts today for a free consultation</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                Call: +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-lg font-semibold transition-colors">
+                Email Us
+              </a>
+            </div>
           </div>
         </div>
 
-        {categories.map((cat) => (
-          <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
-                const service = s as { id?: string; name?: string; link?: string; category?: string; tagline?: string; description?: string; price?: string; period?: string };
-                const slug = service.link ? (() => { try { const u = new URL(service.link); const p = u.pathname.replace(/^\/+|\/+$/g, ''); return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''); } catch { return toSlug(service.id || service.name || ''); } })() : toSlug(service.id || service.name || '');
-                return (
-                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
-                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
-                    <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
-                    <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline || service.description}</p>
-                    <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
-                    <div className="flex gap-3">
-                      <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
-                      <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
-                    </div>
-                  </Card>
-                );
-              })}
-            </div>
-            {byCategory[cat].length > (shownCounts[cat] ?? 12) && (
-              <div className="mt-6 flex justify-center">
-                <button
-                  onClick={() => setShownCounts(prev => ({ ...prev, [cat]: (prev[cat] ?? 12) + 12 }))}
-                  className="px-4 py-2 rounded-lg bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50"
-                >
-                  Show more
-                </button>
+        <div className="space-y-16">
+          {categories.map((category, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">{category}</h2>
+              <p className="text-gray-300 mb-8 text-lg">
+                {category === 'AI & Data' && 'Cutting-edge AI solutions to transform your business'}
+                {category === 'Developer Tools' && 'Essential tools for modern development workflows'}
+                {category === 'Cloud & FinOps' && 'Scalable cloud solutions for modern businesses'}
+                {category === 'Observability' && 'Monitor and optimize your systems in real-time'}
+                {category === 'Quality & Monitoring' && 'Ensure reliability and performance at scale'}
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {byCategory[category]?.slice(0, 6).map((service: any, serviceIndex: number) => (
+                  <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/15 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-white mb-3">{service.name || service.title}</h3>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description || service.summary}</p>
+                    {service.price && (
+                      <p className="text-green-400 font-semibold mb-4">{service.price}</p>
+                    )}
+                    <Link 
+                      href={`/services/${toSlug(service.name || service.title)}`} 
+                      className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                ))}
               </div>
-            )}
-          </section>
-        ))}
-      </div>
-    </UltraFuturisticBackground>
+              
+              {byCategory[category]?.length > 6 && (
+                <div className="text-center mt-6">
+                  <Link 
+                    href={`/services/category/${anchorMap[category]}`}
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    View All {category} Services ({byCategory[category].length})
+                  </Link>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center text-white">
+          <h2 className="text-3xl font-bold mb-8">Why Choose Zion Tech Group?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Team</h3>
+              <p>Certified professionals with 10+ years of experience in cutting-edge technologies</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p>Round-the-clock support to ensure your systems run smoothly</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Scalable Solutions</h3>
+              <p>Solutions that grow with your business, from startup to enterprise</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-6">Let's discuss how we can help transform your business with technology</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+13024640950" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Call Now: +1 302 464 0950
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Send Email
+            </a>
+          </div>
+          <p className="mt-4 text-sm">
+            Address: 364 E Main St STE 1008, Middletown DE 19709
+          </p>
+        </div>
+      </main>
+    </div>
   );
 }

@@ -1,0 +1,47 @@
+Health Check Report - 8/30/2025, 3:24:33 AM
+==================================================
+
+Overall Status: UNHEALTHY
+Total Services: 11
+Healthy Services: 0
+Errors: 12
+Warnings: 2
+
+CRITICAL ERRORS:
+--------------------
+• [1m[36m4[39m[22m is not online (status: │)
+• [1m[36m5[39m[22m is not online (status: │)
+• [1m[36m0[39m[22m is not online (status: │)
+• [1m[36m8[39m[22m is not online (status: │)
+• [1m[36m6[39m[22m is not online (status: │)
+• [1m[36m3[39m[22m is not online (status: │)
+• [1m[36m7[39m[22m is not online (status: │)
+• [1m[36m1[39m[22m is not online (status: │)
+• [1m[36m2[39m[22m is not online (status: │)
+• enhanced-error-prevention-orchestrator-error.log has excessive errors (18)
+• linting-error-fixer-error.log has excessive errors (15)
+• Project health check failed: Command failed: npm run lint 2>&1
+
+WARNINGS:
+--------------------
+• enhanced-error-prevention-orchestrator-error.log contains 18 error entries
+• linting-error-fixer-error.log contains 15 error entries
+
+RECOMMENDATIONS:
+--------------------
+• Review and fix critical errors immediately
+• Address warnings to prevent future issues
+
+Service Status:
+--------------------
+[1m[36m4[39m[22m: │
+[1m[36m5[39m[22m: │
+[1m[36m0[39m[22m: │
+[1m[36m8[39m[22m: │
+[1m[36m6[39m[22m: │
+[1m[36m3[39m[22m: │
+[1m[36m7[39m[22m: │
+[1m[36m1[39m[22m: │
+[1m[36m2[39m[22m: │
+disk: healthy
+memory: healthy
