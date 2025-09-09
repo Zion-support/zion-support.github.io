@@ -15,8 +15,6 @@
     disable = true
 
 # Disable Next.js plugin since we're using Vite
-[build.processing]
-  skip_processing = false
 
 # Disable automatic Next.js detection and plugin
 [build.environment]
