@@ -133,8 +133,8 @@ export default defineConfig(({ mode }) => ({
     target: 'esnext',
     // Enable CSS code splitting
     cssCodeSplit: true,
-    // Add build size reporting
-    reportCompressedSize: true,
+    // Avoid gzip size computation on CI (can appear to hang after "rendering chunks")
+    reportCompressedSize: process.env.CI !== 'true' && process.env.NETLIFY !== 'true',
     // Optimize for production
     emptyOutDir: true,
   },
