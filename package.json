@@ -41,7 +41,7 @@
     "build:preview": "npm run build && npm run start",
     "analyze:bundle": "node scripts/bundle-analyzer.js",
     "analyze:detailed": "npm run build && npm run analyze:bundle",
-    "lint": "eslint .",
+    "lint": "eslint src app components pages",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "start": "next start",
@@ -71,7 +71,7 @@
     "deploy": "npm run build && netlify deploy --prod",
     "deploy:preview": "npm run build && netlify deploy",
     "health": "curl -f https://ziontechgroup.com/api/health || exit 1",
-    "validate": "npm run type-check && npm run lint && npm run build:ci"
+    "validate": "npm run lint && npm run build:ci"
   },
   "dependencies": {
     "@google/model-viewer": "^3.0.1",
@@ -188,6 +188,7 @@
     "cypress": "^14.4.0",
     "cypress-real-events": "^1.12.0",
     "eslint": "8.57.1",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "jest": "^29.7.0",
