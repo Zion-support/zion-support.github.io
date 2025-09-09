@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('🚀 Starting automated PR merge process...');
 
@@ -192,3 +191,4 @@ async function main() {
 }
 
 main();
+
