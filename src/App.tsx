@@ -23,12 +23,11 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
-const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
-const News = React.lazy(() => import('./pages/News'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Services = React.lazy(() => import('./pages/Services'));
+const AdvancedServices = React.lazy(() => import('./pages/AdvancedServices'));
+const AllServices = React.lazy(() => import('./pages/AllServices'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Team = React.lazy(() => import('./pages/Team'));
 
 // Error Boundary Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -89,12 +88,11 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services-advertising" element={<ServicesAdvertising />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/research-development" element={<ResearchDevelopment />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/advanced-services" element={<AdvancedServices />} />
+              <Route path="/all-services" element={<AllServices />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/team" element={<Team />} />
             </Routes>
           </Suspense>
         </main>

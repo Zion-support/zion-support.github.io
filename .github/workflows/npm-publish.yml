@@ -14,8 +14,9 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    
+    # Only run if this is a public package
+    if: ${{ github.repository != 'Zion-Holdings/zion.app' }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
