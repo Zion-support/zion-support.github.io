@@ -22,6 +22,8 @@
   ESLINT_NO_DEV_ERRORS = "true"
   # Optimize build performance
   VITE_LEGACY_BUILD = "false"
+  # Explicitly skip Next.js plugin (plugin installed via Netlify UI)
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # SPA routing redirects for Vite build
 [[redirects]]
@@ -84,3 +86,7 @@
     Cross-Origin-Resource-Policy = "same-origin"
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
