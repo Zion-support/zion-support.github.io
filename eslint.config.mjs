@@ -1,8 +1,7 @@
-const js = require('@eslint/js');
-const react = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
-const tsParser = require('@typescript-eslint/parser');
-const tsPlugin = require('@typescript-eslint/eslint-plugin');
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
 
 module.exports = [
   {
@@ -39,17 +38,13 @@ module.exports = [
     ],
   },
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        projectService: true,
-      },
+      parser: tseslint.parser,
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -95,19 +90,22 @@ module.exports = [
       parserOptions: {
         ecmaFeatures: {
           jsx: true
-        }
+        },
+        project: false
       }
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin
     },
     rules: {
       ...js.configs.recommended.rules,
       ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...tseslint.configs.recommendedTypeChecked?.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',

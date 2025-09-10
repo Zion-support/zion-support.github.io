@@ -1,5 +1,5 @@
 /** @type {import('jest').Config} */
-module.exports = {
+const config = {
 	testEnvironment: 'jsdom',
 	setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
 	testMatch: [
@@ -16,5 +16,23 @@ module.exports = {
 	},
 	transform: {
 		'^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }]
-	}
+	},
+	// Avoid scanning large/invalid directories and nested packages
+	testPathIgnorePatterns: [
+		'/node_modules/',
+		'/zion-os\\.disabled/',
+		'/backup-problematic-files/',
+		'/backup/',
+		'/automation_backup/',
+		'/apps\\.disabled/',
+		'/api\\.disabled/',
+	],
+	modulePathIgnorePatterns: [
+		'/zion-os\\.disabled/',
+		'/backup-problematic-files/',
+		'/backup/',
+		'/automation_backup/'
+	]
 };
+
+export default config;
