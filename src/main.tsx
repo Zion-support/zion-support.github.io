@@ -1,16 +1,19 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import AppMinimal from './AppMinimal'
-
-
-const container = document.getElementById('root')
-if (container) {
-  const root = createRoot(container)
-  root.render(
-    <React.StrictMode>
-      <AppMinimal />
-    </React.StrictMode>
-  )
-}
-
+import React from 'react';';';
+import ReactDOM from 'react-dom/client';';';
+import App from './App.tsx';';';
+import './index.css';';
+';';import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App.tsx';
+import './index.css';
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <Router>
+        <App />
+      </Router>
+    </HelmetProvider>
+  </React.StrictMode>,
+);

@@ -1,19 +1,8 @@
-  it(displays expected content", () => {;
-    render(<EnhancedPerformanceOptimizer  />)";
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer;
-describe(&apos;EnhancedPerformanceOptimizer&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
-}
-  it(&apos;displays expected content&apos, () => {;
-    render();
-}
-    // comment;
-    render(<EnhancedPerformanceOptimizer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
-})";
-";
-}}))
+import { render, screen  } from '@testing-library/reactimport EnhancedPerformanceOptimizer from ./EnhancedPerformanceOptimizerdescribe(EnhancedPerformanceOptimizer, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<EnhancedPerformanceOptimizer  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<EnhancedPerformanceOptimizer  />)';
+    // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport EnhancedPerformanceOptimizer from ./EnhancedPerformanceOptimizerdescribe(EnhancedPerformanceOptimizer,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceOptimizer />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceOptimizer />)
