@@ -8,14 +8,9 @@
     this.log('📊 Report saved to batch-syntax-fix-report.json');
   }
 
-
-
-
-
-const fs = require('fs')
-const path = require(path')
-const { execSync } = require('child_process')
-
+// Run the fixer
+const fixer = new BatchSyntaxFixer();
+fixer.run().catch(console.error);
       /import\s*{\s*([^}]+)\s*}\s*from\s*[]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*[]([^')]
       
       /import\s*{[^}]+}\s*from\s*['"][^]
@@ -63,5 +58,3 @@ const { execSync } = require('child_process')
         return line + 
 <<<<<<< HEAD
 =======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

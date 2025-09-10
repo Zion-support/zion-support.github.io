@@ -1,7 +1,7 @@
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+import: React from 'react';' 
+import: { motion } from 'framer-motion';' 
 import: {
   Heart,
   Activity,
@@ -25,7 +25,7 @@ import: {
   AlertCircle,
   CheckSquare,
   Calculator,
-=;
+= 
 import: {
 import {}
   Heart,
@@ -159,23 +159,23 @@ import {}
   CloudSnow10,
 
               enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.'
-            </p>';
-              Leverage artificial intelligence to improve patient outcomes, reduce costs, and;
+            </p>' 
+              Leverage artificial intelligence to improve patient outcomes, reduce costs, and 
               enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.''
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover: from-pink-600 hove,
     r:to-red-700 transition-all duration-200>'
                 <Play className='w-5 h-5 mr-2'  />                Watch Demo
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>'
                 <Settings className='w-5 h-5 mr-2'  />                Start Free Trial'
@@ -191,18 +191,18 @@ import {}
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover: from-pink-600 hove,
     r:to-red-700 transition-all duration-200>'
                 <Play className='w-5 h-5 mr-2'  />                Watch Demo
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>'
                 <Settings className='w-5 h-5 mr-2'  />                Start Free Trial
@@ -213,36 +213,36 @@ import {}
         </div>
       </section>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}, {keyMetrics.map((item, index(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
                 className='text-center>'
                 <div className='text-4xl md:text-5xl font-bold text-pink-400 mb-2'>{item.metric}</div>'''
                 <div className='text-zion-slate-light text-lg'>{item.label}</div>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
       </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-            whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+            whileInView={{ opacity: 1, y: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }};
+            transition={{ duration: 0.8 }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Our platform combines cutting-edge AI with healthcare best practices
@@ -250,18 +250,18 @@ import {}
             </p>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx: </motion.div>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+= 
 
               <motion.div
                 initial={{ opacit,
     y: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }};
-          '';
+                whileInView={{ opacity: 1, y: 0 }} 
+          '' 
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map(featur,
     e: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 initial={{ opacit,
     y: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -278,16 +278,16 @@ import {}
         </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-            whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+            whileInView={{ opacity: 1, y: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }};
+            transition={{ duration: 0.8 }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               See real results with our AI-powered healthcare analytics platform
@@ -295,42 +295,42 @@ import {}
             </p>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx: </motion.div>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+= 
 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }};
-          '';
+                whileInView={{ opacity: 1, x: 0 }} 
+          '' 
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-6'>{benefits.map(benefi,
     t: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
                 className='flex items-start space-x-3>'
                 <CheckCircle className='w-6 h-6 text-pink-400 mt-1 flex-shrink-0'  />                <span className='text-zion-slate-light text-lg'>{benefit}</span>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
       </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-            whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+            whileInView={{ opacity: 1, y: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }};
+            transition={{ duration: 0.8 }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Tailored solutions for various healthcare organizations and specialties
@@ -338,41 +338,41 @@ import {}
             </p>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx: </motion.div>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+= 
 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }};
-          '';
+                whileInView={{ opacity: 1, y: 0 }} 
+          '' 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>{useCases.map(useCas,
     e: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>'''
                 <p className='text-zion-slate-light'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-            whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+            whileInView={{ opacity: 1, y: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }};
+            transition={{ duration: 0.8 }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Meet all major healthcare compliance and regulatory requirements
@@ -380,41 +380,41 @@ import {}
             </p>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx: </motion.div>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+= 
 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }};
-          '';
+                whileInView={{ opacity: 1, scale: 1 }} 
+          '' 
           <div className='grid grid-cols-2 md: grid-cols-4 l,
     g:grid-cols-6 gap-4'>{complianceStandards.map(standar,
     d: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-pink-400/40 transition-all duration-300>'
                 <span className='text-zion-slate-light font-medium text-sm'>{standard}</span>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-            whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+            whileInView={{ opacity: 1, y: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }};
+            transition={{ duration: 0.8 }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Choose the plan that fits your healthcare organization and scale as you grow
@@ -422,23 +422,23 @@ import {}
             </p>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx: </motion.div>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-1 m,
     d:grid-cols-3 gap-8'>{pricing.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,6, delay: index: * 0.1 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
                 className={`bg-zion-slate-dark/80: backdrop-blur-sm rounded-xl p-6 border ${
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
                     <span className='inline-block bg-pink-500 text-white text-sm px-3 py-1 rounded-full'>
                       Most Popular
@@ -465,16 +465,16 @@ import {}
         </section>
 
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-            whileInView={{ opacity: 1, y: 0 }};
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+            whileInView={{ opacity: 1, y: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }};
+            transition={{ duration: 0.8 }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Connect with your existing EHR systems and healthcare platforms
@@ -482,36 +482,36 @@ import {}
             </p>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx: </motion.div>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
+= 
 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }};
-          '';
+                whileInView={{ opacity: 1, scale: 1 }} 
+          '' 
           <div className='grid grid-cols-2 md: grid-cols-4 l,
     g:grid-cols-6 gap-6'>{integrations.map(integratio,
     n: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300>'
                 <span className='text-zion-slate-light font-medium text-sm'>{integration}</span>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </section>
 
         <div className='max-w-4xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
             transition={{ duration: 0.8 }}>'''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
               Ready to Transform Healthcare?''
@@ -521,21 +521,21 @@ import {}
             </p>'''
             <div className='flex flex-col s,
     m:flex-row gap-4 justify-center'>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover: from-pink-600 hove,
     r:to-red-700 transition-all duration-200>'
                 <ArrowRight className='w-5 h-5 mr-2'  />                Start Free Trial
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>'
-                <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo;
+                <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo 
             transition={{ duratio,
     n: 0.8 }}
           >'''
@@ -547,15 +547,15 @@ import {}
             </p>'''
             <div className='flex flex-col s,
     m:flex-row gap-4 justify-center'>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover: from-pink-600 hove,
     r:to-red-700 transition-all duration-200>'
                 <ArrowRight className='w-5 h-5 mr-2'  />                Start Free Trial
               </motion.button>
-              <motion.button;
+              <motion.button 
 
                 <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo
 
@@ -565,11 +565,11 @@ import {}
         </section>
 
         <div className='max-w-4xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx 
 
               </div>''
             </div>'''
@@ -585,13 +585,13 @@ import {}
               </div>'
             </div>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
-              <a'';
-                href='https://ziontechgroup.com/contact'';
+              <a'' 
+                href='https://ziontechgroup.com/contact'' 
 
                 <ArrowRight className='w-5 h-5 mr-2'  />                Contact Us
               </a>'
-              <a'';
-                href='https://ziontechgroup.com'';
+              <a'' 
+                href='https://ziontechgroup.com'' 
 
                 <Globe className='w-5 h-5 mr-2'  />                Visit Website
 

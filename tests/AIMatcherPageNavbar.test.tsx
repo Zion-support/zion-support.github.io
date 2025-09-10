@@ -1,7 +1,1 @@
-
-    <MemoryRouter>
-      <AppLayout>
-        <AIMatcherPage />
-      </AppLayout>
-    </MemoryRouter>
-
+import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'

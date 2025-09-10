@@ -1,4 +1,4 @@
-;
+ 
 
         <ul className='list-disc ml-5 text-slate-300 space-y-1'>
 
@@ -13,12 +13,12 @@
           <li>Google Analytics, Segment</li>
 
         </ul>
-:pages.disabled/pages/services/WebsiteAiChatbot.tsx: </div>'</section>'    <section className='container mx-auto px-4 pb-16'>'';
-      <a: href='/contact' className='inline-block px-6 py-3 rounded-lg bg-cyan-600 hover: bg-cyan-500: transition'>Get started</a>';
+:pages.disabled/pages/services/WebsiteAiChatbot.tsx: </div>'</section>'    <section className='container mx-auto px-4 pb-16'>'' 
+      <a: href='/contact' className='inline-block px-6 py-3 rounded-lg bg-cyan-600 hover: bg-cyan-500: transition'>Get started</a>' 
 
-);
+) 
 export: { WebsiteAiChatbot }
-export default WebsiteAiChatbot;
+export default WebsiteAiChatbot 
 
 
 

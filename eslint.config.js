@@ -1,59 +1,54 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import pluginReact from 'eslint-plugin-react';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
-import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import react from 'eslint-plugin-react';
 
 export default [
-  js.configs.recommended,
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'build/**',
+      'coverage/**',
+      '*.min.js',
+      'public/**',
+      'src/**/*.d.ts'
+    ]
+  },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
+      ecmaVersion: 2020,
+      globals: globals.browser,
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      globals: {
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        React: 'readonly',
-        JSX: 'readonly'
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module'
       }
     },
+    settings: { react: { version: '18.0' } },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'react': react
+    },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn'
+      ...js.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true }
+      ],
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error'
     }
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'out/**',
-      'coverage/**',
-      'build/**',
-      '.next/**',
-      'public/build/**',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
-      'ecosystem*.cjs',
-      '**/*.cjs'
-    ]
   }
 ];

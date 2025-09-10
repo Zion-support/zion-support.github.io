@@ -1,26 +1,29 @@
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-    });
+export type WalletProvider = any;
+export function getEthereumProvider(): WalletProvider | null {;
+  if (typeof window === 'undefined') return null;
+  // @ts-ignore;
+  const { ethereum } = window;
+  return ethereum ?? null;
+}
+;
+export async function connectMetaMask(): Promise<string[] | null> {;
+  const provider = getEthereumProvider();
+  if (!provider) return null;
+  try {;
+    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' });
     return accounts;
-  } catch (error) {
-    throw new Error("Failed to connect to MetaMask");
+  } catch (e) {;
+    return null;
   }
 }
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-  }
-  try {
-    const accounts = await window.ethereum.request({
-      method: "eth_accounts",    });
+;
+export async function getAccounts(): Promise<string[] | null> {;
+  const provider = getEthereumProvider();
+  if (!provider) return null;
+  try {;
+    const accounts: string[] = await provider.request({ method: 'eth_accounts' });
     return accounts;
-  } catch (error) {
-    return [];
+  } catch (e) {;
+    return null;
   }
 }
-  if (typeof window === "undefined" || !window.ethereum) {
-    throw new Error("MetaMask is not installed");
-  }
-  try {
-    const balance = await window.ethereum.request({
-      method: "eth_getBalance",
-      params: [address, "latest"],

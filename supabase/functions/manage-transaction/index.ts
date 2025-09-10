@@ -148,7 +148,7 @@ serve(async (req) => {
       status: 200,
     });
   } catch (error) {
-    console.error("Transaction management error:", error.message);
+    // console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,

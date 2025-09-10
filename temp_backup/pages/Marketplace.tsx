@@ -1,29 +1,3 @@
-
-import React, { useState, useEffect, useMemo } from "react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { FilterSidebar } from "@/components/search/FilterSidebar";
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { ProductListing } from "@/types/listings";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import { SearchSuggestion } from "@/types/search";
-import styles from './Marketplace.module.css';
-import { useViewMode } from '@/context/ViewModeContext';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
-
 interface ProductContainerProps {
   listings: ProductListing[];
   onRequestQuote: (id: string) => void;
@@ -79,7 +53,7 @@ export default function Marketplace() {
     }, 120000); // 2 minutes
     return () => clearInterval(interval);
   }, []);
-  
+
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
   const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
 
@@ -89,7 +63,7 @@ export default function Marketplace() {
     const timeout = setTimeout(() => setIsLoading(false), 300);
     return () => clearTimeout(timeout);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
-  
+
   // Filter listings based on selected filters
   const filteredListings = listings.filter(listing => {
     // Search filter
@@ -98,27 +72,27 @@ export default function Marketplace() {
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false;
     }
-    
+
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
       return false;
     }
-    
+
     // Location filter
     if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
       return false;
     }
-    
+
     // Availability filter
     if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
       return false;
     }
-    
+
     // Rating filter
     if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
       return false;
     }
-    
+
     return true;
   });
 
@@ -127,7 +101,7 @@ export default function Marketplace() {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-  
+
   const handleFilterChange = (filterType: string, value: string) => {
     console.log(`Filter changed: ${filterType} = ${value}`);
     switch (filterType) {
@@ -148,7 +122,7 @@ export default function Marketplace() {
         break;
     }
   };
-  
+
   const clearAllFilters = () => {
     setSearchQuery("");
     setSelectedProductTypes([]);
@@ -156,17 +130,17 @@ export default function Marketplace() {
     setSelectedAvailability([]);
     setSelectedRating(null);
   };
-  
+
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId);
-    
+
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
       });
-      
+
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: { 
@@ -191,7 +165,7 @@ export default function Marketplace() {
             Browse our curated collection of solutions from verified providers.
           </p>
         </div>
-        
+
         {/* Search and filter bar */}
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
@@ -246,7 +220,7 @@ export default function Marketplace() {
               onClearFilters={clearAllFilters}
             />
           </div>
-          
+
           {/* Main content */}
           <div className="lg:col-span-3">
             {/* Active filters display */}
@@ -268,7 +242,7 @@ export default function Marketplace() {
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-            
+
             {/* Display actual marketplace listings */}
             {isLoading ? (
               <div className="flex justify-center py-20">
@@ -339,3 +313,35 @@ export default function Marketplace() {
       </main>
   );
 }
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const Marketplace: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Marketplace - Zion Tech Group</title>
+        <meta name="description" content="Browse and purchase technology solutions, services, and equipment from Zion Tech Group's comprehensive marketplace." />
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Marketplace</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Browse and purchase technology solutions, services, and equipment from our comprehensive marketplace.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 text-center">
+              Marketplace coming soon. We're building a comprehensive technology marketplace.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Marketplace;

@@ -1,17 +1,17 @@
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
 import: { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC: = () => {
 import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC: = () =>  {}
     }, {
 
-  ];
+  ] 
 
 :pages.disabled/pages/services/ai-cybersecurity.tsx
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+  y: 20 
 
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400'>
                 Cybersecurity
@@ -21,7 +21,7 @@ import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, 
             </h1>'
 '''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Protect your business with intelligent cybersecurity that learns, adapts, and evolves.;
+              Protect your business with intelligent cybersecurity that learns, adapts, and evolves. 
 
                 Secure Your Business'
             </p>'
@@ -54,16 +54,16 @@ import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, 
     g:grid-cols-4 gap-8'>
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+  y: 20 
 
                   <feature.icon className='w-6 h-6 text-red-400' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-6 h-6 text-red-400' />
                 </div>'''
@@ -88,11 +88,11 @@ import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, 
           <div className='grid md:grid-cols-2 gap-8'>
             {services.map((service, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={service.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
 
                     <p className='text-gray-300'>{service.description}</p>
                   </div>'
@@ -124,31 +124,31 @@ import { Shiel,d, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, 
 '''
           <div className='grid md:grid-cols-2 gap-8'>
 
-            <motion.div;
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-  x: -20;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+  x: -20 
 
 
                   </li>
                 ))}
               </ul>
             </motion.div>
-:pages.disabled/pages/services/ai-cybersecurity.tsx: <motion.div;
+:pages.disabled/pages/services/ai-cybersecurity.tsx: <motion.div 
               initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-  x: 20;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+  x: 20 
   ,
-    x: 20;
-            <motion.div;
+    x: 20 
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
   x: 2,0}}
               whileInView: = {}, { opacity:  ,1,
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-:pages.disabled/pages/services/ai-cybersecurity.tsx;
-  x: 0;
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+:pages.disabled/pages/services/ai-cybersecurity.tsx 
+  x: 0 
 
                 Security Assessment
 

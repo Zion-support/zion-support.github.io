@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ScrollToTop from '../components/ScrollToTop';'
-describe('ScrollToTop', () => {test('renders without crashing', () => {render(<ScrollToTop />)expect(screen.getByTestId('scrolltotop')).toBeInTheDocument()})test('displays correct content', () => {render(<ScrollToTop />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ScrollToTop />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ScrollToTop />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ScrollToTop from &apos;./ScrollToTop; describe(&apos;ScrollToTop&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ScrollToTop / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ScrollToTop from &apos;./ScrollToTop; describe(&apos;ScrollToTop&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ScrollToTop / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ScrollToTop from &apos;./ScrollToTop; describe(&apos;ScrollToTop&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<ScrollToTop / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

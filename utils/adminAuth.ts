@@ -1,8 +1,9 @@
-import { NextApiRequest } from 'next';
-
-export function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-  // TODO: Implement proper admin authentication
-  return Promise.resolve({ allowed: true });
-  // TODO: Implement proper internal agent check
-  return false;
-}
+// Stub admin auth utility - placeholder for missing functionality;
+export const requireAdminAuth = () => {;
+  // Placeholder implementation;
+  return true;
+};
+export const isAdmin = () => {;
+  // Placeholder implementation;
+  return true;
+};

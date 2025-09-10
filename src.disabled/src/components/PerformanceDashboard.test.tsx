@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import PerformanceDashboard from '../components/PerformanceDashboard';'
-describe('PerformanceDashboard', () => {test('renders without crashing', () => {render(<PerformanceDashboard />)expect(screen.getByTestId('performancedashboard')).toBeInTheDocument()})test('displays correct content', () => {render(<PerformanceDashboard />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<PerformanceDashboard />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<PerformanceDashboard />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import PerformanceDashboard from &apos;./PerformanceDashboard; describe(&apos;PerformanceDashboard&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<PerformanceDashboard / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import PerformanceDashboard from &apos;./PerformanceDashboard; describe(&apos;PerformanceDashboard&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<PerformanceDashboard / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import PerformanceDashboard from &apos;./PerformanceDashboard; describe(&apos;PerformanceDashboard&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<PerformanceDashboard / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

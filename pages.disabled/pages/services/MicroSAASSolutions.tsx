@@ -6,20 +6,20 @@
         </motion.div>
 
         {/* Solutions Grid */}
-        <motion.div;
+        <motion.div 
 
-            <motion.div;
+            <motion.div 
               key={solution.name}
               initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/MicroSAASSolutions.tsx;
+:pages.disabled/pages/services/MicroSAASSolutions.tsx 
 
-                  <Link;
-                    to={service.link};
+                  <Link 
+                    to={service.link} 
                     className='block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200'>                    Learn More
                   </Link>
 :pages.disabled/pages/services/MicroSAASSolutions.tsx'
-                  <Link';
-                    to='/request-quote'';
+                  <Link' 
+                    to='/request-quote'' 
                     className='block w-full text-center border border-gray-300 text-gray-700 px-4 py-3 rounded-lg font-medium hove,
     r:bg-gray-50 transition-colors duration-200'>                    Get Quote
 
@@ -48,7 +48,7 @@
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div;
+        <motion.div 
 
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
               Ready to Transform Your Business?"
@@ -57,8 +57,8 @@
               Our micro SaaS solutions are designed for rapid deployment and
               immediate impact. Get started with a free consultation and see how
 
-              Our micro SaaS solutions are designed for rapid deployment and;
-              immediate impact. Get started with a free consultation and see how;
+              Our micro SaaS solutions are designed for rapid deployment and 
+              immediate impact. Get started with a free consultation and see how 
               we can help.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''

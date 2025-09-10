@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const Contact: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Contact - Zion Tech Solutions</title>
-        <meta name="description" content="Contact page" />
-      </Head>
-      
-      <main>
-        <h1>Contact</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
-};
-
-export default Contact;
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -41,13 +18,8 @@ export default function ContactPage() {
 		</>
 	);
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 export default function Page(){return null}
-=======
-=======
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react';
@@ -591,7 +563,6 @@ const Contact: NextPage = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
-=======
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-white rounded-2xl shadow-lg p-12">
@@ -670,7 +641,6 @@ const Contact: NextPage = () => {
 };
 
 export default Contact;
-=======
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
@@ -787,4 +757,3 @@ export default Contact;
     </UltraAdvancedFuturisticBackground>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

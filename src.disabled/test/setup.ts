@@ -1,5 +1,1 @@
-
-    onchange: null, addListener: vi.fn(), // deprecated,;
-  removeListener: vi.fn(), // deprecated,;
-  addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn() })) });
-
+// Placeholder content - file was empty after conflict resolution

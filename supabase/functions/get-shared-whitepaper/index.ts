@@ -35,7 +35,7 @@ serve(async (req) => {
       .single();
 
     if (error) {
-      console.error(`Error fetching shared whitepaper (id: ${id}):`, error);
+      // console.error(`Error fetching shared whitepaper (id: ${id}):`, error);
       // Distinguish between "not found" and other errors if necessary
       if (error.code === 'PGRST116') { // PostgREST error code for "Not Found"
          return new Response(
@@ -62,7 +62,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in get-shared-whitepaper function:", error);
+    // console.error("Error in get-shared-whitepaper function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }

@@ -1,9 +1,9 @@
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-import: React from 'react.ts';';
-import: { SEO  } from '@/components/SEO';';
-import: { motion  } from 'framer-motion.ts';';
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+import: React from 'react.ts';' 
+import: { SEO  } from '@/components/SEO';' 
+import: { motion  } from 'framer-motion.ts';' 
 import: { Shield,
   Brain,
   BarChart3,
@@ -11,7 +11,7 @@ import: { Shield,
   Zap,
   Lock,
   Target,
-=;
+= 
 import: { Shield,
   Brain,
   BarChart3,
@@ -29,32 +29,32 @@ import: { Shield,
   Globe,
   Rocket,
   Eye,
-  Cpu'} from 'lucide-react';';
+  Cpu'} from 'lucide-react';' 
 const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
-    } ];
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+    } ] 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
       popular: false:  }, {
       popular: fals,e}, {}
 
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+      <SEO 
+= 
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+  y: 30 
 
               <Shield className='w-4 h-4 mr-2'  />              Fraud Prevention Platform'
-            </div>';
-  y: 0}};
+            </div>' 
+  y: 0}} 
   y: 0}}
-            transition={{ duration: 0.8 }};
-            className='mb-8'';
+            transition={{ duration: 0.8 }} 
+            className='mb-8'' 
 '''
-            <div className='inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6>';
+            <div className='inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6>' 
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx'
               <Shield className='w-4 h-4 mr-2'  />              Fraud Prevention Platform''
             </div>'''
@@ -96,47 +96,47 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx: </motion.div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-=;
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+= 
 
           <div className='grid md: grid-cols-2 gap-8'>
-            {features.map((feature, index();
+            {features.map((feature, index() 
               <motion.div'
-          '';
+          '' 
           <div className='grid md: grid-cols-2 gap-8'>{features.map((feature, index(
               <motion.div
                 key={feature.title}
 
                 initial = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
 
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
   x:  ,0}}
-=;
-  x: 0;
-  x: 0 ';';
-  x: 0;
+= 
+  x: 0 
+  x: 0 ';' 
+  x: 0 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
 >                viewport={{ once: true }}
                 transition: = {}, { duration: 0.,8,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
 
                   <feature.icon className='w-8 h-8 text-white' />
                 </div>''
-                <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3>';
+                <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3>' 
 
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
-                <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3>'';
+                <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-8 h-8 text-white' />
                 </div>'''
@@ -154,26 +154,26 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx: </motion.div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-=;
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={benefi,t}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+  y: 30 
 
                   <CheckCircle className='w-6 h-6 text-white'  />'
                 </div>'                <p className='text-slate-300 font-medium'>{benefit}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -183,30 +183,30 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx: </motion.div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-=;
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+= 
 
           <div className='grid grid-cols-2 md: grid-cols-3 gap-6'>
             {useCases.map(useCas,
-    e: unknown, index: unknown();
+    e: unknown, index: unknown() 
               <motion.div'
-          '';
+          '' 
           <div className='grid grid-cols-2 m,
     d: grid-cols-3 gap-6'>{useCases.map(useCas,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={useCas,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-  scale: 0.8;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+  scale: 0.8 
 
                   <Target className='w-6 h-6 text-white'  />'
                 </div>'                <p className='text-slate-300 font-medium'>{useCase}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -216,10 +216,10 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx: </motion.div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-=;
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-2 md: grid-cols-3 l,
     g:grid-cols-5 gap-6'>{integrations.map(integratio,
     n: unknown, index: unknown(
@@ -227,25 +227,25 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
                 key={integration}
 
                 initial = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-  scale: 0.8;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+  scale: 0.8 
 
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-  scale: 1;
-  scale: 1 ';';
-  scale: 1;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+  scale: 1 
+  scale: 1 ';' 
+  scale: 1 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
                 viewport={{ once: true }}
                 transition: = {}, { duration: 0.,8,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
 
               </motion.div>
             ))}
@@ -258,14 +258,14 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
             </p>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx: </motion.div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-=;
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+= 
 
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricing.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <motion.div'
-          '';
+          '' 
           <div className='grid m,
     d: grid-cols-3 gap-8 max-w-6xl mx-auto'>{pricing.map(pla,
     n: unknown, index: unknown(
@@ -273,26 +273,26 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
                 key={plan.plan}
 
                 initial = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+  y: 30 
 
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+<:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
   y:  ,0}}
-=;
-  y: 0;
+= 
+  y: 0 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
 >                viewport={{ once: true }}
                 transition: = {}, { duration: 0.,8,
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
 
                     <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
@@ -308,17 +308,17 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
                   </div>''
                   <p className='text-gray-300'>{plan.description}</p>
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hove,
-    r:to-orange-600'''';
+    r:to-orange-600'''' 
                 </ul>'
 '''
                 <button className='w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hove,
     r:scale-105 ${}
                   plan.popular''
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover: from-red-600 hove,
-    r:to-orange-600'';
+    r:to-orange-600'' 
                     : 'bg-slate-700 text-white hove,
     r:bg-slate-600'}>
                   Get Started
@@ -339,23 +339,23 @@ const: AIFinancialFraudDetection: React.FC: = (): JSX.Element: =>  {}
               Join 200+ companies that have protected their business with our AI-powered fraud detection platform'
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
-              <a'';
-                href='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'';
-                Start Free Trial'';
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+              <a'' 
+                href='/contact'' 
+                className='inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'' 
+                Start Free Trial'' 
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx 
                 <ArrowRight className='w-5 h-5 ml-2'  />              </a>''
-              <a'';
-                href='/contact'';
-                className='inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300';
-                Schedule Demo;
+              <a'' 
+                href='/contact'' 
+                className='inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300' 
+                Schedule Demo 
                 <ArrowRight className='w-5 h-5 ml-2'  />              </a>'
               <a'''
-                href='/contact'';
+                href='/contact'' 
                 className='inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hove,
     r:bg-white hove,
-    r:text-red-600 transition-all duration-300'';
-                Schedule Demo;
+    r:text-red-600 transition-all duration-300'' 
+                Schedule Demo 
 
               </Link>
             </div>

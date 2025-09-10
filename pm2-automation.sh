@@ -69,7 +69,7 @@ run_type_check() {
 # Build the application
 build_app() {
     log "Building application..."
-    export NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider"
+    export NODE_OPTIONS="--max-old-space-size=6144"
     npm run build
     
     # Verify build output

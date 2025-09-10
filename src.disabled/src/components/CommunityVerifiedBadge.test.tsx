@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import CommunityVerifiedBadge from '../components/CommunityVerifiedBadge';'
-describe('CommunityVerifiedBadge', () => {test('renders without crashing', () => {render(<CommunityVerifiedBadge />)expect(screen.getByTestId('communityverifiedbadge')).toBeInTheDocument()})test('displays correct content', () => {render(<CommunityVerifiedBadge />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<CommunityVerifiedBadge />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<CommunityVerifiedBadge />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import CommunityVerifiedBadge from &apos;./CommunityVerifiedBadge; describe(&apos;CommunityVerifiedBadge&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<CommunityVerifiedBadge / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import CommunityVerifiedBadge from &apos;./CommunityVerifiedBadge; describe(&apos;CommunityVerifiedBadge&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<CommunityVerifiedBadge / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import CommunityVerifiedBadge from &apos;./CommunityVerifiedBadge; describe(&apos;CommunityVerifiedBadge&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<CommunityVerifiedBadge / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

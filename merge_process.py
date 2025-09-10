@@ -49,7 +49,12 @@ def main():
     
     # 4. Check for open PRs
     print("4. Checking for open PRs...")
-    pr_result = run_command('curl -s -H "Authorization: token ghs_IYHKQkildtdfPGMKfcXeTqv1YtJcv83jUUS9" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open', check=False)
+    token = os.environ.get('GITHUB_TOKEN')
+    if token:
+        pr_result = run_command(f'curl -s -H "Authorization: token {token}" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open', check=False)
+    else:
+        pr_result = None
+        print("GITHUB_TOKEN not set; skipping PR fetch.")
     if pr_result and pr_result.stdout:
         try:
             prs = json.loads(pr_result.stdout)

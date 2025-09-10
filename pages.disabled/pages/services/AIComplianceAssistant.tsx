@@ -1,8 +1,8 @@
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-<:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../../components/SEO';';
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
+<:pages.disabled/pages/services/AIComplianceAssistant.tsx 
+import: React from 'react';' 
+import: { motion } from 'framer-motion';' 
+import: { SEO } from '../../components/SEO';' 
 import: {
   Shield,
   CheckCircle,
@@ -12,7 +12,7 @@ import: {
   Zap,
   Globe,
   Lock,
-=;
+= 
 import: {
 import {}
   Shield,
@@ -34,14 +34,14 @@ import {}
   Search,
   Filter,
   Download,
-  Share2''} from 'lucide-react';';
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
+  Share2''} from 'lucide-react';' 
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
 
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
 
             transition={{ duration: 0.8 }}
           >'''
@@ -55,15 +55,15 @@ import {}
               </span>'
             </h1>'''
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-              Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.;
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
+              Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management. 
 
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hove,
     r:from-emerald-700 hove,
-    r:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>;
-              Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.;
+    r:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center> 
+              Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management. 
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -93,7 +93,7 @@ import {}
               Our AI Compliance Assistant provides comprehensive tools to automate and streamline
               your compliance management processes.
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }};
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
     r:border-emerald-500/50''>{/* Icon */}'
                 <div className='mb-6>''
@@ -138,7 +138,7 @@ import {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
@@ -148,19 +148,19 @@ import {}
       <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8 }};
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
+            transition={{ duration: 0.8 }} 
             transition={{ duration: 0.8 }}
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the advantages of AI-powered compliance management that drives
               efficiency and reduces regulatory risk.
 
-              <motion.div;
+              <motion.div 
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -180,7 +180,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }};
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
     r:border-emerald-500/50''>{/* Icon */}'
                 <div className='mb-6>''
@@ -205,7 +205,7 @@ import {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
@@ -215,29 +215,29 @@ import {}
       <section className='py-20 bg-slate-800/50>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8 }};
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
+            transition={{ duration: 0.8 }} 
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
+            viewport={{ once: true }} 
             className='text-center mb-16>'
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our platform supports major regulatory frameworks across industries,
               ensuring comprehensive compliance coverage.
             </p>
 
-              <motion.div;
+              <motion.div 
                 key={regulation.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                viewport={{ once: true }};
+                transition={{ duration: 0.5, delay: index * 0.1 }} 
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-emerald-500/50>
           </motion.div>'
 '''
@@ -250,7 +250,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }};
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
     r:border-emerald-500/50''>{/* Icon */}'
                 <div className='mb-6>''
@@ -275,7 +275,7 @@ import {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
@@ -285,19 +285,19 @@ import {}
       <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8 }};
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
+            transition={{ duration: 0.8 }} 
             transition={{ duration: 0.8 }}
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how organizations across industries leverage our AI Compliance Assistant
               to maintain regulatory compliance and reduce risk.
 
-              <motion.div;
+              <motion.div 
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -317,7 +317,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }};
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
     r:border-emerald-500/50''>{/* Icon */}'
                 <div className='mb-6>''
@@ -342,7 +342,7 @@ import {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
@@ -352,18 +352,18 @@ import {}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20>''
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
     g:px-8'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
             viewport={{ once: true }}>'''
             <h2 className='text-3xl md: text-5xl font-bold text-white mb-6>
               Ready to Automate Your Compliance?''
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-:pages.disabled/pages/services/AIComplianceAssistant.tsx;
+:pages.disabled/pages/services/AIComplianceAssistant.tsx 
 
               to reduce risk and maintain regulatory standards.'
             </p>''
@@ -371,8 +371,8 @@ import {}
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>'
                 <Star className='w-5 h-5 mr-2'  />                Get Started Today'
               </button>''
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg>;
-              Join organizations already leveraging AI-powered compliance management;
+              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg> 
+              Join organizations already leveraging AI-powered compliance management 
               to reduce risk and maintain regulatory standards.''
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
@@ -385,7 +385,7 @@ import {}
                 Schedule Demo'
               </button>''
             </div>'''
-            <ul className='space-y-3>;
+            <ul className='space-y-3> 
             viewport={{ onc,
     e: true }}
           >'''
@@ -393,7 +393,7 @@ import {}
               Ready to Automate Your Compliance?'
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join organizations already leveraging AI-powered compliance management;
+              Join organizations already leveraging AI-powered compliance management 
               to reduce risk and maintain regulatory standards.'
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''

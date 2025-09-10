@@ -21,15 +21,20 @@ try {
     // 4. Check for open PRs
     console.log('4. Checking for open PRs...');
     try {
-        const prs = execSync('curl -s -H "Authorization: token ghs_IYHKQkildtdfPGMKfcXeTqv1YtJcv83jUUS9" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open', { encoding: 'utf8' });
-        const prData = JSON.parse(prs);
-        if (prData.length > 0) {
-            console.log('Open PRs found:', prData.length);
-            prData.forEach(pr => {
-                console.log(`- PR #${pr.number}: ${pr.title} (${pr.head.ref} -> ${pr.base.ref})`);
-            });
+        const token = process.env.GITHUB_TOKEN;
+        if (!token) {
+            console.log('GITHUB_TOKEN not set; skipping PR fetch.');
         } else {
-            console.log('No open PRs found');
+            const prs = execSync(`curl -s -H "Authorization: token ${token}" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open`, { encoding: 'utf8' });
+            const prData = JSON.parse(prs);
+            if (prData.length > 0) {
+                console.log('Open PRs found:', prData.length);
+                prData.forEach(pr => {
+                    console.log(`- PR #${pr.number}: ${pr.title} (${pr.head.ref} -> ${pr.base.ref})`);
+                });
+            } else {
+                console.log('No open PRs found');
+            }
         }
     } catch (error) {
         console.log('Could not fetch PRs:', error.message);

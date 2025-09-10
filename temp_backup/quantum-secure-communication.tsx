@@ -8,8 +8,8 @@ import {
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Key
 } from 'lucide-react';
-
-import Layout from '../components/layout/Layout';
+import Button from '../components/ui/Button';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
 export default function QuantumSecureCommunication() {
@@ -52,7 +52,14 @@ export default function QuantumSecureCommunication() {
   ];
 
   return (
-    <Layout>
+    <UltraAdvancedFuturisticBackground 
+      intensity="high" 
+      colorScheme="quantum-fusion"
+      particleCount={500}
+      animationSpeed={2.0}
+      enableHolographic={true}
+      enableQuantumEffects={true}
+    >
       <div className="min-h-screen">
         <Head>
           <title>Quantum-Secure Communication - Zion Tech Group | Unbreakable Encryption</title>
@@ -104,7 +111,9 @@ export default function QuantumSecureCommunication() {
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+              >
                 Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.
               </motion.p>
 
@@ -122,8 +131,11 @@ export default function QuantumSecureCommunication() {
                       <div className="text-4xl font-bold text-white mb-2">$599</div>
                       <div className="text-purple-200 text-lg mb-4">per month</div>
                       <div className="text-gray-300 mb-6">30-day free trial</div>
-                      <a 
-                        href="/contact" className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl">
+                      <Button 
+                        href="/contact" 
+                        variant="primary"
+                        className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl"
+                      >
                         Start Free Trial
                       </a>
                     </div>
@@ -135,8 +147,11 @@ export default function QuantumSecureCommunication() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
-                  <a 
-                    href="/contact" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25">
+                  <Button 
+                    href="/contact" 
+                    variant="secondary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
+                  >
                     <span className="flex items-center">
                       <Phone className="mr-3 w-5 h-5" />
                       Talk to Expert
@@ -403,8 +418,11 @@ export default function QuantumSecureCommunication() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a 
-                    href="/contact" className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/25">
+                  <Button 
+                    href="/contact" 
+                    variant="primary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/25"
+                  >
                     <span className="flex items-center">
                       <Rocket className="mr-3 w-5 h-5" />
                       Start Free Trial
@@ -418,8 +436,11 @@ export default function QuantumSecureCommunication() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
-                  <a 
-                    href="/contact" className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25">
+                  <Button 
+                    href="/contact" 
+                    variant="secondary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
+                  >
                     <span className="flex items-center">
                       <Phone className="mr-3 w-5 h-5" />
                       Talk to Expert

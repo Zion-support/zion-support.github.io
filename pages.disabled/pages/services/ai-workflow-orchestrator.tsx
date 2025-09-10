@@ -1,8 +1,8 @@
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { Helmet  } from 'react-helmet-async.ts';';
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
+import: { Helmet  } from 'react-helmet-async.ts';' 
 import: { Workflow,
   Brain,
   Zap,
@@ -10,7 +10,7 @@ import: { Workflow,
   Cloud,
   BarChart3,
   Users,
-=;
+= 
 import: { Workflow,
   Brain,
   Zap,
@@ -48,7 +48,7 @@ import: { Workflow,
 =>''
               <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6>'
                 <Workflow className='w-10 h-10 text-white'  />              </div>'
-              ';
+              ' 
 
               <p className='text-xl text-slate-600 max-w-3xl mx-auto mb-8'>
                 Transform your business processes with intelligent workflow automation. Our AI-powered orchestrator learns, adapts, and optimizes your workflows in real-time.
@@ -72,44 +72,44 @@ import: { Workflow,
         <section className='py-16 px-4 sm: px-6 l,
     g:px-8 bg-white>''
           <div className='max-w-7xl mx-auto'>
-            <motion.div;
+            <motion.div 
               initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+  y: 20 
   ,
     y: 20}}
               animate = {
   { opacity: 1,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-  y: 0;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+  y: 0 
   ,
     y: 0}}
               transition = {
   { duration: 0.6,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
   delay: 0.2}}
             >''
               <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
                 Powerful Features for Modern Workflows
               </h2>
-<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-=;
+<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+= 
               '>  delay: 0.2}}>'''
               <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
 
 
-                  <motion.div;
+                  <motion.div 
                     key={feature.title}
                     initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+  y: 20 
 
                     </div>''
-                    <h3 className='text-xl font-semibold text-slate-900 mb-3'>{feature.title}</h3>';
-  delay: 0.1 * index '}};
+                    <h3 className='text-xl font-semibold text-slate-900 mb-3'>{feature.title}</h3>' 
+  delay: 0.1 * index '}} 
                     className='bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hove,
     r:border-blue-200>'
                     <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4>''
@@ -125,14 +125,14 @@ import: { Workflow,
 
               <div className='grid grid-cols-1 md: anygrid-cols-2 gap-6'>
                 {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
 
-                  <motion.div;
+                  <motion.div 
                     key={benefi,t}
                     initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-  x: -20;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+  x: -20 
 
 
                   </motion.div>
@@ -141,16 +141,16 @@ import: { Workflow,
             </motion.div>
 
 
-                  <motion.div;
+                  <motion.div 
                     key={useCase.titl,e}
                     initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+  y: 20 
 
                     </div>''
-                    <h3 className='text-lg font-semibold text-slate-900 mb-2'>{useCase.title}</h3>';
-  delay: 0.1 * index '}};
+                    <h3 className='text-lg font-semibold text-slate-900 mb-2'>{useCase.title}</h3>' 
+  delay: 0.1 * index '}} 
                     className='text-center>'
                     <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4>''
                       <useCase.icon className='w-8 h-8 text-blue-600' />'
@@ -165,14 +165,14 @@ import: { Workflow,
 
               <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
                 {pricing.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
 
-                  <motion.div;
+                  <motion.div 
                     key={plan.nam,e}
                     initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+  y: 20 
 
                         <span className='bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium'>
                           Most Popular
@@ -187,8 +187,8 @@ import: { Workflow,
 
                       <p className='text-slate-600 mt-2'>{plan.description}</p>
                     </div>
-<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-=;
+<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+= 
                     '>                    <ul className='space-y-3 mb-6>
                       {plan.features.map((feature, idx) => (''
                         <li key={idx} className='flex items-center gap-2>'
@@ -197,16 +197,16 @@ import: { Workflow,
                         </li>
                       ))}
                     </ul>
-<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
-=;
+<:pages.disabled/pages/services/ai-workflow-orchestrator.tsx 
+= 
 
                         </li>
                       ))}
                     </ul>`
                     ``
 
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-blue-600 text-white hover:bg-blue-700'''`;`
                         : 'bg-slate-100 text-slate-700 hove,
     r:bg-slate-200'``}`}>'{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
@@ -226,7 +226,7 @@ import: { Workflow,
 
               ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center>'
->              </p>';
+>              </p>' 
               '''
               <div className='flex flex-col sm:flex-row gap-4 justify-center>''
                 <button className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors>

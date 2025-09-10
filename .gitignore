@@ -12,8 +12,16 @@ yarn.lock
 public/toolkit_assets/media_kit.zip
 __pycache__/
 
+# Build outputs
+dist/
+
 # Automation logs and data (continuously changing)
 automation/logs/*.log
 automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
+.next/
+core
+
+# TypeScript build info
+*.tsbuildinfo

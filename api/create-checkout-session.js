@@ -1,44 +1,61 @@
-
-import { withErrorLogging } from;
-  './withErrorLogging.cjs;
-const PROD_DOMAIN =;
-
-    res.statusCode = 405;
-    res.setHeader('Allow;, 'POST;);';
-    res.end('Method Not Allowed;);';
-    return}
-  const { productId, userId } = req.body || {}
-  if (!productId || !userId) {;
-    res.statusCode = 400;
 export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
+export default function handler(req, res) {;
+  res.status(200).json({ message: "Checkout session created" });,
 }
 export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}          price: priceId,
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+import Stripe from 'stripe';
 
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2023-10-16',
+});
 
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-
-    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
-    if(;
-      !isProdDomain() &&;
-
-      metadata: { userId, productId }});
-    res.statusCode = 200;
-    res.json({ sessionId: session.id })} catch (err) {;
-    // Error logged by withErrorLogging wrapper;
-    res.statusCode = 500;
-    res.json({ error: err.message }})}
-export default withErrorLogging(handler);`
-
-    // console.error('Checkout session API error:', err);
-    res.statusCode = 500;'
-    res.json({ error: err.message || 'Checkout session creation failed' });
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
   }
 
-}
-;
-export default withErrorLogging(handler);
+  try {
+    const { priceId, quantity = 1 } = req.body || {};
+
+    if (!priceId) {
+      res.statusCode = 400;
+      res.json({ error: 'Price ID is required' });
+      return;
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      mode: 'subscription',
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price: priceId,
+          quantity: quantity,
+        },
+      ],
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/cancel`,
+    });
+
+    res.statusCode = 200;
+    res.json({ 
+      success: true, 
+      sessionId: session.id,
+      url: session.url 
+    });
+  } catch (err) {
+    // console.error('Checkout session API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Checkout session creation failed' });
+  }
 
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 
@@ -51,35 +68,5 @@ export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
 
-      url: session.url
-
-    })
-  } catch (err) {,
-    // console.error('Checkout session API error:, err),
-    res.statusCode = 500,
-    res.json({ error: err.message || 'Checkout session creation failed' })
-  };
-export default withErrorLogging(handler),
-
-}
-
-export default withErrorLogging(handler);
 export default withErrorLogging(handler);
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-
-
-
-
-
-
-
-
-
-'"`
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-
-
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}`;
-'
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}''
-

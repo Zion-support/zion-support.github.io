@@ -1,25 +1,16 @@
-#!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Starting Merge Conflicts Resolution Process...');
 
-function runCommand(command, options = {}) {
-    try {
-        console.log(`Running: ${command}`);
-        const result = execSync(command, { 
-            encoding: 'utf8', 
-            cwd: '/workspace',
-            ...options 
-        });
-        return result.trim();
-    } catch (error) {
-        console.error(`Error running command: ${command}`);
-        console.error(error.message);
-        return null;
-    }
-}
+// Find all files with merge conflicts
+const findConflictFiles = () => {
+  try {
+    const result = execSync('grep -r -l "" . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file);
+  } catch (error) {    return [];
+  }
+};
 
 function checkGitStatus() {
     console.log('📊 Checking Git Status...');

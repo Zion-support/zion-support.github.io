@@ -1,5 +1,5 @@
-:pages.disabled/pages/services/ITConsulting.tsx;
-  return();
+:pages.disabled/pages/services/ITConsulting.tsx 
+  return() 
 
   Users,
   Cpu,
@@ -147,20 +147,20 @@
   HardDrive3,
   Server4,
   Rocket,
-  Building2'} from 'lucide-react';';
+  Building2'} from 'lucide-react';' 
 export: { function }
 export default function ITConsulting(...args: []):   {}
     }, {
 
   ]}, {
       icon: Scal,e,
-      title: 'Scalability: Planning',,';
-      description: 'Plan: for future growth and technology scaling'}'];
+      title: 'Scalability: Planning',,' 
+      description: 'Plan: for future growth and technology scaling'}'] 
 
 :pages.disabled/pages/services/ITConsulting.tsx
             </div>
-<:pages.disabled/pages/services/ITConsulting.tsx;
-=;
+<:pages.disabled/pages/services/ITConsulting.tsx 
+= 
             '>              <Briefcase className='w-4 h-4 mr-2'  />              IT Consulting Services
             </div>'
             '''
@@ -174,31 +174,31 @@ export default function ITConsulting(...args: []):   {}
 
             </p>
 :pages.disabled/pages/services/ITConsulting.tsx
-<:pages.disabled/pages/services/ITConsulting.tsx;
-=;
+<:pages.disabled/pages/services/ITConsulting.tsx 
+= 
 
-              <Link'';
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold';
-                Get Expert Advice;
+              <Link'' 
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold' 
+                Get Expert Advice 
               </Link>''
               <Link'''
-                to='/services'';
-                className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold';
-                View All Services;
-            '';
+                to='/services'' 
+                className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold' 
+                View All Services 
+            '' 
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
               <Link'''
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'';
-                Get Expert Advice;
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'' 
+                Get Expert Advice 
               </Link>'
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hove,
     r:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold'';
-                View All Services;
+    r:text-white transition-all duration-300 font-semibold'' 
+                View All Services 
 
               </Link>
             </div>
@@ -215,13 +215,13 @@ export default function ITConsulting(...args: []):   {}
 '''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {services.map((service, index
-              <motion.div;
+              <motion.div 
 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ITConsulting.tsx;
-:pages.disabled/pages/services/ITConsulting.tsx;
-  y: 20;
+:pages.disabled/pages/services/ITConsulting.tsx 
+:pages.disabled/pages/services/ITConsulting.tsx 
+  y: 20 
 
                     <service.icon className='w-8 h-8 text-white' />
                   </div>'
@@ -249,8 +249,8 @@ export default function ITConsulting(...args: []):   {}
               From strategy to implementation, we provide
               comprehensive IT consulting solutions.
 
-              <motion.div;
-              Core IT Consulting Services;
+              <motion.div 
+              Core IT Consulting Services 
             </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               From strategy to implementation, we provide
@@ -263,11 +263,11 @@ export default function ITConsulting(...args: []):   {}
             {expertise.map(are,
     a: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ITConsulting.tsx;
-:pages.disabled/pages/services/ITConsulting.tsx;
+:pages.disabled/pages/services/ITConsulting.tsx 
+:pages.disabled/pages/services/ITConsulting.tsx 
 
                     <service.icon className='w-6 h-6 text-white' />
                   </div>'
@@ -283,21 +283,21 @@ export default function ITConsulting(...args: []):   {}
                 <p className='text-zion-slate-light leading-relaxed'>{area.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {benefits.map(benefi,
-    t: unknown, index: unknown();
-              <motion.div';
-                key={index};
-                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300';
+    t: unknown, index: unknown() 
+              <motion.div' 
+                key={index} 
+                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300' 
                 initial={{ opacit,
     y: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-'';
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
+'' 
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6>''
                   <benefit.icon className='w-8 h-8 text-white' />
           </motion.div>'
@@ -305,14 +305,14 @@ export default function ITConsulting(...args: []):   {}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300'';
+              <motion.div 
+                key={index} 
+                className='bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300'' 
                 initial={{ opacit,
     y: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-'';
+'' 
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6>''
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>'''
@@ -320,7 +320,7 @@ export default function ITConsulting(...args: []):   {}
                 <p className='text-zion-slate-light leading-relaxed'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -331,7 +331,7 @@ export default function ITConsulting(...args: []):   {}
 
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {industries.map(industr,
-    y: unknown, index: unknown();
+    y: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -340,25 +340,25 @@ export default function ITConsulting(...args: []):   {}
             {industries.map(industr,
     y: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ITConsulting.tsx;
-:pages.disabled/pages/services/ITConsulting.tsx;
-  y: 20;
+:pages.disabled/pages/services/ITConsulting.tsx 
+:pages.disabled/pages/services/ITConsulting.tsx 
+  y: 20 
 
                 <div className='text-zion-cyan font-semibold'>{industry}</div>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-                className='text-center';
+                className='text-center' 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-'';
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
+'' 
                 <div className='w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step}
           </motion.div>'
 '''
@@ -367,38 +367,38 @@ export default function ITConsulting(...args: []):   {}
     p: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' }, { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' }, { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' }, { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map(phase: unknown, index: unknown(
               <motion.div'
-                key={index};
-                className='text-center'';
+                key={index} 
+                className='text-center'' 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-'';
+'' 
                 <div className='w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step}
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-2'>{useCase.industry}</h3>'''
                 <p className='text-gray-300 text-sm'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-              <Link'';
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold';
-                Schedule Consultation;
+              <Link'' 
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold' 
+                Schedule Consultation 
               </Link>''
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hove,
     r:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold';
-                Explore Services;
+    r:text-white transition-all duration-300 font-semibold' 
+                Explore Services 
       </section>{/* CTA Section */}'
       <section className='py-20 bg-zion-slate-dark/30>'
         <div className='container mx-auto px-4>
-          <motion.div'';
-            className='bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center'';
+          <motion.div'' 
+            className='bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center'' 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -408,16 +408,16 @@ export default function ITConsulting(...args: []):   {}
             </h2>'''
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
 
-                to='/contact'';
-                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'';
-                Schedule Consultation;
+                to='/contact'' 
+                className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'' 
+                Schedule Consultation 
               </Link>'
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hove,
     r:bg-zion-cyan hove,
-    r:text-white transition-all duration-300 font-semibold'';
-                Explore Services;
+    r:text-white transition-all duration-300 font-semibold'' 
+                Explore Services 
 
               </Link>
             </div>

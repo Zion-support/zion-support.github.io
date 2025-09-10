@@ -1,6 +1,6 @@
-:src/pages/services/ai-customer-support-automation.tsx;
-import: React from 'react&apos';;
-import: { motion } from 'framer-motion&apos';;
+:src/pages/services/ai-customer-support-automation.tsx 
+import: React from 'react&apos'; 
+import: { motion } from 'framer-motion&apos'; 
 import: {
   Brain,
   BarChart3,
@@ -46,7 +46,7 @@ import: {
   Gavel,
   Clipboard,
   BookOpen,
-  LineChart ];
+  LineChart ] 
   const: analyticsTypes = [
     {
 

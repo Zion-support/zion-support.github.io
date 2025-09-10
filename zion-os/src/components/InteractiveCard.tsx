@@ -1,19 +1,8 @@
-  children?: React.ReactNode;
-}
-export default function InteractiveCard({title;
-  description;
-  icon;
-  href;
-  color = 'from-purple-500 to-blue-500';
-  className = '';
-  children;
-}: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
 'use client',;
 import React, { useState } from 'react',;
-
 import Link from 'next/link',;
 interface InteractiveCardProps {;
-  title: string,,
+  title: string,;
   description: string,;
   icon: string,;
   href: string,;
@@ -21,7 +10,6 @@ interface InteractiveCardProps {;
   className?: string,;
   children?: React.ReactNode;
 }
-pr-12325
 ;
 export default function InteractiveCard({;
   title,;
@@ -32,34 +20,43 @@ export default function InteractiveCard({;
   className = '',;
   children;
 }: InteractiveCardProps) {;
-  const [isHovered, setIsHovered] = useState(false),;    <Link;
+  const [isHovered, setIsHovered] = useState(false),;
+  return (;
+    <Link;
       href={href}
-      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
-      onMouseEnter={() => setIsHovered (true)}
-      onMouseLeave={() => setIsHovered (false)}
-      aria - label={`Navigate to ${title} page`}
->;
-      <div className="relative & quot;>;
+      className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      aria-label={`Navigate to ${title} page`}
+    >
+      <div className="relative">
         {/* Animated background */}
         <div;
-          className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
+          className={`absolute inset-0 bg-gradient-to-r ${color} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`}
         />;
         {/* Icon */}
+        <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>;
+        {/* Content */}
+        <div className="relative z-10">
+          <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
             {title}
-          </h3>;
-          <p className="text - gray - 400 leading - relaxed text - lg mb - 6">;
+          </h3>
+          <p className="text-gray-400 leading-relaxed text-lg mb-6">
             {description}
           </p>;
           {/* Custom children or default arrow */}
-
-{children || (
-
-            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
           {children || (
-            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
-              <svg
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+              <span>Learn More</span>
+              <svg 
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
+                }`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -69,27 +66,67 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+          style={{;
+            background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           }}
         />;
       </div>;
-    </Link>);
+    </Link>;
+  );
 }
+;
+export function FeatureCard({;
+  title,;
+  description,;
+  icon,;
+  href,;
+  stats,;
+  className = '';
+}: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
+  return (;
     <InteractiveCard;
       title={title}
       description={description}
       icon={icon}
       href={href}
-      className={class_name}
->;
+      className={className}
+    >
       {stats && (
+        <div className="mt-6 pt-6 border-t border-white/10">
+          <div className="grid grid-cols-2 gap-4">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
+              </div>
+            ))}
           </div>;
-        </div>)}
-    </InteractiveCard>);
+        </div>;
+      )}
+    </InteractiveCard>;
+  );
 }
-<div className="text-4xl mb-4">💬</div>
+;
+export function TestimonialCard({;
+  quote,;
+  author,;
+  position,;
+  company,;
+  rating = 5,;
+  className = '';
+}: {;
+  quote: string,;
+  author: string,;
+  position: string,;
+  company: string;
+  rating?: number;
+  className?: string;
+}) {;
+  return (;
+    <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
+      {/* Quote icon */}
       <div className="text-4xl mb-4">💬</div>
       
-
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -99,7 +136,10 @@ export default function InteractiveCard({;
         ))}
       </div>;
       {/* Quote */}
-      </blockquote>      </blockquote>      </blockquote>
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+      </blockquote>
+      
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>

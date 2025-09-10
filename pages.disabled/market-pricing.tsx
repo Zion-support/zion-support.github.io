@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   DollarSign, TrendingUp, BarChart3, Target, 
   Brain, Atom, Shield, Rocket, Globe,
   Check, Star, Zap, Award, Sparkles,
   Users, Lock, BarChart3, Lightbulb, Calculator
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function MarketPricing() {
   const pricingPlans = [
@@ -68,14 +68,14 @@ export default function MarketPricing() {
       popular: false,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+  ] 
 
   const marketData = [
     { metric: 'AI Market Size', value: '$500B+', growth: '+25%', description: 'Global AI market by 2027' },
     { metric: 'Quantum Computing', value: '$65B+', growth: '+40%', description: 'Quantum market by 2030' },
     { metric: 'Business Automation', value: '$200B+', growth: '+18%', description: 'Automation market size' },
     { metric: 'IT Asset Management', value: '$35B+', growth: '+12%', description: 'ITAM market growth' }
-  ];
+  ] 
 
   const competitors = [
     {
@@ -96,7 +96,7 @@ export default function MarketPricing() {
       features: 'Process automation only',
       advantage: 'Our platform provides end-to-end autonomous business operations'
     }
-  ];
+  ] 
 
   const roiCalculator = {
     scenarios: [
@@ -122,7 +122,7 @@ export default function MarketPricing() {
         timeframe: '8 months'
       }
     ]
-  };
+  } 
 
   return (
     <>
@@ -420,5 +420,5 @@ export default function MarketPricing() {
         </section>
       </div>
     </>
-  );
+  ) 
 }

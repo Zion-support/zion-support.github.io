@@ -525,104 +525,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-
-
-      );
-
-
-        content.includes('') ||
-        content.includes('
-
-      );
-
-        content.includes('') ||
-        content.includes('
-        content.includes('')
-
-main
-
-        content.includes('')
-
-
-    return files;
-
-  hasMergeConflicts(filePath) {
-  // TODO: Implement
-
-
-      );
-        content.includes(')
-
-
-
-        content.includes(') ||
-        content.includes(') ||
-        content.includes('
-
-      );
-
-
-        content.includes() ||
-        content.includes('') ||
-        content.includes(      );
-      );
-        content.includes('
-        content.includes('') ||
-        content.includes('') ||
-        content.includes('      );
-
-        content.includes('') ||
-        content.includes('') ||
-        content.includes('      );
-
-      );
-        content.includes('')
-      );
-        content.includes('') ||
-        content.includes('') ||
-        content.includes('      );
-        content.includes('') ||
-        content.includes('') ||
-        content.includes('      );
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-
-
-
-
-
-        content.includes('
-
-        content.includes('') ||
-      );
-
-
-
-
-
-
-content.includes('
-
-        content.includes('') ||
-      );
-    } catch (error) {
-      return false;
-    }
-  }
-  resolveFileConflicts(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        '$1'
+<<<<<<< HEAD
+=======
+=======        '$1'
         /
       content = content.replace(/
       // Remove merge conflict markers and keep HEAD version
@@ -646,56 +553,6 @@ content.includes('
       );
 
       // Clean up any remaining markers
-      content = content.replace(/\n/g, '');
-      content = content.replace(/\n/g, '');
-      content = content.replace(/
-      content = content.replace(/
-
-main
-
-      content = content.replace(/[^\n]+\n/g, '');
-
-      content = content.replace(/[^\n]+\n/g, '');
-
-
-        $1'
-      // Clean up any remaining markers
-        /\n([\s\S]*?)\n\n([\s\S]*?)\n        '$1
-        /
-
-        $1'
-      // Remove merge conflict markers and keep HEAD version;
-      content = content.replace(
-
-
-
-        '$1'
-
-        /
-        '$1'
-
-        /        '$1'
-
-      );
-        /\n(.*?)\n\n(.*?)\n        '$1'
-      );
-
-      // Clean up any remaining markers
-
-
-      content = content.replace(/[^\n]+\n/g, '');
-
-
-
-
-
-      // Clean up any remaining markers
-
-
-
-
-      content = content.replace(/
-
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, utf8');
         this.log(
@@ -1287,39 +1144,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     );
     this.log(
 
-
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Run the complete improvement suite
+const suite = new CompleteImprovementSuite();
+suite.run().catch(console.error);
+<<<<<<< HEAD
+=======
+=======#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

@@ -1,16 +1,16 @@
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-<:pages.disabled/pages/services/AIEducationPlatform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+<:pages.disabled/pages/services/AIEducationPlatform.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
+import: { SEO  } from '@/components/SEO';' 
 import: { Brain,
   GraduationCap,
   TrendingUp,
   Target,
   Users,
   BarChart3,
-=;
+= 
 import: { Brain,
   GraduationCap,
   TrendingUp,
@@ -41,40 +41,40 @@ import: { Brain,
   PenTool,
   Users as UsersIcon,
   Award,
-  Lightbulb'} from 'lucide-react';';
+  Lightbulb'} from 'lucide-react';' 
 export: { function }
 export default function AIEducationPlatform(...args[]):  {}
 
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-<:pages.disabled/pages/services/AIEducationPlatform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AIEducationPlatform.tsx 
+      <SEO 
+= 
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+  y: 20 
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button'
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-teal-700 hove,
-    r:to-cyan-700 transition-all duration-200';
-                Start Free Trial;
+    r:to-cyan-700 transition-all duration-200' 
+                Start Free Trial 
               </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200';
-                Watch Demo;
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
+                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200' 
+                Watch Demo 
   ,
     y: 0}}
             transition={{ duration: 0.8 }}
-'';
+'' 
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Education'
             </div>'''
@@ -89,17 +89,17 @@ export default function AIEducationPlatform(...args[]):  {}
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-teal-700 hove,
-    r:to-cyan-700 transition-all duration-200'';
-                Start Free Trial;
+    r:to-cyan-700 transition-all duration-200'' 
+                Start Free Trial 
               </motion.button>
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'';
-                Watch Demo;
+                whileTap={{ scale: 0.95 }} 
+                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'' 
+                Watch Demo 
 
               </motion.button>
             </div>
@@ -120,18 +120,18 @@ export default function AIEducationPlatform(...args[]):  {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+  y: 20 
 
                   <CheckCircle className='w-6 h-6 text-white'  />'
                 </div>'                <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -150,18 +150,18 @@ export default function AIEducationPlatform(...args[]):  {}
             {benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+  y: 20 
 
                   <TrendingUp className='w-10 h-10 text-white'  />'
                 </div>'                <p className='text-lg text-white font-medium'>{benefit}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -180,18 +180,18 @@ export default function AIEducationPlatform(...args[]):  {}
             {useCases.map(useCas,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+  y: 20 
 
                   <GraduationCap className='w-8 h-8 text-white'  />'
                 </div>'                <h3 className='text-lg font-semibold text-white'>{useCase}</h3>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -204,7 +204,7 @@ export default function AIEducationPlatform(...args[]):  {}
 
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -213,12 +213,12 @@ export default function AIEducationPlatform(...args[]):  {}
             {pricing.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
+  y: 20 
 
                     </li>
                   ))}
@@ -228,19 +228,19 @@ export default function AIEducationPlatform(...args[]):  {}
                   whileHover={{ scale: 1.02 }}`;`
                   whileTap={{ scale: 0.98 }}``;`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${`
-';
-                    plan.popular'';
+' 
+                    plan.popular'' 
                       ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover: from-teal-700 hover:to-cyan-700'''`;`
                       : 'bg-gray-700 text-white hove,
-    r:bg-gray-600'``;
-                <motion.button;
+    r:bg-gray-600'`` 
+                <motion.button 
                   whileHover={{ scal,
     e: 1.02 }}`
                   whileTap={{ scale: 0.98 }}`;`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}`
-                    plan.popular';
+                    plan.popular' 
                       ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover: from-teal-700 hove,
-    r:to-cyan-700'';
+    r:to-cyan-700'' 
                       : 'bg-gray-700 text-white hove,
     r:bg-gray-600'`}`}
 
@@ -263,17 +263,17 @@ export default function AIEducationPlatform(...args[]):  {}
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-teal-700 hove,
-    r:to-cyan-700 transition-all duration-200'';
-                Start Free Trial;
+    r:to-cyan-700 transition-all duration-200'' 
+                Start Free Trial 
               </motion.button>
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'';
-                Schedule Demo;
+                whileTap={{ scale: 0.95 }} 
+                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'' 
+                Schedule Demo 
               </motion.button>'
             </div>'''
             <p className='text-sm text-gray-400 mt-4'>
@@ -288,7 +288,7 @@ export default function AIEducationPlatform(...args[]):  {}
       <section className='py-12 px-4 sm: px-6 lg:px-8 bg-gray-800/50>'
         <div className='max-w-4xl mx-auto text-center>''
           <p className='text-gray-400 mb-4'>
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
+:pages.disabled/pages/services/AIEducationPlatform.tsx 
 
             <span>📞 +1 302 464 0950</span>
 
