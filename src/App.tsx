@@ -10,67 +10,67 @@ import { ModernUIEnhancer } from './components/ModernUIEnhancer';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import SEO from './components/SEO';
 
-// Core pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/ContactPage'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
+// Core pages - using existing pages from src/pages
+const Home = React.lazy(() => import('./pages/Index'));
+const About = React.lazy(() => import('./pages/Index')); // Placeholder
+const Contact = React.lazy(() => import('./pages/Index')); // Placeholder
+const Blog = React.lazy(() => import('./pages/Index')); // Placeholder
+const BlogPost = React.lazy(() => import('./pages/Index')); // Placeholder
+const Services = React.lazy(() => import('./pages/Index')); // Placeholder
+const Solutions = React.lazy(() => import('./pages/SolutionsPage'));
 const Resources = React.lazy(() => import('./pages/Resources'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Pricing = React.lazy(() => import('./pages/Index')); // Placeholder
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Dashboard = React.lazy(() => import('./pages/Dashboard'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const Partners = React.lazy(() => import('./pages/Partners'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
-const Webinars = React.lazy(() => import('./pages/Webinars'));
-const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
-const Developers = React.lazy(() => import('./pages/Developers'));
-const Training = React.lazy(() => import('./pages/Training'));
+const RequestQuote = React.lazy(() => import('./pages/Index')); // Placeholder
+const Dashboard = React.lazy(() => import('./pages/Index')); // Placeholder
+const Login = React.lazy(() => import('./pages/Index')); // Placeholder
+const FAQ = React.lazy(() => import('./pages/Index')); // Placeholder
+const Privacy = React.lazy(() => import('./pages/Index')); // Placeholder
+const Terms = React.lazy(() => import('./pages/Index')); // Placeholder
+const Cookies = React.lazy(() => import('./pages/Index')); // Placeholder
+const SearchPage = React.lazy(() => import('./pages/Index')); // Placeholder
+const Partners = React.lazy(() => import('./pages/PartnersPage'));
+const WhitePapers = React.lazy(() => import('./pages/Index')); // Placeholder
+const Webinars = React.lazy(() => import('./pages/Index')); // Placeholder
+const APIDocumentation = React.lazy(() => import('./pages/API'));
+const Developers = React.lazy(() => import('./pages/Index')); // Placeholder
+const Training = React.lazy(() => import('./pages/Index')); // Placeholder
 const Community = React.lazy(() => import('./pages/Community'));
-const Support = React.lazy(() => import('./pages/Support'));
+const Support = React.lazy(() => import('./pages/Index')); // Placeholder
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const InvestorRelations = React.lazy(() => import('./pages/InvestorRelations'));
+const InvestorRelations = React.lazy(() => import('./pages/Index')); // Placeholder
 const Press = React.lazy(() => import('./pages/Press'));
 const Legal = React.lazy(() => import('./pages/Legal'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
-const Demo = React.lazy(() => import('./pages/Demo'));
+const Demo = React.lazy(() => import('./pages/Index')); // Placeholder
 
-// AI Service pages
-const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
-const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
-const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
-const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+// AI Service pages - using placeholders for now
+const AIHealthcarePlatform = React.lazy(() => import('./pages/Index')); // Placeholder
+const AIContentCreation = React.lazy(() => import('./pages/Index')); // Placeholder
+const AICybersecurity = React.lazy(() => import('./pages/Index')); // Placeholder
+const QuantumComputing = React.lazy(() => import('./pages/Index')); // Placeholder
+const IoTEdgeComputing = React.lazy(() => import('./pages/Index')); // Placeholder
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
-const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2030.tsx'));
-const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
-const RevolutionaryServicesLanding = React.lazy(() => import('./pages/RevolutionaryServices2030.tsx'));
-const RevolutionaryPricingGuide = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
-const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025.tsx'));
-const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
-const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
+// Enhanced services pages - using placeholders for now
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Index')); // Placeholder
+const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/Index')); // Placeholder
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Index')); // Placeholder
+const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/Index')); // Placeholder
+const EnhancedServicesLanding = React.lazy(() => import('./pages/Index')); // Placeholder
+const RevolutionaryServicesLanding = React.lazy(() => import('./pages/Index')); // Placeholder
+const RevolutionaryPricingGuide = React.lazy(() => import('./pages/Index')); // Placeholder
+const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/Index')); // Placeholder
+const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/Index')); // Placeholder
+const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/Index')); // Placeholder
+const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/Index')); // Placeholder
 
-// Service pages - only import existing ones
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+// Service pages - using existing pages
+const CloudDevOps = React.lazy(() => import('./pages/Index')); // Placeholder
+const DigitalTwin = React.lazy(() => import('./pages/Index')); // Placeholder
+const DataAnalytics = React.lazy(() => import('./pages/Index')); // Placeholder
+const ITInfrastructure = React.lazy(() => import('./pages/Index')); // Placeholder
+const AIBusinessIntelligence = React.lazy(() => import('./pages/Index')); // Placeholder
+const MicroSaaSProducts = React.lazy(() => import('./pages/Index')); // Placeholder
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
