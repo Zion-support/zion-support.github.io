@@ -15,13 +15,10 @@ export default function LoadingFallback({ }: LoadingFallbackProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-
-}
 }

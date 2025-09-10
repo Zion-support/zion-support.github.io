@@ -6,35 +6,11 @@ class IntelligentErrorDetector {
   // TODO: Implement
 }
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     this.projectRoot = process.cwd();
     this.errors = [];
     this.fixes = [];
     this.patterns = {
-          conflictType = 'branch';
-          continue;
-        } else if (line.includes('>>>>>>>')) {
-          // End of conflict - choose the newer version (branch content)
-          if (branchContent.length > 0) {
-            fixedLines.push(...branchContent);
-          } else if (headContent.length > 0) {
-            fixedLines.push(...headContent);
-          inConflict = false;
-          conflictType = null;
-          headContent = [];
-          branchContent = [];
-        if (inConflict) {
-
             branchContent.push(line);
         } else {
   // TODO: Implement
@@ -101,8 +77,6 @@ class IntelligentErrorDetector {
             await this.fixUnescapedEntities(file);
     // Generate report;
     this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
-<<<<<<< HEAD
-<<<<<<< HEAD
     this.log('=====================================');
     this.log(`Files scanned: ${allFiles.length}`);
     this.log(`Files with issues: ${this.errors.length}`);
@@ -133,9 +107,6 @@ class IntelligentErrorDetector {
       fixesApplied: this.fixes.length,
       errors: this.errors,
       fixes: this.fixes
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.errorPatterns = {
       syntax: /SyntaxError|ParseError|Unexpected token/gi,
       type: /TypeError|ReferenceError/gi,
@@ -317,29 +288,29 @@ class IntelligentErrorDetector {
     return files;
   }
 
-  async generateErrorReport(errors) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalErrors: Object.values(errors).reduce(
-        (sum, arr) => sum + arr.length,
-        0
-      ),
-      errorsByCategory: Object.entries(errors).reduce(
-        (acc, [category, errorList]) => {
-    acc[category] = errorList.length,
-    return acc
-  },
-        {}
-      ),
-      details: errors,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    this.projectRoot = process.cwd();
-    this.errors = [];
-    this.fixes = [];
-    this.patterns = {
-          conflictType = 'branch';
+  isRelevantFile(filename) {
+    const extensions = ['.tsx', '.ts', '.jsx', '.js', '.cjs', '.mjs'];
+    return extensions.some(ext => filename.endsWith(ext));
+  }
+
+  async fixMergeConflicts(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inConflict = false;
+      let conflictType = null;
+      let headContent = [];
+      let branchContent = [];
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('')) {
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+        } else if (line.includes('')) {          conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {
           // End of conflict - choose the newer version (branch content)
@@ -523,20 +494,10 @@ class IntelligentErrorDetector {
       fixesApplied: this.fixes.length,
       errors: this.errors,
       fixes: this.fixes
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     this.log('
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
   }
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     };
 )
@@ -545,16 +506,6 @@ if (require.main === module) {
   detector.run().catch(console.error);
 
 module.exports = IntelligentErrorDetector;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     this.errorPatterns = {
       synta: x: /SyntaxError|ParseError|Unexpected token/gi,
       typ: e: /TypeError|ReferenceError/gi,
@@ -809,16 +760,4 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentErrorDetector;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
