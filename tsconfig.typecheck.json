@@ -2,6 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": true
-  }
+  },
+  "files": [
+    "./typecheck.d.ts"
+  ]
 }
 
