@@ -304,5 +304,3 @@ function ChatAssistant() {
     </>
   );
 };
-
-export default ChatAssistant;

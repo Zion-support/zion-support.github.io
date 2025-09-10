@@ -2,6 +2,7 @@ import React from 'react';
 import { Newspaper, Calendar, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO';
 
+<<<<<<< HEAD
 const Press = () => {
   const pressReleases = [
     {
@@ -24,10 +25,14 @@ const Press = () => {
     }
   ];
 
+=======
+export default function Press() {
+>>>>>>> 2e76c8f17382c83630cd66eed177eb9d0ef16e40
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Press - Zion Tech Group"
+<<<<<<< HEAD
         description="Latest news, press releases, and media coverage about Zion Tech Group."
         keywords={["press", "news", "media", "press releases", "coverage"]}
       />
@@ -73,11 +78,18 @@ const Press = () => {
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
               Contact Media Team
             </button>
+=======
+        description="Press releases and media coverage for Zion Tech Group."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">Press</h1>
+            <p className="text-xl text-slate-300">Press releases and media coverage.</p>
+>>>>>>> 2e76c8f17382c83630cd66eed177eb9d0ef16e40
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Press;
+}
