@@ -24,6 +24,15 @@ export default defineConfig({
       '@constants': resolve(__dirname, 'src/constants')
     }
   },
+  css: {
+    postcss: './postcss.config.cjs'
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
+    jsx: 'automatic'
+  },
   build: {
     target: 'esnext',
     minify: 'terser',
