@@ -1,307 +1,206 @@
 import React, { useState } from 'react';
+import { Calendar, Clock, User, Mail, Phone } from 'lucide-react';
 import SEO from '../components/SEO';
 
-const ScheduleDemo: React.FC = () => {
+const ScheduleDemo = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
     phone: '',
-    role: '',
-    demoType: '',
-    preferredDate: '',
-    preferredTime: '',
-    timezone: '',
+    company: '',
+    date: '',
+    time: '',
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Handle form submission
     console.log('Demo request submitted:', formData);
-    alert('Thank you for your demo request! We will contact you to confirm the schedule.');
   };
 
-  const demoTypes = [
-    'AI Services Overview',
-    'Cybersecurity Solutions',
-    'Cloud Computing Platform',
-    'Custom Development',
-    'Enterprise Solutions',
-    'API Integration'
-  ];
-
-  const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Schedule Demo - Zion Tech Group"
-        description="Schedule a personalized demo of our AI and technology services. See how we can help your business."
-        keywords="schedule demo, book demo, ai demo, technology demo, zion tech group"
+        description="Schedule a personalized demo of our AI and technology solutions."
+        keywords={["demo", "schedule", "consultation", "presentation", "trial"]}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Schedule a Demo
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See our AI and technology services in action. Schedule a personalized demo tailored to your business needs.
-              </p>
-            </div>
+      
+      <div className="max-w-4xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Schedule a Demo</h1>
+          <p className="text-xl text-gray-300">
+            See our solutions in action with a personalized demonstration
+          </p>
+        </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Demo Information */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h2 className="text-2xl font-bold text-white mb-6">What to Expect</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      1
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Personalized Presentation</h3>
-                      <p className="text-gray-300">We'll tailor the demo to your specific industry and use cases.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      2
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Live Q&A Session</h3>
-                      <p className="text-gray-300">Ask questions and get detailed answers from our experts.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      3
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Custom Solutions</h3>
-                      <p className="text-gray-300">Discuss how our services can be customized for your business.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      4
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Next Steps</h3>
-                      <p className="text-gray-300">Get a detailed proposal and implementation timeline.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-6 bg-white/5 rounded-lg">
-                  <h3 className="text-lg font-semibold text-white mb-3">Demo Duration</h3>
-                  <p className="text-gray-300 mb-2">• 30-45 minutes presentation</p>
-                  <p className="text-gray-300 mb-2">• 15 minutes Q&A session</p>
-                  <p className="text-gray-300">• Total: 45-60 minutes</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Schedule a Demo?</h2>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <Calendar className="h-6 w-6 text-blue-400 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Personalized Experience</h3>
+                  <p className="text-gray-300">Get a customized demonstration tailored to your specific needs and use cases.</p>
                 </div>
               </div>
-
-              {/* Demo Request Form */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h2 className="text-2xl font-bold text-white mb-6">Request Your Demo</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none"
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none"
-                        placeholder="Your company name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Your Role *
-                      </label>
-                      <select
-                        name="role"
-                        value={formData.role}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-purple-400 focus:outline-none"
-                      >
-                        <option value="">Select your role</option>
-                        <option value="ceo">CEO/Founder</option>
-                        <option value="cto">CTO</option>
-                        <option value="it-director">IT Director</option>
-                        <option value="developer">Developer</option>
-                        <option value="manager">Manager</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Demo Type *
-                      </label>
-                      <select
-                        name="demoType"
-                        value={formData.demoType}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-purple-400 focus:outline-none"
-                      >
-                        <option value="">Select demo type</option>
-                        {demoTypes.map((type) => (
-                          <option key={type} value={type}>{type}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Preferred Date *
-                      </label>
-                      <input
-                        type="date"
-                        name="preferredDate"
-                        value={formData.preferredDate}
-                        onChange={handleInputChange}
-                        required
-                        min={new Date().toISOString().split('T')[0]}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-purple-400 focus:outline-none"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Preferred Time *
-                      </label>
-                      <select
-                        name="preferredTime"
-                        value={formData.preferredTime}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-purple-400 focus:outline-none"
-                      >
-                        <option value="">Select time</option>
-                        {timeSlots.map((time) => (
-                          <option key={time} value={time}>{time}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2">
-                        Timezone *
-                      </label>
-                      <select
-                        name="timezone"
-                        value={formData.timezone}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-purple-400 focus:outline-none"
-                      >
-                        <option value="">Select timezone</option>
-                        <option value="EST">Eastern Time (EST)</option>
-                        <option value="CST">Central Time (CST)</option>
-                        <option value="MST">Mountain Time (MST)</option>
-                        <option value="PST">Pacific Time (PST)</option>
-                        <option value="GMT">Greenwich Mean Time (GMT)</option>
-                        <option value="CET">Central European Time (CET)</option>
-                        <option value="JST">Japan Standard Time (JST)</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-300 mb-2">
-                      Additional Message
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none"
-                      placeholder="Tell us about your specific needs or questions..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors"
-                  >
-                    Schedule Demo
-                  </button>
-                </form>
+              
+              <div className="flex items-start space-x-4">
+                <Clock className="h-6 w-6 text-green-400 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Expert Guidance</h3>
+                  <p className="text-gray-300">Our experts will guide you through the features and answer all your questions.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <User className="h-6 w-6 text-purple-400 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">No Commitment</h3>
+                  <p className="text-gray-300">Explore our solutions without any obligation or commitment.</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <div className="bg-slate-800/50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Schedule Your Demo</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Your company name"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="date" className="block text-sm font-medium text-gray-300 mb-2">
+                    Preferred Date
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="time" className="block text-sm font-medium text-gray-300 mb-2">
+                    Preferred Time
+                  </label>
+                  <select
+                    id="time"
+                    name="time"
+                    value={formData.time}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">Select time</option>
+                    <option value="9am">9:00 AM</option>
+                    <option value="10am">10:00 AM</option>
+                    <option value="11am">11:00 AM</option>
+                    <option value="1pm">1:00 PM</option>
+                    <option value="2pm">2:00 PM</option>
+                    <option value="3pm">3:00 PM</option>
+                    <option value="4pm">4:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Additional Information
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={4}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Tell us about your specific needs or questions..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Schedule Demo
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

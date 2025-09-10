@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock } from 'lucide-react';
@@ -327,3 +328,5 @@ const AIBusinessIntelligence = () => {
       </div>
     </div>)};
 export default AIBusinessIntelligence;
+=======
+>>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

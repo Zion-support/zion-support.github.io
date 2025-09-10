@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 const $page = () => {
@@ -389,3 +390,5 @@ export default function Pricing() {
         </div>
       </div>
     </div>)}
+=======
+>>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

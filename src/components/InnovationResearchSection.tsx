@@ -2,6 +2,7 @@
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
 
+<<<<<<< HEAD
 >>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
 =======
 import React, { useState } from 'react';
@@ -486,3 +487,5 @@ export function InnovationResearchSection() {
       </div>
     </section>)}
 >>>>>>> origin/clean-error-fixing-automation
+=======
+>>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

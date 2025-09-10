@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
@@ -171,3 +172,28 @@ export default function BlogPost() {
         </div>
       </div>
     </>)}
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+
+const BlogPost: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Blog Post - Zion Tech Group"
+        description="Read our latest blog post."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center text-white">
+          <h1 className="text-4xl font-bold mb-4">Blog Post</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Read our latest insights and updates.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogPost;
+>>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

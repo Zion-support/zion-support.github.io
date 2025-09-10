@@ -1,58 +1,82 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Server, Network, Shield, Settings } from 'lucide-react';
+>>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
 import SEO from '../../components/SEO';
 
-const ITInfrastructure: React.FC = () => {
-  return (
-    <>
-      <SEO 
-        title="IT Infrastructure Services - Zion Tech Group"
-        description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
-        keywords="it infrastructure, server management, network design, data centers, infrastructure security"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                IT Infrastructure Services
-              </h1>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Build a solid foundation for your business with enterprise-grade IT infrastructure. 
-                Our comprehensive services ensure reliability, scalability, and security.
-              </p>
-            </div>
+const ITInfrastructure = () => {
+  const features = [
+    {
+      title: "Server Management",
+      description: "Comprehensive server infrastructure design and management",
+      icon: <Server className="h-8 w-8 text-blue-400" />
+    },
+    {
+      title: "Network Design",
+      description: "Secure and scalable network architecture solutions",
+      icon: <Network className="h-8 w-8 text-green-400" />
+    },
+    {
+      title: "Security Implementation",
+      description: "Enterprise-grade security measures and compliance",
+      icon: <Shield className="h-8 w-8 text-red-400" />
+    },
+    {
+      title: "System Optimization",
+      description: "Optimize IT infrastructure for maximum performance",
+      icon: <Settings className="h-8 w-8 text-yellow-400" />
+    }
+  ];
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">Coming Soon</h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our IT infrastructure services are currently under development. These services will include:
-              </p>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  Network design and implementation
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  Server management and administration
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  Storage solutions and data management
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  Security infrastructure implementation
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  Cloud infrastructure migration
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-400 mr-3">✓</span>
-                  24/7 monitoring and support
-                </li>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="IT Infrastructure - Zion Tech Group"
+        description="Comprehensive IT infrastructure solutions for modern businesses."
+        keywords={["IT infrastructure", "server management", "network design", "system optimization"]}
+      />
+      
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">IT Infrastructure</h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Build and manage robust IT infrastructure that supports your business growth
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+              <div className="flex justify-center mb-4">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-slate-800/50 rounded-lg p-8">
+          <h2 className="text-3xl font-bold text-white mb-6">Infrastructure Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-4">Core Infrastructure</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Server hardware and software</li>
+                <li>• Network design and implementation</li>
+                <li>• Storage solutions</li>
+                <li>• Backup and disaster recovery</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-4">Management</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>• 24/7 monitoring and support</li>
+                <li>• Performance optimization</li>
+                <li>• Security management</li>
+                <li>• Compliance and auditing</li>
               </ul>
             </div>
           </div>
@@ -256,7 +280,7 @@ const ITInfrastructure = () => {
         </section>
 >>>>>>> origin/clean-error-fixing-automation
       </div>
-    </>
+    </div>
   );
 };
 

@@ -10,7 +10,7 @@ import { _BenefitsSection } from "@/components/BenefitsSection";
 import { _HowItWorksSection } from "@/components/HowItWorksSection";
 import { _WaitlistSection } from "@/components/WaitlistSection";
 import { _BlogSection } from "@/components/BlogSection";
-import { _SEO } from "@/components/SEO";
+import SEO from "../components/SEO";
 import { _Link } from "react-router-dom";
 import { _FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { _FeaturesGuideSection } from "@/components/FeaturesGuideSection";
@@ -20,7 +20,7 @@ import { _useLanguage } from "@/context/LanguageContext";
 import { _ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
 
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Settings } from 'lucide-react';
 import { Zap } from 'lucide-react';
 const features = [];
