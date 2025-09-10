@@ -8,7 +8,7 @@
   skip_processing = false
 
 [build.environment]
-  NODE_VERSION = "22.16.0"
+  NODE_VERSION = "20.19.0"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Skip Sharp postinstall to avoid NAPI issues
   SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
