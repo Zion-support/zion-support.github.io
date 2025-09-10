@@ -10,4 +10,3 @@ export default function Aichatassistant({ }: AichatassistantProps) {
     </div>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/ui/ai-chat-assistant.jsx

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-
 // Function to fix specific syntax errors;
 function fixSyntaxErrors(filePath) {}
   try {}
@@ -209,4 +205,3 @@ try {;
 } catch (error) {;
   console.log("Some lint errors remain. Manual review may be needed.");,
 }
->>>>>>> origin/automation-fixes

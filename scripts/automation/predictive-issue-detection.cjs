@@ -8,12 +8,6 @@
  * Predictive Issue Detection System - PM2 Automation;
  * Identifies potential problems before they occur using ML patterns and historical data;
  */;
-<<<<<<< HEAD
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-const crypto = require("crypto");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -371,9 +365,7 @@ class $1 {
         accuracy: 0}}
   }
   async runPredictiveIssueDetection() {
-  this.log(`Starting Predictive Issue Detection analysis...`)
->>>>>>> origin/automation-fixes
-    try {
+  this.log(`Starting Predictive Issue Detection analysis...`)    try {
   // 1. Collect current project metrics;
       const currentMetrics = await this.collectCurrentMetrics();
       // 2. Analyze historical trends;
@@ -381,123 +373,6 @@ class $1 {
       // 3. Detect anomaly patterns;
       const anomalyDetection = await this.detectAnomalies(currentMetrics);
       // 4. Generate issue predictions;
-<<<<<<< HEAD
-      const predictions = await this.generateIssuePredictions(;
-=======
-      const predictions = await this.generateIssuePredictions(
->>>>>>> origin/automation-fixes
-        currentMetrics,
-        trendAnalysis,
-        anomalyDetection;
-      );
-      // 5. Calculate prediction confidence;
-      const confidenceAnalysis =;
-        await this.calculatePredictionConfidence(predictions);
-      // 6. Generate prevention recommendations;
-<<<<<<< HEAD
-      const recommendations = await this.generatePreventionRecommendations(;
-=======
-      const recommendations = await this.generatePreventionRecommendations(
->>>>>>> origin/automation-fixes
-        predictions,
-        confidenceAnalysis;
-      )
-      // 7. Update historical data;
-      await this.updateHistoricalData(currentMetrics, predictions)
-      // 8. Generate prediction report;
-<<<<<<< HEAD
-      const report = await this.generatePredictionReport(;
-=======
-      const report = await this.generatePredictionReport(
->>>>>>> origin/automation-fixes
-        currentMetrics,
-        predictions,
-        confidenceAnalysis,
-        recommendations;
-<<<<<<< HEAD
-      );
-      this.log("Predictive Issue Detection analysis completed successfully");
-      return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR");
-      throw error}
-  }
-;
-  async collectCurrentMetrics() {
-  this.log("Collecting current project metrics...");
-    const metrics = {
-  "timestamp": new Date().toISOString(),
-      "buildMetrics": {},
-      "codeMetrics": {},
-      "runtimeMetrics": {},
-      "dependencyMetrics": {},
-      "performanceMetrics": {}}
-    try {
-  // Build metrics;
-      metrics.buildMetrics = await this.collectBuildMetrics();
-      // Code metrics;
-      metrics.codeMetrics = await this.collectCodeMetrics();
-      // Runtime metrics;
-      metrics.runtimeMetrics = await this.collectRuntimeMetrics();
-      // Dependency metrics;
-      metrics.dependencyMetrics = await this.collectDependencyMetrics();
-      // Performance metrics;
-      metrics.performanceMetrics = await this.collectPerformanceMetrics();
-      this.log("Project metrics collection completed");
-  async collectCurrentMetrics() {
-  this.log("Collecting current project metrics...");
-    const metrics = {
-  "timestamp": new Date().toISOString(),
-      "buildMetrics": {},
-      "codeMetrics": {},
-      "runtimeMetrics": {},
-      "dependencyMetrics": {},
-      "performanceMetrics": {}}
-;
-    try {
-  // Build metrics;
-      metrics.buildMetrics = await this.collectBuildMetrics();
-      // Code metrics;
-      metrics.codeMetrics = await this.collectCodeMetrics();
-      // Runtime metrics;
-      metrics.runtimeMetrics = await this.collectRuntimeMetrics();
-      // Dependency metrics;
-      metrics.dependencyMetrics = await this.collectDependencyMetrics();
-      // Performance metrics;
-      metrics.performanceMetrics = await this.collectPerformanceMetrics();
-      this.log("Project metrics collection completed");
-      return metrics} catch (error) {  this.log(`Failed to collect "metrics": ${error.message  }`, "ERROR");
-      throw error}
-  }
-;
-=======
-      )
-      this.log(`Predictive Issue Detection analysis completed successfully`)
-      return report;
-} catch (error) {  this.log(`Predictive Issue Detection failed: ${error.message  }`, `ERROR`)
-      throw error;
-}
-  }
-  async collectCurrentMetrics() {
-  this.log(`Collecting current project metrics...`)
-    const metrics = {
-  timestamp: new Date().toISOString(),
-      buildMetrics: {},
-      codeMetrics: {},
-      runtimeMetrics: {},
-      dependencyMetrics: {},
-      performanceMetrics: {}}
-    try {
-  // Build metrics;
-      metrics.buildMetrics = await this.collectBuildMetrics()
-      // Code metrics;
-      metrics.codeMetrics = await this.collectCodeMetrics()
-      // Runtime metrics;
-      metrics.runtimeMetrics = await this.collectRuntimeMetrics()
-      // Dependency metrics;
-      metrics.dependencyMetrics = await this.collectDependencyMetrics()
-      // Performance metrics;
-      metrics.performanceMetrics = await this.collectPerformanceMetrics()
-      this.log(`Project metrics collection completed`)
-
   async collectCurrentMetrics() {
   this.log("Collecting current project metrics...")
 
@@ -530,19 +405,10 @@ class $1 {
 } catch (error) {  this.log(`Failed to collect metrics: ${error.message  }`, `ERROR`)
       throw error;
 }
-  }
->>>>>>> origin/automation-fixes
-  async collectBuildMetrics() {
+  }  async collectBuildMetrics() {
   const buildMetrics = {}
     try {
   // Build time;
-<<<<<<< HEAD
-      const startTime = Date.now();
-      const buildResult = execSync("npm run build", {
-  "encoding": "utf8",
-        "stdio": "pipe"});
-      const buildTime = Date.now() - startTime;
-
       buildMetrics.buildTime = buildTime;
       buildMetrics.buildSuccess = true;
       buildMetrics.buildOutput = buildResult;
@@ -636,9 +502,7 @@ class $1 {
       fileCount,
       averageFileSize: totalSize / fileCount,,
 }
-  }
->>>>>>> origin/automation-fixes
-  async collectCodeMetrics() {
+  }  async collectCodeMetrics() {
   const codeMetrics = {}
     try {
   try {
@@ -648,42 +512,6 @@ class $1 {
       codeMetrics.totalLines = 0;
       codeMetrics.complexityScore = 0;
       for (const file of sourceFiles) {
-<<<<<<< HEAD
-  const content = fs.readFileSync(file, "utf8");
-        const lines = content.split("\n").length;
-        codeMetrics.totalLines += lines;
-        // Calculate complexity;
-        const complexity = this.calculateFileComplexity(content);
-        codeMetrics.complexityScore += complexity}
-;
-=======
-  const content = fs.readFileSync(file, `utf8`)
-        const lines = content.split(`\n`).length;
-        codeMetrics.totalLines += lines;
-        // Calculate complexity;
-        const complexity = this.calculateFileComplexity(content)
-        codeMetrics.complexityScore += complexity;
-}
->>>>>>> origin/automation-fixes
-      codeMetrics.averageComplexity =;
-        codeMetrics.complexityScore / sourceFiles.length;
-      codeMetrics.averageLinesPerFile =;
-        codeMetrics.totalLines / codeMetrics.fileCount;
-<<<<<<< HEAD
-      // Code quality metrics;
-      codeMetrics.codeQuality = await this.analyzeCodeQuality(sourceFiles)} catch (error) {  this.log(`Failed to collect code "metrics": ${error.message  }`, "WARN")}
-;
-    return codeMetrics}
-;
-  getSourceFiles() {
-  const sourceFiles = [];
-    const sourceDirs = ["src", "components", "utils", "hooks", "api"];
-    for (const dir of sourceDirs) {
-  const dirPath = path.join(this.projectRoot, "dir);
-      if (fs.existsSync(dirPath)) {
-  this.scanDirectory(dirPath", sourceFiles)}
-=======
-
       // Code quality metrics;
       codeMetrics.codeQuality = await this.analyzeCodeQuality(sourceFiles),
 } catch (error) {  this.log(`Failed to collect code metrics: ${error.message  }`, `WARN`),
@@ -697,62 +525,10 @@ class $1 {
   const dirPath = path.join(this.projectRoot, "dir)
       if (fs.existsSync(dirPath)) {
   this.scanDirectory(dirPath", sourceFiles),
-}
->>>>>>> origin/automation-fixes
-    }
+}    }
 
     return sourceFiles.filter(;
       file =>;
-<<<<<<< HEAD
-        file.endsWith(".js") || file.endsWith(".ts") || file.endsWith(".tsx");
-    )}
-;
-  scanDirectory(dirPath, fileList) {
-  const files = fs.readdirSync(dirPath);
-    for (const file of files) {
-  const filePath = path.join(dirPath, "file);
-      const stats = fs.statSync(filePath);
-      if (stats.isDirectory()) {
-  this.scanDirectory(filePath", fileList)} else {
-  fileList.push(filePath)}
-    }
-  }
-;
-  calculateFileComplexity(content) {
-  const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""];
-    let complexity = 1;
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g");
-  calculateFileComplexity(content) {
-  const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "];
-    let complexity = 1;
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g");
-      const matches = content.match(regex);
-      if (matches) {
-  complexity += matches.length}
-    }
-;
-    return complexity}
-;
-  async analyzeCodeQuality(files) {
-  const qualityMetrics = {
-  "duplicationScore": 0,
-      "maintainabilityScore": 0,
-      "securityScore": 0}
-    try {
-  // Run ESLint for code quality;
-      const lintResult = execSync("npm run lint", {
-  "encoding": "utf8",
-        "stdio": "pipe"});
-      const lintIssues = this.parseLintOutput(lintResult);
-      qualityMetrics.lintIssues = lintIssues.length;
-      qualityMetrics.maintainabilityScore = Math.max(;
-=======
-        file.endsWith(".js") || file.endsWith(".ts") || file.endsWith(".tsx")
-    ),
-}
-  scanDirectory(dirPath, fileList) {
-  const files = fs.readdirSync(dirPath)
-
     for (const file of files) {
   const filePath = path.join(dirPath, "file)
       const stats = fs.statSync(filePath)
@@ -797,36 +573,12 @@ class $1 {
       const lintIssues = this.parseLintOutput(lintResult)
 
       qualityMetrics.lintIssues = lintIssues.length;
-      qualityMetrics.maintainabilityScore = Math.max(
->>>>>>> origin/automation-fixes
-        0,
+      qualityMetrics.maintainabilityScore = Math.max(        0,
         100 - lintIssues.length * 2;
       )
       // Check for code duplication;
       qualityMetrics.duplicationScore = this.calculateDuplicationScore(files)
       // Check for security issues;
-<<<<<<< HEAD
-      qualityMetrics.securityScore = this.calculateSecurityScore(files)} catch (error) {
-  // Lint failed, assume poor quality;
-      qualityMetrics.maintainabilityScore = 50}
-;
-      qualityMetrics.maintainabilityScore = Math.max(;
-        0,
-        100 - lintIssues.length * 2;
-      );
-      // Check for code duplication;
-      qualityMetrics.duplicationScore = this.calculateDuplicationScore(files);
-      // Check for security issues;
-      qualityMetrics.securityScore = this.calculateSecurityScore(files)} catch (error) {
-  // Lint failed, assume poor quality;
-      qualityMetrics.maintainabilityScore = 50}
-;
-    return qualityMetrics}
-;
-  parseLintOutput(lintOutput) {
-  const issues = [];
-    const lines = lintOutput.split("\n");
-
     for (const line of lines) {
   if (line.includes("error") || line.includes("warning")) {
   issues.push(line.trim());}
@@ -888,15 +640,9 @@ class $1 {
 
         const similarity = this.calculateSimilarity(content1, content2)
         totalDuplication += similarity;
-}
->>>>>>> origin/automation-fixes
-    }
+}    }
 
     const averageDuplication =;
-<<<<<<< HEAD
-      totalDuplication / ((files.length * (files.length - 1)) / 2);
-    return Math.max(0, 100 - averageDuplication * 100);}
-
   calculateSimilarity(content1, content2) {
   const lines1 = content1.split("\n");
     const lines2 = content2.split(`\n`);
@@ -964,73 +710,11 @@ class $1 {
       }
     }
     return Math.max(0, securityScore),
-}
->>>>>>> origin/automation-fixes
-  async collectRuntimeMetrics() {
+}  async collectRuntimeMetrics() {
   const runtimeMetrics = {}
     try {
   // Process metrics;
       runtimeMetrics.processMetrics = {
-<<<<<<< HEAD
-  "memoryUsage": process.memoryUsage(),
-        "cpuUsage": process.cpuUsage(),
-        "uptime": process.uptime()}
-;
-    try {
-  // Process metrics;
-      runtimeMetrics.processMetrics = {
-  "memoryUsage": process.memoryUsage(),
-        "cpuUsage": process.cpuUsage(),
-        "uptime": process.uptime()}
-;
-      // System metrics;
-      runtimeMetrics.systemMetrics = await this.collectSystemMetrics()} catch (error) {  this.log(`Failed to collect runtime "metrics": ${error.message  }`, "WARN")}
-;
-    return runtimeMetrics}
-;
-  async collectSystemMetrics() {
-  try {
-  const memoryInfo = execSync("free -m", { "encoding": "utf8" });
-      const cpuInfo = execSync("top -bn1 | grep "Cpu(s), {
-  "encoding": "utf8",
-  async collectSystemMetrics() {
-  try {
-  const memoryInfo = execSync("free -m", { "encoding": "utf8" });
-      const cpuInfo = execSync("top -bn1 | grep Cpu(s)", {
-  "encoding": "utf8"})});
-return {
-  "memoryInfo": memoryInfo.trim(),
-        "cpuInfo": cpuInfo.trim()}
-    } catch (error) {
-  return { "error": error.message   }
-    } catch (error) {
-  return { "error": error.message }
-    }
-  }
-;
-=======
-  memoryUsage: process.memoryUsage(),
-        cpuUsage: process.cpuUsage(),
-        uptime: process.uptime()}
-    try {
-  // Process metrics;
-      runtimeMetrics.processMetrics = {
-  memoryUsage: process.memoryUsage(),
-        cpuUsage: process.cpuUsage(),
-        uptime: process.uptime(),,
-}
-      // System metrics;
-      runtimeMetrics.systemMetrics = await this.collectSystemMetrics(),
-} catch (error) {  this.log(`Failed to collect runtime metrics: ${error.message  }`, `WARN`),
-}
-    return runtimeMetrics;
-}
-  async collectSystemMetrics() {
-  try {
-  const memoryInfo = execSync(`free -m`, { encoding: "utf8" })
-      const cpuInfo = execSync("top -bn1 | grep "Cpu(s), {
-  encoding: "utf8",
-
   async collectSystemMetrics() {
   try {
   const memoryInfo = execSync(`free -m`, { encoding: "utf8" });
@@ -1042,8 +726,6 @@ return {
   const memoryInfo = execSync("free -m", { encoding: "utf8" });
       const cpuInfo = execSync("top -bn1 | grep Cpu(s)", {
   encoding: "utf8",;});});
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-
       return {
   memoryInfo: memoryInfo.trim(),
         cpuInfo: cpuInfo.trim(),,
@@ -1060,34 +742,11 @@ return {
     try {
   // Check for outdated packages;
       const outdatedResult = execSync("npm outdated --json", {
-<<<<<<< HEAD
-  "encoding": "utf8",
-        "stdio": "pipe"});
-      const outdatedPackages = JSON.parse(outdatedResult);
-=======
-  encoding: "utf8",
-        stdio: "pipe",,
-})
-      const outdatedPackages = JSON.parse(outdatedResult)
-
 >>>>>>> origin/automation-fixes
       dependencyMetrics.outdatedCount = Object.keys(outdatedPackages).length;
       dependencyMetrics.outdatedPackages = outdatedPackages;
       // Check for security vulnerabilities;
       const auditResult = execSync("npm audit --json", {
-<<<<<<< HEAD
-  "encoding": "utf8",
-        "stdio": "pipe",
-      // Check for security vulnerabilities;
-      const auditResult = execSync("npm audit --json", {
-  "encoding": "utf8",
-        "stdio": "pipe"});
-      const auditData = JSON.parse(auditResult);
-      dependencyMetrics.vulnerabilityCount = Object.keys(;
-=======
-  encoding: "utf8",
-        stdio: "pipe",
-
       // Check for security vulnerabilities;
       const auditResult = execSync("npm audit --json", {
   encoding: "utf8",
@@ -1095,108 +754,10 @@ return {
 })
       const auditData = JSON.parse(auditResult)
 
-      dependencyMetrics.vulnerabilityCount = Object.keys(
->>>>>>> origin/automation-fixes
-        auditData.vulnerabilities || {}
+      dependencyMetrics.vulnerabilityCount = Object.keys(        auditData.vulnerabilities || {}
       ).length;
       dependencyMetrics.auditData = auditData;
       // Package lock analysis;
-<<<<<<< HEAD
-      const packageLockPath = path.join(this.projectRoot, "package-lock.json");
-      if (fs.existsSync(packageLockPath)) {
-  const packageLock = JSON.parse(;
-          fs.readFileSync(packageLockPath, "utf8");
-        );
-        dependencyMetrics.totalDependencies = Object.keys(;
-          packageLock.dependencies || {}
-        ).length}
-    } catch (error) {
-  // npm commands may fail if there are issues;
-      dependencyMetrics.error = error.message}
-} catch (error) {
-  // npm commands may fail if there are issues;
-      dependencyMetrics.error = error.message}
-;
-    return dependencyMetrics}
-;
-=======
-      const packageLockPath = path.join(this.projectRoot, `package-lock.json`)
-      if (fs.existsSync(packageLockPath)) {
-  const packageLock = JSON.parse(
-          fs.readFileSync(packageLockPath, `utf8`)
-        )
-        dependencyMetrics.totalDependencies = Object.keys(
-          packageLock.dependencies || {}
-        ).length;
-}
-    } catch (error) {
-  // npm commands may fail if there are issues;
-      dependencyMetrics.error = error.message;
-},
-} catch (error) {
-  // npm commands may fail if there are issues;
-      dependencyMetrics.error = error.message;
-}
-    return dependencyMetrics;
-}
->>>>>>> origin/automation-fixes
-  async collectPerformanceMetrics() {
-  const performanceMetrics = {}
-    try {
-  // Build performance;
-      performanceMetrics.buildPerformance =;
-        await this.measureBuildPerformance();
-      // Runtime performance;
-      performanceMetrics.runtimePerformance =;
-<<<<<<< HEAD
-        await this.measureRuntimePerformance()} catch (error) {
-  this.log(Failed to collect performance "metrics": ${error.message  }",
-        "WARN";
-      )}
-;
-    return performanceMetrics}
-;
-  async measureBuildPerformance() {
-  const metrics = {}
-;
-    try {
-  const startTime = Date.now();
-      const startMemory = process.memoryUsage();
-      // Run a quick build check;
-      execSync("npm run build", { "encoding": "utf8", "stdio": "pipe" });
-      // Run a quick build check;
-      execSync("npm run build", { "encoding": "utf8", "stdio": "pipe" });
-      const endTime = Date.now();
-      const endMemory = process.memoryUsage();
-      metrics.buildTime = endTime - startTime;
-      metrics.memoryDelta = {
-  "heapUsed": endMemory.heapUsed - startMemory.heapUsed,
-        "heapTotal": endMemory.heapTotal - startMemory.heapTotal}
-    } catch (error) {
-  metrics.error = error.message}
-} catch (error) {
-  metrics.error = error.message}
-;
-    return metrics;
-    return metrics}
-;
-=======
-        await this.measureRuntimePerformance(),
-} catch (error) {
-  this.log(Failed to collect performance metrics: ${error.message  }`,
-        `WARN`;
-      ),
-}
-    return performanceMetrics;
-}
-  async measureBuildPerformance() {
-  const metrics = {}
-    try {
-  const startTime = Date.now()
-      const startMemory = process.memoryUsage()
-      // Run a quick build check;
-      execSync(`npm run build", { encoding: "utf8", stdio: "pipe" })
-
       // Run a quick build check;
       execSync("npm run build", { encoding: "utf8", stdio: "pipe" })
 
@@ -1217,138 +778,11 @@ return {
     return metrics;
     return metrics;
 
-}
->>>>>>> origin/automation-fixes
-  async measureRuntimePerformance() {
+}  async measureRuntimePerformance() {
   const metrics = {}
     try {
   try {
   // Measure file system operations;
-<<<<<<< HEAD
-      const fsStart = Date.now();
-      const testFile = path.join(this.projectRoot, "temp-performance-test.txt");
-      fs.writeFileSync(testFile, "performance test");
-      fs.readFileSync(testFile, "utf8");
-      fs.unlinkSync(testFile);
-      const fsEnd = Date.now();
-      metrics.fileSystemLatency = fsEnd - fsStart;
-      // Measure memory allocation;
-      const memoryTest = [];
-      const memStart = process.memoryUsage();
-      for (let i = 0; i < 1000; i++) {
-  memoryTest.push(new Array(1000).fill("test"))}
-;
-      const memEnd = process.memoryUsage();
-      metrics.memoryAllocationSpeed = {
-  "heapUsed": memEnd.heapUsed - memStart.heapUsed,
-        "time": Date.now() - fsEnd}
-    } catch (error) {
-  metrics.error = error.message}
-} catch (error) {
-  metrics.error = error.message}
-;
-    return metrics}
-;
-  async analyzeHistoricalTrends(currentMetrics) {
-  this.log("Analyzing historical trends...");
-    const trends = {
-  "buildTime": this.analyzeTrend(buildTime",
-        currentMetrics.buildMetrics.buildTime;
-      ),
-      "bundleSize": this.analyzeTrend(;
-        "bundleSize",
-        currentMetrics.buildMetrics.bundleSize?.totalSize;
-      ),
-      "codeComplexity": this.analyzeTrend(codeComplexity",
-        currentMetrics.codeMetrics.averageComplexity;
-      ),
-      "dependencies": this.analyzeTrend(;
-        "dependencies",
-        currentMetrics.dependencyMetrics.totalDependencies;
-      )}
-;
-    return trends}
-;
-  analyzeTrend(metricName, currentValue) {const history = this.historicalData[`${metricName}History`] || [];
-    if (history.length < 2) {
-  return { "trend": "INSUFFICIENT_DATA", "confidence": 0 }
-;
-    if (history.length < 2) {
-  return { "trend": "INSUFFICIENT_DATA", "confidence": 0 }
-    }
-;
-    const values = history.map(h => h.value);
-    const trend = this.calculateLinearTrend(values);
-    return {
-  "trend": trend.slope > 0;
-          ? "INCREASING";
-          : trend.slope < 0;
-            ? "DECREASING";
-            : "STABLE",
-      "slope": trend.slope,
-      "confidence": trend.confidence,
-      "prediction": this.predictNextValue(values, trend.slope)}
-  }
-;
-  calculateLinearTrend(values) {
-  const n = values.length;
-    const x = Array.from({ "length": n }, (_, i) => i);
-    const sumX = x.reduce((a, b) => a + b, 0);
-    const sumY = values.reduce((a, b) => a + b, 0);
-    const sumXY = x.reduce((sum, xi, i) => sum + xi * values[i], 0);
-    const sumXX = x.reduce((sum, xi) => sum + xi * xi, 0);
-    const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
-    const intercept = (sumY - slope * sumX) / n;
-    // Calculate confidence (R-squared);
-    const yMean = sumY / n;
-    const ssRes = values.reduce((sum, yi, i) => {
-  const predicted = slope * x[i] + intercept;
-      return sum + Math.pow(yi - predicted, 2)}, 0);
-    const ssTot = values.reduce((sum, yi) => sum + Math.pow(yi - yMean, 2), 0);
-    const confidence = 1 - ssRes / ssTot;
-    return { slope, intercept, confidence }
-  }
-;
-  predictNextValue(values, slope) {
-  const lastValue = values[values.length - 1];
-    return lastValue + slope}
-;
-  async detectAnomalies(currentMetrics) {
-  this.log("Detecting anomalies...");
-    const anomalies = [];
-    // Check for statistical anomalies;
-    const statisticalAnomalies =;
-      this.detectStatisticalAnomalies(currentMetrics);
-    anomalies.push(...statisticalAnomalies);
-    // Check for pattern-based anomalies;
-    const patternAnomalies = this.detectPatternAnomalies(currentMetrics);
-    anomalies.push(...patternAnomalies);
-  async detectAnomalies(currentMetrics) {
-  this.log("Detecting anomalies...");
-    const anomalies = [];
-    // Check for statistical anomalies;
-    const statisticalAnomalies =;
-      this.detectStatisticalAnomalies(currentMetrics);
-    anomalies.push(...statisticalAnomalies);
-    // Check for pattern-based anomalies;
-    const patternAnomalies = this.detectPatternAnomalies(currentMetrics);
-    anomalies.push(...patternAnomalies);
-    // Check for threshold-based anomalies;
-    const thresholdAnomalies = this.detectThresholdAnomalies(currentMetrics);
-    anomalies.push(...thresholdAnomalies);
-this.log(`Detected ${anomalies.length} anomalies`);
-    return anomalies}
-;
-  detectStatisticalAnomalies(metrics) {
-  const anomalies = [];
-=======
-      const fsStart = Date.now()
-      const testFile = path.join(this.projectRoot, "temp-performance-test.txt")
-      fs.writeFileSync(testFile, "performance test")
-      fs.readFileSync(testFile, "utf8")
-      fs.unlinkSync(testFile)
-      const fsEnd = Date.now()
-
       metrics.fileSystemLatency = fsEnd - fsStart;
       // Measure memory allocation;
       const memoryTest = []
@@ -1469,64 +903,9 @@ this.log(`Detected ${anomalies.length} anomalies`)
     return anomalies;
 }
   detectStatisticalAnomalies(metrics) {
-  const anomalies = []
->>>>>>> origin/automation-fixes
-    // Check build time anomalies;
+  const anomalies = []    // Check build time anomalies;
     const buildTimeHistory = this.historicalData.buildHistory.map(;
       h => h.buildTime;
-<<<<<<< HEAD
-    );
-    if (buildTimeHistory.length > 0) {
-  const buildTimeAnomaly = this.checkStatisticalAnomaly(;
-        metrics.buildMetrics.buildTime,
-        buildTimeHistory;
-      );
-      if (buildTimeAnomaly) {
-  anomalies.push(buildTimeAnomaly)}
-=======
-    )
-    if (buildTimeHistory.length > 0) {
-  const buildTimeAnomaly = this.checkStatisticalAnomaly(
-        metrics.buildMetrics.buildTime,
-        buildTimeHistory;
-      )
-      if (buildTimeAnomaly) {
-  anomalies.push(buildTimeAnomaly),
-}
->>>>>>> origin/automation-fixes
-    }
-    // Check bundle size anomalies;
-    const bundleSizeHistory = this.historicalData.buildHistory;
-<<<<<<< HEAD
-      .map(h => h.bundleSize?.totalSize);
-      .filter(Boolean);
-    if (bundleSizeHistory.length > 0) {
-  const bundleSizeAnomaly = this.checkStatisticalAnomaly(;
-        metrics.buildMetrics.bundleSize?.totalSize,
-    // Check bundle size anomalies;
-    const bundleSizeHistory = this.historicalData.buildHistory;
-      .map(h => h.bundleSize?.totalSize);
-      .filter(Boolean);
-    if (bundleSizeHistory.length > 0) {
-  const bundleSizeAnomaly = this.checkStatisticalAnomaly(;
-        metrics.buildMetrics.bundleSize?.totalSize,
-        bundleSizeHistory;
-      );
-      if (bundleSizeAnomaly) {
-  anomalies.push(bundleSizeAnomaly)}
-    }
-;
-    return anomalies}
-;
-  checkStatisticalAnomaly(currentValue, history) {
-  if (!currentValue || history.length === 0) return null;
-=======
-      .map(h => h.bundleSize?.totalSize)
-      .filter(Boolean)
-    if (bundleSizeHistory.length > 0) {
-  const bundleSizeAnomaly = this.checkStatisticalAnomaly(
-        metrics.buildMetrics.bundleSize?.totalSize,
-
     // Check bundle size anomalies;
     const bundleSizeHistory = this.historicalData.buildHistory;
       .map(h => h.bundleSize?.totalSize)
@@ -1544,19 +923,10 @@ this.log(`Detected ${anomalies.length} anomalies`)
 }
   checkStatisticalAnomaly(currentValue, history) {
   if (!currentValue || history.length === 0) return null;
-
->>>>>>> origin/automation-fixes
     const mean = history.reduce((a, b) => a + b, 0) / history.length;
     const variance =;
       history.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) /;
-      history.length;
-<<<<<<< HEAD
-    const stdDev = Math.sqrt(variance);
-=======
-    const stdDev = Math.sqrt(variance)
-
->>>>>>> origin/automation-fixes
-    const zScore = Math.abs(currentValue - mean) / stdDev;
+      history.length;    const zScore = Math.abs(currentValue - mean) / stdDev;
     if (zScore > 2) {
   // More than 2 standard deviations;
       return {
@@ -1658,136 +1028,14 @@ this.log(`Detected ${anomalies.length} anomalies`)
     return anomalies;
 }
   detectThresholdAnomalies(metrics) {
-  const anomalies = []
->>>>>>> origin/automation-fixes
-    // Build time threshold;
+  const anomalies = []    // Build time threshold;
     if (metrics.buildMetrics.buildTime > 60000) {
   // 1 minute;
       anomalies.push({
-<<<<<<< HEAD
-  "type": "THRESHOLD_ANOMALY",
-        "metric": "buildTime",
-        "description": "Build time exceeds acceptable threshold",
-        "severity": "MEDIUM",
-        "threshold": 60000,
-        "currentValue": metrics.buildMetrics.buildTime})}
-;
-=======
-  type: "THRESHOLD_ANOMALY",
-        metric: "buildTime",
-        description: "Build time exceeds acceptable threshold",
-        severity: "MEDIUM",
-        threshold: 60000,
-        currentValue: metrics.buildMetrics.buildTime}),
-}
->>>>>>> origin/automation-fixes
-    // Bundle size threshold;
-    if (metrics.buildMetrics.bundleSize?.totalSize > 10 * 1024 * 1024) {
-  // 10MB;
-      anomalies.push({
-<<<<<<< HEAD
-  "type": "THRESHOLD_ANOMALY",
-        "metric": "bundleSize",
-        "description": "Bundle size exceeds acceptable threshold",
-        "severity": "MEDIUM",
-        "threshold": 10 * 1024 * 1024,
-        "currentValue": metrics.buildMetrics.bundleSize.totalSize})}
-;
-    return anomalies}
-;
-  async generateIssuePredictions(;
-=======
-  type: "THRESHOLD_ANOMALY",
-        metric: "bundleSize",
-        description: "Bundle size exceeds acceptable threshold",
-        severity: `MEDIUM`,
-        threshold: 10 * 1024 * 1024,
-        currentValue: metrics.buildMetrics.bundleSize.totalSize,,
-}),
-}
-    return anomalies;
-}
-  async generateIssuePredictions(
->>>>>>> origin/automation-fixes
-    currentMetrics,
+  async generateIssuePredictions(    currentMetrics,
     trendAnalysis,
     anomalyDetection;
   ) {
-<<<<<<< HEAD
-  this.log("Generating issue predictions...");
-    const predictions = [];
-    // Predict based on trends;
-    const trendPredictions = this.generateTrendBasedPredictions(trendAnalysis);
-    predictions.push(...trendPredictions);
-    // Predict based on anomalies;
-    const anomalyPredictions =;
-      this.generateAnomalyBasedPredictions(anomalyDetection);
-    predictions.push(...anomalyPredictions);
-    // Predict based on current metrics;
-    const metricPredictions =;
-      this.generateMetricBasedPredictions(currentMetrics);
-    predictions.push(...metricPredictions);
-  async generateIssuePredictions(;
-=======
-  this.log(`Generating issue predictions...`)
-    const predictions = []
-    // Predict based on trends;
-    const trendPredictions = this.generateTrendBasedPredictions(trendAnalysis)
-    predictions.push(...trendPredictions)
-    // Predict based on anomalies;
-    const anomalyPredictions =;
-      this.generateAnomalyBasedPredictions(anomalyDetection)
-    predictions.push(...anomalyPredictions)
-    // Predict based on current metrics;
-    const metricPredictions =;
-      this.generateMetricBasedPredictions(currentMetrics)
-    predictions.push(...metricPredictions)
-
-  async generateIssuePredictions(
->>>>>>> origin/automation-fixes
-    currentMetrics,
-    trendAnalysis,
-    anomalyDetection;
-  ) {
-<<<<<<< HEAD
-  this.log("Generating issue predictions...");
-    const predictions = [];
-    // Predict based on trends;
-    const trendPredictions = this.generateTrendBasedPredictions(trendAnalysis);
-    predictions.push(...trendPredictions);
-    // Predict based on anomalies;
-    const anomalyPredictions =;
-      this.generateAnomalyBasedPredictions(anomalyDetection);
-    predictions.push(...anomalyPredictions);
-    // Predict based on current metrics;
-    const metricPredictions =;
-      this.generateMetricBasedPredictions(currentMetrics);
-    predictions.push(...metricPredictions);
-    // Predict based on ML models;
-    const mlPredictions = await this.generateMLPredictions(currentMetrics);
-    predictions.push(...mlPredictions);
-this.log(`Generated ${predictions.length} issue predictions`);
-    return predictions}
-;
-  generateTrendBasedPredictions(trendAnalysis) {
-  const predictions = [];
-    for (const ["metric", "trend"] of Object.entries(trendAnalysis)) {
-  if (trend.trend === "INCREASING" && trend.confidence > 0.7) {
-  predictions.push({
-  "type": "TREND_BASED_PREDICTION",
-          metric,"description": `${metric} is trending upward, may cause issues`,
-          "probability": Math.min(0.9, 0.5 + trend.confidence * 0.4),
-          "timeframe": this.estimateTimeframe(trend.slope),
-          "severity": "MEDIUM"})}
-    }
-;
-    return predictions}
-;
-  estimateTimeframe(slope) {
-  if (slope > 100) return "IMMEDIATE";
-=======
-  this.log("Generating issue predictions...")
-
     const predictions = []
 
     // Predict based on trends;
@@ -1827,112 +1075,10 @@ this.log(`Generated ${predictions.length} issue predictions`)
 }
   estimateTimeframe(slope) {
   if (slope > 100) return `IMMEDIATE`;
-
->>>>>>> origin/automation-fixes
   estimateTimeframe(slope) {
   if (slope > 100) return "IMMEDIATE";
     if (slope > 50) return "SHORT_TERM";
     if (slope > 10) return "MEDIUM_TERM";
-<<<<<<< HEAD
-    return "LONG_TERM"}
-;
-  generateAnomalyBasedPredictions(anomalyDetection) {
-  const predictions = [];
-    for (const anomaly of anomalyDetection) {
-  predictions.push({
-  "type": "ANOMALY_BASED_PREDICTION",
-        "metric": anomaly.metric,"description": `Anomaly detected in ${anomaly.metric}: ${anomaly.description}`,
-        "probability": 0.8,
-        "timeframe": "IMMEDIATE",
-        "severity": anomaly.severity,
-        "anomaly": anomaly})}
-;
-    return predictions}
-;
-  generateMetricBasedPredictions(metrics) {
-  const predictions = [];
-    // Predict build issues;
-    if (metrics.buildMetrics.buildTime > 30000) {
-  predictions.push({
-  "type": "METRIC_BASED_PREDICTION",
-        "metric": "buildTime",
-        "description": Build time is approaching threshold, may cause ""CI/CD"" issues",
-        "probability": 0.7,
-        "timeframe": "SHORT_TERM",
-        "severity": "MEDIUM"})}
-;
-    // Predict dependency issues;
-    if (metrics.dependencyMetrics.vulnerabilityCount > 3) {
-  predictions.push({
-  "type": "METRIC_BASED_PREDICTION",
-        "metric": "securityVulnerabilities",
-        "description": Multiple security vulnerabilities may lead to security incidents",
-        "probability": 0.9,
-        "timeframe": "IMMEDIATE",
-        "severity": "HIGH",
-    // Predict build issues;
-    if (metrics.buildMetrics.buildTime > 30000) {
-  predictions.push({
-  "type": "METRIC_BASED_PREDICTION",
-        "metric": "buildTime",
-        "description": Build time is approaching threshold, may cause "CI/CD" issues",
-        "probability": 0.7,
-        "timeframe": "SHORT_TERM",
-        "severity": "MEDIUM"})}
-;
-    // Predict dependency issues;
-    if (metrics.dependencyMetrics.vulnerabilityCount > 3) {
-  predictions.push({
-  "type": "METRIC_BASED_PREDICTION",
-        "metric": "securityVulnerabilities",
-        "description": Multiple security vulnerabilities may lead to security incidents",
-        "probability": 0.9,
-        "timeframe": "IMMEDIATE",
-        "severity": "HIGH"})}
-;
-    return predictions}
-;
-  async generateMLPredictions(metrics) {
-  const predictions = [];
-=======
-    return `LONG_TERM`;
-}
-  generateAnomalyBasedPredictions(anomalyDetection) {
-  const predictions = []
-    for (const anomaly of anomalyDetection) {
-  predictions.push({
-  type: `ANOMALY_BASED_PREDICTION`,
-        metric: anomaly.metric,description: `Anomaly detected in ${anomaly.metric}: ${anomaly.description}`,
-        probability: 0.8,
-        timeframe: `IMMEDIATE`,
-        severity: anomaly.severity,
-        anomaly: anomaly,,
-}),
-}
-    return predictions;
-}
-  generateMetricBasedPredictions(metrics) {
-  const predictions = []
-    // Predict build issues;
-    if (metrics.buildMetrics.buildTime > 30000) {
-  predictions.push({
-  type: `METRIC_BASED_PREDICTION`,
-        metric: "buildTime",
-        description: Build time is approaching threshold, may cause ""CI/CD"" issues",
-        probability: 0.7,
-        timeframe: "SHORT_TERM",
-        severity: "MEDIUM"}),
-}
-    // Predict dependency issues;
-    if (metrics.dependencyMetrics.vulnerabilityCount > 3) {
-  predictions.push({
-  type: "METRIC_BASED_PREDICTION",
-        metric: "securityVulnerabilities",
-        description: Multiple security vulnerabilities may lead to security incidents",
-        probability: 0.9,
-        timeframe: "IMMEDIATE",
-        severity: "HIGH",
-
     // Predict build issues;
     if (metrics.buildMetrics.buildTime > 30000) {
   predictions.push({
@@ -1959,8 +1105,6 @@ this.log(`Generated ${predictions.length} issue predictions`)
 }
   async generateMLPredictions(metrics) {
   const predictions = []
-
->>>>>>> origin/automation-fixes
     // This would integrate with actual ML models;
     // For now, we"ll use simple heuristics;
     // This would integrate with actual ML models;
@@ -1968,48 +1112,6 @@ this.log(`Generated ${predictions.length} issue predictions`)
     // Predict code quality degradation;
     if (metrics.codeMetrics.averageComplexity > 8) {
   predictions.push({
-<<<<<<< HEAD
-  "type": "ML_PREDICTION",
-        "metric": "codeQuality",
-        "description": "ML model predicts code quality degradation",
-        "probability": 0.75,
-        "timeframe": "MEDIUM_TERM",
-        "severity": "MEDIUM",
-        "confidence": 0.8})}
-;
-    return predictions}
-;
-  async calculatePredictionConfidence(predictions) {
-  this.log("Calculating prediction confidence...");
-    const confidenceAnalysis = {
-  "overallConfidence": 0,
-      "predictions": []}
-;
-    for (const prediction of predictions) {
-  const confidence = this.calculateIndividualConfidence(prediction);
-      prediction.confidence = confidence;
-      confidenceAnalysis.predictions.push(prediction)}
-;
-    // Calculate overall confidence;
-    const totalConfidence = confidenceAnalysis.predictions.reduce(;
-      (sum, p) => sum + p.confidence,
-    // Calculate overall confidence;
-    const totalConfidence = confidenceAnalysis.predictions.reduce(;
-=======
-  type: "ML_PREDICTION",
-        metric: "codeQuality",
-        description: "ML model predicts code quality degradation",
-        probability: 0.75,
-        timeframe: "MEDIUM_TERM",
-        severity: "MEDIUM",
-        confidence: 0.8,,
-}),
-}
-    return predictions;
-}
-  async calculatePredictionConfidence(predictions) {
-  this.log("Calculating prediction confidence...")
-
     const confidenceAnalysis = {
   overallConfidence: 0,
       predictions: [],,
@@ -2024,22 +1126,13 @@ this.log(`Generated ${predictions.length} issue predictions`)
       (sum, p) => sum + p.confidence,
 
     // Calculate overall confidence;
-    const totalConfidence = confidenceAnalysis.predictions.reduce(
->>>>>>> origin/automation-fixes
-      (sum, p) => sum + p.confidence,
+    const totalConfidence = confidenceAnalysis.predictions.reduce(      (sum, p) => sum + p.confidence,
       0;
     );
     confidenceAnalysis.overallConfidence =;
       totalConfidence / confidenceAnalysis.predictions.length;
-<<<<<<< HEAD
-    return confidenceAnalysis}
-;
-=======
-
     return confidenceAnalysis;
-}
->>>>>>> origin/automation-fixes
-  calculateIndividualConfidence(prediction) {
+}  calculateIndividualConfidence(prediction) {
   let confidence = 0.5; // Base confidence;
   calculateIndividualConfidence(prediction) {
   let confidence = 0.5; // Base confidence;
@@ -2056,16 +1149,6 @@ this.log(`Generated ${predictions.length} issue predictions`)
         break;
       case "ML_PREDICTION":;
         confidence += 0.15;
-<<<<<<< HEAD
-        break}
-;
-    // Adjust based on severity;
-    if (prediction.severity === "HIGH") confidence += 0.1;
-    if (prediction.severity === "LOW") confidence -= 0.1;
-    // Adjust based on severity;
-    if (prediction.severity === "HIGH") confidence += 0.1;
-    if (prediction.severity === "LOW") confidence -= 0.1;
-
     // Adjust based on probability;
     confidence = (confidence + prediction.probability) / 2;
     return Math.min(0.95, Math.max(0.05, confidence))}
@@ -2105,51 +1188,9 @@ this.log(`Generated ${predictions.length} issue predictions`)
           this.generateRecommendationForPrediction(prediction)
         if (recommendation) {
   recommendations.push(recommendation),
-}
->>>>>>> origin/automation-fixes
-      }
+}      }
     }
     // Add general recommendations;
-<<<<<<< HEAD
-    recommendations.push(;
-      ...this.generateGeneralRecommendations(confidenceAnalysis);
-    // Add general recommendations;
-    recommendations.push(;
-      ...this.generateGeneralRecommendations(confidenceAnalysis);
-    );
-this.log(`Generated ${recommendations.length} prevention recommendations`);
-    return recommendations}
-;
-  generateRecommendationForPrediction(prediction) {
-  const recommendationTemplates = {
-  "TREND_BASED_PREDICTION": {
-  title: "Address Trending Issue","description": `Monitor and address the upward trend in ${prediction.metric}`,
-        "action": "implement_monitoring",
-        "priority": prediction.severity === "HIGH" ? "HIGH" : "MEDIUM"},
-      "ANOMALY_BASED_PREDICTION": {
-  title: "Investigate Anomaly","description": `Investigate the detected anomaly in ${prediction.metric}`,
-        "action": "investigate_root_cause",
-        "priority": "HIGH"},
-      "METRIC_BASED_PREDICTION": {
-  title: "Preventive Action","description": `Take preventive action for ${prediction.metric}`,
-        "action": "implement_prevention",
-        "priority": prediction.severity === "HIGH" ? "HIGH" : "MEDIUM"}}
-;
-    const template = recommendationTemplates[prediction.type];
-    if (template) {
-  return {
-  ...template,
-        "prediction": prediction,
-        "estimatedEffort": this.estimateEffort(prediction),
-        "timeframe": prediction.timeframe}
-    }
-;
-    return null}
-;
-=======
-    recommendations.push(
-      ...this.generateGeneralRecommendations(confidenceAnalysis)
-
     // Add general recommendations;
     recommendations.push(
       ...this.generateGeneralRecommendations(confidenceAnalysis)
@@ -2182,9 +1223,7 @@ this.log(`Generated ${recommendations.length} prevention recommendations`)
 }
     }
     return null;
-}
->>>>>>> origin/automation-fixes
-  estimateEffort(prediction) {
+}  estimateEffort(prediction) {
   switch (prediction.severity) {
   case "HIGH":;
         return "HIGH";
@@ -2192,30 +1231,6 @@ this.log(`Generated ${recommendations.length} prevention recommendations`)
         return "MEDIUM";
       case "LOW":;
         return "LOW";
-<<<<<<< HEAD
-      "default": ;
-        return "MEDIUM"}
-  }
-;
-  generateGeneralRecommendations(confidenceAnalysis) {
-  const recommendations = [];
-    if (confidenceAnalysis.overallConfidence > 0.8) {
-  recommendations.push({
-  "title": "High Confidence Predictions",
-        "description": Multiple high-confidence predictions suggest proactive measures needed",
-        "action": "schedule_prevention_sprint",
-        "priority": "HIGH",
-        "estimatedEffort": "MEDIUM"})}
-;
-    if (;
-=======
-      default:;
-        return "MEDIUM";
-}
-  }
-  generateGeneralRecommendations(confidenceAnalysis) {
-  const recommendations = []
-
     if (confidenceAnalysis.overallConfidence > 0.8) {
   recommendations.push({
   title: "High Confidence Predictions",
@@ -2225,131 +1240,14 @@ this.log(`Generated ${recommendations.length} prevention recommendations`)
         estimatedEffort: "MEDIUM",,
 }),
 }
-    if (
->>>>>>> origin/automation-fixes
-      confidenceAnalysis.predictions.filter(p => p.severity === "HIGH").length >;
+    if (      confidenceAnalysis.predictions.filter(p => p.severity === "HIGH").length >;
       2;
     ) {
   recommendations.push({
-<<<<<<< HEAD
-  "title": "Multiple High-Severity Issues",
-        "description": "Address high-severity predictions immediately",
-        "action": "immediate_action_required",
-        "priority": "CRITICAL",
-        "estimatedEffort": "HIGH",
-    if (;
-=======
-  title: "Multiple High-Severity Issues",
-        description: "Address high-severity predictions immediately",
-        action: "immediate_action_required",
-        priority: "CRITICAL",
-        estimatedEffort: "HIGH",
-
-    if (
->>>>>>> origin/automation-fixes
-      confidenceAnalysis.predictions.filter(p => p.severity === "HIGH").length >;
+    if (      confidenceAnalysis.predictions.filter(p => p.severity === "HIGH").length >;
       2;
     ) {
   recommendations.push({
-<<<<<<< HEAD
-  "title": "Multiple High-Severity Issues",
-        "description": "Address high-severity predictions immediately",
-        "action": "immediate_action_required",
-        "priority": "CRITICAL",
-        "estimatedEffort": "HIGH"})}
-;
-    return recommendations}
-;
-  async updateHistoricalData(currentMetrics, predictions) {
-  this.log("Updating historical data...");
-    // Update build history;
-    this.historicalData.buildHistory.push({
-  "timestamp": currentMetrics.timestamp,
-      "buildTime": currentMetrics.buildMetrics.buildTime,
-      "bundleSize": currentMetrics.buildMetrics.bundleSize,
-      "buildSuccess": currentMetrics.buildMetrics.buildSuccess});
-    // Update error history;
-    if (currentMetrics.buildMetrics.buildError) {
-  this.historicalData.errorHistory.push({
-  "timestamp": currentMetrics.timestamp,
-        "error": currentMetrics.buildMetrics.buildError,
-        "type": "BUILD_ERROR"})}
-;
-    // Update performance history;
-    this.historicalData.performanceHistory.push({
-  "timestamp": currentMetrics.timestamp,
-      "metrics": currentMetrics.performanceMetrics});
-    // Update issue history;
-    this.historicalData.issueHistory.push({
-  "timestamp": currentMetrics.timestamp,
-      "predictions": predictions,
-      "metrics": currentMetrics});
-=======
-  title: "Multiple High-Severity Issues",
-        description: "Address high-severity predictions immediately",
-        action: "immediate_action_required",
-        priority: "CRITICAL",
-        estimatedEffort: "HIGH",,
-}),
-}
-    return recommendations;
-}
-  async updateHistoricalData(currentMetrics, predictions) {
-  this.log(`Updating historical data...`)
-    // Update build history;
-    this.historicalData.buildHistory.push({
-  timestamp: currentMetrics.timestamp,
-      buildTime: currentMetrics.buildMetrics.buildTime,
-      bundleSize: currentMetrics.buildMetrics.bundleSize,
-      buildSuccess: currentMetrics.buildMetrics.buildSuccess})
-    // Update error history;
-    if (currentMetrics.buildMetrics.buildError) {
-  this.historicalData.errorHistory.push({
-  timestamp: currentMetrics.timestamp,
-        error: currentMetrics.buildMetrics.buildError,
-        type: `BUILD_ERROR`}),
-}
-    // Update performance history;
-    this.historicalData.performanceHistory.push({
-  timestamp: currentMetrics.timestamp,
-      metrics: currentMetrics.performanceMetrics})
-    // Update issue history;
-    this.historicalData.issueHistory.push({
-  timestamp: currentMetrics.timestamp,
-      predictions: predictions,
-      metrics: currentMetrics})
->>>>>>> origin/automation-fixes
-    // Keep only last 50 entries;
-    const maxEntries = 50;
-    for (const key of Object.keys(this.historicalData)) {
-  if (Array.isArray(this.historicalData[key])) {
-<<<<<<< HEAD
-  this.historicalData[key] = this.historicalData[key].slice(-maxEntries)}
-=======
-  this.historicalData[key] = this.historicalData[key].slice(-maxEntries),
-}
->>>>>>> origin/automation-fixes
-    }
-    // Save updated data;
-    try {
-<<<<<<< HEAD
-  fs.writeFileSync(;
-        this.historicalDataLog,
-        JSON.stringify(this.historicalData, null, 2);
-    // Save updated data;
-    try {
-  fs.writeFileSync(;
-        this.historicalDataLog,
-        JSON.stringify(this.historicalData, null, 2);
-      )} catch (error) {  this.log(`Failed to save historical "data": ${error.message  }`, "ERROR")}
-  }
-;
-  async generatePredictionReport(;
-=======
-  fs.writeFileSync(
-        this.historicalDataLog,
-        JSON.stringify(this.historicalData, null, 2)
-
     // Save updated data;
     try {
   fs.writeFileSync(
@@ -2359,62 +1257,12 @@ this.log(`Generated ${recommendations.length} prevention recommendations`)
 } catch (error) {  this.log(`Failed to save historical data: ${error.message  }`, `ERROR`),
 }
   }
-  async generatePredictionReport(
->>>>>>> origin/automation-fixes
-    currentMetrics,
+  async generatePredictionReport(    currentMetrics,
     predictions,
     confidenceAnalysis,
     recommendations;
   ) {
   const report = {
-<<<<<<< HEAD
-  "timestamp": new Date().toISOString(),
-      "summary": {
-  totalPredictions: predictions.length,
-        "highConfidencePredictions": predictions.filter(p => p.confidence > 0.8);
-          .length,
-        "highSeverityPredictions": predictions.filter(p => p.severity === "HIGH");
-          .length,
-        "overallConfidence": confidenceAnalysis.overallConfidence,
-        "recommendationsGenerated": recommendations.length},
-      "details": {
-  currentMetrics: currentMetrics,
-        "predictions": predictions,
-        "confidenceAnalysis": confidenceAnalysis,
-        "recommendations": recommendations},
-      "nextSteps": this.generateNextSteps(predictions, recommendations)}
-;
-=======
-  timestamp: new Date().toISOString(),
-      summary: {
-  totalPredictions: predictions.length,
-        highConfidencePredictions: predictions.filter(p => p.confidence > 0.8)
-          .length,
-        highSeverityPredictions: predictions.filter(p => p.severity === `HIGH`)
-          .length,
-        overallConfidence: confidenceAnalysis.overallConfidence,
-        recommendationsGenerated: recommendations.length},
-      details: {
-  currentMetrics: currentMetrics,
-        predictions: predictions,
-        confidenceAnalysis: confidenceAnalysis,
-        recommendations: recommendations},
-      nextSteps: this.generateNextSteps(predictions, recommendations),,
-}
->>>>>>> origin/automation-fixes
-    // Save report to file;
-    const reportPath = path.join(;
-      this.projectRoot,logs", `predictive-issues-${Date.now()}.json`;
-    // Save report to file;
-<<<<<<< HEAD
-    const reportPath = path.join(;
-      this.projectRoot,logs", "predictive-issues-${Date.now()}.json";
-      this.projectRoot, "logs", "predictive-issues-${Date.now()}.json";
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-this.log(`Prediction report generated: ${reportPath}`);
-    return report;}
-
   generateNextSteps(predictions, recommendations) {
   const nextSteps = [];
     // Immediate actions;
@@ -2465,56 +1313,9 @@ this.log(`Prediction report generated: ${reportPath}`)
   nextSteps.push({
   timeframe: `SHORT_TERM",
         actions: shortTermRecommendations.map(r => r.title)}),
-}
->>>>>>> origin/automation-fixes
-    // Long-term actions;
+}    // Long-term actions;
     const longTermRecommendations = recommendations.filter(;
       r => r.timeframe === "LONG_TERM";
-<<<<<<< HEAD
-    );
-    if (longTermRecommendations.length > 0) {
-  nextSteps.push({
-  "timeframe": "LONG_TERM",
-        "actions": longTermRecommendations.map(r => r.title)})}
-;
-    return nextSteps}
-;
-  async run() {
-  try {
-  const report = await this.runPredictiveIssueDetection();
-      this.log("Predictive Issue Detection completed successfully");
-      return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR");
-      throw error}
-=======
-    )
-    if (longTermRecommendations.length > 0) {
-  nextSteps.push({
-  timeframe: `LONG_TERM`,
-        actions: longTermRecommendations.map(r => r.title),,
-}),
-}
-    return nextSteps;
-}
-  async run() {
-  try {
-  const report = await this.runPredictiveIssueDetection()
-      this.log(`Predictive Issue Detection completed successfully`)
-      return report;
-} catch (error) {  this.log(`Predictive Issue Detection failed: ${error.message  }`, `ERROR`)
-      throw error;
-}
->>>>>>> origin/automation-fixes
-  }
-}
-// Main execution;
-if (require.main === module) {
-<<<<<<< HEAD
-  const automation = new PredictiveIssueDetection();
-  automation;
-    .run();
-    .then(() => {
-  console.log(`✅ Predictive Issue Detection completed`);
-
 // Main execution;
 if (require.main === module) {
   const automation = new PredictiveIssueDetection();
@@ -2957,4 +1758,3 @@ if (require.main === module) {
 }),
 }
 module.exports = PredictiveIssueDetection}}}}}}}}}}}}}}}}}}}}}}}})))))))))))
->>>>>>> origin/automation-fixes

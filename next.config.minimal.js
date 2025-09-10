@@ -4,7 +4,7 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
+
   // Minimal webpack config
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -25,9 +25,6 @@ const nextConfig = {
       };
     }
     return config;
-
-
-
 
   compress: true,
   poweredByHeader: false,
@@ -121,12 +118,9 @@ module.exports = nextConfig;
   distDir: ".next",
 };
 
-
-
-
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
-  
+
   // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -135,7 +129,7 @@ module.exports = nextConfig;
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
   },
-  
+
   // Webpack configuration to exclude problematic directories
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -181,7 +175,7 @@ module.exports = nextConfig;
     }
     return config;
   },
-  
+
   // Headers for security and performance
   async headers() {
     return [
@@ -204,7 +198,7 @@ module.exports = nextConfig;
       },
     ];
   },
-  
+
   // Redirects for SEO
   async redirects() {
     return [
@@ -218,4 +212,3 @@ module.exports = nextConfig;
 };
 
 export default nextConfig;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

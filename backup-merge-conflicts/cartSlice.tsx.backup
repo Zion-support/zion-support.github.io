@@ -72,23 +72,10 @@ const "cartSlice": "createSlic e({;
       state.itemCount = 0},;
   },;
 });
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
-;
-=======
-:src/store/cartSlice.tsx
-      state.itemCount = 0}}}
-    );
-      state.itemCount = 0},
-  },
-}
-    );
-
 >>>>>>> main
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 =======
-;export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/store/cartSlice.tsx
-export { cartSlice };
+;export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;export { cartSlice };
 export default cartSlice.reducer;
 ;
 </string>;

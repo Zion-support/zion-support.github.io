@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "@testing-library/jest-dom";
 export class TestingSystem {
   static async testUserInteraction(
@@ -6,21 +5,11 @@ export class TestingSystem {
     action: "click" | "type" | "hover"
   ) {
     switch (action) {
-      case "click":
-=======
-import;
-  '@testing-library/jest-dom';
-export class TestingSystem {;
-  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {;
-    switch (action) {;
-      case 'click': ;
->>>>>>> origin/automation-fixes
-        element.click();
+      case "click":        element.click();
         break;
       case "type":
         // Handle type action
         break;
-<<<<<<< HEAD
       case "hover":
         // Handle hover action
         break;

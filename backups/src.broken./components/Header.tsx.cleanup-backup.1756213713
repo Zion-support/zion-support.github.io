@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight, ChevronDown } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
-
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -75,9 +68,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  // Handle scroll effect
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  useEffect(() => {
+  // Handle scroll effect  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -85,45 +76,6 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-<<<<<<< HEAD
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      dropdown: [
-        { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
-        { name: 'Cybersecurity', href: '/cybersecurity', description: 'Comprehensive security solutions' },
-        { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
-        { name: 'Data Analytics', href: '/data-analytics', description: 'Transform data into insights' },
-        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation computing' },
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/solutions',
-      dropdown: [
-        { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
-        { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
-        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
-      ]
-    },
-    { 
-      name: 'Company', 
-      href: '/about',
-      dropdown: [
-        { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
-        { name: 'Our Team', href: '/team', description: 'Meet our expert team' },
-        { name: 'Careers', href: '/careers', description: 'Join our growing team' },
-        { name: 'News', href: '/news', description: 'Latest company updates' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }
-      ]
-    },
-    { name: 'Contact', href: '/contact' }
-  ];
 
   const serviceCategories = [
     {
@@ -317,9 +269,7 @@ export function Header() {
                 ) : (
                   <Link
                     to={item.href}
-                    className="flex items-center space-x-1 px-4 py-2 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-                  >
+                    className="flex items-center space-x-1 px-4 py-2 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"                  >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
                   </Link>
@@ -362,12 +312,6 @@ export function Header() {
                   </AnimatePresence>
                 )}
               </div>
-<<<<<<< HEAD
-              <span className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                Zion Tech Group
-              </span>
-            </Link>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -803,9 +747,7 @@ export function Header() {
               asChild
               className="hidden sm:flex bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white border-0 shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
             >
-              <Link to="/contact">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-                Get Started
+              <Link to="/contact">                Get Started
               </Link>
             </Button>
 
@@ -822,11 +764,6 @@ export function Header() {
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
-      </nav>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -902,9 +839,7 @@ export function Header() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+      </AnimatePresence>=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from '../layout/MainNavigation';
