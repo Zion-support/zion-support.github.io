@@ -3,36 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "bin": {
-    "zion": "scripts/cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
-  },
-  "keywords": [
-    "zion",
-    "tech",
-    "services",
-    "marketplace",
-    "ai",
-    "blockchain",
-    "web3",
-    "react",
-    "nextjs",
-    "typescript"
-  ],
-  "author": "Zion Holdings <contact@ziontechgroup.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Zion-Holdings/zion.app/issues"
-  },
-  "homepage": "https://ziontechgroup.com",
-  "packageManager": "npm@10.8.3",
-  "engines": {
-    "node": ">=20.19.0 || >=22.12.0",
-    "npm": ">=10.0.0"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode production",
