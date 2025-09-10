@@ -1,14 +1,10 @@
 {
-  "timestam": "2025-09-05T23:08:10.268Z",
-  "optimization": [
-    "Found 3 images",
-    "Analyzed 113 dependencies"
-  ],
+  "buildTime": -1,
+  "bundleSize": 129068835,
+  "memoryUsage": 4.587310791015625,
+  "cpuUsage": 0.023501,
+  "lastUpdated": "2025-09-06T08:46:49.266Z",
   "recommendations": [
-    "Consider implementing code splitting",
-    "Optimize images using WebP format",
-    "Remove unused dependencies",
-    "Enable gzip compression",
-    "Use React.memo for expensive components"
+    "Consider code splitting - bundle size is large"
   ]
 }

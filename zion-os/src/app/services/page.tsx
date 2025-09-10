@@ -1,5 +1,6 @@
 import Link from 'next/link';
-export default function ServicesPage() {return (;
+export default function ServicesPage() {;
+  return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
