@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-module.exports = {};
-=======
-export interface APIDocumentation {
-  id: string;
-  name: string;
-  version: string;
-  description: string;
-  baseUrl: string;
-  endpoints: APIEndpoint[];
-  schemas: APISchema[];
-  examples: APIExample[];
-  metadata: {
-    lastGenerated: Date;
-    totalEndpoints: number;
-    coverage: number;
-    languages: string[];
-    frameworks: string[];
-  };
-}
-
 export interface APIEndpoint {
   id: string;
   path: string;
@@ -645,4 +624,3 @@ export class APIDocGeneratorService {
 }
 
 export const apiDocGeneratorService = new APIDocGeneratorService();
->>>>>>> origin/automation/changelog

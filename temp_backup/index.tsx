@@ -1,88 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { AnimatedBackground } from '@/components/ui/AnimatedBackground';
-import FuturisticHero from '@/components/ui/FuturisticHero';
-import InteractiveSearch from '@/components/ui/InteractiveSearch';
-import InteractiveStats from '@/components/ui/InteractiveStats';
-import { EnhancedCard } from '@/components/ui/EnhancedCard';
-import EnhancedMarketplaceCard from '@/components/ui/EnhancedMarketplaceCard';
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="relative">
-      <Head>
-        <title>Zion — AI‑Powered Marketplace & Automation Platform</title>
-        <meta
-          name="description"
-          content="Explore AI services, products, talent, automation dashboard, and expert resources. Build, scale, and automate with Zion."
-        />
-=======
-    <>
-      <Head>
-        <title>Zion Tech Group — Autonomous Innovation Hub</title>
-        <meta name="description" content="Leading-edge technology solutions and autonomous innovation systems." />
-        <meta property="og:title" content="Zion Tech Group — Autonomous Innovation Hub" />
-        <meta property="og:description" content="Leading-edge technology solutions and autonomous innovation systems." />
-        <meta name="twitter:card" content="summary_large_image" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
-            </p>
-            
-            {/* Navigation Links */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
-                About Us
-              </a>
-              <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
-                Our Services
-              </a>
-<<<<<<< HEAD
-              <a href="/ai-solutions" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
-                🚀 AI Solutions
-              </a>
-              <a href="/cutting-edge-innovations-2027" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 border border-cyan-400/50 rounded-lg transition-all duration-200">
-                🔬 2027 Cutting-Edge
-              </a>
-              <a href="/practical-micro-saas-2027" className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 border border-green-400/50 rounded-lg transition-all duration-200">
-                💼 2027 Micro SAAS
-              </a>
-              <a href="/all-services-2027" className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700 border border-orange-400/50 rounded-lg transition-all duration-200">
-                🌟 All 2027 Services
-=======
-              <a href="/services-2026" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
-                🚀 2026 Services
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-              </a>
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
-                Case Studies
-              </a>
-              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-                Contact
-              </a>
-            </div>
-          </section>
-<<<<<<< HEAD
-        </main>
-
-        <AnimatedBackground className="pointer-events-none" />
-
         <div className="space-y-20">
           {/* Hero */}
           <FuturisticHero
@@ -250,13 +170,12 @@ export default function HomePage() {
           </section>
         </div>
       </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>
         <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
         <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
       </Head>
-      
+
       <main className="container mx-auto px-4 py-16">
         <div className="text-center text-white">
           <h1 className="text-5xl font-bold mb-6">
@@ -266,7 +185,7 @@ export default function HomePage() {
             Leading technology solutions provider helping businesses transform their digital presence 
             with cutting-edge AI, cloud architecture, and innovative development services.
           </p>
-          
+
           <div className="flex justify-center gap-6 mb-12">
             <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Our Services
@@ -275,7 +194,7 @@ export default function HomePage() {
               Get in Touch
             </Link>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">AI Development</h3>
@@ -291,10 +210,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </main>
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-    </div>
-=======
+      </main>    </div>
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Cpu, Target, Microscope, TestTube } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
@@ -839,68 +755,10 @@ export default function Home() {
           </div>
         </section>
               </UltraFuturisticBackground2028>
-      
+
       {/* Footer */}
       <UltraFuturisticFooter2029 />
-    </>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  );
-=======
-<<<<<<< HEAD
-
-          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0406</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </a>
-              <a href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0405</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </a>
-              <a href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0404</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </a>
-              <a href="/reports/updates/update-2025-08-15-0111" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0111</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </a>
-              <a href="/reports/updates/update-2025-08-15-0403" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0403</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </a>
-              <a href="/reports/updates/update-2025-08-15-0402" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0402</h3>
-                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-              </a>
-            </div>
-          </section>
-          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
-        </main>
-      </div>
-    </>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-import Layout from '../components/layout/Layout';
-import Homepage2025 from '../components/Homepage2025';
-
+    </>  );
 export default function HomePage() {
 	return (
 		<Layout>
@@ -913,4 +771,3 @@ export default function HomePage() {
 		</Layout>
 	);
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

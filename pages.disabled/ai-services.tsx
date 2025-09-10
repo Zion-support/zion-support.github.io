@@ -47,7 +47,6 @@ export default function AIServices() {
         <title>AI & Consciousness Services - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI consciousness and emotional intelligence services. Advanced AI systems with ethical frameworks and quantum-enhanced processing." />
         <meta name="keywords" content="AI consciousness, emotional AI, quantum AI, autonomous AI, AI ethics, AI creativity" />
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
 
@@ -217,12 +216,10 @@ export default function AiServices() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
           <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-indigo-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
-          
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -237,13 +234,11 @@ export default function AiServices() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Pioneering the future of autonomous technology and AI-driven innovation. 
                 We deliver cutting-edge solutions that transform businesses and accelerate growth.
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
                 >
                   Get Started
                 </Link>
@@ -253,11 +248,11 @@ export default function AiServices() {
                 <Brain className="w-4 h-4 mr-2" />
                 AI Services
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 AI Services
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Revolutionary artificial intelligence services that push the boundaries of what's possible. 
                 From consciousness development to healthcare diagnostics, we're shaping the future of AI.
@@ -276,7 +271,7 @@ export default function AiServices() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Our AI Services</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <motion.div
@@ -289,10 +284,10 @@ export default function AiServices() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4`}>
                       {service.icon}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
-                    
+
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-400">
@@ -301,19 +296,17 @@ export default function AiServices() {
                         </li>
                       ))}
                     </ul>
-                    
+
                     <Link href={service.link} className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </motion.div>
                 ))}
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
                   className="px-8 py-4 border border-violet-500/40 text-violet-300 rounded-xl font-semibold hover:bg-violet-500/10 transition-all duration-200"
                 >
                   View All Services
                 </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </div>
             </motion.div>
           </div>
@@ -322,11 +315,9 @@ export default function AiServices() {
         {/* AI Capabilities */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
         {/* Services Grid */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -363,7 +354,7 @@ export default function AiServices() {
                         {service.badge}
                       </span>
                     )}
-                    
+
                     <div className="mb-6">
                       <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <Brain className="w-8 h-8 text-white" />

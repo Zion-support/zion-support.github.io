@@ -1,32 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/ModernHeader-backup.tsx.backup
-<<<<<<< HEAD:src/components/header/ModernHeader-backup.tsx
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-export function ModernHeader("props": "any) {;
-  const [isMobileMenuOpen", setIsMobileMenuOpen] = useState<any>(false);
-=======
-<<<<<<< HEAD
-=======
-import React, { useState } from "react"
-export function ModernHeader($1) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)
->>>>>>> main
-}
-  const [isServicesOpen, setIsServicesOpen] = useState<any>(false);
-}
-<<<<<<< HEAD
-  const toggleMobileMenu = ("props": "any) => {;
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-"}
-;
-  const closeMobileMenu = ("props": "any) => {;
-    setIsMobileMenuOpen(false);
-"}
-    setIsServicesOpen(false);
-}
-  }';
-
   const services = [];
 
   return (;
@@ -256,9 +227,7 @@ export default Component;
 =======
 import React, { useState } from "react";
 export function ModernHeader("props": "any) {;
-  const [isMobileMenuOpen", setIsMobileMenuOpen] = useState<any>(false);  const toggleMobileMenu = (props) => {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/header/ModernHeader-backup.tsx
-    setIsMobileMenuOpen(!isMobileMenuOpen)
+  const [isMobileMenuOpen", setIsMobileMenuOpen] = useState<any>(false);  const toggleMobileMenu = (props) => {    setIsMobileMenuOpen(!isMobileMenuOpen)
 }
   const closeMobileMenu = (props) => {
     setIsMobileMenuOpen(false)
