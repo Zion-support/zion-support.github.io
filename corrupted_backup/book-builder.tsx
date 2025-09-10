@@ -1,15 +1,3 @@
-import dynamic from 'next/dynamic',;
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
-export default function BookBuilderPage() {;
-  return <BookBuilder />;
-}
-import dynamic from 'next/dynamic';
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), {
-  ssr: false,
-});
-
-export default function BookBuilderPage() {
-  return <BookBuilder />;
 import React from 'react';
 export default function Page() {
   return (
@@ -20,4 +8,6 @@ export default function Page() {
       </section>
     </main>
   );
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/book-builder.tsx

@@ -1,111 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-// Final targeted fixes for remaining errors
-const fixes = [// Fix missing semicolons in import statements
-  {
-    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
-    "replacement": 'import { $1 } from \'$2\';'
-  },
-  // Fix malformed import statements
-  {
-    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
-    "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
-  },
-  // Fix missing semicolons after import statements
-  {
-    "pattern": /import\s+([^]+)\s*$/gm,
-    "replacement": 'import $1;'
-  },
-  // Fix unterminated string literals
-  {
-    "pattern": /'([^']*)\s*$/gm,
-    "replacement": '\'$1\';'
-  },
-  // Fix malformed function declarations
-  {
-    "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
-    "replacement": 'export default function $1() {\n  return ('
-  },
-  // Fix missing closing brackets
-  {
-    "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
-    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
-  },
-  // Fix malformed JSX
-  {
-    "pattern": /<\/div>\s*;\s*$/gm,
-    "replacement": '</div>\n  );\n}'
-  },
-  // Fix missing semicolons in object properties
-  {
-    "pattern": /(\w+):\s*'([^']*)',\s*$/gm,
-    "replacement": '$1: \'$2\','
-  },
-  // Fix malformed array declarations
-  {
-    "pattern": /const\s+(\w+)\s*=\s*\[\s*$/gm,
-    "replacement": 'const $1 = [\n    '
-  },
-  // Fix missing commas in arrays
-  {
-    "pattern": /'([^']*)'\s*;\s*'([^']*)'/g,
-    "replacement": '\'$1\',\n    \'$2\''
-  }
-];
+#!/usr/bin/env node;
+const fs = require("fs");
+const path = require("path");
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
+<<<<<<< HEAD
     // Apply fixes
     fixes.forEach(fix => {
       content = content.replace(fix.pattern, fix.replacement)});
@@ -148,64 +48,6 @@ files.forEach(file => {
     fixedCount++}
 });
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Final targeted fixes for remaining errorsconst fixes = [/ Fix missing semicolons in import statements {" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*$/gm,"" replacement: "import { $1 } from \"$2\";" }, / Fix malformed import statements {"" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*export\s*default\s*function/g,"" replacement: "import { $1 } from \"$2\";\n\nexport default function" }, / Fix missing semicolons after import statements {" pattern: /import\s+([^]+)\s*$/gm,"" replacement: "import $1;" }, / Fix unterminated string literals {"" pattern: /"([^"]*)\s*$/gm,"" replacement: "\"$1\";" }, / Fix malformed function declarations {" pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,"" replacement: "export default function $1() {\n return (" }, / Fix missing closing brackets {" pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix malformed JSX {" pattern: /<\/div>\s*;\s*$/gm,"" replacement: "</div>\n );\n}" }, / Fix missing semicolons in object properties {"" pattern: /(\w+):\s*"([^"]*)",\s*$/gm,"" replacement: "$1: \"$2\"," }, / Fix malformed array declarations {" pattern: /const\s+(\w+)\s*=\s*\[\s*$/gm,"" replacement: "const $1 = [\n " }, / Fix missing commas in arrays {"" pattern: /"([^"]*)"\s*;\s*"([^"]*)"/g,"" replacement: "\"$1\",\n \"$2\"" }];function fixFile(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); let originalContent = content; / Apply fixes fixes.forEach(fix => { content = content.replace(fix.pattern, fix.replacement)}); / Additional cleanup content = content" .replace(/;\s*;\s*/g, ";\n")" .replace(/,\s*,\s*/g, ",\n")" .replace(/\s+$/gm, "") / Remove trailing whitespace .trim(); / Ensure proper file ending" if (!content.endsWith("}") && !content.endsWith(";")) {" content += "\n}"} if (content !== originalContent) { fs.writeFileSync(filePath, content);" console.log(`Fixed: ${filePath}`); return true} return false} catch (error) {` console.error(`Error fixing ${filePath}:`, error.message); return false}}function findTsxFiles(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); " if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {" traverse(fullPath)} else if (item.endsWith(".tsx") | item.endsWith(".jsx")) { files.push(fullPath)} } } traverse(dir); return files}/ Main execution"const srcDir = path.join(__dirname, "src");const files = findTsxFiles(srcDir);`console.log(`Found ${files.length} files to check.`);let fixedCount = 0;files.forEach(file => { if (fixFile(file)) { fixedCount++}});`console.log(`Fixed ${fixedCount} files.`);'"`'"`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/main
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -214,142 +56,132 @@ const path = require('path')
     "pattern"
     "replacement"
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
-=======
-// Final targeted fixes for remaining errors;
-const fixes = [// Fix missing semicolons in import statements;
-  {]
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "replacement"
     "pattern"
     "replacement"
     "replacement"
-<<<<<<< HEAD
     "pattern"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-    "replacement"
-    "replacement"
-const fs = require('fs');
-const path = require('path');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
     "replacement"
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+    // Fix missing types in function parameters;
+    content = content.replace(
+      /\(key: keyof (\w+), value: \)/g,
+      '(key: keyof $1, value: any)'
+    );
+    content = content.replace(
+      /\(key: keyof (\w+), value: \)/g,
+      '(key: keyof $1, value: any)'
+    );
 
-<<<<<<< HEAD
+    // Fix malformed useState;
+    content = content.replace(/useState<>\(null\)/g, 'useState(null)');
+    content = content.replace(/useState<>\(null\)/g, 'useState(null)');
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-    "replacement"
-main
+    // Fix malformed type annotations;
+    content = content.replace(/:\s*{;/g, ': {');
+    content = content.replace(/:\s*};/g, ': };');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // Fix malformed object properties;
+    content = content.replace(/(\w+)\s*:\s*{;/g, '$1: {');
+    content = content.replace(/(\w+)\s*:\s*string\s*;/g, '$1: string;');
+    content = content.replace(/(\w+)\s*:\s*number\s*;/g, '$1: number;');
+    content = content.replace(/(\w+)\s*:\s*boolean\s*;/g, '$1: boolean;');
 
-    "replacement"
+    // Fix malformed function parameters;
+    content = content.replace(/\(\s*(\w+)\s*:\s*string\s*\)/g, '($1: string)');
+    content = content.replace(/\(\s*(\w+)\s*:\s*number\s*\)/g, '($1: number)');
+    content = content.replace(
+      /\(\s*(\w+)\s*:\s*boolean\s*\)/g,
+      '($1: boolean)'
+    );
 
-<    "replacement"
+    // Fix malformed JSX;
+    content = content.replace(/<\/([^>]+)>/g, '</$1>');
 
-    "replacement"
-const fs = require('fs');
-const path = require('path');
+    // Fix specific patterns;
+    content = content.replace(
+      /:\s*{(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*}/g,
+      ': { $1, $2, $3, $4, $5 }'
+    );
+    content = content.replace(
+      /:\s*{(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*}/g,
+      ': { $1, $2, $3, $4 }'
+    );
+    content = content.replace(
+      /:\s*{(\w+)\s*,\s*(\w+)\s*,\s*(\w+)\s*}/g,
+      ': { $1, $2, $3 }'
+    );
+    content = content.replace(/:\s*{(\w+)\s*,\s*(\w+)\s*}/g, ': { $1, $2 }');
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-// Function to fix final errors
-=======
-// Function to fix final errors;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-function fixFinalErrors(filePath) {
-  try {
-  // TODO: Implement
+    // Fix malformed interface declarations;
+    content = content.replace(/interface\s+(\w+)\s*{;/g, 'interface $1 {');
+    content = content.replace(/interface\s+(\w+)\s*{/g, 'interface $1 {');
+
+    // Fix malformed type declarations;
+    content = content.replace(/type\s+(\w+)\s*=\s*{;/g, 'type $1 = {');
+    content = content.replace(/type\s+(\w+)\s*=\s*{/g, 'type $1 = {');
+
+    // Fix malformed function declarations;
+    content = content.replace(
+      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
+      'export function $1() {'
+    );
+    content = content.replace(
+      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
+      'export function $1() {'
+    );
+
+    // Fix malformed const declarations;
+    content = content.replace(
+      /const\s+(\w+)\s*:\s*(\w+)\s*=\s*{;/g,
+      'const $1: $2 = {'
+    );
+    content = content.replace(
+      /const\s+(\w+)\s*:\s*(\w+)\s*=\s*{/g,
+      'const $1: $2 = {'
+    );
+
+    // Fix malformed object literals;
+    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*}/g, "{ $1: $2 }");
+    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*,/g, `{ $1: $2,`);
+    // Write back if changed;
+    if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;}
+
+    return false;} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
+    return false;}
 }
 
-    let modified = false;
-
-    // Fix operator.ts - fix object property syntax;
-    if (filePath.includes('operator.ts')) {
-
-      modified = true;
-
-    // Fix track.ts - fix import path;
-    if (filePath.includes('track.ts')) {
-
-
-    // Fix nextauth.ts - remove catch block without try;
-    if (filePath.includes('nextauth.ts')) {
-      content = content.replace(/} catch \(error\) \{[\s\S]*?return res\.status\(500\)\.json\(\{ error: "Internal server error" \}\);\s*}/g, );
-
-      return true;
-  } catch (error) {`;
-    console.error(`Error processing ${filePath}:`, error.message);
-  return false;
-
-// List of files with final errors;
-const filesToFix = [
-
-  'pages/api/auth/[...nextauth].ts
-];
-
-let fixedCount = 0;
-
-
-<<<<<<< HEAD
-filesToFix.forEach(file => {
-  const filePath = path.join(process.cwd(), file);
-  if (fs.existsSync(filePath)) {
-    if (fixFinalErrors(filePath)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`File not found: ${filePath}`);
+function getAllFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  for (const item of items) {
+  const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+  files.push(...getAllFiles(fullPath));} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {
+  files.push(fullPath);}
   }
-});
 
-console.log(`Fixed final errors in ${fixedCount} files.`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    "replacement"
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
+  return files;}
 
+// Main execution;
+const srcDir = path.join(process.cwd(), `src`);
+if (fs.existsSync(srcDir)) {
+  const files = getAllFiles(srcDir);
+  let fixedCount = 0;
+  for (const file of files) {;
+  if (fixFile(file)) {;
+  fixedCount++;,
+}
+  }
 
-
-    "replacement"
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  console.log(`\nFixed ${fixedCount} files.`);,
+} else {;
+  console.log(`src directory not found`);,
+}
+}}}}}}}}}}}}}}}}}}
+>>>>>>> origin/automation-fixes

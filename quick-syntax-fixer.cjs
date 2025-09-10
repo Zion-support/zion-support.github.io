@@ -1,111 +1,67 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class QuickSyntaxFixer {
-  constructor() {
-    this.fixedFiles = [];
-  }
-
-  log(message) {
-    console.log(`[QuickSyntaxFixer] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not: found: ${filePath}`);
-        return false;
-      }
-
-      const originalContent = fs.readFileSync(filePath, 'utf8');
-      const content = originalContent
-        // Remove merge conflict markers
-        .replace(/[\s\S]*?
-
         .replace(/^>>>>>>>.*$/gm, '')
-ursor/fix-lint-push-and-merge-to-main-28da
-=======
-
-        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
+        
         // Fix module.exports
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
-        // Fix constructor;
+        // Fix constructor
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
-        // Fix empty lines with semicolons;
-        .replace(/^\s*;\s*$/gm, )
-        // Fix multiple semicolons;
+        // Fix empty lines with semicolons
+        .replace(/^\s*;\s*$/gm, '')
+        // Fix multiple semicolons
         .replace(/;+/g, ';')
-        // Fix semicolons before commas;
+        // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
-
-      if (content !== originalContent) {
+      if (content !== originalContent) {;
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: d: ${filePath});
+        this.log(`Fixed: ${filePath}`);
         return true;
       }
 
       return false;
-
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
+    }
+  }
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
-    // Fix critical files first;
+    
     const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx';
-      '.eslintrc.js';
-      'ecosystem.config.cjs';
-      'run-automation-suite.cjs';
-      'scripts/fix-syntax-errors.cjs';
-      'scripts/performance-monitor.cjs';
-      'scripts/security-audit.cjs';
-
+      'src/components/ServiceCard.tsx',
+      'utils/accessibility.ts',
+      'utils/auth.ts',
+      'utils/db.ts',
+      'utils/supabase.ts',
+      'utils/types.ts'
     ];
 
-    let fixedCount = 0;
     for (const file of criticalFiles) {
-      if (this.fixFile(file)) {
-        fixedCount++;
-`;
-    this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: s: this.fixedFiles };
+      await this.fixFile(file);
+    }
 
-// Run the fixer;
-if (require.main === module) {
-  const fixer = new QuickSyntaxFixer();
-  fixer.run().catch(console.error);
+    this.log(`✅ Fixed ${fixedCount} critical files`);
+    return { fixedFiles: this.fixedFiles };
+  }
+}
+
+const fixer = new QuickSyntaxFixer();
+fixer.run().catch(console.error);
+
 
 module.exports = QuickSyntaxFixer;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')
-<<<<<<< HEAD
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

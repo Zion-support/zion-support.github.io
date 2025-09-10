@@ -3,11 +3,11 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 console.log('🚀 Starting PR Resolution and Merge Process...\n');
 // Function to run git commands safely;
-function runGitCommand(command, description) {
-  try {
-  // TODO: Implement
-}
-    console.log(`📝 ${description}...`);
+
+    const result = execSync(command, { 
+      encoding: utf8', 
+      stdio: 'pipe,
+
 
       cwd: process.cwd()
     });`;
@@ -18,10 +18,6 @@ function runGitCommand(command, description) {
 
 // Function to check if we can merge a PR;
 function canMergePR(prNumber) {
-  // TODO: Implement
-    const result = runGitCommand(`;
-      `curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,"`;
-      `Checking PR #${prNumber} status`)
     );
     if (result) {
       const pr = JSON.parse(result);
@@ -33,21 +29,10 @@ function canMergePR(prNumber) {
         mergeable_state: pr.mergeable_state,
         head: pr.head.ref,
         base: pr.base.ref,
-        draft: pr.draft;
-      };
+=======
 
-
-// Function to resolve merge conflicts;
-function resolveMergeConflicts() {"
-  console.log('\n🔧 Resolving merge conflicts...\n');
-  // First, let's check current status;
-
-    if (statusResult) {
-      const conflictedFiles = statusResult;
-        .split('\n')
-        .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
-<<<<<<< HEAD
         .map(line => line.split(' ').pop());
+
       
       console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
       
@@ -61,22 +46,30 @@ function resolveMergeConflicts() {"
             
             // Remove conflict markers and keep both versions where possible
             content = content
-<<<<<<< HEAD
-              .replace(/[^\n]+\n/g, '')
-              .replace(/<<<<<<< [^\n]+\n/g, '')
-              .replace(/=======\n/g, '')
-              .replace(/[^\n]+\n/g, '');
-=======
-              .replace(/
-              .replace(/<<<<<<< [^\n]+\n/g, '')
-<<<<<<< HEAD
+
+
+
+              .replace(/\n/g, )
               .replace(/\n/g, '')
               .replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               .replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+              .replace(/[^\n]+\n/g, '')
+              .replace(/
+              .replace(/\n/g, '')
+              .replace(/[^\n]+\n/g, '');
+
+              .replace(/              .replace(/
+
+              .replace(/\n/g, '')
+
+              .replace(/
+
+
+              .replace(/
+
+
             
             fs.writeFileSync(file, content);
             console.log(`✅ Resolved conflicts in ${file}`);
@@ -87,15 +80,15 @@ function resolveMergeConflicts() {"
       }
       
       // Add resolved files
-      runGitCommand('git add .', 'Adding resolved files');
+      runGitCommand(git add ., 'Adding resolved files');
       
       // Commit the merge
-      runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing merge resolution');
+      runGitCommand(git commit -m "Resolve merge conflicts automatically, 'Committing merge resolution');
     }
   }
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
 
       console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
       // Try to resolve conflicts automatically;
@@ -111,21 +104,50 @@ function resolveMergeConflicts() {"
 
   if (prInfo.draft) {`;
     console.log(`⚠️  PR #${prNumber} is a draft. Converting to ready for review...`);
-    // Convert draft to ready for review;
-
-      `Converting PR #${prNumber} to ready for review`)
-  if (prInfo.mergeable === false) {`;
     console.log(`⚠️  PR #${prNumber} has merge conflicts. Attempting to resolve...`);
     resolveMergeConflicts();
   // Try to merge the PR;`;
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
 
+  const mergeResult = runGitCommand(
+    `curl -X PUT -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d '{"merge_method:merge"}'`,
+    `Merging PR #${prNumber}`
+  );
+  
+  if (mergeResult) {
+    const result = JSON.parse(mergeResult);
+    if (result.merged) {
+      console.log(`✅ Successfully merged PR #${prNumber}`);
+      return true;
+    } else {
+      console.log(`❌ Failed to merge PR #${prNumber}: ${result.message}`);
+      return false;
+    }
+  }
+  
+  return false;
+}
+
+
       return false;
 
 // Main execution;
 async function main() {
+<<<<<<< HEAD
+=======
+
+  console.log(📋 Checking open PRs...\n);
+  
+  // Get list of open PRs
+  const prsResult = runGitCommand(
+    'curl -s -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open"',
+    Fetching open PRs
+  );
+  
+
   console.log('📋 Checking open PRs...\n');
   // Get list of open PRs;
+
 
   if (!prsResult) {
     console.log('❌ Failed to fetch PRs');
@@ -135,6 +157,34 @@ async function main() {
   // Process each PR;
   for (const pr of prs) {
     const prInfo = canMergePR(pr.number);
+
+    if (prInfo) {
+      console.log(`\n📊 PR #${prInfo.number}: ${prInfo.title}`);
+      console.log(`   Mergeable: ${prInfo.mergeable}`);
+      console.log(`   State: ${prInfo.mergeable_state}`);
+      console.log(`   Draft: ${prInfo.draft}`);
+      
+      if (prInfo.mergeable || prInfo.mergeable_state === clean) {
+        const merged = mergePR(pr.number, prInfo);
+        if (merged) {
+          console.log(`✅ PR #${pr.number} merged successfully`);
+        }
+      } else {
+        console.log(`⚠️  PR #${pr.number} cannot be merged automatically`);
+      }
+    }
+  }
+  
+  // Update local main branch
+  console.log('\n🔄 Updating local main branch...');
+  runGitCommand(git checkout main, 'Switching to main branch');
+  runGitCommand(git pull origin main, 'Pulling latest changes from main');
+  
+  console.log('\n✅ PR resolution and merge process completed!');
+}
+
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
         const merged = mergePR(pr.number, prInfo);
         if (merged) {`;

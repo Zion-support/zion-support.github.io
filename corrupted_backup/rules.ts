@@ -1,5 +1,6 @@
-import { ServiceVariant } from '../types/service-variants';
-export interface EmergingTechInnovation {;
+
+
+
   id: string;
   name: string;
   tagline: string;
@@ -31,15 +32,68 @@ export interface EmergingTechInnovation {;
     email: string;
     address: string;
     website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+
+  }
+
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+
+
+    ];
+    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
+
+
+      'Only quantum-powered cybersecurity platform with proven AI integration',
+  },;
+];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
+    ];
+    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+import { ServiceVariant } from '../types/service-variants',;
+export interface EmergingTechInnovation {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number,;
+  benefits: string[],;
+  capabilities: string[],;
+
   marketAdvantage: string;
 }
 ;
@@ -463,5 +517,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
+
+
   }
 ];
+
+
+
