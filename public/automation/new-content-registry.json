@@ -45,6 +45,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:29.410Z",
 =======
 <<<<<<< HEAD
@@ -124,10 +125,20 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T09:18:31.528Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T09-18-37-163Z
+=======
+  "generatedAt": "2025-08-15T09:22:57.582Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-092257",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:22:57.542Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-23-02-138Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/guides/guide-2025-08-15-090845",
@@ -143,16 +154,26 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T09:18:31.528Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T09-18-37-163Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-092257",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:22:57.542Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-23-02-138Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "href": "/reports/patterns/pattern-2025-08-15-090845",
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-092257",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-23-02-138Z
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T09:08:45.244Z",
+      "createdAt": "2025-08-15T09:22:57.542Z",
       "source": "cloud-deep-research-factory"
+<<<<<<< HEAD
     },
     {
       "title": "Playbook — Autonomous Delivery",
@@ -1922,6 +1943,8 @@
       "createdAt": "2025-08-15T09:18:31.528Z",
       "source": "cloud-deep-research-factory"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-18-37-163Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-23-02-138Z
     }
   ]
 }
