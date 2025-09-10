@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { useRouter } from 'next/router';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  Phone, 
+  Mail, 
+  MapPin,
+  ChevronDown,
+  Building2
+} from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
