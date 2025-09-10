@@ -1,8 +1,9 @@
 import React from 'react';
-import { Check, Star, Zap, Shield } from 'lucide-react';
+<<<<<<< HEAD
+import { Check, Star } from 'lucide-react';
 import SEO from '../components/SEO';
 
-const ComprehensivePricingGuide2027 = () => {
+const Pricing = () => {
   const plans = [
     {
       name: "Starter",
@@ -56,20 +57,20 @@ const ComprehensivePricingGuide2027 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
-        description="Complete pricing guide for our AI and technology solutions in 2027."
-        keywords={["pricing guide", "2027", "pricing", "plans", "cost"]}
+        title="Pricing - Zion Tech Group"
+        description="Transparent pricing for our AI and technology solutions. Choose the plan that fits your business needs."
+        keywords={["pricing", "plans", "cost", "subscription", "enterprise"]}
       />
       
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Comprehensive Pricing Guide 2027</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">Pricing Plans</h1>
           <p className="text-xl text-gray-300">
-            Transparent pricing for our AI and technology solutions
+            Choose the perfect plan for your business needs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -115,7 +116,7 @@ const ComprehensivePricingGuide2027 = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-16">
           <div className="bg-slate-800/50 rounded-lg p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
             <p className="text-gray-300 mb-6">
@@ -131,4 +132,26 @@ const ComprehensivePricingGuide2027 = () => {
   );
 };
 
-export default ComprehensivePricingGuide2027;
+export default Pricing;
+=======
+import SEO from '../components/SEO';
+
+export default function Pricing() {
+  return (
+    <>
+      <SEO 
+        title="Pricing - Zion Tech Group"
+        description="Transparent pricing for our AI-powered technology solutions and services."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">Pricing</h1>
+            <p className="text-xl text-slate-300">Transparent pricing for our technology solutions.</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> 2e76c8f17382c83630cd66eed177eb9d0ef16e40
