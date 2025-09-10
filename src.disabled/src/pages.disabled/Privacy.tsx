@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"Privacy\": React.FC = () => {}}; export default Privacy;
 const React from "react"; import { SEO } from "./components/SEO"; const Privacy: React.FC = () => {}}; export default Privacy;'"'"
 import _React from 'react'; import { SEO } from '../components/SEO'; const "Privacy": _React.FC = () => {}}; export default Privacy;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

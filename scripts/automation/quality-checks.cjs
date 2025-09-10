@@ -1,41 +1,10 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-// Get automation interval from environment variable ("default": 3 hours);
-=======
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require(`path`)
-console.log(``🔍 Starting continuous quality checks automation...`)
-#!/"usr/bin/env" node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-
 console.log(`"🔍 Starting continuous quality checks automation...")
 
-// Get automation interval from environment variable (default: 3 hours)
->>>>>>> origin/automation-fixes
-const AUTOMATION_INTERVAL =;
+// Get automation interval from environment variable (default: 3 hours)const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours;
 async function $1() {
   try {
-<<<<<<< HEAD
-  .toISOString()});
-    // Run linting;
-    try {
-  execSync("npm run lint", { "stdio": "inherit" });
-      } catch (error) {
-// Get automation interval from environment variable ("default": 3 hours);
-=======
-  console.log(`🔍 Running quality checks at ${new Date().toISOString()})
-
     // Run linting;
     console.log(`"🔍 Running ESLint...")
     try {
@@ -44,108 +13,10 @@ async function $1() {
 } catch (error) {
   console.log(`"⚠️  ESLint issues found but continuing...")
 console.log(`🔍 Starting continuous quality checks automation...`)
-// Get automation interval from environment variable (default: 3 hours)
->>>>>>> origin/automation-fixes
-const AUTOMATION_INTERVAL =;
+// Get automation interval from environment variable (default: 3 hours)const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours;
 async function runQualityChecks() {
   try {
-<<<<<<< HEAD
-  .toISOString()});
-    // Run linting;
-    try {
-  execSync("npm run lint", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Run type checking;
-    try {
-  execSync("npm run type-check", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Run tests;
-    // Run tests;
-    try {
-  execSync("npm test", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Check code coverage if available;
-    try {
-  execSync("npm run "test": coverage", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Check for dead code;
-    // Check for dead code;
-    try {
-  execSync("npx ts-unused-exports tsconfig.json", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Check for circular dependencies;
-    try {
-  execSync("npx madge --circular src/", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Check for duplicate code;
-    // Check for duplicate code;
-    try {
-  execSync("npx jscpd src/", { "stdio": "inherit" });
-      } catch (error) {
-  }
-;
-    // Generate quality report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": "Quality checks completed",
-      "status": "completed"}
-    const reportPath = path.join(process.cwd(), "quality-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    } catch (error) {
-  console.error("❌ Continuous quality checks "failed": ", error.message);
-    // Don`t exit, just log the error and continue}
-=======
-  console.log(`🔍 Running quality checks at ${new Date().toISOString()})
-    // Run linting;
-    console.log(``🔍 Running ESLint...`)
-    try {
-  execSync(`npm run lint`, { stdio: "inherit" })
-      console.log("✅ ESLint completed successfully"`),
-} catch (error) {
-  console.log(`"⚠️  ESLint issues found but continuing..."),
-},
-} catch (error) {
-  console.log(`⚠️  ESLint issues found but continuing...`),
-}
-    // Run type checking;
-    console.log("🔍 Running TypeScript type checking...")
-    try {
-  execSync("npm run type-check", { stdio: "inherit" })
-      console.log("✅ Type checking completed successfully"),
-} catch (error) {
-  console.log("⚠️  Type checking issues found but continuing..."),
-},
-} catch (error) {
-  console.log("⚠️  Type checking issues found but continuing..."),
-}
-    // Run tests;
-    // Run tests;
-
     console.log("🧪 Running tests...")
     try {
   execSync("npm test", { stdio: "inherit" })
@@ -213,76 +84,17 @@ async function runQualityChecks() {
 } catch (error) {
   console.error(`❌ Continuous quality checks failed: `, error.message)
     // Don`t exit, just log the error and continue;
-}
->>>>>>> origin/automation-fixes
-}
+}}
 // Main continuous loop;
 async function runContinuous() {
-<<<<<<< HEAD
-=======
-  console.log(🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  )
->>>>>>> origin/automation-fixes
-  // Run initial quality checks;
-  await runQualityChecks()
-  // Set up continuous execution;
-  setInterval(async () => {
-<<<<<<< HEAD
-  await runQualityChecks()}, AUTOMATION_INTERVAL);
-  }
-;
-// Handle graceful shutdown;
-process.on("SIGINT`, () => {
-} catch (error) {
-  }
-;
-    // Generate quality report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": "Quality checks completed",
-      "status": "completed"}
-;
-    const reportPath = path.join(process.cwd(), "quality-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    } catch (error) {
-  console.error("❌ Continuous quality checks "failed": ", error.message);
-    // Don"t exit, just log the error and continue}
-=======
-  await runQualityChecks(),
-}, AUTOMATION_INTERVAL)
-  console.log( ✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `),
-}
-// Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-  ,
-} catch (error) {
-  console.log("ℹ️  Duplicate code checker not available"),
-}
-    // Generate quality report;
-    console.log("📊 Generating quality report...")
-    const report = {
-  timestamp: new Date().toISOString(),
-      summary: "Quality checks completed",
-      status: "completed",,
-}
-    const reportPath = path.join(process.cwd(), "quality-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log(✅ Quality report saved to ${reportPath})
-
     console.log("✅ Continuous quality checks completed successfully"),
 } catch (error) {
   console.error("❌ Continuous quality checks failed: ", error.message)
     // Don"t exit, just log the error and continue;
-}
->>>>>>> origin/automation-fixes
-}
+}}
 
 // Main continuous loop;
 async function runContinuous() {
-<<<<<<< HEAD
-  // Run initial quality checks;
-  await runQualityChecks();
-
   // Set up continuous execution;
   setInterval(async () => {
   await runQualityChecks()}, AUTOMATION_INTERVAL);
@@ -401,4 +213,3 @@ process.on("SIGTERM", () => {
 runContinuous().catch(error => {
   console.error("❌ Failed to start continuous quality checks: ", error)  process.exit(1),
 }))
->>>>>>> origin/automation-fixes

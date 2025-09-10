@@ -1,16 +1,5 @@
 
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-
 export default function RequestQuote() {
   return (
 <<<<<<< HEAD
@@ -27,9 +16,7 @@ export default function RequestQuote() {
             <GradientHeading>Request a Quote</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Get a customized quote for your AI and tech project needs
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    <div className="min-h-screen bg-background">
+=======    <div className="min-h-screen bg-background">
       <SEO 
         title="Request Quote - Zion Tech Group" 
         description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
@@ -47,32 +34,6 @@ export default function RequestQuote() {
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Tell us about your project and we'll connect you with the perfect talent and services for your needs
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-    </>
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Users, Zap } from "lucide-react";
-
 export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -298,21 +259,11 @@ export default function RequestQuote() {
           </div>
         </div>
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-aa85
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </main>
       
       <Footer />
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-
 export default function RequestQuote() {
   return (
     <>
@@ -343,8 +294,6 @@ export default function RequestQuote() {
       <Footer />
     </>
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   );
 }

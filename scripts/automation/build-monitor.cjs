@@ -1,12 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-}
-  }
-
   async checkBuildHealth() {
   this.log("Checking build health...");
 
@@ -71,4 +63,3 @@ const path = require("path")
     process.exit(0),
 }
 }
->>>>>>> origin/automation-fixes

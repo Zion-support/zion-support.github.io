@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -451,130 +445,10 @@ class $1 {
   }
   processErrorReport(data) {
   const timestamp = data.timestamp;
-
->>>>>>> origin/automation-fixes
     if (data.errors && Array.isArray(data.errors)) {
   data.errors.forEach(error => {
   this.addErrorData(error.type || "unknown", {
   timestamp,
-<<<<<<< HEAD
-          "count": error.count || 1,
-          "source": "automation-report",
-          "details": error.message || error.details || "})})} else if (data.errorType) {
-  this.addErrorData(data.errorType, {
-  timestamp,
-        "count": data.errorCount || 1,
-        "source": "error-report",
-        "details": data.errorMessage || data.details || "})}
-  }
-;
-  processLogLine(line, logFile) {
-  const timestamp = new Date().toISOString();
-    if (line.includes("TypeScript") || line.includes("tsc")) {
-  this.addErrorData("typescript", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("ESLint") || line.includes("lint")) {
-  this.addErrorData("eslint", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("build") || line.includes("Build")) {
-  this.addErrorData("build", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("dependency") || line.includes("npm")) {
-  this.addErrorData("dependencies", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("merge") || line.includes("conflict")) {
-  this.addErrorData("mergeConflicts", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line,
-    if (line.includes("TypeScript") || line.includes("tsc")) {
-  this.addErrorData("typescript", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("ESLint") || line.includes("lint")) {
-  this.addErrorData("eslint", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("build") || line.includes("Build")) {
-  this.addErrorData("build", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("dependency") || line.includes("npm")) {
-  this.addErrorData("dependencies", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})} else if (line.includes("merge") || line.includes("conflict")) {
-  this.addErrorData("mergeConflicts", {
-  timestamp,
-        "count": 1,"source": "log-${logFile}",
-        "details": line})}
-  }
-;
-  addErrorData(type, data) {
-  if (this.errorData[type]) {
-  this.errorData[type].push(data)} else {
-  this.errorData[type] = [data]}
-  }
-;
-  countTypeScriptErrors(output) {
-  const errorLines = output;
-      .split("\n");
-      .filter(line => line.includes("error TS") || line.includes("warning TS"));
-    return errorLines.length}
-;
-  countLintErrors(output) {
-  const errorLines = output;
-      .split("\n");
-      .filter(line => line.includes("error") || line.includes("warning"));
-    return errorLines.length}
-;
-=======
-          count: error.count || 1,
-          source: "automation-report",
-          details: error.message || error.details || ",,
-}),
-}),
-} else if (data.errorType) {
-  this.addErrorData(data.errorType, {
-  timestamp,
-        count: data.errorCount || 1,
-        source: "error-report",
-        details: data.errorMessage || data.details || ",,
-}),
-}
-  }
-  processLogLine(line, logFile) {
-  const timestamp = new Date().toISOString()
-    if (line.includes("TypeScript") || line.includes(`tsc`)) {
-  this.addErrorData(`typescript`, {
-  timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line}),
-} else if (line.includes(`ESLint`) || line.includes(`lint`)) {
-  this.addErrorData(`eslint`, {
-  timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line}),
-} else if (line.includes(`build`) || line.includes(`Build`)) {
-  this.addErrorData(`build`, {
-  timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line}),
-} else if (line.includes(`dependency`) || line.includes(`npm`)) {
-  this.addErrorData(`dependencies`, {
-  timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line}),
-} else if (line.includes(`merge`) || line.includes(`conflict`)) {
-  this.addErrorData(`mergeConflicts`, {
-  timestamp,
-        count: 1,source: `log-${logFile}`,
-        details: line,
-
     if (line.includes("TypeScript") || line.includes("tsc")) {
   this.addErrorData("typescript", {
   timestamp,
@@ -625,37 +499,13 @@ class $1 {
       .split("\n")
       .filter(line => line.includes("error") || line.includes("warning"))
     return errorLines.length;
-}
->>>>>>> origin/automation-fixes
-  countBuildErrors(output) {
+}  countBuildErrors(output) {
   const errorLines = output;
       .split("\n");
       .filter(;
         line =>;
           line.includes("error") ||;
           line.includes("Error") ||;
-<<<<<<< HEAD
-          line.includes("ERROR");
-      );
-    return errorLines.length}
-;
-  analyzeTrends() {
-  this.log("📊 Analyzing error trends...");
-    // Group errors by time periods;
-    const now = new Date();
-    const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-    const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-    const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-    Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType];
-=======
-          line.includes("ERROR")
-      )
-    return errorLines.length;
-}
-  analyzeTrends() {
-  this.log("📊 Analyzing error trends...")
-
     // Group errors by time periods;
     const now = new Date()
     const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000)
@@ -663,61 +513,13 @@ class $1 {
     const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000)
 
     Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType]
->>>>>>> origin/automation-fixes
-      // Daily trends;
+  const errors = this.errorData[errorType]      // Daily trends;
       const dailyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneDayAgo;
-<<<<<<< HEAD
-      );
-      this.trends.daily[errorType] = {
-  "count": dailyErrors.length,
-        "totalErrors": dailyErrors.reduce((sum, e) => sum + e.count, 0),
-        "sources": [...new Set(dailyErrors.map(e => e.source))]}
-      // Weekly trends;
-      const weeklyErrors = errors.filter(;
-=======
-      )
-      this.trends.daily[errorType] = {
-  count: dailyErrors.length,
-        totalErrors: dailyErrors.reduce((sum, e) => sum + e.count, 0),
-        sources: [...new Set(dailyErrors.map(e => e.source))],,
-}
-      // Weekly trends;
-      const weeklyErrors = errors.filter(
-
 >>>>>>> origin/automation-fixes
       // Weekly trends;
       const weeklyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneWeekAgo;
-<<<<<<< HEAD
-      );
-      this.trends.weekly[errorType] = {
-  "count": weeklyErrors.length,
-        "totalErrors": weeklyErrors.reduce((sum, e) => sum + e.count, 0),
-        "sources": [...new Set(weeklyErrors.map(e => e.source))]}
-=======
-      )
-      this.trends.weekly[errorType] = {
-  count: weeklyErrors.length,
-        totalErrors: weeklyErrors.reduce((sum, e) => sum + e.count, 0),
-        sources: [...new Set(weeklyErrors.map(e => e.source))],,
-}
->>>>>>> origin/automation-fixes
-      // Monthly trends;
-      const monthlyErrors = errors.filter(;
-        e => new Date(e.timestamp) >= oneMonthAgo;
-<<<<<<< HEAD
-      );
-      this.trends.monthly[errorType] = {
-  count: monthlyErrors.length,;
-        totalErrors: monthlyErrors.reduce((sum, e) => sum + e.count, 0),;
-        sources: [...new Set(monthlyErrors.map(e => e.source))],;}
-    });}
-
-  generateInsights() {
-  this.log("💡 Generating insights and recommendations...");
-
     const insights = {
   timestamp: new Date().toISOString(),;
       summary: {
@@ -1117,85 +919,11 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`)
 })
 
     return distribution;
-}
->>>>>>> origin/automation-fixes
-  generateErrorTimeline() {
+}  generateErrorTimeline() {
   const timeline = {}
     const now = new Date();
     // Last 7 days;
     for (let i = 6; i >= 0; i--) {
-<<<<<<< HEAD
-  const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
-      const dateStr = date.toISOString().split("T")[0];
-      timeline[dateStr] = {
-  "typescript": 0,
-        "eslint": 0,
-        "build": 0,
-        "dependencies": 0,
-        "system": 0,
-        "mergeConflicts": 0}
-      Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType].filter(e => {
-  const errorDate = new Date(e.timestamp).toISOString().split("T")[0];
-          return errorDate === dateStr});
-        timeline[dateStr][errorType] = errors.reduce(;
-          (sum, e) => sum + e.count,
-    // Last 7 days;
-    for (let i = 6; i >= 0; i--) {
-  const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
-      const dateStr = date.toISOString().split("T")[0];
-      timeline[dateStr] = {
-  "typescript": 0,
-        "eslint": 0,
-        "build": 0,
-        "dependencies": 0,
-        "system": 0,
-        "mergeConflicts": 0}
-;
-      Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType].filter(e => {
-  const errorDate = new Date(e.timestamp).toISOString().split("T")[0];
-          return errorDate === dateStr});
-        timeline[dateStr][errorType] = errors.reduce(;
-          (sum, e) => sum + e.count,
-          0;
-        )})}
-;
-    return timeline}
-;
-  generateSourceBreakdown() {
-  const sources = {}
-;
-    Object.values(this.errorData);
-      .flat();
-      .forEach(error => {
-  if (!sources[error.source]) {
-  sources[error.source] = 0}
-        sources[error.source] += error.count});
-    return Object.entries(sources);
-      .sort(([", "a"], [", "b"]) => b - a);
-      .map((["source", "count"]) => ({ source, count }))}
-;
-  async run() {
-  this.log("🚀 Starting Error Analytics Dashboard...");
-=======
-  const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000)
-      const dateStr = date.toISOString().split(`T`)[0]
-      timeline[dateStr] = {
-  typescript: 0,;
-        eslint: 0,;
-        build: 0,;
-        dependencies: 0,;
-        system: 0,;
-        mergeConflicts: 0}
-      Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType].filter(e => {
-  const errorDate = new Date(e.timestamp).toISOString().split(`T`)[0]
-          return errorDate === dateStr;
-})
-        timeline[dateStr][errorType] = errors.reduce(
-          (sum, e) => sum + e.count,
-
     // Last 7 days;
     for (let i = 6; i >= 0; i--) {
   const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000)
@@ -1238,46 +966,12 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`)
       .map((["source", "count"]) => ({ source, count })),
 }
   async run() {
-  this.log("🚀 Starting Error Analytics Dashboard...`)
->>>>>>> origin/automation-fixes
-    try {
+  this.log("🚀 Starting Error Analytics Dashboard...`)    try {
   // Collect error data;
       await this.collectErrorData();
       // Analyze trends;
       this.analyzeTrends();
       // Generate dashboard;
-<<<<<<< HEAD
-      const dashboard = await this.generateDashboard();
-      this.log(`🎉 Error Analytics Dashboard completed!`);
-      this.log(📊 Analyzed ${Object.values(this.errorData).flat().length} errors`;
-      );
-      this.log( `📈 Generated trends for ${Object.keys(this.trends).length} time periods`;
-      );
-      this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`;
-      );
-      return {
-  "success": true,
-        dashboard,
-        "errorCount": Object.values(this.errorData).flat().length}
-    } catch (error) {
-  this.log(;
-        `💥 Error Analytics Dashboard "failed": ${error.message  }`,ERROR"} catch (error) {
-  this.log(;
-        "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";
-      );
-      throw error}
-      this.log(`Error collecting "reports": ${error.message}`, 'ERROR');
-      return []}
-=======
-      const dashboard = await this.generateDashboard()
-      this.log(`🎉 Error Analytics Dashboard completed!`)
-      this.log(📊 Analyzed ${Object.values(this.errorData).flat().length} errors`;
-      )
-      this.log( `📈 Generated trends for ${Object.keys(this.trends).length} time periods`;
-      )
-      this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`;
-      )
-
       return {
   success: true,;
         dashboard,;
@@ -1289,9 +983,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`)
         `💥 Error Analytics Dashboard failed: ${error.message}",ERROR";
       )
       throw error;
-}
->>>>>>> origin/automation-fixes
-  }
+}  }
 }
 // Run the automation if called directly;
 <<<<<<< HEAD
@@ -1317,4 +1009,3 @@ if (require.main === module) {
   dashboard.run().catch(console.error),
 }
 module.exports = ErrorAnalyticsDashboard}}}}}}}}}}}}}}}))))))))
->>>>>>> origin/automation-fixes

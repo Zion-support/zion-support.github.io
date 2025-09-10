@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-export interface NextGenInnovativeService2025 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  launchDate: string;
-  betaAccess: boolean;
-}
-
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] = [
   // Quantum AI Orchestration Platform
   {
@@ -386,15 +351,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
     launchDate: "Q2 2025",
     betaAccess: true
-<<<<<<< HEAD
-=======
-export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
-  address: string;
-}
-
 export interface NextGenService {
   id: number;
   name: string;
@@ -934,11 +890,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.2
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  }
+    innovationScore: 9.2=======  }
 ];
 
 export default nextGenInnovativeServices2025;

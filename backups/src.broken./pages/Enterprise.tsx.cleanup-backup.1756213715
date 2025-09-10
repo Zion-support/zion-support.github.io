@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-
 const Enterprise: React.FC = () => {
   const enterpriseSolutions = [
     {
@@ -25,9 +20,7 @@ const Enterprise: React.FC = () => {
       title: "Digital Transformation",
       description: "End-to-end digital transformation consulting and implementation for modern enterprises.",
       features: ["Process Automation", "Change Management", "Technology Strategy", "ROI Optimization"]
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import { SEO } from '@/components/SEO';
+=======import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone, Lock } from 'lucide-react';
@@ -105,13 +98,6 @@ export default function Enterprise() {
         "Custom security",
         "On-premise options"
       ]
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    }
-  ];
-
   return (
 <<<<<<< HEAD
 =======
@@ -144,9 +130,7 @@ export default function Enterprise() {
                     {solution.features.map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    <div className="min-h-screen bg-background">
+=======    <div className="min-h-screen bg-background">
       <SEO 
         title="Enterprise Solutions - Zion Tech Group" 
         description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform."
@@ -237,53 +221,6 @@ export default function Enterprise() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <Check className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h3>
-              <p className="text-gray-300 mb-6">
-                Let's discuss how our enterprise solutions can drive innovation, 
-                efficiency, and growth for your organization.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Schedule a Consultation
-              </Link>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-                  <Button 
-                    className={`w-full ${
-                      plan.name === "Professional" 
-                        ? "bg-zion-purple hover:bg-zion-purple-light" 
-                        : "bg-zion-blue hover:bg-zion-blue-light"
-                    }`}
-                  >
-                    {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
@@ -303,23 +240,13 @@ export default function Enterprise() {
                 Download Brochure
               </Button>
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-};
-
 export default Enterprise;
 =======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+}>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
