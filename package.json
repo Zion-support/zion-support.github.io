@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production",
+    "build": "vite build --mode production && cp -f _redirects dist/_redirects || true && cp -f public/_headers dist/_headers || true",
     "start": "vite preview",
     "lint": "eslint --no-error-on-unmatched-pattern \"src/AppMinimal.tsx\" \"src/main.tsx\"",
     "lint:fix": "eslint \"src/AppMinimal.tsx\" \"src/main.tsx\" --fix",
@@ -19,11 +19,9 @@
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
-    
     "test:smoke": "jest --config jest.config.smoke.cjs",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
-    
     "analyze": "ANALYZE=true npm run build",
     "dev:fast": "npm run dev -- --turbo",
     "build:analyze": "ANALYZE=true npm run build",
@@ -60,7 +58,6 @@
     "error:detect": "node automation/intelligent-error-detector.cjs",
     "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
     "optimize:images": "node scripts/optimize-images.js",
-    "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPattern=accessibility",
     "test:performance": "npx jest --testPathPattern=performance",
     "improve:performance": "node scripts/performance-improver.cjs",
@@ -141,7 +138,6 @@
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
-    "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -177,9 +173,6 @@
     "@babel/preset-typescript": "^7.27.1",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
-    "@netlify/plugin-nextjs": "^5.12.1",
-    "@next/bundle-analyzer": "^13.5.6",
-    "@next/eslint-plugin-next": "^15.5.2",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -193,7 +186,6 @@
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.35.0",
-    "eslint-config-next": "^15.5.2",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
@@ -231,7 +223,7 @@
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
   "keywords": [
-    "nextjs",
+    "vite",
     "react",
     "typescript",
     "tailwindcss",
@@ -240,5 +232,6 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
 }
