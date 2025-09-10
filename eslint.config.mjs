@@ -3,7 +3,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 
-module.exports = [
+export default [
   {
     ignores: [
       'node_modules/**',
@@ -12,8 +12,6 @@ module.exports = [
       'coverage/**',
       '.next/**',
       '**/.next/**',
-      'zion-os.disabled/**',
-      'zion-os/**',
       'api/**',
       'api-backup/**',
       'api-disabled/**',
@@ -45,67 +43,20 @@ module.exports = [
       ecmaVersion: 2021,
       sourceType: 'module',
       parser: tseslint.parser,
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        exports: 'readonly'
-      },
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        },
+        ecmaFeatures: { jsx: true },
         project: false
       }
     },
     plugins: {
-      '@typescript-eslint': tsPlugin,
       react,
       'react-hooks': reactHooks,
       '@typescript-eslint': tseslint.plugin
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...tseslint.configs.recommendedTypeChecked?.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',

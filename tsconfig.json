@@ -36,6 +36,32 @@
   "exclude": [
     "node_modules",
     "dist",
-    "build"
+    "build",
+    "__tests__",
+    "tests",
+    "*.disabled",
+    "**/*.disabled/**",
+    "**/*.bak/**",
+    "**/*.backup/**",
+    "**/*_backup/**",
+    "**/*-backup/**",
+    "src.broken",
+    "src.corrupted",
+    "src.corrupted.*",
+    "src_disabled",
+    "src.disabled",
+    "pages.disabled*",
+    "pages.*backup*",
+    "temp_*",
+    "temp-*/**",
+    "out",
+    ".next",
+    "public-backup",
+    "pages-backup",
+    "src_backup*",
+    "zion-os",
+    "zion-os/**",
+    "zion-website",
+    "zion-website/**"
   ]
 }

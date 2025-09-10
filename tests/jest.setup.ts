@@ -77,7 +77,7 @@ jest.mock('@/integrations/supabase/client', () => ({
 jest.mock('firebase/app', () => ({
   initializeApp: jest.fn(),
   // Add other app-level exports if needed, e.g., getApps, getApp
-}));
+}), { virtual: true });
 
 jest.mock('firebase/firestore', () => {
   // Mock collection function to be available on the db instance (for v8 style)
@@ -145,7 +145,7 @@ jest.mock('firebase/firestore', () => {
     },
     // Add other Firestore exports your code uses
   };
-});
+}, { virtual: true });
 
 jest.mock('firebase/auth', () => ({
   getAuth: jest.fn(() => ({
@@ -162,7 +162,7 @@ jest.mock('firebase/auth', () => ({
   // For example:
   // GoogleAuthProvider: jest.fn(),
   // signInWithPopup: jest.fn(() => Promise.resolve({ user: { uid: 'mock-uid' } })),
-}));
+}), { virtual: true });
 
 jest.mock('firebase/storage', () => ({
   getStorage: jest.fn(() => ({
@@ -182,7 +182,7 @@ jest.mock('firebase/storage', () => ({
   getDownloadURL: jest.fn((storageRef) => Promise.resolve(`https://mockstorage.com/${storageRef.fullPath}`)),
   deleteObject: jest.fn(() => Promise.resolve()),
   // Add other Storage exports your code uses
-}));
+}), { virtual: true });
 
 // Mock axios
 jest.mock('axios', () => ({
@@ -276,7 +276,7 @@ jest.mock('vitest', () => {
     beforeAll: global.beforeAll,
     afterAll: global.afterAll,
   } as unknown as Record<string, unknown>;
-});
+}, { virtual: true });
 
 // -----------------------------
 // Lightweight Context & Redux mocks to avoid provider runtime errors
