@@ -6,7 +6,7 @@ import { apiClient } from './apiClient';
  * @param date Date or string to format
  * @returns Formatted date string
  */
-export function formatDate(_date) {
+export function formatDate(date) {
     if (!date)
         return '-';
     try {
@@ -40,7 +40,7 @@ export function checkUrlForReferralCode() {
 /**
  * Track referral when a user signs up
  */
-export async function trackReferral(_userId, _email) {
+export async function trackReferral(userId, email) {
     try {
         const refCode = localStorage.getItem('referral_code');
         if (!refCode)

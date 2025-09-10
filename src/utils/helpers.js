@@ -1,4 +1,3 @@
-/* global console */
 // helpers utility
 export const helpers = {
   // Placeholder utility functions
@@ -6,4 +5,4 @@ export const helpers = {
     // console.log('helpers initialized');
   },
 };
-export default helpers
+export default helpers;
