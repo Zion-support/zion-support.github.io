@@ -37,8 +37,13 @@
     "dev": "vite",
     "build": "vite build --mode production",
     "start": "vite preview",
-    "lint": "eslint {src,app,components}/**/*.{ts,tsx,js,jsx} --max-warnings 0",
-    "lint:fix": "eslint {src,app,components}/**/*.{ts,tsx,js,jsx} --fix",
+<<<<<<< HEAD
+    "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+=======
+    "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+>>>>>>> origin/main
     "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
