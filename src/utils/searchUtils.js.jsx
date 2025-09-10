@@ -2,7 +2,7 @@
 /**
  * Highlight search terms in text with HTML mark tags
  */
-export function highlightSearchTerms(_text, _searchTerm) {
+export function highlightSearchTerms(text, searchTerm) {
     if (!searchTerm.trim()) return text;
     const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(${escaped})`, 'gi');

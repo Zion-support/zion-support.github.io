@@ -30,7 +30,7 @@ function isLocalStorageAvailable() {
         return false;
     }
 }
-function safeConsoleError(_message, _error) {
+function safeConsoleError(message, error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
     // Prevent infinite recursion in console logging
     if (isLoggingError || env === 'production')

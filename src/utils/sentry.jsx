@@ -7,7 +7,7 @@ try {
 catch {
     nodeSentry = null;
 }
-export function captureException(_error) {
+export function captureException(error) {
     if (process.env.NODE_ENV === 'development') {
         if (typeof console !== 'undefined') {
             // console.error(error);

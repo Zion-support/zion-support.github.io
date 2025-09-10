@@ -10,7 +10,7 @@ export function registerServiceWorker() {
   }
 }
 
-function registerValidSW(_swUrl) {
+function registerValidSW(swUrl) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
@@ -79,7 +79,7 @@ export function checkForUpdates() {
 }
 
 // Background sync for offline form submissions
-export function registerBackgroundSync(_tag = 'background-sync') {
+export function registerBackgroundSync(tag = 'background-sync') {
   if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
     navigator.serviceWorker.ready.then((registration) => {
       return registration.sync.register(tag);
@@ -90,7 +90,7 @@ export function registerBackgroundSync(_tag = 'background-sync') {
 }
 
 // Store form data for offline submission
-export function storeFormDataForOffline(_formData) {
+export function storeFormDataForOffline(formData) {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then((registration) => {
       registration.active.postMessage({

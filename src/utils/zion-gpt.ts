@@ -86,7 +86,7 @@ function calculateCost(modelId: string, tokens: number): number {
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
-  prompt, _purpose, _maxTokens = 500, _temperature = 0.7, userId
+  prompt, purpose, maxTokens = 500, temperature = 0.7, userId
 }: {
   prompt: string;
   purpose: 'job' | 'resume' | 'support';

@@ -1,4 +1,4 @@
-/* global console, URL, window, localStorage, document */
+/* global URL, window, localStorage, document */
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
 /**
@@ -15,7 +15,7 @@ export function formatDate(date) {
         }
         return format(date, 'MMM d, yyyy');
     }
-    catch (e) {
+    catch {
         // console.error('Error formatting date:', e);
         return '-';
     }
@@ -63,7 +63,7 @@ export async function trackReferral(userId, email) {
             localStorage.removeItem('referral_code');
         }
     }
-    catch (error) {
+    catch {
         // console.error('Error tracking referral:', error);
     }
 }
