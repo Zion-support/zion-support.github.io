@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
 import React,{ useState,useEffect } from\';react\' \"interface\": AccessibilityEnhancerProps {\'; children: React.ReactNod,e} const \"AccessibilityEnhancer\": React.FC<AccessibilityEnhancerProps> = ({ children}) => { const [accessibilitySettings,setAccessibilitySettings] = useState({ \"highContrast\": \'fals\',e,\"largeText\": \'fals\',e,\"reducedMotion\": \'fals\',e,\"focusVisible\": \'true\'}) useEffect(() => {\''\';
 const React,{ useState,useEffect } from";react" interface: AccessibilityEnhancerProps {"; children: React.ReactNod,e} const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children}) => { const [accessibilitySettings,setAccessibilitySettings] = useState({ highContrast: "fals",e,largeText: "fals",e,reducedMotion: "fals",e,focusVisible: "true"}) useEffect(() => {""";'"'"
 import _React,{ useState,useEffect } from';react' "interface": AccessibilityEnhancerProps {'; children: _React.ReactNod,e} const "AccessibilityEnhancer": _React.FC<AccessibilityEnhancerProps> = ({ children}) => { const [accessibilitySettings,setAccessibilitySettings] = useState({ "highContrast": 'fals',e,"largeText": 'fals',e,"reducedMotion": 'fals',e,"focusVisible": 'true'}) useEffect(() => {''';
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -90,9 +86,7 @@ testDirs.forEach(dir => {;
 }
         }
       }
-    });,
->>>>>>> origin/automation-fixes
-}
+    });,}
 
 // Get all test files in __tests__ directory
 const testDir = path.join(__dirname, '__tests__');
@@ -107,15 +101,4 @@ files.forEach(file => {
     fixedCount++;
   }
 });
-<<<<<<< HEAD
-
-console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
-=======
-console.log(`✅ Fixed ${fixedFiles.length} test files`);
-if (fixedFiles.length > 0) {;
-  console.log("Fixed files:");
-  fixedFiles.forEach(file => console.log(`  - ${file}`));,
-}
-
 console.log("🎉 Test file fixing v2 completed!")})
->>>>>>> origin/automation-fixes

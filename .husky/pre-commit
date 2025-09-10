@@ -1,8 +1,4 @@
 #!/usr/bin/env sh
-<<<<<<< HEAD
-
-echo "🔍 Running pre-commit checks..."
-
 # Temporarily disable TypeScript check due to many syntax errors in other files
 # echo "🔍 Running TypeScript type check..."
 # npm run type-check || {
@@ -33,4 +29,3 @@ echo "✅ Pre-commit checks completed"
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx --yes lint-staged
->>>>>>> origin/automation/changelog
