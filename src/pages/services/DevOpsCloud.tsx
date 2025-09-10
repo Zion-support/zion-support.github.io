@@ -15,7 +15,7 @@ const _services = [];
 const _applications = [];
 const _solutions = [];
 const _implementation = [];
-export default function DevOpsCloudServices() {
+export default function DevOpsCloud() {
     const _devopsServices = [
         {
             icon: Cloud,

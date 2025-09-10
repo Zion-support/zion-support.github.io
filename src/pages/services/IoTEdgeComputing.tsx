@@ -14,7 +14,7 @@ const _services = [];
 const _applications = [];
 const _solutions = [];
 const _implementation = [];
-export default function IoTEdgeComputingServices() {
+export default function IoTEdgeComputing() {
     const _iotServices = [
         {
             icon: Wifi,
