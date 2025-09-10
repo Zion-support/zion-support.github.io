@@ -1,16 +1,9 @@
-export function slugify(title: string, separator = "-"): string {
-  const sep = separator;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-  return title
-    .trim()
-    .replace(/_/g, " ") // treat underscores like spaces
-    .normalize("NFD")
-    .replace(/[\u0300-\u036F]/g, "")
+export function slugify(text: string, separator: string = '-'): string {
+  return text
     .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, sep)
-    .replace(new RegExp(`${escaped}{2,}`, "g"), sep)
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+    .normalize('NFD') // Normalize to decomposed form
+    .replace(/[\u0300-\u036f]/g, '') // Remove accent marks
+    .replace(/[^\w\s-]/g, '') // Remove special characters
+    .replace(/[\s_-]+/g, separator) // Replace spaces and underscores with separator
+    .replace(new RegExp(`^${separator}+|${separator}+$`, 'g'), ''); // Remove leading/trailing separators
 }
-

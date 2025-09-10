@@ -33,7 +33,7 @@ serve(async (req) => {
       .gte("created_at", startDate.toISOString());
 
     if (error) {
-      console.error("Error fetching analytics data:", error);
+      // console.error("Error fetching analytics data:", error);
       throw error;
     }
 
@@ -64,7 +64,7 @@ serve(async (req) => {
       status: 200,
     });
   } catch (error) {
-    console.error("Error:", error.message);
+    // console.error("Error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: {
         ...corsHeaders,
