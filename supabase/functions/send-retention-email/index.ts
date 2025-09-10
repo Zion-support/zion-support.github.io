@@ -22,7 +22,7 @@ interface EmailData {
   display_name: string;
   user_type: string;
   days_inactive?: number;
-  onboarding_status?: any;
+  onboarding_status?: unknown;
   job_id?: string;
   job_title?: string;
 }
@@ -70,7 +70,7 @@ serve(async (req) => {
 
     // Send email via Resend
     const emailResponse = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>",
+      from: "Zion AI Marketplace <notifications@ziontechgroup.com>",
       to: userEmail,
       subject: subject,
       html: html,
@@ -114,7 +114,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error in send-retention-email function:", error);
+    // console.error("Error in send-retention-email function:", error);
 
     return new Response(
       JSON.stringify({
@@ -132,7 +132,7 @@ serve(async (req) => {
   }
 });
 
-async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string; html: string }> {
+async function generateEmail(emailData: EmailData, userData: unknown): Promise<{ subject: string; html: string }> {
   const { email_type, display_name, user_type } = emailData;
   const firstName = display_name?.split(" ")[0] || "there";
 
@@ -207,7 +207,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
           ctaText = "Add Your Skills";
         } else if (!onboarding.availability_set) {
           nextAction = "set your availability to help clients find you";
-          ctaLink = "/profile/settings";
+          ctaLink = "/settings/account";
           ctaText = "Set Your Availability";
         }
       } else {

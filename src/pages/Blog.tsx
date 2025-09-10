@@ -1,411 +1,398 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { Search, 
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  Shield,
+  Cloud,
+  Brain,
+  BarChart3,
+  ShoppingCart,
+  BookOpen,
+  Rocket
+} from 'lucide-react';
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { Search } from "lucide-react";
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  authorAvatar: string;
+  publishDate: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
+  featured: boolean;
+  views: number;
+  likes: number;
+}
 
-// Sample blog data - in a real app this would come from an API or CMS
-const BLOG_POSTS: BlogPost[] = [
+interface Category {
+  name: string;
+  icon: any;
+  count: number;
+  color: string;
+}
+
+const categories: Category[] = [
+  { name: 'AI & Machine Learning', icon: Brain, count: 24, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Cloud & DevOps', icon: Cloud, count: 18, color: 'from-green-500 to-emerald-500' },
+  { name: 'Cybersecurity', icon: Shield, count: 15, color: 'from-red-500 to-pink-500' },
+  { name: 'Business Intelligence', icon: BarChart3, count: 12, color: 'from-purple-500 to-indigo-500' },
+  { name: 'Micro SaaS', icon: ShoppingCart, count: 9, color: 'from-orange-500 to-yellow-500' },
+  { name: 'Industry Insights', icon: TrendingUp, count: 21, color: 'from-teal-500 to-cyan-500' },
+  { name: 'Case Studies', icon: BookOpen, count: 16, color: 'from-pink-500 to-rose-500' },
+  { name: 'Technology Trends', icon: Rocket, count: 19, color: 'from-indigo-500 to-purple-500' }
+];
+
+const blogPosts: BlogPost[] = [
   {
-    id: "ai-trends-2025",
-    title: "10 Emerging AI Trends to Watch in 2025",
-    slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-
-<h2>1. Multimodal AI Systems</h2>
-<p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
-
-<h2>2. Neuromorphic Computing</h2>
-<p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
-
-<h2>3. Federated Learning at Scale</h2>
-<p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 2025, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p>
-
-<h2>4. Quantum AI</h2>
-<p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
-
-<h2>5. AI for Climate Solutions</h2>
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
-    author: {
-      name: "Dr. Alicia Zhang",
-      title: "AI Research Director",
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 15, 2025",
-    readTime: "5 min read",
-    category: "Trends",
-    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
-    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630",
-    isFeatured: true
+    id: '1',
+    title: 'AI Autonomous Research: The Future of Knowledge Discovery',
+    excerpt: 'Discover how our revolutionary AI Autonomous Research Assistant is transforming how businesses gather, analyze, and synthesize information across multiple sources.',
+    content: 'Full article content here...',
+    author: 'Dr. Emily Watson',
+    authorAvatar: '/avatars/emily-watson.jpg',
+    publishDate: '2025-01-20',
+    readTime: '10 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Business Intelligence'],
+    image: '/blog/ai-autonomous-research.jpg',
+    featured: true,
+    views: 18250,
+    likes: 945
   },
   {
-    id: "optimize-ai-listings",
-    title: "How to Optimize Your AI Service Listings for Maximum Visibility",
-    slug: "optimize-ai-listings",
-    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
-    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-
-<h2>Crafting an Irresistible Service Title</h2>
-<p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
-
-<h2>Compelling Service Descriptions That Convert</h2>
-<p>Beyond explaining features, your description should emphasize benefits and outcomes. Use client-centered language, incorporate relevant technical terms for searchability, and structure your content with headers and bullet points for easy scanning.</p>
-
-<h2>Showcase Your Expertise with Case Studies</h2>
-<p>Nothing builds credibility like proven results. Include mini case studies that highlight specific problems you've solved, the approach you took, and quantifiable outcomes you achieved. This transforms abstract services into concrete value.</p>
-
-<h2>Strategic Pricing and Package Structure</h2>
-<p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
-
-<h2>Leveraging Reviews and Testimonials</h2>
-<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
-    author: {
-      name: "Marcus Johnson",
-      title: "Marketing Strategist",
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 10, 2025",
-    readTime: "8 min read",
-    category: "Marketing",
-    tags: ["Marketing", "AI Services", "Visibility", "SEO"],
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
+    id: '2',
+    title: 'Revolutionizing Supply Chains with AI-Powered Optimization',
+    excerpt: 'Learn how AI Supply Chain Optimization is helping businesses predict demand, optimize inventory, and reduce costs with unprecedented accuracy.',
+    content: 'Full article content here...',
+    author: 'Marcus Rodriguez',
+    authorAvatar: '/avatars/marcus-rodriguez.jpg',
+    publishDate: '2025-01-18',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Supply Chain', 'Inventory Optimization', 'Demand Forecasting', 'Cost Reduction'],
+    image: '/blog/ai-supply-chain-optimization.jpg',
+    featured: true,
+    views: 16580,
+    likes: 823
   },
   {
-    id: "green-it",
-    title: "Green IT: Reducing Your Data Center's Carbon Footprint",
-    slug: "green-it",
-    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
-
-<h2>Energy-Efficient Hardware Selection</h2>
-<p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
-
-<h2>Optimizing Cooling Systems</h2>
-<p>Cooling typically represents 40% of data center energy consumption. Implementing hot/cold aisle containment, raising ambient temperature setpoints within ASHRAE guidelines, and deploying liquid cooling for high-density racks can dramatically reduce this energy burden.</p>
-
-<h2>Renewable Energy Integration</h2>
-<p>Many organizations are now leveraging on-site renewable generation or virtual power purchase agreements (VPPAs) to offset their carbon footprint. These approaches not only reduce emissions but can provide long-term cost stability as energy markets fluctuate.</p>
-
-<h2>Workload Optimization and Consolidation</h2>
-<p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>
-
-<h2>Measuring and Reporting Impact</h2>
-<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
-    author: {
-      name: "Sophia Chen",
-      title: "Sustainability Engineer",
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 5, 2025",
-    readTime: "6 min read",
-    category: "Sustainability",
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
-  },
-  {
-    id: "ai-ethics-frameworks",
-    title: "Implementing Ethical AI Frameworks in Enterprise Applications",
-    slug: "ai-ethics-frameworks",
-    excerpt: "A comprehensive guide to integrating ethical considerations into your AI development lifecycle.",
-    content: `<p>As AI systems become more prevalent in critical decision-making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>
-
-<h2>Establishing Ethical Principles</h2>
-<p>Begin by defining clear ethical principles that align with your organization's values and industry requirements. These typically include fairness, transparency, accountability, privacy, and human oversight. These principles should be documented and socialized across all teams involved in AI development.</p>
-
-<h2>Data Ethics and Governance</h2>
-<p>Ethical AI begins with ethical data practices. Establish robust data governance policies that address collection consent, proper anonymization techniques, representation biases, and appropriate usage limitations. Regular data audits should verify adherence to these standards.</p>
-
-<h2>Model Development and Testing</h2>
-<p>Implement bias testing throughout the development process, not just at the end. Use diverse test datasets that represent different demographics and edge cases. Document model limitations and potential risks in model cards that accompany each deployed system.</p>
-
-<h2>Deployment with Human Oversight</h2>
-<p>Even highly accurate AI systems require human oversight mechanisms. Implement appropriate appeal processes, confidence thresholds that trigger human review, and ongoing monitoring for performance drift that might introduce new ethical concerns.</p>
-
-<h2>Continuous Ethical Evaluation</h2>
-<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`,
-    author: {
-      name: "Dr. James Peterson",
-      title: "AI Ethics Officer",
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Mar 30, 2025",
-    readTime: "7 min read",
-    category: "Ethics",
-    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
-  },
-  {
-    id: "ai-talent-acquisition",
-    title: "Winning the AI Talent War: Recruitment Strategies for 2025",
-    slug: "ai-talent-acquisition",
-    excerpt: "How forward-thinking companies are attracting and retaining scarce AI talent in an increasingly competitive market.",
-    content: `<p>The demand for skilled AI professionals continues to outpace supply, creating intense competition among employers. This article examines effective strategies for attracting and retaining top AI talent in today's challenging market.</p>
-
-<h2>Beyond Compensation: What AI Talent Really Wants</h2>
-<p>While competitive salaries are essential, today's AI professionals are equally motivated by challenging problems, access to cutting-edge infrastructure, and opportunities to publish and contribute to the field. Creating an environment that balances practical applications with research opportunities can be a major differentiator.</p>
-
-<h2>Building Internal Talent Pipelines</h2>
-<p>Forward-thinking organizations are creating robust upskilling programs to develop AI capabilities within their existing workforce. Structured mentorship, educational stipends, and dedicated learning time can transform motivated employees into valuable AI contributors.</p>
-
-<h2>Creating Compelling AI Missions</h2>
-<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challenges—whether in sustainability, healthcare, education, or other domains—can be a powerful recruitment tool.</p>
-
-<h2>Remote-First Talent Strategies</h2>
-<p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>
-
-<h2>Retention Through Growth Paths</h2>
-<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`,
-    author: {
-      name: "Elena Rodriguez",
-      title: "Head of AI Talent",
-      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Mar 22, 2025",
-    readTime: "9 min read",
-    category: "Recruitment",
-    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
-  },
-  {
-    id: "ai-compute-optimization",
-    title: "AI Compute Optimization: Balancing Performance and Cost",
-    slug: "ai-compute-optimization",
-    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.",
-    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
-
-<h2>Right-sizing Compute Resources</h2>
-<p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
-
-<h2>Model Compression Techniques</h2>
-<p>Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>
-
-<h2>Strategic Cloud vs. On-Premise Decisions</h2>
-<p>While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>
-
-<h2>Training Efficiency Optimization</h2>
-<p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
-
-<h2>Inference Serving Architecture</h2>
-<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`,
-    author: {
-      name: "Michael Wong",
-      title: "ML Infrastructure Architect",
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Mar 15, 2025",
-    readTime: "6 min read",
-    category: "Infrastructure",
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
+    id: '3',
+    title: 'AI Content Marketing Suite: The Complete Guide to Automated Content Creation',
+    excerpt: 'Explore how AI is revolutionizing content marketing with automated creation, optimization, and distribution for maximum engagement and ROI.',
+    content: 'Full article content here...',
+    author: 'Lisa Thompson',
+    authorAvatar: '/avatars/lisa-thompson.jpg',
+    publishDate: '2025-01-16',
+    readTime: '11 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Content', 'Content Marketing', 'Automation', 'ROI Optimization'],
+    image: '/blog/ai-content-marketing-suite.jpg',
+    featured: true,
+    views: 15230,
+    likes: 756
   }
 ];
 
-// Categories for filtering
-const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-];
+export default function Blog(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('date');
 
-export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  
-  // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch = 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
+  // Filter posts based on search and category
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     
     return matchesSearch && matchesCategory;
   });
-  
-  // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
-  
-  return (
-    <>
-      <SEO 
-        title="Blog - AI & Tech Insights" 
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
-      />
-      <Header />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-            </p>
-          </div>
-          
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img 
-                    src={featuredPosts[0].featuredImage} 
-                    alt={featuredPosts[0].title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {featuredPosts[0].category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {featuredPosts[0].title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    {featuredPosts[0].excerpt}
-                  </p>
-                  <div className="flex items-center mb-6">
-                    <img 
-                      src={featuredPosts[0].author.avatarUrl} 
-                      alt={featuredPosts[0].author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                    />
-                    <div>
-                      <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
-                      <p className="text-sm text-zion-slate-light">
-                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
-                      </p>
-                    </div>
-                  </div>
-                  <Button 
-                    asChild
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
-                  >
-                    <Link to={`/blog/${featuredPosts[0].slug}`}>
-                      Read Article
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
-        
-          {/* Filters and Search */}
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
-                <Input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
-                />
-              </div>
-              
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <SelectValue placeholder="Select Category" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {CATEGORIES.map((category) => (
-                    <SelectItem key={category} value={category} className="text-white">
-                      {category}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
 
-          {/* Blog Posts Grid */}
-          {filteredPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <Card 
-                  key={post.id} 
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300"
+  // Sort posts
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    switch (sortBy) {
+      case 'date':
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      case 'views':
+        return b.views - a.views;
+      case 'likes':
+        return b.likes - a.likes;
+      case 'title':
+        return a.title.localeCompare(b.title);
+      default:
+        return 0;
+    }
+  });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Blog - Zion Tech Group"
+        description="Stay updated with the latest insights in AI, technology, and digital transformation from Zion Tech Group's expert team."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Blog</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Insights, trends, and expert perspectives on AI, technology, and digital transformation
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filters */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-4">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              >
+                <option value="all">All Categories</option>
+                {categories.map((category) => (
+                  <option key={category.name} value={category.name}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
+
+              {/* Sort */}
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              >
+                <option value="date">Latest</option>
+                <option value="views">Most Viewed</option>
+                <option value="likes">Most Liked</option>
+                <option value="title">Alphabetical</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Grid */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Explore Categories</h2>
+            <p className="text-gray-300">Discover insights in your area of interest</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+            {categories.map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group cursor-pointer"
+                onClick={() => setSelectedCategory(category.name)}
+              >
+                <div className={`bg-gradient-to-br ${category.color} rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300`}>
+                  <category.icon className="w-8 h-8 text-white mx-auto mb-3" />
+                  <h3 className="text-white font-semibold mb-2">{category.name}</h3>
+                  <p className="text-white/80 text-sm">{category.count} articles</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Posts */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Latest Articles</h2>
+            <p className="text-gray-300">Stay ahead with our expert insights and analysis</p>
+          </motion.div>
+
+          {sortedPosts.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-medium text-gray-300 mb-2">No articles found</h3>
+              <p className="text-gray-400">Try adjusting your search terms or filters</p>
+            </motion.div>
+          ) : (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
                 >
-                  <div className="aspect-[16/9] relative overflow-hidden">
-                    <img 
-                      src={post.featuredImage} 
-                      alt={post.title} 
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <div className="text-xs text-zion-slate-light">
-                        {post.publishedDate} • {post.readTime}
-                      </div>
+                  {/* Featured Badge */}
+                  {post.featured && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Featured
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
+                  )}
+
+                  {/* Post Image */}
+                  <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Lightbulb className="w-16 h-16 text-cyan-400" />
+                    </div>
+                  </div>
+
+                  {/* Post Content */}
+                  <div className="p-6">
+                    {/* Category */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="text-gray-400 text-sm">{post.readTime}</span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-zion-slate-light mb-4 line-clamp-3">
+
+                    {/* Excerpt */}
+                    <p className="text-gray-300 mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center">
-                      <img 
-                        src={post.author.avatarUrl} 
-                        alt={post.author.name} 
-                        className="w-8 h-8 rounded-full mr-2"
-                      />
-                      <span className="text-sm text-white">{post.author.name}</span>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.slice(0, 3).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                  </CardContent>
-                  <CardFooter className="p-6 pt-0">
-                    <Button 
-                      variant="link" 
-                      className="text-zion-cyan p-0 hover:text-zion-purple"
-                      asChild
+
+                    {/* Meta */}
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-2">
+                        <User className="w-4 h-4" />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-2">
+                        <TrendingUp className="w-4 h-4" />
+                        <span>{post.views.toLocaleString()} views</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Lightbulb className="w-4 h-4" />
+                        <span>{post.likes.toLocaleString()} likes</span>
+                      </div>
+                    </div>
+
+                    {/* Read More */}
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200 group-hover:translate-x-1"
                     >
-                      <Link to={`/blog/${post.slug}`}>
-                        Read More →
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+                </motion.article>
               ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Clear all filters
-              </Button>
             </div>
           )}
         </div>
-      </div>
-      <Footer />
-    </>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get the latest insights and trends delivered to your inbox
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Subscribe
+              </button>
+            </div>
+            <p className="text-sm text-slate-400 mt-4">
+              No spam, unsubscribe at any time. We respect your privacy.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

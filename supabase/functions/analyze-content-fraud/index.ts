@@ -77,7 +77,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
         "Authorization": `Bearer ${openaiApiKey}`,
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4o",
         messages: [
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
@@ -90,12 +90,12 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const data = await response.json();
     
     if (!response.ok) {
-      console.error("OpenAI API error:", data.error);
+      // console.error("OpenAI API error:", data.error);
       throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`);
     }
     
     const analysisText = data.choices[0]?.message?.content || "";
-    console.log("OpenAI analysis result:", analysisText);
+    // console.log("OpenAI analysis result:", analysisText);
     
     // Parse the result
     let classification = "SAFE";
@@ -114,7 +114,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     
     return { classification, explanation };
   } catch (error) {
-    console.error("Error calling OpenAI:", error);
+    // console.error("Error calling OpenAI:", error);
     throw error;
   }
 };
@@ -138,11 +138,11 @@ const updateFraudFlag = async (
     .eq("id", flagId);
   
   if (error) {
-    console.error("Error updating fraud flag:", error);
+    // console.error("Error updating fraud flag:", error);
     throw new Error(`Error updating fraud flag: ${error.message}`);
   }
   
-  console.log(`Updated fraud flag ${flagId} with classification: ${classification}`);
+  // console.log(`Updated fraud flag ${flagId} with classification: ${classification}`);
 };
 
 // Main request handler
@@ -153,19 +153,19 @@ serve(async (req) => {
   }
 
   try {
-    console.log("Received content analysis request");
+    // console.log("Received content analysis request");
     
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices();
     
     // Parse and validate request
     const requestData = await req.json().catch(err => {
-      console.error("Error parsing request JSON:", err);
+      // console.error("Error parsing request JSON:", err);
       throw new Error("Invalid JSON in request body");
     });
     
     const { content, contentType, flagId } = validateRequest(requestData);
-    console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
+    // console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
     
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content);
@@ -183,13 +183,13 @@ serve(async (req) => {
       success: true,
     };
     
-    console.log("Analysis completed successfully:", result);
+    // console.log("Analysis completed successfully:", result);
     return new Response(JSON.stringify(result), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
     });
 
   } catch (error) {
-    console.error("Error analyzing content:", error);
+    // console.error("Error analyzing content:", error);
     
     // Determine appropriate status code based on error
     const statusCode = error.message?.includes("Invalid") ? 400 : 500;
