@@ -40,7 +40,7 @@ class AdvancedAppEnhancementSuite {
   async createPerformanceOptimizationScript() {
     this.log('🚀 Creating Performance Optimization Script');
     
-    const scriptContent = `#!/usr/bin/env node
+const scriptContent = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -168,7 +168,7 @@ module.exports = PerformanceOptimizer;
   async createSecurityEnhancementScript() {
     this.log('🔒 Creating Security Enhancement Script');
     
-    const scriptContent = `#!/usr/bin/env node
+const scriptContent = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -225,7 +225,7 @@ class SecurityEnhancer {
 
   isVulnerablePackage(name, version) {
     // Add logic to check for known vulnerable packages
-    const vulnerablePackages = [
+const vulnerablePackages = [;
       'lodash',
       'moment',
       'jquery'
@@ -289,7 +289,7 @@ module.exports = SecurityEnhancer;
   async createSEOOptimizationScript() {
     this.log('🔍 Creating SEO Optimization Script');
     
-    const scriptContent = `#!/usr/bin/env node
+const scriptContent = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -389,7 +389,7 @@ class SEOOptimizer {
   async generateSitemap() {
     this.log('🗺️ Generating sitemap...');
     try {
-      const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
@@ -486,7 +486,7 @@ module.exports = SEOOptimizer;
   async createAccessibilityEnhancementScript() {
     this.log('♿ Creating Accessibility Enhancement Script');
     
-    const scriptContent = `#!/usr/bin/env node
+const scriptContent = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 

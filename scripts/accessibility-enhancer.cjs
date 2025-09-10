@@ -1,241 +1,203 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-const fs = require("$1")
-const path = require("path")
+class AccessibilityEnhancer {
+  constructor() {
+    this.projectRoot = process.cwd()
+    this.accessibilityEnhancements = [],,
+}
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`),,
+}
+  async createAccessibilityConfig() {
     this.log("♿ Creating accessibility configuration...")
-      const accessibilityConfig = "
-  "ariaLabels"
-    navigation: "Main navigation"
-    "footer": "Site footer"
-    "search": "Search"
-    "menu": "Menu"
-    "close": "Close"
-    "open": "Open"
-    "next": "Next"
-    "previous": "Previous"
-    "loading": "Loading"
-    "error": "Error"
-    "success": "Success"
-    "warning": "Warning"
-  "focusManagement"
-    "focusTrap"
-    "focusVisible"
-  "colorContrast"
-    "enhancedRatio"
-  "keyboardNavigation"
-    "arrowKeys"
-    "escapeKey"
-    "enterKey"
-    "spaceKey"
-  "generateId": (prefix = "id") => \"\${prefix}-\${Math.random().toString(36).substr(2, 9)}\"
-  "isVisible"
-    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"
-  "announce"
+    try {
+      const accessibilityConfig = `// Accessibility configuration;
+export const accessibilityConfig = {
+  // ARIA labels for common elements;
+  ariaLabels: {
+    navigation: "Main navigation",
+    footer: "Site footer",
+    search: "Search",
+    menu: "Menu",
+    close: "Close",
+    open: "Open",
+    next: "Next",
+    previous: "Previous",
+    loading: "Loading",
+    error: "Error",
+    success: "Success",
+    warning: "Warning",,
+},
+
+  // Focus management;
+  focusManagement: {
+    skipToContent: true,
+    focusTrap: true,
+    focusVisible: true,,
+},
+
+  // Color contrast;
+  colorContrast: {
+    minimumRatio: 4.5,
+    enhancedRatio: 7.0,,
+},
+
+  // Keyboard navigation;
+  keyboardNavigation: {
+    tabIndex: 0,
+    arrowKeys: true,
+    escapeKey: true,
+    enterKey: true,
+    spaceKey: true,,
+}
+>>>>>>> origin/automation-fixes
+}
+// Accessibility utilities;
+export const accessibilityUtils = {
+  // Generate unique IDs for ARIA attributes;
+  // Check if element is visible;
+  isVisible: (element) => {
+    const style = window.getComputedStyle(element)
+    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0",,
+},
+
+  // Announce to screen readers;
+  announce: (message) => {
     const announcement = document.createElement("div")
     announcement.setAttribute("aria-live", "polite")
     announcement.setAttribute("aria-atomic", "true")
-    announcement.className = "sr-only"
-};"
-      const configDir = path.join(this.projectRoot, "lib")
-        fs.mkdirSync(configDir, { "recursive"})
-      fs.writeFileSync(path.join(configDir, "accessibility.ts")
-      this.accessibilityEnhancements.push("accessibility configuration created")
-      this.log(" Accessibility configuration created successfully")
-      this.log(` Failed to create accessibility "config"`)
-    this.log("� Creating accessibility styles...")
-      const accessibilityStyles = "
-  "position"
-  white-"space"
-.sr-only-"focusable"
-  "outline"
-@media (prefers-"contrast")
-    background-"color"
-@media (prefers-reduced-"motion")
-    animation-"duration"
-  "position"
-.skip-to-"content"
-  "position"
-.focus-"trap"
-.focus-"trap"
-  "position"
-  overflow: hidden,}"
-      const stylesDir = path.join(this.projectRoot, "styles")
-        fs.mkdirSync(stylesDir, { "recursive"})
-      fs.writeFileSync(path.join(stylesDir, "accessibility.css")
-      this.accessibilityEnhancements.push("accessibility styles created")
-      this.log(" Accessibility styles created successfully")
-      this.log(` Failed to create accessibility "styles"`)
-    this.log("♿ Starting accessibility enhancement...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-#!/usr/bin/env node
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-class AccessibilityEnhancer {
-  // TODO: Implement
+    announcement.className = "sr-only";
+    announcement.textContent = message;
+    document.body.appendChild(announcement)
+    setTimeout(() => {
+      document.body.removeChild(announcement),,
+}, 1000),,
 }
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.accessibilityIssues = [];
-    this.improvements = [];
-
-          // Check for img tags without alt attributes;
-          const imgPattern = /<img[^>]*>/gi;
-</img>`;
-
-<<<<<<< HEAD
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
+}`;
+      const configDir = path.join(this.projectRoot, "lib")
+      if (!fs.existsSync(configDir)) {
+        fs.mkdirSync(configDir, { recursive: true }),,
+}
+      fs.writeFileSync(path.join(configDir, "accessibility.ts"), accessibilityConfig)
+      this.accessibilityEnhancements.push("accessibility configuration created")
+      this.log("✅ Accessibility configuration created successfully"),,
+} catch (error) {
+      this.log(`❌ Failed to create accessibility config: ${error.message}`),,
+}
   }
 
-  async checkAltText() {
-    this.log('🖼️ Checking alt text for images...');
-    
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    const appDir = path.join(this.projectRoot, 'app');
-    const srcDir = path.join(this.projectRoot, 'src');
-    
-    const directories = [pagesDir, appDir, srcDir].filter(dir => fs.existsSync(dir));
-    
-    for (const dir of directories) {
-      const files = this.getAllFiles(dir, ['.js', '.jsx', '.ts', '.tsx']);
-      
-      for (const file of files) {
-        try {
-          const content = fs.readFileSync(file, 'utf8');
-          
-          // Check for img tags without alt attributes
-          const imgPattern = /<img[^>]*>/gi;
-          const images = content.match(imgPattern);
-          
-          if (images) {
-            images.forEach((img, index) => {
-              if (!img.includes('alt=')) {
-                this.accessibilityIssues.push({
-                  type: 'missing-alt',
-                  file: file,
-                  image: index + 1,
-                  severity: 'high',
-                  recommendation: 'Add descriptive alt text to image'
-                });
-              }
-            });
-          }
-          
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-    
-    this.log('✅ Alt text check completed', 'SUCCESS');
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-  getAllFiles(dir, extensions) {
-    const files = [];
-    if (!fs.existsSync(dir)) return files;
-    
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
+  async analyzeHTMLFiles() {
+    this.log('📄 Analyzing HTML files for accessibility...');
+    try {
+      const accessibilityStyles = `/* Accessibility styles */;
+.sr-only {
+  position: absolute;  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  analyzeHTMLFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
       
-      if (stat.isDirectory()) {
-        files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (stat.isFile()) {
-        const ext = path.extname(item).toLowerCase();
-        if (extensions.includes(ext)) {
-          files.push(fullPath);
+      // Check for alt attributes on images
+      const imgTags = content.match(/<img[^>]*>/g) || [];
+      for (const imgTag of imgTags) {
+        if (!imgTag.includes('alt=')) {
+          this.accessibilityIssues.push({
+            file: filePath,
+            issue: 'Image missing alt attribute',
+            severity: 'high',
+            wcag: '1.1.1'
+          });
         }
       }
+      
+      // Check for form labels
+      const inputTags = content.match(/<input[^>]*>/g) || [];
+      for (const inputTag of inputTags) {
+        if (!inputTag.includes('aria-label') && !inputTag.includes('aria-labelledby')) {
+          this.accessibilityIssues.push({
+            file: filePath,
+            issue: 'Input missing label or aria-label',
+            severity: 'high',
+            wcag: '1.3.1'
+          });
+        }
+      }
+      
+      // Check for heading structure
+      const headings = content.match(/<h[1-6][^>]*>/g) || [];
+      let h1Count = 0;
+      let h2Count = 0;
+      
+      for (const heading of headings) {
+        if (heading.includes('<h1')) h1Count++;
+        if (heading.includes('<h2')) h2Count++;
+      }
+      
+      if (h1Count === 0) {
+        this.accessibilityIssues.push({
+          file: filePath,
+          issue: 'Missing H1 heading',
+          severity: 'medium',
+          wcag: '1.3.1'
+        });
+      }
+      
+      // Check for color contrast (basic check)
+      if (content.includes('color:') && !content.includes('background-color:')) {
+        this.accessibilityIssues.push({
+          file: filePath,
+          issue: 'Potential color contrast issue',
+          severity: 'medium',
+          wcag: '1.4.3'
+        });
+      }
+      
+    } catch (error) {
+      this.log(`❌ Error analyzing ${filePath}: ${error.message}`);
     }
-    
-    return files;
   }
 
   async generateAccessibilityReport() {
-    this.log('📊 Generating accessibility report...');
+    this.log('📋 Generating accessibility report...');
     
     const report = {
       timestamp: new Date().toISOString(),
-      accessibilityIssues: this.accessibilityIssues,
-      improvements: this.improvements,
-      summary: {
-        totalIssues: this.accessibilityIssues.length,
-        highSeverity: this.accessibilityIssues.filter(i => i.severity === 'high').length,
-        mediumSeverity: this.accessibilityIssues.filter(i => i.severity === 'medium').length,
-        lowSeverity: this.accessibilityIssues.filter(i => i.severity === 'low').length,
-        improvements: this.improvements.length
-      }
+      issues: this.accessibilityIssues,
+      recommendations: [
+        'Add alt attributes to all images',
+        'Ensure all form inputs have labels',
+        'Use proper heading hierarchy (H1, H2, H3)',
+        'Ensure sufficient color contrast',
+        'Add ARIA labels where needed',
+        'Implement keyboard navigation',
+        'Use semantic HTML elements',
+        'Test with screen readers',
+        'Follow WCAG 2.1 guidelines'
+      ]
     };
-    
-    fs.writeFileSync('accessibility-enhancement-report.json', JSON.stringify(report, null, 2));
-    this.log('✅ Accessibility report generated', 'SUCCESS');
+
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'accessibility-report.json'),
+      JSON.stringify(report, null, 2)
+    );
+
+    this.log('📊 Accessibility report saved to accessibility-report.json');
   }
 
   async run() {
-    this.log('🚀 Starting Accessibility Enhancer');
-    this.log('='.repeat(50));
-    
-    await this.checkAltText();
-    await this.generateAccessibilityReport();
-    
-    this.log('\n📊 Accessibility Enhancement Summary');
-    this.log(`Total accessibility issues: ${this.accessibilityIssues.length}`);
-    this.log(`High severity: ${this.accessibilityIssues.filter(i => i.severity === 'high').length}`);
-    this.log(`Improvements made: ${this.improvements.length}`);
-    
-    this.log('\n✅ Accessibility enhancement completed!');
-  }
-}
-
-const enhancer = new AccessibilityEnhancer();
-enhancer.run().catch(console.error);
+    this.log("♿ Starting accessibility enhancement...")
+    await this.createAccessibilityConfig()
+    await this.createAccessibilityStyles()
+    this.log(`✅ Accessibility enhancement completed. Enhancements: ${this.accessibilityEnhancements.join(", ")}`),,
+}}
 
 module.exports = AccessibilityEnhancer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
