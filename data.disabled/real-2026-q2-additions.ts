@@ -358,7 +358,7 @@ export const real2026Q2Additions = [
   },
   {
 
-    id: 'ai - synthetic - data - factory',
+    id: 'ai - synthetic - data - factory',;
     name: 'AI Synthetic Data Factory',;
     category: 'AI & Data',;
     tagline:;
@@ -370,7 +370,7 @@ export const real2026Q2Additions = [
       'Data schema import and auto - profiling',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
-      'Evaluation dashboard with KS / JS metrics',
+      'Evaluation dashboard with KS / JS metrics',;
       'SDKs for Python / JS and API access',;
     ],;
     use_cases: [;
@@ -458,7 +458,7 @@ export const real2026Q2Additions = [
       'Data schema import and auto - profiling',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
-      'Evaluation dashboard with KS / JS metrics',
+      'Evaluation dashboard with KS / JS metrics',;
       'SDKs for Python / JS and API access',;
     ],;
     use_cases: [;
@@ -1036,7 +1036,7 @@ export const real2026Q2Additions = [
       'BYOD governance',
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
-    competitors: ['Atera', 'NinjaOne'],
+    competitors: ['Atera', 'NinjaOne'],;
     price: '$4',;
 ;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
