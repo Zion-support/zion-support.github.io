@@ -1,14 +1,23 @@
 import React from "react";
+<<<<<<< HEAD:backups/src.broken./components-disabled/WorkspaceHeader.tsx
 
 import { Button } from "@/components/ui/button";
 import { Bell, Users, Settings } from "lucide-react";
 export function WorkspaceHeader({ company }) {
+=======
+import { Button } from "@/components/ui/button";
+import { Bell, Users, Settings } from "lucide-react";
+export function WorkspaceHeader(_{ company }) {
+>>>>>>> origin/clean-error-fixing-automation:src/components/enterprise/workspace/WorkspaceHeader.tsx
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img loading="lazy" src={company.logoUrl || "/placeholder.svg"} alt={company.name} className="max-h-10 max-w-10"/>
+<<<<<<< HEAD:backups/src.broken./components-disabled/WorkspaceHeader.tsx
 
+=======
+>>>>>>> origin/clean-error-fixing-automation:src/components/enterprise/workspace/WorkspaceHeader.tsx
           </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
@@ -20,7 +29,10 @@ export function WorkspaceHeader({ company }) {
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
+<<<<<<< HEAD:backups/src.broken./components-disabled/WorkspaceHeader.tsx
 
+=======
+>>>>>>> origin/clean-error-fixing-automation:src/components/enterprise/workspace/WorkspaceHeader.tsx
             <Bell className="h-4 w-4"/>
           </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
@@ -28,7 +40,10 @@ export function WorkspaceHeader({ company }) {
           </Button>
           <Button variant="outline" size="icon" aria-label="Workspace settings">
             <Settings className="h-4 w-4"/>
+<<<<<<< HEAD:backups/src.broken./components-disabled/WorkspaceHeader.tsx
 
+=======
+>>>>>>> origin/clean-error-fixing-automation:src/components/enterprise/workspace/WorkspaceHeader.tsx
           </Button>
         </div>
       </div>
@@ -47,7 +62,11 @@ export function WorkspaceHeader({ company }) {
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
+<<<<<<< HEAD:backups/src.broken./components-disabled/WorkspaceHeader.tsx
 
     </div>);
 
+=======
+    </div>);
+>>>>>>> origin/clean-error-fixing-automation:src/components/enterprise/workspace/WorkspaceHeader.tsx
 }

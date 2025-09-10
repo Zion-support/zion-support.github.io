@@ -1,10 +1,15 @@
 
 import React from 'react';
+<<<<<<< HEAD
 
 const industries = [];
 const implementation = [];
 export function StatsSection() {
     const _stats = [
+=======
+export function StatsSection() {
+    const stats = [
+>>>>>>> origin/clean-error-fixing-automation
         {
             number: '500+',
             label: 'Happy Clients',
@@ -100,6 +105,10 @@ export function StatsSection() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>);
 }
 
+=======
+    </section>)}
+>>>>>>> origin/clean-error-fixing-automation

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { _Header } from "@/components/Header";
 import { _Footer } from "@/components/Footer";
 import { _TrustedBySection } from "@/components/TrustedBySection";
@@ -24,11 +25,36 @@ import { Settings } from 'lucide-react';
 import { Zap } from 'lucide-react';
 const features = [];
 const services = [];
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { HeroSection } from "@/components/HeroSection";
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { WaitlistSection } from "@/components/WaitlistSection";
+import { BlogSection } from "@/components/BlogSection";
+import { SEO } from "@/components/SEO";
+import { Link } from "react-router-dom";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
+import { SocialShareSection } from "@/components/SocialShareSection";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/context/LanguageContext";
+import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
+>>>>>>> origin/clean-error-fixing-automation
 export default function Index() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();
     // Tools and features showcase
+<<<<<<< HEAD
     const _toolsFeatures = [
+=======
+    const toolsFeatures = [
+>>>>>>> origin/clean-error-fixing-automation
         {
             title: t("home.tool_ai_matcher"),
             description: t("home.tool_ai_matcher_desc"),
@@ -117,5 +143,9 @@ export default function Index() {
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
+<<<<<<< HEAD
     </div>);
 }
+=======
+    </div>)}
+>>>>>>> origin/clean-error-fixing-automation
