@@ -5,8 +5,10 @@ import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,7 +18,15 @@ export default function LoginPage() {
     // Handle login logic here
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+      // Handle login logic here
+    }, 1000);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
