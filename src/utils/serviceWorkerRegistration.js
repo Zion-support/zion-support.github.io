@@ -151,7 +151,7 @@ function showInstallPrompt() {
         } else {
           console.log('User dismissed the install prompt');
         }
-        deferredPrompt = null;
+        window.deferredPrompt = null;
         installButton.remove();
       });
     }

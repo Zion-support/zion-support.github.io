@@ -1,3 +1,4 @@
+/* global fetch, AbortSignal, setTimeout */
 export class LinkHealthChecker {
     config;
     constructor(config = {}) {
