@@ -3,7 +3,6 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export default function CaseStudies() {
->>>>>>> 2e76c8f17382c83630cd66eed177eb9d0ef16e40
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -16,7 +15,6 @@ export default function CaseStudies() {
             <h1 className="text-4xl font-bold text-white mb-6">Case Studies</h1>
             <p className="text-xl text-slate-300">Real success stories from our clients.</p>
           </div>
->>>>>>> 2e76c8f17382c83630cd66eed177eb9d0ef16e40
         </div>
       </div>
     </div>
