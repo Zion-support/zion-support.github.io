@@ -1,46 +1,36 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext } from 'react';
 
-interface WhitelabelContextType {
-  isWhitelabel: boolean;
-  brandName: string;
-  brandLogo: string;
-  primaryColor: string;
-}
-
-const defaultWhitelabelContext: WhitelabelContextType = {
-  isWhitelabel: false,
-  brandName: 'Zion Tech Group',
-  brandLogo: '/logo.png',
-  primaryColor: '#3B82F6'
+const defaultWhitelabelContext = {
+    isWhitelabel: false,
+    companyName: 'Zion Tech Group',
+    brandName: 'Zion Tech Group',
+    logo: '/logo.svg',
+    brandLogo: '/logo.svg',
+    primaryColor: '#1e40af',
+    secondaryColor: '#7c3aed',
+    domain: 'https://ziontechgroup.com',
+    contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
 };
 
-const WhitelabelContext = createContext<WhitelabelContextType>(defaultWhitelabelContext);
+const WhitelabelContext = createContext(defaultWhitelabelContext);
 
 export const useWhitelabel = () => {
-  const context = useContext(WhitelabelContext);
-  if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  }
-  return context;
+    const context = useContext(WhitelabelContext);
+    if (!context) {
+        throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+    }
+    return context;
 };
 
-interface WhitelabelProviderProps {
-  children: ReactNode;
-  value?: Partial<WhitelabelContextType>;
-}
-
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
-  children, 
-  value = {} 
-}) => {
-  const contextValue = {
-    ...defaultWhitelabelContext,
-    ...value
-  };
-
-  return (
-    <WhitelabelContext.Provider value={contextValue}>
-      {children}
-    </WhitelabelContext.Provider>
-  );
+export const WhitelabelProvider = ({ children, value = {} }) => {
+    const contextValue = { ...defaultWhitelabelContext, ...value };
+    return (
+        <WhitelabelContext.Provider value={contextValue}>
+            {children}
+        </WhitelabelContext.Provider>
+    );
 };
