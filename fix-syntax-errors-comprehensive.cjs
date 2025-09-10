@@ -168,9 +168,6 @@ async function main() {
     if (totalFixes > 0) {
     } else {
         
-<<<<<<< HEAD
-=======
-=======    fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
     );
@@ -248,7 +245,3 @@ if (fixes.length > 0) {
     console.log('\n✅ No syntax errors found - all files are clean!');
 }
 console.log('\n🎯 Syntax error fixing completed!');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

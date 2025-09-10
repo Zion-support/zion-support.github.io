@@ -243,7 +243,6 @@ throw error}
       const vulnerabilities = this.parseVulnerabilities(output);
       this.log(`Dependency audit failed with ${vulnerabilities.length} vulnerabilities`, 'ERROR');
       return { "success": false, vulnerabilities, "count": vulnerabilities.length }}
-=======
       )
 
       // Generate report;
@@ -470,27 +469,8 @@ throw error}
 // Run the automation if called directly;
 if (require.main === module) {
   // Run the automation if called directly;
-<<<<<<< HEAD
-// Main execution
-if (require.main === module) {
-  const resolver = new DependencyErrorResolver();
-  // Handle graceful shutdown
-  process.on('SIGINT', () => {
-    resolver.log('Shutting down dependency error resolver...');
-    process.exit(0)});
-  process.on('SIGTERM', () => {
-    resolver.log('Shutting down dependency error resolver...');
-    process.exit(0)});
-  // Start resolver
-  resolver.startResolver().catch(error => {
-    resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
-    process.exit(1)})}
-;
-module.exports = DependencyErrorResolver
-=======
 if (require.main === module) {
   const resolver = new DependencyErrorResolver()
   resolver.run().catch(console.error),
 }
 module.exports = DependencyErrorResolver}}}}}}}}}})))))
->>>>>>> origin/automation-fixes

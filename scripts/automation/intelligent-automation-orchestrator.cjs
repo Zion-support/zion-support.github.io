@@ -435,7 +435,6 @@ function generateIntelligentInsights(projectState, results) {
       "message": "Project has performance issues",
       "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"})}
 ;
-=======
       successCounts.set(automation, (successCounts.get(automation) || 0) + 1)
       console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms`;
       ),
@@ -588,17 +587,10 @@ function generateIntelligentInsights(projectState, results) {
     r => r.status === "success";
   ).length;
   const totalAutomations = results.length;
->>>>>>> origin/automation-fixes
   if (totalAutomations > 0) {
   const successRate = (successfulAutomations / totalAutomations) * 100;
     if (successRate < 80) {
   insights.push({
-<<<<<<< HEAD
-  "type": `automation",
-        "severity": "medium",
-        "message": "Automation success rate is ${successRate.toFixed(1)}%",
-        "recommendation": Investigate failing automations and improve error handling"})}
-=======
   type: `automation`,
         severity: `medium`,
         message: `Automation success rate is ${successRate.toFixed(1)}%`,

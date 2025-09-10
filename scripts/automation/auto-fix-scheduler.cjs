@@ -296,7 +296,6 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   console.error("❌ Unused import fixes failed: ", error);}
     } catch (error) {
   console.error("❌ Unused import fixes failed: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;}
 
   async runFullTypeCheck() {
   try {
@@ -408,7 +407,6 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
       errorMessage,,
 }
     this.fixHistory.push(fixRun)
->>>>>>> origin/automation-fixes
     // Keep only last 100 fix runs;
     if (this.fixHistory.length > 100) {
   // Keep only last 100 fix runs;
@@ -428,13 +426,6 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
 const scheduler = new AutoFixScheduler();
 // Handle process signals;
 process.on("SIGINT", () => {
-<<<<<<< HEAD
-  scheduler.saveFixHistory();
-  process.exit(0)});
-process.on("SIGTERM", () => {
-  scheduler.saveFixHistory();
-  process.exit(0)});
-=======
   console.log("🛑 Received SIGINT, shutting down gracefully...")
   scheduler.saveFixHistory()
   process.exit(0),

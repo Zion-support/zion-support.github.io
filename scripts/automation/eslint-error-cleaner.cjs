@@ -43,7 +43,6 @@ class $1 {
   const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length  } errors`);
         const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
         return { "success": false, "output": error.stdout, errors }
-=======
 #!/"usr/bin/env" node;
 const fs = require("fs")
 const path = require("path")
@@ -174,7 +173,6 @@ class $1 {
   return false}
 ;
       const originalLine = lines[lineIndex];
-=======
   parseESLintErrors(output) {
   const errors = []
     const lines = output.split(`\n`)
@@ -302,7 +300,6 @@ class $1 {
 
   async fixConsoleStatementError(error, lines, lineIndex) {
   const line = lines[lineIndex];
-=======
         )
         return true;
 }
@@ -547,7 +544,6 @@ this.log(`📄 Report generated: ${reportFile}`);
         report}
     } catch (error) {  this.log(`💥 ESLint Error Cleaner "failed": ${error.message  }`, "ERROR");
       throw error}
-=======
       !line.trim().endsWith("}")
     ) {
   fixedLine = line + ";
@@ -713,82 +709,8 @@ this.log(`📄 Report generated: ${reportFile}`)
 }
 
 // Run the automation if called directly;
-<<<<<<< HEAD
-  async startWatching() {
-    this.log('Starting ESLint error monitoring...');
-    // Initial check and fix
-    const initialErrors = await this.checkESLintErrors();
-    if (initialErrors.length > 0) {
-      const autoFixed = await this.autoFixESLintErrors();
-      const manuallyFixed = await this.fixRemainingErrors(initialErrors);
-      await this.generateReport(initialErrors, autoFixed, manuallyFixed)}
-    // Set up file watcher
-    this.watcher = chokidar.watch(['src/**/*.{ts,tsx,js,jsx}',
-      'pages/**/*.{ts,tsx,js,jsx}',
-      'components/**/*.{ts,tsx,js,jsx}'
-    ], {
-      "ignored": /node_modules|\.git|\.next/,
-      "persistent": true,
-      "ignoreInitial": true
-    });
-    this.watcher
-      .on('change', async (filePath) => {
-        this.log(`File "changed": ${filePath}`);
-        await this.handleFileChange(filePath)})
-      .on('add', async (filePath) => {
-        this.log(`File "added": ${filePath}`);
-        await this.handleFileChange(filePath)})
-      .on('unlink', (filePath) => {
-        this.log(`File "removed": ${filePath}`)});
-    this.isRunning = true;
-    this.log('ESLint error monitoring is active')}
-  async handleFileChange(filePath) {
-    // Debounce rapid changes
-    if (this.lastCheck && Date.now() - this.lastCheck < 1000) {
-      return}
-    this.lastCheck = Date.now();
-    // Wait a bit for file to be written
-    setTimeout(async () => {
-      const errors = await this.checkESLintErrors();
-      if (errors.length > 0) {
-        const autoFixed = await this.autoFixESLintErrors();
-        const manuallyFixed = await this.fixRemainingErrors(errors);
-        await this.generateReport(errors, autoFixed, manuallyFixed)}
-    }, 500)}
-  async stop() {
-    if (this.watcher) {
-      await this.watcher.close();
-      this.watcher = null}
-    this.isRunning = false;
-    this.log('ESLint error monitoring stopped')}
-  async run() {
-    try {
-      await this.startWatching();
-      // Keep the process running
-      process.on('SIGINT', async () => {
-        this.log('Received SIGINT, shutting down...');
-        await this.stop();
-        process.exit(0)});
-      process.on('SIGTERM', async () => {
-        this.log('Received SIGTERM, shutting down...');
-        await this.stop();
-        process.exit(0)})} catch (error) {
-      this.log(`ESLint error cleaner "failed": ${error.message}`, 'ERROR');
-      process.exit(1)}
-  }
-}
-// Run the cleaner
-if (require.main === module) {
-  const cleaner = new ESLintErrorCleaner();
-  cleaner.run().catch(error => {
-    console.error('ESLint error cleaner "failed": ', error);
-    process.exit(1)})}
-;
-module.exports = ESLintErrorCleaner
-=======
 if (require.main === module) {
   const cleaner = new ESLintErrorCleaner()
   cleaner.run().catch(console.error),
 }
 module.exports = ESLintErrorCleaner}}}}}}}}}}}))))))
->>>>>>> origin/automation-fixes

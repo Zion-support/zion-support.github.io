@@ -253,7 +253,6 @@ export default function ServicesComparisonPage() {
         title="Services Comparison & Pricing - Zion Tech Group" 
         description="Compare our comprehensive micro SAAS services, features, and pricing. Find the perfect solution for your business needs with detailed comparisons."
         keywords="services comparison, pricing, micro SAAS, AI services, IT solutions, business automation"
-=======  CheckCircle, 
   XCircle, 
   Star, 
   Brain, 
@@ -470,7 +469,6 @@ export default function ServicesComparisonPage() {
           </Tabs>
         </div>
       </div>
-=======      <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Services Comparison & Pricing
@@ -715,8 +713,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </div>
   );
 }

@@ -7,27 +7,8 @@ resolve_conflicts() {
     echo "🔍 Searching for merge conflicts..."
     
     # Find files with merge conflicts
-    conflict_files=$(grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" -l 2>/dev/null || true)
-    
-    if [ -z "$conflict_files" ]; then
-        echo "✅ No merge conflicts found!"
-        return 0
-    fi
-    
-    echo "Found files with merge conflicts:"
-    echo "$conflict_files"
-    
-    # Resolve conflicts by keeping HEAD version
-    for file in $conflict_files; do
-        if [ -f "$file" ]; then
-            echo "🔧 Resolving conflicts in: $file"
-            # Remove merge conflict markers and keep HEAD version
-            sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-            sed -i '/^>>>>>>> /d' "$file"
             # Remove any remaining conflict markers
             sed -i '/^<<<<<<< /d' "$file"
-            sed -i '/^=======/d' "$file"
-            sed -i '/^>>>>>>> /d' "$file"
         fi
     done
     

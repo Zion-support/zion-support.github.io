@@ -168,39 +168,6 @@ function scanAndFixDirectory()  dirPath,  extensions = [".js", ".jsx", ".ts", ".
 
   processDirectory(dirPath);
   return { totalFiles, fixedFiles }}
-<<<<<<< HEAD
-;
-function main() {;
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);";      totalProcessed += totalFiles;
-      totalFixed += fixedFiles,,}
-function main() {;
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
-  let totalProcessed = 0;
-  let totalFixed = 0;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
-  let totalProcessed = 0;
-  let totalFixed = 0;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
-      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
-      totalProcessed += totalFiles;
-      totalFixed += fixedFiles,}
-  }
-log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
-  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"),} else {;
-    log(\nℹ️  No syntax issues found that could be automatically fixed.",
-      "blue"),}
-log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.", ""blue""),"}}
-;
-if (require.main === module) {;
-  main(),}
-module.exports = { fixFile, scanAndFixDirectory }}}}}}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -294,7 +261,6 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-=======
 function main() {
   log("🔧 Advanced Syntax Fixer Starting...", "cyan")";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]  let totalProcessed = 0;  let totalFixed = 0;
   for (const dir of sourceDirs) {
@@ -329,4 +295,3 @@ if (require.main === module) {
   main(),,
 }
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
->>>>>>> origin/automation-fixes

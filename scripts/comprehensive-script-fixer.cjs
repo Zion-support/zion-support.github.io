@@ -109,30 +109,6 @@ class ComprehensiveScriptFixer {
       await this.fixAllScripts()
       this.displaySummary()
       this.log('🎉 Comprehensive script fixing completed successfully')
-<<<<<<< HEAD
-      return { "success": true, "fixedCount": this.fixedCount, "errors": this.errors }
-    } catch (error) {
-      this.log(`💥 Script fixing failed: ${error.message}`, 'error');
-      this.displaySummary();
-      return { success: false, error: error.message }
-    }
-  }
-}
-// Run the script fixer
-if (require.main === module) {
-  const fixer = new ComprehensiveScriptFixer()
-  fixer.run().then(result => {
-    process.exit(result.success ? 0 : 1)
-  })
-}
-module.exports = ComprehensiveScriptFixer
-    fixed = fixed.replace(/;\s*\)/g, ')'
-    fixed = fixed.replace(/['"]\s*;\s*['"]/g, '"")
-    fixed = fixed.replace(/['"]\s*;\s*$/gm, '')
-    fixed = fixed.replace(/require\s*\(\s*['"]\s*;\s*['"]\s*\)/g, 'require("")
-      this.log(`⚠ ${this.errors.length} files had "errors"`)
-      this.log(`� Script fixing "failed"`)
-=======
       return { success: true, fixedCount: this.fixedCount, errors: this.errors }
     } catch (error) {
       this.log(`💥 Script fixing failed: ${error.message}`, 'error')
@@ -149,4 +125,3 @@ if (require.main === module) {
 }),
 }
 module.exports = ComprehensiveScriptFixer}}}
->>>>>>> origin/automation-fixes

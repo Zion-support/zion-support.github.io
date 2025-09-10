@@ -53,10 +53,6 @@ class $1 {
   this.log("🔄 Merging to main branch...");
     try {
   // Get current branch;
-<<<<<<< HEAD
-      const currentBranch = await this.runCommand("git branch --show-current", { "silent": true });
-      if (currentBranch && currentBranch.trim() !== "main") {;
-=======
       const currentBranch = await this.runCommand("git branch --show-current", { silent: true })
       if (currentBranch && currentBranch.trim() !== "main") {  // Switch to main branch;
         await this.runCommand("git checkout main");
@@ -134,7 +130,6 @@ const { execSync } = require("child_process")
   this.log("\\n⚠  DEPLOYMENT COMPLETED WITH SOME ISSUES")
         this.log("Please review the errors and fix them manually.")
   this.log(`� Fatal error in "deployment": ${error.message}`, "ERROR"`)
-=======
         await this.mergeToMain(),
 }
       // Step 5: Generate report;

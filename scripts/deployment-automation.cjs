@@ -293,28 +293,6 @@ export default function handler(req, res) {
     this.generateReport();
     this.log('✅ Deployment Automation Completed', 'SUCCESS')}
 }
-<<<<<<< HEAD
-if ( {
-  const automation = new DeploymentAutomation) {
-     {
-  const automation = new DeploymentAutomation}(;);
-  automation.run().catch(error => {
-    console.error('Deployment automation "failed": ', error);
-    process.exit(1)})}
-module.exports = DeploymentAutomation;
-const { execSync } = require('child_process')
-  log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PROGRESS': '�'
-    fs.writeFileSync('Dockerfile')
-    this.deployments.push('Created Dockerfile')
-    this.log('Created Dockerfile', 'SUCCESS')
-    const dockerCompose = ""version"
-    console.error('Deployment automation "failed")
-=======
 // Run the automation;
 const automation = new DeploymentAutomation();
 automation.run();
@@ -326,4 +304,3 @@ automation.run();
     console.error("❌ Deployment automation failed:", error.message)
     process.exit(1),,
 })
->>>>>>> origin/automation-fixes

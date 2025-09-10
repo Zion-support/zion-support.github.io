@@ -347,12 +347,6 @@ module.exports = AlertingSystem;";
     if () {
       fs.mkdirSync(dirPath, { "recursive": true })}
   }
-<<<<<<< HEAD
-  generateReport() {
-    const duration = Date.now() - this.startTim) {
-    ) {
-      fs.mkdirSync(dirPath, { "recursive": true })}
-=======
   async run() {
     this.log("🔍 Starting monitoring automation...");
     try {
@@ -379,7 +373,6 @@ module.exports = AlertingSystem;";
       this.log(`❌ Monitoring automation failed: ${error.message}`, "ERROR")
       throw error,
 }
->>>>>>> origin/automation-fixes
   }
   generateReport() {
     const duration = Date.now() - this.startTim}e;
@@ -402,43 +395,6 @@ module.exports = AlertingSystem;";
     this.generateReport();
     this.log('✅ Monitoring Automation Completed', 'SUCCESS')}
 }
-<<<<<<< HEAD
-if ( {
-  const automation = new MonitoringAutomation) {
-     {
-  const automation = new MonitoringAutomation}(;);
-  automation.run().catch(error => {
-    console.error('Monitoring automation "failed": ', error);
-    process.exit(1)})}
-module.exports = MonitoringAutomation;
-  log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PROGRESS': '�'
-    const healthCheck = "
-    "message"
-    "version"
-    const metrics = "
-    const alerting = "
-      "service"
-      console.error('Failed to send "alert")
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-                console.error('Failed to load "metrics")
-    console.error('Monitoring automation "failed")
-=======
 // Run if this script is executed directly;
 if (require.main === module) {
   const monitoring = new MonitoringAutomation()
@@ -457,4 +413,3 @@ if (require.main === module) {
 }),
 }
 module.exports = MonitoringAutomation
->>>>>>> origin/automation-fixes

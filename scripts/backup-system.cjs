@@ -3,9 +3,6 @@
   cleanOldBackups() {
     const backups = fs.readdirSync(this.backupDir)
       .filter(file => file.endsWith(".tar.gz"))
-<<<<<<< HEAD
-      .map(file => ({"name": file,"path": path.join(this.backupDir, file),"stats": fs.statSync(path.join(this.backupDir, file))}))
-=======
       .map(file => ({
         name: file,
         path: path.join(this.backupDir, file),
@@ -30,7 +27,6 @@
   listBackups() {
     if (!fs.existsSync(this.backupDir)) {
       return []}
-=======
         console.log(`🗑️  Deleted old backup: ${backup.name}`),,
 }),,
 }

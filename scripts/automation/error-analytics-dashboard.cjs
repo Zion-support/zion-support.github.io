@@ -230,7 +230,6 @@ class ErrorAnalyticsDashboard {
 ;
   processErrorReport(data) {
   const timestamp = data.timestamp;
-=======
 #!/"usr/bin/env" node;
 const fs = require("fs")
 const path = require("path")
@@ -516,7 +515,6 @@ class $1 {
   const errors = this.errorData[errorType]      // Daily trends;
       const dailyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneDayAgo;
->>>>>>> origin/automation-fixes
       // Weekly trends;
       const weeklyErrors = errors.filter(;
         e => new Date(e.timestamp) >= oneWeekAgo;
@@ -706,7 +704,6 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
   d.percentage = total > 0 ? Math.round((d.totalErrors / total) * 100) : 0});
     return distribution}
 ;
-=======
       )
       this.trends.monthly[errorType] = {
   count: monthlyErrors.length,
@@ -986,24 +983,6 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`)
 }  }
 }
 // Run the automation if called directly;
-<<<<<<< HEAD
-// Main execution
-if (require.main === module) {
-  const dashboard = new ErrorAnalyticsDashboard();
-  // Handle graceful shutdown
-  process.on('SIGINT', () => {
-    dashboard.log('Shutting down error analytics dashboard...');
-    process.exit(0)});
-  process.on('SIGTERM', () => {
-    dashboard.log('Shutting down error analytics dashboard...');
-    process.exit(0)});
-  // Start dashboard
-  dashboard.startDashboard().catch(error => {
-    dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
-    process.exit(1)})}
-;
-module.exports = ErrorAnalyticsDashboard
-=======
 if (require.main === module) {
   const dashboard = new ErrorAnalyticsDashboard()
   dashboard.run().catch(console.error),

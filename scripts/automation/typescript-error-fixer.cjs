@@ -246,52 +246,9 @@ class TypeScriptErrorFixer {
           // Fix import statements;
           content = content.replace(
             /import\s+\{\s*Brain,\s*Database,\s*Zap,\s*Shield,\s*BarChart3,\s*MessageSquare,\s*Code,\s*Globe,\s*Server,\s*Eye,\s*FileText,\s*CheckCircle,\s*Users,\s*Lock,\s*Search\s*\}\s*from\s*"lucide-react";/g,import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search  } from "lucide-react";
->>>>>>> origin/automation-fixes
           // Fix export statements;
           content = content.replace(
             /export\s+default\s+AIServicesPage;\s*$/g,export default AIServicesPage;
-<<<<<<< HEAD
-          );
-          // Fix function declarations;
-          content = content.replace(;
-            /const\s+"AIServicesPage": \s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,
-            "const "AIServicesPage": React.FC = () => {";
-          );
-          if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-            fixes++;
-            this.log("  ✅ Fixed ""import/export"" errors in ${filePath}")}
-        } catch (error) {  this.log("  ⚠️  Could not fix ${filePath  }: ${error.message}")}
-      }
-    }
-;
-    return fixes}
-;
-  async runCommand(command, options = {}) {
-  try {this.log("Running "command": ${command} ${options.args ? options.args.join(" ") : ""}");const result = execSync("${command} ${options.args ? options.args.join(" ") : ""}", {
-  "stdio": "inherit",
-        "cwd": this.projectRoot,
-  async runCommand(command, options = {}) {
-  try {this.log("Running "command": ${command} ${options.args ? options.args.join(" ") : "}");const result = execSync("${command} ${options.args ? options.args.join(" ") : "}", {
-  "stdio": "inherit",
-        "cwd": this.projectRoot});this.log("Command finished with exit code ${result.status}");
-      return result} catch (error) {  this.log("Command "failed": ${error.message  }");
-      throw error}
-  }
-;
-  async generateReport() {
-  const report = {
-  "timestamp": new Date().toISOString(),
-      "fixesApplied": 0, // This will be updated by runTypeScriptErrorFixer;
-      "summary": "TypeScript error fixer report",
-      "status": "completed"}
-    return report}
-}
-;
-const errorFixer = new TypeScriptErrorFixer();
-// Main continuous loop;
-async function $1() {
-=======
           )
 
           // Fix function declarations;

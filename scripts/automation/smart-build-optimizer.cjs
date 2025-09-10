@@ -116,7 +116,6 @@ class $1 {
       // 2. Identify optimization opportunities;
       optimization.optimizations = await this.identifyOptimizations(
         optimization.currentPerformance;
->>>>>>> origin/automation-fixes
       // 3. Apply safe optimizations;
       optimization.applied = await this.applyOptimizations(
         optimization.optimizations;
@@ -424,7 +423,6 @@ class $1 {
 ;
   generateRecommendations(optimization) {
   const recommendations = [];
-=======
 
       const packagePath = path.join(this.projectRoot, "package.json")
       if (fs.existsSync(packagePath)) {
@@ -483,14 +481,6 @@ class $1 {
       this.performanceThresholds.buildTime;
     ) {
   recommendations.push({
-<<<<<<< HEAD
-  "category": "PERFORMANCE",
-        "priority": "HIGH",
-        "suggestion": "Consider using esbuild for faster builds",
-        "action": "Update Vite configuration to use esbuild minifier"})}
-;
-    if (;
-=======
   category: "PERFORMANCE",
         priority: "HIGH",
         suggestion: "Consider using esbuild for faster builds",

@@ -1,9 +1,5 @@
 }}>;
       <div className="relative">;
-=======
-<<<<<<< HEAD
-}}>
-      <div className="relative">=======
         {children}
       </div>;
     </DropdownMenuContext.Provider>)}

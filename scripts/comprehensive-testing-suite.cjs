@@ -23,7 +23,6 @@
   async runIntegrationTests() {
     try {
       this.log("Running integration tests...");
-=======
 const fs = require("fs")
 const path = require("fs")
 const { execSync } = require("child_process")
@@ -133,43 +132,6 @@ class ComprehensiveTestingSuite {
         "Add performance tests",
         "Implement accessibility tests",
         "Add security tests",
-<<<<<<< HEAD
-        "Set up continuous testing in CI/CD"],};
-    const reportPath = path.join(this.projectRoot, "comprehensive-testing-suite-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Test report saved to ${reportPath}`, "success");
-    return report,};
-;
-  async run() {;}
-    this.log("Starting Comprehensive Testing Suite");
-    try {;}
-      await this.runUnitTests();
-      await this.runIntegrationTests();
-      await this.runE2ETests();
-      await this.runCoverageAnalysis();
-      await this.runLintingTests();
-      await this.runTypeChecking();
-      await this.runBuildTests();
-      const report = await this.generateTestReport();
-      this.log("Comprehensive Testing Suite completed");
-      this.log(`"Summary": ${report.summary.totalPassed}/${report.summary.totalTests} tests passed`);
-      this.log(`Success "Rate": ${report.summary.successRate}%`);
-      if (report.summary.totalFailed > 0) {;}
-        this.log(`${report.summary.totalFailed} tests failed`, "error"),};
-      ;
-      return report,} catch (error) {;}
-      this.log(`Comprehensive testing suite "failed": ${error.message}`, "error");
-      throw error,};
-  };
-};
-;
-// Run the comprehensive testing suite;
-if (require.main === module) {;}
-  const testSuite = new ComprehensiveTestingSuite();
-  testSuite.run().catch(console.error),};
-;
-module.exports = ComprehensiveTestingSuite;
-=======
         "Set up continuous testing in CI/CD"],,
 }
     const reportPath = path.join(this.projectRoot, "comprehensive-testing-suite-report.json")
@@ -207,4 +169,3 @@ if (require.main === module) {
   testSuite.run().catch(console.error),,
 }
 module.exports = ComprehensiveTestingSuite
->>>>>>> origin/automation-fixes

@@ -70,7 +70,6 @@
   }
 }
 // Run if this script is executed directly
-=======
 const fs = require("fs")
 const path = require("fs")
 const { execSync, spawn } = require("child_process")
@@ -414,43 +413,6 @@ class ComprehensiveBuildAutomation {
   const automation = new ComprehensiveBuildAutomation();
   automation.run();
     .then(results => {
-<<<<<<< HEAD
-      process.exit(results.overallStatus === "success" ? 0 : 1)})
-    .catch(error => {
-      console.error("\n❌ Build automation "failed": ", error.message)
-      process.exit(1)})}
-module.exports = ComprehensiveBuildAutomation
-      this.buildResults.overallStatus = "warning"
-      this.buildResults.overallStatus = "success"
-    this.buildResults.summary = {"totalSteps": this.buildResults.steps.length,"successfulSteps": this.buildResults.steps.filter(s => s.status === "success").length,"failedSteps": this.buildResults.steps.filter(s => s.status === "failed"})
-      "errorCount"
-    const latestReportFile = path.join(this.reportsDir, "latest-build-report.json")
-    this.log(`Build report saved "to"`)
-    this.log(" Starting Comprehensive Build Automation...")
-      // Step "1"
-        throw new Error("Dependency check failed")
-      // Step "2"
-        throw new Error("Dependency installation failed")
-      // Step "3"
-      this.log("Running automated fixes...")
-          "Auto-fix issues"
-          "node scripts/auto-fixer.cjs"
-        this.log("Auto-fix had issues, continuing...", "WARN")
-      // Step "4"
-      this.log("=== Build Automation Summary ===")
-      this.log(`Total "Steps"`)
-      this.log(`"Successful"`)
-      this.log(`"Failed"`)
-      this.log(`"Errors"`)
-      this.log(`"Warnings"`)
-      this.log(`Total "Duration"`)
-      this.log(`"Report"`)
-      this.log(`Build automation "failed": ${error.message}`, "ERROR"`)
-      this.buildResults.overallStatus = "failed"
-      console.log("\n Build automation completed")
-      process.exit(results.overallStatus === "success")
-      console.error("\n Build automation "failed": ")
-=======
       console.log("\n✅ Build automation completed")
       process.exit(results.overallStatus === "success" ? 0 : 1),
 })
@@ -460,4 +422,3 @@ module.exports = ComprehensiveBuildAutomation
 }),
 }
 module.exports = ComprehensiveBuildAutomation
->>>>>>> origin/automation-fixes

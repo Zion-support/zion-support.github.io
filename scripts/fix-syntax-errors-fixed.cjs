@@ -35,7 +35,6 @@
   fixAllFiles() {;
     this.log("🔧 Starting syntax error fixing...");
     const filesToFix = [;
-=======
 const fs = require("fs")
 const path = require("path")
 class SyntaxErrorFixer {
@@ -84,33 +83,6 @@ class SyntaxErrorFixer {
       "pages/pricing-guide.tsx",
       "pages/pricing.tsx",
 // Run the fixer;
-<<<<<<< HEAD
-if (require.main === module) {;
-  const fixer = new SyntaxErrorFixer();
-  fixer.fixAllFiles(),}
-;
-module.exports = SyntaxErrorFixer
-const fs = require("$1")
-const path = require("path")
-      let content = fs.readFileSync(filePath, "utf8")
-      content = content.replace(/&apos;s\s*""\s*$/gm, "&apos;s"")
-      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s">")
-      content = content.replace(/&apos;s\s*""\s*,/gm, "&apos;s", ")
-      content = content.replace(/we\\"ll\s*""\s*$/gm, "we\\"ll"")
-      content = content.replace(/we\\"ll\s*""\s*,/gm, "we\\"ll", ")
-      content = content.replace(/""\s*$/gm, """)
-      content = content.replace(/""\s*>/gm, "">")
-      content = content.replace(/""\s*,/gm, ", ")
-      content = content.replace(/""\s*\)/gm, "")"
-        fs.writeFileSync(filePath, content, "utf8")
-      this.errors.push({ "file": filePath, "error"})
-    this.log(" Starting syntax error fixing...")
-      "pages/blog.tsx"
-      "pages/help.tsx"
-      "pages/pricing-guide.tsx"
-      "pages/pricing.tsx"
-      "
-=======
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer()
   fixer.fixAllFiles(),,

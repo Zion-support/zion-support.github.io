@@ -142,15 +142,9 @@ class $1 {
       const outdatedCount = Object.keys(outdatedData).length;
 this.log(`Found ${outdatedCount} outdated packages`)
       // Save outdated packages report;
->>>>>>> origin/automation-fixes
       // Parse the JSON output;
       const outdatedData = JSON.parse(result.stdout)
       const outdatedCount = Object.keys(outdatedData).length;
-<<<<<<< HEAD
-this.log(`Found ${outdatedCount} outdated packages");
-      // Save outdated packages report;
-      const outdatedReportFile = path.join(;)
-=======
 this.log(`Found ${outdatedCount} outdated packages")
 
       // Save outdated packages report;

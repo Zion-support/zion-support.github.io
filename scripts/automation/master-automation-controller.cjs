@@ -211,7 +211,6 @@ class MasterAutomationController {
         memory: app.monit ? app.monit.memory : 0,
         timestamp: Date.now(),,
 }))
->>>>>>> origin/automation-fixes
       // Simple trend analysis;
       if (memoryData.length >= 2) {
   // Simple trend analysis;
@@ -277,7 +276,6 @@ class MasterAutomationController {
           break;
         case "status":;
           return await this.getStatus();
-=======
   const first = memoryData[0]
         const last = memoryData[memoryData.length - 1]
         const trend = last.memory > first.memory ? "increasing" : "decreasing";
@@ -358,7 +356,6 @@ class MasterAutomationController {
         case "health":;
           await this.generateHealthReport()
           break;
->>>>>>> origin/automation-fixes
         case "emergency-stop":;
           await this.emergencyStop()
           break;
@@ -372,23 +369,6 @@ class MasterAutomationController {
 module.exports = MasterAutomationController;
 // If run directly, start the master controller;
 if (require.main === module) {
-<<<<<<< HEAD
-  const masterController = new MasterAutomationController();
-  // Handle graceful shutdown;
-  process.on("SIGINT", () => {
-  masterController.stop();
-    process.exit(0)});
-  process.on("SIGTERM", () => {
-  masterController.stop();
-    process.exit(0)});
-  // Handle command line arguments;
-  const args = process.argv.slice(2);
-  if (args.length > 0) {
-  masterController.runCommand(args[0], args.slice(1))} else {
-} else {
-  // Start the master controller;
-    masterController.start()}
-=======
   const masterController = new MasterAutomationController()
   // Handle graceful shutdown;
   process.on(`SIGINT`, () => {

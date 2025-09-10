@@ -7,15 +7,6 @@ async function getAllFiles(dirPath, arrayOfFiles = []) {
       arrayOfFiles = await getAllFiles(fullPath, arrayOfFiles)} else {
       arrayOfFiles.push(fullPath)}
   }
-<<<<<<< HEAD
-  return arrayOfFiles}
-// Run the analysis
-if (require.main === module) {
-  identifyMissingPages()}
-module.exports = { identifyMissingPages }
-        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
-    console.error("Error identifying missing "pages")
-=======
   return arrayOfFiles,,
 }
 // Run the analysis;

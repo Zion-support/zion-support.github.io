@@ -33,21 +33,7 @@ class EnhancedErrorFixingAutomation {
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
-          this.log(`Fixing merge conflicts in ${file}`);
-          
-          // Simple merge conflict resolution - keep the HEAD version
-          const lines = content.split("\n");
-          const newLines = [];
-          let inConflict = false;
-          
-          for (const line of lines) {
-            if (line.includes("<<<<<<< HEAD")) {
-              inConflict = true;
               continue;
-            } else if (line.includes("=======")) {
-              continue;
-            } else if (line.includes(">>>>>>> ")) {
               inConflict = false;
               continue;
             } else if (!inConflict) {
@@ -134,7 +120,6 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
-=======
 #!/usr/bin/env node;
 #!/"usr/bin/env" node;
 #!/usr/bin/env node;
@@ -616,7 +601,6 @@ export default [
     for (const file of files) {
   try {
   const content = fs.readFileSync(file, "utf8")
-        if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {
   const fixedContent = this.resolveMergeConflicts(content)
           fs.writeFileSync(file, fixedContent)
           this.fixesApplied.push({

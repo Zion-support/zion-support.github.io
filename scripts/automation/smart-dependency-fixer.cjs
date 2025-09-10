@@ -216,59 +216,6 @@ async function autoFixDependencyIssues(issues) {
   if (issues.missing.length > 0) {
   // Fix peer dependency issues;
   if (issues.conflicts.some(conflict => conflict.includes("peer"))) {
-<<<<<<< HEAD
-    try {
-  execSync("npm install --legacy-peer-deps", { "stdio": "inherit" });
-      fixedIssues.push({
-  "type": "peerDependencies",
-        "message": "Fixed peer dependency issues with legacy flag"})} catch (error) {
-} catch (error) {
-  }
-  }
-;
-  return fixedIssues}
-;
-async function verifyDependencyFixes(issues) {
-  // Check vulnerabilities again;
-  try {
-  const auditOutput = execSync("npm audit --json", {
-  "stdio": "pipe"}).toString();
-    const auditData = JSON.parse(auditOutput);
-    if (;
-      auditData.vulnerabilities &&;
-      Object.keys(auditData.vulnerabilities).length === 0;
-    ) {
-  } else {
-  }
-  } catch (error) {
-  }
-;
-  // Check for dependency conflicts again;
-  try {
-} catch (error) {
-  }
-;
-  // Check for dependency conflicts again;
-  try {
-  const lsOutput = execSync("npm ls --json", { "stdio": "pipe" }).toString();
-    const lsData = JSON.parse(lsOutput);
-    if (!lsData.problems || lsData.problems.length === 0) {
-  } else {
-  }
-  } catch (error) {
-  }
-;
-  // Check for missing packages again;
-  try {
-  const checkOutput = execSync("npm check --json", {
-  "stdio": "pipe"}).toString();
-    const checkData = JSON.parse(checkOutput);
-    if (!checkData.missing || checkData.missing.length === 0) {
-  } else {
-  }
-  } catch (error) {
-  }
-=======
   console.log("🔧 Attempting to fix peer dependency issues...")
     try {
   execSync("npm install --legacy-peer-deps", { stdio: "inherit" })

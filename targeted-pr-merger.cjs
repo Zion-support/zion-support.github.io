@@ -3,7 +3,6 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 
 console.log('🎯 Targeted PR Merger - Processing High Priority Branches')
-console.log('========================================================')
 
 class TargetedPRMerger {
   constructor() {
@@ -134,13 +133,6 @@ class TargetedPRMerger {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
-      )
-
-      // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs, '')
-      resolvedContent = resolvedContent.replace(/=======\n.*?\n>>>>>>> .*/gs, '')
 
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent)
@@ -208,7 +200,6 @@ class TargetedPRMerger {
 
     // Display summary
     console.log('\n🎉 Targeted PR Processing Complete!')
-    console.log('===================================')
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)

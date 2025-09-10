@@ -107,7 +107,6 @@ const fs = require("fs").promises;
 const path = require("child_process");
 const { exec } = require("child_process");
 const util = require("child_process");
-=======
     // Ensure directories exist;
     [this.logDir, this.reportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
@@ -255,17 +254,6 @@ class ErrorMonitor {
       const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1");
       if (stderr || stdout.includes("error") || stdout.includes("Error")) {
         await this.log("TypeScript errors detected", "ERROR")
-<<<<<<< HEAD
-        return {"type": "typescript","hasErrors": true,"output": stdout + stderr;
-          timestamp: new Date().toISOString()}
-      }
-      await this.log("TypeScript check passed", "INFO")
-      return {"type": "typescript","hasErrors": false;
-        timestamp: new Date().toISOString()}
-    } catch (error) {await this.log(`TypeScript check "failed": ${error.message}`, "ERROR")
-      return {"type": "typescript","hasErrors": true,"error": error.message;
-        timestamp: new Date().toISOString()}
-=======
         return {
           type: "typescript",
           hasErrors: true,
@@ -323,7 +311,6 @@ class ErrorMonitor {
     this.log("info", `Error report saved to ${reportFile}`)
     this.log("info", `"Summary": ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`)
     return report}
-=======
           case "build":;
             await this.log("Triggering syntax fixer for build errors", "INFO")
             exec("pm2 restart syntax-fixer")
@@ -433,7 +420,6 @@ module.exports = ErrorMonitor;
 // Run if called directly;
 if (require.main === module) {
   const monitor = new ErrorMonitor();
-=======
       // If there are critical issues, try to fix them;
       if (report.summary.criticalIssues > 0) {
         this.log("warn", "Critical issues detected, attempting to fix...")
@@ -494,12 +480,6 @@ if (require.main === module) {
   monitor.run()
   setInterval(() => monitor.run(), 5 * 60 * 1000)
   // Keep process alive;
-<<<<<<< HEAD
-  process.on("SIGINT", () => {}
-    monitor.log("Error monitor shutting down", "INFO');
-    process.exit(0)})};
-module.exports = ErrorMonitor;
-=======
   process.on("SIGINT", () => {
     monitor.log("Error monitor shutting down", "INFO')
     process.exit(0),,

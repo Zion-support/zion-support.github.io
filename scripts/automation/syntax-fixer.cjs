@@ -66,7 +66,6 @@ class $1 {
     // Remove standalone conflict markers;
     fixed = fixed.replace(/^    fixed = fixed.replace(/^\\n/gm, () => { changes++; return "});
     fixed = fixed.replace(/^    ;
->>>>>>> origin/automation-fixes
     // Fix missing semicolons at end of import statements;
     fixed = fixed.replace(/^(import .+from .+)$/gm, (match) => {
   if (!match.endsWith(";")) {
@@ -108,18 +107,6 @@ const ${name}: React.FC<${name}Props> = () => {
         this.fixUnterminatedStrings,
         this.removeCorruptContent,
         this.fixModuleSystemErrors,
-<<<<<<< HEAD
-        this.fixCommonSyntaxErrors];
-      for (let i = 0; i < fixes.length; i++) {
-  let result;
-        if (typeof fixes[i] === "function") {
-  result = fixes[i](content)} else {
-  result = fixes[i]}
-        ;
-        if (result && result.content !== undefined) {
-  content = result.content;
-          totalChanges += result.changes || 0}
-=======
         this.fixCommonSyntaxErrors;
       ]
 
@@ -298,7 +285,6 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
   console.error("Syntax fixer "failed")
-=======
   fs.writeFileSync(filePath, content)
         this.fixesApplied += totalChanges;
         this.log(`info`, `Fixed ${filePath} (${totalChanges} changes)`)

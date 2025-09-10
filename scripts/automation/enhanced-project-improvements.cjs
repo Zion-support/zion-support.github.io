@@ -167,7 +167,6 @@ export const securityConfig = {
     // Add ESLint rules for better code quality;
     const eslintConfig = ";
 module.exports = {
->>>>>>> origin/automation-fixes
     // Add loading states and error boundariesconst loadingComponent = ;
 import React from "react";
 interface LoadingSpinnerProps {
@@ -464,61 +463,6 @@ module.exports = nextConfig;
 if (require.main === module) {
   // Run the improvements;
 if (require.main === module) {
-<<<<<<< HEAD
-  const improvements = new EnhancedProjectImprovements();
-  improvements.run().catch(console.error)}
-;
-module.exports = EnhancedProjectImprovements
-import { render, RenderOptions  } from "@testing-";library/react""
-import { Provider  } from "react-redux"
-import { store  } from "../store"
-const "AllTheProviders"
-  "ui"
-  options?: Omit<RenderOptions, "wrapper"
-) => render(ui, { "wrapper"})
-export * from "@testing-"library/react""
-    fs.writeFileSync(path.join(this.projectRoot, "src/utils/test-utils.tsx")
-    this.improvementsList.push("Enhanced test utilities")
-  this.log("⚡ Applying Build and Deployment Optimizations...")
-    const nextConfig = "
-/** @type {import("next"})
-  "reactStrictMode"
-  "swcMinify"
-  "compress"
-  "poweredByHeader"
-  "experimental"
-    "optimizePackageImports": ["@""mui/material""", "@""mui/icons-material"""]
-  "images"
-  domains: ["localhost"]
-    "formats": ["""image/webp""", """image/avif"""]
-  return ["]
-  "source": "/(.*)"", ""headers"
-  key: "X-Frame-Options"", ""value": "DENY"", "}", "
-  "key": "X-Content-Type-Options"", ""value": "nosniff"", "}", "
-  "key": "Referrer-Policy"", ""value": "strict-origin-when-cross-origin"", "}", ""
-  "webpack"
-    const nextConfig = "
-/** @type {import("next"})
-  "reactStrictMode"
-  "swcMinify"
-  "compress"
-  "poweredByHeader"
-  "experimental"
-    "optimizePackageImports": ["@"mui/material"", "@"mui/icons-material""]
-  "images"
-  domains: ["localhost"]
-    "formats": [""image/webp"", ""image/avif""]
-  return ["]
-  "source": "/(.*)", ""headers"
-  key: "X-Frame-Options", ""value": "DENY", "}", "
-  "key": "X-Content-Type-Options", ""value": "nosniff", "}", "
-  "key": "Referrer-Policy", ""value": "strict-origin-when-cross-origin", "}", "
-  "webpack"
-  const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  "analyzerMode": "static"
-          "openAnalyzer"
-    fs.writeFileSync(path.join(this.projectRoot, ")
-=======
   const improvements = new EnhancedProjectImprovements()
   improvements.run().catch(console.error),
 }

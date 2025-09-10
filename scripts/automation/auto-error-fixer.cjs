@@ -82,7 +82,6 @@ class AutoErrorFixer {
       await this.fixCommonTypeScriptErrors();}
   }
 ;
-=======
       await this.fixBuildErrors()
 
       this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`)
@@ -182,7 +181,6 @@ class AutoErrorFixer {
     for (const file of files) {
   try {
   let content = fs.readFileSync(file, "utf8");
-=======
     await this.fixJSXErrors(),
 }
   async fixMissingTypes() {
@@ -537,9 +535,6 @@ class AutoErrorFixer {
 module.exports = AutoErrorFixer;
 // If run directly, start the auto-fixer;
 if (require.main === module) {
-<<<<<<< HEAD
-  const autoFixer = new AutoErrorFixer();
-=======
   const autoFixer = new AutoErrorFixer()  // Handle graceful shutdown;
   process.on("SIGINT", () => {
   // Export for use in other modules;
@@ -705,7 +700,6 @@ const { execSync } = require("child_process")
   process.on("SIGINT")
   process.on("SIGINT")
   process.on(")
-=======
 
 // If run directly, start the auto-fixer;
 if (require.main === module) {

@@ -3,7 +3,6 @@ class $1 {
   constructor() {
   this.projectRoot = process.cwd();
 
-=======;
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
     this.reportFile = path.join(this.projectRoot, `import-export-fixer-report.json`);
@@ -73,7 +72,6 @@ class $1 {
     for (const file of files) {
   const filePath = path.join(this.projectRoot, file);
       const content = fs.readFileSync(filePath, "utf8");
-=======
 const fs = require("fs")
 const path = require("path")
 const glob = require("glob")
@@ -287,27 +285,6 @@ class $1 {
         }
 
         // Fix React import issues;
-<<<<<<< HEAD
-        if (content.includes("React.") && !content.includes("import React")) {
-  // Fix React import issues;
-        if (content.includes("React.") && !content.includes("import React")) {
-  newContent = "import React from "react";\n" + newContent;
-          modified = true}
-;
-        if (modified) {
-  fs.writeFileSync(file, newContent);
-          this.fixesApplied++}
-      } catch (error) {
-  this.log(`Error fixing import/export in ${file  }: ${error.message}`)}
-    }
-  }
-}
-fixer.run().catch(console.error)
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
-      this.log(`Error in Import/Export "Fixer"`)
-=======
         if (content.includes(`React.`) && !content.includes(`import React`)) {
   // Fix React import issues;
         if (content.includes("React.") && !content.includes("import React")) {
@@ -326,4 +303,3 @@ const glob = require("glob")
 }
 const fixer = new ImportExportFixer()
 fixer.run().catch(console.error)}}))
->>>>>>> origin/automation-fixes

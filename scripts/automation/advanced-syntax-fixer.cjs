@@ -51,7 +51,6 @@ function fixAdvancedSyntaxErrors(filePath) {
     content = content.replace(missingParenRegex, (match, offset, string) => {
   // Fix malformed JSX closing tags;
     const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
->>>>>>> origin/automation-fixes
     // Fix missing closing parentheses in function declarations;
     const missingParenRegex = /^\s*}\s*$/gm;
     content = content.replace(missingParenRegex, (match, offset, string) => {
@@ -59,11 +58,6 @@ function fixAdvancedSyntaxErrors(filePath) {
       const beforeMatch = string.substring(0, offset);
       const openParens = (beforeMatch.match(/\(/g) || []).length;
       const closeParens = (beforeMatch.match(/\)/g) || []).length;
-<<<<<<< HEAD
-      if (openParens > closeParens) {
-  return "})"}
-      return match});
-=======
 
       if (openParens > closeParens) {
   return "})";
@@ -176,7 +170,6 @@ const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
-=======
     content = content.replace(malformedTryCatchRegex, `  } catch (`)
     if (content !== originalContent) {
   fs.writeFileSync(filePath, content, `utf8`)

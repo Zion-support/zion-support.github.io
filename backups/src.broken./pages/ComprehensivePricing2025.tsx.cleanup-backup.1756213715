@@ -97,8 +97,6 @@ const ComprehensivePricing2025: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
 
@@ -350,7 +348,6 @@ const ComprehensivePricing2025: React.FC = () => {
                       <span className="text-blue-200">Support:</span>
                       <div className="text-white font-semibold capitalize">{service.supportLevel}</div>
                     </div>
-==============      {/* Pricing Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -415,28 +412,12 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-=======
-<<<<<<< HEAD
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-=======
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             >
               <Phone className="w-5 h-5 inline mr-2" />
               Call +1 302 464 0950
@@ -446,24 +427,10 @@ const ComprehensivePricing2025: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               Schedule Consultation
             </a>
-=======
-<<<<<<< HEAD
-              <Mail className="w-5 h-5 inline mr-2" />
-              Email Us
-            </motion.button>
-=======
               Schedule Consultation
             </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-              Schedule Consultation
-            </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>

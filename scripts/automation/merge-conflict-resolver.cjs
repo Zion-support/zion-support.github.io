@@ -9,7 +9,6 @@ class MergeConflictResolver {
     this.isRunning = false;
   async start() {
   this.log("🚀 Starting Merge Conflict Resolver...");
-=======
     this.checkInterval = 2 * 60 * 1000; // Check every 2 minutes;
 }
   log(message) {
@@ -153,7 +152,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
       const headMatch = content.match(/\n/);
       const incomingMatch = content.match(/\n([\s\S]*?)\n;
       if (headMatch && incomingMatch) {
->>>>>>> origin/automation-fixes
   resolveJsonConflict(content) {
   // For JSON files, try to merge the objects;
     try {
@@ -161,10 +159,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
       const headMatch = content.match(/\n/);
       const incomingMatch = content.match(/\n([\s\S]*?)\n;
       if (headMatch && incomingMatch) {
-<<<<<<< HEAD
-  const headJson = JSON.parse(headMatch[1].trim());
-        const incomingJson = JSON.parse(incomingMatch[1].trim());
-=======
   const headJson = JSON.parse(headMatch[1].trim())
         const incomingJson = JSON.parse(incomingMatch[1].trim())
         // Merge the objects, preferring incoming for conflicts;
@@ -274,9 +268,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`),
 module.exports = MergeConflictResolver;
 // If run directly, start the conflict resolver;
 if (require.main === module) {
-<<<<<<< HEAD
-  const conflictResolver = new MergeConflictResolver();
-=======
   const conflictResolver = new MergeConflictResolver()  // Handle graceful shutdown;
   process.on("SIGINT", () => {
   // Export for use in other modules;
@@ -383,7 +374,6 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   process.on("SIGINT")
   process.on("SIGINT")
   process.on(")
-=======
 
 // If run directly, start the conflict resolver;
 if (require.main === module) {

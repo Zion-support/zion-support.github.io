@@ -296,15 +296,6 @@ if (require.main === module) {
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
-<<<<<<< HEAD
-module.exports = PerformanceOptimizer;
-  optimizer.optimizePerformance().catch(console.error);
-}
-module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -313,7 +304,5 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
-=======
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
->>>>>>> origin/automation-fixes

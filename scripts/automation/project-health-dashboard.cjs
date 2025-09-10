@@ -273,7 +273,6 @@ class $1 {
   const fullPath = path.join(dir, item.name)
 
         if (
->>>>>>> origin/automation-fixes
           item.isDirectory() &&;
           !item.name.startsWith(".") &&;
           item.name !== "node_modules";
@@ -369,7 +368,6 @@ class $1 {
   const content = fs.readFileSync(fullPath, "utf8")            // Check for corruption patterns;
             if (
               content.includes("import {") ||;
->>>>>>> origin/automation-fixes
             // Check for corruption patterns;
             if (;
               content.includes("import {") ||;
@@ -409,7 +407,6 @@ class $1 {
           item.name !== "node_modules";
         ) {
   if (;
-=======
   files.push(...(await this.getAllFiles(fullPath))),
 } else if (item.isFile()) {
   files.push(fullPath),
@@ -544,7 +541,6 @@ class $1 {
 ;
     return recommendations}
 ;
-=======
   count += await this.countTotalFiles(fullPath),
 } else if (item.isFile()) {
   count++;
@@ -695,8 +691,6 @@ class $1 {
                 </div>;
                 ${this.renderIssues(healthData.dependencies.issues)}
             </div>;
-<<<<<<< HEAD
-=======
             <div class=status-card status-${healthData.typescript.status.toLowerCase()}">;
                 <h3>🔧 TypeScript</h3>;
                 <div class="metric>;
@@ -717,7 +711,6 @@ class $1 {
                 </div>;
                 ${this.renderIssues(healthData.typescript.issues)}
             </div>;
->>>>>>> origin/automation-fixes
             <div class="status-card status-${healthData.build.status.toLowerCase()}>;
                 <h3>🏗️ Build</h3>;
                 <div class=metric>;
@@ -731,8 +724,6 @@ class $1 {
                     <span class="metric-value>${healthData.build.buildTime}ms</span></div>`;
                     : ``;
             </div>;
-<<<<<<< HEAD
-=======
             <div class=status-card status-${healthData.build.status.toLowerCase()}>;
                 <h3>🏗️ Build</h3>;
                 <div class="metric">;
@@ -744,7 +735,6 @@ class $1 {
                     ? `<div class="metric">;
                     <span>Build Time:</span>;
                     <span class=metric-value>${healthData.build.buildTime}ms</span></div>`;
->>>>>>> origin/automation-fixes
             <div class=status-card status-${healthData.files.status.toLowerCase()}">;
                 <h3>📁 Files</h3>;
                 <div class="metric>;
@@ -765,8 +755,6 @@ class $1 {
                 </div>;
                 ${this.renderIssues(healthData.files.issues)}
             </div>;
-<<<<<<< HEAD
-=======
             <div class="status-card status-${healthData.pm2.status.toLowerCase()}>;
                 <h3>⚡ PM2 Processes</h3>;
                 <div class=metric>;
@@ -780,24 +768,10 @@ class $1 {
                 ${this.renderIssues(healthData.pm2.issues)}
             </div>;
         </div>;
->>>>>>> origin/automation-fixes
         <div class=recommendations>;
             <h3>💡 Recommendations</h3>;
             ${healthData.recommendations.map(rec => `<div class=recommendation>• ${rec}</div>`).join(``)}
         </div>;
-<<<<<<< HEAD
-        <div class=timestamp">            Generated "at": ${new Date(healthData.timestamp).toLocaleString()}
-        </div>;
-    </div>;
-</body></html>"}
-;
-  renderIssues(issues) {
-  if (!issues || issues.length === 0) {
-  return "<div class="issues-list><div class=issue style="background": #f0fdf4; color: #059669;>✓ No issues found</div></div>"}
-;
-    return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠️ ${issue}</div>`).join("")}</div>"}
-;
-=======
 
         <div class=timestamp">            Generated at: ${new Date(healthData.timestamp).toLocaleString()}
         </div>;
@@ -869,7 +843,6 @@ this.log(`Summary report generated: ${summaryFile}`)
     if (healthData.dependencies.status === "CRITICAL") count++;
     if (healthData.files.status === "CRITICAL") count++;
     return count}
-=======
     ),
 }
   countCriticalIssues(healthData) {
@@ -1201,7 +1174,6 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.files.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
-=======
 async function main() {
   const dashboard = new ProjectHealthDashboard()
 

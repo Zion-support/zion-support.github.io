@@ -18,7 +18,6 @@ const execAsync = promisify(exec);
         timeout: 30000, 
         ...options 
       });
-=======
 class MasterAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
@@ -113,7 +112,6 @@ class MasterAutomation {}
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
-=======
       return {}
         success: false,
         stdout: error.stdout || '',
@@ -269,7 +267,6 @@ class MasterAutomation {}
         gitAutomation: await this.getPM2Logs("git-automation", 20)
       }
     };
-=======
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -337,7 +334,6 @@ if (require.main === module) {
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
-=======
   };
   async start() {}
     this.log('Master Automation started');
@@ -388,9 +384,6 @@ if (require.main === module) {}
         console.error('Master Automation "failed": ', error);        process.exit(1);
       });
       break;
-<<<<<<< HEAD
-module.exports = MasterAutomation;
-=======
 module.exports = MasterAutomation;
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'

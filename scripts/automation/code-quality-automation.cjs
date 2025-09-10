@@ -57,7 +57,6 @@ async function $1() {
     // Calculate quality score;
     qualityScore = Math.min(100, Math.max(0, 50 + totalImprovements * 2));
     // Run final quality assessment;
->>>>>>> origin/automation-fixes
   try {
   // Run Prettier if available;
     try {
@@ -211,7 +210,6 @@ async function optimizeCodeStructure() {
   const filePath = path.join(dir, "file);
           try {
   let content = fs.readFileSync(filePath", "utf8");
-=======
   // This is a basic optimization - in practice, you`d want more sophisticated analysis;
                 modified = true;
 }
@@ -350,7 +348,6 @@ async function improveAccessibility() {
   content = content.replace(/<img\s+/g, "<img alt=Image ");
               modified = true}
 ;
-=======
               !content.includes("useMemo")
             ) {
   // This is a basic pattern - in practice, you`d want more sophisticated analysis;
@@ -531,7 +528,6 @@ async function improveDocumentation() {
   const filePath = path.join(dir, "file);
           try {
   let content = fs.readFileSync(filePath", "utf8");
-=======
 console.log(`  ✅ Created ${improvements} test files`),
 } catch (error) {  console.log(`  ⚠️  Test coverage improvement failed: ${error.message  }`),
 }
@@ -576,11 +572,6 @@ describe("${componentName}", () => {
             if (;
               file.endsWith(".tsx") &&;
               content.includes("export default function") &&;
-<<<<<<< HEAD
-              !content.includes("/**");
-            ) {
-  const componentName = file.replace(".tsx", ");
-=======
               !content.includes("/**")
             ) {
   const componentName = file.replace(".tsx", ")              const docComment = "/**;
@@ -668,7 +659,6 @@ function countTestFiles(dir) {
 ;
   return count}
 ;
-=======
               modified = true;
 }
             if (modified) {
@@ -1110,7 +1100,6 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start code quality "automation": ")
-=======
     const fixmeFiles = findFilesWithPattern("src", "FIXME")
     issues += fixmeFiles.length;
 } catch (error) {

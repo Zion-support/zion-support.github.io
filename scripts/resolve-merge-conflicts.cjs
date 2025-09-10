@@ -65,9 +65,6 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-<<<<<<< HEAD
-=======
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -75,8 +72,6 @@ function findConflictedFiles(dir) {
         }
       }
     }
-<<<<<<< HEAD
-=======
     searchInDirectory(this.projectRoot)
     return filesWithConflicts,,
 }
@@ -99,38 +94,7 @@ function findConflictedFiles(dir) {
       errors: this.errors,
       totalConflicts: filesWithConflicts.length,,
 }
->>>>>>> origin/automation-fixes
   }
   scanDirectory(dir);
   return conflictedFiles;
 }
-<<<<<<< HEAD
-// Main execution
-try {
-  const conflictedFiles = findConflictedFiles('.');
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    process.exit(0);
-  }
-  console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
-  conflictedFiles.forEach(file => console.log(`  - ${file}`));
-  let resolvedCount = 0;
-  for (const file of conflictedFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
-  }
-  console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-  // Try to build after resolving conflicts
-  console.log('\n🔨 Testing build after conflict resolution...');
-  try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful after conflict resolution!');
-  } catch (error) {
-    console.log('⚠️  Build still has issues, but conflicts are resolved');
-  }
-} catch (error) {
-  console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
-}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

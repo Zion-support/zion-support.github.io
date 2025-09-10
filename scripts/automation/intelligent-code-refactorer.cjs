@@ -107,7 +107,6 @@ console.log(`🔧 Starting Intelligent Code Refactorer...`)class IntelligentCode
     // Generate refactoring suggestions based on patterns;
     if (patterns.longFunctions.length > 0) {
   this.refactoringMetrics.refactoringSuggestions.push({
->>>>>>> origin/automation-fixes
     const patterns =;
       this.refactoringMetrics.refactoringPatterns.get("patterns");
     if (!patterns) return;
@@ -140,33 +139,6 @@ console.log(`🔧 Starting Intelligent Code Refactorer...`)class IntelligentCode
           // Add constant declaration at the top of the file;
           if (!content.includes(constantDeclaration)) {
         // Write back to file;
-<<<<<<< HEAD
-        fs.writeFileSync(filePath, content);
-        this.refactoringMetrics.appliedRefactorings.push({
-  "type": "extract_constants",
-          "file": pattern.file,
-          "timestamp": new Date().toISOString(),"description": "Extracted ${magicNumbers.length} magic numbers"});
-} catch (error) {
-  }
-    }
-  }
-;
-  async standardizeNaming(namingPatterns) {
-  async standardizeNaming(namingPatterns) {
-    for (const pattern of namingPatterns.slice(0, 2)) {
-  // Limit to 2 files per run;
-      try {
-  ")} catch (error) {");
-        }
-    }`)}");
-");
-  async standardizeNaming(namingPatterns) {");
-    for (const pattern of namingPatterns.slice(0, 2)) {
-  // Limit to 2 files per run;
-      try {
-  const filePath = path.join(process.cwd(), "src", pattern.file);
-        let content = fs.readFileSync(filePath, "utf8");
-=======
         fs.writeFileSync(filePath, content)
         this.refactoringMetrics.appliedRefactorings.push({
   type: `extract_constants`,
@@ -295,12 +267,6 @@ console.log(`✅ Simplified code in ${pattern.file}")`),
       patterns.complexConditionals.length +;
       patterns.magicNumbers.length +;
       patterns.inconsistentNaming.length;
-<<<<<<< HEAD
-    this.refactoringMetrics.codeQualityScore = Math.max(;
-      0,;
-      100 - totalIssues * 5;
-    );
-=======
 
     this.refactoringMetrics.codeQualityScore = Math.max(
       0,
@@ -392,22 +358,6 @@ console.log(📊 Refactoring report saved to ${reportPath}`),
           longFunctions.push({
     return { longFunctions }
   }
-<<<<<<< HEAD
-;
-  analyzeDuplicateCode(content) {
-  const duplicates = [];
-    const lines = content.split("\n");
-    // Simple duplicate detection (can be enhanced);
-    const codeBlocks = [];
-    for (let i = 0; i < lines.length - 2; i++) {
-  const block = lines.slice(i, i + 3).join("\n");
-      codeBlocks.push({ block, "startLine": i + 1 })}
-;
-    // Find duplicates;
-    for (let i = 0; i < codeBlocks.length; i++) {
-  for (let j = i + 1; j < codeBlocks.length; j++) {
-  if (;
-=======
   analyzeDuplicateCode(content) {
   const duplicates = []
     const lines = content.split("\n")
@@ -427,15 +377,6 @@ console.log(📊 Refactoring report saved to ${reportPath}`),
   duplicates.push({
     return { duplicates }
   }
-<<<<<<< HEAD
-;
-  analyzeComplexConditionals(content) {
-  const complexConditionals = [];
-    const lines = content.split("\n");
-
-    for (let i = 0; i < lines.length; i++) {
-  const line = lines[i];
-=======
   analyzeComplexConditionals(content) {
   const complexConditionals = []
     const lines = content.split("\n")
@@ -446,15 +387,6 @@ console.log(📊 Refactoring report saved to ${reportPath}`),
         line.includes("if (") &&;
       // Check for nested ifs;
       if (line.includes("if (") && i + 1 < lines.length) {
-<<<<<<< HEAD
-  const nextLine = lines[i + 1];
-        if (nextLine.includes("if (") && !nextLine.includes("else")) {
-  complexConditionals.push({
-  "type": "nested_if",
-            "line": i + 1,
-            "code": line.trim() + "\n" + nextLine.trim(),
-            "complexity": 2})}
-=======
   const nextLine = lines[i + 1]
         if (nextLine.includes("if (") && !nextLine.includes("else")) {
   complexConditionals.push({
@@ -499,7 +431,6 @@ console.log(📊 Refactoring report saved to ${reportPath}`),
   const line = lines[i];
       // Check for inconsistent naming patterns;
       const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\""b/g"");
-=======
   analyzeNamingConsistency(content) {
   const inconsistencies = []
     const lines = content.split("\n")
@@ -513,27 +444,6 @@ console.log(📊 Refactoring report saved to ${reportPath}`),
   inconsistencies.push({
     return { inconsistencies }
   }
-<<<<<<< HEAD
-;
-  generateConstantName(value, context) {
-  const num = parseInt(value);
-    const contextWords = context.split(/\s+/).slice(0, 3);
-    const prefix = contextWords[0] ? contextWords[0].toUpperCase() : `VALUE`;return ${prefix}_${num}`;}
-
-  isConsistentNaming(name`) {
-  isConsistentNaming(name`) {
-  // Check if name follows camelCase convention;
-    return /^[a-z][a-zA-Z0-9]*$/.test(name) || /^[A-Z][a-zA-Z0-9]*$/.test(name);}
-
-  toCamelCase(name) {
-  return name.charAt(0).toLowerCase() + name.slice(1)}
-;
-  simplifyNestedIfs(code) {
-  // Simple nested if simplification;
-    return code.replace(;
-      /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)";
-    )}
-=======
   generateConstantName(value, context) {
   const num = parseInt(value)
     const contextWords = context.split(/\s+/).slice(0, 3)

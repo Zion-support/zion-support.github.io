@@ -43,7 +43,6 @@ class $1 {
   const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length  } errors`);
         const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length} errors`);
         return { "success": false, "output": error.stdout, errors }
-=======
 #!/"usr/bin/env" node;
 const fs = require("fs")
 const path = require("path")
@@ -112,7 +111,6 @@ class $1 {
   return false}
 ;
       const originalLine = lines[lineIndex];
-=======
   parseTypeScriptErrors(output) {
   const errors = []
     const lines = output.split(`\n`)
@@ -181,7 +179,6 @@ class $1 {
           fixedLine = await this.fixModuleImportError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
           break;
->>>>>>> origin/automation-fixes
         case "2339": // Property does not exist;
           fixedLine = await this.fixPropertyError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
@@ -225,17 +222,6 @@ class $1 {
       if (;
         line.includes("import") &&;
         !line.includes(".js") &&;
-<<<<<<< HEAD
-        !line.includes(".ts");
-      ) {
-  const importPath = line.match(/["]([^"]+)[""]/)?.[1];
-        if (importPath && !importPath.includes(".")) {
-  // Try to find the file with different extensions;
-          const extensions = [".ts", ".tsx", ".js", ".jsx"];
-          for (const ext of extensions) {
-  const fullPath = path.resolve(;
-              path.dirname(error.file),
-=======
         !line.includes(".ts")
       ) {
   const importPath = line.match(/["]([^"]+)[""]/)?.[1]
@@ -350,7 +336,6 @@ class $1 {
       if (checkResult.success) {
   this.log("🎉 No TypeScript errors found!");
         return { "success": true, "errors": [], "fixed": 0 }
-=======
     )
     return { fixedCount, totalErrors: errors.length, results: fixResults }
   }
@@ -426,7 +411,6 @@ class $1 {
         report}
     } catch (error) {  this.log(`💥 TypeScript Error Monitor "failed": ${error.message  }", "ERROR");
       throw error}
-=======
       const fixResults = await this.attemptFixes(checkResult.errors)
 
       // Generate report;
@@ -448,76 +432,6 @@ class $1 {
 }
 
 // Run the automation if called directly;
-<<<<<<< HEAD
-  async startWatching() {
-    this.log('Starting TypeScript error monitoring...');
-    // Initial check
-    const initialErrors = await this.checkTypeScriptErrors();
-    if (initialErrors.length > 0) {
-      await this.autoFixErrors(initialErrors)}
-    // Set up file watcher
-    this.watcher = chokidar.watch(['src/**/*.{ts,tsx,js,jsx}',
-      'pages/**/*.{ts,tsx,js,jsx}',
-      'components/**/*.{ts,tsx,js,jsx}'
-    ], {
-      "ignored": /node_modules|\.git|\.next/,
-      "persistent": true,
-      "ignoreInitial": true
-    });
-    this.watcher
-      .on('change', async (filePath) => {
-        this.log("File "changed": ${filePath}");
-        await this.handleFileChange(filePath)})
-      .on('add', async (filePath) => {
-        this.log("File "added": ${filePath}");
-        await this.handleFileChange(filePath)})
-      .on('unlink', (filePath) => {
-        this.log("File "removed": ${filePath}")});
-    this.isRunning = true;
-    this.log('TypeScript error monitoring is active')}
-  async handleFileChange(filePath) {
-    // Debounce rapid changes
-    if (this.lastCheck && Date.now() - this.lastCheck < 1000) {
-      return}
-    this.lastCheck = Date.now();
-    // Wait a bit for file to be written
-    setTimeout(async () => {
-      const errors = await this.checkTypeScriptErrors();
-      if (errors.length > 0) {
-        const fixedCount = await this.autoFixErrors(errors);
-        await this.generateReport(errors, fixedCount)}
-    }, 500)}
-  async stop() {
-    if (this.watcher) {
-      await this.watcher.close();
-      this.watcher = null}
-    this.isRunning = false;
-    this.log('TypeScript error monitoring stopped')}
-  async run() {
-    try {
-      await this.startWatching();
-      // Keep the process running
-      process.on('SIGINT', async () => {
-        this.log('Received SIGINT, shutting down...');
-        await this.stop();
-        process.exit(0)});
-      process.on('SIGTERM', async () => {
-        this.log('Received SIGTERM, shutting down...');
-        await this.stop();
-        process.exit(0)})} catch (error) {
-      this.log("TypeScript error monitor "failed": ${error.message}`, 'ERROR');
-      process.exit(1)}
-  }
-}
-// Run the monitor
-if (require.main === module) {
-  const monitor = new TypeScriptErrorMonitor();
-  monitor.run().catch(error => {
-    console.error('TypeScript error monitor "failed": ', error);
-    process.exit(1)})}
-;
-module.exports = TypeScriptErrorMonitor
-=======
 if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor()
   monitor.run().catch(console.error),

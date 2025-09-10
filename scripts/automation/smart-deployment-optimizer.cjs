@@ -103,13 +103,11 @@ class $1 {
         if (bundleSize > 2 * 1024 * 1024) {
   // 2MB threshold;
           this.deploymentMetrics.optimizationSuggestions.push({
->>>>>>> origin/automation-fixes
         // Check for optimization opportunities;
         if (bundleSize > 2 * 1024 * 1024) {
   // 2MB threshold;
           this.deploymentMetrics.optimizationSuggestions.push({
   async analyzeDeploymentPatterns() {
-=======
   type: "bundle_size",
             priority: "high",
             description: "Bundle size exceeds 2MB, optimization needed",
@@ -133,26 +131,6 @@ class $1 {
     const successfulBuilds = this.deploymentMetrics.buildTimes.filter(;
       build => build.duration > 0;
     ).length;
-<<<<<<< HEAD
-    this.deploymentMetrics.successRate =;
-      totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
-
-    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}";
-    this.deploymentMetrics.successRate =;
-      totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
-    : ${this.deploymentMetrics.deploymentFrequency}";
-      totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;");
-`);
-    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}`);
-    );
-    console.log( 📊 Success rate: ${this.deploymentMetrics.successRate.toFixed(2)}%;
-    );
-    // Analyze build time trends;
-    if (this.deploymentMetrics.buildTimes.length > 1) {
-  const recentBuildTimes = this.deploymentMetrics.buildTimes;
-        .slice(-5);
-        .map(build => build.duration);
-=======
 
     this.deploymentMetrics.successRate =;
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
@@ -312,7 +290,6 @@ if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {
       historicalPath,
       JSON.stringify(this.deploymentMetrics, null, 2);
     );
-=======
   type: `build_time`,
           priority: `medium",
           description: "Average build time exceeds 1 minute",

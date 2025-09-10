@@ -527,9 +527,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       return (
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-<<<<<<< HEAD
-=======
-=======        '$1'
         /
       content = content.replace(/
       // Remove merge conflict markers and keep HEAD version
@@ -1147,9 +1144,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

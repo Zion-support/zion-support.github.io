@@ -195,32 +195,6 @@ module.exports = {
           "20%": { transform: "translate(-2px, 2px)" },
           "40%": { transform: "translate(-2px, -2px)" },
           "60%": { transform: "translate(2px, 2px)" },
-<<<<<<< HEAD
-          "80%": { transform: "translate(2px, -2px)" },
-        },
-        typewriter: {
-          "0%": { width: "0%" },;
-          "50%": { width: "100%" },;
-          "100%": { width: "0%" }},;
-        breathe: {
-          "0%, 100%": { transform: "scale(1)" },;
-          "50%": { transform: "scale(1.05)" }},;
-        orbit: {
-          "0%": { transform: "rotate(0deg) translateX(50px) rotate(0deg)" },;
-          "100%": { transform: "rotate(360deg) translateX(50px) rotate(-360deg)" }},;
-        "pulse-neon": {
-          "0%, 100%": {
-            boxShadow: "0 0 5px rgba(0, 212, 255, 0.5), 0 0 10px rgba(0, 212, 255, 0.3)"},;
-          "50%": {
-            boxShadow: "0 0 15px rgba(0, 212, 255, 0.8), 0 0 25px rgba(0, 212, 255, 0.5)"}},;
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },;
-          "100%": { backgroundPosition: "200% 0" }},;
-        wave: {
-          "0%, 100%": { transform: "translateY(0)" },;
-          "50%": { transform: "translateY(-10px)" }}},;
-      backgroundImage: {
-=======
           "80%": { transform: "translate(2px, -2px)" },,
 },
         typewriter: {;
@@ -254,7 +228,6 @@ module.exports = {
 },,
 },
       backgroundImage: {;
->>>>>>> origin/automation-fixes
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         holographic: "linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899, #10b981)",
@@ -265,15 +238,9 @@ module.exports = {
         "neon-green": "linear-gradient(45deg, #10b981, #059669)",
         glass: "linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))",
         "glass-dark": "linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1))",
-<<<<<<< HEAD
-        shimmer: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
-      },
-      fontSize: {
-=======
         shimmer: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",,
 },
       fontSize: {;
->>>>>>> origin/automation-fixes
         "responsive-xs": ["0.75rem", { lineHeight: "1rem" }],
         "responsive-sm": ["0.875rem", { lineHeight: "1.25rem" }],
         "responsive-base": ["1rem", { lineHeight: "1.5rem" }],
@@ -282,22 +249,6 @@ module.exports = {
         "responsive-2xl": ["1.5rem", { lineHeight: "2rem" }],
         "responsive-3xl": ["1.875rem", { lineHeight: "2.25rem" }],
         "responsive-4xl": ["2.25rem", { lineHeight: "2.5rem" }],
-<<<<<<< HEAD
-        "responsive-5xl": ["3rem", { lineHeight: "1" }],
-      },
-      colors: {
-        neon: {
-          blue: "#00d4ff",;
-          purple: "#8b5cf6",;
-          pink: "#ec4899",;
-          green: "#10b981"},;
-        cyber: {
-          dark: "#0f0f23",
-          darker: "#1a1a2e",
-          "dark-blue": "#16213e",
-          blue: "#0f3460",
-        },
-=======
         "responsive-5xl": ["3rem", { lineHeight: "1" }],,
 },
       colors: {;
@@ -313,7 +264,6 @@ module.exports = {
           "dark-blue": "#16213e",
           blue: "#0f3460",,
 },
->>>>>>> origin/automation-fixes
         "high-contrast": "#ffffff",
         "high-contrast-secondary": "#e5e7eb",
         border: "hsl(var(--border))",
@@ -321,34 +271,6 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-<<<<<<< HEAD
-        primary: {
-          DEFAULT: "hsl(var(--primary))",;
-          foreground: "hsl(var(--primary-foreground))"},;
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",;
-          foreground: "hsl(var(--secondary-foreground))"},;
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",;
-          foreground: "hsl(var(--destructive-foreground))"},;
-        muted: {
-          DEFAULT: "hsl(var(--muted))",;
-          foreground: "hsl(var(--muted-foreground))"},;
-        accent: {
-          DEFAULT: "hsl(var(--accent))",;
-          foreground: "hsl(var(--accent-foreground))"},;
-        popover: {
-          DEFAULT: "hsl(var(--popover))",;
-          foreground: "hsl(var(--popover-foreground))"},;
-        card: {
-          DEFAULT: "hsl(var(--card))",;
-          foreground: "hsl(var(--card-foreground))"}},;
-      borderRadius: {
-        lg: "var(--radius)",;
-        md: "calc(var(--radius) - 2px)",;
-        sm: "calc(var(--radius) - 4px)"},;
-      boxShadow: {
-=======
         primary: {;
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",,
@@ -384,7 +306,6 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",,
 },
       boxShadow: {;
->>>>>>> origin/automation-fixes
         "neon-blue": "0 0 20px rgba(0, 212, 255, 0.5)",
         "neon-purple": "0 0 20px rgba(139, 92, 246, 0.5)",
         "neon-pink": "0 0 20px rgba(236, 72, 153, 0.5)",

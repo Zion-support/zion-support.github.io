@@ -177,7 +177,6 @@ class $1 {
 ;
   async runPredictiveIssueDetection() {
   this.log("Starting Predictive Issue Detection analysis...");
-=======
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -450,7 +449,6 @@ class $1 {
       "averageFileSize": totalSize / fileCount}
   }
 ;
-=======
       const startTime = Date.now()
       const buildResult = execSync(`npm run build`, {
   encoding: "utf8",
@@ -596,7 +594,6 @@ class $1 {
         const content2 = fs.readFileSync(files[j], "utf8");
         const similarity = this.calculateSimilarity(content1, content2);
         totalDuplication += similarity}
-=======
       qualityMetrics.securityScore = this.calculateSecurityScore(files),
 } catch (error) {
   // Lint failed, assume poor quality;
@@ -674,7 +671,6 @@ class $1 {
 ;
     return Math.max(0, securityScore)}
 ;
-=======
       totalDuplication / ((files.length * (files.length - 1)) / 2)
     return Math.max(0, 100 - averageDuplication * 100),
 }
@@ -736,13 +732,11 @@ class $1 {
   return { error: error.message }
     }
   }
->>>>>>> origin/automation-fixes
   async collectDependencyMetrics() {
   const dependencyMetrics = {}
     try {
   // Check for outdated packages;
       const outdatedResult = execSync("npm outdated --json", {
->>>>>>> origin/automation-fixes
       dependencyMetrics.outdatedCount = Object.keys(outdatedPackages).length;
       dependencyMetrics.outdatedPackages = outdatedPackages;
       // Check for security vulnerabilities;
@@ -930,55 +924,6 @@ this.log(`Detected ${anomalies.length} anomalies`)
     if (zScore > 2) {
   // More than 2 standard deviations;
       return {
-<<<<<<< HEAD
-  "type": "STATISTICAL_ANOMALY",
-        "metric": "buildTime",
-        currentValue,
-        "expectedRange": ["mean - 2 * stdDev", "mean + 2 * stdDev"],
-        zScore,
-        "severity": zScore > 3 ? "HIGH" : "MEDIUM"}
-    }
-;
-    return null}
-;
-  detectPatternAnomalies(metrics) {
-  const anomalies = [];
-    // Check for unusual patterns in code metrics;
-    if (metrics.codeMetrics.complexityScore > 100) {
-  anomalies.push({
-  "type": "PATTERN_ANOMALY",
-        "metric": "codeComplexity",
-        "description": "Unusually high code complexity detected",
-        "severity": "MEDIUM"})}
-;
-    // Check for dependency anomalies;
-    if (metrics.dependencyMetrics.vulnerabilityCount > 5) {
-  anomalies.push({
-  "type": "PATTERN_ANOMALY",
-        "metric": "securityVulnerabilities",
-        "description": "High number of security vulnerabilities",
-        "severity": "HIGH",
-    // Check for unusual patterns in code metrics;
-    if (metrics.codeMetrics.complexityScore > 100) {
-  anomalies.push({
-  "type": "PATTERN_ANOMALY",
-        "metric": "codeComplexity",
-        "description": "Unusually high code complexity detected",
-        "severity": "MEDIUM"})}
-;
-    // Check for dependency anomalies;
-    if (metrics.dependencyMetrics.vulnerabilityCount > 5) {
-  anomalies.push({
-  "type": "PATTERN_ANOMALY",
-        "metric": "securityVulnerabilities",
-        "description": "High number of security vulnerabilities",
-        "severity": "HIGH"})}
-;
-    return anomalies}
-;
-  detectThresholdAnomalies(metrics) {
-  const anomalies = [];
-=======
   type: `STATISTICAL_ANOMALY`,
         metric: `buildTime`,
         currentValue,
@@ -1162,7 +1107,6 @@ this.log(`Generated ${predictions.length} issue predictions`)
           this.generateRecommendationForPrediction(prediction);
         if (recommendation) {
   recommendations.push(recommendation)}
-=======
         break;
 }
     // Adjust based on severity;
@@ -1284,7 +1228,6 @@ this.log(`Generated ${recommendations.length} prevention recommendations`)
   "timeframe": "SHORT_TERM",
         "actions": shortTermRecommendations.map(r => r.title)})}
 ;
-=======
     const reportPath = path.join(
       this.projectRoot,logs`, `predictive-issues-${Date.now()}.json`;
       this.projectRoot, "logs", `predictive-issues-${Date.now()}.json`;
@@ -1736,7 +1679,6 @@ this.log("Prediction report "generated": ${reportPath}")
 // console.log(" Predictive Issue Detection completed")
   console.log(" Predictive Issue Detection completed")
   console.error(" Predictive Issue Detection "failed")
-=======
   const automation = new PredictiveIssueDetection()
   automation;
     .run()

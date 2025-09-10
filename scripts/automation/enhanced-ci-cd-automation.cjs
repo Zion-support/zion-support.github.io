@@ -268,7 +268,6 @@ console.log(✅ Tests completed in ${duration}ms``);} catch (error) {
         skippedMatches.length > 0;
           ? parseInt(skippedMatches[0].match(/\d+/)[0]);
           : 0;
->>>>>>> origin/automation-fixes
       return {
   passed,
         failed,
@@ -409,7 +408,5 @@ async function main() {
 }}
 
 // Start the ""CI/CD"" pipeline;
-<<<<<<< HEAD
-=======
 // Start the "CI/CD' pipeline;
 main().catch(console.error)}}}}}}

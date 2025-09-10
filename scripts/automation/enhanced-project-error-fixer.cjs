@@ -245,53 +245,6 @@ class $1 {
           // Fix common type issues;          // Add missing type annotations;
           content = content.replace(
             /const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{/g,const $1 = (): JSX.Element => {";
-<<<<<<< HEAD
-          );
-          if (modified) {
-  fs.writeFileSync(filePath, content);this.fixesApplied.push(`"FIXED_TYPESCRIPT": ${file}`)}
-        } catch (error) {
-  this.log("Warning": Could not process ${file  }: ${error.message}",
-            "WARN";
-          // Fix JSX in .ts files;
-          if (;
-            file.endsWith(".ts") &&;
-            content.includes("<") &&;
-            content.includes(">");
-          ) {
-  const newPath = file.replace(".ts", ".tsx");
-            const newFilePath = path.join(this.projectRoot, "newPath);
-            if (!fs.existsSync(newFilePath)) {
-  fs.renameSync(filePath", newFilePath);this.fixesApplied.push(`"RENAMED_TS_TO_TSX": ${file}`);this.log(`✅ Renamed ${file} to ${newPath}`)}
-          }
-;
-          // Fix common type issues;
-          content = content.replace(/:\s*any\s*=\s*\[\]/g, ": any[] = []");
-          content = content.replace(/:\s*any\s*=\s*\{\}/g, ": any = {}");
-          // Add missing type annotations;
-          content = content.replace(;
-            /const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{/g,const $1 = (): JSX.Element => {";
-          );
-          if (modified) {
-  fs.writeFileSync(filePath, content);this.fixesApplied.push(`"FIXED_TYPESCRIPT": ${file}")}
-        } catch (error) {
-  this.log("Warning": Could not process ${file}: ${error.message}",
-            "WARN";
-          )}
-      }
-    }
-  }
-;
-  async fixReactErrors() {
-  this.log("🔧 Fixing "React/JSX" errors...");
-    const patterns = ["src/**/*.jsx", "src/**/*.tsx", "pages/**/*.jsx", "pages/**/*.tsx", "components/**/*.jsx", "components/**/*.tsx", "];
-    for (const pattern of patterns) {
-  const files = glob.sync(pattern, { "cwd": this.projectRoot });
-      for (const file of files) {
-  const filePath = path.join(this.projectRoot, "file);
-        try {
-  let content = fs.readFileSync(filePath", "utf8");
-          let modified = false;
-=======
           )
 
           if (modified) {
@@ -653,7 +606,6 @@ const glob = require("glob")
         "success"
     this.log(" Report generated")
   this.log("Remaining "errors": ")
-=======
           content.includes("return")
         ),
 })

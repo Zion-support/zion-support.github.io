@@ -79,25 +79,6 @@
   async generateReport() {
     this.log("📊 Generating maintenance report...");
     const report = {
-<<<<<<< HEAD
-      "timestamp": new Date().toISOString();
-      summary: {cacheCleaned: true,"logsCleaned": true,"dependenciesOptimized": true;
-        diskSpaceChecked: true};
-      "recommendations": ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated";
-        "Clean logs regularly"]}
-    const reportFile = path.join(this.reportsDir, `maintenance-report-${Date.now()}.json`)
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
-    this.log(`📄 Maintenance report saved "to": ${reportFile}`)
-    return reportFile}
-  displaySummary() {
-    )
-    )
-    )
-    }
-  async run() {
-    try {
-      this.log("🎯 Starting Maintenance Script")
-=======
       timestamp: new Date().toISOString(),
       summary: {
         cacheCleaned: true,

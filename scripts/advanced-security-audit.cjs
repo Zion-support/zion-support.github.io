@@ -39,35 +39,6 @@
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
         if (
-<<<<<<< HEAD
-          stat.isDirectory() &&
-          !item.startsWith(".") &&
-          item !== "node_modules") {
-          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {
-          if (
-            extensions.length === 0 ||
-            extensions.includes(path.extname(item))) {
-            files.push(fullPath)}
-        }
-      }
-    } catch (error) {
-      // Skip directories that can"t be read}
-    return files}
-  async generateSecurityReport() {
-    this.log("📊 Generating security report...")
-    const report = {"timestamp": new Date().toISOString(),"dependencies": await this.checkDependencies(),"codeSecurity": await this.checkCodeSecurity();
-      environmentVariables: await this.checkEnvironmentVariables();
-      filePermissions: await this.checkFilePermissions();
-      recommendations: []}
-    // Generate recommendations
-    if (
-      report.dependencies.success &&
-      report.dependencies.vulnerabilities > 0) {
-      report.recommendations.push({
-        "type": "dependencies";
-        message: `${report.dependencies.vulnerabilities} vulnerabilities found in dependencies`;
-        "action": "Run npm audit fix to resolve vulnerabilities"})}
-=======
           stat.isDirectory() &&;
           !item.startsWith(".") &&;
           item !== "node_modules") {
@@ -108,22 +79,6 @@
       issue => issue.severity === "high")
     if (highSeverityIssues.length > 0) {
       report.recommendations.push({
-<<<<<<< HEAD
-        "type": "code";
-        message: `${highSeverityIssues.length} high severity security issues found`;
-        "action": "Review and fix high severity security issues in code"})}
-    if (report.environmentVariables.totalIssues > 0) {
-      report.recommendations.push({
-        "type": "environment";
-        message: `${report.environmentVariables.totalIssues} potential sensitive environment variables found`;
-        "action": "Review environment variables and ensure sensitive data is properly secured"})}
-    const reportPath = path.join(
-      this.reportsDir;
-      "advanced-security-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8")
-    this.log(`📊 Security report "generated": ${reportPath}`)
-    return report}
-=======
         type: "code",
         message: `${highSeverityIssues.length} high severity security issues found`,
         action: "Review and fix high severity security issues in code",,,
@@ -144,71 +99,11 @@
     this.log(`📊 Security report generated: ${reportPath}`)
     return report,,
 }
->>>>>>> origin/automation-fixes
   async run() {
     this.log("🎯 Starting Advanced Security Audit");
     try {
       const report = await this.generateSecurityReport()
       this.log("🎉 Advanced Security Audit Completed")
-<<<<<<< HEAD
-      this.log(`📊 "Recommendations": ${report.recommendations.length}`)
-      return report} catch (error) {
-      this.log(`❌ Fatal error in security audit: ${error.message}`);
-      throw error}
-  }
-}
-// Run the advanced security audit
-const audit = new AdvancedSecurityAudit()
-audit
-  .run()
-  .then(report => {
-    process.exit(0)})
-  .catch(error => {
-    console.error("❌ Security audit "failed": ", error)
-    process.exit(1)})
-              if (value && value.trim() !== ""
-                  key.toLowerCase().includes("password")
-                  key.toLowerCase().includes("secret")
-                  key.toLowerCase().includes("key")
-                  key.toLowerCase().includes("token")
-                  issues.push({"file": envFile,"key"})
-                    message: "Potential sensitive environment variable"
-          // Skip files that can"
-      ` Environment variables "check"
-    return {"success": true,"issues"}
-    this.log(" Checking file permissions...")
-    const sensitiveFiles = ["package.json","package-lock.json",".env"]
-      ".env.local"
-      ".env.production"
-          const permissions = (mode & parseInt("777")
-            issues.push({"file": file,"permissions"})
-              message: "File is world-readable"
-          // Skip files that can"
-    this.log(` File permissions "check"`)
-    return {"success": true,"issues"}
-          !item.startsWith(".")
-          item !== "node_modules"
-      // Skip directories that can"
-    this.log(" Generating security report...")
-    const report = {"timestamp": new Date().toISOString(),"dependencies": await this.checkDependencies(),"codeSecurity"}
-        "type": "dependencies"
-        "action": "Run npm audit fix to resolve vulnerabilities"
-      issue => issue.severity === "high"
-        "type": "code"
-        "action": "Review and fix high severity security issues in code"
-        "type": "environment"
-        "action": "Review environment variables and ensure sensitive data is properly secured"
-      "advanced-security-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8"
-    this.log(` Security report "generated"`)
-    this.log(" Starting Advanced Security Audit")
-      this.log("� Advanced Security Audit Completed")
-      this.log(` "Recommendations"`)
-      this.log(` Fatal error in security "audit"`)
-// console.log(" Advanced Security Audit completed successfully!")
-    console.log(` "Recommendations"`)
-    console.error(" Security audit "failed": ")
-=======
       this.log(`📊 Recommendations: ${report.recommendations.length}`)
       return report,,
 } catch (error) {
@@ -230,4 +125,3 @@ audit;
     console.error("❌ Security audit failed:", error)
     process.exit(1),,
 }))
->>>>>>> origin/automation-fixes

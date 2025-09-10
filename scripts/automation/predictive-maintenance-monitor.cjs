@@ -373,7 +373,6 @@ class $1 {
           "description": "Bundle size is large",
           "action": "Implement code splitting and tree shaking",
           "estimatedEffort": "medium"})}
-=======
       )
     ) {
   recommendations.push({
@@ -436,7 +435,6 @@ class $1 {
     // Deduct points for risk factors;
     this.maintenanceMetrics.riskFactors.forEach(factor => {
   switch (factor.severity) {
->>>>>>> origin/automation-fixes
     // Deduct points for predicted issues;
     this.maintenanceMetrics.predictedIssues.forEach(issue => {
   switch (issue.probability) {
@@ -448,67 +446,6 @@ class $1 {
           break;
         case "low":;
           healthScore -= 2;
-<<<<<<< HEAD
-          break}
-    });
-    // Ensure health score doesn`t go below 0;
-    this.maintenanceMetrics.systemHealth = Math.max(0, healthScore);
-    }
-;
-  async generateReport() {
-  console.log(`📊 Generating maintenance report...`);
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": {
-  systemHealth: this.maintenanceMetrics.systemHealth,
-        "riskFactors": this.maintenanceMetrics.riskFactors.length,
-        "predictedIssues": this.maintenanceMetrics.predictedIssues.length,
-        "recommendations": this.maintenanceMetrics.maintenanceRecommendations.length,
-        "performanceTrends": this.maintenanceMetrics.performanceTrends.length},      "metrics": this.maintenanceMetrics,
-      "recommendations": this.maintenanceMetrics.maintenanceRecommendations,
-      "predictions": this.maintenanceMetrics.predictedIssues,
-      "risks": this.maintenanceMetrics.riskFactors}
-    const reportPath = path.join(;
-      this.reportDir,maintenance-${Date.now()}.json`;
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // Save historical data;
-    const historicalPath = path.join(;
-      this.reportDir,
-      "maintenance-history.json`;
-    // Ensure health score doesn"t go below 0;
-    this.maintenanceMetrics.systemHealth = Math.max(0, healthScore);
-    }
-;
-  async generateReport() {
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": {
-  systemHealth: this.maintenanceMetrics.systemHealth,
-        "riskFactors": this.maintenanceMetrics.riskFactors.length,
-        "predictedIssues": this.maintenanceMetrics.predictedIssues.length,
-        "recommendations": ;
-          this.maintenanceMetrics.maintenanceRecommendations.length,
-        "performanceTrends": this.maintenanceMetrics.performanceTrends.length},
-      "metrics": this.maintenanceMetrics,
-      "recommendations": this.maintenanceMetrics.maintenanceRecommendations,
-      "predictions": this.maintenanceMetrics.predictedIssues,
-      "risks": this.maintenanceMetrics.riskFactors}
-;
-    const reportPath = path.join(;
-      this.reportDir,maintenance-${Date.now()}.json";
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // Save historical data;
-    const historicalPath = path.join(;
-      this.reportDir,
-      "maintenance-history.json";
-    );
-    fs.writeFileSync(;
-      historicalPath,
-      JSON.stringify(this.maintenanceMetrics, null, 2);
-    );
-=======
           break;
 }
     })
@@ -635,9 +572,6 @@ class $1 {
     return {
 // Main continuous loop;
 async function $1() {
-<<<<<<< HEAD
-  const monitor = new PredictiveMaintenanceMonitor();
-=======
   console.log(🔮 Starting predictive maintenance monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
   )
 

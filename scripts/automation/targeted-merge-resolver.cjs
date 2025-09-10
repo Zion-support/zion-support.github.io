@@ -145,33 +145,6 @@ class $1 {
   // Get list of conflicted files;
       // Resolve conflicts in each file;
       for (const file of conflictedFiles) {
-<<<<<<< HEAD
-  await this.resolveFileConflicts(file)}
-;
-      // Add resolved files;
-      execSync("git add .", { "stdio": "pipe" });
-      // Continue merge;
-      execSync("git merge --continue", { "stdio": "pipe" });
-      this.mergeStats.conflictsResolved += conflictedFiles.length;
-      return { success: true }
-    } catch (error) {
-  // If resolution fails, abort the merge;
-      try {
-  execSync("git merge --abort", { "stdio": "pipe"   })} catch (abortError) {this.log("⚠️ Failed to abort "merge": ${abortError.message}", "WARN")} catch (error) {
-  // If resolution fails, abort the merge;
-      try {
-  execSync("git merge --abort", { "stdio": "pipe" })} catch (abortError) {this.log("⚠️ Failed to abort "merge": ${abortError.message}", "WARN")}
-;
-      return {
-  "success": false,"error": "Failed to resolve conflicts: ${error.message}"}
-    }
-  }
-;
-  getConflictedFiles() {
-  try {
-  const statusOutput = execSync("git status --porcelain", {
-  "encoding": "utf8"});
-=======
   await this.resolveFileConflicts(file),
 }
       // Add resolved files;
@@ -212,7 +185,6 @@ class $1 {
       if (;
         !content.includes("<<<<<<<") &&;
         !content.includes("") &&;
-        !content.includes(">>>>>>>");
       ) {
   return; // No conflicts in this file}
 ;
@@ -231,8 +203,6 @@ this.log(`✅ Resolved conflicts "in": ${filePath}")} catch (error) {
   let resolvedContent = content;
     // "Strategy": Keep incoming changes (after ) and remove conflict markers;
     resolvedContent = resolvedContent.replace(;
-=======
-        !content.includes(">>>>>>>")
       ) {
   return; // No conflicts in this file;
 }
@@ -332,11 +302,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}"),
   execSync("git commit -m "Auto-resolve merge conflicts, {
 // Run the targeted merge resolver;
 if (require.main === module) {
-<<<<<<< HEAD
-  const resolver = new TargetedMergeResolver();
-  resolver.run().catch(error => {
-  console.error("❌ Fatal "error": ", error);
-=======
   const resolver = new TargetedMergeResolver()
   resolver.run().catch(error => {
   console.error(`❌ Fatal error: `, error)

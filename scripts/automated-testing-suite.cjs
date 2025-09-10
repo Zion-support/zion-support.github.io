@@ -250,98 +250,6 @@ function runTests() {
     console.error('❌ Tests "failed": ', error.message);
     process.exit(1)}
 }
-<<<<<<< HEAD
-function generateTestReport() {
-  const report = {
-    "timestamp": new Date().toISOString(),
-    "testResults": {
-      unit: 'Check coverage report',
-      "integration": 'Check integration test results',
-      "e2e": 'Check E2E test results'
-    },
-    "coverage": 'Check coverage/lcov-report/index.html'
- };
-  fs.writeFileSync('test-automation-report.json', JSON.stringify(report, null, 2));
-  }
-runTests();
-generateTestReport();
-";
-  fs.writeFileSync('scripts/run-all-tests.cjs', testAutomationScript);
-  }
-// Function to update package.json with test scripts
-function updatePackageJson() {
-  const packageJsonPath = path.join(process.cwd(), 'package.json;';);
-  if () {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8') {
-    ) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'}););
-    // Add test scripts
-    packageJson.scripts = {
-      ...packageJson.scripts,
-      'test': 'jest',
-      '"test": watch': 'jest --watch',
-      '"test": coverage': 'jest --coverage',
-      '"test": integration': 'jest --testPathPattern=integration',
-      '"test": e2e': 'playwright test',
-      '"test": all': 'node scripts/run-all-tests.cjs'
-    };
-    // Add test dependencies
-    packageJson.devDependencies = {
-      ...packageJson.devDependencies,
-      '@testing-library/react': '^13.4.0',
-      '@testing-library/jest-dom': '^5.16.5',
-      '@testing-library/user-event': '^14.4.3',
-      'jest': '^29.5.0',
-      'jest-environment-jsdom': '^29.5.0',
-      '@playwright/test': '^1.35.0',
-      'node-mocks-http': '^1.11.0'
-    };
-    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-    }
-}
-// Function to generate testing report
-function generateTestingReport() {
-  const report = {
-    "timestamp": new Date().toISOString(),
-    "testingSuite": {
-      unitTests: 'Jest configuration and component test templates',
-      "integrationTests": 'API and E2E test templates',
-      "testAutomation": 'Automated test runner script',
-      "coverage": 'Code coverage configuration'
-    },
-    "testTypes": ['Unit tests for components and utilities',
-      'Integration tests for API endpoints',
-      'E2E tests for user workflows',
-      'Performance tests for Core Web Vitals'
-    ],
-    "nextSteps": ['Install test dependencies: npm install',
-      'Write unit tests for existing components',
-      'Create integration tests for API endpoints',
-      'Set up E2E tests for critical user flows',
-      'Configure CI/CD pipeline to run tests automatically'
-    ]
- };
-  fs.writeFileSync('testing-suite-report.json', JSON.stringify(report, null, 2));
-  }
-// Main execution
-try {
-  createUnitTestTemplates();
-  createIntegrationTestTemplates();
-  createTestAutomationScript();
-  updatePackageJson();
-  generateTestingReport();
-  } catch (error) {
-  console.error('❌ Automated testing suite creation "failed": ', error.message);
-  process.exit(1)}
-  fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
-  console.log('\n📊 Test Summary:');
-  console.log(`Total: ${report.summary.total}`);
-  console.log(`Passed: ${report.summary.passed}`);
-  console.log(`Failed: ${report.summary.failed}`);
-  return report;
-}
-runTests().catch(console.error);
-=======
 // Run the automated testing suite;
 const testSuite = new AutomatedTestingSuite()
 testSuite;
@@ -356,4 +264,3 @@ testSuite;
     console.error("❌ Testing suite failed:", error)
     process.exit(1),,
 })
->>>>>>> origin/automation-fixes

@@ -18,23 +18,6 @@ class PM2Monitor {
           return}
         resolve(stdout)})})}
   // Get system information;
-<<<<<<< HEAD
-  async getSystemInfo() {;
-    return new Promise((resolve, reject) => {;
-      exec("pm2 monit --no-daemon", (error, stdout, stderr) => {;
-        if (error) {;
-          reject(error);
-          return,}
-        resolve(stdout),}),}),}
-;
-  // Create logs directory if it doesn"t exist;
-  ensureLogsDir() {;
-    if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { "recursive": true }),}
-  }
-,}
-;
-=======
   async getSystemInfo() {
     return new Promise((resolve, reject) => {
       exec("pm2 monit --no-daemon", (error, stdout, stderr) => {
@@ -58,32 +41,6 @@ class PM2Monitor {
     return processes}
 
   // Generate summary statistics;
-<<<<<<< HEAD
-  generateSummary(statusOutput) {;
-    const processes = this.parseStatus(statusOutput);
-    const summary = {
-      total: processes.length,;
-      online: processes.filter(p => p.status === "online").length,;
-      errored: processes.filter(p => p.status === "errored").length,;
-      stopped: processes.filter(p => p.status === "stopped").length,;
-      launching: processes.filter(p => p.status === "launching").length,;
-      totalRestarts: processes.reduce(;
-        (sum, p) => sum + parseInt(p.restarts || 0),;
-        0),;
-      averageMemory: 0,;
-      totalMemory: 0}
-
-    // Calculate memory statistics;
-    const memoryValues = processes;
-      .filter(p => p.memory && p.memory !== "N/A");
-      .map(p => this.parseMemory(p.memory));
-    if (memoryValues.length > 0) {
-      summary.totalMemory = memoryValues.reduce((sum, mem) => sum + mem, 0);
-      summary.averageMemory = summary.totalMemory / memoryValues.length,}
-;
-    return summary,}
-;
-=======
   generateSummary(statusOutput) {
     const processes = this.parseStatus(statusOutput)
     const summary = {
@@ -121,15 +78,6 @@ class PM2Monitor {
       case "b":;
         return value;
   // Start monitoring;
-<<<<<<< HEAD
-  start() {;
-    if (this.isRunning) {;
-      return,}
-;
-    this.isRunning = true;
-    this.monitor(),}
-;
-=======
   start() {
     if (this.isRunning) {
       console.log("Monitoring is already running");
@@ -154,14 +102,6 @@ class PM2Monitor {
         await this.generateReport();
         // Wait for next update;
   // Utility function to sleep;
-<<<<<<< HEAD
-  sleep(ms) {;
-    return new Promise(resolve => setTimeout(resolve, ms)),}
-;
-  // Display help information;
-  showHelp() {;
-    ,}
-=======
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))}
 
@@ -201,20 +141,6 @@ async function main() {
       monitor.start();
       break;
     case "status":;
-<<<<<<< HEAD
-      const status = await monitor.getStatus();
-      break;
-    case "logs":;
-      const processName = process.argv[3];
-      if (!processName) {;
-        console.error("Please specify a process name");
-        process.exit(1),}
-      const logs = await monitor.getLogs(processName);
-      break;
-    case "report":;
-      const report = await monitor.generateReport();
-      );
-=======
       const status = await monitor.getStatus()
       console.log(status)
       break;
@@ -233,99 +159,6 @@ async function main() {
     case "help":;
       monitor.showHelp();
       break;
-<<<<<<< HEAD
-    "default": console.error(`Unknown command: ${command}`);
-      monitor.showHelp();
-      process.exit(1),}
-;
-  // Handle graceful shutdown;
-  process.on("SIGINT", () => {;
-    monitor.stop(),});
-  process.on("SIGTERM', () => {;
-    monitor.stop(),}),}
-;
-// Run if called directly;
-if (require.main === module) {;
-  main().catch(console.error),}
-;
-module.exports = PM2Monitor
-const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")
-    this.logsDir = "./logs"
-const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")"
-    this.logsDir = "./logs"
-      exec("pm2 status --no-daemon")
-      exec(pm2 logs ${processName} --lines ${lines} --nostream")
-      exec(pm2 logs ${processName} --lines ${lines} --nostream", ")
-      exec("pm2 monit --no-daemon", (error, stdout, stderr) => {"}
-  // Create logs directory if it doesn"t exist"
-      fs.mkdirSync(this.logsDir, { ""recursive"})
-      exec("pm2 monit --no-daemon")
-  // Create logs directory if it doesn"
-      fs.mkdirSync(this.logsDir, { "recursive"})
-    const lines = statusOutput.split("\n")
-      if (line.includes("│") && !line.includes("──") && !line.includes("id")
-          .split("│")
-            "id"
-            "name"
-            "mode"
-            "restarts"
-            "status"
-            "cpu"
-            "memory": parts[6] || "N/A"
-    const lines = statusOutput.split("\n")
-      if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")"}
-          processes.push({);            "id": parts[0],            name": parts[1],";            "mode": parts[2],"""restarts": parts[3],            "status": parts[4],            cpu": parts[5],";            "memory": parts[6] || "N/A", "}),"
-      "total"
-      "online": processes.filter(p => p.status === "online")
-      "errored": processes.filter(p => p.status === "errored")
-      "stopped": processes.filter(p => p.status === "stopped")
-      "launching": processes.filter(p => p.status === "launching")
-      "totalRestarts"
-      "averageMemory"
-      "totalMemory"
-      .filter(p => p.memory && p.memory !== "N/A")
-      case "mb"
-      case "kb"
-      case "b"
-      "default"
-      case "mb":";        return value * 1024 * 1024;      case "kb":";        return value * 1024;      case "b":";        return value;      "default"
-// console.log("Monitoring is already running")
-    console.log(" Starting PM2 Monitoring Dashboard...")
-// console.log("Press Ctrl+C to stop\n")
-    console.log("\n� Monitoring stopped")
-    console.log("\n� Monitoring stopped");    process.exit(0),"
-// console.log(" PM2 Monitoring Dashboard - Zion Application")
-        console.log("=")
-// console.log(`⏰ Last "Updated"`)
-        console.log("\n Summary "Statistics": ");console.log(`   Total Processes: ${summary.total}`);console.log(`   "Online": ${summary.online} `);console.log(`   "Errored": ${summary.errored} `);console.log(`   "Stopped": ${summary.stopped} ⏸`);console.log(`   "Launching": ${summary.launching} �`);console.log(`   Total "Restarts": ${summary.totalRestarts}"`)
-        console.log(   Average "Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB"
-          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"
-// console.log("\n⚠  "WARNING": Some processes are in error state!")
-          console.log("\n⚠  "WARNING": High number of restarts detected!")
-        console.log("\n Summary Statistics":");console.log("   Total ""Processes": ${summary.total}");console.log("   Online": ${summary.online} ");console.log("   ""Errored": ${summary.errored} ");console.log("   Stopped": ${summary.stopped} ⏸");console.log("   ""Launching": ${summary.launching} �");console.log("   Total Restarts": ${summary.totalRestarts}");        console.log(   Average ""Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");");");";        console.log(");");";          "   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB""
-          console.log("\n⚠  ""WARNING": Some processes are in error state!")}"
-          console.log("\n⚠  WARNING": High number of restarts detected!")}"
-        console.error("Error in monitoring "loop": ")
-    console.log(")
-"Commands"
-  const command = process.argv[2] || "start"
-    console.log("";PM2 Monitoring Dashboard - Usage);""Commands"
-"Examples":;"
-  const command = process.argv[2] || "start""
-    case "start"
-    case "status"
-    case "logs"
-        console.error("Please specify a process name")
-    case "report"
-    case "help"
-    "default"
-  process.on("SIGINT")
-  process.on(")
-=======
     default:console.error(`Unknown command: ${command}`)
       monitor.showHelp()
       process.exit(1),,

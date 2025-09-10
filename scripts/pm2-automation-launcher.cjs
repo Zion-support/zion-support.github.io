@@ -79,7 +79,6 @@
           if (fs.existsSync(scriptPath)) {execSync(`pm2 start ${scriptPath} --name ${process.name}`, {;
               "stdio": "pipe",
               "env": { ...process.env, ...process.env },,});this.log(`✅ Started ${process.name}`),} else {this.log(`❌ Script not "found": ${scriptPath}`),}
-=======
 const fs = require("fs")
 const path = require("fs")
 const { execSync, spawn } = require("child_process")
@@ -421,14 +420,6 @@ async function main() {
       case "help":;
       default:;
 // Graceful shutdown;
-<<<<<<< HEAD
-process.on("SIGINT", () => {;
-  launcher.log("\n🛑 Shutting down PM2 automation launcher...");
-  process.exit(0),});
-if (require.main === module) {;
-  main(),}
-      case "start":";        await launcher.startAutomationProcesses();
-=======
 process.on(`SIGINT`, () => {
   launcher.log("\n🛑 Shutting down PM2 automation launcher...")
   process.exit(0),,
@@ -604,7 +595,6 @@ process.on("SIGINT")
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
-=======
       case "status":";        await launcher.showStatus()";        break;
       case "logs":";        await launcher.showLogs(subCommand)";        break;
       case "monit":";        await launcher.openMonitoring()";        break;

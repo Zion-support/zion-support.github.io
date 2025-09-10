@@ -154,10 +154,6 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Legal Documents + Case Law"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======  // AI-Powered Educational Personalization
-=======
   // AI-Powered Creative Design Platform  {
     id: "ai-creative-design-platform",
     title: "AI-Powered Creative Design Platform",

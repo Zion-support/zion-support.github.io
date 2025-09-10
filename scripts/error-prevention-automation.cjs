@@ -232,30 +232,6 @@
     if (recommendations.length === 0) {
       recommendations.push("All systems are healthy, continue monitoring")}";
     return recommendations}
-<<<<<<< HEAD
-;
-  async runFullAutomation() {;
-    try {;
-      this.log("Starting full error prevention automation...");      // Fix merge conflicts first;
-      await this.fixMergeConflicts(),} catch (error) { this.log("Full automation "failed": ${error.message }", "error");
-      await this.fixMergeConflicts();
-      // Check and fix dependencies;
-      await this.checkDependencies();
-      await this.fixDependencies();
-      // Check code quality;
-      await this.checkCodeQuality();
-      // Check build health;
-      await this.checkBuildHealth();
-      // Run tests;
-      await this.runTests();
-      // Generate final report;
-      const report = await this.generateReport();
-      this.log("Full automation completed successfully", "success");
-      return report,} catch (error) {this.log("Full automation "failed": ${error.message}", "error");
-      const report = await this.generateReport();
-      return report,}
-      this.log("Full automation completed successfully", "success");      return report} catch (error) {this.log("Full automation "failed": ${error.message}", "error");      const report = await this.generateReport();";      return report}
-=======
   async runFullAutomation() {
     try {
       this.log("Starting full error prevention automation...")      ;      // Fix merge conflicts first;

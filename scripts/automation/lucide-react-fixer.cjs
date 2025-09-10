@@ -128,22 +128,16 @@ class $1 {
       // 3. Remove unused icon imports;
       newContent = this.removeUnusedIconImports(newContent);
       if (newContent !== content) modified = true;
->>>>>>> origin/automation-fixes
     try {
   // 1. Fix duplicate imports;
       newContent = this.fixDuplicateIconImports(newContent);
       if (newContent !== content) modified = true;
-<<<<<<< HEAD
-=======
       // 2. Fix invalid icon names;
       newContent = this.fixInvalidIconNames(newContent);
       if (newContent !== content) modified = true;
->>>>>>> origin/automation-fixes
       // 3. Remove unused icon imports;
       newContent = this.removeUnusedIconImports(newContent);
       if (newContent !== content) modified = true;
-<<<<<<< HEAD
-=======
       // 4. Fix import statement formatting;
       newContent = this.fixImportFormatting(newContent);
       if (newContent !== content) modified = true;
@@ -419,7 +413,6 @@ const { execSync } = require("child_process")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
   const fullPath = path.join(dirPath, ")
-=======
   const fixer = new LucideReactIconFixer()
 
 // Main execution;
