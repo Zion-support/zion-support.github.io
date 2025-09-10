@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+>>>>>>> main
+=======
+import { ProductListing } from "@/types/listings"; export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [,","});"})'@/types/listings&apos;&apos,  export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [,"export const SPECIALIZED_INDUSTRY_SERVICES_2025: ProductListing[] = [,"
+>>>>>>> origin/automation-fixes
