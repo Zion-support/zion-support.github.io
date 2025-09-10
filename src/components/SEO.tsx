@@ -1,5 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
+// Lightweight head tags for Vite app; avoids next/head in non-Next builds
+const Head: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
+  <>{children}</>
+);
 
 export interface SEOProps {
   title?: string;

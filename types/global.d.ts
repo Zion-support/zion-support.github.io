@@ -10,7 +10,6 @@ declare module "*.scss" { const content: { [className: string]: string }; export
 declare module "*.module.css" { const content: { [className: string]: string }; export default content }
 declare module "*.module.scss" { const content: { [className: string]: string }; export default content }
 
-// Next.js specific types
 declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: "development" | "production" | "test";
@@ -21,7 +20,6 @@ declare namespace NodeJS {
   }
 }
 
-// Global window extensions
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;

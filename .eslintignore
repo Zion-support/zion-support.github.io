@@ -43,20 +43,21 @@ node_modules/
 
 # Ignore logs
 *.log
-<<<<<<< HEAD
 logs/
 automation/logs/
 
 # Ignore generated files
-*.generated.*
+**/*.generated.*
 *.backup.*
 *.disabled.*
 *.corrupted.*
 *.broken.*
-=======
-**/*.generated.*
 zion.app/recovered-content/**
 
 # Netlify functions (serverless functions with different linting rules)
 netlify/functions/
->>>>>>> origin/automation/changelog
+
+# Large disabled or external workspaces
+zion-os.disabled/
+zion-os/
+zion-website/
