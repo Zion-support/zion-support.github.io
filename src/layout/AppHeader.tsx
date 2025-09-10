@@ -1,7 +1,7 @@
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, MessageSquare, BarChart3, Smartphone, Database, Network, Clock, Key, Globe2, ShieldCheck, Car, Home, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, Gauge, GitFork, Award, Truck, Server, Eye } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ThemeToggle from '../components/ThemeToggle';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
