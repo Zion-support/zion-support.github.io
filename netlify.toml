@@ -22,6 +22,8 @@
   ESLINT_NO_DEV_ERRORS = "true"
   # Optimize build performance
   VITE_LEGACY_BUILD = "false"
+  # Explicitly skip the Netlify Next.js plugin when present via UI
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # SPA routing redirects for Vite build
 [[redirects]]
