@@ -22,31 +22,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": [
-        "./*"
-      ]
-=======
       "@/*": ["./src/*"]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
-    },
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "strictFunctionTypes": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-<<<<<<< HEAD
-    "exactOptionalPropertyTypes": true,
-    "allowSyntheticDefaultImports": true
-=======
-    "exactOptionalPropertyTypes": true
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
+    }
   },
   "include": [
-    "src/**/*",
-    "src/**/*.tsx",
-    "src/**/*.ts"
+    "src"
   ],
   "exclude": [
     "node_modules",

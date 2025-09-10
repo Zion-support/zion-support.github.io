@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-=======
-import { createRoot } from 'react-dom/client'
-import App from './App'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
 
 // Performance monitoring
 if (typeof window !== 'undefined') {
@@ -28,7 +22,6 @@ if (typeof window !== 'undefined') {
   }
 }
 
-<<<<<<< HEAD
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
@@ -36,19 +29,11 @@ if (rootElement) {
   
   const app = (
     <React.StrictMode>
-      <Router>
-        <App />
-      </Router>
+      <App />
     </React.StrictMode>
   );
 
   root.render(app);
-=======
-const container = document.getElementById('root')
-if (container) {
-  const root = createRoot(container)
-  root.render(<App />)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
 } else {
   console.error('Root element not found');
 }
