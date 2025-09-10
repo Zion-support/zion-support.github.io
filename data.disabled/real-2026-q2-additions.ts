@@ -329,7 +329,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
-  {
+  {;
 ;
     id: 'ai - synthetic - data - factory',;
     name: 'AI Synthetic Data Factory',;
@@ -341,7 +341,7 @@ export const real2026Q2Additions = [
     features: [;
       'Differential privacy and k - anonymity options',
       'Data schema import and auto - profiling',
-      'Class balancing, minority class boosters',
+      'Class balancing, minority class boosters',;
       'Bias and fairness testing with reports',;
       'Evaluation dashboard with KS / JS metrics',;
       'SDKs for Python / JS and API access',;
@@ -429,7 +429,7 @@ export const real2026Q2Additions = [
     features: [;
       'Differential privacy and k - anonymity options',
       'Data schema import and auto - profiling',
-      'Class balancing, minority class boosters',
+      'Class balancing, minority class boosters',;
       'Bias and fairness testing with reports',;
       'Evaluation dashboard with KS / JS metrics',;
       'SDKs for Python / JS and API access',;
@@ -1007,7 +1007,7 @@ export const real2026Q2Additions = [
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
-    ],
+    ],;
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],;
     competitors: ['Atera', 'NinjaOne'],;
     price: '$4',;
