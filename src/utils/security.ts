@@ -1,3 +1,4 @@
+/* global btoa, atob, KeyboardEvent */
 // Security utilities and helpers
 export class SecurityUtils {
   // XSS Protection

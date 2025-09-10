@@ -1,3 +1,4 @@
+/* global localStorage, sessionStorage */
 import { logErrorToProduction } from '@/utils/productionLogger';
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};

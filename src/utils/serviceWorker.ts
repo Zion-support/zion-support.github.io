@@ -1,3 +1,4 @@
+/* global confirm */
 // Service Worker Registration Utility
 export function registerServiceWorker(): void {
   if ('serviceWorker' in navigator) {

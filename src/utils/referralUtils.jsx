@@ -1,3 +1,4 @@
+/* global console, URL, window, localStorage, document */
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
 /**

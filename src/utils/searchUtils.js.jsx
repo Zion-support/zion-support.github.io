@@ -1,3 +1,4 @@
+/* global clearTimeout, setTimeout */
 /**
  * Highlight search terms in text with HTML mark tags
  */

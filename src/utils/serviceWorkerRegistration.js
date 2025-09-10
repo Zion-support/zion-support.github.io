@@ -1,3 +1,4 @@
+/* global navigator, window, console, Notification, document, caches, PerformanceObserver, deferredPrompt */
 // Service Worker Registration
 export function registerServiceWorker() {
   if ('serviceWorker' in navigator) {

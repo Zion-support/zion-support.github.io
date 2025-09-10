@@ -1,3 +1,4 @@
+/* global require, process, console, window */
 let nodeSentry;
 try {
     // Optional dependency for server-side logging
