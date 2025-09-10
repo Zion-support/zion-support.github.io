@@ -1,12 +1,11 @@
 [build]
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
-  command_timeout = "30m"
+  command_timeout = "15m"
 
 [build.environment]
 NODE_VERSION = "22"
 NODE_OPTIONS = "--max-old-space-size=4096"
-NETLIFY_NEXT_PLUGIN_SKIP = "true"
 SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 # API functions (disabled for Vite SPA)
