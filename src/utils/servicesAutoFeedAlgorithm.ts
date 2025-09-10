@@ -281,7 +281,7 @@ export function getServicesMarketStats(services: ProductListing[]) {
   const premiumCount = services.filter(s => (s.price || 0) > 15000).length;
   
   // Category distribution
-  const categoryStats = services.reduce((acc: any, service) => {
+  const categoryStats = services.reduce((acc: unknown, service) => {
     const cat = service.category || 'Other';
     if (!acc[cat]) acc[cat] = { count: 0, avgPrice: 0, prices: [] };
     acc[cat].count += 1;

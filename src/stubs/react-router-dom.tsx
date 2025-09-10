@@ -1,7 +1,7 @@
-export const BrowserRouter = ({ children }: { children: any }) => children;
-export const Routes = ({ children }: { children: any }) => children;
-export const Route = ({ element }: { element: any }) => element;
-export const Link = (props: any) => { return <a {...props} />; };
+export const BrowserRouter = ({ children }: { children: unknown }) => children;
+export const Routes = ({ children }: { children: unknown }) => children;
+export const Route = ({ element }: { element: unknown }) => element;
+export const Link = (props: unknown) => { return <a {...props} />; };
 export const NavLink = Link;
 export const Navigate = ({ to }: { to: string }) => null;
 export const MemoryRouter = BrowserRouter;

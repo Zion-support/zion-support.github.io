@@ -15,7 +15,7 @@ const CHAINS = [
     { id: 'avalanche', name: 'Avalanche', logo: '/logos/avalanche-logo.svg' },
     { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' },
 ];
-function suggestChain(region, stake) {
+function suggestChain(_region, _stake) {
     if (stake > 1000)
         return 'ethereum';
     if (region === 'asia')

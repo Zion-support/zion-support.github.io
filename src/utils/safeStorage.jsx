@@ -1,3 +1,4 @@
+/* global localStorage, sessionStorage */
 import { error as logErrorToProduction } from '@/utils/productionLogger';
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
@@ -29,7 +30,7 @@ function isLocalStorageAvailable() {
         return false;
     }
 }
-function safeConsoleError(message, error) {
+function safeConsoleError(_message, _error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
     // Prevent infinite recursion in console logging
     if (isLoggingError || env === 'production')
@@ -56,9 +57,9 @@ export const safeStorage = {
         try {
             return localStorage.getItem(key);
         }
-        catch (e) {
+        catch (error) {
             if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+                safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, error);
             }
             return inMemoryStore[key] || null;
         }
@@ -70,9 +71,9 @@ export const safeStorage = {
         try {
             localStorage.setItem(key, value);
         }
-        catch (e) {
+        catch (error) {
             if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+                safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, error);
             }
             inMemoryStore[key] = value;
         }
@@ -84,9 +85,9 @@ export const safeStorage = {
         try {
             localStorage.removeItem(key);
         }
-        catch (e) {
+        catch (error) {
             if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+                safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, error);
             }
             delete inMemoryStore[key];
         }
@@ -101,8 +102,8 @@ export const safeStorage = {
         try {
             localStorage.clear();
         }
-        catch (e) {
-            safeConsoleError('safeStorage.clear: Error clearing localStorage. Falling back to in-memory.', e);
+        catch (error) {
+            safeConsoleError('safeStorage.clear: Error clearing localStorage. Falling back to in-memory.', error);
             for (const key in inMemoryStore) {
                 delete inMemoryStore[key];
             }
@@ -121,7 +122,7 @@ export const safeSessionStorage = {
         try {
             return sessionStorage.getItem(key);
         }
-        catch (e) {
+        catch {
             return sessionMemoryStore[key] || null;
         }
     },
@@ -131,7 +132,7 @@ export const safeSessionStorage = {
         try {
             sessionStorage.setItem(key, value);
         }
-        catch (e) {
+        catch {
             sessionMemoryStore[key] = value;
         }
     },
@@ -141,7 +142,7 @@ export const safeSessionStorage = {
         try {
             sessionStorage.removeItem(key);
         }
-        catch (e) {
+        catch {
             delete sessionMemoryStore[key];
         }
     },

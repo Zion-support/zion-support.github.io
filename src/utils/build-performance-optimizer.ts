@@ -44,7 +44,7 @@ class BuildPerformanceOptimizer {
   }
 
   public async analyzeBuildOutput(buildDir: string = '.next'): Promise<PerformanceMetrics> {
-    console.log('🔍 Starting build performance analysis...');
+    // console.log('🔍 Starting build performance analysis...');
     
     try {
       // Analyze static chunks
@@ -59,11 +59,11 @@ class BuildPerformanceOptimizer {
       // Generate recommendations
       this.generateRecommendations();
       
-      console.log('✅ Build performance analysis complete');
+      // console.log('✅ Build performance analysis complete');
       return this.performanceMetrics;
       
     } catch (error) {
-      console.error('❌ Error during build analysis:', error);
+      // console.error('❌ Error during build analysis:', error);
       throw error;
     }
   }
@@ -75,7 +75,7 @@ class BuildPerformanceOptimizer {
     const staticDir = path.join(buildDir, 'static', 'chunks');
     
     if (!fs.existsSync(staticDir)) {
-      console.warn('⚠️ Static chunks directory not found');
+      // console.warn('⚠️ Static chunks directory not found');
       return;
     }
 
@@ -136,10 +136,10 @@ class BuildPerformanceOptimizer {
     const vendorSize = vendorChunks.reduce((total, chunk) => total + chunk.size, 0);
     const pageSize = pageChunks.reduce((total, chunk) => total + chunk.size, 0);
 
-    console.log(`📊 Bundle composition:`);
-    console.log(`  Vendor chunks: ${this.formatSize(vendorSize)} (${vendorChunks.length} files)`);
-    console.log(`  Page chunks: ${this.formatSize(pageSize)} (${pageChunks.length} files)`);
-    console.log(`  Total: ${this.formatSize(this.performanceMetrics.totalBundleSize)}`);
+    // console.log(`📊 Bundle composition:`);
+    // console.log(`  Vendor chunks: ${this.formatSize(vendorSize)} (${vendorChunks.length} files)`);
+    // console.log(`  Page chunks: ${this.formatSize(pageSize)} (${pageChunks.length} files)`);
+    // console.log(`  Total: ${this.formatSize(this.performanceMetrics.totalBundleSize)}`);
   }
 
   private identifyOptimizations(): void {
@@ -355,16 +355,16 @@ Estimated Gzipped: ${this.formatSize(this.performanceMetrics.totalBundleSize * 0
       await optimizer.analyzeBuildOutput(buildDir);
       const report = optimizer.generateReport();
       
-      console.log(report);
+      // console.log(report);
       
       // Save report to file
       const fs = await import('fs');
       const reportPath = 'build-performance-report.md';
       fs.writeFileSync(reportPath, report);
-      console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+      // console.log(`\n📄 Detailed report saved to: ${reportPath}`);
       
     } catch (error) {
-      console.error('❌ Analysis failed:', error);
+      // console.error('❌ Analysis failed:', error);
       process.exit(1);
     }
   }

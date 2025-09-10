@@ -28,7 +28,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             trackEvent('blockchain', 'dashboard', 'wallet_connected');
         }
         catch (error) {
-            console.error('Failed to connect wallet:', error);
+            // console.error('Failed to connect wallet:', error);
         }
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
@@ -45,7 +45,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', 'dashboard', 'nft_minted');
             }
             catch (error) {
-                console.error('Failed to mint NFT:', error);
+                // console.error('Failed to mint NFT:', error);
             }
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
@@ -58,7 +58,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', 'dashboard', 'transaction_sent');
             }
             catch (error) {
-                console.error('Failed to send transaction:', error);
+                // console.error('Failed to send transaction:', error);
             }
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]);

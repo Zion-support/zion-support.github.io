@@ -146,7 +146,7 @@ function clampSkillsToEight(skills: SkillCategories): SkillCategories {
   return result;
 }
 
-function ensureSkillBuckets(obj: any): SkillCategories {
+function ensureSkillBuckets(obj: unknown): SkillCategories {
   const buckets: SkillCategories = {
     programming: Array.isArray(obj?.programming) ? obj.programming : [],
     devops: Array.isArray(obj?.devops) ? obj.devops : [],
@@ -208,10 +208,10 @@ async function callOpenAI(payload: {
     throw new Error("Invalid OpenAI response content");
   }
 
-  let parsed: any;
+  let parsed: unknown;
   try {
     parsed = JSON.parse(content);
-
+  } catch {
     // Attempt to extract JSON substring
     const match = content.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("Failed to parse OpenAI JSON output");
@@ -226,7 +226,7 @@ async function callOpenAI(payload: {
 
   const incomplete = Boolean(parsed.incomplete_profile);
   const missing = Array.isArray(parsed.missing_fields)
-    ? parsed.missing_fields.map((s: any) => String(s))
+    ? parsed.missing_fields.map((s: unknown) => String(s))
     : [];
 
   return {
@@ -317,7 +317,7 @@ Deno.serve(async (req) => {
         .select();
       if (upsertCacheErr) {
         // Non-fatal
-        console.warn("Cache upsert error", upsertCacheErr);
+        // console.warn("Cache upsert error", upsertCacheErr);
       }
     }
 
@@ -370,10 +370,10 @@ Deno.serve(async (req) => {
           body: JSON.stringify(payload),
         });
         if (!emailResp.ok) {
-          console.warn("Email failed", await emailResp.text());
+          // console.warn("Email failed", await emailResp.text());
         }
       } catch (e) {
-        console.warn("Notification error", e);
+        // console.warn("Notification error", e);
       }
     }
 
@@ -389,9 +389,10 @@ Deno.serve(async (req) => {
       { status: 200, headers: { "Content-Type": "application/json" } },
     );
   } catch (err) {
-    console.error(err);
+    // console.error(err);
     return new Response(
       JSON.stringify({ error: "Internal Error", details: String(err?.message ?? err) }),
       { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
+});

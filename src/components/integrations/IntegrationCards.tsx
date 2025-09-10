@@ -21,14 +21,8 @@ interface IntegrationCardProps {
   onConnect?: () => void;
 }
 
-export function IntegrationCard({
-  title,
-  description,
-  icon,
-  status = "disconnected",
-  href,
-  onConnect,
-}: IntegrationCardProps) {
+export function IntegrationCard(_{
+  title, _description, _icon, _status = "disconnected", _href, _onConnect, }: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">

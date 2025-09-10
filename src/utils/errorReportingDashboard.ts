@@ -394,11 +394,7 @@ export {
 };
 
 // Enhanced error reporting function
-export function reportSystemError(
-  error: Error, 
-  severity: 'critical' | 'high' | 'medium' | 'low' = 'medium',
-  context?: Record<string, unknown>
-): void {
+export function reportSystemError(error: Error, severity: 'critical' | 'high' | 'medium' | 'low' = 'medium', context?: Record<string, _unknown>): void {
   // Report to dashboard
   errorReportingDashboard.reportError(error, severity);
   

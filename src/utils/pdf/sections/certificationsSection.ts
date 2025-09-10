@@ -4,12 +4,7 @@ import { Certification } from '@/types/resume';
 import { PdfThemeColors } from '@/utils/pdf/themeConfig';
 import { formatDate } from '@/utils/pdf/formatters';
 
-export function addCertificationsSection(
-  doc: jsPDF,
-  certifications: Certification[],
-  colors: PdfThemeColors,
-  startY: number
-): number {
+export function addCertificationsSection(doc: jsPDF, certifications: Certification[], colors: PdfThemeColors, startY: number): number {
   if (certifications.length === 0) return startY;
   
   let yPos = startY;

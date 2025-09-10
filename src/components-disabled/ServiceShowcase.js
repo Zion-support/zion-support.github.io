@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
-export function ServiceShowcase({ services }) {
+export function ServiceShowcase(_{ services }) {
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return <Zap className="h-5 w-5"/>;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export function Loading({ size = 'md', variant = 'spinner', className, text }) {
+export function Loading(_{ size = 'md', _variant = 'spinner', _className, _text }) {
     const sizeClasses = {
         sm: 'w-4 h-4',
         md: 'w-6 h-6',
@@ -33,7 +33,7 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     </div>);
 }
 // Skeleton loading for content
-export function Skeleton({ className, ...props }) {
+export function Skeleton(_{ className, _...props }) {
     return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
 }
 // Page loading component

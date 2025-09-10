@@ -33,13 +33,13 @@ const defaultRetryConfig: RetryConfig = {
 /**
  * Enhanced error handling wrapper for getServerSideProps
  */
-export function withServerSideErrorHandling<P extends Record<string, any>>(
+export function withServerSideErrorHandling<P extends Record<string, unknown>>(
   getServerSideProps: GetServerSideProps<P>,
   retryConfig: Partial<RetryConfig> = {}
 ): GetServerSideProps<P | ErrorPageProps> {
   const config = { ...defaultRetryConfig, ...retryConfig };
 
-  return async (context: any) => {
+  return async (context: unknown) => {
     let lastError: Error | null = null;
     
     for (let attempt = 0; attempt <= config.maxRetries; attempt++) {
@@ -61,7 +61,7 @@ export function withServerSideErrorHandling<P extends Record<string, any>>(
         }
         
         return result;
-      } catch (error: any) {
+      } catch (error: unknown) {
         lastError = error;
         
         logWarn('⚠️ getServerSideProps attempt ${attempt + 1}/${config.maxRetries + 1} failed for ${context.resolvedUrl}:', { data: error.message });
@@ -159,13 +159,13 @@ export function withServerSideErrorHandling<P extends Record<string, any>>(
 /**
  * Enhanced error handling wrapper for getStaticProps
  */
-export function withStaticErrorHandling<P extends Record<string, any>>(
+export function withStaticErrorHandling<P extends Record<string, unknown>>(
   getStaticProps: GetStaticProps<P>,
   retryConfig: Partial<RetryConfig> = {}
 ): GetStaticProps<P> {
   const config = { ...defaultRetryConfig, ...retryConfig };
 
-  return async (context: any) => {
+  return async (context: unknown) => {
     let lastError: Error | null = null;
     
     for (let attempt = 0; attempt <= config.maxRetries; attempt++) {
@@ -187,7 +187,7 @@ export function withStaticErrorHandling<P extends Record<string, any>>(
         }
         
         return result;
-      } catch (error: any) {
+      } catch (error: unknown) {
         lastError = error;
         
         logWarn('⚠️ getStaticProps attempt ${attempt + 1}/${config.maxRetries + 1} failed:', { data: error.message });
@@ -316,11 +316,7 @@ export function validateEnvironment(requiredVars: string[]): void {
 /**
  * Safe fetch wrapper with retry logic
  */
-export async function safeFetch(
-  url: string, 
-  options?: RequestInit, 
-  retryConfig: Partial<RetryConfig> = {}
-): Promise<Response> {
+export async function safeFetch(url: string, options?: RequestInit, retryConfig: Partial<RetryConfig> = {}): Promise<Response> {
   const config = { ...defaultRetryConfig, ...retryConfig };
   let lastError: Error | null = null;
 
@@ -339,7 +335,7 @@ export async function safeFetch(
       }
 
       return response;
-    } catch (error: any) {
+    } catch (error: unknown) {
       lastError = error;
 
       const shouldRetry = attempt < config.maxRetries && 

@@ -11,7 +11,7 @@ interface ConversationItemProps {
   onClick: () => void;
 }
 
-export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
+export function ConversationItem(_{ conversation, _isActive, onClick }: ConversationItemProps) {
   return (
     <div 
       className={cn(

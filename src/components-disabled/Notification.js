@@ -30,7 +30,7 @@ const notificationStyles = {
         iconColor: 'text-zion-gold'
     }
 };
-export function Notification({ id, type, title, message, duration = 5000, onClose }) {
+export function Notification(_{ id, _type, _title, _message, _duration = 5000, _onClose }) {
     const [isVisible, setIsVisible] = useState(true);
     const styles = notificationStyles[type];
     const Icon = styles.icon;
@@ -61,7 +61,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
       </div>
     </div>);
 }
-export function NotificationContainer({ notifications, onClose }) {
+export function NotificationContainer(_{ notifications, _onClose }) {
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
     </div>);

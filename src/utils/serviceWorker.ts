@@ -1,3 +1,4 @@
+/* global confirm */
 // Service Worker Registration Utility
 export function registerServiceWorker(): void {
   if ('serviceWorker' in navigator) {
@@ -23,7 +24,7 @@ export function registerServiceWorker(): void {
         });
       })
       .catch(error => {
-        console.error('Service worker registration failed:', error);
+        // console.error('Service worker registration failed:', error);
       });
   }
 }

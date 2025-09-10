@@ -468,7 +468,7 @@ if (typeof window !== 'undefined') {
   import('./logError').then((logErrorModule) => {
     const originalLogError = logErrorModule.logError;
     if (originalLogError) {
-      (window as any).logError = (...args: any[]) => {
+      (window as any).logError = (...args: unknown[]) => {
         const result = originalLogError(args[0], args[1]);
         
         // Collect the log
@@ -490,6 +490,6 @@ if (typeof window !== 'undefined') {
     }
   }).catch(() => {
     // Fallback if import fails
-    console.warn('Could not hook into logError for advanced log collection');
+    // console.warn('Could not hook into logError for advanced log collection');
   });
 } 

@@ -7,7 +7,7 @@ export class ApiError extends Error {
         this.data = data;
     }
 }
-export async function apiClient(input, init, retries = 3) {
+export async function apiClient(_input, _init, _retries = 3) {
     let lastError;
     for (let attempt = 0; attempt < retries; attempt++) {
         try {

@@ -17,14 +17,7 @@ type NotificationType =
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
-  userId,
-  title,
-  message,
-  type,
-  relatedId = null,
-  sendEmail = false,
-  actionUrl = null,
-  actionText = null,
+  userId, title, message, type, relatedId = null, sendEmail = false, actionUrl = null, actionText = null,
 }: {
   userId: string;
   title: string;
@@ -67,15 +60,8 @@ export async function createNotification({
 /**
  * Creates a hire request notification for admin and talent
  */
-export async function createHireRequestNotifications({
-  talentId,
-  adminId,
-  requesterName,
-  requesterEmail,
-  projectType,
-  projectSummary,
-  hireRequestId,
-}: {
+export async function createHireRequestNotifications(_{
+  talentId, _adminId, _requesterName, _requesterEmail, _projectType, _projectSummary, _hireRequestId, }: {
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -129,11 +115,8 @@ export async function createHireRequestNotifications({
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification({
-  userId,
-  missingMilestone,
-  userRole,
-}: {
+export async function createOnboardingNotification(_{
+  userId, _missingMilestone, _userRole, }: {
   userId: string;
   missingMilestone: string;
   userRole: 'talent' | 'client';
@@ -202,14 +185,8 @@ export async function createOnboardingNotification({
 /**
  * Creates a system notification for a user
  */
-export async function createSystemNotification({
-  userId,
-  title,
-  message,
-  actionUrl = null,
-  actionText = null,
-  sendEmail = false,
-}: {
+export async function createSystemNotification(_{
+  userId, _title, _message, _actionUrl = null, _actionText = null, _sendEmail = false, }: {
   userId: string;
   title: string;
   message: string;

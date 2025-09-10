@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 interface PWAContextType {
   isOnline: boolean;
   isInstallable: boolean;
-  installPrompt: any;
+  installPrompt: unknown;
   installApp: () => void;
   updateAvailable: boolean;
   updateApp: () => void;
@@ -14,7 +14,7 @@ const PWAContext = createContext<PWAContextType | undefined>(undefined);
 export const PWAProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [isInstallable, setIsInstallable] = useState(false);
-  const [installPrompt, setInstallPrompt] = useState<any>(null);
+  const [installPrompt, setInstallPrompt] = useState<unknown>(null);
   const [updateAvailable, setUpdateAvailable] = useState(false);
 
   useEffect(() => {

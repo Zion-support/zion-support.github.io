@@ -11,10 +11,7 @@ import { logWarn } from '@/utils/productionLogger';
  * available and falls back to console.error. Also sends to custom backend.
  * This is the primary error reporting function for external monitoring services.
  */
-export function logError(
-  error: unknown,
-  context?: { componentStack?: string } & Record<string, unknown>
-): string {
+export function logError(error: unknown, context?: { componentStack?: string } & Record<string, _unknown>): string {
   const traceId = generateTraceId();
   let errorToSend: Error;
   if (error instanceof Error) {
@@ -87,7 +84,7 @@ export function logError(
     }
   } catch (err) {
     // Use console logging to avoid circular dependencies
-    console.error('Failed to report error to Sentry:', err);
+    // console.error('Failed to report error to Sentry:', err);
   }
 
   try {
@@ -127,12 +124,12 @@ export function logError(
     // Non-blocking call
     sendErrorToBackend(errorDetails).catch(err => {
       // Use console logging to avoid circular dependencies
-      console.error('Error sending logError to backend:', err);
+      // console.error('Error sending logError to backend:', err);
     });
 
   } catch (err) {
     // Use console logging to avoid circular dependencies
-    console.error('Failed to prepare or send error to custom backend:', err);
+    // console.error('Failed to prepare or send error to custom backend:', err);
   }
 
   return traceId;

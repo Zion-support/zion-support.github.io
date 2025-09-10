@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
+export function PerformanceOptimizedLoader(_{ size = 'md', _color = 'primary', _text, _fullScreen = false }) {
     const sizeClasses = {
         sm: 'w-6 h-6',
         md: 'w-12 h-12',
@@ -50,7 +50,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
     return <LoaderContent />;
 }
 // Skeleton loader for content
-export function SkeletonLoader({ className = "", lines = 3, height = "h-4" }) {
+export function SkeletonLoader(_{ className = "", _lines = 3, _height = "h-4" }) {
     return (<div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (<motion.div key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`} style={{
                 width: `${Math.random() * 40 + 60}%`
@@ -58,7 +58,7 @@ export function SkeletonLoader({ className = "", lines = 3, height = "h-4" }) {
     </div>);
 }
 // Card skeleton loader
-export function CardSkeleton({ className = "" }) {
+export function CardSkeleton(_{ className = "" }) {
     return (<div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
       <div className="space-y-4">
         {/* Image skeleton */}
@@ -80,13 +80,13 @@ export function CardSkeleton({ className = "" }) {
     </div>);
 }
 // Grid skeleton loader
-export function GridSkeleton({ columns = 3, rows = 2, className = "" }) {
+export function GridSkeleton(_{ columns = 3, _rows = 2, _className = "" }) {
     return (<div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index) => (<CardSkeleton key={index}/>))}
     </div>);
 }
 // Page skeleton loader
-export function PageSkeleton({ className = "" }) {
+export function PageSkeleton(_{ className = "" }) {
     return (<div className={`space-y-8 ${className}`}>
       {/* Header skeleton */}
       <div className="space-y-4">

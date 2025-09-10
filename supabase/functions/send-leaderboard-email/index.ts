@@ -25,7 +25,7 @@ serve(async (req) => {
       .limit(10);
 
     const leaderboard = (users || [])
-      .map((u: any, idx: number) => `${idx + 1}. ${u.display_name} - ${u.points} pts`)
+      .map((u: unknown, idx: number) => `${idx + 1}. ${u.display_name} - ${u.points} pts`)
       .join("<br>");
 
     const { data: emails } = await supabase
@@ -47,7 +47,7 @@ serve(async (req) => {
       status: 200,
     });
   } catch (error) {
-    console.error("leaderboard email error", error);
+    // console.error("leaderboard email error", error);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,

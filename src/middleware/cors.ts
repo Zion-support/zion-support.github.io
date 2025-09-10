@@ -36,11 +36,7 @@ const defaultCorsOptions: CorsOptions = {
 /**
  * Apply CORS headers to API response
  */
-export function applyCorsHeaders(
-  req: NextApiRequest,
-  res: NextApiResponse,
-  options: CorsOptions = {}
-): void {
+export function applyCorsHeaders(req: NextApiRequest, res: NextApiResponse, options: CorsOptions = {}): void {
   const corsOptions = { ...defaultCorsOptions, ...options };
 
   // Set Access-Control-Allow-Origin
@@ -74,8 +70,7 @@ export function applyCorsHeaders(
 /**
  * CORS middleware that can be used to wrap API handlers
  */
-export function withCors(
-  handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void,
+export function withCors(handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void,
   options: CorsOptions = {}
 ) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
@@ -113,8 +108,7 @@ export const apiDocsCorsOptions: CorsOptions = {
 /**
  * Quick helper for API documentation endpoints
  */
-export function withApiDocsCors(
-  handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void
+export function withApiDocsCors(handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void
 ) {
   return withCors(handler, apiDocsCorsOptions);
 } 

@@ -13,7 +13,7 @@ const ReactPlayer = React.lazy(() => import('react-player'));
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer');
   return {
-    default: (props: any) => (
+    default: (props: unknown) => (
       React.createElement('model-viewer', props)
     ),
   };
@@ -25,7 +25,7 @@ interface ProductGalleryProps {
   modelUrl?: string;
 }
 
-export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryProps) {
+export function ProductGallery(_{ images, _videoUrl, modelUrl }: ProductGalleryProps) {
   const [selected, setSelected] = useState(0);
   const [zoomOpen, setZoomOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);

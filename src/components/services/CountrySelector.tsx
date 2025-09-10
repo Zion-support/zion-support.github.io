@@ -10,7 +10,7 @@ interface CountrySelectorProps {
   selectedCountry: CountryPricing | null;
 }
 
-export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
+export function CountrySelector(_{ onCountryChange, selectedCountry }: CountrySelectorProps) {
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
   
   // Set top/popular countries

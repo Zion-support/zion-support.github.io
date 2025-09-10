@@ -1,3 +1,4 @@
+/* global navigator, window, console, Notification, document, caches, PerformanceObserver, deferredPrompt */
 // Service Worker Registration
 export function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
@@ -9,7 +10,7 @@ export function registerServiceWorker() {
   }
 }
 
-function registerValidSW(swUrl) {
+function registerValidSW(_swUrl) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
@@ -22,18 +23,18 @@ function registerValidSW(swUrl) {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
               // New content is available and the old content is still cached
-              console.log('New content is available; please refresh.');
+              // console.log('New content is available; please refresh.');
               showUpdateNotification();
             } else {
               // Everything is precached
-              console.log('Content is cached for offline use.');
+              // console.log('Content is cached for offline use.');
             }
           }
         };
       };
     })
     .catch((error) => {
-      console.error('Error during service worker registration:', error);
+      // console.error('Error during service worker registration:', error);
     });
 }
 
@@ -63,7 +64,7 @@ export function unregisterServiceWorker() {
         registration.unregister();
       })
       .catch((error) => {
-        console.error(error.message);
+        // console.error(error.message);
       });
   }
 }
@@ -78,18 +79,18 @@ export function checkForUpdates() {
 }
 
 // Background sync for offline form submissions
-export function registerBackgroundSync(tag = 'background-sync') {
+export function registerBackgroundSync(_tag = 'background-sync') {
   if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
     navigator.serviceWorker.ready.then((registration) => {
       return registration.sync.register(tag);
     }).catch((error) => {
-      console.error('Background sync registration failed:', error);
+      // console.error('Background sync registration failed:', error);
     });
   }
 }
 
 // Store form data for offline submission
-export function storeFormDataForOffline(formData) {
+export function storeFormDataForOffline(_formData) {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then((registration) => {
       registration.active.postMessage({
@@ -106,7 +107,7 @@ export function requestNotificationPermission() {
     if (Notification.permission === 'default') {
       Notification.requestPermission().then((permission) => {
         if (permission === 'granted') {
-          console.log('Notification permission granted');
+          // console.log('Notification permission granted');
         }
       });
     }
@@ -146,11 +147,11 @@ function showInstallPrompt() {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
+          // console.log('User accepted the install prompt');
         } else {
-          console.log('User dismissed the install prompt');
+          // console.log('User dismissed the install prompt');
         }
-        deferredPrompt = null;
+        window.deferredPrompt = null;
         installButton.remove();
       });
     }
@@ -165,11 +166,11 @@ export function monitorNetworkStatus() {
     if (navigator.onLine) {
       document.body.classList.remove('offline');
       document.body.classList.add('online');
-      console.log('Network connection restored');
+      // console.log('Network connection restored');
     } else {
       document.body.classList.remove('online');
       document.body.classList.add('offline');
-      console.log('Network connection lost');
+      // console.log('Network connection lost');
     }
   };
 
@@ -192,7 +193,7 @@ export async function clearOldCaches() {
       oldCaches.map(cacheName => caches.delete(cacheName))
     );
     
-    console.log('Old caches cleared');
+    // console.log('Old caches cleared');
   }
 }
 
@@ -203,8 +204,8 @@ export function monitorPerformance() {
     const navigationObserver = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.entryType === 'navigation') {
-          console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
-          console.log('DOM content loaded:', entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart);
+          // console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+          // console.log('DOM content loaded:', entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart);
         }
       });
     });
@@ -215,7 +216,7 @@ export function monitorPerformance() {
     const resourceObserver = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.initiatorType === 'img' && entry.duration > 1000) {
-          console.warn('Slow image load:', entry.name, entry.duration);
+          // console.warn('Slow image load:', entry.name, entry.duration);
         }
       });
     });

@@ -462,7 +462,6 @@ export default function ServicesPage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
->>>>>>> 6de525ab7fd2268019c6a3413cbe79321aeb887d:src_disabled/ServicesPage.tsx
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -473,7 +472,6 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-purple hover:bg-zion-cyan/10">
                 <Globe className="h-4 w-4 mr-2" />
                 All Services
-              </Button>
               </Button>
             </Link>
             <Link to="/request-quote">

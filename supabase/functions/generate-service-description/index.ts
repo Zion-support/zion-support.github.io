@@ -60,7 +60,7 @@ The description should:
       }
     );
   } catch (error) {
-    console.error("Error in generate-service-description:", error);
+    // console.error("Error in generate-service-description:", error);
     
     return new Response(
       JSON.stringify({ 

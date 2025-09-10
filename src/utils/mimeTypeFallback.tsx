@@ -80,13 +80,13 @@ class MimeTypeFallback {
       const response = await fetch(url, { method: 'HEAD' });
 
       if (!response.ok) {
-        console.warn(`Resource not found: ${url}`);
+        // console.warn(`Resource not found: ${url}`);
         return false;
       }
 
       const contentType = response.headers.get('content-type');
       if (!contentType) {
-        console.warn(`No content-type header for: ${url}`);
+        // console.warn(`No content-type header for: ${url}`);
         return false;
       }
 
@@ -96,12 +96,12 @@ class MimeTypeFallback {
         return true; // MIME type is correct or generic
       }
 
-      console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
+      // console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
 
       // Try to fix with fallback URL
       return await this.tryFallbackUrl(url);
     } catch (error) {
-      console.error(`Error checking MIME type for ${url}:`, error);
+      // console.error(`Error checking MIME type for ${url}:`, error);
       return await this.tryFallbackUrl(url);
     }
   }
@@ -110,7 +110,7 @@ class MimeTypeFallback {
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
 
     if (fallbackUrl) {
-      console.log(`Trying fallback URL: ${fallbackUrl}`);
+      // console.log(`Trying fallback URL: ${fallbackUrl}`);
 
       try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' });
@@ -119,13 +119,13 @@ class MimeTypeFallback {
           const expectedType = this.getMimeType(originalUrl);
 
           if (contentType && contentType.includes(expectedType)) {
-            console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`);
+            // console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`);
             this.replaceResource(originalUrl, fallbackUrl);
             return true;
           }
         }
       } catch (error) {
-        console.error(`Fallback URL failed: ${fallbackUrl}`, error);
+        // console.error(`Fallback URL failed: ${fallbackUrl}`, error);
       }
     }
 
@@ -136,15 +136,15 @@ class MimeTypeFallback {
     // Replace script tags
     const scripts = document.querySelectorAll(`script[src="${originalUrl}"]`);
     scripts.forEach(script => {
-      (script as HTMLScriptElement).src = fallbackUrl;
-      console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`);
+      (script as any).src = fallbackUrl;
+      // console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`);
     });
 
     // Replace stylesheet links
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {
       (link as HTMLLinkElement).href = fallbackUrl;
-      console.log(`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`);
+      // console.log(`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`);
     });
   }
 
@@ -158,16 +158,16 @@ class MimeTypeFallback {
       '/js/utils-vendor-CrFdsnXa.js',
     ];
 
-    console.log('🔍 Preloading critical resources...');
+    // console.log('🔍 Preloading critical resources...');
 
     for (const resource of criticalResources) {
       try {
         const isValid = await this.checkAndFixMimeType(resource);
         if (!isValid) {
-          console.warn(`Critical resource has MIME type issues: ${resource}`);
+          // console.warn(`Critical resource has MIME type issues: ${resource}`);
         }
       } catch (error) {
-        console.error(`Error preloading resource: ${resource}`, error);
+        // console.error(`Error preloading resource: ${resource}`, error);
       }
     }
   }
@@ -193,12 +193,12 @@ class MimeTypeFallback {
       const element = this.createResourceElement(url, type);
 
       element.onload = () => {
-        console.log(`✅ Resource loaded successfully: ${url}`);
+        // console.log(`✅ Resource loaded successfully: ${url}`);
         resolve();
       };
 
       element.onerror = () => {
-        console.error(`❌ Failed to load resource: ${url}`);
+        // console.error(`❌ Failed to load resource: ${url}`);
         reject(new Error(`Failed to load resource: ${url}`));
       };
 

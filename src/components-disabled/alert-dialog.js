@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 const AlertDialogContext = createContext(undefined);
-export function AlertDialog({ children, open, onOpenChange }) {
+export function AlertDialog(_{ children, _open, _onOpenChange }) {
     const [internalOpen, setInternalOpen] = useState(false);
     const isControlled = open !== undefined;
     const isOpen = isControlled ? open : internalOpen;
@@ -18,7 +18,7 @@ export function AlertDialog({ children, open, onOpenChange }) {
       </div>
     </AlertDialogContext.Provider>);
 }
-export function AlertDialogTrigger({ children }) {
+export function AlertDialogTrigger(_{ children }) {
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
@@ -26,7 +26,7 @@ export function AlertDialogTrigger({ children }) {
       {children}
     </div>);
 }
-export function AlertDialogContent({ children, className = '' }) {
+export function AlertDialogContent(_{ children, _className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogContent must be used within AlertDialog');
@@ -39,19 +39,19 @@ export function AlertDialogContent({ children, className = '' }) {
       </div>
     </div>);
 }
-export function AlertDialogHeader({ children, className = '' }) {
+export function AlertDialogHeader(_{ children, _className = '' }) {
     return <div className={`mb-4 ${className}`}>{children}</div>;
 }
-export function AlertDialogTitle({ children, className = '' }) {
+export function AlertDialogTitle(_{ children, _className = '' }) {
     return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
 }
-export function AlertDialogDescription({ children, className = '' }) {
+export function AlertDialogDescription(_{ children, _className = '' }) {
     return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
 }
-export function AlertDialogFooter({ children, className = '' }) {
+export function AlertDialogFooter(_{ children, _className = '' }) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
 }
-export function AlertDialogAction({ children, onClick, className = '' }) {
+export function AlertDialogAction(_{ children, _onClick, _className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogAction must be used within AlertDialog');
@@ -64,7 +64,7 @@ export function AlertDialogAction({ children, onClick, className = '' }) {
       {children}
     </button>);
 }
-export function AlertDialogCancel({ children, className = '' }) {
+export function AlertDialogCancel(_{ children, _className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogCancel must be used within AlertDialog');

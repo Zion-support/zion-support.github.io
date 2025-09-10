@@ -1,13 +1,23 @@
 [build]
   publish = "dist"
   command = "npm ci && npm run build"
+  framework = "vite"
+
+# Disable automatic framework detection
+[build.processing]
+  skip_processing = false
 
 [build.environment]
-  NODE_VERSION = "20.18.0"
+  NODE_VERSION = "22.12.0"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Skip Sharp postinstall to avoid NAPI issues
   SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
   SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+  # Force Vite build
+  VITE_BUILD = "true"
+  # Ensure proper build environment
+  NODE_ENV = "production"
+  CI = "true"
 
 # SPA routing redirects for Vite build
 [[redirects]]

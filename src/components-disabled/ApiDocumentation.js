@@ -325,7 +325,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+// console.log(data);`,
                 python: `import requests
 
 headers = {
@@ -703,7 +703,7 @@ print(data)`
                 code={`import crypto from 'crypto';
 
 // Function to verify webhook signature
-function verifyWebhookSignature(payload, signature, secret) {
+function verifyWebhookSignature(_payload, _signature, _secret) {
   const hmac = crypto.createHmac('sha256', secret);
   const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual(
@@ -888,14 +888,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 }
 
 // Helper component for API endpoint documentation
-function EndpointSection({
-  method,
-  endpoint,
-  description,
-  note,
-  params = [],
-  codeExamples,
-  responseExamples
+function EndpointSection(_{
+  method, _endpoint, _description, _note, _params = [], _codeExamples, responseExamples
 }: EndpointSectionProps) {
   const [activeTab, setActiveTab] = useState("curl");
   

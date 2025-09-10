@@ -93,7 +93,7 @@ export function SignUpForm() {
         
         router.push("/mobile");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       logErrorToProduction('Signup/Login error:', { data: err });
       setError(err.message || 'An unexpected error occurred. Please try again.');
     } finally {
@@ -104,7 +104,7 @@ export function SignUpForm() {
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle();
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError(err.message);
     }
   };

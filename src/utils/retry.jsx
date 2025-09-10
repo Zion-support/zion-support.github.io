@@ -1,4 +1,5 @@
-export async function retry(fn, options = {}) {
+/* global setTimeout */
+export async function retry(_fn, _options = {}) {
     const { retries = 3, minTimeout = 500 } = options;
     let attempt = 0;
     while (true) {

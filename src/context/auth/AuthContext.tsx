@@ -47,7 +47,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           setUser({ id: '1', email: 'user@example.com', name: 'User' });
         }
       } catch (error) {
-        console.error('Auth check failed:', error);
+        // console.error('Auth check failed:', error);
       } finally {
         setIsLoading(false);
       }
@@ -65,7 +65,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setUser(user);
       localStorage.setItem('auth_token', 'fake_token');
     } catch (error) {
-      console.error('Login failed:', error);
+      // console.error('Login failed:', error);
       throw error;
     } finally {
       setIsLoading(false);

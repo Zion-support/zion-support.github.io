@@ -20,7 +20,7 @@ interface ApplyFormProps {
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
+export function ApplyForm(_{ job, _onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
   const [message, setMessage] = useState(

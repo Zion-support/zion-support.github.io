@@ -84,7 +84,7 @@ serve(async (req) => {
   }
 });
 
-async function processOnboardingReminder(supabase, userId, milestone, role) {
+async function processOnboardingReminder(_supabase, _userId, _milestone, _role) {
   try {
     // Create notification for user
     const milestoneMessages = {
@@ -112,11 +112,11 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     // For example, call another edge function to send email
     
   } catch (error) {
-    console.error("Error processing onboarding reminder:", error);
+    // console.error("Error processing onboarding reminder:", error);
   }
 }
 
-async function processResumeScoring(supabase, applicationId) {
+async function processResumeScoring(_supabase, _applicationId) {
   try {
     // Call the resume-scorer function to process the application
     const response = await fetch(
@@ -136,7 +136,7 @@ async function processResumeScoring(supabase, applicationId) {
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
     }
 
-    console.log(`Successfully scored application ${applicationId}`);
+    // console.log(`Successfully scored application ${applicationId}`);
     
     // Notify the client that their application has been scored
     const { data: application } = await supabase
@@ -165,13 +165,13 @@ async function processResumeScoring(supabase, applicationId) {
       }
     }
   } catch (error) {
-    console.error("Error processing resume scoring:", error);
+    // console.error("Error processing resume scoring:", error);
   }
 }
 
-async function processContentGeneration(supabase, contentType) {
+async function processContentGeneration(_supabase, _contentType) {
   try {
-    console.log(`Starting scheduled content generation for ${contentType}`);
+    // console.log(`Starting scheduled content generation for ${contentType}`);
     
     // Call the content generation function
     const response = await fetch(
@@ -196,7 +196,7 @@ async function processContentGeneration(supabase, contentType) {
     }
 
     const contentData = await response.json();
-    console.log(`Successfully generated ${contentType} content`);
+    // console.log(`Successfully generated ${contentType} content`);
     
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
@@ -266,12 +266,12 @@ async function processContentGeneration(supabase, contentType) {
           },
         );
       } catch (shareError) {
-        console.error('Error sharing blog post:', shareError);
+        // console.error('Error sharing blog post:', shareError);
       }
     }
     
     return contentData;
   } catch (error) {
-    console.error(`Error processing ${contentType} generation:`, error);
+    // console.error(`Error processing ${contentType} generation:`, error);
   }
 }

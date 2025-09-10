@@ -4,12 +4,7 @@ import { WorkExperience } from '@/types/resume';
 import { PdfThemeColors } from '@/utils/pdf/themeConfig';
 import { formatDate } from '@/utils/pdf/formatters';
 
-export function addWorkExperienceSection(
-  doc: jsPDF,
-  workExperience: WorkExperience[],
-  colors: PdfThemeColors,
-  startY: number
-): number {
+export function addWorkExperienceSection(doc: jsPDF, workExperience: WorkExperience[], colors: PdfThemeColors, startY: number): number {
   if (workExperience.length === 0) return startY;
   
   let yPos = startY;

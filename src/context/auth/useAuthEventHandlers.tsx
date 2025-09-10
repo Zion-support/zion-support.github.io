@@ -8,11 +8,7 @@ import type { useRouter } from 'next/router'; // Import useRouter for ReturnType
 /**
  * Custom hook for auth event handling
  */
-export function useAuthEventHandlers(
-  setUser: React.Dispatch<React.SetStateAction<UserDetails | null>>,
-  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>,
-  router: ReturnType<typeof useRouter> // Use ReturnType<typeof useRouter>
-) {
+export function useAuthEventHandlers(setUser: React.Dispatch<React.SetStateAction<UserDetails | null>>, setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>, router: ReturnType<typeof useRouter> // Use ReturnType<typeof useRouter>) {
   // Removed: const router = useRouter();
 
   const handleSignedIn = (mappedUser: UserProfile) => {

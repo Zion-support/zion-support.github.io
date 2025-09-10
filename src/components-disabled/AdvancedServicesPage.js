@@ -262,7 +262,7 @@ export default function AdvancedServicesPage() {
     </div>);
 }
 // Service Card Component
-function ServiceCard({ service }) {
+function ServiceCard(_{ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
       <div className="relative">
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>

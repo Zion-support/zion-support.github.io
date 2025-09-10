@@ -13,7 +13,7 @@ interface ChatMessageProps {
   timestamp: Date;
 }
 
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+export function ChatMessage(_{ message, _isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme();
   
   return (

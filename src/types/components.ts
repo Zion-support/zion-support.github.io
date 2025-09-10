@@ -75,8 +75,8 @@ export interface CardProps extends BaseComponentProps {
 
 // Form props
 export interface FormProps extends BaseComponentProps {
-  onSubmit: (data: Record<string, any>) => void;
-  initialValues?: Record<string, any>;
+  onSubmit: (data: Record<string, unknown>) => void;
+  initialValues?: Record<string, unknown>;
   validationSchema?: unknown;
   loading?: boolean;
 }

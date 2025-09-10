@@ -1,3 +1,4 @@
+/* global ErrorEvent, Event */
 import React, { useState, useEffect } from 'react';
 
 interface ResourceError {

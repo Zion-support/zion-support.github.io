@@ -11,7 +11,7 @@ interface OnsiteQuoteModalProps {
   country?: string;
 }
 
-export function OnsiteQuoteModal({ open, onOpenChange, country }: OnsiteQuoteModalProps) {
+export function OnsiteQuoteModal(_{ open, _onOpenChange, country }: OnsiteQuoteModalProps) {
   const enqueueSnackbar = useEnqueueSnackbar();
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', details: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,7 +39,7 @@ export function OnsiteQuoteModal({ open, onOpenChange, country }: OnsiteQuoteMod
       enqueueSnackbar('Quote Requested', { variant: 'success' });
       onOpenChange(false);
       setFormData({ name: '', email: '', phone: '', details: '' });
-    } catch (err: any) {
+    } catch (err: unknown) {
       enqueueSnackbar(err?.response?.data?.message || err.message, { variant: 'error' });
     } finally {
       setIsSubmitting(false);

@@ -10,7 +10,7 @@ let isSentryInitialized = false;
 export function initSentry() {
   if (SENTRY_DSN_SUPABASE && !SENTRY_DSN_SUPABASE.includes("YOUR_SENTRY_DSN")) {
     if (isSentryInitialized) {
-      // console.log("Sentry already initialized for Supabase functions.");
+      // // console.log("Sentry already initialized for Supabase functions.");
       return;
     }
     try {
@@ -21,16 +21,16 @@ export function initSentry() {
         // Add any other Deno-specific Sentry options here
       });
       isSentryInitialized = true;
-      console.log(`Sentry initialized for Supabase functions. Release: ${SENTRY_RELEASE}, Env: ${SENTRY_ENVIRONMENT}`);
+      // console.log(`Sentry initialized for Supabase functions. Release: ${SENTRY_RELEASE}, Env: ${SENTRY_ENVIRONMENT}`);
     } catch (e) {
-      console.error("Failed to initialize Sentry for Supabase functions:", e);
+      // console.error("Failed to initialize Sentry for Supabase functions:", e);
     }
   } else {
-    // console.log("SENTRY_DSN_SUPABASE not found or is a placeholder. Sentry integration disabled for Supabase functions.");
+    // // console.log("SENTRY_DSN_SUPABASE not found or is a placeholder. Sentry integration disabled for Supabase functions.");
   }
 }
 
-export function captureSupabaseError(error: any, context?: Record<string, unknown>) {
+export function captureSupabaseError(error: unknown, context?: Record<string, _unknown>) {
   if (!isSentryInitialized && SENTRY_DSN_SUPABASE && !SENTRY_DSN_SUPABASE.includes("YOUR_SENTRY_DSN")) {
     // Attempt to initialize if not already, useful for cold starts if init wasn't called explicitly
     // Be cautious with this in very high throughput functions to avoid repeated init attempts on every error
@@ -50,7 +50,7 @@ export function captureSupabaseError(error: any, context?: Record<string, unknow
     }
   } else {
     // Fallback if Sentry is not initialized
-    console.error("[Sentry Fallback] Supabase Function Error:", error, "Context:", context || {});
+    // console.error("[Sentry Fallback] Supabase Function Error:", error, "Context:", context || {});
   }
 }
 
@@ -80,12 +80,7 @@ export function withSentry(handler: (req: Request) => Promise<Response>) {
 */
 
 // Structured logging helper
-export function logStructured(
-  level: "INFO" | "ERROR" | "WARN" | "DEBUG",
-  message: string,
-  data?: Record<string, unknown>,
-  functionName?: string
-) {
+export function logStructured(level: "INFO" | "ERROR" | "WARN" | "DEBUG", message: string, data?: Record<string, _unknown>, functionName?: string) {
   const logEntry = {
     timestamp: new Date().toISOString(),
     level,
@@ -94,10 +89,10 @@ export function logStructured(
     ...(data && { data }),
   };
   if (level === "ERROR") {
-    console.error(JSON.stringify(logEntry));
+    // console.error(JSON.stringify(logEntry));
   } else if (level === "WARN") {
-    console.warn(JSON.stringify(logEntry));
+    // console.warn(JSON.stringify(logEntry));
   } else {
-    console.log(JSON.stringify(logEntry));
+    // console.log(JSON.stringify(logEntry));
   }
 }

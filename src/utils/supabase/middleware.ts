@@ -19,7 +19,7 @@ export async function updateSession(request: NextRequest) {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!supabaseUrl || !supabaseAnonKey) {
-    console.warn('Supabase environment variables not configured, skipping auth middleware');
+    // console.warn('Supabase environment variables not configured, skipping auth middleware');
     return response;
   }
 
@@ -55,7 +55,7 @@ export async function updateSession(request: NextRequest) {
       }
     );
   } catch (initError) {
-    console.error('Failed to initialize Supabase client in middleware:', initError);
+    // console.error('Failed to initialize Supabase client in middleware:', initError);
     return response;
   }
 
@@ -85,7 +85,7 @@ export async function updateSession(request: NextRequest) {
     
     return response;
   } catch (authError) {
-    console.error('Error during authentication check:', authError);
+    // console.error('Error during authentication check:', authError);
     
     // Redirect to login on authentication errors
     const redirectUrl = new URL('/auth/login', request.url);

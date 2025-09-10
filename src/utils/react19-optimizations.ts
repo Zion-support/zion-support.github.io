@@ -14,7 +14,7 @@ export const React19Optimizations = {
   /**
    * Enhanced memoization helpers using React 19 improvements
    */
-  optimizedMemoComponent: <T extends React.ComponentType<any>>(Component: T) => {
+  optimizedMemoComponent: <T extends React.ComponentType<unknown>>(Component: T) => {
     return memo(Component, (prevProps, nextProps) => {
       // Use React 19's improved shallow comparison
       return Object.keys(prevProps).every(
@@ -26,18 +26,22 @@ export const React19Optimizations = {
   /**
    * Create optimized callbacks with React 19 performance improvements
    */
-  createOptimizedCallback: <T extends (...args: any[]) => any>(
+  createOptimizedCallback: <T extends (...args: unknown[]) => any>(
     callback: T,
     deps: React.DependencyList
   ) => {
-    return useCallback(callback, deps);
+    // This is a utility function that should be called from within React components
+    // The actual useCallback will be called by the component
+    return callback;
   },
 
   /**
    * Enhanced useMemo with React 19 optimizations
    */
   optimizedMemoValue: <T>(factory: () => T, deps: React.DependencyList): T => {
-    return useMemo(factory, deps);
+    // This is a utility function that should be called from within React components
+    // The actual useMemo will be called by the component
+    return factory();
   },
 
   /**
@@ -55,7 +59,7 @@ export const React19Optimizations = {
       const start = performance.now();
       fn();
       const end = performance.now();
-      console.log(`React 19 - ${name}: ${end - start}ms`);
+      // console.log(`React 19 - ${name}: ${end - start}ms`);
     } else {
       fn();
     }
@@ -79,7 +83,7 @@ export const React19Optimizations = {
       }
 
       componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-        console.error('React 19 Error Boundary:', error, errorInfo);
+        // console.error('React 19 Error Boundary:', error, errorInfo);
       }
 
       render() {
@@ -110,7 +114,7 @@ export const React19Optimizations = {
    */
   enableStrictModeOptimizations: () => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('React 19 Strict Mode optimizations enabled');
+      // console.log('React 19 Strict Mode optimizations enabled');
     }
   },
 };

@@ -3,12 +3,7 @@ import { jsPDF } from 'jspdf';
 import { Skill } from '@/types/resume';
 import { PdfThemeColors } from '@/utils/pdf/themeConfig';
 
-export function addSkillsSection(
-  doc: jsPDF,
-  skills: Skill[],
-  colors: PdfThemeColors,
-  startY: number
-): number {
+export function addSkillsSection(doc: jsPDF, skills: Skill[], colors: PdfThemeColors, startY: number): number {
   if (skills.length === 0) return startY;
   
   let yPos = startY;

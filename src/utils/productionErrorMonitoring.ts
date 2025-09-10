@@ -24,7 +24,7 @@ interface ErrorReport {
   };
   performanceMetrics?: {
     loadTime?: number;
-    memoryUsage?: any;
+    memoryUsage?: unknown;
   };
 }
 
@@ -80,7 +80,7 @@ export class ProductionErrorMonitor {
     Sentry.setUser({ id: userId });
   }
 
-  public reportError(error: Error | unknown, context: Record<string, any> = {}): void {
+  public reportError(error: Error | unknown, context: Record<string, unknown> = {}): void {
     const errorReport = this.buildErrorReport(error, context);
     
     // Send to Sentry
@@ -116,7 +116,7 @@ export class ProductionErrorMonitor {
     }
   }
 
-  private buildErrorReport(error: Error | unknown, context: Record<string, any>): ErrorReport {
+  private buildErrorReport(error: Error | unknown, context: Record<string, unknown>): ErrorReport {
     const actualError = error instanceof Error ? error : new Error(String(error));
     
     return {
@@ -192,7 +192,7 @@ export class ProductionErrorMonitor {
 export const errorMonitor = ProductionErrorMonitor.getInstance();
 
 // Convenience functions
-export const reportError = (error: Error | unknown, context?: Record<string, any>) => {
+export const reportError = (error: Error | unknown, context?: Record<string, unknown>) => {
   errorMonitor.reportError(error, context);
 };
 

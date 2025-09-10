@@ -3,7 +3,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 const ReactPlayer = React.lazy(() => import('react-player'));
 const ModelViewer = React.lazy(() => import('@google/model-viewer/react'));
-export function ProductGallery({ images, videoUrl, modelUrl }) {
+export function ProductGallery(_{ images, _videoUrl, _modelUrl }) {
     const [selected, setSelected] = useState(0);
     const poster = images[0];
     return (<Tabs defaultValue="images" className="w-full">

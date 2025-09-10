@@ -1,13 +1,9 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import Sitemap from &apos;./Sitemap;
-describe(&apos;Sitemap&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<Sitemap / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { render, screen } from '@testing-library/react';
+import Sitemap from './Sitemap';
+
+describe('Sitemap', () => {
+  it('displays expected content', () => {
+    render(<Sitemap />);
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+});

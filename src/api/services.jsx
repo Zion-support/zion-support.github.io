@@ -1,3 +1,4 @@
+/* global URLSearchParams, fetch */
 const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 export async function fetchServices(category, q) {
     const params = new URLSearchParams();

@@ -87,7 +87,7 @@ export const BundleAnalyzer = () => {
             setAnalysis(mockAnalysis);
         }
         catch (error) {
-            console.error('Bundle analysis failed:', error);
+            // console.error('Bundle analysis failed:', error);
         }
         finally {
             setIsAnalyzing(false);

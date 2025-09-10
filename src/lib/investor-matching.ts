@@ -62,12 +62,7 @@ const investors: Investor[] = [
   }
 ];
 
-export async function getInvestorMatches(
-  industry: string,
-  location: string,
-  stage: string,
-  limit = 5
-): Promise<InvestorMatch[]> {
+export async function getInvestorMatches(industry: string, location: string, stage: string, _limit = 5): Promise<InvestorMatch[]> {
   await new Promise(resolve => setTimeout(resolve, 500));
 
   const filtered = investors.filter(inv => {

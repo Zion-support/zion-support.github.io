@@ -17,15 +17,8 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void;
 }
 
-export function MobileHeader({
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
-  onSettingsClick,
-}: MobileHeaderProps) {
+export function MobileHeader(_{
+  title, _showBack = false, _showNotifications = false, _showSettings = false, _className, _onNotificationsClick, _onSettingsClick, }: MobileHeaderProps) {
   const router = useRouter();
 
   return (

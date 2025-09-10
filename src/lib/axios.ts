@@ -2,7 +2,7 @@ import axios from 'axios';
 import { safeStorage } from '@/utils/safeStorage';
 
 // Create and configure axios instance
-const createAxiosInstance = (): any => {
+const createAxiosInstance = (): unknown => {
   const instance = axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
     timeout: 15000,
@@ -13,7 +13,7 @@ const createAxiosInstance = (): any => {
 
   // Request interceptor
   instance.interceptors.request.use(
-    (config: any) => {
+    (config: unknown) => {
       // Add auth token if available
       if (typeof window !== 'undefined') {
         const token = safeStorage.getItem('auth-token');
@@ -23,15 +23,15 @@ const createAxiosInstance = (): any => {
       }
       return config;
     },
-    (error: any) => {
+    (error: unknown) => {
       return Promise.reject(error);
     }
   );
 
   // Response interceptor
   instance.interceptors.response.use(
-    (response: any) => response,
-    (error: any) => {
+    (response: unknown) => response,
+    (error: unknown) => {
       if (error?.response?.status === 401) {
         // Handle unauthorized access
         if (typeof window !== 'undefined') {

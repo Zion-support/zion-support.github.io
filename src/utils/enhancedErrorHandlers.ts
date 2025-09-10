@@ -20,7 +20,7 @@ export class EnhancedApiErrorHandler {
   /**
    * Handle API errors with intelligent toast management
    */
-  handleApiError(error: any, options?: {
+  handleApiError(error: unknown, options?: {
     retryAction?: () => void;
     showToast?: boolean;
     context?: string;
@@ -149,7 +149,7 @@ export class EnhancedApiErrorHandler {
   /**
    * Handle network errors specifically
    */
-  handleNetworkError(error: any, options?: {
+  handleNetworkError(error: unknown, options?: {
     retryAction?: () => void;
     context?: string;
   }): void {
@@ -181,7 +181,7 @@ export class EnhancedConsoleErrorHandler {
   }
 
   private overrideConsoleError(): void {
-    console.error = (...args: any[]) => {
+    console.error = (...args: unknown[]) => {
       // Prevent infinite recursion
       if (this.isProcessingError) {
         this.originalConsoleError(...args);
@@ -341,7 +341,7 @@ export class EnhancedFetchErrorHandler {
         }
 
         return response;
-      } catch (err: any) {
+      } catch (err: unknown) {
         const url = typeof args[0] === 'string' ? args[0] : '';
 
         // Only show network errors for user-initiated requests

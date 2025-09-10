@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
 import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+export function HireNowCTA(_{ talentName, _hourlyRate, _onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
         projectDescription: '',

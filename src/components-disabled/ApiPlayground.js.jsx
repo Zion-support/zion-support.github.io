@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
-export function ApiPlayground({ method, path, params = [] }) {
+export function ApiPlayground(_{ method, _path, _params = [] }) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({});
     const [body, setBody] = useState("{}");

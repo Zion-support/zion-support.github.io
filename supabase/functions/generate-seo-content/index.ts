@@ -6,17 +6,17 @@ import { corsHeaders } from '../_shared/cors.ts'
 const FINE_TUNED_MODEL_ID = "gpt-3.5-turbo"; // Placeholder - Replace with actual fine-tuned model ID
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
 
-console.log(JSON.stringify({
-  timestamp: new Date().toISOString(),
-  level: 'INFO',
-  message: 'Function "generate-seo-content" initializing.',
-  serviceName: 'generate-seo-content',
-  functionVersion: '1.0.0' // Example version
-}));
+// console.log(JSON.stringify({
+//   timestamp: new Date().toISOString(),
+//   level: 'INFO',
+//   message: 'Function "generate-seo-content" initializing.',
+//   serviceName: 'generate-seo-content',
+//   functionVersion: '1.0.0' // Example version
+// }));
 
 serve(async (req) => {
   const requestTimestamp = new Date().toISOString();
-  const errorLoggerPayload: any = { // For logging errors before returning response
+  const errorLoggerPayload: unknown = { // For logging errors before returning response
     timestamp: requestTimestamp,
     serviceName: 'generate-seo-content',
     method: req.method,
@@ -32,7 +32,7 @@ serve(async (req) => {
     const { contentType, userPrompt, keywords } = body;
 
     errorLoggerPayload.body = { contentType, userPromptLength: userPrompt?.length, keywords };
-    console.log(JSON.stringify({
+    // console.log(JSON.stringify({
       timestamp: requestTimestamp,
       level: 'INFO',
       type: 'request_received',
@@ -43,14 +43,14 @@ serve(async (req) => {
     }));
 
     if (!contentType || !userPrompt) {
-      console.warn(JSON.stringify({ ...errorLoggerPayload, level: 'WARN', type: 'validation_error', message: 'Missing contentType or userPrompt' }));
+      // console.warn(JSON.stringify({ ...errorLoggerPayload, level: 'WARN', type: 'validation_error', message: 'Missing contentType or userPrompt' }));
       return new Response(JSON.stringify({ error: 'Missing contentType or userPrompt in request body' }), {
         status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
     }
 
     if (!OPENAI_API_KEY) {
-      console.error(JSON.stringify({ ...errorLoggerPayload, level: 'ERROR', type: 'configuration_error', message: 'Missing OPENAI_API_KEY environment variable' }));
+      // console.error(JSON.stringify({ ...errorLoggerPayload, level: 'ERROR', type: 'configuration_error', message: 'Missing OPENAI_API_KEY environment variable' }));
       return new Response(JSON.stringify({ error: 'Missing OPENAI_API_KEY configuration' }), {
         status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
@@ -72,13 +72,13 @@ serve(async (req) => {
         finalUserPrompt = `As an expert SEO content writer, generate a concise and informative FAQ answer for the question: "${userPrompt}". ${keywords && Array.isArray(keywords) && keywords.length > 0 ? `Incorporate these keywords naturally: ${keywords.join(', ')}.` : ''} The answer should be clear and directly address the question.`;
         break;
       default:
-        console.warn(JSON.stringify({ ...errorLoggerPayload, level: 'WARN', type: 'validation_error', message: `Invalid content type: ${contentType}` }));
+        // console.warn(JSON.stringify({ ...errorLoggerPayload, level: 'WARN', type: 'validation_error', message: `Invalid content type: ${contentType}` }));
         return new Response(JSON.stringify({ error: 'Invalid content type. Supported types are: blogPost, serviceDescription, faq.' }), {
           status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
         });
     }
 
-    console.log(JSON.stringify({
+    // console.log(JSON.stringify({
       timestamp: new Date().toISOString(),
       level: 'INFO',
       type: 'openai_request',
@@ -100,7 +100,7 @@ serve(async (req) => {
     const generatedContent = chatCompletion.choices[0].message.content;
 
     if (!generatedContent) {
-        console.error(JSON.stringify({
+        // console.error(JSON.stringify({
           ...errorLoggerPayload,
           level: 'ERROR',
           type: 'openai_response_error',
@@ -113,7 +113,7 @@ serve(async (req) => {
         });
     }
 
-    console.log(JSON.stringify({
+    // console.log(JSON.stringify({
       timestamp: new Date().toISOString(),
       level: 'INFO',
       type: 'openai_success',
@@ -129,7 +129,7 @@ serve(async (req) => {
     });
 
   } catch (error) {
-    console.error(JSON.stringify({
+    // console.error(JSON.stringify({
       ...errorLoggerPayload,
       level: 'ERROR',
       type: 'general_error',

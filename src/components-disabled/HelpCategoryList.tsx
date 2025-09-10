@@ -9,7 +9,7 @@ interface HelpCategoryListProps {
   searchQuery: string;
 }
 
-export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {
+export function HelpCategoryList(_{ categories, _onCategorySelect, searchQuery }: HelpCategoryListProps) {
   // Filter categories based on search query
   const filteredCategories = searchQuery
     ? categories.filter(

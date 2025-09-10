@@ -220,7 +220,7 @@ class EnhancedLogAnalytics {
     });
   }
 
-  private executeAlertAction(action: string, alertData: any): void {
+  private executeAlertAction(action: string, alertData: unknown): void {
     switch (action) {
       case 'dashboard':
         // Update dashboard notification
@@ -237,7 +237,7 @@ class EnhancedLogAnalytics {
     }
   }
 
-  private updateDashboardAlert(alertData: any): void {
+  private updateDashboardAlert(alertData: unknown): void {
     // Store alert in localStorage for dashboard display
     if (typeof window !== 'undefined') {
       const alerts = JSON.parse(localStorage.getItem('dashboard-alerts') || '[]');
@@ -246,7 +246,7 @@ class EnhancedLogAnalytics {
     }
   }
 
-  private sendEmailAlert(alertData: any): void {
+  private sendEmailAlert(alertData: unknown): void {
     // Implement email notification
     fetch('/api/alerts/email', {
       method: 'POST',
@@ -257,7 +257,7 @@ class EnhancedLogAnalytics {
     });
   }
 
-  private sendSlackAlert(alertData: any): void {
+  private sendSlackAlert(alertData: unknown): void {
     // Implement Slack notification
     fetch('/api/alerts/slack', {
       method: 'POST',

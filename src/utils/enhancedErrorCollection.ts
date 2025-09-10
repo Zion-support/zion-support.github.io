@@ -453,16 +453,13 @@ class EnhancedErrorCollector {
 export const enhancedErrorCollector = new EnhancedErrorCollector();
 
 // Utility functions
-export function reportEnhancedError(
-  error: Error | string,
-  options?: {
+export function reportEnhancedError(error: Error | string, options?: {
     severity?: ErrorDetails['severity'];
     category?: ErrorDetails['category'];
     tags?: string[];
     context?: ErrorContext;
     reproductionSteps?: string[];
-  }
-): string {
+  }): string {
   return enhancedErrorCollector.collectError(error, options);
 }
 

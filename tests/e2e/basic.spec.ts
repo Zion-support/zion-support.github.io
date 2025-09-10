@@ -1,12 +1,6 @@
-}import React from 'react';
-interface Basic.specProps {
-  // Add props here as needed
-export default function Basic.spec({ }: Basic.specProps) {
+import { test, expect } from '@playwright/test';
 
-}=
-
->}
-:temp_exclude/src.pages.disabled/Help.jsx
-
-:src.pages.disabled/Help.jsx
-=>}
+test('basic functionality works', async ({ page }) => {
+  await page.goto('/');
+  await expect(page).toHaveTitle(/Zion Tech Group/);
+});

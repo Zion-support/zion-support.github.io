@@ -1,3 +1,4 @@
+/* global console, URL, window, localStorage, document */
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
 /**
@@ -5,7 +6,7 @@ import { apiClient } from './apiClient';
  * @param date Date or string to format
  * @returns Formatted date string
  */
-export function formatDate(date) {
+export function formatDate(_date) {
     if (!date)
         return '-';
     try {
@@ -15,7 +16,7 @@ export function formatDate(date) {
         return format(date, 'MMM d, yyyy');
     }
     catch (e) {
-        console.error('Error formatting date:', e);
+        // console.error('Error formatting date:', e);
         return '-';
     }
 }
@@ -39,7 +40,7 @@ export function checkUrlForReferralCode() {
 /**
  * Track referral when a user signs up
  */
-export async function trackReferral(userId, email) {
+export async function trackReferral(_userId, _email) {
     try {
         const refCode = localStorage.getItem('referral_code');
         if (!refCode)
@@ -63,6 +64,6 @@ export async function trackReferral(userId, email) {
         }
     }
     catch (error) {
-        console.error('Error tracking referral:', error);
+        // console.error('Error tracking referral:', error);
     }
 }

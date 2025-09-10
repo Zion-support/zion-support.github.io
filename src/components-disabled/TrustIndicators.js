@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap } from 'lucide-react';
-export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
+export function TrustIndicators(_{ className, _showStats = true, _showCertifications = true }) {
     const indicators = [
         {
             icon: Shield,
@@ -115,7 +115,7 @@ export function TrustIndicators({ className, showStats = true, showCertification
     </section>);
 }
 // Compact version for smaller spaces
-export function TrustIndicatorsCompact({ className }) {
+export function TrustIndicatorsCompact(_{ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
       <div className="flex items-center gap-2 text-zion-cyan text-sm">
         <Shield className="w-4 h-4"/>

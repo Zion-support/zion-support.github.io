@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
-export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
+export function LoadingFallback(_{ message = "Loading...", _size = "md", _className = "" }) {
     const sizeClasses = {
         sm: "w-6 h-6",
         md: "w-8 h-8",

@@ -10,7 +10,7 @@ interface UploadSectionProps {
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
+export function UploadSection(_{ customFile, onFileUpload }: UploadSectionProps) {
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">

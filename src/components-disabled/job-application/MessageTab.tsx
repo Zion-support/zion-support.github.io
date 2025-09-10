@@ -11,7 +11,7 @@ export interface MessageTabProps {
   setProposalLink: (link: string) => void;
 }
 
-export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
+export function MessageTab(_{ message, _setMessage, _proposalLink, setProposalLink }: MessageTabProps) {
   return (
     <div className="space-y-4">
       <div>

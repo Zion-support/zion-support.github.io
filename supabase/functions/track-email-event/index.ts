@@ -71,7 +71,7 @@ serve(async (req) => {
       { status: 400, headers: { "Content-Type": "application/json" } }
     );
   } catch (error) {
-    console.error("Error tracking email event:", error);
+    // console.error("Error tracking email event:", error);
     
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {

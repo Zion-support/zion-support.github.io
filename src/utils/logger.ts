@@ -2,19 +2,7 @@ import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger
 
 // Removed circular dependency with productionLogger - using direct console methods instead
 
-interface LogLevel {
-  DEBUG: 'debug';
-  INFO: 'info';
-  WARN: 'warn';
-  ERROR: 'error';
-}
-
-const LOG_LEVELS: LogLevel = {
-  DEBUG: 'debug',
-  INFO: 'info',
-  WARN: 'warn',
-  ERROR: 'error'
-};
+// Removed unused LOG_LEVELS constant
 
 class Logger {
   private isDevelopment = process.env.NODE_ENV === 'development';
@@ -43,7 +31,7 @@ class Logger {
     if (!this.isDevelopment && typeof window !== 'undefined') {
       try {
         // Integration with Sentry or other error monitoring
-        const globalWindow = window as Window & { Sentry?: { captureException: (error: Error) => void } };
+        const globalWindow = window as typeof window & { Sentry?: { captureException: (error: Error) => void } };
         if (globalWindow.Sentry) {
           globalWindow.Sentry.captureException(error instanceof Error ? error : new Error(message));
         }
@@ -63,13 +51,13 @@ class Logger {
 
   // Performance timing
   time(label: string): void {
-    if (this.isDevelopment) {
+    if (this.isDevelopment && typeof console !== 'undefined') {
       console.time(label);
     }
   }
 
   timeEnd(label: string): void {
-    if (this.isDevelopment) {
+    if (this.isDevelopment && typeof console !== 'undefined') {
       console.timeEnd(label);
     }
   }

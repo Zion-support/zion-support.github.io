@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-export function AnimatedBackground({ className = '', variant = 'grid' }) {
+export function AnimatedBackground(_{ className = '', _variant = 'grid' }) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -150,7 +150,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         }}/>);
 }
 // Neon glow effect component
-export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
+export function NeonGlow(_{ children, _className = '', _glowColor = '#8c15e9' }) {
     return (<div className={`relative ${className}`} style={{
             textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
             filter: `drop-shadow(0 0 10px ${glowColor})`
@@ -159,7 +159,7 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
     </div>);
 }
 // Floating particles component
-export function FloatingParticles({ count = 20, className = '' }) {
+export function FloatingParticles(_{ count = 20, _className = '' }) {
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
                 left: `${Math.random() * 100}%`,
@@ -170,7 +170,7 @@ export function FloatingParticles({ count = 20, className = '' }) {
     </div>);
 }
 // Gradient border component
-export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
+export function GradientBorder(_{ children, _className = '', _borderWidth = '2px' }) {
     return (<div className={`relative ${className}`} style={{
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
             padding: borderWidth,

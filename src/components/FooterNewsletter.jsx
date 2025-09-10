@@ -11,7 +11,7 @@ export function FooterNewsletter() {
       setIsSubscribed(true);
       setEmail('');
       // Here you would typically send the email to your backend
-      console.log('Newsletter subscription:', email);
+      // console.log('Newsletter subscription:', email);
     }
   };
 

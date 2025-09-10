@@ -15,9 +15,7 @@ interface FetchMarketplaceDataOptions {
  * If the API fails or returns no products, sample listings are returned
  * so the marketplace and payment flows remain testable.
  */
-export async function fetchMarketplaceData(
-  options: FetchMarketplaceDataOptions = {}
-): Promise<ProductListing[]> {
+export async function fetchMarketplaceData(options: FetchMarketplaceDataOptions = {}): Promise<ProductListing[]> {
   const { limit, category, sortBy } = options;
   try {
     const searchParams = new URLSearchParams();

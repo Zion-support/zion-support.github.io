@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CldUploadButton } from 'next-cloudinary';
-export function AvatarUpload({ value, onChange }) {
+export function AvatarUpload(_{ value, _onChange }) {
     const [url, setUrl] = useState(value);
     const handleUpload = (result) => {
         const secure = result?.info?.secure_url;

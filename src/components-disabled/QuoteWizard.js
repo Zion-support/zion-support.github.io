@@ -8,7 +8,7 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import Skeleton from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 const WIZARD_STEPS = [1, 2, 3];
-function StepIndicator({ step }) {
+function StepIndicator(_{ step }) {
     const progress = (step / WIZARD_STEPS.length) * 100;
     return (<div className="space-y-1">
       <div data-testid="step-indicator" className="text-sm text-muted-foreground">
@@ -19,7 +19,7 @@ function StepIndicator({ step }) {
       </div>
     </div>);
 }
-export function QuoteWizard({ category }) {
+export function QuoteWizard(_{ category }) {
     const [step, setStep] = useState(1);
     const [selectedItemId, setSelectedItemId] = useState(null);
     const [message, setMessage] = useState('');
