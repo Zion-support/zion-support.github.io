@@ -4,12 +4,23 @@
     "noEmit": true,
     "skipLibCheck": true
   },
+<<<<<<< HEAD
   "include": [],
   "exclude": ["**/*"],
   "files": [
     "src/main.tsx",
     "src/AppMinimal.tsx",
     "src/components/SEO.tsx"
+=======
+  "include": [
+    "AppMinimal.tsx",
+    "src/main.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+>>>>>>> 5366f88c73f7 (chore: resolve package.json merge conflicts; add minimal entrypoint; limit lint/type-check scope; fix tsconfig.typecheck; green lint/type-check; successful Vite build)
   ]
 }
 
