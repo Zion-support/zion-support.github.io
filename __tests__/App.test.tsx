@@ -1,14 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import App from "../src/App";
-;
-describe("App", (); => {;
-  test("renders without crashing", (); => {;
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import App from '../App';
+
+describe('App', () => {
+  it('renders without crashing', () => {
     render(<App />);
-<<<<<<< HEAD
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 });
-;
