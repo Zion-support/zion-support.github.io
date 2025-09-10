@@ -37,7 +37,6 @@ export interface GeneratedBlogContent {
   imagePrompt?: string;
 }
 
-<<<<<<< HEAD
 // Type for generated newsletter content
 export interface GeneratedNewsletterContent {
   subject: string;
@@ -45,12 +44,12 @@ export interface GeneratedNewsletterContent {
   body: string;
   cta: string;
 }
-=======
-  const authors = [
-    { name: 'John Doe', avatar: '/avatars/john.jpg' },
-    { name: 'Jane Smith', avatar: '/avatars/jane.jpg' },
-    { name: 'Mike Johnson', avatar: '/avatars/mike.jpg' },
-  ];
+
+const authors = [
+  { name: 'John Doe', avatar: '/avatars/john.jpg' },
+  { name: 'Jane Smith', avatar: '/avatars/jane.jpg' },
+  { name: 'Mike Johnson', avatar: '/avatars/mike.jpg' },
+];
 
   const randomTitle = titles[Math.floor(Math.random() * titles.length)];
   const randomAuthor = authors[Math.floor(Math.random() * authors.length)];

@@ -79,12 +79,12 @@ export const monitorBundlePerformance = () => {
     const loadTime = perfData.loadEventEnd - perfData.fetchStart;
     
     // Log performance metrics
-    // // console.log('Bundle Performance Metrics:', {
-      loadTime: `${loadTime}ms`,
-      domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.fetchStart}ms`,
-      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 'N/A',
-      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 'N/A'
-    });
+    // console.log('Bundle Performance Metrics:', {
+    //   loadTime: `${loadTime}ms`,
+    //   domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.fetchStart}ms`,
+    //   firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 'N/A',
+    //   firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 'N/A'
+    // });
 
     // Report to analytics if available
     if ((window as any).gtag) {
@@ -103,11 +103,11 @@ export const monitorBundlePerformance = () => {
     );
 
     if (largeResources.length > 0) {
-      // // console.warn('Large resources detected:', largeResources.map(r => ({
-        name: r.name,
-        size: `${Math.round(r.transferSize / 1024)}KB`,
-        loadTime: `${Math.round(r.duration)}ms`
-      })));
+      // console.warn('Large resources detected:', largeResources.map(r => ({
+      //   name: r.name,
+      //   size: `${Math.round(r.transferSize / 1024)}KB`,
+      //   loadTime: `${Math.round(r.duration)}ms`
+      // })));
     }
   });
 

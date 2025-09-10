@@ -19,7 +19,9 @@ export const devConsole = {
   
   // Conditional logging
   logIf: (condition: boolean, ...args: unknown[]) => {
-    if (isDevelopment && condition) // // console.log(...args);
+    if (isDevelopment && condition) {
+      // console.log(...args);
+    }
   },
   
   // Performance measurement

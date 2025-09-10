@@ -6,34 +6,30 @@ export interface ProductListing {
   currency: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   rating?: number;
   reviewCount?: number;
   featured?: boolean;
   image?: string;
-=======
-  images: string[];
-  seller: {
+  images?: string[];
+  seller?: {
     id: string;
     name: string;
     avatar: string;
     rating: number;
     reviews: number;
   };
-  location: {
+  location?: {
     city: string;
     country: string;
     coordinates?: [number, number];
   };
-  status: 'active' | 'sold' | 'expired' | 'draft';
->>>>>>> origin/chore/fix-links-and-build
+  status?: 'active' | 'sold' | 'expired' | 'draft';
   createdAt: Date;
   updatedAt: Date;
 }
 
-<<<<<<< HEAD
 export type ListingView = "grid" | "list";
-=======
+
 export interface ListingFilter {
   category?: string;
   priceRange?: {

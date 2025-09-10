@@ -59,7 +59,6 @@ export interface Badge {
   color: string;
 }
 
-<<<<<<< HEAD
 export interface UserBadge {
   userId: string;
   badgeId: string;
@@ -78,7 +77,7 @@ export interface CommunityUser {
   isVerified: boolean;
   isModerator: boolean;
 }
-=======
+
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   {
     id: 'general',

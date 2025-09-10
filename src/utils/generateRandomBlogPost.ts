@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export const generateRandomBlogPost = () => {
-=======
 import { BlogPost } from '@/types/blog';
 
 export function generateRandomBlogPost(): BlogPost {
