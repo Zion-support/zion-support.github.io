@@ -18,11 +18,9 @@ Metrics are exposed at `/metrics` and can be scraped by Prometheus.
 
 A staff-only route `/admin/metrics` embeds a Grafana dashboard via an iframe. Set the `GRAFANA_URL` environment variable to the dashboard URL.
 
-## Frontend Error Reporting
+## Error Reporting
 
-The React client integrates Sentry for capturing runtime errors. Provide your
-Sentry DSN via the `VITE_SENTRY_DSN` environment variable. Errors are
-automatically reported using `@sentry/react`.
+The frontend reports errors to Sentry using `@sentry/react`. Provide your DSN via the `VITE_SENTRY_DSN` environment variable. You can customize the sampling rate in `src/utils/sentry.ts`.
 
 ## Running with Loki and Prometheus
 

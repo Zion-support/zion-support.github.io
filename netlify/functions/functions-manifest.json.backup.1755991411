@@ -1,21 +1,6 @@
 {
   "generatedAt": "2025-08-13T16:07:24.311Z",
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "generatedAt": "2025-08-12T01:33:59.547Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -25,22 +10,7 @@
     "auto-scheduler",
     "automation-matrix",
     "autonomous-cloud-brain",
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "generatedAt": "2025-08-12T01:34:55.479Z",
   "functions": [
     "a11y-alt-text-runner",
