@@ -1,38 +1,40 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 
-interface EnhancedNavigationProps {
-  className?: string;
-}
-
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className={`bg-white shadow-lg ${className}`}>
+    <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <span className="text-xl font-bold text-gray-800">Zion Tech</span>
-            </Link>
+            <a href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech
+            </a>
           </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
+          <div className="hidden md:flex space-x-8">
+            {navigationItems.map(item => (
+              <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
+          </div>
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              Menu
+            </button>
           </div>
         </div>
       </div>
