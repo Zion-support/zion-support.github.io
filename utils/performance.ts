@@ -35,14 +35,14 @@ export const lazyLoadImage = (img: HTMLImageElement, src: string): void => {
     },
     { threshold: 0.1 }
   );
-  
+
   observer.observe(img);
 };
 
 // Preload critical resources
 export const preloadResource = (href: string, as: string): void => {
   if (typeof window === 'undefined') return;
-  
+
   const link = document.createElement('link');
   link.rel = 'preload';
   link.href = href;
@@ -53,7 +53,7 @@ export const preloadResource = (href: string, as: string): void => {
 // Prefetch resources for better navigation
 export const prefetchResource = (href: string): void => {
   if (typeof window === 'undefined') return;
-  
+
   const link = document.createElement('link');
   link.rel = 'prefetch';
   link.href = href;
@@ -63,7 +63,7 @@ export const prefetchResource = (href: string): void => {
 // Bundle size analyzer
 export const analyzeBundleSize = (): void => {
   if (process.env.NODE_ENV !== 'development') return;
-  
+
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
@@ -74,7 +74,6 @@ export const analyzeBundleSize = (): void => {
       });
     }
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
@@ -228,10 +227,6 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   console.group_end ();
 }
 
-
-
-
-
 // Performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
@@ -255,14 +250,14 @@ export const reportWebVitals = (metric: any) => {
 // Resource hints for better performance
 export const addResourceHints = (): void => {
   if (typeof document === 'undefined') return;
-  
+
   // DNS prefetch for external domains
   const dnsPrefetchDomains = [
     'fonts.googleapis.com',
     'fonts.gstatic.com',
     'images.unsplash.com'
   ];
-  
+
   dnsPrefetchDomains.forEach(domain => {
     const link = document.createElement('link');
     link.rel = 'dns-prefetch';
@@ -274,11 +269,11 @@ export const addResourceHints = (): void => {
 // Performance observer for Core Web Vitals
 export const observeWebVitals = (callback: (metric: any) => void): void => {
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-  
+
   const observer = new PerformanceObserver((list) => {
     list.getEntries().forEach(callback);
   });
-  
+
   observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 };
 
@@ -295,7 +290,7 @@ export const getOptimizedImageUrl = (
     q: quality.toString(),
     ...(height && { h: height.toString() })
   });
-  
+
   return `${src}?${params.toString()}`;
 };
 

@@ -1,8 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,8 +24,6 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -39,19 +34,6 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-<<<<<<< HEAD
-            <a href="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-=======
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="text-xl font-bold gradient-text">Zion Tech Group</span>
-            </Link>
-          </div>
-
           {/* Desktop Navigation */}
 <<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
@@ -158,30 +140,10 @@ export function Navigation() {
             >
               Zion OS
             </Link>
-            <Link 
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-              href="/docs" 
+            <Link               href="/docs" 
               className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"
             >
               Docs
-<<<<<<< HEAD
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <button className="btn-primary text-sm transform hover:scale-105 transition-all duration-300">
-=======
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-            >
-              Contact
-            </Link>
-            <Link href="/multiverse/launch" className="btn-primary text-sm">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-              Get Started
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -343,9 +305,7 @@ export function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started
-              </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-            </div>
+              </Link>            </div>
           </div>
         </div>
       </div>

@@ -1,173 +1,12 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-// Get automation interval from environment variable ("default": 24 hours);
-=======
-#!/"usr/bin/env" node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-
 console.log(`"📚 Starting Smart Documentation Generator...")
 
-// Get automation interval from environment variable (default: 24 hours)
->>>>>>> origin/automation-fixes
-const AUTOMATION_INTERVAL =;
+// Get automation interval from environment variable (default: 24 hours)const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours;
 class $1 {
   constructor() {
   this.documentationMetrics = {
   generatedDocs: [],
-<<<<<<< HEAD
-      "documentationCoverage": 0,
-      "missingDocs": [],
-      "documentationSuggestions": [],
-      "docPatterns": new Map()}
-    this.reportDir = path.join(process.cwd(), "documentation-reports");
-    this.docsDir = path.join(process.cwd(), "docs");
-    this.ensureDirectories()}
-;
-  ensureDirectories() {
-  if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { "recursive": true })}
-    if (!fs.existsSync(this.docsDir)) {
-  fs.mkdirSync(this.docsDir, { "recursive": true })}
-  }
-;
-  async generateDocumentation() {
-  try {
-  .toISOString()}";
-  async generateDocumentation() {
-  try {
-  .toISOString()}`;
-      );
-=======
-      documentationCoverage: 0,
-      missingDocs: [],
-      documentationSuggestions: [],
-      docPatterns: new Map(),,
-}
-    this.reportDir = path.join(process.cwd(), `documentation-reports`)
-    this.docsDir = path.join(process.cwd(), `docs`)
-    this.ensureDirectories(),
-}
-  ensureDirectories() {
-  if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { recursive: true }),
-}
-    if (!fs.existsSync(this.docsDir)) {
-  fs.mkdirSync(this.docsDir, { recursive: true }),
-}
-  }
-  async generateDocumentation() {
-  try {
-  console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}";
-  async generateDocumentation() {
-  try {
-  console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`;
-      )
->>>>>>> origin/automation-fixes
-      // Analyze codebase structure;
-      await this.analyzeCodebaseStructure()
-      // Identify missing documentation;
-      await this.identifyMissingDocumentation()
-      // Generate API documentation;
-      await this.generateAPIDocumentation()
-      // Generate component documentation;
-      await this.generateComponentDocumentation()
-      // Generate setup and deployment guides;
-      await this.generateSetupGuides()
-      // Generate README updates;
-<<<<<<< HEAD
-      await this.updateREADME();
-      .toISOString()}`);
-      );
-      // Analyze codebase structure;
-      await this.analyzeCodebaseStructure();
-      // Identify missing documentation;
-      await this.identifyMissingDocumentation();
-      // Generate API documentation;
-      await this.generateAPIDocumentation();
-      // Generate component documentation;
-      await this.generateComponentDocumentation();
-      // Generate setup and deployment guides;
-      await this.generateSetupGuides();
-      // Generate README updates;
-      await this.updateREADME();
-      // Calculate documentation coverage;
-      await this.calculateDocumentationCoverage();
-      // Generate report;
-      await this.generateReport();
-      } catch (error) {
-  console.error("❌ Smart documentation generation "failed": ", error.message)}
-  }
-;
-  async analyzeCodebaseStructure() {
-    const srcPath = path.join(process.cwd(), "src");
-    if (!fs.existsSync(srcPath)) {
-      return}
-;
-    const structure = {
-  "components": [],
-      "utilities": [],
-      "hooks": [],
-      "services": [],
-      "types": [],
-      "pages": [],
-      "configs": []}
-;
-    const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]);
-    for (const file of allFiles) {
-  const content = fs.readFileSync(file, "utf8");
-      const relativePath = path.relative(srcPath, file);
-      if (;
-        relativePath.includes("components/") ||;
-        content.includes("export default") ||;
-        (content.includes("function") && content.includes("props"));
-      ) {
-  structure.components.push({
-  "path": relativePath,
-          "name": this.extractComponentName(content),
-          "hasDocs": this.hasExistingDocs(file)})} else if (;
-        relativePath.includes("utils/") ||;
-        relativePath.includes("helpers/") ||;
-        content.includes("export function") ||;
-        content.includes("export const");
-      ) {
-  structure.utilities.push({
-  "path": relativePath,
-          "name": this.extractFunctionName(content),
-          "hasDocs": this.hasExistingDocs(file)})} else if (content.includes("use") && content.includes("export")) {
-  structure.hooks.push({
-  "path": relativePath,
-          "name": this.extractHookName(content),
-          "hasDocs": this.hasExistingDocs(file)})} else if (;
-        relativePath.includes("services/") ||;
-        content.includes("api") ||;
-        content.includes("fetch");
-      ) {
-  structure.services.push({
-  "path": relativePath,
-          "name": this.extractServiceName(content),
-          "hasDocs": this.hasExistingDocs(file)})} else if (;
-        relativePath.includes("types/") ||;
-        content.includes("interface") ||;
-        content.includes("type ");
-      ) {
-  structure.types.push({
-  "path": relativePath,
-          "name": this.extractTypeName(content)})} else if (relativePath.includes("pages/") || content.includes("Route")) {
-  structure.pages.push({
-  "path": relativePath,
-          "name": this.extractPageName(content)})}
-=======
-      await this.updateREADME()
-      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`)
-      )
-
       // Analyze codebase structure;
       await this.analyzeCodebaseStructure()
 
@@ -270,81 +109,15 @@ class $1 {
   path: relativePath,
           name: this.extractPageName(content),,
 }),
-}
->>>>>>> origin/automation-fixes
-    }
+}    }
 
     // Analyze config files;
-<<<<<<< HEAD
-    const configFiles = ["package.json"", "vite.config.ts", "tsconfig.json"", "tailwind.config.js", ""];
-    for (const configFile of configFiles) {
-  // Analyze config files;
-    const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", "];
-    for (const configFile of configFiles) {
-  const configPath = path.join(process.cwd(), "configFile);
-      if (fs.existsSync(configPath)) {
-  structure.configs.push({
-  "path": configFile", "name": configFile,
-          "hasDocs": this.hasExistingDocs(configPath)})}
-    }
-;
-    this.documentationMetrics.docPatterns.set("structure", structure);
-    }
-;
-  async identifyMissingDocumentation() {
-    const structure = this.documentationMetrics.docPatterns.get("structure");
-    if (!structure) return;
-    const missingDocs = [];
-=======
-    const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", ""]
-    for (const configFile of configFiles) {
-  // Analyze config files;
-    const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", "]
-    for (const configFile of configFiles) {
-  const configPath = path.join(process.cwd(), "configFile)
-      if (fs.existsSync(configPath)) {
-  structure.configs.push({
-  path: configFile", name: configFile,
-          hasDocs: this.hasExistingDocs(configPath),,
-}),
-}
-    }
-    this.documentationMetrics.docPatterns.set("structure", structure)
-    console.log("📊 Codebase structure analysis completed"),
-}
-  async identifyMissingDocumentation() {
-  console.log("🔍 Identifying missing documentation...")
-
     const structure = this.documentationMetrics.docPatterns.get("structure")
     if (!structure) return;
 
-    const missingDocs = []
->>>>>>> origin/automation-fixes
-    // Check for missing component documentation;
+    const missingDocs = []    // Check for missing component documentation;
     const undocumentedComponents = structure.components.filter(;
       comp => !comp.hasDocs;
-<<<<<<< HEAD
-    );
-    if (undocumentedComponents.length > 0) {
-  missingDocs.push({
-  "type": "component",
-        "items": undocumentedComponents,
-        "priority": "high"})}
-;
-    // Check for missing utility documentation;
-    const undocumentedUtilities = structure.utilities.filter(;
-=======
-    )
-    if (undocumentedComponents.length > 0) {
-  missingDocs.push({
-  type: "component",
-        items: undocumentedComponents,
-        priority: "high",,
-}),
-}
-    // Check for missing utility documentation;
-    const undocumentedUtilities = structure.utilities.filter(
-
 >>>>>>> origin/automation-fixes
     // Check for missing utility documentation;
     const undocumentedUtilities = structure.utilities.filter(;
@@ -352,155 +125,13 @@ class $1 {
     // Check for missing utility documentation;
     const undocumentedUtilities = structure.utilities.filter(;
       util => !util.hasDocs;
-<<<<<<< HEAD
-    );
-    if (undocumentedUtilities.length > 0) {
-  missingDocs.push({
-  "type": "utility",
-        "items": undocumentedUtilities,
-        "priority": "medium"})}
-;
-    // Check for missing hook documentation;
-    const undocumentedHooks = structure.hooks.filter(hook => !hook.hasDocs);
-    if (undocumentedHooks.length > 0) {
-  missingDocs.push({
-  "type": "hook",
-        "items": undocumentedHooks,
-        "priority": "medium"})}
-;
-=======
-    )
-    if (undocumentedUtilities.length > 0) {
-  missingDocs.push({
-  type: "utility",
-        items: undocumentedUtilities,
-        priority: "medium",,
-}),
-}
-    // Check for missing hook documentation;
-    const undocumentedHooks = structure.hooks.filter(hook => !hook.hasDocs)
-    if (undocumentedHooks.length > 0) {
-  missingDocs.push({
-  type: "hook",
-        items: undocumentedHooks,
-        priority: "medium",,
-}),
-}
->>>>>>> origin/automation-fixes
-    // Check for missing service documentation;
-    const undocumentedServices = structure.services.filter(;
-      service => !service.hasDocs;
-<<<<<<< HEAD
-    );
-    if (undocumentedServices.length > 0) {
-  missingDocs.push({
-  "type": "service",
-        "items": undocumentedServices,
-        "priority": "high`,
-=======
-    )
-    if (undocumentedServices.length > 0) {
-  missingDocs.push({
-  type: `service`,
-        items: undocumentedServices,
-        priority: `high`,
-
->>>>>>> origin/automation-fixes
-    // Check for missing service documentation;
-    const undocumentedServices = structure.services.filter(;
-      service => !service.hasDocs;
-<<<<<<< HEAD
-    );
-    if (undocumentedServices.length > 0) {
-  missingDocs.push({
-  "type": "service",
-        "items": undocumentedServices,
-        "priority": "high"})}
-;
-    this.documentationMetrics.missingDocs = missingDocs;
-    }
-;
-  async generateAPIDocumentation() {
-    const structure = this.documentationMetrics.docPatterns.get("structure");
-    if (!structure) return;
-    const apiDocs = [];
-=======
-    )
-    if (undocumentedServices.length > 0) {
-  missingDocs.push({
-  type: "service",
-        items: undocumentedServices,
-        priority: "high",,
-}),
-}
-    this.documentationMetrics.missingDocs = missingDocs;
-    console.log(📊 Found ${missingDocs.length} categories of missing documentation`;
-    ),
-}
-  async generateAPIDocumentation() {
-  console.log(`📖 Generating API documentation...`);
-    const structure = this.documentationMetrics.docPatterns.get(`structure");
-    if (!structure) return;
-
-    const apiDocs = []
->>>>>>> origin/automation-fixes
-    // Generate documentation for services;
+    const apiDocs = []    // Generate documentation for services;
+    for (const service of structure.services.slice(0, 5)) {
+  // Limit to 5 services per run;
+      try {    // Generate documentation for services;
     for (const service of structure.services.slice(0, 5)) {
   // Limit to 5 services per run;
       try {
-<<<<<<< HEAD
-  const servicePath = path.join(process.cwd(), "src", service.path);
-        const content = fs.readFileSync(servicePath, "utf8");
-        const apiDoc = this.generateServiceDocumentation(service, content);
-        const docPath = path.join(;
-          this.docsDir,api`,
-          ${service.name.toLowerCase()}.md;
-        );
-=======
-  const servicePath = path.join(process.cwd(), "src`, service.path)
-        const content = fs.readFileSync(servicePath, `utf8`)
-        const apiDoc = this.generateServiceDocumentation(service, content)
-        const docPath = path.join(
-          this.docsDir,api`,
-          ${service.name.toLowerCase()}.md;
-        )
-
->>>>>>> origin/automation-fixes
-    // Generate documentation for services;
-    for (const service of structure.services.slice(0, 5)) {
-  // Limit to 5 services per run;
-      try {
-<<<<<<< HEAD
-  const servicePath = path.join(process.cwd(), "src", service.path);
-        const content = fs.readFileSync(servicePath, "utf8");
-        const apiDoc = this.generateServiceDocumentation(service, content);
-        const docPath = path.join(;
-          this.docsDir,api",
-          ${service.name.toLowerCase()}.md;
-        );
-        // Ensure API docs directory exists;
-        const apiDocsDir = path.dirname(docPath);
-        if (!fs.existsSync(apiDocsDir)) {
-  fs.mkdirSync(apiDocsDir, { "recursive": true })}
-;
-        fs.writeFileSync(docPath, apiDoc);
-        this.documentationMetrics.generatedDocs.push({
-  "type": `api`,
-          "path": docPath,
-          "service": service.name,
-          "timestamp": new Date().toISOString()});
-} catch (error) {
-  }
-    }
-  }
-;
-  async generateComponentDocumentation() {
-  async generateComponentDocumentation() {
-    const structure = this.documentationMetrics.docPatterns.get("structure");
-=======
-  const servicePath = path.join(process.cwd(), "src", service.path)
-        const content = fs.readFileSync(servicePath, "utf8")
-
         const apiDoc = this.generateServiceDocumentation(service, content)
         const docPath = path.join(
           this.docsDir,api",
@@ -532,123 +163,11 @@ console.log(✅ Generated API documentation for ${service.name}`),
   async generateComponentDocumentation() {
   console.log(``⚛️ Generating component documentation...`)
     console.log(`⚛️ Generating component documentation...`)
-    const structure = this.documentationMetrics.docPatterns.get("structure")
->>>>>>> origin/automation-fixes
-    if (!structure) return;
+    const structure = this.documentationMetrics.docPatterns.get("structure")    if (!structure) return;
     // Generate documentation for components;
     for (const component of structure.components.slice(0, 10)) {
   // Limit to 10 components per run;
       try {
-<<<<<<< HEAD
-  const componentPath = path.join(process.cwd(), "src", component.path);
-        const content = fs.readFileSync(componentPath, "utf8");
-        const componentDoc = this.generateComponentDoc(component, content);
-        const docPath = path.join(;
-          this.docsDir,components",
-=======
-  const componentPath = path.join(process.cwd(), "src`, component.path)
-        const content = fs.readFileSync(componentPath, `utf8`)
-        const componentDoc = this.generateComponentDoc(component, content)
-        const docPath = path.join(
-          this.docsDir,components`,
->>>>>>> origin/automation-fixes
-          ${component.name.toLowerCase()}.md;
-        );
-        // Ensure components docs directory exists;
-<<<<<<< HEAD
-        const componentsDocsDir = path.dirname(docPath);
-        if (!fs.existsSync(componentsDocsDir)) {
-  fs.mkdirSync(componentsDocsDir, { "recursive": true })}
-;
-        fs.writeFileSync(docPath, componentDoc);
-        this.documentationMetrics.generatedDocs.push({
-  "type": "component",
-          "path": docPath,
-          "component": component.name,
-          "timestamp": new Date().toISOString(),
-        this.documentationMetrics.generatedDocs.push({
-  "type": "component",
-          "path": docPath,
-          "component": component.name,
-          "timestamp": new Date().toISOString()});
-        } catch (error) {
-  }
-    }
-  }
-;
-  async generateSetupGuides() {
-    // Generate installation guide;
-  async generateSetupGuides() {
-    // Generate installation guide;
-    // Generate installation guide;
-    const installationGuide = this.generateInstallationGuide();
-    const installPath = path.join(this.docsDir, "installation.md");
-    fs.writeFileSync(installPath, installationGuide);
-    // Generate development guide;
-    const developmentGuide = this.generateDevelopmentGuide();
-    const devPath = path.join(this.docsDir, "development.md");
-    fs.writeFileSync(devPath, developmentGuide);
-    // Generate deployment guide;
-    const deploymentGuide = this.generateDeploymentGuide();
-    const deployPath = path.join(this.docsDir, "deployment.md");
-    fs.writeFileSync(deployPath, deploymentGuide);
-    this.documentationMetrics.generatedDocs.push(;
-      {
-  "type": "guide",
-        "path": installPath,
-        "name": "Installation Guide",
-        "timestamp": new Date().toISOString()},
-      {
-  "type": "guide",
-        "path": devPath,
-        "name": "Development Guide",
-        "timestamp": new Date().toISOString()},
-      {
-  "type": "guide",
-        "path": deployPath,
-        "name": "Deployment Guide",
-        "timestamp": new Date().toISOString()}
-    );
-    }
-;
-  async updateREADME() {
-    try {
-  const readmePath = path.join(process.cwd(), "README.md");
-      let readmeContent = ";
-      if (fs.existsSync(readmePath)) {
-  readmeContent = fs.readFileSync(readmePath, "utf8")}
-;
-      const updatedREADME = this.generateUpdatedREADME(readmeContent);
-      fs.writeFileSync(readmePath, updatedREADME);
-      this.documentationMetrics.generatedDocs.push({
-  "type": "readme",
-        "path": readmePath,
-        "name": "README.md",
-        "timestamp": new Date().toISOString()});
-      } catch (error) {
-} catch (error) {
-  }
-    } catch (error) {
-  }
-}
-;
-  async calculateDocumentationCoverage() {
-    const structure = this.documentationMetrics.docPatterns.get("structure`);
-  async calculateDocumentationCoverage() {
-    const structure = this.documentationMetrics.docPatterns.get("structure");
-    if (!structure) return;
-=======
-        const componentsDocsDir = path.dirname(docPath)
-        if (!fs.existsSync(componentsDocsDir)) {
-  fs.mkdirSync(componentsDocsDir, { recursive: true }),
-}
-        fs.writeFileSync(docPath, componentDoc)
-        this.documentationMetrics.generatedDocs.push({
-  type: `component`,
-          path: docPath,
-          component: component.name,
-          timestamp: new Date().toISOString(),
-
         this.documentationMetrics.generatedDocs.push({
   type: "component",
           path: docPath,
@@ -749,47 +268,15 @@ console.log(✅ Generated API documentation for ${service.name}`),
 
     const structure = this.documentationMetrics.docPatterns.get("structure")
     if (!structure) return;
-
->>>>>>> origin/automation-fixes
     const totalItems =;
       structure.components.length +;
       structure.utilities.length +;
       structure.hooks.length +;
-      structure.services.length;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-fixes
-    const documentedItems =;
+      structure.services.length;    const documentedItems =;
       structure.components.filter(comp => comp.hasDocs).length +;
       structure.utilities.filter(util => util.hasDocs).length +;
       structure.hooks.filter(hook => hook.hasDocs).length +;
       structure.services.filter(service => service.hasDocs).length;
-<<<<<<< HEAD
-    this.documentationMetrics.documentationCoverage =;
-      totalItems > 0 ? (documentedItems / totalItems) * 100 : 0;
-    }%`;
-    )}
-;
-  async generateReport() {
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": {
-  totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure";
-        );
-          ? Object.values(;
-              this.documentationMetrics.docPatterns.get(`structure`);
-            ).reduce((sum, arr) => sum + arr.length, 0);
-          : 0,;
-        generatedDocs: this.documentationMetrics.generatedDocs.length,;
-        missingDocs: this.documentationMetrics.missingDocs.length,;
-        documentationCoverage: this.documentationMetrics.documentationCoverage},;
-      metrics: this.documentationMetrics,;
-      generated: this.documentationMetrics.generatedDocs,;
-      missing: this.documentationMetrics.missingDocs}
-    const reportPath = path.join(;
-=======
-
     this.documentationMetrics.documentationCoverage =;
       totalItems > 0 ? (documentedItems / totalItems) * 100 : 0;
     console.log(📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%`;
@@ -812,20 +299,10 @@ console.log(✅ Generated API documentation for ${service.name}`),
       metrics: this.documentationMetrics,
       generated: this.documentationMetrics.generatedDocs,
       missing: this.documentationMetrics.missingDocs}
-    const reportPath = path.join(
->>>>>>> origin/automation-fixes
-      this.reportDir,documentation-${Date.now()}.json`;
+    const reportPath = path.join(      this.reportDir,documentation-${Date.now()}.json`;
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // Also save latest report;
-<<<<<<< HEAD
-    const latestReportPath = path.join(;
-      process.cwd(),
-      "documentation-report.json";
-    );
-    fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log(📊 Documentation report saved to ${reportPath});}
-
   findFiles(dir, extensions) {
   const files = [];
 
@@ -955,18 +432,11 @@ console.log(📊 Documentation report saved to ${reportPath}),
       /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/;
     )
     return match ? match[1] : `UnknownPage`;
-}
->>>>>>> origin/automation-fixes
-  generateServiceDocumentation(service, content) {return # ${service.name}
+}  generateServiceDocumentation(service, content) {return # ${service.name}
 
 ## Overview;
 ## Overview;
-This service provides API functionality for ${service.name.toLowerCase()} operations.;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-fixes
-## Functions;
+This service provides API functionality for ${service.name.toLowerCase()} operations.;## Functions;
 This service provides API functionality for ${service.name.toLowerCase()} operations.;
 ## Functions;
 ${this.extractServiceFunctions(content)}
@@ -976,26 +446,13 @@ ${this.extractServiceFunctions(content)}
 \\`\`typescript;
 import { ${service.name} } from `./${service.path}`;
 // Example usage;
-<<<<<<< HEAD
-const result = await ${service.name}.methodName(params`);\"\"\`;
-=======
-const result = await ${service.name}.methodName(params`)\`\`\`;
->>>>>>> origin/automation-fixes
-## Parameters;
-${this.extractServiceParameters(content)}
-
 ## Returns;
 ${this.extractServiceReturns(content)}
 
 ## Error Handling;
 ${this.extractServiceErrors(content)}
 
-## Examples;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-fixes
-## Returns;
+## Examples;## Returns;
 ${this.extractServiceReturns(content)}
 
 ## Error Handling;
@@ -1005,108 +462,22 @@ ${this.extractServiceErrors(content)}
 ${this.generateServiceExamples(service.name)}
 
 ---;
-<<<<<<< HEAD
-*Generated automatically by Smart Documentation Generator*}
-;
-=======
-*Generated automatically by Smart Documentation Generator*;
-}
->>>>>>> origin/automation-fixes
-  generateComponentDoc(component, content) {
-  return `# ${component.name}
-
 ## Overview;
-${component.name} is a React component that ${this.extractComponentPurpose(content)}.;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-fixes
-## Props;
+${component.name} is a React component that ${this.extractComponentPurpose(content)}.;## Props;
 ${this.extractComponentProps(content)}
 
 ## Usage;
-<<<<<<< HEAD
-\"\"\`tsx;
-function $1() {
-  return (;
-    <${component.name} ;
-      // Add your props here;
-    />;
-  )}\`\"\";
-=======
-\`\`\`tsx;
-import { ${component.name} } from `./${component.path}`;
-function $1() {
-  return (
-    <${component.name}
-      // Add your props here;
-    />;
-  ),
-}\`\`\`;
->>>>>>> origin/automation-fixes
-## Examples;
-${this.generateComponentExamples(component.name)}
-
-## Styling;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-fixes
-## Styling;
+## Styling;## Styling;
 ${this.extractComponentStyling(content)}
 
 ---;
-<<<<<<< HEAD
-*Generated automatically by Smart Documentation Generator*}
-;
-  generateInstallationGuide() {
-  return "# Installation Guide;
-  generateInstallationGuide() {
-  return "# Installation Guide;
-=======
-*Generated automatically by Smart Documentation Generator*;
-}
-  generateInstallationGuide() {
-  return "# Installation Guide;
-  generateInstallationGuide() {
-  return `# Installation Guide;
->>>>>>> origin/automation-fixes
-## Prerequisites;
-- Node.js (v18 or higher);
-- npm or yarn;
-- Git;
-## Quick Start;
-1. Clone the repository:\`\`\`bash;
-git clone <repository-url>;
-<<<<<<< HEAD
-cd zion-app\"\"\";
-2. Install dependencies:\"\"\"bash;
-npm install\"\"\";
-3. Start the development server:\"\"\"bash;
-npm run dev\"\"\";
-4. Open your browser and navigate to \"http://localhost:5173\";
-=======
-cd zion-app\`\`\`;
-
-2. Install dependencies:\`\`\`bash;
-npm install\`\`\`;
-
 3. Start the development server:\`\`\`bash;
 npm run dev\`\`\`;
 4. Open your browser and navigate to \`http://localhost:5173\`;
-
->>>>>>> origin/automation-fixes
 ## Environment Setup;
 Create a \`.env\` file in the root directory:;
 \`\`\`env;
-VITE_API_URL=your_api_url_here;
-<<<<<<< HEAD
-VITE_APP_ENV=development\"\"\";
-=======
-VITE_APP_ENV=development\`\`\`;
-
->>>>>>> origin/automation-fixes
-## Available Scripts;
+VITE_API_URL=your_api_url_here;## Available Scripts;
 - \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking;
 ---;
 <<<<<<< HEAD
@@ -1122,9 +493,7 @@ VITE_APP_ENV=development\`\`\`;
   generateDevelopmentGuide() {
   return "# Development Guide;
   generateDevelopmentGuide() {
-  return `# Development Guide;
->>>>>>> origin/automation-fixes
-## Project Structure;
+  return `# Development Guide;## Project Structure;
 \`\`\`;
 src/;
 ## Project Structure;
@@ -1136,11 +505,6 @@ src/;
 ├── hooks/         # Custom React hooks;
 ├── services/      # API services;
 ├── types/         # TypeScript type definitions;
-<<<<<<< HEAD
-└── styles/        # CSS and styling files\"\"\";
-=======
-└── styles/        # CSS and styling files\`\`\`;
-
 >>>>>>> origin/automation-fixes
 ## Development Workflow;
 1. Create a feature branch from main;
@@ -1163,8 +527,6 @@ src/;
 ---;
 <<<<<<< HEAD
 =======
-
->>>>>>> origin/automation-fixes
 ## Testing;
 - Write unit tests for utilities and hooks;
 - Write component tests using React Testing Library;
@@ -1174,33 +536,8 @@ src/;
 - Implement proper loading states;
 - Optimize bundle size with code splitting;
 ---;
-<<<<<<< HEAD
-*Generated automatically by Smart Documentation Generator*}
-;
-=======
-*Generated automatically by Smart Documentation Generator*;
-}
->>>>>>> origin/automation-fixes
-  generateDeploymentGuide() {
-  return "# Deployment Guide;
-  generateDeploymentGuide() {
-  return "# Deployment Guide;
-## Production Build;
-1. Build the application: \`\`\`bash;
-npm run build\`\`\`;
-2. The build output will be in the \`dist\` directory;
-## Deployment Options;
-<<<<<<< HEAD
-### Netlify (Recommended);
-1. Connect your repository to Netlify2. Set build command: \"npm run build\";
-3. Set publish directory: \"dist\";
-=======
-### Netlify (Recommended)
-
 1. Connect your repository to Netlify2. Set build command: \`npm run build\`;
-3. Set publish directory: \`dist\`;
->>>>>>> origin/automation-fixes
-4. Deploy automatically on push to main branch;
+3. Set publish directory: \`dist\`;4. Deploy automatically on push to main branch;
 ### Vercel;
 1. Import your repository to Vercel2. Set build command: \`npm run build\`;
 3. Set output directory: \`dist\`;
@@ -1212,11 +549,6 @@ npm run build\`\`\`;
 Set the following environment variables in production:;
 \`\`\`env;
 VITE_API_URL=https://your-production-api.com;
-<<<<<<< HEAD
-VITE_APP_ENV=production\"\"\";
-=======
-VITE_APP_ENV=production\`\`\";
-
 >>>>>>> origin/automation-fixes
 ## Monitoring;
 - Set up error tracking (Sentry, LogRocket);
@@ -1456,96 +788,19 @@ npm install;
 npm run dev\`\`\`;
 
 ## 📚 Documentation;
-- [Installation Guide](./``docs/installation.md``)
->>>>>>> origin/automation-fixes
-- [Development Guide](./""docs/development.md"")
+- [Installation Guide](./``docs/installation.md``)- [Development Guide](./""docs/development.md"")
 - [Deployment Guide](./""docs/deployment.md"")
 - [API Documentation](./""docs/api/"")
 - [Component Documentation](./""docs/components/"")
-<<<<<<< HEAD
-\"\"\"
-npm run dev\"\"\"
-=======
-
 ## 🛠️ Tech Stack;
 \`\`\`bash;
 npm install;
 npm run dev\`\`\`;
-## 📚 Documentation;
->>>>>>> origin/automation-fixes
-- [Installation Guide](./"docs/installation.md")
+## 📚 Documentation;- [Installation Guide](./"docs/installation.md")
 - [Development Guide](./"docs/development.md")
 - [Deployment Guide](./"docs/deployment.md")
 - [API Documentation](./"docs/api/")
 - [Component Documentation](./"docs/components/")
-<<<<<<< HEAD
-- \"npm run dev\" - Start development server- \"npm run build\" - Build for production- \"npm run preview\" - Preview production build- \"npm run lint\" - Run ESLint- \"npm run type-check\" - Run TypeScript type checking- \"npm test\"
-This project uses intelligent PM2 automations for continuous "improvement"
-View automation reports in the project root:- \"ai-analysis-report.json\" - AI code analysis results- \"deployment-optimization-report.json\" - Deployment optimization metrics- \"test-generation-report.json\" - Test generation statistics- \"refactoring-report.json\" - Code refactoring progress- \"documentation-report.json\"
-    const lines = content.split("\n")
-        line.includes("export function")
-        (line.includes("export const")
-          line.includes("=")
-          line.includes("(")
-        func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
-      .join("\n")
-  // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
-  return "- Promise resolving to the API response"
-  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples(serviceName) {return "\"\"}
-  "name": `Example
-  "description": "Test item"}
-});\"\"\""
-    return "provides user interface functionality"
-  // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-        func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
-      .join("\n")
-  // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
-  return "- Promise resolving to the API response"
-  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples(serviceName) {return "\"\"}
-  "name": "Example"
-  "description": "Test item"}
-});\`\"\""
-    return "provides user interface functionality"
-  // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-  generateComponentExamples(componentName) {return "\"\"}
-  generateComponentExamples(componentName) {return `\"\"`}
-<${componentName} className="custom-class"
-</${componentName}>\`\"\""
-  extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
-;
-  generateFunctionDescription(funcName) {
-  // Generate basic descriptions based on function name;
-    const descriptions = {
-  "fetch": "Fetches data from the API",
-      "create": "Creates a new resource",
-      "update": "Updates an existing resource",
-      "delete": "Deletes a resource",
-      "get": "Retrieves data",
-      "set": "Sets data",
-      "validate": "Validates input data",
-      "format": "Formats data for display"}
-    for (const ["key", "description"] of Object.entries(descriptions)) {
-  if (funcName.toLowerCase().includes(key)) {
-  return description}
-    }
-;
-    return "Performs the specified operation"}
-=======
-## 🛠️ Tech Stack;
-- **Framework**: React 18;
-- **Build Tool**: Vite;
-- **Language**: TypeScript;
-- **Styling**: Tailwind CSS;
-- **Testing**: Vitest + React Testing Library;
-- **State Management**: Redux Toolkit;
-- **Routing**: React Router DOM;
-## 📦 Available Scripts;
-- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking- \`npm test\` - Run tests;
-## 🤖 Automation;
-This project uses intelligent PM2 automations for continuous improvement:;
-
 - **AI Code Analyzer** - Analyzes code quality and suggests improvements;
 - **Smart Deployment Optimizer** - Optimizes build and deployment processes;
 - **Adaptive Test Generator** - Generates tests based on code changes;
@@ -1681,83 +936,14 @@ const result = await ${serviceName}.createItem({
 }
     }
     return `Performs the specified operation`;
-}
->>>>>>> origin/automation-fixes
-}
+}}
 
 // Main continuous loop;
 async function runContinuous() {
-<<<<<<< HEAD
-  {
-  );
-  const generator = new SmartDocumentationGenerator();
-=======
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-// Main continuous loop;
-async function runContinuous() {
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`)
-  )
-
-  const generator = new SmartDocumentationGenerator()
->>>>>>> origin/automation-fixes
-  // Run initial documentation generation;
+  const generator = new SmartDocumentationGenerator()  // Run initial documentation generation;
   await generator.generateDocumentation();
   // Set up continuous execution;
   setInterval(async () => {
-<<<<<<< HEAD
-  await generator.generateDocumentation()}, AUTOMATION_INTERVAL);
-  }
-;
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  `)}
-;
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  process.exit(0)});
-process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...");
-  process.exit(0);});
-// Start the smart documentation generator;
-runContinuous().catch(error => {
-  console.error("❌ Failed to start smart documentation "generator": ', error);  process.exit(1)})
-  "fetch": "Fetches data from the API"
-      "create": "Creates a new resource"
-      "update": "Updates an existing resource"
-      "delete": "Deletes a resource"
-      "get": "Retrieves data"
-      "set": "Sets data"
-      "validate": "Validates input data"
-      "format": "Formats data for display"
-    for (const ["key", "description")]
-    return "Performs the specified operation"
-  console.log("� Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-  "
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-  console.error(" Failed to start smart documentation "generator")
-=======
-  await generator.generateDocumentation(),
-}, AUTOMATION_INTERVAL)
-  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `),
-}
-// Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-  console.log(`🛑 Received SIGINT, shutting down gracefully...")
-  `),
-}
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...")
-  process.exit(0),
-})
-
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...")
   process.exit(0),
@@ -1766,4 +952,3 @@ process.on("SIGTERM", () => {
 runContinuous().catch(error => {
   console.error("❌ Failed to start smart documentation generator: ', error)  process.exit(1),
 })}}}}}}}}}}}}}})))))
->>>>>>> origin/automation-fixes

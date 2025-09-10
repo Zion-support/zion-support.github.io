@@ -2,102 +2,6 @@
 import { execSync  } from "child_process";
 import fs from "fs";
 import path from "path";
-<<<<<<< HEAD
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-#!/usr/bin/env node
-=======
-import { fileURLToPath } from `url`;
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-console.log(``🚀 Starting continuous front maximizer automation...`)
-#!/"usr/bin/env" node;
->>>>>>> origin/automation-fixes
-import { execSync  } from "child_process";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath  } from "url";
-<<<<<<< HEAD
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-// Get automation interval from environment variable ("default": 4 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
-async function $1() {
-  try {
-  .toISOString()});
-    // Build the project first;
-    try {
-  execSync("npm run build", { "stdio": "inherit" });
-      } catch (error) {
-// Get automation interval from environment variable ("default": 4 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
-async function runFrontMaximizer() {
-  try {
-  .toISOString()});
-    // Build the project first;
-    try {
-  execSync("npm run build", { "stdio": "inherit" });
-      } catch (error) {
-      return}
-    } catch (error) {
-      return}
-    ;
-    // Check if dist folder exists;
-    const distPath = path.join(process.cwd(), "dist");
-    if (!fs.existsSync(distPath)) {
-      return}
-    ;
-    // Optimize images if available;
-    try {
-  if (fs.existsSync(""scripts/optimize-images.js"")) {
-  execSync("node "scripts/optimize-images.js"", { "stdio": "inherit" });
-        } else {
-  }
-    } catch (error) {
-  }
-    } catch (error) {
-  }
-    ;
-    // Check for unused CSS;
-    try {
-  execSync("npx purgecss --css dist/**/*.css --content dist/**/*.html --output "dist/optimized"", { "stdio": "inherit" });
-      } catch (error) {
-  }
-    } catch (error) {
-  }
-    ;
-    // Check for JavaScript bundle optimization;
-    // Check for JavaScript bundle optimization;
-    try {
-  execSync("node "scripts/analyze-bundle.js"", { "stdio": "inherit" });
-      } catch (error) {
-  }
-    } catch (error) {
-  }
-    ;
-    // Check for critical CSS;
-    try {
-  if (fs.existsSync(""scripts/critical-css.js"")) {
-  execSync("node "scripts/critical-css.js"", { "stdio": "inherit" });
-        } else {
-  }
-    } catch (error) {
-  }
-    ;
-    // Generate front maximizer report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": "Front maximizer completed",
-      "status": "completed"}
-    const reportPath = path.join(process.cwd(), "front-maximizer-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    } catch (error) {
-  console.error("❌ Continuous front maximizer "failed": ", error.message)} catch (error) {
-  console.error("❌ Continuous front maximizer "failed": ", error.message);
-// Don`t exit, just log the error and continue}
-=======
-
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
@@ -209,77 +113,16 @@ async function runFrontMaximizer() {
   console.error(`❌ Continuous front maximizer failed: `, error.message)
 
     // Don`t exit, just log the error and continue;
-}
->>>>>>> origin/automation-fixes
-}
+}}
 // Main continuous loop;
-<<<<<<< HEAD
-async function runContinuous() {
-=======
-async function runContinuous() {console.log(🚀 Starting continuous front maximizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`)
->>>>>>> origin/automation-fixes
-  // Run initial front maximizer;
-  await runFrontMaximizer()
-  // Set up continuous execution;
-  setInterval(async () => {
-<<<<<<< HEAD
-} catch (error) {
-  }
-    ;
-    // Generate front maximizer report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": "Front maximizer completed",
-      "status": "completed"}
-    ;
-    const reportPath = path.join(process.cwd(), "front-maximizer-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    } catch (error) {
-  console.error("❌ Continuous front maximizer "failed": ", error.message);
-    // Don"t exit, just log the error and continue}
-=======
-  ,
-} catch (error) {
-  console.log("⚠️  Critical CSS extraction failed but continuing..."),
-}
-    // Generate front maximizer report;
-    console.log("📊 Generating front maximizer report...")
-    const report = {
-  timestamp: new Date().toISOString(),
-      summary: "Front maximizer completed",
-      status: "completed";
-}
-    const reportPath = path.join(process.cwd(), "front-maximizer-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log(✅ Front maximizer report saved to ${reportPath})
-
     console.log("✅ Continuous front maximizer completed successfully")
 
 } catch (error) {
   console.error("❌ Continuous front maximizer failed: ", error.message)
     // Don"t exit, just log the error and continue;
-}
->>>>>>> origin/automation-fixes
-}
+}}
 
 // Main continuous loop;
-<<<<<<< HEAD
-async function runContinuous() {
-  // Run initial front maximizer;
-  await runFrontMaximizer();
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runFrontMaximizer();
-  setInterval(async () => {
-  await runFrontMaximizer()}, AUTOMATION_INTERVAL);
-  }
-;
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...");
-  process.exit(0);});
-
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
   process.exit(0);});
@@ -393,4 +236,3 @@ process.on("SIGTERM", () => {
 runContinuous().catch(error => {
   console.error("❌ Failed to start continuous front maximizer: ", error)  process.exit(1),
 }))))
->>>>>>> origin/automation-fixes

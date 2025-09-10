@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-  }
-
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
@@ -110,9 +99,7 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-      
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-      return size}}
+            return size}}
 
     totalSize = getDirectorySize(buildDir);
 

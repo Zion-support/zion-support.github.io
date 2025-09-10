@@ -48,14 +48,11 @@ const AdminKYCPage: React.FC = () => {
       )
     );
   };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/kyc.tsx
 
   return (
     <>
       <Head>
         <title>Admin KYC Queue - Zion Tech Group</title>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/kyc.tsx
         <meta name="description" content="Review and approve or reject KYC submissions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -105,5 +102,3 @@ const AdminKYCPage: React.FC = () => {
 };
 
 export default AdminKYCPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/kyc.tsx

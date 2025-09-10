@@ -7,18 +7,18 @@ console.log('🚀 Direct Conflict Resolver - Working directly with files...\n');
 function resolveConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) return false;
-    
+
     let content = fs.readFileSync(filePath, 'utf8');
     if (!content.includes('')) return false;
-    
+
     console.log(`🔧 Resolving: ${filePath}`);
-    
+
     // Keep incoming changes (after )
     const lines = content.split('\n');
     const resolved = [];
     let inConflict = false;
     let keepIncoming = false;
-    
+
     for (const line of lines) {
       if (line.includes('')) {
         inConflict = true;
@@ -32,12 +32,12 @@ function resolveConflicts(filePath) {
         keepIncoming = false;
         continue;
       }
-      
+
       if (!inConflict || keepIncoming) {
         resolved.push(line);
       }
     }
-    
+
     const newContent = resolved.join('\n');
     fs.writeFileSync(filePath, newContent, 'utf8');
     console.log(`✅ Fixed: ${filePath}`);
@@ -51,14 +51,14 @@ function resolveConflicts(filePath) {
 // Find files with conflicts
 function findConflicts() {
   const conflicts = [];
-  
+
   function scan(dir) {
     try {
       const items = fs.readdirSync(dir);
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', 'out'].includes(item)) {
             scan(fullPath);
@@ -78,7 +78,7 @@ function findConflicts() {
       // Skip directories that can't be read
     }
   }
-  
+
   scan('/workspace');
   return conflicts;
 }
@@ -91,20 +91,20 @@ console.log(`Found ${conflictFiles.length} files with conflicts\n`);
 if (conflictFiles.length > 0) {
   console.log('📋 Resolving conflicts...');
   let fixedCount = 0;
-  
+
   // Process in smaller batches
   const batchSize = 100;
   for (let i = 0; i < conflictFiles.length; i += batchSize) {
     const batch = conflictFiles.slice(i, i + batchSize);
     console.log(`Processing batch ${Math.floor(i/batchSize) + 1}...`);
-    
+
     for (const file of batch) {
       if (resolveConflicts(file)) {
         fixedCount++;
       }
     }
   }
-  
+
   console.log(`\n✅ Fixed ${fixedCount} files with conflicts`);
 } else {
   console.log('✅ No conflicts found');
