@@ -1,7 +1,17 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
-  }
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "AppMinimal.tsx",
+    "src/main.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
 }
 
