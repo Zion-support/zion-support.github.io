@@ -1,17 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true,
-    "allowJs": false
-  },
-  "include": [
-    "types/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "out",
-    "public"
-  ]
+    "noEmit": true
+  }
 }
 
