@@ -55,7 +55,7 @@ serve(async (req) => {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4o',
         messages: [
           {
             role: 'system',
@@ -87,11 +87,11 @@ serve(async (req) => {
       });
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
-      console.error('Failed to parse AI response as JSON:', parseError);
+      // console.error('Failed to parse AI response as JSON:', parseError);
       throw new Error('Failed to parse AI response');
     }
   } catch (error) {
-    console.error('Error generating milestones:', error);
+    // console.error('Error generating milestones:', error);
     return new Response(
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),
       { 

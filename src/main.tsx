@@ -1,38 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { createRoot } from 'react-dom/client'
+// eslint-disable-next-line no-unused-vars
+import AppMinimal from './AppMinimal'
 
-// Import i18n configuration
-import './i18n';
-import { LanguageProvider } from './context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+const container = document.getElementById('root')
+if (container) {
+  const root = createRoot(container)
+  root.render(<AppMinimal />)
+}
 
-// Import auth and notification providers
-import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context';
-
-// Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <Router>
-        <AuthProvider>
-          <NotificationProvider>
-            <AnalyticsProvider>
-              <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                <App />
-                <LanguageDetectionPopup />
-              </LanguageProvider>
-            </AnalyticsProvider>
-          </NotificationProvider>
-        </AuthProvider>
-      </Router>
-    </HelmetProvider>
-  </React.StrictMode>
-);
