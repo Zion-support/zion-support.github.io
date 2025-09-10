@@ -58,7 +58,8 @@ export default [
     plugins: {
       '@typescript-eslint': tsPlugin,
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tsPlugin
     },
     rules: {
       ...js.configs.recommended.rules,
