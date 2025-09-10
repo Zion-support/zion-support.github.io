@@ -1,15 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-<<<<<<< HEAD
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
-=======
     "lib": ["dom", "dom.iterable", "es6"],
->>>>>>> origin/automation/changelog
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,22 +12,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
-    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "allowJs": true,
     "incremental": true,
-<<<<<<< HEAD
     "plugins": [
       {
         "name": "next"
       }
     ],
-=======
->>>>>>> origin/automation/changelog
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -43,7 +29,6 @@
       ]
     }
   },
-<<<<<<< HEAD
   "include": [
     "next-env.d.ts",
     "**/*.ts",

@@ -81,13 +81,17 @@ module.exports = [
   {
     files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
+        project: false,
+        tsconfigRootDir: __dirname,
       },
+      globals: globals.browser,
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -95,7 +99,8 @@ module.exports = [
       'react-hooks': reactHooks,
     },
     rules: {
-      'no-unused-vars': 'warn',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn'
     },
