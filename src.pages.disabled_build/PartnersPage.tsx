@@ -1,0 +1,30 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { 
+  Handshake,
+  Award,
+  Users,
+  Globe,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Shield,
+  Cloud,
+  Brain,
+  Code,
+  Database,
+  Zap,
+  Target,
+  Building2,
+  Heart,
+  Coffee,
+  BookOpen,
+  Lightbulb,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Calendar,
+  Briefcase
+} from "lucide-react";

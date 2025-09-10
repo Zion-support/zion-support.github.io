@@ -7,10 +7,3 @@ export default function NotFound(): JSX.Element {
       <SEO title="NotFound - Zion Tech Group" description="Professional NotFound services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">NotFound</h1>
-        <p className="text-gray-300 text-lg">
-          Professional NotFound services to help your business grow.
-        </p>
-      </div>
-    </div>
-  );
-}

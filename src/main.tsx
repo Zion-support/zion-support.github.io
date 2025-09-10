@@ -1,14 +1,8 @@
-import React from 'react'
 import { createRoot } from 'react-dom/client'
-import AppMinimal from './AppMinimal'
+import App from './AppMinimal'
 
 const container = document.getElementById('root')
 if (container) {
   const root = createRoot(container)
-  root.render(
-    <React.StrictMode>
-      <AppMinimal />
-    </React.StrictMode>
-  )
+  root.render(<App />)
 }
-

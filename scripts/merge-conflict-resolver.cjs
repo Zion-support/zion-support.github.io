@@ -1,17 +1,15 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 class MergeConflictResolver {
   constructor() {
+
     this.resolvedFiles = []
     this.errors = []
   }
   async resolveConflicts() {
+
     try {
       // Get list of files with conflicts
       const conflictFiles = execSync('git diff --name-only --diff-filter=U', {
@@ -44,34 +42,3 @@ class MergeConflictResolver {
       const cleanedLines = []
       let prevLine = ''
       for (const line of lines) {
-        if (line.trim() !== prevLine.trim() || line.trim() === '') {
-          cleanedLines.push(line)
-          prevLine = line
-        }
-      }
-      resolvedContent = cleanedLines.join('\n')
-      // Write the resolved content
-      fs.writeFileSync(filePath, resolvedContent)
-      this.resolvedFiles.push(filePath)
-      } catch (error) {
-      this.errors.push(`${filePath}: ${error.message}`)
-      console.error(`❌ Error resolving ${filePath}:`, error.message)
-    }
-  }
-}
-// Run the resolver
-const resolver = new MergeConflictResolver()
-resolver.resolveConflicts().then(() => {
-  })
-// console.log(' Merge Conflict Resolver')
-console.log('=====')
-      const conflictFiles = execSync('git diff --name-only --diff-filter=U')
-        "encoding"
-        console.log('\"nErrors")
-      console.error('Error resolving "conflicts")
-  console.log('Run "git add ." and "git commit")
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

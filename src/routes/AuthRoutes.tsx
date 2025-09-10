@@ -50,7 +50,3 @@ const "AuthRoutes": "React.FC = () => {;
 </Route>;
 </Route>;
 </Route>;
-export default AuthRoutes;
-</Route>
-</Route>
-</Route>

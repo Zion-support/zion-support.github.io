@@ -1,88 +1,6 @@
 import Link from 'next/link';
 
 export default function SolutionsPage() {
-<<<<<<< HEAD
-  const solutions = [
-    {
-      title: "AI Autonomous Business Operations",
-      description: "Transform your business with self-managing AI systems that operate independently and optimize every aspect of your operations.",
-      features: [
-        "24/7 autonomous operation",
-        "Real-time decision making",
-        "Predictive analytics",
-        "Cost optimization",
-        "Scalable architecture"
-      ],
-      icon: "🤖",
-      href: "/solutions/autonomous-business-operations"
-    },
-    {
-      title: "Quantum Computing Solutions",
-      description: "Leverage the power of quantum computing to solve complex problems that are impossible for classical computers.",
-      features: [
-        "Quantum algorithm optimization",
-        "Financial modeling",
-        "Drug discovery",
-        "Climate prediction",
-        "Cryptography"
-      ],
-      icon: "⚛️",
-      href: "/solutions/quantum-computing"
-    },
-    {
-      title: "AI-Powered Enterprise Security",
-      description: "Next-generation security solutions that use AI to detect and prevent threats before they impact your business.",
-      features: [
-        "Threat detection",
-        "Behavioral analysis",
-        "Automated response",
-        "Compliance monitoring",
-        "Real-time protection"
-      ],
-      icon: "🔒",
-      href: "/solutions/enterprise-security"
-    },
-    {
-      title: "AI Content Creation Platform",
-      description: "Revolutionize your content strategy with AI-powered tools that generate high-quality, engaging content at scale.",
-      features: [
-        "Multi-format content",
-        "Brand voice consistency",
-        "SEO optimization",
-        "Performance analytics",
-        "Workflow automation"
-      ],
-      icon: "✍️",
-      href: "/solutions/content-creation"
-    },
-    {
-      title: "AI Business Intelligence Suite",
-      description: "Transform raw data into actionable insights with our comprehensive AI-powered business intelligence platform.",
-      features: [
-        "Advanced analytics",
-        "Predictive modeling",
-        "Interactive dashboards",
-        "Data visualization",
-        "Real-time reporting"
-      ],
-      icon: "📊",
-      href: "/solutions/business-intelligence"
-    },
-    {
-      title: "AI Research & Development Platform",
-      description: "Accelerate innovation with our AI-powered research platform that streamlines discovery and development processes.",
-      features: [
-        "Literature analysis",
-        "Hypothesis generation",
-        "Experimental design",
-        "Data interpretation",
-        "Collaboration tools"
-      ],
-      icon: "🔬",
-      href: "/solutions/research-development"
-    }
-  ];
-
   const caseStudies = [
     {
       title: "Global Manufacturing Optimization",
@@ -119,7 +37,6 @@ export default function SolutionsPage() {
         "30% reduction in treatment time",
         "40% increase in patient outcomes"
       ]
-=======
   const caseStudies = [
     {
       title: "AI-Powered Manufacturing Optimization",
@@ -244,27 +161,11 @@ export default function SolutionsPage() {
     {
       name: "Autonomous Business Intelligence",
       description: "Intelligent systems that analyze data and provide actionable business insights.",
-      features: ["Real-time Analytics", "Predictive Modeling", "Data Visualization", "Automated Reporting"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-    }
+      features: ["Real-time Analytics", "Predictive Modeling", "Data Visualization", "Automated Reporting"]    }
   ];
 
   return (
     <div className="min-h-screen py-20">
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="text-center mb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            AI Solutions That Transform
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how our cutting-edge AI solutions are revolutionizing industries and driving unprecedented business growth. 
-            From autonomous operations to quantum computing, we deliver results that exceed expectations.
-          </p>
-        </div>
-      </section>
-
       {/* Solutions Grid */}
       <section className="mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,7 +258,6 @@ export default function SolutionsPage() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">
             Our Implementation Process
           </h2>
-=======
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
@@ -488,89 +388,28 @@ export default function SolutionsPage() {
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
-              <p className="text-gray-300">We analyze your business needs and identify AI opportunities for maximum impact.</p>
-            </div>
-=======
-              <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
-              <p className="text-gray-300 text-sm">
-                We analyze your business needs and identify the best AI solutions for your specific challenges.
-              </p>
-            </div>
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">Strategy</h3>
-              <p className="text-gray-300">We develop a comprehensive AI strategy tailored to your business objectives.</p>
-            </div>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
               <p className="text-gray-300 text-sm">
                 Our team designs a customized solution architecture tailored to your business requirements.
               </p>
             </div>
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">Implementation</h3>
-              <p className="text-gray-300">Our expert team deploys and configures your AI solutions with precision.</p>
-            </div>
-=======
-              <h3 className="text-lg font-semibold text-white mb-2">Deploy</h3>
-              <p className="text-gray-300 text-sm">
-                We implement the solution with minimal disruption to your existing operations.
-              </p>
-            </div>
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">Optimization</h3>
-              <p className="text-gray-300">We continuously monitor and optimize your AI systems for peak performance.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the AI revolution and discover how our solutions can drive innovation, efficiency, and growth for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Start Your Transformation
-            </Link>
-            <Link href="/services" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-=======
               <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
               <p className="text-gray-300 text-sm">
                 Continuous monitoring and optimization ensure maximum performance and ROI.
@@ -598,8 +437,6 @@ export default function SolutionsPage() {
             </Link>
           </div>
         </div>
-      </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-    </div>
+      </div>    </div>
   );
 }

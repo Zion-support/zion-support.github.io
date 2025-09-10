@@ -1,71 +1,41 @@
-import React, {useState, useCallback} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
-import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
-import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
+import React, { useState, useCallback } from "react";"""
+import { motion, AnimatePresence } from "framer-motion";"""
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from "lucide-react";
+import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";
 ;
-export const AICodeGenerator = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;}
-    );'
-    const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);'
-    const [customCode, setCustomCode] = useState('');
+export const AICodeGenerator = () => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });"
+    const [activeTab, setActiveTab] = useState("generate");
+    const [showAdvanced, setShowAdvanced] = useState(false);"
+    const [customCode, setCustomCode] = useState("");
     const [copied, setCopied] = useState(false);
-    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
+    const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();
     const [form, setForm] = useState({}
-'
-''
-'''
-        prompt: '','''
-        language: 'typescript','''
-        framework: 'react','''
-        style: 'functional','''
-        target: 'web','''
-        quality: 'development',
+"
+""
+"""
+        prompt: "","""
+        language: "typescript","""
+        framework: "react","""
+        style: "functional","""
+        target: "web","""
+        quality: "development",
         includeTests: false,
         includeDocs: false,
         includeErrorHandling: false,
         includeLogging: false,
-import React, {useState, useCallback} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
-import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
-;
-export const AICodeGenerator = (props: any) => {;
-    const { trackEvent } = useAnalytics({enableTracking: true,;
-        enableUserBehaviorTracking: true;});';
-    const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);';
-    const [customCode, setCustomCode] = useState('');
-    const [copied, setCopied] = useState(false);
-    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
-    const [form, setForm] = useState({}
-';
-'';
-''';
-        prompt: '',''';
-        language: 'typescript',''';
-        framework: 'react',''';
-        style: 'functional',''';
-        target: 'web',''';
-        quality: 'development',;
-        includeTests: false,;
-        includeDocs: false,;
-        includeErrorHandling: false,;
-        includeLogging: false,;
         includeMetrics: false;
-    }
-    );
+    });
     // Handle form submission;
     const handleSubmit = useCallback(async (e) => {}
         e.preventDefault();
-        if(!form.prompt.trim());
-            return;
-        await generateCode(form.prompt, form);';
         if(!form.prompt.trim())
+
             return;
-        await generateCode(form.prompt, form);'
-        trackEvent('ai_code_generator',form_submitted', form.language, null, {}
+        await generateCode(form.prompt, form);"
+        trackEvent("ai_code_generator",form_submitted", form.language, null, {}
             framework: form.framework,
             style: form.style,
             target: form.target,
@@ -73,46 +43,47 @@ export const AICodeGenerator = (props: any) => {;
         })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis;
     const handleAnalyzeCustomCode = useCallback(async () => {}
-        if(!customCode.trim());
-            return;
-        await analyzeCode(customCode, form.language);';
         if(!customCode.trim())
+
             return;
-        await analyzeCode(customCode, form.language);'
-        trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
+        await analyzeCode(customCode, form.language);"
+        trackEvent("ai_code_generator",custom_code_analyzed", form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization;
     const handleOptimizeCode = useCallback(async (focus) => {}
         if(!generatedCode && !customCode)
+
             return;
         const codeToOptimize = generatedCode || customCode;
         const optimizedCode = await optimizeCode(codeToOptimize, focus);
         if (generatedCode) {}
-'
-            // Update generated code''
-            // Note: In a real implementation, you'd want to update the state properly;
-        }'
-        trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
+"
+            // Update generated code""
+            // Note: In a real implementation, you"d want to update the state properly;
+        }"
+        trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation;
     const handleGenerateTests = useCallback(async () => {}
         if(!generatedCode && !customCode)
-            return;'
-        const codeToTest = generatedCode || customCode;''
-        const testCode = await generateTests(codeToTest, form.language);'''
-        // In a real implementation, you'd want to display the test code''''
-        // '''
-        trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
+
+            return;"
+        const codeToTest = generatedCode || customCode;""
+        const testCode = await generateTests(codeToTest, form.language);"""
+        // In a real implementation, you"d want to display the test code""""
+        // console.log("Generated tests:", testCode);"""
+        trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
     const handleGenerateDocs = useCallback(async () => {}
         if(!generatedCode && !customCode)
-            return;'
-        const codeToDoc = generatedCode || customCode;''
-        const docs = await generateDocs(codeToDoc, form.language);'''
-        // In a real implementation, you'd want to display the documentation''''
-        // '''
-        trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
+
+            return;"
+        const codeToDoc = generatedCode || customCode;""
+        const docs = await generateDocs(codeToDoc, form.language);"""
+        // In a real implementation, you"d want to display the documentation""""
+        // console.log("Generated docs:", docs);"""
+        trackEvent("ai_code_generator",docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
-try {}
+        try {}
 
             await navigator.clipboard.writeText(code)"
             setCopied(true)""
@@ -124,13 +95,15 @@ try {}
             // comment
 
     }, [trackEvent])
-}
+
+
     // comment
 const handleApplySuggestion = useCallback((suggestion) => {}""
         applySuggestion(suggestion)"""
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null, {}"
             suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])
-}
+
+
     // comment
 const handleClearHistory = useCallback(() => {}""
         clearHistory()"";"""
@@ -168,11 +141,11 @@ const handleClearHistory = useCallback(() => {}""
         <nav className="flex space-x-8 px-6">"""
           {[""",
             { id: "generate", label: "Generate", icon: Sparkles }, """
-            {id: "analyze", label: "Analyze", icon: Eye},"""
-            {id: "optimize", label: "Optimize", icon: Zap}, """
-            {id: "tests", label: "Tests", icon: TestTube},"""
-            {id: "docs", label: "Docs", icon: FileText}", "
-].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
+            { id: "analyze", label: "Analyze", icon: Eye },"""
+            { id: "optimize", label: "Optimize", icon: Zap }, """
+            { id: "tests", label: "Tests", icon: TestTube },"""
+            { id: "docs", label: "Docs", icon: FileText }", "
+].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-purple-500 text-purple-600 dark: text-purple-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className="w-4 h-4"/" >"              {label}
@@ -187,9 +160,9 @@ const handleClearHistory = useCallback(() => {}""
         <AnimatePresence mode="wait">"""""""
           {activeTab === "generate" && (<motion.div key="generate" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <form onSubmit="{handleSubmit}" className="space-y-4">"""""
@@ -198,7 +171,7 @@ const handleClearHistory = useCallback(() => {}""
                     Describe what you want to build,
                   </label>",
                   <textarea value="{form.prompt}" onChange = {}"""
-  (e) =" > setForm(prev => ({...prev, prompt: e.target.value """"",
+  (e) =" > setForm(prev => ({ ...prev, prompt: e.target.value """"",
 """"}))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>"
                 </div>""
 """"",
@@ -209,7 +182,7 @@ const handleClearHistory = useCallback(() => {}""
                       Language,
                     </label>",
                     <select value="{form.language}" onChange = {}"""
-  (e) =" > setForm(prev => ({...prev, language: e.target.value """"",
+  (e) =" > setForm(prev => ({ ...prev, language: e.target.value """"",
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""""
                       <option value="typescript">TypeScript</option>"""""
                       <option value="javascript">JavaScript</option>"""""
@@ -227,7 +200,7 @@ const handleClearHistory = useCallback(() => {}""
                       Framework""
                     </label>""",
                     <select value="{form.framework" || ""} onChange = {}"""
-  (e) =" > setForm(prev => ({...prev, framework: e.target.value || null """"",
+  (e) =" > setForm(prev => ({ ...prev, framework: e.target.value || null """"",
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""""
                       <option value="">None</option>"""""
                       <option value="react">React</option>"""""
@@ -246,7 +219,7 @@ const handleClearHistory = useCallback(() => {}""
                       Style,
                     </label>",
                     <select value="{form.style}" onChange = {}"""
-  (e) =" > setForm(prev => ({...prev, style: e.target.value """"",
+  (e) =" > setForm(prev => ({ ...prev, style: e.target.value """"",
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""""
                       <option value="functional">Functional</option>"""""
                       <option value="oop">OOP</option>"""""
@@ -260,7 +233,7 @@ const handleClearHistory = useCallback(() => {}""
                       Quality,
                     </label>",
                     <select value="{form.quality}" onChange = {}"""
-  (e) =" > setForm(prev => ({...prev, quality: e.target.value """"",
+  (e) =" > setForm(prev => ({ ...prev, quality: e.target.value """"",
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""""
                       <option value="prototype">Prototype</option>"""""
                       <option value="development">Development</option>"""""
@@ -277,19 +250,19 @@ const handleClearHistory = useCallback(() => {}""
                 {/* comment */}
 
                 {showAdvanced && (<motion.div initial = {}"
-  {opacity: 0, height: 0}} animate = {}""
-  {opacity: 1, """
+  { opacity: 0, height: 0}} animate = {}""
+  { opacity: 1, """
   height: "auto"}} exit = {}""
-  {opacity: 0, height: 0 """"">
+  { opacity: 0, height: 0 """"">
 """"}} className="grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">"""
                     {[""",
                     { key: "includeTests", label: "Tests", icon: TestTube }, """
-                    {key: "includeDocs", label: "Docs", icon: FileText},"""
-                    {key: "includeErrorHandling", label: "Error Handling", icon: AlertCircle}, """
-                    {key: "includeLogging", label: "Logging", icon: Info},""""
-                    {key: "includeMetrics", label: "Metrics", icon: Gauge}""""].map(({key, label, icon: Icon}) => (<label key="{key}" className="flex items-center gap-2 cursor-pointer">""""
+                    { key: "includeDocs", label: "Docs", icon: FileText },"""
+                    { key: "includeErrorHandling", label: "Error Handling", icon: AlertCircle }, """
+                    { key: "includeLogging", label: "Logging", icon: Info },""""
+                    { key: "includeMetrics", label: "Metrics", icon: Gauge }""""].map(({ key, label, icon: Icon }) => (<label key="{key}" className="flex items-center gap-2 cursor-pointer">""""
                         <input type="checkbox" checked="{form[key]}" onChange = {}"""
-  (e) =" > setForm(prev => ({...prev, [key]: e.target.checked """""
+  (e) =" > setForm(prev => ({ ...prev, [key]: e.target.checked """""
 """"}))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />""""
                         <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/" >""""",
                         <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>"
@@ -303,20 +276,20 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>""""
                       <Sparkles className="w-5 h-5"/" >"
                       Generate Code,
-</>)}
+</>) }
 
                 </button>
               </form>
               {/* comment */}
 
               {generatedCode && (<motion.div initial = {}"
-  {opacity: 0, y: 20}} animate = {}""
-  {opacity: 1, y: 0 """"">
+  { opacity: 0, y: 20}} animate = {}""
+  { opacity: 1, y: 0 """"">
 """"}} className="space-y-4">""""
                   <div className="flex items-center justify-between">""""
                     <h3 className="text-lg font-semibold text-gray-900 dark: text-white">""
                       Generated Code"""""
-                    """""
+                    </h3>"""""
                     <div className="flex items-center gap-2">"""",
                       <button onClick="{()" =" > copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">""""",
                         {copied ? <CheckCircle className="w-4 h-4"/" > : <Copy className="w-4 h-4"/" >}"""
@@ -339,9 +312,9 @@ const handleClearHistory = useCallback(() => {}""
 """""""
           {activeTab === "analyze" && (<motion.div key="analyze" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               <div>""""
                 <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">""
@@ -357,81 +330,24 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>""""
                     <Eye className="w-5 h-5"/" >"
                     Analyze Code,
-</>)}
+</>) }
 
               </button>
               {/* comment */}
-;
-              {codeAnalysis && (<motion.div initial = {}";
-  {"opacity": "0", "y": "20"}} animate = {}"";
-  {"opacity": "1", "y": "0 """"">;
-"""""}} className="space-y-6">""""";
-                  {/* comment */}"""";
-                  <div className="grid grid-cols-2 "md": "grid-cols-5 gap-4">""";
-                    {["""",;
-                    { "key": "complexity", "label": "Complexity", "icon": "Code", "color": "red" },""";
-                    {"key": "maintainability", "label": "Maintainability", "icon": "Wrench", "color": "blue"},""";
-                    {"key": "security", "label": "Security", "icon": "Shield", "color": "green"},""";
-                    {"key": "performance", "label": "Performance", "icon": "Gauge", "color": "yellow"},""";
-                    {"key": "accessibility", "label": "Accessibility", "icon": "Eye", "color": "purple"}";
-                ].map(({key, label, "icon": "Icon", color}) => {}"";
-                    const value = codeAnalysis[key]""";
-                    if (typeof value === "number") {}"";
-"""""";
-                        return (";
-    <div key="{key}" className="text-center p-4 bg-gray-50 "dark": "bg-gray-700 rounded-lg">""""""""",;
-                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}/" >""""";
-                            <div className="text-2xl font-bold text-gray-900 "dark": "text-white">""",;
-                              {value}/10""""";
-                            </div>"""";
-                            <div className="text-sm text-gray-600 "dark": "text-gray-400">{label"}</div>;
-                          </div>)}
-;
-                    return null})}";
-                  </div>"";
-""""";
-                  {/* comment */}""""";
-                  <div className="bg-gray-50 "dark": "bg-gray-700 rounded-lg p-4">"""";
-                    <h4 className="font-medium text-gray-900 "dark":text-white mb-3">Code Metrics</h4>"""";
-                    <div className="grid grid-cols-2 "md":grid-cols-5 gap-4 text-sm">""""",;
-                      {Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"""";
-                          <div className="text-lg font-semibold text-gray-900 "dark": "text-white">{value"}</div>"""";
-                          <div className="text-gray-600 "dark": "text-gray-400 capitalize">"""",;
-                            {key.replace(/([A-Z])/g, $1").trim()}";
-                          </div>;
-                        </div>))}
-;
-                    </div>";
-                  </div>"";
-""""";
-                  {/* comment */}""""";
-                  {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 "dark": "bg-gray-700 rounded-lg p-4">"""""";
-                      <h4 className="font-medium text-gray-900 "dark":text-white mb-3">Issues Found</h4>"""""""";
-                      <div className="space-y-2">""""""""",;
-                        {codeAnalysis.issues.map((issue, index) => (<div key="{index}" className="{"flex" items-start gap-3 p-3 rounded-lg ${issue.severity === "error" ? "bg-red-50 "dark": "bg-red-900/30" :""""""";
-                            issue.severity === "warning" ? "bg-yellow-50 "dark":bg-yellow-900/30" :""""""""">;
-                                "bg-blue-50 "dark":bg-blue-900/30""}"}" >""""""";
-                            {issue.severity === "error" ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/" >) : "issue.severity === "warning" ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/" >) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/" >)"}""""";
-                            <div className="flex-1">"""";
-                              <div className="text-sm font-medium text-gray-900 "dark": "text-white">""",;
-                                {issue.message}""""";
-                              </div>"""";
-                              {issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
-;
 
               {codeAnalysis && (<motion.div initial = {}"
-  {opacity: 0, y: 20}} animate = {}""
-  {opacity: 1, y: 0 """"">
+  { opacity: 0, y: 20}} animate = {}""
+  { opacity: 1, y: 0 """"">
 """"}} className="space-y-6">"""""
                   {/* comment */}""""
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"""
                     {[""",
                     { key: "complexity", label: "Complexity", icon: Code, color: "red" },"""
-                    {key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"""
-                    {key: "security", label: "Security", icon: Shield, color: "green"},"""
-                    {key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"""
-                    {key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}"
-                ].map(({key, label, icon: Icon, color}) => {}""
+                    { key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue" },"""
+                    { key: "security", label: "Security", icon: Shield, color: "green" },"""
+                    { key: "performance", label: "Performance", icon: Gauge, color: "yellow" },"""
+                    { key: "accessibility", label: "Accessibility", icon: Eye, color: "purple" }"
+                ].map(({ key, label, icon: Icon, color }) => {}""
                     const value = codeAnalysis[key]"""
                     if (typeof value === "number") {}""
 """"""
@@ -456,66 +372,6 @@ const handleClearHistory = useCallback(() => {}""
                           <div className="text-gray-600 dark: text-gray-400 capitalize">""",
                             {key.replace(/([A-Z])/g, $1").trim()}"
                           </div>
-;
-              {codeAnalysis && (<motion.div initial = {}";
-  {opacity: 0, y: 20}} animate = {}"";
-  {opacity: 1, y: 0 """"">;
-""""}} className="space-y-6">""""";
-                  {/* comment */}"""";
-                  <div className="grid grid-cols-2 md: grid-cols-5 gap-4">""";
-                    {[""",;
-                    { key: "complexity", label: "Complexity", icon: Code, color: "red" },""";
-                    {key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},""";
-                    {key: "security", label: "Security", icon: Shield, color: "green"},""";
-                    {key: "performance", label: "Performance", icon: Gauge, color: "yellow"},""";
-                    {key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}";
-                ].map(({key, label, icon: Icon, color}) => {}"";
-                    const value = codeAnalysis[key]""";
-                    if (typeof value === "number") {}"";
-"""""";
-                        return (";
-    <div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">"""""""",;
-                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}/" >""""";
-                            <div className="text-2xl font-bold text-gray-900 dark: text-white">"",;
-                              {value}/10""""";
-                            </div>"""";
-                            <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>;
-                          </div>)}
-;
-                    return null})}";
-                  </div>"";
-""""";
-                  {/* comment */}""""";
-                  <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"""";
-                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>"""";
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">"""",;
-                      {Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"""";
-                          <div className="text-lg font-semibold text-gray-900 dark: text-white">{value}</div>"""";
-                          <div className="text-gray-600 dark: text-gray-400 capitalize">""",;
-                            {key.replace(/([A-Z])/g, $1").trim()}";
-                          </div>;
-                        </div>))}
-;
-                    </div>";
-                  </div>"";
-""""";
-                  {/* comment */}""""";
-                  {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"""""";
-                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>"""""""";
-                      <div className="space-y-2">"""""""",;
-                        {codeAnalysis.issues.map((issue, index) => (<div key="{index}" className="{"flex" items-start gap-3 p-3 rounded-lg ${issue.severity === "error" ? "bg-red-50 dark: bg-red-900/30" :""""""";
-                            issue.severity === "warning" ? "bg-yellow-50 dark:bg-yellow-900/30" :""""""""">;
-                                "bg-blue-50 dark:bg-blue-900/30"}"}" >""""""";
-                            {issue.severity === "error" ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/" >) : issue.severity === "warning" ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/" >) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/" >)}""""";
-                            <div className="flex-1">"""";
-                              <div className="text-sm font-medium text-gray-900 dark: text-white">"",;
-                                {issue.message}""""";
-                              </div>"""";
-                              {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-;
-                                </div>) }
-;
-                            </div>;
                         </div>))}
 
                     </div>"
@@ -547,15 +403,15 @@ const handleClearHistory = useCallback(() => {}""
 """""""
           {activeTab === "optimize" && (<motion.div key="optimize" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Code Optimization"""""
-                """"
+                </h3>""""
                 <p className="text-gray-600 dark:text-gray-400">
                   Select an optimization focus area to improve your code"
                 </p>""
@@ -564,10 +420,10 @@ const handleClearHistory = useCallback(() => {}""
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">"""
                 {[""",
                 { key: "performance", label: "Performance", icon: Gauge, color: "blue" },"""
-                {key: "security", label: "Security", icon: Shield, color: "green"},"""
-                {key: "maintainability", label: "Maintainability", icon: Wrench, color: "purple"},""""""
-                {key: "accessibility", label: "Accessibility", icon: Eye, color: "indigo"}"""","""
-].map(({key, label, icon: Icon, color}) => (<button key="{key}" onClick="{()" =" > handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{"p-6" text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode""""""
+                { key: "security", label: "Security", icon: Shield, color: "green" },"""
+                { key: "maintainability", label: "Maintainability", icon: Wrench, color: "purple" },""""""
+                { key: "accessibility", label: "Accessibility", icon: Eye, color: "indigo" }"""","""
+].map(({ key, label, icon: Icon, color }) => (<button key="{key}" onClick="{()" =" > handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{"p-6" text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode""""""
                     ? "border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed"""""""",
                     : "border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer"}"}>"""""""""
                     <Icon className="{"w-12" h-12 mx-auto mb-3 text-${color}-500"}/" >"""""
@@ -578,15 +434,15 @@ const handleClearHistory = useCallback(() => {}""
 """""""
           {activeTab === "tests" && (<motion.div key="tests" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Generate Tests"""""
-                """"
+                </h3>""""
                 <p className="text-gray-600 dark:text-gray-400">
                   Automatically generate comprehensive test suites for your code"
                 </p>""
@@ -600,15 +456,15 @@ const handleClearHistory = useCallback(() => {}""
 """""""
           {activeTab === "docs" && (<motion.div key="docs" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Generate Documentation"""""
-                """"
+                </h3>""""
                 <p className="text-gray-600 dark:text-gray-400">
                   Create comprehensive documentation for your code"
                 </p>""
@@ -624,16 +480,16 @@ const handleClearHistory = useCallback(() => {}""
         {/* comment */}
 
         {suggestions.length > 0 && (<motion.div initial = {}"
-  {opacity: 0, y: 20}} animate = {}""
-  {opacity: 1, y: 0 """"">
+  { opacity: 0, y: 20}} animate = {}""
+  { opacity: 1, y: 0 """"">
 """"}} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">""""
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">"",
               AI Suggestions ({suggestions.length})"""""
-            """"
+            </h3>""""
             <div className="grid gap-4">"
               {suggestions.map((suggestion) => (<motion.div key="{suggestion.id}" initial = {}"
-  {opacity: 0, x: 20}} animate = {}""
-  {opacity: 1, x: 0 """"">
+  { opacity: 0, x: 20}} animate = {}""
+  { opacity: 1, x: 0 """"">
 """"}} className="p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">""""""
                   <div className="flex items-start justify-between mb-3">""""""""
                     <div className="flex items-center gap-2">""""""""
@@ -681,13 +537,13 @@ const handleClearHistory = useCallback(() => {}""
         {/* comment */}
 
         {history.length > 0 && (<motion.div initial = {}"
-  {opacity: 0, y: 20}} animate = {}""
-  {opacity: 1, y: 0 """"">
+  { opacity: 0, y: 20}} animate = {}""
+  { opacity: 1, y: 0 """"">
 """"}} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">""""
             <div className="flex items-center justify-between mb-4">""""
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">"",
                 Generation History ({history.length})"""""
-              """""
+              </h3>"""""
               <button onClick="{handleClearHistory}" className="px-3 py-1 bg-red-100 hover: bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">""""
                 <Trash2 className="w-4 h-4"/" >"
                 Clear History"
@@ -729,83 +585,7 @@ const handleClearHistory = useCallback(() => {}""
 """""""`""
 "
 
-  } catch (error) {console.error(error);}
+  } catch (error) {
+    console.error(error);
+  }
 export default Component
-
-</Trash2>
-</motion>
-</motion>
-</motion>
-</FileText>
-</FileText>
-</motion>
-</TestTube>
-</TestTube>
-</motion>
-</Icon>
-</Zap>
-</motion>
-</Info>
-</AlertCircle>
-</AlertCircle>
-</Icon>
-</motion>
-</Eye>
-</Loader2>
-</textarea>
-</motion>
-</Download>
-</Copy>
-</CheckCircle>
-</motion>
-</Sparkles>
-</Loader2>
-</Icon>
-</motion>
-</Settings>
-</textarea>
-</motion>
-</Icon>
-</Download>
-</Sparkles>
-export default Component;
-</Trash2>;
-</motion>;
-</motion>;
-</motion>;
-</FileText>;
-</FileText>;
-</motion>;
-</TestTube>;
-</TestTube>;
-</motion>;
-</Icon>;
-</Zap>;
-</motion>;
-</Info>;
-</AlertCircle>;
-</AlertCircle>;
-</Icon>;
-</motion>;
-</Eye>;
-</Loader2>;
-</textarea>;
-</motion>;
-</Download>;
-</Copy>;
-</CheckCircle>;
-</motion>;
-</Sparkles>;
-</Loader2>;
-</Icon>;
-</motion>;
-</Settings>;
-</textarea>;
-</motion>;
-</Icon>;
-</Download>;
-</Sparkles>;
-</Code>;
-</div>;
-</Code>
-</div>

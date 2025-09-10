@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-
 
     './src/**/*.{js,ts,jsx,tsx,mdx}',
 
@@ -14,9 +6,7 @@ export default {
     extend: {
       colors: {
 background: 'var(--background)',
-        foreground: 'var(--foreground)',
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-        primary: {
+        foreground: 'var(--foreground)',        primary: {
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -83,4 +73,3 @@ background: 'var(--background)',
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
 };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

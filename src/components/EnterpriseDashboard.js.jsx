@@ -1,206 +1,182 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
-import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
+import React, { useState, useEffect, useCallback, useMemo } from "react";"""
+import { motion, AnimatePresence } from "framer-motion";"""
+import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from "lucide-react";
 ;
-export const EnterpriseDashboard = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;}
-    );'
-    const [activeTab, setActiveTab] = useState('overview');
+export const EnterpriseDashboard = () => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });"
+    const [activeTab, setActiveTab] = useState("overview");
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false);'
-    const [dateRange, setDateRange] = useState('24h');'
-    const [searchQuery, setSearchQuery] = useState('');'
-    const [filterStatus, setFilterStatus] = useState('all');
+    const [isRefreshing, setIsRefreshing] = useState(false);"
+    const [dateRange, setDateRange] = useState("24h");"
+    const [searchQuery, setSearchQuery] = useState("");"
+    const [filterStatus, setFilterStatus] = useState("all");
     // Mock data - in production, this would come from real-time APIs;
     const [systemMetrics] = useState([]
         {}
-'
-''
-'''
-            id: 'cpu','''
-            name: 'CPU Usage',''
-            value: 45,'''
-            unit: '%','''
-            status: 'healthy','''
-            trend: 'stable',
+"
+""
+"""
+            id: "cpu","""
+            name: "CPU Usage",""
+            value: 45,"""
+            unit: "%","""
+            status: "healthy","""
+            trend: "stable",
             change: 2,
-            threshold: {warning: 70, critical: 90},
+            threshold: { warning: 70, critical: 90 },
             lastUpdated: new Date () },
         {}
-'
-''
-'''
-            id: 'memory','''
-            name: 'Memory Usage',''
-            value: 78,'''
-            unit: '%','''
-            status: 'warning','''
-            trend: 'up',
+"
+""
+"""
+            id: "memory","""
+            name: "Memory Usage",""
+            value: 78,"""
+            unit: "%","""
+            status: "warning","""
+            trend: "up",
             change: 8,
-            threshold: {warning: 75, critical: 90},
+            threshold: { warning: 75, critical: 90 },
             lastUpdated: new Date () },
         {}
-'
-''
-'''
-            id: 'disk','''
-            name: 'Disk Usage',''
-            value: 65,'''
-            unit: '%','''
-            status: 'healthy','''
-            trend: 'stable',
+"
+""
+"""
+            id: "disk","""
+            name: "Disk Usage",""
+            value: 65,"""
+            unit: "%","""
+            status: "healthy","""
+            trend: "stable",
             change: 1,
-            threshold: {warning: 80, critical: 95},
+            threshold: { warning: 80, critical: 95 },
             lastUpdated: new Date () },
         {}
-'
-''
-'''
-            id: 'network','''
-            name: 'Network Load',''
-            value: 32,'''
-            unit: 'Mbps','''
-            status: 'healthy','''
-            trend: 'down',
+"
+""
+"""
+            id: "network","""
+            name: "Network Load",""
+            value: 32,"""
+            unit: "Mbps","""
+            status: "healthy","""
+            trend: "down",
             change: -5,
-            threshold: {warning: 100, critical: 150},
+            threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date () }
     ]) ;
     const [serviceStatuses] = useState ([]
         {}
-'
-''
-'''
-            id: 'web-server','''
-            name: 'Web Server','''
-            status: 'online',
+"
+""
+"""
+            id: "web-server","""
+            name: "Web Server","""
+            status: "online",
             uptime: 99.98,
             responseTime: 45,
             errorRate: 0.02;
         },
         {}
-'
-''
-'''
-            id: 'database','''
-            name: 'Database','''
-            status: 'online',
+"
+""
+"""
+            id: "database","""
+            name: "Database","""
+            status: "online",
             uptime: 99.95,
             responseTime: 12,
             errorRate: 0.01;
         },
         {}
-'
-''
-'''
-            id: 'api-gateway','''
-            name: 'API Gateway','''
-            status: 'degraded',
+"
+""
+"""
+            id: "api-gateway","""
+            name: "API Gateway","""
+            status: "degraded",
             uptime: 99.87,
             responseTime: 89,
             errorRate: 0.15;
         },
         {}
-'
-''
-'''
-            id: 'cache-server','''
-            name: 'Cache Server','''
-            status: 'online',
+"
+""
+"""
+            id: "cache-server","""
+            name: "Cache Server","""
+            status: "online",
             uptime: 99.99,
             responseTime: 2,
             errorRate: 0.001;
         }
     ]) ;
-import React, {useState, useEffect, useCallback, useMemo} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
-;
-export const EnterpriseDashboard = (props: any) => {;
-    const { trackEvent } = useAnalytics({enableTracking: true,;
-        enableUserBehaviorTracking: true;});';
-    const [activeTab, setActiveTab] = useState('overview');
-    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false);';
-    const [dateRange, setDateRange] = useState('24h');';
-    const [searchQuery, setSearchQuery] = useState('');';
-    const [filterStatus, setFilterStatus] = useState('all');
-    // Mock data - in production, this would come from real-time APIs;
-    const [systemMetrics] = useState([];
     const [securityAlerts] = useState ([]
         {}
-'
-''
-'''
-            id: 'alert-1','''
-            severity: 'medium','''
-            type: 'anomaly','''
-            title: 'Unusual Login Pattern Detected','''
-            description: 'Multiple login attempts from different locations within short time frame','''
-            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''
-            status: 'investigating','''
-            affected['user-123',user-456'],;'''
-            source: 'Security Monitoring System'
+"
+""
+"""
+            id: "alert-1","""
+            severity: "medium","""
+            type: "anomaly","""
+            title: "Unusual Login Pattern Detected","""
+            description: "Multiple login attempts from different locations within short time frame","""
+            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago""""
+            status: "investigating","""
+            affected["user-123",user-456"],;"""
+            source: "Security Monitoring System"
         },
         {}
-'
-''
-'''
-            id: 'alert-2','''
-            severity: 'low','''
-            type: 'access_violation','''
-            title: 'Failed Authentication Attempt','''
-            description: 'User attempted to access restricted resource without proper permissions','''
-            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''
-            status: 'resolved','''
-            affected['user-789'],;'''
-            source: 'Access Control System'
+"
+""
+"""
+            id: "alert-2","""
+            severity: "low","""
+            type: "access_violation","""
+            title: "Failed Authentication Attempt","""
+            description: "User attempted to access restricted resource without proper permissions","""
+            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago""""
+            status: "resolved","""
+            affected["user-789"],;"""
+            source: "Access Control System"
         }
     ]) ;
     const [userActivities] = useState ([]
         {}
-            "id": 'activity-2',''';
-            "userId": 'user-456',''';
-            "userName": 'Jane Smith',''';
-            "action": 'data_export',''';
-            "resource": 'reports','';
-            "timestamp": "new Date(Date.now() - 1000 * 60 * 5)",''';
-            "ipAddress": '192.168.1.101',''';
-            "userAgent": 'Firefox/89.0.2',''';
-            "status": 'success';
-'
-''
-'''
-            id: 'activity-1','''
-            userId: 'user-123','''
-            userName: 'John Doe','''
-            action: 'login','''
-            resource: 'dashboard',''
-            timestamp: new Date(Date.now() - 1000 * 60 * 2),'''
-            ipAddress: '192.168.1.100','''
-            userAgent: 'Chrome/91.0.4472.124','''
-            status: 'success'
+"
+""
+"""
+            id: "activity-1","""
+            userId: "user-123","""
+            userName: "John Doe","""
+            action: "login","""
+            resource: "dashboard",""
+            timestamp: new Date(Date.now() - 1000 * 60 * 2),"""
+            ipAddress: "192.168.1.100","""
+            userAgent: "Chrome/91.0.4472.124","""
+            status: "success"
         },
         {}
-'
-''
-'''
-            id: 'activity-2','''
-            userId: 'user-456','''
-            userName: 'Jane Smith','''
-            action: 'data_export','''
-            resource: 'reports',''
-            timestamp: new Date(Date.now() - 1000 * 60 * 5),'''
-            ipAddress: '192.168.1.101','''
-            userAgent: 'Firefox/89.0.2','''
-            status: 'success'
+"
+""
+"""
+            id: "activity-2","""
+            userId: "user-456","""
+            userName: "Jane Smith","""
+            action: "data_export","""
+            resource: "reports",""
+            timestamp: new Date(Date.now() - 1000 * 60 * 5),"""
+            ipAddress: "192.168.1.101","""
+            userAgent: "Firefox/89.0.2","""
+            status: "success"
         }
     ]) ;
     // Refresh data;
     const refreshData = useCallback(async () => {}
         setIsRefreshing(true) ;
-try {}
+        try {}
 
             // comment
 await new Promise(resolve => setTimeout(resolve, 1000))"
@@ -220,7 +196,7 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
         finally {}
 
             setIsRefreshing(false)}
-}, [activeTab, dateRange, trackEvent]);
+    }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -231,20 +207,17 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
 }, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
-    // Filtered data;
-    const filtered = securityAlerts;
-        if(filterStatus !== 'all') {;
-}, [activeTab, dateRange, trackEvent]);
     // Filtered data
     const filtered = securityAlerts;
-        if(filterStatus !== 'all') {
-}, [activeTab, dateRange, trackEvent])
-}
+        if(filterStatus !== "all") {}, [activeTab, dateRange, trackEvent])
+
+
     // comment
 useEffect(() => {}
 
         const interval = setInterval()
-}
+
+
         return () => clearInterval(interval)}, [refreshInterval, refreshData])"
     // comment
     const filtered = securityAlerts"""
@@ -258,7 +231,8 @@ useEffect(() => {}
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
 
         return filtered}, [securityAlerts, filterStatus, searchQuery])
-}
+
+
     const filtered = userActivities,
 if(searchQuery) {}
 
@@ -267,9 +241,10 @@ if(searchQuery) {}
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
 
         return filtered}, [userActivities, searchQuery])
-}
+
+
     // comment
-const getStatusColor = (props: any) => {}"
+const getStatusColor = (status) => {}"
         switch (status) {}""
 """
 """""
@@ -293,7 +268,7 @@ default: """"",
     }
 
     // comment
-const getSeverityColor = (props: any) => {}"
+const getSeverityColor = (severity) => {}"
         switch (severity) {}""
 """
             case "critical": """
@@ -346,12 +321,12 @@ default: """,,
         <nav className="flex space-x-8 px-6">"""
           {[""",
             { id: "overview", label: "Overview", icon: BarChart3 }, """
-            {id: "performance", label: "Performance", icon: TrendingUp},"""
-            {id: "security", label: "Security", icon: Shield}, """
-            {id: "users", label: "Users", icon: Users},"""
-            {id: "services", label: "Services", icon: Server}, """
-            {id: "analytics", label: "Analytics", icon: PieChart}","
-].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
+            { id: "performance", label: "Performance", icon: TrendingUp },"""
+            { id: "security", label: "Security", icon: Shield }, """
+            { id: "users", label: "Users", icon: Users },"""
+            { id: "services", label: "Services", icon: Server }, """
+            { id: "analytics", label: "Analytics", icon: PieChart }","
+].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className="w-4 h-4"/" >"              {label}
@@ -366,20 +341,20 @@ default: """,,
         <AnimatePresence mode="wait">"""""""
           {activeTab === "overview" && (<motion.div key="overview" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">",
                 {systemMetrics.map((metric) => (<motion.div key="{metric.id}" initial = {}"
-  {opacity: 0, scale: 0.9}} animate = {}"""
-  {opacity: 1, scale: 1 """">
+  { opacity: 0, scale: 0.9}} animate = {}"""
+  { opacity: 1, scale: 1 """">
 """"}} className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-4">""""
                       <h3 className="font-medium text-gray-900 dark:text-white">",
                         {metric.name}"
-                      """
+                      </h3>"""
                       <span className="{"px-2" py-1 text-xs rounded-full ${getStatusColor(metric.status)}"}" >"
                         {metric.status}"
                       </span>""
@@ -409,7 +384,7 @@ default: """,,
               <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">""
                   Service Status"""""
-                """""""
+                </h3>"""""""
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"""""""",
                   {serviceStatuses.map((service) => (<div key="{service.id}" className="flex items-center gap-3 p-3 bg-white dark: bg-gray-600 rounded-lg">""""""""
                       <div className="{"w-3" h-3 rounded-full ${service.status === "online" ? "bg-green-500" :""""
@@ -440,7 +415,7 @@ default: """,,
                 <div className="flex items-center justify-between mb-4">""""
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">""
                     Recent Security Alerts"""""
-                  """""
+                  </h3>"""""
                   <span className="text-sm text-gray-600 dark:text-gray-400">"",
                     {securityAlerts.filter(a => a.status === "new").length} new""
                   </span>"""""
@@ -478,17 +453,16 @@ default: """,,
             </motion.div>)}"""""
 """""""
           {activeTab === "performance" && (<motion.div key="performance" initial = {}
-                        <div className="text-xs text-yellow-700 "dark":text-yellow-300">",;
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Performance Monitoring"""""
-                """"
+                </h3>""""
                 <p className="text-gray-600 dark:text-gray-400">
                   Real-time performance metrics and system health monitoring,
                 </p>"
@@ -519,9 +493,9 @@ default: """,,
 """""""
           {activeTab === "security" && (<motion.div key="security" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="flex items-center gap-4 mb-6">""""
@@ -540,8 +514,8 @@ default: """,,
               {/* comment */}""""
               <div className="space-y-4">"
                 {filteredSecurityAlerts.map((alert) => (<motion.div key="{alert.id}" initial = {}"
-  {opacity: 0, x: 20}} animate = {}""
-  {opacity: 1, x: 0 """"">
+  { opacity: 0, x: 20}} animate = {}""
+  { opacity: 1, x: 0 """"">
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""""
                     <div className="flex items-start justify-between mb-4">"""""""
                       <div className="flex items-center gap-3">""",
@@ -586,19 +560,11 @@ default: """,,
               </div>""
             </motion.div>)}"""""
 """""""
-;
-                        </div>;
-                      </div>) }
-;
-                  </motion.div>) ) }";
-              </div>"";
-            </motion.div>)}""""";
-""""""";
           {activeTab === "users" && (<motion.div key="users" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="flex items-center gap-4 mb-6">""""
@@ -616,8 +582,8 @@ default: """,,
               {/* comment */}""""
               <div className="space-y-4">"
                 {filteredUserActivities.map((activity) => (<motion.div key="{activity.id}" initial = {}"
-  {opacity: 0, x: 20}} animate = {}""
-  {opacity: 1, x: 0 """"">
+  { opacity: 0, x: 20}} animate = {}""
+  { opacity: 1, x: 0 """"">
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-3">""""
                       <div className="flex items-center gap-3">""""
@@ -661,15 +627,15 @@ default: """,,
 """""""
           {activeTab === "services" && (<motion.div key="services" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <Server className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Service Management"""""
-                """"
+                </h3>""""
                 <p className="text-gray-600 dark:text-gray-400">
                   Monitor and manage all system services,
                 </p>"
@@ -678,8 +644,8 @@ default: """,,
               {/* comment */}""""
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">",
                 {serviceStatuses.map((service) => (<motion.div key="{service.id}" initial = {}"
-  {opacity: 0, scale: 0.9}} animate = {}"""
-  {opacity: 1, scale: 1 """">
+  { opacity: 0, scale: 0.9}} animate = {}"""
+  { opacity: 1, scale: 1 """">
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-4">""""
                       <h4 className="text-lg font-semibold text-gray-900 dark:text-white">",
@@ -727,15 +693,15 @@ default: """,,
 """""""
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <PieChart className="w-16 h-16 text-purple-500 mx-auto mb-4"/" >"""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">""
                   Analytics & Insights"""""
-                """"
+                </h3>""""
                 <p className="text-gray-600 dark:text-gray-400">
                   Comprehensive analytics and business intelligence,
                 </p>"
@@ -766,87 +732,10 @@ default: """,,
         </AnimatePresence>"
       </div>""""
     </div>)}"""""""
-""""'"""""
+""""""""""
 "
 
-  } catch (error) {console.error(error);}
+  } catch (error) {
+    console.error(error);
+  }
 export default Component
-
-</LineChart>
-</PieChart>
-</PieChart>
-</motion>
-</motion>
-</Server>
-</motion>
-</Users>
-</motion>
-</div>
-</motion>
-</motion>
-</div>
-</motion>
-</BarChart3>
-</LineChart>
-</div>
-</TrendingUp>
-</motion>
-</div>
-</div>
-</div>
-</Clock3>
-</TrendingDown>
-</TrendingUp>
-</motion>
-</motion>
-</div>
-</Icon>
-</RefreshCw>
-</Loader2>
-</Server>
-</Activity>
-;
-        </AnimatePresence>";
-      </div>"""";
-    </div>)}""""""";
-""""'""""";
-";
-  } catch (error) {console.error(error);}
-export default Component;
-</LineChart>;
-</PieChart>;
-</PieChart>;
-</motion>;
-</motion>;
-</Server>;
-</motion>;
-</Users>;
-</motion>;
-</div>;
-</motion>;
-</motion>;
-</div>;
-</motion>;
-</BarChart3>;
-</LineChart>;
-</div>;
-</TrendingUp>;
-</motion>;
-</div>;
-</div>;
-</div>;
-</Clock3>;
-</TrendingDown>;
-</TrendingUp>;
-</motion>;
-</motion>;
-</div>;
-</Icon>;
-</RefreshCw>;
-</Loader2>;
-</Server>;
-</Activity>;
-</div>;
-</div>;
-</div>
-</div>

@@ -16,5 +16,3 @@ export default function ChatAssistant({ enabled = false }: "ChatAssistantProps) 
         {isOpen ? '×' : '💬'}
       </button>;
     </div>;
-  );
-}
