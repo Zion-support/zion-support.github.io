@@ -1,54 +1,57 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
-export default function API() {
-  const apiEndpoints = [
+export default function APIPage() {
+  const apiFeatures = [
     {
-      name: 'Authentication',
-      method: 'POST',
-      endpoint: '/api/auth/login',
-      description: 'Authenticate users and get access tokens',
-      parameters: ['email', 'password'],
-      response: 'JWT token'
+      title: "RESTful APIs",
+      description: "Clean, intuitive REST API endpoints for easy integration",
+      icon: Code,
+      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
     },
     {
-      name: 'User Profile',
-      method: 'GET',
-      endpoint: '/api/user/profile',
-      description: 'Get user profile information',
-      parameters: ['token'],
-      response: 'User profile data'
+      title: "Comprehensive Documentation",
+      description: "Detailed API documentation with examples and guides",
+      icon: Book,
+      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
     },
     {
-      name: 'Services List',
-      method: 'GET',
-      endpoint: '/api/services',
-      description: 'Get list of available services',
-      parameters: ['category', 'limit'],
-      response: 'Array of services'
+      title: "High Performance",
+      description: "Fast, reliable APIs built for scale and speed",
+      icon: Zap,
+      features: ["Low Latency", "High Throughput", "Global CDN"]
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with authentication and encryption",
+      icon: Shield,
+      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];
 
   return (
-    <>
-      <Head>
-        <title>API Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
+    <Layout
+      title="API Reference - Zion Tech Group"
+      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
+    >
       <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span>
-            </h1>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Comprehensive API documentation for integrating with Zion Tech Group services
-            </p>
+        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API Reference
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive API documentation and reference for integrating with Zion Tech Group services
+              </p>
+            </motion.div>
           </div>
         </div>
 
@@ -153,6 +156,6 @@ export default function API() {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }

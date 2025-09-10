@@ -1,31 +1,3 @@
-/* Accessibility and Performance Enhancements */
-
-/* High contrast mode */
-.high-contrast {
-  --tw-bg-opacity: 1;
-  --tw-text-opacity: 1;
-}
-
-.high-contrast * {
-  background-color: white !important;
-  color: black !important;
-  border-color: black !important;
-}
-
-/* Reduced motion */
-.reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-}
-
-/* Focus improvements */
-.focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Skip link */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -38,38 +10,75 @@
   border: 0;
 }
 
-.sr-only:focus {
+.sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
-  padding: 0.5rem 1rem;
-  margin: 0;
+  padding: inherit;
+  margin: inherit;
   overflow: visible;
   clip: auto;
   white-space: normal;
-  background: #3b82f6;
-  color: white;
-  border-radius: 0.25rem;
-  font-weight: 600;
 }
 
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
+.focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-.will-change-opacity {
-  will-change: opacity;
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
+@media (prefers-contrast: high) {
+  .text-gray-600 {
+    color: #000000;
   }
-  
-  body {
-    background: white !important;
-    color: black !important;
+  .bg-gray-100 {
+    background-color: #ffffff;
+    border: 1px solid #000000;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-to-content:focus {
+  top: 6px;
+}
+
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap::before,
+.focus-trap::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
