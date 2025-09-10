@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/Categories.jsx
-interface CategoriesProps {
-  // Add props here as needed
-}
-export default function Categories({ }: CategoriesProps) {
-  return (
-    <div>
-      <h1>Categories</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-========
 interface PostJobProps {
   // Add props here as needed
 }
@@ -22,10 +9,11 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 }
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PostJob.jsx
 }
-<
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 }
-}
->>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:corrupted_backup/PostJob.jsx
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/PostJob.jsx

@@ -1,18 +1,6 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/fix-syntax-push-and-merge-to-main-8452
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   "timestamp": "2025-09-06T01:31:58.924Z",
   "duration": 151,
   "improvements": [
@@ -24,13 +12,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-8452
   ],
   "errors": [],
   "success": true
-
 }
-<<<<<<< HEAD
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "timestamp": "2025-09-06T10:42:44.767Z",
   "totalDuration": 17470,
   "successfulTasks": 3,
@@ -45,15 +27,8 @@ origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "monitoringSetup": true
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+>>>>>>> main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
