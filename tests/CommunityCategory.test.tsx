@@ -3,7 +3,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ForumCategoryPage from '@/pages/ForumCategoryPage';
 import * as forumService from '@/services/forumPostService';
-import { vi } from 'vitest';
+import { vi, it, expect } from 'vitest';
 
 it('loads posts for category', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([
