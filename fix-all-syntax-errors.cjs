@@ -1,115 +1,74 @@
-#!/usr/bin/env node
+// Function to fix specific file issues;
+function fixSpecificFileIssues(filePath, content) {
+  // Fix react-router-dom imports in Next.js files;
+  if (content.includes("react-router-dom")) {
+  content = content.replace(;
+      /import\s+{\s*Link\s*}\s+from\s+"react-router-dom";/g,;
+      "import Link from "next/link";";
+    );
+    content = content.replace(;
+      /import\s+{\s*useLocation\s*}\s+from\s+"react-router-dom";/g,;
+      "import { useRouter  } from "next/router";";
+    );}
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+  return content;}
 
-function findFilesWithSyntaxErrors() {
-  const files = [];
-  
-  function walkDir(dir) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other directories
-        if (!['node_modules', '.next', '.git', 'dist', 'out'].includes(item)) {
-          walkDir(fullPath);
-        }
-      } else if (item.match(/\.(ts|tsx|js|jsx)$/)) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  walkDir('/workspace');
-  return files;
-}
-
-function fixSyntaxErrorsInFile(filePath) {
+// List of files to fix;
+const filesToFix = [;
+  "components/AccessibilityEnhancer.tsx",;
+  "components/PerformanceOptimizer.tsx",;
+  "components/SEOEnhancer.tsx",;
+  "components/layout/Footer.tsx",;
+  `components/layout/Header.tsx`,;
+];
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix import statements with trailing commas
-    const importFix = content.replace(/import\s+([^;]+),\s*$/gm, 'import $1;');
-    if (importFix !== content) {
-      content = importFix;
-      modified = true;
-    }
-    
-    // Fix export statements with trailing commas
-    const exportFix = content.replace(/export\s+([^;]+),\s*$/gm, 'export $1;');
-    if (exportFix !== content) {
-      content = exportFix;
-      modified = true;
-    }
-    
-    // Fix type definitions with missing commas
-    const typeFix = content.replace(/export type (\w+) = \{/g, 'export type $1 = {');
-    if (typeFix !== content) {
-      content = typeFix;
-      modified = true;
-    }
-    
-    // Fix missing semicolons after statements
-    const semicolonFix = content.replace(/([^;}])\s*$/gm, '$1;');
-    if (semicolonFix !== content) {
-      content = semicolonFix;
-      modified = true;
-    }
-    
-    // Fix specific syntax errors
-    const fixes = [
-      // Fix missing comma in type definitions
-      { pattern: /Omit<Toast 'id'>/g, replacement: "Omit<Toast, 'id'>" },
-      // Fix missing semicolons in imports
-      { pattern: /import\s+([^;]+),\s*$/gm, replacement: 'import $1;' },
-      // Fix missing semicolons in exports
-      { pattern: /export\s+([^;]+),\s*$/gm, replacement: 'export $1;' },
-      // Fix missing semicolons after statements
-      { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
-    ];
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed ${filePath}`);
-      return true;
-    }
-    
-    return false;
+  if (!fs.existsSync(filePath)) {
+  console.log(`File not found: ${filePath}`);
+      return;}
+
+    let content = fs.readFileSync(filePath, `utf8`);
+    const originalContent = content;
+    // Apply general fixes;
+    content = fixMalformedImports(content);
+    content = fixSpecificFileIssues(filePath, content);
+    if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);} else {
+  console.log(`No fixes needed: ${filePath}`);}
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
-  }
+  console.error(`Error fixing ${filePath }:`, error.message);}
 }
 
-function main() {
-  console.log('🔧 Starting comprehensive syntax error fix...');
-  
-  const files = findFilesWithSyntaxErrors();
-  console.log(`Found ${files.length} files to check`);
-  
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    if (fixSyntaxErrorsInFile(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`🎉 Fixed syntax errors in ${fixedCount} files`);
-}
+// Fix all files;
+console.log(`Starting comprehensive syntax error fixes...`);
+filesToFix.forEach(fixFile);
+// Also check for any other files with similar patterns;
+const componentsDir = "components";
+if (fs.existsSync(componentsDir)) {
+  function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+    files.forEach(file => {
+  const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      if (stat.isDirectory()) {
+  walkDir(filePath);} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
+          if (;
+            content.includes("";"import") ||;
+            content.includes("";"const") ||;
+            content.includes("`;`interface");
+          ) {
+  console.log(;
+              `Found additional file with syntax errors: ${filePath}`;
+            );
+            fixFile(filePath);}
+        } catch (error) {
+  // Skip files that can`t be read;}
+      }
+    });}
 
-main();
+  walkDir(componentsDir);}
+
+console.log(`Comprehensive syntax error fixes completed!")}}

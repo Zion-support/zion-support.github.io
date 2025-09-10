@@ -1,10 +1,23 @@
+
+
+
+export interface Branding {;
+
+export interface Branding {;
+
+  logoUrl?: string,;
+  primaryColor?: string,;
+  secondaryColor?: string,;
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-export interface Branding {logoUrl?: string;
+export interface Branding {;
+  logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
 }
-export interface DeployModules {marketplace: boolean;
+;
+export interface DeployModules {;
+  marketplace: boolean;
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -23,7 +36,9 @@ export interface DeployModules {marketplace: boolean;
   trailer?: boolean;
   bookStore?: boolean;
 }
-export interface DeployInput {instanceName: string;
+;
+export interface DeployInput {;
+  instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
@@ -32,16 +47,22 @@ export interface DeployInput {instanceName: string;
   modules: DeployModules;
   requestedRoutes?: string[];
 }
-export interface DeployLogEntry {timestamp: string;
+;
+export interface DeployLogEntry {;
+  timestamp: string;
   level: "info" | "warn" | "error";
   action: string;
   details?: Record<string unknown> | string;
 }
-export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
+;
+export interface GeneratedAsset {;
+  kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
 }
-export interface DeployResult {success: boolean;
+;
+export interface DeployResult {;
+  success: boolean;
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -49,6 +70,8 @@ export interface DeployResult {success: boolean;
   summary: string;
   version: string;
 }
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+;
+export interface AccessControlConfig {;
+  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
 }

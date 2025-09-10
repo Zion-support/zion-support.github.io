@@ -1,4 +1,5 @@
-export default function CaseStudiesPage() {return (;
+export default function CaseStudiesPage() {;
+  return (;
     <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb-20">;

@@ -1,111 +1,104 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class ComprehensiveSyntaxFixer {
+class $1 {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
+  this.projectRoot = process.cwd();
+    this.fixedFiles = [];}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+  console.log(`[${new Date().toISOString()}] ${message}`);}
 
-  async fixMergeConflicts() {
-    this.log('🔧 Fixing merge conflicts...');
-    
-    const files = [
-      'tsconfig.json',
-      '.eslintrc.js',
-      'package.json'
+  fixFile(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
+      let originalContent = content;
+
+      // Fix JSX fragment syntax - use <> instead of React.Fragment;
+      content = content.replace(/<React\.Fragment>/g, "<>");
+      content = content.replace(/<\/React\.Fragment>/g, "</>");
+
+      // Fix interface syntax errors;
+      content = content.replace(/children:\s*React\.ReactNode,/g, "children: React.ReactNode,");
+
+      // Fix JSX component syntax;
+      content = content.replace(/<Html\s+lang="en">/g, "<Html lang="en">");
+      content = content.replace(/<Head>/g, "<Head>");
+      content = content.replace(/<Main>/g, "<Main>");
+      content = content.replace(/<NextScript>/g, "<NextScript>");
+
+      // Fix meta tag syntax;
+      content = content.replace(/<meta name = "description content="([^"]*)" \/>"/g, "<meta name="description" content="$1" />");
+      content = content.replace(/<meta name="viewport content="([^"]*)" \/>/g, "<meta name="viewport" content="$1" />");
+
+      // Fix import statements;
+      if (content.includes("import React") && content.includes("React.Fragment")) {
+  content = content.replace(/import React from "react"/g, "import React from "react"");}
+      // Fix function syntax;
+      content = content.replace(/export default function (\w+)\(\)\s*{\s*return\s*\(\s*<>/g, "export default function $1() {\n  return (\n    <>");
+
+      // Fix closing syntax;
+      content = content.replace(/<\/>\s*\)\s*,/g, "</>\n  )");
+
+      // Fix missing imports;
+      if (content.includes("<Head>") && !content.includes("import Head")) {
+  content = content.replace(/import React from "react"/, "import React from "react"\nimport Head from "next/head"");}
+      if (content.includes("<Link") && !content.includes("import Link")) {
+  content = content.replace(/import React from "react"/, "import React from "react"\nimport Link from "next/link"");}
+      // Fix malformed JSX;
+      content = content.replace(/<Head>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Head>/g, ;
+        "<Head>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Head>");
+
+      if (content !== originalContent) {
+  fs.writeFileSync(filePath, content, "utf8");
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`);
+        return true;}
+      return false;} catch (error) {
+  this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false;,}
+// Main execution
+const filesToFix = ['components/ContactForm.tsx',
+  'pages/_app.tsx',
+  'pages/cloud-devops.tsx',
+  'pages/cybersecurity.tsx',
+  'pages/docs.tsx'
+];
+let totalFixed = ;0;
+for (const file of filesToFix) {
+  if () {
+    if (processFile(file)) {
+      totalFixed++}
+  }
+  async fixAllFiles() {
+  this.log("🔧 Starting comprehensive syntax fix...");
+
+    const filesToFix = [;
+  "components/Layout.tsx",;
+      "pages/NotFound.tsx",;
+      "pages/_document.tsx",;
+      "pages/ai-services.tsx",;
+      "pages/api.tsx";
     ];
 
-    for (const file of files) {
-      const filePath = path.join(this.projectRoot, file);
+    let fixedCount = 0;
+    for (const file of filesToFix) {
+  const filePath = path.join(this.projectRoot, file);
       if (fs.existsSync(filePath)) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
-          // Remove merge conflict markers
-          content = content.replace(/[\s\S]*?
-          content = content.replace(/
-          
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
-        }
-      }
+  if (this.fixFile(filePath)) {
+  fixedCount++;}
+      } else {
+  this.log(`⚠️ File not found: ${file}`);}
     }
-  }
-
-  async fixSyntaxErrors() {
-    this.log('🔧 Fixing syntax errors...');
-    
-    const commands = [
-      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
-      { cmd: 'npm run format', desc: 'Format code' }
-    ];
-
-    for (const { cmd, desc } of commands) {
-      try {
-        this.log(`🚀 ${desc}`);
-        execSync(cmd, { stdio: 'pipe', cwd: this.projectRoot });
-        this.log(`✅ ${desc} completed`);
-      } catch (error) {
-        this.log(`⚠️ ${desc} failed: ${error.message}`);
-      }
-    }
-  }
-
-  async generateReport() {
-    this.log('📊 Generating syntax fix report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: 'completed',
-      fixes: [
-        'Merge conflicts resolved',
-        'Syntax errors fixed',
-        'Code formatted'
-      ],
-      summary: 'Comprehensive syntax fix completed successfully'
-    };
-
-    const reportPath = path.join(this.reportsDir, 'syntax-fix-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Comprehensive Syntax Fix...');
-      
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.generateReport();
-      
-      this.log('🎉 Comprehensive Syntax Fix completed successfully!');
-    } catch (error) {
-      this.log(`❌ Comprehensive Syntax Fix failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
+    this.log(`🎉 Fixed syntax in ${fixedCount} files`);
+    return { fixedCount, files: this.fixedFiles };}
 }
 
-// Run the syntax fixer
+// Run the fixer;
 const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
+fixer.fixAllFiles();
+  .then(result => {
+  console.log("✅ Comprehensive syntax fixing completed successfully");
+    console.log(`📊 Summary: ${result.fixedCount} files fixed`);
+    process.exit(0);});
+  .catch(error => {
+  console.error("❌ Comprehensive syntax fixing failed:", error.message);
+    process.exit(1);,
+});}}

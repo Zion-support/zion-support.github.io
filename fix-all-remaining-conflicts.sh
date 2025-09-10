@@ -11,8 +11,6 @@ find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" |
         cp "$file" "$file.backup"
         
         # Remove merge conflict markers and keep the main branch content
-        
-        # Clean up any remaining conflict markers
         sed -i '//d' "$file"
         sed -i '/
         sed -i '/

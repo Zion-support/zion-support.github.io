@@ -1,71 +1,90 @@
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  Project
-  Milestone
-  MilestoneStatus
-  isMilestoneStatus
-} from '../types/milestones';
+import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones';
 import { CurrentUser } from './auth';
-export interface Milestone {
-  id: string;
-  title: string;
-  description?: string;
-  dueDate: string;
-  amountUsd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: any[];
-  createdAt: string;
-  updatedAt: string;
+const DATA_FILE = path.join(process.cwd(), 'dataprojects.json');
+type DbShape = { projects: Project[] };
+function readDb(): DbShape {;
+  const raw = fs.readFileSync(DATA_FILE, 'utf8');
+  return JSON.parse(raw) as DbShape;
 }
-// Mock storage
-const projects: Project[] = [];
-export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) |null;
+;
+function writeDb(db: DbShape) {;
+  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8');
 }
-export function getAllProjects(): Project[] {
-  return projects;
+;
+export function getProject(projectId: string): Project | null {;
+  const db = readDb();
+  return db.projects.find((p) => p.id === projectId) || null;
 }
-export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
-  const newProject: Project = {
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
+;
+export function saveProject(updated: Project): void {;
+  const db = readDb();
+  const idx = db.projects.findIndex((p) => p.id === updated.id);
+  if (idx === -1) {;
+    db.projects.push(updated);
+  } else {;
+    db.projects[idx] = updated;
   }
-  projects.push(newProject);
-  return newProject;
+  writeDb(db);
 }
-export function updateProject(id: string, updates: Partial<Project>): Project | null {
-  const project = projects.find(p => p.id === id);
-  if (!project) return null;
-  Object.assign(project, updates, { updatedAt: new Date().toISOString() });
-  return project;
+;
+export function assertParticipantOrAdmin(;
+  project: Project;
+  user: CurrentUser;
+): boolean {;
+  if (user.role === 'admin') return true;
+  const { clientUserId, talentUserId } = project.participants;
+  return user.userId === clientUserId || user.userId === talentUserId;
 }
-export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
-  const newMilestone: Milestone = {
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  }
-  project.milestones.push(newMilestone);
-  project.updatedAt = new Date().toISOString();
-  return newMilestone;
+;
+export function isClient(project: Project, user: CurrentUser): boolean {;
+  return user.role === 'admin' || user.userId === project.participants.clientUserId;
 }
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
-  const milestone = project.milestones.find(m => m.id === milestoneId);
-  if (!milestone) return null;
-  Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
-  project.updatedAt = new Date().toISOString();
-  return milestone;
+;
+export function isTalent(project: Project, user: CurrentUser): boolean {;
+  return user.role === 'admin' || user.userId === project.participants.talentUserId;
 }
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
-  const index = project.milestones.findIndex(m => m.id === milestoneId);
-  if (index === -1) return false;
-  project.milestones.splice(index, 1);
-  project.updatedAt = new Date().toISOString();
-  return true;
+;
+export function generateId(prefix: string = 'id'): string {;
+  const rand = Math.random().toString(36).slice(2, 8);
+  const time = Date.now().toString(36);
+  return `${prefix}_${time}_${rand}`;
+}
+;
+export function addMilestone(;
+  project: Project;
+  payload: Omit<Milestone 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }
+): Milestone {;
+  const now = new Date().toISOString();
+  const m: Milestone = {;
+    id: generateId('ms');
+    title: payload.title;
+    description: payload.description;
+    dueDate: payload.dueDate;
+    amountUsd: payload.amountUsd;
+    status: payload.status && isMilestoneStatus(payload.status) ? payload.status : 'Pending';
+    attachments: payload.attachments || [];
+    createdAt: now;
+    updatedAt: now};
+  project.milestones.push(m);
+  project.updatedAt = now;
+  saveProject(project);
+  return m;
+}
+;
+export function updateMilestone(;
+  project: Project;
+  milestoneId: string;
+  update: Partial<Milestone>;
+): Milestone | null {;
+  const idx = project.milestones.findIndex((m) => m.id === milestoneId);
+  if (idx === -1) return null;
+  const now = new Date().toISOString();
+  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now };
+  project.milestones[idx] = next;
+  project.updatedAt = now;
+  saveProject(project);
+  return next;
 }
