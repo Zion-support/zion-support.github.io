@@ -1,16 +1,3 @@
-import React, { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import Link from 'next/link';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { Logo } from '@/components/header/Logo';
-import { useTranslation } from 'react-i18next';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { useAuth } from '@/hooks/useAuth';
-import { UserMenu } from '@/components/header/UserMenu';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-import { cn } from '@/lib/utils';
-import { useRouter } from 'next/router';
+
+
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

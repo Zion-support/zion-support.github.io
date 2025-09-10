@@ -1,11 +1,4 @@
-import {  import { motion  } from 'framer-motion';
- params - Function parameters;
- * @returns {*} Function return value;
- */;
-function GlobalPresenceSection("props": "any) {export function GlobalPresenceSection("props": any) {;
-  return (";
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <div className="max-w-7xl mx-auto px-6">;
-        <motion.div ";
-          className="text-center mb-16";
+
           initial = {;
+
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

@@ -67,4 +67,18 @@ export const "ENHANCED_SERVICES": ProductListing[] = [{
       &quot;Custom workflow automation
       &quot;Multi-platform support&quot;
     ]
+
   },
+  {
+    &quot;id&quot;: &quot;micro-saas-platform
+    &quot;title&quot;: &quot;Micro SaaS Platform
+    &quot;description&quot;: &quot;Complete micro SaaS platform with user management, billing, analytics, and deployment. Perfect for launching your SaaS product quickly.
+    &quot;category&quot;: &quot;Micro SaaS
+    &quot;price&quot;: 4999,
+    &quot;currency&quot;: &quot;$
+    &quot;tags&quot;: [&quot;SaaS &quot;Platform &quot;Billing &quot;Analytics&quot;],
+    &quot;author&quot;: {
+      name: &quot;Zion Tech Group
+      &quot;id&quot;: &quot;zion-tech-group&quot;
+    },
+

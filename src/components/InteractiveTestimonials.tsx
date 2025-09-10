@@ -1,11 +1,4 @@
-import React from 'react';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- params - Function parameters;
- * @returns {*} Function return value;
- */;
-function InteractiveTestimonials("props": "any) {export function InteractiveTestimonials("props": any) {;
-";
-  const [selectedCategory", setSelectedCategory] = useState<any>("All");
-  const [selectedTestimonial, setSelectedTestimonial] = useState<any>(0);
-";
+
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
+
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

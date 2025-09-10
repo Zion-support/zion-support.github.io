@@ -31,7 +31,8 @@
     "strictFunctionTypes": true,
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true
+    "exactOptionalPropertyTypes": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*",
