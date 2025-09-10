@@ -1,82 +1,48 @@
-#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+// Function to fix remaining syntax errors;
+function fixRemainingErrors(content) {
+  let fixed = content;
+  // Fix common import issues;
+  fixed = fixed.replace(/import React, \{ useState \} from "react";\\s*import \\{ motion\\s*\\} from "framer-motion"; import \\{ [^}]+ \\} from "lucide-react";/g, ;
+    "import React, { useState } from "react";\\nimport { motion  } from "framer-motion";\\nimport { Shield, TrendingUp, Brain, CheckCircle, Star, ArrowRight, Users, Target, Clock, DollarSign, Database, Zap, Globe, Activity, AlertTriangle, Eye, Lock, Download, Upload, RefreshCw, Settings, Play, Gauge, BarChart3, Cpu, Factory, Truck, HardHat, Thermometer, GaugeIcon, AlertCircle, CheckSquare, XCircle, ShieldCheck, Fingerprint, Search, Bell, FileText, CreditCard, Building, ShoppingCart  } from "lucide-react";");
+  // Fix malformed component declarations;
+  fixed = fixed.replace(/const\\s+([A-Z][a-zA-Z0-9]*)\\s*=\\s*\\(\\)\\s*=>\\s*\\{/g, "const $1 = () => {");
+  // Fix missing semicolons in imports;
+  fixed = fixed.replace(/import\\s+([^]+)(?!)/g, "import $1;");
+  // Fix broken JSX syntax;
+  fixed = fixed.replace(/<\\s*([A-Z][a-zA-Z0-9]*)\\s*([^>]*?)\\s*>/g, "<$1$2>");
+  // Fix unterminated strings;
+  fixed = fixed.replace(/("|")([^""]*?)(?=\\n|$)/g, "$1$2"");
+  // Fix missing closing braces;
+  const openBraces = (fixed.match(/\\{/g) || []).length;
+  const closeBraces = (fixed.match(/\\}/g) || []).length;
+  if (openBraces > closeBraces) {
+  fixed += "\\n".repeat(openBraces - closeBraces).replace(/\\n/g, "\\n}");}
+  return fixed;}
 
-const fs = require('fs');
-const path = require('path');
-
-// Simple template for service pages
-const template = `import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-export const metadata = {
-  title: 'SERVICE_TITLE | Zion Tech Group',
-  description: 'Professional services for your business needs.',
-  keywords: 'services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            SERVICE_TITLE
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional services designed to meet your business requirements.
-          </p>
-        </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your requirements and get a custom solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link href="/services" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors">
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}`;
-
-// List of problematic files to fix
-const problematicFiles = [
-  'app/services/ai-financial-analyzer/page.tsx',
-  'app/services/ai-fintech-solutions/page.tsx',
-  'app/services/ai-healthcare-analytics/page.tsx',
-  'app/services/ai-hr-management/page.tsx',
-  'app/services/ai-inventory-management/page.tsx'
-];
-
-function fixFiles() {
-  let fixed = 0;
-  
-  for (const filePath of problematicFiles) {
-    try {
-      const serviceName = filePath.split('/')[2].split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const content = template.replace(/SERVICE_TITLE/g, serviceName);
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed ${filePath}`);
-      fixed++;
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+// Function to process files;
+function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
+  const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {
+  processFiles(filePath);} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
+        const fixed = fixRemainingErrors(content);
+        if (content !== fixed) {
+  fs.writeFileSync(filePath, fixed);
+          console.log(`Fixed: ${filePath}`);,
+}
+      } catch (error) {;
+  console.log(`Skipping corrupted file: ${filePath}`);,
+}
     }
-  }
-  
-  console.log(`Fixed ${fixed} files`);
+  });,
 }
 
-fixFiles();
+// Process all files;
+processFiles("src");
+console.log("Remaining syntax error fixes completed!")
