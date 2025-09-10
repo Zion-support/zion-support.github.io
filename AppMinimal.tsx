@@ -1,10 +1,7 @@
-import React from 'react';
-export default function AppMinimal(): React.JSX.Element {
-  // TODO: Implement
-}
+export default function AppMinimal(): JSX.Element {
   return (
     <main>
-</main>
-      <h1>Zion Tech Group - Minimal App</h1>
-      <p>Building the future with innovative technology solutions</p>
-    </main>)
+      <h1>Minimal App</h1>
+    </main>
+  );
+}
