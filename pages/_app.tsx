@@ -1,13 +1,34 @@
 import type { AppProps } from 'next/app';
-import { DefaultSeo } from 'next-seo';
-import SEO from '../next-seo.config';
-import '../src/index.css';
+import '../styles/globals.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <DefaultSeo {...SEO} />
+    <ErrorBoundary>
+      <PerformanceMonitor />
+      <AccessibilityEnhancer />
       <Component {...pageProps} />
-    </>
+<<<<<<< HEAD
+    </ErrorBoundary>
+=======
+export default function App({ Component, pageProps }: AppProps) {;
+  return (;
+    <ErrorBoundary>;
+      <Head>;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <title>Zion Tech Group — AI, IT & Micro SaaS</title>;
+      </Head>;
+      <div className="min-h-screen flex flex-col">;
+        <PerformanceMonitor />;
+        <main className="flex-grow">;
+          <Component {...pageProps} />;
+        </main>;
+      </div>;
+    </ErrorBoundary>;
+>>>>>>> origin/automation-fixes
   );
 }
+=======
+    </Layout>
+  )
+}
+>>>>>>> origin/automation/changelog
