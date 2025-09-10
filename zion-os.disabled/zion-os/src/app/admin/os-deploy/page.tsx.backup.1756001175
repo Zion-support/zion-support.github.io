@@ -98,22 +98,6 @@ export default function AdminDeployPage() {
 
   return (
     <div className="space-y-8">
-<<<<<<< HEAD
-      {/* Header Section */}
-      <div className="text-center space-y-4 pb-8 border-b border-white/10">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="p-3 bg-blue-500/20 rounded-full">
-            <Rocket className="w-8 h-8 text-blue-400" />
-          </div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-            Unified Deployment
-          </h1>
-        </div>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto">
-          Launch sovereign AI-powered digital economies with comprehensive configuration options
-        </p>
-      </div>
-
       <form onSubmit={onSubmit} className="space-y-8">
         {/* Basic Configuration Card */}
         <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
@@ -144,7 +128,6 @@ export default function AdminDeployPage() {
                     placeholder="zion.example.com" 
                     className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 text-white placeholder-white/40 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200" 
                   />
-=======
       {/* Header */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold gradient-text">Unified Deployment</h1>
@@ -282,9 +265,7 @@ export default function AdminDeployPage() {
               {FeatureKeys.map((k) => (
                 <label key={k} className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
                   <input type="checkbox" name={k} className="checkbox-field" />
-                  <span className="text-white/90 text-sm">{labelFor(k)}</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
-                </label>
+                  <span className="text-white/90 text-sm">{labelFor(k)}</span>                </label>
                 <label className="block">
                   <span className="block text-sm font-medium text-white/80 mb-2">Subdomain</span>
                   <input 
@@ -338,48 +319,6 @@ export default function AdminDeployPage() {
             </div>
             <h2 className="text-2xl font-semibold">Governance & Economy</h2>
           </div>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <label className="block">
-              <span className="block text-sm font-medium text-white/80 mb-2">Token System</span>
-              <div className="relative">
-                <select 
-                  name="tokenSystem" 
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 appearance-none"
-                >
-                  <option value="SHARED">ZION$ Shared</option>
-                  <option value="LOCAL">Local</option>
-                </select>
-                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <svg className="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-            </label>
-            
-            <label className="block">
-              <span className="block text-sm font-medium text-white/80 mb-2">Governance Type</span>
-              <div className="relative">
-                <select 
-                  name="governanceType" 
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 appearance-none"
-                >
-                  <option value="ADMIN">Admin</option>
-                  <option value="DAO_LITE">DAO-lite</option>
-                  <option value="DAO_FULL">Full DAO</option>
-                </select>
-                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                  <svg className="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-            </label>
-          </div>
-        </div>
-
         {/* Location & Region Card */}
         <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
           <div className="flex items-center gap-3 mb-6">
@@ -478,7 +417,6 @@ export default function AdminDeployPage() {
                     </svg>
                   </div>
                 </div>
-=======
 
           {/* Optional Add-ons */}
           <div className="space-y-6">
@@ -515,57 +453,10 @@ export default function AdminDeployPage() {
                   <option value="">None</option>
                   <option value="stripe">Stripe</option>
                   <option value="coinbase-commerce">Coinbase Commerce</option>
-                </select>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
-              </label>
+                </select>              </label>
             </div>
           </div>
 
-<<<<<<< HEAD
-        {/* Deployment Action */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl border border-blue-500/30 p-6">
-          <div className="flex items-center justify-between">
-            <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-white">Ready to Deploy?</h3>
-              <p className="text-white/70">Your Zion ecosystem will be deployed with the selected configuration</p>
-            </div>
-            <button 
-              disabled={loading} 
-              className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
-            >
-              {loading ? (
-                <>
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <span>Deploying...</span>
-                </>
-              ) : (
-                <>
-                  <Play className="w-5 h-5" />
-                  <span>Deploy Instance</span>
-                </>
-              )}
-            </button>
-          </div>
-          
-          {message && (
-            <div className={`mt-4 p-4 rounded-lg border ${
-              message.includes('failed') 
-                ? 'bg-red-500/20 border-red-500/30 text-red-300' 
-                : 'bg-green-500/20 border-green-500/30 text-green-300'
-            }`}>
-              <div className="flex items-center gap-2">
-                {message.includes('failed') ? (
-                  <AlertCircle className="w-5 h-5" />
-                ) : (
-                  <CheckCircle className="w-5 h-5" />
-                )}
-                <span className="font-medium">{message}</span>
-              </div>
-            </div>
-          )}
-        </div>
-      </form>
-=======
           {/* Submit Section */}
           <div className="border-t border-white/10 pt-6">
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -596,7 +487,6 @@ export default function AdminDeployPage() {
           </div>
         </form>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
     </div>
   );
 }

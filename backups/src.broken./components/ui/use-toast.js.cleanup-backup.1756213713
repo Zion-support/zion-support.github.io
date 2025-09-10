@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import { useState, useCallback } from 'react';
-export function useToast() {
-    const [toasts, setToasts] = useState([]);
-    const toast = useCallback((options) => {
-        const id = Math.random().toString(36).substr(2, 9);
-        const newToast = {
-            id,
-            title: options.title,
-            description: options.description,
-            variant: options.variant || 'default',
-            duration: options.duration || 5000,
-        };
-        setToasts(prev => [...prev, newToast]);
-        // Auto-remove toast after duration
-        setTimeout(() => {
-            setToasts(prev => prev.filter(toast => toast.id !== id));
-        }, newToast.duration);
-        return id;
-    }, []);
-    const dismiss = useCallback((id) => {
-        setToasts(prev => prev.filter(toast => toast.id !== id));
-    }, []);
-    const dismissAll = useCallback(() => {
-        setToasts([]);
-    }, []);
-=======
 import { useState } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
@@ -57,20 +30,10 @@ export function useToast() {
     const info = (title, description) => {
         return toast({ title, description, type: 'info' });
     };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     return {
         toasts,
         toast,
         dismiss,
-<<<<<<< HEAD
-        dismissAll,
-    };
-}
-// Export a default toast function for backward compatibility
-export const toast = (options) => {
-    // This is a simplified version - in a real app, you'd want to use a toast context
-    console.log('Toast:', options);
-=======
         success,
         error,
         warning,
@@ -83,5 +46,4 @@ export const toast = (options) => {
     // In a real app, you'd want to integrate with a toast library
     console.log('Toast:', options);
     return Date.now().toString();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 };

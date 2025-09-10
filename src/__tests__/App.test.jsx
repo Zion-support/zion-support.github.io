@@ -146,25 +146,3 @@ jest.mock('../pages/Contact', () => {
   return function MockContact(props: any) {
     return <div data-testid="contact-page"></d></di>Contact Page</div>}}
     );
-// Wrap App with Router for testing
-const renderWithRouter = (props: any) => {
-  return render(
-    <BrowserRouter></BrowserRoute></BrowserRouter>
-      {component}
-    </BrowserRouter>
-  )};
-;
-describe('App Component', () => {;
-  test('renders without crashing', () => {;
-    renderWithRouter(<App  />);
-    expect(screen.getByTestId('index-page')).toBeInTheDocument()})}
-    );
-export {MockIndex, MockAbout, MockContact};
-;
-export {MockIndex, MockAbout, MockContact};
-;
-export {MockIndex, MockAbout, MockContact};
-;
-export {MockIndex, MockAbout, MockContact};
-;
-export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};

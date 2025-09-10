@@ -34,10 +34,3 @@ export function ReferralMiddleware("props": "any) {;
     );
         localStorage.removeItem('referralCode');
       } catch(err) {;
-        console.error('Error tracking referral', err);
-      }
-    }
-    sendReferral();
-  }, [user?.id, user?.email]); // Added user?.email;
-  return <>{children}</>;
-}

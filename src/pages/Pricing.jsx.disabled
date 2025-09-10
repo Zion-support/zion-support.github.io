@@ -1,188 +1,196 @@
-<<<<<<< HEAD:src_backup_temp/pages/Pricing.jsx.disabled
-import React from 'react';"
-import {SEO} from '../components/SEO';
-const Pricing = (props) => {}
-  const pricingTiers = []
-    {}
-'
-      "name": 'Starter','
-      "price": '$19','
-      "period": '/month','
-      "description": "
-        'Perfect for individuals and small teams getting started with AI tools','
-      "features": ["
-        'AI Content Generation (100 credits/month),Basic AI Image Editing',AI Meeting Assistant (5 hours/month),Email Support',Basic Analytics Dashboard',Mobile App Access'
+import React from 'react';
+import { Check, Star, Zap } from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+const Pricing = () => {
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      price: '$19',
+      period: '/month',
+      description: 'Perfect for individuals and small teams getting started with AI tools',
+      features: [
+        'AI Content Generation (100 credits/month)',
+        'Basic AI Image Editing',
+        'AI Meeting Assistant (5 hours/month)',
+        'Email Support',
+        'Basic Analytics Dashboard',
+        'Mobile App Access'
       ],
-      "popular": false,'
-      "cta": 'Start Free Trial','
-      "link": '/signup?plan=starter'},
-    {}
-'
-      "name": 'Professional','
-      "price": '$49','
-      "period": '/month','
-      "description": 'Ideal for growing businesses and professional teams','
-      "features": ["
-        'Everything in Starter',AI Content Generation (500 credits/month),Advanced AI Image & Video Editing',AI Code Assistant (Basic),AI Meeting Assistant (20 hours/month),AI Translation (10 languages),Priority Support',Advanced Analytics',API Access (1000 calls/month),Team Collaboration Tools'
+      popular: false,
+      cta: 'Start Free Trial',
+      link: '/signup?plan=starter'
+    },
+    {
+      name: 'Professional',
+      price: '$49',
+      period: '/month',
+      description: 'Ideal for growing businesses and professional teams',
+      features: [
+        'Everything in Starter',
+        'AI Content Generation (500 credits/month)',
+        'Advanced AI Image & Video Editing',
+        'AI Code Assistant (Basic)',
+        'AI Meeting Assistant (20 hours/month)',
+        'AI Translation (10 languages)',
+        'Priority Support',
+        'Advanced Analytics',
+        'API Access (1000 calls/month)',
+        'Team Collaboration Tools'
       ],
-      "popular": true,'
-      "cta": 'Start Free Trial','
-      "link": '/signup?plan=professional'},
-    {}
-'
-      "name": 'Business','
-      "price": '$99','
-      "period": '/month','
-      "description": 'Comprehensive solution for established businesses','
-      "features": ["
-        'Everything in Professional',AI Content Generation (2000 credits/month),AI Code Assistant (Advanced),AI Data Analytics Platform',AI Threat Detection',Multi-Cloud Management',AI-Powered CRM',Business Process Automation',AI Meeting Assistant (Unlimited),AI Translation (100+ languages),24/7 Support',Custom Integrations',API Access (10000 calls/month),Advanced Security Features'
+      popular: true,
+      cta: 'Start Free Trial',
+      link: '/signup?plan=professional'
+    },
+    {
+      name: 'Enterprise',
+      price: '$99',
+      period: '/month',
+      description: 'For large organizations with advanced AI needs',
+      features: [
+        'Everything in Professional',
+        'AI Content Generation (2000 credits/month)',
+        'Advanced AI Code Assistant',
+        'AI Meeting Assistant (unlimited)',
+        'AI Translation (50+ languages)',
+        '24/7 Phone & Chat Support',
+        'Custom Analytics & Reporting',
+        'API Access (unlimited)',
+        'Advanced Team Management',
+        'Custom Integrations',
+        'Dedicated Account Manager',
+        'SLA Guarantee'
       ],
-      "popular": false,'
-      "cta": 'Start Free Trial','
-      "link": '/signup?plan=business'},
-    {}
-'
-      "name": 'Enterprise','
-      "price": 'Custom','
-      "period": ",'
-      "description": "
-        'Tailored solutions for large organizations with specific requirements','
-      "features": ["
-        'Everything in Business',Unlimited AI Content Generation',Custom AI Model Training',Zero Trust Security Suite',Edge Computing Solutions',AI Market Research Platform',AI Legal Document Review',AI Financial Advisor',AI Healthcare Assistant',Dedicated Account Manager',Custom Development',On-Premise Deployment',SLA Guarantees',Compliance Certifications'
-      ],
-      "popular": false,'
-      "cta": 'Contact Sales','
-      "link": '/contact'};
+      popular: false,
+      cta: 'Contact Sales',
+      link: '/contact?plan=enterprise'
+    }
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO "
-        title="Pricing - Zion Tech Group | AI & Technology Solutions"
-        description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals, teams, and enterprises."
-        keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing"
-        canonical=""https": //ziontechgroup.com/pricing"
-       />
-"
-      {/* Hero Section */}"
-      <section className="pt-24 pb-16 px-4 "sm": px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <div className="mb-8">"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">";
-              Simple, Transparent";';
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">'
-                {' '}
-                Pricing;
-              </span>";
-            </h1>";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
-              Choose the perfect plan for your AI and technology needs. Start;
-              with a free trial and scale as you grow.;
-            </p>;
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* Pricing Tiers */}";
-      <section className="py-16 px-4 "sm": px-6 lg:px-8">";
-        <div className="max-w-7xl mx-auto">";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {pricingTiers.map((tier, index) => (;
-              <div;
-                key={index}
-                className={`bg-slate-800/50 border rounded-xl p-8 ${}
-'
-                  tier.popular"
-                    ? 'border-blue-500 shadow-lg shadow-blue-500/25"`
-                    : 'border-white/10'""
-                }"}
-              >";
-                {tier.popular && (";
-                  <div className="text-center mb-4">";
-                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )}";
-";
-                <div className="text-center mb-6">";
-                  <h3 className="text-2xl font-bold text-white mb-2">;
-                    {tier.name}";
-                  ";
-                  <div className="text-4xl font-bold text-white mb-1">";
-                    {tier.price}";
-                    <span className="text-lg text-gray-400">{tier.period}</span>";
-                  </div>";
-                  <p className="text-gray-300 text-sm">{tier.description}</p>;
-                </div>";
-";
-                <ul className="space-y-3 mb-8">;
-                  {tier.features.map((feature, idx) => (;
-                    <li";
-                      key={idx}";
-                      className="flex items-start text-gray-300 text-sm";
-                    >";
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>;
-                      {feature}
-                    </li>) ) }
-                </ul>
+  return (
+    <>
+      <SEO 
+        title="Pricing - Zion Tech Group"
+        description="Choose the perfect plan for your AI needs. Flexible pricing options for individuals, teams, and enterprises."
+        keywords="AI pricing, AI tools pricing, AI services cost, AI platform pricing"
+      />
+      
+      <div className="min-h-screen bg-background">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h1 className="text-4xl font-bold text-foreground mb-4">
+                Simple, Transparent Pricing
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Choose the perfect plan for your AI needs. No hidden fees, no surprises.
+              </p>
+            </div>
 
-                <a"
-                  href={tier.link}""
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${}
-'
-"
-"`
-                    tier.popular""'"
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white "hover": from-blue-600 hover:to-cyan-600""'"'"
-                      : 'bg-transparent border border-white text-white hover:text-slate-900'""""
-                  }"}
-                >;
-                  {tier.cta}
-                </a>;
-              </div>) ) }
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* CTA Section */}";
-      <section className="py-16 px-4 "sm": px-6 lg:px-8">";
-        <div className="max-w-4xl mx-auto text-center">";
-          <h2 className="text-3xl font-bold text-white mb-6">;
-            Need a Custom Solution?";
-          </h2>";
-          <p className="text-xl text-gray-300 mb-8">;
-            Contact us for enterprise pricing and custom solutions tailored to;
-            your specific needs.";
-          </p>";
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a";
-              href="tel:+13024640950";
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105";
-            >;
-              📞 Call + 1 (302) 464 - 0950;
-            </a>";
-            <a";
-              href="/contact";
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all";
-            >;
-              Contact Sales;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            {/* Pricing Cards */}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {pricingTiers.map((tier, index) => (
+                <div
+                  key={index}
+                  className={`relative bg-card rounded-lg p-8 shadow-lg border ${
+                    tier.popular ? 'border-primary ring-2 ring-primary/20' : 'border-border'
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                        <Star className="h-4 w-4 mr-1" />
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">
+                      {tier.name}
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      {tier.description}
+                    </p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-foreground">
+                        {tier.price}
+                      </span>
+                      <span className="text-muted-foreground ml-1">
+                        {tier.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <Check className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
+                      tier.popular
+                        ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                    }`}
+                    onClick={() => window.location.href = tier.link}
+                  >
+                    {tier.cta}
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* FAQ Section */}
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-foreground mb-8">
+                Frequently Asked Questions
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8 text-left">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    Can I change plans anytime?
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    Is there a free trial?
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Yes, all plans come with a 14-day free trial. No credit card required.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    What payment methods do you accept?
+                  </h3>
+                  <p className="text-muted-foreground">
+                    We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    Can I cancel anytime?
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Yes, you can cancel your subscription at any time. No cancellation fees.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
-;
-export default Pricing;
-export {Pricing};
-export {Pricing};
-export {Pricing};
-export {Pricing};
-export {Pricing};
+};
 
-</SEO>;';';
-=======
-import React from 'react';''' import {SEO} from '../components/SEO'; const Pricing = (props: any) => {} const pricingTiers = [] {} ' name: 'Starter',' price: '$19',' period: '/month',' description:'' 'Perfect for individuals and small teams getting started with AI tools',' features: ['' 'AI Content Generation (100 credits/month),Basic AI Image Editing',AI Meeting Assistant (5 hours/month),Email Support',Basic Analytics Dashboard',Mobile App Access' ],popular: false,' cta: 'Start Free Trial',' link: '/signup?plan=starter'},{} ' name: 'Professional',' price: '$49',' period: '/month',' description: 'Ideal for growing businesses and professional teams',' features: ['' 'Everything in Starter',AI Content Generation (500 credits/month),Advanced AI Image & Video Editing',AI Code Assistant (Basic),AI Meeting Assistant (20 hours/month),AI Translation (10 languages),Priority Support',Advanced Analytics',API Access (1000 calls/month),Team Collaboration Tools' ],popular: true,' cta: 'Start Free Trial',' link: '/signup?plan=professional'},{} ' name: 'Business',' price: '$99',' period: '/month',' description: 'Comprehensive solution for established businesses',' features: ['' 'Everything in Professional',AI Content Generation (2000 credits/month),AI Code Assistant (Advanced),AI Data Analytics Platform',AI Threat Detection',Multi-Cloud Management',AI-Powered CRM',Business Process Automation',AI Meeting Assistant (Unlimited),AI Translation (100+ languages),24/7 Support',Custom Integrations',API Access (10000 calls/month),Advanced Security Features' ],popular: false,' cta: 'Start Free Trial',' link: '/signup?plan=business'},{} ' name: 'Enterprise',' price: 'Custom',' period: '',' description:'' 'Tailored solutions for large organizations with specific requirements',' features: ['' 'Everything in Business',Unlimited AI Content Generation',Custom AI Model Training',Zero Trust Security Suite',Edge Computing Solutions',AI Market Research Platform',AI Legal Document Review',AI Financial Advisor',AI Healthcare Assistant',Dedicated Account Manager',Custom Development',On-Premise Deployment',SLA Guarantees',Compliance Certifications' ],popular: false,' cta: 'Contact Sales',' link: '/contact'} ]; return() <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">""" <SEO """" title="Pricing - Zion Tech Group | AI & Technology Solutions"""" description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals,teams,and enterprises."""" keywords="pricing,AI services,technology solutions,subscription plans,enterprise pricing"""" canonical="https: /> """ {}"""" <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">"""" <div className="max-w-7xl mx-auto text-center">"""" <div className="mb-8">"""" <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""" Simple,Transparent"""" <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">' {' '} Pricing; </span>""" </h1>"""" <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"> Choose the perfect plan for your AI and technology needs. Start; with a free trial and scale as you grow. </p> </div> </div> </section> """ {}"""" <section className="py-16 px-4 sm:px-6 lg:px-8">"""" <div className="max-w-7xl mx-auto">"""" <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> {pricingTiers.map((tier,index) => ( <div; key={index} className={`bg-slate-800/50 border rounded-xl p-8 ${} ' tier.popular'' ? 'border-blue-500 shadow-lg shadow-blue-500/25'''` : 'border-white/10'`` }`} >""" {tier.popular && ("""" <div className="text-center mb-4">"""" <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium"> Most Popular; </span> </div> )}""" """" <div className="text-center mb-6">"""" <h3 className="text-2xl font-bold text-white mb-2"> {tier.name}""" </h3>"""" <div className="text-4xl font-bold text-white mb-1">""" {tier.price}"""" <span className="text-lg text-gray-400">{tier.period}</span>""" </div>"""" <p className="text-gray-300 text-sm">{tier.description}</p> </div>""" """" <ul className="space-y-3 mb-8"> {tier.features.map((feature,idx) => ( <li""" key={idx}"""" className="flex items-start text-gray-300 text-sm"""" >"""" <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span> {feature} </li>) ) } </ul> <a` href={tier.link}`` className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${} ' '' '''` tier.popular'''`'` ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'''`'`'` : 'bg-transparent border border-white text-white hover:text-slate-900'```` }`} > {tier.cta} </a> </div>) ) } </div> </div> </section> """ {}"""" <section className="py-16 px-4 sm:px-6 lg:px-8">"""" <div className="max-w-4xl mx-auto text-center">"""" <h2 className="text-3xl font-bold text-white mb-6"> Need a Custom Solution?""" </h2>"""" <p className="text-xl text-gray-300 mb-8"> Contact us for enterprise pricing and custom solutions tailored to; your specific needs.""" </p>"""" <div className="flex flex-col sm:flex-row gap-4 justify-center">""" <a"""" href="tel:+13024640950"""" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105""" > 📞 Call + 1 (302) 464 - 0950; </a>""" <a"""" href="/contact"""" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all""" > Contact Sales; </a> </div> </div> </section> </div> )} export default Pricing; export {Pricing}; export {Pricing}; export {Pricing}; export {Pricing}; export {Pricing}; </SEO>
->>>>>>> origin/automation-improvements:src/pages._quarantine/Pricing.jsx
+export default Pricing;

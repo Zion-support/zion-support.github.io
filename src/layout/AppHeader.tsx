@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import Link from 'next/link';
@@ -8,11 +9,48 @@ import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { LoginModal } from '@/components/auth/LoginModal';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  PanelLeft
+} from 'lucide-react';
+>>>>>>> origin/backup-improvements-20250827-015311
 import { useAuth } from '@/hooks/useAuth';
 import { UserMenu } from '@/components/header/UserMenu';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD
+import { useRouter } from 'next/router';
+=======
 import { useRouter } from 'next/router';
 
 export function AppHeader() {
@@ -115,3 +153,39 @@ export function AppHeader() {
     </>
   );
 }
+<<<<<<< HEAD
+=======
+
+// Missing icon component
+const ShoppingCart = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+  </svg>
+);
+
+const Server = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+  </svg>
+);
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MainNavigation } from './MainNavigation';
+export function AppHeader() {
+    return (<header className="bg-white shadow-sm border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
+            </Link>
+          </div>
+          <MainNavigation />
+        </div>
+      </div>
+    </header>);
+}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> origin/backup-improvements-20250827-015311
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

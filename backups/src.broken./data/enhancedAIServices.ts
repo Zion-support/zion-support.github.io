@@ -3,66 +3,6 @@ export interface AIService {
   title: string;
   description: string;
   category: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  pricing: {
-    monthly: number;
-    yearly: number;
-    custom: string;
-    currency: string;
-    pricingModel: string;
-  };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  location?: string;
-  availability?: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-  competitors?: string[];
-  marketSize?: string;
-  roi?: string;
-  technology?: string[];
-  integrations?: string[];
-  compliance?: string[];
-  scalability?: string;
-}
-
 export const ENHANCED_AI_SERVICES: AIService[] = [
   // AI-Powered Predictive Analytics Platform
   {
@@ -649,10 +589,6 @@ export const AI_SERVICE_PRICING_TIERS = [
   { name: "Professional", price: "$699-1,499", features: ["Advanced AI features", "Priority support", "Up to 100,000 API calls"] },
   { name: "Enterprise", price: "$1,499+", features: ["Custom AI models", "24/7 support", "Unlimited API calls"] }
 ];
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   technologies: string[];
   integrations: string[];
   support: string[];
@@ -1199,10 +1135,3 @@ export const getAIServicesByCategory = (category: string): AIService[] => {
 export const getAIServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

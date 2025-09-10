@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import type { ReactNode } from "react";
-import { 
-  Globe, 
-  Rocket, 
-  Settings, 
-  Building2,
-  ArrowRight
-} from "lucide-react";
-
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <section className="space-y-8">
@@ -137,7 +127,5 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
       <div className="py-8">
         {children}
       </div>
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
-  );
+    </div>  );
 }

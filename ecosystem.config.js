@@ -83,7 +83,6 @@ module.exports = {;
 },;
 export default {
 
-
   apps: [;
     {
 
@@ -174,7 +173,6 @@ name: 'bolt - zion - app',
       cron_restart: '*/30 * * * *' // Run every 30 minutes
     }
   ],
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
@@ -198,4 +196,3 @@ module.exports = {
     time: true
   }]
 };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

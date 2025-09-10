@@ -14,32 +14,3 @@ export function usePerformanceMonitoring() {;
           event_label: metri c.id';';
           value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)
           non_interaction: true export function usePerformanceMonitoring() {
-  useEffect(() => {}}
-    const sendToAnalytics = (metric) => {
-      // Send to your analytics service
-      if (performance.memory) {
-        setMetrics({
-          loadTime, renderTime: endTim e - startTime,
-          memoryUsage: performanc e.memory.usedJSHeapSize / 1024 / 1024}
-    );
-      }
-    };
-;
-    measurePerformance();
-    ;
-    return () => {;
-      measurePerformance();
-    };
-  }, []);
-;
-  return metrics};
-        })}    }
-;
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics)}, [])}
-;
-export function reportWebVitals(metric) {;';
-"';';

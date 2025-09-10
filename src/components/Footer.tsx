@@ -1,8 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 :src/components/Footer.tsx
 ';
 ';';import { 
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
+>>>>>>> origin/backup-improvements-20250827-015311
   Mail, 
   Phone, 
   MapPin, 
@@ -16,6 +27,9 @@ import { Link } from 'react-router-dom';
   Target,
   Heart,
 :src/components/Footer.tsx
+<<<<<<< HEAD
+  DollarSign  Users,
+=======
   DollarSign  Users,
   HardDrive,
   TrendingUp,
@@ -189,6 +203,7 @@ export function Footer(props: any) {
 export default function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
 
+<<<<<<< HEAD
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
   // TODO: Add dependencies if needed
@@ -229,6 +244,43 @@ export default function Footer(props: any) {
     );
   };
 export default function Footer(props: any) {
+=======
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+export function Footer() {
+=======
+import { FooterNewsletter } from './FooterNewsletter';
+import { Logo } from './header/Logo';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight, ArrowUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+  
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+<<<<<<< HEAD
+  return (
+    <footer className="bg-futuristic border-t border-zion-cyan/20 pt-20 pb-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000"></div>
+      </div>
+
+      <div className="container-responsive relative z-10">
+=======
+>>>>>>> origin/backup-improvements-20250827-015311
   const footerSections = [
     {
       title: 'Company',
@@ -385,6 +437,7 @@ export function Footer(props: any) {
   ];
   const currentYear = new Date().getFullYear();
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -624,6 +677,37 @@ const Footer = () => {
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-2xl">Z</span>
+=======
+    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+          {/* Company info */}
+          <div className="lg:col-span-2">
+<<<<<<< HEAD
+            <motion.div 
+              className="mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">Z</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gradient">ZION TECH GROUP</h3>
+                  <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
+                </div>
+>>>>>>> origin/backup-improvements-20250827-015311
               </div>
               <div>
                 <h3 className="text-2xl font-bold">Zion Tech Group</h3>
@@ -1368,6 +1452,7 @@ export function Footer(props: any) {
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
+<<<<<<< HEAD
                       {link.name}          {/* Services */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Services</h4>
@@ -1722,12 +1807,73 @@ export function Footer(props: any) {
                     >
                       <span>{link.name}</span>
                       <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+=======
+                      {item.icon && <item.icon className="w-3 h-3 group-hover:text-zion-cyan" />}
+                      {item.name}
+=======
+            <div className="mb-6">
+              <Logo />
+            </div>
+            <p className="text-zion-slate-light mb-6 max-w-sm leading-relaxed">
+              Zion Tech Group is a leading technology company providing innovative IT solutions, AI services, and connecting top tech talent with forward-thinking organizations.
+            </p>
+            
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <MapPin className="h-4 w-4 mr-3 text-zion-cyan" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <Phone className="h-4 w-4 mr-3 text-zion-cyan" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <Mail className="h-4 w-4 mr-3 text-zion-cyan" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-zion-blue-light rounded-lg flex items-center justify-center text-zion-slate-light hover:bg-zion-cyan hover:text-white transition-colors"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Footer sections */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.path}
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group"
+                    >
+                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {link.name}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> origin/backup-improvements-20250827-015311
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+<<<<<<< HEAD
         </div>        {/* Stats Section */}
         <div className="border-t border-gray-800 mt-12 pt-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -1747,6 +1893,62 @@ export function Footer(props: any) {
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
+=======
+        </div>
+
+<<<<<<< HEAD
+        {/* Bottom section */}
+        <motion.div 
+          className="pt-8 border-t border-zion-cyan/20 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="flex items-center space-x-4 text-zion-slate-light text-sm">
+            <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Made with <Heart className="w-4 h-4 inline text-zion-cyan" /> for innovation</span>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Privacy Policy
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Terms of Service
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Cookies
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Scroll to top button */}
+        <motion.button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          whileHover={{ y: -5 }}
+        >
+          <ArrowUp className="w-5 h-5" />
+        </motion.button>
+      </div>
+=======
+        {/* Newsletter section */}
+        <div className="mb-12 pt-8 border-t border-zion-blue-light">
+          <div className="max-w-2xl">
+            <h3 className="text-xl font-semibold text-white mb-2">
+              Stay Updated with Zion Tech Group
+            </h3>
+            <p className="text-zion-slate-light text-sm mb-6">
+              Get the latest insights on technology trends, industry news, and exclusive updates delivered to your inbox.
+            </p>
+            <FooterNewsletter />
+>>>>>>> origin/backup-improvements-20250827-015311
           </div>
         </div>
         {/* Newsletter Signup */}
@@ -1805,6 +2007,21 @@ Cookie Policy      </div>
           </button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+      {/* Scroll to top button */}
+      <motion.button
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 w-12 h-12 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors flex items-center justify-center"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </motion.button>
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> origin/backup-improvements-20250827-015311
     </footer>
   );
 :src/components/Footer.tsx
@@ -1831,3 +2048,4 @@ Cookie Policy      </div>
 }
 };
 export default Footer;
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

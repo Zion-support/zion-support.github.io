@@ -619,7 +619,6 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     reviews: 18
   }
 ];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-96bc
     trialDays: 30,
     setupTime: '2-4 weeks',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket', 'Rigetti Computing'],

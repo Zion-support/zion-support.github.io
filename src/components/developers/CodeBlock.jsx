@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/developers/CodeBlock.jsx
 import React from "react";
 ;
 export default function CodeBlock("props": "any) {;
@@ -19,9 +18,3 @@ export default function CodeBlock("props": "any) {;
           Copy
         </button>
       </div>
-      <pre className="text-sm text-gray-100">
-        <code>{text}</code>
-      </pre>
-    </div>
-    );
-}

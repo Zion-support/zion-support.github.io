@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { MetadataRoute } from 'next';
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com';
   
@@ -74,25 +71,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/enterprise-it',
     '/research-development',
     '/space-tech',
-    '/case-studies',
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
-    '/news',
+    '/case-studies',    '/news',
     '/events',
     '/webinars',
     '/white-papers',
-<<<<<<< HEAD
-    '/case-studies',
-    '/research-development',
-    '/space-tech',
-    '/micro-saas',
-    '/enterprise-it',
-  ].map(page => ({
-    url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
   return [...mainPages, ...servicePages, ...additionalPages];
 =======
     '/docs',
@@ -226,6 +208,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: route === '' ? 1 : 0.8,
-  }))
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
-}
+  }))}

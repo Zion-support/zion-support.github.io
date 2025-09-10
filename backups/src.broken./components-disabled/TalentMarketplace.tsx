@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "@/components/Header";
+<<<<<<< HEAD:backups/src.broken./components-disabled/TalentMarketplace.tsx
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -28,6 +29,25 @@ export default function TalentMarketplace() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
+=======
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function TalentMarketplace() {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Talent Marketplace",
+        "description": "Hire vetted AI and tech professionals from around the world on Zion.",
+        "url": "https://app.ziontechgroup.com/features/talent-marketplace"
+    };
+    return (<>
+      <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplace, hire developers, tech freelancers" canonical="https://app.ziontechgroup.com/features/talent-marketplace"/>
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/features/TalentMarketplace.tsx
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -35,6 +55,7 @@ export default function TalentMarketplace() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
+<<<<<<< HEAD:backups/src.broken./components-disabled/TalentMarketplace.tsx
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <OptimizedImage
               src="https://placehold.co/800x400"
@@ -43,6 +64,9 @@ export default function TalentMarketplace() {
               fill
             />
           </div>
+=======
+          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot of talent directory" className="rounded-lg shadow-xl mx-auto mb-12"/>
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/features/TalentMarketplace.tsx
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find pre-screened experts for short or long term projects.</li>
@@ -67,6 +91,11 @@ export default function TalentMarketplace() {
           </div>
         </div>
       </main>
+<<<<<<< HEAD:backups/src.broken./components-disabled/TalentMarketplace.tsx
     </>
   );
+=======
+      <Footer />
+    </>);
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/features/TalentMarketplace.tsx
 }

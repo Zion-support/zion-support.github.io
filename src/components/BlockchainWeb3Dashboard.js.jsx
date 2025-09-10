@@ -1,94 +1,96 @@
-import {useState, useCallback} from 'react';';
-import {motion, AnimatePresence} from 'framer-motion';';
-import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
+import React from "react"
+import { useState, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from "lucide-react";
 ;
 ;
-export const BlockchainWeb3Dashboard = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;}
-    );'
-    const [activeTab, setActiveTab] = useState('overview');
+export const BlockchainWeb3Dashboard = ({ className = "" }) => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });"
+    const [activeTab, setActiveTab] = useState("overview");
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
-    const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();
+    const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3();
     const [nftForm, setNftForm] = useState({}
-''
-''
-''''
-        name: '', ''''
-        description: '',''''
-        image: ''
-    }
-    );
+"
+""
+"""
+        name: "","""
+        description: "","""
+        image: ""
+    });
     const [transactionForm, setTransactionForm] = useState({}
-''
-''
-''''
-        to: '', ''''
-        value: '',''''
-        data: ''
-    }
-    );
+"
+""
+"""
+        to: "","""
+        value: "","""
+        data: ""
+    });
     const handleConnectWallet = useCallback(async () => {}
         try {}
-            await connectWallet();';
-            trackEvent('blockchain',dashboard',wallet_connected')}
+            await connectWallet();"
+            trackEvent("blockchain",dashboard",wallet_connected")}
         catch (error) {}
-'';
-''';
-            // console.error('Failed to connect "wallet":', error)}
+"
+""
+"""
+            // console.error("Failed to connect wallet:", error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {}
-if(nftForm.name.trim() && wallet) {}
-;
+        if(nftForm.name.trim() && wallet) {}
+
             try {}
-;
-                const metadata = {}";
-  "name": "nftForm.name", "description": "nftForm.description", "image": "nftForm.image || ""https":// comment;
-""""""", "",;
-}""";", ";
-}";"";
-                await mintNFT(contracts[1]?.address || "", metadata)",";
-                setNftForm({name : "", "description": "", "image": ""})""";
-                setShowMintNFT(false)",";
-                trackEvent("blockchain", dashboard",nft_minted")}";
-            catch (error) {}""";
-  "name": "nftForm.name", "description": "nftForm.description", "image": "nftForm.image || ""https":// comment;
-""""""",",;
-}""}";
-                await mintNFT(contracts[1]?.address || "", metadata)";
-                setNftForm({"name": "", "description": "", "image": ""})";
-                setShowMintNFT(false)";
+
+                const metadata = {}"
+  name: nftForm.name, description: nftForm.description, image: nftForm.image || "https:// comment
+"""""", "",
+}""";", "
+}";""
+                await mintNFT(contracts[1]?.address || "", metadata)","
+                setNftForm({ name : "", description: "", image: "" })"""
+                setShowMintNFT(false)","
+                trackEvent("blockchain", dashboard",nft_minted")}"
+            catch (error) {}"""
+  name: nftForm.name, description: nftForm.description, image: nftForm.image || "https:// comment
+"""""",",
+}""}"
+                await mintNFT(contracts[1]?.address || "", metadata)"
+                setNftForm({ name: "", description: "", image: "" })"
+                setShowMintNFT(false)"
                 trackEvent("blockchain",dashboard",nft_minted")}
-;
-            catch (error) {}"";
-"";
-""";
-""""";
-                // comment;
+
+            catch (error) {}""
+""
+"""
+"""""
+                // comment
 
         }
-;
-    }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
-}
+
+    }, [nftForm, wallet, contracts, mintNFT, trackEvent])
+
+
     const handleSendTransaction = useCallback(async () => {}
-;
-        if(transactionForm.to.trim() && transactionForm.value && wallet) {}";
-            try {}"";
-                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)""";
-                setTransactionForm({"to": "", "value": "", "data": ""})"";
-                setShowSendTransaction(false)""";
-                trackEvent("blockchain", dashboard",transaction_sent")}";
-            catch (error) {}"";
-""";
-""""";
-                // comment;
+
+        if(transactionForm.to.trim() && transactionForm.value && wallet) {}"
+            try {}""
+                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)"""
+                setTransactionForm({ to: "", value: "", data: "" })""
+                setShowSendTransaction(false)"""
+                trackEvent("blockchain", dashboard",transaction_sent")}"
+            catch (error) {}""
+"""
+"""""
+                // comment
 
         }
-;
-    }, [transactionForm, wallet, sendTransaction, trackEvent]);
-}
-    const getStatusColor = (props: any) => {}"
+
+    }, [transactionForm, wallet, sendTransaction, trackEvent])
+
+
+    const getStatusColor = (status) => {}"
         switch (status) {}""
 ""
             case "confirmed": return "text-green-600 bg-green-100"
@@ -105,7 +107,7 @@ if(nftForm.name.trim() && wallet) {}
             <Wallet className = "w-16 h-16 text-gray-400 mx-auto mb-4"/" >"""""
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">""
                     Connect Your Wallet"""""
-                  """"
+                  </h3>""""
                   <p className="text-gray-500 dark:text-gray-400 mb-6">""
                     Connect your Web3 wallet to start using blockchain features"""""
                   </p>""""",
@@ -114,7 +116,7 @@ if(nftForm.name.trim() && wallet) {}
                   </button>""""
                 </div>) : (<div className="space-y-6">""""
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">""""
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information""""
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Wallet Information</h3>""""
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""""
                       <div>""""
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">""
@@ -156,7 +158,7 @@ if(nftForm.name.trim() && wallet) {}
                   </div>"""""
 """""
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">""""
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions""""
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions</h3>""""
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""",
                       <button onClick="{()" =" > setShowSendTransaction(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-green-600 rounded-lg hover: bg-green-700">"""""
                         <Send className="w-5 h-5"/" >""
@@ -174,12 +176,12 @@ if(nftForm.name.trim() && wallet) {}
 """""""
           {activeTab === "contracts" && (<motion.div key="contracts" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts,
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts</h3>,
                 <button onClick = {}"
   () =" > addContract({}"
 """
@@ -235,21 +237,21 @@ if(nftForm.name.trim() && wallet) {}
                         <span className="text-gray-500 dark: text-gray-400">Last Used:</span>""""
                         <span className="text-gray-900 dark:text-white">,
                           {contract.lastInteraction.toLocaleDateString()}
-;
-                        </span>;
-                      </div>;
-                  </div>) ) }";
-              </div>"";
-            </motion.div>)}""""";
-""""""";
+
+                        </span>
+                      </div>
+                  </div>) ) }"
+              </div>""
+            </motion.div>)}"""""
+"""""""
           {activeTab === "nfts" && (<motion.div key="nfts" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">NFT Collection</h3>"""",
                 <button onClick="{()" =" > setShowMintNFT(true)} className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700">"""""
                   <Plus className="w-4 h-4 inline mr-2"/" >"
                   Mint NFT"
@@ -287,20 +289,20 @@ if(nftForm.name.trim() && wallet) {}
                             <span className="text-gray-500 dark: text-gray-400">Price:</span>"""",
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>
                           </div>)}
-;
-                      </div>;
-                  </div>) ) }";
-              </div>"";
-            </motion.div>)}""""";
-""""""";
+
+                      </div>
+                  </div>) ) }"
+              </div>""
+            </motion.div>)}"""""
+"""""""
           {activeTab === "defi" && (<motion.div key="defi" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions,
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions</h3>,
                 <button onClick = {}"
   () =" > createDeFiPosition({}"
 """
@@ -357,21 +359,21 @@ if(nftForm.name.trim() && wallet) {}
                         <span className="text-gray-500 dark: text-gray-400">Started:</span>""""
                         <span className="text-gray-900 dark:text-white">,
                           {position.startDate.toLocaleDateString()}
-;
-                        </span>;
-                      </div>;
-                  </div>) ) }";
-              </div>"";
-            </motion.div>)}""""";
-""""""";
+
+                        </span>
+                      </div>
+                  </div>) ) }"
+              </div>""
+            </motion.div>)}"""""
+"""""""
           {activeTab === "transactions" && (<motion.div key="transactions" initial = {}
 
-  {opacity: 0, y: 20}} animate = {}"
-  {opacity: 1, y: 0}} exit = {}""
-  {opacity: 0, y: -20 """"">
+  { opacity: 0, y: 20}} animate = {}"
+  { opacity: 1, y: 0}} exit = {}""
+  { opacity: 0, y: -20 """"">
 """"}} className="space-y-4">""""
               <div className="flex items-center justify-between">""""
-                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History"""",
+                <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Transaction History</h3>"""",
                 <button onClick="{()" =" > setShowSendTransaction(true)} className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700">"""""
                   <Send className="w-4 h-4 inline mr-2"/" >"
                   Send Transaction"
@@ -404,60 +406,60 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                         <span className="text-gray-500 dark:text-gray-400">From:</span>""""
                         <code className="block text-xs font-mono mt-1">,
                           {tx.from.slice(0, 8)}...{tx.from.slice(-6)}
-;
-                        </code>";
-                      </div>"";
-                      """"";
-                      <div>""""";
-                        <span className="text-gray-500 "dark": "text-gray-400">"To":</span>"""";
-                        <code className="block text-xs font-mono mt-1">",;
+
+                        </code>"
+                      </div>""
+                      """""
+                      <div>"""""
+                        <span className="text-gray-500 dark: text-gray-400">To:</span>""""
+                        <code className="block text-xs font-mono mt-1">,
                           {tx.to.slice(0, 8)}...{tx.to.slice(-6)}
-;
-                        </code>";
-                      </div>"";
-                      """"";
-                      <div>""""";
-                        <span className="text-gray-500 "dark": "text-gray-400">"Value":</span>""""",;
-                        <p className="font-medium text-gray-900 "dark": "text-white mt-1">{tx.value"} ETH</p>";
-                      </div>"";
-                    </div>""""";
-                    """"";
-                    <div className="mt-3 pt-3 border-t border-gray-200 "dark": "border-gray-600">"""";
-                      <div className="grid grid-cols-1 "md":grid-cols-3 gap-4 text-sm">""""";
-                        <div>"""";
-                          <span className="text-gray-500 "dark":text-gray-400">Gas "Used":</span>""""",;
-                          <p className="text-gray-900 "dark": "text-white">{tx.gasUsed"}</p>";
-                        </div>"";
-                        """"";
-                        <div>""""";
-                          <span className="text-gray-500 "dark": "text-gray-400">Gas "Price":</span>""""",;
-                          <p className="text-gray-900 "dark": "text-white">{tx.gasPrice"} Gwei</p>";
-                        </div>"";
-                        """"";
-                        <div>""""";
-                          <span className="text-gray-500 "dark": "text-gray-400">"Timestamp":</span>"""";
-                          <p className="text-gray-900 "dark":text-white">",;
+
+                        </code>"
+                      </div>""
+                      """""
+                      <div>"""""
+                        <span className="text-gray-500 dark: text-gray-400">Value:</span>"""",
+                        <p className="font-medium text-gray-900 dark:text-white mt-1">{tx.value} ETH</p>"
+                      </div>""
+                    </div>"""""
+                    """""
+                    <div className="mt-3 pt-3 border-t border-gray-200 dark: border-gray-600">""""
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">"""""
+                        <div>""""
+                          <span className="text-gray-500 dark:text-gray-400">Gas Used:</span>"""",
+                          <p className="text-gray-900 dark:text-white">{tx.gasUsed}</p>"
+                        </div>""
+                        """""
+                        <div>"""""
+                          <span className="text-gray-500 dark: text-gray-400">Gas Price:</span>"""",
+                          <p className="text-gray-900 dark:text-white">{tx.gasPrice} Gwei</p>"
+                        </div>""
+                        """""
+                        <div>"""""
+                          <span className="text-gray-500 dark: text-gray-400">Timestamp:</span>""""
+                          <p className="text-gray-900 dark:text-white">,
                             {tx.timestamp.toLocaleString()}
-;
-                          </p>;
-                        </div>;
+
+                          </p>
+                        </div>
                   </div>) ) }
-;
-              </div>;
+
+              </div>
             </motion.div>) }
-;
-        </AnimatePresence>";
-      </div>"";
-      {/* comment */}""""";
-      <AnimatePresence>"""";
-        {showMintNFT && (<motion.div initial="{{" "opacity": "0 "}} animate="{{" "opacity": "1 "}} exit="{{" "opacity": "0 "}} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
+
+        </AnimatePresence>"
+      </div>""
+      {/* comment */}"""""
+      <AnimatePresence>""""
+        {showMintNFT && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <motion.div initial = {}
 
-  {scale: 0.9, opacity: 0}} animate = {}"
-  {scale: 1, opacity: 1}} exit = {}""
-  {scale: 0.9, opacity: 0 """"">
+  { scale: 0.9, opacity: 0}} animate = {}"
+  { scale: 1, opacity: 1}} exit = {}""
+  { scale: 0.9, opacity: 0 """"">
 """"}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">""""
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT"""""
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>"""""
               """"
               <div className="space-y-4">"""""
                 <div>""""
@@ -465,7 +467,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Name"""""
                   </label>""""",
                   <input type="text" value="{nftForm.name}" onChange = {}"""
-  (e) =" > setNftForm(prev => ({...prev, name: e.target.value """"",
+  (e) =" > setNftForm(prev => ({ ...prev, name: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name" />"
                 </div>""
                 """""
@@ -474,7 +476,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Description,
                   </label>",
                   <textarea value="{nftForm.description}" onChange = {}"""
-  (e) =" > setNftForm(prev => ({...prev, description: e.target.value """"",
+  (e) =" > setNftForm(prev => ({ ...prev, description: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows="{3}/">"
                 </div>""
                 """""
@@ -483,7 +485,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Image URL (optional)"""""
                   </label>""""",
                   <input type="url" value="{nftForm.image}" onChange = {}"""
-  (e) =" > setNftForm(prev => ({...prev, image: e.target.value """"",
+  (e) =" > setNftForm(prev => ({ ...prev, image: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https:// comment
                 </div>""
               </div>"""""
@@ -505,11 +507,11 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
         {showSendTransaction && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <motion.div initial = {}
 
-  {scale: 0.9, opacity: 0}} animate = {}"
-  {scale: 1, opacity: 1}} exit = {}""
-  {scale: 0.9, opacity: 0 """"">
+  { scale: 0.9, opacity: 0}} animate = {}"
+  { scale: 1, opacity: 1}} exit = {}""
+  { scale: 0.9, opacity: 0 """"">
 """"}} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">""""
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction"""""
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction</h3>"""""
               """"
               <div className="space-y-4">"""""
                 <div>""""
@@ -517,7 +519,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     To Address"""""
                   </label>""""",
                   <input type="text" value="{transactionForm.to}" onChange = {}"""
-  (e) =" > setTransactionForm(prev => ({...prev, to: e.target.value """"",
+  (e) =" > setTransactionForm(prev => ({ ...prev, to: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." />"
                 </div>""
                 """""
@@ -526,7 +528,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Amount (ETH)"""""
                   </label>""""",
                   <input type="number" step="0.001" value="{transactionForm.value}" onChange = {}"""
-  (e) =" > setTransactionForm(prev => ({...prev, value: e.target.value """"",
+  (e) =" > setTransactionForm(prev => ({ ...prev, value: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1" />"
                 </div>""
                 """"
@@ -535,7 +537,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                     Data(),
                   </label>",
                   <textarea value="{transactionForm.data}" onChange = {}"""
-  (e) =" > setTransactionForm(prev => ({...prev, data: e.target.value """"",
+  (e) =" > setTransactionForm(prev => ({ ...prev, data: e.target.value """"",
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows="{3}/">"
                 </div>""
               </div>"""""
@@ -556,32 +558,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
 """"'""`""
 "
 
-  } catch (error) {console.error(error);}
-export default Component;
-
-</textarea>;
-</motion>;
-</motion>;
-</textarea>;
-</motion>;
-</motion>;
-</Coins>;
-</Send>;
-</motion>;
-</div>;
-</Plus>;
-</motion>;
-</div>;
-</Plus>;
-</motion>;
-</div>;
-</Plus>;
-</Plus>;
-</motion>;
-</Plus>;
-</Send>;
-</Download>;
-</Wallet>;
-</div>;
-</div>;
-</div>
+  } catch (error) {
+    console.error(error);
+  }
+export default Component

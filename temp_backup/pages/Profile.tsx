@@ -1,7 +1,22 @@
+<<<<<<< HEAD:temp_backup/pages/Profile.tsx
 
 import React, { useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+=======
+import React from 'react';
+<<<<<<< HEAD
+import { useEffect } from 'react';
+=======
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+
+import React, { useEffect } from 'react';
+=======
+import { useEffect } from 'react';
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -82,10 +97,19 @@ export default function Profile() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:temp_backup/pages/Profile.tsx
       <Footer />
+<<<<<<< HEAD
+
+=======
 =======
       
+<<<<<<< HEAD:temp_backup/pages/Profile.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
 const Profile: React.FC = () => {
   return (
     <>
@@ -93,7 +117,7 @@ const Profile: React.FC = () => {
         <title>Profile - Zion Tech Group</title>
         <meta name="description" content="Manage your Zion Tech Group profile. Update your information, preferences, and account settings." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -102,7 +126,7 @@ const Profile: React.FC = () => {
               Manage your account information, preferences, and settings in one place.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Profile management coming soon. We're building comprehensive profile features.
@@ -110,7 +134,22 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/chore/fix-links-and-build:src/pages/Profile.tsx
     </>
   );
+<<<<<<< HEAD:temp_backup/pages/Profile.tsx
 }
+=======
+};
+
+export default Profile;
+=======
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+    </>);
+}
+;
+export default Profile;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx

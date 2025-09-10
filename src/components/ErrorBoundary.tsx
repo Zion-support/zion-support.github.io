@@ -1,25 +1,33 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -28,43 +36,30 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo,
     });
 
-    // Log error to monitoring service
-    if (process.env.NODE_ENV === 'production') {
-      // In production, send to error monitoring service
-      console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-  }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    // Call custom error handler if provided
+    this.props.onError?.(error, errorInfo);
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
+    }
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      // Example: Send to error logging service
-      const errorData = {
-        id: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        // Add any other relevant information
-      };
-
-      // You can send this to your error logging service
-      
-      
-      // Example: Send to external service
-      // fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorData)
-      // });
-  } catch (logError) {
-      console.error('Failed to log error:', logError);
-    }
+    // Here you would typically send the error to a service like Sentry, LogRocket, etc.
+    console.error('Error logged to service:', {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    });
   };
 
   private handleRetry = () => {
@@ -72,53 +67,11 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      showStack: false
     });
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleCopyError = () => {
-    if (this.state.error && this.state.errorInfo) {
-      const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-Error ID: ${this.state.errorId}
-Timestamp: ${new Date().toISOString()}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
-      `.trim();
-
-      navigator.clipboard.writeText(errorText).then(() => {
-        // Show success feedback
-        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
-          button.classList.add('text-green-600');
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('text-green-600');
-          }, 2000);
-        }
-      }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-      });
-    }
-  };
-
-  private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
+  private handleReload = () => {
+    window.location.reload();
   };
 
   render() {
@@ -128,49 +81,85 @@ User Agent: ${navigator.userAgent}
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <AlertTriangle className="w-6 h-6 text-red-600" />
-            </div>
-            
-            <div className="text-center">
-              <h1 className="text-xl font-semibold text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-              
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4" role="alert">
+          <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-xl p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg
+                  className="h-8 w-8 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
                 >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  Refresh Page
-                </button>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-white">
+                  Something went wrong
+                </h3>
               </div>
             </div>
             
+            <div className="mt-2">
+              <p className="text-sm text-gray-300">
+                We apologize for the inconvenience. An unexpected error has occurred.
+              </p>
+            </div>
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 p-4 bg-gray-100 rounded-md">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700">
-                  Error Details (Development Only)
+              <details className="mt-4">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">
+                  Error Details (Development)
                 </summary>
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
+                <div className="mt-2 p-3 bg-gray-700 rounded text-xs text-gray-300 overflow-auto max-h-40">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.error.stack && (
+                    <div className="mb-2">
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                    </div>
+                  )}
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                    </div>
+                  )}
+                </div>
               </details>
             )}
+
+            <div className="mt-6 flex space-x-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex-1 bg-cyan-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors"
+                aria-label="Try again"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={this.handleReload}
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors"
+                aria-label="Reload page"
+              >
+                Reload Page
+              </button>
+            </div>
+
+            <div className="mt-4 text-center">
+              <p className="text-xs text-gray-500">
+                If this problem persists, please contact support.
+              </p>
+            </div>
           </div>
         </div>
       );
@@ -180,4 +169,28 @@ User Agent: ${navigator.userAgent}
   }
 }
 
-export default ErrorBoundary;
+// Hook for error boundary functionality
+export function useErrorHandler() {
+  return (error: Error, errorInfo?: ErrorInfo) => {
+    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    
+    // You can add additional error handling logic here
+    // For example, sending to an error reporting service
+  };
+}
+
+// Higher-order component for error boundary
+export function withErrorBoundary<P extends object>(
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Omit<Props, 'children'>
+) {
+  const WrappedComponent = (props: P) => (
+    <ErrorBoundary {...errorBoundaryProps}>
+      <Component {...props} />
+    </ErrorBoundary>
+  );
+
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+
+  return WrappedComponent;
+}

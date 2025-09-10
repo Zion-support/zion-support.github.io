@@ -2,10 +2,6 @@ import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
-
-
-
-
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
@@ -28,7 +24,6 @@ function helpText(): string {;
 }
 
 app.command('/zion', async ({ command, ack, respond }) => {
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   await ack();
   const text = (command.text || '').trim();
   const [sub, ...rest] = text.split(' ');
@@ -84,5 +79,4 @@ app.command('/zion', async ({ command, ack, respond }) => {
   await app.start(port);
   // eslint-disable-next-line no-console
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 })();

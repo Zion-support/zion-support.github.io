@@ -25,76 +25,7 @@ export interface SpecializedITInfrastructureService2025 {
   documentationUrl?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
-  // Edge Computing Orchestration Platform
-=======
-export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
-  // Edge Computing Infrastructure Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  {
-    id: "edge-computing-infrastructure-platform",
-    title: "Edge Computing Infrastructure Platform",
-    description: "Comprehensive edge computing platform that brings processing power closer to data sources, enabling real-time analytics, low-latency applications, and distributed computing capabilities.",
-    category: "Edge Computing",
-    subcategory: "Infrastructure Platform",
-    price: 2800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Distributed edge nodes",
-      "Real-time data processing",
-      "Low-latency connectivity",
-      "Edge AI capabilities",
-      "Load balancing",
-      "Edge security",
-      "Monitoring and analytics",
-      "Scalable infrastructure"
-    ],
-    benefits: [
-      "Reduced latency by 90%",
-      "Lower bandwidth costs",
-      "Real-time processing",
-      "Improved user experience",
-      "Scalable edge network"
-    ],
-    useCases: [
-      "IoT applications",
-      "Real-time analytics",
-      "Content delivery",
-      "Autonomous systems",
-      "Gaming platforms"
-    ],
-    targetAudience: [
-      "IoT companies",
-      "Content providers",
-      "Gaming companies",
-      "Manufacturing firms",
-      "Technology companies"
-    ],
-    tags: ["Edge Computing", "Infrastructure", "Real-time", "IoT", "Low Latency"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,800 - $12,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"
-  },
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  // Quantum-Ready Cloud Infrastructure
-=======
   // Quantum Network Infrastructure
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "quantum-network-infrastructure",
     title: "Quantum Network Infrastructure",
@@ -198,70 +129,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"
-  },
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  // Autonomous DevOps Infrastructure
-  {
-    id: "autonomous-devops-infrastructure",
-    title: "Autonomous DevOps Infrastructure",
-    description: "Self-healing, self-optimizing infrastructure platform that automatically manages deployments, scaling, monitoring, and incident response using AI and machine learning.",
-    category: "IT Infrastructure",
-    subcategory: "DevOps Automation",
-    price: 1400,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Self-healing systems",
-      "Automated scaling",
-      "Intelligent monitoring",
-      "Predictive maintenance",
-      "Automated incident response",
-      "Performance optimization",
-      "Cost optimization",
-      "Security automation"
-    ],
-    benefits: [
-      "Reduce downtime by 90%",
-      "Automate 80% of operations",
-      "Reduce operational costs",
-      "Improve system reliability",
-      "24/7 autonomous operation"
-    ],
-    useCases: [
-      "Web applications",
-      "Microservices",
-      "Cloud-native apps",
-      "E-commerce platforms",
-      "SaaS applications"
-    ],
-    targetAudience: [
-      "DevOps engineers",
-      "Site reliability engineers",
-      "Cloud architects",
-      "Startup companies",
-      "Enterprise IT teams"
-    ],
-    tags: ["DevOps", "Automation", "AI", "Cloud", "Infrastructure"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,400 - $4,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Kubernetes", "Docker", "Terraform", "Python", "Machine Learning"],
-    integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "Slack"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR"],
-    roi: "250% within 8 months",
-    competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
-    infrastructure: "Auto-scaling cloud-native",
-    scalability: "Infinite auto-scaling",
-    uptime: "99.99% availability"
   },
 
   // Zero-Trust Security Infrastructure
@@ -392,7 +259,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     category: "IT Infrastructure",
     subcategory: "Cloud Orchestration",
     price: 1900,
-=======
   // Hybrid Cloud Infrastructure Platform
   {
     id: "hybrid-cloud-infrastructure-platform",
@@ -400,9 +266,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     description: "Advanced hybrid cloud platform that seamlessly integrates on-premises, private cloud, and public cloud resources for optimal performance, cost, and security.",
     category: "Cloud Infrastructure",
     subcategory: "Hybrid Cloud",
-    price: 2500,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    currency: "$",
+    price: 2500,    currency: "$",
     pricingModel: "monthly",
     features: [
       "Multi-cloud management",
