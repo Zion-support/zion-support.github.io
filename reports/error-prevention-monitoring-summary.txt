@@ -1,0 +1,33 @@
+Error Prevention Monitoring Report - 8/30/2025, 3:23:07 AM
+==================================================
+
+Total Services: 7
+Online Services: 0
+Offline Services: 7
+Total Errors: 28
+Total Warnings: 0
+Active Alerts: 11
+
+ACTIVE ALERTS:
+--------------------
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m4\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m5\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m0\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m6\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m3\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m1\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• service_offline: {"type":"service_offline","service":"\u001b[1m\u001b[36m2\u001b[39m\u001b[22m","status":"│","timestamp":"2025-08-30T03:23:07.204Z"}
+• excessive_errors: {"type":"excessive_errors","logFile":"enhanced-error-prevention-orchestrator-error.log","errorCount":15,"timestamp":"2025-08-30T03:23:07.204Z"}
+• excessive_errors: {"type":"excessive_errors","logFile":"linting-error-fixer-error.log","errorCount":13,"timestamp":"2025-08-30T03:23:07.204Z"}
+• health_monitoring_failure: {"type":"health_monitoring_failure","error":"Command failed: npm run lint 2>&1","timestamp":"2025-08-30T03:23:07.288Z"}
+• too_many_offline_services: {"type":"too_many_offline_services","current":7,"threshold":2,"timestamp":"2025-08-30T03:23:07.289Z"}
+
+Service Status:
+--------------------
+[1m[36m4[39m[22m: │ (│ | default%)
+[1m[36m5[39m[22m: │ (│ | default%)
+[1m[36m0[39m[22m: │ (│ | default%)
+[1m[36m6[39m[22m: │ (│ | default%)
+[1m[36m3[39m[22m: │ (│ | default%)
+[1m[36m1[39m[22m: │ (│ | default%)
+[1m[36m2[39m[22m: │ (│ | default%)

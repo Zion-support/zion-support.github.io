@@ -1,24 +1,27 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+.next
 node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+package-lock.json
+yarn.lock
+public/toolkit_assets/media_kit.zip
+__pycache__/
+
+# Build outputs
+dist/
+
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
+.next/
+core
+
+# TypeScript build info
+*.tsbuildinfo
