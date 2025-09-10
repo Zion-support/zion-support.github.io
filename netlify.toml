@@ -6,6 +6,7 @@
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
+PNPM_VERSION = "9.12.1"
 
 # API functions (if needed)
 # [functions]
