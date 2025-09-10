@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-<<<<<<< HEAD
     "lib": [
       "dom",
       "dom.iterable",
       "es6"
     ],
-=======
-    "lib": ["dom", "dom.iterable", "es6"],
->>>>>>> origin/automation/changelog
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -28,20 +24,16 @@
     "noFallthroughCasesInSwitch": true,
     "allowJs": true,
     "incremental": true,
-<<<<<<< HEAD
     "plugins": [
       {
         "name": "next"
       }
     ],
-=======
->>>>>>> origin/automation/changelog
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
-<<<<<<< HEAD
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -49,11 +41,17 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "zion-os.disabled",
+    "temp-disabled",
+    "pages._archive_corrupted",
+    "pages.disabled",
+    "pages.disabled_full",
+    "pages.disabled.full",
+    "src.pages.disabled",
+    "zion-os",
+    "zion-website/src",
+    "tests",
+    "backup-merge-conflicts"
   ]
 }
-=======
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-}
->>>>>>> origin/automation/changelog
