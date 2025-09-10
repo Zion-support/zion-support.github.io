@@ -1,44 +1,61 @@
-import { Component, ReactNode, ErrorInfo } from 'react';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 export class ErrorBoundary extends Component<Props, State> {
-  state: State = { hasError: false };
-
   constructor(props: Props) {
-    super(props);
-    console.log("ErrorBoundary.tsx: Constructor");
-    // Note: While the instructions said to log near state initialization if no constructor,
-    // adding a constructor to log is a common practice and cleaner.
-    // If a constructor is explicitly forbidden, the alternative is:
-    // console.log("ErrorBoundary.tsx: Initializing state"); // (and place it before state declaration)
-    // However, state initialization like `state: State = { hasError: false };` happens after constructor.
-    // For this exercise, assuming adding a constructor for logging is acceptable.
+    super(props)
+    this.state = { hasError: false }
   }
 
-  static getDerivedStateFromError() {
-    console.log("ErrorBoundary.tsx: getDerivedStateFromError triggered");
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, info: ErrorInfo) {
-    console.log("ErrorBoundary.tsx: ComponentDidCatch triggered");
-    console.error('Uncaught error:', error, info);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    })
+    
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo)
+    
+    // Send to error reporting service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      })
+    }
   }
 
   render() {
-    console.log("ErrorBoundary.tsx: Render");
     if (this.state.hasError) {
-      if (this.props.fallback) return <>{this.props.fallback}</>;
-      return <div className="p-4 text-center">Something went wrong.</div>;
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo.componentStack}
+          </details>
+        </div>
+      )
     }
-    return this.props.children;
+
+    return this.props.children
   }
 }
+
+export default ErrorBoundary

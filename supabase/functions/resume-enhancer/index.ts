@@ -88,7 +88,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error in resume-enhancer function:", error);
+    // console.error("Error in resume-enhancer function:", error);
     return new Response(
       JSON.stringify({
         error: error.message,

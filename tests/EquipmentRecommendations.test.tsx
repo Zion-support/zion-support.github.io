@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, useNavigate } from 'react-router-dom';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import EquipmentPage from '@/pages/EquipmentPage';
@@ -45,8 +45,10 @@ const recommended = [
   }
 ];
 
+let receivedUserId = '';
 const server = setupServer(
   rest.get('/api/equipment/recommendations', (req, res, ctx) => {
+    receivedUserId = req.url.searchParams.get('userId') || '';
     return res(ctx.json(recommended));
   })
 );
@@ -71,13 +73,20 @@ test('loads AI recommendations', async () => {
   expect(await screen.findByText('Recommended 1')).toBeInTheDocument();
   expect(screen.getByText('Recommended 2')).toBeInTheDocument();
   expect(screen.getByText('Recommended 3')).toBeInTheDocument();
+  expect(receivedUserId).toBe('u1');
 });
 
 
 vi.spyOn(auth, 'useAuth').mockReturnValueOnce({ user: null, isLoading: false } as any);
 test('redirects to login when not authenticated', () => {
   const navigateMock = vi.fn();
-  vi.spyOn(require('react-router-dom'), 'useNavigate').mockReturnValue(navigateMock);
+  vi.mock('react-router-dom', async () => {
+    const actual = await vi.importActual('react-router-dom');
+    return {
+      ...actual,
+      useNavigate: () => navigateMock
+    };
+  });
 
   render(
     <MemoryRouter initialEntries={['/equipment']}>
@@ -88,5 +97,5 @@ test('redirects to login when not authenticated', () => {
   );
 
   fireEvent.click(screen.getByText(/AI Recommendations/i));
-  expect(navigateMock).toHaveBeenCalledWith('/login?next=/equipment&reco=1');
+  expect(navigateMock).toHaveBeenCalledWith('/auth/login?returnTo=/equipment&reco=1');
 });
