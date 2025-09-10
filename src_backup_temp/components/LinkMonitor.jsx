@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/LinkMonitor.jsx
-"type": 'redirect',"`'"`;,"});,"})';';';
 type: 'redirect',"`'"`;,"}
     );,"})';';';
 ',';';

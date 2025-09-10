@@ -41,8 +41,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
 "}, []);
     // Check for existing auth state on mount;
 : "src/context/auth/useAuthState.tsx;
-    ;
-    accessToken: nul l,
+    ;    accessToken: nul l,
     refreshToken: nul l
   }
     );
@@ -51,32 +50,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
 }, []);
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
-=======
-}
-
-interface AuthTokens {
-  accessToken: string | null;
-  refreshToken: string | null}
-
-  accessToken: string | null;
-  refreshToken: string | null;
-}
-
-export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {;
-  const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState<typeof true>(true);
-  const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
-  const [tokens, setTokens] = useState<any>({;
-
-    accessToken: null,
-    refreshToken: null;
-});
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
-    // Check for existing auth state on mount;
-:src/context/auth/useAuthState.tsx;
->>>>>>> origin/automation-fixes:src/context/auth/useAuthState.tsx
+    
         if(typeof window !== 'null') {;
           if(auth) {;
         if(typeof window !== 'null') {;

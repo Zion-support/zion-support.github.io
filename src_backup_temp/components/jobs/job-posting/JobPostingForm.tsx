@@ -31,26 +31,7 @@ export function JobPostingForm("props": "any) {;
     submitJob;
   } = useJobForm({ jobId, onSuccess });
 ;
-=======
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
-  const navigate = useNavigate();
-  const { createJob, updateJob, getJobById } = useJobs();
-  const [isFormLoading, setIsFormLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState("");
-  const {;
-    form,
-    isLoading,
-    startDate,
-    setStartDate,
-    endDate,
-    setEndDate,
-    isRemote,
-    setIsRemote,
-    submitJob;
-} = useJobForm({ jobId, onSuccess });
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
-  const {
+  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;  const {
     form,
     isLoading,
     startDate,
@@ -212,11 +193,9 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
           <p className="text-sm text-muted-foreground">;
             Fill in the details below to create a job posting.</p>;
         </div>;
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
         <BasicInfoFields control={form.control}  />;
         ;
-        <DateFields startDate={startDate} ;
-  return (<Form {...form}>
+        <DateFields startDate={startDate} ;  return (<Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
           <h3 className="text-lg font-medium">Post a Job

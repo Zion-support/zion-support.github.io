@@ -1,5 +1,7 @@
 <<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Merge Conflict Resolver");"console.log("=====");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { if (true) { return false) { ) { return false}} console.log(` Resolving conflicts in ${filePath}.`); try {" let content = fs.readFileSync(filePath, "utf8";); let modified = fal;s;e; / Remove conflict markers and keep the newer version (incoming changes)"`"`
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +19,8 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove conflict markers and keep the newer version (incoming changes)
     // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
@@ -34,6 +38,7 @@ function resolveMergeConflicts(filePath) {
         continue;
       }
       if (line.includes('')) {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
         conflictType = 'incoming';
         continue;
       }
@@ -143,6 +148,8 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
+=======
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
@@ -209,11 +216,4 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
-=======
-// Run the resolver;
-if (require.main === module) {
-  const resolver = new MergeConflictResolver()
-  resolver.resolveAllConflicts(),,
-}
-module.exports = MergeConflictResolver
->>>>>>> origin/automation-fixes
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

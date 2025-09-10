@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+import fs from 'fs';''
+import path from 'path';''
+import { execSync } from 'child_process';''
+console.log('🔧 Resolving merge conflicts by accepting incoming changes...');'
+// Function to resolve merge conflicts by accepting incoming changes;
+function resolveMergeConflicts(filePath) {}
+  try {}
+  // TODO: Implement;
+}'
+    let content = fs.readFileSync(filePath, 'utf8');'
+    // Check if file has merge conflict markers;'
+    if (content.includes('<<<<<<<') || content.includes(')
+      // Clean up any remaining conflict markers;
+      content = content;)'
+        .replace(/);
+      fs.writeFileSync(filePath, content);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Function to find all files with merge conflicts;
+function findConflictedFiles() {}
+  try {}
+  // TODO: Implement;
+}
+    const result = execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8' }
+});''
+    return result.trim().split('\n').map(line => line.split(' ').pop()).filter(Boolean);'
+  } catch (error) {'}
+    console.log('No conflicted files found or error:', error.message);'
+=======
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -5,21 +42,16 @@ const fs = require('fs');
 
 console.log('🚀 Starting Merge Conflicts Resolution Process...');
 
-function runCommand(command, options = {}) {
-    try {
-        console.log(`Running: ${command}`);
-        const result = execSync(command, { 
-            encoding: 'utf8', 
-            cwd: '/workspace',
-            ...options 
-        });
-        return result.trim();
-    } catch (error) {
-        console.error(`Error running command: ${command}`);
-        console.error(error.message);
-        return null;
-    }
-}
+// Find all files with merge conflicts
+const findConflictFiles = () => {
+  try {
+    const result = execSync('grep -r -l "" . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file);
+  } catch (error) {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+    return [];
+  }
+};
 
 function checkGitStatus() {
     console.log('📊 Checking Git Status...');

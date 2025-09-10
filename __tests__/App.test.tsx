@@ -8,15 +8,18 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
+<<<<<<< HEAD
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
 =======
-import App from '../App';
-
-test('renders app', () => {;
-  render(<App />);
-  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-})
->>>>>>> origin/automation-fixes
+    const heading = screen.getByRole('heading', { level: '1' });
+    expect(heading).toBeInTheDocument();
+  });
+});
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
+  });
+});
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

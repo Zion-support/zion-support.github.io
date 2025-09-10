@@ -1,8 +1,6 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import EnhancedUserExperience from '../components/EnhancedUserExperience';'
-describe('EnhancedUserExperience', () => {test('renders without crashing', () => {render(<EnhancedUserExperience />)expect(screen.getByTestId('enhanceduserexperience')).toBeInTheDocument()})test('displays correct content', () => {render(<EnhancedUserExperience />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<EnhancedUserExperience />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<EnhancedUserExperience />)// Add styling tests here;'
-  })})
+<<<<<<< HEAD
+=======
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedUserExperience from &apos;./EnhancedUserExperience; describe(&apos;EnhancedUserExperience&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedUserExperience / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedUserExperience from &apos;./EnhancedUserExperience; describe(&apos;EnhancedUserExperience&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedUserExperience / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedUserExperience from &apos;./EnhancedUserExperience; describe(&apos;EnhancedUserExperience&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<EnhancedUserExperience / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

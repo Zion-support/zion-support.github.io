@@ -141,27 +141,23 @@ export default function Page() {;
           newValue';
             ? 'High contrast mode enabled'';
             : 'High contrast mode disabled';
-        )} else if(key === 'largeText') {;
-  // Toggle settings
+        )} else if(key === 'largeText') {;  // Toggle settings
       applySettings({ [key]: newValue }
     );
+
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
         )}
     },
     [settings, applySettings, announceToScreenReader];
   );
+;
   // Zoom controls;
 <<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   ;
       applySettings({ "zoomLevel": "newZoo m "});`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
-=======
-      applySettings({ zoomLevel: newZoom });`;
-      announceToScreenReader(`Zoom level ${newZoom}%`)},
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityEnhancer.tsx
-    [settings.zoomLevel, applySettings, announceToScreenReader];
-  // Zoom controls
+    [settings.zoomLevel, applySettings, announceToScreenReader];  // Zoom controls
       applySettings({ zoomLevel: newZoo m }
     );`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
@@ -208,8 +204,7 @@ export default function Page() {;
                 ;
               >";
                 <EyeOff className="w-4 h-4"   />              </button>;
-            </div>;
-      {/* Accessibility Panel */}
+            </div>;      {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
             initial={{ opacity: 0, x: 30 0 }}
@@ -228,6 +223,7 @@ export default function Page() {;
               >"
                 <EyeOff className="w-4 h-4"   />              </button>
             </div>
+
             {/* Content */"}";
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
               {/* Visual Enhancements */}";

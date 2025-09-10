@@ -23,11 +23,6 @@ export function CandidateCard("props": "any) {;
         // Here you would save the notes to the database;
         // For now, we'll just show a toast;
         toast({}
-""";
-"""";
-            "title": "Notes saved","""";
-            "description": "Your notes have been saved""";
-        });
 """
 """"
             title: "Notes saved",""""

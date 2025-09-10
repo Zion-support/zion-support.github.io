@@ -64,6 +64,7 @@ import {
   Droplets,
   Gamepad2
 } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const contactInfo = {
   phone: "+1 302 464 0950",
@@ -3678,10 +3679,10 @@ export default function AIServicesPage() {
   });
 
   return (
-    <MainLayout
-      title="AI Services - Zion Tech Group"
-      description="Cutting-edge artificial intelligence solutions for modern businesses"
-      keywords="AI services, machine learning, artificial intelligence, automation"
+    <Layout
+      title="AI Services - Zion Tech Group | 100+ Cutting-Edge AI Solutions"
+      description="Comprehensive AI services including machine learning, computer vision, NLP, analytics, and automation. 100+ AI solutions with competitive pricing and proven results."
+      keywords="AI services, machine learning, computer vision, NLP, AI automation, AI consulting, artificial intelligence solutions"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -3705,41 +3706,52 @@ export default function AIServicesPage() {
         {/* Services Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our AI Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver comprehensive AI services that help businesses harness the power of artificial intelligence.
-              </p>
-            </motion.div>
+            <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 md:mb-0">
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <a href="tel:+13024640950" className="hover:text-blue-300">{contactInfo.phone}</a>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">{contactInfo.email}</a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <span className="text-blue-200 text-xs md:text-sm">24/7 AI Support Available</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="text-blue-600 mb-6">
-                    <service.icon className="w-12 h-12" />
-                  </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-                  <div className="mb-4">
-                    <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
-                  </div>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+        {/* Search and Filter Section */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-6 md:mb-8">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search AI services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm md:text-base"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
+                      selectedCategory === category.name
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                   >
                     {category.name} ({category.count})
                   </button>
@@ -3749,47 +3761,98 @@ export default function AIServicesPage() {
           </div>
         </section>
 
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <ArrowRight className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-<<<<<<< HEAD
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <Link
-                      href="/contact"
-                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition-colors"
-                    >
-                      Get Quote
-                    </Link>
-                    <Link
-                      href={`/contact?service=${encodeURIComponent(service.title)}`}
-                      className="flex-1 border border-blue-600 text-blue-600 px-4 py-2 rounded text-center hover:bg-blue-50 transition-colors"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
+        {/* Services Grid */}
+        <section id="services" className="py-12 md:py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {filteredServices.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <motion.div
+                    key={service.id}
+                    className="bg-white rounded-lg shadow-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-center justify-between mb-3 md:mb-4">
+                      <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
+                        <IconComponent className="w-6 h-6 md:w-8 md:h-8" />
+                      </div>
+                      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">
+                        {service.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-3 md:mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <div className="mb-3 md:mb-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-base md:text-lg font-bold text-green-600">
+                          {service.price}
+                        </span>
+                        <span className="text-xs md:text-sm text-gray-500 line-through">
+                          {service.marketPrice}
+                        </span>
+                      </div>
+                      <div className="text-xs text-green-600 font-medium">
+                        Save up to 40% vs market rate
+                      </div>
+                    </div>
+                    
+                    <div className="mb-3 md:mb-4">
+                      <h4 className="text-xs md:text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                      <ul className="text-xs text-gray-600 space-y-1">
+                        {service.features.slice(0, 4).map((feature, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-3 md:mb-4">
+                      <h4 className="text-xs md:text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                          <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3 md:mb-4">
+                      <span>Setup: {service.setupTime}</span>
+                      <span>Target: {service.targetUsers.split(',')[0]}</span>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Link
+                        href="/contact"
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 md:px-4 rounded-lg text-xs md:text-sm font-semibold transition-colors"
+                      >
+                        Get Quote
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="px-3 md:px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg text-xs md:text-sm font-semibold transition-colors"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -3822,69 +3885,5 @@ export default function AIServicesPage() {
         </section>
       </div>
     </Layout>
-=======
-      {/* CTA Section */}
-      <section className="bg-blue-600 py-16 sm: py-24>;
-        <div className=mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center>;
-            <h2 className=text-3xl font-bold tracking-tight text-white sm:text-4xl">;
-              Ready to Transform Your Business with AI?;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-blue-100>;
-              Let's discuss how our AI solutions can drive your business;
-              forward. Get a free consultation and custom proposal.;
-            </p>;
-            <div className=mt-10 flex items-center justify-center gap-x-6">;
-              <Link;
-                href="/contact;
-                className=rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">;
-                Schedule Consultation;
-              </Link>;
-              <a;
-                href="tel:+13024640950;
-                className=text-sm font-semibold leading-6 text-white hover:text-blue-100">;
-                Call +1 302 464 0950 <span aria-hidden="true">→</span>;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      <Footer />;
-    </>;
-  )}
->>>>>>> origin/automation-fixes
-=======
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Link from 'next/link';
-
-export default function AIServicesPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <SEO title="AI Services | Zion Tech Group" description="LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing." canonical="https://ziontechgroup.com/ai-services/" />
-      <div className="container mx-auto px-4 py-24 text-white">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>
-          <p className="text-gray-300 text-lg">Productized AI solutions: evaluation labs, safety & guardrails, chatbots, agents, search/RAG, and automation. See <Link className="text-cyan-400 underline" href="/market-pricing">Market Pricing</Link> for typical vendor benchmarks.</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: 'RAG & Vector Search', href: '/vector-search-starter' },
-              { title: 'AI Evaluation Lab', href: '/rag-evaluation-lab' },
-              { title: 'AI Guardrails', href: '/ai-powered-cybersecurity' },
-              { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
-              { title: 'AI Customer Service', href: '/ai-customer-service' },
-              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' },
-            ].map((c) => (
-              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
-                <div className="text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-sm text-gray-400">Questions? <Link className="text-cyan-400 underline" href="/contact">Contact us</Link>.</div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/automation/changelog
   );
 }

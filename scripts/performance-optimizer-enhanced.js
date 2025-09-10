@@ -1,43 +1,6 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
 #!/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() } async optimizeImages() { async optimizeCode() { async optimizeDependencies() { } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(console.error)
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,".")} async optimize() { console.log(" Starting performance optimization.") await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() console.log(" Performance optimization completed!")} async optimizeImages() { console.log(" Optimizing images.") async optimizeCode() { console.log(" Optimizing code.") async optimizeDependencies() { console.log(" Optimizing dependencies.") } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(console.error)""
 #!/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { _console.log("⚡ Starting performance optimization...") await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() _console.log("✅ Performance optimization completed!")} async optimizeImages() { _console.log("🖼️ Optimizing images...") async optimizeCode() { _console.log("💻 Optimizing code...") async optimizeDependencies() { _console.log("📦 Optimizing dependencies...") } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(_console.error)
-=======
-#!/usr/bin/env node;
-/**;
- * Performance Optimization Script;
- */;
-const fs = require("$1");
-const path = require("path");
-class PerformanceOptimizer {
-  constructor() {
-    this.projectRoot = path.resolve(__dirname, "..")}
-
-  async optimize() {
-    console.log("⚡ Starting performance optimization...");
-    await this.optimizeImages();
-    await this.optimizeCode();
-    await this.optimizeDependencies();
-    console.log("✅ Performance optimization completed!")}
-
-  async optimizeImages() {
-    console.log("🖼️ Optimizing images...");
-    // Image optimization logic would go here}
-
-  async optimizeCode() {
-    console.log("💻 Optimizing code...");
-    // Code optimization logic would go here}
-
-  async optimizeDependencies() {
-    console.log("📦 Optimizing dependencies...");
-    // Dependency optimization logic would go here}
-}
-
-// Run optimization;
-const optimizer = new PerformanceOptimizer()
-optimizer.optimize().catch(console.error)
->>>>>>> origin/automation-fixes
-=======
-#!/usr/bin/env node const fs = require("child_process"); const path = require("path") class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { console.log("⚡ Starting performance optimization...") await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() console.log("✅ Performance optimization completed!")} async optimizeImages() { console.log("🖼️ Optimizing images...") async optimizeCode() { console.log("💻 Optimizing code...") async optimizeDependencies() { console.log("📦 Optimizing dependencies...") } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(console.error)
->>>>>>> origin/automation-improvements
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

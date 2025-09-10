@@ -1,55 +1,6 @@
-
-#!/usr/bin/env node
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-class QuickSyntaxFixer {;
-  constructor() {;
-    this.fixedFiles = [];
-  }
-;
-  log(message) {;
-    console.log(`[QuickSyntaxFixer] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
-        return false;
-      }
-;
-      const originalContent = fs.readFileSync(filePath, 'utf8');
-      const content = originalContent
-        // Remove merge conflict markers
-
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {INFO: 'ℹ️',SUCCESS: '✅',ERROR: '❌',WARNING: '⚠️',PROGRESS: '🔄'}[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  async fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`, 'WARNING');
-        return false;
-      }
-
-
-      const content = fs.readFileSync(filePath, 'utf8');
-      let fixedContent = content;
-
->>>>>>> merged-prs-20250907-203621=======
-[\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
-
-
-        .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
-
-
-
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
+<<<<<<< HEAD
+        .replace(/^>>>>>>>.*$/gm, '')
+        
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor
@@ -100,6 +51,17 @@ const fixer = new QuickSyntaxFixer();
 fixer.run().catch(console.error);
 
 
+module.exports = QuickSyntaxFixer;
+=======
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath, 'utf8')
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
 
 

@@ -126,78 +126,8 @@ class PerformanceMonitor {
 }
       // Check source code size;
       const srcPath = path.join(this.projectRoot, "src")
-      if (fs.existsSync(srcPath)) {
-        const srcSize = this.getDirectorySize(srcPath)
-        this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB,,
-}
-      // Count files;
-      this.metrics.application.fileCounts = {
-        source: this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),
-        components: this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),
-        pages: this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"]),,
-}
-      console.log("✅ Application metrics collected"),,
-} catch (error) {
-      console.warn("⚠️  Could not collect application metrics: ", error.message),,
-}
-  }
-
-  async collectBuildMetrics() {
-    try {
-      console.log("🔨 Collecting build metrics...")
-      // Check if build artifacts exist;
-      const buildFiles = [
-        "dist/index.html",
-        "dist/css",
-        "dist/js",
-        "dist/assets"]
-
-      this.metrics.build.hasBuildArtifacts = buildFiles.some(file => ;
-        fs.existsSync(path.join(this.projectRoot, file)))
-      // Check build configuration;
-      const packageJsonPath = path.join(this.projectRoot, "package.json")
-      if (fs.existsSync(packageJsonPath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
-        this.metrics.build.scripts = Object.keys(packageJson.scripts || {}),,
-}
-      console.log("✅ Build metrics collected"),,
-} catch (error) {
-      console.warn("⚠️  Could not collect build metrics: ", error.message)
-      // Check if build directory exists;
-      const buildDir = path.join(process.cwd(), ".next")
-      if (fs.existsSync(buildDir)) {
-        const buildSize = this.getDirectorySize(buildDir)
-        this.metrics.application.buildSize = Math.round(
-          buildSize / 1024 / 1024),,
-}
-      // Check bundle size;
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
-      const dependencies = Object.keys(packageJson.dependencies || {}).length;
-      const devDependencies = Object.keys(
-        packageJson.devDependencies || {}
-      ).length;
-      this.metrics.application.bundleSize = dependencies + devDependencies,,
-} catch (error) {
-      console.error("Error collecting application metrics: ", error.message),,
-}
-  }
-
-  async collectWebMetrics() {
-    try {
-      // Simulate web vitals collection;
-      this.metrics.web = {
-        lcp: Math.random() * 3000 + 1000, // 1-4 seconds;
-        fid: Math.random() * 100 + 10, // 10-110ms;
-        cls: Math.random() * 0.1, // 0-0.1;
-        fcp: Math.random() * 2000 + 500, // 0.5-2.5 seconds;
-        ttfb: Math.random() * 500 + 100, // 100-600ms,,
-}
-    } catch (error) {
-      console.error("Error collecting web metrics: ", error.message),,
-}
-      console.warn("⚠️  Could not collect build metrics: ", error.message)}
-
-}
+<<<<<<< HEAD
+=======
   getDirectorySize(dirPath) {
     let totalSize = 0;
     if (!fs.existsSync(dirPath)) return 0;
@@ -305,49 +235,60 @@ class PerformanceMonitor {
       console.error("Error saving report":", error.message)"}"}
   getRecommendations() {
     const recommendations = []
-    if (this.metrics.web.lcp > 2500) {
-      recommendations.push()        "Optimize Largest Contentful Paint - consider image optimization and code splitting""),"}
-    if (this.metrics.web.fid > 100) {
-      recommendations.push()        "Reduce First Input Delay - minimize JavaScript execution time""),"}
-    if (this.metrics.web.cls > 0.1) {
-      recommendations.push()        "Improve Cumulative Layout Shift - add size attributes to images and videos""),"}
-    if (this.metrics.application.buildSize > 50) {
-      recommendations.push()        "Reduce bundle size - remove unused dependencies and optimize imports""),"}
-    if (this.metrics.system.memory.heapUsed > 100) {
-      recommendations.push()        "Optimize memory usage - check for memory leaks and optimize data structures""),"}
-    return recommendations}
-}
-// Run the performance monitor;
-if (require.main === module) {
-    if (this.metrics.web.lcp > 2500) {
-      recommendations.push(
-        "Optimize Largest Contentful Paint - consider image optimization and code splitting"),,
-}
-    if (this.metrics.web.fid > 100) {
-      recommendations.push(
-        "Reduce First Input Delay - minimize JavaScript execution time"),,
-}
-    if (this.metrics.web.cls > 0.1) {
-      recommendations.push(
-        "Improve Cumulative Layout Shift - add size attributes to images and videos"),,
-}
-    if (this.metrics.application.buildSize > 50) {
-      recommendations.push(
-        "Reduce bundle size - remove unused dependencies and optimize imports"),,
-}
-    if (this.metrics.system.memory.heapUsed > 100) {
-      recommendations.push(
-        "Optimize memory usage - check for memory leaks and optimize data structures"),,
-}
-    return recommendations,,
-}
-}
-// Run the performance monitor;
-const monitor = new PerformanceMonitor()
-monitor.monitor().catch(error => {
-  console.error("Fatal error: ", error.message)
-  process.exit(1),,
-})
-  const monitor = new PerformanceMonitor()
-  monitor.runPerformanceTest().catch(console.error)}
-module.exports = PerformanceMonitor}}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+      this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
+      console.log(" Application metrics collected")
+      console.warn("⚠  Could not collect application "metrics": ")
+      console.log("� Collecting build metrics...")
+      const buildFiles = ["dist/index.html","dist/css","dist/js"]
+        "dist/assets"
+      const packageJsonPath = path.join(this.projectRoot, "package.json")
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+      console.log(" Build metrics collected")
+      console.warn("⚠  Could not collect build "metrics": ")
+      const buildDir = path.join(process.cwd(), ".next"
+      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
+      console.error("Error collecting application "metrics": ")
+        "lcp"
+        "fid"
+        "cls"
+        "fcp"
+        "ttfb"
+      console.error("Error collecting web "metrics": ")
+      console.warn("⚠  Could not collect build "metrics": ")
+        // Skip directories we can"
+        if (file === "node_modules" || file === ".git")
+    const reportPath = path.join(this.projectRoot, "performance-report.json")
+// console.log("\n Performance "Summary": ")
+    console.log("=")
+// console.log("� System Metrics:")
+    console.log(`   "CPU"`)
+// console.log(`   "Process": PID ${this.metrics.system.process.pid}, "Uptime"`)
+    console.log("\n� Application "Metrics": ")
+// console.log(`   "Dependencies"`)
+    console.log(`   Source "Code"`)
+// console.log(`   "Files"`)
+    console.log("\n� Build "Metrics": ")
+// console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"`})
+    console.log(`   Available "Scripts"`)
+    console.log("=")
+  async runPerformanceTest() {console.log(" Starting performance monitoring..."),"}
+    console.log("\n Performance Metrics Report");";    console.log("─".repeat(50));""
+    console.log("� "System": ");"    console.log(),      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";    console.log();      "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    console.log(`   ""Uptime": ${this.metrics.system.process.uptime || "N/A"}s`);";";    // Application metrics;";    console.log("\n� "Application": ");"    if (this.metrics.application.buildSize) {",      console.log("   Build "size": ${this.metrics.application.buildSize}MB");"
+    console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);
+    console.log("\n� Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");"
+    console.log(`\n Performance "Score": ${score}/100`);
+      console.log(" Excellent performance!")} else if (score >= 70) {      console.log("⚠  Good performance, room for improvement")} else {      console.log(" Performance needs attention")}"
+      const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations"}
+      console.log("\n� Report saved "to": ${this.reportFile}");"} catch (error) {console.error("Error saving report":", error.message),"}"
+    if (this.metrics.web.lcp > 2500) {recommendations.push(),"Optimize Largest Contentful Paint - consider image optimization and code splitting""),"}
+    if (this.metrics.web.fid > 100) {recommendations.push(),"Reduce First Input Delay - minimize JavaScript execution time""),"}
+    if (this.metrics.web.cls > 0.1) {recommendations.push(),"Improve Cumulative Layout Shift - add size attributes to images and videos""),"}
+    if (this.metrics.application.buildSize > 50) {recommendations.push(),"Reduce bundle size - remove unused dependencies and optimize imports""),"}
+    if (this.metrics.system.memory.heapUsed > 100) {recommendations.push(),"Optimize memory usage - check for memory leaks and optimize data structures""),"}
+        "Optimize Largest Contentful Paint - consider image optimization and code splitting"
+        "Reduce First Input Delay - minimize JavaScript execution time"
+        "Improve Cumulative Layout Shift - add size attributes to images and videos"
+        "Reduce bundle size - remove unused dependencies and optimize imports"
+        "Optimize memory usage - check for memory leaks and optimize data structures"
+  console.error("Fatal "error": ")

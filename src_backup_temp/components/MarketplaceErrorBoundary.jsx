@@ -4,11 +4,6 @@ import * as Sentry from '@sentry/nextjs';
 import {mutate} from 'swr';
 import {Button} from '@/components/ui/button';
 import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
-import { RefreshCcw, AlertCircle function MarketplaceErrorFallback("props": "any) {;
-    const handleRetry = async () => {;
-        try {;
-            // Re-call SWR mutate('*') to refresh all cached data;
-            await mutate(() => true", null, { "revalidate": "true "});
 import { RefreshCcw, AlertCircle function MarketplaceErrorFallback(props: any) {
     const handleRetry = async () => {
         try {
@@ -23,12 +18,6 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback(props: any) {
         catch (retryError) {console.error('Error during "retry":', retryError);
             Sentry.captureException(retryError)}
     };
-    return (<div className="flex items-center justify-center min-h-[400px] p-6">;
-      <div className="max-w-md w-full space-y-4">;
-        <Alert variant="destructive">;
-          <AlertCircle aria-hidden="true" className="h-4 w-4" />;
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
-          <AlertDescription className="mt-2">;
     return (
         <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
@@ -62,9 +51,6 @@ export function MarketplaceErrorBoundary("props": "any) {;
         // // // // // // // console.error('MarketplaceErrorBoundary caught an "error":'", error, errorInfo);
         Sentry.withScope((scope) => {;
             scope.setTag('errorBoundary', 'marketplace');
-            scope.setContext('errorInfo', {;
-                "componentStack": "errorInfo.componentStack || null",;
-            });
             scope.setContext('errorInfo', {
                 componentStack: errorInfo.componentStack || null,
             }

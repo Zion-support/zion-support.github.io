@@ -1,20 +1,6 @@
-  test('renders without crashing', () => {
-
-    render(<AnalyticsTracker />);
-    expect(screen.getByTestId('analyticstracker)).toBeInTheDocument()});
-
-
-  test('displays correct content', () => {
-    render(<AnalyticsTracker />);
-
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-
-    render(<AnalyticsTracker />);
-    // Add interaction tests based on component functionality});
-;
-  test('applies correct styling', () => {
-    render(<AnalyticsTracker />);
-    // Add styling tests if needed;
+<<<<<<< HEAD
+import _React from 'react"  import '@testing-library/jest-dom import AnalyticsTracker from '../components/AnalyticsTracker" describe('AnalyticsTracker',() => {' test('renders without crashing',() => {' render(<AnalyticsTracker / / />) expect(screen.getByTestId("analyticstracker")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<AnalyticsTracker / / />) }) test('handles user interactions',() => {' render(<AnalyticsTracker / / />) }) test('applies correct styling',() => {' render(<AnalyticsTracker / / />) }) })
+=======
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import AnalyticsTracker from "./components/AnalyticsTracker" describe("AnalyticsTracker",() => {" test("renders without crashing",() => {" render(<AnalyticsTracker / / />) expect(screen.getByTestId("analyticstracker")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<AnalyticsTracker / / />) }) test("handles user interactions",() => {" render(<AnalyticsTracker / / />) }) test("applies correct styling",() => {" render(<AnalyticsTracker / / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import AnalyticsTracker from '../components/AnalyticsTracker" describe('AnalyticsTracker',() => {' test('renders without crashing',() => {' render(<AnalyticsTracker / / />) expect(screen.getByTestId("analyticstracker")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<AnalyticsTracker / / />) }) test('handles user interactions',() => {' render(<AnalyticsTracker / / />) }) test('applies correct styling',() => {' render(<AnalyticsTracker / / />) }) })
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

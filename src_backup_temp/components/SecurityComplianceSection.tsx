@@ -136,8 +136,7 @@ function SecurityComplianceSection () {];
                     <span className="text-gray-300 text-sm font-medium">{feature.status}</span>;
                   </div>;
                 </div>;
-              </div>;
-}}
+              </div>;}}
               viewport={{ once: tru e }}
               transition = {
   { duration: 0.6,
@@ -197,11 +196,12 @@ function SecurityComplianceSection () {];
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
             Comprehensive Security Features;
-          </h3>;
-}}
+          </h3>;}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
+          
+
           <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-8">;
             {complianceFeatures.map((category", index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">;
                 <h4 className="text-xl font - bold text-white mb-4 text-center">                  {category.category}
@@ -263,8 +263,7 @@ function SecurityComplianceSection () {];
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">;";
 >>>>>>> origin/automation-fixes:src/components/SecurityComplianceSection.tsx
               <div className="text-center">;";
-                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;";
-}}
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;";}}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -340,8 +339,7 @@ function SecurityComplianceSection () {];
                 <FileText className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;
-}}
+        </motion.div>;}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold mb-4">

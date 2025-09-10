@@ -549,9 +549,12 @@ runSecurityCheck('Sensitive Data Scan', () => {
         };
     }
 });
-const out = `security-scan-report-${Date.now()}.json`;
-fs.writeFileSync(out, JSON.stringify(report, null, 2));
-console.log(`✅ Security scan completed. Report: ${out}`);
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
 
@@ -1336,7 +1339,7 @@ if (securityReport.status === 'vulnerable') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 =======
-const scanner = new SecurityScanner()
-scanner.runSecurityScan().catch(console.error)
->>>>>>> origin/automation-fixes
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

@@ -25,8 +25,7 @@ export function EnhancedContact(...args[]): "{;
     "message": '';
   }) ;
 ;
-  const [errors, setErrors] = useState<any> ({}) ;
-interface ContactFormErrors {
+  const [errors, setErrors] = useState<any> ({}) ;interface ContactFormErrors {
   [key: string]: string}
 export function EnhancedContact(...args[]):  {
   const [formData, setFormData] = useState<any>({
@@ -324,8 +323,7 @@ export function EnhancedContact(...args[]):  {;
                     <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>";
                     <p className="text-zion-cyan font-medium mb-1">{info.value}</p>";
                     <p className="text-zion-slate-light text-sm">{info.description}</p>;
-                  </div>;
-}}
+                  </div>;}}
                   transition={{ delay: 0.3 + index * 0.1 }}"
                   className="flex items-start space-x-4"
                 >"
@@ -386,8 +384,7 @@ export function EnhancedContact(...args[]):  {;
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;
-}}
+          </motion.div>;}}
               transition={{ delay: 0.6 }}"
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
             >"
@@ -412,6 +409,7 @@ export function EnhancedContact(...args[]):  {;
               </div>
             </motion.div>
           </motion.div>
+
           {/* Contact Form */}
           <motion.div;
             initial = {;

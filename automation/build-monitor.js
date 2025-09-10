@@ -7,6 +7,30 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
+<<<<<<< HEAD
+    this.isRunning = false;
+    this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
+    this.logLevel = process.env.LOG_LEVEL || 'info';
+    this.lastBuildTime = null;
+    this.buildHistory = [];
+    this.maxBuildHistory = 10;
+  }
+
+  log(level, message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    
+    if (level === 'error') {
+      console.error(logMessage);
+    } else if (level === 'warn') {
+      console.warn(logMessage);
+    } else {
+      console.log(logMessage);
+    }
+  }
+
+  async checkBuildStatus() {
+=======
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -143,78 +167,8 @@ class BuildMonitor {
         previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'));
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
-      }
-    this.isRunning = false;
-    this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
-    this.logLevel = process.env.LOG_LEVEL || 'info';
-    this.lastBuildTime = null;
-    this.buildHistory = [];
-    this.maxBuildHistory = 10;
-  }
-  log(level, message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    if (level === 'error') {
-      console.error(logMessage);
-    } else if (level === 'warn') {
-      console.warn(logMessage);
-    } else {
-      console.log(logMessage);
-    }
-  }
-    const report = {
-      ...results,
-      trends: {
-        consecutiveFailures: this.consecutiveFailures,
-        improvementSinceLastRun: previousReport ? 
-          (results.build.status === 'success' && previousReport.build.status === 'failed') : false,
-        degradationSinceLastRun: previousReport ?
-          (results.build.status === 'failed' && previousReport.build.status === 'success') : false
-      },
-      healthScore: this.calculateHealthScore(results),
-      recommendations: this.generateRecommendations(results)
-    };
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Build health report updated: ${this.reportFile}`);
-    return report;
-  }
-  calculateHealthScore(results) {
-    let score = 100;
-    if (results.build.status === 'failed') score -= 40;
-    if (results.lint.status === 'failed') score -= 20;
-    if (results.typeCheck.status === 'failed') score -= 20;
-    if (results.dependencies.status === 'warning') score -= 10;
-    // Penalty for slow builds
-    if (results.build.duration > 120000) score -= 10; // 2 minutes
-    return Math.max(0, score);
-  }
-  generateRecommendations(results) {
-    const recommendations = [];
-    if (results.build.status === 'failed') {
-      recommendations.push('Fix build errors immediately');
-      recommendations.push('Run intelligent error fixer');
-    }
-    if (results.lint.status === 'failed') {
-      recommendations.push('Address linting issues');
-      recommendations.push('Consider running auto-formatter');
-    }
-    if (results.typeCheck.status === 'failed') {
-      recommendations.push('Fix TypeScript errors');
-      recommendations.push('Review type definitions');
-    }
-    if (results.build.duration > 180000) { // 3 minutes
-      recommendations.push('Optimize build performance');
-      recommendations.push('Consider build caching');
-    }
-    if (results.dependencies.outdated.length > 10) {
-      recommendations.push('Update outdated dependencies');
-      recommendations.push('Schedule dependency maintenance');
-    }
-    return recommendations;
-  }
-  async run() {
-    this.log('Starting build health check...');
-  async checkBuildStatus() {
+      }  async checkBuildStatus() {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     try {
       this.log('info', 'Checking build status...');
       // Check if .next directory exists and is recent
@@ -233,13 +187,17 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
+      
+      return true;
+=======
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
-    }
-      return true;
+    }      return true;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
       return false;
@@ -438,8 +396,11 @@ class BuildMonitor {
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
+<<<<<<< HEAD
+=======
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   const command = process.argv[2];
   switch (command) {
     case 'start':

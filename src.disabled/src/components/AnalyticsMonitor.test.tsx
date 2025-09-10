@@ -1,8 +1,6 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import AnalyticsMonitor from '../components/AnalyticsMonitor';'
-describe('AnalyticsMonitor', () => {test('renders without crashing', () => {render(<AnalyticsMonitor />)expect(screen.getByTestId('analyticsmonitor')).toBeInTheDocument()})test('displays correct content', () => {render(<AnalyticsMonitor />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<AnalyticsMonitor />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<AnalyticsMonitor />)// Add styling tests here;'
-  })})
+<<<<<<< HEAD
+=======
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import AnalyticsMonitor from &apos;./AnalyticsMonitor; describe(&apos;AnalyticsMonitor&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<AnalyticsMonitor / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import AnalyticsMonitor from &apos;./AnalyticsMonitor; describe(&apos;AnalyticsMonitor&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<AnalyticsMonitor / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import AnalyticsMonitor from &apos;./AnalyticsMonitor; describe(&apos;AnalyticsMonitor&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<AnalyticsMonitor / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

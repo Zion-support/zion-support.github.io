@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+=======
 export default {
   apps: [
     {
@@ -88,6 +89,7 @@ export default {
       cron_restart: '*/30 * * * *' // Run every 30 minutes
     }
   ],
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",

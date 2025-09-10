@@ -1,12 +1,18 @@
-
-
-import { render, screen } from '@testing - library / react';
-import '@testing - library / jest - dom';
-import SEO from '../components / SEO';
-describe ('SEO', () => {
-  test ('renders without crashing', () => {
-    render (<SEO />);
-    expect (screen.getByTestId ('seo')).toBeInTheDocument ();
+<<<<<<< HEAD
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SEO from '../components/SEO';
+describe('SEO', () => {
+  test('renders without crashing', () => {
+    render(<SEO />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<SEO />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 });
 import React from 'react'
@@ -18,15 +24,6 @@ describe('SEO'
     expect(screen.getByRole('main'
   test('displays correct content'
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
-describe('SEO';
-  test('renders without crashing';
-    expect(screen && screen.getByRole('main';
-  test('displays correct content';
-import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
-
-describe('SEO', () => {
-});
-  });
-});
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe("SEO",() => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});''"
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

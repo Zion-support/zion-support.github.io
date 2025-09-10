@@ -12,77 +12,80 @@ import {
   Building2
 } from 'lucide-react';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const navigation = {
+  'Services': [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Blockchain', href: '/blockchain' },
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'Custom Development', href: '/custom-development' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'Enterprise Solutions', href: '/enterprise-solutions' }
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Development', href: '/solutions/custom' },
+    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Legacy Modernization', href: '/solutions/legacy-modernization' },
+    { name: 'API Development', href: '/solutions/api-development' }
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Agriculture', href: '/industries/agriculture' },
+    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Transportation', href: '/industries/transportation' },
+    { name: 'Real Estate', href: '/industries/real-estate' },
+    { name: 'Media & Entertainment', href: '/industries/media' },
+    { name: 'Legal', href: '/industries/legal' }
+  ],
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Training', href: '/training' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Best Practices', href: '/best-practices' },
+    { name: 'Industry Reports', href: '/industry-reports' },
+    { name: 'Newsletter', href: '/newsletter' }
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Investor Relations', href: '/investors' }
+  ]
+};
 
-  const navigation = [
-    {
-      name: 'Home',
-      href: '/'
-    },
-    {
-      name: 'About',
-      href: '/about'
-    },
-    {
-      name: 'Services',
-      href: '/services',
-      dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Web Development', href: '/web-development' },
-        { name: 'Mobile Development', href: '/mobile-development' },
-        { name: 'Cloud Solutions', href: '/cloud-solutions' }
-      ]
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      dropdown: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cloud Solutions', href: '/cloud-solutions' },
-        { name: 'Security Solutions', href: '/security-solutions' },
-        { name: 'Data Analytics', href: '/data-analytics' }
-      ]
-    },
-    {
-      name: 'Industries',
-      href: '/industries',
-      dropdown: [
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Finance', href: '/industries/finance' },
-        { name: 'E-commerce', href: '/industries/ecommerce' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '/resources',
-      dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Documentation', href: '/docs' }
-      ]
-    },
-    {
-      name: 'Company',
-      href: '/company',
-      dropdown: [
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Press', href: '/press' }
-      ]
-    },
-    {
-      name: 'Contact',
-      href: '/contact'
-    }
-  ];
+const quickLinks = [
+  { name: 'Free Consultation', href: '/consultation' },
+  { name: 'Get Quote', href: '/quote' },
+  { name: 'Support', href: '/support' }
+];
 
 export default function Header() {
   return (
@@ -100,53 +103,57 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
-                  onMouseEnter={() => setActiveDropdown(item.name)}
+          <nav className="hidden lg:flex items-center space-x-6">
+            {Object.entries(navigation).map(([title, links]) => (
+              <div key={title} className="relative group">
+                <button
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                  onMouseEnter={() => setActiveDropdown(title)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  {item.name}
-                  {item.dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
-                </Link>
-
-                {/* Dropdown Menu */}
-                {item.dropdown && (
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                        onMouseEnter={() => setActiveDropdown(item.name)}
-                        onMouseLeave={() => setActiveDropdown(null)}
-                      >
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <span className="font-medium">{title}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {activeDropdown === title && (
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-3 z-50 max-h-96 overflow-y-auto">
+                    <div className="grid grid-cols-1 gap-1">
+                      {links.map((link) => (
+                        <Link
+                          key={link.name}
+                          href={link.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-md mx-2"
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Quick Links */}
+          <div className="hidden lg:flex items-center space-x-3">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors text-sm font-medium"
+              >
+                {link.name}
+              </Link>
+            ))}
             <Link
               href="/contact"
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            >
+              Get Quote
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Get Started
             </Link>
