@@ -8,6 +8,7 @@ export default [
   {
     ignores: [
       'dist/**',
+      'out/**',
       'node_modules/**',
       '*.config.js',
       '*.config.cjs',
@@ -16,7 +17,16 @@ export default [
       'coverage/**',
       '*.min.js',
       'public/**',
-      'src/**/*.d.ts'
+      'src/**/*.d.ts',
+      'zion-os/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'zion/**',
+      '.next/**',
+      '**/.next/**',
+      '**/dist/**',
+      '**/out/**',
+      '**/build/**'
     ]
   },
   {
@@ -51,3 +61,4 @@ export default [
       'no-var': 'error'
     }
   }
+]
