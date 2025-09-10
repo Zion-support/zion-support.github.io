@@ -1,5 +1,12 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "generatedAt": "2025-08-15T11:53:49.108Z",
+  "items": [
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,6 +88,7 @@
   "generatedAt": "2025-08-15T06:01:29.410Z",
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:29.482Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T06-01-44-708Z
 =======
@@ -153,10 +161,23 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:54:36.540Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-54-40-633Z
+=======
+  "generatedAt": "2025-08-15T11:42:50.230Z",
+=======
+  "generatedAt": "2025-08-15T11:54:36.572Z",
+>>>>>>> cbaacf542fb (chore(sync): advanced autonomous sync)
+  "items": [
+    {
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-115436",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:54:36.540Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "source": "cloud-blueprint-factory"
     },
     {
       "title": "Playbook — Autonomous Delivery",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,10 +199,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:54:36.506Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-54-40-633Z
+=======
+      "href": "/reports/playbooks/playbook-2025-08-15-115436",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:54:36.506Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "source": "cloud-playbook-factory"
     },
     {
       "title": "Case Study — Automation Autonomous",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,7 +217,11 @@
       "createdAt": "2025-08-15T11:29:01.168Z",
 =======
       "href": "/reports/cases/case-2025-08-15-114250",
+=======
+      "href": "/reports/cases/case-2025-08-15-115436",
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "desc": "New autonomous content",
+<<<<<<< HEAD
       "createdAt": "2025-08-15T11:42:50.144Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-42-54-846Z
 =======
@@ -206,12 +237,19 @@
       "href": "/reports/cases/case-2025-08-15-115349",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:53:49.064Z",
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
 =======
       "href": "/reports/cases/case-2025-08-15-115436",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:54:36.463Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-54-40-633Z
+=======
+>>>>>>> bf424113f98 (chore(sync): advanced autonomous sync)
+=======
+      "createdAt": "2025-08-15T11:54:36.463Z",
+>>>>>>> cbaacf542fb (chore(sync): advanced autonomous sync)
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "source": "cloud-deep-research-factory"
     },
     {
@@ -220,10 +258,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "href": "/reports/guides/guide-2025-08-15-112901",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:29:01.168Z",
 =======
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "href": "/reports/guides/guide-2025-08-15-114250",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:42:50.144Z",
@@ -237,16 +278,25 @@
       "href": "/reports/guides/guide-2025-08-15-115349",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:53:49.064Z",
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
+=======
+>>>>>>> bf424113f98 (chore(sync): advanced autonomous sync)
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
 =======
       "href": "/reports/guides/guide-2025-08-15-115436",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:54:36.463Z",
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T11-54-40-633Z
+=======
+>>>>>>> cbaacf542fb (chore(sync): advanced autonomous sync)
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -340,8 +390,14 @@
 =======
       "createdAt": "2025-08-15T11:35:54.877Z",
 =======
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
       "href": "/reports/patterns/pattern-2025-08-15-114250",
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-115436",
+>>>>>>> cbaacf542fb (chore(sync): advanced autonomous sync)
       "desc": "New autonomous content",
+<<<<<<< HEAD
       "createdAt": "2025-08-15T11:42:50.144Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-42-54-846Z
       "source": "cloud-deep-research-factory"
@@ -2914,11 +2970,18 @@
 =======
       "href": "/reports/patterns/pattern-2025-08-15-114845",
 =======
+      "createdAt": "2025-08-15T11:54:36.463Z",
+      "source": "cloud-deep-research-factory"
+<<<<<<< HEAD
+>>>>>>> ac2d09a889d (chore(sync): advanced autonomous sync)
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
+=======
       "href": "/reports/patterns/pattern-2025-08-15-115349",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:53:49.064Z",
       "source": "cloud-deep-research-factory"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T11-48-49-727Z
 =======
@@ -2929,6 +2992,11 @@
       "createdAt": "2025-08-15T11:54:36.463Z",
       "source": "cloud-deep-research-factory"
 >>>>>>> origin/automation/git-sync/2025-08-15T11-54-40-633Z
+=======
+>>>>>>> bf424113f98 (chore(sync): advanced autonomous sync)
+=======
+>>>>>>> cbaacf542fb (chore(sync): advanced autonomous sync)
+>>>>>>> origin/automation/git-sync/2025-08-15T11-54-48-875Z
     }
   ]
 =======
