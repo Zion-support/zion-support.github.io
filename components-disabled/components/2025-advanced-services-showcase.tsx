@@ -67,9 +67,9 @@ const categories = [
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div;
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={ opacity: 0, y: 20 }
+      animate={ opacity: 1, y: 0 }
+      transition={ duration: 0.5 }
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : `;
       }`}
@@ -124,9 +124,9 @@ const categories = [
     </motion.div>)
 
   const ServiceList = ({ service }: { service: any }) => (
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}`;
+      initial={ opacity: 0, x: -20 }
+      animate={ opacity: 1, x: 0 }
+      transition={ duration: 0.5 }`;
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${"
         <div className="flex items-start gap-6">"
           <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -159,14 +159,14 @@ const categories = [
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
           <div className="text-center">"
             <motion.h1;
-              transition={{ duration: 0.8 }}"
+              transition={ duration: 0.8 }"
               className="text-4xl md:text-6xl font-bold text-white mb-6""
             </motion.h1>
             <motion.p;
-              transition={{ duration: 0.8, delay: 0.2 }}"
+              transition={ duration: 0.8, delay: 0.2 }"
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto""
             </motion.p>
-              transition={{ duration: 0.8, delay: 0.4 }}"
+              transition={ duration: 0.8, delay: 0.4 }"
               className="flex flex-col sm:flex-row gap-4 justify-center items-center""
 </motion>"
               <div className="flex items-center gap-2 text-white">"
@@ -315,8 +315,8 @@ if ()
     setFilteredServices (filtered);
   }, [selected_category, search_term]);
   const ServiceCard = ({ service }: { service: any }) =>: any (
-      initial={{ opacity: 0, coordinate_y: 20 }}
-      animate={{ opacity: 1, coordinate_y: 0 }}
+      initial={ opacity: 0, coordinate_y: 20 }
+      animate={ opacity: 1, coordinate_y: 0 }
       className={`relative bg - white dark:bg - gray - 800 rounded - 2xl shadow - lg hover:shadow - 2xl transition - all duration - 300 overflow - hidden border border - gray - 200 dark:border - gray - 700 ${
         service.popular ? 'ring - 2 ring - blue - 500' : ;`;
     >;
@@ -402,15 +402,15 @@ if ()
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>;
           <div className='text-center'>;
             <motion&& motion.h1;
-              transition={{ duration: 0 && 0.8 }}
+              transition={ duration: 0 && 0.8 }
               className='text-4xl md:text-6xl font-bold text-white mb-6'>;
             </motion && motion.h1>;
             <motion&& motion.p;
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.2 }
               className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>;
             </motion && motion.p>;
             <motion&& motion.div;
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <div className='flex items-center gap-2 text-white'>;
                 <CheckCircle className='w-5 h-5 text-green-300' />                <span>30+ New Services</span>;

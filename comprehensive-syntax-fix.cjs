@@ -1,230 +1,104 @@
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-
-class ComprehensiveSyntaxFixer {
+class $1 {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
+  this.projectRoot = process.cwd();
+    this.fixedFiles = [];}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+  console.log(`[${new Date().toISOString()}] ${message}`);}
 
-  async fixMergeConflicts() {
-    this.log('🔧 Fixing merge conflicts...');
-    
-    const files = [
-      'tsconfig.json',
-      '.eslintrc.js',
-      'package.json'
-    ];
-
-    for (const file of files) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
-          // Remove merge conflict markers
-
-=======
-
-          content = content.replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-console.log('🔧 Running comprehensive syntax fix...');
-// Fix specific files with known issues;
-const fixes = [
-  {
-    file: '/workspace/lib/analytics.ts',
-    content: `// Analytics utilities;
-export const trackEvent = (event: string, data?: any) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', event, data);
-
-  }
-};
-
-export const trackPageView = (url: string) => {
-
-    });
-  }`;
-};`,
-  },
-
-    content: `import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom404() {
-  return (
-    <>
-      <Head>
-
-        <title>404 - Page Not Found</title>
-        <meta name="description" content="The page you are looking for does not exist." />"
-</meta>
-      "
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">"
-</div>"
-        <div className="text-center">"
-
-          <Link href="/" className="text-blue-600 hover:text-blue-800">"
-
-        </div>
-    </>)
-  );`;
-}`,
-  {"
-
-export default function App() {
-    <div className="App">"
-      <h1>App Component</h1>
-export default class ErrorBoundary extends Component<Props, State> {
-
-      return <h1>Sorry, something went wrong.</h1>;"
-    <footer className="bg-gray-900 text-white p-4">"
-</footer>"
-      <div className="container mx-auto text-center">"
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-    <header className="bg-blue-600 text-white p-4">"
-</header>
-      <h1>Header Component</h1>
-    </header>"
-    <div className="performance-monitor">"
-      <p>Performance Monitor</p>
-    <div className="performance-optimized">"
-      <p>Performance Optimized Component</p>
-    <header className="layout-header">"
-      <h1>Layout Header</h1>
-    <div className="main-layout">"
-    <aside className="sidebar">"
-</aside>
-      <p>Sidebar</p>
-  <React.StrictMode>
-
-    <App />
-
-  </React.StrictMode>)`;
-);`,
-
-];
-
-let fixedCount = 0;
-for (const fix of fixes) {
+  fixFile(filePath) {
   try {
+  let content = fs.readFileSync(filePath, "utf8");
+      let originalContent = content;
 
-<<<<<<< HEAD
-console.log(`✅ Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5
-const { execSync } = require('child_process');
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+      // Fix JSX fragment syntax - use <> instead of React.Fragment;
+      content = content.replace(/<React\.Fragment>/g, "<>");
+      content = content.replace(/<\/React\.Fragment>/g, "</>");
 
-          content = content.replace(/
+      // Fix interface syntax errors;
+      content = content.replace(/children:\s*React\.ReactNode,/g, "children: React.ReactNode,");
 
-<<<<<<< HEAD
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-=======
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
-        }
-      }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    }
+      // Fix JSX component syntax;
+      content = content.replace(/<Html\s+lang="en">/g, "<Html lang="en">");
+      content = content.replace(/<Head>/g, "<Head>");
+      content = content.replace(/<Main>/g, "<Main>");
+      content = content.replace(/<NextScript>/g, "<NextScript>");
+
+      // Fix meta tag syntax;
+      content = content.replace(/<meta name = "description content="([^"]*)" \/>"/g, "<meta name="description" content="$1" />");
+      content = content.replace(/<meta name="viewport content="([^"]*)" \/>/g, "<meta name="viewport" content="$1" />");
+
+      // Fix import statements;
+      if (content.includes("import React") && content.includes("React.Fragment")) {
+  content = content.replace(/import React from "react"/g, "import React from "react"");}
+      // Fix function syntax;
+      content = content.replace(/export default function (\w+)\(\)\s*{\s*return\s*\(\s*<>/g, "export default function $1() {\n  return (\n    <>");
+
+      // Fix closing syntax;
+      content = content.replace(/<\/>\s*\)\s*,/g, "</>\n  )");
+
+      // Fix missing imports;
+      if (content.includes("<Head>") && !content.includes("import Head")) {
+  content = content.replace(/import React from "react"/, "import React from "react"\nimport Head from "next/head"");}
+      if (content.includes("<Link") && !content.includes("import Link")) {
+  content = content.replace(/import React from "react"/, "import React from "react"\nimport Link from "next/link"");}
+      // Fix malformed JSX;
+      content = content.replace(/<Head>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Head>/g, ;
+        "<Head>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Head>");
+
+      if (content !== originalContent) {
+  fs.writeFileSync(filePath, content, "utf8");
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`);
+        return true;}
+      return false;} catch (error) {
+  this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false;,}
+// Main execution
+const filesToFix = ['components/ContactForm.tsx',
+  'pages/_app.tsx',
+  'pages/cloud-devops.tsx',
+  'pages/cybersecurity.tsx',
+  'pages/docs.tsx'
+];
+let totalFixed = ;0;
+for (const file of filesToFix) {
+  if () {
+    if (processFile(file)) {
+      totalFixed++}
   }
+  async fixAllFiles() {
+  this.log("🔧 Starting comprehensive syntax fix...");
 
-  async fixSyntaxErrors() {
-    this.log('🔧 Fixing syntax errors...');
-    const commands = [
-      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
-      { cmd: 'npm run format', desc: 'Format code' }
+    const filesToFix = [;
+  "components/Layout.tsx",;
+      "pages/NotFound.tsx",;
+      "pages/_document.tsx",;
+      "pages/ai-services.tsx",;
+      "pages/api.tsx";
     ];
 
-    for (const { cmd, desc } of commands) {
-      try {
-        this.log(`🚀 ${desc}`);
-        execSync(cmd, { stdio: 'pipe', cwd: this.projectRoot });
-        this.log(`✅ ${desc} completed`);
-      } catch (error) {
-        this.log(`⚠️ ${desc} failed: ${error.message}`);
-      }
+    let fixedCount = 0;
+    for (const file of filesToFix) {
+  const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+  if (this.fixFile(filePath)) {
+  fixedCount++;}
+      } else {
+  this.log(`⚠️ File not found: ${file}`);}
     }
-  }
+    this.log(`🎉 Fixed syntax in ${fixedCount} files`);
+    return { fixedCount, files: this.fixedFiles };}
+}
 
-  async generateReport() {
-    this.log('📊 Generating syntax fix report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: 'completed',
-      fixes: [
-        'Merge conflicts resolved',
-        'Syntax errors fixed',
-        'Code formatted'
-      ],
-      summary: 'Comprehensive syntax fix completed successfully'
-    };
-
-    const reportPath = path.join(this.reportsDir, 'syntax-fix-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Comprehensive Syntax Fix...');
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.generateReport();
-      this.log('🎉 Comprehensive Syntax Fix completed successfully!');
-    } catch (error) {
-      this.log(`❌ Comprehensive Syntax Fix failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-
-    fixedCount++;
-  } catch (error) {`;
-    console.error(`Error fixing ${fix.file}:`, error.message);
-`;
-console.log(`✅ Fixed ${fixedCount} files`);
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// Run the fixer;
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllFiles();
+  .then(result => {
+  console.log("✅ Comprehensive syntax fixing completed successfully");
+    console.log(`📊 Summary: ${result.fixedCount} files fixed`);
+    process.exit(0);});
+  .catch(error => {
+  console.error("❌ Comprehensive syntax fixing failed:", error.message);
+    process.exit(1);,
+});}}
