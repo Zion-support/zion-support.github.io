@@ -14,6 +14,11 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
@@ -29,6 +34,17 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "zion-os.disabled",
+    "temp-disabled",
+    "pages._archive_corrupted",
+    "pages.disabled",
+    "pages.disabled_full",
+    "pages.disabled.full",
+    "src.pages.disabled",
+    "zion-os",
+    "zion-website/src",
+    "tests",
+    "backup-merge-conflicts"
   ]
 }
