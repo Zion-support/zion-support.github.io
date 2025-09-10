@@ -57,9 +57,9 @@ export const safeStorage = {
         try {
             return localStorage.getItem(key);
         }
-        catch (_e) {
+        catch (error) {
             if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+                safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, error);
             }
             return inMemoryStore[key] || null;
         }
@@ -71,9 +71,9 @@ export const safeStorage = {
         try {
             localStorage.setItem(key, value);
         }
-        catch (_e) {
+        catch (error) {
             if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+                safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, error);
             }
             inMemoryStore[key] = value;
         }
@@ -85,9 +85,9 @@ export const safeStorage = {
         try {
             localStorage.removeItem(key);
         }
-        catch (_e) {
+        catch (error) {
             if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+                safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, error);
             }
             delete inMemoryStore[key];
         }
@@ -102,8 +102,8 @@ export const safeStorage = {
         try {
             localStorage.clear();
         }
-        catch (_e) {
-            safeConsoleError('safeStorage.clear: Error clearing localStorage. Falling back to in-memory.', e);
+        catch (error) {
+            safeConsoleError('safeStorage.clear: Error clearing localStorage. Falling back to in-memory.', error);
             for (const key in inMemoryStore) {
                 delete inMemoryStore[key];
             }
