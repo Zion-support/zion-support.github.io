@@ -28,12 +28,6 @@ export default defineConfig({
       '@constants': resolve(__dirname, 'src/constants')
     }
   },
-  esbuild: {
-    loader: 'tsx',
-    include: /src\/.*\.[jt]sx?$/,
-    exclude: [],
-    jsx: 'automatic',
-  },
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -126,7 +120,8 @@ export default defineConfig({
     open: true
   },
   css: {
-    devSourcemap: true
+    devSourcemap: true,
+    postcss: './postcss.config.cjs'
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
