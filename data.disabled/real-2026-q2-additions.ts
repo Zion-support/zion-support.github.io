@@ -452,9 +452,9 @@ export const real2026Q2Additions = [
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description:;
+    description:
       'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
-    features: [;
+    features: [
       'Return portal widgets and hosted flows',
       'Policy rules engine with A / B tests',
       'Carrier label and pickup automation',
