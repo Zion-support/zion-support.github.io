@@ -65,7 +65,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error in zion-gpt function:", error);
+    // console.error("Error in zion-gpt function:", error);
     
     return new Response(
       JSON.stringify({ error: error.message }),
