@@ -30,16 +30,53 @@ const accessibilityFeatures = [
     features: ['Closed captions', 'Audio descriptions', 'Sign language support', 'Volume controls']
   },
   {
+    title: "Motor Accessibility",
+    description: "Features to support users with motor impairments",
     icon: Hand,
-    title: 'Motor Accessibility',
-    description: 'Keyboard navigation, voice control, and assistive technologies',
-    features: ['Keyboard-only navigation', 'Voice commands', 'Switch controls', 'Gesture alternatives']
+    features: [
+      "Full keyboard navigation support",
+      "Customizable click targets",
+      "Drag and drop alternatives",
+      "Timeout extensions and controls"
+    ]
   },
   {
     icon: Brain,
-    title: 'Cognitive Accessibility',
-    description: 'Clear language, consistent navigation, and cognitive load reduction',
-    features: ['Plain language', 'Consistent UI patterns', 'Progress indicators', 'Error prevention']
+    title: "Cognitive Accessibility",
+    description: "Clear navigation, consistent layouts, and simplified interfaces",
+    features: [
+      "Consistent navigation patterns",
+      "Clear and simple language",
+      "Error prevention and recovery",
+      "Customizable interface complexity"
+    ]
+  }
+];
+
+const complianceStandards = [
+  {
+    name: "WCAG 2.1 AA",
+    description: "Web Content Accessibility Guidelines Level AA compliance",
+    status: "Compliant",
+    icon: Award
+  },
+  {
+    name: "Section 508",
+    description: "US Federal accessibility requirements",
+    status: "Compliant", 
+    icon: FileText
+  },
+  {
+    name: "ADA",
+    description: "Americans with Disabilities Act compliance",
+    status: "Compliant",
+    icon: Users
+  },
+  {
+    name: "EN 301 549",
+    description: "European accessibility standard",
+    status: "Compliant",
+    icon: Globe
   }
 ];
 
@@ -69,8 +106,25 @@ export default function AccessibilityPage() {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20">
+        {/* Commitment Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Accessibility Features
+                </h2>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Standards */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
