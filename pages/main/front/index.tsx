@@ -831,6 +831,7 @@ export default function MainFrontIndex() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T05-59-06-401Z
 =======
 >>>>>>> origin/automation/git-sync/2025-08-15T06-04-36-803Z
@@ -842,6 +843,8 @@ export default function MainFrontIndex() {
 >>>>>>> origin/automation/git-sync/2025-08-15T06-50-28-159Z
 =======
 >>>>>>> origin/automation/git-sync/2025-08-15T07-02-20-681Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T07-34-43-563Z
   </div>
 </section>
 /* AUTO:FRONT_INDEX_DIRECTORY_END */}
