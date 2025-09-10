@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci --no-audit --no-fund --omit=optional && npm run build"
+  command = "pnpm run build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -7,6 +7,7 @@
 NODE_VERSION = "22"
 NODE_OPTIONS = "--max-old-space-size=4096"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
+NETLIFY_USE_PNPM = "true"
 SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 # API functions (disabled for Vite SPA)
