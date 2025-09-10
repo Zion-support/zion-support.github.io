@@ -6,6 +6,12 @@
 import { cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+import { TextEncoder, TextDecoder } from 'util'
+
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder as any
+
 // Cleanup after each test
 afterEach(() => {
   cleanup()

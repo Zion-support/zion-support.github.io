@@ -1,13 +1,9 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import SEOHead from &apos;./SEOHead;
-describe(&apos;SEOHead&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<SEOHead / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { render, screen } from '@testing-library/react';
+import SEOHead from './SEOHead';
+
+describe('SEOHead', () => {
+  it('displays expected content', () => {
+    render(<SEOHead />);
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+});
