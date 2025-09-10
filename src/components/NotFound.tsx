@@ -1,11 +1,7 @@
 import React from "react";
 import { SEO } from "@/components/SEO";
 
-interface NotFoundProps {
-  // Add any props if needed
-}
-
-export default function NotFound(props: NotFoundProps) {
+export default function NotFound(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="NotFound - Zion Tech Group" description="Professional NotFound services by Zion Tech Group" />

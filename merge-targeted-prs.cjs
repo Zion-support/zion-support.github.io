@@ -2,10 +2,10 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 
-console.log('🚀 Comprehensive PR Merge Automation')
-console.log('=====================================')
+console.log('🎯 Targeted PR Merge Automation')
+console.log('================================')
 
-class PRMerger {
+class TargetedPRMerger {
   constructor() {
     this.processedBranches = []
     this.mergedBranches = []
@@ -33,25 +33,6 @@ class PRMerger {
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'error')
       throw error
-    }
-  }
-
-  async getAllRemoteBranches() {
-    try {
-      const result = await this.runCommand('git branch -r', 'Getting all remote branches')
-      const branches = result.split('\n')
-        .map(branch => branch.trim())
-        .filter(branch => branch && !branch.includes('HEAD') && branch.startsWith('origin/'))
-        .map(branch => branch.replace('origin/', ''))
-        .filter(branch => branch !== 'main')
-        .filter(branch => !branch.includes('backup-'))
-        .filter(branch => !branch.includes('cursor/'))
-      
-      this.log(`Found ${branches.length} remote branches to process`)
-      return branches
-    } catch (error) {
-      this.log(`Error getting remote branches: ${error.message}`, 'error')
-      return []
     }
   }
 
@@ -163,28 +144,35 @@ class PRMerger {
 
   async runAutomation() {
     try {
-      this.log('Starting comprehensive PR merge automation...')
+      this.log('Starting targeted PR merge automation...')
 
-      // Get all remote branches
-      const branches = await this.getAllRemoteBranches()
+      // Target specific important branches
+      const targetBranches = [
+        '1wzbwr-codex/fix-typescript-errors-in-files',
+        '1m9jcs-codex/fix-client-side-rendering-and-javascript-errors',
+        '1nc0kn-codex/fix-blank-screen-on-app-load',
+        '1ry69n-codex/fix-npm-eio-error-during-install',
+        '2503nr-codex/fix-ts2614-error-with-suspense-import',
+        '26ywwb-codex/fix-client-side-rendering-and-javascript-errors',
+        '0smfo8-codex/fix-404-error-for-non-existent-route',
+        '0une71-codex/fix-unsupported-shell-syntax-in-setup.sh',
+        '0nylrk-codex/fix-footer-contact-link'
+      ]
 
-      if (branches.length === 0) {
+      if (targetBranches.length === 0) {
         this.log('No branches to process', 'info')
         return
       }
 
-      // Process branches in batches to avoid overwhelming the system
-      const batchSize = 3
-      for (let i = 0; i < branches.length; i += batchSize) {
-        const batch = branches.slice(i, i + batchSize)
-        this.log(`Processing batch ${Math.floor(i/batchSize) + 1}/${Math.ceil(branches.length/batchSize)}`)
-
-        for (const branch of batch) {
+      // Process branches one by one
+      for (const branch of targetBranches) {
+        try {
           await this.processBranch(branch)
+          // Small delay between branches
+          await new Promise(resolve => setTimeout(resolve, 2000))
+        } catch (error) {
+          this.log(`Failed to process ${branch}: ${error.message}`, 'error')
         }
-
-        // Small delay between batches
-        await new Promise(resolve => setTimeout(resolve, 3000))
       }
 
       // Generate final report
@@ -213,11 +201,11 @@ class PRMerger {
     }
 
     // Save report to file
-    fs.writeFileSync('pr-merge-automation-report.json', JSON.stringify(report, null, 2))
+    fs.writeFileSync('targeted-pr-merge-report.json', JSON.stringify(report, null, 2))
 
     // Display summary
-    console.log('\n🎉 PR Merge Automation Complete!')
-    console.log('================================')
+    console.log('\n🎉 Targeted PR Merge Complete!')
+    console.log('==============================')
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)
@@ -231,14 +219,14 @@ class PRMerger {
       })
     }
 
-    console.log('\n📊 Detailed report saved to: pr-merge-automation-report.json')
+    console.log('\n📊 Detailed report saved to: targeted-pr-merge-report.json')
   }
 }
 
 // Run the automation
-const automation = new PRMerger()
+const automation = new TargetedPRMerger()
 automation.runAutomation().then(() => {
-  console.log('\n🚀 Comprehensive PR merge automation completed!')
+  console.log('\n🚀 Targeted PR merge automation completed!')
 }).catch(error => {
   console.error('Automation failed:', error.message)
   process.exit(1)
