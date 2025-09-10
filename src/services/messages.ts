@@ -17,8 +17,8 @@ interface MessageResponse {
   error?: string;
 }
 
-export async function sendMessage(_{ 
-  productId, _sellerId, _subject, message 
+export async function sendMessage({ 
+  productId, sellerId, subject, message 
 }: SendMessageParams): Promise<MessageResponse> {
   try {
     const response = await fetch('/api/messages', {

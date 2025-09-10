@@ -115,8 +115,8 @@ export async function createHireRequestNotifications({
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification(_{
-  userId, _missingMilestone, _userRole, }: {
+export async function createOnboardingNotification({
+  userId, missingMilestone, userRole, }: {
   userId: string;
   missingMilestone: string;
   userRole: 'talent' | 'client';
@@ -185,8 +185,8 @@ export async function createOnboardingNotification(_{
 /**
  * Creates a system notification for a user
  */
-export async function createSystemNotification(_{
-  userId, _title, _message, _actionUrl = null, _actionText = null, _sendEmail = false, }: {
+export async function createSystemNotification({
+  userId, title, message, actionUrl = null, actionText = null, sendEmail = false, }: {
   userId: string;
   title: string;
   message: string;
