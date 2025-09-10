@@ -1,19 +1,18 @@
 import React, { createContext, useContext } from 'react';
 
-const WhitelabelContext = createContext();
+type WhitelabelConfig = Record<string, unknown>;
 
-export function WhitelabelProvider(_{ children, _config }) {
-  return (
-    <WhitelabelContext.Provider value={config}>
-      {children}
-    </WhitelabelContext.Provider>
-  );
+const WhitelabelContext = createContext<WhitelabelConfig | undefined>(undefined);
+
+export function WhitelabelProvider({ children, config }: { children: React.ReactNode; config: WhitelabelConfig }) {
+  return <WhitelabelContext.Provider value={config}>{children}</WhitelabelContext.Provider>;
 }
 
-export function useWhitelabel() {
+export function useWhitelabel(): WhitelabelConfig {
   const context = useContext(WhitelabelContext);
   if (context === undefined) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
   return context;
 }
+
