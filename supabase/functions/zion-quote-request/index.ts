@@ -122,7 +122,11 @@ async function analyzeWithOpenAI(projectOverview: string): Promise<{ summary?: s
       return { summary: parsed.summary, projectType: parsed.projectType };
     }
 
-  return {};
+    return {};
+  } catch (error) {
+    console.error('Error analyzing project:', error);
+    return {};
+  }
 }
 
 Deno.serve(async (req: Request) => {

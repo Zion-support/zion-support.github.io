@@ -136,7 +136,7 @@ class MimeTypeFallback {
     // Replace script tags
     const scripts = document.querySelectorAll(`script[src="${originalUrl}"]`);
     scripts.forEach(script => {
-      (script as HTMLScriptElement).src = fallbackUrl;
+      (script as any).src = fallbackUrl;
       console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`);
     });
 

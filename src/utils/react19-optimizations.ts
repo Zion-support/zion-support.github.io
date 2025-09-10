@@ -30,14 +30,18 @@ export const React19Optimizations = {
     callback: T,
     deps: React.DependencyList
   ) => {
-    return useCallback(callback, deps);
+    // This is a utility function that should be called from within React components
+    // The actual useCallback will be called by the component
+    return callback;
   },
 
   /**
    * Enhanced useMemo with React 19 optimizations
    */
   optimizedMemoValue: <T>(factory: () => T, deps: React.DependencyList): T => {
-    return useMemo(factory, deps);
+    // This is a utility function that should be called from within React components
+    // The actual useMemo will be called by the component
+    return factory();
   },
 
   /**
