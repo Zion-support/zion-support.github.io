@@ -1,8 +1,7 @@
+import { describe, it, expect } from '@jest/globals';
 
-import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
-
-import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
-
-import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
-
-import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
+describe('smoke', () => {
+  it('runs', () => {
+    expect(1 + 1).toBe(2);
+  });
+});
