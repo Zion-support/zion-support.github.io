@@ -46,10 +46,10 @@ serve(async (req) => {
 
     // In a real implementation, here you would use a service like Resend, SendGrid, etc.
     // to send the actual email. For this example, we'll simulate the email sending.
-    console.log(`Email would be sent to ${userProfile.email}`);
-    console.log(`Subject: ${notification.title}`);
-    console.log(`Body: ${notification.message}`);
-    console.log(`Type: ${notification.type}`);
+    // console.log(`Email would be sent to ${userProfile.email}`);
+    // console.log(`Subject: ${notification.title}`);
+    // console.log(`Body: ${notification.message}`);
+    // console.log(`Type: ${notification.type}`);
 
     return new Response(
       JSON.stringify({ success: true }),
@@ -60,7 +60,7 @@ serve(async (req) => {
     );
     
   } catch (error) {
-    console.error("Error sending email notification:", error.message);
+    // console.error("Error sending email notification:", error.message);
     return new Response(
       JSON.stringify({ error: error.message }),
       {
