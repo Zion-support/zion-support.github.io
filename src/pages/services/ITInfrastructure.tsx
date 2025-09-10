@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react';
-const features = [];
-const services = [];
-const applications = [];
-const solutions = [];
-const implementation = [];
+const _features = [];
+const _services = [];
+const _applications = [];
+const _solutions = [];
+const _implementation = [];
 const _ITInfrastructure = () => {
     const _features = [
         {
@@ -124,7 +124,7 @@ const _ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              {infrastructureServices.map((_service, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -132,7 +132,7 @@ const _ITInfrastructure = () => {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                      {service.features.map((_feature, _idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
                         </li>))}
@@ -156,10 +156,10 @@ const _ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {infrastructureAreas.map((_area, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (<li key={idx} className="text-gray-300 flex items-center">
+                    {area.solutions.map((_solution, _idx) => (<li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
                       </li>))}

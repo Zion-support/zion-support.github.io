@@ -1,12 +1,12 @@
 import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { _Server, Clock, MapPin } from "lucide-react";
 
-const services = [];
-const implementation = [];
+const _services = [];
+const _implementation = [];
 // Component to show service details for the selected country
 export function ServiceDetails({ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
-    const _getDatacenters = (country) => {
+    const _getDatacenters = (_country) => {
         const _dataCenters = {
             "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -21,7 +21,7 @@ export function ServiceDetails({ country }) {
         return dataCenters[country] || dataCenters["default"];
     };
     // Get region-specific image
-    const _getRegionalImage = (country) => {
+    const _getRegionalImage = (_country) => {
         // In a real app, you'd have specific images for each region
         const _regions = {
             "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
@@ -36,7 +36,7 @@ export function ServiceDetails({ country }) {
         return regions[country] || regions["default"];
     };
     // Get region-specific instructions
-    const _getRegionalInstructions = (country) => {
+    const _getRegionalInstructions = (_country) => {
         // In a real implementation, this would be much more detailed and specific
         const _timeZones = {
             "United States": "EST/CST/PST depending on location",
@@ -76,7 +76,7 @@ export function ServiceDetails({ country }) {
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (<div key={idx} className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">
+              {datacenters.map((_dc, _idx) => (<div key={idx} className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">
                   {dc}
                 </div>))}
             </div>

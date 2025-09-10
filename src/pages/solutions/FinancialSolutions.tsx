@@ -1,20 +1,12 @@
+import { _DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard, DollarSign, Check } from 'lucide-react';
 import React from 'react';
 import { _motion } from 'framer-motion';
-import { _DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard } from 'lucide-react';
-
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-const features = [];
-const benefits = [];
-const industries = [];
-const services = [];
-const solutions = [];
+const _features = [];
+const _benefits = [];
+const _industries = [];
+const _services = [];
+const _solutions = [];
 export default function FinancialSolutions() {
     const _features = [
         {
@@ -127,7 +119,7 @@ export default function FinancialSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
+            {features.map((_feature, _index) => (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white"/>
                 </div>
@@ -154,7 +146,7 @@ export default function FinancialSolutions() {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (<div key={index} className="flex items-center space-x-3">
+                {benefits.map((_benefit, _index) => (<div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0"/>
                     <span className="text-gray-300">{benefit}</span>
                   </div>))}
@@ -164,7 +156,7 @@ export default function FinancialSolutions() {
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>
               <div className="space-y-4">
-                {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                {solutions.map((_solution, _index) => (<div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
                     <h4 className="font-semibold text-cyan-400 mb-2">{solution.title}</h4>
                     <p className="text-gray-300 text-sm">{solution.description}</p>
                   </div>))}
@@ -188,7 +180,7 @@ export default function FinancialSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (<motion.div key={industry} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">
+            {industries.map((_industry, _index) => (<motion.div key={industry} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">
                 <CreditCard className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>
                 <h3 className="font-semibold">{industry}</h3>
               </motion.div>))}
@@ -220,3 +212,6 @@ export default function FinancialSolutions() {
       </section>
     </div>);
 }
+
+
+export { FinancialSolutions };

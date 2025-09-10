@@ -1,20 +1,15 @@
+import { _Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud, Shield, Check } from 'lucide-react';
 import React from 'react';
 import { _Link } from 'react-router-dom';
-import { _Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
-
 import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Check } from 'lucide-react';
-const features = [];
-const benefits = [];
-const technologies = [];
-const securityServices = [];
-const complianceStandards = [];
-const securityTechnologies = [];
-const services = [];
-const solutions = [];
+const _features = [];
+const _benefits = [];
+const _technologies = [];
+const _securityServices = [];
+const _complianceStandards = [];
+const _securityTechnologies = [];
+const _services = [];
+const _solutions = [];
 const _CybersecurityServices = () => {
     const _securityServices = [
         {
@@ -151,7 +146,7 @@ const _CybersecurityServices = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
+            {securityServices.map((_service, _index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -162,7 +157,7 @@ const _CybersecurityServices = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
+                  {service.features.map((_feature, _featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
                     </li>))}
@@ -190,7 +185,7 @@ const _CybersecurityServices = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceStandards.map((standard, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+            {complianceStandards.map((_standard, _index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-6 h-6 text-white"/>
                 </div>
@@ -214,7 +209,7 @@ const _CybersecurityServices = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">
+            {benefits.map((_benefit, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-white"/>
                 </div>
@@ -238,7 +233,7 @@ const _CybersecurityServices = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {securityTechnologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+            {securityTechnologies.map((_tech, _index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold text-sm">{tech}</p>
               </div>))}
           </div>

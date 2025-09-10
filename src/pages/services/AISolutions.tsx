@@ -59,3 +59,5 @@ export default function AISolutions() {
     </div>
   );
 }
+
+export { AISolutions };

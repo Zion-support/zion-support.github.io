@@ -3,8 +3,8 @@ import { _Link } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
-const services = [];
-const solutions = [];
+const _services = [];
+const _solutions = [];
 const _TransformationServices = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">

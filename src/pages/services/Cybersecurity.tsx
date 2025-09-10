@@ -1,5 +1,5 @@
 const services = [];
-const solutions = [];
+const _solutions = [];
 
 
 export default function Cybersecurity() {
@@ -60,3 +60,5 @@ export default function Cybersecurity() {
     </div>
   );
 }
+
+export { Cybersecurity };
