@@ -1,4 +1,4 @@
-import {  import { motion  } from 'framer-motion';
+import { _ import { motion  } from 'framer-motion';
         name: 'Error Rate',
         value: Math.random() * 2,
         unit: '%',

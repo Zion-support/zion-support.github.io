@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
+import { _Button } from './button';
+import { _Badge } from './badge';
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');
@@ -22,14 +22,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     const [results, setResults] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
     const [_selectedResult, setSelectedResult] = useState(null);
-    const searchRef = useRef(null);
-    const inputRef = useRef(null);
+    const _searchRef = useRef(null);
+    const _inputRef = useRef(null);
     // Mock search results - moved inside useCallback to fix dependency issue
     // Mock suggestions based on query
-    const generateSuggestions = useCallback((searchQuery) => {
+    const _generateSuggestions = useCallback((searchQuery) => {
         if (!searchQuery.trim())
             return [];
-        const baseSuggestions = [
+        const _baseSuggestions = [
             'AI services',
             'Machine learning',
             'Cloud solutions',
@@ -44,10 +44,10 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             .slice(0, 5);
     }, []);
     // Handle search input
-    const handleSearchInput = useCallback((value) => {
+    const _handleSearchInput = useCallback((value) => {
         setQuery(value);
         if (value.trim()) {
-            const newSuggestions = generateSuggestions(value);
+            const _newSuggestions = generateSuggestions(value);
             setSuggestions(newSuggestions);
             setIsOpen(true);
         }
@@ -57,10 +57,10 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         }
     }, [generateSuggestions]);
     // Perform search
-    const performSearch = useCallback(async (searchQuery, searchFilters) => {
+    const _performSearch = useCallback(async (searchQuery, searchFilters) => {
         setIsSearching(true);
         // Mock search results
-        const mockResults = [
+        const _mockResults = [
             {
                 id: '1',
                 title: 'AI-Powered Business Intelligence Platform',
@@ -116,14 +116,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 800));
         // Filter results based on query and filters
-        const filteredResults = mockResults.filter(result => {
-            const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        const _filteredResults = mockResults.filter(result => {
+            const _matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-            const matchesCategory = searchFilters.category.length === 0 ||
+            const _matchesCategory = searchFilters.category.length === 0 ||
                 searchFilters.category.includes(result.category);
-            const matchesRating = result.rating >= searchFilters.rating;
-            const matchesVerified = !searchFilters.verified || result.metadata.verified;
+            const _matchesRating = result.rating >= searchFilters.rating;
+            const _matchesVerified = !searchFilters.verified || result.metadata.verified;
             return matchesQuery && matchesCategory && matchesRating && matchesVerified;
         });
         // Sort by relevance
@@ -137,19 +137,19 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         onSearch?.(searchQuery, searchFilters);
     }, [searchHistory, onSearch]);
     // Handle search submission
-    const handleSearch = useCallback(() => {
+    const _handleSearch = useCallback(() => {
         if (query.trim()) {
             performSearch(query, filters);
         }
     }, [query, filters, performSearch]);
     // Handle voice input
-    const toggleVoiceInput = useCallback(() => {
+    const _toggleVoiceInput = useCallback(() => {
         setIsVoiceActive(!isVoiceActive);
         // In a real implementation, this would start/stop speech recognition
         if (!isVoiceActive) {
             // Simulate voice input
             setTimeout(() => {
-                const voiceQuery = 'AI machine learning services';
+                const _voiceQuery = 'AI machine learning services';
                 setQuery(voiceQuery);
                 handleSearchInput(voiceQuery);
                 setIsVoiceActive(false);
@@ -157,13 +157,13 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         }
     }, [isVoiceActive, handleSearchInput]);
     // Save search
-    const saveSearch = useCallback((searchQuery) => {
+    const _saveSearch = useCallback((searchQuery) => {
         if (!savedSearches.includes(searchQuery)) {
             setSavedSearches(prev => [...prev, searchQuery]);
         }
     }, [savedSearches]);
     // Share search results
-    const shareResults = useCallback(() => {
+    const _shareResults = useCallback(() => {
         if (navigator.share) {
             navigator.share({
                 title: 'Search Results from Zion Tech Group',
@@ -177,7 +177,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         }
     }, [query]);
     // Handle keyboard navigation
-    const handleKeyDown = useCallback((e) => {
+    const _handleKeyDown = useCallback((e) => {
         if (e.key === 'Enter') {
             handleSearch();
         }
@@ -187,14 +187,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         }
     }, [handleSearch]);
     // Handle result selection
-    const handleResultClick = useCallback((result) => {
+    const _handleResultClick = useCallback((result) => {
         setSelectedResult(result);
         onResultClick?.(result);
         setIsOpen(false);
     }, [onResultClick]);
     // Close search when clicking outside
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const _handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setIsOpen(false);
             }
@@ -273,7 +273,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Category</label>
                       <select multiple value={filters.category} onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions, option => option.value);
+                    const _selected = Array.from(e.target.selectedOptions, option => option.value);
                     setFilters(prev => ({ ...prev, category: selected }));
                 }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value="AI & Analytics">AI & Analytics</option>

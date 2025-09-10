@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from '../../integrations/supabase/client';
+import { _supabase, getFromProfiles } from '../../integrations/supabase/client';
 
         return { "error": "(clientLoginResult.error as any)?.message || "Client-side login failed." "};    if(res.status === 200) {
       // Successful API call
       setTokens({ accessToken: dat a.accessToken, refreshToken: dat a.refreshToken }
     );
-      const clientLoginResult = await loginImpl({ email, password }
+      const _clientLoginResult = await loginImpl({ email, password }
     ); // This is supabase.auth.signInWithPassword client-side
       if(clientLoginResult?.error) {
-        // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+        // loginImpl(useEmailAuth.login) already shows a toast.// console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
       }
 ;
       // Navigation logic(already present);
-      const params = new URLSearchParams(location.search);
-      const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
+      const _params = new URLSearchParams(location.search);
+      const _next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
       navigate(next, { "replace": "tru e "});
 ;
       return { "error": "nul l "}; // Successful login;    toast({
@@ -27,7 +27,7 @@ import { supabase, getFromProfiles } from '../../integrations/supabase/client';
   };
 ;
   // Refactored signup method;
-  const signup = async("name": "string", "email": "string", "password": "string) => {;
+  const _signup = async("name": "string", "email": "string", "password": "string) => {;
     setIsLoading(true);
     try {;
       const { res", data } = await registerUser(name, email, password);

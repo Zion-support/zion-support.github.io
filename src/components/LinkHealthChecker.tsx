@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink } from 'lucide-react';
-const LinkHealthChecker = ({ links, className = '' }) => {
+import { _CheckCircle, XCircle, AlertTriangle, ExternalLink } from 'lucide-react';
+const _LinkHealthChecker = ({ links, className = '' }) => {
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
-    const checkLinkHealth = async (url) => {
-        const startTime = Date.now();
+    const _checkLinkHealth = async (url) => {
+        const _startTime = Date.now();
         try {
             // Check if it's an external link
             if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {
@@ -47,10 +47,10 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             };
         }
     };
-    const checkAllLinks = async () => {
+    const _checkAllLinks = async () => {
         setIsChecking(true);
         setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
-        const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
+        const _statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
         setLinkStatuses(statuses);
         setIsChecking(false);
     };
@@ -58,7 +58,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         // Auto-check links when component mounts
         checkAllLinks();
     }, [links]);
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':
                 return <CheckCircle className="w-5 h-5 text-green-500"/>;
@@ -72,7 +72,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
         }
     };
-    const getStatusText = (status) => {
+    const _getStatusText = (status) => {
         switch (status) {
             case 'healthy':
                 return 'Healthy';
@@ -86,7 +86,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return 'Unknown';
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'healthy':
                 return 'text-green-500';
@@ -100,9 +100,9 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return 'text-gray-500';
         }
     };
-    const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
-    const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
-    const externalCount = linkStatuses.filter(s => s.status === 'external').length;
+    const _healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
+    const _brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
+    const _externalCount = linkStatuses.filter(s => s.status === 'external').length;
     return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -140,7 +140,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       {/* Link Status List */}
       <div className="space-y-3">
         {links.map((link, index) => {
-            const status = linkStatuses[index];
+            const _status = linkStatuses[index];
             if (!status)
                 return null;
             return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300">

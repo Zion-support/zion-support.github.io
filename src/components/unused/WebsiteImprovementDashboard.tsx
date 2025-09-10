@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
-const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+const _WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
     const [isOpen, setIsOpen] = useState(showOnLoad);
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({
@@ -34,12 +34,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance
-    const analyzePerformance = useCallback(async () => {
+    const _analyzePerformance = useCallback(async () => {
         setIsAnalyzing(true);
         // Simulate performance analysis
         await new Promise(resolve => setTimeout(resolve, 2000));
         // Mock performance data (in a real app, you'd use Web Vitals API)
-        const mockMetrics = {
+        const _mockMetrics = {
             loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
             firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
             largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds
@@ -51,11 +51,11 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false);
     }, []);
     // Analyze SEO
-    const analyzeSEO = useCallback(async () => {
+    const _analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis
-        const mockSEO = {
+        const _mockSEO = {
             score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues: [
                 'Missing meta description on some pages',
@@ -80,11 +80,11 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false);
     }, []);
     // Analyze accessibility
-    const analyzeAccessibility = useCallback(async () => {
+    const _analyzeAccessibility = useCallback(async () => {
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1800));
         // Mock accessibility analysis
-        const mockAccessibility = {
+        const _mockAccessibility = {
             score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues: [
                 'Some form controls lack proper labels',
@@ -99,7 +99,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(false);
     }, []);
     // Run comprehensive analysis
-    const runFullAnalysis = useCallback(async () => {
+    const _runFullAnalysis = useCallback(async () => {
         await Promise.all([
             analyzePerformance(),
             analyzeSEO(),
@@ -107,7 +107,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         ]);
     }, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
     // Get performance grade
-    const getPerformanceGrade = (metric, thresholds) => {
+    const _getPerformanceGrade = (metric, thresholds) => {
         if (metric <= thresholds.good)
             return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
         if (metric <= thresholds.needsImprovement)
@@ -115,7 +115,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
     };
     // Get trend indicator
-    const getTrendIndicator = (value, previousValue) => {
+    const _getTrendIndicator = (value, previousValue) => {
         if (value < previousValue)
             return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
         if (value > previousValue)
@@ -268,7 +268,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         thresholds: { good: 100, needsImprovement: 300 }
                     }
                 ].map((metric, index) => {
-                    const grade = getPerformanceGrade(metric.value, metric.thresholds);
+                    const _grade = getPerformanceGrade(metric.value, metric.thresholds);
                     return (<div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
                           <div>
                             <div className="text-sm font-medium text-gray-900 dark:text-white">

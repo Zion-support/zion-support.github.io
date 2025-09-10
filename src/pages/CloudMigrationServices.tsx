@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _SEO } from "@/components/SEO";
+import { _Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
+import { _Link } from "react-router-dom";
 export default function CloudMigrationServices() {
-    const services = [
+    const _services = [
         {
             title: "Cloud Assessment",
             description: "Comprehensive analysis of your current infrastructure and cloud readiness",
@@ -32,7 +32,7 @@ export default function CloudMigrationServices() {
             price: "From $8,000"
         }
     ];
-    const cloudPlatforms = [
+    const _cloudPlatforms = [
         {
             name: "AWS",
             description: "Amazon Web Services migration and optimization",
@@ -58,7 +58,7 @@ export default function CloudMigrationServices() {
             features: ["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Basic Migration",
             price: "$5,000",
@@ -104,7 +104,7 @@ export default function CloudMigrationServices() {
             popular: false
         }
     ];
-    const testimonials = [
+    const _testimonials = [
         {
             name: "Alex Rodriguez",
             role: "CTO, RetailTech Solutions",

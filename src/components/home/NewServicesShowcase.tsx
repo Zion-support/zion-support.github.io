@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { SERVICE_CATEGORIES } from '@/data/microSaasServices';
-import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _SERVICE_CATEGORIES } from '@/data/microSaasServices';
+import { _Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle } from 'lucide-react';
 export function NewServicesShowcase() {
     // Get featured services from each category
-    const featuredServices = SERVICE_CATEGORIES.map(category => category.services[0]).filter(Boolean);
+    const _featuredServices = SERVICE_CATEGORIES.map(category => category.services[0]).filter(Boolean);
     return (<section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">

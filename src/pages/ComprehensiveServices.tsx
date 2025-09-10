@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { _motion } from 'framer-motion';
+import { _SEO } from '@/components/SEO';
 import ComprehensiveServicesShowcase from '@/components/ComprehensiveServicesShowcase';
 
 const ComprehensiveServices: React.FC = () => {

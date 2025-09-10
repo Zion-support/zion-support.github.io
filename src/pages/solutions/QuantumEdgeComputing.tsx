@@ -1,7 +1,7 @@
 import React from 'react';
-import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi } from 'lucide-react';
-const QuantumEdgeComputing = () => {
-    const edgeFeatures = [
+import { _Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi } from 'lucide-react';
+const _QuantumEdgeComputing = () => {
+    const _edgeFeatures = [
         {
             icon: Wifi,
             title: "Edge Processing",
@@ -27,7 +27,7 @@ const QuantumEdgeComputing = () => {
             features: ["Local encryption", "Secure communication", "Access control", "Threat detection"]
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: "IoT Networks",
             description: "Intelligent edge processing for IoT device networks",
@@ -65,7 +65,7 @@ const QuantumEdgeComputing = () => {
             benefits: ["Ultra-low latency", "Real-time risk", "Market analysis", "Fraud detection"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Ultra-low latency for real-time applications",
         "Reduced bandwidth costs and network congestion",
         "Enhanced privacy and data security",
@@ -73,7 +73,7 @@ const QuantumEdgeComputing = () => {
         "Scalable deployment across distributed networks",
         "Future-proof quantum-enhanced technology"
     ];
-    const implementation = [
+    const _implementation = [
         {
             phase: "Edge Assessment",
             description: "Evaluate current edge infrastructure and requirements",

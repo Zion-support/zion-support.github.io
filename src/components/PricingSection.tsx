@@ -59,7 +59,7 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
         <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">,
 
           {plans.map((plan, index) => {;
-            const IconComponent = plan.icon;
+            const _IconComponent = plan.icon;
             return (;
               <motion.div,";
 key = "{plan.name}"";

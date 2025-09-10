@@ -1,10 +1,10 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { _SEO } from "@/components/SEO";
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {
-    const serviceCategories = [
+    const _serviceCategories = [
         {
             name: "AI & Machine Learning",
             description: "Cutting-edge artificial intelligence solutions for business transformation",
@@ -162,13 +162,13 @@ export default function ServicesOverview() {
             ]
         }
     ];
-    const stats = [
+    const _stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
         { label: "Technologies", value: "100+", icon: Server },
         { label: "Client Satisfaction", value: "98%", icon: Check }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -177,7 +177,7 @@ export default function ServicesOverview() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

@@ -1,14 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-export const FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
-    const getVariantStyles = () => {
-        const intensityMultiplier = {
+import { _motion } from 'framer-motion';
+export const _FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
+    const _getVariantStyles = () => {
+        const _intensityMultiplier = {
             low: 0.3,
             medium: 0.5,
             high: 0.8
         };
-        const multiplier = intensityMultiplier[glowIntensity];
-        const baseStyles = {
+        const _multiplier = intensityMultiplier[glowIntensity];
+        const _baseStyles = {
             primary: {
                 bg: 'bg-zion-cyan/20',
                 border: 'border-zion-cyan',
@@ -47,8 +47,8 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         };
         return baseStyles[variant];
     };
-    const getSizeStyles = () => {
-        const sizeStyles = {
+    const _getSizeStyles = () => {
+        const _sizeStyles = {
             sm: 'px-3 py-1.5 text-sm',
             md: 'px-4 py-2 text-base',
             lg: 'px-6 py-3 text-lg',
@@ -56,8 +56,8 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         };
         return sizeStyles[size];
     };
-    const styles = getVariantStyles();
-    const sizeStyles = getSizeStyles();
+    const _styles = getVariantStyles();
+    const _sizeStyles = getSizeStyles();
     return (<motion.button type={type} onClick={onClick} disabled={disabled || loading} className={`
         relative overflow-hidden rounded-lg font-semibold transition-all duration-300
         ${styles.bg} ${styles.border} ${styles.text} ${styles.glow}

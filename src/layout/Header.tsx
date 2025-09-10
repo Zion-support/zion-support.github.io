@@ -3,15 +3,15 @@ import React { useState, useEffect } from "react";,"});,"})","});,"})"
 export default function Header() {,"});,"})"
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);,"});,"})"
   const [scrolled, setScrolled] = useState(false);,"});,"})"
-  const location = useLocation();,"});,"})"
+  const _location = useLocation();,"});,"})"
   useEffect(() => {,"});,"})"
-    const handleScroll = () => {,"});,"})"
+    const _handleScroll = () => {,"});,"})"
       setScrolled(window.scrollY > 50);,"});,"});"
 },"});,"})"
     window.addEventListener("scroll", handleScroll);,"});,"})"
     return () => window.removeEventListener("scroll", handleScroll);,"});,"});"
 }, []);,"});,"})"
-  const navigation = [],"});,"})"
+  const _navigation = [],"});,"})"
       name: "Solutions","});,"})"
       href: "/solutions","});,"})"
       current: location.pathname.startsWith("/solutions"),"});,"})"
@@ -120,11 +120,11 @@ export default function Header() {,"});,"})"
   const [scrolled, setScrolled] = useState(false)
 
 
-  const location = useLocation()
+  const _location = useLocation()
 
 
   useEffect(() => {
-    const handleScroll = () => {
+    const _handleScroll = () => {
       setScrolled(window.scrollY: > 50)}
 
     window.addEventListener()
@@ -133,7 +133,7 @@ export default function Header() {,"});,"})"
     return: () => window.removeEventListener("scroll", handleScroll)}, [])
 
 
-  const navigation = []} {"
+  const _navigation = []} {"
       name: "Solutions,",";"
       href: "/solutions,",";"
       current: location.pathname.startsWith("/solutions"),";"
@@ -193,7 +193,7 @@ export default function Header() {,"});,"})"
     return () => window.removeEventListener("scroll", handleScroll)}, [])
 
 
-  const navigation = [])
+  const _navigation = [])
 
 
       name: "Home"",

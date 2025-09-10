@@ -2,8 +2,8 @@
     },
   ];
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
+  const _toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const _toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
   return (

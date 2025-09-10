@@ -1,7 +1,7 @@
 import React from "react";
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import { _ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+import { _useAuth } from "@/hooks/useAuth";
+import { _Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
     const { user, isLoading } = useAuth();
     // If not authenticated, redirect to login

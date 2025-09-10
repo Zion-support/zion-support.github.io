@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from "lucide-react";
+import { _safeStorage } from "@/utils/safeStorage";
+import { _X, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useIsMobile } from "@/hooks/use-mobile";
-export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appStoreUrl = "/download", googlePlayUrl = "/download", delay = 1500 }) => {
+import { _useIsMobile } from "@/hooks/use-mobile";
+export const _SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appStoreUrl = "/download", googlePlayUrl = "/download", delay = 1500 }) => {
     const [isVisible, setIsVisible] = useState(false);
-    const isMobile = useIsMobile();
+    const _isMobile = useIsMobile();
     useEffect(() => {
         // Only show banner on mobile devices and if it hasn't been dismissed
         if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-            const timer = setTimeout(() => {
+            const _timer = setTimeout(() => {
                 setIsVisible(true);
             }, delay);
             return () => clearTimeout(timer);
         }
     }, [isMobile, delay]);
-    const dismissBanner = () => {
+    const _dismissBanner = () => {
         setIsVisible(false);
         safeStorage.setItem("smartBannerDismissed", "true");
     };
-    const resetBanner = () => {
+    const _resetBanner = () => {
         safeStorage.removeItem("smartBannerDismissed");
         setIsVisible(true);
     };
@@ -30,8 +30,8 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
       </div>) : null;
     }
     // Detect iOS or Android
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+    const _isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const _bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
     return (<div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">

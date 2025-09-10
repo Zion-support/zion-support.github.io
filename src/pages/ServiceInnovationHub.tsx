@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
 import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovationHub';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-const ServiceInnovationHub = () => {
-    const innovationAreas = [
+import { _Button } from '../components/ui/button';
+import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { _Badge } from '../components/ui/badge';
+const _ServiceInnovationHub = () => {
+    const _innovationAreas = [
         {
             icon: <Atom className="w-8 h-8 text-zion-cyan"/>,
             title: 'Quantum Technology',
@@ -50,7 +50,7 @@ const ServiceInnovationHub = () => {
             investment: '$80B+'
         }
     ];
-    const keyInsights = [
+    const _keyInsights = [
         {
             title: 'Quantum Revolution',
             description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade',

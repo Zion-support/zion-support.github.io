@@ -1,7 +1,7 @@
 import React from 'react';
-import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
-const AIPoweredSecurity = () => {
-    const securityFeatures = [
+import { _Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+const _AIPoweredSecurity = () => {
+    const _securityFeatures = [
         {
             icon: Brain,
             title: "AI Threat Detection",
@@ -27,7 +27,7 @@ const AIPoweredSecurity = () => {
             features: ["Biometric verification", "Behavioral analysis", "Risk-based access", "Multi-factor auth"]
         }
     ];
-    const securitySolutions = [
+    const _securitySolutions = [
         {
             title: "Network Security",
             description: "AI-powered network monitoring and threat prevention",
@@ -65,7 +65,7 @@ const AIPoweredSecurity = () => {
             capabilities: ["Threat hunting", "Automated response", "Forensic analysis", "Recovery planning"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Proactive threat detection and prevention",
         "Reduced false positives and alert fatigue",
         "Faster incident response and resolution",
@@ -73,7 +73,7 @@ const AIPoweredSecurity = () => {
         "Comprehensive security coverage",
         "Cost-effective security operations"
     ];
-    const implementation = [
+    const _implementation = [
         {
             phase: "Security Assessment",
             description: "Evaluate current security posture and identify gaps",

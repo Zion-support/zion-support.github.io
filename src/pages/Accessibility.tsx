@@ -1,7 +1,7 @@
 import React from 'react';
-import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
-const Accessibility = () => {
-    const accessibilityFeatures = [
+import { _Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
+const _Accessibility = () => {
+    const _accessibilityFeatures = [
         {
             icon: Eye,
             title: "Visual Accessibility",
@@ -27,7 +27,7 @@ const Accessibility = () => {
             features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
         }
     ];
-    const complianceStandards = [
+    const _complianceStandards = [
         {
             standard: "WCAG 2.1",
             level: "AA",
@@ -53,7 +53,7 @@ const Accessibility = () => {
             status: "Compliant"
         }
     ];
-    const toolsAndTechnologies = [
+    const _toolsAndTechnologies = [
         {
             name: "Screen Readers",
             description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack",
@@ -85,7 +85,7 @@ const Accessibility = () => {
             icon: Eye
         }
     ];
-    const ongoingImprovements = [
+    const _ongoingImprovements = [
         "Regular accessibility audits and testing",
         "User feedback integration",
         "Continuous monitoring and updates",

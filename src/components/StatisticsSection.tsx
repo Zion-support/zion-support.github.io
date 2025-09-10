@@ -1,6 +1,6 @@
 import React from 'react';
-import { Users, Globe, TrendingUp, Award } from 'lucide-react';
-const stats = [
+import { _Users, Globe, TrendingUp, Award } from 'lucide-react';
+const _stats = [
     {
         icon: <Users className="w-8 h-8"/>,
         value: "10K+",

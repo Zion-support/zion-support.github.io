@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { _Link } from 'react-router-dom';
 
 
       {/* Hero Section */}
@@ -92,7 +92,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Events: React.FC = () => {}
-  const upcomingEvents = [
+  const _upcomingEvents = [
     {title}: "AI Innovation Summit 2024",
       date: "March 15-16, 2024",
       location: "Virtual Event",

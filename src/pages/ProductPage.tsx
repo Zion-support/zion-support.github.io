@@ -1,18 +1,18 @@
-import { useParams } from 'react-router-dom';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { NEW_PRODUCTS } from '@/data/newProductsData';
-import { useCart } from '@/context/CartContext';
-import { toast } from '@/hooks/use-toast';
+import { _useParams } from 'react-router-dom';
+import { _useState } from 'react';
+import { _Button } from '@/components/ui/button';
+import { _NEW_PRODUCTS } from '@/data/newProductsData';
+import { _useCart } from '@/context/CartContext';
+import { _toast } from '@/hooks/use-toast';
 export default function ProductPage() {
     const { id } = useParams();
-    const product = NEW_PRODUCTS.find(p => p.id === id);
+    const _product = NEW_PRODUCTS.find(p => p.id === id);
     const { dispatch } = useCart();
     const [adding, setAdding] = useState(false);
     if (!product) {
         return <div className="p-6 text-white">Product not found</div>;
     }
-    const handleAdd = () => {
+    const _handleAdd = () => {
         setAdding(true);
         dispatch({
             type: 'ADD_ITEM',

@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from "lucide-react";
+import { _useState } from "react";
+import { _useParams } from "react-router-dom";
+import { _KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
+import { _HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _SEO } from "@/components/SEO";
+import { _ProtectedRoute } from "@/components/ProtectedRoute";
+import { _Briefcase } from "lucide-react";
 function HiringTrackerContent() {
     const { jobId } = useParams();
     const [activeTab, setActiveTab] = useState("kanban");

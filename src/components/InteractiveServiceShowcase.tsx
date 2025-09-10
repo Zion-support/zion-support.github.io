@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-const InteractiveServiceShowcase = () => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+const _InteractiveServiceShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [hoveredService, setHoveredService] = useState(null);
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Services', icon: '🚀', count: 35 },
         { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },
         { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },
@@ -12,7 +12,7 @@ const InteractiveServiceShowcase = () => {
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
         { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
     ];
-    const services = [
+    const _services = [
         {
             id: 'ai-strategy',
             title: 'AI Strategy Consulting',
@@ -105,10 +105,10 @@ const InteractiveServiceShowcase = () => {
             href: '/services/automation'
         }
     ];
-    const filteredServices = activeCategory === 'all'
+    const _filteredServices = activeCategory === 'all'
         ? services
         : services.filter(service => service.category === activeCategory);
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -117,7 +117,7 @@ const InteractiveServiceShowcase = () => {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
@@ -128,7 +128,7 @@ const InteractiveServiceShowcase = () => {
             }
         }
     };
-    const categoryVariants = {
+    const _categoryVariants = {
         hidden: { scale: 0.8, opacity: 0 },
         visible: {
             scale: 1,

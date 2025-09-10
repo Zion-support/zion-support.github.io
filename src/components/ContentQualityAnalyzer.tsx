@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
-const ContentQualityAnalyzer = () => {
+import { _motion } from 'framer-motion';
+import { _FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
+const _ContentQualityAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [contentIssues, setContentIssues] = useState([]);
@@ -9,7 +9,7 @@ const ContentQualityAnalyzer = () => {
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     // Sample data based on the analysis report
-    const sampleIssues = [
+    const _sampleIssues = [
         {
             id: '1',
             pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js',
@@ -55,12 +55,12 @@ const ContentQualityAnalyzer = () => {
         setContentIssues(sampleIssues);
         generateReport(sampleIssues);
     }, []);
-    const generateReport = (issues) => {
-        const totalPages = 79; // From analysis report
-        const pagesWithIssues = issues.length;
-        const criticalIssues = issues.filter(i => i.severity === 'high').length;
-        const mediumIssues = issues.filter(i => i.severity === 'medium').length;
-        const lowIssues = issues.filter(i => i.severity === 'low').length;
+    const _generateReport = (issues) => {
+        const _totalPages = 79; // From analysis report
+        const _pagesWithIssues = issues.length;
+        const _criticalIssues = issues.filter(i => i.severity === 'high').length;
+        const _mediumIssues = issues.filter(i => i.severity === 'medium').length;
+        const _lowIssues = issues.filter(i => i.severity === 'low').length;
         setReport({
             totalPages,
             pagesWithIssues,
@@ -73,13 +73,13 @@ const ContentQualityAnalyzer = () => {
             lastUpdated: new Date()
         });
     };
-    const startAnalysis = async () => {
+    const _startAnalysis = async () => {
         setIsAnalyzing(true);
         // Simulate content analysis
         await new Promise(resolve => setTimeout(resolve, 3000));
         setIsAnalyzing(false);
     };
-    const getSeverityIcon = (severity) => {
+    const _getSeverityIcon = (severity) => {
         switch (severity) {
             case 'high':
                 return <AlertTriangle className="w-4 h-4 text-red-400"/>;
@@ -91,7 +91,7 @@ const ContentQualityAnalyzer = () => {
                 return <Info className="w-4 h-4 text-gray-400"/>;
         }
     };
-    const getSeverityColor = (severity) => {
+    const _getSeverityColor = (severity) => {
         switch (severity) {
             case 'high':
                 return 'text-red-400';
@@ -103,7 +103,7 @@ const ContentQualityAnalyzer = () => {
                 return 'text-gray-400';
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'resolved':
                 return 'text-green-400';
@@ -115,13 +115,13 @@ const ContentQualityAnalyzer = () => {
                 return 'text-gray-400';
         }
     };
-    const filteredIssues = contentIssues.filter(issue => {
-        const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter;
-        const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _filteredIssues = contentIssues.filter(issue => {
+        const _matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter;
+        const _matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesFilter && matchesSearch;
     });
-    const getIssueTypeLabel = (type) => {
+    const _getIssueTypeLabel = (type) => {
         switch (type) {
             case 'missing_title':
                 return 'Missing Title';

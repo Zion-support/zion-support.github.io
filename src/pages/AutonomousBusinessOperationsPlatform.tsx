@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
-import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Network } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
+import { _Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 
@@ -175,7 +175,7 @@ import SEOHead from '../components/SEOHead';
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-                                                            const IconComponent = feature.icon;
+                                                            const _IconComponent = feature.icon;
                                                             return (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
                     <IconComponent className="w-6 h-6 text-white"/>
@@ -203,7 +203,7 @@ import SEOHead from '../components/SEOHead';
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-                                                            const IconComponent = useCase.icon;
+                                                            const _IconComponent = useCase.icon;
                                                             return (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -993,7 +993,7 @@ import SEOHead from '../components/SEOHead';
             </Link>
 
 
-  const testimonials = [
+  const _testimonials = [
     {name}: "Operations Director",
       role: "Chief Operations Officer",
       company: "Global Manufacturing Co.",

@@ -92,7 +92,7 @@ export default function Page(props: any) {;
       fonts: resource s.filter(r => r.initiatorType === 'font').length;
     if(isMonitoring) {;
 // Optimize images;
-    const optimizeImages = ("props": "any) => {;
+    const _optimizeImages = ("props": "any) => {;
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
 // TODO: Add dependencies if needed
@@ -102,8 +102,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 }, []);, []);
     if(isMonitoring) {
 // Optimize images
-    const optimizeImages = (props: any) => {
-      const images = document.querySelectorAll('img');
+    const _optimizeImages = (props: any) => {
+      const _images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
@@ -119,10 +119,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     preloadCriticalResources();
     optimizeImages();
     // Set up intersection observer for lazy loading
-    const observer = new IntersectionObserver((entries) => {';
+    const _observer = new IntersectionObserver((entries) => {';
         entries.forEach(entry => {';';
           if (entry.isIntersecting) {';';';
-            const target = entry.target as HTMLElement;';';';';
+            const _target = entry.target as HTMLElement;';';';';
             if(target.dataset.src) {';';';';';
               target.style.backgroundImage = `url(${target.dataset.src})`;',';';';';
     ';';';';';        });

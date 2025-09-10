@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Input } from '@/components/ui/input';
+import { _Textarea } from '@/components/ui/textarea';
+import { _Label } from '@/components/ui/label';
+import { _Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
+import { _SERVICE_CATEGORIES } from '@/data/enhancedServices';
 export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',
@@ -15,12 +15,12 @@ export default function ComprehensiveContact() {
         service: '',
         message: ''
     });
-    const handleSubmit = (e) => {
+    const _handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-        console.log('Form submitted:', formData);
+        // console.log('Form submitted:', formData);
     };
-    const handleChange = (e) => {
+    const _handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value

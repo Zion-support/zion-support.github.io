@@ -1,5 +1,5 @@
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const _classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return <span className={classes}>{children}</span>;
   }

@@ -17,8 +17,8 @@ export const "EnhancedLayout": "React.FC<EnhancedLayoutProps> = ({ children",";
   noindex = false,;
   showPerformanceMetrics = false,;
   showSEOAnalysis = false}) => {;
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
-  const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");          {/* comment */}"
+  const _fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
+  const _canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");          {/* comment */}"
           <meta property="og: titl e" content="{fullTitle}"    />"
           <meta property="og: descriptio n" content="{description}"    />"
           <meta property="og: imag e" content="{ogImage}"    />"

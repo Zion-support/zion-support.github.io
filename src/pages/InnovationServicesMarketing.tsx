@@ -1,11 +1,11 @@
 import React from 'react';
-import { cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
-import { specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
-const InnovationServicesMarketing = () => {
-    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
-    const categories = Array.from(new Set(allServices.map(service => service.category)));
-    const industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
-    const formatPrice = (price, model) => {
+import { _cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
+import { _specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
+const _InnovationServicesMarketing = () => {
+    const _allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
+    const _categories = Array.from(new Set(allServices.map(service => service.category)));
+    const _industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
+    const _formatPrice = (price, model) => {
         if (model === 'percentage of revenue') {
             return `${price}% of revenue`;
         }
@@ -107,8 +107,8 @@ const InnovationServicesMarketing = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Service Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => {
-            const categoryServices = allServices.filter(service => service.category === category);
-            const avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length;
+            const _categoryServices = allServices.filter(service => service.category === category);
+            const _avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length;
             return (<div key={category} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -138,8 +138,8 @@ const InnovationServicesMarketing = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Industry-Specific Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry) => {
-            const industryServices = specializedIndustrySolutions2025.filter(service => service.industry === industry);
-            const avgPrice = industryServices.reduce((sum, service) => sum + service.price, 0) / industryServices.length;
+            const _industryServices = specializedIndustrySolutions2025.filter(service => service.industry === industry);
+            const _avgPrice = industryServices.reduce((sum, service) => sum + service.price, 0) / industryServices.length;
             return (<div key={industry} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{industry}</h3>
                   <p className="text-gray-300 mb-4">

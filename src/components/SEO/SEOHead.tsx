@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { _Helmet } from 'react-helmet-async';
 ;
 export function SEOHead(props: any) {
-  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';
-  const defaultKeywords = [';';
+  const _fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';
+  const _defaultKeywords = [';';
     'AI services',';';
     'technology solutions',';';
     'enterprise automation',';';
@@ -24,8 +24,8 @@ export function SEOHead({ ;
   ogImage = '"https": "//ziontechgroup.com/images/og-image.png'",;
   structuredData ;
 }: "SEOHeadProps) {;
-  const fullTitle = `${title"} | Zion Tech Group - AI & Technology Solutions`;
-  const defaultKeywords = [;
+  const _fullTitle = `${title"} | Zion Tech Group - AI & Technology Solutions`;
+  const _defaultKeywords = [;
     'AI services',;
     'technology solutions',;
     'enterprise automation',;

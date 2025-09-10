@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-const mockParticipants = [
+import { _Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
+const _mockParticipants = [
     {
         id: '1',
         name: 'Sarah Johnson',
@@ -38,7 +38,7 @@ const mockParticipants = [
         joinTime: '2024-01-15T10:05:00.000Z'
     }
 ];
-const mockChatMessages = [
+const _mockChatMessages = [
     {
         id: '1',
         senderId: '1',
@@ -67,7 +67,7 @@ const mockChatMessages = [
         reactions: []
     }
 ];
-const mockDocuments = [
+const _mockDocuments = [
     {
         id: '1',
         name: 'Q4_2024_Review.pptx',
@@ -87,7 +87,7 @@ const mockDocuments = [
         permissions: 'view'
     }
 ];
-const mockMeetings = [
+const _mockMeetings = [
     {
         id: '1',
         title: 'Q4 2024 Review Meeting',
@@ -116,25 +116,25 @@ export function AdvancedCollaborationPlatform() {
     const [documents, setDocuments] = useState(mockDocuments);
     const [meetings, setMeetings] = useState(mockMeetings);
     const [searchQuery, setSearchQuery] = useState('');
-    const containerRef = useRef(null);
-    const toggleMute = () => {
+    const _containerRef = useRef(null);
+    const _toggleMute = () => {
         setIsMuted(!isMuted);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p));
     };
-    const toggleVideo = () => {
+    const _toggleVideo = () => {
         setIsVideoOff(!isVideoOff);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p));
     };
-    const toggleScreenShare = () => {
+    const _toggleScreenShare = () => {
         setIsScreenSharing(!isScreenSharing);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p));
     };
-    const toggleRecording = () => {
+    const _toggleRecording = () => {
         setIsRecording(!isRecording);
     };
-    const sendChatMessage = () => {
+    const _sendChatMessage = () => {
         if (chatMessage.trim()) {
-            const newMessage = {
+            const _newMessage = {
                 id: Date.now().toString(),
                 senderId: '1',
                 senderName: 'Sarah Johnson',
@@ -147,11 +147,11 @@ export function AdvancedCollaborationPlatform() {
             setChatMessage('');
         }
     };
-    const raiseHand = () => {
+    const _raiseHand = () => {
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p));
     };
-    const filteredParticipants = participants.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
-    const filteredDocuments = documents.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase()));
+    const _filteredParticipants = participants.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
+    const _filteredDocuments = documents.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">
         <Users className="w-6 h-6"/>
@@ -273,7 +273,7 @@ export function AdvancedCollaborationPlatform() {
             { id: 'documents', label: 'Documents', icon: FileText },
             { id: 'participants', label: 'Participants', icon: Users }
         ].map(tab => {
-            const Icon = tab.icon;
+            const _Icon = tab.icon;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${activeTab === tab.id
                     ? 'border-zion-emerald text-zion-emerald bg-zion-emerald/5'
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>

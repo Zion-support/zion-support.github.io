@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight } from "lucide-react";
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { _ArrowRight } from "lucide-react";
 export function ServicesShowcase() {
-    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+    const _featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
     return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>

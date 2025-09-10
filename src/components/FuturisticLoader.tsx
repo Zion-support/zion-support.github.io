@@ -1,16 +1,16 @@
 import React from 'react';
-export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
-    const sizeClasses = {
+export const _FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
+    const _sizeClasses = {
         small: 'w-8 h-8',
         medium: 'w-16 h-16',
         large: 'w-24 h-24'
     };
-    const textSizes = {
+    const _textSizes = {
         small: 'text-sm',
         medium: 'text-lg',
         large: 'text-xl'
     };
-    const renderLoader = () => {
+    const _renderLoader = () => {
         switch (variant) {
             case 'matrix':
                 return (<div className="relative">

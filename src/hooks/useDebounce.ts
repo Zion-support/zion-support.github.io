@@ -1,5 +1,5 @@
-import { useState,useEffect } from 'react' export function useDebounce<T>(value: 'T',delay: number): T { const [debouncedValue,setDebouncedValue] = useState<>(value) useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay) return () => { clearTimeout(handler)}},[value,delay]) return debouncedValue};""
-import { useState,useEffect } from 'react' export function useDebounce<T>("value": 'T',"delay": "number): T { const [debouncedValue",setDebouncedValue] = useState<>(value) useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay) return () => { clearTimeout(handler)}},[value,delay]) return debouncedValue};""
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import { useState,useEffect } from 'react' export function useDebounce<T>(value: T,delay: number): T { const [debouncedValue,setDebouncedValue] = useState<>(value) useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay) return () => { clearTimeout(handler)}},[value,delay]) return debouncedValue};;";';
+import { _useState,useEffect } from 'react' export function useDebounce<T>(value: 'T',delay: number): T { const [debouncedValue,setDebouncedValue] = useState<>(value) useEffect(() => { const _handler = setTimeout(() => { setDebouncedValue(value)},delay) return () => { clearTimeout(handler)}},[value,delay]) return debouncedValue};""
+import { _useState,useEffect } from 'react' export function useDebounce<T>("value": 'T',"delay": "number): T { const [debouncedValue",setDebouncedValue] = useState<>(value) useEffect(() => { const _handler = setTimeout(() => { setDebouncedValue(value)},delay) return () => { clearTimeout(handler)}},[value,delay]) return debouncedValue};""
+import { _useEffect } from 'react';,
+import { _useState } from 'react';,
+import { _useState,useEffect } from 'react' export function useDebounce<T>(value: T,delay: number): T { const [debouncedValue,setDebouncedValue] = useState<>(value) useEffect(() => { const _handler = setTimeout(() => { setDebouncedValue(value)},delay) return () => { clearTimeout(handler)}},[value,delay]) return debouncedValue};;";';

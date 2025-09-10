@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from "@/data/microSaasServices";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe } from "lucide-react";
-import { Link } from "react-router-dom";
-const categoryIcons = {
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Badge } from "@/components/ui/badge";
+import { _Button } from "@/components/ui/button";
+import { _MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from "@/data/microSaasServices";
+import { _Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe } from "lucide-react";
+import { _Link } from "react-router-dom";
+const _categoryIcons = {
     'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
@@ -16,7 +16,7 @@ const categoryIcons = {
     'E-commerce': ShoppingCart,
     'EdTech': GraduationCap
 };
-const categoryColors = {
+const _categoryColors = {
     'AI Business Solutions': 'from-purple-500 to-indigo-600',
     'IT Infrastructure': 'from-blue-500 to-cyan-600',
     'Data Analytics': 'from-green-500 to-emerald-600',
@@ -26,7 +26,7 @@ const categoryColors = {
     'E-commerce': 'from-indigo-500 to-purple-600',
     'EdTech': 'from-teal-500 to-green-600'
 };
-const features = [
+const _features = [
     "AI-Powered Automation",
     "Real-time Analytics",
     "Multi-cloud Support",
@@ -40,7 +40,7 @@ const features = [
     "SOC 2 Type II Compliant",
     "30-Day Money Back Guarantee"
 ];
-const benefits = [
+const _benefits = [
     {
         icon: <Zap className="h-6 w-6"/>,
         title: "Immediate Deployment",
@@ -63,7 +63,7 @@ const benefits = [
     }
 ];
 export function ServicesShowcase() {
-    const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0, 6);
+    const _featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0, 6);
     return (<div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -94,8 +94,8 @@ export function ServicesShowcase() {
         {/* Categories Overview */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {MICRO_SAAS_CATEGORIES.map((category) => {
-            const IconComponent = categoryIcons[category.label];
-            const colorClass = categoryColors[category.label];
+            const _IconComponent = categoryIcons[category.label];
+            const _colorClass = categoryColors[category.label];
             return (<Card key={category.value} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${colorClass} rounded-full flex items-center justify-center mb-4`}>

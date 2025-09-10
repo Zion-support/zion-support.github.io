@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-const mockMetrics = [
+import { _BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
+const _mockMetrics = [
     {
         id: 'revenue',
         name: 'Monthly Revenue',
@@ -62,7 +62,7 @@ const mockMetrics = [
         lastUpdated: '2024-01-15T10:00:00.000Z'
     }
 ];
-const mockInsights = [
+const _mockInsights = [
     {
         id: 'insight-1',
         type: 'prediction',
@@ -100,7 +100,7 @@ const mockInsights = [
         actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
 ];
-const mockModels = [
+const _mockModels = [
     {
         id: 'model-1',
         name: 'Customer Lifetime Value Predictor',
@@ -142,18 +142,18 @@ export function AdvancedBusinessIntelligence() {
     const [insights, setInsights] = useState(mockInsights);
     const [models, setModels] = useState(mockModels);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
-    const timeRanges = [
+    const _containerRef = useRef(null);
+    const _categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
+    const _timeRanges = [
         { value: '7d', label: '7 Days' },
         { value: '30d', label: '30 Days' },
         { value: '90d', label: '90 Days' },
         { value: '1y', label: '1 Year' }
     ];
-    const filteredMetrics = selectedCategory === 'all'
+    const _filteredMetrics = selectedCategory === 'all'
         ? data
         : data.filter(metric => metric.category === selectedCategory);
-    const refreshData = async () => {
+    const _refreshData = async () => {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
@@ -161,11 +161,11 @@ export function AdvancedBusinessIntelligence() {
     };
     useEffect(() => {
         if (autoRefresh) {
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+            const _interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
         }
     }, [autoRefresh]);
-    const getTrendIcon = (trend) => {
+    const _getTrendIcon = (trend) => {
         switch (trend) {
             case 'up':
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -175,7 +175,7 @@ export function AdvancedBusinessIntelligence() {
                 return <Activity className="w-4 h-4 text-gray-500"/>;
         }
     };
-    const getPriorityColor = (priority) => {
+    const _getPriorityColor = (priority) => {
         switch (priority) {
             case 'high':
                 return 'border-red-500 bg-red-50 dark:bg-red-900/20';
@@ -185,7 +185,7 @@ export function AdvancedBusinessIntelligence() {
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20';
         }
     };
-    const getInsightIcon = (type) => {
+    const _getInsightIcon = (type) => {
         switch (type) {
             case 'prediction':
                 return <Brain className="w-5 h-5 text-blue-500"/>;
@@ -199,7 +199,7 @@ export function AdvancedBusinessIntelligence() {
                 return <Zap className="w-5 h-5 text-purple-500"/>;
         }
     };
-    const formatValue = (value, unit) => {
+    const _formatValue = (value, unit) => {
         if (unit === 'USD') {
             return new Intl.NumberFormat('en-US', {
                 style: 'currency',
@@ -295,7 +295,7 @@ export function AdvancedBusinessIntelligence() {
             { id: 'models', label: 'ML Models', icon: Zap },
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
-            const Icon = tab.icon;
+            const _Icon = tab.icon;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id
                     ? 'border-zion-purple text-zion-purple bg-zion-purple/5'
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
@@ -348,7 +348,7 @@ export function AdvancedBusinessIntelligence() {
                 { label: 'Set Alerts', icon: AlertTriangle, action: () => { } },
                 { label: 'Export Data', icon: Download, action: () => { } }
             ].map((item, index) => {
-                const Icon = item.icon;
+                const _Icon = item.icon;
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">
                       <Icon className="w-4 h-4 mx-auto mb-2"/>
                       {item.label}

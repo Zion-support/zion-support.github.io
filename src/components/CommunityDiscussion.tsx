@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-const initialPosts = [
+import { _MessageCircle } from "lucide-react";
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _Textarea } from "@/components/ui/textarea";
+import { _Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { _Card, CardContent } from "@/components/ui/card";
+import { _Separator } from "@/components/ui/separator";
+const _initialPosts = [
     {
         id: 1,
         author: "Anna Zhou",
@@ -22,12 +22,12 @@ const initialPosts = [
         body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
     },
 ];
-export const CommunityDiscussion = () => {
+export const _CommunityDiscussion = () => {
     const [posts, setPosts] = useState(initialPosts);
     const [showNew, setShowNew] = useState(false);
     const [newTitle, setNewTitle] = useState("");
     const [newBody, setNewBody] = useState("");
-    const handleAddPost = () => {
+    const _handleAddPost = () => {
         if (!newTitle.trim() || !newBody.trim())
             return;
         setPosts([

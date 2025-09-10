@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-const AdvancedCybersecuritySuite = () => {
-    const features = [
+const _AdvancedCybersecuritySuite = () => {
+    const _features = [
         {
             title: "Threat Detection",
             description: "Advanced AI-powered threat detection and response",
@@ -23,7 +23,7 @@ const AdvancedCybersecuritySuite = () => {
             icon: "🚨"
         }
     ];
-    const securityModules = [
+    const _securityModules = [
         {
             title: "Network Security",
             description: "Advanced firewall, intrusion detection, and network monitoring",
@@ -45,7 +45,7 @@ const AdvancedCybersecuritySuite = () => {
             features: ["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
         }
     ];
-    const complianceFrameworks = [
+    const _complianceFrameworks = [
         "SOC 2 Type II",
         "ISO 27001",
         "NIST Cybersecurity Framework",
@@ -53,7 +53,7 @@ const AdvancedCybersecuritySuite = () => {
         "HIPAA",
         "PCI DSS"
     ];
-    const threatIntelligence = [
+    const _threatIntelligence = [
         {
             category: "Real-time Monitoring",
             description: "24/7 security operations center with AI-powered threat detection"

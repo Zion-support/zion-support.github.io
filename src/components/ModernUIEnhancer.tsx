@@ -1,17 +1,17 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
+export const _ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('auto');
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [deviceType, setDeviceType] = useState('desktop');
-    const scrollToTopRef = useRef(null);
+    const _scrollToTopRef = useRef(null);
     // Detect device type
     useEffect(() => {
-        const updateDeviceType = () => {
-            const width = window.innerWidth;
+        const _updateDeviceType = () => {
+            const _width = window.innerWidth;
             if (width < 768) {
                 setDeviceType('mobile');
             }
@@ -30,22 +30,22 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     useEffect(() => {
         if (!enableScrollEffects)
             return;
-        const handleScroll = () => {
-            const scrollTop = window.pageYOffset;
+        const _handleScroll = () => {
+            const _scrollTop = window.pageYOffset;
             setShowScrollToTop(scrollTop > 300);
             // Parallax effect for background elements
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('[data-parallax]');
+            const _scrolled = window.pageYOffset;
+            const _parallaxElements = document.querySelectorAll('[data-parallax]');
             parallaxElements.forEach((element) => {
-                const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
-                const yPos = -(scrolled * speed);
+                const _speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
+                const _yPos = -(scrolled * speed);
                 element.style.transform = `translateY(${yPos}px)`;
             });
             // Fade in elements on scroll
-            const fadeElements = document.querySelectorAll('[data-fade-in]');
+            const _fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                const _rect = element.getBoundingClientRect();
+                const _isVisible = rect.top < window.innerHeight && rect.bottom > 0;
                 if (isVisible) {
                     element.classList.add('fade-in-visible');
                 }
@@ -56,14 +56,14 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     }, [enableScrollEffects]);
     // Theme management
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'auto';
+        const _savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme);
     }, []);
-    const applyTheme = (theme) => {
-        const root = document.documentElement;
+    const _applyTheme = (theme) => {
+        const _root = document.documentElement;
         if (theme === 'auto') {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const _prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark);
         }
         else {
@@ -71,14 +71,14 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         }
         localStorage.setItem('theme', theme);
     };
-    const toggleTheme = () => {
-        const themes = ['light', 'dark', 'auto'];
-        const currentIndex = themes.indexOf(currentTheme);
-        const nextTheme = themes[(currentIndex + 1) % themes.length];
+    const _toggleTheme = () => {
+        const _themes = ['light', 'dark', 'auto'];
+        const _currentIndex = themes.indexOf(currentTheme);
+        const _nextTheme = themes[(currentIndex + 1) % themes.length];
         setCurrentTheme(nextTheme);
         applyTheme(nextTheme);
     };
-    const scrollToTop = () => {
+    const _scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
@@ -88,7 +88,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     useEffect(() => {
         if (!enableAnimations)
             return;
-        const style = document.createElement('style');
+        const _style = document.createElement('style');
         style.textContent = `
       .fade-in {
         opacity: 0;
@@ -227,22 +227,22 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     useEffect(() => {
         if (!enableScrollEffects)
             return;
-        const observerOptions = {
+        const _observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px',
         };
-        const observer = new IntersectionObserver((entries) => {
+        const _observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    const element = entry.target;
-                    const animationType = element.getAttribute('data-animation');
+                    const _element = entry.target;
+                    const _animationType = element.getAttribute('data-animation');
                     if (animationType) {
                         element.classList.add(`${animationType}-visible`);
                     }
                 }
             });
         }, observerOptions);
-        const animatedElements = document.querySelectorAll('[data-animation]');
+        const _animatedElements = document.querySelectorAll('[data-animation]');
         animatedElements.forEach((element) => {
             observer.observe(element);
         });

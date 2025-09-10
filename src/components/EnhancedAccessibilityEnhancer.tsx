@@ -1,5 +1,5 @@
 import React from 'react';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
+import { _ import { motion, AnimatePresence  } from 'framer-motion';
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
         document.documentElement.classList.add('reduced-motion')} else {;

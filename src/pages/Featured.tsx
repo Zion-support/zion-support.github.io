@@ -1,5 +1,5 @@
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { GradientHeading } from "@/components/GradientHeading";
+import { _FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { _GradientHeading } from "@/components/GradientHeading";
 export default function Featured() {
     return (<>
       

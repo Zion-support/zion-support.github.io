@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
-const portfolioProjects = [
+import { _ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
+const _portfolioProjects = [
     {
         id: '1',
         title: 'AI-Powered E-commerce Platform',
@@ -92,35 +92,35 @@ const portfolioProjects = [
         tags: ['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
     }
 ];
-const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
+const _categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
 export function InteractivePortfolio() {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
     const [hoveredProject, setHoveredProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const containerRef = useRef(null);
-    const filteredProjects = portfolioProjects.filter(project => selectedCategory === 'All' || project.category === selectedCategory);
-    const handleProjectClick = (project) => {
+    const _containerRef = useRef(null);
+    const _filteredProjects = portfolioProjects.filter(project => selectedCategory === 'All' || project.category === selectedCategory);
+    const _handleProjectClick = (project) => {
         setSelectedProject(project);
         setIsModalOpen(true);
     };
-    const closeModal = () => {
+    const _closeModal = () => {
         setIsModalOpen(false);
         setSelectedProject(null);
         setCurrentImageIndex(0);
     };
-    const nextImage = () => {
+    const _nextImage = () => {
         if (selectedProject) {
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now
         }
     };
-    const prevImage = () => {
+    const _prevImage = () => {
         if (selectedProject) {
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1);
         }
     };
-    const handleKeyPress = (e) => {
+    const _handleKeyPress = (e) => {
         if (e.key === 'Escape') {
             closeModal();
         }

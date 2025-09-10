@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { _EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { _Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { _CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
 export default function ServicesPricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
+    const _filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
-    const getPriceTier = (price) => {
+    const _getPriceTier = (price) => {
         if (price < 10000)
             return 'Starter';
         if (price < 25000)
             return 'Professional';
         return 'Enterprise';
     };
-    const getPriceTierColor = (tier) => {
+    const _getPriceTierColor = (tier) => {
         switch (tier) {
             case 'Starter': return 'bg-green-500';
             case 'Professional': return 'bg-blue-500';
@@ -27,7 +27,7 @@ export default function ServicesPricingGuide() {
             default: return 'bg-gray-500';
         }
     };
-    const getServiceIcon = (category) => {
+    const _getServiceIcon = (category) => {
         switch (category) {
             case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
             case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>;

@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-const UltimateServicesShowcase2025 = () => {
+import { _ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
+import { _INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
+import { _EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
+const _UltimateServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
-    const allServices = [
+    const _allServices = [
         ...ULTIMATE_MICRO_SAAS_SERVICES_2025,
         ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025,
         ...EMERGING_TECHNOLOGY_SOLUTIONS_2025
     ];
     // Get unique categories
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const _categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     // Filter and sort services
-    const filteredServices = allServices
+    const _filteredServices = allServices
         .filter(service => {
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
-        const priceMatch = selectedPriceRange === 'all' ||
+        const _categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+        const _priceMatch = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'low' && service.price < 5000) ||
             (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||
             (selectedPriceRange === 'high' && service.price >= 15000);
-        const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        const _searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && priceMatch && searchMatch;
@@ -40,13 +40,13 @@ const UltimateServicesShowcase2025 = () => {
                 return 0;
         }
     });
-    const formatPrice = (price) => {
+    const _formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(1)}K`;
         }
         return `$${price}`;
     };
-    const getSupportLevelColor = (level) => {
+    const _getSupportLevelColor = (level) => {
         switch (level) {
             case 'enterprise':
                 return 'bg-purple-600';

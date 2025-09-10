@@ -1,27 +1,27 @@
 
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { Button } from '../ui/button';
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {
-    const context = useContext(AccessibilityContext);
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
+import { _Button } from '../ui/button';
+const _AccessibilityContext = createContext(undefined);
+export const _useAccessibility = () => {
+    const _context = useContext(AccessibilityContext);
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider');
     }
     return context;
 };
 // Accessibility Provider Component
-export const AccessibilityProvider = ({ children }) => {
+export const _AccessibilityProvider = ({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
     const [reducedMotion, setReducedMotion] = useState(false);
     const [fontSize, setFontSize] = useState('medium');
     const [colorBlindMode, setColorBlindMode] = useState('none');
     // Load settings from localStorage
     useEffect(() => {
-        const savedSettings = localStorage.getItem('zion-accessibility-settings');
+        const _savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedSettings) {
-            const settings = JSON.parse(savedSettings);
+            const _settings = JSON.parse(savedSettings);
             setHighContrast(settings.highContrast || false);
             setReducedMotion(settings.reducedMotion || false);
             setFontSize(settings.fontSize || 'medium');
@@ -30,7 +30,7 @@ export const AccessibilityProvider = ({ children }) => {
     }, []);
     // Save settings to localStorage
     useEffect(() => {
-        const settings = {
+        const _settings = {
             highContrast,
             reducedMotion,
             fontSize,
@@ -40,7 +40,7 @@ export const AccessibilityProvider = ({ children }) => {
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     // Apply accessibility settings to document
     useEffect(() => {
-        const root = document.documentElement;
+        const _root = document.documentElement;
         // High contrast mode
         if (highContrast) {
             root.classList.add('high-contrast');
@@ -63,9 +63,9 @@ export const AccessibilityProvider = ({ children }) => {
                 colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
                     'url(#tritanopia)';
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);
-    const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-    const value = {
+    const _toggleHighContrast = () => setHighContrast(!highContrast);
+    const _toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+    const _value = {
         highContrast,
         reducedMotion,
         fontSize,
@@ -80,12 +80,12 @@ export const AccessibilityProvider = ({ children }) => {
     </AccessibilityContext.Provider>);
 };
 // Accessibility Panel Component
-export const AccessibilityPanel = () => {
+export const _AccessibilityPanel = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
     // Keyboard shortcuts
     useEffect(() => {
-        const handleKeyDown = (event) => {
+        const _handleKeyDown = (event) => {
             // Ctrl/Cmd + Shift + A to open accessibility panel
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
                 event.preventDefault();
@@ -205,22 +205,22 @@ export const AccessibilityPanel = () => {
     </>);
 };
 // Skip to Content Link
-export const SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
+export const _SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
     Skip to main content
   </a>);
 // Focus Trap Hook
-export const useFocusTrap = (isActive) => {
+export const _useFocusTrap = (isActive) => {
     useEffect(() => {
         if (!isActive)
             return;
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-        const container = document.activeElement?.closest('[data-focus-trap]');
+        const _focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        const _container = document.activeElement?.closest('[data-focus-trap]');
         if (!container)
             return;
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0];
-        const lastFocusableElement = focusableContent[focusableContent.length - 1];
-        const handleTabKey = (e) => {
+        const _focusableContent = container.querySelectorAll(focusableElements);
+        const _firstFocusableElement = focusableContent[0];
+        const _lastFocusableElement = focusableContent[focusableContent.length - 1];
+        const _handleTabKey = (e) => {
             if (e.key === 'Tab') {
                 if (e.shiftKey) {
                     if (document.activeElement === firstFocusableElement) {
@@ -241,6 +241,6 @@ export const useFocusTrap = (isActive) => {
     }, [isActive]);
 };
 // Screen Reader Only Text
-export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
+export const _SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
 export default AccessibilityPanel;
 

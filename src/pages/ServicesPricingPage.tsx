@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-import { SEO } from '@/components/SEO';
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
+import { _COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
+import { _SEO } from '@/components/SEO';
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
-    const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
-        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
+    const _servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
+        const _categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
         if (categoryServices.length > 0) {
             acc[category] = categoryServices;
         }

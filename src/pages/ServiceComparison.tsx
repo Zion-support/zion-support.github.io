@@ -1,11 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
-import { AdvancedServiceComparison } from '../components/AdvancedServiceComparison';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-const ServiceComparison = () => {
-    const features = [
+import { _motion } from 'framer-motion';
+import { _BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
+import { _AdvancedServiceComparison } from '../components/AdvancedServiceComparison';
+import { _Button } from '../components/ui/button';
+import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+const _ServiceComparison = () => {
+    const _features = [
         {
             icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
             title: 'Advanced Filtering',
@@ -26,7 +26,7 @@ const ServiceComparison = () => {
             description: 'Get detailed insights into each service\'s capabilities and target audience'
         }
     ];
-    const benefits = [
+    const _benefits = [
         'Make informed decisions with comprehensive service comparisons',
         'Find the perfect service tier for your business needs and budget',
         'Understand complexity levels and implementation requirements',

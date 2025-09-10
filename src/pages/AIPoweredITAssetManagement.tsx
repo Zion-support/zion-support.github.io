@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _motion } from 'framer-motion';
 
 =======
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Users, Globe, BarChart3 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { GradientHeading } from '@/components/GradientHeading';
+import { _Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Users, Globe, BarChart3 } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
+import { _Header } from '@/components/header/Header';
+import { _Footer } from '@/components/Footer';
+import { _GradientHeading } from '@/components/GradientHeading';
 
-const AIPoweredITAssetManagement = () => {
-    const features = [
+const _AIPoweredITAssetManagement = () => {
+    const _features = [
         {
             icon: Monitor,
             title: "Intelligent Asset Discovery",
@@ -43,7 +43,7 @@ const AIPoweredITAssetManagement = () => {
         }
     ];
 
-    const capabilities = [
+    const _capabilities = [
         {
             icon: Cpu,
             title: "Intelligent Asset Discovery",
@@ -76,7 +76,7 @@ const AIPoweredITAssetManagement = () => {
         }
     ];
 
-    const benefits = [
+    const _benefits = [
         {
             icon: CheckCircle,
             title: "Reduced Downtime",

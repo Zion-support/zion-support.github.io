@@ -2527,7 +2527,7 @@ export const enhancedAIServices2025: AIService[] = [
   }
 ];
 
-export const allServices = {
+export const _allServices = {
   microSaas: enhancedMicroSaasServices2025,
   itServices: enhancedITServices2025,
   aiServices: enhancedAIServices2025

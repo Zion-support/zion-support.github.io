@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { _EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
 export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
+    const _filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
-    const getCategoryIcon = (category) => {
-        const icons = {
+    const _getCategoryIcon = (category) => {
+        const _icons = {
             'AI Development': <Brain className="w-6 h-6"/>,
             'Cloud Services': <Cloud className="w-6 h-6"/>,
             'DevOps': <Zap className="w-6 h-6"/>,
@@ -23,14 +23,14 @@ export default function PricingGuide() {
         };
         return icons[category] || <Star className="w-6 h-6"/>;
     };
-    const formatPrice = (price) => {
+    const _formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(0)}K`;
         }
         return `$${price}`;
     };
-    const getMarketComparison = (price, category) => {
-        const comparisons = {
+    const _getMarketComparison = (price, category) => {
+        const _comparisons = {
             'AI Development': { avg: price * 1.3, savings: 23 },
             'Cloud Services': { avg: price * 1.25, savings: 20 },
             'DevOps': { avg: price * 1.35, savings: 26 },
@@ -152,7 +152,7 @@ export default function PricingGuide() {
           {/* Services Pricing Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredServices.map((service) => {
-            const marketComparison = getMarketComparison(service.price, service.category);
+            const _marketComparison = getMarketComparison(service.price, service.category);
             return (<Card key={service.id} className="bg-white/5 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-3">

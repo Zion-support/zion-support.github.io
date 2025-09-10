@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap } from 'lucide-react';
+import { _Link, useLocation } from 'react-router-dom';
+import { _cn } from '@/lib/utils';
+import { _Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap } from 'lucide-react';
 export function MainSidebar() {
-    const location = useLocation();
-    const sidebarSections = [
+    const _location = useLocation();
+    const _sidebarSections = [
         {
             title: 'Main',
             items: [
@@ -43,7 +43,7 @@ export function MainSidebar() {
             ]
         }
     ];
-    const isActive = (href) => {
+    const _isActive = (href) => {
         if (href === '/') {
             return location.pathname === '/';
         }

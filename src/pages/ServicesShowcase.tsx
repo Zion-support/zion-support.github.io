@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Rocket, Target, Brain, Cloud, Zap } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Shield, Rocket, Target, Brain, Cloud, Zap } from 'lucide-react';
 
 export default function ServicesShowcase() {
-  const serviceCategories = [
+  const _serviceCategories = [
     {
       title: "AI-Powered Micro SAAS Solutions",
       subtitle: "Intelligent software-as-a-service solutions that automate and optimize business processes",

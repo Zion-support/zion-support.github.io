@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
-const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = '' }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
+const _AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -20,7 +20,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
     useEffect(() => {
         if (!enabled)
             return;
-        const root = document.documentElement;
+        const _root = document.documentElement;
         // High contrast mode
         if (settings.highContrast) {
             root.style.setProperty('--high-contrast', 'true');
@@ -77,8 +77,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
     useEffect(() => {
         if (!enabled || !settings.screenReader)
             return;
-        const announce = (message) => {
-            const announcement = document.createElement('div');
+        const _announce = (message) => {
+            const _announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
             announcement.setAttribute('aria-atomic', 'true');
             announcement.className = 'sr-only';
@@ -99,11 +99,11 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             announce('Reduced motion enabled');
         }
     }, [settings.highContrast, settings.largeText, settings.reducedMotion, enabled, settings.screenReader]);
-    const updateSetting = useCallback((key, value) => {
+    const _updateSetting = useCallback((key, value) => {
         setSettings(prev => {
-            const newSettings = { ...prev, [key]: value };
+            const _newSettings = { ...prev, [key]: value };
             // Add notification
-            const notification = {
+            const _notification = {
                 id: Date.now().toString(),
                 message: `${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',
@@ -113,8 +113,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             return newSettings;
         });
     }, []);
-    const resetToDefaults = useCallback(() => {
-        const defaultSettings = {
+    const _resetToDefaults = useCallback(() => {
+        const _defaultSettings = {
             highContrast: false,
             largeText: false,
             fontSize: 16,
@@ -125,7 +125,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             keyboardNavigation: true
         };
         setSettings(defaultSettings);
-        const notification = {
+        const _notification = {
             id: Date.now().toString(),
             message: 'Accessibility settings reset to defaults',
             type: 'info',
@@ -133,17 +133,17 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         };
         setNotifications(prev => [notification, ...prev.slice(0, 2)]);
     }, []);
-    const increaseFontSize = useCallback(() => {
+    const _increaseFontSize = useCallback(() => {
         updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
     }, [settings.fontSize, updateSetting]);
-    const decreaseFontSize = useCallback(() => {
+    const _decreaseFontSize = useCallback(() => {
         updateSetting('fontSize', Math.max(settings.fontSize - 2, 12));
     }, [settings.fontSize, updateSetting]);
     // Keyboard shortcuts
     useEffect(() => {
         if (!enabled)
             return;
-        const handleKeyDown = (e) => {
+        const _handleKeyDown = (e) => {
             if (e.ctrlKey || e.metaKey) {
                 switch (e.key) {
                     case 'h':

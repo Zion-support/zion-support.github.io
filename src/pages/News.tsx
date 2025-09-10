@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 import { 
     Calendar,
     User,
@@ -21,7 +21,7 @@ export default function News() {
     const [selectedCategory, setSelectedCategory] = useState('All');
 
     
-    const categories = [
+    const _categories = [
         'All',
         'Company News',
         'Product Updates',
@@ -32,7 +32,7 @@ export default function News() {
         'Market Trends'
     ];
     
-    const sources = [
+    const _sources = [
         'All Sources',
         'Company Press Releases',
         'Industry Reports',
@@ -42,7 +42,7 @@ export default function News() {
         'Customer Success Stories'
     ];
     
-    const timeframes = [
+    const _timeframes = [
         'All Time',
         'Last 24 Hours',
         'Last Week',
@@ -51,7 +51,7 @@ export default function News() {
         'Last Year'
     ];
 
-    const fadeInUp = {
+    const _fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }

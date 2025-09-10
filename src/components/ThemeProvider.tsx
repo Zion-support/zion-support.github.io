@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {';
-export const useTheme = (props: any) => {;';';
+export const _useTheme = (props: any) => {;';';
 type Theme = 'light' | 'dark' | 'system';';';export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
-export const useTheme = ("props": "any) => {;
+export const _useTheme = ("props": "any) => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 ;
@@ -24,7 +24,7 @@ export const "ThemeProvider": "React.FC<ThemeProviderProps> = ({ children "}) =>
     if(typeof window !== 'null') {;
       if(saved && ['light',dark',system'].includes(saved)) {;
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
-export const useTheme = (props: any) => {;
+export const _useTheme = (props: any) => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {

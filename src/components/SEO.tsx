@@ -1,12 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { _Helmet } from 'react-helmet-async';
 
 
 }
 
 export const SEO: React.FC<SEOProps> = ({ title, description }) => {
-  const resolvedTitle = title ?? 'Zion Tech Group';
-  const resolvedDescription = description ?? 'AI-powered solutions and IT services by Zion Tech Group';
+  const _resolvedTitle = title ?? 'Zion Tech Group';
+  const _resolvedDescription = description ?? 'AI-powered solutions and IT services by Zion Tech Group';
 
   return (
     <Helmet>

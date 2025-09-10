@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
+import { _SEO } from "@/components/SEO";
+import { _Link } from 'react-router-dom';
+import { _Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
 import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
 export default function UltimateHomepage2025() {
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
         setIsVisible(true);
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
         }, 5000);
         return () => clearInterval(interval);
     }, []);
-    const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
-    const allServices = ultimateInnovativeServices2025.slice(0, 9);
-    const stats = [
+    const _featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
+    const _allServices = ultimateInnovativeServices2025.slice(0, 9);
+    const _stats = [
         { number: '10+', label: 'Revolutionary Services', icon: Rocket },
         { number: '500+', label: 'Happy Customers', icon: Users },
         { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
         { number: '24/7', label: 'Expert Support', icon: Clock }
     ];
-    const benefits = [
+    const _benefits = [
         {
             icon: Brain,
             title: 'AI-Powered Intelligence',
@@ -47,7 +47,7 @@ export default function UltimateHomepage2025() {
             color: 'from-orange-500 to-red-500'
         }
     ];
-    const industries = [
+    const _industries = [
         { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },
         { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
         { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' },

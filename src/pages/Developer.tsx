@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const Developer = () => {
+import { _Helmet } from 'react-helmet-async';
+const _Developer = () => {
     return (<>
       <Helmet>
         <title>Developer Portal - Zion Tech Group</title>

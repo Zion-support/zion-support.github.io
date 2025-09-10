@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { _Link, useLocation } from "react-router-dom";
 import { 
   X,
   ChevronRight,
@@ -40,4 +40,4 @@ import {
   Leaf,
   Handshake
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { _motion, AnimatePresence } from "framer-motion";

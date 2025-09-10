@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
-import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/advancedServices';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { _ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/advancedServices';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
+import { _Badge } from '@/components/ui/badge';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
 export default function AdvancedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [sortBy, setSortBy] = useState('featured');
     // Filter services based on search and category
-    const filteredServices = ADVANCED_SERVICES.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const _filteredServices = ADVANCED_SERVICES.filter(service => {
+        const _matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         return matchesSearch && matchesCategory;
     });
     // Sort services
-    const sortedServices = [...filteredServices].sort((a, b) => {
+    const _sortedServices = [...filteredServices].sort((a, b) => {
         switch (sortBy) {
             case 'price-low':
                 return (a.price || 0) - (b.price || 0);
@@ -33,7 +33,7 @@ export default function AdvancedServicesPage() {
                 return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
         }
     });
-    const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
+    const _uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
       <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-const AIAutonomousBusinessOperations = () => {
-    const features = [
+import { _Link } from 'react-router-dom';
+const _AIAutonomousBusinessOperations = () => {
+    const _features = [
         {
             title: "Process Automation",
             description: "AI-powered automation of repetitive business processes",
@@ -23,7 +23,7 @@ const AIAutonomousBusinessOperations = () => {
             icon: "🔮"
         }
     ];
-    const businessAreas = [
+    const _businessAreas = [
         {
             category: "Operations Management",
             capabilities: ["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]
@@ -41,7 +41,7 @@ const AIAutonomousBusinessOperations = () => {
             capabilities: ["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: "Manufacturing",
             description: "Optimize production processes and quality control",
@@ -63,7 +63,7 @@ const AIAutonomousBusinessOperations = () => {
             icon: "💼"
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: "Efficiency Gains",
             description: "Improve operational efficiency by 40%",

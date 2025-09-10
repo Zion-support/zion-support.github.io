@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2 } from 'lucide-react';
-const mockAIResponses = [
+import { _MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2 } from 'lucide-react';
+const _mockAIResponses = [
     "I'd be happy to help you with that! Let me provide you with some information about our AI development services.",
     "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.",
     "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",
@@ -21,18 +21,18 @@ export function AIChatAssistant() {
     const [inputValue, setInputValue] = useState('');
     const [isListening, setIsListening] = useState(false);
     const [isTyping, setIsTyping] = useState(false);
-    const messagesEndRef = useRef(null);
-    const inputRef = useRef(null);
-    const scrollToBottom = () => {
+    const _messagesEndRef = useRef(null);
+    const _inputRef = useRef(null);
+    const _scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
-    const handleSendMessage = async () => {
+    const _handleSendMessage = async () => {
         if (!inputValue.trim())
             return;
-        const userMessage = {
+        const _userMessage = {
             id: Date.now().toString(),
             type: 'user',
             content: inputValue,
@@ -43,8 +43,8 @@ export function AIChatAssistant() {
         setIsTyping(true);
         // Simulate AI response
         setTimeout(() => {
-            const randomResponse = mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
-            const aiMessage = {
+            const _randomResponse = mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
+            const _aiMessage = {
                 id: (Date.now() + 1).toString(),
                 type: 'assistant',
                 content: randomResponse,
@@ -54,12 +54,12 @@ export function AIChatAssistant() {
             setIsTyping(false);
         }, 1500 + Math.random() * 1000);
     };
-    const handleVoiceInput = () => {
+    const _handleVoiceInput = () => {
         if (!isListening) {
             setIsListening(true);
             // Simulate voice recognition
             setTimeout(() => {
-                const voiceText = "I'm interested in your AI development services";
+                const _voiceText = "I'm interested in your AI development services";
                 setInputValue(voiceText);
                 setIsListening(false);
             }, 2000);
@@ -68,13 +68,13 @@ export function AIChatAssistant() {
             setIsListening(false);
         }
     };
-    const handleKeyPress = (e) => {
+    const _handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             handleSendMessage();
         }
     };
-    const toggleChat = () => {
+    const _toggleChat = () => {
         if (isOpen) {
             setIsMinimized(!isMinimized);
         }

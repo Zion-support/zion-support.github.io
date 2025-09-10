@@ -1,7 +1,7 @@
 import React from "react";
-import { Star } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-const testimonials = [
+import { _Star } from "lucide-react";
+import { _Card, CardContent, CardFooter } from "@/components/ui/card";
+const _testimonials = [
     {
         name: "Alex Johnson",
         role: "AI Developer",
@@ -24,7 +24,7 @@ const testimonials = [
         avatar: "/placeholder.svg"
     }
 ];
-export const AppTestimonials = () => {
+export const _AppTestimonials = () => {
     return (<section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

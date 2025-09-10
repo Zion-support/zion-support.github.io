@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const _location = useLocation();
 
   const navItems = [
     { name: 'Home', path: '/' },

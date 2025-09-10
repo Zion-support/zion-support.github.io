@@ -1,18 +1,18 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-const AdvancedServicePortfolioDashboard = () => {
+import { _motion } from 'framer-motion';
+import { _BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { _Button } from './ui/button';
+import { _Badge } from './ui/badge';
+import { _Input } from './ui/input';
+const _AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');
     const [selectedComplexity, setSelectedComplexity] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('overview');
     // Mock data - in real app this would come from API
-    const portfolioData = [
+    const _portfolioData = [
         {
             id: 'ai-consciousness',
             title: 'Advanced AI Consciousness Platform',
@@ -104,23 +104,23 @@ const AdvancedServicePortfolioDashboard = () => {
             technologyMaturity: 'Leading'
         }
     ];
-    const filteredPortfolio = useMemo(() => {
+    const _filteredPortfolio = useMemo(() => {
         return portfolioData.filter(service => {
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-            const matchesStatus = selectedStatus === 'all' || service.status === selectedStatus;
-            const matchesComplexity = selectedComplexity === 'all' || service.complexity === selectedComplexity;
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
+            const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+            const _matchesStatus = selectedStatus === 'all' || service.status === selectedStatus;
+            const _matchesComplexity = selectedComplexity === 'all' || service.complexity === selectedComplexity;
+            const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesStatus && matchesComplexity && matchesSearch;
         });
     }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
-    const portfolioMetrics = useMemo(() => {
-        const activeServices = portfolioData.filter(s => s.status === 'Active');
-        const totalRevenue = portfolioData.reduce((sum, s) => sum + s.revenue, 0);
-        const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
-        const avgPerformance = activeServices.length > 0
+    const _portfolioMetrics = useMemo(() => {
+        const _activeServices = portfolioData.filter(s => s.status === 'Active');
+        const _totalRevenue = portfolioData.reduce((sum, s) => sum + s.revenue, 0);
+        const _totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
+        const _avgPerformance = activeServices.length > 0
             ? activeServices.reduce((sum, s) => sum + s.performance, 0) / activeServices.length
             : 0;
-        const portfolioGrowth = portfolioData.length > 0
+        const _portfolioGrowth = portfolioData.length > 0
             ? portfolioData.reduce((sum, s) => sum + s.growth, 0) / portfolioData.length
             : 0;
         return {
@@ -132,7 +132,7 @@ const AdvancedServicePortfolioDashboard = () => {
             marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
         };
     }, [portfolioData]);
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'Active': return 'bg-green-100 text-green-800';
             case 'Development': return 'bg-blue-100 text-blue-800';
@@ -141,7 +141,7 @@ const AdvancedServicePortfolioDashboard = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getComplexityColor = (complexity) => {
+    const _getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
@@ -150,7 +150,7 @@ const AdvancedServicePortfolioDashboard = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getMarketDemandColor = (demand) => {
+    const _getMarketDemandColor = (demand) => {
         switch (demand) {
             case 'Low': return 'bg-gray-100 text-gray-800';
             case 'Medium': return 'bg-blue-100 text-blue-800';
@@ -159,7 +159,7 @@ const AdvancedServicePortfolioDashboard = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getTechnologyMaturityColor = (maturity) => {
+    const _getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
@@ -168,7 +168,7 @@ const AdvancedServicePortfolioDashboard = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Categories', count: portfolioData.length },
         { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },
         { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length },

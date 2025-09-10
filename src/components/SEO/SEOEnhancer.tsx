@@ -62,8 +62,8 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({title = 'Zion Tech Gro
       document.title = title}';';';';';
     // Add performance monitoring"',';';';';
     ';';';';';
-    if (typeof window !== 'undefined' && 'performance' in window) {const observer = new PerformanceObserver((list) => {';';';';
-        const entries = list.getEntries();';';';';';
+    if (typeof window !== 'undefined' && 'performance' in window) {const _observer = new PerformanceObserver((list) => {';';';';
+        const _entries = list.getEntries();';';';';';
 export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({""',';';';';
     ';';';';';
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',""',';';';';
@@ -82,8 +82,8 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({""',';';';';
     // Add performance monitoring""',';';';';
     ';';';';';
     if (typeof window !== 'undefined' && 'performance' in window) {';';';';
-      const observer = new PerformanceObserver((list) => {';';';';';
-        const entries = list.getEntries();',';';';';
+      const _observer = new PerformanceObserver((list) => {';';';';';
+        const _entries = list.getEntries();',';';';';
     ';';';';';
         entries.forEach((entry) => {'';';';';';
         entries.forEach((entry) => {""',';';';';
@@ -93,7 +93,7 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({""',';';';';
     ';';';';';
       observer.observe({ entryTypes: ['navigation'] });}
   }, [title]);
-  const defaultStructuredData = {""
+  const _defaultStructuredData = {""
     "@context": "https://schema.org", "@type": "Organization",""
     "name": "Zion Tech Group", "url": "https://ziontechgroup.com",""
     "logo": "https://ziontechgroup.com/logo.png", "description": description,""

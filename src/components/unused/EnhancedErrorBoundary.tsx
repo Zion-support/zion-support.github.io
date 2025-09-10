@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
-import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
+import { _motion } from 'framer-motion';
+import { _ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
 class EnhancedErrorBoundary extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +22,7 @@ class EnhancedErrorBoundary extends Component {
     componentDidCatch(error, errorInfo) {
         this.setState({ errorInfo });
         // Log error to console
-        console.error('Error caught by boundary:', error, errorInfo);
+        // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
             this.props.onError(error, errorInfo);
@@ -36,7 +36,7 @@ class EnhancedErrorBoundary extends Component {
     reportError(error, errorInfo) {
         // In a real application, you would send this to your error reporting service
         // For example: Sentry, LogRocket, Bugsnag, etc.
-        const errorReport = {
+        const _errorReport = {
             id: this.state.errorId,
             timestamp: new Date().toISOString(),
             error: {
@@ -57,8 +57,8 @@ class EnhancedErrorBoundary extends Component {
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
             console.group('Error Report');
-            console.log('Error ID:', errorReport.id);
-            console.log('Error Details:', errorReport);
+            // console.log('Error ID:', errorReport.id);
+            // console.log('Error Details:', errorReport);
             console.groupEnd();
         }
         // In production, you would send this to your error reporting service
@@ -77,10 +77,10 @@ class EnhancedErrorBoundary extends Component {
         window.location.href = '/';
     };
     handleReportIssue = () => {
-        const error = this.state.error;
-        const errorInfo = this.state.errorInfo;
+        const _error = this.state.error;
+        const _errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
-            const issueBody = `
+            const _issueBody = `
 ## Error Report
 
 **Error ID:** ${this.state.errorId}
@@ -115,7 +115,7 @@ ${errorInfo.componentStack}
 ## Additional Context
 
       `.trim();
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+            const _issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl, '_blank');
         }
     };

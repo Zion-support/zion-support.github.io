@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { toast } from "@/components/ui/use-toast";
-import { apiClient } from "@/utils/apiClient";
-import { cn } from "@/lib/utils";
-import { ChatMessage } from "./ChatMessage";
-import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from "lucide-react";
-import { useTheme } from "@/hooks/useTheme";
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _ScrollArea } from "@/components/ui/scroll-area";
+import { _toast } from "@/components/ui/use-toast";
+import { _apiClient } from "@/utils/apiClient";
+import { _cn } from "@/lib/utils";
+import { _ChatMessage } from "./ChatMessage";
+import { _QuickReplyButton } from "./QuickReplyButton";
+import { _Send, Loader2 } from "lucide-react";
+import { _useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
     { id: "hire", text: "How do I hire?" },
@@ -27,8 +27,8 @@ export function ChatBotPanel() {
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [failedAttempts, setFailedAttempts] = useState(0);
-    const scrollAreaRef = useRef(null);
-    const inputRef = useRef(null);
+    const _scrollAreaRef = useRef(null);
+    const _inputRef = useRef(null);
     const { theme } = useTheme();
     // Auto-scroll to bottom when messages change
     useEffect(() => {
@@ -42,10 +42,10 @@ export function ChatBotPanel() {
             inputRef.current.focus();
         }
     }, []);
-    const handleSendMessage = async (text = inputValue) => {
+    const _handleSendMessage = async (text = inputValue) => {
         if (!text.trim())
             return;
-        const userMessage = {
+        const _userMessage = {
             id: `user-${Date.now()}`,
             content: text,
             sender: "user",
@@ -56,8 +56,8 @@ export function ChatBotPanel() {
         setIsLoading(true);
         try {
             // Call the OpenAI-powered support function
-            const response = await sendToAIAssistant(text);
-            const botMessage = {
+            const _response = await sendToAIAssistant(text);
+            const _botMessage = {
                 id: `bot-${Date.now()}`,
                 content: response.message || "Sorry, I couldn't process your request. Please try again.",
                 sender: "bot",
@@ -78,7 +78,7 @@ export function ChatBotPanel() {
             }
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // console.error("Error in AI chat:", error);
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -93,9 +93,9 @@ export function ChatBotPanel() {
             setIsLoading(false);
         }
     };
-    const sendToAIAssistant = async (message) => {
+    const _sendToAIAssistant = async (message) => {
         try {
-            const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+            const _response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -110,22 +110,22 @@ export function ChatBotPanel() {
                     message: "I'm having trouble connecting to my knowledge base right now."
                 };
             }
-            const data = await response.json();
+            const _data = await response.json();
             return {
                 success: true,
                 message: data.message
             };
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // console.error("Error in AI chat:", error);
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
             };
         }
     };
-    const suggestEscalation = () => {
-        const escalationMessage = {
+    const _suggestEscalation = () => {
+        const _escalationMessage = {
             id: `bot-escalation-${Date.now()}`,
             content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
             sender: "bot",
@@ -135,11 +135,11 @@ export function ChatBotPanel() {
         // Log this interaction for the support team
         logSupportEscalation();
     };
-    const logSupportEscalation = async () => {
+    const _logSupportEscalation = async () => {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
-            console.log("Support escalation triggered", {
+            // console.log("Support escalation triggered", {
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
@@ -148,13 +148,13 @@ export function ChatBotPanel() {
             });
         }
         catch (error) {
-            console.error("Failed to log support escalation:", error);
+            // console.error("Failed to log support escalation:", error);
         }
     };
-    const handleQuickReply = (text) => {
+    const _handleQuickReply = (text) => {
         handleSendMessage(text);
     };
-    const handleEscalateToLiveAgent = () => {
+    const _handleEscalateToLiveAgent = () => {
         setMessages((prev) => [
             ...prev,
             {
@@ -176,7 +176,7 @@ export function ChatBotPanel() {
             description: "A support agent will be with you shortly.",
         });
     };
-    const handleEmailSupport = () => {
+    const _handleEmailSupport = () => {
         setMessages((prev) => [
             ...prev,
             {

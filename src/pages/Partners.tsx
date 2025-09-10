@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
+import { _Header } from '@/components/header/Header';
+import { _Footer } from '@/components/Footer';
+import { _SEO } from '@/components/SEO';
+import { _GradientHeading } from '@/components/GradientHeading';
 
 export default function Partners() {
     return (

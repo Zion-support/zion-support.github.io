@@ -1,11 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
 import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-const ServiceRecommendations = () => {
-    const features = [
+import { _Button } from '../components/ui/button';
+import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+const _ServiceRecommendations = () => {
+    const _features = [
         {
             icon: <Brain className="w-6 h-6 text-zion-cyan"/>,
             title: 'AI-Powered Analysis',
@@ -27,7 +27,7 @@ const ServiceRecommendations = () => {
             description: 'All recommendations are validated by our technology experts and industry specialists'
         }
     ];
-    const benefits = [
+    const _benefits = [
         'Save time researching and comparing different service options',
         'Get personalized recommendations based on your specific business needs',
         'Understand implementation complexity and expected timelines',
@@ -35,7 +35,7 @@ const ServiceRecommendations = () => {
         'Access to our comprehensive portfolio of cutting-edge services',
         'Expert guidance throughout the selection and implementation process'
     ];
-    const processSteps = [
+    const _processSteps = [
         {
             step: 1,
             title: 'Tell Us About Your Business',

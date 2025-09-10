@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useWallet } from "@/hooks/useWallet";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Gift, ArrowRight, ExternalLink } from "lucide-react";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
+import { _useWallet } from "@/hooks/useWallet";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Gift, ArrowRight, ExternalLink } from "lucide-react";
+import { _Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
 const REWARD_OPTIONS = [
     {
         id: 'premium-week',
@@ -30,7 +30,7 @@ const REWARD_OPTIONS = [
 export function RedeemTokensCard() {
     const { wallet, spendTokens } = useWallet();
     const [open, setOpen] = useState(false);
-    const handleRedeem = async (option) => {
+    const _handleRedeem = async (option) => {
         if (!wallet || wallet.balance < option.cost)
             return;
         await spendTokens(option.cost, `Redeemed: ${option.title}`);

@@ -1,12 +1,12 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _SEO } from "@/components/SEO";
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _Button } from "@/components/ui/button";
+import { _Card, CardContent } from "@/components/ui/card";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Careers() {
     // Sample job listings
-    const jobs = {
+    const _jobs = {
         engineering: [
             {
                 title: "Senior Frontend Engineer",
@@ -80,7 +80,7 @@ export default function Careers() {
         ]
     };
     // Benefits list
-    const benefits = [
+    const _benefits = [
         {
             title: "Flexible Work",
             description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",

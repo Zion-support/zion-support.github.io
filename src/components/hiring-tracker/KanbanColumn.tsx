@@ -1,10 +1,10 @@
-import { Droppable } from "@hello-pangea/dnd";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "./CandidateCard";
+import { _Droppable } from "@hello-pangea/dnd";
+import { _Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Badge } from "@/components/ui/badge";
+import { _CandidateCard } from "./CandidateCard";
 export function KanbanColumn({ id, title, description, applications, count }) {
     // Add color based on column type
-    const getBadgeVariant = (columnId) => {
+    const _getBadgeVariant = (columnId) => {
         switch (columnId) {
             case "new":
                 return "secondary";
@@ -20,7 +20,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
                 return "outline";
         }
     };
-    const getColumnBgColor = (columnId) => {
+    const _getColumnBgColor = (columnId) => {
         switch (columnId) {
             case "hired":
                 return "bg-green-50";

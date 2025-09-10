@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
 
 
       <Helmet>
@@ -22,7 +22,7 @@ import { Helmet } from 'react-helmet-async';
     }
   ];
 
-  const platforms = [
+  const _platforms = [
     {name}: "AWS",
       description: "Amazon Web Services cloud platform solutions",
       icon: "☁️"

@@ -15,11 +15,11 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     return () => clearTimeout(timer) }, []) };
   ];
 ;
-  const quickServices = [";
+  const _quickServices = [";
     { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";
     { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";
     { "name": "Cloud Services", "icon": "Clou d", "link": "/cloud-solutions" },;";
-    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };  const quickServices = ["
+    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };  const _quickServices = ["
     { name: "AI Solutions", icon: Brai n, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shiel d, link: "/cybersecurity" },"
     { name: "Cloud Services", icon: Clou d, link: "/cloud-solutions" },;"

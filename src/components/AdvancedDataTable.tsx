@@ -1,9 +1,9 @@
-import { useState, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
-import { useVirtualScroll } from '../hooks/useVirtualScroll';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
+import { _useState, useMemo, useCallback } from 'react';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
+import { _useVirtualScroll } from '../hooks/useVirtualScroll';
+import { _useAnalytics } from '../hooks/useAnalytics';
+export const _AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -16,20 +16,20 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const [currentPage, setCurrentPage] = useState(1);
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting
-    const processedData = useMemo(() => {
-        let result = [...data];
+    const _processedData = useMemo(() => {
+        let _result = [...data];
         // Apply search
         if (searchQuery.trim()) {
             result = result.filter(item => columns.some(col => {
-                const value = String(item[col.key]).toLowerCase();
+                const _value = String(item[col.key]).toLowerCase();
                 return value.includes(searchQuery.toLowerCase());
             }));
         }
         // Apply filters
         filters.forEach(filter => {
             result = result.filter(item => {
-                const value = String(item[filter.key]).toLowerCase();
-                const filterValue = filter.value.toLowerCase();
+                const _value = String(item[filter.key]).toLowerCase();
+                const _filterValue = filter.value.toLowerCase();
                 switch (filter.operator) {
                     case 'contains':
                         return value.includes(filterValue);
@@ -54,8 +54,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         // Apply sorting
         if (sortConfig) {
             result.sort((a, b) => {
-                const aVal = a[sortConfig.key];
-                const bVal = b[sortConfig.key];
+                const _aVal = a[sortConfig.key];
+                const _bVal = b[sortConfig.key];
                 if (aVal < bVal)
                     return sortConfig.direction === 'asc' ? -1 : 1;
                 if (aVal > bVal)
@@ -66,8 +66,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         return result;
     }, [data, searchQuery, filters, sortConfig, columns]);
     // Pagination
-    const totalPages = Math.ceil(processedData.length / pageSize);
-    const paginatedData = enablePagination
+    const _totalPages = Math.ceil(processedData.length / pageSize);
+    const _paginatedData = enablePagination
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
         : processedData;
     // Virtual scrolling
@@ -77,7 +77,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         overscan: 5
     });
     // Handle sorting
-    const handleSort = useCallback((key) => {
+    const _handleSort = useCallback((key) => {
         if (!enableSorting)
             return;
         setSortConfig(prev => {
@@ -91,9 +91,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         trackEvent('table', 'column_sorted', String(key));
     }, [enableSorting, trackEvent]);
     // Handle filter change
-    const handleFilterChange = useCallback((key, value, operator) => {
+    const _handleFilterChange = useCallback((key, value, operator) => {
         setFilters(prev => {
-            const newFilters = prev.filter(f => f.key !== key);
+            const _newFilters = prev.filter(f => f.key !== key);
             if (value.trim()) {
                 newFilters.push({ key, value, operator });
             }
@@ -102,9 +102,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         trackEvent('table', 'filter_applied', String(key), undefined, { operator, value });
     }, [trackEvent]);
     // Handle selection
-    const handleSelectionChange = useCallback((item, checked) => {
-        const itemKey = String(item.id || JSON.stringify(item));
-        const newSelection = new Set(selectedItems);
+    const _handleSelectionChange = useCallback((item, checked) => {
+        const _itemKey = String(item.id || JSON.stringify(item));
+        const _newSelection = new Set(selectedItems);
         if (checked) {
             newSelection.add(itemKey);
         }
@@ -115,9 +115,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)));
     }, [selectedItems, onSelectionChange, data]);
     // Handle select all
-    const handleSelectAll = useCallback((checked) => {
+    const _handleSelectAll = useCallback((checked) => {
         if (checked) {
-            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
+            const _allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
             onSelectionChange?.(paginatedData);
         }
@@ -127,38 +127,38 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         }
     }, [paginatedData, onSelectionChange]);
     // Export data
-    const handleExport = useCallback(() => {
+    const _handleExport = useCallback(() => {
         if (onExport) {
             onExport(processedData);
         }
         else {
             // Default CSV export
-            const csvContent = generateCSV(processedData, columns);
+            const _csvContent = generateCSV(processedData, columns);
             downloadCSV(csvContent, 'table-export.csv');
         }
         trackEvent('table', 'data_exported', 'export_completed', processedData.length);
     }, [processedData, columns, onExport, trackEvent]);
     // Generate CSV content
-    const generateCSV = (data, columns) => {
-        const headers = columns.map(col => col.header).join(',');
-        const rows = data.map(item => columns.map(col => {
-            const value = item[col.key];
+    const _generateCSV = (data, columns) => {
+        const _headers = columns.map(col => col.header).join(',');
+        const _rows = data.map(item => columns.map(col => {
+            const _value = item[col.key];
             return typeof value === 'string' && value.includes(',') ? `"${value}"` : value;
         }).join(','));
         return [headers, ...rows].join('\n');
     };
     // Download CSV
-    const downloadCSV = (content, filename) => {
-        const blob = new Blob([content], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
+    const _downloadCSV = (content, filename) => {
+        const _blob = new Blob([content], { type: 'text/csv' });
+        const _url = window.URL.createObjectURL(blob);
+        const _a = document.createElement('a');
         a.href = url;
         a.download = filename;
         a.click();
         window.URL.revokeObjectURL(url);
     };
     // Get sort icon
-    const getSortIcon = (key) => {
+    const _getSortIcon = (key) => {
         if (!enableSorting || sortConfig?.key !== key) {
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/>;
         }
@@ -167,8 +167,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             : <ChevronDown className="w-4 h-4 text-blue-500"/>;
     };
     // Render cell content
-    const renderCell = (column, item, index) => {
-        const value = item[column.key];
+    const _renderCell = (column, item, index) => {
+        const _value = item[column.key];
         if (column.render) {
             return column.render(value, item, index);
         }
@@ -292,7 +292,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
               </button>
               
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-                const page = i + 1;
+                const _page = i + 1;
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page
                         ? 'bg-blue-500 text-white'
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>

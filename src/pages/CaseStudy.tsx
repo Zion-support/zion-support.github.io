@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { CASE_STUDIES } from "@/data/case-studies";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { _useRouter } from "next/router";
+import { _CASE_STUDIES } from "@/data/case-studies";
+import { _SEO } from "@/components/SEO";
+import { _Button } from "@/components/ui/button";
+import { _ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
-    const router = useRouter();
+    const _router = useRouter();
     const { slug } = router.query;
-    const study = CASE_STUDIES.find((s) => s.slug === slug);
+    const _study = CASE_STUDIES.find((s) => s.slug === slug);
     if (!study) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.

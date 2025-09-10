@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { _useState } from "react";
+import { _useNavigate } from "react-router-dom";
+import { _useAuth } from "@/hooks/useAuth";
+import { _Button } from "@/components/ui/button";
+import { _UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
+import { _ProfileSetup } from "@/components/onboarding/ProfileSetup";
+import { _Steps, Step } from "@/components/ui/steps";
+import { _supabase } from "@/integrations/supabase/client";
+import { _toast } from "@/hooks/use-toast";
 export default function Onboarding() {
     const { user, updateProfile, isLoading } = useAuth();
     const [currentStep, setCurrentStep] = useState(0);
     const [userType, setUserType] = useState(null);
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     // Convert our user types to match what's expected in the database
-    const mapUserTypeToDatabase = (type) => {
+    const _mapUserTypeToDatabase = (type) => {
         switch (type) {
             case "serviceProvider":
                 return "creator";
@@ -25,7 +25,7 @@ export default function Onboarding() {
                 return "buyer";
         }
     };
-    const handleUserTypeSelect = (type) => {
+    const _handleUserTypeSelect = (type) => {
         setUserType(type);
         // Direct to specific registration page based on user type
         if (type === "serviceProvider") {
@@ -39,7 +39,7 @@ export default function Onboarding() {
         // Continue with the onboarding flow for clients
         setCurrentStep(1);
     };
-    const handleProfileComplete = async (data) => {
+    const _handleProfileComplete = async (data) => {
         if (!user || !userType) {
             toast({
                 title: "Authentication Error",
@@ -49,7 +49,7 @@ export default function Onboarding() {
             navigate('/login');
             return;
         }
-        const dbUserType = mapUserTypeToDatabase(userType);
+        const _dbUserType = mapUserTypeToDatabase(userType);
         try {
             await updateProfile({
                 id: user.id,
@@ -70,14 +70,14 @@ export default function Onboarding() {
                 description: 'Your profile has been set up successfully.',
             });
             // Get the appropriate dashboard route based on user type
-            const dashboardRoute = userType === "client"
+            const _dashboardRoute = userType === "client"
                 ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
             navigate(dashboardRoute);
         }
         catch (error) {
-            console.error('Error updating profile:', error);
+            // console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
@@ -85,7 +85,7 @@ export default function Onboarding() {
             });
         }
     };
-    const steps = [
+    const _steps = [
         { label: "Select Role", description: "Choose how you'll use the platform" },
         { label: "Create Profile", description: "Tell us about yourself" },
     ];

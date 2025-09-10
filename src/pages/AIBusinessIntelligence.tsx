@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain } from 'lucide-react';
-const AIBusinessIntelligence = () => {
+import { _Helmet } from 'react-helmet-async';
+import { _BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain } from 'lucide-react';
+const _AIBusinessIntelligence = () => {
     return (<>
       <Helmet>
         <title>AI Business Intelligence | Zion Tech Group</title>

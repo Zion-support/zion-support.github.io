@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
-const ComprehensivePricingShowcase2025 = () => {
+import { _Link } from 'react-router-dom';
+import { _advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+const _ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
-    const allServices = [
+    const _allServices = [
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
         ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
-    const categories = [
+    const _categories = [
         'all',
         'Legal Tech & Compliance',
         'Quantum Computing & Security',
@@ -26,22 +26,22 @@ const ComprehensivePricingShowcase2025 = () => {
         'AI & Analytics',
         'AI & Customer Experience'
     ];
-    const priceRanges = [
+    const _priceRanges = [
         { value: 'all', label: 'All Prices' },
         { value: 'low', label: 'Under $500/month', max: 500 },
         { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
         { value: 'high', label: 'Over $2,000/month', min: 2000 }
     ];
-    const filteredServices = allServices
+    const _filteredServices = allServices
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => {
         if (priceRange === 'all')
             return true;
-        const range = priceRanges.find(r => r.value === priceRange);
+        const _range = priceRanges.find(r => r.value === priceRange);
         if (!range)
             return true;
         if (service.price) {
-            const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+            const _price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
             if (range.min && range.max) {
                 return price >= range.min && price <= range.max;
             }
@@ -54,7 +54,7 @@ const ComprehensivePricingShowcase2025 = () => {
         }
         return true;
     });
-    const getServiceTypeColor = (type) => {
+    const _getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
                 return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -66,8 +66,8 @@ const ComprehensivePricingShowcase2025 = () => {
                 return 'bg-gray-100 text-gray-800 border-gray-200';
         }
     };
-    const getCategoryIcon = (category) => {
-        const icons = {
+    const _getCategoryIcon = (category) => {
+        const _icons = {
             'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
@@ -85,7 +85,7 @@ const ComprehensivePricingShowcase2025 = () => {
         };
         return icons[category] || '🚀';
     };
-    const getPriceDisplay = (service) => {
+    const _getPriceDisplay = (service) => {
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">
           {service.price}

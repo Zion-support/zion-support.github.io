@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
 
 
 // Import all service data
-import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
-import { IOT_EDGE_COMPUTING_SERVICES } from '../data/iotEdgeComputingServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
+import { _ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
+import { _INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
+import { _IOT_EDGE_COMPUTING_SERVICES } from '../data/iotEdgeComputingServices';
+import { _INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 
 
 
-    const getCategoryIcon = (category) => {
-        const categoryIcons = {
+    const _getCategoryIcon = (category) => {
+        const _categoryIcons = {
             'AI & Analytics': <Brain className="h-5 w-5"/>,
             'Emerging Technology': <Rocket className="h-5 w-5"/>,
             'Blockchain & Web3': <Cube className="h-5 w-5"/>,
@@ -28,7 +28,7 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServi
     };
 
 
-    const getPriceRange = (price) => {
+    const _getPriceRange = (price) => {
         if (price < 10000) return 'starter';
         if (price < 25000) return 'professional';
         return 'enterprise';

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { PRICING_TIERS } from '@/data/advancedServices';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { _CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
+import { _PRICING_TIERS } from '@/data/advancedServices';
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {

@@ -1,5 +1,5 @@
 
-import { useLocation } from 'react-router-dom';interface AccessibilitySettings {
+import { _useLocation } from 'react-router-dom';interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   largeText: boolean;
@@ -31,7 +31,7 @@ export function AccessibilityEnhancer(props: any) {
   // Apply accessibility settings
   useEffect(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+    const _root = document.documentElement;
     // Apply font size
     root.style.fontSize = `${settings.fontSize}px`;
     // Apply line height
@@ -75,16 +75,16 @@ export function AccessibilityEnhancer(props: any) {
   private notifyListeners(): "void {;
     this.listeners.forEach(listener => listener(this.state));
   }
-    const handleKeyDown = (props: any) => {
-      const target = event.target as HTMLElement;
+    const _handleKeyDown = (props: any) => {
+      const _target = event.target as HTMLElement;
       ';
       // Tab navigation enhancement';';
       if (event.key === 'Tab') {';
-        const focusableElements = document.querySelectorAll(';';
+        const _focusableElements = document.querySelectorAll(';';
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;  "}
+        const _firstElement = focusableElements[0] as HTMLElement;
+        const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;  "}
   toggleReducedMotion(): "void {;
     this.state.reducedMotion = !this.state.reducedMotion;
     this.applyAccessibilityStyles();
@@ -98,15 +98,15 @@ export function AccessibilityEnhancer(props: any) {
     this.notifyListeners();
   "}
   increaseFontSize(): "void {;
-    const sizes = ['small'", 'medium', 'large'];
-    const currentIndex = sizes.indexOf(this.state.fontSize);
+    const _sizes = ['small'", 'medium', 'large'];
+    const _currentIndex = sizes.indexOf(this.state.fontSize);
     if (currentIndex < sizes.length - 1) {;
       this.setFontSize(sizes[currentIndex + 1] as any);
     }
   }
   decreaseFontSize(): "void {;
-    const sizes = ['small'", 'medium', 'large'];
-    const currentIndex = sizes.indexOf(this.state.fontSize);
+    const _sizes = ['small'", 'medium', 'large'];
+    const _currentIndex = sizes.indexOf(this.state.fontSize);
     if (currentIndex > 0) {;
       this.setFontSize(sizes[currentIndex - 1] as any);
     }
@@ -123,13 +123,13 @@ export function AccessibilityEnhancer(props: any) {
   "}
   // Focus management;
   trapFocus("element": "HTMLElement): () => void {;
-    const focusableElements = element.querySelectorAll(;
+    const _focusableElements = element.querySelectorAll(;
       'button", [href], input, select, textarea, [tabindex]: "not([tabindex="-1"])';
     );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
+    const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 ;
-    const handleTabKey = ("e": KeyboardEvent) => {;
+    const _handleTabKey = ("e": KeyboardEvent) => {;
       if (e.key === 'Tab') {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
@@ -148,7 +148,7 @@ export function AccessibilityEnhancer(props: any) {
     document.addEventListener('keydown', handleKeyDown);';';    };
     if (!settings.screenReader) return;
 
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -161,9 +161,9 @@ export function AccessibilityEnhancer(props: any) {
   // Add accessibility attributes to interactive elements
   useEffect(() => {
     if (!enabled) return;
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    const _interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     interactiveElements.forEach((element) => {
-      const el = element as HTMLElement;
+      const _el = element as HTMLElement;
       // Add focus indicators
       if (!el.hasAttribute('data-accessibility-enhanced')) {
         el.setAttribute('data-accessibility-enhanced', 'true');
@@ -172,7 +172,7 @@ export function AccessibilityEnhancer(props: any) {
     }
     );
   }, [enabled]);
-  const updateSetting = (props: any) => {
+  const _updateSetting = (props: any) => {
     setSettings(prev => ({
       ...prev,
       [key]: value

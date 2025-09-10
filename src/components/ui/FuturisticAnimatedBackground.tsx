@@ -1,18 +1,18 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
-    const canvasRef = useRef(null);
-    const particlesRef = useRef([]);
-    const animationRef = useRef(null);
+import { _motion } from 'framer-motion';
+export const _FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
+    const _canvasRef = useRef(null);
+    const _particlesRef = useRef([]);
+    const _animationRef = useRef(null);
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const _canvas = canvasRef.current;
         if (!canvas)
             return;
-        const ctx = canvas.getContext('2d');
+        const _ctx = canvas.getContext('2d');
         if (!ctx)
             return;
         // Set canvas size
-        const resizeCanvas = () => {
+        const _resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         };
@@ -81,7 +81,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             }
         }
         function getParticleColor() {
-            const colors = {
+            const _colors = {
                 cyberpunk: ['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],
                 quantum: ['#4facfe', '#00f2fe', '#43e97b', '#38f9d7', '#fa709a'],
                 neon: ['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'],
@@ -90,12 +90,12 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             return colors[variant][Math.floor(Math.random() * colors[variant].length)];
         }
         // Initialize particles
-        const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
-        for (let i = 0; i < particleCount; i++) {
+        const _particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
+        for (let _i = 0; i < particleCount; i++) {
             particlesRef.current.push(new Particle());
         }
         // Animation loop
-        const animate = () => {
+        const _animate = () => {
             if (!ctx || !canvas)
                 return;
             // Clear canvas with fade effect
@@ -123,11 +123,11 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 return;
             ctx.strokeStyle = `rgba(0, 255, 255, ${intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3})`;
             ctx.lineWidth = 0.5;
-            for (let i = 0; i < particlesRef.current.length; i++) {
-                for (let j = i + 1; j < particlesRef.current.length; j++) {
-                    const dx = particlesRef.current[i].x - particlesRef.current[j].x;
-                    const dy = particlesRef.current[i].y - particlesRef.current[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
+            for (let _i = 0; i < particlesRef.current.length; i++) {
+                for (let _j = i + 1; j < particlesRef.current.length; j++) {
+                    const _dx = particlesRef.current[i].x - particlesRef.current[j].x;
+                    const _dy = particlesRef.current[i].y - particlesRef.current[j].y;
+                    const _distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {
                         ctx.beginPath();
                         ctx.moveTo(particlesRef.current[i].x, particlesRef.current[i].y);
@@ -144,14 +144,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             if (variant === 'cyberpunk') {
                 ctx.strokeStyle = `rgba(0, 255, 255, ${intensity === 'low' ? 0.05 : intensity === 'medium' ? 0.1 : 0.15})`;
                 ctx.lineWidth = 0.5;
-                const gridSize = 50;
-                for (let x = 0; x < canvas.width; x += gridSize) {
+                const _gridSize = 50;
+                for (let _x = 0; x < canvas.width; x += gridSize) {
                     ctx.beginPath();
                     ctx.moveTo(x, 0);
                     ctx.lineTo(x, canvas.height);
                     ctx.stroke();
                 }
-                for (let y = 0; y < canvas.height; y += gridSize) {
+                for (let _y = 0; y < canvas.height; y += gridSize) {
                     ctx.beginPath();
                     ctx.moveTo(0, y);
                     ctx.lineTo(canvas.width, y);
@@ -160,12 +160,12 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             }
             // Add wave effect for quantum variant
             if (variant === 'quantum') {
-                const time = Date.now() * 0.001;
+                const _time = Date.now() * 0.001;
                 ctx.strokeStyle = `rgba(74, 172, 254, ${intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3})`;
                 ctx.lineWidth = 2;
                 ctx.beginPath();
-                for (let x = 0; x < canvas.width; x += 5) {
-                    const y = canvas.height / 2 + Math.sin(x * 0.01 + time) * 50;
+                for (let _x = 0; x < canvas.width; x += 5) {
+                    const _y = canvas.height / 2 + Math.sin(x * 0.01 + time) * 50;
                     if (x === 0) {
                         ctx.moveTo(x, y);
                     }
@@ -177,7 +177,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             }
             // Add scan line effect for neon variant
             if (variant === 'neon') {
-                const scanLineY = (Date.now() * 0.1) % canvas.height;
+                const _scanLineY = (Date.now() * 0.1) % canvas.height;
                 ctx.strokeStyle = `rgba(255, 0, 110, ${intensity === 'low' ? 0.3 : intensity === 'medium' ? 0.5 : 0.7})`;
                 ctx.lineWidth = 3;
                 ctx.shadowColor = '#ff006e';

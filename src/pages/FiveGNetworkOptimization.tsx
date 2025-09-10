@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
-const FiveGNetworkOptimization = () => {
+import { _Helmet } from 'react-helmet-async';
+import { _Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
+const _FiveGNetworkOptimization = () => {
     return (<>
       <Helmet>
         <title>5G Network Optimization - Zion Tech Group</title>

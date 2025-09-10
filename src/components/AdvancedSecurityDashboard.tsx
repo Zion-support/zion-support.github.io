@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
-const mockSecurityEvents = [
+import { _Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
+const _mockSecurityEvents = [
     {
         id: '1',
         type: 'threat',
@@ -38,7 +38,7 @@ const mockSecurityEvents = [
         priority: 'high'
     }
 ];
-const mockComplianceRequirements = [
+const _mockComplianceRequirements = [
     {
         id: '1',
         framework: 'SOC2',
@@ -73,7 +73,7 @@ const mockComplianceRequirements = [
         controls: ['Risk assessment', 'Mitigation planning', 'Documentation']
     }
 ];
-const mockSecurityMetrics = [
+const _mockSecurityMetrics = [
     {
         id: '1',
         name: 'Security Score',
@@ -115,7 +115,7 @@ const mockSecurityMetrics = [
         category: 'Remediation'
     }
 ];
-const mockThreatIntelligence = [
+const _mockThreatIntelligence = [
     {
         id: '1',
         threatType: 'Ransomware Campaign',
@@ -151,16 +151,16 @@ export function AdvancedSecurityDashboard() {
     const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics);
     const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];
-    const frameworks = ['all', 'SOC2', 'ISO27001', 'GDPR', 'HIPAA', 'PCI-DSS'];
-    const filteredEvents = selectedSeverity === 'all'
+    const _containerRef = useRef(null);
+    const _severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];
+    const _frameworks = ['all', 'SOC2', 'ISO27001', 'GDPR', 'HIPAA', 'PCI-DSS'];
+    const _filteredEvents = selectedSeverity === 'all'
         ? securityEvents
         : securityEvents.filter(event => event.severity === selectedSeverity);
-    const filteredCompliance = selectedFramework === 'all'
+    const _filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
         : complianceRequirements.filter(req => req.framework === selectedFramework);
-    const refreshData = async () => {
+    const _refreshData = async () => {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
@@ -168,11 +168,11 @@ export function AdvancedSecurityDashboard() {
     };
     useEffect(() => {
         if (autoRefresh) {
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+            const _interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
         }
     }, [autoRefresh]);
-    const getSeverityColor = (severity) => {
+    const _getSeverityColor = (severity) => {
         switch (severity) {
             case 'critical':
                 return 'bg-red-500 text-white';
@@ -186,7 +186,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-gray-500 text-white';
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'compliant':
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
@@ -198,7 +198,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
         }
     };
-    const getRiskLevelColor = (riskLevel) => {
+    const _getRiskLevelColor = (riskLevel) => {
         switch (riskLevel) {
             case 'high':
                 return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
@@ -208,7 +208,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
         }
     };
-    const getTrendIcon = (trend) => {
+    const _getTrendIcon = (trend) => {
         switch (trend) {
             case 'up':
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -218,7 +218,7 @@ export function AdvancedSecurityDashboard() {
                 return <Activity className="w-4 h-4 text-gray-500"/>;
         }
     };
-    const getEventIcon = (type) => {
+    const _getEventIcon = (type) => {
         switch (type) {
             case 'threat':
                 return <AlertTriangle className="w-5 h-5 text-red-500"/>;
@@ -315,7 +315,7 @@ export function AdvancedSecurityDashboard() {
             { id: 'threats', label: 'Threat Intel', icon: Shield },
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
-            const Icon = tab.icon;
+            const _Icon = tab.icon;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id
                     ? 'border-zion-red text-zion-red bg-zion-red/5'
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>

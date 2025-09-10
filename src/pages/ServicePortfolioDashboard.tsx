@@ -1,11 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain } from 'lucide-react';
 import AdvancedServicePortfolioDashboard from '../components/AdvancedServicePortfolioDashboard';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-const ServicePortfolioDashboard = () => {
-    const features = [
+import { _Button } from '../components/ui/button';
+import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+const _ServicePortfolioDashboard = () => {
+    const _features = [
         {
             icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
             title: 'Comprehensive Analytics',
@@ -27,7 +27,7 @@ const ServicePortfolioDashboard = () => {
             description: 'Data-driven recommendations for portfolio optimization and growth'
         }
     ];
-    const benefits = [
+    const _benefits = [
         'Comprehensive view of all service offerings and their performance',
         'Real-time analytics and performance metrics for informed decision making',
         'Portfolio optimization insights and strategic recommendations',
@@ -35,7 +35,7 @@ const ServicePortfolioDashboard = () => {
         'Market demand analysis and competitive positioning',
         'Technology maturity assessment and innovation tracking'
     ];
-    const portfolioStats = [
+    const _portfolioStats = [
         {
             label: 'Total Services',
             value: '52+',

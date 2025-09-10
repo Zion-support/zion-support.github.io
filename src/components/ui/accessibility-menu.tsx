@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from './button';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
+import { _Button } from './button';
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -12,7 +12,7 @@ export function AccessibilityMenu() {
     });
     useEffect(() => {
         // Load settings from localStorage
-        const savedSettings = localStorage.getItem('accessibility-settings');
+        const _savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
             setSettings(JSON.parse(savedSettings));
         }
@@ -23,8 +23,8 @@ export function AccessibilityMenu() {
         // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(settings));
     }, [settings]);
-    const applySettings = (newSettings) => {
-        const root = document.documentElement;
+    const _applySettings = (newSettings) => {
+        const _root = document.documentElement;
         // Font size
         root.style.setProperty('--font-size-multiplier', newSettings.fontSize === 'small' ? '0.875' :
             newSettings.fontSize === 'large' ? '1.125' : '1');
@@ -43,17 +43,17 @@ export function AccessibilityMenu() {
             root.classList.remove('reduced-motion');
         }
     };
-    const toggleSetting = (key) => {
+    const _toggleSetting = (key) => {
         setSettings(prev => ({
             ...prev,
             [key]: !prev[key]
         }));
     };
-    const updateFontSize = (size) => {
+    const _updateFontSize = (size) => {
         setSettings(prev => ({ ...prev, fontSize: size }));
     };
-    const resetSettings = () => {
-        const defaultSettings = {
+    const _resetSettings = () => {
+        const _defaultSettings = {
             fontSize: 'medium',
             highContrast: false,
             reducedMotion: false,

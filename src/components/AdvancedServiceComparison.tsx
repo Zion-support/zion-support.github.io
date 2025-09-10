@@ -1,14 +1,14 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+import { _motion } from 'framer-motion';
+import { _Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
+import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { _Button } from './ui/button';
+import { _Badge } from './ui/badge';
+import { _Input } from './ui/input';
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const POPULARITY_LEVELS = ['Low', 'Medium', 'High', 'Trending'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
-export const AdvancedServiceComparison = () => {
+export const _AdvancedServiceComparison = () => {
     const [selectedServices, setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({
         category: 'all',
@@ -19,7 +19,7 @@ export const AdvancedServiceComparison = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('grid');
     // Mock data - in real app this would come from props or API
-    const mockServices = [
+    const _mockServices = [
         {
             id: 'ai-crm-basic',
             name: 'AI CRM Basic',
@@ -89,21 +89,21 @@ export const AdvancedServiceComparison = () => {
             link: 'https://ziontechgroup.com/services/quantum-enterprise'
         }
     ];
-    const filteredServices = useMemo(() => {
+    const _filteredServices = useMemo(() => {
         return mockServices.filter(service => {
-            const matchesCategory = filters.category === 'all' || service.category === filters.category;
-            const matchesComplexity = filters.complexity === 'all' || service.complexity === filters.complexity;
-            const matchesTechnology = filters.technology === 'all' || service.technology.includes(filters.technology);
-            const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
+            const _matchesCategory = filters.category === 'all' || service.category === filters.category;
+            const _matchesComplexity = filters.complexity === 'all' || service.complexity === filters.complexity;
+            const _matchesTechnology = filters.technology === 'all' || service.technology.includes(filters.technology);
+            const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch;
         });
     }, [filters, searchTerm]);
-    const toggleServiceSelection = (serviceId) => {
+    const _toggleServiceSelection = (serviceId) => {
         setSelectedServices(prev => prev.includes(serviceId)
             ? prev.filter(id => id !== serviceId)
             : [...prev, serviceId]);
     };
-    const getComplexityColor = (complexity) => {
+    const _getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
@@ -112,7 +112,7 @@ export const AdvancedServiceComparison = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getPopularityIcon = (popularity) => {
+    const _getPopularityIcon = (popularity) => {
         switch (popularity) {
             case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>;
             case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;

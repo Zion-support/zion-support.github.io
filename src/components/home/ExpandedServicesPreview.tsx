@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
+import { _SERVICE_CATEGORIES } from '@/data/expandedServices';
 export function ExpandedServicesPreview() {
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
@@ -15,7 +15,7 @@ export function ExpandedServicesPreview() {
             default: return '⚡';
         }
     };
-    const getCategoryColor = (category) => {
+    const _getCategoryColor = (category) => {
         switch (category) {
             case 'AI Services': return 'from-purple-500 to-indigo-600';
             case 'Micro SAAS': return 'from-blue-500 to-cyan-600';

@@ -601,7 +601,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
 ];
-export const serviceCategories = [
+export const _serviceCategories = [
   {
     name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',

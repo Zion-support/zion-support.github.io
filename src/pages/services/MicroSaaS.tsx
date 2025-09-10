@@ -1,7 +1,7 @@
 import React from 'react';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
-const MicroSAAS = () => {
-    const microsaasServices = [
+import { _Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
+const _MicroSAAS = () => {
+    const _microsaasServices = [
         {
             icon: Package,
             title: "SAAS Development",
@@ -39,7 +39,7 @@ const MicroSAAS = () => {
             features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Lower development costs and faster time to market",
         "Scalable architecture that grows with your business",
         "Reduced infrastructure management overhead",
@@ -47,7 +47,7 @@ const MicroSAAS = () => {
         "Flexible subscription models and pricing strategies",
         "Continuous updates and feature improvements"
     ];
-    const technologies = [
+    const _technologies = [
         {
             name: "Frontend",
             description: "React, Vue.js, Angular with modern UI frameworks",
@@ -79,7 +79,7 @@ const MicroSAAS = () => {
             icon: TrendingUp
         }
     ];
-    const industries = [
+    const _industries = [
         {
             title: "Healthcare",
             description: "HIPAA-compliant patient management and telemedicine platforms",

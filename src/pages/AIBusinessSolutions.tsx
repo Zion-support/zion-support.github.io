@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { _Link } from 'react-router-dom';
 export default function AIBusinessSolutions() {
-    const businessSolutions = [
+    const _businessSolutions = [
         {
             category: 'Marketing & Sales',
             solutions: [
@@ -71,7 +71,7 @@ export default function AIBusinessSolutions() {
             ]
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: 'Increased Efficiency',
             description: 'Automate repetitive tasks and optimize workflows',
@@ -97,7 +97,7 @@ export default function AIBusinessSolutions() {
             detail: 'Customer satisfaction improvement'
         }
     ];
-    const industries = [
+    const _industries = [
         {
             name: 'Healthcare',
             applications: ['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare']

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
-const AIAutonomousLegalResearchAssistant = () => {
-    const features = [
+import { _Link } from 'react-router-dom';
+import { _Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
+const _AIAutonomousLegalResearchAssistant = () => {
+    const _features = [
         "Autonomous case law analysis",
         "Statute interpretation & updates",
         "Legal precedent identification",
@@ -12,7 +12,7 @@ const AIAutonomousLegalResearchAssistant = () => {
         "Multi-jurisdiction support",
         "AI-powered legal insights"
     ];
-    const benefits = [
+    const _benefits = [
         {
             icon: Clock,
             title: "Time Efficiency",
@@ -34,7 +34,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             description: "Stay current with latest legal changes and regulatory updates"
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Professional",
             price: "$899",
@@ -81,7 +81,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             ]
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: "Case Preparation",
             description: "Comprehensive legal research for case strategy and argument development",
@@ -103,7 +103,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             icon: BarChart3
         }
     ];
-    const industries = [
+    const _industries = [
         "Corporate Law",
         "Criminal Defense",
         "Family Law",

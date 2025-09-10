@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { HomeIcon, MagnifyingGlassIcon, ArrowLeftIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
-export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
-    const defaultSuggestions = [
+import { _Link } from 'react-router-dom';
+import { _motion } from 'framer-motion';
+import { _HomeIcon, MagnifyingGlassIcon, ArrowLeftIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+export const _Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
+    const _defaultSuggestions = [
         '/services',
         '/ai-solutions',
         '/about',
         '/contact',
         '/case-studies'
     ];
-    const suggestions = suggestedRoutes.length > 0 ? suggestedRoutes : defaultSuggestions;
+    const _suggestions = suggestedRoutes.length > 0 ? suggestedRoutes : defaultSuggestions;
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto text-center">
         {/* Error Icon */}

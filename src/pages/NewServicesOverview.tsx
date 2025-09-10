@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
+import { _Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
 export default function NewServicesOverview() {
-    const serviceCategories = [
+    const _serviceCategories = [
         {
             id: 'ai-services',
             title: 'Advanced AI Services',
@@ -154,7 +154,7 @@ export default function NewServicesOverview() {
             ]
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             icon: Brain,
             title: 'AI-First Approach',
@@ -180,7 +180,7 @@ export default function NewServicesOverview() {
             color: 'text-yellow-400'
         }
     ];
-    const stats = [
+    const _stats = [
         { icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
         { icon: TrendingUpIcon, value: '95%', label: 'Success Rate', description: 'Proven track record of delivery' },
         { icon: Award, value: '10+', label: 'Years Experience', description: 'Deep industry expertise' },

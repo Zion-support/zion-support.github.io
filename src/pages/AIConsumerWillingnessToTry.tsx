@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const AIConsumerWillingnessToTry = () => {
+import { _Helmet } from 'react-helmet-async';
+const _AIConsumerWillingnessToTry = () => {
     return (<>
       <Helmet>
         <title>AI Consumer Willingness to Try Platform | Zion Tech Group</title>

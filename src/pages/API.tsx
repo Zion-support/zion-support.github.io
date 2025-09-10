@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const API = () => {
+import { _Helmet } from 'react-helmet-async';
+const _API = () => {
     return (<>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>

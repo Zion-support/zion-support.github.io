@@ -1,25 +1,25 @@
-import { useState } from "react";
-import { Draggable } from "@hello-pangea/dnd";
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
+import { _useState } from "react";
+import { _Draggable } from "@hello-pangea/dnd";
+import { _formatDistanceToNow } from "date-fns";
+import { _Link } from "react-router-dom";
+import { _Card, CardContent } from "@/components/ui/card";
+import { _Avatar } from "@/components/ui/avatar";
+import { _Button } from "@/components/ui/button";
+import { _Textarea } from "@/components/ui/textarea";
+import { _MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from "lucide-react";
+import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
+import { _ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { _toast } from "@/hooks/use-toast";
+import { _HireConfirmationModal } from "./HireConfirmationModal";
 export function CandidateCard({ application, index }) {
     const [showNotes, setShowNotes] = useState(false);
     const [notes, setNotes] = useState(application.notes || "");
     const [showHireModal, setShowHireModal] = useState(false);
     // Check if application is stalled (no activity for 7 days)
-    const isStalled = application.updated_at &&
+    const _isStalled = application.updated_at &&
         new Date(application.updated_at).getTime() <
             (Date.now() - 7 * 24 * 60 * 60 * 1000);
-    const handleSaveNotes = () => {
+    const _handleSaveNotes = () => {
         // Here you would save the notes to the database
         // For now, we'll just show a toast
         toast({
@@ -28,7 +28,7 @@ export function CandidateCard({ application, index }) {
         });
         setShowNotes(false);
     };
-    const handleHireConfirmed = () => {
+    const _handleHireConfirmed = () => {
         // Hiring process completed via the modal
         toast({
             title: "Hiring process initiated",

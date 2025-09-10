@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _SEO } from "@/components/SEO";
+import { _PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
+import { _Link } from "react-router-dom";
 export default function AIContentGenerator() {
-    const features = [
+    const _features = [
         {
             title: "AI Writing Assistant",
             description: "Generate high-quality content for blogs, social media, and marketing campaigns",
@@ -28,7 +28,7 @@ export default function AIContentGenerator() {
             icon: <Target className="h-6 w-6 text-zion-cyan"/>
         }
     ];
-    const contentTypes = [
+    const _contentTypes = [
         {
             import: { SEO }, from, "@/components/SEO": ,
             import: { Button }, from, "@/components/ui/button": ,
@@ -82,7 +82,7 @@ export default function AIContentGenerator() {
             icon: <Video className="h-8 w-8 text-zion-blue"/>
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Starter",
             price: "$49",
@@ -148,7 +148,7 @@ export default function AIContentGenerator() {
             popular: false
         }
     ];
-    const testimonials = [
+    const _testimonials = [
         {
             name: "Jennifer Martinez",
             role: "Marketing Director, GrowthBrand",

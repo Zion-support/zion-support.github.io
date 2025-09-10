@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
-import { format } from "date-fns";
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
-import { useWebhooks } from "@/hooks/useWebhooks";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { Switch } from "@/components/ui/switch";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { _useState, useEffect } from "react";
+import { _format } from "date-fns";
+import { _Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
+import { _useWebhooks } from "@/hooks/useWebhooks";
+import { _Button } from "@/components/ui/button";
+import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { _Input } from "@/components/ui/input";
+import { _Checkbox } from "@/components/ui/checkbox";
+import { _Label } from "@/components/ui/label";
+import { _Badge } from "@/components/ui/badge";
+import { _Switch } from "@/components/ui/switch";
+import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { _AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { _ScrollArea } from "@/components/ui/scroll-area";
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {
     const { webhooks, loading, testResult, fetchWebhooks, createWebhook, toggleWebhook, deleteWebhook, testWebhook, clearTestResult } = useWebhooks();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -30,39 +30,39 @@ export function WebhooksManager() {
     useEffect(() => {
         fetchWebhooks();
     }, []);
-    const handleCreateWebhook = async () => {
+    const _handleCreateWebhook = async () => {
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;
         await createWebhook(webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? undefined : webhookSecret);
         setShowCreateDialog(false);
         resetWebhookForm();
     };
-    const handleToggleStatus = async (webhookId, currentStatus) => {
+    const _handleToggleStatus = async (webhookId, currentStatus) => {
         await toggleWebhook(webhookId, !currentStatus);
     };
-    const handleDeleteWebhook = async (webhookId) => {
+    const _handleDeleteWebhook = async (webhookId) => {
         await deleteWebhook(webhookId);
         setShowDeleteConfirm(null);
     };
-    const handleTestWebhook = async (webhookId) => {
+    const _handleTestWebhook = async (webhookId) => {
         await testWebhook(webhookId, testEventType);
         setShowTestResult(true);
     };
-    const resetWebhookForm = () => {
+    const _resetWebhookForm = () => {
         setWebhookName("");
         setWebhookUrl("");
         setWebhookSecret("");
         setSelectedEvents([]);
     };
     // Event type options
-    const eventOptions = [
+    const _eventOptions = [
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
         { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
         { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
         { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
     ];
     // Toggle an event selection
-    const toggleEvent = (event) => {
+    const _toggleEvent = (event) => {
         setSelectedEvents(prev => prev.includes(event)
             ? prev.filter(e => e !== event)
             : [...prev, event]);

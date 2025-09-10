@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard } from 'lucide-react';
 export default function FinancialSolutions() {
-    const features = [
+    const _features = [
         {
             icon: Brain,
             title: "AI-Powered Risk Assessment",
@@ -34,7 +34,7 @@ export default function FinancialSolutions() {
             description: "AI-driven investment strategies and portfolio management"
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Reduce fraud losses by 60-80%",
         "Improve risk assessment accuracy by 40%",
         "Lower operational costs by 30-50%",
@@ -42,7 +42,7 @@ export default function FinancialSolutions() {
         "Faster transaction processing",
         "Better regulatory compliance"
     ];
-    const solutions = [
+    const _solutions = [
         {
             title: "Digital Banking",
             description: "Modern digital banking platforms with AI-powered features"
@@ -60,7 +60,7 @@ export default function FinancialSolutions() {
             description: "Automated regulatory compliance and reporting"
         }
     ];
-    const industries = [
+    const _industries = [
         "Retail Banking",
         "Investment Banking",
         "Insurance",

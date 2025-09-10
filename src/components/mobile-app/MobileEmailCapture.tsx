@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useEnqueueSnackbar } from '@/context';
-export const MobileEmailCapture = () => {
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _useEnqueueSnackbar } from '@/context';
+export const _MobileEmailCapture = () => {
     const [email, setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-    const enqueueSnackbar = useEnqueueSnackbar();
-    const handleSubmit = async (e) => {
+    const _enqueueSnackbar = useEnqueueSnackbar();
+    const _handleSubmit = async (e) => {
         e.preventDefault();
         if (!email || isSubmitting)
             return;
@@ -23,7 +23,7 @@ export const MobileEmailCapture = () => {
             }, 5000);
         }
         catch (error) {
-            console.error("Error subscribing:", error);
+            // console.error("Error subscribing:", error);
             enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
         }
         finally {

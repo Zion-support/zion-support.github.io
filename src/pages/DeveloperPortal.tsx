@@ -1,12 +1,12 @@
 import React from 'react';
 import SEO from '../SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Button } from '../ui/button';
-import { Badge } from '../ui/badge';
-import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { _Button } from '../ui/button';
+import { _Badge } from '../ui/badge';
+import { _Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
+import { _Link } from 'react-router-dom';
 export default function DeveloperPortal() {
-    const apiFeatures = [
+    const _apiFeatures = [
         {
             title: 'RESTful APIs',
             description: 'Clean, intuitive REST APIs for all major platform features',
@@ -36,7 +36,7 @@ export default function DeveloperPortal() {
             docs: '/api-docs/sdks'
         }
     ];
-    const quickStartSteps = [
+    const _quickStartSteps = [
         {
             step: 1,
             title: 'Get API Keys',
@@ -62,7 +62,7 @@ export default function DeveloperPortal() {
             action: 'View Examples'
         }
     ];
-    const resources = [
+    const _resources = [
         {
             title: 'API Reference',
             description: 'Complete API endpoint documentation with examples',
@@ -140,7 +140,7 @@ export default function DeveloperPortal() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Powerful APIs & Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {apiFeatures.map((feature) => {
-            const IconComponent = feature.icon;
+            const _IconComponent = feature.icon;
             return (<Card key={feature.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
@@ -195,7 +195,7 @@ export default function DeveloperPortal() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Developer Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource) => {
-            const IconComponent = resource.icon;
+            const _IconComponent = resource.icon;
             return (<Card key={resource.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">

@@ -1,12 +1,12 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
+import { _SEO } from "@/components/SEO";
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Link } from "react-router-dom";
+import { _Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
 export default function HowItWorks() {
-    const clientSteps = [
+    const _clientSteps = [
         {
             icon: Search,
             title: "Search & Discover",
@@ -32,7 +32,7 @@ export default function HowItWorks() {
             color: "text-zion-purple"
         }
     ];
-    const talentSteps = [
+    const _talentSteps = [
         {
             icon: UserPlus,
             title: "Create Your Profile",
@@ -58,7 +58,7 @@ export default function HowItWorks() {
             color: "text-zion-purple"
         }
     ];
-    const platformFeatures = [
+    const _platformFeatures = [
         {
             icon: Zap,
             title: "AI-Powered Matching",
@@ -84,7 +84,7 @@ export default function HowItWorks() {
             color: "text-zion-purple"
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: "For Clients",
             icon: Users,

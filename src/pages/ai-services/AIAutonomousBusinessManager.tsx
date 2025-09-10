@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-const features = [
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
+const _features = [
     {
         title: "Intelligent Decision Making",
         description: "AI-powered decision engine that analyzes market trends, customer behavior, and business metrics to make optimal business decisions.",
@@ -29,7 +29,7 @@ const features = [
         color: "from-orange-500 to-red-500"
     }
 ];
-const benefits = [
+const _benefits = [
     "Increase operational efficiency by up to 60%",
     "Reduce decision-making time by 80%",
     "Improve customer satisfaction scores by 45%",
@@ -37,7 +37,7 @@ const benefits = [
     "Minimize operational risks with predictive analytics",
     "Scale operations seamlessly with intelligent automation"
 ];
-const useCases = [
+const _useCases = [
     {
         title: "Enterprise Management",
         description: "Comprehensive business management for large enterprises with multiple departments and complex operations.",
@@ -59,7 +59,7 @@ const useCases = [
         icon: BarChart3
     }
 ];
-const testimonials = [
+const _testimonials = [
     {
         content: "The AI Autonomous Business Manager transformed our operations completely. We've seen a 40% increase in efficiency and our decision-making process is now lightning-fast.",
         name: "Sarah Chen",
@@ -126,7 +126,7 @@ export default function AIAutonomousBusinessManager() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
-            const IconComponent = feature.icon;
+            const _IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-gray-800/70 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                     <IconComponent className="w-8 h-8"/>
@@ -174,7 +174,7 @@ export default function AIAutonomousBusinessManager() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
+            const _IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>

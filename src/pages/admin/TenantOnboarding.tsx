@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
-import { Switch } from "@/components/ui/switch";
+import { _SEO } from "@/components/SEO";
+import { _useAuth } from "@/hooks/useAuth";
+import { _Navigate } from "react-router-dom";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Input } from "@/components/ui/input";
+import { _Label } from "@/components/ui/label";
+import { _Button } from "@/components/ui/button";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { _toast } from "sonner";
+import { _supabase } from "@/integrations/supabase/client";
+import { _Switch } from "@/components/ui/switch";
 export default function TenantOnboarding() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("company");
@@ -27,28 +27,28 @@ export default function TenantOnboarding() {
         is_co_branded: true
     });
     // Check if user has admin role
-    const isAdmin = user?.role === "admin";
+    const _isAdmin = user?.role === "admin";
     if (!isAdmin) {
         return <Navigate to="/unauthorized"/>;
     }
-    const handleInputChange = (e) => {
+    const _handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
-    const handleSelectChange = (name, value) => {
+    const _handleSelectChange = (name, value) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
-    const handleSwitchChange = (name, checked) => {
+    const _handleSwitchChange = (name, checked) => {
         setFormData(prev => ({ ...prev, [name]: checked }));
     };
-    const handleSubmit = async (e) => {
+    const _handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         try {
             // Generate subdomain if not provided
-            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const _subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
-            const landingPageCopy = {
+            const _landingPageCopy = {
                 headline: "AI Hiring Assistant",
                 subtitle: `Find the best talent for your ${formData.industry || "company"}`,
                 cta: "Get Started"
@@ -90,7 +90,7 @@ export default function TenantOnboarding() {
             });
         }
         catch (error) {
-            console.error("Error creating tenant:", error);
+            // console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
             });

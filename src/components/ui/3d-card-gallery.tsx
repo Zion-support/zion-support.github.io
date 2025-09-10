@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+import { _motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { _Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
+import { _Button } from './button';
+import { _Badge } from './badge';
 export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
@@ -18,18 +18,18 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const [sortOrder, setSortOrder] = useState('desc');
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
-    const galleryRef = useRef(null);
+    const _galleryRef = useRef(null);
     // Filter and sort items
-    const filteredAndSortedItems = items
+    const _filteredAndSortedItems = items
         .filter(item => {
-        const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        const _matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-        const matchesCategory = filters.category.length === 0 || filters.category.includes(item.category);
-        const matchesStatus = filters.status.length === 0 || filters.status.includes(item.status);
-        const matchesComplexity = filters.complexity.length === 0 || filters.complexity.includes(item.metadata.complexity);
-        const matchesVerified = !filters.verified || item.metadata.verified;
-        const matchesFeatured = !filters.featured || item.metadata.featured;
+        const _matchesCategory = filters.category.length === 0 || filters.category.includes(item.category);
+        const _matchesStatus = filters.status.length === 0 || filters.status.includes(item.status);
+        const _matchesComplexity = filters.complexity.length === 0 || filters.complexity.includes(item.metadata.complexity);
+        const _matchesVerified = !filters.verified || item.metadata.verified;
+        const _matchesFeatured = !filters.featured || item.metadata.featured;
         return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured;
     })
         .sort((a, b) => {
@@ -65,22 +65,22 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     useEffect(() => {
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length);
         }, 3000);
         return () => clearInterval(interval);
     }, [isPlaying, viewMode, filteredAndSortedItems.length]);
     // Handle card click
-    const handleCardClick = useCallback((item) => {
+    const _handleCardClick = useCallback((item) => {
         setSelectedItem(item);
         onCardClick?.(item);
     }, [onCardClick]);
     // Handle action click
-    const handleActionClick = useCallback((itemId, action) => {
+    const _handleActionClick = useCallback((itemId, action) => {
         onAction?.(itemId, action);
     }, [onAction]);
     // Get status color
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'active':
                 return 'border-green-500/50 bg-green-500/10 text-green-400';
@@ -95,7 +95,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         }
     };
     // Get complexity color
-    const getComplexityColor = (complexity) => {
+    const _getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'beginner':
                 return 'border-green-500/50 bg-green-500/10 text-green-400';
@@ -110,8 +110,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         }
     };
     // Get category icon
-    const getCategoryIcon = (category) => {
-        const iconMap = {
+    const _getCategoryIcon = (category) => {
+        const _iconMap = {
             'AI & ML': Brain,
             'Cybersecurity': Shield,
             'Cloud': Globe,
@@ -214,7 +214,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               {/* Image */}
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
                 {(() => {
-                    const CategoryIcon = getCategoryIcon(item.category);
+                    const _CategoryIcon = getCategoryIcon(item.category);
                     return <CategoryIcon className="w-8 h-8 text-white"/>;
                 })()}
               </div>
@@ -288,7 +288,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 <div>
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">
                     {(() => {
-                const CategoryIcon = getCategoryIcon(selectedItem.category);
+                const _CategoryIcon = getCategoryIcon(selectedItem.category);
                 return <CategoryIcon className="w-24 h-24 text-white"/>;
             })()}
                   </div>
@@ -361,26 +361,26 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-    const rotateX = useSpring(useTransform(y, [-100, 100], [15, -15]), { stiffness: 300, damping: 30 });
-    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
-    const CategoryIcon = getCategoryIcon(item.category);
-    const handleMouseMove = useCallback((event) => {
+    const _x = useMotionValue(0);
+    const _y = useMotionValue(0);
+    const _rotateX = useSpring(useTransform(y, [-100, 100], [15, -15]), { stiffness: 300, damping: 30 });
+    const _rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
+    const _CategoryIcon = getCategoryIcon(item.category);
+    const _handleMouseMove = useCallback((event) => {
         if (!isHovered)
             return;
-        const rect = event.currentTarget.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
+        const _rect = event.currentTarget.getBoundingClientRect();
+        const _centerX = rect.left + rect.width / 2;
+        const _centerY = rect.top + rect.height / 2;
         x.set(event.clientX - centerX);
         y.set(event.clientY - centerY);
     }, [isHovered, x, y]);
-    const handleMouseLeave = useCallback(() => {
+    const _handleMouseLeave = useCallback(() => {
         x.set(0);
         y.set(0);
         setIsHovered(false);
     }, [x, y]);
-    const handleLike = useCallback((e) => {
+    const _handleLike = useCallback((e) => {
         e.stopPropagation();
         setIsLiked(!isLiked);
     }, [isLiked]);

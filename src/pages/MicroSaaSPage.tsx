@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Badge } from '@/components/ui/badge';
+import { _Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
 export default function MicroSAASPage() {
-    const microSAASServices = [
+    const _microSAASServices = [
         {
             id: "email-automation",
             title: "Email Marketing Automation",
@@ -282,7 +282,7 @@ export default function MicroSAASPage() {
             reviews: 112
         }
     ];
-    const categories = [
+    const _categories = [
         "All Services",
         "Marketing",
         "Productivity",
@@ -298,7 +298,7 @@ export default function MicroSAASPage() {
         "Feedback"
     ];
     const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-    const filteredServices = selectedCategory === "All Services"
+    const _filteredServices = selectedCategory === "All Services"
         ? microSAASServices
         : microSAASServices.filter(service => service.category === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">

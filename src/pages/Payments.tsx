@@ -1,7 +1,7 @@
 import React from "react";
-import { TransactionHistory } from "@/components/transactions/TransactionHistory";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _TransactionHistory } from "@/components/transactions/TransactionHistory";
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Payments() {
     return (<>
       
@@ -84,7 +84,7 @@ export default function Payments() {
     </>);
 }
 // Import UI components for Payment Settings tab
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+import { _Button } from "@/components/ui/button";
+import { _Switch } from "@/components/ui/switch";
+import { _Label } from "@/components/ui/label";
+import { _Checkbox } from "@/components/ui/checkbox";

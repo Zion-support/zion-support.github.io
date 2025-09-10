@@ -1,10 +1,10 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { _Badge } from './ui/badge';
+import { _Button } from './ui/button';
+import { _Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 export function ServiceShowcase({ services }) {
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return <Zap className="h-5 w-5"/>;
             case 'Security': return <Shield className="h-5 w-5"/>;
@@ -13,7 +13,7 @@ export function ServiceShowcase({ services }) {
             default: return <Star className="h-5 w-5"/>;
         }
     };
-    const getCategoryColor = (category) => {
+    const _getCategoryColor = (category) => {
         switch (category) {
             case 'AI Services': return 'from-purple-500 to-pink-500';
             case 'Security': return 'from-red-500 to-orange-500';

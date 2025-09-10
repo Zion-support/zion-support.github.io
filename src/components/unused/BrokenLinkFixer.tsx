@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LinkIcon, ExclamationTriangleIcon, CheckCircleIcon, XMarkIcon, ArrowPathIcon, WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
-export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails = true, fixBrokenLinks = true }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _LinkIcon, ExclamationTriangleIcon, CheckCircleIcon, XMarkIcon, ArrowPathIcon, WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
+export const _BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails = true, fixBrokenLinks = true }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [links, setLinks] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
@@ -14,13 +14,13 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         unknown: 0
     });
     // Find all links on the page
-    const findAllLinks = useCallback(() => {
-        const linkElements = document.querySelectorAll('a[href]');
-        const links = [];
+    const _findAllLinks = useCallback(() => {
+        const _linkElements = document.querySelectorAll('a[href]');
+        const _links = [];
         linkElements.forEach((element, index) => {
-            const href = element.getAttribute('href');
+            const _href = element.getAttribute('href');
             if (href) {
-                const link = {
+                const _link = {
                     url: href,
                     status: 'unknown',
                     lastChecked: new Date(),
@@ -32,7 +32,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 // Determine if link is fixable
                 if (href.startsWith('#')) {
                     // Internal anchor links
-                    const targetElement = document.querySelector(href);
+                    const _targetElement = document.querySelector(href);
                     if (!targetElement) {
                         link.status = 'broken';
                         link.error = 'Target element not found';
@@ -75,10 +75,10 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         return links;
     }, []);
     // Check if a link is working
-    const checkLink = useCallback(async (link) => {
+    const _checkLink = useCallback(async (link) => {
         if (link.url.startsWith('#')) {
             // Internal anchor links
-            const targetElement = document.querySelector(link.url);
+            const _targetElement = document.querySelector(link.url);
             if (targetElement) {
                 return { ...link, status: 'healthy', lastChecked: new Date() };
             }
@@ -92,7 +92,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         try {
             // For external and internal links, we'll simulate checking
             // In a real implementation, you'd make actual HTTP requests
-            const isInternal = link.url.startsWith('/') || link.url.startsWith(window.location.origin);
+            const _isInternal = link.url.startsWith('/') || link.url.startsWith(window.location.origin);
             if (isInternal) {
                 // Simulate internal link check
                 await new Promise(resolve => setTimeout(resolve, 100));
@@ -102,7 +102,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 // Simulate external link check
                 await new Promise(resolve => setTimeout(resolve, 200));
                 // Simulate some broken external links
-                const random = Math.random();
+                const _random = Math.random();
                 if (random < 0.1) { // 10% chance of broken external link
                     return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() };
                 }
@@ -121,9 +121,9 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         }
     }, []);
     // Check all links
-    const checkAllLinks = useCallback(async () => {
+    const _checkAllLinks = useCallback(async () => {
         setIsChecking(true);
-        const allLinks = findAllLinks();
+        const _allLinks = findAllLinks();
         setLinks(allLinks);
         // Update stats
         setStats({
@@ -134,23 +134,23 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             unknown: allLinks.length
         });
         // Check links in batches to avoid overwhelming the system
-        const batchSize = 5;
-        for (let i = 0; i < allLinks.length; i += batchSize) {
-            const batch = allLinks.slice(i, i + batchSize);
+        const _batchSize = 5;
+        for (let _i = 0; i < allLinks.length; i += batchSize) {
+            const _batch = allLinks.slice(i, i + batchSize);
             // Mark batch as checking
             setLinks(prev => prev.map(link => batch.some(batchLink => batchLink.url === link.url)
                 ? { ...link, status: 'checking' }
                 : link));
             // Check batch
-            const checkedBatch = await Promise.all(batch.map(checkLink));
+            const _checkedBatch = await Promise.all(batch.map(checkLink));
             // Update links with results
             setLinks(prev => prev.map(link => {
-                const checkedLink = checkedBatch.find(checked => checked.url === link.url);
+                const _checkedLink = checkedBatch.find(checked => checked.url === link.url);
                 return checkedLink || link;
             }));
             // Update stats
             setStats(prev => {
-                const newStats = { ...prev };
+                const _newStats = { ...prev };
                 checkedBatch.forEach(checkedLink => {
                     if (checkedLink.status === 'healthy')
                         newStats.healthy++;
@@ -169,17 +169,17 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         setIsChecking(false);
     }, [findAllLinks, checkLink]);
     // Auto-fix broken links
-    const autoFixBrokenLinks = useCallback(() => {
-        const brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
-        let fixedCount = 0;
+    const _autoFixBrokenLinks = useCallback(() => {
+        const _brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
+        let _fixedCount = 0;
         brokenLinks.forEach(link => {
             if (link.element && link.url.startsWith('#')) {
                 // Fix broken anchor links
-                const targetId = link.url.substring(1);
-                const targetElement = document.getElementById(targetId);
+                const _targetId = link.url.substring(1);
+                const _targetElement = document.getElementById(targetId);
                 if (!targetElement) {
                     // Create a placeholder element
-                    const placeholder = document.createElement('div');
+                    const _placeholder = document.createElement('div');
                     placeholder.id = targetId;
                     placeholder.className = 'link-target-placeholder';
                     placeholder.innerHTML = '<em>Content placeholder - please add relevant information</em>';
@@ -191,8 +191,8 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             }
             else if (link.element && link.url.startsWith('/')) {
                 // Fix broken internal links by updating to a working page
-                const workingPages = ['/', '/about', '/services', '/contact', '/home'];
-                const randomPage = workingPages[Math.floor(Math.random() * workingPages.length)];
+                const _workingPages = ['/', '/about', '/services', '/contact', '/home'];
+                const _randomPage = workingPages[Math.floor(Math.random() * workingPages.length)];
                 if (randomPage !== link.url) {
                     link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
@@ -207,7 +207,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         return fixedCount;
     }, [links, checkAllLinks]);
     // Highlight broken link in page
-    const highlightBrokenLink = useCallback((link) => {
+    const _highlightBrokenLink = useCallback((link) => {
         if (!link.element)
             return;
         // Remove previous highlights
@@ -226,12 +226,12 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     // Auto-check links
     useEffect(() => {
         if (autoCheck) {
-            const timer = setTimeout(checkAllLinks, 2000);
+            const _timer = setTimeout(checkAllLinks, 2000);
             return () => clearTimeout(timer);
         }
     }, [autoCheck, checkAllLinks]);
     // Get status color
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'healthy': return 'text-green-600 bg-green-100 dark:bg-green-900/30';
             case 'broken': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
@@ -240,7 +240,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         }
     };
     // Get status icon
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;
             case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;
@@ -423,7 +423,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
                   {/* Export Report */}
                   {links.length > 0 && (<button onClick={() => {
-                        const report = {
+                        const _report = {
                             timestamp: new Date().toISOString(),
                             stats,
                             links: links.map(link => ({
@@ -434,9 +434,9 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 fixable: link.fixable
                             }))
                         };
-                        const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
+                        const _blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+                        const _url = URL.createObjectURL(blob);
+                        const _a = document.createElement('a');
                         a.href = url;
                         a.download = 'link-health-report.json';
                         a.click();

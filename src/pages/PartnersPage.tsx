@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 import { 
   Users, 
   Globe, 
@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 const PartnersPage: React.FC = () => {
-  const partners = [
+  const _partners = [
     {
       id: 1,
       name: 'Microsoft',
@@ -45,7 +45,7 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const partnershipTiers = [
+  const _partnershipTiers = [
     {
       name: 'Platinum',
       icon: Star,

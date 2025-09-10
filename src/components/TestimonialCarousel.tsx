@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
-const testimonials = [
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
+const _testimonials = [
     {
         id: 1,
         name: 'Sarah Johnson',
@@ -73,13 +73,13 @@ export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
     useEffect(() => {
-        const timer = setInterval(() => {
+        const _timer = setInterval(() => {
             setDirection(1);
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);
         }, 5000);
         return () => clearInterval(timer);
     }, []);
-    const slideVariants = {
+    const _slideVariants = {
         enter: (direction) => ({
             x: direction > 0 ? 1000 : -1000,
             opacity: 0
@@ -95,15 +95,15 @@ export function TestimonialCarousel() {
             opacity: 0
         })
     };
-    const swipeConfidenceThreshold = 10000;
-    const swipePower = (offset, velocity) => {
+    const _swipeConfidenceThreshold = 10000;
+    const _swipePower = (offset, velocity) => {
         return Math.abs(offset) * velocity;
     };
-    const paginate = (newDirection) => {
+    const _paginate = (newDirection) => {
         setDirection(newDirection);
         setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length);
     };
-    const goToSlide = (index) => {
+    const _goToSlide = (index) => {
         setDirection(index > currentIndex ? 1 : -1);
         setCurrentIndex(index);
     };
@@ -133,7 +133,7 @@ export function TestimonialCarousel() {
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 }
         }} drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={1} onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
+            const _swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
                 paginate(1);
             }

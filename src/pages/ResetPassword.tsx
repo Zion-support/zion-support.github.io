@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists
-import { toast } from '@/hooks/use-toast'; // Assuming this hook exists
+import { _useState, useEffect } from 'react';
+import { _useParams, useNavigate } from 'react-router-dom';
+import { _Input } from '@/components/ui/input';
+import { _Button } from '@/components/ui/button';
+import { _PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists
+import { _toast } from '@/hooks/use-toast'; // Assuming this hook exists
 // Placeholder for the actual API call, to be implemented in a later step
-import { resetPassword } from '@/services/auth';
+import { _resetPassword } from '@/services/auth';
 export default function ResetPasswordPage() {
     const { token } = useParams();
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -19,13 +19,13 @@ export default function ResetPasswordPage() {
             // Consider redirecting to an error page or login page
         }
     }, [token]);
-    const handlePasswordChange = (e) => {
+    const _handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
-    const handleConfirmPasswordChange = (e) => {
+    const _handleConfirmPasswordChange = (e) => {
         setConfirmPassword(e.target.value);
     };
-    const handleSubmit = async (e) => {
+    const _handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         if (password !== confirmPassword) {
@@ -45,7 +45,7 @@ export default function ResetPasswordPage() {
         }
         catch (err) {
             // Ensure err.message is a string.
-            const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
+            const _errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
             setError(errorMessage);
             toast.error(errorMessage);
         }

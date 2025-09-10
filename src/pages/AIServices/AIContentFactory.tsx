@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
 import SEO from '../SEO';
-const features = [
+const _features = [
     {
         title: "AI-Powered Content Factory",
         description: "Intelligent content factory system that learns and adapts to your specific needs and requirements.",
@@ -29,7 +29,7 @@ const features = [
         color: "from-orange-500 to-red-500"
     }
 ];
-const benefits = [
+const _benefits = [
     "Increase efficiency and productivity",
     "Reduce operational costs",
     "Improve accuracy and quality",
@@ -90,7 +90,7 @@ export default function AIContentFactory() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
-            const IconComponent = feature.icon;
+            const _IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                     <IconComponent className="w-8 h-8"/>

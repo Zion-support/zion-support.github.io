@@ -1,16 +1,16 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
+import { _Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
+import { _Badge } from './ui/badge';
+import { _Button } from './ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { _Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
+import { _COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
 export function ServicesComparisonTable() {
-    const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
-    const getCategoryServices = (category) => {
+    const _serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
+    const _getCategoryServices = (category) => {
         return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
     };
-    const getFeatureIcon = (hasFeature) => {
+    const _getFeatureIcon = (hasFeature) => {
         return hasFeature ? (<Check className="w-4 h-4 text-green-500"/>) : (<X className="w-4 h-4 text-red-500"/>);
     };
     return (<div className="py-16 bg-slate-50 dark:bg-slate-900">
@@ -27,8 +27,8 @@ export function ServicesComparisonTable() {
         {/* Service Categories Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {serviceCategories.map((category) => {
-            const services = getCategoryServices(category);
-            const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) / services.length;
+            const _services = getCategoryServices(category);
+            const _avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) / services.length;
             return (<Card key={category} className="border-2 border-slate-200 dark:border-slate-700">
                 <CardHeader className="text-center">
                   <CardTitle className="text-slate-900 dark:text-white">{category}</CardTitle>

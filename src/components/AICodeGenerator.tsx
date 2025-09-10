@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
-import { useAICodeGeneration } from '../hooks/useAICodeGeneration';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const AICodeGenerator = () => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
+import { _useAICodeGeneration } from '../hooks/useAICodeGeneration';
+import { _useAnalytics } from '../hooks/useAnalytics';
+export const _AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -27,7 +27,7 @@ export const AICodeGenerator = () => {
         includeMetrics: false
     });
     // Handle form submission
-    const handleSubmit = useCallback(async (e) => {
+    const _handleSubmit = useCallback(async (e) => {
         e.preventDefault();
         if (!form.prompt.trim())
             return;
@@ -40,18 +40,18 @@ export const AICodeGenerator = () => {
         });
     }, [form, generateCode, trackEvent]);
     // Handle custom code analysis
-    const handleAnalyzeCustomCode = useCallback(async () => {
+    const _handleAnalyzeCustomCode = useCallback(async () => {
         if (!customCode.trim())
             return;
         await analyzeCode(customCode, form.language);
         trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length);
     }, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization
-    const handleOptimizeCode = useCallback(async (focus) => {
+    const _handleOptimizeCode = useCallback(async (focus) => {
         if (!generatedCode && !customCode)
             return;
-        const codeToOptimize = generatedCode || customCode;
-        const optimizedCode = await optimizeCode(codeToOptimize, focus);
+        const _codeToOptimize = generatedCode || customCode;
+        const _optimizedCode = await optimizeCode(codeToOptimize, focus);
         if (generatedCode) {
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
@@ -59,27 +59,27 @@ export const AICodeGenerator = () => {
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length);
     }, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
-    const handleGenerateTests = useCallback(async () => {
+    const _handleGenerateTests = useCallback(async () => {
         if (!generatedCode && !customCode)
             return;
-        const codeToTest = generatedCode || customCode;
-        const testCode = await generateTests(codeToTest, form.language);
+        const _codeToTest = generatedCode || customCode;
+        const _testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
-        console.log('Generated tests:', testCode);
+        // console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
-    const handleGenerateDocs = useCallback(async () => {
+    const _handleGenerateDocs = useCallback(async () => {
         if (!generatedCode && !customCode)
             return;
-        const codeToDoc = generatedCode || customCode;
-        const docs = await generateDocs(codeToDoc, form.language);
+        const _codeToDoc = generatedCode || customCode;
+        const _docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
-        console.log('Generated docs:', docs);
+        // console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
-    const copyToClipboard = useCallback(async (code) => {
+    const _copyToClipboard = useCallback(async (code) => {
         try {
             await navigator.clipboard.writeText(code);
             setCopied(true);
@@ -87,11 +87,11 @@ export const AICodeGenerator = () => {
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
         }
         catch (error) {
-            console.error('Failed to copy code:', error);
+            // console.error('Failed to copy code:', error);
         }
     }, [trackEvent]);
     // Apply suggestion
-    const handleApplySuggestion = useCallback((suggestion) => {
+    const _handleApplySuggestion = useCallback((suggestion) => {
         applySuggestion(suggestion);
         trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, undefined, {
             suggestionId: suggestion.id,
@@ -99,7 +99,7 @@ export const AICodeGenerator = () => {
         });
     }, [applySuggestion, trackEvent]);
     // Clear history
-    const handleClearHistory = useCallback(() => {
+    const _handleClearHistory = useCallback(() => {
         clearHistory();
         trackEvent('ai_code_generator', 'history_cleared', 'manual');
     }, [clearHistory, trackEvent]);
@@ -302,7 +302,7 @@ export const AICodeGenerator = () => {
                     { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {
-                    const value = codeAnalysis[key];
+                    const _value = codeAnalysis[key];
                     if (typeof value === 'number') {
                         return (<div key={key} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>

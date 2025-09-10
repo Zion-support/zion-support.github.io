@@ -1,8 +1,8 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
-import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
+import { _SEO } from '../../components/SEO';
+import { _Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
 export default function MicroSAASSolutions() {
-    const services = [
+    const _services = [
         {
             title: "Custom SAAS Development",
             description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
@@ -34,7 +34,7 @@ export default function MicroSAASSolutions() {
             features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: "Rapid Deployment",
             description: "Quick time-to-market with agile development methodologies",
@@ -56,7 +56,7 @@ export default function MicroSAASSolutions() {
             icon: Shield
         }
     ];
-    const industries = [
+    const _industries = [
         {
             name: "Healthcare",
             description: "HIPAA-compliant patient management systems",

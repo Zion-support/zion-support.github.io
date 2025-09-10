@@ -1,23 +1,23 @@
 import Link from 'next/link';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
+import { _Heart } from 'lucide-react';
+import { _useWishlist } from '@/hooks/useWishlist';
+import { _Button } from '@/components/ui/button';
+import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
+import { _useDispatch } from 'react-redux';
+import { _addItem } from '@/store/cartSlice';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { captureException } from '@/utils/sentry';
+import { _useAuth } from '@/context/auth/AuthProvider';
+import { _useRouter } from 'next/router';
+import { _useMediaQuery } from 'usehooks-ts';
+import { _useEnqueueSnackbar } from '@/context/SnackbarContext';
+import { _captureException } from '@/utils/sentry';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const { isAuthenticated } = useAuth();
     const { isWishlisted, toggle } = useWishlist();
     const [imageError, setImageError] = useState(false);
-    const router = useRouter();
-    const enqueueSnackbar = useEnqueueSnackbar();
+    const _router = useRouter();
+    const _enqueueSnackbar = useEnqueueSnackbar();
     if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
         captureException(new Error('Invalid product data received by ProductCard'), {
             extra: { product },
@@ -28,11 +28,11 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>);
     }
-    const active = isWishlisted(product.id);
-    const dispatch = useDispatch();
+    const _active = isWishlisted(product.id);
+    const _dispatch = useDispatch();
     // Title is now guaranteed to be a non-empty string by the check above.
-    const productTitle = product.title;
-    const addToCart = () => {
+    const _productTitle = product.title;
+    const _addToCart = () => {
         dispatch(addItem({
             id: product.id,
             title: productTitle,
@@ -40,9 +40,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             image: imageUrl || undefined,
         }));
     };
-    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-    const imageAltText = productTitle;
-    const handleImageError = (error) => {
+    const _imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
+    const _imageAltText = productTitle;
+    const _handleImageError = (error) => {
         if (!imageError) {
             setImageError(true);
             captureException(error, {
@@ -51,9 +51,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             });
         }
     };
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const isTablet = useMediaQuery('(max-width: 1200px)');
-    const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+    const _isMobile = useMediaQuery('(max-width: 768px)');
+    const _isTablet = useMediaQuery('(max-width: 1200px)');
+    const _imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
     return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>
         <Heart aria-hidden="true" className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}/>

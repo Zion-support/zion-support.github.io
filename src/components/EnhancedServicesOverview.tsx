@@ -1,16 +1,16 @@
 import React from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-const ServiceCategory = ({ category, services }) => {
-    const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
+import { _ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+const _ServiceCategory = ({ category, services }) => {
+    const _categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
     if (categoryServices.length === 0)
         return null;
-    const getCategoryIcon = (categoryName) => {
-        const iconMap = {
+    const _getCategoryIcon = (categoryName) => {
+        const _iconMap = {
             'AI & Machine Learning': <Brain className="w-6 h-6"/>,
             'Cybersecurity & Compliance': <Shield className="w-6 h-6"/>,
             'Data & Analytics': <Database className="w-6 h-6"/>,
@@ -25,8 +25,8 @@ const ServiceCategory = ({ category, services }) => {
         };
         return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>;
     };
-    const getCategoryColor = (categoryName) => {
-        const colorMap = {
+    const _getCategoryColor = (categoryName) => {
+        const _colorMap = {
             'AI & Machine Learning': 'from-purple-500 to-indigo-600',
             'Cybersecurity & Compliance': 'from-red-500 to-pink-600',
             'Data & Analytics': 'from-blue-500 to-cyan-600',
@@ -124,7 +124,7 @@ const ServiceCategory = ({ category, services }) => {
       </div>
     </div>);
 };
-const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
+const _BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group Services?</h2>
@@ -203,7 +203,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
       </div>
     </div>
   </section>);
-const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">
+const _ContactSection = () => (<section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
       <p className="text-zion-slate-light text-lg max-w-2xl mx-auto mb-8">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react';
-const mockProjects = [
+import { _Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react';
+const _mockProjects = [
     {
         id: '1',
         name: 'AI-Powered E-commerce Platform',
@@ -54,14 +54,14 @@ const mockProjects = [
         ]
     }
 ];
-const statusColors = {
+const _statusColors = {
     'planning': 'bg-zion-blue text-white',
     'in-progress': 'bg-zion-cyan text-white',
     'review': 'bg-zion-gold text-white',
     'completed': 'bg-zion-emerald text-white',
     'on-hold': 'bg-zion-slate text-white'
 };
-const priorityColors = {
+const _priorityColors = {
     'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
@@ -74,14 +74,14 @@ export function ProjectManagementDashboard() {
     const [filterPriority, setFilterPriority] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [viewMode, setViewMode] = useState('grid');
-    const filteredProjects = mockProjects.filter(project => {
-        const statusMatch = filterStatus === 'all' || project.status === filterStatus;
-        const priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
-        const searchMatch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const _filteredProjects = mockProjects.filter(project => {
+        const _statusMatch = filterStatus === 'all' || project.status === filterStatus;
+        const _priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
+        const _searchMatch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             project.description.toLowerCase().includes(searchQuery.toLowerCase());
         return statusMatch && priorityMatch && searchMatch;
     });
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'planning': return <Calendar className="w-4 h-4"/>;
             case 'in-progress': return <TrendingUp className="w-4 h-4"/>;
@@ -91,7 +91,7 @@ export function ProjectManagementDashboard() {
             default: return <Clock className="w-4 h-4"/>;
         }
     };
-    const getProgressColor = (progress) => {
+    const _getProgressColor = (progress) => {
         if (progress >= 80)
             return 'bg-zion-emerald';
         if (progress >= 60)
@@ -102,10 +102,10 @@ export function ProjectManagementDashboard() {
             return 'bg-zion-orange';
         return 'bg-red-500';
     };
-    const calculateProjectHealth = (project) => {
-        const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
-        const totalTasks = project.tasks.length;
-        const budgetUtilization = (project.spent / project.budget) * 100;
+    const _calculateProjectHealth = (project) => {
+        const _overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
+        const _totalTasks = project.tasks.length;
+        const _budgetUtilization = (project.spent / project.budget) * 100;
         if (overdueTasks > 0 || budgetUtilization > 90)
             return 'critical';
         if (overdueTasks > 0 || budgetUtilization > 75)

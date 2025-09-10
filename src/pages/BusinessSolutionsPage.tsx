@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf } from 'lucide-react';
-const BusinessSolutions = [
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Badge } from '@/components/ui/badge';
+import { _Link } from 'react-router-dom';
+import { _Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf } from 'lucide-react';
+const _BusinessSolutions = [
     {
         title: "Business Strategy Consulting",
         description: "Strategic planning and business model optimization for growth",
@@ -153,7 +153,7 @@ const BusinessSolutions = [
         link: "/request-quote?service=sustainability-consulting"
     }
 ];
-const categories = [
+const _categories = [
     { name: "All", value: "all", icon: <Building className="h-4 w-4"/> },
     { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Automation", value: "automation", icon: <Zap className="h-4 w-4"/> },
@@ -174,7 +174,7 @@ const categories = [
 ];
 export default function BusinessSolutionsPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
-    const filteredSolutions = selectedCategory === "all"
+    const _filteredSolutions = selectedCategory === "all"
         ? BusinessSolutions
         : BusinessSolutions.filter(solution => solution.category.toLowerCase() === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">

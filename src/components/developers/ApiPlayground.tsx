@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useLocalStorage } from "@/hooks";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import { _useState } from "react";
+import { _useLocalStorage } from "@/hooks";
+import { _Input } from "@/components/ui/input";
+import { _Textarea } from "@/components/ui/textarea";
+import { _Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
@@ -10,24 +10,24 @@ export function ApiPlayground({ method, path, params = [] }) {
     const [body, setBody] = useState("{}");
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
-    const handleParamChange = (name, value) => {
+    const _handleParamChange = (name, value) => {
         setParamValues((prev) => ({ ...prev, [name]: value }));
     };
-    const sendRequest = async () => {
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
-        let url = `${baseUrl}${path}`;
-        const searchParams = new URLSearchParams();
+    const _sendRequest = async () => {
+        const _baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+        let _url = `${baseUrl}${path}`;
+        const _searchParams = new URLSearchParams();
         if (method === "GET" || method === "DELETE") {
             params.forEach((p) => {
-                const val = paramValues[p.name];
+                const _val = paramValues[p.name];
                 if (val)
                     searchParams.append(p.name, val);
             });
-            const query = searchParams.toString();
+            const _query = searchParams.toString();
             if (query)
                 url += `?${query}`;
         }
-        const options = {
+        const _options = {
             method,
             headers: {
                 Authorization: `Bearer ${apiKey}`,
@@ -45,8 +45,8 @@ export function ApiPlayground({ method, path, params = [] }) {
         setLoading(true);
         setResponse(null);
         try {
-            const res = await fetch(url, options);
-            const text = await res.text();
+            const _res = await fetch(url, options);
+            const _text = await res.text();
             setResponse(text);
         }
         catch (err) {

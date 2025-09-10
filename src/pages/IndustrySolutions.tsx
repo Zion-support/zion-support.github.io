@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope } from 'lucide-react';
-const IndustrySolutions = () => {
+import { _Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope } from 'lucide-react';
+const _IndustrySolutions = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
     // Industry-specific solutions data
-    const industrySolutions = [
+    const _industrySolutions = [
         {
             id: 1,
             name: "Healthcare Technology Solutions",
@@ -247,17 +247,17 @@ const IndustrySolutions = () => {
             }
         }
     ];
-    const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
-    const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
-    const filteredSolutions = industrySolutions.filter(solution => {
-        const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
+    const _solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
+    const _filteredSolutions = industrySolutions.filter(solution => {
+        const _matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             solution.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesIndustry = selectedIndustry === 'all' || solution.industry === selectedIndustry;
-        const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
+        const _matchesIndustry = selectedIndustry === 'all' || solution.industry === selectedIndustry;
+        const _matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
         return matchesSearch && matchesIndustry && matchesSolutionType;
     });
-    const formatPrice = (price, model) => {
+    const _formatPrice = (price, model) => {
         switch (model) {
             case 'monthly':
                 return `$${price.toLocaleString()}/month`;
@@ -269,7 +269,7 @@ const IndustrySolutions = () => {
                 return `$${price.toLocaleString()}`;
         }
     };
-    const getIndustryColor = (score) => {
+    const _getIndustryColor = (score) => {
         if (score >= 95)
             return 'text-green-500';
         if (score >= 90)
@@ -278,7 +278,7 @@ const IndustrySolutions = () => {
             return 'text-yellow-500';
         return 'text-orange-500';
     };
-    const getIndustryIcon = (industry) => {
+    const _getIndustryIcon = (industry) => {
         switch (industry) {
             case 'Healthcare': return <Stethoscope className="w-6 h-6"/>;
             case 'Finance': return <CreditCard className="w-6 h-6"/>;

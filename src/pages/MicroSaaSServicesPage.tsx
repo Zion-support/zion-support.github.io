@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
-import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-const categories = [
+import { _Link } from 'react-router-dom';
+import { _Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import { _MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
+import { _SEO } from '@/components/SEO';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
+import { _Badge } from '@/components/ui/badge';
+const _categories = [
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length },
     { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('AI Services').length },
     { id: 'IT Services', name: 'IT Services', icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('IT Services').length },
     { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('Business Solutions').length }
 ];
-const pricingModels = [
+const _pricingModels = [
     { id: 'all', name: 'All Pricing' },
     { id: 'monthly', name: 'Monthly' },
     { id: 'yearly', name: 'Yearly' },
@@ -26,7 +26,7 @@ export default function MicroSaasServicesPage() {
     const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
-        let filtered = MICRO_SAAS_SERVICES;
+        let _filtered = MICRO_SAAS_SERVICES;
         // Filter by category
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory);
@@ -37,7 +37,7 @@ export default function MicroSaasServicesPage() {
         }
         // Filter by search query
         if (searchQuery.trim()) {
-            const query = searchQuery.toLowerCase();
+            const _query = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(query) ||
                 service.description.toLowerCase().includes(query) ||
                 service.tags.some(tag => tag.toLowerCase().includes(query)) ||
@@ -60,7 +60,7 @@ export default function MicroSaasServicesPage() {
         });
         setFilteredServices(filtered);
     }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-    const ServiceCard = ({ service }) => (<div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20">
+    const _ServiceCard = ({ service }) => (<div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20">
       {/* Featured Badge */}
       {service.featured && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
           Featured
@@ -116,22 +116,22 @@ export default function MicroSaasServicesPage() {}
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const _filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
+    const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const _matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const formatPrice = (price: number, currency: string, model: string) => {}
+  const _formatPrice = (price: number, currency: string, model: string) => {}
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
     return `${currency}${price}`;
   };
 
-  const ServiceCard = ({service}: {service}: MicroSaasService }) => (
+  const _ServiceCard = ({service}: {service}: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       

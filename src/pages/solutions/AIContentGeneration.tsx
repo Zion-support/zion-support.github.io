@@ -1,7 +1,7 @@
 import React from 'react';
-import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
-const AIContentGeneration = () => {
-    const contentFeatures = [
+import { _Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
+const _AIContentGeneration = () => {
+    const _contentFeatures = [
         {
             icon: FileText,
             title: "Text Generation",
@@ -27,7 +27,7 @@ const AIContentGeneration = () => {
             features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
         }
     ];
-    const contentTypes = [
+    const _contentTypes = [
         {
             title: "Marketing Content",
             description: "Engaging marketing materials and campaigns",
@@ -65,7 +65,7 @@ const AIContentGeneration = () => {
             capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Significantly faster content creation",
         "Consistent quality and brand voice",
         "Scalable content production",
@@ -73,7 +73,7 @@ const AIContentGeneration = () => {
         "Multilingual content capabilities",
         "24/7 content creation availability"
     ];
-    const implementation = [
+    const _implementation = [
         {
             phase: "Content Strategy",
             description: "Define content goals and requirements",

@@ -4,12 +4,12 @@
 
 // Focus management
 export function trapFocus(element: HTMLElement) {
-  const focusableElements = element.querySelectorAll(
+  const _focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   ) as NodeListOf<HTMLElement>;
   
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
+  const _firstElement = focusableElements[0];
+  const _lastElement = focusableElements[focusableElements.length - 1];
   
   function handleTabKey(e: KeyboardEvent) {
     if (e.key === 'Tab') {
@@ -36,7 +36,7 @@ export function trapFocus(element: HTMLElement) {
 
 // Announce messages to screen readers
 export function announceToScreenReader(message: string, priority: 'polite' | 'assertive' = 'polite') {
-  const announcement = document.createElement('div');
+  const _announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -51,7 +51,7 @@ export function announceToScreenReader(message: string, priority: 'polite' | 'as
 
 // Skip link functionality
 export function createSkipLink(targetId: string, text = 'Skip to main content') {
-  const skipLink = document.createElement('a');
+  const _skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
@@ -104,22 +104,22 @@ export function prefersReducedMotion(): boolean {
 
 // Color contrast checker
 export function getContrastRatio(color1: string, color2: string): number {
-  const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g);
+  const _getLuminance = (color: string): number => {
+    const _rgb = color.match(/\d+/g);
     if (!rgb) return 0;
     
     const [r, g, b] = rgb.map(c => {
-      const val = parseInt(c) / 255;
+      const _val = parseInt(c) / 255;
       return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
     });
     
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
   
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
+  const _lum1 = getLuminance(color1);
+  const _lum2 = getLuminance(color2);
+  const _brightest = Math.max(lum1, lum2);
+  const _darkest = Math.min(lum1, lum2);
   
   return (brightest + 0.05) / (darkest + 0.05);
 }
@@ -172,7 +172,7 @@ export class LiveRegionManager {
       return this.regions.get(id)!;
     }
     
-    const region = document.createElement('div');
+    const _region = document.createElement('div');
     region.id = id;
     region.setAttribute('aria-live', priority);
     region.setAttribute('aria-atomic', 'true');
@@ -192,12 +192,12 @@ export class LiveRegionManager {
   }
   
   announce(id: string, message: string) {
-    const region = this.regions.get(id) || this.createRegion(id);
+    const _region = this.regions.get(id) || this.createRegion(id);
     region.textContent = message;
   }
   
   clear(id: string) {
-    const region = this.regions.get(id);
+    const _region = this.regions.get(id);
     if (region) {
       region.textContent = '';
     }
@@ -217,7 +217,7 @@ export class LiveRegionManager {
 export function initFocusVisible() {
   if (typeof window === 'undefined') return;
   
-  let hadKeyboardEvent = true;
+  let _hadKeyboardEvent = true;
   let keyboardThrottleTimeout: NodeJS.Timeout;
   
   function onPointerDown() {

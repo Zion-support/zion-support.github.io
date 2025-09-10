@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
-const ComprehensiveServicesOverview2025 = () => {
+import { _Link } from 'react-router-dom';
+import { _allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
+const _ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const categories = [
+    const _categories = [
         'all',
         'AI & Business Intelligence',
         'Cybersecurity & Quantum Computing',
@@ -19,9 +19,9 @@ const ComprehensiveServicesOverview2025 = () => {
         'Energy & Sustainability',
         'Logistics & Transportation'
     ];
-    const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
-    const getCategoryIcon = (category) => {
-        const icons = {
+    const _filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+    const _getCategoryIcon = (category) => {
+        const _icons = {
             'AI & Business Intelligence': '🧠',
             'Cybersecurity & Quantum Computing': '🔒',
             'DevOps & Infrastructure': '⚙️',
@@ -37,8 +37,8 @@ const ComprehensiveServicesOverview2025 = () => {
         };
         return icons[category] || '🚀';
     };
-    const getCategoryColor = (category) => {
-        const colors = {
+    const _getCategoryColor = (category) => {
+        const _colors = {
             'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
             'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',
             'DevOps & Infrastructure': 'from-green-500 to-emerald-500',
@@ -178,7 +178,7 @@ const ComprehensiveServicesOverview2025 = () => {
           <div className="bg-slate-800 rounded-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               {(() => {
-                const service = allEnhancedServices.find(s => s.id === selectedService);
+                const _service = allEnhancedServices.find(s => s.id === selectedService);
                 if (!service)
                     return null;
                 return (<>

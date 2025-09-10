@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
-const CybersecurityServices = () => {
-    const securityServices = [
+import { _Link } from 'react-router-dom';
+import { _Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
+const _CybersecurityServices = () => {
+    const _securityServices = [
         {
             title: "Threat Detection & Response",
             description: "Advanced threat detection systems with real-time monitoring and rapid response capabilities.",
@@ -76,7 +76,7 @@ const CybersecurityServices = () => {
             ]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Protect against evolving cyber threats",
         "Ensure compliance with industry regulations",
         "Safeguard sensitive customer data",
@@ -84,7 +84,7 @@ const CybersecurityServices = () => {
         "Build customer trust and confidence",
         "Reduce financial and reputational risk"
     ];
-    const complianceStandards = [
+    const _complianceStandards = [
         "SOC 2 Type II",
         "ISO 27001",
         "GDPR",
@@ -92,7 +92,7 @@ const CybersecurityServices = () => {
         "PCI DSS",
         "NIST Framework"
     ];
-    const securityTechnologies = [
+    const _securityTechnologies = [
         "SIEM Solutions",
         "EDR/XDR Platforms",
         "Next-Gen Firewalls",

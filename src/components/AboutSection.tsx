@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Award, Users, Globe, Target, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Award, Users, Globe, Target, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 export function AboutSection() {
-    const achievements = [
+    const _achievements = [
         { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },
         { number: "500+", label: "Projects Delivered", icon: <Target className="w-6 h-6"/> },
         { number: "50+", label: "Enterprise Clients", icon: <Users className="w-6 h-6"/> },
         { number: "25+", label: "Countries Served", icon: <Globe className="w-6 h-6"/> }
     ];
-    const values = [
+    const _values = [
         {
             title: "Innovation First",
             description: "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.",
@@ -30,7 +30,7 @@ export function AboutSection() {
             icon: <Shield className="w-8 h-8"/>
         }
     ];
-    const technologies = [
+    const _technologies = [
         "Artificial Intelligence & ML", "Cloud Computing", "Cybersecurity", "Data Analytics",
         "Blockchain Technology", "IoT Solutions", "Mobile Development", "Web Applications",
         "DevOps & Automation", "Quantum Computing", "Edge Computing", "5G Networks"

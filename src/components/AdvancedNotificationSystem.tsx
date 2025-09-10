@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff } from 'lucide-react';
-const mockNotifications = [
+import { _Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff } from 'lucide-react';
+const _mockNotifications = [
     {
         id: '1',
         title: 'Project Milestone Achieved',
@@ -12,8 +12,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
+            { label: 'View Details', action: () => // console.log('View project'), variant: 'primary' },
+            { label: 'Archive', action: () => // console.log('Archive'), variant: 'secondary' }
         ]
     },
     {
@@ -27,8 +27,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
+            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' },
+            { label: 'Dismiss', action: () => // console.log('Dismiss'), variant: 'secondary' }
         ]
     },
     {
@@ -42,8 +42,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
+            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' },
+            { label: 'Acknowledge', action: () => // console.log('Acknowledge'), variant: 'secondary' }
         ]
     },
     {
@@ -57,8 +57,8 @@ const mockNotifications = [
         isRead: true,
         isArchived: false,
         actions: [
-            { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
+            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },
+            { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
         ]
     }
 ];
@@ -73,32 +73,32 @@ export function AdvancedNotificationSystem() {
     const [showRead, setShowRead] = useState(true);
     const [groupByCategory, setGroupByCategory] = useState(false);
     const [unreadCount, setUnreadCount] = useState(0);
-    const containerRef = useRef(null);
+    const _containerRef = useRef(null);
     useEffect(() => {
         setUnreadCount(notifications.filter(n => !n.isRead).length);
     }, [notifications]);
-    const filteredNotifications = notifications.filter(notification => {
-        const typeMatch = filterType === 'all' || notification.type === filterType;
-        const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
-        const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
-        const searchMatch = notification.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const _filteredNotifications = notifications.filter(notification => {
+        const _typeMatch = filterType === 'all' || notification.type === filterType;
+        const _priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
+        const _categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
+        const _searchMatch = notification.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             notification.message.toLowerCase().includes(searchQuery.toLowerCase());
-        const readMatch = showRead || !notification.isRead;
+        const _readMatch = showRead || !notification.isRead;
         return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch;
     });
-    const markAsRead = (id) => {
+    const _markAsRead = (id) => {
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isRead: true } : n));
     };
-    const markAllAsRead = () => {
+    const _markAllAsRead = () => {
         setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
     };
-    const archiveNotification = (id) => {
+    const _archiveNotification = (id) => {
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n));
     };
-    const deleteNotification = (id) => {
+    const _deleteNotification = (id) => {
         setNotifications(prev => prev.filter(n => n.id !== id));
     };
-    const getTypeIcon = (type) => {
+    const _getTypeIcon = (type) => {
         switch (type) {
             case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;
             case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;
@@ -107,7 +107,7 @@ export function AdvancedNotificationSystem() {
             default: return <Info className="w-5 h-5 text-zion-slate"/>;
         }
     };
-    const getPriorityColor = (priority) => {
+    const _getPriorityColor = (priority) => {
         switch (priority) {
             case 'low': return 'border-l-zion-emerald';
             case 'medium': return 'border-l-zion-cyan';
@@ -116,12 +116,12 @@ export function AdvancedNotificationSystem() {
             default: return 'border-l-zion-slate';
         }
     };
-    const getTimeAgo = (timestamp) => {
-        const now = new Date();
-        const diff = now.getTime() - timestamp.getTime();
-        const minutes = Math.floor(diff / (1000 * 60));
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const _getTimeAgo = (timestamp) => {
+        const _now = new Date();
+        const _diff = now.getTime() - timestamp.getTime();
+        const _minutes = Math.floor(diff / (1000 * 60));
+        const _hours = Math.floor(diff / (1000 * 60 * 60));
+        const _days = Math.floor(diff / (1000 * 60 * 60 * 24));
         if (minutes < 1)
             return 'Just now';
         if (minutes < 60)
@@ -130,9 +130,9 @@ export function AdvancedNotificationSystem() {
             return `${hours}h ago`;
         return `${days}d ago`;
     };
-    const groupedNotifications = groupByCategory
+    const _groupedNotifications = groupByCategory
         ? filteredNotifications.reduce((groups, notification) => {
-            const category = notification.category;
+            const _category = notification.category;
             if (!groups[category])
                 groups[category] = [];
             groups[category].push(notification);

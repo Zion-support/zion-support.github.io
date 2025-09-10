@@ -43,7 +43,7 @@ export default function CheckoutShippingOptions({
 }: CheckoutShippingOptionsProps) {
   const [selectedOption, setSelectedOption] = useState(selectedShipping || '');
 
-  const handleOptionChange = (option: ShippingOption) => {
+  const _handleOptionChange = (option: ShippingOption) => {
     setSelectedOption(option.id);
     onSelectShipping(option);
   };

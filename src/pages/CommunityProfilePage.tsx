@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { formatDistanceToNow } from "date-fns";
+import { _useState, useEffect } from "react";
+import { _useParams, Link } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _formatDistanceToNow } from "date-fns";
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 // Mock user data
-const mockUser = {
+const _mockUser = {
     id: "user1",
     name: "Alex Johnson",
     avatar: "https://i.pravatar.cc/150?img=3",
@@ -46,7 +46,7 @@ const mockUser = {
     isModerator: false
 };
 // Mock posts by this user
-const userPosts = [
+const _userPosts = [
     {
         id: "1",
         title: "Best practices for AI model fine-tuning",

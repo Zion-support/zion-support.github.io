@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react";
+import { _useState, useEffect } from "react";
+import { _Footer } from "@/components/Footer";
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _ListingScoreCard } from "@/components/ListingScoreCard";
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { _Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react";
 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
     { label: 'Newest First', value: 'newest' },
     { label: 'Oldest First', value: 'oldest' },
@@ -30,14 +30,14 @@ export function CategoryListingPage({ title, description, listings: initialListi
     }, [selectedFilter]);
     useEffect(() => {
         setIsLoading(true);
-        const timeout = setTimeout(() => setIsLoading(false), 300);
+        const _timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout);
     }, [searchQuery, selectedSort, selectedFilter]);
     // Process listings based on filters and search
-    const processedListings = initialListings
+    const _processedListings = initialListings
         .filter(listing => {
         // Apply search filter
-        const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        const _matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             (listing.tags && listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
         // Apply category filters

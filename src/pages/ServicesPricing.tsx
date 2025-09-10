@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-const pricingTiers = [
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { _Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
+const _pricingTiers = [
     {
         name: "Starter",
         description: "Perfect for small businesses and startups",
@@ -73,7 +73,7 @@ const pricingTiers = [
         popular: false
     }
 ];
-const serviceCategories = [
+const _serviceCategories = [
     {
         name: "AI Services",
         icon: <Zap className="w-6 h-6"/>,
@@ -115,7 +115,7 @@ const serviceCategories = [
         ]
     }
 ];
-const benefits = [
+const _benefits = [
     {
         icon: <CheckCircle className="w-8 h-8"/>,
         title: "Scalable Solutions",

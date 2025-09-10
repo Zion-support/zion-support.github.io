@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
-    const cardVariants = {
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+const _ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
+    const _cardVariants = {
         hidden: { opacity: 0, y: 20, scale: 0.95 },
         visible: {
             opacity: 1,
@@ -22,7 +22,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             }
         }
     };
-    const iconVariants = {
+    const _iconVariants = {
         hidden: { scale: 0.8, opacity: 0 },
         visible: {
             scale: 1,
@@ -41,7 +41,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             }
         }
     };
-    const featureVariants = {
+    const _featureVariants = {
         hover: {
             x: 5,
             transition: {
@@ -50,7 +50,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             }
         }
     };
-    const badgeVariants = {
+    const _badgeVariants = {
         hidden: { scale: 0, opacity: 0 },
         visible: {
             scale: 1,

@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { _useState, useEffect, useCallback } from 'react';
+import { _supabase } from '@/integrations/supabase/client';
 
 interface PricingSuggestionAnalytics {
   totalSuggestions: number;
@@ -35,7 +35,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     error: null
   });
 
-  const fetchAnalytics = useCallback(async () => {
+  const _fetchAnalytics = useCallback(async () => {
     setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
     
     try {
@@ -43,7 +43,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Mock data for now - replace with actual Supabase query
-      const mockData = {
+      const _mockData = {
         totalSuggestions: 256,
         acceptanceRate: 0.72,
         averagePriceGap: 12.5,
@@ -72,7 +72,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         error: null
       });
     } catch (error) {
-      console.error('Error fetching pricing suggestion analytics:', error);
+      // console.error('Error fetching pricing suggestion analytics:', error);
       setAnalytics(prev => ({
         ...prev,
         isLoading: false,

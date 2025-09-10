@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { format, addDays } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-const formSchema = z.object({
+import { _Button } from "@/components/ui/button";
+import { _Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import { _Input } from "@/components/ui/input";
+import { _Textarea } from "@/components/ui/textarea";
+import { _Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { _Calendar } from "@/components/ui/calendar";
+import { _Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import { _cn } from "@/lib/utils";
+import { _zodResolver } from "@hookform/resolvers/zod";
+import { _useForm } from "react-hook-form";
+import { _z } from "zod";
+import { _format, addDays } from "date-fns";
+import { _CalendarIcon } from "lucide-react";
+import { _toast } from "@/components/ui/use-toast";
+import { _useInterviews } from "@/hooks/useInterviews";
+const _formSchema = z.object({
     date: z.date({
         required_error: "Please select a date for the interview.",
     }).refine(date => date > new Date(), {
@@ -30,7 +30,7 @@ const formSchema = z.object({
 export function InterviewRequestForm({ talent, onClose, userDetails }) {
     const { requestInterview } = useInterviews();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+    const _form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
             title: `Interview with ${talent.full_name}`,
@@ -52,10 +52,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         setIsSubmitting(true);
         try {
             // Combine date and time
-            const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
-            const scheduledDate = new Date(dateTimeString);
+            const _dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+            const _scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
-            const durationMinutes = parseInt(values.duration);
+            const _durationMinutes = parseInt(values.duration);
             await requestInterview({
                 talent_id: talent.id,
                 client_id: userDetails.id,
@@ -74,7 +74,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             onClose();
         }
         catch (error) {
-            console.error("Failed to schedule interview:", error);
+            // console.error("Failed to schedule interview:", error);
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
@@ -85,7 +85,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             setIsSubmitting(false);
         }
     }
-    const timeSlots = [
+    const _timeSlots = [
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
         "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
         "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",

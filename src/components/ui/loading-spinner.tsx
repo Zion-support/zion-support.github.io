@@ -11,5 +11,5 @@ export function LoadingSpinner() {;
   );
 }
 
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 

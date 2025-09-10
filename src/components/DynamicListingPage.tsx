@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Slider } from "@/components/ui/slider";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
+import { _useState, useEffect } from "react";
+import { _useNavigate } from "react-router-dom";
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _ProductListingCard } from "@/components/ProductListingCard";
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { _Skeleton } from "@/components/ui/skeleton";
+import { _Slider } from "@/components/ui/slider";
+import { _Search, Filter, LayoutGrid, List, Star } from "lucide-react";
+import { _toast } from "@/hooks/use-toast";
+import { _Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [view, setView] = useState("grid");
@@ -20,9 +20,9 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedRating, setSelectedRating] = useState(null);
     useEffect(() => {
-        const listingsWithPrice = allListings.filter(l => l.price !== null);
+        const _listingsWithPrice = allListings.filter(l => l.price !== null);
         if (listingsWithPrice.length > 0) {
-            const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
+            const _max = Math.max(...listingsWithPrice.map(l => l.price || 0));
             setPriceRange({ min: 0, max });
             setCurrentPriceFilter([0, max]);
         }
@@ -31,33 +31,33 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
         0,
         initialPrice.max
     ]);
-    const handleSliderChange = (values) => {
+    const _handleSliderChange = (values) => {
         setCurrentPriceFilter([values[0], values[1]]);
     };
-    const filteredListings = allListings.filter(listing => {
-        const matchesSearch = !searchQuery ||
+    const _filteredListings = allListings.filter(listing => {
+        const _matchesSearch = !searchQuery ||
             listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             (listing.tags && listing.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-        const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
-        const matchesPrice = listing.price === null || (listing.price >= currentPriceFilter[0] &&
+        const _matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
+        const _matchesPrice = listing.price === null || (listing.price >= currentPriceFilter[0] &&
             listing.price <= currentPriceFilter[1]);
-        const matchesRating = selectedRating === null ||
+        const _matchesRating = selectedRating === null ||
             (listing.rating !== undefined && listing.rating >= selectedRating);
         return matchesSearch && matchesCategory && matchesPrice && matchesRating;
     });
-    const totalPages = itemsPerPage
+    const _totalPages = itemsPerPage
         ? Math.ceil(filteredListings.length / itemsPerPage)
         : 1;
-    const paginatedListings = itemsPerPage
+    const _paginatedListings = itemsPerPage
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
         : filteredListings;
     useEffect(() => {
         setCurrentPage(1);
     }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
-    const handleRequestQuote = (listingId) => {
+    const _handleRequestQuote = (listingId) => {
         setIsLoading(true);
-        const listing = allListings.find(item => item.id === listingId);
+        const _listing = allListings.find(item => item.id === listingId);
         setTimeout(() => {
             setIsLoading(false);
             if (listing) {
@@ -100,7 +100,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Category
                 </label>
                 <Select value={selectedCategory} onValueChange={(value) => {
-            console.log("Category selected:", value);
+            // console.log("Category selected:", value);
             setSelectedCategory(value);
         }}>
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -134,7 +134,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-                console.log("Rating selected:", rating);
+                // console.log("Rating selected:", rating);
                 setSelectedRating(rating);
             }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -148,7 +148,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
               </div>
               
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={() => {
-            console.log("Resetting filters");
+            // console.log("Resetting filters");
             setSearchQuery("");
             setSelectedCategory("all");
             setCurrentPriceFilter([0, priceRange.max]);
@@ -165,7 +165,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-            console.log("Search query:", e.target.value);
+            // console.log("Search query:", e.target.value);
             setSearchQuery(e.target.value);
         }} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
                 </div>

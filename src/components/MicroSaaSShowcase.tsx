@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud } from 'lucide-react';
 export function MicroSaasShowcase() {
     const [activeCategory, setActiveCategory] = useState('all');
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },
         { id: 'ai-ml', name: 'AI & ML', icon: <Cpu className="h-5 w-5"/> },
         { id: 'security', name: 'Security', icon: <Shield className="h-5 w-5"/> },
@@ -11,7 +11,7 @@ export function MicroSaasShowcase() {
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
     ];
-    const microSaasServices = [
+    const _microSaasServices = [
         {
             id: 'ai-content-optimizer',
             title: 'AI Content Optimizer Pro',
@@ -109,7 +109,7 @@ export function MicroSaasShowcase() {
             color: 'from-emerald-500 to-blue-500'
         }
     ];
-    const filteredServices = activeCategory === 'all'
+    const _filteredServices = activeCategory === 'all'
         ? microSaasServices
         : microSaasServices.filter(service => service.category === activeCategory);
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50">

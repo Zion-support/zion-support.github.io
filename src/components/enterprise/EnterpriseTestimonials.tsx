@@ -1,7 +1,7 @@
 import React from "react";
-import { Quote } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
-const testimonials = [
+import { _Quote } from "lucide-react";
+import { _Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
+const _testimonials = [
     {
         quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
         author: "Sarah Johnson",

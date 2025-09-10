@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
+import { _format } from 'date-fns';
 
     await sendMessage(activeConversation.id", messageText);export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
@@ -9,7 +9,7 @@ import { format } from 'date-fns';
     scrollToBottom();
   }, [activeMessages]);
 ';
-  const scrollToBottom = (props: any) => {';';    await sendMessage(activeConversation.id, messageText);
+  const _scrollToBottom = (props: any) => {';';    await sendMessage(activeConversation.id, messageText);
     setMessageText('');
   };
   if(!activeConversation) {
@@ -44,8 +44,8 @@ import { format } from 'date-fns';
   activeMessages.forEach(message => {;
   const groupedMessages: { date: string; messages: an y[] }[] = [];
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
+    const _messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
+    const _existingGroup = groupedMessages.find(group => group.date === messageDate);
     if(existingGroup) {
       existingGroup.messages.push(message);
     } else {;

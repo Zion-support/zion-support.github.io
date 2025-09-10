@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-const MicroSAAS = () => {
-    const microSaasServices = [
+const _MicroSAAS = () => {
+    const _microSaasServices = [
         {
             title: "AI Content Generator",
             description: "Automated content creation platform for marketing, social media, and business communications.",

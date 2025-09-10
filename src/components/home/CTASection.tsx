@@ -1,10 +1,10 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
+import { _motion  } from 'framer-motion';
+import { _Link  } from 'react-router-dom';
+import { _ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
 ;
 const "CTASection": "React.FC = (): JSX.Element => {;
-  const features = [;
+  const _features = [;
     {;
       "icon": Rocke t",;
       "title": "Fast Implementation",;
@@ -19,7 +19,7 @@ const "CTASection": "React.FC = (): JSX.Element => {;
       "icon": "Calenda r",;
       "title": "Flexible Plans",;
       "description": "Scale up or down as your business grows";const CTASection: React.FC = (): JSX.Element => {
-  const features = [
+  const _features = [
     {
       icon: Rocke t,
       title: "Fast Implementation",

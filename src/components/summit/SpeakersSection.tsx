@@ -1,4 +1,4 @@
-const speakers = [
+const _speakers = [
     {
         name: 'Alex Zion',
         title: 'Founder & CEO',

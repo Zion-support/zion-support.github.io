@@ -1,13 +1,13 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { _SEO } from '@/components/SEO';
+import { _GradientHeading } from '@/components/GradientHeading';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
+import { _Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings } from 'lucide-react';
+import { _Link } from 'react-router-dom';
 export default function HelpCenterPage() {
-    const helpCategories = [
+    const _helpCategories = [
         {
             icon: <User className="w-8 h-8 text-zion-cyan"/>,
             title: "Getting Started",
@@ -37,7 +37,7 @@ export default function HelpCenterPage() {
             color: "text-zion-purple"
         }
     ];
-    const faqs = [
+    const _faqs = [
         {
             question: "How do I create an account on Zion?",
             answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner, fill in your basic information, verify your email, and you're ready to start using our platform."

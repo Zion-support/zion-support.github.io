@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _SEO } from '@/components/SEO';
+import { _motion } from 'framer-motion';
 
 
 

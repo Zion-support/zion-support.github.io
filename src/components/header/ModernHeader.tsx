@@ -5,11 +5,11 @@ export function ModernHeader() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false)
 
 
-  const toggleMobileMenu = () => {
+  const _toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 
 
-  const closeMobileMenu = () => {
+  const _closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
 
 
@@ -18,7 +18,7 @@ export function ModernHeader() {;
 
   }'
 
-  const services = []
+  const _services = []
 
   return (
     <>

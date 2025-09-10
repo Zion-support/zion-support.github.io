@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
-const MarketingServices = [
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Badge } from '@/components/ui/badge';
+import { _Link } from 'react-router-dom';
+import { _Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
+const _MarketingServices = [
     {
         title: "Search Engine Optimization (SEO)",
         description: "Improve your website's visibility and rank higher in search results",
@@ -152,7 +152,7 @@ const MarketingServices = [
         link: "/request-quote?service=marketing-technology"
     }
 ];
-const categories = [
+const _categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "SEO", value: "seo", icon: <Search className="h-4 w-4"/> },
     { name: "PPC", value: "ppc", icon: <TrendingUp className="h-4 w-4"/> },
@@ -173,7 +173,7 @@ const categories = [
 ];
 export default function DigitalMarketingServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
-    const filteredServices = selectedCategory === "all"
+    const _filteredServices = selectedCategory === "all"
         ? MarketingServices
         : MarketingServices.filter(service => service.category.toLowerCase() === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-purple-dark to-zion-slate">

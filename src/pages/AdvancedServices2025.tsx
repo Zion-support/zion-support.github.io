@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-const AdvancedServices2025 = () => {
-    const advancedServices = [
+import { _Link } from 'react-router-dom';
+const _AdvancedServices2025 = () => {
+    const _advancedServices = [
         {
             category: "Enterprise AI & Machine Learning",
             description: "Advanced artificial intelligence solutions for enterprise-scale operations",

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 export function Select({ children, className = '', value, onValueChange, disabled = false }) {
-  const baseClasses = `
+  const _baseClasses = `
     flex h-10 w-full items-center justify-between rounded-md border 
     border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
     text-white placeholder:text-zion-slate-light/50

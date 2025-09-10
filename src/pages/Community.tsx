@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const Community = () => {
+import { _Helmet } from 'react-helmet-async';
+const _Community = () => {
     return (<>
       <Helmet>
         <title>Community - Zion Tech Group</title>

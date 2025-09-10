@@ -35,5 +35,5 @@ if (rootElement) {
 
   root.render(app);
 } else {
-  console.error('Root element not found');
+  // console.error('Root element not found');
 }

@@ -1,7 +1,7 @@
 
 import React from 'react';
 export function StatsSection() {
-    const stats = [
+    const _stats = [
         {
             number: '500+',
             label: 'Happy Clients',

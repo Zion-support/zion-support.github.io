@@ -1,23 +1,23 @@
-import { useState, useEffect } from "react";
-import { JobsList } from "@/components/jobs/JobsList";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
-import { useJobs } from "@/hooks/useJobs";
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { _useState, useEffect } from "react";
+import { _JobsList } from "@/components/jobs/JobsList";
+import { _Button } from "@/components/ui/button";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Link } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
+import { _ProtectedRoute } from "@/components/ProtectedRoute";
+import { _SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { _useJobs } from "@/hooks/useJobs";
+import { _ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { _ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
+import { _UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+import { _useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
     const [activeTab, setActiveTab] = useState("all");
     const { jobs, isLoading } = useJobs();
     const [selectedJobId, setSelectedJobId] = useState(null);
     const [selectedJobTitle, setSelectedJobTitle] = useState("");
-    const isMobile = useIsMobile();
+    const _isMobile = useIsMobile();
     // Set the first job as selected when jobs are loaded (if any)
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
@@ -25,7 +25,7 @@ function ClientDashboardContent() {
             setSelectedJobTitle(jobs[0].title);
         }
     }, [jobs, selectedJobId]);
-    const handleJobSelect = (jobId, jobTitle) => {
+    const _handleJobSelect = (jobId, jobTitle) => {
         setSelectedJobId(jobId);
         setSelectedJobTitle(jobTitle);
     };

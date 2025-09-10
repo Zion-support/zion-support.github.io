@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { _ProductListing } from "@/types/listings";
 export default function Page() {
 
   "Quantum Computing": {

@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { _Link } from 'react-router-dom';
 export function BlogSection() {
-    const blogPosts = [
+    const _blogPosts = [
         {
             id: '1',
             title: 'The Future of AI in Technology',

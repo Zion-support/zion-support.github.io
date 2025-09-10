@@ -1,6 +1,6 @@
 import React from 'react';
-import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
-import { motion, AnimatePresence  } from 'framer-motion';
+import { _ import { innovativeServices2025 } from '../data/innovativeServices2025';
+import { _motion, AnimatePresence  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */

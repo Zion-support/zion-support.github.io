@@ -1,6 +1,6 @@
 import React from 'react';';';import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+import { _Button } from './ui/button';
+import { _AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

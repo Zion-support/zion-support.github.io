@@ -1,12 +1,12 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _Button } from "@/components/ui/button";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Badge } from "@/components/ui/badge";
+import { _Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
+import { _Link } from "react-router-dom";
 export default function CloudCostOptimizer() {
-    const features = [
+    const _features = [
         "AI-driven cost optimization algorithms",
         "Multi-cloud support (AWS, Azure, GCP)",
         "Real-time cost monitoring and alerts",
@@ -20,7 +20,7 @@ export default function CloudCostOptimizer() {
         "Automated cost optimization actions",
         "Custom optimization policies"
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Starter",
             price: "$49",
@@ -73,7 +73,7 @@ export default function CloudCostOptimizer() {
             popular: false
         }
     ];
-    const optimizationServices = [
+    const _optimizationServices = [
         {
             title: "Cost Analysis & Monitoring",
             description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",
@@ -95,7 +95,7 @@ export default function CloudCostOptimizer() {
             icon: <Settings className="h-8 w-8 text-zion-purple"/>
         }
     ];
-    const supportedClouds = [
+    const _supportedClouds = [
         "Amazon Web Services (AWS)",
         "Microsoft Azure",
         "Google Cloud Platform (GCP)",
@@ -105,7 +105,7 @@ export default function CloudCostOptimizer() {
         "Linode",
         "Vultr"
     ];
-    const costSavings = [
+    const _costSavings = [
         {
             metric: "Average Cost Reduction",
             value: "40%",

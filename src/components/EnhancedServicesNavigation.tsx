@@ -1,4 +1,4 @@
-const Component = ("props": "any) => {;
+const _Component = ("props": "any) => {;
 import React from "react";
 """;","});,"})";
           "title": "Code Review & Security",""";,"});,"})";
@@ -325,7 +325,7 @@ export { EnhancedServicesNavigation };,"});,"})";
 export { EnhancedServicesNavigation };,"});,"})";
 ;,"});,"})";
 export { EnhancedServicesNavigation };,"});,"});
-const Component = (props: any) => {
+const _Component = (props: any) => {
 import React from "react"
 """;,"}
     );,"})"

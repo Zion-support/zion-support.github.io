@@ -1,23 +1,23 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => {
-    const canvasRef = useRef(null);
-    const particlesRef = useRef(null);
+import { _motion } from 'framer-motion';
+export const _QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => {
+    const _canvasRef = useRef(null);
+    const _particlesRef = useRef(null);
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const _canvas = canvasRef.current;
         if (!canvas)
             return;
-        const ctx = canvas.getContext('2d');
+        const _ctx = canvas.getContext('2d');
         if (!ctx)
             return;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         // Quantum particle system
-        const particles = [];
-        const colors = ['#22ddd2', '#8b5cf6', '#3b82f6', '#22ddd2'];
-        const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1;
+        const _particles = [];
+        const _colors = ['#22ddd2', '#8b5cf6', '#3b82f6', '#22ddd2'];
+        const _intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1;
         // Initialize particles
-        for (let i = 0; i < 50 * intensityMultiplier; i++) {
+        for (let _i = 0; i < 50 * intensityMultiplier; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
@@ -30,13 +30,13 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             });
         }
         // Quantum entanglement effect
-        const entangleParticles = () => {
-            for (let i = 0; i < particles.length; i += 2) {
+        const _entangleParticles = () => {
+            for (let _i = 0; i < particles.length; i += 2) {
                 if (i + 1 < particles.length) {
-                    const p1 = particles[i];
-                    const p2 = particles[i + 1];
+                    const _p1 = particles[i];
+                    const _p2 = particles[i + 1];
                     // Create quantum correlation
-                    const distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+                    const _distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
                     if (distance < 100) {
                         // Draw entanglement line
                         ctx.beginPath();
@@ -50,14 +50,14 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             }
         };
         // Neural network connections
-        const drawNeuralConnections = () => {
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const p1 = particles[i];
-                    const p2 = particles[j];
-                    const distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+        const _drawNeuralConnections = () => {
+            for (let _i = 0; i < particles.length; i++) {
+                for (let _j = i + 1; j < particles.length; j++) {
+                    const _p1 = particles[i];
+                    const _p2 = particles[j];
+                    const _distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
                     if (distance < 150) {
-                        const strength = 1 - distance / 150;
+                        const _strength = 1 - distance / 150;
                         ctx.beginPath();
                         ctx.moveTo(p1.x, p1.y);
                         ctx.lineTo(p2.x, p2.y);
@@ -69,7 +69,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             }
         };
         // Animation loop
-        const animate = () => {
+        const _animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Update and draw particles
             particles.forEach((particle, index) => {
@@ -96,8 +96,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 ctx.globalAlpha = particle.opacity;
                 ctx.fillStyle = particle.color;
                 // Quantum superposition effect
-                const sizeVariation = Math.sin(particle.quantumState) * 0.5;
-                const finalSize = particle.size + sizeVariation;
+                const _sizeVariation = Math.sin(particle.quantumState) * 0.5;
+                const _finalSize = particle.size + sizeVariation;
                 ctx.beginPath();
                 ctx.arc(particle.x, particle.y, finalSize, 0, Math.PI * 2);
                 ctx.fill();
@@ -116,7 +116,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         };
         animate();
         // Handle resize
-        const handleResize = () => {
+        const _handleResize = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         };

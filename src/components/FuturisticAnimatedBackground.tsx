@@ -2,17 +2,17 @@
 import React, { useEffect, useRef } from 'react';
 
 export const FuturisticAnimatedBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const _canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const _canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const _ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {
+    const _resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -32,11 +32,11 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     }> = [];
 
     // Initialize particles
-    const initParticles = () => {
+    const _initParticles = () => {
       particles.length = 0;
-      const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 10000));
+      const _particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 10000));
       
-      for (let i = 0; i < particleCount; i++) {
+      for (let _i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -61,11 +61,11 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     }> = [];
 
     // Initialize shapes
-    const initShapes = () => {
+    const _initShapes = () => {
       shapes.length = 0;
-      const shapeCount = 15;
+      const _shapeCount = 15;
       
-      for (let i = 0; i < shapeCount; i++) {
+      for (let _i = 0; i < shapeCount; i++) {
         shapes.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -79,7 +79,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     };
 
     // Draw triangle
-    const drawTriangle = (x: number, y: number, size: number, rotation: number) => {
+    const _drawTriangle = (x: number, y: number, size: number, rotation: number) => {
       ctx.save();
       ctx.translate(x, y);
       ctx.rotate(rotation);
@@ -94,7 +94,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     };
 
     // Draw square
-    const drawSquare = (x: number, y: number, size: number, rotation: number) => {
+    const _drawSquare = (x: number, y: number, size: number, rotation: number) => {
       ctx.save();
       ctx.translate(x, y);
       ctx.rotate(rotation);
@@ -105,15 +105,15 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     };
 
     // Draw circle
-    const drawCircle = (x: number, y: number, size: number) => {
+    const _drawCircle = (x: number, y: number, size: number) => {
       ctx.beginPath();
       ctx.arc(x, y, size / 2, 0, Math.PI * 2);
     };
 
     // Animation loop
-    const animate = () => {
+    const _animate = () => {
       // Clear canvas with gradient background
-      const gradient = ctx.createRadialGradient(
+      const _gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
@@ -146,9 +146,9 @@ export const FuturisticAnimatedBackground: React.FC = () => {
 
         // Draw connections between nearby particles
         particles.slice(index + 1).forEach(otherParticle => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const _dx = particle.x - otherParticle.x;
+          const _dy = particle.y - otherParticle.y;
+          const _distance = Math.sqrt(dx * dx + dy * dy);
           
           if (distance < 100) {
             ctx.save();
@@ -198,14 +198,14 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.strokeStyle = '#06b6d4';
       ctx.lineWidth = 0.5;
 
-      const gridSize = 50;
-      for (let x = 0; x < canvas.width; x += gridSize) {
+      const _gridSize = 50;
+      for (let _x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
-      for (let y = 0; y < canvas.height; y += gridSize) {
+      for (let _y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);

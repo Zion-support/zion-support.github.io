@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap } from 'lucide-react';
-const LinkHealthMonitor = () => {
+import { _motion } from 'framer-motion';
+import { _Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap } from 'lucide-react';
+const _LinkHealthMonitor = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [report, setReport] = useState(null);
     const [selectedFilter, setSelectedFilter] = useState('all');
     // Sample data based on the analysis report
-    const sampleLinks = [
+    const _sampleLinks = [
         {
             url: 'https://linkedin.com/company/ziontechgroup',
             status: 'broken',
@@ -50,12 +50,12 @@ const LinkHealthMonitor = () => {
         setLinkStatuses(sampleLinks);
         generateReport(sampleLinks);
     }, []);
-    const generateReport = (links) => {
-        const totalLinks = links.length;
-        const healthyLinks = links.filter(l => l.status === 'healthy').length;
-        const brokenLinks = links.filter(l => l.status === 'broken').length;
-        const externalLinks = links.filter(l => l.status === 'external').length;
-        const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
+    const _generateReport = (links) => {
+        const _totalLinks = links.length;
+        const _healthyLinks = links.filter(l => l.status === 'healthy').length;
+        const _brokenLinks = links.filter(l => l.status === 'broken').length;
+        const _externalLinks = links.filter(l => l.status === 'external').length;
+        const _avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
         setReport({
             totalLinks,
             healthyLinks,
@@ -65,13 +65,13 @@ const LinkHealthMonitor = () => {
             lastUpdated: new Date()
         });
     };
-    const startMonitoring = async () => {
+    const _startMonitoring = async () => {
         setIsMonitoring(true);
         // Simulate link checking
         await new Promise(resolve => setTimeout(resolve, 2000));
         setIsMonitoring(false);
     };
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':
                 return <CheckCircle className="w-4 h-4 text-green-400"/>;
@@ -83,7 +83,7 @@ const LinkHealthMonitor = () => {
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>;
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'healthy':
                 return 'text-green-400';
@@ -95,7 +95,7 @@ const LinkHealthMonitor = () => {
                 return 'text-yellow-400';
         }
     };
-    const filteredLinks = linkStatuses.filter(link => {
+    const _filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')
             return true;
         return link.status === selectedFilter;

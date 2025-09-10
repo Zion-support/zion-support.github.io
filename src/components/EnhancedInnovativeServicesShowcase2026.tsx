@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Shield, Atom, Cpu, Network, Heart, Scale, DollarSign, Factory, Satellite, Code, Users, Globe, Server, Zap, Star, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon, ExternalLink, Rocket, Award, MessageCircle } from 'lucide-react';
-import { EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '@/data/expandedInnovativeServices2026';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Brain, Shield, Atom, Cpu, Network, Heart, Scale, DollarSign, Factory, Satellite, Code, Users, Globe, Server, Zap, Star, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon, ExternalLink, Rocket, Award, MessageCircle } from 'lucide-react';
+import { _EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '@/data/expandedInnovativeServices2026';
 
 export default function EnhancedInnovativeServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  const categories = [
+  const _categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue', count: EXPANDED_INNOVATIVE_SERVICES_2026.length },
     ...SPECIALIZED_SERVICE_CATEGORIES.map(cat => ({
       id: cat.id,
@@ -60,19 +60,19 @@ export default function EnhancedInnovativeServicesShowcase2026() {
     return colorMap[categoryId] || 'from-zion-cyan to-zion-blue';
   }
 
-  const filteredServices = selectedCategory === 'all' 
+  const _filteredServices = selectedCategory === 'all' 
     ? EXPANDED_INNOVATIVE_SERVICES_2026
     : EXPANDED_INNOVATIVE_SERVICES_2026.filter(service => {
-        const category = SPECIALIZED_SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory);
+        const _category = SPECIALIZED_SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory);
         return category?.services.includes(service.id);
       });
 
-  const handleServiceClick = (service: any) => {
+  const _handleServiceClick = (service: any) => {
     setSelectedService(service);
     setIsVideoPlaying(false);
   };
 
-  const formatPrice = (price: number) => {
+  const _formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
     }

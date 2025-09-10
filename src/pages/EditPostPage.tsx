@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import { _useState, useEffect } from "react";
+import { _Link, useNavigate, useParams } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
+import { _useToast } from "@/hooks/use-toast";
+import { _useAuth } from "@/hooks/useAuth";
 // Mock post data
-const mockPost = {
+const _mockPost = {
     id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
@@ -26,7 +26,7 @@ const mockPost = {
 };
 export default function EditPostPage() {
     const { postId } = useParams();
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const { toast } = useToast();
     const { user } = useAuth();
     const [post, setPost] = useState(mockPost);
@@ -52,8 +52,8 @@ export default function EditPostPage() {
         </div>);
     }
     // Check if the user is the author or an admin
-    const isAuthor = user?.id === post.authorId;
-    const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+    const _isAuthor = user?.id === post.authorId;
+    const _isAdmin = user?.userType === 'admin' || user?.role === 'admin';
     if (!isAuthor && !isAdmin) {
         return (<div className="container py-8">
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>
@@ -63,13 +63,13 @@ export default function EditPostPage() {
           </Button>
         </div>);
     }
-    const initialValues = {
+    const _initialValues = {
         title: post.title,
         content: post.content,
         categoryId: post.categoryId,
         tags: post.tags.join(", ")
     };
-    const handleSubmit = async (values) => {
+    const _handleSubmit = async (values) => {
         try {
             // Here we would normally update the post in the database
             // For now, we'll just simulate a successful update

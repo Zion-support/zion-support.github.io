@@ -1,9 +1,9 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { _SEO } from "@/components/SEO";
 import Link from 'next/link';
-import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
+import { _Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
 export default function IoTEdgeComputingServices() {
-    const iotServices = [
+    const _iotServices = [
         {
             icon: Wifi,
             title: 'IoT Device Management Platform',
@@ -131,7 +131,7 @@ export default function IoTEdgeComputingServices() {
             ]
         }
     ];
-    const industries = [
+    const _industries = [
         'Smart Cities & Municipalities',
         'Manufacturing & Industry 4.0',
         'Healthcare & Medical Devices',
@@ -141,7 +141,7 @@ export default function IoTEdgeComputingServices() {
         'Retail & Smart Stores',
         'Building Management & Smart Homes'
     ];
-    const technologies = [
+    const _technologies = [
         'LoRaWAN & NB-IoT',
         '5G & Edge Computing',
         'MQTT & CoAP Protocols',
@@ -151,7 +151,7 @@ export default function IoTEdgeComputingServices() {
         'AWS IoT & Azure IoT',
         'Google Cloud IoT & IBM Watson'
     ];
-    const benefits = [
+    const _benefits = [
         'Real-time data processing and insights',
         'Reduced latency and improved performance',
         'Lower bandwidth and cloud costs',
@@ -159,7 +159,7 @@ export default function IoTEdgeComputingServices() {
         'Scalable IoT deployments',
         'Predictive maintenance and optimization'
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: 'Smart Manufacturing',
             description: 'Real-time monitoring of production lines, predictive maintenance, and quality control automation.',

@@ -2,14 +2,14 @@
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import React, { useState } from 'react';';';
-import { motion  } from 'framer-motion';';';
+import { _motion  } from 'framer-motion';';';
 ;
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';  const features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
+import { _motion  } from 'framer-motion';  const _features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
     { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
-  const containerVariants = {
+  const _containerVariants = {
   hidden: { opacity: 0,
   y: 2 0
 },
@@ -22,7 +22,7 @@ import { motion  } from 'framer-motion';  const features = [{ "icon": "Cloc k", 
       };
     };
   };
-  const itemVariants = {
+  const _itemVariants = {
   hidden: { opacity: 0,
   y: 2 0
 },
@@ -32,13 +32,13 @@ import { motion  } from 'framer-motion';  const features = [{ "icon": "Cloc k", 
       transition: { duration: 0.5 };
     };
   };
-  const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },
+  const _features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
+import { _motion  } from 'framer-motion';
+import { _Link  } from 'react-router-dom';
 ;
 ,";
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },";

@@ -121,7 +121,7 @@ export { FuturisticFooter };
 </motion>;
 </motion>;
 </motion>;
-</motion>  const stats = [']
+</motion>  const _stats = [']
     { value: '500+', label: 'Projects Completed', icon: CheckCircle },''
     { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },''
     { value: '24/7', label: 'Support Available', icon: Award },''

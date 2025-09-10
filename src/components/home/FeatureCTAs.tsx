@@ -1,8 +1,8 @@
 import React from 'react';
-import { Play, Download, Users, Zap, ArrowRight } from 'lucide-react';
+import { _Play, Download, Users, Zap, ArrowRight } from 'lucide-react';
 
-export const FeatureCTAs = () => {
-  const ctaItems = [
+export const _FeatureCTAs = () => {
+  const _ctaItems = [
     {
       title: "Watch Demo",
       description: "See our solutions in action",

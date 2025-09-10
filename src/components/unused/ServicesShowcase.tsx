@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 export function ServicesShowcase() {
-    const services = [
+    const _services = [
         {
             icon: CpuChipIcon,
             title: "AI & Machine Learning",
@@ -47,7 +47,7 @@ export function ServicesShowcase() {
             href: "/business-intelligence"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -56,7 +56,7 @@ export function ServicesShowcase() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

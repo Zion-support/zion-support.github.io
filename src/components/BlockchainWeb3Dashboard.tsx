@@ -1,9 +1,9 @@
-import { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
-import { useBlockchainWeb3 } from '../hooks/useBlockchainWeb3';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {
+import { _useState, useCallback } from 'react';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
+import { _useBlockchainWeb3 } from '../hooks/useBlockchainWeb3';
+import { _useAnalytics } from '../hooks/useAnalytics';
+export const _BlockchainWeb3Dashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -22,19 +22,19 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         value: '',
         data: ''
     });
-    const handleConnectWallet = useCallback(async () => {
+    const _handleConnectWallet = useCallback(async () => {
         try {
             await connectWallet();
             trackEvent('blockchain', 'dashboard', 'wallet_connected');
         }
         catch (error) {
-            console.error('Failed to connect wallet:', error);
+            // console.error('Failed to connect wallet:', error);
         }
     }, [connectWallet, trackEvent]);
-    const handleMintNFT = useCallback(async () => {
+    const _handleMintNFT = useCallback(async () => {
         if (nftForm.name.trim() && wallet) {
             try {
-                const metadata = {
+                const _metadata = {
                     name: nftForm.name,
                     description: nftForm.description,
                     image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name}`
@@ -45,11 +45,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', 'dashboard', 'nft_minted');
             }
             catch (error) {
-                console.error('Failed to mint NFT:', error);
+                // console.error('Failed to mint NFT:', error);
             }
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
-    const handleSendTransaction = useCallback(async () => {
+    const _handleSendTransaction = useCallback(async () => {
         if (transactionForm.to.trim() && transactionForm.value && wallet) {
             try {
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || undefined);
@@ -58,11 +58,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain', 'dashboard', 'transaction_sent');
             }
             catch (error) {
-                console.error('Failed to send transaction:', error);
+                // console.error('Failed to send transaction:', error);
             }
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]);
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'confirmed': return 'text-green-600 bg-green-100';
             case 'pending': return 'text-yellow-600 bg-yellow-100';

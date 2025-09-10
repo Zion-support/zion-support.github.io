@@ -1,23 +1,23 @@
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";
-import { QuoteFormSection } from "@/components/QuoteFormSection";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { PageHero } from "@/components/services/PageSections/PageHero";
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+import { _useState, useEffect } from "react";
+import { _useSearchParams } from "react-router-dom";
+import { _ITServicePricingTable } from "@/components/services/ITServicePricingTable";
+import { _GlobalServiceSection } from "@/components/GlobalServiceSection";
+import { _QuoteFormSection } from "@/components/QuoteFormSection";
+import { _TrustedBySection } from "@/components/TrustedBySection";
+import { _onsiteServicePricing } from "@/data/onsiteServicePricing";
+import { _toast } from "@/hooks/use-toast";
+import { _PageHero } from "@/components/services/PageSections/PageHero";
+import { _CountryTabs } from "@/components/services/PageSections/CountryTabs";
+import { _ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
+import { _ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
+import { _ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+import { _EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
     const [searchParams] = useSearchParams();
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
     // Check for success parameter in URL
-    const success = searchParams.get("success");
+    const _success = searchParams.get("success");
     // Show success toast if redirected from successful payment
     useEffect(() => {
         if (success === "true") {
@@ -28,14 +28,14 @@ export default function ITOnsiteServicesPage() {
         }
     }, [success]);
     // Popular countries for the featured cards
-    const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+    const _popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
     // Filter countries based on search query
-    const filteredCountries = onsiteServicePricing
+    const _filteredCountries = onsiteServicePricing
         .filter(country => country.country.toLowerCase().includes(searchQuery.toLowerCase()))
         .sort((a, b) => {
         // First, sort by popular status
-        const aIsPopular = popularCountries.includes(a.country);
-        const bIsPopular = popularCountries.includes(b.country);
+        const _aIsPopular = popularCountries.includes(a.country);
+        const _bIsPopular = popularCountries.includes(b.country);
         if (aIsPopular && !bIsPopular)
             return -1;
         if (!aIsPopular && bIsPopular)
@@ -43,7 +43,7 @@ export default function ITOnsiteServicesPage() {
         // Then sort alphabetically
         return a.country.localeCompare(b.country);
     });
-    const handleCountrySelect = (country) => {
+    const _handleCountrySelect = (country) => {
         setSelectedCountry(country);
         // Scroll to the service details section
         setTimeout(() => {

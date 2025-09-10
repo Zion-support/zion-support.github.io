@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
+import { _motion } from 'framer-motion';
+import { _CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
 export function FeaturesSection() {
-    const features = [
+    const _features = [
         {
             icon: CheckCircleIcon,
             title: "Proven Track Record",
@@ -40,7 +40,7 @@ export function FeaturesSection() {
             color: "text-zion-purple"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -49,7 +49,7 @@ export function FeaturesSection() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

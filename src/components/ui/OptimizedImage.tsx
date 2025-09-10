@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { motion, AnimatePresence } from 'framer-motion';
+import { _cn } from '@/lib/utils';
+import { _motion, AnimatePresence } from 'framer-motion';
 export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [hasError, setHasError] = useState(false);
     const [isInView, setIsInView] = useState(priority);
-    const imgRef = useRef(null);
-    const observerRef = useRef(null);
+    const _imgRef = useRef(null);
+    const _observerRef = useRef(null);
     // Intersection Observer for lazy loading
     useEffect(() => {
         if (priority || !imgRef.current)
@@ -27,15 +27,15 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             }
         };
     }, [priority]);
-    const handleLoad = () => {
+    const _handleLoad = () => {
         setIsLoaded(true);
         onLoad?.();
     };
-    const handleError = () => {
+    const _handleError = () => {
         setHasError(true);
         onError?.();
     };
-    const getAspectRatioClass = () => {
+    const _getAspectRatioClass = () => {
         if (typeof aspectRatio === 'number') {
             return `aspect-[${aspectRatio}]`;
         }
@@ -48,7 +48,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 return '';
         }
     };
-    const getObjectFitClass = () => {
+    const _getObjectFitClass = () => {
         switch (objectFit) {
             case 'cover':
                 return 'object-cover';
@@ -65,13 +65,13 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         }
     };
     // Generate responsive image sources
-    const generateSrcSet = (imageSrc) => {
+    const _generateSrcSet = (imageSrc) => {
         if (!imageSrc.includes('http'))
             return imageSrc;
-        const baseUrl = imageSrc.split('?')[0];
-        const params = new URLSearchParams(imageSrc.split('?')[1] || '');
-        const widths = [320, 640, 768, 1024, 1280, 1920];
-        const srcSet = widths
+        const _baseUrl = imageSrc.split('?')[0];
+        const _params = new URLSearchParams(imageSrc.split('?')[1] || '');
+        const _widths = [320, 640, 768, 1024, 1280, 1920];
+        const _srcSet = widths
             .filter(w => !width || w <= width)
             .map(w => {
             params.set('w', w.toString());
@@ -81,8 +81,8 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             .join(', ');
         return srcSet;
     };
-    const currentSrc = hasError ? fallback : (isInView ? src : placeholder);
-    const srcSet = generateSrcSet(currentSrc);
+    const _currentSrc = hasError ? fallback : (isInView ? src : placeholder);
+    const _srcSet = generateSrcSet(currentSrc);
     return (<div className={cn('relative overflow-hidden', getAspectRatioClass(), className)} style={{
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
@@ -113,7 +113,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
 }
 // Avatar image component
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
-    const sizeClasses = {
+    const _sizeClasses = {
         sm: 'w-8 h-8',
         md: 'w-10 h-10',
         lg: 'w-12 h-12',

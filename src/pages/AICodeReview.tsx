@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Code, Shield, Zap, Users, BarChart3, Target, CheckCircle } from 'lucide-react';
 export default function AICodeReview() {
-    const features = [
+    const _features = [
         {
             icon: Code,
             title: "Automated Code Analysis",
@@ -34,7 +34,7 @@ export default function AICodeReview() {
             description: "Ensure code follows industry best practices and coding standards"
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Reduce code review time by 80%",
         "Improve code quality and maintainability",
         "Detect security vulnerabilities early",
@@ -42,7 +42,7 @@ export default function AICodeReview() {
         "Accelerate development cycles",
         "Reduce production bugs by 60%"
     ];
-    const supportedLanguages = [
+    const _supportedLanguages = [
         "JavaScript/TypeScript",
         "Python",
         "Java",

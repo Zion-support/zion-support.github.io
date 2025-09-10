@@ -1,23 +1,23 @@
 import React, { useEffect, useRef } from 'react';
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
-    const canvasRef = useRef(null);
+    const _canvasRef = useRef(null);
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const _canvas = canvasRef.current;
         if (!canvas)
             return;
-        const ctx = canvas.getContext('2d');
+        const _ctx = canvas.getContext('2d');
         if (!ctx)
             return;
         let animationFrameId;
-        let particles = [];
-        const resizeCanvas = () => {
+        let _particles = [];
+        const _resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         };
-        const initParticles = () => {
+        const _initParticles = () => {
             particles = [];
-            const particleCount = variant === 'particles' ? 100 : 50;
-            for (let i = 0; i < particleCount; i++) {
+            const _particleCount = variant === 'particles' ? 100 : 50;
+            for (let _i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
@@ -28,27 +28,27 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 });
             }
         };
-        const drawGrid = () => {
-            const gridSize = 40;
-            const offset = (Date.now() * 0.001) % gridSize;
+        const _drawGrid = () => {
+            const _gridSize = 40;
+            const _offset = (Date.now() * 0.001) % gridSize;
             ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
             ctx.lineWidth = 1;
             // Vertical lines
-            for (let x = offset; x < canvas.width; x += gridSize) {
+            for (let _x = offset; x < canvas.width; x += gridSize) {
                 ctx.beginPath();
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canvas.height);
                 ctx.stroke();
             }
             // Horizontal lines
-            for (let y = offset; y < canvas.height; y += gridSize) {
+            for (let _y = offset; y < canvas.height; y += gridSize) {
                 ctx.beginPath();
                 ctx.moveTo(0, y);
                 ctx.lineTo(canvas.width, y);
                 ctx.stroke();
             }
         };
-        const drawParticles = () => {
+        const _drawParticles = () => {
             particles.forEach((particle, index) => {
                 // Update position
                 particle.x += particle.vx;
@@ -69,7 +69,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 ctx.fill();
                 // Draw connections
                 particles.slice(index + 1).forEach(otherParticle => {
-                    const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +
+                    const _distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +
                         Math.pow(particle.y - otherParticle.y, 2));
                     if (distance < 100) {
                         ctx.beginPath();
@@ -82,17 +82,17 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 });
             });
         };
-        const drawWaves = () => {
-            const time = Date.now() * 0.001;
-            const amplitude = 50;
-            const frequency = 0.01;
+        const _drawWaves = () => {
+            const _time = Date.now() * 0.001;
+            const _amplitude = 50;
+            const _frequency = 0.01;
             ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
             ctx.lineWidth = 2;
             // Draw multiple wave layers
-            for (let layer = 0; layer < 3; layer++) {
+            for (let _layer = 0; layer < 3; layer++) {
                 ctx.beginPath();
-                for (let x = 0; x < canvas.width; x++) {
-                    const y = canvas.height / 2 +
+                for (let _x = 0; x < canvas.width; x++) {
+                    const _y = canvas.height / 2 +
                         amplitude * Math.sin(frequency * x + time + layer) +
                         layer * 30;
                     if (x === 0) {
@@ -105,20 +105,20 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 ctx.stroke();
             }
         };
-        const drawMatrix = () => {
-            const time = Date.now() * 0.001;
-            const fontSize = 14;
-            const columns = Math.floor(canvas.width / fontSize);
+        const _drawMatrix = () => {
+            const _time = Date.now() * 0.001;
+            const _fontSize = 14;
+            const _columns = Math.floor(canvas.width / fontSize);
             ctx.fillStyle = 'rgba(34, 221, 210, 0.8)';
             ctx.font = `${fontSize}px monospace`;
-            for (let i = 0; i < columns; i++) {
-                const x = i * fontSize;
-                const y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
-                const char = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+            for (let _i = 0; i < columns; i++) {
+                const _x = i * fontSize;
+                const _y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
+                const _char = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
                 ctx.fillText(char, x, y);
             }
         };
-        const animate = () => {
+        const _animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             switch (variant) {
                 case 'grid':

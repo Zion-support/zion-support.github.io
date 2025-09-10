@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { _Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function EnterpriseSolutions() {
-    const solutions = [
+    const _solutions = [
         {
             icon: Building2,
             title: "Enterprise Architecture",
@@ -40,7 +40,7 @@ export default function EnterpriseSolutions() {
             features: ["Custom AI Models", "Workflow Automation", "Intelligent Analytics", "Process Optimization"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Increased operational efficiency by 40-60%",
         "Reduced IT costs through automation and optimization",
         "Enhanced security and compliance posture",
@@ -48,7 +48,7 @@ export default function EnterpriseSolutions() {
         "Faster time-to-market for new products/services",
         "Better data insights and decision-making capabilities"
     ];
-    const caseStudies = [
+    const _caseStudies = [
         {
             company: "Fortune 500 Manufacturing",
             industry: "Manufacturing",
@@ -108,7 +108,7 @@ export default function EnterpriseSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white"/>

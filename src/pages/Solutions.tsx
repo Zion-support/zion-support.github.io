@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { _Link } from 'react-router-dom';
 import { 
   Building2, 
   Heart, 
@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 export default function Solutions() {
-  const solutions = [
+  const _solutions = [
     {
       id: 'enterprise',
       title: 'Enterprise Solutions',
@@ -115,7 +115,7 @@ export default function Solutions() {
     }
   ];
 
-  const industries = [
+  const _industries = [
     'Healthcare',
     'Finance',
     'Manufacturing',

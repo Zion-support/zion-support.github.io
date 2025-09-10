@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-const UltimatePricing2025 = () => {
-    const pricingTiers = [
+import { _Link } from 'react-router-dom';
+const _UltimatePricing2025 = () => {
+    const _pricingTiers = [
         {
             name: "Micro SAAS Solutions",
             description: "Affordable, specialized software solutions for modern businesses",

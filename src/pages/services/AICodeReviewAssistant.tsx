@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
-const AICodeReviewAssistant = () => {
-    const features = [
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
+import { _motion } from 'framer-motion';
+import { _CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
+const _AICodeReviewAssistant = () => {
+    const _features = [
         {
             title: "Automated Security Vulnerability Detection",
             description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production",
@@ -26,7 +26,7 @@ const AICodeReviewAssistant = () => {
             icon: <GitBranch className="w-6 h-6"/>
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             metric: "40-60%",
             description: "Reduction in code review time",
@@ -48,7 +48,7 @@ const AICodeReviewAssistant = () => {
             icon: <Zap className="w-5 h-5"/>
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Starter",
             price: "$199",
@@ -94,10 +94,10 @@ const AICodeReviewAssistant = () => {
             popular: false
         }
     ];
-    const integrations = [
+    const _integrations = [
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
     ];
-    const useCases = [
+    const _useCases = [
         "Code quality improvement",
         "Security compliance",
         "Team productivity enhancement",

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AgenticRagHelpdesk() {
-    const features = [
+    const _features = [
         {
             icon: Brain,
             title: 'Intelligent Knowledge Retrieval',
@@ -28,7 +28,7 @@ export default function AgenticRagHelpdesk() {
             benefits: ['Data encryption', 'Access controls', 'Audit trails']
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: 'Customer Support',
             description: 'Provide instant, accurate responses to customer inquiries',

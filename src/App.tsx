@@ -51,7 +51,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 const App = () => {
   useEffect(() => {
     // Add any global initialization logic here
-    console.log('Zion Tech Group App initialized');
+    // console.log('Zion Tech Group App initialized');
   }, []);
 
   return (

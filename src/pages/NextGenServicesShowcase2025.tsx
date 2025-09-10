@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 import Link from 'next/link';
-import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
+import { _Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
 export default function NextGenServicesShowcase2025() {
-    const featuredServices = [
+    const _featuredServices = [
         {
             id: 'ai-consciousness-simulator',
             title: 'AI Consciousness Simulation Platform',
@@ -65,7 +65,7 @@ export default function NextGenServicesShowcase2025() {
             path: '/multimodal-ai-platform'
         }
     ];
-    const microSaasServices = [
+    const _microSaasServices = [
         {
             title: 'AI-Powered Social Media Scheduling Suite',
             description: 'Intelligent social media management with AI content generation and optimal posting optimization.',
@@ -91,7 +91,7 @@ export default function NextGenServicesShowcase2025() {
             trial: '21 days free'
         }
     ];
-    const infrastructureServices = [
+    const _infrastructureServices = [
         {
             title: 'Quantum-Secure Cloud Infrastructure',
             description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.',

@@ -1,11 +1,11 @@
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Inbox } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { _SEO } from "@/components/SEO";
+import { _ApplicationsTracker } from "@/components/jobs/applications";
+import { _Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { _Inbox } from "lucide-react";
+import { _ProtectedRoute } from "@/components/ProtectedRoute";
+import { _useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
-    const isMobile = useIsMobile();
+    const _isMobile = useIsMobile();
     return (<>
       <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>
       

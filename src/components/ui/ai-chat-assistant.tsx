@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
-import { Button } from './button';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
+import { _Button } from './button';
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -22,10 +22,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
-    const messagesEndRef = useRef(null);
-    const inputRef = useRef(null);
+    const _messagesEndRef = useRef(null);
+    const _inputRef = useRef(null);
     // Auto-scroll to bottom
-    const scrollToBottom = () => {
+    const _scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
     useEffect(() => {
@@ -40,19 +40,19 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     // Simulate AI typing
     useEffect(() => {
         if (isTyping) {
-            const timer = setTimeout(() => {
+            const _timer = setTimeout(() => {
                 setIsTyping(false);
             }, 2000);
             return () => clearTimeout(timer);
         }
     }, [isTyping]);
     // Generate AI response
-    const generateAIResponse = (_userMessage) => {
+    const _generateAIResponse = (_userMessage) => {
         setIsTyping(true);
         // Simulate API call delay
-        const timer = setTimeout(() => {
+        const _timer = setTimeout(() => {
             // Mock AI responses based on user input
-            const responses = [
+            const _responses = [
                 {
                     content: "That's a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models, natural language processing, and predictive analytics.",
                     suggestions: ['Tell me more about AI pricing', 'What industries do you serve?', 'Can you provide a demo?']
@@ -70,8 +70,8 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     suggestions: ['Schedule consultation', 'View case studies', 'Meet the team']
                 }
             ];
-            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-            const aiMessage = {
+            const _randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            const _aiMessage = {
                 id: Date.now().toString(),
                 type: 'assistant',
                 content: randomResponse.content,
@@ -89,10 +89,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         return () => clearTimeout(timer);
     };
     // Send message
-    const sendMessage = async () => {
+    const _sendMessage = async () => {
         if (!inputValue.trim() || isTyping)
             return;
-        const userMessage = {
+        const _userMessage = {
             id: Date.now().toString(),
             type: 'user',
             content: inputValue.trim(),
@@ -105,24 +105,24 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         generateAIResponse(userMessage.content);
     };
     // Handle enter key
-    const handleKeyPress = (e) => {
+    const _handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             sendMessage();
         }
     };
     // Toggle voice input
-    const toggleVoiceInput = () => {
+    const _toggleVoiceInput = () => {
         setIsRecording(!isRecording);
         // In a real implementation, this would start/stop speech recognition
     };
     // Handle suggestion click
-    const handleSuggestionClick = useCallback((suggestion) => {
+    const _handleSuggestionClick = useCallback((suggestion) => {
         setInputValue(suggestion);
         inputRef.current?.focus();
     }, []);
     // Clear chat
-    const clearChat = () => {
+    const _clearChat = () => {
         setMessages([messages[0]]); // Keep welcome message
     };
     if (!enabled)

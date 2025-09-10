@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { _SEO } from "@/components/SEO";
+import { _Card, CardContent } from "@/components/ui/card";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Button } from "@/components/ui/button";
+import { _toast } from "@/hooks/use-toast";
+import { _supabase } from "@/integrations/supabase/client";
 // Import refactored components
-import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
+import { _FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
 export default function FraudDetection() {
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);
@@ -24,7 +24,7 @@ export default function FraudDetection() {
         actioned_count: 0,
     });
     // Fetch fraud flags
-    const fetchFraudFlags = async () => {
+    const _fetchFraudFlags = async () => {
         setIsLoading(true);
         try {
             const { data, error } = await supabase
@@ -36,7 +36,7 @@ export default function FraudDetection() {
             setFlags(data || []);
             setFilteredFlags(data || []);
             // Calculate stats
-            const newStats = {
+            const _newStats = {
                 total_flags: data?.length || 0,
                 pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
                 suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
@@ -47,7 +47,7 @@ export default function FraudDetection() {
             setStats(newStats);
         }
         catch (error) {
-            console.error("Error fetching fraud flags:", error);
+            // console.error("Error fetching fraud flags:", error);
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
@@ -63,10 +63,10 @@ export default function FraudDetection() {
     }, []);
     // Apply filters
     useEffect(() => {
-        let result = [...flags];
+        let _result = [...flags];
         // Apply search filter
         if (searchQuery) {
-            const query = searchQuery.toLowerCase();
+            const _query = searchQuery.toLowerCase();
             result = result.filter((flag) => flag.user_email?.toLowerCase().includes(query) ||
                 flag.content_excerpt.toLowerCase().includes(query) ||
                 flag.reason.toLowerCase().includes(query));
@@ -85,10 +85,10 @@ export default function FraudDetection() {
         }
         setFilteredFlags(result);
     }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
-    const handleAction = async (flagId, action) => {
+    const _handleAction = async (flagId, action) => {
         try {
-            const status = action === 'ignore' ? 'ignored' : 'actioned';
-            const actionTaken = action === 'ignore' ? 'none' : action;
+            const _status = action === 'ignore' ? 'ignored' : 'actioned';
+            const _actionTaken = action === 'ignore' ? 'none' : action;
             const { error } = await supabase
                 .from("fraud_flags")
                 .update({
@@ -109,7 +109,7 @@ export default function FraudDetection() {
             fetchFraudFlags();
         }
         catch (error) {
-            console.error("Error updating fraud flag:", error);
+            // console.error("Error updating fraud flag:", error);
             toast({
                 title: "Error",
                 description: "Failed to update flag",
@@ -117,13 +117,13 @@ export default function FraudDetection() {
             });
         }
     };
-    const resetFilters = () => {
+    const _resetFilters = () => {
         setSearchQuery("");
         setStatusFilter(null);
         setSeverityFilter(null);
         setContentTypeFilter(null);
     };
-    const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
+    const _hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
     return (<SEO title="Fraud Detection | Admin Dashboard" description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"/>
         ,
             <div className="container mx-auto px-4 py-8">

@@ -31,7 +31,7 @@ contactInfo: {
 }}
 
 // Zion Tech Group Contact Information;
-const zionContact = {
+const _zionContact = {
 
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","

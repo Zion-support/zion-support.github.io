@@ -1,10 +1,10 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
 export default function Enterprise() {
-    const features = [
+    const _features = [
         {
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,
             title: "Team Management",
@@ -36,7 +36,7 @@ export default function Enterprise() {
             description: "Priority support with dedicated account managers and 24/7 technical assistance."
         }
     ];
-    const plans = [
+    const _plans = [
         {
             name: "Starter",
             price: "$999",

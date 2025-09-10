@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
-const Leadership = () => {
-    const leadershipTeam = [
+import { _Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
+const _Leadership = () => {
+    const _leadershipTeam = [
         {
             name: "Dr. Sarah Chen",
             role: "Chief Executive Officer",
@@ -112,7 +112,7 @@ const Leadership = () => {
             location: "New York, NY"
         }
     ];
-    const companyValues = [
+    const _companyValues = [
         {
             title: "Innovation First",
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
@@ -134,7 +134,7 @@ const Leadership = () => {
             icon: Target
         }
     ];
-    const vision = {
+    const _vision = {
         title: "Our Vision",
         description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
         goals: [
