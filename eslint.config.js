@@ -1,5 +1,5 @@
 // Flat ESLint config replacing deprecated .eslintignore usage
-import js from "@eslint/js";
+import eslintJs from "@eslint/js";
 import globals from "globals";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
@@ -8,7 +8,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 
 export default [
   {
-    ...js.configs.recommended,
+    ...eslintJs.configs.recommended,
     files: [
       "src/**/*.{js,jsx,ts,tsx}",
       "app/**/*.{js,jsx,ts,tsx}",
