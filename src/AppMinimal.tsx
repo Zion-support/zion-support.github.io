@@ -1,6 +1,7 @@
+import type { ReactElement } from "react";
 import { SEO } from "./components/SEO";
 
-export default function AppMinimal(): JSX.Element {
+export default function AppMinimal(): ReactElement {
   return (
     <div className="min-h-screen bg-white">
       <SEO
