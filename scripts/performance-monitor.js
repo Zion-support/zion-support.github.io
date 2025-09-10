@@ -1,3 +1,56 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim();  const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { } else { } } try {  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' });  performanceChecks.bundleAnalysis = true} catch (error) { ')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { ,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: * 1000}ms`); if (parseFloat(responseTime) < 1) { } else { } performanceChecks.loadTime = true} else { ,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); `); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
+#!/usr/bin/env node
+const fs = // // require('fs');
+const path = // // require('path');
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString()
+    };
+  }
+const performanceChecks = {
+  buildSize: false,
+  bundleAnalysis: false,
+  lighthouseScore: false,
+  loadTime: false,
+  memoryUsage: false;
+};
+      "bundleSize": 0,
+      "memoryUsage": 0,
+      "timestamp": new Date().toISOString()
+    }}
+const performanceChecks = {
+  "buildSize": false,
+  "bundleAnalysis": false,
+  "lighthouseScore": false,
+  "loadTime": false,
+  "memoryUsage": false};
+try {
+  // Check build size
+  if (fs.existsSync('.next')) {
+    const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim();
+    console.log(`✅ Build "size": ${buildSize}`);
+    // Check if build size is reasonable (less than 50MB)
+    const sizeInMB = parseInt(buildSize.split('\t')[0]);
+    if (sizeInMB < 50) {
+      console.log('✅ Build size is within acceptable limits');
+    } else {
+      console.log('⚠️  Build size is large, consider optimization');
+    }
+  }
+try {
+  // Bundle analysis
+  console.log('📋 Analyzing bundle...');
+  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
+  console.log('✅ Bundle analysis completed');
+  performanceChecks.bundleAnalysis = true;
+} catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+=======
 #!/usr/bin/env node;
 
 /**;
@@ -98,15 +151,67 @@ class PerformanceMonitor {
       this.log(`Error rate: ${(errorRate * 100).toFixed(2)}%`, 'INFO');
 
       return {
-        responseTime,;
-        throughput,;
-        errorRate,;
-        uptime: appStatus.uptime}
-      } catch (error) {
-      this.log(`Error checking application performance: ${error.message}`, 'ERROR');
-      return null}
-  }
+        responseTime,
+        throughput,
+        errorRate,
+        uptime: appStatus.uptime;
+}
 
+} catch (error) {
+      this.log(`Error checking application performance: ${error.message}`, 'ERROR')
+      return null;
+>>>>>>> origin/automation-fixes
+}
+  performanceChecks.bundleAnalysis = true} catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
+try {
+  // Check if app is running and get basic metrics
+  const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" "http": //localhost:3000', { "encoding": 'utf8' });
+  if (isRunning === '200') {
+    console.log('✅ Application is running on localhost: 3000');,
+    console.log('✅ Application is running on "localhost": 3000'),
+    // Get response time
+    const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { "encoding": 'utf8' });
+    console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
+    if (parseFloat(responseTime) < 1) {
+      console.log('✅ Response time is good');
+    } else {
+      console.log('⚠️  Response time could be improved');
+    }
+    performanceChecks.loadTime = true;
+  } else {
+    console.log('⚠️  Application not running on localhost: 3000');,
+  }
+<<<<<<< HEAD
+      console.log('✅ Response time is good')} else {
+      console.log('⚠️  Response time could be improved')}
+    performanceChecks.loadTime = true} else {
+    console.log('⚠️  Application not running on "localhost": 3000')}
+  measureMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024); // MB
+  }
+  generateReport() {
+    const report = {
+      "timestamp": this.metrics.timestamp,
+      "metrics": this.metrics,
+      "recommendations": this.generateRecommendations()
+    }
+    const reportPath = path.join(process.cwd(), 'performance-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log('Performance report generated:', reportPath);
+  }
+    console.log('Performance report "generated": ', reportPath)}
+  generateRecommendations() {
+    const recommendations = [];
+    if (this.metrics.bundleSize > 1000000) {
+      recommendations.push('Consider code splitting to reduce bundle size');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('High memory usage detected, consider optimization');
+    }
+    return recommendations;
+=======
   async checkBundlePerformance() {
     this.log('Checking bundle performance...', 'INFO');
 
@@ -498,22 +603,23 @@ class PerformanceMonitor {
     this.log(`Report generated: ${reportFile}`, 'INFO');
     return report}
 
-  generateRecommendations() {
-    const recommendations = [];
-
     if (this.performanceStats.memoryUsage > 0.8) {
-      recommendations.push('High memory usage detected, investigate memory leaks')}
+      recommendations.push('High memory usage detected, investigate memory leaks'),
+}
     if (this.performanceStats.cpuUsage > 80) {
-      recommendations.push('High CPU usage detected, optimize CPU-intensive operations')}
+      recommendations.push('High CPU usage detected, optimize CPU-intensive operations'),
+}
     if (this.performanceStats.responseTime > 1000) {
-      recommendations.push('Slow response time, optimize application performance')}
+      recommendations.push('Slow response time, optimize application performance'),
+}
     if (this.performanceStats.errorRate > 0.05) {
-      recommendations.push('High error rate, investigate and fix application errors')}
-    recommendations.push('Monitor performance metrics regularly');
-    recommendations.push('Set up performance alerts for critical thresholds');
+      recommendations.push('High error rate, investigate and fix application errors'),
+}
+    recommendations.push('Monitor performance metrics regularly')
+    recommendations.push('Set up performance alerts for critical thresholds')
 
-    return recommendations}
-
+    return recommendations;
+}
   async run() {
     try {
       this.log('Starting performance monitoring automation...', 'INFO');
@@ -538,21 +644,59 @@ class PerformanceMonitor {
       this.log('Performance monitoring automation completed', 'INFO');
       this.log(`Summary: Memory ${(this.performanceStats.memoryUsage * 100).toFixed(2)}%, CPU ${this.performanceStats.cpuUsage.toFixed(2)}%`, 'INFO');
 
-      return report} catch (error) {
-      this.log(`Fatal error in performance monitor: ${error.message}`, 'ERROR');
-      throw error}
+      return report;
+} catch (error) {
+      this.log(`Fatal error in performance monitor: ${error.message}`, 'ERROR')
+      throw error;
+}
+>>>>>>> origin/automation-fixes
   }
 }
-
+<<<<<<< HEAD
+// Generate performance report
+const totalChecks = Object.keys(performanceChecks).length;
+const passedChecks = Object.values(performanceChecks).filter(Boolean).length;
+const performanceScore = Math.round((passedChecks / totalChecks) * 100);
+console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
+// Save performance report
+const report = {
+  timestamp: new Date().toISOString(),
+  score: performanceScore,
+  checks: performanceChecks,
+  recommendations: [];
+};
+if (performanceScore < 80) {
+  report.recommendations.push('Consider optimizing build size');
+  report.recommendations.push('Review bundle composition');
+  report.recommendations.push('Implement code splitting');
+}
+module.exports = PerformanceMonitor;
+  "timestamp": new Date().toISOString(),
+  "score": performanceScore,
+  "checks": performanceChecks,
+  "recommendations": []};
+if (performanceScore < 80) {
+  report.recommendations.push('Consider optimizing build size');
+  report.recommendations.push('Review bundle composition');
+  report.recommendations.push('Implement code splitting')}
+module.exports = PerformanceMonitor;
+#!/usr/bin/env node const fs = const path = class PerformanceMonitor { constructor() { this.metrics = { bundleSize: 0,memoryUsage: 0,timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: false,bundleAnalysis: false,lighthouseScore: false,loadTime: false,memoryUsage: false}; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim(); console.log(`✅ Build size: ${buildSize}`); const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { console.log('✅ Build size is within acceptable limits')} else { console.log('⚠️ Build size is large,consider optimization')} } try { console.log('📋 Analyzing bundle...'); const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' }); console.log('✅ Bundle analysis completed'); performanceChecks.bundleAnalysis = true} catch (error) { console.log('⚠️ Bundle analysis not available (install @next/bundle-analyzer)')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { console.log('✅ Application is running on localhost: 3000'),const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: console.log(`✅ Response time: ${parseFloat(responseTime) * 1000}ms`); if (parseFloat(responseTime) < 1) { console.log('✅ Response time is good')} else { console.log('⚠️ Response time could be improved')} performanceChecks.loadTime = true} else { console.log('⚠️ Application not running on localhost: 3000'),} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: this.metrics.timestamp,metrics: this.metrics,recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); console.log('Performance report generated:',reportPath)} generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); console.log(`\n📊 Performance Score: ${performanceScore}% (${passedChecks}/${totalChecks})`); const report = { timestamp: new Date().toISOString(),score: performanceScore,checks: performanceChecks,recommendations: []}; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
+=======
 // Run the performance monitor if called directly;
 if (require.main === module) {
-  const monitor = new PerformanceMonitor();
+  const monitor = new PerformanceMonitor()
 
-  monitor.run();
+  monitor.run()
     .then(() => {
-      process.exit(0)});
+      process.exit(0),
+})
     .catch((error) => {
-      console.error('Performance monitor failed:', error);
-      process.exit(1)})}
-
+      console.error('Performance monitor failed:', error)
+      process.exit(1),
+}),
+}
 module.exports = PerformanceMonitor;
+>>>>>>> origin/automation-fixes
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceMonitor { constructor() { this.metrics = { bundleSize: '0',memoryUsage: '0',timestamp: new Date().toISOString() }} const performanceChecks = { buildSize: 'false',bundleAnalysis: 'false',lighthouseScore: 'false',loadTime: 'false',memoryUsage: 'false;' }; try { if (fs.existsSync('.next')) { const buildSize = execSync('du -sh .next',{ encoding: 'utf8' }).trim(); console.log(`✅ Build size: ${buildSize}`); const sizeInMB = parseInt(buildSize.split('\t')[0]); if (sizeInMB < 50) { console.log('✅ Build size is within acceptable limits')} else { console.log('⚠️ Build size is large,consider optimization')} } try { console.log('📋 Analyzing bundle...'); const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks',{ encoding: 'utf8' }); console.log('✅ Bundle analysis completed'); performanceChecks.bundleAnalysis = true} catch (error) { console.log('⚠️ Bundle analysis not available (install @next/bundle-analyzer)')} try { const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: if (isRunning === '200') { console.log('✅ Application is running on localhost: 3000');,const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" http: console.log(`✅ Response time: ${parseFloat(responseTime) * 1000}ms`); if (parseFloat(responseTime) < 1) { console.log('✅ Response time is good')} else { console.log('⚠️ Response time could be improved')} performanceChecks.loadTime = true} else { console.log('⚠️ Application not running on localhost: 3000');,} measureMemoryUsage() { const usage = process.memoryUsage(); this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024)} generateReport() { const report = { timestamp: 'this.metrics.timestamp',metrics: 'this.metrics',recommendations: this.generateRecommendations() } const reportPath = path.join(process.cwd(),'performance-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); console.log('Performance report generated:',reportPath)} generateRecommendations() { const recommendations = []; if (this.metrics.bundleSize > 1000000) { recommendations.push('Consider code splitting to reduce bundle size')} if (this.metrics.memoryUsage > 100) { recommendations.push('High memory usage detected,consider optimization')} return recommendations} } const totalChecks = Object.keys(performanceChecks).length; const passedChecks = Object.values(performanceChecks).filter(Boolean).length; const performanceScore = Math.round((passedChecks / totalChecks) * 100); console.log(`\n📊 Performance Score: ${performanceScore}% (${passedChecks}/${totalChecks})`); const report = { timestamp: new Date().toISOString(),score: 'performanceScore',checks: 'performanceChecks',recommendations: '[];' }; if (performanceScore < 80) { report.recommendations.push('Consider optimizing build size'); report.recommendations.push('Review bundle composition'); report.recommendations.push('Implement code splitting')} module.exports = PerformanceMonitor;
+>>>>>>> origin/automation-improvements

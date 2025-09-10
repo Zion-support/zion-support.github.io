@@ -1,10 +1,41 @@
+<<<<<<< HEAD
+=======
+// Service finder utility for searching and filtering services;
 
+>>>>>>> origin/automation-fixes
 export interface Service {
   id: string;
   name: string;
   description: string;
   category: string;
   price?: number;
+<<<<<<< HEAD
+  features: string[];
+}
+export const findService = (query: string, services: Service[]): Service[] => {
+  const searchTerm = query.toLowerCase();
+  return services.filter(service => 
+    service.name.toLowerCase().includes(searchTerm) ||
+    service.description.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm)
+  );
+};
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
+  return services.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase()
+  );
+};
+export default {
+  findService,
+  getServicesByCategory
+};
+// Service finder utility
+export const findService = ("_serviceName": string) => {
+  // Implementation placeholder
+  return null;
+};
+export const findService = (_serviceName: string) => { return null};
+=======
   features?: string[];
   tags?: string[];
   [key: string]: any}
@@ -76,4 +107,7 @@ export function searchServices(;
       }
     }
   }
-  return results}
+
+  return results;
+}
+>>>>>>> origin/automation-fixes

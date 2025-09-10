@@ -18,36 +18,16 @@ export default function UltraFuturisticBackground2029() {
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let animationFrameId: number;
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      opacity: number;
-      type: 'quantum' | 'neon' | 'hologram';
-      life: number;
-      maxLife: number;
-    }> = [];
-
-
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -218,15 +198,6 @@ export default function UltraFuturisticBackground2029() {
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Handle window resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
-    };
-
-    window.addEventListener('resize', handleResize);
-    initParticles();
     animate();
 
     return () => {
@@ -363,7 +334,6 @@ export default function UltraFuturisticBackground2029() {
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
           animate={{
-            rotate: 360,
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]
           }}

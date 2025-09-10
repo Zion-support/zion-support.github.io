@@ -1,44 +1,52 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
   baseUrl: string;
-  className?: string}
+  className?: string;
+}
 
 const Pagination: React.FC<PaginationProps> = ({ ;
-  currentPage, ;
-  totalPages, ;
-  baseUrl, ;
-  className = '' }) => {
-  const getPageNumbers = () => {
+  currentPage,
+  totalPages,
+  baseUrl,
+  className = '' ;
+}) => {
+  const getPageNumbers = () => {;
     const pages = [];
     const maxVisiblePages = 5;
-
-    if (totalPages <= maxVisiblePages) {
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i)}
-    } else {
+    if (totalPages <= maxVisiblePages) {;
+      for (let i = 1; i <= totalPages; i++) {;
+        pages.push(i);
+}
+    } else {;
       const startPage = Math.max(1, currentPage - 2);
       const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-
-      if (startPage > 1) {
+      if (startPage > 1) {;
         pages.push(1);
-        if (startPage > 2) {
-          pages.push('...')}
+        if (startPage > 2) {;
+          pages.push('...');
+}
       }
-      for (let i = startPage; i <= endPage; i++) {
-        pages.push(i)}
-      if (endPage < totalPages) {
-        if (endPage < totalPages - 1) {
-          pages.push('...')}
-        pages.push(totalPages)}
-    }
-    return pages}
-  if (totalPages <= 1) return null;
 
+      for (let i = startPage; i <= endPage; i++) {;
+        pages.push(i);
+}
+
+      if (endPage < totalPages) {;
+        if (endPage < totalPages - 1) {;
+          pages.push('...');
+}
+        pages.push(totalPages);
+}
+    }
+
+    return pages;
+};
+  if (totalPages <= 1) return null;
   return (;
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
       {/* Previous Button */}
@@ -64,11 +72,11 @@ const Pagination: React.FC<PaginationProps> = ({ ;
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
-            )}
+            );
+}
 
           const pageNumber = page as number;
           const isCurrentPage = pageNumber === currentPage;
-
           return (;
             <Link;
               key={pageNumber}
@@ -76,11 +84,13 @@ const Pagination: React.FC<PaginationProps> = ({ ;
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${;
                 isCurrentPage;
                   ? 'bg-blue-600 text-white border border-blue-600';
-                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900'}`}
+                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';
+}`}
             >;
               {pageNumber}
             </Link>;
-          )})}
+          );
+})}
       </div>;
 
       {/* Next Button */}
@@ -98,5 +108,40 @@ const Pagination: React.FC<PaginationProps> = ({ ;
         </span>;
       )}
     </nav>;
-  )}
+  );
+};
 export default Pagination;
+=======
+import EnhancedButton from './EnhancedButton';
+
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+};
+
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const canPrev = page > 1;
+  const canNext = page < totalPages;
+
+  const goTo = (p: number) => {
+    if (p >= 1 && p <= totalPages) onChange(p);
+  };
+
+  return (
+    <div className="flex items-center justify-between gap-2 mt-4">
+      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>
+        Prev
+      </EnhancedButton>
+      <div className="text-sm">
+        Page {page} of {totalPages}
+      </div>
+      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
+        Next
+      </EnhancedButton>
+    </div>
+  );
+}
+>>>>>>> origin/automation/changelog

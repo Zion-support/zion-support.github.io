@@ -366,40 +366,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="border-t border-gray-800/50"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
-              <Heart className="w-4 h-4 text-red-400" />
-            </div>
-            
-            <div className="flex items-center gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Floating Contact Button */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-          onClick={() => window.location.href = '/contact'}
-          aria-label="Quick contact Zion Tech Group"
-        >
-          <Phone className="w-6 h-6" />
-        </motion.button>
-      </div>
+        <ArrowUp className="w-6 h-6 mx-auto" />
+      </motion.button>
     </footer>
   );
 };

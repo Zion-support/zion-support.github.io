@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 export default {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {} } };
+    autoprefixer: {},
+  },
+=======
+export default {;
+  plugins: {;
+  tailwindcss: {},
+    autoprefixer: {},,,
+},,,
+>>>>>>> origin/automation-fixes
+};

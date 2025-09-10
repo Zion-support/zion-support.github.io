@@ -1,12 +1,22 @@
-import React from 'react'
-
-export default function AppMinimal() {
-	return (
-		<div className="min-h-screen flex items-center justify-center bg-slate-900">
-			<div className="text-center">
-				<h1 className="text-3xl font-bold text-white mb-2">Zion App</h1>
-				<p className="text-slate-300">Build is unblocked. Full app can be restored next.</p>
-			</div>
-		</div>
-	)
+<<<<<<< HEAD
+import React from "react";
+import { SEO  } from "@/components/SEO";
+export default function AppMinimal() {return (;
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
+      <SEO title="AppMinimal - Zion Tech Group" description="Professional AppMinimal services by Zion Tech Group" />";
+      <div className="container mx-auto px-4 py-20">";
+        <h1 className="text-4xl font-bold text-white mb-8">AppMinimal</h1>";
+        <p className="text-gray-300 text-lg">;
+          Professional AppMinimal services to help your business grow.;
+        </p>;
+      </div>;
+  );";,
+}"        <p className="text-gray-300 text-lg">;
+          Professional AppMinimal services to help your business grow.;
+        </p>;
+      </div>;
+  );
 }
+=======
+import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function AppMinimal(props: any) {return ( <div className="min-h-screen bg-white"> <SEO title="AppMinimal - Zion Tech Group" description="Professional AppMinimal services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">AppMinimal</h1> <p className="text-gray-300 text-lg"> Professional AppMinimal services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
+>>>>>>> origin/automation-improvements

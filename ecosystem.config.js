@@ -1,4 +1,5 @@
-module.exports = {
+<<<<<<< HEAD
+export default {
   apps: [
     {
       name: 'ziontechgroup-web',
@@ -86,5 +87,51 @@ module.exports = {
       time: true,
       cron_restart: '*/30 * * * *' // Run every 30 minutes
     }
-  ]
+  ],
+module.exports = {
+  apps: [{
+    name: "ziontechgroup-site",
+    script: "npm",
+    args: "start",
+    instances: 1,
+    exec_mode: "fork",
+    env: {
+      NODE_ENV: "production",
+      PORT: 3000
+    },
+    env_production: {
+      NODE_ENV: "production",
+      PORT: 3000
+    },
+    max_memory_restart: "1G",
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
 };
+=======
+module.exports = {;
+  apps : [{;
+    script: 'index.js',
+    watch: '.';
+}, {;
+    script: './service-worker/',
+    watch: ['./service-worker'];
+}],
+
+  deploy : {;
+    production : {;
+      user : 'SSH_USERNAME',
+      host : 'SSH_HOSTMACHINE',
+      ref  : 'origin/master',
+      repo : 'GIT_REPOSITORY',
+      path : 'DESTINATION_PATH',
+      'pre-deploy-local': '',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': '';
+}
+  }
+};
+>>>>>>> origin/automation-fixes

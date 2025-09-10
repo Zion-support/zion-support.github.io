@@ -1,6 +1,44 @@
+<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+<<<<<<< HEAD
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ErrorBoundary from '../components/ErrorBoundary';
+=======
+import type { AppProps } from 'next/app'
+import Layout from '../components/layout/Layout'
+import '../styles/globals.css'
+>>>>>>> origin/automation/changelog
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ErrorBoundary>
+      <PerformanceMonitor />
+      <AccessibilityEnhancer />
+      <Component {...pageProps} />
+<<<<<<< HEAD
+    </ErrorBoundary>
+=======
+export default function App({ Component, pageProps }: AppProps) {;
+  return (;
+    <ErrorBoundary>;
+      <Head>;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <title>Zion Tech Group — AI, IT & Micro SaaS</title>;
+      </Head>;
+      <div className="min-h-screen flex flex-col">;
+        <PerformanceMonitor />;
+        <main className="flex-grow">;
+          <Component {...pageProps} />;
+        </main>;
+      </div>;
+    </ErrorBoundary>;
+>>>>>>> origin/automation-fixes
+  );
 }
+=======
+    </Layout>
+  )
+}
+>>>>>>> origin/automation/changelog

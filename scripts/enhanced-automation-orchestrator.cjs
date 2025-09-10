@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync, spawn } = require("fs");
 const fs = require("fs");
@@ -16,10 +17,49 @@ class EnhancedAutomationOrchestrator {
       security: { success: false, output: ", errors: [] }
     }
   }
-
+}
+// Run the orchestrator
+if (require.main === module) {
+  const orchestrator = new EnhancedAutomationOrchestrator();
+  orchestrator.run().catch(console.error)}
+module.exports = EnhancedAutomationOrchestrator;
+    const reportFile = path.join(this.projectRoot, "enhanced-automation-report.json")
+    this.log(` Report "generated"`)
+// console.log("\n=== ENHANCED AUTOMATION REPORT ===")
+    console.log(`"Duration"`)
+// console.log(`"Status"`)
+    console.log(`Syntax "Fixes"`)
+// console.log(`Performance "Optimizations"`)
+    console.log(`Security "Enhancements"`)
+// console.log(`Test "Improvements"`)
+    console.log(`Build "Optimizations"`)
+    console.log(`"Errors"`)
+    this.log(" Starting Enhanced Automation Orchestrator...")
+      this.log(" Enhanced Automation Orchestrator completed!")
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+=======
+#!/usr/bin/env node;
+const { execSync, spawn } = require("fs")
+const fs = require("fs")
+const path = require("path")
+class EnhancedAutomationOrchestrator {
+  constructor() {
+    this.projectRoot = process.cwd()
+    this.reportsDir = path.join(this.projectRoot, "automation-reports")
+    this.logFile = path.join(this.reportsDir, "enhanced-automation.log")
+    this.ensureDirectories()
+    this.results = {
+      linting: { success: false, output: ", errors: [] },
+      testing: { success: false, output: ", errors: [] },
+      building: { success: false, output: ", errors: [] },
+      performance: { success: false, output: ", errors: [] },
+      security: { success: false, output: ", errors: [] }
+    }
+  }
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { recursive: true }),,
+}
   }
 
   log(message, level = "INFO") {
@@ -142,30 +182,32 @@ class EnhancedAutomationOrchestrator {
       this.log(`${status} ${category.toUpperCase()}: ${result.success ? "PASSED" : "FAILED"}`, "INFO")});
     const total = Object.keys(this.results).length;
     const successful = Object.values(this.results).filter(r => r.success).length;
-    const successRate = ((successful / total) * 100).toFixed(1);
-    this.log(`\n🎯 Success Rate: ${successRate}% (${successful}/${total})`, "INFO")}
-
+    const successRate = ((successful / total) * 100).toFixed(1)
+    this.log(`\n🎯 Success Rate: ${successRate}% (${successful}/${total})`, "INFO"),,
+}
   async run() {
-    this.log("🎯 Starting Enhanced Automation Orchestrator", "INFO");
-    this.log("=".repeat(60), "INFO");
+    this.log("🎯 Starting Enhanced Automation Orchestrator", "INFO")
+    this.log("=".repeat(60), "INFO")
     try {
-      await this.runLinting();
-      await this.runTesting();
-      await this.runBuilding();
-      await this.runPerformanceChecks();
-      await this.runSecurityChecks();
-      const report = await this.generateReport();
-      this.printSummary();
-      this.log("🎉 Enhanced automation completed successfully!", "SUCCESS");
-      return report} catch (error) {
-      this.log(`💥 Automation failed: ${error.message}`, "ERROR");
-      throw error}
+      await this.runLinting()
+      await this.runTesting()
+      await this.runBuilding()
+      await this.runPerformanceChecks()
+      await this.runSecurityChecks()
+      const report = await this.generateReport()
+      this.printSummary()
+      this.log("🎉 Enhanced automation completed successfully!", "SUCCESS")
+      return report,,
+} catch (error) {
+      this.log(`💥 Automation failed: ${error.message}`, "ERROR")
+      throw error,,
+}
   }
 }
-
 // Run the orchestrator;
 if (require.main === module) {
-  const orchestrator = new EnhancedAutomationOrchestrator();
-  orchestrator.run().catch(console.error)}
-
+  const orchestrator = new EnhancedAutomationOrchestrator()
+  orchestrator.run().catch(console.error),,
+}
 module.exports = EnhancedAutomationOrchestrator
+>>>>>>> origin/automation-fixes

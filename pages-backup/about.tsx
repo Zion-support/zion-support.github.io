@@ -17,7 +17,7 @@ const About: NextPage = () => {
               About Zion Tech Group;
             </h1>;
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-              We are a leading technology solutions provider dedicated to transforming businesses,;
+              We are a leading technology solutions provider dedicated to transforming businesses,
 through innovative AI, cloud architecture, and cutting-edge development services.;
             </p>;
             <div className="flex justify-center">;
@@ -37,7 +37,7 @@ through innovative AI, cloud architecture, and cutting-edge development services
                 <Target className="w-16 h-16 text-blue-600 mx-auto mb-6"  />;
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>;
                 <p className="text-gray-600">;
-                  To empower businesses with cutting-edge technology solutions that drive growth,;
+                  To empower businesses with cutting-edge technology solutions that drive growth,
                   efficiency, and innovation in the digital age.;
                 </p>;
               </div>;
@@ -45,7 +45,7 @@ through innovative AI, cloud architecture, and cutting-edge development services
                 <Globe className="w-16 h-16 text-green-600 mx-auto mb-6"  />;
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>;
                 <p className="text-gray-600">;
-                  To be the global leader in technology transformation, creating a world where,;
+                  To be the global leader in technology transformation, creating a world where,
 every business can thrive through intelligent automation and innovation.;
                 </p>;
               </div>;
@@ -106,5 +106,6 @@ every business can thrive through intelligent automation and innovation.;
         </section>;
       </div>;
     </Layout>;
-  )}
+  );
+}
 }export default About
