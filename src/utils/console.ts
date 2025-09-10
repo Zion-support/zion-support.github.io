@@ -19,7 +19,7 @@ export const devConsole = {
   
   // Conditional logging
   logIf: (condition: boolean, ...args: unknown[]) => {
-    if (isDevelopment && condition) // console.log(...args);
+    if (isDevelopment && condition) // // console.log(...args);
   },
   
   // Performance measurement
@@ -28,7 +28,7 @@ export const devConsole = {
       const start = performance.now();
       const result = fn();
       const end = performance.now();
-      // console.log(`${name}: ${(end - start).toFixed(2)}ms`);
+      // // console.log(`${name}: ${(end - start).toFixed(2)}ms`);
       return result;
     }
     return fn();
@@ -45,7 +45,7 @@ export const bundleLog = {
   // Bundle size warnings
   warnLargeComponent: (componentName: string, size: number) => {
     if (isDevelopment && size > 100) {
-      // console.warn(`Large component: ${componentName} (${size}kb)`);
+      // // console.warn(`Large component: ${componentName} (${size}kb)`);
     }
   }
 };

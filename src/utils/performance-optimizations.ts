@@ -121,7 +121,7 @@ export class PerformanceOptimizer {
             const resource = entry as PerformanceResourceTiming;
             const size = resource.transferSize;
             if (size > 100000) { // 100KB threshold
-              // console.warn(`Large bundle detected: ${entry.name} (${(size / 1024).toFixed(2)}KB)`);
+              // // console.warn(`Large bundle detected: ${entry.name} (${(size / 1024).toFixed(2)}KB)`);
             }
           }
         });
@@ -137,7 +137,7 @@ export class PerformanceOptimizer {
       setInterval(() => {
         const memory = (performance as any).memory;
         if (memory.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
-          // console.warn('High memory usage detected:', {
+          // // console.warn('High memory usage detected:', {
           //   used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
           //   total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
           //   limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)}MB`
@@ -181,7 +181,7 @@ export const monitorWebVitals = async () => {
       getLCP(console.log);
       getTTFB(console.log);
     } catch (error) {
-      // console.warn('Web Vitals monitoring failed:', error);
+      // // console.warn('Web Vitals monitoring failed:', error);
     }
   }
 };
@@ -191,7 +191,7 @@ export const registerServiceWorker = async (): Promise<void> => {
   if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js');
-      // console.log('Service Worker registered:', registration);
+      // // console.log('Service Worker registered:', registration);
       
       // Handle updates
       registration.addEventListener('updatefound', () => {
@@ -200,13 +200,13 @@ export const registerServiceWorker = async (): Promise<void> => {
           newWorker.addEventListener('statechange', () => {
             if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
               // New content available, notify user
-              // console.log('New content available, please refresh.');
+              // // console.log('New content available, please refresh.');
             }
           });
         }
       });
     } catch (error) {
-      // console.error('Service Worker registration failed:', error);
+      // // console.error('Service Worker registration failed:', error);
     }
   }
 };

@@ -79,7 +79,7 @@ export const monitorBundlePerformance = () => {
     const loadTime = perfData.loadEventEnd - perfData.fetchStart;
     
     // Log performance metrics
-    // console.log('Bundle Performance Metrics:', {
+    // // console.log('Bundle Performance Metrics:', {
       loadTime: `${loadTime}ms`,
       domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.fetchStart}ms`,
       firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 'N/A',
@@ -103,7 +103,7 @@ export const monitorBundlePerformance = () => {
     );
 
     if (largeResources.length > 0) {
-      // console.warn('Large resources detected:', largeResources.map(r => ({
+      // // console.warn('Large resources detected:', largeResources.map(r => ({
         name: r.name,
         size: `${Math.round(r.transferSize / 1024)}KB`,
         loadTime: `${Math.round(r.duration)}ms`
@@ -182,7 +182,7 @@ export const optimizeMemoryUsage = () => {
       const usageRatio = memInfo.usedJSHeapSize / memInfo.jsHeapSizeLimit;
       
       if (usageRatio > 0.8) {
-        // console.warn('High memory usage detected, triggering cleanup');
+        // // console.warn('High memory usage detected, triggering cleanup');
         // Force garbage collection if available
         if ((window as any).gc) {
           (window as any).gc();

@@ -46,7 +46,7 @@ export default function WishlistPage() {
           }
         ]);
       } catch (error) {
-        // console.error('Error loading favorites:', error);
+        // // console.error('Error loading favorites:', error);
       } finally {
         setLoading(false);
       }
@@ -61,7 +61,7 @@ export default function WishlistPage() {
 
   const addToCart = (item) => {
     // Simulate adding to cart
-    // console.log('Adding to cart:', item);
+    // // console.log('Adding to cart:', item);
     alert('Item added to cart!');
   };
 

@@ -10,13 +10,13 @@ export async function loginUser(_email, _password) {
         body: JSON.stringify({ email, password }),
     });
     const data = await res.json().catch(() => ({}));
-    // console.log('login response', res.status, data);
+    // // console.log('login response', res.status, data);
     if (data?.accessToken) {
         document.cookie = `authToken=${data.accessToken}; secure; samesite=strict`;
         setAuthToken(data.accessToken);
     }
     else {
-        // console.warn('Token missing in login response', data);
+        // // console.warn('Token missing in login response', data);
     }
     return { res, data };
 }
@@ -30,13 +30,13 @@ export async function registerUser(_name, _email, _password) {
         body: JSON.stringify({ name, email, password }),
     });
     const data = await res.json().catch(() => ({}));
-    // console.log('signUp response', res.status, data);
+    // // console.log('signUp response', res.status, data);
     if (data?.token) {
         document.cookie = `authToken=${data.token}; secure; samesite=strict`;
         setAuthToken(data.token);
     }
     else {
-        // console.warn('Token missing in signup response', data);
+        // // console.warn('Token missing in signup response', data);
     }
     return { res, data };
 }

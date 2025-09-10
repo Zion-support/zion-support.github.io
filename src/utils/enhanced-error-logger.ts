@@ -194,9 +194,9 @@ class EnhancedErrorLogger {
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
         console.group(`🚨 Enhanced Error [${enhancedError.severity}]`);
-        // console.error(enhancedError.message);
-        // console.log('Context:', enhancedError.context);
-        // console.log('Breadcrumbs:', this.breadcrumbs.slice(-5));
+        // // console.error(enhancedError.message);
+        // // console.log('Context:', enhancedError.context);
+        // // console.log('Breadcrumbs:', this.breadcrumbs.slice(-5));
         console.groupEnd();
       }
 
@@ -206,7 +206,7 @@ class EnhancedErrorLogger {
       }
 
     } catch (loggerError) {
-      // console.error('Error in enhanced error logger:', loggerError);
+      // // console.error('Error in enhanced error logger:', loggerError);
     }
   }
 
@@ -338,7 +338,7 @@ class EnhancedErrorLogger {
         })
       });
     } catch (reportError) {
-      // console.error('Failed to report error:', reportError);
+      // // console.error('Failed to report error:', reportError);
     }
   }
 

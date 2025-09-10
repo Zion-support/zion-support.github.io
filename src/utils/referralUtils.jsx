@@ -16,7 +16,7 @@ export function formatDate(date) {
         return format(date, 'MMM d, yyyy');
     }
     catch (e) {
-        // console.error('Error formatting date:', e);
+        // // console.error('Error formatting date:', e);
         return '-';
     }
 }
@@ -64,6 +64,6 @@ export async function trackReferral(userId, email) {
         }
     }
     catch (error) {
-        // console.error('Error tracking referral:', error);
+        // // console.error('Error tracking referral:', error);
     }
 }

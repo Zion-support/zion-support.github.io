@@ -23,7 +23,7 @@ class ComponentErrorBoundary extends Component<
   }
 
   componentDidCatch(error: Error) {
-    // console.error('Component loading error:', error);
+    // // console.error('Component loading error:', error);
   }
 
   render() {
@@ -93,7 +93,7 @@ export function createSafeComponent(importPath: string, fallbackComponent?: Reac
             try {
               return React.createElement(Component, props);
             } catch (error) {
-              // console.error(`Error rendering component from ${importPath}:`, error);
+              // // console.error(`Error rendering component from ${importPath}:`, error);
               const Fallback = fallbackComponent || DefaultFallback;
               return React.createElement(Fallback);
             }
@@ -105,7 +105,7 @@ export function createSafeComponent(importPath: string, fallbackComponent?: Reac
               try {
                 return await (Component as any).getInitialProps(ctx);
               } catch (error) {
-                // console.error(`Error in getInitialProps for ${importPath}:`, error);
+                // // console.error(`Error in getInitialProps for ${importPath}:`, error);
                 return {};
               }
             };
@@ -114,7 +114,7 @@ export function createSafeComponent(importPath: string, fallbackComponent?: Reac
           return { default: WrappedComponent };
         })
         .catch(error => {
-          // console.error(`Failed to load component from ${importPath}:`, error);
+          // // console.error(`Failed to load component from ${importPath}:`, error);
           const Fallback = fallbackComponent || DefaultFallback;
           return { default: Fallback };
         });

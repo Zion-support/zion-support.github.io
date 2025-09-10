@@ -6,7 +6,7 @@ export function TalentGrid(_{ talents, _isLoading, _onTalentClick, _isAuthentica
             handleBook(talent);
         }
         else {
-            // console.log("Book talent:", talent.id);
+            // // console.log("Book talent:", talent.id);
         }
     };
     const handleMessageInternal = (talent) => {

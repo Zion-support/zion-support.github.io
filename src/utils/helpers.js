@@ -2,7 +2,7 @@
 export const helpers = {
   // Placeholder utility functions
   init: () => {
-    // console.log('helpers initialized');
+    // // console.log('helpers initialized');
   },
 };
 export default helpers;

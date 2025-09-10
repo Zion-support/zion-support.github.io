@@ -108,7 +108,7 @@ class EnhancedErrorHandler {
     if (!this.config.enableLogging) return;
 
     // Console logging
-    // console.error('🚨 Error Details:', errorDetails);
+    // // console.error('🚨 Error Details:', errorDetails);
 
     // External logging (Sentry, LogRocket, etc.)
     if (this.config.enableReporting) {
@@ -140,7 +140,7 @@ class EnhancedErrorHandler {
     try {
       await this.sendErrorsToService(errors);
     } catch (error) {
-      // console.error('Failed to send errors to service:', error);
+      // // console.error('Failed to send errors to service:', error);
       // Re-queue errors for retry
       this.errorQueue.unshift(...errors);
     }
@@ -152,7 +152,7 @@ class EnhancedErrorHandler {
   private async sendErrorsToService(errors: ErrorDetails[]): Promise<void> {
     // This would integrate with your error reporting service
     // For now, we'll just log them
-    // console.log('📤 Sending errors to service:', errors.length);
+    // // console.log('📤 Sending errors to service:', errors.length);
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 100));
@@ -217,7 +217,7 @@ class EnhancedErrorHandler {
    */
   private showNotification(message: string, type: 'error' | 'warning' | 'info'): void {
     // This would integrate with your notification system
-    // console.log(`🔔 ${type.toUpperCase()}: ${message}`);
+    // // console.log(`🔔 ${type.toUpperCase()}: ${message}`);
     
     // You could use a toast library like react-hot-toast here
     if (typeof window !== 'undefined' && (window as any).toast) {
@@ -268,7 +268,7 @@ class EnhancedErrorHandler {
     } catch (error) {
       if (this.retryCount < this.config.maxRetries) {
         this.retryCount++;
-        // console.log(`🔄 Retrying operation (${this.retryCount}/${this.config.maxRetries})...`);
+        // // console.log(`🔄 Retrying operation (${this.retryCount}/${this.config.maxRetries})...`);
         
         await new Promise(resolve => 
           setTimeout(resolve, this.config.retryDelay * this.retryCount)

@@ -16,7 +16,7 @@ let MemoryDatastore: unknown;
 const isBuildEnv = process.env.CI === 'true' || process.env.NODE_ENV === 'production' && typeof window === 'undefined';
 
 if (isBuildEnv) {
-  // console.log('🚫 OrbitDB/LibP2P disabled for CI/build environment');
+  // // console.log('🚫 OrbitDB/LibP2P disabled for CI/build environment');
   
   // Provide mock implementations
   createOrbitDB = () => Promise.resolve({
@@ -81,7 +81,7 @@ if (isBuildEnv) {
     const datastoreCore = require('datastore-core');
     MemoryDatastore = datastoreCore.MemoryDatastore;
   } catch (error: unknown) {
-    // console.warn('⚠️ Failed to load native libp2p modules, using mocks:', error.message);
+    // // console.warn('⚠️ Failed to load native libp2p modules, using mocks:', error.message);
     
     // Fallback to mocks if native modules fail to load
     createOrbitDB = () => Promise.resolve({

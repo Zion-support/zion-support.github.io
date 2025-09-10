@@ -84,7 +84,7 @@ export function logError(error: unknown, context?: { componentStack?: string } &
     }
   } catch (err) {
     // Use console logging to avoid circular dependencies
-    // console.error('Failed to report error to Sentry:', err);
+    // // console.error('Failed to report error to Sentry:', err);
   }
 
   try {
@@ -124,12 +124,12 @@ export function logError(error: unknown, context?: { componentStack?: string } &
     // Non-blocking call
     sendErrorToBackend(errorDetails).catch(err => {
       // Use console logging to avoid circular dependencies
-      // console.error('Error sending logError to backend:', err);
+      // // console.error('Error sending logError to backend:', err);
     });
 
   } catch (err) {
     // Use console logging to avoid circular dependencies
-    // console.error('Failed to prepare or send error to custom backend:', err);
+    // // console.error('Failed to prepare or send error to custom backend:', err);
   }
 
   return traceId;

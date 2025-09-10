@@ -59,7 +59,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn('Paint metrics not supported:', error);
+      // // console.warn('Paint metrics not supported:', error);
     }
   }
 
@@ -74,7 +74,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn('LCP not supported:', error);
+      // // console.warn('LCP not supported:', error);
     }
   }
 
@@ -92,7 +92,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn('FID not supported:', error);
+      // // console.warn('FID not supported:', error);
     }
   }
 
@@ -112,7 +112,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn('CLS not supported:', error);
+      // // console.warn('CLS not supported:', error);
     }
   }
 
@@ -146,7 +146,7 @@ class PerformanceUtils {
     const end = performance.now();
     
     const duration = end - start;
-    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    // // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     
     return result;
   }
@@ -157,7 +157,7 @@ class PerformanceUtils {
     const end = performance.now();
     
     const duration = end - start;
-    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    // // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     
     return result;
   }

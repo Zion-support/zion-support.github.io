@@ -9,7 +9,7 @@ export function createLazyComponent<T extends ComponentType<unknown>>(
 ) {
   return lazy(() =>
     importFn().catch((error) => {
-      // console.error('Failed to load component:', error);
+      // // console.error('Failed to load component:', error);
       return {
         default: fallback || (() => (
           <div className="flex items-center justify-center p-8">
@@ -48,7 +48,7 @@ export function retryImport<T>(
         .then(resolve)
         .catch((error) => {
           if (attemptNumber < retries) {
-            // console.warn(`Import attempt ${attemptNumber} failed, retrying...`, error);
+            // // console.warn(`Import attempt ${attemptNumber} failed, retrying...`, error);
             setTimeout(() => attempt(attemptNumber + 1), delay * attemptNumber);
           } else {
             reject(error);

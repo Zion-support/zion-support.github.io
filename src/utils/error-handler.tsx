@@ -74,7 +74,7 @@ export class ErrorHandler {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error captured:', fullErrorInfo);
+      // // console.error('Error captured:', fullErrorInfo);
     }
 
     // Send to external service in production
@@ -94,7 +94,7 @@ export class ErrorHandler {
         body: JSON.stringify(errorInfo),
       });
     } catch (error) {
-      // console.warn('Failed to send error to external service:', error);
+      // // console.warn('Failed to send error to external service:', error);
     }
   }
 

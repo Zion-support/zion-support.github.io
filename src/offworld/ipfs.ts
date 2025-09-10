@@ -14,7 +14,7 @@ let MemoryDatastore: unknown;
 const isBuildEnv = process.env.CI === 'true' || process.env.NODE_ENV === 'production' && typeof window === 'undefined';
 
 if (isBuildEnv) {
-  // console.log('🚫 IPFS/Helia/LibP2P disabled for CI/build environment');
+  // // console.log('🚫 IPFS/Helia/LibP2P disabled for CI/build environment');
   
   // Provide mock implementations
   createHelia = () => Promise.resolve({
@@ -75,7 +75,7 @@ if (isBuildEnv) {
     const datastoreCore = require('datastore-core');
     MemoryDatastore = datastoreCore.MemoryDatastore;
   } catch (error: unknown) {
-    // console.warn('⚠️ Failed to load native IPFS/libp2p modules, using mocks:', error.message);
+    // // console.warn('⚠️ Failed to load native IPFS/libp2p modules, using mocks:', error.message);
     
     // Fallback to mocks if native modules fail to load
     createHelia = () => Promise.resolve({
