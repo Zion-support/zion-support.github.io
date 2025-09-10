@@ -1,13 +1,6 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
-
-
-
-
-
-
-
+import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -262,10 +255,6 @@ export default function OfflinePage() {
                   <div className="flex items-start gap-2">
                     <span className="text-blue-600 font-semibold">•</span>
                     <span>Check your internet connection and try refreshing the page</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-blue-600 font-semibold">•</span>
-                    <span>If you still see a blank screen when back online, run <code>./setup.sh npm</code> to reinstall dependencies</span>
                   </div>
                 </div>
               </CardContent>

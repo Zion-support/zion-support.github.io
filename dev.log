@@ -1,85 +1,23 @@
+nohup: ignoring input
 
-> project@0.0.0 dev
-> npm run env:dev && next dev
+> bolt.new.zion.app@0.1.0 dev
+> vite
 
+Port 3000 is in use, trying another one...
 
-> project@0.0.0 env:dev
-> node scripts/check-dev-environment.cjs
+  VITE v5.4.19  ready in 157 ms
 
-🔍 Checking Development Environment
-==================================
-
-📦 Node.js Version: v22.16.0
-   ✅ Node.js version is compatible
-
-📋 Package.json: ✅ Found
-📁 Node modules: ✅ Installed
-
-🌍 Environment Configuration:
-=============================
-   ✅ .env.local found
-
-⚙️  Configuration Files:
-=======================
-   ✅ next.config.js found (ES module)
-   ✅ tsconfig.json found
-   ✅ Tailwind config found
-
-🔧 Development Scripts:
-======================
-   ✅ dev script available
-   ✅ build script available
-   ✅ start script available
-
-📊 Environment Status:
-=====================
-🎉 Perfect! Your development environment is fully configured.
-
-You can now run:
-• npm run dev - Start development server
-• npm run build - Build for production
-• npm run start - Start production server
-
-💡 Quick Setup Commands:
-========================
-npm install          # Install dependencies
-npm run build        # Test production build
-npm run dev          # Start development server
-Next.js Configuration: {
-  isProd: false,
-  isNetlify: false,
-  isPreviewBuild: true,
-  cdnUrl: 'Not set',
-  isValidCDN: undefined,
-  shouldUseCDN: false,
-  assetPrefix: 'Disabled (serving from origin)',
-  imageOptimization: 'Enabled'
-}
- ⚠ Port 3000 is in use, using available port 3001 instead.
-Next.js Configuration: {
-  isProd: false,
-  isNetlify: false,
-  isPreviewBuild: true,
-  cdnUrl: 'Not set',
-  isValidCDN: undefined,
-  shouldUseCDN: false,
-  assetPrefix: 'Disabled (serving from origin)',
-  imageOptimization: 'Enabled'
-}
-   ▲ Next.js 15.3.4
-   - Local:        http://localhost:3001
-   - Network:      http://172.17.0.5:3001
-   - Environments: .env.local
-   - Experiments (use with caution):
-     · cpus: 2
-     · esmExternals
-
- ✓ Starting...
- ⚠ The "experimental.esmExternals" option has been modified. experimental.esmExternals is not recommended to be modified as it may disrupt module resolution. It should be removed from your next.config.js.
-🚫 Sentry disabled - using mock implementation (Smart Detection)
-🚫 Native modules externalized for server build: 17
-🚫 Sentry disabled - using mock implementation (Smart Detection)
-🚫 Native modules externalized for server build: 17
-🚫 Sentry disabled - using mock implementation (Smart Detection)
-[Error: optimization.usedExports can't be used with cacheUnaffected as export usage is a global effect]
-[?25h
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: http://172.30.0.2:3001/
+Error: spawn xdg-open ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+    at onErrorNT (node:internal/child_process:483:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+6:22:28 PM [vite] page reload src/pages/Resources.tsx
+6:22:33 PM [vite] hmr update /src/App.tsx, /src/index.css
+6:22:38 PM [vite] hmr update /src/App.tsx, /src/index.css
+6:23:35 PM [vite] hmr update /src/App.tsx, /src/index.css
+6:23:40 PM [vite] hmr update /src/App.tsx, /src/index.css
+6:24:43 PM [vite] page reload src/pages/RequestQuote.tsx
+6:24:48 PM [vite] hmr update /src/App.tsx, /src/index.css
+6:24:52 PM [vite] hmr update /src/App.tsx, /src/index.css

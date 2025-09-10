@@ -1,1 +1,2 @@
-export { default } from '@/pages/About';
+import React from 'react';
+import { motion } from 'framer-motion';

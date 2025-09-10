@@ -1,1 +1,1 @@
-export { default } from '@/pages/SummitPage';
+export { default } from "./summit";
