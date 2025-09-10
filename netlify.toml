@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
+  command = "corepack enable && corepack prepare pnpm@9.12.1 --activate && pnpm install --frozen-lockfile --prefer-offline && pnpm run build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -23,6 +23,7 @@
   PNPM_VERSION = "9.12.1"
   # Additional NPM flags for better performance
   NPM_FLAGS = "--no-audit --no-fund --prefer-offline"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # API functions (disabled for Vite SPA)
 # [functions]
