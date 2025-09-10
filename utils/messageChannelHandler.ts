@@ -1,24 +1,9 @@
-type MessageHandler = {
-  sendMessage: (message: unknown) => void;
-  receiveMessage: (callback: (message: unknown) => void) => void;
-=======
-export const messageChannelHandler = {;
-  sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},,
->>>>>>> origin/automation-fixes
-=======
->>>>>>> origin/automation/changelog
-};
-export const messageChannelHandler: MessageHandler = {
-  sendMessage: (_message) => {
-    // No-op: placeholder for message channel integration
+// Message channel handler for communication between components
+export const messageChannelHandler = {
+  send: (message: any) => {
+    // Implementation for sending messages
   },
-  receiveMessage: (_callback: (message: string) => void) => {
+  receive: (callback: (message: any) => void) => {
     // Implementation for receiving messages
-    // eslint-disable-next-line no-console
-    console.log('Setting up message receiver');
   }
 };
-=======
-type MessageHandler = { sendMessage: (message: unknown) => void; receiveMessage: (callback: (message: unknown) => void) => void}; export const messageChannelHandler: MessageHandler = { sendMessage: (_message) => { },receiveMessage: (_callback) => { },};
->>>>>>> origin/automation-improvements
