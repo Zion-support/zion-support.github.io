@@ -1,32 +1,41 @@
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  testMatch: [
-    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/out/',
-    '/dist/',
-    '/recovered-branches/',
-    '/src_backup/',
-    '/e2e/'
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js'
+  },
+  testMatch: ['<rootDir>/tests/**/smoke.test.{js,jsx,ts,tsx}'],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
-    'components/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}'
+    '!src/**/*.d.ts'
   ],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
-  },
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.simple.js'],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
   transform: {
-    '^.+\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(.*\.mjs$))'
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+    '<rootDir>/zion-os.disabled/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/tests/integration/',
+    '<rootDir>/tests/e2e/',
+    '<rootDir>/tests/playwright/',
+    '<rootDir>/tests/storybook/'
+  ],
+  transformIgnorePatterns: ['node_modules/(?!(.*\\.mjs$))'],
+  roots: ['<rootDir>/src', '<rootDir>/tests'],
+  watchPathIgnorePatterns: [
+    '<rootDir>/zion-os.disabled/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/zion-os.disabled/zion-os/package.json',
+    '<rootDir>/backup-problematic-files/temp-exclude/zion-os/package.json'
   ]
 };

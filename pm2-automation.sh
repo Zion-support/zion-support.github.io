@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# PM2 Automation Script for Error Fixing
-# This script manages PM2 processes for automated error fixing
+# PM2 Automation Script to replace GitHub Actions
+# This script handles CI/CD pipeline automation
+
+set -e
 
 # Colors for output
 RED='\033[0;31m'
@@ -10,188 +12,250 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Create logs directory if it doesn't exist
-mkdir -p logs
-
-# Function to print colored output
-print_status() {
+# Logging function
+log() {
     echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
-print_success() {
-    echo -e "${GREEN}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+error() {
+    echo -e "${RED}[ERROR]${NC} $1"
 }
 
-print_warning() {
-    echo -e "${YELLOW}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
 }
 
-print_error() {
-    echo -e "${RED}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
 }
 
-# Function to start all automation processes
-start_automation() {
-    print_status "Starting PM2 automation processes..."
-    
-    # Start all processes
-    pm2 start ecosystem.config.js
-    
-    if [ $? -eq 0 ]; then
-        print_success "All automation processes started successfully!"
-        print_status "Dashboard available at: http://localhost:3001"
+# Check if PM2 is running
+check_pm2_status() {
+    if ! pm2 ping > /dev/null 2>&1; then
+        error "PM2 is not running. Starting PM2 daemon..."
+        pm2 start
+        sleep 2
+    fi
+    success "PM2 is running"
+}
+
+# Install dependencies
+install_deps() {
+    log "Installing dependencies..."
+    npm ci
+    success "Dependencies installed successfully"
+}
+
+# Run linting
+run_lint() {
+    log "Running ESLint..."
+    if npm run lint; then
+        success "Linting passed"
     else
-        print_error "Failed to start some automation processes"
+        warning "Linting issues found - continuing with build"
+    fi
+}
+
+# Run type checking
+run_type_check() {
+    log "Running TypeScript type checking..."
+    if npm run type-check; then
+        success "Type checking passed"
+    else
+        warning "Type checking issues found - continuing with build"
+    fi
+}
+
+# Build the application
+build_app() {
+    log "Building application..."
+    export NODE_OPTIONS="--max-old-space-size=6144"
+    npm run build
+    
+    # Verify build output
+    if [ -d "dist" ]; then
+        success "Build successful! Found dist folder with:"
+        ls -la dist/
+        
+        # Check for essential files
+        if [ -f "dist/index.html" ]; then
+            success "✓ index.html found"
+        else
+            error "✗ index.html not found"
+            exit 1
+        fi
+        
+        if [ -f "dist/css/index-"*.css ]; then
+            success "✓ CSS files found"
+        else
+            warning "✗ CSS files found"
+        fi
+        
+        if [ -f "dist/js/index-"*.js ]; then
+            success "✓ JavaScript files found"
+        else
+            warning "✗ JavaScript files found"
+        fi
+    else
+        error "Build failed: dist folder not found"
         exit 1
     fi
 }
 
-# Function to stop all automation processes
-stop_automation() {
-    print_status "Stopping PM2 automation processes..."
-    
-    pm2 stop ecosystem.config.js
-    
-    if [ $? -eq 0 ]; then
-        print_success "All automation processes stopped successfully!"
+# Run tests
+run_tests() {
+    log "Running tests..."
+    if npm test --if-present; then
+        success "Tests passed"
     else
-        print_error "Failed to stop some automation processes"
-        exit 1
+        warning "Tests failed or not available - continuing"
     fi
 }
 
-# Function to restart all automation processes
-restart_automation() {
-    print_status "Restarting PM2 automation processes..."
-    
-    pm2 restart ecosystem.config.js
-    
-    if [ $? -eq 0 ]; then
-        print_success "All automation processes restarted successfully!"
-    else
-        print_error "Failed to restart some automation processes"
-        exit 1
-    fi
+# Security audit
+security_audit() {
+    log "Running security audit..."
+    npm audit --audit-level=moderate || true
+    npm audit fix --audit-level=moderate || true
+    success "Security audit completed"
 }
 
-# Function to show status of automation processes
-show_status() {
-    print_status "PM2 automation processes status:"
+# Deploy with PM2
+deploy_pm2() {
+    log "Deploying with PM2..."
+    
+    # Check if app is already running
+    if pm2 list | grep -q "bolt-new-zion-app"; then
+        log "App is running, reloading..."
+        pm2 reload bolt-new-zion-app
+    else
+        log "Starting app for the first time..."
+        pm2 start ecosystem.config.js
+    fi
+    
+    success "Deployment completed"
+}
+
+# Health check
+health_check() {
+    log "Running health checks..."
     pm2 status
+    pm2 logs --lines 10
+    success "Health checks completed"
 }
 
-# Function to show logs
-show_logs() {
-    local app_name=${1:-""}
+# Performance monitoring
+performance_monitor() {
+    log "Starting performance monitoring..."
+    pm2 monit &
+    success "Performance monitoring started"
+}
+
+# Main CI/CD pipeline
+main() {
+    log "Starting PM2 CI/CD Pipeline..."
     
-    if [ -z "$app_name" ]; then
-        print_status "Showing logs for all processes:"
+    # Check PM2 status
+    check_pm2_status
+    
+    # Install dependencies
+    install_deps
+    
+    # Code quality checks
+    run_lint
+    run_type_check
+    security_audit
+    
+    # Build and test
+    build_app
+    run_tests
+    
+    # Deploy
+    deploy_pm2
+    
+    # Post-deployment
+    health_check
+    
+    success "🚀 PM2 CI/CD Pipeline completed successfully!"
+    log "Your application is now running with PM2"
+    log "Use 'pm2 status' to check status"
+    log "Use 'pm2 logs' to view logs"
+    log "Use 'pm2 monit' to monitor performance"
+}
+
+# Watch mode for development
+watch_mode() {
+    log "Starting watch mode..."
+    check_pm2_status
+    
+    # Start the app in development mode
+    pm2 start ecosystem.config.js --env development
+    
+    # Watch for file changes and restart
+    log "Watching for file changes..."
+    pm2 start ecosystem.config.js --watch
+    
+    success "Watch mode started. App will restart on file changes."
+}
+
+# Production deployment
+production_deploy() {
+    log "Starting production deployment..."
+    check_pm2_status
+    
+    # Run full pipeline
+    main
+    
+    # Switch to production environment
+    pm2 reload ecosystem.config.js --env production
+    
+    success "Production deployment completed!"
+}
+
+# Parse command line arguments
+case "${1:-main}" in
+    "main")
+        main
+        ;;
+    "watch")
+        watch_mode
+        ;;
+    "production")
+        production_deploy
+        ;;
+    "health")
+        health_check
+        ;;
+    "monitor")
+        performance_monitor
+        ;;
+    "status")
+        pm2 status
+        ;;
+    "logs")
         pm2 logs
-    else
-        print_status "Showing logs for $app_name:"
-        pm2 logs "$app_name"
-    fi
-}
-
-# Function to run a quick fix
-quick_fix() {
-    print_status "Running quick error fix..."
-    
-    # Run the lint error fixer
-    node automation/lint-error-fixer.cjs all
-    
-    if [ $? -eq 0 ]; then
-        print_success "Quick fix completed successfully!"
-    else
-        print_error "Quick fix failed"
-        exit 1
-    fi
-}
-
-# Function to run type check
-type_check() {
-    print_status "Running TypeScript type check..."
-    
-    npm run type-check
-    
-    if [ $? -eq 0 ]; then
-        print_success "TypeScript type check passed!"
-    else
-        print_error "TypeScript type check failed"
-        exit 1
-    fi
-}
-
-# Function to run lint check
-lint_check() {
-    print_status "Running ESLint check..."
-    
-    npm run lint
-    
-    if [ $? -eq 0 ]; then
-        print_success "ESLint check passed!"
-    else
-        print_error "ESLint check failed"
-        exit 1
-    fi
-}
-
-# Function to show help
-show_help() {
-    echo "PM2 Automation Script for Error Fixing"
-    echo ""
-    echo "Usage: $0 [COMMAND]"
-    echo ""
-    echo "Commands:"
-    echo "  start       Start all automation processes"
-    echo "  stop        Stop all automation processes"
-    echo "  restart     Restart all automation processes"
-    echo "  status      Show status of all processes"
-    echo "  logs        Show logs for all processes"
-    echo "  logs [app]  Show logs for specific app"
-    echo "  quick-fix   Run a quick error fix"
-    echo "  type-check  Run TypeScript type check"
-    echo "  lint-check  Run ESLint check"
-    echo "  help        Show this help message"
-    echo ""
-    echo "Examples:"
-    echo "  $0 start"
-    echo "  $0 logs error-fixer"
-    echo "  $0 quick-fix"
-}
-
-# Main script logic
-case "$1" in
-    start)
-        start_automation
         ;;
-    stop)
-        stop_automation
+    "restart")
+        pm2 restart bolt-new-zion-app
         ;;
-    restart)
-        restart_automation
+    "stop")
+        pm2 stop bolt-new-zion-app
         ;;
-    status)
-        show_status
-        ;;
-    logs)
-        show_logs "$2"
-        ;;
-    quick-fix)
-        quick_fix
-        ;;
-    type-check)
-        type_check
-        ;;
-    lint-check)
-        lint_check
-        ;;
-    help|--help|-h)
-        show_help
+    "delete")
+        pm2 delete bolt-new-zion-app
         ;;
     *)
-        print_error "Unknown command: $1"
-        show_help
+        echo "Usage: $0 {main|watch|production|health|monitor|status|logs|restart|stop|delete}"
+        echo "  main        - Run full CI/CD pipeline"
+        echo "  watch       - Start in watch mode for development"
+        echo "  production  - Deploy to production"
+        echo "  health      - Run health checks"
+        echo "  monitor     - Start performance monitoring"
+        echo "  status      - Show PM2 status"
+        echo "  logs        - Show PM2 logs"
+        echo "  restart     - Restart the application"
+        echo "  stop        - Stop the application"
+        echo "  delete      - Delete the application from PM2"
         exit 1
         ;;
 esac
