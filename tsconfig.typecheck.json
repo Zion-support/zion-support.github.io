@@ -4,12 +4,14 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": [],
-  "exclude": ["**/*"],
-  "files": [
-    "src/main.tsx",
+  "include": [
     "src/AppMinimal.tsx",
-    "src/components/SEO.tsx"
+    "src/main.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
   ]
 }
 

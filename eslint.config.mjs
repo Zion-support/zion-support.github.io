@@ -52,7 +52,11 @@ export default [
         ...globals.browser
       }
     },
+    settings: {
+      react: { version: 'detect' }
+    },
     plugins: {
+      '@typescript-eslint': tsPlugin,
       react,
       'react-hooks': reactHooks,
       '@typescript-eslint': tsPlugin
