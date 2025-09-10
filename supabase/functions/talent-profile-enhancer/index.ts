@@ -53,7 +53,7 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4o',
         messages: [
           {
             role: 'system',
@@ -102,7 +102,7 @@ serve(async (req) => {
     try {
       enhancedProfile = JSON.parse(responseContent);
     } catch (e) {
-      console.error("Error parsing OpenAI response:", e);
+      // console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content");
     }
 
@@ -112,7 +112,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in talent-profile-enhancer function:", error);
+    // console.error("Error in talent-profile-enhancer function:", error);
     
     return new Response(
       JSON.stringify({ error: error.message }),
