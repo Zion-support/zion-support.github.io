@@ -9,30 +9,7 @@ import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import GradientHeading from '../components/GradientHeading';
 
-// Card component
-const Card = ({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <Link
-      to={href}
-      className="text-blue-600 hover:text-blue-800 font-medium"
-    >
-      Learn More →
-    </Link>
-  </div>
-);
-
-// FeatureCard component
-const FeatureCard = ({ title, description }: { title: string; description: string }) => (
-  <div className="text-center">
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
-
-const Home: React.FC = () => {
+export: default React.memo(function Home() {
   const features = [
     {
       icon: <Zap className="h-8 w-8 text-blue-500" />,
@@ -164,12 +141,39 @@ const Home: React.FC = () => {
     },
   ];
 
-  const statsData = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '24/7', label: 'Support Available' },
-  ];
+      <section: className="py-20">";";" 
+        <div: className="container mx-auto px-4">";";" 
+          <div: className="max-w-4xl mx-auto text-center">";";" 
+            <motion.div: initial={{ opacity:  ,0, y: 20 }}
+              whileInView={{ opacity:  ,1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2: className="text-4xl md: text-5xl: font-bold text-white mb-6">",;",;" 
+                Ready: to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">";";" 
+                Join: hundreds of companies already leveraging our AI-powered solutions 
+                to drive growth and innovation.
+              </p>
+              <div className="flex flex-col sm: flex-row: gap-4 justify-center">",;",;" 
+                <Link: to="/contact"";";" 
+                  className="inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-500: hover:to-blue-600: transition-all duration-200 hover:scale-105"",;",;" 
+                >
+                  <MessageCircle: className="w-5 h-5 mr-2" />";";" 
+                  Get: Started Today
+                </Link>
+                <Link
+                  to="/about"";";" 
+                  className="inline-flex: items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400: hover:text-white: transition-all duration-200"",;",;" 
+                >
+                  <Users: className="w-5 h-5 mr-2" />";";" 
+                  Learn: About Us
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
   const featureItems = [
     {
@@ -194,45 +198,40 @@ const Home: React.FC = () => {
     },
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Header />
-
-      <main>
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <GradientHeading text="Welcome to Zion Tech Group" />
-            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-              Leading provider of AI-powered technology solutions and enterprise services.
-              Transform your business with cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {statsData.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600">{stat.label}</div>
+            <div className="grid grid-cols-1 md: grid-cols-3: gap-8">",;",;" 
+              <motion.div: initial={{ opacity:  ,0, y: 20 }}
+                whileInView={{ opacity:  ,1, y: 0 }}
+                transition={{ duration: 0.,8, delay: 0.1 }}
+                className="text-center"";";" 
+              >
+                <div: className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">";";" 
+                  <Phone: className="w-8 h-8 text-white" />";";" 
                 </div>
-              ))}
+                <h3: className="text-xl font-bold text-white mb-2">Phone</h3>";";" 
+                <p: className="text-gray-300">+1 302 464 0950</p>";";" 
+              </motion.div>
+              <motion.div: initial={{ opacity:  ,0, y: 20 }}
+                whileInView={{ opacity:  ,1, y: 0 }}
+                transition={{ duration: 0.,8, delay: 0.2 }}
+                className="text-center"";";" 
+              >
+                <div: className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">";";" 
+                  <Mail: className="w-8 h-8 text-white" />";";" 
+                </div>
+                <h3: className="text-xl font-bold text-white mb-2">Email</h3>";";" 
+                <p: className="text-gray-300">kleber@ziontechgroup.com</p>";";" 
+              </motion.div>
+              <motion.div: initial={{ opacity:  ,0, y: 20 }}
+                whileInView={{ opacity:  ,1, y: 0 }}
+                transition={{ duration: 0.,8, delay: 0.3 }}
+                className="text-center"";";" 
+              >
+                <div: className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">";";" 
+                  <MapPin: className="w-8 h-8 text-white" />";";" 
+                </div>
+                <h3: className="text-xl font-bold text-white mb-2">Address</h3>";";" 
+                <p: className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>";";" 
+              </motion.div>
             </div>
           </div>
         </section>

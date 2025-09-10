@@ -32,8 +32,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   },
-  server: {
-    port: 3000,
-    open: true,
-  },
 });
