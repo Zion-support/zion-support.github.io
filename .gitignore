@@ -23,4 +23,5 @@ automation/data/*.json
 .next/
 core
 
-tsconfig.tsbuildinfo
+# TypeScript build info
+*.tsbuildinfo
