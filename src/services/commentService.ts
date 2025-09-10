@@ -28,7 +28,7 @@ export function getComments(slug: string): CommentEntry[] {
   return all[slug] || [];
 }
 
-export function addComment(slug: string, entry: Omit<CommentEntry, _'id' | 'createdAt'>): CommentEntry {
+export function addComment(slug: string, entry: Omit<CommentEntry, 'id' | 'createdAt'>): CommentEntry {
   const all = getAll();
   const newEntry: CommentEntry = {
     id:
