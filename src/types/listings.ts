@@ -86,4 +86,3 @@ export interface ListingStats {
   aiScore?: number;
   pricingTier?: string;
 }
->>>>>>> origin/chore/fix-links-and-build
