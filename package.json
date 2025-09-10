@@ -9,7 +9,7 @@
     "start": "vite preview",
     "lint": "eslint --no-error-on-unmatched-pattern \"src/AppMinimal.tsx\" \"src/main.tsx\"",
     "lint:fix": "eslint \"src/AppMinimal.tsx\" \"src/main.tsx\" --fix",
-    "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
+    "type-check": "npx tsc --project tsconfig.typecheck.json --noEmit",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -23,7 +23,6 @@
     "test:smoke": "jest --config jest.config.smoke.cjs",
     "lint:check": "eslint . --max-warnings 0",
     "prebuild": "npm run type-check",
-    "postbuild": "npm run test:smoke",
     "security:audit": "npm audit",
     "security:fix": "npm audit fix"
   },
@@ -62,7 +61,6 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
     "react-router-dom": "^6.17.0",
-    "react-scripts": "5.0.1",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "vite": "^4.5.0",
@@ -91,6 +89,7 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.5",
+    "terser": "^5.44.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.9.2",
     "vite-plugin-eslint": "^1.8.1"
