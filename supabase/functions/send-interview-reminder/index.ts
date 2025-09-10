@@ -40,7 +40,7 @@ serve(async (req) => {
     
     if (error) throw error;
     
-    console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
+    // console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
     
     const results = [];
     
@@ -69,7 +69,7 @@ serve(async (req) => {
             
             results.push(`Reminder sent to client: ${clientEmail}`);
           } catch (emailError) {
-            console.error(`Error sending reminder to client ${clientEmail}:`, emailError);
+            // console.error(`Error sending reminder to client ${clientEmail}:`, emailError);
           }
         }
         
@@ -95,7 +95,7 @@ serve(async (req) => {
             
             results.push(`Reminder sent to talent: ${talentEmail}`);
           } catch (emailError) {
-            console.error(`Error sending reminder to talent ${talentEmail}:`, emailError);
+            // console.error(`Error sending reminder to talent ${talentEmail}:`, emailError);
           }
         }
         
@@ -112,7 +112,7 @@ serve(async (req) => {
       status: 200,
     });
   } catch (error) {
-    console.error("Error in send-interview-reminder function:", error);
+    // console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
