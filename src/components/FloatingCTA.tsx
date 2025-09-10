@@ -1,22 +1,4 @@
-import React from 'react';';';
-import { Link  } from 'react-router-dom';';
-export default function Page(props: any) {';';
-import React from 'react';
-import { Link  } from 'react-router-dom';
-export default function Page(props: any) {;
-import React from 'react';
-import { Link  } from 'react-router-dom';
-export default function Page("props": "any) {;
- from 'lucide-react';
-;
-const "FloatingCTA": React.FC = () : JSX.Element => {;
-  const [isOpen", setIsOpen] = useState<any>(false);
-  const [isVisible, setIsVisible] = useState<any>(false);
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
+
   "};export default function Page(props: any) {
  from 'lucide-react';
 const FloatingCTA: React.FC = () : JSX.Element => {;
@@ -33,11 +15,11 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     return () => clearTimeout(timer) }, []) };
   ];
 ;
-  const quickServices = [";
+  const _quickServices = [";
     { "name": "AI Solutions", "icon": "Brai n", "link": "/ai-services" },";
     { "name": "Cybersecurity", "icon": "Shiel d", "link": "/cybersecurity" },";
     { "name": "Cloud Services", "icon": "Clou d", "link": "/cloud-solutions" },;";
-    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };  const quickServices = ["
+    { "name": "Digital Transformation", "icon": "Za p", "link": "/digital-transformation" };  const _quickServices = ["
     { name: "AI Solutions", icon: Brai n, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shiel d, link: "/cybersecurity" },"
     { name: "Cloud Services", icon: Clou d, link: "/cloud-solutions" },;"
@@ -98,3 +80,4 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 </motion>
 </any>
 </any>
+

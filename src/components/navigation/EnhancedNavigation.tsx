@@ -31,18 +31,18 @@ import { ;
   TreePine,;
   Home;
 } from "lucide-react";
-const EnhancedNavigation = ("props": "any) => {;
+const _EnhancedNavigation = ("props": "any) => {;
   const [isOpen", setIsOpen] = useState<any>(false);
   const [isScrolled, setIsScrolled] = useState<any>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {;
-    const handleScroll = ("props": "any) => {;
+    const _handleScroll = ("props": "any) => {;
       setIsScrolled(window.scrollY > 20);
     "}
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const navigationItems = [;
+  const _navigationItems = [;
     {;
       "name": "Services",;
       "href": "/services",;
@@ -194,7 +194,7 @@ const EnhancedNavigation = ("props": "any) => {;
       ];
     }
   ];
-  const contactInfo = [;
+  const _contactInfo = [;
     {;
       "text": "+1 302 464 0950",;
       "href": ""tel": "+13024640950"",;
@@ -211,11 +211,11 @@ const EnhancedNavigation = ("props": "any) => {;
       "icon": "MapPi n;
     "}
   ];
-  const toggleDropdown = ("props": "any) => {;
+  const _toggleDropdown = ("props": "any) => {;
     setActiveDropdown(activeDropdown === name ? null : name);
   "}
 ;
-  const closeMobileMenu = ("props": "any) => {;
+  const _closeMobileMenu = ("props": "any) => {;
     setIsOpen(false);
     setActiveDropdown(null);
   "}

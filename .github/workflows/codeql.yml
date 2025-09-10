@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
@@ -33,4 +35,9 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
+<<<<<<< HEAD
           category: '/language:javascript-typescript'
+=======
+          category: '/language:javascript'
+          upload: true
+>>>>>>> origin/backup-improvements-20250827-015311

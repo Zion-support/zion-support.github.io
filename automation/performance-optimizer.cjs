@@ -179,14 +179,3 @@ class PerformanceOptimizer {
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     this.log(`Performance report saved to ${reportPath}`, 'SUCCESS');
   }
-}
-
-// Run if called directly
-if (require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer.optimize().then(success => {
-    process.exit(success ? 0 : 1);
-  });
-}
-
-module.exports = PerformanceOptimizer;

@@ -35,6 +35,7 @@ jobs:
             echo "Build failed: .next folder not found"
             exit 1
           fi
+<<<<<<< HEAD
           echo "Build successful: .next folder found"
       - name: Run basic tests (if available)
         run: |
@@ -45,6 +46,15 @@ jobs:
           fi
         continue-on-error: true
       - name: Upload build artifacts
+=======
+      - name: Run tests
+        run: npm run test:ci
+        continue-on-error: true
+      - name: Security scan
+        run: npm run security:scan
+        continue-on-error: true
+      - name: Upload build (optional)
+>>>>>>> origin/backup-improvements-20250827-015311
         if: success()
         uses: actions/upload-artifact@v4
         with:

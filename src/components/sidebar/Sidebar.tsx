@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { _usePathname } from 'next/navigation';
 import { ;
   Home, ;
   Services, ;
@@ -53,10 +53,10 @@ interface SidebarProps {;
 "}
 ;
 export function Sidebar({ isOpen, onClose }: "SidebarProps) {;
-  const pathname = usePathname();
+  const _pathname = usePathname();
   const [expandedSections", setExpandedSections] = useState<string[]>(['services', 'solutions']);
 ;
-  const toggleSection = ("props": "any) => {;
+  const _toggleSection = ("props": "any) => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -64,9 +64,9 @@ export function Sidebar({ isOpen, onClose }: "SidebarProps) {;
     );
   };
 ;
-  const isActive = ("path": "string) => pathname === path;
+  const _isActive = ("path": "string) => pathname === path;
 ;
-  const navigationSections = [;
+  const _navigationSections = [;
     {;
       "title": 'Main'",;
       "items": "[;
@@ -136,7 +136,7 @@ export function Sidebar({ isOpen, onClose }: "SidebarProps) {;
     }
   ];
 ;
-  const quickActions = [;
+  const _quickActions = [;
     { "name": 'Get Quote', "href": '/contact', "icon": "Sta r", "color": 'text-yellow-400' },;
     { "name": 'Schedule Demo', "href": '/demo', "icon": "Calenda r", "color": 'text-blue-400' },;
     { "name": 'Support', "href": '/support', "icon": "HelpCircl e", "color": 'text-green-400' }

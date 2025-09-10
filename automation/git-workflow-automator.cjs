@@ -247,11 +247,7 @@ class GitWorkflowAutomator {
       
       // Simple conflict resolution - keep the latest version
       const resolvedContent = content
-<<<<<<< HEAD
-
-=======
         .replace(/[\s\S]*?[\s\S]*?        .replace(/[\s\S]*?        .replace(/[\s\S]*?
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       fs.writeFileSync(filePath, resolvedContent);
       
       // Add resolved file

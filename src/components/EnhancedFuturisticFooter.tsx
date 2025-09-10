@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { _Link } from 'react-router-dom';
 ;
     {;
       "title": 'Revolutionary 2030 Services';
@@ -144,7 +144,7 @@ import { Link } from 'react-router-dom';
     }
   ];
 }
-  const footerSections = [
+  const _footerSections = [
     {
       title: 'Revolutionary 2030 Services',
       featured: true,

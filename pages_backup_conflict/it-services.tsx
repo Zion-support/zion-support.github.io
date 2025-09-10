@@ -1333,7 +1333,7 @@ export default function ITServices() {
                     </Link>
                   </div>
                 </div>
-              ))}
+              ))};
             </div>;
           </div>;
         </section>;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+import { _Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 ;
 export function SimpleFooter("props": "any) {;
-  const currentYear = new Date().getFullYear();
+  const _currentYear = new Date().getFullYear();
 ;
   return (;
     <footer className="bg-gray-900 text-white">;

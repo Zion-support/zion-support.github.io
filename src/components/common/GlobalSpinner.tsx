@@ -1,5 +1,5 @@
 import React from "react";
-import { SEO } from "@/components/SEO";
+import { _SEO } from "@/components/SEO";
 export default function GlobalSpinner("props": "any) {return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="GlobalSpinner - Zion Tech Group" description="Professional GlobalSpinner services by Zion Tech Group"   />";

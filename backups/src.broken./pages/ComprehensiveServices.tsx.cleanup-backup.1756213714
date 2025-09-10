@@ -118,7 +118,6 @@ export default function ComprehensiveServices() {
             <Link to="/pricing-guide">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
                 <TrendingUp className="w-5 h-5 mr-2" />
-                View Pricing Guide=======              </Button>
             </Link>
           </div>
         </div>
@@ -146,7 +145,6 @@ export default function ComprehensiveServices() {
                       <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                         Learn More
                       </Button>
-                    </div>=======                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -179,10 +177,6 @@ export default function ComprehensiveServices() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             {[
               {
                 icon: <Zap className="w-8 h-8" />,
@@ -212,8 +206,6 @@ export default function ComprehensiveServices() {
                 <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
               </div>
-<<<<<<< HEAD
-=======
             {EXPANDED_SERVICE_CATEGORIES.map((category) => (
               <Card key={category.value} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
                 <CardHeader className="text-center">
@@ -231,9 +223,6 @@ export default function ComprehensiveServices() {
                   </Button>
                 </CardContent>
               </Card>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ))}
           </div>
         </div>

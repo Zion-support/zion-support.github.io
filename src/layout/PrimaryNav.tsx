@@ -1,36 +1,60 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import { Search, Menu, X, Sun, Moon } from 'lucide-react';
-import Logo from '../components/Logo';
-import ResponsiveNavigation from '../components/ResponsiveNavigation';
-import SearchBar from '../components/SearchBar';
-import UserMenu from '../components/UserMenu';
 
-export default function PrimaryNav() {
-  const router = useRouter();
-  const [isDark, setIsDark] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    // Add theme switching logic here
-  };
+}
+                  >";
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground "hover": "tex t-primary"   />;
+                    {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">;
+                        {cartCount"}
+                      </span>;
+                    )}
+                  </Link>;
+                </HoverCardTrigger>;
+                <HoverCardContent>";
+                  <div className="p-4">";
+                    <p className="text-sm text-muted-foreground">Cart preview</p>;
+                  </div>;
+                </HoverCardContent>;
+              </HoverCard>;
+            </div>;
+            {/* Compact controls group */}";
+            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
+              <ModeToggle  />;
+              <LanguageSelector  />;
+            </div>;
+            {/* Auth links - flex wrap for very small screens */}";
+            <div className="flex items-center gap-1 flex-wrap">;
+              {!isLoggedIn && (;
+                <>;
+                  <Link";
+                    href="/auth/login";
+                    className="text-sm "hover": "tex t-primary whitespace-nowrap";
+                    data-testid="login-link";
+                    {t('auth.login')"}
+                  </Link>;
+                  <Link";
+                    href="/signup";
+                    className="text-sm "hover": "tex t-primary whitespace-nowrap";
+                    {t('auth.signup')"}
+                  </Link>;
+                </>;
+              )}
+              {isLoggedIn && <UserMenu  />}
+            </div>;
+          </div>;
+          {/* Mobile menu button */}
+          <button;
+            onClick={() => setIsOpen(!isOpen)}";
+            className=""lg": "hidden text-white "hover": tex t-cyan-400 transition-colors duration-200";
+          >";
+            {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />"}          </button>;
+        </div>;
+        {/* Mobile Navigation */}
+        <AnimatePresence>;
+          {isOpen && ;
+            <motion.div;
+              initial = {;
 
-  const handleSearch = (query: string) => {
-    if (query.trim()) {
-      router.push(`/search/${encodeURIComponent(query)}`);
-    }
-  };
 
-  const handleSuggestionSelect = (suggestion: any) => {
-    if (suggestion.id) {
-      router.push(`/marketplace/listing/${suggestion.id}`);
-    } else if (suggestion.type === 'doc' && suggestion.slug) {
-      router.push(suggestion.slug);
-    } else if (suggestion.type === 'page') {
-      router.push(suggestion.slug);
-    }
-  };
 
   return (
     <header
@@ -54,36 +78,3 @@ export default function PrimaryNav() {
             placeholder="Search products, docs, or pages..."
           />
         </div>
-
-        {/* User Menu - hidden on mobile, shown on desktop */}
-        <div className="hidden md:block order-3 flex-shrink-0">
-          <UserMenu />
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden order-3 p-2 rounded-md hover:bg-accent"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-primary/20 bg-card">
-          <div className="container px-4 py-4 space-y-4">
-            <ResponsiveNavigation />
-            <SearchBar
-              onSearch={handleSearch}
-              onSelectSuggestion={handleSuggestionSelect}
-              placeholder="Search..."
-            />
-            <UserMenu />
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}

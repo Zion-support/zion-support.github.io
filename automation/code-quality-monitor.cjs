@@ -258,8 +258,6 @@ async function checkDocumentationCoverage() {
   const endTime = Date.now();
   const duration = endTime - startTime;
 
-<<<<<<< HEAD
-=======
     process.exit(1);
   } else {
       console.log()

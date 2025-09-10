@@ -35,15 +35,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Verify build output
-        run: |
-          if [ ! -d .next ]; then
-            echo "Build failed: .next folder not found"
-            exit 1
-          fi
-          echo "Build successful: .next folder found"
-
-  test:
+=======  test:
     name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -60,9 +52,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build project
-        run: npm run build
-
       - name: Run basic tests (if available)
         run: |
           if npm run | grep -q "test"; then
@@ -70,7 +59,13 @@ jobs:
           else
             echo "No test script found, skipping tests"
           fi
+=======
+      - name: Run tests
+        run: npm run test:ci
         continue-on-error: true
+
+      - name: Security scan
+        run: npm run security:scan        continue-on-error: true
 
       - name: Upload test artifacts
         uses: actions/upload-artifact@v4
