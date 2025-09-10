@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -26,11 +27,120 @@ const EnhancedLoadingSpinner = () => (
       <div className="mt-4 text-center">
         <div className="text-cyan-500 text-sm animate-pulse">Loading amazing experiences...</div>
       </div>
+=======
+import React, { Suspense, lazy, useEffect } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
+
+// For now, we'll use simple components until pages are created
+const HomePage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>
+      <p className="text-xl text-gray-300">Advanced AI & Technology Solutions</p>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
     </div>
   </div>
 );
 
+<<<<<<< HEAD
 // Error boundary component
+=======
+const ServicesPage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Our Services</h1>
+      <p className="text-xl text-gray-300">Comprehensive technology solutions</p>
+    </div>
+  </div>
+);
+
+const SolutionsPage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Solutions</h1>
+      <p className="text-xl text-gray-300">Innovative technology solutions</p>
+    </div>
+  </div>
+);
+
+const AboutPage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">About Us</h1>
+      <p className="text-xl text-gray-300">Learn about our mission and values</p>
+    </div>
+  </div>
+);
+
+const ContactPage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+      <p className="text-xl text-gray-300">Get in touch with our team</p>
+    </div>
+  </div>
+);
+
+const PricingPage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Pricing</h1>
+      <p className="text-xl text-gray-300">Flexible pricing options</p>
+    </div>
+  </div>
+);
+
+const NotFoundPage = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+      <p className="text-xl text-gray-300">The page you're looking for doesn't exist</p>
+    </div>
+  </div>
+);
+
+// Service Pages
+const AISolutions = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">AI Solutions</h1>
+      <p className="text-xl text-gray-300">Advanced artificial intelligence services</p>
+    </div>
+  </div>
+);
+
+const QuantumComputing = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Quantum Computing</h1>
+      <p className="text-xl text-gray-300">Next-generation quantum solutions</p>
+    </div>
+  </div>
+);
+
+const Cybersecurity = () => (
+  <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">Cybersecurity</h1>
+      <p className="text-xl text-gray-300">Advanced security solutions</p>
+    </div>
+  </div>
+);
+
+// Enhanced loading component with accessibility
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900" role="status" aria-label="Loading page">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4" aria-hidden="true"></div>
+      <p className="text-gray-400">Loading...</p>
+      <span className="sr-only">Please wait while the page loads</span>
+    </div>
+  </div>
+);
+
+// Enhanced error fallback component with better UX
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
     <div className="text-center">
@@ -46,6 +156,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
+<<<<<<< HEAD
 function App() {
   return (
     <HelmetProvider>
@@ -80,3 +191,47 @@ function App() {
 }
 
 export default App;
+=======
+export default function App() {
+  // Performance monitoring and analytics
+  useEffect(() => {
+    // Track page load performance
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const loadTime = performance.now();
+      console.log(`App loaded in ${loadTime.toFixed(2)}ms`);
+      
+      // Track Core Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then((vitals) => {
+          if (vitals.onCLS) vitals.onCLS(console.log);
+          if (vitals.onINP) vitals.onINP(console.log); // INP replaces FID
+          if (vitals.onFCP) vitals.onFCP(console.log);
+          if (vitals.onLCP) vitals.onLCP(console.log);
+          if (vitals.onTTFB) vitals.onTTFB(console.log);
+        });
+      }
+    }
+  }, []);
+
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <BrowserRouter>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/services/ai" element={<AISolutions />} />
+            <Route path="/services/quantum" element={<QuantumComputing />} />
+            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </ErrorBoundary>
+  );
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a91
