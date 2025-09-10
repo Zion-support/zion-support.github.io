@@ -69,7 +69,7 @@ serve(async (req) => {
     );
     
   } catch (error) {
-    console.error("Error in job-talent-matcher:", error);
+    // console.error("Error in job-talent-matcher:", error);
     
     return new Response(
       JSON.stringify({ error: error.message }),

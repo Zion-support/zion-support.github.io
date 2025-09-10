@@ -51,7 +51,7 @@ serve(async (req) => {
       .single();
 
     if (error) {
-      console.error(`Error updating public status for whitepaper ${whitepaperId}:`, error);
+      // console.error(`Error updating public status for whitepaper ${whitepaperId}:`, error);
       if (error.code === 'PGRST116') { // Not found
           return new Response(JSON.stringify({ error: "Whitepaper not found." }), { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" }});
       }
@@ -68,7 +68,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in set-shared-whitepaper-public-status function:", error);
+    // console.error("Error in set-shared-whitepaper-public-status function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
