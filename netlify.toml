@@ -92,6 +92,4 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
+ 
