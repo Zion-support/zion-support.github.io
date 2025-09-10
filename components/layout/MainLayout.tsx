@@ -4,24 +4,20 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 interface MainLayoutProps {
-  children: React.ReactNode
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'product'
-  noindex?: boolean
-  nofollow?: boolean
-  canonical?: string
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = "Zion Tech Group",
-  description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services",
-  keywords = "technology, AI, cloud, micro SaaS, cybersecurity, digital transformation, IT services"
-}) => {
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS",
+  ogImage = "/og-image.jpg"
+}: MainLayoutProps) => {
   return (
     <>
       <Head>
@@ -50,7 +46,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
