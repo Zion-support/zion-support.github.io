@@ -9,18 +9,6 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
-=======
-
   { opacity: 0,
   y: 20;
 }}
@@ -30,9 +18,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
   y: 0;
 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
-        >";
+          transition={{ duration: 0.6 }}        >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Global Presence;
           </h2>";
@@ -41,25 +27,6 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
         </motion.div>;
         {/* Global Statistics */"}
         <motion.div;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
-          className="grid grid - cols - 2 "md": "gri d - cols - 4 gap-8 mb-16"          initial = {;
-  { "opacity": 0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.2;
-"}}
-        > {globalStats.map ( (stat, index) => {;
-            ;
-=======
-          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"          initial = {;
-
   { opacity: 0,
   y: 30;
 }}
@@ -75,9 +42,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
   delay: 0.2;
 }}
         >;
-          {globalStats.map ( (stat, index) => {;
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
-            return (";
+          {globalStats.map ( (stat, index) => {;            return (";
               <div key = {stat.label} className="text-center">";
                 <div className="flex justify-center mb-3">";
                   <div className="p-2 bg-blue-100 rounded-lg">";
@@ -102,21 +67,6 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
         {/* Global Offices */}
         <motion.div;
           className="mb-16";          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.4;
-"}}
-=======
-
   { opacity: 0,
   y: 30;
 }}
@@ -130,37 +80,17 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
 
   { duration: 0.6,
   delay: 0.4;
-}}
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
-        >";
+}}        >";
           <h3 className="text-3xl font-bold text-white text-center mb-12">;
             Strategic Global Locations;
           </h3>;}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
-          
 
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 4 gap-8">;
             {globalOffices.map((office", index) => (<motion.div;
                 key={office.city}
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center "hover": "borde r-blue - 500 / 50 transition - all duration - 300 "hover": shado w-lg "hover": shado w-blue -500 / 25 group"                initial = {;
-  { "opacity": 0",;
-  "y": "3 0;
-"}}
-                whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-                viewport={{ "once": "tru e "}}
-                transition = {;
-  { "duration": "0.6",;
-  "delay": "0.6 + index * 0.1;
-"}}
-=======
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25 group"                initial = {;
-
   { opacity: 0,
   y: 30;
 }}
@@ -174,9 +104,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
 
   { duration: 0.6,
   delay: 0.6 + index * 0.1;
-}}
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
-              >";
+}}              >";
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-"hover": "scal e-110 transition-transform duration-300">";
                   <span className="text-2xl">{office.icon"}</span>;
                 </div>;
@@ -193,21 +121,6 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
         {/* Global Map Visualization */}
         <motion.div;
           className="text-center mb-12"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.8;
-"}}
-=======
-
   { opacity: 0,
   y: 30;
 }}
@@ -221,9 +134,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
 
   { duration: 0.6,
   delay: 0.8;
-}}
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
-        >;
+}}        >;
           <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">;
             <div className="w-24 h-24 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-full flex items - center justify - center mx - auto mb-6">;
               <span className="text-4xl">🌍</span>;
@@ -246,21 +157,6 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
 
         <motion.div;
           className="text-center"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "1.0;
-"}}
-=======
-
   { opacity: 0,
   y: 20;
 }}
@@ -274,9 +170,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
 
   { duration: 0.6,
   delay: 1.0;
-}}
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
-        >";
+}}        >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;
               Ready to Go Global?;
@@ -315,12 +209,9 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
 export default GlobalPresenceSection;";
             <span className="text-2xl">→</span>;
           </div>;

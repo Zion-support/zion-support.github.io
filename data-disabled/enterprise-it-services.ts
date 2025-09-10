@@ -1,9 +1,7 @@
-<<<<<<<< HEAD:data.disabled/enterprise-it-services.ts
-export interface EnterpriseItService {
-========
+<export interface EnterpriseItService {
+=
 export interface EnterpriseITService {
->>>>>>>> pr-12866:data-disabled/enterprise-it-services.ts
-  id: string;
+>  id: string;
   name: string;
   tagline: string;
   price: string;

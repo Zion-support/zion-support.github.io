@@ -8,13 +8,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 ;
 export function ProfileRatings("props": "any) {;
   const { reviews", isLoading, fetchUserReviews, reportReview } = useReviews();
-=======
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
   // Calculate rating distribution;
-<<<<<<< HEAD:src_backup_temp/components/profile/ProfileRatings.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
@@ -42,10 +39,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         }
       }
     );
-      
+
       setRatingDistribution(distribution);
     }
-=======
   useEffect(() => {
   // TODO: Add dependencies if needed;
 }, []);
@@ -58,23 +54,19 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       });
       setRatingDistribution(distribution);
 }
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
   }, [reviews]);
   // Fetch reviews when component mounts or userId/fetchUserReviews changes;
-<<<<<<< HEAD:src_backup_temp/components/profile/ProfileRatings.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews;
   ;
-=======
   useEffect(() => {
   // TODO: Add dependencies if needed;
 }, []);
     fetchUserReviews(userId);
 }, [userId, fetchUserReviews]); // Added fetchUserReviews;
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
   return (<div className="space-y-6">;
       <div className="flex flex-col "md": "fle x-row gap-6">;
         <div className=""md":w-1/3">;
@@ -85,8 +77,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       </div>
     </div>
     );
-=======
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
 }
 ;
 </ReviewsList>;

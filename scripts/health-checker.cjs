@@ -3,96 +3,6 @@
 /**
  * Health Checker;
  * Comprehensive health check for the application;
-<<<<<<< HEAD
- */
-const fs = require("child_process");
-const path = require("child_process");
-=======
- */;
-const fs = require("fs")
-const path = require("fs")
->>>>>>> origin/automation-fixes
-const { execSync } = require("child_process")
-class HealthChecker {
-  constructor() {
-    this.projectRoot = process.cwd()
-<<<<<<< HEAD
-    this.healthStatus = {"overall": "healthy","checks": [],"issues": [];
-      recommendations: []}
-  }
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    }
-=======
-    this.healthStatus = {
-      overall: "healthy",
-      checks: [],
-      issues: [],
-      recommendations: [],,
-}
-  }
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry),,
-}
->>>>>>> origin/automation-fixes
-  async runHealthChecks() {
-    try {
-      this.log("Running comprehensive health checks...")
-      await this.checkProjectStructure()
-      await this.checkDependencies()
-      await this.checkConfiguration()
-      await this.checkCodeQuality()
-      await this.checkBuildHealth()
-      await this.checkSecurity()
-      this.determineOverallHealth()
-<<<<<<< HEAD
-      this.log("Health checks completed", "success")} catch (error) {
-      this.log(`Health checks "failed": ${error.message}`, "error")}
-=======
-      this.log("Health checks completed", "success"),,
-} catch (error) {
-      this.log(`Health checks failed: ${error.message}`, "error"),,
-}
->>>>>>> origin/automation-fixes
-  }
-  async checkProjectStructure() {
-    try {
-      this.log("Checking project structure...")
-      const requiredDirs = ["src", "pages", "components", "public"]
-      const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"]
-      for (const dir of requiredDirs) {
-        if (fs.existsSync(dir)) {
-          this.healthStatus.checks.push({
-<<<<<<< HEAD
-            "name": `Directory: ${dir}`;
-const { execSync } = require("child_process");
-class HealthChecker {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-    this.healthStatus = {"overall": "healthy","checks": [],"issues": [];}
-      recommendations: []};
-  };
-  log(message, type = "info") {}
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
-    console.log(logEntry)};
-  async runHealthChecks() {}
-    try {}
-      this.log("Running comprehensive health checks...");
-      await this.checkProjectStructure();
-      await this.checkDependencies();
-      await this.checkConfiguration();
-      await this.checkCodeQuality();
-      await this.checkBuildHealth();
-      await this.checkSecurity();
-      this.determineOverallHealth();
-      this.log("Health checks completed", "success")} catch (error) {
-      this.log(`Health checks failed: ${error.message}`, "error")}
-  }
-
   async checkProjectStructure() {
     try {
       this.log("Checking project structure...");
@@ -321,69 +231,9 @@ class HealthChecker {}
   }
   async checkCodeQuality() {
     try {
-      this.log("Checking code quality...")
->>>>>>> origin/automation-fixes
-      // Check for ESLint config;
+      this.log("Checking code quality...")      // Check for ESLint config;
       const eslintConfigs = [".eslintrc.js", ".eslintrc.json", "eslint.config.js"]
       let eslintFound = false;
-<<<<<<< HEAD
-      for (const config of eslintConfigs) {}
-        if (fs.existsSync(config)) {}
-          eslintFound = true;
-          break};
-      };
-      if (eslintFound) {}
-        this.healthStatus.checks.push({"name": "ESLint Config","status": "pass";})
-          message: "ESLint configuration found"})} else {}
-        this.healthStatus.checks.push({"name": "ESLint Config","status": "warn";})
-          message: "No ESLint configuration found"}
-});
-        this.healthStatus.recommendations.push("Add ESLint configuration for code quality")};
-=======
-      for (const config of eslintConfigs) {
-        if (fs.existsSync(config)) {
-          eslintFound = true;
-          break,,
-}
-      }
-      if (eslintFound) {
-        this.healthStatus.checks.push({
-          name: "ESLint Config",
-          status: "pass",
-          message: "ESLint configuration found",,
-}),,
-} else {
-        this.healthStatus.checks.push({
-          name: "ESLint Config",
-          status: "warn",
-          message: "No ESLint configuration found",,
-})
-        this.healthStatus.recommendations.push("Add ESLint configuration for code quality"),,
-}
->>>>>>> origin/automation-fixes
-      // Check for Prettier config;
-      const prettierConfigs = [".prettierrc", ".prettierrc.js", "prettier.config.js"]
-      let prettierFound = false;
-<<<<<<< HEAD
-      for (const config of prettierConfigs) {}
-        if (fs.existsSync(config)) {}
-          prettierFound = true;
-          break}
-      }
-      if (prettierFound) {
-        this.healthStatus.checks.push({;
-          name: "Prettier Config",;
-          status: "pass",;
-          message: "Prettier configuration found"})} else {
-        this.healthStatus.checks.push({;
-          name: "Prettier Config",;
-          status: "warn",;
-          message: "No Prettier configuration found"});
-        this.healthStatus.recommendations.push("Add Prettier configuration for code formatting")}
-      this.log("Code quality check completed", "success")} catch (error) {
-      this.log(`Code quality check failed: ${error.message}`, "error")}
-  }
-
   async checkBuildHealth() {
     try {
       this.log("Checking build health...");
@@ -614,4 +464,3 @@ if (require.main === module) {
   checker.run().catch(console.error),,
 }
 module.exports = HealthChecker
->>>>>>> origin/automation-fixes

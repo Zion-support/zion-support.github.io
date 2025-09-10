@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
 
       return false;}
   }
@@ -47,20 +41,10 @@ const { execSync } = require("child_process")
 
       return false;
 }
-  }
->>>>>>> origin/automation-fixes
-  async fixUnsafeCode(line) {
+  }  async fixUnsafeCode(line) {
   let fixedLine = line;
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-<<<<<<< HEAD
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
-;
-    // Replace innerHTML with textContent where possible;
-    if (line.includes(".innerHTML =")) {
-  fixedLine = line.replace(;
-        /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";
-
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
   fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
@@ -92,88 +76,10 @@ const { execSync } = require("child_process")
       ),
 }
     return fixedLine;
-}
->>>>>>> origin/automation-fixes
-  async fixMemoryLeak(line) {
+}  async fixMemoryLeak(line) {
   let fixedLine = line;
     // Add cleanup for event listeners;
     if (line.includes("addEventListener")) {
-<<<<<<< HEAD
-  fixedLine = line.replace(;
-        /addEventListener\s*\((["^", ""]+),\s*(["^", ""]+),\s*false\)/g,addEventListener($1, $2, { "once": true })";
-      )}
-;
-    return fixedLine}
-;
-=======
-  fixedLine = line.replace(
-        /addEventListener\s*\((["^", ""]+),\s*(["^", ""]+),\s*false\)/g,addEventListener($1, $2, { once: true })";
-      ),
-}
-    return fixedLine;
-}
->>>>>>> origin/automation-fixes
-  async fixAsyncError(line) {
-  let fixedLine = line;
-    // Add error handling for promises;
-    if (line.includes(".then(") && !line.includes(".catch(")) {
-<<<<<<< HEAD
-  fixedLine = line + "\n  .catch(error => console.error(""Error": ", error))"}
-;
-    return fixedLine}
-;
-=======
-  fixedLine = line + "\n  .catch(error => console.error("Error: ", error))"}
-    return fixedLine;
-}
->>>>>>> origin/automation-fixes
-  async fixTypeIssue(line) {
-  let fixedLine = line;
-    // Replace any with more specific types;
-    if (line.includes(": any")) {
-<<<<<<< HEAD
-  fixedLine = line.replace(/: ""any/g"", ": unknown");
-    // Replace any with more specific types;
-    if (line.includes(": any")) {
-  fixedLine = line.replace(/: "any/g", ": unknown")}
-;
-    if (line.includes("as any")) {
-  fixedLine = line.replace(/as "any/g", "as unknown")}
-;
-    return fixedLine}
-;
-  async generateReport(fixResults) {
-  this.log("📊 Generating error prevention monitoring report...");
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": {
-  totalIssues: fixResults.totalIssues,
-        "fixedIssues": fixResults.fixedCount,
-        "preventionRate": fixResults.totalIssues > 0;
-            ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
-                2;
-              );
-            : 100},
-      "fixResults": fixResults.results,
-      "recommendations": ["Review applied fixes to ensure they meet your requirements"", "Consider adding more specific type annotations", "Implement proper error handling for async operations"", "Regularly review code for potential security issues", ""]}
-    const reportFile = path.join(;
-      this.reportsPath,error-prevention-monitor-report.json";
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Report "generated": ${reportFile}`);
-    return report}
-;
-  async run() {
-  this.log("🚀 Starting Error Prevention Monitor...");
-    try {
-  // Scan for potential errors;
-      const potentialErrors = await this.scanForPotentialErrors();
-      if (potentialErrors.length === 0) {
-  this.log("🎉 No potential errors detected!");
-        return { "success": true, "issues": [], "fixed": 0 }
-=======
-  fixedLine = line.replace(/: ""any/g", ": unknown")
-
     // Replace any with more specific types;
     if (line.includes(": any")) {
   fixedLine = line.replace(/: "any/g", ": unknown");}
@@ -235,33 +141,8 @@ const { execSync } = require("child_process")
 
       if (potentialErrors.length === 0) {
   this.log("🎉 No potential errors detected!")
-        return { success: true, issues: [], fixed: 0 }
->>>>>>> origin/automation-fixes
-      }
+        return { success: true, issues: [], fixed: 0 }      }
       // Apply preventive fixes;
-<<<<<<< HEAD
-      const fixResults = await this.applyPreventiveFixes(potentialErrors);
-      // Generate report;
-      const report = await this.generateReport(fixResults);
-      this.log("🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
-      return {
-  "success": fixResults.fixedCount > 0,
-        "issues": potentialErrors,
-        "fixed": fixResults.fixedCount,
-        report,
-  async run() {
-  this.log("🚀 Starting Error Prevention Monitor...");
-    try {
-  // Scan for potential errors;
-      const potentialErrors = await this.scanForPotentialErrors();
-      if (potentialErrors.length === 0) {
-  this.log("🎉 No potential errors detected!");
-        return { "success": true, "issues": [], "fixed": 0 }
-      }
-;
-      // Apply preventive fixes;
-      const fixResults = await this.applyPreventiveFixes(potentialErrors);
-
       // Generate report;
       const report = await this.generateReport(fixResults);
 
@@ -274,8 +155,6 @@ const { execSync } = require("child_process")
         report,;}
     } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
       throw error;}
->>>>>>> main}
-
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
     try {

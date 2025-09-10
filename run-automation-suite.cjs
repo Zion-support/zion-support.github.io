@@ -1,34 +1,11 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
-#!/usr/bin/env node
-/**
- * Automation Suite Runner
- * Runs all automation scripts and generates comprehensive reports
- */
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-class AutomationSuiteRunner {
-  constructor() {
-=======
-#!/usr/bin/env node;
-
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 class AutomationSuiteRunner {;
-  constructor() {;
->>>>>>> origin/automation-fixes
-    this.projectRoot = process.cwd();
+  constructor() {;    this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "automation-suite.log");
     this.ensureDirectories();
-<<<<<<< HEAD
-  }
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}}
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
@@ -373,9 +350,7 @@ module.exports = AutomationSuiteRunner;
         command: "npm run build",
         description: "Build Application";
 };
-    ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    const results = [];
+    ];    const results = [];
     for() {;
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });
