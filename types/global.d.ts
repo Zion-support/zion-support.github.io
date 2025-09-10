@@ -10,11 +10,7 @@ declare module "*.scss" { const content: { [className: string]: string }; export
 declare module "*.module.css" { const content: { [className: string]: string }; export default content }
 declare module "*.module.scss" { const content: { [className: string]: string }; export default content }
 
-<<<<<<< HEAD
 // Node.js environment variables
-=======
-// Next.js specific types
->>>>>>> origin/main
 declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: "development" | "production" | "test";
