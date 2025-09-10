@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { MetadataRoute } from 'next'
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   
@@ -284,6 +281,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...mainPages, ...servicePages, ...additionalPages];
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-}
+  return [...mainPages, ...servicePages, ...additionalPages];}

@@ -1,9 +1,6 @@
 "use client";
 
 import { useState } from "react";
-<<<<<<< HEAD
-import Link from "next/link";
-
 // Service categories and their services
 const serviceCategories = {
   "AI & Machine Learning": [
@@ -1533,54 +1530,8 @@ export default function ServicesPage() {
           </div>
           <div>
             <h3 className="font-semibold">Address</h3>
-            <p className="text-sm opacity-90">364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
-          </div>
+            <p className="text-sm opacity-90">364 E Main St STE 1008<br />Middletown DE 19709</p>          </div>
         </div>
-      </div>
-
-<<<<<<< HEAD
-      {/* Search and Filters */}
-      <div className="space-y-4">
-        <div className="flex flex-col md:flex-row gap-4">
-          <input
-            type="text"
-            placeholder="Search services..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="flex-1 bg-zinc-900 border border-white/10 rounded-lg px-4 py-2"
-          />
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="bg-zinc-900 border border-white/10 rounded-lg px-4 py-2"
-          >
-            <option value="all">All Categories</option>
-            {categories.map(category => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select>
-        </div>
-=======
-      {/* Search and Filter */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <input
-          type="text"
-          placeholder="Search services..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-1 p-3 bg-zinc-900 border border-white/10 rounded"
-        />
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="p-3 bg-zinc-900 border border-white/10 rounded"
-        >
-          {categories.map(category => (
-            <option key={category} value={category}>{category}</option>
-          ))}
-        </select>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
       </div>
 
       {/* Services Grid */}
@@ -1736,39 +1687,11 @@ export default function ServicesPage() {
               className="block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded transition-colors"
             >
               Learn More
-            </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
-          </div>
+            </a>          </div>
         ))}
       </div>
 
       {/* Call to Action */}
-<<<<<<< HEAD
-      <div className="text-center bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-pink-900/20 rounded-lg p-8 border border-white/10">
-        <h2 className="text-3xl font-semibold mb-4">Ready to Transform Your Business?</h2>
-        <p className="text-lg opacity-80 mb-6 max-w-3xl mx-auto">
-          Our revolutionary services are designed to give you a competitive edge in the digital economy. 
-          From AI-powered automation to quantum computing solutions, we deliver the future of technology today.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
-          <div className="text-center space-y-2">
-            <div className="text-3xl">🚀</div>
-            <h3 className="font-semibold">Instant Deployment</h3>
-            <p className="text-sm opacity-80">Deploy in weeks, not months</p>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-3xl">💰</div>
-            <h3 className="font-semibold">Massive Savings</h3>
-            <p className="text-sm opacity-80">Up to 75% cost reduction</p>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-3xl">🔒</div>
-            <h3 className="font-semibold">Enterprise Security</h3>
-            <p className="text-sm opacity-80">SOC2 & GDPR compliant</p>
-          </div>
-        </div>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+13024640950"
@@ -1807,9 +1730,7 @@ export default function ServicesPage() {
           >
             Contact Sales
           </a>
-        </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6180
-      </div>
+        </div>      </div>
     </div>
   );
 }

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// eslint.config.js
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-// import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
-
 // Cleaned global objects
 const browserGlobals = Object.fromEntries(
   Object.entries(globals.browser).map(([key, value]) => [key.trim(), value])
@@ -172,9 +163,7 @@ export default [
 <<<<<<< HEAD:eslint.config.js.disabled
 ];
 =======
-];
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:eslint.config.js
-=======
+];=======
 =======
 >>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 <<<<<<< HEAD:eslint.config.js

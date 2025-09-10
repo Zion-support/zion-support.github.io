@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -51,7 +50,6 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>
@@ -61,7 +59,6 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
 
         {/* Services Section */}
         <section className="py-16 px-4">
