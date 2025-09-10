@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-10T16:04:12.277Z",
+  "optimizations": [],
+  "recommendations": [],
+  "metrics": {
+    "bundleSize": "7.7M",
+    "dependencies": {
+      "production": 89,
+      "development": 45,
+      "total": 134
+    }
+  }
+}
