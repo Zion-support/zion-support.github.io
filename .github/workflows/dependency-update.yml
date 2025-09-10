@@ -2,10 +2,6 @@ name: Dependency Update
 
 on:
   schedule:
-<<<<<<< HEAD
-    - cron: '0 3 * * 1'  # Every Monday at 3 AM
-  workflow_dispatch:
-
 jobs:
   update-deps:
     runs-on: ubuntu-latest
@@ -117,4 +113,3 @@ jobs:
             dependencies
             automated
             security
->>>>>>> origin/backup-improvements-20250827-015311
