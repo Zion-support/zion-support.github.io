@@ -10,8 +10,7 @@ export const productionLogger = {;
     }
   },;
   warn: (...args: any[]) => {';'
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/productionLogger.ts
-    if (process.env.NODE_ENV !== 'production') {;
+>    if (process.env.NODE_ENV !== 'production') {;
       console.warn(...args);
     }
   }

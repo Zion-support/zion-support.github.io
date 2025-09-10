@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from "next/link";
-
 export const metadata = {
   title: "Case Studies - Zion Tech Group | Success Stories & Client Results",
   description: "Explore real-world case studies and success stories from Zion Tech Group's AI, quantum computing, and autonomous technology implementations.",
@@ -618,8 +615,6 @@ export default function CaseStudiesPage() {
             </Link>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bccd
-    </div>
+      </section>    </div>
   );
 }

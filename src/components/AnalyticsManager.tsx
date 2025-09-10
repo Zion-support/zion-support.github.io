@@ -2,50 +2,6 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-function AnalyticsManager("props": "any) {;
-  BarChart3",;
-  Users,;
-  Eye,;
-  MousePointer,;
-  Clock,;
-  TrendingUp,  Activity,;
-  Zap,;
-  Target,;
-  Globe,;
-  Smartphone,;
-  Monitor} from 'lucide-react';
-;
-interface AnalyticsData {;
-  "pageViews": "number;
-  "uniqueVisitors": number;
-  "sessionDuration": number;
-  "bounceRate": number;
-  "conversionRate": number;
-  "topPages": { "path": string; "views": number ;
-"}[];
-  "userAgents": "{ "device": string; "count": number "}[];
-  "performance": "{;
-    "fcp": number;
-    "lcp": number;
-    "fid": number;
-    "cls": number"};
-  "events": "{ "name": string; "count": number; "timestamp": string "}[]}
-interface UserSession {;
-  "id": "string;
-  "startTime": number;
-  "lastActivity": number;
-  "pageViews": string[];
-  "events": { "name": string; "timestamp": number; data?: unknown ;
-"}[];
-  "userAgent": "string;
-  "referrer": string"}
-;
-export function AnalyticsManager("props": "any) {;
-  const [analyticsData", setAnalyticsData] = useState<AnalyticsData | null>(;
-=======
-function AnalyticsManager () {;
-
   BarChart3,
   Users,
   Eye,
@@ -86,64 +42,26 @@ interface UserSession {
   referrer: string}
 
 export function AnalyticsManager() {;
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    null;
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;    null;
   );
   const [currentSession, setCurrentSession] = useState<UserSession | null>(;
     null;
   );
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-  const [isTracking, setIsTracking] = useState<any>(false);
-  const [showAnalytics, setShowAnalytics] = useState<any>(false);
-;
-  // Initialize analytics tracking;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-=======
-  const [isTracking, setIsTracking] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
-  // Initialize analytics tracking;
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
 };
-}, []); []);
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    initializeAnalytics();
+}, []); []);    initializeAnalytics();
     return () => cleanupAnalytics()}, []);
     // Create or retrieve session;
     localStorage.setItem('zion_session_id', sessionId);
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-;
-    const "session": "UserSessio n = {;
-      "id": sessionI d",;
-      "startTime": "Dat e.now () ",;
-      "lastActivity": "Dat e.now () ",;
-      "pageViews": "[window.location.pathname]",;
-      "events": "[]",;
-      "userAgent": "navigato r.userAgent",;
-      "referrer": "documen t.referrer"};
-;
-=======
-    const session: UserSession = {;
-
       id: sessionId,
       startTime: Date.now () ,
       lastActivity: Date.now () ,
       pageViews: [window.location.pathname],
       events: [],
       userAgent: navigator.userAgent,
-      referrer: document.referrer};
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    setCurrentSession(session);
+      referrer: document.referrer};    setCurrentSession(session);
     // Track page view;
     trackPageView(window.location.pathname);
     // Track user agent;
@@ -157,80 +75,23 @@ export function AnalyticsManager() {;
     setupPerformanceMonitoring();
     // Set up session tracking;
     setupSessionTracking();
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-;
-    // }, []);
-;
-=======
-    // console.log('Analytics initialized for session:', sessionId)}, []);
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    document.removeEventListener('scroll', handleScroll);
-    window.removeEventListener('beforeunload', handleBeforeUnload);
-    document.removeEventListener('click', handleClick);';
-    document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
-    // Save session data;
-    if(currentSession) {;
-      saveSessionData(currentSession)}
-  }, [currentSession]) };
-    // Scroll tracking';
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-    document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
-;
-=======
-    document.addEventListener('scroll', handleScroll, { passive: true });
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    // Page unload tracking';
-    // Scroll tracking'
-    document.addEventListener('scroll', handleScroll, { passive: tru e }
-    );
-    // Page unload tracking'
-    window.addEventListener('beforeunload', handleBeforeUnload)}, []);
-    // Track button clicks';
-    if(target.tagName === 'BUTTON' || target.closest('button')) {;
-      trackEvent('button_click', {;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-        "text": "targe t.textContent || target.innerText",;
-        "className": "targe t.className",;
-        "id": "targe t.id"})}
-;
-=======
-
         text: target.textContent || target.innerText,
         className: target.className,
         id: target.id})}
-
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
     // Track link clicks';
     if(target.tagName === 'A' || target.closest('a')) {;
       trackEvent('link_click', {;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-          : "(target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click'", {;
-        "href": "lin k.href",;
-        "text": "lin k.textContent || link.innerText"})}
-=======
-          : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {;
-
         href: link.href,
-        text: link.textContent || link.innerText})}
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    // Track form interactions;
+        text: link.textContent || link.innerText})}    // Track form interactions;
     if(';
       target.tagName === 'INPUT' ||';
       target.tagName === 'SELECT' ||';
       target.tagName === 'TEXTAREA';
     ) {;
       trackEvent('form_interaction', {;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-        "type": "targe t.tagName.toLowerCase()",;
-        "name": "(target as HTMLInputElement).name",;
-        "id": "targe t.id"})}
-=======
-
         type: target.tagName.toLowerCase(),
         name: (target as HTMLInputElement).name,
-        id: target.id})}
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-  }, []) ;
+        id: target.id})}  }, []) ;
     if(scrollDepth % 25 === 0) {;
       // Track at 25%, 50%, 75%, 100%';
       trackEvent('scroll_depth', { "depth": "scrollDept h "})}
@@ -239,139 +100,22 @@ export function AnalyticsManager() {;
         if(fcp) {;
           trackPerformance('fcp', fcp.startTime)}
       });
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-      fcpObserver.observe({ "entryTypes": "['paint'] "});
-;
-=======
-      fcpObserver.observe({ entryTypes: ['paint'] });
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-      // Largest Contentful Paint;
-      }
-    );
-      fcpObserver.observe({ entryTypes: ['paint'] }
-    );
-        if(lcp) {;
-          trackPerformance('lcp', lcp.startTime)}
-      });
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-      lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
-;
-=======
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-      // First Input Delay;
-      }
-    );
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
-    );
-        if(fid) {;
-          trackPerformance('fid', fid.processingStart - fid.startTime)}
-      });
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-      fidObserver.observe({ "entryTypes": "['first-input'] "});
-;
-=======
-      fidObserver.observe({ entryTypes: ['first-input'] });
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-      // Cumulative Layout Shift;
-      const clsObserver = new PerformanceObserver(list => {;
-      }
-    );
-      fidObserver.observe({ entryTypes: ['first-input'] }
-    );
-        let clsValue = 0;        for (const entry of list.getEntries()) {;
-          if(!entry.hadRecentInput) {;
-            clsValue += (entry as any).value}
-        }
-        trackPerformance('cls', clsValue)});
-      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
-        trackPerformance('cls', clsValue)}
-    );
-      clsObserver.observe({ entryTypes: ['layout-shift'] })}
-  }, []) }
-    }, 30000) ;
-    return () => clearInterval(activityInterval) }, [currentSession]) ;
-        trackEvent('page_view', { path });
-        // Send to analytics endpoint';
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-        sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
-    },;
-=======
-        sendAnalyticsData('page_view', { path, timestamp: Date.now() })}
-    },
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    [currentSession];
-        trackEvent('page_view', { path }
-    );
-        // Send to analytics endpoint'
-        sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
-    },
-    [currentSession]
-  );
-        setCurrentSession(prev =>;
-          prev;
-            ? {;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-                ...prev,;
-                "events": "[...prev.events", event],;
-                "lastActivity": "Dat e.now()"}
-            : "null;
-=======
-
                 ...prev,
                 events: [...prev.events, event],
                 lastActivity: Date.now()}
-            : null;
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-        );
+            : null;        );
         // Send to analytics endpoint';
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-        sendAnalyticsData('event'", event)}
-    },;
-=======
-        sendAnalyticsData('event', event)}
-    },
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    [currentSession];
-  )}, [])}, [])}, []);
-        // For now, just log to console';
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-        // } catch(error) {;
-        // console.error('Failed to send analytics "data":', error)}
-    },;
-=======
-        // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id })} catch(error) {;
-
         // console.error('Failed to send analytics data:', error)}
-    },
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    [currentSession];
+    },    [currentSession];
   );
         // Send to analytics endpoint';
         await sendAnalyticsData('session_end', session)} catch(error) {;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-        // console.error('Failed to save session "data":', error)}
-    },;
-=======
-
         // console.error('Failed to save session data:', error)}
-    },
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    [sendAnalyticsData];
+    },    [sendAnalyticsData];
   );
     // Calculate bounce rate(single page view sessions);
     // Calculate conversion rate(sessions with specific events);
     return {;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-      pageViews,;
-      "uniqueVisitors": "1", // Single session;
-      "sessionDuration": "Mat h.round(sessionDuration / 1000) ", // in seconds;
-      bounceRate,;
-      "conversionRate": "Mat h.round(conversionRate)",;
-      "topPages": "currentSessio n.pageViews.reduce();
-        (acc", path) => {;
-=======
-
       pageViews,
       uniqueVisitors: 1, // Single session;
       sessionDuration: Math.round(sessionDuration / 1000) , // in seconds;
@@ -379,52 +123,19 @@ export function AnalyticsManager() {;
       conversionRate: Math.round(conversionRate),
       topPages: currentSession.pageViews.reduce();
         (acc, path) => {;
-
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
           acc[path] = (acc[path] || 0) + 1;
           return acc},
         {} as Record<string, number>;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-      ),;
-      "userAgents": "[{ "device": getDeviceTyp e(currentSession.userAgent)", "count": "1 "},;
-      ],;
-      "performance": "{ "fcp": 0", "lcp": "0", "fid": "0", "cls": "0 "}, // Would be populated from performance tracking;
-      "events": "currentSessio n.events.map(e => ({;
-        "name": e.name",;
-        "count": "1",;
-        "timestamp": "new Date(e.timestamp).toISOString()"}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {;
-=======
-      ),
-      userAgents: [{ device: getDeviceType(currentSession.userAgent), count: 1 },
-      ],
-      performance: { fcp: 0, lcp: 0, fid: 0, cls: 0 }, // Would be populated from performance tracking;
-      events: currentSession.events.map(e => ({;
-
         name: e.name,
         count: 1,
         timestamp: new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {;
-
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
       return 'Tablet'} else {;
       return 'Desktop'}  };
   // Update analytics data when session changes;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
 };
-}, []); []);
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
-    if(currentSession) {;
+}, []); []);    if(currentSession) {;
       setAnalyticsData(report)}
   }, [currentSession, generateAnalyticsReport]) ;
   if(!showAnalytics) {;
@@ -438,13 +149,10 @@ export function AnalyticsManager() {;
       >";
         <BarChart3 className="w-6 h-6"  />;
       </motion.button>;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
     )"}
 ;
-=======
     )}
 
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
   return ();
     <motion.div;
       initial={{ "opacity": "0", "y": "2 0 "}}

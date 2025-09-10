@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 describe(\'AIChatAssistant\', () => {
   it(\'renders without crashing\', () => {
     render(<AIChatAssistant />);
@@ -28,7 +26,6 @@ describe('AIChatAssistant', () => {'}
   it('handles user input', () => {'}
     render(<AIChatAssistant />);,
     const input = screen.getByPlaceholderText(/type your message/i);,
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     expect(input).toBeInTheDocument();
   });
 });
