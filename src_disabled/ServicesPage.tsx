@@ -473,7 +473,6 @@ export default function ServicesPage() {
                 <Globe className="h-4 w-4 mr-2" />
                 All Services
               </Button>
-              </Button>
             </Link>
             <Link to="/request-quote">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
