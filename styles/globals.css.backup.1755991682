@@ -23,7 +23,7 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
+
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -33,7 +33,7 @@
   --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
   --neon-red: #ef4444;
-  
+
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -194,7 +194,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
@@ -202,31 +202,24 @@ h3 {
   animation: particleFloat 30s ease-in-out infinite;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* New Futuristic Effects */
 
 /* Holographic effect */
 .holographic {
-  background: linear-gradient(45deg, 
-    rgba(59, 130, 246, 0.1) 0%, 
-    rgba(147, 51, 234, 0.1) 25%, 
-    rgba(16, 185, 129, 0.1) 50%, 
-    rgba(239, 68, 68, 0.1) 75%, 
+  background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(147, 51, 234, 0.1) 25%,
+    rgba(16, 185, 129, 0.1) 50%,
+    rgba(239, 68, 68, 0.1) 75%,
     rgba(59, 130, 246, 0.1) 100%);
   background-size: 200% 200%;
   animation: holographicShift 8s ease-in-out infinite;
@@ -240,9 +233,9 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.1) 50%, 
+  background: linear-gradient(45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
     transparent 100%);
   animation: holographicScan 4s linear infinite;
 }
@@ -259,7 +252,7 @@ h3 {
 
 /* Neural network effect */
 .neural-bg {
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
@@ -270,11 +263,11 @@ h3 {
 }
 
 @keyframes neuralPulse {
-  0%, 100% { 
+  0%, 100% {
     background-size: 100px 100px, 150px 150px, 200px 200px, 120px 120px, 300px 300px;
     opacity: 0.7;
   }
-  50% { 
+  50% {
     background-size: 120px 120px, 180px 180px, 240px 240px, 140px 140px, 360px 360px;
     opacity: 1;
   }
@@ -301,7 +294,7 @@ h3 {
 
 /* Cyberpunk neon effect */
 .cyberpunk-neon {
-  box-shadow: 
+  box-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -311,16 +304,16 @@ h3 {
 }
 
 @keyframes neonPulse {
-  from { 
-    box-shadow: 
+  from {
+    box-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor,
       inset 0 0 5px rgba(255, 255, 255, 0.1);
   }
-  to { 
-    box-shadow: 
+  to {
+    box-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -355,19 +348,19 @@ h3 {
 }
 
 @keyframes floatOrb {
-  0%, 100% { 
+  0%, 100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.3;
   }
-  25% { 
+  25% {
     transform: translate(50px, -30px) scale(1.2);
     opacity: 0.6;
   }
-  50% { 
+  50% {
     transform: translate(100px, 0) scale(0.8);
     opacity: 0.3;
   }
-  75% { 
+  75% {
     transform: translate(50px, 30px) scale(1.1);
     opacity: 0.5;
   }
@@ -412,12 +405,12 @@ h3 {
 }
 
 .glitch::before,
-<<<<<<< HEAD
-<<<<<<< HEAD
+  content: attr(data-text);
+.glitch::after {  content: attr(data-text);
+.glitch::after {
+  content: attr(data-text);
+.glitch::after {  content: attr(data-text);
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 .glitch::after {
 =======
 @keyframes particleFloat {
@@ -437,25 +430,17 @@ h3 {
   background-size: 200% 200%, 200% 200%, 200% 200%, 400% 400%;
   animation: quantumNeural 25s ease infinite;
 }
-
 @keyframes quantumNeural {
   0% { 
     background-position: 0% 50%, 100% 50%, 50% 100%, 0% 50%;
   }
   25% { 
     background-position: 100% 50%, 0% 50%, 100% 100%, 100% 50%;
-  }
   50% { 
     background-position: 100% 100%, 0% 100%, 0% 0%, 100% 100%;
-  }
   75% { 
     background-position: 0% 100%, 100% 0%, 0% 100%, 0% 100%;
-  }
   100% { 
-    background-position: 0% 50%, 100% 50%, 50% 100%, 0% 50%;
-  }
-}
-
 /* Holographic Effect */
 .holographic {
   background: linear-gradient(
@@ -466,37 +451,33 @@ h3 {
   );
   background-size: 200% 200%;
   animation: holographic 3s ease-in-out infinite;
-}
-
 @keyframes holographic {
   0% { background-position: 200% 200%; }
   50% { background-position: -200% -200%; }
   100% { background-position: 200% 200%; }
-}
-
 /* Cyberpunk Glitch Effect */
 .cyberpunk-glitch {
   position: relative;
-}
-
 .cyberpunk-glitch::before,
 .cyberpunk-glitch::after {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
   content: attr(data-text);
 .glitch::after {  content: attr(data-text);
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
+
+
+
 .glitch::after {  content: attr(data-text);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+
 =======
+.glitch::after {
+  content: attr(data-text);
+  content: attr(data-text);
 .glitch::after {  content: attr(data-text);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+.glitch::after {  content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
@@ -504,114 +485,110 @@ h3 {
   height: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
+
 .glitch::before {
   animation: glitch-1 2s infinite;
-=======
+
 .cyberpunk-glitch::before {
   animation: glitch-1 2s infinite linear alternate-reverse;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
+=======
+.glitch::before {
+  animation: glitch-1 2s infinite;
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
   color: #ff0000;
   z-index: -1;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
+=======
+
+
+.glitch::before {
+  animation: glitch-1 2s infinite;
+
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+
+  color: #ff0000;
+  z-index: -1;
+}
+=======
+
+
+
+
+
+
+
 =======
 .glitch::before {
-  animation: glitch-1 2s infinite;  color: #ff0000;
+  animation: glitch-1 2s infinite;
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+  color: #ff0000;
   z-index: -1;
 }
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .glitch::after {
   animation: glitch-2 2s infinite;
   color: #00ff00;
   z-index: -2;
 }
-
 @keyframes glitch {
   0%, 100% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
-}
-
 @keyframes glitch-1 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-  0%, 100% { transform: translate(0); }
-=======
 .cyberpunk-glitch::after {
   animation: glitch-2 2s infinite linear alternate-reverse;
   color: #00ffff;
+  0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
+=======
   z-index: -2;
 }
+=======
 
-@keyframes glitch-1 {
-  0% { transform: translate(0); }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
   20% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-=======
-=======
-  0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
-<<<<<<< HEAD
+}
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+=======
+
+
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+
+=======
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
 }
 
 @keyframes glitch-2 {
   0%, 100% { transform: translate(0); }
-=======
-  100% { transform: translate(0); }
-}
-
-@keyframes glitch-2 {
-  0% { transform: translate(0); }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
   20% { transform: translate(2px, -2px); }
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
-=======
-  20% { transform: translate(-2px, 2px); }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
@@ -619,19 +596,33 @@ h3 {
 }
 
 @keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }  20% { transform: translate(2px, -2px); }
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
 =======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+
+  0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
+
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
+
+
+
+=======
 }
 
 /* Enhanced component styles */
@@ -652,12 +643,12 @@ h3 {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+  content: '';
+.button::before {  content: '';
+.button::before {
+  content: '';
+.button::before {  content: '';
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 .button::before {
 =======
   100% { transform: translate(0); }
@@ -669,24 +660,25 @@ h3 {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .futuristic-card::before {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
   content: '';
 .button::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
+
+
+
 .button::before {  content: '';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+
 =======
+.button::before {
+  content: '';
+  content: '';
 .button::before {  content: '';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+.button::before {  content: '';
   position: absolute;
   top: 0;
   left: -100%;
@@ -701,22 +693,15 @@ h3 {
   transition: left 0.5s ease;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .button:hover::before {
   left: 100%;
 }
@@ -729,12 +714,12 @@ h3 {
 /* Enhanced typography */
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
-<<<<<<< HEAD
-<<<<<<< HEAD
+  -webkit-background-clip: text;
+  background-size: 300% 300%;  -webkit-background-clip: text;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-size: 300% 300%;  -webkit-background-clip: text;
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   background-size: 300% 300%;
 =======
 .futuristic-card:hover::before {
@@ -745,7 +730,6 @@ h3 {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
 /* Neon Glow Effects */
 .neon-glow {
   text-shadow: 
@@ -753,21 +737,12 @@ h3 {
     0 0 10px currentColor,
     0 0 15px currentColor,
     0 0 20px currentColor;
-}
-
 .neon-border {
   box-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 15px currentColor,
     inset 0 0 5px currentColor;
-}
-
 /* Quantum Particle Animation */
 .quantum-particles {
   position: relative;
-}
-
 .quantum-particles::before {
   content: '';
   position: absolute;
@@ -780,8 +755,6 @@ h3 {
     radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
   animation: quantumFloat 20s ease-in-out infinite;
-}
-
 @keyframes quantumFloat {
   0%, 100% { 
     transform: translate(0, 0) scale(1);
@@ -790,27 +763,17 @@ h3 {
   25% { 
     transform: translate(10px, -10px) scale(1.1);
     opacity: 1;
-  }
   50% { 
     transform: translate(-5px, 15px) scale(0.9);
     opacity: 0.8;
-  }
   75% { 
     transform: translate(15px, 5px) scale(1.05);
     opacity: 0.9;
-  }
-}
-
 /* Futuristic Button Effects */
 .futuristic-btn {
-  position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-}
-
 .futuristic-btn::before {
-  content: '';
-  position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
@@ -819,29 +782,17 @@ h3 {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.6s ease, height 0.6s ease;
-}
-
 .futuristic-btn:hover::before {
   width: 300px;
   height: 300px;
-}
-
 .futuristic-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
 /* Matrix Rain Effect */
 .matrix-rain {
-  position: relative;
-  overflow: hidden;
-}
-
 .matrix-rain::before {
   content: '01';
-  position: absolute;
   top: -100%;
-  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -855,13 +806,9 @@ h3 {
   font-size: 20px;
   color: #00ff00;
   text-shadow: 0 0 10px #00ff00;
-}
-
 @keyframes matrixRain {
   0% { top: -100%; }
   100% { top: 100%; }
-}
-
 /* Futuristic Loading Spinner */
 .futuristic-spinner {
   width: 50px;
@@ -870,91 +817,65 @@ h3 {
   border-top: 3px solid #3b82f6;
   border-right: 3px solid #8b5cf6;
   border-bottom: 3px solid #ec4899;
-  border-radius: 50%;
   animation: futuristicSpin 1s linear infinite;
-}
-
 @keyframes futuristicSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
-}
-
 ::-webkit-scrollbar-track {
   background: #1f2937;
-}
-
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6);
   border-radius: 4px;
-}
-
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #2563eb, #7c3aed);
-}
-
 /* Selection Styles */
 ::selection {
   background: rgba(147, 51, 234, 0.3);
   color: #ffffff;
-}
-
 ::-moz-selection {
-  background: rgba(147, 51, 234, 0.3);
-  color: #ffffff;
-}
-
 /* Focus Styles */
 .focus-ring:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.3);
-}
-
 /* Enhanced Typography */
 .text-gradient {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   background-size: 200% 200%;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
   -webkit-background-clip: text;
   background-size: 300% 300%;  -webkit-background-clip: text;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
+
+
+
   background-size: 300% 300%;  -webkit-background-clip: text;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+
 =======
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
   background-size: 300% 300%;  -webkit-background-clip: text;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  background-size: 300% 300%;  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease infinite;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @keyframes textGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -999,7 +920,7 @@ h3 {
   .card {
     @apply p-4;
   }
-  
+
   .button {
     @apply px-4 py-2 text-sm;
   }
@@ -1014,35 +935,24 @@ h3 {
   .neural-bg,
   .quantum-tunnel,
   .floating-orbs,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   .matrix-rain {
-=======
-.text-glow {
-  text-shadow: 
-    0 0 10px currentColor,
-    0 0 20px currentColor,
-    0 0 30px currentColor;
-}
-
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
   .futuristic-card:hover {
     transform: none;
-<<<<<<< HEAD
-=======
-=======
   .matrix-rain {    background: none !important;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+
+
+
   }
-  
+
+=======
+  .matrix-rain {
+  }
   .quantum-particles::before {
     animation-duration: 30s;
   }
@@ -1061,9 +971,9 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
-  
+
   .neon-glow {
-    text-shadow: 
+    text-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor;
   }
@@ -1078,7 +988,7 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .futuristic-card:hover {
     transform: none;
   }
@@ -1089,42 +999,114 @@ h3 {
   .futuristic-bg,
   .quantum-neural-bg,
   .particles-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
     background: none !important;
   }
-  
-<<<<<<< HEAD
+
+.cyber-grid {
+
+    background-size: 15px 15px;
+
+  }
+  .matrix-rain {    background: none !important;
+
+  }
+
+  .quantum-particles::before {
+    animation-duration: 30s;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .futuristic-card {
+    border-width: 2px;
+  }
+
+  .neon-glow {
+    text-shadow:
+      0 0 10px currentColor,
+      0 0 20px currentColor;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .futuristic-card:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .futuristic-bg,
+  .quantum-neural-bg,
+  .particles-bg {
+
+    background: none !important;
+  }
   .cyber-grid {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     background-size: 15px 15px;
 =======
+=======
+    background-size: 15px 15px;
+=======
+=======
+  .cyber-grid {
+    background-size: 15px 15px;
+
   .futuristic-card {
     box-shadow: none !important;
     border: 1px solid #000 !important;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+  }
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  }
-  .matrix-rain {    background: none !important;
-  }
+    background-size: 15px 15px;  }
+=======
   
+
+    background-size: 15px 15px;
+
+
   .cyber-grid {
+
+
+
+
     background-size: 15px 15px;  }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
+
+
 =======
-=======
+  .cyber-grid {
+    background-size: 15px 15px;
+
+    background-size: 15px 15px;
+
+
+  .cyber-grid {
+
+  .futuristic-card {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+
+  }
     background-size: 15px 15px;  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
     background-size: 15px 15px;  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 
 /* Dark mode enhancements */
@@ -1162,7 +1144,7 @@ h3 {
 /* Enhanced focus states */
 .focus-glow:focus {
   outline: none;
-  box-shadow: 
+  box-shadow:
     0 0 0 3px rgba(0, 212, 255, 0.1),
     0 0 20px rgba(0, 212, 255, 0.3);
 }
@@ -1184,7 +1166,7 @@ h3 {
 }
 
 .pattern-lines {
-  background-image: 
+  background-image:
     linear-gradient(45deg, rgba(0, 212, 255, 0.05) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(0, 212, 255, 0.05) 25%, transparent 25%);
   background-size: 40px 40px;
