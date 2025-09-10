@@ -1,0 +1,1 @@
+export const seoOptimizer = { init: () => { } }; export default seoOptimizer;
