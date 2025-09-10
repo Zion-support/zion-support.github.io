@@ -1,0 +1,39 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "apps/**",
+    "apps.backup/**",
+    "backup/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "broken_files_backup/**",
+    "corrupted_backup/**",
+    "_conflicted_disabled/**",
+    "components-disabled/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "api-backup/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "src_backup/**",
+    "temp_components/**",
+    "utils/**",
+    "lib/**",
+    "hooks/**",
+    "data/**",
+    "pages/**",
+    "app/**",
+
+  ]
+}
+

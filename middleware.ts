@@ -10,6 +10,7 @@ const publicRoutes = [
   "/services",
   "/products",
   "/talent",
+  "/test",
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
