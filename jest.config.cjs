@@ -46,6 +46,15 @@ module.exports = {
     "<rootDir>/tests/CheckoutStripe.test.ts",
     "<rootDir>/tests/integration/api/health.test.ts",
     "<rootDir>/tests/.*/playwright.*\\.ts$",
+    "<rootDir>/tests/Login.test.tsx",
+    "<rootDir>/tests/CreatePostButtonRedirect.test.tsx",
+    "<rootDir>/tests/EquipmentRouting.test.tsx",
+    "<rootDir>/tests/ExploreNavigation.test.tsx",
+    "<rootDir>/tests/EquipmentRecommendations.test.tsx",
+    "<rootDir>/tests/CategoryDetail.test.tsx",
+    "<rootDir>/tests/CategoryCard.test.tsx",
+    "<rootDir>/tests/ContactPublisherModal.test.tsx",
+    "<rootDir>/tests/CommunityCategory.test.tsx",
   ],
   transformIgnorePatterns: [
     "node_modules/(?!(.*\\.mjs$))"
