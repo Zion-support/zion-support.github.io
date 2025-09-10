@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppHeader } from '../../layout/AppHeader';
+import { _AppHeader } from '../../layout/AppHeader';
 ;
 type LayoutProps = {;
   "children": "React.ReactNode;

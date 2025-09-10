@@ -1,8 +1,23 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
-const CloudDevOpsServices = () => {
-    const cloudServices = [
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const cloudServices = [];
+const cloudPlatforms = [];
+const technologies = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const _CloudDevOpsServices = () => {
+    const _cloudServices = [
         {
             title: "Cloud Migration & Strategy",
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
@@ -76,7 +91,7 @@ const CloudDevOpsServices = () => {
             ]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Faster time to market with automated deployments",
         "Improved reliability and uptime",
         "Cost optimization through resource management",
@@ -84,7 +99,7 @@ const CloudDevOpsServices = () => {
         "Scalable infrastructure that grows with your business",
         "Better collaboration between development and operations teams"
     ];
-    const technologies = [
+    const _technologies = [
         "AWS, Azure, GCP",
         "Kubernetes & Docker",
         "Terraform & Ansible",
@@ -92,7 +107,7 @@ const CloudDevOpsServices = () => {
         "Prometheus & Grafana",
         "ELK Stack"
     ];
-    const cloudPlatforms = [
+    const _cloudPlatforms = [
         {
             name: "Amazon Web Services",
             description: "Leading cloud platform with comprehensive services",

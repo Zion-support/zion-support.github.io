@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
-const mockChartData = [
+import { _BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
+
+import { Settings } from 'lucide-react';
+const _mockChartData = [
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
@@ -14,14 +16,14 @@ const mockChartData = [
     { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },
     { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024-10-01') }
 ];
-const chartTypes = [
+const _chartTypes = [
     { id: 'bar', name: 'Bar Chart', icon: '📊', description: 'Compare values across categories' },
     { id: 'line', name: 'Line Chart', icon: '📈', description: 'Show trends over time' },
     { id: 'pie', name: 'Pie Chart', icon: '🥧', description: 'Display proportions of a whole' },
     { id: 'area', name: 'Area Chart', icon: '🏔️', description: 'Show cumulative data over time' },
     { id: 'scatter', name: 'Scatter Plot', icon: '🎯', description: 'Show correlation between variables' }
 ];
-const colorPalettes = [
+const _colorPalettes = [
     ['#06b6d4', '#7c3aed', '#10b981', '#f59e0b', '#ef4444'],
     ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'],
     ['#ef4444', '#f97316', '#eab308', '#84cc16', '#22c55e'],
@@ -43,14 +45,14 @@ export function AdvancedDataVisualization() {
     const [data, setData] = useState(mockChartData);
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [autoRefresh, setAutoRefresh] = useState(false);
-    const containerRef = useRef(null);
-    const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
-    const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
-    const refreshData = async () => {
+    const _containerRef = useRef(null);
+    const _categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
+    const _filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
+    const _refreshData = async () => {
         setIsRefreshing(true);
         // Simulate data refresh
         setTimeout(() => {
-            const newData = data.map(item => ({
+            const _newData = data.map(item => ({
                 ...item,
                 value: item.value + Math.floor(Math.random() * 100000 - 50000)
             }));
@@ -60,15 +62,15 @@ export function AdvancedDataVisualization() {
     };
     useEffect(() => {
         if (autoRefresh) {
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+            const _interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
         }
     }, [autoRefresh]);
-    const downloadChart = (format) => {
+    const _downloadChart = (format) => {
         // Simulate chart download
-        console.log(`Downloading chart as ${format}`);
+        // console.log(`Downloading chart as ${format}`);
     };
-    const renderChart = () => {
+    const _renderChart = () => {
         switch (selectedChartType) {
             case 'bar':
                 return renderBarChart();
@@ -84,9 +86,9 @@ export function AdvancedDataVisualization() {
                 return renderBarChart();
         }
     };
-    const renderBarChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];
+    const _renderBarChart = () => {
+        const _maxValue = Math.max(...filteredData.map(item => item.value));
+        const _colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">
             <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{
@@ -100,9 +102,9 @@ export function AdvancedDataVisualization() {
           </div>))}
       </div>);
     };
-    const renderLineChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];
+    const _renderLineChart = () => {
+        const _maxValue = Math.max(...filteredData.map(item => item.value));
+        const _colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
           <polyline fill="none" stroke={colors[0]} strokeWidth="3" points={filteredData.map((item, index) => `${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
@@ -113,15 +115,15 @@ export function AdvancedDataVisualization() {
         </div>
       </div>);
     };
-    const renderPieChart = () => {
-        const total = filteredData.reduce((sum, item) => sum + item.value, 0);
-        const colors = colorPalettes[selectedColorPalette];
+    const _renderPieChart = () => {
+        const _total = filteredData.reduce((sum, item) => sum + item.value, 0);
+        const _colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-center justify-center">
         <div className="relative w-64 h-64">
           {filteredData.map((item, index) => {
-                const percentage = (item.value / total) * 100;
-                const angle = (percentage / 100) * 360;
-                const prevAngle = filteredData
+                const _percentage = (item.value / total) * 100;
+                const _angle = (percentage / 100) * 360;
+                const _prevAngle = filteredData
                     .slice(0, index)
                     .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0);
                 return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style={{
@@ -139,9 +141,9 @@ export function AdvancedDataVisualization() {
         </div>
       </div>);
     };
-    const renderAreaChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];
+    const _renderAreaChart = () => {
+        const _maxValue = Math.max(...filteredData.map(item => item.value));
+        const _colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
           <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d={`M 0,${280} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
@@ -151,9 +153,9 @@ export function AdvancedDataVisualization() {
         </div>
       </div>);
     };
-    const renderScatterChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];
+    const _renderScatterChart = () => {
+        const _maxValue = Math.max(...filteredData.map(item => item.value));
+        const _colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
           {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}

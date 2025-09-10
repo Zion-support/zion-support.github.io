@@ -1,6 +1,20 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+const features = [];
+const cloudServices = [];
+const cloudPlatforms = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 
 
       <Helmet>
@@ -22,7 +36,7 @@ import { Helmet } from 'react-helmet-async';
     }
   ];
 
-  const platforms = [
+  const _platforms = [
     {name}: "AWS",
       description: "Amazon Web Services cloud platform solutions",
       icon: "☁️"

@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 // Performance monitoring
 if (typeof window !== 'undefined') {
@@ -30,13 +29,11 @@ if (rootElement) {
   
   const app = (
     <React.StrictMode>
-      <Router>
-        <App />
-      </Router>
+      <App />
     </React.StrictMode>
   );
 
   root.render(app);
 } else {
-  console.error('Root element not found');
+  // console.error('Root element not found');
 }

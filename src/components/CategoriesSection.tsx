@@ -1,9 +1,13 @@
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+
 * CategoriesSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
 function CategoriesSection("props": "any) {;
-const categories = [{;
+const _categories = [{;
     "title": "AI Services"",;
     "description": "Cutting - edge AI solutions, chatbots, and machine learning",;
     "icon": "🤖",;
@@ -33,7 +37,7 @@ const categories = [{;
   },;
 ];
 ;
-const specialServices = [{;
+const _specialServices = [{;
     "title": "IT Onsite Services",;
     "link": "/it - onsite - services";
   },;

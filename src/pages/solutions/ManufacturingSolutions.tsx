@@ -1,8 +1,21 @@
 import React from 'react';
+import { _motion } from 'framer-motion';
+import { _Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const solutions = [];
 export default function ManufacturingSolutions() {
-    const features = [
+    const _features = [
         {
             icon: Brain,
             title: "AI-Powered Predictive Maintenance",
@@ -34,7 +47,7 @@ export default function ManufacturingSolutions() {
             description: "AI-powered process improvement and efficiency optimization"
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Reduce downtime by 40-60%",
         "Improve product quality by 25-35%",
         "Lower production costs by 20-30%",
@@ -42,7 +55,7 @@ export default function ManufacturingSolutions() {
         "Better resource utilization",
         "Enhanced safety and compliance"
     ];
-    const solutions = [
+    const _solutions = [
         {
             title: "Smart Manufacturing",
             description: "IoT-enabled connected manufacturing with real-time monitoring"
@@ -60,7 +73,7 @@ export default function ManufacturingSolutions() {
             description: "Intelligent inventory and supply chain management"
         }
     ];
-    const industries = [
+    const _industries = [
         "Automotive",
         "Electronics",
         "Pharmaceuticals",

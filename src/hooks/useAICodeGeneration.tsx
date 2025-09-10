@@ -1,6 +1,6 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
-import { useAnalytics } from './useAnalytics';
-export const useAICodeGeneration = () => {
+import { _useState, useCallback, useRef, useEffect } from 'react';
+import { _useAnalytics } from './useAnalytics';
+export const _useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -11,14 +11,14 @@ export const useAICodeGeneration = () => {
     const [codeAnalysis, setCodeAnalysis] = useState(null);
     const [suggestions, setSuggestions] = useState([]);
     const [history, setHistory] = useState([]);
-    const generationTimeoutRef = useRef(null);
+    const _generationTimeoutRef = useRef(null);
     // Generate code using AI
-    const generateCode = useCallback(async (prompt, options) => {
+    const _generateCode = useCallback(async (prompt, options) => {
         setIsGenerating(true);
         try {
             // Simulate AI processing - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 3000));
-            let generatedCode = '';
+            let _generatedCode = '';
             // Generate code based on options
             if (options.language === 'typescript' && options.framework === 'react') {
                 generatedCode = generateReactTypeScriptCode(prompt, options);
@@ -34,7 +34,7 @@ export const useAICodeGeneration = () => {
             }
             setGeneratedCode(generatedCode);
             // Add to history
-            const historyItem = {
+            const _historyItem = {
                 id: `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 prompt,
                 code: generatedCode,
@@ -53,7 +53,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to generate code:', error);
+            // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -63,12 +63,12 @@ export const useAICodeGeneration = () => {
         }
     }, [trackEvent]);
     // Analyze existing code
-    const analyzeCode = useCallback(async (code, language) => {
+    const _analyzeCode = useCallback(async (code, language) => {
         setIsAnalyzing(true);
         try {
             // Simulate AI analysis - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
-            const analysis = {
+            const _analysis = {
                 complexity: calculateComplexity(code),
                 maintainability: calculateMaintainability(code),
                 security: calculateSecurityScore(code),
@@ -88,7 +88,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to analyze code:', error);
+            // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -98,7 +98,7 @@ export const useAICodeGeneration = () => {
         }
     }, [trackEvent]);
     // Apply a code suggestion
-    const applySuggestion = useCallback((suggestion) => {
+    const _applySuggestion = useCallback((suggestion) => {
         setGeneratedCode(prev => {
             // Simple replacement - in production, this would be more sophisticated
             return prev.replace(/\/\/ TODO: Apply suggestion/g, suggestion.code);
@@ -112,11 +112,11 @@ export const useAICodeGeneration = () => {
         });
     }, [trackEvent]);
     // Optimize existing code
-    const optimizeCode = useCallback(async (code, focus) => {
+    const _optimizeCode = useCallback(async (code, focus) => {
         try {
             // Simulate AI optimization - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2500));
-            let optimizedCode = code;
+            let _optimizedCode = code;
             switch (focus) {
                 case 'performance':
                     optimizedCode = optimizeForPerformance(code);
@@ -135,7 +135,7 @@ export const useAICodeGeneration = () => {
             return optimizedCode;
         }
         catch (error) {
-            console.error('Failed to optimize code:', error);
+            // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -143,11 +143,11 @@ export const useAICodeGeneration = () => {
         }
     }, [trackEvent]);
     // Generate tests for code
-    const generateTests = useCallback(async (code, language) => {
+    const _generateTests = useCallback(async (code, language) => {
         try {
             // Simulate AI test generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
-            let testCode = '';
+            let _testCode = '';
             if (language === 'typescript' || language === 'javascript') {
                 testCode = generateJestTests(code);
             }
@@ -161,7 +161,7 @@ export const useAICodeGeneration = () => {
             return testCode;
         }
         catch (error) {
-            console.error('Failed to generate tests:', error);
+            // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -169,11 +169,11 @@ export const useAICodeGeneration = () => {
         }
     }, [trackEvent]);
     // Generate documentation for code
-    const generateDocs = useCallback(async (code, language) => {
+    const _generateDocs = useCallback(async (code, language) => {
         try {
             // Simulate AI documentation generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 1500));
-            let docs = '';
+            let _docs = '';
             if (language === 'typescript' || language === 'javascript') {
                 docs = generateJSDoc(code);
             }
@@ -187,7 +187,7 @@ export const useAICodeGeneration = () => {
             return docs;
         }
         catch (error) {
-            console.error('Failed to generate documentation:', error);
+            // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -195,14 +195,14 @@ export const useAICodeGeneration = () => {
         }
     }, [trackEvent]);
     // Clear generation history
-    const clearHistory = useCallback(() => {
+    const _clearHistory = useCallback(() => {
         setHistory([]);
         trackEvent('ai_code_generation', 'history_cleared', 'manual');
     }, [trackEvent]);
     // Export generated code
-    const exportCode = useCallback((format) => {
-        let exportContent = '';
-        let filename = '';
+    const _exportCode = useCallback((format) => {
+        let _exportContent = '';
+        let _filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
                 code: generatedCode,
@@ -220,9 +220,9 @@ export const useAICodeGeneration = () => {
             exportContent = generatedCode;
             filename = 'generated-code.txt';
         }
-        const blob = new Blob([exportContent], { type: 'text/plain' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const _blob = new Blob([exportContent], { type: 'text/plain' });
+        const _url = window.URL.createObjectURL(blob);
+        const _a = document.createElement('a');
         a.href = url;
         a.download = filename;
         a.click();
@@ -230,12 +230,12 @@ export const useAICodeGeneration = () => {
         trackEvent('ai_code_generation', 'code_exported', format, exportContent.length);
     }, [generatedCode, codeAnalysis, suggestions, trackEvent]);
     // Get basic code metrics
-    const getCodeMetrics = useCallback((code) => {
-        const lines = code.split('\n').length;
-        const functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length;
-        const classes = (code.match(/class\s+\w+/g) || []).length;
-        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;
-        const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
+    const _getCodeMetrics = useCallback((code) => {
+        const _lines = code.split('\n').length;
+        const _functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length;
+        const _classes = (code.match(/class\s+\w+/g) || []).length;
+        const _imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;
+        const _dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
         return {
             linesOfCode: lines,
             functions,
@@ -245,9 +245,9 @@ export const useAICodeGeneration = () => {
         };
     }, []);
     // Helper functions for code generation
-    const generateReactTypeScriptCode = (prompt, options) => {
+    const _generateReactTypeScriptCode = (prompt, options) => {
         return `import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
@@ -260,7 +260,7 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
     // TODO: Implement initialization logic
   }, []);
 
-  const handleAction = useCallback(() => {
+  const _handleAction = useCallback(() => {
     // TODO: Implement action handler
   }, []);
 
@@ -279,13 +279,13 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
 
 export default GeneratedComponent;`;
     };
-    const generateExpressCode = (prompt, _options) => {
+    const _generateExpressCode = (prompt, _options) => {
         return `import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+const _app = express();
+const _PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -300,10 +300,10 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`);
+  // console.log(\`Server running on port \${PORT}\`);
 });`;
     };
-    const generatePythonCode = (prompt, _options) => {
+    const _generatePythonCode = (prompt, _options) => {
         return `#!/usr/bin/env python3
 """
 Generated Python code based on prompt: ${prompt}
@@ -334,7 +334,7 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())`;
     };
-    const generateGenericCode = (prompt, options) => {
+    const _generateGenericCode = (prompt, options) => {
         return `// Generated ${options.language} code based on prompt: ${prompt}
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
@@ -343,19 +343,19 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-console.log("Generated code placeholder");
-console.log("Prompt:", "${prompt}");
-console.log("Language:", "${options.language}");`;
+// console.log("Generated code placeholder");
+// console.log("Prompt:", "${prompt}");
+// console.log("Language:", "${options.language}");`;
     };
     // Helper functions for code analysis
-    const calculateComplexity = (code) => {
-        const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
+    const _calculateComplexity = (code) => {
+        const _cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));
     };
-    const calculateMaintainability = (code) => {
-        const lines = code.split('\n').length;
-        const functions = (code.match(/function|=>/g) || []).length;
-        const avgFunctionLength = lines / Math.max(1, functions);
+    const _calculateMaintainability = (code) => {
+        const _lines = code.split('\n').length;
+        const _functions = (code.match(/function|=>/g) || []).length;
+        const _avgFunctionLength = lines / Math.max(1, functions);
         if (avgFunctionLength < 10)
             return 9;
         if (avgFunctionLength < 20)
@@ -364,20 +364,20 @@ console.log("Language:", "${options.language}");`;
             return 5;
         return 3;
     };
-    const calculateSecurityScore = (code) => {
-        const securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length;
+    const _calculateSecurityScore = (code) => {
+        const _securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length;
         return Math.max(1, 10 - securityIssues);
     };
-    const calculatePerformanceScore = (code) => {
-        const performanceIssues = (code.match(/setInterval|setTimeout|addEventListener|querySelectorAll/g) || []).length;
+    const _calculatePerformanceScore = (code) => {
+        const _performanceIssues = (code.match(/setInterval|setTimeout|addEventListener|querySelectorAll/g) || []).length;
         return Math.max(1, 10 - Math.floor(performanceIssues / 2));
     };
-    const calculateAccessibilityScore = (code) => {
-        const accessibilityFeatures = (code.match(/aria-|role=|alt=|title=/g) || []).length;
+    const _calculateAccessibilityScore = (code) => {
+        const _accessibilityFeatures = (code.match(/aria-|role=|alt=|title=/g) || []).length;
         return Math.min(10, Math.max(1, Math.floor(accessibilityFeatures / 2)));
     };
-    const generateCodeSuggestions = (code, _language) => {
-        const suggestions = [];
+    const _generateCodeSuggestions = (code, _language) => {
+        const _suggestions = [];
         // Performance suggestions
         if (code.includes('setInterval') || code.includes('setTimeout')) {
             suggestions.push({
@@ -411,13 +411,13 @@ console.log("Language:", "${options.language}");`;
             });
         }
         // Best practice suggestions
-        if (code.includes('console.log')) {
+        if (code.includes('// console.log')) {
             suggestions.push({
                 id: `suggestion_${Date.now()}_3`,
                 type: 'best_practice',
                 title: 'Remove Console Logs',
-                description: 'Remove console.log statements for production code',
-                code: '// Remove console.log statements\n// Use proper logging library for production',
+                description: 'Remove // console.log statements for production code',
+                code: '// Remove // console.log statements\n// Use proper logging library for production',
                 confidence: 0.90,
                 impact: 'low',
                 category: 'Best Practices',
@@ -428,8 +428,8 @@ console.log("Language:", "${options.language}");`;
         }
         return suggestions;
     };
-    const analyzeCodeIssues = (code, _language) => {
-        const issues = [];
+    const _analyzeCodeIssues = (code, _language) => {
+        const _issues = [];
         if (code.includes('TODO')) {
             issues.push({
                 severity: 'info',
@@ -447,34 +447,39 @@ console.log("Language:", "${options.language}");`;
         return issues;
     };
     // Helper functions for code optimization
-    const optimizeForPerformance = (code) => {
+    const _optimizeForPerformance = (code) => {
         return code
-            .replace(/console\.log/g, '// console.log removed for performance')
+            .replace(/console\.log/g, '// // console.log removed for performance')
             .replace(/setInterval/g, '// Consider requestAnimationFrame instead of setInterval')
             .replace(/querySelectorAll/g, '// Consider caching querySelectorAll results');
     };
-    const optimizeForSecurity = (code) => {
+    const _optimizeForSecurity = (code) => {
         return code
             .replace(/innerHTML/g, 'textContent')
             .replace(/eval/g, '// eval() removed for security - use alternatives')
             .replace(/localStorage/g, '// Consider security implications of localStorage');
     };
-    const optimizeForMaintainability = (code) => {
+    const _optimizeForMaintainability = (code) => {
         return code
             .replace(/\/\/ TODO/g, '// IMPLEMENTED:')
             .replace(/any/g, 'unknown')
             .replace(/function\s+(\w+)/g, 'const $1 = (');
     };
-    const optimizeForAccessibility = (code) => {
+    const _optimizeForAccessibility = (code) => {
         return code
             .replace(/<div>/g, '<div role="main">')
             .replace(/<button>/g, '<button aria-label="Action button">')
             .replace(/<img/g, '<img alt="Description"');
     };
     // Helper functions for test generation
-    const generateJestTests = (_code) => {
-        return `import { render, screen, fireEvent } from '@testing-library/react';
+    const _generateJestTests = (_code) => {
+        return `import { _render, screen, fireEvent } from '@testing-library/react';
 import GeneratedComponent from './GeneratedComponent';
+
+import { motion } from 'framer-motion';
+import { Target } from 'lucide-react';
+import { Code } from 'lucide-react';
+const implementation = [];
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
@@ -488,7 +493,7 @@ describe('GeneratedComponent', () => {
   });
 });`;
     };
-    const generatePytestTests = (_code) => {
+    const _generatePytestTests = (_code) => {
         return `import pytest
 from generated_module import GeneratedClass
 
@@ -504,7 +509,7 @@ class TestGeneratedClass:
     
     # TODO: Add more specific test cases based on class functionality`;
     };
-    const generateGenericTests = (_code, language) => {
+    const _generateGenericTests = (_code, language) => {
         return `// Generated tests for ${language} code
 // TODO: Implement specific test cases based on code functionality
 
@@ -516,7 +521,7 @@ describe('Generated Code Tests', () => {
 });`;
     };
     // Helper functions for documentation generation
-    const generateJSDoc = (_code) => {
+    const _generateJSDoc = (_code) => {
         return `/**
  * Generated Component
  * 
@@ -526,11 +531,11 @@ describe('Generated Code Tests', () => {
  * @example
  * <GeneratedComponent />
  */
-export const GeneratedComponent = () => {
+export const _GeneratedComponent = () => {
   // Component implementation
 };`;
     };
-    const generatePythonDoc = (_code) => {
+    const _generatePythonDoc = (_code) => {
         return `"""
 Generated Module
 
@@ -546,7 +551,7 @@ def generated_function():
     """
     pass`;
     };
-    const generateGenericDocs = (_code, language) => {
+    const _generateGenericDocs = (_code, language) => {
         return `/**
  * Generated ${language} Code
  * 

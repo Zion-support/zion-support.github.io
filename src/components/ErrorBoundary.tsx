@@ -38,7 +38,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      // console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Call custom error handler if provided
@@ -52,7 +52,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // Here you would typically send the error to a service like Sentry, LogRocket, etc.
-    console.error('Error logged to service:', {
+    // console.error('Error logged to service:', {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -172,7 +172,7 @@ export class ErrorBoundary extends Component<Props, State> {
 // Hook for error boundary functionality
 export function useErrorHandler() {
   return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    // console.error('Error caught by useErrorHandler:', error, errorInfo);
     
     // You can add additional error handling logic here
     // For example, sending to an error reporting service
@@ -184,7 +184,7 @@ export function withErrorBoundary<P extends object>(
   Component: React.ComponentType<P>,
   errorBoundaryProps?: Omit<Props, 'children'>
 ) {
-  const WrappedComponent = (props: P) => (
+  const _WrappedComponent = (props: P) => (
     <ErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </ErrorBoundary>

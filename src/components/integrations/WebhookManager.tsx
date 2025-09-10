@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 export default function Page("props": "any) {;
 ",;
     { "value": "quote_received", "label": "Quote Request Received" },;
@@ -13,5 +13,5 @@ export default function Page("props": "any) {;
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks;
   ;
-  const handleAddEvent = ("props": "any) => {;
+  const _handleAddEvent = ("props": "any) => {;
 export default function Page() {;

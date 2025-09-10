@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Star  } from 'lucide-react';
-import { ReviewStats } from '@/components/reviews/ReviewStats';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { useReviews } from '@/hooks/useReviews';
-import { Button } from '@/components/ui/button';
+import { _useState, useEffect } from 'react';
+import { _Star  } from 'lucide-react';
+import { _ReviewStats } from '@/components/reviews/ReviewStats';
+import { _ReviewsList } from '@/components/reviews/ReviewsList';
+import { _useReviews } from '@/hooks/useReviews';
+import { _Button } from '@/components/ui/button';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 ;
 export function ProfileRatings("props": "any) {;

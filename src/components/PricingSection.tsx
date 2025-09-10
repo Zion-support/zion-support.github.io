@@ -1,3 +1,13 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+
 
   { opacity: 0,
   y: 20;
@@ -59,7 +69,7 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
         <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">,
 
           {plans.map((plan, index) => {;
-            const IconComponent = plan.icon;
+            const _IconComponent = plan.icon;
             return (;
               <motion.div,";
 key = "{plan.name}"";

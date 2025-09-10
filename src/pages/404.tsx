@@ -1,14 +1,22 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Home, ArrowLeft, Search, Users, Brain, Shield, Zap } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap } from 'lucide-react';
-const NotFoundPage = () => {
-    const popularServices = [
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
+const _NotFoundPage = () => {
+    const _popularServices = [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Transform your business with AI' },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
         { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Zap, description: 'Scale your infrastructure' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Users, description: 'Enterprise-grade technology' }
     ];
-    const quickLinks = [
+    const _quickLinks = [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Search },
         { name: 'About Us', path: '/about', icon: Users },

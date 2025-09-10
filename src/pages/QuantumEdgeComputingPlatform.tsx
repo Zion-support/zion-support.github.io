@@ -1,8 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
-const QuantumEdgeComputingPlatform = () => {
-    const features = [
+import { _Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Zap } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const pricingPlans = [];
+const industries = [];
+const applications = [];
+const implementation = [];
+const _QuantumEdgeComputingPlatform = () => {
+    const _features = [
         "Quantum-accelerated edge processing",
         "Real-time data analysis and insights",
         "Distributed quantum computing nodes",
@@ -12,7 +22,7 @@ const QuantumEdgeComputingPlatform = () => {
         "Low-latency quantum communication",
         "Energy-efficient quantum operations"
     ];
-    const benefits = [
+    const _benefits = [
         {
             icon: Zap,
             title: "Quantum Performance",
@@ -34,7 +44,7 @@ const QuantumEdgeComputingPlatform = () => {
             description: "Flexible scaling from small deployments to enterprise-wide quantum networks"
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Starter",
             price: "$1,299",
@@ -79,7 +89,7 @@ const QuantumEdgeComputingPlatform = () => {
             ]
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: "Financial Services",
             description: "Real-time risk assessment and algorithmic trading with quantum speed",

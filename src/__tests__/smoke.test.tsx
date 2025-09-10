@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { _render, screen } from '@testing-library/react';
 
 function Hello() {
 	return <main>OK</main>;

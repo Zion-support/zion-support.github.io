@@ -1,7 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-const ResearchDevelopment = () => {
-    const researchAreas = [
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const technologies = [];
+const applications = [];
+const solutions = [];
+const _ResearchDevelopment = () => {
+    const _researchAreas = [
         {
             title: "Artificial Intelligence & Machine Learning",
             description: "Advancing the frontiers of AI with autonomous systems, neural networks, and intelligent automation.",

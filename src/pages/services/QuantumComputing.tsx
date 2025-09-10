@@ -1,8 +1,20 @@
 
+import { _Link } from 'react-router-dom';
+import { _Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard } from 'lucide-react';
-const QuantumComputing = () => {
-    const quantumServices = [
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+const features = [];
+const industries = [];
+const quantumServices = [];
+const applications = [];
+const solutions = [];
+const _QuantumComputing = () => {
+    const _quantumServices = [
         {
             icon: Brain,
             title: "Quantum Neural Networks",
@@ -32,7 +44,7 @@ const QuantumComputing = () => {
             path: "/solutions/quantum-simulation"
         }
     ];
-    const applications = [
+    const _applications = [
         {
             icon: Target,
             title: "Financial Services",

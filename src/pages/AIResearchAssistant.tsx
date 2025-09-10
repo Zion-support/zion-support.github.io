@@ -1,7 +1,14 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
+const features = [];
+const benefits = [];
+const useCases = [];
+const services = [];
+const applications = [];
 export default function AIResearchAssistant() {
-    const features = [
+    const _features = [
         {
             title: 'Intelligent Literature Review',
             description: 'AI-powered analysis of research papers, journals, and academic sources',
@@ -27,7 +34,7 @@ export default function AIResearchAssistant() {
             benefits: ['Shared workspaces', 'Version control', 'Communication tools']
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             industry: 'Academic Research',
             applications: ['Literature reviews', 'Meta-analyses', 'Systematic reviews', 'Grant writing']
@@ -45,7 +52,7 @@ export default function AIResearchAssistant() {
             applications: ['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics']
         }
     ];
-    const tools = [
+    const _tools = [
         { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine' },
         { name: 'Google Scholar', url: 'https://scholar.google.com/', description: 'Comprehensive academic search' },
         { name: 'ResearchGate', url: 'https://www.researchgate.net/', description: 'Academic social network' },

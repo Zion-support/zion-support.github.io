@@ -1,3 +1,8 @@
+import { motion } from 'framer-motion';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+const services = [];
+
 
   "};    pageViews: number;    clicks: number;
     scrolls: number;
@@ -27,7 +32,7 @@
     setCurrentPage(path) ;
     trackingRef.current.pageViews++;
 ;
-    const pageViewData = {;
+    const _pageViewData = {;
       "sessionId": "userSessio n",;
       path,;
       "timestamp": "new Date () .toISOString () ",;
@@ -79,10 +84,10 @@
   ;
     // Use Performance API to get metrics';
     if('performance' in window) {;
-      const navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint') ;
+      const _navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;
+      const _paint = performance.getEntriesByType('paint') ;
 ;
-      const performanceData = {;
+      const _performanceData = {;
         "sessionId": "userSessio n",;
         "loadTime": "navigatio n.loadEventEnd - navigation.loadEventStart",;
         "firstPaint": "pain t.find(entry => entry.name === 'first - paint') ?.startTime || 0",;
@@ -96,7 +101,7 @@ if(enableHeatmap) {;
 ;
     // Setup scroll tracking;
     let "scrollTimeout": "NodeJ S.Timeout;
-    const handleScroll = ("props": any) => {;
+    const _handleScroll = ("props": any) => {;
       clearTimeout(scrollTimeout) ;
       scrollTimeout = setTimeout(() => {;
         trackInteraction('scroll'", {;

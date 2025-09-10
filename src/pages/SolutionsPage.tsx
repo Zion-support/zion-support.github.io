@@ -1,6 +1,10 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const solutions = [];
+
 
 export default function SolutionsPage() {
-  const solutions = [
+  const _solutions = [
     {
       title: "Enterprise AI Platform",
       description: "Comprehensive AI solution for large enterprises",

@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { _Link } from 'react-router-dom';
+import { _advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+
 import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
-const AdvancedInnovativeServicesShowcase2025 = () => {
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const _AdvancedInnovativeServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
-    const categories = [
+    const _categories = [
         'all',
         'Legal Tech & Compliance',
         'Quantum Computing & Security',
@@ -22,12 +29,12 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
         'AI & Analytics',
         'AI & Customer Experience'
     ];
-    const allServices = [
+    const _allServices = [
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
         ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
-    const filteredServices = allServices
+    const _filteredServices = allServices
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -43,8 +50,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 return a.name.localeCompare(b.name);
         }
     });
-    const getCategoryIcon = (category) => {
-        const icons = {
+    const _getCategoryIcon = (category) => {
+        const _icons = {
             'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
@@ -62,7 +69,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
         };
         return icons[category] || '🚀';
     };
-    const getServiceTypeColor = (type) => {
+    const _getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
                 return 'bg-blue-100 text-blue-800 border-blue-200';

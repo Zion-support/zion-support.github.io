@@ -1,9 +1,19 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
-import { useMachineLearning } from '../hooks/useMachineLearning';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const MachineLearningDashboard = ({ className = '' }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
+import { _useMachineLearning } from '../hooks/useMachineLearning';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+export const _MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -21,7 +31,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         modelId: '',
         input: ''
     });
-    const handleCreateModel = useCallback(() => {
+    const _handleCreateModel = useCallback(() => {
         if (newModelForm.name.trim()) {
             createModel({
                 name: newModelForm.name,
@@ -33,8 +43,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             trackEvent('ml', 'dashboard', 'model_created');
         }
     }, [newModelForm, createModel, trackEvent]);
-    const handleStartTraining = useCallback(async (modelId) => {
-        const hyperparameters = {
+    const _handleStartTraining = useCallback(async (modelId) => {
+        const _hyperparameters = {
             learningRate: 0.001,
             batchSize: 32,
             epochs: 100,
@@ -45,64 +55,64 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             trackEvent('ml', 'dashboard', 'training_started');
         }
         catch (error) {
-            console.error('Training failed:', error);
+            // console.error('Training failed:', error);
         }
     }, [startTraining, trackEvent]);
-    const handleStopTraining = useCallback((jobId) => {
+    const _handleStopTraining = useCallback((jobId) => {
         stopTraining(jobId);
         trackEvent('ml', 'dashboard', 'training_stopped');
     }, [stopTraining, trackEvent]);
-    const handleDeployModel = useCallback((modelId) => {
+    const _handleDeployModel = useCallback((modelId) => {
         deployModel(modelId);
         trackEvent('ml', 'dashboard', 'model_deployed');
     }, [deployModel, trackEvent]);
-    const handleArchiveModel = useCallback((modelId) => {
+    const _handleArchiveModel = useCallback((modelId) => {
         archiveModel(modelId);
         trackEvent('ml', 'dashboard', 'model_archived');
     }, [archiveModel, trackEvent]);
-    const handleMakePrediction = useCallback(async () => {
+    const _handleMakePrediction = useCallback(async () => {
         if (predictionForm.modelId && predictionForm.input.trim()) {
             try {
-                const input = JSON.parse(predictionForm.input);
-                const result = await makePrediction(predictionForm.modelId, input);
-                console.log('Prediction result:', result);
+                const _input = JSON.parse(predictionForm.input);
+                const _result = await makePrediction(predictionForm.modelId, input);
+                // console.log('Prediction result:', result);
                 setPredictionForm({ modelId: '', input: '' });
                 trackEvent('ml', 'dashboard', 'prediction_made');
             }
             catch (error) {
-                console.error('Prediction failed:', error);
+                // console.error('Prediction failed:', error);
             }
         }
     }, [predictionForm, makePrediction, trackEvent]);
-    const handleExportModel = useCallback((modelId) => {
+    const _handleExportModel = useCallback((modelId) => {
         try {
-            const modelData = exportModel(modelId);
+            const _modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData);
             trackEvent('ml', 'dashboard', 'model_exported');
         }
         catch (error) {
-            console.error('Export failed:', error);
+            // console.error('Export failed:', error);
         }
     }, [exportModel, trackEvent]);
-    const handleImportModel = useCallback((event) => {
-        const file = event.target.files?.[0];
+    const _handleImportModel = useCallback((event) => {
+        const _file = event.target.files?.[0];
         if (file) {
-            const reader = new FileReader();
+            const _reader = new FileReader();
             reader.onload = (e) => {
                 try {
-                    const modelData = e.target?.result;
+                    const _modelData = e.target?.result;
                     importModel(modelData);
                     setShowImportModel(false);
                     trackEvent('ml', 'dashboard', 'model_imported');
                 }
                 catch (error) {
-                    console.error('Import failed:', error);
+                    // console.error('Import failed:', error);
                 }
             };
             reader.readAsText(file);
         }
     }, [importModel, trackEvent]);
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'deployed': return 'text-green-600 bg-green-100';
             case 'ready': return 'text-blue-600 bg-blue-100';
@@ -111,7 +121,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             default: return 'text-gray-600 bg-gray-100';
         }
     };
-    const getJobStatusColor = (status) => {
+    const _getJobStatusColor = (status) => {
         switch (status) {
             case 'running': return 'text-blue-600 bg-blue-100';
             case 'completed': return 'text-green-600 bg-green-100';
@@ -120,7 +130,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             default: return 'text-gray-600 bg-gray-100';
         }
     };
-    const getModelTypeIcon = (type) => {
+    const _getModelTypeIcon = (type) => {
         switch (type) {
             case 'classification': return <Target className="w-4 h-4"/>;
             case 'regression': return <TrendingUp className="w-4 h-4"/>;
@@ -401,7 +411,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               
               <div className="space-y-4">
                 {trainingJobs.map((job) => {
-                const model = models.find(m => m.id === job.modelId);
+                const _model = models.find(m => m.id === job.modelId);
                 return (<div key={job.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center space-x-3">
@@ -497,7 +507,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <h4 className="font-medium text-gray-900 dark:text-white mb-3">Recent Predictions</h4>
                 <div className="space-y-3">
                   {predictions.slice(0, 5).map((prediction) => {
-                const model = models.find(m => m.id === prediction.modelId);
+                const _model = models.find(m => m.id === prediction.modelId);
                 return (<div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">
                         <div className="flex items-center justify-between mb-2">
                           <div className="flex items-center space-x-2">

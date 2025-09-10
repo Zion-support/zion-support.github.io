@@ -1,7 +1,18 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _CubeIcon, CpuChipIcon, BoltIcon, GlobeAltIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+
 import { Link } from 'react-router-dom';
-import { CubeIcon, CpuChipIcon, BoltIcon, GlobeAltIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
-const QuantumTechnology = () => {
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Cube } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
+const _QuantumTechnology = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">

@@ -1,35 +1,38 @@
-import { useRouter } from 'next/router'; // Changed from useParams
-import { useEffect, useState } from 'react';
-import { Elements } from '@stripe/react-stripe-js';
-import { getStripe } from '@/utils/getStripe';
+import { _useRouter } from 'next/router'; // Changed from useParams
+import { _useEffect, useState } from 'react';
+import { _Elements } from '@stripe/react-stripe-js';
+import { _getStripe } from '@/utils/getStripe';
 import CardForm from '@/components/checkout/CardForm';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
-import { NEW_PRODUCTS } from '@/data/newProductsData';
+import { _NEW_PRODUCTS } from '@/data/newProductsData';
+
+import { Check } from 'lucide-react';
+import { useParams } from 'react-router-dom';
 export default function CheckoutPage() {
-    const router = useRouter();
+    const _router = useRouter();
     const { id: rawId } = router.query;
-    const id = typeof rawId === 'string' ? rawId : undefined;
+    const _id = typeof rawId === 'string' ? rawId : undefined;
     const [product, setProduct] = useState(null);
     const [intent, setIntent] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
-        const fetchProduct = async () => {
+        const _fetchProduct = async () => {
             if (!id)
                 return;
             setIsLoading(true);
             setError(null);
             try {
-                const res = await fetch(`/api/products/${id}`);
+                const _res = await fetch(`/api/products/${id}`);
                 if (!res.ok)
                     throw new Error('Failed to fetch product');
-                const data = await res.json();
+                const _data = await res.json();
                 setProduct(data);
             }
             catch (err) {
-                console.error('Failed to load product', err);
+                // console.error('Failed to load product', err);
                 setError(err.message);
-                const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
+                const _fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
                 setProduct(fallback);
             }
             finally {

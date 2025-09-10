@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+const services = [];
+const solutions = [];
+
 
     },
   ];
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
+  const _toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const _toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
   return (

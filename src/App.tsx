@@ -1,7 +1,11 @@
-import React, { Suspense, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, lazy, useEffect } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
+import { HelmetProvider } from 'react-helmet-async';
+import Navigation from './components/Navigation';
+
+import { Helmet } from 'react-helmet-async';
+const services = [];
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -33,12 +37,12 @@ const EnhancedLoadingSpinner = () => (
 // Error boundary component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4 text-red-500">Something went wrong</h1>
-      <p className="text-xl text-gray-300 mb-4">{error.message}</p>
+    <div className="text-center max-w-md mx-auto p-6">
+      <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
+      <p className="text-gray-300 mb-6">{error.message}</p>
       <button
         onClick={resetErrorBoundary}
-        className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+        className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded transition-colors"
       >
         Try again
       </button>
@@ -46,57 +50,45 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-function App() {
-  // Performance monitoring and analytics
+// Main App component
+const App = () => {
   useEffect(() => {
-    // Track page load performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const _loadTime = performance.now();
-      // App loaded in ${_loadTime.toFixed(2)}ms
-      
-      // Track Core Web Vitals
-      if ('web-vitals' in window) {
-        import('web-vitals').then((vitals) => {
-          if (vitals.onCLS) vitals.onCLS(() => {});
-          if (vitals.onINP) vitals.onINP(() => {}); // INP replaces FID
-          if (vitals.onFCP) vitals.onFCP(() => {});
-          if (vitals.onLCP) vitals.onLCP(() => {});
-          if (vitals.onTTFB) vitals.onTTFB(() => {});
-        });
-      }
-    }
+    // Add any global initialization logic here
+    // console.log('Zion Tech Group App initialized');
   }, []);
+
   return (
     <HelmetProvider>
-      <Router>
-        <div className="App">
-          <ErrorBoundary FallbackComponent={ErrorFallback}>
-            <Suspense fallback={<EnhancedLoadingSpinner />}>
-              <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="*" element={
-                <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-                    <p className="text-xl text-gray-300">The page you're looking for doesn't exist.</p>
-                  </div>
-                </div>
-              } />
-              </Routes>
-            </Suspense>
-          </ErrorBoundary>
-        </div>
-      </Router>
+      <BrowserRouter>
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <div className="min-h-screen bg-gray-900 text-white">
+            <Navigation />
+            <main>
+              <Suspense fallback={<EnhancedLoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="/sitemap" element={<Sitemap />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="*" element={<div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+                      <p className="text-xl text-gray-300">The page you're looking for doesn't exist.</p>
+                    </div>
+                  </div>} />
+                </Routes>
+              </Suspense>
+            </main>
+          </div>
+        </ErrorBoundary>
+      </BrowserRouter>
     </HelmetProvider>
   );
-}
+};
 
 export default App;

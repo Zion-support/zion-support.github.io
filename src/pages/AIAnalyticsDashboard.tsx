@@ -1,12 +1,24 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _SEO } from "@/components/SEO";
+import { _BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
+import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const testimonials = [];
+const pricingPlans = [];
+const integrations = [];
 export default function AIAnalyticsDashboard() {
-    const features = [
+    const _features = [
         {
             title: "AI-Powered Insights",
             description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and opportunities",
@@ -28,7 +40,7 @@ export default function AIAnalyticsDashboard() {
             icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Starter",
             price: "$99",
@@ -74,7 +86,7 @@ export default function AIAnalyticsDashboard() {
             popular: false
         }
     ];
-    const testimonials = [
+    const _testimonials = [
         {
             name: "Sarah Chen",
             role: "CTO, TechFlow Inc.",

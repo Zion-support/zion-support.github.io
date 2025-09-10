@@ -1,8 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { _Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const caseStudies = [];
 export default function GovernmentSolutions() {
-    const solutions = [
+    const _solutions = [
         {
             icon: Building2,
             title: "Digital Government",
@@ -40,7 +54,7 @@ export default function GovernmentSolutions() {
             features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Improved citizen satisfaction and engagement",
         "Enhanced operational efficiency and cost savings",
         "Better compliance and risk management",
@@ -48,7 +62,7 @@ export default function GovernmentSolutions() {
         "Faster service delivery and response times",
         "Enhanced data security and privacy protection"
     ];
-    const caseStudies = [
+    const _caseStudies = [
         {
             organization: "State Government Agency",
             specialty: "Digital Services",
@@ -108,7 +122,7 @@ export default function GovernmentSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white"/>

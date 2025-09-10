@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
-const navigationItems = [
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
+const _navigationItems = [
     {
         name: 'Home',
         href: '/',
@@ -39,14 +47,14 @@ export default function FuturisticNavigation() {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
-        const handleScroll = () => {
+        const _handleScroll = () => {
             setScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    const toggleMenu = () => setIsOpen(!isOpen);
-    const closeMenu = () => setIsOpen(false);
+    const _toggleMenu = () => setIsOpen(!isOpen);
+    const _closeMenu = () => setIsOpen(false);
     return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
             ? 'bg-black/80 backdrop-blur-md border-b border-cyan-500/20'
             : 'bg-transparent'}`}>

@@ -1,14 +1,16 @@
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage, } from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
-import { Mail, PaperPlane } from 'lucide-react';
+import { _Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
+import { _Textarea } from '@/components/ui/textarea';
+import { _Form, FormField, FormItem, FormLabel, FormControl, FormMessage, } from '@/components/ui/form';
+import { _useForm } from 'react-hook-form';
+import { _Mail, PaperPlane } from 'lucide-react';
 import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-const schema = z.object({
+import { _toast } from '@/hooks/use-toast';
+
+const services = [];
+const _schema = z.object({
     subject: z
         .string()
         .min(5, 'Subject must be at least 5 characters')
@@ -20,13 +22,13 @@ const schema = z.object({
 });
 export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail, }) {
     const [isSubmitting, setIsSubmitting] = React.useState(false);
-    const form = useForm({
+    const _form = useForm({
         resolver: zodResolver(schema),
         mode: 'onChange',
         defaultValues: { subject: '', message: '' },
     });
-    const handleSend = async () => {
-        const values = form.getValues();
+    const _handleSend = async () => {
+        const _values = form.getValues();
         setIsSubmitting(true);
         try {
             await api.post('/messages', {

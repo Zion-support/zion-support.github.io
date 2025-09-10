@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 
     return <div className={classes}  />}  
   return ()
@@ -9,7 +11,7 @@ const Skeleton: React.FC < SkeletonProps> = ({;
   width = 'w-full',;
   rounded = true,;
   animated = true}) => {;
-  const baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : ''}`;`;
+  const _baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : ''}`;`;
   if(!animated) {;
     return <div className={classes}  />} ;
   return ();

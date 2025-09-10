@@ -1,6 +1,8 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
-const AIAutonomousBusinessProcessAutomation = () => {
+const _AIAutonomousBusinessProcessAutomation = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">

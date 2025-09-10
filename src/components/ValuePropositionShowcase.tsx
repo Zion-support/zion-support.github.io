@@ -1,6 +1,20 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 import { 
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
   TrendingUp, 
   Target, 
   Award, 
@@ -17,7 +31,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-const valueMetrics = [
+const _valueMetrics = [
   {
     icon: <TrendingUp className="w-8 h-8" />,
     title: "Average ROI",
@@ -48,7 +62,7 @@ const valueMetrics = [
   }
 ];
 
-const competitiveAdvantages = [
+const _competitiveAdvantages = [
   {
     title: "AI-Powered Intelligence",
     description: "Advanced machine learning algorithms that continuously improve performance and provide predictive insights",
@@ -75,7 +89,7 @@ const competitiveAdvantages = [
   }
 ];
 
-const marketComparison = [
+const _marketComparison = [
   {
     category: "AI Business Intelligence",
     competitors: ["Tableau", "Power BI", "Looker"],
@@ -102,7 +116,7 @@ const marketComparison = [
   }
 ];
 
-const successStories = [
+const _successStories = [
   {
     company: "TechCorp Solutions",
     industry: "SaaS",
@@ -130,7 +144,7 @@ const successStories = [
 ];
 
 export function ValuePropositionShowcase() {
-  const containerVariants = {
+  const _containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -141,7 +155,7 @@ export function ValuePropositionShowcase() {
     }
   };
 
-  const itemVariants = {
+  const _itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
@@ -153,7 +167,7 @@ export function ValuePropositionShowcase() {
     }
   };
 
-  const cardVariants = {
+  const _cardVariants = {
     hidden: { scale: 0.95, opacity: 0 },
     visible: {
       scale: 1,

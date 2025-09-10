@@ -1,3 +1,7 @@
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+
 
         "timeline": ''});';';';  if (submitStatus === 'success') {
     return (

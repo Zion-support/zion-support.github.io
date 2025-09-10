@@ -1,5 +1,14 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const services = [];
+const solutions = [];
+
                 </p>;
                 {/* Contact Information */}
                 <div className="space-y-3">;
@@ -121,7 +130,7 @@ export { FuturisticFooter };
 </motion>;
 </motion>;
 </motion>;
-</motion>  const stats = [']
+</motion>  const _stats = [']
     { value: '500+', label: 'Projects Completed', icon: CheckCircle },''
     { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },''
     { value: '24/7', label: 'Support Available', icon: Award },''

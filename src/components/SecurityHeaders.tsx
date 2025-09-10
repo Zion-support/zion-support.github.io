@@ -1,8 +1,14 @@
 
 import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
+import { _Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+const securityFeatures = [];
 export function SecurityHeaders({ className }) {
-    const securityFeatures = [
+    const _securityFeatures = [
         {
             icon: Shield,
             title: "SOC 2 Type II Certified",
@@ -32,7 +38,7 @@ export function SecurityHeaders({ className }) {
             color: "text-zion-purple"
         }
     ];
-    const complianceBadges = [
+    const _complianceBadges = [
         { name: "SOC 2", status: "Certified", year: "2024", icon: CheckCircle },
         { name: "ISO 27001", status: "Certified", year: "2024", icon: CheckCircle },
         { name: "GDPR", status: "Compliant", year: "2024", icon: CheckCircle },

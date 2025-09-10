@@ -1,9 +1,29 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { _SEO } from "@/components/SEO";
 import Link from 'next/link';
-import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
+import { _Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const technologies = [];
+const devopsServices = [];
+const cloudProviders = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function DevOpsCloudServices() {
-    const devopsServices = [
+    const _devopsServices = [
         {
             icon: Cloud,
             title: 'Cloud Migration & Strategy',
@@ -131,7 +151,7 @@ export default function DevOpsCloudServices() {
             ]
         }
     ];
-    const cloudProviders = [
+    const _cloudProviders = [
         {
             name: 'Amazon Web Services (AWS)',
             services: 'EC2, S3, Lambda, RDS, EKS',
@@ -157,7 +177,7 @@ export default function DevOpsCloudServices() {
             pricing: 'Optimized for each workload'
         }
     ];
-    const industries = [
+    const _industries = [
         'Financial Services & Banking',
         'Healthcare & Life Sciences',
         'E-commerce & Retail',
@@ -167,7 +187,7 @@ export default function DevOpsCloudServices() {
         'Government & Public Sector',
         'Startups & Scale-ups'
     ];
-    const technologies = [
+    const _technologies = [
         'AWS, Azure, GCP',
         'Kubernetes & Docker',
         'Terraform & Ansible',
@@ -177,7 +197,7 @@ export default function DevOpsCloudServices() {
         'Istio & Linkerd',
         'Helm & ArgoCD'
     ];
-    const benefits = [
+    const _benefits = [
         'Faster software delivery and deployment',
         'Improved system reliability and uptime',
         'Reduced infrastructure costs',
@@ -185,7 +205,7 @@ export default function DevOpsCloudServices() {
         'Better scalability and performance',
         'Improved team collaboration and productivity'
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: 'Microservices Migration',
             description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',

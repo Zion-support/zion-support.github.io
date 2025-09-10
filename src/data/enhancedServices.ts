@@ -1,3 +1,5 @@
+const features = [];
+
 export interface ProductListing {
   &quot;id&quot;: string;
   title: string;

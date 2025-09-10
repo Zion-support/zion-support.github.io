@@ -1,6 +1,10 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousApplicationSecurity = () => {
+import { Cloud } from 'lucide-react';
+const applications = [];
+const _AIAutonomousApplicationSecurity = () => {
     return (<>
       <Helmet>
         <title>AI Autonomous Application Security Platform | Zion Tech Group</title>

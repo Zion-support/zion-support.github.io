@@ -1,5 +1,8 @@
 import React from "react"
 
+import { motion } from 'framer-motion';
+const features = [];
+
 interface HeroFeature {
 icon: React.ComponentType<{ className?: string}>;
   title: string;

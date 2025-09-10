@@ -1,8 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-const HealthcareSolutions = () => {
-    const solutions = [
+import { _Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const _HealthcareSolutions = () => {
+    const _solutions = [
         {
             title: 'AI-Powered Patient Care',
             description: 'Intelligent patient monitoring and care management systems.',
@@ -56,7 +66,7 @@ const HealthcareSolutions = () => {
             href: '/services/cybersecurity'
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: 'Improved Patient Outcomes',
             description: 'AI-driven insights lead to better diagnosis and treatment.',
@@ -104,7 +114,7 @@ const HealthcareSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -143,7 +153,7 @@ const HealthcareSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
+            const _Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>

@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
-const RevolutionaryServicesShowcase2025 = () => {
+import { _REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
+import { _EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const _RevolutionaryServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
-    const allServices = [
+    const _allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({ ...service, source: 'revolutionary' })),
         ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({ ...service, source: 'emerging' }))
     ];
-    const categories = [
+    const _categories = [
         'all',
         'Micro SAAS',
         'IT Services',
@@ -20,9 +25,9 @@ const RevolutionaryServicesShowcase2025 = () => {
         'Biotechnology',
         'Quantum Technology'
     ];
-    const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _filteredServices = allServices.filter(service => {
+        const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch;

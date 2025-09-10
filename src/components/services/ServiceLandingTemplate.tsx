@@ -1,8 +1,12 @@
 import React from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description, benefits, testimonials, ctaText, ctaLink, }) => {
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _Button } from "@/components/ui/button";
+import { _Card, CardContent, CardFooter } from "@/components/ui/card";
+
+import { Link } from 'react-router-dom';
+const benefits = [];
+const testimonials = [];
+export const _ServiceLandingTemplate = ({ title, subtitle, heroImage, description, benefits, testimonials, ctaText, ctaLink, }) => {
     return (<div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
         <div className="container mx-auto">

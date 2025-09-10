@@ -1,8 +1,18 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { Helmet } from 'react-helmet-async';
-const ITInfrastructure = () => {
-    const features = [
+import { Cloud } from 'lucide-react';
+const features = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
+const _ITInfrastructure = () => {
+    const _features = [
         {
             title: "Network Management",
             description: "Comprehensive network infrastructure design, implementation, and maintenance",
@@ -28,7 +38,7 @@ const ITInfrastructure = () => {
             icon: "⚡"
         }
     ];
-    const infrastructureFeatures = [
+    const _infrastructureFeatures = [
         { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
         { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
         { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
@@ -58,7 +68,7 @@ const ITInfrastructure = () => {
     }
   ];
 
-  const infrastructureAreas = [
+  const _infrastructureAreas = [
     {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },

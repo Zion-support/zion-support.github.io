@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useInView  } from 'framer-motion';
-import { useRef  } from 'react';
-import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
+import { _motion, useInView  } from 'framer-motion';
+import { _useRef  } from 'react';
+import { _TrendingUp, Award, Users, Clock  } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { TrendingUp } from 'lucide-react';
 ;
 interface Stat {;
   "number": "string;
@@ -15,8 +18,8 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {;
   "stats": "Sta t[]"}
 ;
 const "StatsSection": "React.FC<StatsSectionProps> = ({ stats "}) => {;
-  const ref = useRef(null);
-  const isInView = useInView(ref, { "once": "tru e "});
+  const _ref = useRef(null);
+  const _isInView = useInView(ref, { "once": "tru e "});
   const [counts, setCounts] = useState<any>({});
 ;
   useEffect(() => {;

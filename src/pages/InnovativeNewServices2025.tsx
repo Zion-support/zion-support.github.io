@@ -1,31 +1,45 @@
 import React, { useState } from 'react';
+import { _Link } from 'react-router-dom';
+import { _Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { _SEOHead } from '../components/SEOHead';
+import { _INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
+import { _SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
 import { Link } from 'react-router-dom';
-import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEOHead } from '../components/SEOHead';
-import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
-const InnovativeNewServices2025 = () => {
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const _InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    const priceRanges = [
+    const _allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];
+    const _categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const _priceRanges = [
         { value: 'all', label: 'All Prices' },
         { value: '0-2000', label: 'Under $2,000/month' },
         { value: '2000-5000', label: '$2,000 - $5,000/month' },
         { value: '5000+', label: '$5,000+/month' }
     ];
-    const filteredServices = allServices.filter(service => {
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+    const _filteredServices = allServices.filter(service => {
+        const _categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
         // All services have a price property
-        const servicePrice = service.price;
-        const priceMatch = selectedPriceRange === 'all' ||
+        const _servicePrice = service.price;
+        const _priceMatch = selectedPriceRange === 'all' ||
             (selectedPriceRange === '0-2000' && service.price < 2000) ||
             (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||
             (selectedPriceRange === '5000+' && service.price >= 5000);
         return categoryMatch && priceMatch;
     });
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'AI & Analytics':
                 return Brain;
@@ -39,7 +53,7 @@ const InnovativeNewServices2025 = () => {
                 return Zap;
         }
     };
-    const getCategoryColor = (category) => {
+    const _getCategoryColor = (category) => {
         switch (category) {
             case 'AI & Analytics':
                 return 'from-purple-500 to-pink-600';
@@ -132,8 +146,8 @@ const InnovativeNewServices2025 = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service) => {
-            const IconComponent = getCategoryIcon(service.category);
-            const categoryColor = getCategoryColor(service.category);
+            const _IconComponent = getCategoryIcon(service.category);
+            const _categoryColor = getCategoryColor(service.category);
             return (<div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 overflow-hidden hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="p-8">
                     {/* Header */}

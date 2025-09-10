@@ -15,8 +15,8 @@ interface ToastContextType {
 
   toasts: Toast[],"
   addToast: (void",") => $3,removeToast: (id: string) => voi,d}
-const ToastContext = createContext<ToastContextType | undefined>(undefined);
-const ToastContext = createContext<ToastContextType | undefined>(undefined)
+const _ToastContext = createContext<ToastContextType | undefined>(undefined);
+const _ToastContext = createContext<ToastContextType | undefined>(undefined)
 
 
 export function ToastProvider({ children }: { children: React.ReactNode}) {

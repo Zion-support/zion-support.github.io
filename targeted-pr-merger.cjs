@@ -133,6 +133,13 @@ class TargetedPRMerger {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
+        /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+        (match) => {
+          // Extract the HEAD section (our changes)
+          const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+          return headMatch ? headMatch[1].trim() : '';
+        }
+      );
 
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent)

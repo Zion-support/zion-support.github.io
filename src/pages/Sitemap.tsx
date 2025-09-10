@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+
 export default function Sitemap() {
   const sitemapSections = [
     {

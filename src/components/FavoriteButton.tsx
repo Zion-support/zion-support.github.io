@@ -1,6 +1,8 @@
 import React from 'react';
+import { _Heart } from 'lucide-react';
+import { _Button } from '@/components/ui/button';
+
 import { Heart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 interface FavoriteButtonProps {;
   "talentId": "string;
   "isFavorite": boolean;
@@ -8,7 +10,7 @@ interface FavoriteButtonProps {;
   className?: string;
 "}
 export function FavoriteButton({ talentId, isFavorite, onToggle, className }: "FavoriteButtonProps) {;
-  const handleToggle = ("e": React.MouseEvent) => {;
+  const _handleToggle = ("e": React.MouseEvent) => {;
     e.preventDefault();
     e.stopPropagation();
     onToggle(talentId);

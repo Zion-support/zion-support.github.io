@@ -1,15 +1,24 @@
 
 import React, { useState } from 'react';
+import { _motion } from 'framer-motion';
+import { _TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
+import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { _Button } from './ui/button';
+import { _Badge } from './ui/badge';
+
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-const AdvancedAnalyticsDashboard = () => {
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const _AdvancedAnalyticsDashboard = () => {
     const [timeRange, setTimeRange] = useState('30d');
     const [selectedMetric, setSelectedMetric] = useState('overview');
     // Mock data - in real app this would come from API
-    const metrics = [
+    const _metrics = [
         {
             title: 'Total Revenue',
             value: '$2.4M',
@@ -43,7 +52,7 @@ const AdvancedAnalyticsDashboard = () => {
             color: 'from-yellow-500 to-orange-600'
         }
     ];
-    const servicePerformance = [
+    const _servicePerformance = [
         {
             name: 'AI CRM Platform',
             performance: 96,
@@ -85,14 +94,14 @@ const AdvancedAnalyticsDashboard = () => {
             status: 'stable'
         }
     ];
-    const categoryDistribution = [
+    const _categoryDistribution = [
         { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },
         { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },
         { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },
         { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },
         { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
     ];
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'trending':
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -104,7 +113,7 @@ const AdvancedAnalyticsDashboard = () => {
                 return <Activity className="w-4 h-4 text-gray-500"/>;
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'trending':
                 return 'bg-green-100 text-green-800';

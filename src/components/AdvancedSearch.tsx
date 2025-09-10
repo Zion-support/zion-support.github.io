@@ -1,7 +1,14 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
-const mockSuggestions = [
+import { _Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
+
+import { Cloud } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const services = [];
+const solutions = [];
+const _mockSuggestions = [
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
@@ -17,10 +24,10 @@ export function AdvancedSearch() {
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const searchRef = useRef(null);
-    const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
+    const _searchRef = useRef(null);
+    const _categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const _handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowSuggestions(false);
             }
@@ -30,7 +37,7 @@ export function AdvancedSearch() {
     }, []);
     useEffect(() => {
         if (query.trim()) {
-            const filtered = mockSuggestions
+            const _filtered = mockSuggestions
                 .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()) ||
                 suggestion.category?.toLowerCase().includes(query.toLowerCase()))
                 .sort((a, b) => b.relevance - a.relevance)
@@ -43,20 +50,20 @@ export function AdvancedSearch() {
             setShowSuggestions(false);
         }
     }, [query]);
-    const handleSuggestionClick = (suggestion) => {
+    const _handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.text);
         setShowSuggestions(false);
         // Here you would typically trigger a search
     };
-    const toggleFilter = (category) => {
+    const _toggleFilter = (category) => {
         setSelectedFilters(prev => prev.includes(category)
             ? prev.filter(f => f !== category)
             : [...prev, category]);
     };
-    const clearFilters = () => {
+    const _clearFilters = () => {
         setSelectedFilters([]);
     };
-    const getSuggestionIcon = (type) => {
+    const _getSuggestionIcon = (type) => {
         switch (type) {
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;
@@ -65,7 +72,7 @@ export function AdvancedSearch() {
             default: return <Search className="w-4 h-4 text-zion-slate"/>;
         }
     };
-    const getSuggestionColor = (type) => {
+    const _getSuggestionColor = (type) => {
         switch (type) {
             case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';

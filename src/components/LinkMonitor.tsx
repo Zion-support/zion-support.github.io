@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { LinkValidator } from '../utils/linkValidator';
-export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
+import { _LinkValidator } from '../utils/linkValidator';
+
+import { Link } from 'react-router-dom';
+export const _LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);
     const [isScanning, setIsScanning] = useState(false);
     const [scanProgress, setScanProgress] = useState(0);
     const [lastScanTime, setLastScanTime] = useState(null);
     // Scan all links on the current page
-    const scanPageLinks = async () => {
+    const _scanPageLinks = async () => {
         setIsScanning(true);
         setScanProgress(0);
-        const links = Array.from(document.querySelectorAll('a[href]'));
-        const results = [];
-        for (let i = 0; i < links.length; i++) {
-            const link = links[i];
-            const href = link.getAttribute('href');
+        const _links = Array.from(document.querySelectorAll('a[href]'));
+        const _results = [];
+        for (let _i = 0; i < links.length; i++) {
+            const _link = links[i];
+            const _href = link.getAttribute('href');
             if (href) {
-                const result = LinkValidator.validateLink(href, window.location.pathname);
+                const _result = LinkValidator.validateLink(href, window.location.pathname);
                 if (result.status === 'broken') {
                     results.push(result);
                     if (autoFix) {
@@ -40,18 +42,18 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         });
     };
     // Fix a broken link
-    const fixBrokenLink = async (originalUrl, validationResult) => {
+    const _fixBrokenLink = async (originalUrl, validationResult) => {
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to:')) {
-            const newUrl = validationResult.suggestedFix.replace('Redirect to: ', '');
+            const _newUrl = validationResult.suggestedFix.replace('Redirect to: ', '');
             // Find and update the link
-            const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
+            const _links = document.querySelectorAll(`a[href="${originalUrl}"]`);
             links.forEach(link => {
                 link.href = newUrl;
                 link.setAttribute('data-fixed', 'true');
                 link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
             });
             // Add to fixed links list
-            const fix = {
+            const _fix = {
                 originalUrl,
                 newUrl,
                 type: 'redirect',
@@ -61,34 +63,34 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         }
     };
     // Fix all broken links
-    const fixAllBrokenLinks = async () => {
+    const _fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
             await fixBrokenLink(brokenLink.url, brokenLink);
         }
         setBrokenLinks([]);
     };
     // Generate redirect rules for server configuration
-    const generateRedirectRules = () => {
-        const rules = LinkValidator.generateRedirectRules();
-        const blob = new Blob([rules], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+    const _generateRedirectRules = () => {
+        const _rules = LinkValidator.generateRedirectRules();
+        const _blob = new Blob([rules], { type: 'text/plain' });
+        const _url = URL.createObjectURL(blob);
+        const _a = document.createElement('a');
         a.href = url;
         a.download = 'redirect-rules.txt';
         a.click();
         URL.revokeObjectURL(url);
     };
     // Export broken links report
-    const exportReport = () => {
-        const report = {
+    const _exportReport = () => {
+        const _report = {
             scanTime: lastScanTime?.toISOString(),
             totalBrokenLinks: brokenLinks.length,
             brokenLinks: brokenLinks,
             fixedLinks: fixedLinks
         };
-        const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const _blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+        const _url = URL.createObjectURL(blob);
+        const _a = document.createElement('a');
         a.href = url;
         a.download = 'broken-links-report.json';
         a.click();

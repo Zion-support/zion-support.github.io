@@ -1,27 +1,34 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
-import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
+import { _Header } from "@/components/Header";
+import { _Footer } from "@/components/Footer";
+import { _TrustedBySection } from "@/components/TrustedBySection";
+import { _TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { _FloatingCTA } from "@/components/FloatingCTA";
+import { _HeroSection } from "@/components/HeroSection";
+import { _CategoriesSection } from "@/components/CategoriesSection";
+import { _BenefitsSection } from "@/components/BenefitsSection";
+import { _HowItWorksSection } from "@/components/HowItWorksSection";
+import { _WaitlistSection } from "@/components/WaitlistSection";
+import { _BlogSection } from "@/components/BlogSection";
+import { _SEO } from "@/components/SEO";
+import { _Link } from "react-router-dom";
+import { _FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { _FeaturesGuideSection } from "@/components/FeaturesGuideSection";
+import { _SocialShareSection } from "@/components/SocialShareSection";
+import { _useTranslation } from "react-i18next";
+import { _useLanguage } from "@/context/LanguageContext";
+import { _ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const features = [];
+const services = [];
 export default function Index() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();
     // Tools and features showcase
-    const toolsFeatures = [
+    const _toolsFeatures = [
         {
             title: t("home.tool_ai_matcher"),
             description: t("home.tool_ai_matcher_desc"),

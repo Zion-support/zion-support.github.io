@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { _Button } from '@/components/ui/button';
 export default function ReplyForm({ onSubmit, placeholder = "Write your reply..." }) {
     const [content, setContent] = useState('');
-    const handleSubmit = (e) => {
+    const _handleSubmit = (e) => {
         e.preventDefault();
         if (content.trim()) {
             onSubmit(content);

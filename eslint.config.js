@@ -46,15 +46,13 @@ export default [
         sourceType: 'module'
       }
     },
-    settings: { react: { version: '18.0' } },
+    settings: { react: { version: '19.0' } },
     plugins: {
-      'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'react': react
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
@@ -80,16 +78,14 @@ export default [
         project: './tsconfig.json'
       }
     },
-    settings: { react: { version: '18.0' } },
+    settings: { react: { version: '19.0' } },
     plugins: {
       '@typescript-eslint': tseslint,
-      'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'react': react
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }

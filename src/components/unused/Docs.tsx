@@ -1,7 +1,10 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
-const Docs = () => {
-    const docCategories = [
+const solutions = [];
+const _Docs = () => {
+    const _docCategories = [
         {
             title: "Getting Started",
             description: "Quick start guides and basic setup instructions",
@@ -42,7 +45,7 @@ const Docs = () => {
             ]
         }
     ];
-    const popularDocs = [
+    const _popularDocs = [
         {
             title: "Building Your First AI Model",
             category: "AI & Machine Learning",

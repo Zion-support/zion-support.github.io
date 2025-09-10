@@ -1,10 +1,18 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Brain, Shield, Users, TrendingUp, ArrowRight, Star } from 'lucide-react';
+import { _ADVANCED_SERVICES } from '@/data/advancedServices';
+
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Brain, Shield, Users, TrendingUp, ArrowRight, Star } from 'lucide-react';
-import { ADVANCED_SERVICES } from '@/data/advancedServices';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const services = [];
+const solutions = [];
 // Featured services for the showcase
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 export function AdvancedServicesShowcase() {

@@ -1,32 +1,37 @@
 import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import { QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
+import { _useAdminQuotes } from "@/hooks/useAdminQuotes";
+import { _useAuth } from "@/hooks/useAuth";
+import { _Card } from "@/components/ui/card";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Navigate } from "react-router-dom";
+import { _ProtectedRoute } from "@/components/ProtectedRoute";
+import { _QuoteDetails } from "@/components/quotes/QuoteDetails";
+import { _ExportToCSV } from "@/components/quotes/ExportToCSV";
+import { _QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
+
+import { useAuth } from '@/hooks/useAuth';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import QuoteDetails from '@/components/QuoteDetails';
 export default function QuoteManager() {
     const { user } = useAuth();
-    const isAdmin = user?.userType === 'admin';
+    const _isAdmin = user?.userType === 'admin';
     const [selectedQuote, setSelectedQuote] = useState(null);
     const [showDetails, setShowDetails] = useState(false);
     const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
     // Count quotes by status
-    const statusCounts = {
+    const _statusCounts = {
         new: quotes.filter(q => q.status === 'new').length,
         in_review: quotes.filter(q => q.status === 'in_review').length,
         accepted: quotes.filter(q => q.status === 'accepted').length,
         responded: quotes.filter(q => q.status === 'responded').length,
         closed: quotes.filter(q => q.status === 'closed').length
     };
-    const handleViewDetails = (quote) => {
+    const _handleViewDetails = (quote) => {
         setSelectedQuote(quote);
         setShowDetails(true);
     };
-    const handleResetFilters = () => {
+    const _handleResetFilters = () => {
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');

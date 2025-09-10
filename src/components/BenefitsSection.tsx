@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 
+import { _motion } from 'framer-motion';
+import { _Bot, Clock, Globe, TrendingDown, Zap, Shield, Users } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, Zap, Shield, Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const benefits = [
+  const _benefits = [
     {
       title: "AI-Powered Matchmaking",
       description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
@@ -45,14 +54,14 @@ export function BenefitsSection() {
     }
   ];
 
-  const additionalStats = [
+  const _additionalStats = [
     { icon: <Zap className="w-6 h-6" />, value: "500+", label: "Projects Completed" },
     { icon: <Shield className="w-6 h-6" />, value: "99.9%", label: "Uptime Guarantee" },
     { icon: <Users className="w-6 h-6" />, value: "10K+", label: "Happy Clients" },
     { icon: <Globe className="w-6 h-6" />, value: "150+", label: "Countries Served" }
   ];
 
-  const containerVariants = {
+  const _containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -63,12 +72,12 @@ export function BenefitsSection() {
     }
   };
 
-  const statsVariants = {
+  const _statsVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
 
-  const itemVariants = {
+  const _itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };

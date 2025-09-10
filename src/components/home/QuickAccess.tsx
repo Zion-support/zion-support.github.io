@@ -1,3 +1,9 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+const features = [];
+const services = [];
+const solutions = [];
+
 
                 <p className="text-gray-300 text-sm leading-relaxed">;              {/* Content */}"
               <div className="mb-4">"

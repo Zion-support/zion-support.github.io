@@ -1,6 +1,11 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousSoftwareEngineer = () => {
+import { Code } from 'lucide-react';
+const applications = [];
+const solutions = [];
+const _AIAutonomousSoftwareEngineer = () => {
     return (<>
       <Helmet>
         <title>AI Autonomous Software Engineer | Zion Tech Group</title>

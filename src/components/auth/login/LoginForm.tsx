@@ -1,34 +1,37 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
-import { Link } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+import { _useState } from "react";
+import { _useForm } from "react-hook-form";
+import { _useNavigate } from "react-router-dom";
+import { _zodResolver } from "@hookform/resolvers/zod";
+import { _z } from "zod";
+import { _LogIn, User, Eye, EyeOff } from "lucide-react";
+import { _useAuth } from "@/hooks/useAuth";
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { _Link } from "react-router-dom";
+import { _LoadingOverlay } from "@/components/LoadingOverlay";
+
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 // Form validation schema
-const loginSchema = z.object({
+const _loginSchema = z.object({
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),
     password: z.string().min(6, "Password must be at least 6 characters"),
 });
 export function LoginForm() {
     const { login, isLoading } = useAuth();
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+    const _form = useForm({
         resolver: zodResolver(loginSchema),
         defaultValues: {
             email: "",
             password: "",
         },
     });
-    const onSubmit = async (data) => {
+    const _onSubmit = async (data) => {
         if (isSubmitting)
             return;
         try {

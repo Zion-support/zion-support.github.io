@@ -1,7 +1,12 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
-const Sitemap = () => {
-    const sitemapData = {
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+const _Sitemap = () => {
+    const _sitemapData = {
         main: [
             { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' },
             { path: '/about', label: 'About Us', description: 'Learn about our company and mission' },
@@ -182,7 +187,7 @@ const Sitemap = () => {
             'AI Autonomous Web Security', 'AI Autonomous Workflow', 'AI Autonomous Writing',
             'AI Autonomous Zero Trust Security'
         ].map((service) => {
-            const path = '/' + service.toLowerCase().replace(/\s+/g, '-').replace(/ai-autonomous-/, 'ai-autonomous-');
+            const _path = '/' + service.toLowerCase().replace(/\s+/g, '-').replace(/ai-autonomous-/, 'ai-autonomous-');
             return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-center">
                   <div className="font-medium text-slate-900 text-sm">{service}</div>
                 </Link>);

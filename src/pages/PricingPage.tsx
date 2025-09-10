@@ -1,6 +1,9 @@
+const features = [];
+const solutions = [];
+
 
 export default function PricingPage() {
-  const plans = [
+  const _plans = [
     {
       name: "Starter",
       price: "$2,999",

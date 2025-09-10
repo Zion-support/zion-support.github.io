@@ -1,9 +1,26 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
 import Link from 'next/link';
-import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
+import { _Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const technologies = [];
+const solutions = [];
+const implementation = [];
 export default function NextGenServicesShowcase2025() {
-    const featuredServices = [
+    const _featuredServices = [
         {
             id: 'ai-consciousness-simulator',
             title: 'AI Consciousness Simulation Platform',
@@ -65,7 +82,7 @@ export default function NextGenServicesShowcase2025() {
             path: '/multimodal-ai-platform'
         }
     ];
-    const microSaasServices = [
+    const _microSaasServices = [
         {
             title: 'AI-Powered Social Media Scheduling Suite',
             description: 'Intelligent social media management with AI content generation and optimal posting optimization.',
@@ -91,7 +108,7 @@ export default function NextGenServicesShowcase2025() {
             trial: '21 days free'
         }
     ];
-    const infrastructureServices = [
+    const _infrastructureServices = [
         {
             title: 'Quantum-Secure Cloud Infrastructure',
             description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.',

@@ -1,9 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { _Helmet } from 'react-helmet-async';
+import { _motion } from 'framer-motion';
+import { _Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
-const FiveGEnterpriseSolutions = () => {
-    const features = [
+import { Helmet } from 'react-helmet-async';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const _FiveGEnterpriseSolutions = () => {
+    const _features = [
         {
             icon: Wifi,
             title: "Ultra-Fast Connectivity",
@@ -35,7 +49,7 @@ const FiveGEnterpriseSolutions = () => {
             description: "Support for thousands of connected devices simultaneously"
         }
     ];
-    const solutions = [
+    const _solutions = [
         {
             title: "Smart Manufacturing",
             description: "Enable Industry 4.0 with real-time monitoring and automation",
@@ -57,7 +71,7 @@ const FiveGEnterpriseSolutions = () => {
             applications: ["Traffic Management", "Energy Grids", "Public Safety"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             icon: Rocket,
             title: "10x Faster Speeds",

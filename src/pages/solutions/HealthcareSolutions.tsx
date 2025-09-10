@@ -1,8 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
-import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { _Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const caseStudies = [];
 export default function HealthcareSolutions() {
-    const solutions = [
+    const _solutions = [
         {
             icon: Heart,
             title: "Patient Care AI",
@@ -40,7 +55,7 @@ export default function HealthcareSolutions() {
             features: ["Resource Optimization", "Workflow Automation", "Performance Analytics", "Cost Management"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Improved patient outcomes and care quality",
         "Reduced medical errors and diagnostic time",
         "Enhanced operational efficiency and cost savings",
@@ -48,7 +63,7 @@ export default function HealthcareSolutions() {
         "Streamlined administrative processes",
         "Enhanced data security and compliance"
     ];
-    const caseStudies = [
+    const _caseStudies = [
         {
             organization: "Regional Medical Center",
             specialty: "Cardiology",
@@ -108,7 +123,7 @@ export default function HealthcareSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white"/>

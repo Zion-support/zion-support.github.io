@@ -3,12 +3,14 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;';';
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');';';
   const [searchTerm, setSearchTerm] = useState<any>('');';';
 import React from 'react';
+
+const services = [];
 const "ComprehensiveServicesShowcase2030": "React.FC = () => {;
   const [activeTab", setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ;
-  const getFilteredServices = (props: any) => {;
+  const _getFilteredServices = (props: any) => {;
     let services: an y[] = [];
     switch(activeTab) {';
 ';';
@@ -20,7 +22,7 @@ const "ComprehensiveServicesShowcase2030": "React.FC = () => {;
         break;';';
       case 'ai':  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ;
-  const getFilteredServices = ("props": "any) => {;
+  const _getFilteredServices = ("props": "any) => {;
     let "services": an y[] = [];
     switch(activeTab) {;
       case 'microsaas':;
@@ -34,6 +36,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;const "Comprehensive
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>(");
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const getFilteredServices = (props) => {;
+  const _getFilteredServices = (props) => {;
     let "services": an y[] = [];
     switch(activeTab) {

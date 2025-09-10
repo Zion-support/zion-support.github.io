@@ -1,9 +1,19 @@
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
-const aiServices = [
+import { motion } from 'framer-motion';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+const _aiServices = [
     {
         id: 'ai-chat',
         name: 'ZionGPT Pro',
@@ -96,26 +106,26 @@ const aiServices = [
         status: 'beta'
     }
 ];
-const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
+const _categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
 export function AIServicesShowcase() {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedService, setSelectedService] = useState(null);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-    const filteredServices = selectedCategory === 'All'
+    const _filteredServices = selectedCategory === 'All'
         ? aiServices
         : aiServices.filter(service => service.category === selectedCategory);
-    const getStatusBadge = (status) => {
-        const statusConfig = {
+    const _getStatusBadge = (status) => {
+        const _statusConfig = {
             active: { color: 'bg-green-500', text: 'Active' },
             beta: { color: 'bg-yellow-500', text: 'Beta' },
             new: { color: 'bg-blue-500', text: 'New' }
         };
-        const config = statusConfig[status];
+        const _config = statusConfig[status];
         return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font-medium`}>
         {config.text}
       </span>);
     };
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -125,7 +135,7 @@ export function AIServicesShowcase() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { opacity: 0, y: 20, scale: 0.95 },
         visible: {
             opacity: 1,

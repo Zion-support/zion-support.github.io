@@ -1,4 +1,4 @@
-const Component = ("props": "any) => {;
+const _Component = ("props": "any) => {;
 import React from "react";
 """;","});,"})";
           "title": "Code Review & Security",""";,"});,"})";
@@ -325,8 +325,15 @@ export { EnhancedServicesNavigation };,"});,"})";
 export { EnhancedServicesNavigation };,"});,"})";
 ;,"});,"})";
 export { EnhancedServicesNavigation };,"});,"});
-const Component = (props: any) => {
+const _Component = (props: any) => {
 import React from "react"
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Code } from 'lucide-react';
+const services = [];
+const solutions = [];
 """;,"}
     );,"})"
           title: "Code Review & Security",""";,"}

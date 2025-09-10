@@ -41,26 +41,6 @@ jobs:
         run: npm ci
       - name: Run basic automation check
         run: |
-<<<<<<< HEAD
-          echo "Checking available automation scripts..."
-          npm run | grep automation || echo "No automation scripts found"
-          echo "Automation check complete"
-=======
-          npm run automation:improvement || echo "Automation improvement completed"
-          npm run security:scan || echo "Security scan completed"
->>>>>>> origin/backup-improvements-20250827-015311
-      - name: Create Pull Request
-        if: steps.changes.outputs.changes == 'true'
-        id: cpr
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-<<<<<<< HEAD
-          commit-message: "chore(improvement): continuous improvement results"
-          title: "chore(improvement): apply continuous improvement results"
-          body: |
-            Automated improvement loop completed.
-
             - Checked available automation scripts
             - Verified build process
             - Applied any available improvements
@@ -71,9 +51,7 @@ jobs:
             Automated improvement and security scan loop.
 
             - Runs automation:improvement orchestration
-            - Runs security scan
->>>>>>> origin/backup-improvements-20250827-015311
-          branch: automation/continuous-improvement
+            - Runs security scan          branch: automation/continuous-improvement
           delete-branch: true
           signoff: false
           labels: |

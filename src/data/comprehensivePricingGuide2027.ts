@@ -1,3 +1,13 @@
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Code } from 'lucide-react';
+const integrations = [];
+const applications = [];
+
 ;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [// AI-Powered Micro SAAS Services;
   {
 "

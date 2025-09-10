@@ -1,7 +1,11 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _CogIcon } from '@heroicons/react/24/outline';
+
 import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
-const ServiceInnovationHub = () => {
+import { Cog } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const _ServiceInnovationHub = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

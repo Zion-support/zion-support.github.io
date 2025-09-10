@@ -1,7 +1,15 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _CogIcon, ChartBarIcon, ShieldCheckIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+
 import { Link } from 'react-router-dom';
-import { CogIcon, ChartBarIcon, ShieldCheckIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/outline';
-const AIAutonomousBusinessManager = () => {
+import { Cog } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const solutions = [];
+const _AIAutonomousBusinessManager = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">

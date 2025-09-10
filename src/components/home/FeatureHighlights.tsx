@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+const features = [];
+const solutions = [];
+
     "description": "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
   },;
   {;
@@ -27,7 +31,7 @@ import React from 'react';
     };
   };
 ;
-  const itemVariants = {;
+  const _itemVariants = {;
   "hidden": "{ "opacity": 0", "y": "3 0",;
   "scale": "0.95;
 "},;
@@ -42,7 +46,7 @@ import React from 'react';
     };
   };
 ;
-  const achievementVariants = {;
+  const _achievementVariants = {;
   "hidden": "{ "opacity": 0",;
   "scale": "0.8;
 "},;
@@ -53,7 +57,7 @@ import React from 'react';
     };
   };
 ;
-  const techVariants = {;
+  const _techVariants = {;
   "hidden": "{ "opacity": 0",;
   "x": "-20;
 "},;

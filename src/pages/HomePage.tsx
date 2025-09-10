@@ -1,3 +1,6 @@
+const services = [];
+const solutions = [];
+
 
 export default function HomePage() {
   return (

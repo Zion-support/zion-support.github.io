@@ -1,9 +1,22 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
 import SEO from '../SEO';
-const features = [
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const _features = [
     {
         title: "Unified Business Platform",
         description: "Complete business management solution that integrates all aspects of your operations into one intelligent platform.",
@@ -29,7 +42,7 @@ const features = [
         color: "from-orange-500 to-red-500"
     }
 ];
-const benefits = [
+const _benefits = [
     "Centralize all business operations in one platform",
     "Reduce software costs by up to 70%",
     "Improve team collaboration and productivity",
@@ -37,7 +50,7 @@ const benefits = [
     "Scale operations without technical limitations",
     "Ensure data security and compliance"
 ];
-const modules = [
+const _modules = [
     {
         title: "Customer Management",
         description: "Comprehensive CRM with AI-powered insights and automation.",
@@ -112,7 +125,7 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
-            const IconComponent = feature.icon;
+            const _IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                     <IconComponent className="w-8 h-8"/>
@@ -160,7 +173,7 @@ export default function AIAutonomousBusinessPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {modules.map((module, index) => {
-            const IconComponent = module.icon;
+            const _IconComponent = module.icon;
             return (<motion.div key={module.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>

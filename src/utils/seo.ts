@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+
 /**
  * SEO utilities and helpers
  */
@@ -63,7 +66,7 @@ export function updateSEO(data: SEOData) {
 function updateMetaTag(name: string, content: string | undefined, attribute = 'name') {
   if (!content) return;
   
-  let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+  let _meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
   
   if (!meta) {
     meta = document.createElement('meta');
@@ -78,7 +81,7 @@ function updateMetaTag(name: string, content: string | undefined, attribute = 'n
 function updateCanonicalURL(url?: string) {
   if (!url) return;
   
-  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  let _canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   
   if (!canonical) {
     canonical = document.createElement('link');
@@ -91,21 +94,21 @@ function updateCanonicalURL(url?: string) {
 
 // Generate structured data
 export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Article' | 'Product', data: any) {
-  const baseSchema = {
+  const _baseSchema = {
     '@context': 'https://schema.org',
     '@type': type,
   };
   
-  const structuredData = { ...baseSchema, ...data };
+  const _structuredData = { ...baseSchema, ...data };
   
   // Remove existing structured data
-  const existingScript = document.querySelector('script[type="application/ld+json"]');
+  const _existingScript = document.querySelector('script[type="application/ld+json"]');
   if (existingScript) {
     existingScript.remove();
   }
   
   // Add new structured data
-  const script = document.createElement('script');
+  const _script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(structuredData);
   document.head.appendChild(script);
@@ -141,7 +144,7 @@ Sitemap: ${domain}${sitemapPath}`;
 export function getSEOMetrics() {
   if (typeof window === 'undefined') return null;
   
-  const metrics = {
+  const _metrics = {
     title: document.title,
     titleLength: document.title.length,
     description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
@@ -159,15 +162,15 @@ export function getSEOMetrics() {
   };
   
   // Calculate SEO score
-  const score = calculateSEOScore(metrics);
+  const _score = calculateSEOScore(metrics);
   
   return { ...metrics, score };
 }
 
 // Calculate SEO score based on best practices
 function calculateSEOScore(metrics: any): number {
-  let score = 0;
-  const maxScore = 100;
+  let _score = 0;
+  const _maxScore = 100;
   
   // Title length (30-60 characters is optimal)
   if (metrics.titleLength >= 30 && metrics.titleLength <= 60) {
@@ -192,7 +195,7 @@ function calculateSEOScore(metrics: any): number {
   
   // Image alt text coverage
   if (metrics.imageCount > 0) {
-    const altCoverage = (metrics.imageAltCount / metrics.imageCount) * 100;
+    const _altCoverage = (metrics.imageAltCount / metrics.imageCount) * 100;
     if (altCoverage >= 90) {
       score += 10;
     } else if (altCoverage >= 70) {
@@ -232,15 +235,15 @@ function calculateSEOScore(metrics: any): number {
 
 // Breadcrumb generator
 export function generateBreadcrumbs(path: string, baseUrl: string = '') {
-  const segments = path.split('/').filter(Boolean);
-  const breadcrumbs = [
+  const _segments = path.split('/').filter(Boolean);
+  const _breadcrumbs = [
     { name: 'Home', url: baseUrl }
   ];
   
-  let currentPath = baseUrl;
+  let _currentPath = baseUrl;
   segments.forEach((segment, index) => {
     currentPath += `/${segment}`;
-    const name = segment
+    const _name = segment
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');

@@ -1,12 +1,17 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
-import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _Link } from "react-router-dom";
+import { _FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
+import { _Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const solutions = [];
 export function ContactInfo() {
-    const contactMethods = [
+    const _contactMethods = [
         {
             title: "Phone Support",
             description: "Speak directly with our technical experts",
@@ -44,7 +49,7 @@ export function ContactInfo() {
             color: "#8c15e9"
         }
     ];
-    const companyStats = [
+    const _companyStats = [
         {
             label: "Years Experience",
             value: "10+",

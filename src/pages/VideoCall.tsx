@@ -1,14 +1,17 @@
-import { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';
-import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
+import { _useState } from 'react';
+import { _useParams, useNavigate } from 'react-router-dom';
+import { _SEO } from '@/components/SEO';
+import { _VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { _Button } from '@/components/ui/button';
+import { _toast } from 'sonner';
+
+import SEO from '@/components/SEO';
+import { useParams } from 'react-router-dom';
 export default function VideoCall() {
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { roomId } = useParams();
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const [isJoining, setIsJoining] = useState(false);
     const [hasJoined, setHasJoined] = useState(false);
     const [participants, setParticipants] = useState([
@@ -19,7 +22,7 @@ export default function VideoCall() {
             isMuted: false
         }
     ]);
-    const handleJoinCall = () => {
+    const _handleJoinCall = () => {
         setIsJoining(true);
         // Simulate connection delay
         setTimeout(() => {
@@ -30,7 +33,7 @@ export default function VideoCall() {
             });
         }, 1500);
     };
-    const handleLeaveCall = () => {
+    const _handleLeaveCall = () => {
         setHasJoined(false);
         toast.info("Call ended", {
             description: "You have left the meeting"
@@ -40,14 +43,14 @@ export default function VideoCall() {
             navigate(-1);
         }, 1500);
     };
-    const simulateUserJoining = () => {
+    const _simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
-        const mockUsers = [
+        const _mockUsers = [
             { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
             { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
             { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
         ];
-        const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+        const _randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!participants.find(p => p.id === randomUser.id)) {
             setParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`);

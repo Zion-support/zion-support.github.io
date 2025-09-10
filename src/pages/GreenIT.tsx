@@ -1,13 +1,19 @@
 import React from 'react';
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _GradientHeading } from "@/components/GradientHeading";
+import { _Button } from "@/components/ui/Button";
+import { _Leaf, Server, Cloud } from "lucide-react";
+import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Cloud } from 'lucide-react';
+const technologies = [];
+const solutions = [];
 
 export default function GreenIT() {
-    const greenITSolutions = [
+    const _greenITSolutions = [
         {
             title: "Energy-Efficient Hardware",
             description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",

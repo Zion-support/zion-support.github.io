@@ -1,22 +1,25 @@
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { _Link, useNavigate, useSearchParams } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
 import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
+import { _useToast } from "@/hooks/use-toast";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 export default function CreatePostPage() {
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const { toast } = useToast();
     const [searchParams] = useSearchParams();
     // Get category from URL query params if available
-    const initialCategory = searchParams.get("category");
-    const initialValues = {
+    const _initialCategory = searchParams.get("category");
+    const _initialValues = {
         categoryId: initialCategory || "project-help"
     };
-    const handleSubmit = async (values) => {
+    const _handleSubmit = async (values) => {
         try {
             // Here we would normally save to the database
             // For now, we'll just simulate a successful post creation
             // Parse tags into an array
-            const tagsArray = values.tags.split(",").map(tag => tag.trim());
+            const _tagsArray = values.tags.split(",").map(tag => tag.trim());
             toast({
                 title: "Post created",
                 description: "Your post has been published successfully"

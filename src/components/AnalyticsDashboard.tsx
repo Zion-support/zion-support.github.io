@@ -1,8 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+import { _BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+export const _AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
         enablePerformanceTracking: true,
@@ -16,14 +19,14 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     useEffect(() => {
         if (!showRealTime)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             updateAnalyticsSummary();
         }, refreshInterval);
         return () => clearInterval(interval);
     }, [showRealTime, refreshInterval]);
     // Update analytics summary
-    const updateAnalyticsSummary = () => {
-        const summary = getAnalyticsSummary();
+    const _updateAnalyticsSummary = () => {
+        const _summary = getAnalyticsSummary();
         if (summary) {
             setAnalyticsSummary(summary);
         }
@@ -33,15 +36,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         updateAnalyticsSummary();
     }, [events, currentSession]);
     // Track dashboard interactions
-    const handleDashboardInteraction = (action, metadata) => {
+    const _handleDashboardInteraction = (action, metadata) => {
         trackEvent('dashboard', action, 'dashboard_interaction', undefined, metadata);
     };
     // Track conversion goal
-    const handleTrackConversion = () => {
+    const _handleTrackConversion = () => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange });
     };
     // Get events by category for chart
-    const getEventsByCategory = () => {
+    const _getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory)
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
@@ -50,10 +53,10 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         }));
     };
     // Get performance score
-    const getPerformanceScore = () => {
+    const _getPerformanceScore = () => {
         if (!performanceMetrics)
             return 0;
-        let score = 100;
+        let _score = 100;
         // Deduct points for poor performance
         if (performanceMetrics.pageLoadTime > 3000)
             score -= 20;
@@ -70,15 +73,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         return Math.max(0, score);
     };
     // Format duration
-    const formatDuration = (seconds) => {
+    const _formatDuration = (seconds) => {
         if (seconds < 60)
             return `${seconds}s`;
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
+        const _minutes = Math.floor(seconds / 60);
+        const _remainingSeconds = seconds % 60;
         return `${minutes}m ${remainingSeconds}s`;
     };
     // Format number with K/M suffix
-    const formatNumber = (num) => {
+    const _formatNumber = (num) => {
         if (num >= 1000000)
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000)

@@ -22,22 +22,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "allowSyntheticDefaultImports": true
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
-    "src/**/*",
-    "src/**/*.tsx",
-    "src/**/*.ts"
+    "src"
   ],
   "exclude": [
     "node_modules",

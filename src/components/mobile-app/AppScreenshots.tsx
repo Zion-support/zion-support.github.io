@@ -1,19 +1,19 @@
 import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { _ChevronLeft, ChevronRight } from "lucide-react";
+import { _Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
-const mockScreenshots = [
+const _mockScreenshots = [
     { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
     { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
     { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
     { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
     { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
 ];
-export const AppScreenshots = () => {
-    const scrollContainerRef = useRef(null);
-    const scroll = (direction) => {
+export const _AppScreenshots = () => {
+    const _scrollContainerRef = useRef(null);
+    const _scroll = (direction) => {
         if (scrollContainerRef.current) {
-            const scrollAmount = 300;
+            const _scrollAmount = 300;
             scrollContainerRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth",

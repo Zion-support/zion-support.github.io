@@ -1,21 +1,26 @@
-import { useParams, Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
-import { useGetOrderQuery } from '@/hooks/useOrder';
-import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
+import { _useParams, Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Skeleton } from '@/components/ui/skeleton';
+import { _useGetOrderQuery } from '@/hooks/useOrder';
+import { _generateInvoicePdf } from '@/utils/generateInvoicePdf';
+import { _useAuth } from '@/hooks/useAuth';
+import { _supabase } from '@/integrations/supabase/client';
+import { _toast } from '@/hooks/use-toast';
+
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
+const integrations = [];
 export default function OrderDetailPage() {
     const { orderId } = useParams();
     const { user } = useAuth();
     const { data: order, isLoading } = useGetOrderQuery(orderId);
-    const handleDownload = async () => {
+    const _handleDownload = async () => {
         if (!order)
             return;
-        const blob = await generateInvoicePdf(order);
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
+        const _blob = await generateInvoicePdf(order);
+        const _url = URL.createObjectURL(blob);
+        const _link = document.createElement('a');
         link.href = url;
         link.download = `invoice-${order.orderId}.pdf`;
         document.body.appendChild(link);
@@ -23,7 +28,7 @@ export default function OrderDetailPage() {
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
     };
-    const handleResend = async () => {
+    const _handleResend = async () => {
         if (!order || !user?.email)
             return;
         try {

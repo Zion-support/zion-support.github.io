@@ -1,18 +1,32 @@
 import React, { useState, useMemo } from 'react';
+import { _motion } from 'framer-motion';
+import { _Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
+import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { _Button } from './ui/button';
+import { _Badge } from './ui/badge';
+import { _Input } from './ui/input';
+
 import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-const AdvancedServiceInnovationHub = () => {
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const industries = [];
+const services = [];
+const applications = [];
+const _AdvancedServiceInnovationHub = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImpact, setSelectedImpact] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('trends');
     // Mock data - in real app this would come from API
-    const innovationTrends = [
+    const _innovationTrends = [
         {
             id: 'quantum-supremacy',
             title: 'Quantum Supremacy & Commercialization',
@@ -92,7 +106,7 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Emerging'
         }
     ];
-    const futureRoadmap = [
+    const _futureRoadmap = [
         {
             id: 'quantum-internet',
             title: 'Quantum Internet Infrastructure',
@@ -172,17 +186,17 @@ const AdvancedServiceInnovationHub = () => {
             category: 'ai'
         }
     ];
-    const filteredTrends = useMemo(() => {
+    const _filteredTrends = useMemo(() => {
         return innovationTrends.filter(trend => {
-            const matchesCategory = selectedCategory === 'all' || trend.category === selectedCategory;
-            const matchesImpact = selectedImpact === 'all' || trend.impact === selectedImpact;
-            const matchesStatus = selectedStatus === 'all' || trend.status === selectedStatus;
-            const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            const _matchesCategory = selectedCategory === 'all' || trend.category === selectedCategory;
+            const _matchesImpact = selectedImpact === 'all' || trend.impact === selectedImpact;
+            const _matchesStatus = selectedStatus === 'all' || trend.status === selectedStatus;
+            const _matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch;
         });
     }, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
-    const getImpactColor = (impact) => {
+    const _getImpactColor = (impact) => {
         switch (impact) {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
@@ -190,7 +204,7 @@ const AdvancedServiceInnovationHub = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
@@ -199,7 +213,7 @@ const AdvancedServiceInnovationHub = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'quantum': return <Atom className="w-5 h-5"/>;
             case 'ai': return <Brain className="w-5 h-5"/>;
@@ -209,7 +223,7 @@ const AdvancedServiceInnovationHub = () => {
             default: return <Cpu className="w-5 h-5"/>;
         }
     };
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },
         { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },
         { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/> },

@@ -1,35 +1,37 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
+import { _useNavigate } from "react-router-dom";
+import { _Badge } from "@/components/ui/badge";
+import { _Button } from "@/components/ui/button";
+import { _DollarSign } from "lucide-react";
+import { _RatingStars } from "@/components/RatingStars";
+import { _FavoriteButton } from "@/components/FavoriteButton";
 import Image from 'next/image'; // Import next/image
+
+import { DollarSign } from 'lucide-react';
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
-    const isGrid = view === 'grid';
-    const navigate = useNavigate();
+    const _isGrid = view === 'grid';
+    const _navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0
         ? listing.images[0]
         : '/placeholder.svg');
     const [imageError, setImageError] = useState(false);
-    const formatPrice = () => {
+    const _formatPrice = () => {
         if (listing.price === null)
             return "Custom pricing";
         return `${listing.currency}${listing.price.toLocaleString()}`;
     };
-    const handleImageError = () => {
+    const _handleImageError = () => {
         if (!imageError) { // Prevent infinite loops if placeholder also fails
             setImageSrc('/placeholder.svg');
             setImageError(true);
         }
     };
-    const handleViewListing = () => {
+    const _handleViewListing = () => {
         navigate(`${detailBasePath}/${listing.id}`);
     };
-    const handleRequestQuote = (e) => {
+    const _handleRequestQuote = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onRequestQuote) {
@@ -39,7 +41,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             navigate(`/request-quote?listing=${listing.id}`);
         }
     };
-    const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+    const _imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
     return (<div data-testid="equipment-link" className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`} onClick={handleViewListing} tabIndex={0} role="button" onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -128,6 +130,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
     </div>);
 }
 ;
-export const ProductListingCard = React.memo(ProductListingCardComponent);
+export const _ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 

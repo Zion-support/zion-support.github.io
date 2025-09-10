@@ -1,10 +1,26 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
+import { _motion } from 'framer-motion';
+import { _CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity } from 'lucide-react';
-const IncidentResponsePlatform = () => {
-    const features = [
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const pricingPlans = [];
+const integrations = [];
+const services = [];
+const _IncidentResponsePlatform = () => {
+    const _features = [
         {
             title: "AI-Powered Threat Detection",
             description: "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",
@@ -26,7 +42,7 @@ const IncidentResponsePlatform = () => {
             icon: <Clock className="w-6 h-6"/>
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             metric: "70%",
             description: "Reduction in response time",
@@ -48,7 +64,7 @@ const IncidentResponsePlatform = () => {
             icon: <Shield className="w-5 h-5"/>
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Professional",
             price: "$299",
@@ -96,10 +112,10 @@ const IncidentResponsePlatform = () => {
             popular: false
         }
     ];
-    const integrations = [
+    const _integrations = [
         "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow"
     ];
-    const useCases = [
+    const _useCases = [
         "Security incident management",
         "IT operations",
         "Compliance management",

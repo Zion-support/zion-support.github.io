@@ -1,10 +1,15 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
 ;
 export default function Footer("props": "any) {;
-  const currentYear = new Date().getFullYear();
+  const _currentYear = new Date().getFullYear();
 ;
-  const footerSections = [;
+  const _footerSections = [;
     {;
       "title": 'Services';
       "links": [;
@@ -68,7 +73,7 @@ export default function Footer("props": "any) {;
     }
   ];
 ;
-  const legalLinks = [;
+  const _legalLinks = [;
     { "name": 'Privacy Policy', "href": '/privacy-policy' }
     { "name": 'Terms of Service', "href": '/terms-of-service' }
     { "name": 'Cookie Policy', "href": '/cookie-policy' }

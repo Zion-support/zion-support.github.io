@@ -1,7 +1,21 @@
 import React from 'react';
-import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
-const BlockchainWeb3 = () => {
-    const blockchainServices = [
+import { _Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const services = [];
+const applications = [];
+const blockchainServices = [];
+const web3Technologies = [];
+const solutions = [];
+const _BlockchainWeb3 = () => {
+    const _blockchainServices = [
         {
             icon: LinkIcon,
             title: "Smart Contract Development",
@@ -39,7 +53,7 @@ const BlockchainWeb3 = () => {
             features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
         }
     ];
-    const web3Technologies = [
+    const _web3Technologies = [
         {
             name: "Ethereum",
             description: "Smart contracts and DeFi protocols",
@@ -71,7 +85,7 @@ const BlockchainWeb3 = () => {
             icon: "AVAX"
         }
     ];
-    const useCases = [
+    const _useCases = [
         {
             title: "Financial Services",
             description: "DeFi protocols, payment systems, and asset tokenization",
@@ -103,7 +117,7 @@ const BlockchainWeb3 = () => {
             icon: Target
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Transparent and immutable record-keeping",
         "Reduced intermediaries and costs",
         "Enhanced security and privacy",

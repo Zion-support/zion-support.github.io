@@ -1,17 +1,19 @@
 
+import { _motion } from 'framer-motion';
+
 import { motion } from 'framer-motion';
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
-    const sizeClasses = {
+    const _sizeClasses = {
         sm: 'w-6 h-6',
         md: 'w-12 h-12',
         lg: 'w-16 h-16'
     };
-    const colorClasses = {
+    const _colorClasses = {
         primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
         white: 'text-white'
     };
-    const spinnerVariants = {
+    const _spinnerVariants = {
         animate: {
             rotate: 360,
             transition: {
@@ -21,7 +23,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
             }
         }
     };
-    const pulseVariants = {
+    const _pulseVariants = {
         animate: {
             scale: [1, 1.2, 1],
             opacity: [0.5, 1, 0.5],
@@ -32,7 +34,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
             }
         }
     };
-    const LoaderContent = () => (<div className="flex flex-col items-center justify-center space-y-4">
+    const _LoaderContent = () => (<div className="flex flex-col items-center justify-center space-y-4">
       <motion.div variants={spinnerVariants} animate="animate" className={`${sizeClasses[size]} ${colorClasses[color]}`}>
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="31.416" strokeDashoffset="31.416" className="animate-dash"/>

@@ -1,9 +1,27 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-const features = [
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const useCases = [];
+const testimonials = [];
+const services = [];
+const applications = [];
+const _features = [
     {
         title: "Automated Code Analysis",
         description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities.",
@@ -29,7 +47,7 @@ const features = [
         color: "from-purple-500 to-indigo-500"
     }
 ];
-const benefits = [
+const _benefits = [
     "Reduce code review time by up to 80%",
     "Catch security vulnerabilities before deployment",
     "Improve code quality and maintainability",
@@ -37,7 +55,7 @@ const benefits = [
     "Reduce technical debt and bug fixes",
     "Accelerate development cycles"
 ];
-const useCases = [
+const _useCases = [
     {
         title: "Development Teams",
         description: "Streamline code review processes for development teams of any size.",
@@ -59,7 +77,7 @@ const useCases = [
         icon: Cpu
     }
 ];
-const testimonials = [
+const _testimonials = [
     {
         content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",
         name: "Alex Thompson",
@@ -126,7 +144,7 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
-            const IconComponent = feature.icon;
+            const _IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-gray-800/70 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                     <IconComponent className="w-8 h-8"/>
@@ -174,7 +192,7 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
+            const _IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>

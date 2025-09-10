@@ -682,9 +682,17 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   };
 ];
 // Import new services
-import { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
-import { NEW_IT_SERVICES_2025 } from './newITServices2025';
-import { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
+import { _NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
+import { _NEW_IT_SERVICES_2025 } from './newITServices2025';
+import { _NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
+
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const services = [];
 // Re-export new services
 export { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 export { NEW_IT_SERVICES_2025 } from './newITServices2025';

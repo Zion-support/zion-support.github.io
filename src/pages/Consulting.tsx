@@ -1,7 +1,20 @@
 import React from 'react';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
-const Consulting = () => {
-    const consultingServices = [
+import { _Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+const _Consulting = () => {
+    const _consultingServices = [
         {
             icon: Lightbulb,
             title: "Technology Strategy",
@@ -39,7 +52,7 @@ const Consulting = () => {
             features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
         }
     ];
-    const industries = [
+    const _industries = [
         {
             title: "Financial Services",
             description: "Banking, insurance, and fintech consulting",
@@ -71,7 +84,7 @@ const Consulting = () => {
             icon: Briefcase
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Expert guidance from industry professionals",
         "Proven methodologies and best practices",
         "Customized solutions for your specific needs",
@@ -79,7 +92,7 @@ const Consulting = () => {
         "Measurable results and ROI",
         "Access to cutting-edge technology insights"
     ];
-    const process = [
+    const _process = [
         {
             phase: "Discovery",
             description: "Understanding your business needs and objectives",

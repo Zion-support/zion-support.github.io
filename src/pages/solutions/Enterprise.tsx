@@ -1,8 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
-import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
-const EnterpriseSolutions = () => {
-    const solutions = [
+import { _Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const _EnterpriseSolutions = () => {
+    const _solutions = [
         {
             title: 'AI-Powered Business Intelligence',
             description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
@@ -56,7 +67,7 @@ const EnterpriseSolutions = () => {
             href: '/services/ai-autonomous-systems'
         }
     ];
-    const industries = [
+    const _industries = [
         {
             name: 'Healthcare',
             description: 'AI-powered healthcare solutions for hospitals and medical facilities.',
@@ -113,7 +124,7 @@ const EnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -152,7 +163,7 @@ const EnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => {
-            const Icon = industry.icon;
+            const _Icon = industry.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -199,7 +210,7 @@ const EnterpriseSolutions = () => {
                 icon: Users
             }
         ].map((benefit, index) => {
-            const Icon = benefit.icon;
+            const _Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>

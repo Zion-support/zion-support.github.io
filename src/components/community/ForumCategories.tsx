@@ -1,6 +1,6 @@
 import React from 'react';
 export default function ForumCategories() {
-    const categories = [
+    const _categories = [
         {
             id: '1',
             name: 'General Discussion',

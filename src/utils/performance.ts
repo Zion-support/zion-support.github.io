@@ -11,12 +11,12 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout | null = null;
   
   return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
+    const _later = () => {
       timeout = null;
       if (!immediate) func(...args);
     };
     
-    const callNow = immediate && !timeout;
+    const _callNow = immediate && !timeout;
     
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
@@ -63,7 +63,7 @@ export function collectPerformanceMetrics() {
     return null;
   }
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   
   if (!navigation) return null;
 
@@ -97,7 +97,7 @@ export function lazyLoadImage(img: HTMLImageElement, src: string, placeholder?: 
     img.src = placeholder;
   }
   
-  const observer = createIntersectionObserver((entries) => {
+  const _observer = createIntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         img.src = src;
@@ -118,7 +118,7 @@ export function lazyLoadImage(img: HTMLImageElement, src: string, placeholder?: 
 // Preload critical resources
 export function preloadCriticalResources(resources: string[]) {
   resources.forEach((resource) => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     
@@ -138,8 +138,8 @@ export function preloadCriticalResources(resources: string[]) {
 export function analyzeBundleSize() {
   if (typeof window === 'undefined') return null;
   
-  const scripts = Array.from(document.scripts);
-  const stylesheets = Array.from(document.styleSheets);
+  const _scripts = Array.from(document.scripts);
+  const _stylesheets = Array.from(document.styleSheets);
   
   return {
     scripts: scripts.map(script => ({

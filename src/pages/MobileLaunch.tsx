@@ -1,6 +1,10 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
 import { Helmet } from 'react-helmet-async';
-const MobileLaunch = () => {
+const services = [];
+const applications = [];
+const _MobileLaunch = () => {
     return (<>
       <Helmet>
         <title>Mobile Launch - Zion Tech Group</title>

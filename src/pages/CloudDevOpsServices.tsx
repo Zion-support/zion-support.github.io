@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
-import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
-const CloudDevOpsServices = () => {
+import { _Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+const _CloudDevOpsServices = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
     // Cloud & DevOps Services data
-    const cloudDevOpsServices = [
+    const _cloudDevOpsServices = [
         {
             id: 1,
             name: "Multi-Cloud Infrastructure Management",
@@ -133,17 +144,17 @@ const CloudDevOpsServices = () => {
             support: "24/7 security support"
         }
     ];
-    const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
-    const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
-    const filteredServices = cloudDevOpsServices.filter(service => {
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
+    const _pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
+    const _filteredServices = cloudDevOpsServices.filter(service => {
+        const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
+        const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const _matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
         return matchesSearch && matchesCategory && matchesPricing;
     });
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
             case 'Container Orchestration': return <Server className="w-6 h-6"/>;
@@ -154,7 +165,7 @@ const CloudDevOpsServices = () => {
             default: return <Code className="w-6 h-6"/>;
         }
     };
-    const getPricingColor = (pricing) => {
+    const _getPricingColor = (pricing) => {
         switch (pricing) {
             case 'Enterprise': return 'text-purple-400';
             case 'Professional': return 'text-blue-400';

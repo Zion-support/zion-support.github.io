@@ -1,9 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
 import SEO from '../SEO';
-const features = [
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const _features = [
     {
         title: "Automated Code Analysis",
         description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.",
@@ -29,7 +41,7 @@ const features = [
         color: "from-orange-500 to-red-500"
     }
 ];
-const benefits = [
+const _benefits = [
     "Reduce code review time by up to 80%",
     "Catch bugs and security issues early",
     "Improve code quality and maintainability",
@@ -37,7 +49,7 @@ const benefits = [
     "Accelerate development cycles",
     "Reduce technical debt"
 ];
-const supportedLanguages = [
+const _supportedLanguages = [
     "JavaScript/TypeScript",
     "Python",
     "Java",
@@ -100,7 +112,7 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
-            const IconComponent = feature.icon;
+            const _IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                     <IconComponent className="w-8 h-8"/>

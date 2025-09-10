@@ -1,3 +1,5 @@
+const solutions = [];
+
 
 export default function AISolutions() {
   return (

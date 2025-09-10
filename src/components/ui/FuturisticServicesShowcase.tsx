@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle } from 'lucide-react';
-const services = [
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+const _services = [
     {
         id: 'ai-automation',
         name: 'AI & Automation',
@@ -61,7 +74,7 @@ const services = [
 export default function FuturisticServicesShowcase() {
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Services', icon: <Star className="w-4 h-4"/> },
         { id: 'ai-automation', name: 'AI & Automation', icon: <Brain className="w-4 h-4"/> },
         { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-4 h-4"/> },
@@ -70,7 +83,7 @@ export default function FuturisticServicesShowcase() {
         { id: 'quantum-computing', name: 'Quantum Computing', icon: <Rocket className="w-4 h-4"/> },
         { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: <Star className="w-4 h-4"/> }
     ];
-    const filteredServices = selectedCategory === 'all'
+    const _filteredServices = selectedCategory === 'all'
         ? services
         : services.filter(service => service.id === selectedCategory);
     return (<section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">

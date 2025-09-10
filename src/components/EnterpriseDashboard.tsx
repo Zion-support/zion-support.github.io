@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const EnterpriseDashboard = () => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const services = [];
+export const _EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -143,21 +150,21 @@ export const EnterpriseDashboard = () => {
         }
     ]);
     // Refresh data
-    const refreshData = useCallback(async () => {
+    const _refreshData = useCallback(async () => {
         setIsRefreshing(true);
         try {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
-            const now = new Date();
-            console.log('Data refreshed at:', now.toLocaleTimeString());
+            const _now = new Date();
+            // console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
                 tab: activeTab,
                 dateRange
             });
         }
         catch (error) {
-            console.error('Failed to refresh data:', error);
+            // console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -168,12 +175,12 @@ export const EnterpriseDashboard = () => {
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
-        const interval = setInterval(refreshData, refreshInterval);
+        const _interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval);
     }, [refreshInterval, refreshData]);
     // Filtered data
-    const filteredSecurityAlerts = useMemo(() => {
-        let filtered = securityAlerts;
+    const _filteredSecurityAlerts = useMemo(() => {
+        let _filtered = securityAlerts;
         if (filterStatus !== 'all') {
             filtered = filtered.filter(alert => alert.status === filterStatus);
         }
@@ -184,8 +191,8 @@ export const EnterpriseDashboard = () => {
         }
         return filtered;
     }, [securityAlerts, filterStatus, searchQuery]);
-    const filteredUserActivities = useMemo(() => {
-        let filtered = userActivities;
+    const _filteredUserActivities = useMemo(() => {
+        let _filtered = userActivities;
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -194,7 +201,7 @@ export const EnterpriseDashboard = () => {
         return filtered;
     }, [userActivities, searchQuery]);
     // Get status color
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'healthy':
             case 'online':
@@ -215,7 +222,7 @@ export const EnterpriseDashboard = () => {
         }
     };
     // Get severity color
-    const getSeverityColor = (severity) => {
+    const _getSeverityColor = (severity) => {
         switch (severity) {
             case 'critical':
                 return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';

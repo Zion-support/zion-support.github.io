@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
+import { _Button } from './button';
+import { _Badge } from './badge';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -26,18 +32,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         diskUsage: 85
     });
     // Performance monitoring functions
-    const measureFPS = useCallback(() => {
-        let frameCount = 0;
-        let lastTime = performance.now();
-        const countFrame = () => {
+    const _measureFPS = useCallback(() => {
+        let _frameCount = 0;
+        let _lastTime = performance.now();
+        const _countFrame = () => {
             frameCount++;
-            const currentTime = performance.now();
+            const _currentTime = performance.now();
             if (currentTime - lastTime >= 1000) {
-                const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+                const _fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
                 setMetrics(prev => ({ ...prev, fps }));
                 // Check for performance alerts
                 if (fps < thresholds.fps) {
-                    const alert = {
+                    const _alert = {
                         id: `fps-${Date.now()}`,
                         metric: 'FPS',
                         message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`,
@@ -54,18 +60,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         };
         requestAnimationFrame(countFrame);
     }, [thresholds.fps, onAlert]);
-    const measureMemory = useCallback(() => {
+    const _measureMemory = useCallback(() => {
         if ('memory' in performance) {
-            const memoryInfo = performance.memory;
-            const used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
-            const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
-            const percentage = Math.round((used / total) * 100);
+            const _memoryInfo = performance.memory;
+            const _used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
+            const _total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
+            const _percentage = Math.round((used / total) * 100);
             setMetrics(prev => ({
                 ...prev,
                 memory: { used, total, percentage }
             }));
             if (percentage > thresholds.memory) {
-                const alert = {
+                const _alert = {
                     id: `memory-${Date.now()}`,
                     metric: 'Memory',
                     message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`,
@@ -77,15 +83,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             }
         }
     }, [thresholds.memory, onAlert]);
-    const measureRenderTime = useCallback(() => {
-        const start = performance.now();
+    const _measureRenderTime = useCallback(() => {
+        const _start = performance.now();
         // Simulate render work
         requestAnimationFrame(() => {
-            const end = performance.now();
-            const renderTime = Math.round(end - start);
+            const _end = performance.now();
+            const _renderTime = Math.round(end - start);
             setMetrics(prev => ({ ...prev, renderTime }));
             if (renderTime > thresholds.renderTime) {
-                const alert = {
+                const _alert = {
                     id: `render-${Date.now()}`,
                     metric: 'Render Time',
                     message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`,
@@ -97,18 +103,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             }
         });
     }, [thresholds.renderTime, onAlert]);
-    const measureNetworkLatency = useCallback(async () => {
-        const start = performance.now();
+    const _measureNetworkLatency = useCallback(async () => {
+        const _start = performance.now();
         try {
             await fetch('/api/health', {
                 method: 'HEAD',
                 cache: 'no-cache'
             });
-            const end = performance.now();
-            const latency = Math.round(end - start);
+            const _end = performance.now();
+            const _latency = Math.round(end - start);
             setMetrics(prev => ({ ...prev, networkLatency: latency }));
             if (latency > thresholds.networkLatency) {
-                const alert = {
+                const _alert = {
                     id: `network-${Date.now()}`,
                     metric: 'Network',
                     message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`,
@@ -124,10 +130,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             setMetrics(prev => ({ ...prev, networkLatency: 999 }));
         }
     }, [thresholds.networkLatency, onAlert]);
-    const simulateMetrics = useCallback(() => {
+    const _simulateMetrics = useCallback(() => {
         // Simulate CPU and disk usage for demo purposes
-        const cpuUsage = Math.round(Math.random() * 100);
-        const diskUsage = Math.round(60 + Math.random() * 30);
+        const _cpuUsage = Math.round(Math.random() * 100);
+        const _diskUsage = Math.round(60 + Math.random() * 30);
         setMetrics(prev => ({
             ...prev,
             cpuUsage,
@@ -135,7 +141,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             timestamp: Date.now()
         }));
         if (cpuUsage > thresholds.cpuUsage) {
-            const alert = {
+            const _alert = {
                 id: `cpu-${Date.now()}`,
                 metric: 'CPU',
                 message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`,
@@ -146,7 +152,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
         }
         if (diskUsage > thresholds.diskUsage) {
-            const alert = {
+            const _alert = {
                 id: `disk-${Date.now()}`,
                 metric: 'Disk',
                 message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`,
@@ -161,7 +167,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     useEffect(() => {
         if (!enabled || !autoRefresh)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             measureMemory();
             measureRenderTime();
             measureNetworkLatency();
@@ -177,19 +183,19 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     }, [enabled, measureFPS]);
     // Clear old alerts
     useEffect(() => {
-        const interval = setInterval(() => {
-            const now = Date.now();
+        const _interval = setInterval(() => {
+            const _now = Date.now();
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
         return () => clearInterval(interval);
     }, []);
-    const getMetricColor = (metric, value, threshold) => {
+    const _getMetricColor = (metric, value, threshold) => {
         if (metric === 'FPS') {
             return value >= threshold ? 'text-green-400' : 'text-red-400';
         }
         return value <= threshold ? 'text-green-400' : 'text-red-400';
     };
-    const getMetricIcon = (metric) => {
+    const _getMetricIcon = (metric) => {
         switch (metric) {
             case 'FPS': return Activity;
             case 'Memory': return Activity;
@@ -200,7 +206,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             default: return Activity;
         }
     };
-    const getSeverityColor = (severity) => {
+    const _getSeverityColor = (severity) => {
         switch (severity) {
             case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
@@ -372,7 +378,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {alerts.map((alert) => {
-                const Icon = getMetricIcon(alert.metric);
+                const _Icon = getMetricIcon(alert.metric);
                 return (<motion.div key={alert.id} className={`p-2 rounded-lg border text-xs ${getSeverityColor(alert.severity)}`} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
                       <div className="flex items-center gap-2">
                         <Icon className="w-3 h-3"/>

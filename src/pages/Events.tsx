@@ -1,5 +1,9 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
 
 
       {/* Hero Section */}
@@ -88,11 +92,11 @@ import { Link } from 'react-router-dom';
                   <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                     Register Now
                   </button>
-import React from 'react';
-import {Link} from 'react-router-dom';
+
+const services = [];
 
 const Events: React.FC = () => {}
-  const upcomingEvents = [
+  const _upcomingEvents = [
     {title}: "AI Innovation Summit 2024",
       date: "March 15-16, 2024",
       location: "Virtual Event",

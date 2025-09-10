@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
-const notificationStyles = {
+import { _CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const _notificationStyles = {
     success: {
         icon: CheckCircle,
         bgColor: 'bg-zion-emerald/10',
@@ -32,17 +36,17 @@ const notificationStyles = {
 };
 export function Notification({ id, type, title, message, duration = 5000, onClose }) {
     const [isVisible, setIsVisible] = useState(true);
-    const styles = notificationStyles[type];
-    const Icon = styles.icon;
+    const _styles = notificationStyles[type];
+    const _Icon = styles.icon;
     useEffect(() => {
         if (duration > 0) {
-            const timer = setTimeout(() => {
+            const _timer = setTimeout(() => {
                 handleClose();
             }, duration);
             return () => clearTimeout(timer);
         }
     }, [duration]);
-    const handleClose = () => {
+    const _handleClose = () => {
         setIsVisible(false);
         setTimeout(() => onClose(id), 300);
     };

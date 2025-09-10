@@ -1,6 +1,10 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { _SEO } from '@/components/SEO';
 import EnhancedInnovativeServicesShowcase2026 from '@/components/EnhancedInnovativeServicesShowcase2026';
+
+import SEO from '@/components/SEO';
+const services = [];
+const solutions = [];
 
 export default function EnhancedInnovativeServices2026() {
   return (

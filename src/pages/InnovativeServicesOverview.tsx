@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
+import { _motion } from 'framer-motion';
+import { _comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
+import { _innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
+import { _expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
+import { _emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
+import { _enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
-import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
-import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
-const InnovativeServicesOverview = () => {
+const features = [];
+const useCases = [];
+const services = [];
+const solutions = [];
+const _InnovativeServicesOverview = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const allServices = [
+    const _allServices = [
         ...comprehensiveMicroSaasServices2025,
         ...innovativeITAIServices2025,
         ...expandedInnovativeServices2025,
         ...emergingTechInnovationServices2025,
         ...enterpriseITInnovationServices2025
     ];
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
         { id: 'ai-services', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
         { id: 'quantum-computing', name: 'Quantum Computing', count: allServices.filter(s => s.category.includes('Quantum')).length },
@@ -27,13 +33,13 @@ const InnovativeServicesOverview = () => {
         { id: 'finance', name: 'Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length },
         { id: 'sustainability', name: 'Sustainability & Energy', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Climate')).length }
     ];
-    const filteredServices = selectedCategory === 'all'
+    const _filteredServices = selectedCategory === 'all'
         ? allServices
         : allServices.filter(service => {
-            const category = categories.find(c => c.id === selectedCategory);
+            const _category = categories.find(c => c.id === selectedCategory);
             if (!category)
                 return true;
-            const categoryMappings = {
+            const _categoryMappings = {
                 'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
                 'quantum-computing': ['Quantum'],
                 'blockchain': ['Blockchain', 'Web3'],
@@ -44,10 +50,10 @@ const InnovativeServicesOverview = () => {
                 'finance': ['Finance', 'Trading'],
                 'sustainability': ['Energy', 'Climate', 'Sustainability', 'Green Tech']
             };
-            const targetKeywords = categoryMappings[selectedCategory] || [category.name];
+            const _targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()));
         });
-    const fadeInUp = {
+    const _fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }

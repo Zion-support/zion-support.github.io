@@ -1,8 +1,21 @@
 import React from 'react';
+import { _motion } from 'framer-motion';
+import { _ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const solutions = [];
+const retailTypes = [];
 export default function RetailSolutions() {
-    const features = [
+    const _features = [
         {
             icon: Brain,
             title: "AI-Powered Customer Insights",
@@ -34,7 +47,7 @@ export default function RetailSolutions() {
             description: "Seamless integration across online and offline retail channels"
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Increase sales by 25-40%",
         "Improve customer retention by 30%",
         "Reduce inventory costs by 20-35%",
@@ -42,7 +55,7 @@ export default function RetailSolutions() {
         "Better marketing ROI",
         "Streamlined operations"
     ];
-    const solutions = [
+    const _solutions = [
         {
             title: "E-commerce Platform",
             description: "Modern online retail platform with AI-powered features"
@@ -60,7 +73,7 @@ export default function RetailSolutions() {
             description: "AI-driven marketing campaigns and personalization"
         }
     ];
-    const retailTypes = [
+    const _retailTypes = [
         "Fashion & Apparel",
         "Electronics",
         "Home & Garden",

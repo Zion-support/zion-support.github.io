@@ -1,6 +1,10 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousInvention = () => {
+const technologies = [];
+const solutions = [];
+const _AIAutonomousInvention = () => {
     return (<>
       <Helmet>
         <title>AI Autonomous Invention Platform | Zion Tech Group</title>

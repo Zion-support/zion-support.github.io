@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
-import { cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
-import { specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
-const CuttingEdgeServicesShowcase = () => {
+import { _cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
+import { _specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
+
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const _CuttingEdgeServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedIndustry, setSelectedIndustry] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
-    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
-    const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-    const industries = ['All', ...Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)))];
-    const filteredServices = allServices.filter(service => {
-        const categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;
-        const industryMatch = selectedIndustry === 'All' ||
+    const _allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
+    const _categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const _industries = ['All', ...Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)))];
+    const _filteredServices = allServices.filter(service => {
+        const _categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;
+        const _industryMatch = selectedIndustry === 'All' ||
             ('industry' in service ? service.industry === selectedIndustry : true);
-        const searchMatch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        const _searchMatch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && industryMatch && searchMatch;
     });
-    const formatPrice = (price, model) => {
+    const _formatPrice = (price, model) => {
         if (model === 'percentage of revenue') {
             return `${price}% of revenue`;
         }

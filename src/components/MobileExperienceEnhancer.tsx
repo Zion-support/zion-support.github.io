@@ -18,9 +18,9 @@ export function MobileExperienceEnhancer({ ;
   useEffect(() => {;
     if (!enabled) return;
 ;
-    const checkDevice = () => {;
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+    const _checkDevice = () => {;
+      const _width = window.innerWidth;
+      const _height = window.innerHeight;
       ;
       setIsMobile(width < 768);
       setIsTablet(width >= 768 && width < 1024);
@@ -43,7 +43,7 @@ export function MobileExperienceEnhancer({ ;
     // Add mobile-specific optimizations;
     if (isMobile) {;
       // Prevent zoom on input focus;
-      const viewport = document.querySelector('meta[name="viewport"]');
+      const _viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {;
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
       }
@@ -62,8 +62,8 @@ export function MobileExperienceEnhancer({ ;
   return null; // This component doesn't render anything visible;
 }
 useEffect(() => {;
-    const checkDevice = ("props": "any) => {;
-      const userAgent = navigator.userAgent;
-      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    const _checkDevice = ("props": "any) => {;
+      const _userAgent = navigator.userAgent;
+      const _isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
 "}
-      const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);      // comment
+      const _isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);      // comment

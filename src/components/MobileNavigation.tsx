@@ -1,19 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronDown, Search, User, Bell } from 'lucide-react';
-const MobileNavigation = ({ isOpen, onToggle }) => {
+import { _Link, useLocation } from 'react-router-dom';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _X, ChevronDown, Search, User, Bell } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const industries = [];
+const services = [];
+const solutions = [];
+const _MobileNavigation = ({ isOpen, onToggle }) => {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
-    const location = useLocation();
-    const menuRef = useRef(null);
+    const _location = useLocation();
+    const _menuRef = useRef(null);
     // Close menu when route changes
     useEffect(() => {
         onToggle();
     }, [location.pathname]);
     // Close menu when clicking outside
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const _handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 onToggle();
             }
@@ -27,7 +34,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             document.body.style.overflow = 'unset';
         };
     }, [isOpen, onToggle]);
-    const navigationItems = [
+    const _navigationItems = [
         {
             label: 'Services',
             href: '/services',
@@ -73,15 +80,15 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             ]
         }
     ];
-    const toggleDropdown = (label) => {
+    const _toggleDropdown = (label) => {
         setActiveDropdown(activeDropdown === label ? null : label);
     };
-    const handleSearch = (e) => {
+    const _handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
-        console.log('Search query:', searchQuery);
+        // console.log('Search query:', searchQuery);
     };
-    const menuVariants = {
+    const _menuVariants = {
         closed: {
             x: '100%',
             opacity: 0,
@@ -99,7 +106,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             }
         }
     };
-    const dropdownVariants = {
+    const _dropdownVariants = {
         closed: {
             height: 0,
             opacity: 0,

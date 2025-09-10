@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Check } from 'lucide-react';
+
 interface ShippingOption {
   id: string;
   name: string;
@@ -43,7 +45,7 @@ export default function CheckoutShippingOptions({
 }: CheckoutShippingOptionsProps) {
   const [selectedOption, setSelectedOption] = useState(selectedShipping || '');
 
-  const handleOptionChange = (option: ShippingOption) => {
+  const _handleOptionChange = (option: ShippingOption) => {
     setSelectedOption(option.id);
     onSelectShipping(option);
   };

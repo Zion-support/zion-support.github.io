@@ -1,10 +1,13 @@
-import { Gift } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { useEffect, useState } from 'react';
-import { usePoints } from '@/hooks/usePoints';
+import { _Gift } from 'lucide-react';
+import { _useAuth } from '@/hooks/useAuth';
+import { _useEffect, useState } from 'react';
+import { _usePoints } from '@/hooks/usePoints';
+import { _Link } from 'react-router-dom';
+import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+
 import { Link } from 'react-router-dom';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { useAuth } from '@/hooks/useAuth';
 export function PointsBadge() {
     const { user, signOut, logout } = useAuth();
     const { ledger, balance } = usePoints();
@@ -14,7 +17,7 @@ export function PointsBadge() {
     }, [balance]);
     if (!user)
         return null;
-    const breakdown = ledger.reduce((acc, e) => {
+    const _breakdown = ledger.reduce((acc, e) => {
         if (e.reason === 'purchase')
             acc.purchase += e.delta;
         if (e.reason === 'post')
@@ -23,7 +26,7 @@ export function PointsBadge() {
             acc.referral += e.delta;
         return acc;
     }, { purchase: 0, post: 0, referral: 0 });
-    const handleLogout = async () => {
+    const _handleLogout = async () => {
         if (signOut) {
             await signOut();
         }

@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
-const EnhancedComprehensiveServicesShowcase = () => {
+import { _advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
+import { _specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+
+import { Target } from 'lucide-react';
+const features = [];
+const technologies = [];
+const services = [];
+const solutions = [];
+const _EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
-    const allServices = [
+    const _allServices = [
         ...advancedInnovativeServicesExpansionV3.map(service => ({
             ...service,
             type: 'Advanced AI & Innovation',
@@ -17,22 +23,22 @@ const EnhancedComprehensiveServicesShowcase = () => {
             displayPrice: service.price
         }))
     ];
-    const filteredServices = allServices.filter(service => {
-        const matchesCategory = activeCategory === 'all' || service.type === activeCategory;
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _filteredServices = allServices.filter(service => {
+        const _matchesCategory = activeCategory === 'all' || service.type === activeCategory;
+        const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch;
     });
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
         { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },
         { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }
     ];
-    const handleServiceClick = (service) => {
+    const _handleServiceClick = (service) => {
         setSelectedService(service);
     };
-    const closeModal = () => {
+    const _closeModal = () => {
         setSelectedService(null);
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

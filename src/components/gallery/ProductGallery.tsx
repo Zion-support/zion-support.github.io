@@ -1,11 +1,13 @@
 import React, { useState, Suspense } from 'react';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-const ReactPlayer = React.lazy(() => import('react-player'));
-const ModelViewer = React.lazy(() => import('@google/model-viewer/react'));
+import { _Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { _AspectRatio } from '@/components/ui/aspect-ratio';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const _ReactPlayer = React.lazy(() => import('react-player'));
+const _ModelViewer = React.lazy(() => import('@google/model-viewer/react'));
 export function ProductGallery({ images, videoUrl, modelUrl }) {
     const [selected, setSelected] = useState(0);
-    const poster = images[0];
+    const _poster = images[0];
     return (<Tabs defaultValue="images" className="w-full">
       <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
         <TabsTrigger value="images">Images</TabsTrigger>

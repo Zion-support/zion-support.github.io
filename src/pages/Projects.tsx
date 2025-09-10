@@ -1,11 +1,14 @@
 import React from "react";
-import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { Clock, Briefcase } from "lucide-react";
+import { _useProjects } from "@/hooks/useProjects";
+import { _SEO } from "@/components/SEO";
+import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _Link } from "react-router-dom";
+import { _Clock, Briefcase } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 function ProjectsContent() {
     const { projects, isLoading } = useProjects();
     return (<>

@@ -1,3 +1,9 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Brain } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+const services = [];
+
 
                   <AnimatePresence>;
                     {activeDropdown === category.name && ;

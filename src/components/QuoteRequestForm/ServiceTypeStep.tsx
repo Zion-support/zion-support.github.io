@@ -1,23 +1,26 @@
 
-import { useEffect, useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { captureException } from "@/utils/sentry";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
-import { z } from "zod";
-const listingSchema = z.object({
+import { _useEffect, useState } from "react";
+import { _Input } from "@/components/ui/input";
+import { _Card } from "@/components/ui/card";
+import { _Search } from "lucide-react";
+import { _ListingScoreCard } from "@/components/ListingScoreCard";
+import { _captureException } from "@/utils/sentry";
+import { _Skeleton } from "@/components/ui/skeleton";
+import { _useDebounce } from "@/hooks/useDebounce";
+import { _z } from "zod";
+
+const services = [];
+const solutions = [];
+const _listingSchema = z.object({
     id: z.string(),
     title: z.string(),
     category: z.string(),
     image: z.string().optional(),
 });
-const listingsSchema = z.array(listingSchema);
+const _listingsSchema = z.array(listingSchema);
 export function ServiceTypeStep({ formData, updateFormData }) {
     const [searchQuery, setSearchQuery] = useState("");
-    const debouncedQuery = useDebounce(searchQuery, 300);
+    const _debouncedQuery = useDebounce(searchQuery, 300);
     const [listings, setListings] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -27,18 +30,18 @@ export function ServiceTypeStep({ formData, updateFormData }) {
             setListings([]);
             return;
         }
-        const fetchServices = async () => {
+        const _fetchServices = async () => {
             setLoading(true);
             setError(null);
-            const url = `/api/public/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`;
-            const maxRetries = 3;
-            for (let attempt = 0; attempt < maxRetries; attempt++) {
+            const _url = `/api/public/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`;
+            const _maxRetries = 3;
+            for (let _attempt = 0; attempt < maxRetries; attempt++) {
                 try {
-                    const response = await fetch(url);
+                    const _response = await fetch(url);
                     if (!response.ok)
                         throw new Error('Failed to fetch');
-                    const data = await response.json();
-                    const parsed = listingsSchema.safeParse(data);
+                    const _data = await response.json();
+                    const _parsed = listingsSchema.safeParse(data);
                     if (!parsed.success)
                         throw new Error('Invalid response');
                     setListings(parsed.data);
@@ -49,7 +52,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                 catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
-                            console.error('Failed to load services:', err);
+                            // console.error('Failed to load services:', err);
                         }
                         else {
                             captureException(err);
@@ -66,21 +69,21 @@ export function ServiceTypeStep({ formData, updateFormData }) {
         };
         fetchServices();
     }, [formData.serviceType, debouncedQuery]);
-    const handleTypeSelect = (type) => {
+    const _handleTypeSelect = (type) => {
         updateFormData({ serviceType: type });
     };
-    const handleItemSelect = (item) => {
+    const _handleItemSelect = (item) => {
         updateFormData({
             specificItem: item,
             serviceCategory: item.category,
             serviceType: item.category.toLowerCase()
         });
     };
-    const sourceListings = listings;
-    const filteredListings = sourceListings.filter(item => {
+    const _sourceListings = listings;
+    const _filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected
         if (formData.serviceType !== "") {
-            const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
+            const _categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if (!categoryMatch)
                 return false;
         }

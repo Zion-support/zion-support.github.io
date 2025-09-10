@@ -4,8 +4,8 @@ export default function ExpensiveComponent() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         // Simulate expensive computation
-        const timer = setTimeout(() => {
-            const expensiveData = Array.from({ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+        const _timer = setTimeout(() => {
+            const _expensiveData = Array.from({ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
             setData(expensiveData);
             setLoading(false);
         }, 2000);

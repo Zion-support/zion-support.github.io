@@ -1,8 +1,17 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence, useScroll } from 'framer-motion';
-import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+import { _motion, AnimatePresence, useScroll } from 'framer-motion';
+import { _Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
+import { _Button } from './button';
+import { _Badge } from './badge';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
 export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -17,25 +26,25 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     });
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
-    const timelineRef = useRef(null);
+    const _timelineRef = useRef(null);
     const { scrollYProgress: _scrollYProgress } = useScroll({
         target: timelineRef,
         offset: ["start end", "end start"]
     });
     // Filter events based on current filters
-    const filteredEvents = events.filter(event => {
-        const matchesStatus = filters.status.length === 0 || filters.status.includes(event.status);
-        const matchesCategory = filters.category.length === 0 || filters.category.includes(event.category);
-        const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
+    const _filteredEvents = events.filter(event => {
+        const _matchesStatus = filters.status.length === 0 || filters.status.includes(event.status);
+        const _matchesCategory = filters.category.length === 0 || filters.category.includes(event.category);
+        const _matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
         return matchesStatus && matchesCategory && matchesPriority;
     });
     // Auto-play functionality
     useEffect(() => {
         if (!isPlaying || filteredEvents.length === 0)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             setCurrentEventIndex(prev => {
-                const next = (prev + 1) % filteredEvents.length;
+                const _next = (prev + 1) % filteredEvents.length;
                 if (next === 0) {
                     setIsPlaying(false); // Stop when reaching the end
                 }
@@ -45,16 +54,16 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         return () => clearInterval(interval);
     }, [isPlaying, filteredEvents.length, playbackSpeed]);
     // Handle event selection
-    const handleEventClick = useCallback((event) => {
+    const _handleEventClick = useCallback((event) => {
         setSelectedEvent(event);
         onEventClick?.(event);
     }, [onEventClick]);
     // Handle status change
-    const handleStatusChange = useCallback((eventId, newStatus) => {
+    const _handleStatusChange = useCallback((eventId, newStatus) => {
         onStatusChange?.(eventId, newStatus);
     }, [onStatusChange]);
     // Get status icon and color
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'completed':
                 return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };
@@ -69,7 +78,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         }
     };
     // Get priority color
-    const getPriorityColor = (priority) => {
+    const _getPriorityColor = (priority) => {
         switch (priority) {
             case 'critical':
                 return 'border-red-500/50 bg-red-500/10';
@@ -84,8 +93,8 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         }
     };
     // Get category icon
-    const getCategoryIcon = (category) => {
-        const iconMap = {
+    const _getCategoryIcon = (category) => {
+        const _iconMap = {
             'AI & ML': Zap,
             'Cybersecurity': Shield,
             'Cloud': Globe,
@@ -97,27 +106,27 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         return iconMap[category] || Calendar;
     };
     // Toggle play/pause
-    const togglePlayback = useCallback(() => {
+    const _togglePlayback = useCallback(() => {
         setIsPlaying(!isPlaying);
     }, [isPlaying]);
     // Reset timeline
-    const resetTimeline = useCallback(() => {
+    const _resetTimeline = useCallback(() => {
         setCurrentEventIndex(0);
         setIsPlaying(false);
     }, []);
     // Export timeline
-    const exportTimeline = useCallback(() => {
-        const dataStr = JSON.stringify(filteredEvents, null, 2);
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });
-        const url = URL.createObjectURL(dataBlob);
-        const link = document.createElement('a');
+    const _exportTimeline = useCallback(() => {
+        const _dataStr = JSON.stringify(filteredEvents, null, 2);
+        const _dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const _url = URL.createObjectURL(dataBlob);
+        const _link = document.createElement('a');
         link.href = url;
         link.download = `timeline-${new Date().toISOString().split('T')[0]}.json`;
         link.click();
         URL.revokeObjectURL(url);
     }, [filteredEvents]);
     // Share timeline
-    const shareTimeline = useCallback(() => {
+    const _shareTimeline = useCallback(() => {
         if (navigator.share) {
             navigator.share({
                 title: 'Project Timeline',
@@ -203,7 +212,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Status</label>
                 <select multiple value={filters.status} onChange={(e) => {
-                const selected = Array.from(e.target.selectedOptions, option => option.value);
+                const _selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev, status: selected }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="completed">Completed</option>
@@ -216,7 +225,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Category</label>
                 <select multiple value={filters.category} onChange={(e) => {
-                const selected = Array.from(e.target.selectedOptions, option => option.value);
+                const _selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev, category: selected }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="AI & ML">AI & ML</option>
@@ -232,7 +241,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Priority</label>
                 <select multiple value={filters.priority} onChange={(e) => {
-                const selected = Array.from(e.target.selectedOptions, option => option.value);
+                const _selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev, priority: selected }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="critical">Critical</option>
@@ -274,9 +283,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           {/* Events */}
           <div className="space-y-6">
             {filteredEvents.map((event, index) => {
-                const statusInfo = getStatusIcon(event.status);
-                const CategoryIcon = getCategoryIcon(event.category);
-                const isCurrent = index === currentEventIndex;
+                const _statusInfo = getStatusIcon(event.status);
+                const _CategoryIcon = getCategoryIcon(event.category);
+                const _isCurrent = index === currentEventIndex;
                 return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : ''}`} initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.02 }}>
                   {/* Status Indicator */}
                   <div className="relative z-10">

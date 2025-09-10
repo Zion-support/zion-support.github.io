@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useAISearch } from "@/hooks/useAISearch";
+import { _useEffect, useState } from "react";
+import { _useNavigate, useSearchParams } from "react-router-dom";
+import { _EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { _generateSearchSuggestions } from "@/data/marketplaceData";
+import { _useAISearch } from "@/hooks/useAISearch";
 export default function SearchPage() {
     const [params] = useSearchParams();
-    const navigate = useNavigate();
-    const initial = params.get("q") || "";
+    const _navigate = useNavigate();
+    const _initial = params.get("q") || "";
     const [query, setQuery] = useState(initial);
     const { results, loading, search } = useAISearch();
-    const suggestions = generateSearchSuggestions();
+    const _suggestions = generateSearchSuggestions();
     useEffect(() => {
         if (initial) {
             search(initial);
         }
     }, [initial]);
-    const handleSubmit = (e) => {
+    const _handleSubmit = (e) => {
         e.preventDefault();
         navigate(`/search?q=${encodeURIComponent(query)}`);
         search(query);

@@ -1,7 +1,17 @@
 import React from 'react';
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-const AIBusinessIntelligence = () => {
-    const biFeatures = [
+import { _Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
+
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const solutions = [];
+const biFeatures = [];
+const biSolutions = [];
+const implementation = [];
+const _AIBusinessIntelligence = () => {
+    const _biFeatures = [
         {
             icon: Brain,
             title: "AI Analytics",
@@ -27,7 +37,7 @@ const AIBusinessIntelligence = () => {
             features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]
         }
     ];
-    const biSolutions = [
+    const _biSolutions = [
         {
             title: "Sales Analytics",
             description: "Comprehensive sales performance and forecasting",
@@ -65,7 +75,7 @@ const AIBusinessIntelligence = () => {
             capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Data-driven decision making across all business areas",
         "Real-time insights and instant access to critical information",
         "Automated reporting and reduced manual analysis time",
@@ -73,7 +83,7 @@ const AIBusinessIntelligence = () => {
         "Improved operational efficiency and cost optimization",
         "Enhanced customer understanding and engagement"
     ];
-    const implementation = [
+    const _implementation = [
         {
             phase: "Data Assessment",
             description: "Evaluate current data sources and quality",

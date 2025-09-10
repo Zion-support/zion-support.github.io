@@ -1,25 +1,30 @@
-import { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { _useEffect, useState } from 'react';
+import { _Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
+import { _useAuth } from '@/hooks/useAuth';
+import { _supabase } from '@/integrations/supabase/client';
+import { _ProtectedRoute } from '@/components/ProtectedRoute';
+import { _Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { _useToast } from '@/hooks/use-toast';
+import { _apiClient } from '@/utils/apiClient';
+
 import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { useToast } from '@/hooks/use-toast';
-import { apiClient } from '@/utils/apiClient';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const integrations = [];
 export default function TokenManager() {
     const { user } = useAuth();
     const { toast } = useToast();
     const [transactions, setTransactions] = useState([]);
     const [userId, setUserId] = useState('');
     const [amount, setAmount] = useState(0);
-    const isAdmin = user?.userType === 'admin';
+    const _isAdmin = user?.userType === 'admin';
     useEffect(() => {
         if (isAdmin)
             fetchTransactions();
     }, [isAdmin]);
-    const fetchTransactions = async () => {
+    const _fetchTransactions = async () => {
         const { data, error } = await supabase
             .from('token_transactions')
             .select('*')
@@ -28,10 +33,10 @@ export default function TokenManager() {
         if (!error)
             setTransactions(data || []);
     };
-    const handleIssue = async (type) => {
+    const _handleIssue = async (type) => {
         if (!userId || amount <= 0)
             return;
-        const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
+        const _res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId, amount }),
@@ -44,7 +49,7 @@ export default function TokenManager() {
             fetchTransactions();
         }
         else {
-            const err = await res.json();
+            const _err = await res.json();
             toast({
                 title: 'Error',
                 description: err.error || 'Failed',

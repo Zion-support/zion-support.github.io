@@ -1,16 +1,35 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { _Badge } from '../components/ui/badge';
+import { _Button } from '../components/ui/button';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { _Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
 import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
 import enhancedAIServices2025 from '../data/enhancedAIServices2025';
 import enhancedITServices2025 from '../data/enhancedITServices2025';
-const ComprehensivePricing = () => {
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const technologies = [];
+const services = [];
+const implementation = [];
+const _ComprehensivePricing = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [billingCycle, setBillingCycle] = useState('monthly');
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category.toLowerCase()) {
             case 'productivity': return <Users className="h-5 w-5"/>;
             case 'finance': return <DollarSign className="h-5 w-5"/>;
@@ -42,7 +61,7 @@ const ComprehensivePricing = () => {
             default: return <Star className="h-5 w-5"/>;
         }
     };
-    const getCategoryColor = (category) => {
+    const _getCategoryColor = (category) => {
         switch (category.toLowerCase()) {
             case 'productivity': return 'from-green-500 to-emerald-500';
             case 'finance': return 'from-blue-500 to-cyan-500';
@@ -74,7 +93,7 @@ const ComprehensivePricing = () => {
             default: return 'from-gray-500 to-slate-500';
         }
     };
-    const formatPrice = (price, pricingModel) => {
+    const _formatPrice = (price, pricingModel) => {
         if (pricingModel === 'per API call') {
             return `$${price.toFixed(3)} per call`;
         }
@@ -103,7 +122,7 @@ const ComprehensivePricing = () => {
             return `$${price}`;
         }
     };
-    const renderMicroSaasPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    const _renderMicroSaasPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {enhancedMicroSaasServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-700/50 border-slate-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
           <CardHeader className="pb-4">
             <div className="flex items-center gap-3 mb-3">
@@ -184,7 +203,7 @@ const ComprehensivePricing = () => {
           </CardContent>
         </Card>))}
     </div>);
-    const renderAIPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    const _renderAIPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {enhancedAIServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-purple-800/50 to-pink-700/50 border-purple-600/30 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
           <CardHeader className="pb-4">
             <div className="flex items-center gap-3 mb-3">
@@ -269,7 +288,7 @@ const ComprehensivePricing = () => {
           </CardContent>
         </Card>))}
     </div>);
-    const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    const _renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
           <CardHeader className="pb-4">
             <div className="flex items-center gap-3 mb-3">

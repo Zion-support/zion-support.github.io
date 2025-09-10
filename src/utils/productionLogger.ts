@@ -1,18 +1,18 @@
 // Production logger utility
-export const productionLogger = {
+export const _productionLogger = {
   log: (...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log(...args);
+      // console.log(...args);
     }
   },
   error: (...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
-      console.error(...args);
+      // console.error(...args);
     }
   },
   warn: (...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn(...args);
+      // console.warn(...args);
     }
   },
   info: (...args: any[]) => {
@@ -22,9 +22,9 @@ export const productionLogger = {
   }
 };
 
-export const logErrorToProduction = (error: any, context?: string) => {
+export const _logErrorToProduction = (error: any, context?: string) => {
   if (process.env.NODE_ENV === 'development') {
-    console.error('Error logged to production:', { error, context });
+    // console.error('Error logged to production:', { error, context });
   }
   // In production, this would send to a logging service
 };

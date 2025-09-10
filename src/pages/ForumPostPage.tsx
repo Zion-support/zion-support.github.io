@@ -1,19 +1,26 @@
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow, format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
+import { _useState } from "react";
+import { _useParams, Link } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _Button } from "@/components/ui/button";
+import { _Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { _Badge } from "@/components/ui/badge";
+import { _Card, CardContent } from "@/components/ui/card";
+import { _Alert, AlertDescription } from "@/components/ui/alert";
+import { _ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle } from "lucide-react";
+import { _formatDistanceToNow, format } from "date-fns";
+import { _useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
-import { useToast } from "@/components/ui/use-toast";
+import { _useToast } from "@/components/ui/use-toast";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 // Mock data for a forum post
-const mockPost = {
+const _mockPost = {
     id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
@@ -43,7 +50,7 @@ const mockPost = {
     authorRole: "Verified Talent"
 };
 // Mock data for replies
-const mockReplies = [
+const _mockReplies = [
     {
         id: "reply1",
         postId: "1",
@@ -119,9 +126,9 @@ export default function ForumPostPage() {
     const [post, setPost] = useState(mockPost);
     const [replies, setReplies] = useState(mockReplies);
     // Check if this is the user's own post
-    const isAuthor = user?.id === post?.authorId;
+    const _isAuthor = user?.id === post?.authorId;
     // Check if user is admin/mod
-    const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+    const _isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
     // For this demo, we'll assume the post is found
     if (!post) {
         return (<div className="container py-8">
@@ -131,7 +138,7 @@ export default function ForumPostPage() {
         </Button>
       </div>);
     }
-    const handleUpvote = () => {
+    const _handleUpvote = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
@@ -145,7 +152,7 @@ export default function ForumPostPage() {
             description: "You upvoted this post",
         });
     };
-    const handleDownvote = () => {
+    const _handleDownvote = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
@@ -159,7 +166,7 @@ export default function ForumPostPage() {
             description: "You downvoted this post",
         });
     };
-    const handleSubmitReply = async (content) => {
+    const _handleSubmitReply = async (content) => {
         if (!user) {
             toast({
                 title: "Authentication required",
@@ -168,7 +175,7 @@ export default function ForumPostPage() {
             return;
         }
         // Create a new reply
-        const newReply = {
+        const _newReply = {
             id: `reply${Date.now()}`,
             postId: post.id,
             content,
@@ -191,7 +198,7 @@ export default function ForumPostPage() {
             description: "Your reply has been added to the discussion",
         });
     };
-    const handleMarkAsAnswer = (replyId) => {
+    const _handleMarkAsAnswer = (replyId) => {
         // Only post author or admin can mark an answer
         if (!isAuthor && !isAdminOrMod) {
             toast({
@@ -202,7 +209,7 @@ export default function ForumPostPage() {
             return;
         }
         // Update the replies
-        const updatedReplies = replies.map(reply => ({
+        const _updatedReplies = replies.map(reply => ({
             ...reply,
             isAnswer: reply.id === replyId
         }));
@@ -213,7 +220,7 @@ export default function ForumPostPage() {
             description: "The reply has been marked as the accepted answer",
         });
     };
-    const handleReportPost = () => {
+    const _handleReportPost = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
@@ -226,7 +233,7 @@ export default function ForumPostPage() {
             description: "A moderator will review this content",
         });
     };
-    const handlePinPost = () => {
+    const _handlePinPost = () => {
         if (!isAdminOrMod)
             return;
         setPost({ ...post, isPinned: !post.isPinned });
@@ -235,7 +242,7 @@ export default function ForumPostPage() {
             description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top",
         });
     };
-    const handleLockPost = () => {
+    const _handleLockPost = () => {
         if (!isAdminOrMod)
             return;
         setPost({ ...post, isLocked: !post.isLocked });
@@ -244,8 +251,8 @@ export default function ForumPostPage() {
             description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled",
         });
     };
-    const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-    const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
+    const _timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
+    const _formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
     return (<>
       <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description={post.content.substring(0, 160)} keywords={`community, forum, discussion, ${post.tags.join(', ')}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
       

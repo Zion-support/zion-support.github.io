@@ -1,8 +1,14 @@
 import React from 'react';
+import { _motion } from 'framer-motion';
+import { _StarIcon } from '@heroicons/react/24/solid';
+
 import { motion } from 'framer-motion';
-import { StarIcon } from '@heroicons/react/24/solid';
+import { Icon } from 'lucide-react';
+const testimonials = [];
+const services = [];
+const solutions = [];
 export function TestimonialsSection() {
-    const testimonials = [
+    const _testimonials = [
         {
             name: "Sarah Johnson",
             role: "CTO",
@@ -36,7 +42,7 @@ export function TestimonialsSection() {
             avatar: "DT"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -45,7 +51,7 @@ export function TestimonialsSection() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

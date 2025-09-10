@@ -1,9 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+
 import { Link } from 'react-router-dom';
-import { CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
 export function ServicesShowcase() {
-    const services = [
+    const _services = [
         {
             icon: CpuChipIcon,
             title: "AI & Machine Learning",
@@ -47,7 +59,7 @@ export function ServicesShowcase() {
             href: "/business-intelligence"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -56,7 +68,7 @@ export function ServicesShowcase() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

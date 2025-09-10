@@ -1,18 +1,18 @@
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchResultCard } from "@/components/search/SearchResultCard";
-import { SearchBar } from "@/components/SearchBar";
-const LIMIT = 20;
+import { _useEffect, useRef, useState } from "react";
+import { _useRouter } from "next/router";
+import { _useInfiniteQuery } from "@tanstack/react-query";
+import { _generateSearchSuggestions } from "@/data/marketplaceData";
+import { _SearchResultCard } from "@/components/search/SearchResultCard";
+import { _SearchBar } from "@/components/SearchBar";
+const _LIMIT = 20;
 export default function SearchResultsPage() {
-    const router = useRouter();
-    const initialQuery = router.query.q || "";
+    const _router = useRouter();
+    const _initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
         queryKey: ["search", query],
         queryFn: async ({ pageParam = 1 }) => {
-            const res = await fetch(`/api/search?q=${encodeURIComponent(query)}&page=${pageParam}&limit=${LIMIT}`);
+            const _res = await fetch(`/api/search?q=${encodeURIComponent(query)}&page=${pageParam}&limit=${LIMIT}`);
             if (!res.ok)
                 throw new Error("Failed to fetch");
             return (await res.json());
@@ -28,13 +28,13 @@ export default function SearchResultsPage() {
             refetch();
         }
     }, [initialQuery]);
-    const allResults = data?.pages.flat() ?? [];
-    const loader = useRef(null);
+    const _allResults = data?.pages.flat() ?? [];
+    const _loader = useRef(null);
     useEffect(() => {
-        const el = loader.current;
+        const _el = loader.current;
         if (!el)
             return;
-        const observer = new IntersectionObserver((entries) => {
+        const _observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
                 fetchNextPage();
             }
@@ -42,7 +42,7 @@ export default function SearchResultsPage() {
         observer.observe(el);
         return () => observer.disconnect();
     }, [loader.current, hasNextPage, isFetchingNextPage]);
-    const suggestions = generateSearchSuggestions().slice(0, 5);
+    const _suggestions = generateSearchSuggestions().slice(0, 5);
     return (<main className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <SearchBar value={query} onChange={setQuery}/>

@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { safeStorage } from '@/utils/safeStorage';
-import { getCartKey } from '@/utils/cartUtils';
-import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import { _useTranslation } from 'react-i18next';
+import { _useForm } from 'react-hook-form';
+import { _useNavigate } from 'react-router-dom';
+import { _safeStorage } from '@/utils/safeStorage';
+import { _getCartKey } from '@/utils/cartUtils';
+import { _getStripe } from '@/utils/getStripe';
+import { _apiClient } from '@/utils/apiClient';
+
+import { Check } from 'lucide-react';
 export default function CheckoutPage() {
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const { t } = useTranslation();
     const [items, setItems] = useState([]);
-    const form = useForm({
+    const _form = useForm({
         defaultValues: { name: '', email: '', address: '', city: '', country: '' },
     });
     useEffect(() => {
@@ -18,7 +20,7 @@ export default function CheckoutPage() {
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
             return;
         }
-        const stored = safeStorage.getItem(getCartKey(user?.id));
+        const _stored = safeStorage.getItem(getCartKey(user?.id));
         if (stored) {
             try {
                 setItems(JSON.parse(stored));
@@ -28,20 +30,20 @@ export default function CheckoutPage() {
             }
         }
     }, [sku]);
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-    const onSubmit = async (data) => {
+    const _subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+    const _onSubmit = async (data) => {
         try {
-            const response = await apiClient('/api/checkout_sessions', {
+            const _response = await apiClient('/api/checkout_sessions', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ amount: subtotal }),
             });
-            const result = await res.json();
+            const _result = await res.json();
             if (!res.ok)
                 throw new Error(result.error || 'Failed');
-            const stripe = await getStripe();
+            const _stripe = await getStripe();
             if (stripe && result.clientSecret) {
-                const payment = await stripe.confirmCardPayment(result.clientSecret, {
+                const _payment = await stripe.confirmCardPayment(result.clientSecret, {
                     payment_method: {
                         card: { token: 'tok_visa' },
                         billing_details: { name: data.name, email: data.email },
@@ -58,7 +60,7 @@ export default function CheckoutPage() {
                         });
                     }
                     catch (e) {
-                        console.error('Failed to add points', e);
+                        // console.error('Failed to add points', e);
                     }
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
@@ -66,7 +68,7 @@ export default function CheckoutPage() {
             }
         }
         catch (err) {
-            console.error('Payment failed', err);
+            // console.error('Payment failed', err);
         }
     };
     return (<div className="max-w-2xl mx-auto p-6">

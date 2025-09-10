@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';
-import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
+import { _useParams, useNavigate } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';
+import { _formatDistanceToNow } from 'date-fns';
+import { _toast } from 'sonner';
+import { _useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import { _ApplyToJobModal } from '@/components/messaging/job-application';
+import { _SEO } from '@/components/SEO';
+import { _useWhitelabel } from '@/context/WhitelabelContext';
+
+import SEO from '@/components/SEO';
+import { DollarSign } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams();
     const { job, isLoading, error } = useJobDetails(jobId);
     const { user, isAuthenticated } = useAuth();
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const { isWhitelabel, brandName } = useWhitelabel();
     const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
     if (isLoading) {
@@ -35,7 +40,7 @@ export default function JobDetails() {
         
       </>);
     }
-    const handleApply = () => {
+    const _handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
@@ -47,16 +52,16 @@ export default function JobDetails() {
         }
         setIsApplyModalOpen(true);
     };
-    const handleApplySuccess = async (appliedJobId) => {
+    const _handleApplySuccess = async (appliedJobId) => {
         toast.success("Application submitted successfully!");
         setIsApplyModalOpen(false);
     };
-    const formatBudget = (budget) => {
+    const _formatBudget = (budget) => {
         if (!budget)
             return "Not specified";
         return `$${budget.min} - $${budget.max}`;
     };
-    const isOwnJob = user?.id === job.client_id;
+    const _isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
       

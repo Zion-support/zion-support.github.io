@@ -1,3 +1,8 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Settings } from 'lucide-react';
+
 
 "autoAnalyze": "tru e",;export default function Page(props: any) {
 interface SEOMetrics {

@@ -1,6 +1,9 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousOptimization = () => {
+import { Code } from 'lucide-react';
+const _AIAutonomousOptimization = () => {
     return (<>
       <Helmet>
         <title>AI Autonomous Optimization Platform | Zion Tech Group</title>

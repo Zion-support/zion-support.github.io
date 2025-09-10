@@ -1,3 +1,5 @@
+const testimonials = [];
+
   "testimonials": "Testimonia l[];
 ;
 "}

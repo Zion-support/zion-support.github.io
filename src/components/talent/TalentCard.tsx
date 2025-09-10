@@ -1,13 +1,16 @@
 import React from 'react';
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useNavigate } from "react-router-dom";
-const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => {
-    const navigate = useNavigate();
-    const handleMessage = (e) => {
+import { _Button } from "@/components/ui/button";
+import { _Card } from "@/components/ui/card";
+import { _MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { _FavoriteButton } from "@/components/FavoriteButton";
+import { _useNavigate } from "react-router-dom";
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+const _TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => {
+    const _navigate = useNavigate();
+    const _handleMessage = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onMessage) {
@@ -17,7 +20,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
             navigate(`/messages?talentId=${talent.id}`);
         }
     };
-    const handleBook = (e) => {
+    const _handleBook = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onBook) {
@@ -25,7 +28,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         }
     };
     // Extract skills - limit to 5 for display
-    const skills = talent.skills?.slice(0, 5) || [];
+    const _skills = talent.skills?.slice(0, 5) || [];
     return (<Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple" onClick={handleViewProfile} tabIndex={0}>
       <div className="p-6">
         <div className="flex items-start">
@@ -147,6 +150,6 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
 
     </Card>);
 };
-export const TalentCard = React.memo(TalentCardComponent);
+export const _TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
 

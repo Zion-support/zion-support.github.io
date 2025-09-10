@@ -1,8 +1,15 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const technologies = [];
+const industries = [];
+const services = [];
+const solutions = [];
+export const _AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -12,8 +19,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
-    const messagesEndRef = useRef(null);
-    const inputRef = useRef(null);
+    const _messagesEndRef = useRef(null);
+    const _inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
         if (isOpen && messages.length === 0) {
@@ -34,18 +41,18 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
     // Track chatbot interactions
-    const trackChatbotInteraction = useCallback((action, metadata) => {
+    const _trackChatbotInteraction = useCallback((action, metadata) => {
         trackEvent('chatbot', action, 'chatbot_interaction', undefined, metadata);
     }, [trackEvent]);
     // Add message to chat
-    const addMessage = useCallback((message) => {
-        const newMessage = {
+    const _addMessage = useCallback((message) => {
+        const _newMessage = {
             ...message,
             id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
         };
         setMessages(prev => {
-            const updated = [...prev, newMessage];
+            const _updated = [...prev, newMessage];
             // Keep only the last maxMessages
             return updated.slice(-maxMessages);
         });
@@ -56,8 +63,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         return newMessage;
     }, [maxMessages, enableContext]);
     // Add bot message with typing effect
-    const addBotMessage = useCallback((content, metadata) => {
-        const message = addMessage({
+    const _addBotMessage = useCallback((content, metadata) => {
+        const _message = addMessage({
             type: 'bot',
             content,
             metadata
@@ -71,11 +78,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         return message;
     }, [addMessage, trackChatbotInteraction]);
     // Simulate AI processing
-    const simulateAIProcessing = useCallback(async (userInput) => {
+    const _simulateAIProcessing = useCallback(async (userInput) => {
         // Simulate processing delay
         await new Promise(resolve => setTimeout(resolve, responseDelay));
         // Simple AI logic - in production, this would connect to a real AI service
-        const input = userInput.toLowerCase();
+        const _input = userInput.toLowerCase();
         // Intent recognition
         if (input.includes('service') || input.includes('offer')) {
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
@@ -96,11 +103,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         return "I understand you're asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you're looking for?";
     }, [responseDelay]);
     // Handle user input
-    const handleUserInput = useCallback(async (input) => {
+    const _handleUserInput = useCallback(async (input) => {
         if (!input.trim())
             return;
         // Add user message
-        const userMessage = addMessage({
+        const _userMessage = addMessage({
             type: 'user',
             content: input.trim()
         });
@@ -114,7 +121,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         setIsTyping(true);
         try {
             // Get AI response
-            const response = await simulateAIProcessing(input);
+            const _response = await simulateAIProcessing(input);
             // Add bot response
             addBotMessage(response, {
                 intent: 'response',
@@ -147,33 +154,33 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         }
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission
-    const handleSubmit = useCallback((e) => {
+    const _handleSubmit = useCallback((e) => {
         e.preventDefault();
         handleUserInput(inputValue);
     }, [inputValue, handleUserInput]);
     // Handle suggestion click
-    const handleSuggestionClick = useCallback((suggestion) => {
+    const _handleSuggestionClick = useCallback((suggestion) => {
         handleUserInput(suggestion);
         trackChatbotInteraction('suggestion_clicked', { suggestion });
     }, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
-    const toggleChatbot = useCallback(() => {
+    const _toggleChatbot = useCallback(() => {
         setIsOpen(!isOpen);
         trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' });
     }, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
-    const toggleMinimize = useCallback(() => {
+    const _toggleMinimize = useCallback(() => {
         setIsMinimized(!isMinimized);
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' });
     }, [isMinimized, trackChatbotInteraction]);
     // Clear conversation
-    const clearConversation = useCallback(() => {
+    const _clearConversation = useCallback(() => {
         setMessages([]);
         // setConversationContext([]); // This line was removed
         trackChatbotInteraction('conversation_cleared');
     }, [trackChatbotInteraction]);
     // Get typing indicator
-    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
+    const _TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
       <Bot className="w-5 h-5 text-blue-500"/>
       <div className="flex space-x-1">
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
@@ -183,7 +190,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
     </motion.div>);
     // Get message suggestions
-    const MessageSuggestions = ({ suggestions }) => (<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-wrap gap-2 mt-3">
+    const _MessageSuggestions = ({ suggestions }) => (<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-wrap gap-2 mt-3">
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
           {suggestion}
         </button>))}

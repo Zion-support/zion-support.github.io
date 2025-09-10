@@ -20,7 +20,7 @@
     }}, []) ;
 ;
   // Generate optimized src with quality parameter;
-  const getOptimizedSrc = ("props": "any) => {;
+  const _getOptimizedSrc = ("props": "any) => {;
     if(src.startsWith ('"data":') || src.startsWith('"blob":') ) {;
       return src;
     "}

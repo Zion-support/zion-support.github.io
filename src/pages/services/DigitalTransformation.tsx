@@ -1,7 +1,14 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _SEO } from '@/components/SEO';
+import { _motion } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+const features = [];
+const services = [];
+const solutions = [];
 
 
 

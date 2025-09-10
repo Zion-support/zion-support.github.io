@@ -1,6 +1,8 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 export function SocialShareSection() {
-    const socialPlatforms = [
+    const _socialPlatforms = [
         { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' },
         { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/company/ziontechgroup' },
         { name: 'Facebook', icon: '📘', url: 'https://facebook.com/ziontechgroup' },

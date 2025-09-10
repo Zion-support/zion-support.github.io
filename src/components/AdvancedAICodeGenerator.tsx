@@ -1,12 +1,20 @@
 import React, { useState, useRef } from 'react';
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
-const mockCodeSnippets = [
+import { _Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const _mockCodeSnippets = [
     {
         id: '1',
         title: 'React Hook for API Calls',
         description: 'Custom hook for managing API calls with loading states and error handling',
         language: 'typescript',
-        code: `import { useState, useEffect } from 'react';
+        code: `import { _useState, useEffect } from 'react';
 
 interface UseApiOptions<T> {
   url: string;
@@ -20,12 +28,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const execute = async () => {
+  const _execute = async () => {
     try {
       setLoading(true);
       setError(null);
       
-      const response = await fetch(url, {
+      const _response = await fetch(url, {
         method,
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +46,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         throw new Error(\`HTTP error! status: \${response.status}\`);
       }
 
-      const result = await response.json();
+      const _result = await response.json();
       setData(result);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
@@ -135,12 +143,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }
 
   validateField(field) {
-    const value = this.form[field]?.value;
-    const fieldRules = this.rules.get(field) || [];
-    const fieldErrors = [];
+    const _value = this.form[field]?.value;
+    const _fieldRules = this.rules.get(field) || [];
+    const _fieldErrors = [];
 
     for (const rule of fieldRules) {
-      const result = rule(value, this.form);
+      const _result = rule(value, this.form);
       if (result !== true) {
         fieldErrors.push(result);
       }
@@ -152,7 +160,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }
 
   validateForm() {
-    let isValid = true;
+    let _isValid = true;
     for (const field of this.rules.keys()) {
       if (!this.validateField(field)) {
         isValid = false;
@@ -162,8 +170,8 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }
 
   updateFieldUI(field) {
-    const fieldElement = this.form[field];
-    const errors = this.errors.get(field) || [];
+    const _fieldElement = this.form[field];
+    const _errors = this.errors.get(field) || [];
     
     if (errors.length > 0) {
       fieldElement.classList.add('error');
@@ -207,7 +215,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         createdAt: '2024-01-08'
     }
 ];
-const mockCodeAnalysis = [
+const _mockCodeAnalysis = [
     {
         id: '1',
         snippetId: '1',
@@ -242,30 +250,30 @@ const mockCodeAnalysis = [
         timestamp: '2024-01-10T14:20:00Z'
     }
 ];
-const mockAIGenerations = [
+const _mockAIGenerations = [
     {
         id: '1',
         prompt: 'Create a React hook for managing local storage with TypeScript',
-        generatedCode: `import { useState, useEffect } from 'react';
+        generatedCode: `import { _useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
-      const item = window.localStorage.getItem(key);
+      const _item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue;
     }
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
+  const _setValue = (value: T | ((val: T) => T)) => {
     try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      const _valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
+      // console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
   };
 
@@ -296,8 +304,8 @@ export function AdvancedAICodeGenerator() {
     const [codeAnalysis, setCodeAnalysis] = useState(mockCodeAnalysis);
     const [aiGenerations, setAiGenerations] = useState(mockAIGenerations);
     const [showSuggestions, setShowSuggestions] = useState(true);
-    const containerRef = useRef(null);
-    const getComplexityColor = (complexity) => {
+    const _containerRef = useRef(null);
+    const _getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'low': return 'text-green-500';
             case 'medium': return 'text-yellow-500';
@@ -305,23 +313,23 @@ export function AdvancedAICodeGenerator() {
             default: return 'text-gray-500';
         }
     };
-    const getQualityColor = (score) => {
+    const _getQualityColor = (score) => {
         if (score >= 90)
             return 'text-green-500';
         if (score >= 80)
             return 'text-yellow-500';
         return 'text-red-500';
     };
-    const generateCode = async () => {
+    const _generateCode = async () => {
         if (!aiPrompt.trim())
             return;
         setIsGenerating(true);
         // Simulate AI code generation
         setTimeout(() => {
-            const newGeneration = {
+            const _newGeneration = {
                 id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives: [
@@ -336,7 +344,7 @@ export function AdvancedAICodeGenerator() {
             setIsGenerating(false);
         }, 2000);
     };
-    const copyToClipboard = (text) => {
+    const _copyToClipboard = (text) => {
         navigator.clipboard.writeText(text);
     };
     if (!isOpen) {
@@ -597,7 +605,7 @@ export function AdvancedAICodeGenerator() {
 
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
-                const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
+                const _snippet = codeSnippets.find(s => s.id === analysis.snippetId);
                 return (<div key={analysis.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                     <div className="flex items-start justify-between mb-4">
                       <div>

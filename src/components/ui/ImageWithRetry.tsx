@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { cn } from '@/lib/utils';
+import { _cn } from '@/lib/utils';
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.svg', className, retryClassName, ...props }) {
     const [currentSrc, setCurrentSrc] = useState(src);
     const [failed, setFailed] = useState(false);
-    const handleError = () => {
+    const _handleError = () => {
         setFailed(true);
         setCurrentSrc(fallbackSrc);
     };
-    const handleRetry = () => {
+    const _handleRetry = () => {
         setFailed(false);
         setCurrentSrc(src);
     };

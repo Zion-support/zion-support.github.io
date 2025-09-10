@@ -1,8 +1,16 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 export function HomepagePromotion() {
-    const featuredServices = [
+    const _featuredServices = [
         {
             id: "ai-content-generation",
             title: "AI Content Generation Suite",
@@ -44,7 +52,7 @@ export function HomepagePromotion() {
             link: "/comprehensive-services-showcase"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -53,7 +61,7 @@ export function HomepagePromotion() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
