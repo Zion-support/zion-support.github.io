@@ -42,18 +42,27 @@ export default [
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tseslint.parser,
+      parser: tsParser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: false
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly'
       }
     },
+    settings: {
+      react: { version: 'detect' }
+    },
     plugins: {
+      '@typescript-eslint': tsPlugin,
       react,
       'react-hooks': reactHooks
     },
     rules: {
       ...js.configs.recommended.rules,
+      ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
