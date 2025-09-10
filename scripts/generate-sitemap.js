@@ -5,8 +5,16 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const generateSitemap = () => {
+  const pages = [
+    { url: '', priority: '1.0', changefreq: 'daily' },
+    { url: '/about', priority: '0.8', changefreq: 'weekly' },
+    { url: '/services', priority: '0.8', changefreq: 'weekly' },
+    { url: '/services/ai-services', priority: '0.7', changefreq: 'weekly' },
+    { url: '/services/micro-saas', priority: '0.7', changefreq: 'weekly' },
+    { url: '/services/it-services', priority: '0.7', changefreq: 'weekly' },
+    { url: '/contact', priority: '0.6', changefreq: 'monthly' },
+  ];
 
 const baseUrl = 'https://ziontechgroup.com';
 

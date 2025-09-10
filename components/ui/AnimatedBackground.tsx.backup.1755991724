@@ -40,7 +40,7 @@ export default function AnimatedBackground() {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1
+        opacity: Math.random() * 0.5 + 0.2,
       });
     }
 
@@ -49,17 +49,8 @@ export default function AnimatedBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Create gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
-      gradient.addColorStop(0.5, 'rgba(30, 30, 60, 0.6)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)');
-      
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach(particle => {
+        // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -81,18 +72,7 @@ export default function AnimatedBackground() {
         ctx.fill();
 
         // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index === otherIndex) return;
-          
-          const distance = Math.sqrt(
-            Math.pow(particle.x - otherParticle.x, 2) + 
-            Math.pow(particle.y - otherParticle.y, 2)
-          );
-          
-          if (distance < 100) {
-=======
-        // Draw connections;
-        particles.forEach((otherParticle) => {}
+        particles.forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -128,4 +108,6 @@ export default function AnimatedBackground() {
       style={{ background: 'transparent' }}
     />
   );
-}
+};
+
+export default ParticleBackground;

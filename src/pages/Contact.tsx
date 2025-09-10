@@ -1,139 +1,105 @@
-<<<<<<< HEAD
-import React from 'react'; const Contact = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Contact Us </h1> <p className="text-xl text-gray-600"> Get in touch with our team to discuss your technology needs. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2> <div className="space-y-4"> <div> <h3 className="text-lg font-medium text-gray-900">Email</h3> <p className="text-gray-600">info@ziontechgroup.com</p> </div> <div> <h3 className="text-lg font-medium text-gray-900">Phone</h3> <p className="text-gray-600">+1-302-464-0950</p> </div> <div> <h3 className="text-lg font-medium text-gray-900">Address</h3> <p className="text-gray-600"> 364 E Main St STE 1008<br /> Middletown,DE 19709 </p> </div> </div> </div> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2> <form className="space-y-6"> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Name</label> <input type="text" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Email</label> <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Message</label> <textarea rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea> </div> <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"> Send Message </button> </form> </div> </div> </div> </div> )}; export default Contact;
-=======
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import z from 'zod';
-import { ChatAssistant } from '@/components/ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { useNotifications } from '@/context/NotificationContext';
+import SEOHead from '@/components/SEOHead';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: '',
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    message?: string;
-  }>({});
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = () => {
+    const errors: string[] = [];
+
+    if (!formData.name.trim()) errors.push('Name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    if (!formData.message.trim()) errors.push('Message is required');
+
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push('Please enter a valid email address');
+    }
+
+    if (formData.message && formData.message.length < 10) {
+      errors.push('Message must be at least 10 characters long');
+    }
+
+    return errors;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    logInfo('[ContactForm] handleSubmit triggered.');
-    logInfo('[ContactForm] formData:', { data: formData });
 
-    const schema = z.object({
-      name: z.string().min(2, 'Name must be at least 2 characters'),
-      email: z.string().email('Invalid email address'),
-      message: z.string().min(10, 'Message must be at least 10 characters'),
-    });
-
-    const result = schema.safeParse(formData);
-    logInfo('[ContactForm] Zod validation result:', { data: result });
-
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
-      for (const err of result.error.errors) {
-        if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
-        }
-      }
-      setErrors(fieldErrors);
-      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again';
-      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } });
+    const errors = validateForm();
+    if (errors.length > 0) {
       toast({
-        title: 'Form Validation Error',
-        description: validationErrorMsg,
+        title: 'Validation Error',
+        description: errors.join(', '),
         variant: 'destructive',
       });
       return;
     }
 
-    setErrors({});
     setIsSubmitting(true);
-    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).');
 
     try {
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-        .then(async (res) => {
-          logInfo('[ContactForm] API response status:', { data: res.status });
-          const responseBody = await res.text(); // Read as text first to avoid JSON parse error if not JSON
-          logInfo('[ContactForm] API response body:', { data: responseBody });
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
 
-          // Note: setIsSubmitting(false) is called within then/catch of the promise.
-          // If fetch itself or .then/.catch structure has a synchronous error,
-          // the outer try/catch will handle it.
+      // Show success notification
+      addNotification({
+        type: 'success',
+        title: 'Message sent successfully!',
+        message: 'Thank you for your message. We\'ll get back to you within 24 hours.',
+        duration: 5000,
+        action: {
+          label: 'View Services',
+          onClick: () => window.location.href = '/services',
+        },
+      });
 
-          if (!res.ok) {
-            let errorData = { error: `Request failed with status ${res.status}` };
-            try {
-              errorData = JSON.parse(responseBody);
-            } catch (parseError) {
-              logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError });
-            }
-            logErrorToProduction('[ContactForm] API error response:', { data: errorData });
-            // This throw will be caught by the .catch block below
-            throw new Error(errorData.error || 'Failed to send message');
-          }
+      toast({
+        title: 'Message sent successfully!',
+        description: 'Thank you for your message. We\'ll get back to you within 24 hours.',
+      });
 
-          setIsSubmitting(false); // Moved here for success path
-          logInfo('[ContactForm] Message submission successful.');
-          toast({
-            title: 'Message Sent',
-            description:
-              "We've received your message and will get back to you soon.",
-          });
-          setSubmitted(true);
-          setTimeout(() => setSubmitted(false), 2000);
-          setFormData({ name: '', email: '', message: '' });
-        })
-        .catch((err) => {
-          // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
-          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err });
-          setIsSubmitting(false);
-          toast({
-            title: 'Submission Error',
-            description: err.message || 'An unexpected error occurred during submission.',
-            variant: 'destructive',
-          });
-        });
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
     } catch (error) {
-      // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
-      // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
-      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error });
+      // Show error notification
+      addNotification({
+        type: 'error',
+        title: 'Error sending message',
+        message: 'There was an error sending your message. Please try again.',
+        duration: 7000,
+      });
+
+      toast({
+        title: 'Error',
+        description: 'There was an error sending your message. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
       setIsSubmitting(false);
       toast({
         title: 'Critical Submission Error',
@@ -143,61 +109,50 @@ export default function Contact() {
     }
   };
 
-  // Handle sending messages to the AI chat assistant
-  const handleSendMessage = async (message: string): Promise<void> => {
-    try {
-      const response = await fetch(
-        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            messages: [{ role: 'user', content: message }],
-          }),
-        },
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to get response from AI assistant');
-      }
-
-      return Promise.resolve();
-    } catch (error) {
-      logErrorToProduction('Error in AI chat', error);
-      toast({
-        title: 'Chat Error',
-        description:
-          'There was an error communicating with our AI assistant. Please try again.',
-        variant: 'destructive',
-      });
-      return Promise.resolve();
-    }
-  };
-
-  const offices = [
+  const contactInfo = [
     {
-      name: 'Headquarters',
-      address: '123 Tech Avenue, San Francisco, CA 94105',
-      phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com',
+      icon: <Mail className="w-6 h-6" />,
+      title: 'Email',
+      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
+      description: 'Send us an email anytime',
     },
     {
-      name: 'East Coast Office',
-      address: '456 Innovation Street, New York, NY 10001',
-      phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com',
+      icon: <Phone className="w-6 h-6" />,
+      title: 'Phone',
+      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      description: 'Call us during business hours',
     },
+    {
+      icon: <MapPin className="w-6 h-6" />,
+      title: 'Address',
+      details: ['123 Tech Street', 'Innovation City, IC 12345'],
+      description: 'Visit our headquarters',
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: 'Business Hours',
+      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM'],
+      description: 'We\'re here to help',
+    },
+  ];
+
+  const services = [
+    'AI & Machine Learning',
+    'Cybersecurity',
+    'Cloud Infrastructure',
+    'Software Development',
+    'Data Solutions',
+    'Mobile Solutions',
+    'Consulting',
+    'Other',
   ];
 
   return (
     <>
-      <SEO
-        title="Contact Us - Get Help from Zion Tech Marketplace"
-        description="Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime."
-        keywords="contact Zion, AI marketplace support, tech platform contact"
-        canonical="https://app.ziontechgroup.com/contact"
+      <SEOHead
+        title="Contact Us - Get Your Free Consultation | Zion Tech Group"
+        description="Ready to transform your business? Contact our expert team for a free consultation on AI services, cybersecurity, cloud solutions, and custom software development."
+        keywords="contact, consultation, AI services, cybersecurity, cloud solutions, software development, technology consulting"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,15 +163,84 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-zion-slate-light text-lg mb-8">
-                Whether you have a question about our platform, pricing, or
-                anything else, our team is ready to answer all your questions.
-              </p>
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                  <p className="text-gray-600">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="your.email@company.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

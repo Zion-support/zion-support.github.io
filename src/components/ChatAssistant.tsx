@@ -24,12 +24,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   enableSuggestions = true;
 }) => {;
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([{;
-      id: '1',
-      text: 'Hello! I\'m your AI assistant.How can I help you today?',
-      sender: 'assistant',
-      timestamp: new Date();
-}
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      text: 'Hello! I\'m Zion Tech\'s AI assistant. How can I help you today?',
+      isBot: true,
+      timestamp: new Date(),
+    },
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -42,49 +44,33 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;
-};
-}, []); []);
-    scrollToBottom();
-}, [messages]);
-  const handleSendMessage = async () => {;
-    if(!inputValue.trim()) return;
-    const userMessage: Message = {;
-      id: Date.now().toString(),
-      text: inputValue,
-      sender: 'user',
-      timestamp: new Date();
-};
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsTyping(true);
-    // Simulate AI response;
-    setTimeout(() => {;
-      const aiResponse: Message = {;
-        id: (Date.now() + 1).toString(),
-        text: getAIResponse(inputValue),
-        sender: 'assistant',
+  const handleSendMessage = () => {
+    if (message.trim()) {
+      const newMessage = {
+        id: messages.length + 1,
+        text: message,
+        isBot: false,
         timestamp: new Date(),
-        metadata: {;
-          confidence: 0.95,
-          suggestions: ['Learn more about our services', 'Schedule a consultation', 'View pricing'];
-}
       };
-      setMessages(prev => [...prev, aiResponse]);
-      setIsTyping(false);
-}, 1500);
-};
-  const getAIResponse = (input: string): string => {;
-    const responses = ["I'd be happy to help you with that! Can you provide more details about your specific needs?",
-      "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions.Which area interests you most?",
-      "Thank you for reaching out! I can connect you with one of our experts to discuss your requirements in detail.",
-      "Based on your query, I recommend exploring our comprehensive service offerings.Would you like me to guide you through them?",
-      "Excellent! We have extensive experience in that area.Let me provide you with some relevant information and next steps." ];
-    return responses[Math.floor(Math.random() * responses.length)];
-};
-  const handleKeyPress = (e: React.KeyboardEvent) => {;
-    if(e.key === 'Enter' && !e.shiftKey) {;
+
+      setMessages([...messages, newMessage]);
+      setMessage('');
+
+      // Simulate bot response
+      setTimeout(() => {
+        const botResponse = {
+          id: messages.length + 2,
+          text: 'Thank you for your message! Our team will get back to you shortly. In the meantime, feel free to explore our services or contact us directly.',
+          isBot: true,
+          timestamp: new Date(),
+        };
+        setMessages(prev => [...prev, botResponse]);
+      }, 1000);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
 }
@@ -137,95 +123,55 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
               </div>;
             </div>;
 
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3">;
-              {messages.map((message) => (;
-                <div ;
-                  key={message.id}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >;
-                  <div className={`max-w-[80%] ${message.sender === 'user' ;
-                      ? 'bg-cyan-500 text-white' ;
-                      : 'bg-white/10 text-gray-100';
-} rounded-lg p-3`}>;
-                    <p className="text-sm">{message.text}</p>;
-                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400';
-}`}>;
-                      {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </p>;
-                  </div>;
-                </div>;
-              ))}
+          {/* Messages */}
+          <div className="flex-1 p-4 overflow-y-auto space-y-4">
+            {messages.map(msg => (
+              <div
+                key={msg.id}
+                className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}
+              >
+                <div
+                  className={`max-w-xs px-4 py-2 rounded-lg ${
+                    msg.isBot
+                      ? 'bg-gray-100 text-gray-800'
+                      : 'bg-blue-600 text-white'
+                  }`}
+                >
+                  <p className="text-sm">{msg.text}</p>
+                  <p className="text-xs opacity-70 mt-1">
+                    {msg.timestamp.toLocaleTimeString([], {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-              {isTyping && (;
-                <div className="flex justify-start">;
-                  <div className="bg-white/10 text-gray-100 rounded-lg p-3">;
-                    <div className="flex space-x-1">;
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>;
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>;
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>;
-                    </div>;
-                  </div>;
-                </div>;
-              )}
-              <div ref={messagesEndRef} />;
-            </div>;
-
-            {/* Input */}
-            <div className="p-4 border-t border-white/10">;
-              <div className="flex items-center gap-2">;
-                <div className="flex-1 relative">;
-                  <input;
-                    ref={inputRef}
-                    type="text";
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Type your message...";
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400";
-                  />;
-                </div>;
-                {enableFileUpload && (;
-                  <button className="text-gray-400 hover:text-white transition-colors p-2">;
-                    <Paperclip className="w-4 h-4" />;
-                  </button>;
-                )}
-
-                {enableVoice && (;
-                  <button ;
-                    onClick={toggleVoice}
-                    className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover:text-white';
-}`}
-                  >;
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                  </button>;
-                )}
-
-                <button ;
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim()}
-                  className="bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors">;
-                  <Send className="w-4 h-4" />;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-        )}
-      </AnimatePresence>;
-
-      {/* Toggle Button */}
-      <motion.button;
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-shadow";
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >;
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>;
-    </div>;
+          {/* Input */}
+          <div className="p-4 border-t border-gray-200">
+            <div className="flex space-x-2">
+              <input
+                type="text"
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Type your message..."
+                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              />
+              <button
+                onClick={handleSendMessage}
+                className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
+
 export default ChatAssistant;
-=======
-import React,{ useState } from 'react'; type ChatAssistantProps = { enabled?: boolean}; export default function ChatAssistant({ enabled = false }: ChatAssistantProps) { const [isOpen,setIsOpen] = useState(false); if (!enabled) return null; return ( <div style={{ position: 'fixed',bottom: 16,right: 16,zIndex: 50 }}> {isOpen && ( <div style={{ width: 320,height: 380,background: 'white',border: '1px solid #e5e7eb',borderRadius: 8,marginBottom: 8 }} /> )} <button onClick={() => setIsOpen(v => !v)} style={{ width: 56,height: 56,borderRadius: 28,background: '#06b6d4',color: 'white',border: 'none' }}> {isOpen ? '×' : '💬'} </button> </div> )}
->>>>>>> origin/automation-improvements

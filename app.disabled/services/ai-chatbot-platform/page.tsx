@@ -1,19 +1,7 @@
 export const metadata = {
   title: 'AI Chatbot Platform | Zion Tech Group',
-  description: 'Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management. No coding required.',
-  keywords: 'AI chatbot platform, conversational AI, chatbot development, customer service automation',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Chatbot Platform | Zion Tech Group',
-    description: 'Build intelligent chatbots with natural language processing and multi-channel deployment.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Chatbot Platform | Zion Tech Group',
-    description: 'Build intelligent chatbots with natural language processing and multi-channel deployment.',
-  },
+  description:
+    'Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management. No coding required.',
 };
 
 export default function AIChatbotPlatformPage() {
@@ -141,67 +129,66 @@ export default function AIChatbotPlatformPage() {
   );
 }
 
-function UseCasesSection() {}
-  const useCases = []
-    {"
-      title: "Customer Support","
-      description: "24/7 automated customer support with instant responses","
-      icon: "🎧",
-      benefits: ["
-        "Reduce support costs by 60%","
-        "Instant response times","
-        "Handle 80% of queries automatically",
+function UseCasesSection() {
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: '24/7 automated customer support with instant responses',
+      icon: '🎧',
+      benefits: [
+        'Reduce support costs by 60%',
+        'Instant response times',
+        'Handle 80% of queries automatically',
       ],
     },
-    {"
-      title: "Sales Assistant","
-      description: "Qualify leads and guide prospects through the sales funnel","
-      icon: "💼",
-      benefits: ["
-        "Increase lead conversion by 40%","
-        "Qualify leads 24/7","
-        "Schedule meetings automatically",
+    {
+      title: 'Sales Assistant',
+      description: 'Qualify leads and guide prospects through the sales funnel',
+      icon: '💼',
+      benefits: [
+        'Increase lead conversion by 40%',
+        'Qualify leads 24/7',
+        'Schedule meetings automatically',
       ],
     },
-    {"
-      title: "E-commerce Assistant","
-      description: "Help customers find products and complete purchases","
-      icon: "🛒",
-      benefits: ["
-        "Boost sales by 25%","
-        "Reduce cart abandonment","
-        "Personalized recommendations",
+    {
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products and complete purchases',
+      icon: '🛒',
+      benefits: [
+        'Boost sales by 25%',
+        'Reduce cart abandonment',
+        'Personalized recommendations',
       ],
     },
-    {"
-      title: "HR Assistant","
-      description: "Answer employee questions and streamline HR processes","
-      icon: "👥",
-      benefits: ["
-        "Reduce HR workload by 50%","
-        "Instant policy answers","
-        "Automated onboarding",
+    {
+      title: 'HR Assistant',
+      description: 'Answer employee questions and streamline HR processes',
+      icon: '👥',
+      benefits: [
+        'Reduce HR workload by 50%',
+        'Instant policy answers',
+        'Automated onboarding',
       ],
     },
-    {"
-      title: "Lead Generation","
-      description: "Capture and qualify leads through engaging conversations","
-      icon: "📈",
-      benefits: ["
-        "Generate 3x more leads","
-        "Qualify prospects automatically","
-        "Nurture leads effectively",
+    {
+      title: 'Lead Generation',
+      description: 'Capture and qualify leads through engaging conversations',
+      icon: '📈',
+      benefits: [
+        'Generate 3x more leads',
+        'Qualify prospects automatically',
+        'Nurture leads effectively',
       ],
     },
-    {"
-      title: "Appointment Booking","
-      description: "Automate appointment scheduling and reminders","
-      icon: "📅",
-      benefits: ["
-        "Reduce no-shows by 30%","
-        "24/7 availability","
-        "Automatic confirmations",
-
+    {
+      title: 'Appointment Booking',
+      description: 'Automate appointment scheduling and reminders',
+      icon: '📅',
+      benefits: [
+        'Reduce no-shows by 30%',
+        '24/7 availability',
+        'Automatic confirmations',
       ],
     },
   ];
@@ -257,13 +244,12 @@ function PricingSection() {}
           price="$99""
           period="month""
           description="Perfect for small businesses getting started with chatbots"
-          features={["
-            "1 chatbot","
-            "1,000 conversations/month","
-            "Basic templates","
-            "Email support","
-            "Website integration",
-
+          features={[
+            '1 chatbot',
+            '1,000 conversations/month',
+            'Basic templates',
+            'Email support',
+            'Website integration',
           ]}
           popular={false}
         />
@@ -272,14 +258,13 @@ function PricingSection() {}
           price="$299""
           period="month""
           description="Advanced features for growing businesses"
-          features={["
-            "5 chatbots","
-            "10,000 conversations/month","
-            "Advanced NLP","
-            "Priority support","
-            "Multi-channel deployment","
-            "Analytics dashboard",
-
+          features={[
+            '5 chatbots',
+            '10,000 conversations/month',
+            'Advanced NLP',
+            'Priority support',
+            'Multi-channel deployment',
+            'Analytics dashboard',
           ]}
           popular={true}
         />
@@ -288,14 +273,13 @@ function PricingSection() {}
           price="Custom""
           period="""
           description="Full-scale solution for large organizations"
-          features={["
-            "Unlimited chatbots","
-            "Unlimited conversations","
-            "Custom integrations","
-            "24/7 support","
-            "Dedicated account manager","
-            "White-label solution",
-
+          features={[
+            'Unlimited chatbots',
+            'Unlimited conversations',
+            'Custom integrations',
+            '24/7 support',
+            'Dedicated account manager',
+            'White-label solution',
           ]}
           popular={false}
         />
@@ -320,8 +304,8 @@ function PricingCard({}
   popular: boolean;
 }) {}
   return (
-    <div"
-      className={`relative border-2 rounded-xl p-8 ${popular ? "border-indigo-500 bg-indigo-50" : "border-gray-200"}`}
+    <div
+      className={`relative border-2 rounded-xl p-8 ${popular ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200'}`}
     >
       {popular && ("
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -354,12 +338,12 @@ function PricingCard({}
           </li>
         ))}
       </ul>
-      <a"
-        href="tel:+13024640950"`
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${}
-          popular"
-            ? "bg-indigo-600 text-white hover:bg-indigo-700""
-            : "bg-gray-900 text-white hover:bg-gray-800"`
+      <a
+        href="tel:+13024640950"
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+          popular
+            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+            : 'bg-gray-900 text-white hover:bg-gray-800'
         }`}
       >
         Get Started;

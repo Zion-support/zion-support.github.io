@@ -1,71 +1,9 @@
-<<<<<<< HEAD
-
-      // // // // // // // console.error('Newsletter subscription failed:', error) ;
-} finally {;
-      setIsSubmitting(false) ;
-      // console.error('Newsletter subscription failed:', error)} finally {;
-
-      setIsSubmitting(false)}
-  };
-  return ();
-    <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">";
-      <div className="text-center">";
-        <div className="flex justify-center mb-4">";
-          <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">";
-            <Mail className="w-6 h-6 text-white"  />          </div>;
-        </div>;
-";
-        <h3 className="text-xl font-bold text-white mb-2">;
-          Stay Updated;
-        </h3>";
-        <p className="text-gray-300 mb-6 max-w-md mx-auto">;
-          Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.</p>;
-
-        {isSubmitted ? (";
-          <div className="flex items-center justify-center gap-2 text-green-400">";
-            <CheckCircle className="w-5 h-5"  />            <span>Successfully subscribed!</span>;
-          </div>;
-        ) : (";
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">;
-            <input";
-              type="email";
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}";
-              placeholder="Enter your email address";
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300";
-              required;
-            />;
-            <button";
-              type="submit";
-              disabled={isSubmitting || !email.trim()}";
-              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2";
-
-              {isSubmitting ? (;
-                <>";
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />;
-                  Subscribing...;
-                </>;
-              ) : (;
-                <>";
-                  <Send className="w-4 h-4"  />                  Subscribe;
-                </>) }
-            </button>;
-          </form>;
-        )}
-";
-        <p className="text-xs text-gray-400 mt-4">;
-          We respect your privacy.Unsubscribe at any time.;
-        </p>;
-      </div>;
-    </div>;) };
-'";
-=======
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Loader2 } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
 
 export function FooterNewsletter(): React.ReactElement {
   const [email, setEmail] = useState('');
@@ -87,11 +25,10 @@ export function FooterNewsletter(): React.ReactElement {
 
     const trimmedEmail = email.trim();
     if (!EMAIL_REGEX.test(trimmedEmail)) {
-      setEmailError("Please enter a valid email address.");
+      setEmailError('Please enter a valid email address.');
       return;
-    } else {
-      setEmailError("");
     }
+      setEmailError('');
 
     setIsSubmitting(true);
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
@@ -100,14 +37,14 @@ export function FooterNewsletter(): React.ReactElement {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmedEmail })
+        body: JSON.stringify({ email: trimmedEmail }),
       });
 
       const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
 
       if (res.ok) {
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` });
+          toast.success(data.message || 'You\'re already subscribed!', { id: `${uniqueToastIdBase}-already-subscribed` });
         } else {
           toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` });
         }
@@ -121,7 +58,9 @@ export function FooterNewsletter(): React.ReactElement {
       }
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` });
+      toast.error('Unable to subscribe right now. Please try again later.', {
+        id: `${uniqueToastIdBase}-catch-error`,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -144,7 +83,7 @@ export function FooterNewsletter(): React.ReactElement {
         placeholder="Enter your email"
         className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={e => setEmail(e.target.value)}
         autoComplete="email"
         required
       />
@@ -152,8 +91,9 @@ export function FooterNewsletter(): React.ReactElement {
       {/* Honeypot field */}
       <input
         type="text"
+        name="honeypot"
         value={honeypot}
-        onChange={(e) => setHoneypot(e.target.value)}
+        onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
         autoComplete="off"
         style={{ display: 'none' }}
@@ -175,5 +115,4 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
   );
-} 
->>>>>>> origin/automation/changelog
+}

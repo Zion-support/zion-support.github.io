@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = { 
+export const metadata = {
   title: 'AI Customer Support Automation | Zion Tech Group',
   description: 'Intelligent customer support automation with AI chatbots, ticket routing, sentiment analysis, and 24/7 multilingual support for enhanced customer experience.',
-  keywords: 'AI customer support, chatbot automation, ticket routing, sentiment analysis, multilingual support, customer service AI'
+  keywords: 'AI customer support, chatbot automation, ticket routing, sentiment analysis, multilingual support, customer service AI',
 };
 
 interface FeatureProps {
@@ -154,14 +154,14 @@ export default function AICustomerSupportAutomationPage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { name: "Zendesk", icon: "🎫", description: "Ticket management" },
-            { name: "Freshdesk", icon: "🆕", description: "Support platform" },
-            { name: "Intercom", icon: "💬", description: "Customer messaging" },
-            { name: "Salesforce", icon: "☁️", description: "CRM integration" },
-            { name: "Slack", icon: "💼", description: "Team communication" },
-            { name: "Microsoft Teams", icon: "👥", description: "Collaboration" },
-            { name: "WhatsApp", icon: "📱", description: "Messaging platform" },
-            { name: "LiveChat", icon: "💻", description: "Live support" }
+            { name: 'Zendesk', icon: '🎫', description: 'Ticket management' },
+            { name: 'Freshdesk', icon: '🆕', description: 'Support platform' },
+            { name: 'Intercom', icon: '💬', description: 'Customer messaging' },
+            { name: 'Salesforce', icon: '☁️', description: 'CRM integration' },
+            { name: 'Slack', icon: '💼', description: 'Team communication' },
+            { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
+            { name: 'WhatsApp', icon: '📱', description: 'Messaging platform' },
+            { name: 'LiveChat', icon: '💻', description: 'Live support' },
           ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="text-3xl mb-3">{integration.icon}</div>
@@ -227,12 +227,12 @@ export default function AICustomerSupportAutomationPage() {
             period="month"
             description="Perfect for small businesses"
             features={[
-              "Up to 1,000 conversations/month",
-              "Basic AI chatbot",
-              "Email support integration",
-              "Basic analytics",
-              "5 team members",
-              "Email support"
+              'Up to 1,000 conversations/month',
+              'Basic AI chatbot',
+              'Email support integration',
+              'Basic analytics',
+              '5 team members',
+              'Email support',
             ]}
             cta="Start Free Trial"
           />
@@ -242,14 +242,14 @@ export default function AICustomerSupportAutomationPage() {
             period="month"
             description="Most popular for growing businesses"
             features={[
-              "Up to 10,000 conversations/month",
-              "Advanced AI chatbot",
-              "Multi-channel support",
-              "Sentiment analysis",
-              "Smart ticket routing",
-              "Advanced analytics",
-              "Priority support",
-              "25 team members"
+              'Up to 10,000 conversations/month',
+              'Advanced AI chatbot',
+              'Multi-channel support',
+              'Sentiment analysis',
+              'Smart ticket routing',
+              'Advanced analytics',
+              'Priority support',
+              '25 team members',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -260,15 +260,15 @@ export default function AICustomerSupportAutomationPage() {
             period="month"
             description="For large organizations"
             features={[
-              "Unlimited conversations",
-              "Custom AI training",
-              "Multilingual support",
-              "White-label options",
-              "Dedicated account manager",
-              "24/7 phone support",
-              "Custom integrations",
-              "Unlimited team members",
-              "API access"
+              'Unlimited conversations',
+              'Custom AI training',
+              'Multilingual support',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Custom integrations',
+              'Unlimited team members',
+              'API access',
             ]}
             cta="Contact Sales"
           />
