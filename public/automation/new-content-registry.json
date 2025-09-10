@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   "generatedAt": "2025-08-15T11:53:49.108Z",
@@ -1198,10 +1199,41 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T12:00:38.516Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T12-00-56-964Z
+=======
+  "generatedAt": "2025-08-15T12:21:30.750Z",
+  "items": [
+    {
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-122130",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T12:21:30.716Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Playbook — Autonomous Delivery",
+      "href": "/reports/playbooks/playbook-2025-08-15-122130",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T12:21:30.680Z",
+      "source": "cloud-playbook-factory"
+    },
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-122130",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T12:21:30.635Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — Cloud Improving Implementation",
+      "href": "/reports/guides/guide-2025-08-15-122130",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T12:21:30.635Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T12-21-36-254Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3153,6 +3185,12 @@
       "createdAt": "2025-08-15T12:18:17.935Z",
       "source": "cloud-deep-research-factory"
 >>>>>>> origin/automation/git-sync/2025-08-15T12-18-23-213Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-122130",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T12:21:30.635Z",
+      "source": "cloud-deep-research-factory"
+>>>>>>> origin/automation/git-sync/2025-08-15T12-21-36-254Z
     }
   ]
 =======
