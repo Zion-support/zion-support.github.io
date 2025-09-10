@@ -17,44 +17,74 @@ import {
   Rocket,
   Search,
   Phone,
-  Mail
+  Mail,
+  Sun,
+  Moon
 } from 'lucide-react';
-export function AppHeader() {};
-  return null;
-}
-};
-      setScrolled(window.scrollY > 20);,
-};
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  // Close mobile menu when route changes;
-  useEffect(() => {};
-}, [location.pathname]);
-;
-  const navigationItems = [;
-    { name: 'Home', path: '/', icon: null },;
-    {};
-        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },;
-        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },;
-        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },;
-        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500' },;
-        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500' },;
-        { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },;
-        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },;
-        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },;
-      ]},;
-    { name: 'About', path: '/about', icon: null },;
-    { name: 'Contact', path: '/contact', icon: null },;
+export function AppHeader() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  const closeAllDropdowns = () => {
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+  };
+
+  const navigationItems = [
+    { name: 'Home', path: '/', icon: null },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: null,
+      dropdown: [
+        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
+        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },
+        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },
+        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500' },
+        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500' },
+        { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },
+        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },
+        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
+      ]
+    },
+    { name: 'About', path: '/about', icon: null },
+    { name: 'Contact', path: '/contact', icon: null },
   ];
 
   const isActive = (path) => location.pathname === path;
 
-  return (;
-    <div>Broken JSX</div>
-    >;
-      <div className="container mx-auto px-4">;
-        <div className="flex items-center justify-between h-16 lg:h-20">;
+  return (
+    <motion.header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30' 
+          : 'bg-transparent'
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group" onClick={closeAllDropdowns}>
             <div className="relative">
@@ -62,9 +92,8 @@ export function AppHeader() {};
                 <span className="text-white font-bold text-lg lg:text-xl">Z</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              {/* Neon glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 animate-pulse"></div>
-            </motion.div>
+            </div>
             <div className="hidden sm:block">
               <motion.div 
                 className="text-xl lg:text-2xl font-bold text-white"
@@ -85,48 +114,18 @@ export function AppHeader() {};
             </div>
           </Link>
 
-          {/* Enhanced Desktop Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map(((((((item => (
+            {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div
                     className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, index, index, index, index, index, index) => ({ ...(((((item => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, index, index, index, index, index, key: index })) => ({ ...((((item => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, index, index, index, index, key: index })) => ({ ...(((item => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, index, index, index, key: index })) => ({ ...((item => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, index, index, key: index })) => ({ ...(item => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, index, key: index })) => ({ ...item => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan cursor-pointer transition-colors"
-                    onMouseEnter={(, key: index })) => setActiveDropdown(item.name)}
+                    onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4"       />
+                    <ChevronDown className="w-4 h-4" />
                   </div>
                 ) : (
                   <Link
@@ -151,7 +150,7 @@ export function AppHeader() {};
                     transition={{ duration: 0.2 }}
                   >
                     <div className="grid grid-cols-1 gap-2">
-                      {item.dropdown.map(((((((dropdownItem => (
+                      {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
@@ -160,103 +159,13 @@ export function AppHeader() {};
                           <div
                             className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
                           >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
+                            <dropdownItem.icon className="w-4 h-4 text-white" />
                           </div>
                           <span className="text-white group-hover:text-zion-cyan transition-colors">
                             {dropdownItem.name}
                           </span>
                         </Link>
-                      , index, index, index, index, index, index) => ({ ...(((((dropdownItem => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors group"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
-                          >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
-                          </div>
-                          <span className="text-white group-hover:text-zion-cyan transition-colors">
-                            {dropdownItem.name}
-                          </span>
-                        </Link>
-                      , index, index, index, index, index, key: index })) => ({ ...((((dropdownItem => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors group"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
-                          >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
-                          </div>
-                          <span className="text-white group-hover:text-zion-cyan transition-colors">
-                            {dropdownItem.name}
-                          </span>
-                        </Link>
-                      , index, index, index, index, key: index })) => ({ ...(((dropdownItem => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors group"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
-                          >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
-                          </div>
-                          <span className="text-white group-hover:text-zion-cyan transition-colors">
-                            {dropdownItem.name}
-                          </span>
-                        </Link>
-                      , index, index, index, key: index })) => ({ ...((dropdownItem => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors group"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
-                          >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
-                          </div>
-                          <span className="text-white group-hover:text-zion-cyan transition-colors">
-                            {dropdownItem.name}
-                          </span>
-                        </Link>
-                      , index, index, key: index })) => ({ ...(dropdownItem => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors group"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
-                          >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
-                          </div>
-                          <span className="text-white group-hover:text-zion-cyan transition-colors">
-                            {dropdownItem.name}
-                          </span>
-                        </Link>
-                      , index, key: index })) => ({ ...dropdownItem => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors group"
-                        >
-                          <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
-                          >
-                            <dropdownItem.icon className="w-4 h-4 text-white"       />
-                          </div>
-                          <span className="text-white group-hover:text-zion-cyan transition-colors">
-                            {dropdownItem.name}
-                          </span>
-                        </Link>
-                      , key: index })))}
+                      ))}
                     </div>
                   </motion.div>
                 )}
@@ -266,19 +175,19 @@ export function AppHeader() {};
 
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            {/* Search button */}
+            {/* Theme toggle */}
             <motion.button
-              onClick={() => setSearchOpen(!searchOpen)}
+              onClick={() => setIsDarkMode(!isDarkMode)}
               className="p-2 text-white hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {isDarkMode ? (
-                <Sun className="w-5 h-5"       />
+                <Sun className="w-5 h-5" />
               ) : (
-                <Moon className="w-5 h-5"       />
+                <Moon className="w-5 h-5" />
               )}
-            </button>
+            </motion.button>
 
             {/* CTA Button */}
             <Link to="/contact">
@@ -290,18 +199,6 @@ export function AppHeader() {};
                 Get Started
               </motion.button>
             </Link>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6"       />
-              ) : (
-                <Menu className="w-6 h-6"       />
-              )}
-            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -315,210 +212,62 @@ export function AppHeader() {};
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-zion-cyan/30"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="container mx-auto px-4 py-6">
-            <nav className="space-y-4">
-              {navigationItems.map(((((((item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-zion-cyan/30"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="container mx-auto px-4 py-6">
+              <nav className="space-y-4">
+                {navigationItems.map((item) => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <div className="text-white font-medium mb-2">
+                          {item.name}
+                        </div>
+                        <div className="pl-4 space-y-2">
+                          {item.dropdown.map(dropdownItem => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.path}
+                              className="block text-zion-cyan hover:text-white transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.path}
+                        className="block text-white hover:text-zion-cyan transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
                         {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, index, index, index) => ({ ...(((((item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
-                        {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, index, index, key: index })) => ({ ...((((item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
-                        {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, index, key: index }, index) => ({ ...dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, index, key: index }, key: index }))) => ({ ...(((item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
-                        {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map(((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, key: index }, index, index) => ({ ...(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, key: index }, index, key: index })) => ({ ...dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, index, key: index }, key: index }))) => ({ ...((item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
-                        {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map((((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, key: index }, index, index, index) => ({ ...((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, key: index }, index, index, key: index })) => ({ ...(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, key: index }, index, key: index })) => ({ ...dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, index, key: index }, key: index }))) => ({ ...(item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
-                        {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map(((((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, key: index }, index, index, index, index) => ({ ...(((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, key: index }, index, index, index, key: index })) => ({ ...((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, key: index }, index, index, key: index })) => ({ ...(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, key: index }, index, key: index })) => ({ ...dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, index, key: index }, key: index }))) => ({ ...item => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <div className="text-white font-medium mb-2">
-                        {item.name}
-                      </div>
-                      <div className="pl-4 space-y-2">
-                        {item.dropdown.map((((((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, key: index }, index, index, index, index, index) => ({ ...((((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, key: index }, index, index, index, index, key: index })) => ({ ...(((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, key: index }, index, index, index, key: index })) => ({ ...((dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, key: index }, index, index, key: index })) => ({ ...(dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, key: index }, index, key: index })) => ({ ...dropdownItem => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block text-zion-cyan hover:text-white transition-colors"
-                            onClick={(, key: index }, key: index }))) => setMobileMenuOpen(false)}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className="block text-white hover:text-zion-cyan transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>;
-              ))}
-              <div className="pt-4 border-t border-zion-cyan/30">;
-                <div>Broken JSX</div>
-                  onClick={() => setMobileMenuOpen(false)}
-                >;
-                  Get Started;
-                </Link>;
-              </div>;
-            </div>;
-          </motion.div>;
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-zion-cyan/30">
+                  <Link
+                    to="/contact"
+                    className="block text-zion-cyan hover:text-white transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </nav>
+            </div>
+          </motion.div>
         )}
-      </AnimatePresence>;
-    </motion.header>;
-  )}
+      </AnimatePresence>
+    </motion.header>
+  );
+}
