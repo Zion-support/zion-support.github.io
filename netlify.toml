@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "corepack enable && pnpm install --frozen-lockfile=false --prefer-offline --no-frozen-lockfile && pnpm run build"
   publish = "dist"
   command_timeout = "30m"
 
