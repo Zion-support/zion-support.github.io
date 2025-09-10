@@ -21,11 +21,7 @@
     "format:check": "prettier --check .",
     "test:smoke": "jest --config jest.config.smoke.cjs",
     "lint:check": "eslint . --max-warnings 0",
-<<<<<<< HEAD
-    "prebuild": "npm run type-check",
-=======
     "prebuild": "echo 'Skipping prebuild checks for now'",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4497
     "postbuild": "npm run test:smoke",
     "security:audit": "npm audit",
     "security:fix": "npm audit fix"
