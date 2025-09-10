@@ -451,7 +451,7 @@ export class Logger {
 export const logger = Logger.getInstance();
 
 
-export function createError(message: string, code: ErrorCodes = ErrorCodes.INTERNAL_ERROR, _statusCode = 500, context?: Record<string, _unknown>): CustomError {
+export function createError(message: string, code: ErrorCodes = ErrorCodes.INTERNAL_ERROR, statusCode = 500, context?: Record<string, unknown>): CustomError {
   return new CustomError(message, code, statusCode, true, context);
 }
 

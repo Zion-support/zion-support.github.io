@@ -11,7 +11,7 @@ import { logWarn } from '@/utils/productionLogger';
  * available and falls back to console.error. Also sends to custom backend.
  * This is the primary error reporting function for external monitoring services.
  */
-export function logError(error: unknown, context?: { componentStack?: string } & Record<string, _unknown>): string {
+export function logError(error: unknown, context?: { componentStack?: string } & Record<string, unknown>): string {
   const traceId = generateTraceId();
   let errorToSend: Error;
   if (error instanceof Error) {
