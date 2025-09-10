@@ -51876,6 +51876,7 @@
       "route": "/docs/reports/unused-exports.md"
     }
   ],
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T10:30:05.171Z",
   "items": [
     {
@@ -51884,10 +51885,34 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T10:30:06.787Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T10-30-11-360Z
+=======
+  "generatedAt": "2025-08-15T10:34:35.330Z",
+  "items": [
+    {
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-104011",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:40:11.028Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Playbook — Autonomous Delivery",
+      "href": "/reports/playbooks/playbook-2025-08-15-104010",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:40:10.993Z",
+      "source": "cloud-playbook-factory"
+    },
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-104010",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:40:10.949Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-40-16-789Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51909,10 +51934,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T10:30:06.787Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T10-30-11-360Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-104010",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:40:10.949Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-40-16-789Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104940,4 +104971,12 @@
     }
   ]
 >>>>>>> origin/automation/git-sync/2025-08-15T10-27-58-352Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-104010",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:40:10.949Z",
+      "source": "cloud-deep-research-factory"
+    }
+  ]
+>>>>>>> origin/automation/git-sync/2025-08-15T10-40-16-789Z
 }
