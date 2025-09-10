@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-        <div className="cyber-grid w-full h-full"></div>;
-      </div>;
-";
-      <div className="container-responsive relative z-10">;
-
-=======
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -400,4 +392,3 @@ export function ServicesOverview() {
         </div>
       </div>
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

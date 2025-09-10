@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-:src/store/wishlistSlice.tsx;
-interface WishlistState {
-  items: WishlistItem[];
-:src/store/wishlistSlice.tsx;
-  itemCount: number;
-  itemCount: number}
-
-
-;
-=======
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const initialState = {
     items: [],
@@ -45,4 +34,3 @@ const wishlistSlice = createSlice({
 });
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
->>>>>>> origin/clean-error-fixing-automation

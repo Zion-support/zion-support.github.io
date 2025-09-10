@@ -17,9 +17,4 @@ export default function PostCard({ post }) {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

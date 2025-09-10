@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface SeparatorProps {
-  orientation?: 'horizontal' | 'vertical';
-  className?: string;
-}
-
-export function Separator({ orientation = 'horizontal', className = '' }: SeparatorProps) {
-  return (
-    <div
-      className={`${
-        orientation === 'horizontal' 
-          ? 'h-px w-full' 
-          : 'h-full w-px'
-      } bg-border ${className}`}
-    />
-  );
-}
-
-=======
 const __rest = (this && this.__rest) || function (s, e) {
     const t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -37,4 +15,3 @@ const Separator = React.forwardRef((_a, ref) => {
     return (_jsx("div", Object.assign({ ref: ref, className: cn('shrink-0 bg-border', orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]', className) }, props)))});
 Separator.displayName = 'Separator';
 export { Separator };
->>>>>>> origin/clean-error-fixing-automation

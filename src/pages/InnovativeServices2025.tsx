@@ -1,26 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { _Link } from 'react-router-dom';
-
-import { Link } from 'react-router-dom';
-const features = [];
-const benefits = [];
-const useCases = [];
-const services = [];
-const applications = [];
-const solutions = [];
-const implementation = [];
-const _InnovativeServices2025 = () => {
-    const _innovativeServices = [
-        {
-            category: "AI-Powered Micro SAAS Solutions",
-            description: "Intelligent software-as-a-service solutions that automate and optimize business processes",
-            services: [
-                {
-                    name: "AI-Powered HR Assistant",
-                    description: "Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.",
-                    features: [
-=======
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {
     const innovativeServices = [
@@ -32,18 +10,13 @@ const InnovativeServices2025 = () => {
                     name: "AI-Powered HR Assistant",
                     description: "Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.",
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "AI-powered resume screening with 95% accuracy",
                         "Intelligent interview scheduling and candidate matching",
                         "Automated employee onboarding workflows",
                         "Performance tracking and predictive analytics",
                         "Bias detection and elimination algorithms"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "70% faster hiring process",
                         "Reduced unconscious bias in hiring",
                         "Improved employee retention by 40%",
@@ -52,34 +25,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$199 - $799/month",
                     marketPosition: "Leading AI-powered HR solution for mid-market companies",
-<<<<<<< HEAD
-                    useCases: ["Recruitment agencies", "HR departments", "Startups", "Enterprise companies"],
-                    competitors: ["BambooHR", "Workday", "Zenefits"],
-=======
                     useCases["Recruitment agencies", "HR departments", "Startups", "Enterprise companies"],
                     competitors["BambooHR", "Workday", "Zenefits"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Advanced AI algorithms, comprehensive automation, and bias-free hiring processes"
                 },
                 {
                     name: "Smart Inventory Management",
                     description: "AI-driven inventory optimization platform that eliminates stockouts and reduces carrying costs through predictive analytics.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Machine learning demand forecasting",
                         "Automated reorder point calculations",
                         "Supplier performance analytics",
                         "Real-time inventory tracking",
                         "Multi-location optimization"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "30% reduction in inventory costs",
                         "Zero stockout incidents",
                         "Improved supplier relationships",
@@ -88,34 +48,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$149 - $599/month",
                     marketPosition: "Next-generation inventory management for retail and manufacturing",
-<<<<<<< HEAD
-                    useCases: ["Retail chains", "Manufacturing", "E-commerce", "Distribution centers"],
-                    competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl"],
-=======
                     useCases["Retail chains", "Manufacturing", "E-commerce", "Distribution centers"],
                     competitors["TradeGecko", "Zoho Inventory", "Fishbowl"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "AI-powered forecasting, real-time optimization, and seamless ERP integration"
                 },
                 {
                     name: "AI Legal Document Analyzer",
                     description: "Advanced legal AI platform that automates document review, contract analysis, and compliance monitoring.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Natural language processing for legal documents",
                         "Automated contract risk assessment",
                         "Compliance violation detection",
                         "Legal research automation",
                         "Audit trail and reporting"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "90% faster document review",
                         "Comprehensive risk identification",
                         "Automated compliance checking",
@@ -124,13 +71,8 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$299 - $1,199/month",
                     marketPosition: "Cutting-edge legal AI for law firms and corporate legal departments",
-<<<<<<< HEAD
-                    useCases: ["Law firms", "Corporate legal", "Compliance teams", "Contract management"],
-                    competitors: ["Kira Systems", "Luminance", "eBrevia"],
-=======
                     useCases["Law firms", "Corporate legal", "Compliance teams", "Contract management"],
                     competitors["Kira Systems", "Luminance", "eBrevia"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration"
                 }
             ]
@@ -138,30 +80,18 @@ const InnovativeServices2025 = () => {
         {
             category: "Advanced AI & Machine Learning",
             description: "Enterprise-grade artificial intelligence solutions that drive innovation and competitive advantage",
-<<<<<<< HEAD
-            services: [
-                {
-                    name: "AI-Powered Fraud Detection",
-                    description: "Next-generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real-time.",
-                    features: [
-=======
             services[
                 {
                     name: "AI-Powered Fraud Detection",
                     description: "Next-generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real-time.",
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Real-time transaction monitoring",
                         "Behavioral pattern recognition",
                         "Machine learning risk scoring",
                         "Automated fraud alerts",
                         "Comprehensive fraud analytics"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "99.9% fraud detection accuracy",
                         "Real-time prevention capabilities",
                         "Reduced false positives by 80%",
@@ -170,34 +100,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$3,000 - $25,000/month",
                     marketPosition: "Leading AI fraud detection for financial institutions and e-commerce",
-<<<<<<< HEAD
-                    useCases: ["Banks", "Credit card companies", "E-commerce platforms", "Insurance companies"],
-                    competitors: ["Sift", "Signifyd", "Forter"],
-=======
                     useCases["Banks", "Credit card companies", "E-commerce platforms", "Insurance companies"],
                     competitors["Sift", "Signifyd", "Forter"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Advanced ML algorithms, real-time processing, and industry-leading accuracy rates"
                 },
                 {
                     name: "AI Supply Chain Optimization",
                     description: "Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI-powered analytics.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Predictive demand forecasting",
                         "Route optimization algorithms",
                         "Supplier performance analytics",
                         "Real-time supply chain visibility",
                         "Risk assessment and mitigation"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "25% reduction in supply chain costs",
                         "Improved delivery performance",
                         "Enhanced supplier relationships",
@@ -206,34 +123,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$4,000 - $30,000/month",
                     marketPosition: "Advanced supply chain optimization for global enterprises",
-<<<<<<< HEAD
-                    useCases: ["Manufacturing", "Logistics", "Retail", "Healthcare"],
-                    competitors: ["Llamasoft", "AnyLogic", "FlexSim"],
-=======
                     useCases["Manufacturing", "Logistics", "Retail", "Healthcare"],
                     competitors["Llamasoft", "AnyLogic", "FlexSim"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "AI-powered optimization, real-time visibility, and comprehensive risk management"
                 },
                 {
                     name: "AI-Powered Healthcare",
                     description: "Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Medical imaging analysis",
                         "Diagnostic assistance algorithms",
                         "Patient monitoring systems",
                         "Drug discovery optimization",
                         "Healthcare analytics dashboard"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "Improved diagnostic accuracy by 30%",
                         "Enhanced patient care quality",
                         "Reduced healthcare costs",
@@ -242,13 +146,8 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$8,000 - $60,000/month",
                     marketPosition: "Leading healthcare AI for hospitals and medical institutions",
-<<<<<<< HEAD
-                    useCases: ["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
-                    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-=======
                     useCases["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
                     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"
                 }
             ]
@@ -256,30 +155,18 @@ const InnovativeServices2025 = () => {
         {
             category: "Emerging Technology Solutions",
             description: "Cutting-edge technology services that position businesses for the future",
-<<<<<<< HEAD
-            services: [
-                {
-                    name: "Quantum Computing Consulting",
-                    description: "Expert guidance on quantum computing strategy, implementation, and business transformation for forward-thinking organizations.",
-                    features: [
-=======
             services[
                 {
                     name: "Quantum Computing Consulting",
                     description: "Expert guidance on quantum computing strategy, implementation, and business transformation for forward-thinking organizations.",
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Quantum computing strategy development",
                         "Use case identification and validation",
                         "Vendor selection and evaluation",
                         "Implementation roadmap planning",
                         "Quantum workforce development"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "Future-ready technology strategy",
                         "Competitive advantage in emerging tech",
                         "Innovation leadership positioning",
@@ -288,34 +175,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$5,000 - $25,000/month",
                     marketPosition: "Premier quantum computing consulting for Fortune 500 companies",
-<<<<<<< HEAD
-                    useCases: ["Financial services", "Pharmaceutical", "Logistics", "Research institutions"],
-                    competitors: ["McKinsey", "BCG", "Deloitte"],
-=======
                     useCases["Financial services", "Pharmaceutical", "Logistics", "Research institutions"],
                     competitors["McKinsey", "BCG", "Deloitte"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Deep quantum expertise, practical implementation experience, and strategic business focus"
                 },
                 {
                     name: "Metaverse Development",
                     description: "Complete metaverse platform development including VR/AR experiences, 3D environments, and interactive digital spaces.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Virtual reality platform development",
                         "Augmented reality applications",
                         "3D modeling and design",
                         "Interactive experience creation",
                         "Multi-user platform support"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "Innovation leadership in emerging tech",
                         "New revenue streams and business models",
                         "Enhanced customer engagement",
@@ -324,34 +198,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$8,000 - $60,000/month",
                     marketPosition: "Leading metaverse development for brands and enterprises",
-<<<<<<< HEAD
-                    useCases: ["Brand marketing", "Virtual events", "Training and education", "Entertainment"],
-                    competitors: ["Meta", "Microsoft", "Unity"],
-=======
                     useCases["Brand marketing", "Virtual events", "Training and education", "Entertainment"],
                     competitors["Meta", "Microsoft", "Unity"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Custom development, rapid prototyping, and comprehensive platform solutions"
                 },
                 {
                     name: "Web3 Development",
                     description: "Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Decentralized application development",
                         "Smart contract development",
                         "DeFi platform creation",
                         "NFT marketplace development",
                         "Blockchain integration services"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "Decentralized business models",
                         "Innovation in financial services",
                         "New revenue opportunities",
@@ -360,13 +221,8 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$6,000 - $45,000/month",
                     marketPosition: "Expert Web3 development for fintech and innovative businesses",
-<<<<<<< HEAD
-                    useCases: ["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
-                    competitors: ["Consensys", "Chainlink Labs", "Alchemy"],
-=======
                     useCases["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
                     competitors["Consensys", "Chainlink Labs", "Alchemy"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise"
                 }
             ]
@@ -374,30 +230,18 @@ const InnovativeServices2025 = () => {
         {
             category: "Advanced Cybersecurity Solutions",
             description: "Next-generation security solutions that protect against evolving cyber threats",
-<<<<<<< HEAD
-            services: [
-                {
-                    name: "Zero Trust Architecture",
-                    description: "Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.",
-                    features: [
-=======
             services[
                 {
                     name: "Zero Trust Architecture",
                     description: "Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.",
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "Identity verification and authentication",
                         "Continuous access monitoring",
                         "Network segmentation",
                         "Threat detection and response",
                         "Compliance and audit support"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "Enhanced security posture",
                         "Reduced attack surface",
                         "Improved compliance",
@@ -406,34 +250,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$4,500 - $35,000/month",
                     marketPosition: "Leading zero trust implementation for enterprise organizations",
-<<<<<<< HEAD
-                    useCases: ["Financial services", "Healthcare", "Government", "Technology companies"],
-                    competitors: ["Palo Alto Networks", "Cisco", "Microsoft"],
-=======
                     useCases["Financial services", "Healthcare", "Government", "Technology companies"],
                     competitors["Palo Alto Networks", "Cisco", "Microsoft"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Comprehensive implementation, rapid deployment, and ongoing optimization support"
                 },
                 {
                     name: "AI-Powered Cybersecurity",
                     description: "Next-generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real-time.",
-<<<<<<< HEAD
-                    features: [
-=======
                     features[
->>>>>>> origin/clean-error-fixing-automation
                         "AI-powered threat detection",
                         "Behavioral analysis and monitoring",
                         "Automated incident response",
                         "Predictive security analytics",
                         "Continuous learning and adaptation"
                     ],
-<<<<<<< HEAD
-                    benefits: [
-=======
                     benefits[
->>>>>>> origin/clean-error-fixing-automation
                         "Proactive threat prevention",
                         "Zero-day attack protection",
                         "Automated response capabilities",
@@ -442,13 +273,8 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$5,000 - $40,000/month",
                     marketPosition: "Advanced AI cybersecurity for high-security environments",
-<<<<<<< HEAD
-                    useCases: ["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
-                    competitors: ["Darktrace", "CrowdStrike", "SentinelOne"],
-=======
                     useCases["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
                     competitors["Darktrace", "CrowdStrike", "SentinelOne"],
->>>>>>> origin/clean-error-fixing-automation
                     competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence"
                 }
             ]
@@ -587,10 +413,5 @@ const InnovativeServices2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-=======
     </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default InnovativeServices2025;

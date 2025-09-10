@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import { _Link } from 'react-router-dom';
-
-import { Link } from 'react-router-dom';
-export function BlogSection() {
-    const _blogPosts = [
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 export function BlogSection() {
     const blogPosts = [
->>>>>>> origin/clean-error-fixing-automation
         {
             id: '1',
             title: 'The Future of AI in Technology',
@@ -50,10 +40,4 @@ export function BlogSection() {
             </article>))}
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}
-
-=======
     </section>)}
->>>>>>> origin/clean-error-fixing-automation

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Users, MessageCircle, Calendar, Award } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -28,7 +25,6 @@ const Community = () => {
       icon: <Award className="h-8 w-8 text-yellow-400" />
     }
   ];
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -84,10 +80,6 @@ const Community = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-import { Helmet } from 'react-helmet-async';
 const Community = () => {
     return (<>
       <Helmet>
@@ -113,9 +105,6 @@ const Community = () => {
       </div>
     </>)};
 export default Community;
->>>>>>> origin/clean-error-fixing-automation
-=======
 };
 
 export default Community;
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

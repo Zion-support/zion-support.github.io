@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 import React, { createContext, useContext, useState } from 'react';
 const LanguageProvider({ children }) {
     const [language, setLanguage] = useState('en');
@@ -20,4 +16,3 @@ export function useLanguage() {
     if (!context) {
         throw new Error('useLanguage must be used within a LanguageProvider')}
     return context}
->>>>>>> origin/clean-error-fixing-automation

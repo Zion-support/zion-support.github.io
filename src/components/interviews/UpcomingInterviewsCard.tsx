@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-
-
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useInterviews } from "@/hooks/useInterviews";
@@ -118,4 +114,3 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>)}
->>>>>>> origin/clean-error-fixing-automation

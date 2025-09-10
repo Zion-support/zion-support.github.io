@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Server, Clock, MapPin } from "lucide-react";
-
-const _services = [];
-const _implementation = [];
-// Component to show service details for the selected country
-export function ServiceDetails({ country }) {
-    // Get datacenters for regions (simplified - in production this would come from a real database)
-    const _getDatacenters = (_country) => {
-        const _dataCenters = {
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 // Component to show service details for the selected country
@@ -17,7 +5,6 @@ export function ServiceDetails(_{ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
         const dataCenters = {
->>>>>>> origin/clean-error-fixing-automation
             "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom": ["London", "Manchester", "Birmingham"],
             "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -31,15 +18,9 @@ export function ServiceDetails(_{ country }) {
         return dataCenters[country] || dataCenters["default"];
     };
     // Get region-specific image
-<<<<<<< HEAD
-    const _getRegionalImage = (_country) => {
-        // In a real app, you'd have specific images for each region
-        const _regions = {
-=======
     const getRegionalImage = (country) => {
         // In a real app, you'd have specific images for each region
         const regions = {
->>>>>>> origin/clean-error-fixing-automation
             "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
             "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
             "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
@@ -52,15 +33,9 @@ export function ServiceDetails(_{ country }) {
         return regions[country] || regions["default"];
     };
     // Get region-specific instructions
-<<<<<<< HEAD
-    const _getRegionalInstructions = (_country) => {
-        // In a real implementation, this would be much more detailed and specific
-        const _timeZones = {
-=======
     const getRegionalInstructions = (country) => {
         // In a real implementation, this would be much more detailed and specific
         const timeZones = {
->>>>>>> origin/clean-error-fixing-automation
             "United States": "EST/CST/PST depending on location",
             "United Kingdom": "GMT/BST",
             "Germany": "CET/CEST",
@@ -69,21 +44,13 @@ export function ServiceDetails(_{ country }) {
             "Singapore": "SGT",
             "default": "Local timezone"
         };
-<<<<<<< HEAD
-        const _timezone = timeZones[country] || timeZones["default"];
-=======
         const timezone = timeZones[country] || timeZones["default"];
->>>>>>> origin/clean-error-fixing-automation
         return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
             `Response times are typically within 4 hours for metropolitan areas. ` +
             `Please have site access permissions and contact details ready for our technicians. ` +
             `For remote locations, additional travel fees may apply.`;
     };
-<<<<<<< HEAD
-    const _datacenters = getDatacenters(country);
-=======
     const datacenters = getDatacenters(country);
->>>>>>> origin/clean-error-fixing-automation
     return (<Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
@@ -106,11 +73,7 @@ export function ServiceDetails(_{ country }) {
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-<<<<<<< HEAD
-              {datacenters.map((_dc, _idx) => (<div key={idx} className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">
-=======
               {datacenters.map((dc, idx) => (<div key={idx} className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">
->>>>>>> origin/clean-error-fixing-automation
                   {dc}
                 </div>))}
             </div>
