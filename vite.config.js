@@ -4,6 +4,9 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  css: {
+    postcss: undefined
+  },
   server: {
     port: 3000,
     open: true,
