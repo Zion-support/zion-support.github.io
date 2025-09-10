@@ -1,26 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+const fs = require('fs');
+const path = require(path');
+
+// Function to resolve merge conflicts by choosing the remote version
+function resolveConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
 
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { execSync } = require('child_process');
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
@@ -42,12 +34,7 @@ function resolveMergeConflicts(filePath) {
     const resolvedLines = [];
     let inConflict = false;
     let conflictStart = -1;
-<<<<<<< HEAD
     
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
@@ -56,19 +43,22 @@ function resolveMergeConflicts(filePath) {
         conflictStart = -1;
         continue;
 
-<<<<<<< HEAD
       if (!inConflict) {
         resolvedLines.push(line);
       }
     }
     
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-<<<<<<< HEAD
     // Remove all merge conflict markers and keep the main branch version (after =======)
     
     // Clean up any remaining conflict markers
     
+    // Remove all merge conflict markers and keep only the remote version
+    content = content.replace(/\n[\s\S]*?\n([\s\S]*?)    
+    // Also handle cases where there are only  and     content = content.replace(/\n([\s\S]*?)    
     // Remove any remaining conflict markers
+    content = content.replace(/\n/g, '');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content, utf8');
     
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
@@ -76,15 +66,6 @@ function resolveMergeConflicts(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Resolved conflicts in: ${filePath}`);
-=======
-    const resolvedContent = resolvedLines.join('\n');
-    
-    if (content !== resolvedContent) {
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      console.log(`Resolved conflicts in: ${filePath}`);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return true;
     return false;
   } catch (error) {
@@ -121,10 +102,8 @@ function findFilesWithConflicts(dir) {
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
       const fullPath = path.join(currentPath, item);
-<<<<<<< HEAD
       const stat = fs.statSync(fullPath);
       
-<<<<<<< HEAD
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
@@ -133,8 +112,6 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.md') || item.endsWith('.json'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-=======
-<<<<<<< HEAD
 
     
     // Clean up any remaining  markers
@@ -145,23 +122,43 @@ function findFilesWithConflicts(dir) {
     
     fs.writeFileSync(filePath, content);
     console.log(`Resolved conflicts in: ${filePath}`);
+    return true;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}: ${error.message}`);
+    return false;
   }
+
+// Get list of conflicted files
+function getConflictedFiles() {
+  try {
+    const { execSync } = require('child_process');
+    const output = execSync(git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8 });
+    return output.trim().split(\n').map(line => line.split(' ).pop()).filter(Boolean);
+  } catch (error) {
+    console.error(Error getting conflicted files:', error.message);
+    return [];
+  }
+
+// Main execution
+console.log('Starting conflict resolution...);
+const conflictedFiles = getConflictedFiles();
+
+if (conflictedFiles.length === 0) {
+  console.log(No conflicted files found.');
+  process.exit(0);
 }
 
-// Get all .tsx and .ts files in pages directory
-const pagesDir = path.join(__dirname, 'pages');
-const files = fs.readdirSync(pagesDir, { recursive: true })
-  .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'))
-  .map(file => path.join(pagesDir, file));
+console.log(`Found ${conflictedFiles.length} conflicted files.`);
 
-files.forEach(file => {
-  if (fs.existsSync(file)) {
-    resolveMergeConflicts(file);
+let resolvedCount = 0;
+conflictedFiles.forEach(filePath => {
+  if (resolveConflicts(filePath)) {
+    resolvedCount++;
   }
 });
 
+console.log(`Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files.`);
+console.log('Conflict resolution completed!');
 console.log('Merge conflicts resolved!');
 
 const { execSync } = require('child_process');
@@ -196,15 +193,11 @@ function resolveMergeConflicts() {
 resolveMergeConflicts();
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
         if (content.includes('
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         }
       }
@@ -253,15 +246,10 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 for (const file of filesWithConflicts) {
 
-<<<<<<< HEAD
     resolvedCount++;
   }
 }
 
 console.log(`Resolved conflicts in ${resolvedCount} files`);
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     // Clean up any remaining 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

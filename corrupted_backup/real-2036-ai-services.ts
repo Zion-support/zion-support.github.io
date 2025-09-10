@@ -1,3 +1,6 @@
+
+
+
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform';
@@ -209,4 +212,6 @@ export const real2036AIServices = [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
   }
+
 ];
+
