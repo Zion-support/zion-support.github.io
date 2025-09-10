@@ -1,0 +1,118 @@
+const ServicesShowcase: React.FC = () => {
+  const services = [
+    {
+      category: "AI & Machine Learning",
+      icon: Brain,
+      services: [
+        {
+          name: "AI Business Intelligence",
+          description: "Advanced analytics and business intelligence powered by artificial intelligence",
+          href: "/services/ai-business-intelligence",
+          features: ["Predictive Analytics", "Real-time Insights", "Custom Dashboards"]
+        },
+        {
+          name: "AI Marketing Automation",
+          description: "Intelligent marketing automation with AI-driven optimization",
+          href: "/services/ai-marketing-automation",
+          features: ["Campaign Optimization", "Customer Segmentation", "ROI Tracking"]
+        },
+        {
+          name: "AI Workflow Automation",
+          description: "Streamline business processes with intelligent automation",
+          href: "/services/ai-workflow-automation",
+          features: ["Process Optimization", "Error Reduction", "Efficiency Gains"]
+const ServicesShowcase: React.FC = () => {
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let our team of experts help you implement the right technology solutions 
+              to drive growth and innovation in your organization.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
+                View Case Studies
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-green-400 mb-3">Pricing</h4>
+                      <p className="text-xl text-gray-300 font-semibold">{service.pricing}</p>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Benefits</h4>
+                      <ul className="space-y-2">
+                        {service.benefits.map((benefit, idx) => (
+                          <li key={idx} className="text-gray-300 flex items-center">
+                            <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-purple-400 mb-3">Market Position</h4>
+                      <p className="text-gray-300">{service.marketPosition}</p>
+                    </div>
+
+                    <div className="mb-8">
+                      <h4 className="text-lg font-semibold text-cyan-400 mb-3">Competitive Advantage</h4>
+                      <p className="text-gray-300">{service.competitiveAdvantage}</p>
+                    </div>
+                    
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                    >
+                      Get Started
+                      <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+  );
+export default $page;>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export default ServicesShowcase;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

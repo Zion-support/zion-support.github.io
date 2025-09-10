@@ -23,10 +23,7 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -36,10 +33,7 @@
   --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
   --neon-red: #ef4444;
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -200,11 +194,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-<<<<<<< HEAD
   background-image:
-=======
-  background-image: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
@@ -212,12 +202,6 @@ h3 {
   animation: particleFloat 30s ease-in-out infinite;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> main
 =======
 
 
@@ -226,26 +210,16 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* New Futuristic Effects */
 
 /* Holographic effect */
 .holographic {
-<<<<<<< HEAD
   background: linear-gradient(45deg,
     rgba(59, 130, 246, 0.1) 0%,
     rgba(147, 51, 234, 0.1) 25%,
     rgba(16, 185, 129, 0.1) 50%,
     rgba(239, 68, 68, 0.1) 75%,
-=======
-  background: linear-gradient(45deg, 
-    rgba(59, 130, 246, 0.1) 0%, 
-    rgba(147, 51, 234, 0.1) 25%, 
-    rgba(16, 185, 129, 0.1) 50%, 
-    rgba(239, 68, 68, 0.1) 75%, 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     rgba(59, 130, 246, 0.1) 100%);
   background-size: 200% 200%;
   animation: holographicShift 8s ease-in-out infinite;
@@ -259,15 +233,9 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-<<<<<<< HEAD
   background: linear-gradient(45deg,
     transparent 0%,
     rgba(255, 255, 255, 0.1) 50%,
-=======
-  background: linear-gradient(45deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.1) 50%, 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transparent 100%);
   animation: holographicScan 4s linear infinite;
 }
@@ -284,11 +252,7 @@ h3 {
 
 /* Neural network effect */
 .neural-bg {
-<<<<<<< HEAD
   background-image:
-=======
-  background-image: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
@@ -299,19 +263,11 @@ h3 {
 }
 
 @keyframes neuralPulse {
-<<<<<<< HEAD
   0%, 100% {
     background-size: 100px 100px, 150px 150px, 200px 200px, 120px 120px, 300px 300px;
     opacity: 0.7;
   }
   50% {
-=======
-  0%, 100% { 
-    background-size: 100px 100px, 150px 150px, 200px 200px, 120px 120px, 300px 300px;
-    opacity: 0.7;
-  }
-  50% { 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     background-size: 120px 120px, 180px 180px, 240px 240px, 140px 140px, 360px 360px;
     opacity: 1;
   }
@@ -338,11 +294,7 @@ h3 {
 
 /* Cyberpunk neon effect */
 .cyberpunk-neon {
-<<<<<<< HEAD
   box-shadow:
-=======
-  box-shadow: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -352,26 +304,16 @@ h3 {
 }
 
 @keyframes neonPulse {
-<<<<<<< HEAD
   from {
     box-shadow:
-=======
-  from { 
-    box-shadow: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor,
       inset 0 0 5px rgba(255, 255, 255, 0.1);
   }
-<<<<<<< HEAD
   to {
     box-shadow:
-=======
-  to { 
-    box-shadow: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -406,7 +348,6 @@ h3 {
 }
 
 @keyframes floatOrb {
-<<<<<<< HEAD
   0%, 100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.3;
@@ -420,21 +361,6 @@ h3 {
     opacity: 0.3;
   }
   75% {
-=======
-  0%, 100% { 
-    transform: translate(0, 0) scale(1);
-    opacity: 0.3;
-  }
-  25% { 
-    transform: translate(50px, -30px) scale(1.2);
-    opacity: 0.6;
-  }
-  50% { 
-    transform: translate(100px, 0) scale(0.8);
-    opacity: 0.3;
-  }
-  75% { 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transform: translate(50px, 30px) scale(1.1);
     opacity: 0.5;
   }
@@ -479,26 +405,12 @@ h3 {
 }
 
 .glitch::before,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   content: attr(data-text);
 .glitch::after {  content: attr(data-text);
-=======
->>>>>>> main
 .glitch::after {
   content: attr(data-text);
 .glitch::after {  content: attr(data-text);
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
 .glitch::after {
 =======
 @keyframes particleFloat {
@@ -508,7 +420,6 @@ h3 {
   75% { transform: translateY(-20px) rotate(270deg); }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Quantum Neural Network Background */
 .quantum-neural-bg {
   background: 
@@ -549,8 +460,6 @@ h3 {
   position: relative;
 .cyberpunk-glitch::before,
 .cyberpunk-glitch::after {
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -563,14 +472,12 @@ h3 {
 .glitch::after {  content: attr(data-text);
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 .glitch::after {
   content: attr(data-text);
   content: attr(data-text);
 .glitch::after {  content: attr(data-text);
 .glitch::after {  content: attr(data-text);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   position: absolute;
   top: 0;
   left: 0;
@@ -578,78 +485,18 @@ h3 {
   height: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .glitch::before {
   animation: glitch-1 2s infinite;
 
 .cyberpunk-glitch::before {
   animation: glitch-1 2s infinite linear alternate-reverse;
 
-=======
-.glitch::before {
-  animation: glitch-1 2s infinite;
-.cyberpunk-glitch::before {
-  animation: glitch-1 2s infinite linear alternate-reverse;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  color: #ff0000;
-  z-index: -1;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-.glitch::before {
-  animation: glitch-1 2s infinite;
-
-.cyberpunk-glitch::before {
-  animation: glitch-1 2s infinite linear alternate-reverse;
-
-  color: #ff0000;
-  z-index: -1;
-}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 .glitch::before {
   animation: glitch-1 2s infinite;
@@ -659,71 +506,72 @@ h3 {
   z-index: -1;
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+
+
+.glitch::before {
+  animation: glitch-1 2s infinite;
+
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+
+  color: #ff0000;
+  z-index: -1;
+}
+=======
+
+
+
+
+
+
+
+=======
+.glitch::before {
+  animation: glitch-1 2s infinite;
+.cyberpunk-glitch::before {
+  animation: glitch-1 2s infinite linear alternate-reverse;
+  color: #ff0000;
+  z-index: -1;
+}
+
 .glitch::after {
   animation: glitch-2 2s infinite;
   color: #00ff00;
   z-index: -2;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 @keyframes glitch {
   0%, 100% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
-<<<<<<< HEAD
 @keyframes glitch-1 {
-<<<<<<< HEAD
 .cyberpunk-glitch::after {
   animation: glitch-2 2s infinite linear alternate-reverse;
   color: #00ffff;
-<<<<<<< HEAD
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   z-index: -2;
 }
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
   20% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-  0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
-<<<<<<< HEAD
 }
 @keyframes glitch-2 {
   0%, 100% { transform: translate(0); }
 =======
-  100% { transform: translate(0); }
-}
-
-@keyframes glitch-2 {
-  0% { transform: translate(0); }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
-=======
 
 
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
 
@@ -749,29 +597,14 @@ h3 {
 
 @keyframes glitch-2 {
   0%, 100% { transform: translate(0); }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   20% { transform: translate(2px, -2px); }
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
-=======
-  20% { transform: translate(-2px, 2px); }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 =======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
 
   40% { transform: translate(-2px, -2px); }
@@ -782,17 +615,6 @@ h3 {
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -800,9 +622,7 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 /* Enhanced component styles */
@@ -823,32 +643,17 @@ h3 {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   content: '';
 .button::before {  content: '';
-=======
->>>>>>> main
 .button::before {
   content: '';
 .button::before {  content: '';
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
 .button::before {
 =======
   100% { transform: translate(0); }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Futuristic Card Hover Effects */
 .futuristic-card {
   position: relative;
@@ -856,8 +661,6 @@ h3 {
   transition: all 0.3s ease;
 }
 .futuristic-card::before {
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -870,14 +673,12 @@ h3 {
 .button::before {  content: '';
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 .button::before {
   content: '';
   content: '';
 .button::before {  content: '';
 .button::before {  content: '';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   position: absolute;
   top: 0;
   left: -100%;
@@ -892,12 +693,6 @@ h3 {
   transition: left 0.5s ease;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> main
 =======
 
 
@@ -906,9 +701,7 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .button:hover::before {
   left: 100%;
 }
@@ -921,33 +714,18 @@ h3 {
 /* Enhanced typography */
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   -webkit-background-clip: text;
   background-size: 300% 300%;  -webkit-background-clip: text;
-=======
->>>>>>> main
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-size: 300% 300%;  -webkit-background-clip: text;
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
   background-size: 300% 300%;
 =======
 .futuristic-card:hover::before {
   left: 100%;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .futuristic-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -1066,8 +844,6 @@ h3 {
 .text-gradient {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
   background-size: 200% 200%;
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -1080,25 +856,17 @@ h3 {
   background-size: 300% 300%;  -webkit-background-clip: text;
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   background-size: 300% 300%;  -webkit-background-clip: text;
   background-size: 300% 300%;  -webkit-background-clip: text;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease infinite;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> main
 =======
 
 
@@ -1107,9 +875,7 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 @keyframes textGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -1154,10 +920,7 @@ h3 {
   .card {
     @apply p-4;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .button {
     @apply px-4 py-2 text-sm;
   }
@@ -1172,45 +935,24 @@ h3 {
   .neural-bg,
   .quantum-tunnel,
   .floating-orbs,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
   .matrix-rain {
-<<<<<<< HEAD
-=======
-=======
-.text-glow {
-  text-shadow: 
-    0 0 10px currentColor,
-    0 0 20px currentColor,
-    0 0 30px currentColor;
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
   .futuristic-card:hover {
     transform: none;
   .matrix-rain {    background: none !important;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
 =======
   .matrix-rain {
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .quantum-particles::before {
     animation-duration: 30s;
   }
@@ -1229,14 +971,9 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
-<<<<<<< HEAD
 
   .neon-glow {
     text-shadow:
-=======
-  .neon-glow {
-    text-shadow: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 10px currentColor,
       0 0 20px currentColor;
   }
@@ -1251,10 +988,7 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .futuristic-card:hover {
     transform: none;
   }
@@ -1268,23 +1002,16 @@ h3 {
 
     background: none !important;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .cyber-grid {
 
     background-size: 15px 15px;
 
   }
   .matrix-rain {    background: none !important;
-<<<<<<< HEAD
 
   }
 
-=======
-  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .quantum-particles::before {
     animation-duration: 30s;
   }
@@ -1303,14 +1030,9 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
-<<<<<<< HEAD
 
   .neon-glow {
     text-shadow:
-=======
-  .neon-glow {
-    text-shadow: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 10px currentColor,
       0 0 20px currentColor;
   }
@@ -1325,10 +1047,7 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .futuristic-card:hover {
     transform: none;
   }
@@ -1342,39 +1061,22 @@ h3 {
 
     background: none !important;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   .cyber-grid {
     background-size: 15px 15px;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     background-size: 15px 15px;
 =======
 =======
   .cyber-grid {
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     background-size: 15px 15px;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   .futuristic-card {
     box-shadow: none !important;
     border: 1px solid #000 !important;
   }
 =======
     background-size: 15px 15px;  }
-<<<<<<< HEAD
-=======
-    background-size: 15px 15px;  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   
 
@@ -1389,7 +1091,6 @@ h3 {
     background-size: 15px 15px;  }
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   .cyber-grid {
     background-size: 15px 15px;
@@ -1406,7 +1107,6 @@ h3 {
   }
     background-size: 15px 15px;  }
     background-size: 15px 15px;  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 /* Dark mode enhancements */
@@ -1444,11 +1144,7 @@ h3 {
 /* Enhanced focus states */
 .focus-glow:focus {
   outline: none;
-<<<<<<< HEAD
   box-shadow:
-=======
-  box-shadow: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 0 3px rgba(0, 212, 255, 0.1),
     0 0 20px rgba(0, 212, 255, 0.3);
 }
@@ -1470,11 +1166,7 @@ h3 {
 }
 
 .pattern-lines {
-<<<<<<< HEAD
   background-image:
-=======
-  background-image: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(45deg, rgba(0, 212, 255, 0.05) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(0, 212, 255, 0.05) 25%, transparent 25%);
   background-size: 40px 40px;
@@ -1492,8 +1184,4 @@ h3 {
   .no-print {
     display: none !important;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

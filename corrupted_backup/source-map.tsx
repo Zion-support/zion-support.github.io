@@ -1,6 +1,3 @@
-export { default } from "../dev/tree",
-export { default } from "../dev/tree";
-export { default } from '../dev/tree';
 import React from 'react';
 export default function Page() {
   return (

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T14:10:25.098Z",
+  "timestamp": "2025-08-29T15:49:21.069Z",
   "summary": {
     "total": 6,
     "passed": 5,
@@ -8,7 +8,7 @@
   "results": {
     "unit": {
       "status": "success",
-      "results": "No unit tests found\n"
+      "results": "\n> bolt.new.zion.app@0.1.0 test\n> vitest\n\nNo unit tests found\n"
     },
     "integration": {
       "status": "failure",
@@ -28,7 +28,7 @@
     },
     "coverage": {
       "status": "success",
-      "results": "Coverage generation failed\n"
+      "results": "\n> bolt.new.zion.app@0.1.0 test\n> vitest --coverage\n\nCoverage generation failed\n"
     }
   },
   "qualityGates": false
