@@ -8,33 +8,12 @@
   skip_processing = false
 
 [build.environment]
-  NODE_VERSION = "20.19.0"
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  # Skip Sharp postinstall to avoid NAPI issues
-  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
-  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
-  # Force Vite build
-  VITE_BUILD = "true"
-  # Ensure proper build environment
-  NODE_ENV = "production"
-  CI = "true"
-  # Disable linting during build to prevent failures
-  ESLINT_NO_DEV_ERRORS = "true"
-  # Optimize build performance
-  VITE_LEGACY_BUILD = "false"
-  # Explicitly skip Next.js plugin (plugin installed via Netlify UI)
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
 
-[functions]
-  # Ensure Netlify bundles TS/JS functions with esbuild
-  node_bundler = "esbuild"
-  directory = "netlify/functions"
-
-# SPA routing redirects for Vite build
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# API functions (if needed)
+# [functions]
+# directory = "netlify/functions"
 
 # Long-term caching for static assets
 [[headers]]
