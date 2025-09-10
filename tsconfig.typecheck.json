@@ -9,6 +9,9 @@
 		"**/*.test.tsx",
 		"**/*.spec.ts",
 		"**/*.spec.tsx",
+		"dist",
+		"out",
+		"public",
 		"apps/**",
 		"apps.backup/**",
 		"backup/**",
@@ -24,6 +27,12 @@
 		"api-disabled/**",
 		"api.disabled/**",
 		"api.disabled.temp/**",
+		"pages/**",
+		"src/pages/**",
+		"src/pages/services/**",
+		"src/legal/**",
+		"src/mobile/**",
+		"src/layout/Header.tsx",
 		"src_backup/**",
 		"temp_components/**",
 		"utils/**",
@@ -31,9 +40,8 @@
 		"hooks/**",
 		"data/**",
 		"app/**",
-		"pages/**",
-		"src/pages/**",
-		"src/pages/services/**"
+		"src.broken/**",
+		"src.corrupted/**"
 	]
 }
 
