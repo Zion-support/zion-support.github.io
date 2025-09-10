@@ -3,53 +3,44 @@
 /* High Contrast Mode */
 .high-contrast {
   --bg-primary: #000000;
-  --bg-secondary: #1a1a1a;
+  --bg-secondary: #ffffff;
   --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --accent: #ffff00;
-  --border: #ffffff;
+  --text-secondary: #000000;
+  --border-color: #ffffff;
+  --accent-color: #ffff00;
 }
 
 .high-contrast * {
   background-color: var(--bg-primary) !important;
   color: var(--text-primary) !important;
-  border-color: var(--border) !important;
+  border-color: var(--border-color) !important;
 }
 
 .high-contrast button,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
 .high-contrast a {
-  background-color: var(--accent) !important;
-  color: var(--bg-primary) !important;
-  border: 2px solid var(--border) !important;
+  color: var(--accent-color) !important;
+  text-decoration: underline !important;
 }
 
-.high-contrast button:hover,
-.high-contrast a:hover {
-  background-color: var(--text-primary) !important;
-  color: var(--bg-primary) !important;
+.high-contrast a:visited {
+  color: #ff00ff !important;
 }
 
-/* Large Text Mode */
-.large-text {
-  font-size: 1.2em;
+.high-contrast a:hover,
+.high-contrast a:focus {
+  background-color: var(--accent-color) !important;
+  color: var(--text-secondary) !important;
 }
 
-.large-text h1 { font-size: 2.5em; }
-.large-text h2 { font-size: 2em; }
-.large-text h3 { font-size: 1.75em; }
-.large-text h4 { font-size: 1.5em; }
-.large-text h5 { font-size: 1.25em; }
-.large-text h6 { font-size: 1.1em; }
-
-.large-text button,
-.large-text input,
-.large-text select,
-.large-text textarea {
-  font-size: 1.1em;
-  padding: 0.75em 1em;
-}
-
-/* Reduced Motion Mode */
+/* Reduced Motion */
 .reduced-motion *,
 .reduced-motion *::before,
 .reduced-motion *::after {
@@ -71,26 +62,55 @@
   animation: none !important;
 }
 
-/* Enhanced Focus Mode */
+/* Font Size Adjustments */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-small h1 { font-size: 1.5rem; }
+.font-small h2 { font-size: 1.25rem; }
+.font-small h3 { font-size: 1.125rem; }
+.font-small h4 { font-size: 1rem; }
+.font-small h5 { font-size: 0.875rem; }
+.font-small h6 { font-size: 0.75rem; }
+
+.font-medium {
+  font-size: 1rem;
+}
+
+.font-medium h1 { font-size: 2rem; }
+.font-medium h2 { font-size: 1.5rem; }
+.font-medium h3 { font-size: 1.25rem; }
+.font-medium h4 { font-size: 1.125rem; }
+.font-medium h5 { font-size: 1rem; }
+.font-medium h6 { font-size: 0.875rem; }
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-large h1 { font-size: 2.5rem; }
+.font-large h2 { font-size: 2rem; }
+.font-large h3 { font-size: 1.75rem; }
+.font-large h4 { font-size: 1.5rem; }
+.font-large h5 { font-size: 1.25rem; }
+.font-large h6 { font-size: 1.125rem; }
+
+/* Enhanced Focus Indicators */
 .focus-visible *:focus {
   outline: 3px solid #3b82f6 !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
 }
 
 .focus-visible button:focus,
-.focus-visible a:focus {
-  outline: 3px solid #10b981 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3) !important;
-}
-
 .focus-visible input:focus,
 .focus-visible select:focus,
-.focus-visible textarea:focus {
-  outline: 3px solid #8b5cf6 !important;
+.focus-visible textarea:focus,
+.focus-visible a:focus {
+  outline: 3px solid #3b82f6 !important;
   outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
 }
 
 /* Skip Links */
@@ -110,7 +130,7 @@
   top: 6px;
 }
 
-/* Screen Reader Only */
+/* Screen Reader Only Content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -123,48 +143,183 @@
   border: 0;
 }
 
-/* Focus Indicators for Interactive Elements */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
+/* High Contrast Focus for High Contrast Mode */
+.high-contrast .focus-visible *:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
 }
 
-/* High contrast focus indicators */
-.high-contrast button:focus-visible,
-.high-contrast a:focus-visible,
-.high-contrast input:focus-visible,
-.high-contrast select:focus-visible,
-.high-contrast textarea:focus-visible,
-.high-contrast [tabindex]:focus-visible {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
+/* Improved Button Contrast */
+.high-contrast button {
+  min-height: 44px;
+  min-width: 44px;
+  border: 2px solid var(--border-color) !important;
 }
 
-/* Reduced motion for prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+.high-contrast button:hover,
+.high-contrast button:focus {
+  background-color: var(--accent-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Improved Link Contrast */
+.high-contrast a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* Form Field Improvements */
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  min-height: 44px;
+  border: 2px solid var(--border-color) !important;
+  padding: 8px !important;
+}
+
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 
-/* High contrast for prefers-contrast */
-@media (prefers-contrast: high) {
-  :root {
-    --bg-primary: #000000;
-    --bg-secondary: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
-    --accent: #ffff00;
-    --border: #ffffff;
+.reduced-motion .loading::after {
+  animation: none !important;
+}
+
+/* Error States */
+.error {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+}
+
+.high-contrast .error {
+  border-color: #ff0000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Success States */
+.success {
+  border-color: #10b981 !important;
+  background-color: #f0fdf4 !important;
+}
+
+.high-contrast .success {
+  border-color: #00ff00 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Warning States */
+.warning {
+  border-color: #f59e0b !important;
+  background-color: #fffbeb !important;
+}
+
+.high-contrast .warning {
+  border-color: #ffff00 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  
+  thead {
+    display: table-header-group;
+  }
+  
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
 }
