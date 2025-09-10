@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from 'react';
+
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
+
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
+
   useEffect(() => {
     // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
+    
     // Apply accessibility settings from localStorage
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
   }, []);
+
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
@@ -36,13 +41,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.classList.remove('reduced-motion');
     }
-  }
+  };
+
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-}
+  };
+
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
@@ -70,8 +77,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast
           </button>
 
-          <div className="text-xs text-gray-600 dark:text-gray-300">;
-            Font Size:;
+          <div className="text-xs text-gray-600 dark:text-gray-300">
+            Font Size:
           </div>
           <div className="flex gap-1">
             {['small', 'normal', 'large', 'extra-large'].map((size) => (
@@ -84,28 +91,30 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
                 aria-label={`Set font size to ${size}`}
-              >;
+              >
                 {size.charAt(0).toUpperCase()}
-              </button>;
+              </button>
             ))}
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
 
       {/* Skip to main content link */}
-      <a;
-        href="#main-content";
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
-        Skip to main content;
-      </a>;
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
 
       {/* Screen reader only content */}
-      <div className="sr-only">;
-        <h1>Zion Tech Group - Technology Solutions Provider</h1>;
-        <p>Leading technology solutions provider helping businesses transform their digital presence ;
-          with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.;
-        </p>;
-      </div>;
+      <div className="sr-only">
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>
+        <p>
+          Leading technology solutions provider helping businesses transform their digital presence 
+          with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
+        </p>
+      </div>
 
       {/* Main content */}
       <div id="main-content">
@@ -137,6 +146,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       `}</style>
     </>
   );
-}
+};
 
 export default AccessibilityEnhancer;
