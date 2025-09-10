@@ -109,7 +109,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Error generating smart contract:', error);
+    // console.error('Error generating smart contract:', error);
     return new Response(
       JSON.stringify({ 
         success: false, 
