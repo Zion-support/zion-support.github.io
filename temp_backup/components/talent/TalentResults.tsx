@@ -1,9 +1,8 @@
-
 import React from "react";
-import { TalentProfile } from "@/types/talent";
 import { ActiveFilters } from "@/components/talent/ActiveFilters";
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
+<<<<<<< HEAD:temp_backup/components/talent/TalentResults.tsx
 
 interface TalentResultsProps {
   filteredTalents: TalentProfile[];
@@ -40,10 +39,15 @@ export function TalentResults({
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
+=======
+export function TalentResults({ talents, totalCount, isLoading, viewProfile, handleBook, handleMessage, isAuthenticated, activeFiltersProps }) {
+    return (<div className="flex-1">
+>>>>>>> origin/backup-improvements-20250827-015311:src/components/talent/TalentResults.tsx
       {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
+      <ActiveFilters {...activeFiltersProps}/>
       
       {/* Results count */}
+<<<<<<< HEAD:temp_backup/components/talent/TalentResults.tsx
       <ResultsHeader 
         isLoading={isLoading}
         resultCount={filteredTalents.length}
@@ -63,4 +67,11 @@ export function TalentResults({
       />
     </div>
   );
+=======
+      <ResultsHeader isLoading={isLoading} resultCount={totalCount}/>
+      
+      {/* Talents grid */}
+      <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters}/>
+    </div>);
+>>>>>>> origin/backup-improvements-20250827-015311:src/components/talent/TalentResults.tsx
 }
