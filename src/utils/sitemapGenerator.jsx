@@ -21,7 +21,8 @@ export class SitemapGenerator {
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}
       </url>`;
-            return urlElement.replace(/\s+/g).trim()}).join('');`;
+            return urlElement.replace(/\s+/g, ' ').trim();
+        }).join('\n');
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
 
     /**;

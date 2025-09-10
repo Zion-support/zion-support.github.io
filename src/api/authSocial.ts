@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    open: (url: string, target: string, features: string) => Window | null;
+  }
+}
+
 export function openAuthPopup(provider: string): Window | null {
   const width = 600;
   const height = 600;

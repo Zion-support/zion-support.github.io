@@ -119,9 +119,10 @@ Crawl-delay: 1`;
             <h2 > Main Pages</h2>
             <div className="sitemap - links">
                 ${urls
-            .filter (url => url.priority && url.priority >= 0.8) .map (url => `
-                    <a href="${baseUrl}${url.url}" className="sitemap - link priority - high">
-                        ${url.url === '/' ? 'Home' : url.url.split ('/') .pop () ?.replace (/-/g, ' ') .replace (/\b\w / g, l => l.toUpperCase () ) || url.url}
+            .filter(url => url.priority && url.priority >= 0.8)
+            .map(url => `
+                    <a href="${baseUrl}${url.url}" className="sitemap-link priority-high">
+                        ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>
                   `).join('')}
             </div>
