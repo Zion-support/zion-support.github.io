@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
 import handler from '@/pages/api/auth/register';
+import { vi } from 'vitest'; // Import vi
 
 const signUpMock = vi.fn();
 vi.mock('@supabase/supabase-js', () => ({
