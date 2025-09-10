@@ -458,23 +458,8 @@ if (require.main === module) {}
         process.exit(1);
       });
       break;
-<<<<<<< HEAD
-    case "report":
-      automation.generateReport().catch(error => {
-        console.error("Failed to generate report: ", error);
-=======
-    case 'report':
-      automation.generateReport().catch(error => {})
-        console.error('Failed to generate report: ', error);
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        process.exit(1);
-      });
-      break;
-<<<<<<< HEAD
-    default:
-      console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+    default: 
+      console.log('Usage: node master-automation.cjs [start|status]');
       process.exit(1);
   }
 }

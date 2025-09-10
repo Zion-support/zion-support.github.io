@@ -1,52 +1,26 @@
-  try {
-      return {  try {
-      return {
-    }
-    const confidence =
-      typeof parsed && parsed.confidence === 'number'
-        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
-        : 0 && 0.6;
-        confidence: 0.5,
-      }
-    }
-    const confidence =;
-      typeof parsed.confidence === 'number';
-        ? Math.max (0, Math.min (1, parsed.confidence));
-        : 0.6;
-    return {
-    } as GptClassification;
-  } catch {
-    return {
-  reasoning: string;
-      label: 'SUSPICIOUS'
-      reason: 'Invalid JSON from GPT'
-      confidence: 0.5
-      confidence: 0.5,
-    }
-  }export interface GptResult {
-      label: 'SUSPICIOUS',
-      reason: 'Invalid JSON from GPT',
-      confidence: 0.5,
-    };
-  }export interface GptResult {;
-  label: string;
+export interface GptClassification {
+  isFraud: boolean;
   confidence: number;
-  reasoning: string
+  reason: string;
+  category: string;
 }
 
-}  label: string;
-  confidence: number;
-  reasoning: string
+export interface MonitoredSource {
+  type: 'email' | 'message' | 'profile' | 'review';
+  id: string;
 }
 
-  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
+export async function classifyWithGPT(
+  text: string,
+  source: MonitoredSource
+): Promise<GptClassification> {
+  // Mock implementation - in production, integrate with OpenAI API
+  const isFraud = text.toLowerCase().includes('scam') || text.toLowerCase().includes('fake');
   
   return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
-
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-
-  }
-
+    isFraud,
+    confidence: isFraud ? 0.8 : 0.1,
+    reason: isFraud ? 'Suspicious keywords detected' : 'No fraud indicators found',
+    category: isFraud ? 'suspicious' : 'legitimate'
+  };
 }

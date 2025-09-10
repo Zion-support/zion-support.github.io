@@ -1,4 +1,9 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+export interface User {
+  id: string;
+  email: string;
+  role: 'admin' | 'user';
+  name?: string;
+}
 
 export type CurrentUser = {
   userId: string;
@@ -22,14 +27,10 @@ export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
   return { userId, role };
 }
 
-export function requireUser(
-  req: NextApiRequest,
-  res: NextApiResponse
-): CurrentUser | null {
-  const user = getCurrentUser(req);
+export function requireAuth(req: any): User {
+  const user = getUserFromRequest(req);
   if (!user) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return null;
+    throw new Error('Authentication required');
   }
   return user;
 }

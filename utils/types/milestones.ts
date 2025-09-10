@@ -1,68 +1,30 @@
-export type ProjectParticipants = {
+export type MilestoneStatus = 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type ProjectParticipantRole = 'client' | 'talent';
 
-export type Milestone = $2;
-  title: string,
-  description?: string,
-  dueDate: string, // ISO date
-  amountUsd: number,
-  status: MilestoneStatus,
-  attachments?: MilestoneAttachment[],
-  submittedByUserId?: string,
-  approvedByUserId?: string,
-  paidAt?: string, // ISO date
-  createdAt: string, // ISO date
-  updatedAt: string, // ISO date
-},
-
-  clientUserId: string;
-  talentUserId: string;
-}
-export type Project = {  id: string;
-  title: string;
-  description?: string;  title: string;
-  description?: string;
-  due_date: string;
-  amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
-
-  updatedAt: string
-
-}
-export function isMilestoneStatus(value: string): value is MilestoneStatus {
-  return (
-
-  );export interface MilestoneAttachment {
+export interface Milestone {
   id: string;
-  name: string;
-  url: string;
-  type: string;
-  size: number;
-
-export interface CreateMilestoneRequest {;
-
+  projectId: string;
   title: string;
   description?: string;
-}
-export interface UpdateMilestoneRequest {
-
-export interface UpdateMilestoneRequest {;
-
-export interface UpdateMilestoneRequest {  title?: string;
-  description?: string;
-  due_date?: string;
-  amount_usd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
+  amount: number;
+  dueDate?: string;
+  status: MilestoneStatus;
+  createdAt: string;
+  updatedAt: string;
 }
 
-export function getDaysUntilDue(milestone: Milestone): number | null {
-  if (!milestone.dueDate) return null;
-  const dueDate = new Date(milestone.dueDate);
-  const now = new Date();
-  const diffTime = dueDate.getTime() - now.getTime();
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  clientId: string;
+  talentId: string;
+  milestones: Milestone[];
+  status: 'active' | 'completed' | 'cancelled';
+  createdAt: string;
+  updatedAt: string;
 }
 
-}
+export function isMilestoneStatus(status: string): status is MilestoneStatus {
+  return ['Pending', 'In Progress', 'Submitted', 'Approved', 'Paid'].includes(status);
 }
