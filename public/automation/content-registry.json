@@ -2585,6 +2585,22 @@
       "route": "/reports/insights"
     },
     {
+      "file": "pages/reports/patterns/pattern-2025-08-16-154051.tsx",
+      "route": "/reports/patterns/pattern-2025-08-16-154051"
+    },
+    {
+      "file": "pages/reports/patterns/pattern-2025-08-16-154050.tsx",
+      "route": "/reports/patterns/pattern-2025-08-16-154050"
+    },
+    {
+      "file": "pages/reports/patterns/pattern-2025-08-16-152447.tsx",
+      "route": "/reports/patterns/pattern-2025-08-16-152447"
+    },
+    {
+      "file": "pages/reports/patterns/pattern-2025-08-16-151112.tsx",
+      "route": "/reports/patterns/pattern-2025-08-16-151112"
+    },
+    {
       "file": "pages/reports/patterns/pattern-2025-08-16-145842.tsx",
       "route": "/reports/patterns/pattern-2025-08-16-145842"
     },
@@ -16489,6 +16505,22 @@
       "route": "/main/front"
     },
     {
+      "file": "pages/reports/cases/case-2025-08-16-154051.tsx",
+      "route": "/reports/cases/case-2025-08-16-154051"
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-16-154050.tsx",
+      "route": "/reports/cases/case-2025-08-16-154050"
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-16-152447.tsx",
+      "route": "/reports/cases/case-2025-08-16-152447"
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-16-151112.tsx",
+      "route": "/reports/cases/case-2025-08-16-151112"
+    },
+    {
       "file": "pages/reports/cases/case-2025-08-16-145842.tsx",
       "route": "/reports/cases/case-2025-08-16-145842"
     },
@@ -19979,6 +20011,22 @@
     {
       "file": "pages/reports/cases/case-2025-08-15-021207.tsx",
       "route": "/reports/cases/case-2025-08-15-021207"
+    },
+    {
+      "file": "pages/reports/guides/guide-2025-08-16-154051.tsx",
+      "route": "/reports/guides/guide-2025-08-16-154051"
+    },
+    {
+      "file": "pages/reports/guides/guide-2025-08-16-154050.tsx",
+      "route": "/reports/guides/guide-2025-08-16-154050"
+    },
+    {
+      "file": "pages/reports/guides/guide-2025-08-16-152447.tsx",
+      "route": "/reports/guides/guide-2025-08-16-152447"
+    },
+    {
+      "file": "pages/reports/guides/guide-2025-08-16-151112.tsx",
+      "route": "/reports/guides/guide-2025-08-16-151112"
     },
     {
       "file": "pages/reports/guides/guide-2025-08-16-145842.tsx",
@@ -23771,27 +23819,27 @@
       "route": "/docs/reports/unused-exports.md"
     }
   ],
-  "generatedAt": "2025-08-16T15:11:09.378Z",
+  "generatedAt": "2025-08-16T15:50:18.742Z",
   "items": [
     {
       "title": "Case Study — Cloud Improving",
-      "href": "/reports/cases/case-2025-08-16-151112",
+      "href": "/reports/cases/case-2025-08-16-155021",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-16T15:11:12.895Z",
+      "createdAt": "2025-08-16T15:50:21.253Z",
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
-      "href": "/reports/guides/guide-2025-08-16-151112",
+      "href": "/reports/guides/guide-2025-08-16-155021",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-16T15:11:12.895Z",
+      "createdAt": "2025-08-16T15:50:21.253Z",
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Automation Trends 2025",
-      "href": "/reports/patterns/pattern-2025-08-16-151112",
+      "href": "/reports/patterns/pattern-2025-08-16-155021",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-16T15:11:12.895Z",
+      "createdAt": "2025-08-16T15:50:21.253Z",
       "source": "cloud-deep-research-factory"
     }
   ]
