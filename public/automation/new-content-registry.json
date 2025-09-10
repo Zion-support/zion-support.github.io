@@ -1,4 +1,26 @@
 {
-  "generatedAt": "2025-08-15T09:40:24.475Z",
-  "items": []
+  "generatedAt": "2025-08-15T09:47:13.225Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-094713",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:47:13.183Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — Cloud Improving Implementation",
+      "href": "/reports/guides/guide-2025-08-15-094713",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:47:13.183Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Pattern — Cloud Improving Continuously",
+      "href": "/reports/patterns/pattern-2025-08-15-094713",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:47:13.183Z",
+      "source": "cloud-deep-research-factory"
+    }
+  ]
 }
