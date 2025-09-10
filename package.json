@@ -28,7 +28,7 @@
     "dev:fast": "npm run dev -- --turbo",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
-    "lint:check": "eslint src --max-warnings 0",
+    "lint:check": "eslint src types --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
@@ -173,7 +173,7 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-    "esbuild": "^0.25.9",
+    
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@netlify/plugin-nextjs": "^5.12.1",
