@@ -40,7 +40,7 @@ const suggestions = [
   "View case studies"
 ];
 
-export default function ChatAssistant() {
+function ChatAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([

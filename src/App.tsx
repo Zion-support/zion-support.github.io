@@ -10,14 +10,14 @@ import { ModernUIEnhancer } from './components/ModernUIEnhancer';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import SEO from './components/SEO';
 
-// Core pages - using existing pages from src/pages
+// Core pages
 const Home = React.lazy(() => import('./pages/Index'));
-const About = React.lazy(() => import('./pages/Index')); // Placeholder
-const Contact = React.lazy(() => import('./pages/Index')); // Placeholder
-const Blog = React.lazy(() => import('./pages/Index')); // Placeholder
-const BlogPost = React.lazy(() => import('./pages/Index')); // Placeholder
-const Services = React.lazy(() => import('./pages/Index')); // Placeholder
-const Solutions = React.lazy(() => import('./pages/SolutionsPage'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/ContactPage'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
 const Resources = React.lazy(() => import('./pages/Resources'));
 const Pricing = React.lazy(() => import('./pages/Index')); // Placeholder
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
@@ -72,16 +72,23 @@ const ITInfrastructure = React.lazy(() => import('./pages/Index')); // Placehold
 const AIBusinessIntelligence = React.lazy(() => import('./pages/Index')); // Placeholder
 const MicroSaaSProducts = React.lazy(() => import('./pages/Index')); // Placeholder
 
+// Import the new pages
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
+const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
+const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+
 // Simple placeholder pages for missing ones
-const Careers = () => (
+const Signup = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
+      title="Sign Up - Zion Tech Group"
+      description="Join our platform and start building the future with AI-powered solutions."
     />
     <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
+      <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
+      <p className="text-xl text-gray-300">Join our platform</p>
     </div>
   </div>
 );
@@ -131,6 +138,7 @@ function App() {
                       <Route path="/privacy" element={<Privacy />} />
                       <Route path="/terms" element={<Terms />} />
                       <Route path="/cookies" element={<Cookies />} />
+                      <Route path="/sitemap" element={<Sitemap />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/pricing" element={<Pricing />} />
                       <Route path="/services" element={<Services />} />
@@ -144,6 +152,19 @@ function App() {
                       <Route path="/community" element={<Community />} />
                       <Route path="/support" element={<Support />} />
                       <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                      <Route path="/login" element={<Login />} />
+                      <Route path="/signup" element={<Signup />} />
+                      <Route path="/search" element={<SearchPage />} />
+                      <Route path="/api-docs" element={<APIDocumentation />} />
+                      <Route path="/developers" element={<Developers />} />
+                      <Route path="/training" element={<Training />} />
+                      <Route path="/investors" element={<InvestorRelations />} />
+                      <Route path="/press" element={<Press />} />
+                      <Route path="/legal" element={<Legal />} />
+                      <Route path="/marketplace" element={<Marketplace />} />
+                      <Route path="/dashboard" element={<Dashboard />} />
+                      <Route path="/request-quote" element={<RequestQuote />} />
+                      
                       {/* Enhanced Services Routes */}
                       <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                       <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
@@ -154,17 +175,10 @@ function App() {
                       <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                       <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                       <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                      <Route path="/request-quote" element={<RequestQuote />} />
-                      <Route path="/dashboard" element={<Dashboard />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/marketplace" element={<Marketplace />} />
-                      <Route path="/search" element={<SearchPage />} />
-                      <Route path="/api-docs" element={<APIDocumentation />} />
-                      <Route path="/developers" element={<Developers />} />
-                      <Route path="/training" element={<Training />} />
-                      <Route path="/investors" element={<InvestorRelations />} />
-                      <Route path="/press" element={<Press />} />
-                      <Route path="/legal" element={<Legal />} />
+                      <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+                      <Route path="/zion-2026-services" element={<Zion2026InnovativeServicesShowcase />} />
+                      <Route path="/zion-2026-overview" element={<Zion2026ServicesOverview />} />
+                      <Route path="/zion-2026-pricing" element={<Zion2026ComprehensivePricingGuide />} />
 
                       {/* Service Routes - only for existing pages */}
                       <Route path="/services/cloud-devops" element={<CloudDevOps />} />
