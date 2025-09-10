@@ -346,17 +346,16 @@ export const real2026Q2Additions = [
       'SDKs for Python / JS and API access',
     ],
     use_cases: [
-      'MSPs and IT providers',;
-      'Internal IT for SMBs',;
-      'BYOD governance',;
-    ],;
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],;
-    competitors: ['Atera', 'NinjaOne'],;
-    price: '$4',;
-;
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
-  },;
+      'MSPs and IT providers',
+      'Internal IT for SMBs',
+      'BYOD governance',
+    ],
+    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
+    competitors: ['Atera', 'NinjaOne'],
+    price: '$4',
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
+  },
 
 
       'Training data augmentation',
@@ -445,14 +444,14 @@ export const real2026Q2Additions = [
     trial_days: 14,
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',;
-    link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',;
-  },;
-  {;
-    id: 'ecommerce - returns - orchestrator',;
-    name: 'E‑commerce Returns Orchestrator',;
-    category: 'Developer Tools',;
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',;
+    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
+    link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
+  },
+  {
+    id: 'ecommerce - returns - orchestrator',
+    name: 'E‑commerce Returns Orchestrator',
+    category: 'Developer Tools',
+    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
     description:;
       'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
     features: [;
@@ -1007,12 +1006,12 @@ export const real2026Q2Additions = [
       'Internal IT for SMBs',
       'BYOD governance',
     ],
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],;
-    competitors: ['Atera', 'NinjaOne'],;
-    price: '$4',;
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
-  },;
+    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
+    competitors: ['Atera', 'NinjaOne'],
+    price: '$4',
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
+  },
 ;
 ;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
