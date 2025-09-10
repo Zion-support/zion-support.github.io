@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from '../components/AccessibilityEnhancer';
 import { 
