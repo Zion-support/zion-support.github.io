@@ -1,41 +1,7 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, ExternalLink } from 'lucide-react';
 
-const apiEndpoints = [
-  {
-    method: 'GET',
-    path: '/api/v1/health',
-    description: 'Check API health status',
-    response: {
-      status: 'ok',
-      timestamp: '2024-01-01T00:00:00Z'
-    }
-  },
-  {
-    method: 'POST',
-    path: '/api/v1/auth/login',
-    description: 'Authenticate user and get access token',
-    response: {
-      token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      expires_in: 3600
-    }
-  },
-  {
-    method: 'GET',
-    path: '/api/v1/users',
-    description: 'Get list of users',
-    response: {
-      users: [],
-      total: 0,
-      page: 1
-    }
-  }
-];
-
-export default function APIDocs() {
+export default function ApiDocsPage() {
   return (
     <>
       <Head>

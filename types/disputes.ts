@@ -7,27 +7,33 @@ export type DisputeReason =
   | 'Payment Issue'
   | 'Communication Breakdown'
   | 'Other';
-
-export type DisputeAttachment = {
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+export type DisputeReason =;
+  | 'Scope Disagreement';
+  | 'Quality Issues';
+  | 'Delivery Delay';
+  | 'Payment Issue';
+  | 'Communication Breakdown';
+  | 'Other';
+export type DisputeAttachment = {;
   id: string;
   fileName: string;
   fileSize: number;
   mimeType: string;
-  path: string; // server-side storage path
+  path: string, // server-side storage path;
   uploadedAt: string;
   uploadedByUserId: string;
 };
-
-export type DisputeMessage = {
+export type DisputeMessage = {;
   id: string;
   authorUserId: string;
   authorRole: 'client' | 'talent' | 'admin';
   body: string;
   createdAt: string;
 };
-
-export type DisputeCase = {
-  id: string; // case id like DSP-YYYYMMDD-XXXX
+export type DisputeCase = {;
+  id: string, // case id like DSP-YYYYMMDD-XXXX;
   projectId: string;
   entityType?: 'milestone' | 'contract' | 'thread';
   entityId?: string;

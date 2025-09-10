@@ -9,23 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'zion-blue': '#3b82f6',
-        'zion-purple': '#8b5cf6',
-        'zion-green': '#10b981',
-        'zion-orange': '#f59e0b',
-        'zion-red': '#ef4444',
-        'zion-teal': '#14b8a6',
-        'zion-cyan': '#06b6d4',
-        'zion-indigo': '#6366f1',
-        'zion-emerald': '#059669',
-        'zion-pink': '#ec4899',
-      },
+        'zion-blue': '#3b82f6zion-purple': '#8b5cf6zion-green': '#10b981zion-orange': '#f59e0bzion-red': '#ef4444zion-teal': '#14b8a6zion-cyan': '#06b6d4zion-indigo': '#6366f1zion-emerald': '#059669zion-pink': '#ec4899'},
       animation: {
-        'fade-in': 'fadeIn 0.6s ease-out',
-        'slide-up': 'slideUp 0.8s ease-out',
-        'bounce-slow': 'bounce 2s infinite',
-        'pulse-slow': 'pulse 3s infinite',
-      },
+        'fade-in': 'fadeIn 0.6s ease-outslide-up': 'slideUp 0.8s ease-outbounce-slow': 'bounce 2s infinitepulse-slow': 'pulse 3s infinite'},
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
@@ -40,12 +26,7 @@ const config: Config = {
         xs: '2px',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
-  plugins: [],
-}
-
-export default config
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'}}},
+  plugins: []}
+;
+export default config;

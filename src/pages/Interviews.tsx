@@ -174,17 +174,18 @@ function InterviewsContent() {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-          </TabsContent>
-        </Tabs>
-      </main>
-    </>
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+    </>;
   );
 }
-
-export default function Interviews() {
-  return (
-    <ProtectedRoute>
-      <InterviewsContent />
-    </ProtectedRoute>
+;
+export default function Interviews() {;
+  return (;
+    <ProtectedRoute>;
+      <InterviewsContent />;
+    </ProtectedRoute>;
   );
 }
+;

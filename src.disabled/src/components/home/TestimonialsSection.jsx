@@ -1,4 +1,5 @@
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

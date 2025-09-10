@@ -1,5 +1,5 @@
-import { SEO } from "@/components/SEO";
-import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -51,6 +51,56 @@ export default function Status() {
     // Try to load external status page, fallback after timeout
     const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
+        setShowFallback(true)
+import { SEO } from "@/components/SEO",;
+import { useState, useEffect } from "react",;
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import Link from "next/link",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { logWarn } from '@/utils/productionLogger',;
+interface ServiceStatus {;
+  name: string,;
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance',;
+  description: string,;
+  lastChecked: string;
+}
+;
+const FALLBACK_SERVICES: ServiceStatus[] = [;
+  {;
+    name: "Marketplace API",;
+    status: "operational",;
+    description: "Product listings and search functionality",;
+    lastChecked: new Date().toISOString();
+  },;
+  {;
+    name: "Authentication Service",;
+    status: "operational",;
+    description: "User login and registration",;
+    lastChecked: new Date().toISOString();
+  },;
+  {;
+    name: "Payment Processing",;
+    status: "operational",;
+    description: "Checkout and payment handling",;
+    lastChecked: new Date().toISOString();
+  },;
+  {;
+    name: "Talent Directory",;
+    status: "operational",;
+    description: "AI talent profiles and matching",;
+    lastChecked: new Date().toISOString();
+  }
+],;
+export default function Status() {;
+  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),;
+  const [showFallback, setShowFallback] = useState(false),;
+  const [uptime, setUptime] = useState<number | null>(null),;
+  const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",;
+  useEffect(() => {;
+    // Try to load external status page, fallback after timeout;
+    const timeout = setTimeout(() => {;
+      if (!externalStatusLoaded) {;
         setShowFallback(true);
       }
     }, 5000); // 5 second timeout
@@ -71,8 +121,8 @@ export default function Status() {
         logWarn('Failed to fetch uptime', { data: err });
       }
     }
-    fetchUptime();
-  }, []);
+    fetchUptime()
+  }, []),
 
   const getStatusIcon = (status: ServiceStatus['status']) => {
     switch (status) {
@@ -85,6 +135,20 @@ export default function Status() {
       case 'maintenance':
         return <Clock className="h-5 w-5 text-blue-500" />;
       default:
+        return <AlertCircle className="h-5 w-5 text-gray-500" />
+    fetchUptime();
+  }, []),;
+  const getStatusIcon = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return <CheckCircle className="h-5 w-5 text-green-500" />,;
+      case 'degraded':;
+        return <Clock className="h-5 w-5 text-yellow-500" />,;
+      case 'outage':;
+        return <AlertCircle className="h-5 w-5 text-red-500" />,;
+      case 'maintenance':;
+        return <Clock className="h-5 w-5 text-blue-500" />,;
+      default:;
         return <AlertCircle className="h-5 w-5 text-gray-500" />;
     }
   };
@@ -120,15 +184,15 @@ export default function Status() {
   };
 
   const formatUptime = (seconds: number) => {
-    const days = Math.floor(seconds / 86400);
-    const hours = Math.floor((seconds % 86400) / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const parts: string[] = [];
-    if (days > 0) parts.push(`${days}d`);
-    if (hours > 0) parts.push(`${hours}h`);
-    parts.push(`${minutes}m`);
-    return parts.join(' ');
-  };
+    const days = Math.floor(seconds / 86400),
+    const hours = Math.floor((seconds % 86400) / 3600),
+    const minutes = Math.floor((seconds % 3600) / 60),
+    const parts: string[] = [],
+    if (days > 0) parts.push(`${days}d`),
+    if (hours > 0) parts.push(`${hours}h`),
+    parts.push(`${minutes}m`),
+    return parts.join(' ')
+  },
 
   return (
     <>
@@ -274,5 +338,66 @@ export default function Status() {
         </div>
       </main>
     </>
+  )
+                  </CardContent>;
+                </Card>;
+              </div>;
+              <div className="text-center">;
+                <p className="text-zion-slate-light mb-4">;
+                  For detailed incident history and real-time updates:;
+                </p>;
+                <Button;
+                  variant="outline";
+                  asChild;
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                >;
+                  <a;
+                    href={statusUrl} ;
+                    target="_blank";
+                    rel="noopener noreferrer";
+                    className="flex items-center gap-2";
+                  >;
+                    <ExternalLink className="h-4 w-4" />;
+                    Visit Full Status Page;
+                  </a>;
+                </Button>;
+              </div>;
+            </>;
+          )}
+;
+          <div className="mt-12 text-center">;
+            <Card className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-white">Need Help?</CardTitle>;
+              </CardHeader>;
+              <CardContent className="space-y-4">;
+                <p className="text-zion-slate-light">;
+                  If you're experiencing issues not reflected here, please contact our support team.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                  >;
+                    <Link href="/contact">Contact Support</Link>;
+                  </Button>;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10";
+                  >;
+                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">;
+                      @ZionTechGroup;
+                    </a>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
   );
 }
+;

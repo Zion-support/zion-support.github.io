@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
-=======
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Building, 
-  Shield, 
-  Users, import {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   Building,
   Shield,
   Users,
@@ -28,7 +16,7 @@ import { Building,
   Phone,
   Mail;
 } from 'lucide-react';
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -97,6 +85,7 @@ const services = [
       'Audit automation'';
     ];
   }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
 ];
 =======
 import Layout from '../../components/Layout';';
@@ -126,7 +115,7 @@ const benefits = [
     description: 'Digital systems provide transparency and enable better accountability.,',
     icon: Globe;
   }
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
 ];
 export default function GovernmentPage() {
   return (
@@ -200,7 +189,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
               className="text-center mb-16"
 =======
               className="text-center max-w-4xl mx-auto""
@@ -246,7 +235,7 @@ export default function GovernmentPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -264,6 +253,7 @@ export default function GovernmentPage() {
                   </ul>,
                 </motion.div>;
               ))}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
             </div>
 =======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
@@ -287,7 +277,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -314,6 +304,7 @@ export default function GovernmentPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
             </div>
 =======
               className="text-center mb-16""
@@ -339,30 +330,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Government?;
-              </h2>;
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
-                Let our government technology experts help you implement solutions that enhance;
-                citizen services and improve operational efficiency.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Start Your Government Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/government.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?

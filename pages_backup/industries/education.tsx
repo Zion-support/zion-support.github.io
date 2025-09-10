@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
-=======
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { BookOpen, 
-  Brain, 
-  Users, import {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   BookOpen,
   Brain,
   Users,
@@ -27,7 +15,7 @@ import { BookOpen,
   Globe,
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -96,6 +84,7 @@ const services = [
       'Collaboration features'';
     ];
   }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
 ];
 =======
 import Layout from '../../components/Layout';';
@@ -125,7 +114,7 @@ const benefits = [
     description: 'Analytics help educators make informed decisions about teaching methods.,',
     icon: BarChart3;
   }
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
 ];
 export default function EducationPage() {
   return (
@@ -199,7 +188,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
               className="text-center mb-16"
 =======
               className="text-center max-w-4xl mx-auto""
@@ -245,7 +234,7 @@ export default function EducationPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -263,6 +252,7 @@ export default function EducationPage() {
                   </ul>,
                 </motion.div>;
               ))}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
             </div>
 =======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
@@ -286,7 +276,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -313,6 +303,7 @@ export default function EducationPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
             </div>
 =======
               className="text-center mb-16""
@@ -338,30 +329,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Education?;
-              </h2>;
-              <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
-                Let our education technology experts help you implement solutions that improve;
-                learning outcomes and student engagement.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Start Your Education Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/education.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?

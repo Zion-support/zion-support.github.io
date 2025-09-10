@@ -1,18 +1,14 @@
-import { tokenStore } from './storage';
-
-export interface TokenConfig {
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: number;
-  maxSupply: number;
-  mintingEnabled: boolean;
-  burningEnabled: boolean;
-  transferEnabled: boolean;
+import { randomUUID } from "crypto";
+import { tokenStore } from "./storage";
+import { TokenTransaction, WalletSummary } from "./types";
+export function getWalletSummary(userId: string): WalletSummary {;
+  const wallet = tokenStore.getWallet(userId);
+  const transactions = tokenStore.getTransactions(userId);
+  const config = tokenStore.getConfig();
+  return { wallet, transactions, config }
 }
-
-export interface TokenTransaction {
-  id: string;
+;
+export function earnTokens(;
   userId: string;
   amount: number;
   type: 'mint' | 'burn' | 'transfer';
@@ -28,22 +24,4 @@ export function getConfig(): TokenConfig {
 
 export function getAllTransactions(): TokenTransaction[] {
   return tokenStore.getAllTransactions();
-}
-
-export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  return tokenStore.addTransaction({
-    userId,
-    amount,
-    type: 'mint',
-    reason
-  });
-}
-
-export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  return tokenStore.addTransaction({
-    userId,
-    amount: -amount, // negative amount for revocation
-    type: 'burn',
-    reason
-  });
 }

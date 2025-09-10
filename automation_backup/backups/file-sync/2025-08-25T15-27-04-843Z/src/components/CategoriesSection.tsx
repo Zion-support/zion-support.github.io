@@ -1,6 +1,13 @@
-<<<<<<< HEAD
-module.exports = {};
-=======
 export {};
 module.exports = {};
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+export {};
+
+
+
+
+
+export {};
+module.exports = {};
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

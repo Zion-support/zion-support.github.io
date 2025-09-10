@@ -253,6 +253,6 @@ try {
 }
 <<<<<<< HEAD
 console.log('\nMerge conflict fixing complete!');
-=======
-console.log('\nMerge conflict fixing complete!');
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

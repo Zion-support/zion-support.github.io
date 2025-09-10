@@ -1,7 +1,6 @@
-import React from 'react';
-import { render, RenderOptions } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
-
+import React from 'react',
+import { render, RenderOptions } from '@testing-library/react',
+import { ThemeProvider } from 'next-themes',
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
@@ -36,7 +35,6 @@ export const mockNextRouter = () => ({
   domainLocales: [],
   isPreview: false
 });
-
-export const createMockProps = (overrides = {}) => ({
-  ...overrides
+export const createMockProps = (overrides = {}) => ({;
+  ...overrides;
 });
