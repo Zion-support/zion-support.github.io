@@ -1209,108 +1209,175 @@ title: 'AI-Powered IT Operations (AIOps)',
   }
 ];
 
-<<<<<<< HEAD
-  const itServices = [
-    {
-      title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
-      icon: Cloud,
-      features: [
-        'Multi-cloud architecture design and implementation',
-        'Legacy system migration and modernization',
-        'Serverless computing and containerization',
-        'Auto-scaling and load balancing',
-        'Cost optimization and FinOps practices',
-        'Disaster recovery and backup solutions'
-      ],
-      pricing: '$5,000 - $50,000/month',
-      delivery: '4-12 weeks',
-      category: 'Cloud Services'
+const categories = [
+  'All',
+  'AI Operations',
+  'Quantum Security',
+  'Edge Computing',
+  '5G Networks',
+  'Blockchain Infrastructure',
+  'IoT Platforms',
+  'AI Infrastructure',
+  'Green IT',
+  'Zero Trust Security',
+  'Cloud Management',
+  'Analytics Platform',
+  'Disaster Recovery',
+  'Network Security',
+  'IT Compliance',
+  'Digital Transformation',
+  'Asset Management',
+  'Data Protection',
+  'Performance Monitoring',
+  'Cloud Security',
+  'ITSM'
+];
+
+export default function ITServicesPage() {
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  const filteredServices = itServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services and solutions for modern businesses. From AI operations to cybersecurity, we provide cutting-edge technology solutions."
+      keywords="IT services, technology solutions, AI operations, cybersecurity, cloud computing, digital transformation"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                IT Services & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive IT services and solutions designed to transform your business operations, 
+                enhance security, and drive innovation across all technology domains.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Search Bar */}
+              <div className="mb-8">
+                <div className="relative max-w-2xl mx-auto">
+                  <input
+                    type="text"
+                    placeholder="Search IT services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2 justify-center mb-8">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+      category: 'Development'
     },
     {
-      title: 'Cybersecurity & Compliance',
-      description: 'Enterprise-grade security solutions and compliance management',
-      icon: Shield,
+      icon: Server,
+      name: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure setup, management, and optimization for enterprise environments.',
       features: [
-        'Zero-trust security architecture',
-        'SOC 2, GDPR, HIPAA compliance automation',
-        'Penetration testing and vulnerability assessments',
-        'Security monitoring and incident response',
-        'Identity and access management (IAM)',
-        'Data encryption and privacy protection'
+        'Server setup and configuration',
+        'Network infrastructure design',
+        'Storage and backup solutions',
+        'Monitoring and alerting systems',
+        'Performance optimization',
+        'Disaster recovery planning'
       ],
-      pricing: '$3,000 - $25,000/month',
-      delivery: '3-8 weeks',
-      category: 'Security Services'
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Reliable and scalable infrastructure',
+        'Reduced downtime and maintenance',
+        'Optimized performance and costs',
+        'Enhanced security and compliance'
+      ],
+      category: 'Infrastructure'
     },
     {
-      title: 'Network Infrastructure',
-      description: 'Design, implementation, and management of enterprise networks',
-      icon: Network,
+      icon: Cpu,
+      name: 'High-Performance Computing Solutions',
+      description: 'Advanced HPC infrastructure for scientific computing, AI/ML workloads, and data-intensive applications.',
       features: [
-        'SD-WAN and hybrid network solutions',
-        'Network security and firewall management',
-        'Wireless network design and optimization',
-        'Network monitoring and performance tuning',
-        'VoIP and unified communications',
-        'Network documentation and training'
+        'GPU cluster setup and optimization',
+        'Distributed computing frameworks',
+        'High-speed networking configuration',
+        'Parallel processing optimization',
+        'Scientific computing environments',
+        'AI/ML infrastructure scaling'
       ],
-      pricing: '$2,000 - $15,000/month',
-      delivery: '2-6 weeks',
-      category: 'Network Services'
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Massive computational power',
+        'Accelerated research and development',
+        'Scalable AI/ML infrastructure',
+        'Cost-effective high-performance computing'
+      ],
+      category: 'High-Performance Computing'
     },
     {
-      title: 'IT Support & Helpdesk',
-      description: '24/7 technical support and helpdesk services',
-      icon: Users,
+      icon: Globe,
+      name: 'IoT Platform & Device Management',
+      description: 'Comprehensive IoT solutions including device management, data analytics, and edge computing.',
       features: [
-        '24/7/365 technical support coverage',
-        'Remote desktop and troubleshooting',
-        'Software installation and updates',
-        'Hardware procurement and management',
-        'User training and documentation',
-        'SLA-based response times'
+        'IoT device connectivity and management',
+        'Edge computing infrastructure',
+        'Real-time data processing and analytics',
+        'Device security and firmware updates',
+        'IoT platform integration',
+        'Predictive maintenance systems'
       ],
-      pricing: '$1,500 - $8,000/month',
-      delivery: '1-2 weeks',
-      category: 'Support Services'
+      pricing: '$150 – $350/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Scalable IoT infrastructure',
+        'Real-time device monitoring',
+        'Automated device management',
+        'Data-driven insights and optimization'
+      ],
+      category: 'IoT & Edge Computing'
     },
     {
-      title: 'Data Management & Analytics',
-      description: 'Data warehousing, analytics, and business intelligence solutions',
-      icon: Database,
-      features: [
-        'Data warehouse design and implementation',
-        'ETL/ELT pipeline development',
-        'Business intelligence dashboards',
-        'Data governance and quality management',
-        'Real-time analytics and reporting',
-        'Machine learning data preparation'
-      ],
-      pricing: '$4,000 - $30,000/month',
-      delivery: '6-16 weeks',
-      category: 'Data Services'
-    },
-    {
-      title: 'DevOps & CI/CD',
-      description: 'Automated deployment pipelines and infrastructure as code',
-      icon: Settings,
-      features: [
-        'CI/CD pipeline setup and optimization',
-        'Infrastructure as Code (IaC) implementation',
-        'Container orchestration with Kubernetes',
-        'Monitoring and logging solutions',
-        'Automated testing and quality gates',
-        'DevSecOps and security integration'
-      ],
-      pricing: '$3,500 - $20,000/month',
-      delivery: '4-10 weeks',
-      category: 'DevOps Services'
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation consulting and implementation',
-      icon: Zap,
+      icon: BarChart3,
+      name: 'Enterprise Digital Transformation',
+      description: 'Comprehensive digital transformation consulting and implementation for modern business operations.',
       features: [
         'Digital strategy and roadmap development',
         'Process automation and optimization',
