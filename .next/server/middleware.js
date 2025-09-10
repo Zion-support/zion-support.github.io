@@ -79,7 +79,7 @@ function enhanceGlobals() {
     Object.defineProperty(globalThis, "__import_unsupported", {
         value: __import_unsupported,
         enumerable: false,
-        configurable: false
+        configurable: false;
     });
     // Eagerly fire instrumentation hook to make the startup faster.
     void ensureInstrumentationRegistered();
@@ -2155,7 +2155,7 @@ const config = {
 };
 
 ;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=private-next-root-dir%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2Fhome%2Frunner%2Fwork%2Fzion.app%2Fzion.app&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLygoPyFfbmV4dFxcL3N0YXRpY3xfbmV4dFxcL2ltYWdlfGZhdmljb24uaWNvfC4qXFwuKD86c3ZnfHBuZ3xqcGd8anBlZ3xnaWZ8d2VicCkkKS4qKSkoLmpzb24pP1tcXC8jXFw%2FXT8kIiwib3JpZ2luYWxTb3VyY2UiOiIvKCg%2FIV9uZXh0L3N0YXRpY3xfbmV4dC9pbWFnZXxmYXZpY29uLmljb3wuKlxcLig%2FOnN2Z3xwbmd8anBnfGpwZWd8Z2lmfHdlYnApJCkuKikifV0%3D&preferredRegion=&middlewareConfig=eyJtYXRjaGVycyI6W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLygoPyFfbmV4dFxcL3N0YXRpY3xfbmV4dFxcL2ltYWdlfGZhdmljb24uaWNvfC4qXFwuKD86c3ZnfHBuZ3xqcGd8anBlZ3xnaWZ8d2VicCkkKS4qKSkoLmpzb24pP1tcXC8jXFw%2FXT8kIiwib3JpZ2luYWxTb3VyY2UiOiIvKCg%2FIV9uZXh0L3N0YXRpY3xfbmV4dC9pbWFnZXxmYXZpY29uLmljb3wuKlxcLig%2FOnN2Z3xwbmd8anBnfGpwZWd8Z2lmfHdlYnApJCkuKikifV19!
-=======
+
 "use strict";
 (() => {
 var exports = {};
@@ -2203,7 +2203,7 @@ function nHandler(opts) {
         ...opts,
         page,
         handler
-=======
+
 
 
 const mod = {
@@ -2619,9 +2619,9 @@ function normalizeCookie(cookie = {
     }
     return cookie;
 }
-// Annotate the CommonJS export names for ESM import in node:
+// Annotate the CommonJS export names for ESM import in node:;
 0 && (0);
-=======
+
 
 /***/ }),
 
@@ -2800,7 +2800,7 @@ var __dirname = "/";
 /******/ }
 ]);
 //# sourceMappingURL=middleware.js.map
-=======
+
 /***/ 303133:
 /***/ ((module) => {
 

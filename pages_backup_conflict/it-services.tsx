@@ -1338,7 +1338,7 @@ export default function ITServices() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer />;
     </>;
   );
 };
