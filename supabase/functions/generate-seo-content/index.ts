@@ -33,14 +33,14 @@ serve(async (req) => {
 
     errorLoggerPayload.body = { contentType, userPromptLength: userPrompt?.length, keywords };
     // console.log(JSON.stringify({
-      timestamp: requestTimestamp,
-      level: 'INFO',
-      type: 'request_received',
-      serviceName: 'generate-seo-content',
-      method: req.method,
-      url: req.url,
-      body: { contentType, userPromptLength: userPrompt?.length, keywords }
-    }));
+    //   timestamp: requestTimestamp,
+    //   level: 'INFO',
+    //   type: 'request_received',
+    //   serviceName: 'generate-seo-content',
+    //   method: req.method,
+    //   url: req.url,
+    //   body: { contentType, userPromptLength: userPrompt?.length, keywords }
+    // }));
 
     if (!contentType || !userPrompt) {
       // console.warn(JSON.stringify({ ...errorLoggerPayload, level: 'WARN', type: 'validation_error', message: 'Missing contentType or userPrompt' }));
