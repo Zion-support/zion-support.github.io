@@ -243,20 +243,3 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
-    </div>
-
-    </>
-
-
-  );
-}
-
-    <div className={className || ""}>
-      <h1>Register</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Register;
-
