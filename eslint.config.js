@@ -1,101 +1,115 @@
 // Flat ESLint config for ESLint v9+
 // Keeps rules minimal and limits scope to project TS/TSX files
 import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
 
 export default [
-  // Base JS recommendations (applied to TS as well)
   {
-    ...js.configs.recommended,
-    files: ['**/*.{ts,tsx,js,jsx}'],
     ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'out/**',
-      'coverage/**',
-      'public/**',
-      '__tests__/**',
-      'tests/**',
-      'cypress/**',
-      'e2e/**',
-      '**/*.{test,spec}.{js,jsx,ts,tsx}',
-      // noisy/unrelated top-level dirs in this monorepo-like workspace
-      'apps/**',
-      'automation/**',
-      'infra/**',
-      'monitoring/**',
-      'netlify/**',
-      'offworld/**',
-      'prisma/**',
-      'simulator/**',
-      'stories/**',
-      'supabase/**',
-      'token/**',
-      'universe/**',
-      'vision/**',
-      'wiki/**',
-      'zion/**',
-      'zion_*/**',
-      'zion-*/**',
-      // backups/disabled/temp
-      '**/*.backup/**',
-      '**/*.disabled/**',
-      '**/*.temp/**',
-      '**/*.old/**',
-      'backup*/**',
-      'temp_*/**',
-      'recovered-branches/**',
-    ],
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      'build/',
+      'coverage/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      '.prettierrc.js',
+      '.eslintrc.*',
+      '*.min.js',
+      '*.bundle.js',
+      'scripts/',
+      'automation/',
+      'automation_backup/',
+      'data_backup/',
+      'pm2-automation/',
+      '__tests__/',
+      'pages.disabled/',
+      'pages.corrupted.*/',
+      'pages.broken/',
+      'pages.bak/',
+      'pages.blog.disabled/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-disabled/',
+      'pages-quarantine/',
+      'pages.__backup/',
+      'pages-backup/',
+      '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.ts',
+      '*.spec.tsx'
+    ]
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: tsparser,
-      ecmaVersion: 'latest',
+      ecmaVersion: 2021,
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-      },
       globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        JSX: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
       },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
     plugins: {
-      '@typescript-eslint': tseslint,
       react,
-      'react-hooks': reactHooks,
+      'react-hooks': reactHooks
     },
     rules: {
-      // general
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      // ts
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      // react
-      'react/react-in-jsx-scope': 'off',
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
       'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-    settings: {
-      react: { version: 'detect' },
-    },
-  },
+      'react/react-in-jsx-scope': 'off'
+    }
+  }
 ];
