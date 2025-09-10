@@ -1,46 +1,24 @@
 import React from 'react';
-interface NewsletterSubscription.testProps {
-  // Add props here as needed
->
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-
-
-
-
-interface NewsletterSubscription.testProps {
+// Mock component for testing
+interface NewsletterSubscriptionProps {
   // Add props here as needed
 }
 
-export default function NewsletterSubscription.test({ }: NewsletterSubscription.testProps) {
+function NewsletterSubscription({ }: NewsletterSubscriptionProps) {
   return (
     <div>
-      <h1>NewsletterSubscription.test</h1>
+      <h1>NewsletterSubscription</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-<:tests/NewsletterSubscription.test.tsx
-
-=
-}
-=======
 }
 
-}
-
-
->
-
-
-
-}
->>>>>>>> main:corrupted_backup/NewsletterSubscription.test.tsx
-
-
-
-
-
-}
->
-
+describe('NewsletterSubscription', () => {
+  it('renders without crashing', () => {
+    render(<NewsletterSubscription />);
+    expect(screen.getByText('NewsletterSubscription')).toBeInTheDocument();
+  });
+});

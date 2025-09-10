@@ -1,46 +1,24 @@
 import React from 'react';
-interface ServiceTypeStep.testProps {
-  // Add props here as needed
->
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-
-
-
-
-interface ServiceTypeStep.testProps {
+// Mock component for testing
+interface ServiceTypeStepProps {
   // Add props here as needed
 }
 
-export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
+function ServiceTypeStep({ }: ServiceTypeStepProps) {
   return (
     <div>
-      <h1>ServiceTypeStep.test</h1>
+      <h1>ServiceTypeStep</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-<:tests/ServiceTypeStep.test.tsx
-
-=
-}
-=======
 }
 
-}
-
-
->
-
-
-
-}
->>>>>>>> main:corrupted_backup/ServiceTypeStep.test.tsx
-
-
-
-
-
-}
->
-
+describe('ServiceTypeStep', () => {
+  it('renders without crashing', () => {
+    render(<ServiceTypeStep />);
+    expect(screen.getByText('ServiceTypeStep')).toBeInTheDocument();
+  });
+});

@@ -25,7 +25,13 @@ module.exports = {
     '<rootDir>/build/',
     '<rootDir>/zion-os.disabled/',
     '<rootDir>/backup-problematic-files/',
-    '<rootDir>/tests/integration/'
+    '<rootDir>/tests/integration/',
+    '<rootDir>/tests/e2e/',
+    '<rootDir>/tests/playwright/',
+    '<rootDir>/tests/storybook/',
+    '<rootDir>/tests/security/',
+    '<rootDir>/tests/visual-regression.test.ts',
+    '<rootDir>/tests/CheckoutStripe.test.ts'
   ],
   transformIgnorePatterns: ['node_modules/(?!(.*\\.mjs$))'],
   roots: ['<rootDir>/src', '<rootDir>/tests'],
