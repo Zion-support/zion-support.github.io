@@ -3,8 +3,6 @@ const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-const FILE_PATH = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -21,18 +19,19 @@ async function handler(req, res) {
       return;
     }
 
-    try {
-      const subs = fs.existsSync(FILE_PATH)
-        ? JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'))
-        : [];
-      if (!subs.includes(email)) subs.push(email);
-      fs.writeFileSync(FILE_PATH, JSON.stringify(subs, null, 2));
-    } catch (err) {
-      console.error('Failed to persist subscription:', err);
-    }
+  const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
+  let existing = [];
+  try {
+    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+    if (!Array.isArray(existing)) existing = [];
+  } catch {
+    // File doesn't exist or is invalid, use empty array
+  }
+  existing.push({ email, subscribedAt: new Date().toISOString() });
+  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
-    res.statusCode = 200;
-    res.json({ success: true });
+  res.statusCode = 200;
+  res.json({ success: true });
   } catch (err) {
     console.error('Subscribe API error:', err);
     res.statusCode = 500;

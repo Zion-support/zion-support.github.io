@@ -77,7 +77,7 @@ serve(async (req) => {
         .single();
         
       if (resumeError) {
-        console.error("Error fetching resume:", resumeError);
+        // console.error("Error fetching resume:", resumeError);
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
@@ -85,25 +85,25 @@ serve(async (req) => {
           Headline: ${resume.headline || ""}
           
           Work Experience:
-          ${resume.work_history.map((job: any) => 
+          ${resume.work_history.map((job: unknown) => 
             `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
             ${job.description || ""}`
           ).join("\n\n")}
           
           Education:
-          ${resume.education.map((edu: any) =>
+          ${resume.education.map((edu: unknown) =>
             `${edu.degree} in ${edu.field_of_study || ""} from ${edu.institution}`
           ).join("\n")}
 
           Skills:
-          ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
+          ${resume.resume_skills.map((skill: unknown) => skill.name).join(", ")}
 
           Certifications:
-          ${resume.certifications.map((cert: any) => `${cert.name} from ${cert.issuing_organization}`).join(", ")}
+          ${resume.certifications.map((cert: unknown) => `${cert.name} from ${cert.issuing_organization}`).join(", ")}
         `;
         
-        resumeSkills = resume.resume_skills.map((skill: any) => skill.name);
-        resumeCerts = resume.certifications.map((cert: any) => cert.name);
+        resumeSkills = resume.resume_skills.map((skill: unknown) => skill.name);
+        resumeCerts = resume.certifications.map((cert: unknown) => cert.name);
       }
     }
     
@@ -206,7 +206,7 @@ serve(async (req) => {
         throw new Error("Invalid response format");
       }
     } catch (error) {
-      console.error("Error parsing AI response:", error);
+      // console.error("Error parsing AI response:", error);
       throw new Error("Failed to parse AI analysis results");
     }
 
@@ -238,7 +238,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error in resume-scorer function:", error);
+    // console.error("Error in resume-scorer function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { 

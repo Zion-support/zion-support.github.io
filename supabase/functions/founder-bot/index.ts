@@ -60,13 +60,13 @@ serve(async (req) => {
 
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
-    console.log('AI chat interaction logged');
+    // console.log('AI chat interaction logged');
 
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Error in ai-chat function:', error);
+    // console.error('Error in ai-chat function:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
