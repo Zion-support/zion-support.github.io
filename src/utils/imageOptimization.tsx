@@ -19,8 +19,8 @@ interface OptimizedImageProps {
   lazy?: boolean;
 }
 
-export function OptimizedImage(_{
-  src, _alt, _width, _height, _className, _priority = false, _placeholder = 'empty', _blurDataURL, _quality = 75, _sizes, _onLoad, _onError, _fallbackSrc, _lazy = true, ...props
+export function OptimizedImage({
+  src, alt, width, height, className, priority = false, placeholder = 'empty', blurDataURL, quality = 75, sizes, onLoad, onError, fallbackSrc, lazy = true, ...props
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
