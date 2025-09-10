@@ -1,29 +1,25 @@
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
-const react = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
-const typescript = require('@typescript-eslint/eslint-plugin');
-const tsparser = require('@typescript-eslint/parser');
-const globals = require('globals');
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
 
-module.exports = [
-  js.configs.recommended,
+export default [
   {
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
       'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
+      '.next/**',
+      '**/.next/**',
+      'zion-os/**',
+      'zion-os.disabled/**',
+      'apps/**',
       'scripts/**',
       'automation/**',
       'backup-problematic-files/**',
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
-      'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
       'api/**',
@@ -46,36 +42,7 @@ module.exports = [
       'types/**',
       '*.cjs',
       '*.mjs',
-      'supabase/**',
-      'ultimate-*.cjs',
-      'advanced-*.js',
-      'comprehensive-*.js',
-      'enhanced-*.js',
-      'fix-*.js',
-      'merge-*.js',
-      'run-*.js',
-      'test-*.js',
-      '*.test.js',
-      '*.spec.js',
-      'aggressive-*.js',
-      'batch-*.js',
-      'clean-*.js',
-      'critical-*.js',
-      'execute-*.js',
-      'final-*.js',
-      'health-*.js',
-      'improve-*.js',
-      'maintenance-*.js',
-      'monitoring-*.js',
-      'optimized-*.js',
-      'performance-*.js',
-      'resolve-*.js',
-      'seo-*.js',
-      'simple-*.js',
-      'structural-*.js',
-      'system-*.js',
-      'ultimate-*.js',
-      '*.js'
+      'supabase/**'
     ],
   },
   {
@@ -90,7 +57,7 @@ module.exports = [
       },
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': tseslint,
       'react': react,
       'react-hooks': reactHooks,
     },
