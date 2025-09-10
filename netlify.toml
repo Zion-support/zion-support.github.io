@@ -1,6 +1,6 @@
 [build]
-  command = "corepack enable && corepack prepare pnpm@9.12.1 --activate && pnpm install --frozen-lockfile --prefer-offline --unsafe-perm=false && pnpm run build"
-  publish = "dist"
+  command = "npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
