@@ -5,17 +5,17 @@ import App from './App'
 if (typeof window !== 'undefined') {
   // Track initial page load
   window.addEventListener('load', () => {
-    console.log('App loaded successfully');
+    // Page loaded
   });
 
   // Track Core Web Vitals
   if ('web-vitals' in window) {
     import('web-vitals').then((vitals) => {
-      if (vitals.onCLS) vitals.onCLS(console.log);
-      if (vitals.onINP) vitals.onINP(console.log); // INP replaces FID
-      if (vitals.onFCP) vitals.onFCP(console.log);
-      if (vitals.onLCP) vitals.onLCP(console.log);
-      if (vitals.onTTFB) vitals.onTTFB(console.log);
+      if (vitals.onCLS) vitals.onCLS(() => {});
+      if (vitals.onINP) vitals.onINP(() => {}); // INP replaces FID
+      if (vitals.onFCP) vitals.onFCP(() => {});
+      if (vitals.onLCP) vitals.onLCP(() => {});
+      if (vitals.onTTFB) vitals.onTTFB(() => {});
     });
   }
 }

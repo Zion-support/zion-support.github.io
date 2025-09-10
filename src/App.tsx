@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 
@@ -131,17 +131,17 @@ export default function App() {
   useEffect(() => {
     // Track page load performance
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const loadTime = performance.now();
-      console.log(`App loaded in ${loadTime.toFixed(2)}ms`);
+      const _loadTime = performance.now();
+      // App loaded in ${_loadTime.toFixed(2)}ms
       
       // Track Core Web Vitals
       if ('web-vitals' in window) {
         import('web-vitals').then((vitals) => {
-          if (vitals.onCLS) vitals.onCLS(console.log);
-          if (vitals.onINP) vitals.onINP(console.log); // INP replaces FID
-          if (vitals.onFCP) vitals.onFCP(console.log);
-          if (vitals.onLCP) vitals.onLCP(console.log);
-          if (vitals.onTTFB) vitals.onTTFB(console.log);
+          if (vitals.onCLS) vitals.onCLS(() => {});
+          if (vitals.onINP) vitals.onINP(() => {}); // INP replaces FID
+          if (vitals.onFCP) vitals.onFCP(() => {});
+          if (vitals.onLCP) vitals.onLCP(() => {});
+          if (vitals.onTTFB) vitals.onTTFB(() => {});
         });
       }
     }
