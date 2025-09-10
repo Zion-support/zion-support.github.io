@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState, useMemo, useCallback } from 'react';
+import React, { Suspense, lazy, useState, useMemo, useCallback, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import { HelmetProvider } from 'react-helmet-async';
@@ -14,17 +14,57 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import './App.css';
 import './styles/accessibility.css';
 
-// Lazy load pages for better performance
-const Home = lazy(() => import('./pages/HomePage'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Profile = lazy(() => import('./pages/Profile'));
-const Cart = lazy(() => import('./pages/Cart'));
-const Checkout = lazy(() => import('./pages/Checkout'));
-const Wishlist = lazy(() => import('./pages/Wishlist'));
+// Enhanced lazy loading with error boundaries and preloading
+const Home = lazy(() => 
+  import('./pages/HomePage').catch(() => ({ 
+    default: () => <div>Failed to load Home page</div> 
+  }))
+);
+const About = lazy(() => 
+  import('./pages/About').catch(() => ({ 
+    default: () => <div>Failed to load About page</div> 
+  }))
+);
+const Services = lazy(() => 
+  import('./pages/Services').catch(() => ({ 
+    default: () => <div>Failed to load Services page</div> 
+  }))
+);
+const Contact = lazy(() => 
+  import('./pages/Contact').catch(() => ({ 
+    default: () => <div>Failed to load Contact page</div> 
+  }))
+);
+const Blog = lazy(() => 
+  import('./pages/Blog').catch(() => ({ 
+    default: () => <div>Failed to load Blog page</div> 
+  }))
+);
+const Marketplace = lazy(() => 
+  import('./pages/Marketplace').catch(() => ({ 
+    default: () => <div>Failed to load Marketplace page</div> 
+  }))
+);
+const Profile = lazy(() => 
+  import('./pages/Profile').catch(() => ({ 
+    default: () => <div>Failed to load Profile page</div> 
+  }))
+);
+const Cart = lazy(() => 
+  import('./pages/Cart').catch(() => ({ 
+    default: () => <div>Failed to load Cart page</div> 
+  }))
+);
+const Checkout = lazy(() => 
+  import('./pages/Checkout').catch(() => ({ 
+    default: () => <div>Failed to load Checkout page</div> 
+  }))
+);
+const Wishlist = lazy(() => 
+  import('./pages/Wishlist').catch(() => ({ 
+    default: () => <div>Failed to load Wishlist page</div> 
+  }))
+);
 
 // Memoized error fallback component
 const ErrorFallback = React.memo(() => (
@@ -44,6 +84,38 @@ ErrorFallback.displayName = 'ErrorFallback';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  const [preloadedRoutes, setPreloadedRoutes] = useState(new Set());
+
+  // Preload critical routes on idle
+  useEffect(() => {
+    const preloadRoutes = () => {
+      const criticalRoutes = ['/about', '/services', '/contact'];
+      criticalRoutes.forEach(route => {
+        if (!preloadedRoutes.has(route)) {
+          // Preload route components
+          switch (route) {
+            case '/about':
+              import('./pages/About');
+              break;
+            case '/services':
+              import('./pages/Services');
+              break;
+            case '/contact':
+              import('./pages/Contact');
+              break;
+          }
+          setPreloadedRoutes(prev => new Set([...prev, route]));
+        }
+      });
+    };
+
+    // Use requestIdleCallback for preloading
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preloadRoutes);
+    } else {
+      setTimeout(preloadRoutes, 100);
+    }
+  }, [preloadedRoutes]);
 
   // Memoized routes configuration
   const routes = useMemo(() => [
@@ -65,6 +137,16 @@ function App() {
     description: "Transform your business with cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. Trusted by 500+ businesses worldwide."
   }), []);
 
+  // Enhanced loading fallback with better UX
+  const LoadingFallback = useCallback(() => (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="text-center">
+        <LoadingSpinner />
+        <p className="text-white mt-4 text-lg">Loading amazing content...</p>
+      </div>
+    </div>
+  ), []);
+
   return (
     <HelmetProvider>
       <Analytics trackingId="G-XXXXXXXXXX" />
@@ -75,7 +157,7 @@ function App() {
         
         <main className="min-h-screen">
           <ErrorBoundary fallback={<ErrorFallback />}>
-            <Suspense fallback={<LoadingSpinner />}>
+            <Suspense fallback={<LoadingFallback />}>
               <Routes>
                 {routes.map(({ path, element }) => (
                   <Route key={path} path={path} element={element} />

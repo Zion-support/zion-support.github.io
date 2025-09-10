@@ -1,87 +1,161 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
-  isSlowConnection: boolean;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  loadTime: number | null;
 }
 
-const PerformanceMonitor = memo(function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+interface PerformanceMonitorProps {
+  enabled?: boolean;
+  reportInterval?: number;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
 
-  useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return;
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enabled = true,
+  reportInterval = 10000,
+  onMetricsUpdate
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    loadTime: null
+  });
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      
-      // Check if connection is slow
-      const connection = (navigator as any).connection;
-      const isSlowConnection = connection ? 
-        connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
+  const getPerformanceMetrics = useCallback((): PerformanceMetrics => {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    
+    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || null;
+    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || null;
+    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : null;
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.navigationStart : null;
 
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage: (performance as any).memory?.usedJSHeapSize,
-        isSlowConnection
-      });
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+    // Get CLS (Cumulative Layout Shift)
+    let cls = null;
+    if ('PerformanceObserver' in window) {
+      try {
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          cls = clsValue;
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        console.warn('CLS measurement not supported');
+      }
     }
 
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
+    // Get FID (First Input Delay) - simplified version
+    let fid = null;
+    if ('PerformanceObserver' in window) {
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            fid = (entry as any).processingStart - entry.startTime;
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        console.warn('FID measurement not supported');
+      }
+    }
+
+    return { fcp, lcp, fid, cls, ttfb, loadTime };
+  }, []);
+
+  const reportMetrics = useCallback(() => {
+    if (!enabled) return;
+
+    const currentMetrics = getPerformanceMetrics();
+    setMetrics(currentMetrics);
+    
+    if (onMetricsUpdate) {
+      onMetricsUpdate(currentMetrics);
+    }
+
+    // Log performance metrics in development
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚀 Performance Metrics');
+      console.log('First Contentful Paint (FCP):', currentMetrics.fcp ? `${currentMetrics.fcp.toFixed(2)}ms` : 'N/A');
+      console.log('Largest Contentful Paint (LCP):', currentMetrics.lcp ? `${currentMetrics.lcp.toFixed(2)}ms` : 'N/A');
+      console.log('First Input Delay (FID):', currentMetrics.fid ? `${currentMetrics.fid.toFixed(2)}ms` : 'N/A');
+      console.log('Cumulative Layout Shift (CLS):', currentMetrics.cls ? currentMetrics.cls.toFixed(4) : 'N/A');
+      console.log('Time to First Byte (TTFB):', currentMetrics.ttfb ? `${currentMetrics.ttfb.toFixed(2)}ms` : 'N/A');
+      console.log('Load Time:', currentMetrics.loadTime ? `${currentMetrics.loadTime.toFixed(2)}ms` : 'N/A');
+      console.groupEnd();
+    }
+
+    // Send metrics to analytics service in production
+    if (process.env.NODE_ENV === 'production' && window.gtag) {
+      window.gtag('event', 'performance_metrics', {
+        event_category: 'Performance',
+        event_label: 'Core Web Vitals',
+        custom_map: {
+          fcp: currentMetrics.fcp,
+          lcp: currentMetrics.lcp,
+          fid: currentMetrics.fid,
+          cls: currentMetrics.cls,
+          ttfb: currentMetrics.ttfb,
+          load_time: currentMetrics.loadTime
+        }
+      });
+    }
+  }, [enabled, getPerformanceMetrics, onMetricsUpdate]);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    // Initial metrics collection after page load
+    const initialTimeout = setTimeout(() => {
+      reportMetrics();
+    }, 1000);
+
+    // Periodic metrics collection
+    const interval = setInterval(reportMetrics, reportInterval);
+
+    // Cleanup
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(interval);
+    };
+  }, [enabled, reportInterval, reportMetrics]);
+
+  // Monitor for performance issues
+  useEffect(() => {
+    if (!enabled) return;
+
+    const checkPerformanceIssues = () => {
+      const { fcp, lcp, cls } = metrics;
+      
+      // Alert for poor performance
+      if (fcp && fcp > 3000) {
+        console.warn('⚠️ Poor FCP detected:', fcp);
+      }
+      if (lcp && lcp > 4000) {
+        console.warn('⚠️ Poor LCP detected:', lcp);
+      }
+      if (cls && cls > 0.25) {
+        console.warn('⚠️ Poor CLS detected:', cls);
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    checkPerformanceIssues();
+  }, [metrics, enabled]);
 
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  if (!isVisible || !metrics) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="flex justify-between items-center mb-2">
-        <h3 className="font-bold">Performance</h3>
-        <button 
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      <div className="space-y-1">
-        <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-        <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
-        {metrics.memoryUsage && (
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-        )}
-        <div className={metrics.isSlowConnection ? 'text-yellow-400' : 'text-green-400'}>
-          Connection: {metrics.isSlowConnection ? 'Slow' : 'Fast'}
-        </div>
-      </div>
-    </div>
-  );
-});
+  // Don't render anything - this is a monitoring component
+  return null;
+};
 
 export default PerformanceMonitor;

@@ -207,3 +207,5 @@ Deno.serve(async (req: Request) => {
   } catch (err: any) {
     return new Response(JSON.stringify({ error: 'Unexpected error', details: err?.message || String(err) }), { status: 500 });
   }
+});
+  }
