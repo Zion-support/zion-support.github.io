@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-export default function NotFound() { return <div className="py-24 text-center">Page not found.</div>; }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

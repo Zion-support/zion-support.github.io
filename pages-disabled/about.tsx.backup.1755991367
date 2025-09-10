@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Information coming soon.</p>
-    </div>
-  );
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

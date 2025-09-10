@@ -1,92 +1,109 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix common syntax errors in service pages
-function fixServicePage(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix missing closing braces in IndustryCard components
-    content = content.replace(
-      /features=\[([^\]]+)\]\s*\/>/g,
-      (match, features) => {
-        // Check if the features array is properly closed
-        if (!features.includes(']')) {
-          return match.replace(']', ']');
+// Function to find and fix all relevant files
+function fixAllFiles() {
+  const extensions = ['.tsx', '.ts', '.js', '.jsx', '.cjs'];
+  const excludeDirs = ['node_modules', '.next', 'out', 'dist', 'build', 'coverage'];
+  
+  function walkDir(dir) {
+    const files = fs.readdirSync(dir);
+    let fixedCount = 0;
+    
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        if (!excludeDirs.includes(file)) {
+          fixedCount += walkDir(filePath);
         }
-        return match;
+      } else if (extensions.some(ext => file.endsWith(ext))) {
+        if (fixSyntaxErrors(filePath)) {
+          fixedCount++;
+        }
       }
-    );
-
-    // Fix duplicate metadata exports
-    const metadataRegex = /export const metadata = \{[\s\S]*?\};/g;
-    const metadataMatches = content.match(metadataRegex);
-    if (metadataMatches && metadataMatches.length > 1) {
-      // Keep only the first metadata export
-      content = content.replace(metadataRegex, (match, index) => {
-        return index === 0 ? match : '';
-      });
-      modified = true;
     }
-
-    // Fix metadata in JSX
-    content = content.replace(
-      /\/\/ eslint-disable-next-line react-refresh\/only-export-components\nexport const metadata = \{[\s\S]*?\};\n/g,
-      ''
-    );
-
-    // Fix missing closing tags
-    content = content.replace(/(<IndustryCard[^>]*>)(?![\s\S]*?<\/IndustryCard>)/g, (match) => {
-      return match + '</IndustryCard>';
-    });
-
-    // Fix duplicate description in metadata
-    content = content.replace(
-      /description: '[^']*',\s*description: '[^']*',/g,
-      (match) => {
-        const firstDesc = match.match(/description: '([^']*)'/)[1];
-        return `description: '${firstDesc}',`;
-      }
-    );
-
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    
+    return fixedCount;
   }
-  return false;
+  
+  return walkDir('.');
 }
-
-// Find all service page files
-const servicesDir = path.join(__dirname, 'app', 'services');
-const serviceFiles = [];
-
-function findServiceFiles(dir) {
-  const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      findServiceFiles(filePath);
-    } else if (file === 'page.tsx') {
-      serviceFiles.push(filePath);
-    }
-  });
-}
-
-findServiceFiles(servicesDir);
-
-console.log(`Found ${serviceFiles.length} service page files`);
-
+// Main execution
+const fixedCount = fixFilesInDirectory('./src');
+const pagesDir = '/workspace/pages';
+const pageFiles = getAllPageFiles(pagesDir);
+console.log(`Found ${pageFiles.length} page files to check...`);
 let fixedCount = 0;
-serviceFiles.forEach(file => {
-  if (fixServicePage(file)) {
+for (const file of pageFiles) {
+  if (fixSyntaxErrors(file)) {
     fixedCount++;
   }
-});
+}
+console.log(`Fixed ${fixedCount} files out of ${pageFiles.length} total files.`);
+=======
+function fixSyntaxErrors(filePath) {;
+  console.log(`Fixing syntax errors in: ${filePath}`);
+  let content = fs.readFileSync(filePath, 'utf8');
+  // Fix common syntax errors;
+  content = content;
+    // Remove extra semicolons after class declarations;
+    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'));
+    // Remove extra semicolons after method declarations;
+    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
+    // Remove extra semicolons after if/for/while statements;
+    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {');
+    // Remove trailing commas before closing braces;
+    .replace(/,(\s*[}\]])/g, '$1');
+    // Remove extra semicolons after closing braces;
+    .replace(/\}(\s*;)/g, '}$1');
+    // Fix method declarations with extra semicolons;
+    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
+    // Remove standalone semicolons;
+    .replace(/^\s*;\s*$/gm, '');
+    // Fix object property declarations;
+    .replace(/(\w+):\s*([^,}]+),/g, '$1: $2,');
+    // Fix array declarations;
+    .replace(/\[\s*\]\s*;/g, '[]');
+    // Remove extra semicolons in function calls;
+    .replace(/\(\s*\)\s*;/g, '()');
+    // Fix constructor calls;
+    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()');
+    // Clean up multiple semicolons;
+    .replace(/;+/g, ';');
+    // Remove semicolons at end of lines that shouldn't have them;
+    .replace(/;\s*$/gm, (match, offset, string) => {;
+      const lines = string.split('\n');
+      const lineIndex = string.substring(0, offset).split('\n').length - 1;
+      const line = lines[lineIndex];
+      // Don't remove semicolons from statements that should have them;
+      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {;
+        return match;
+}
 
-console.log(`Fixed ${fixedCount} files`);
+      // Don't remove semicolons from object/array literals;
+      if (line.match(/[\[\{]\s*$/)) {;
+        return match;
+}
+
+      return match.replace(';', '');
+});
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed syntax errors in: ${filePath}`);
+}
+
+// Fix the main automation files;
+const filesToFix = [;
+  'simple-automation-orchestrator.cjs',
+  'run-automation-suite.cjs';
+];
+filesToFix.forEach(file => {;
+  if (fs.existsSync(file)) {;
+    fixSyntaxErrors(file);
+} else {;
+    console.log(`File not found: ${file}`);
+}
+});
+console.log('Syntax error fixing completed!');}}}}}}
