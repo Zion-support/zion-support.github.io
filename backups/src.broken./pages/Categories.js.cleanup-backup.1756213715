@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+export default function Categories() {
+    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Service Categories - Zion Tech Group", description: "Browse tech services by category and find what you need.", canonical: "https://ziontechgroup.com/categories" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Service Categories" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Browse our comprehensive range of tech services organized by category." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Our category browsing system is currently under development." })] }) })] }) }), _jsx(Footer, {})] }));
+=======
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { GradientHeading } from "@/components/GradientHeading";
+export default function Categories() {
+    return (<>
+      
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center mb-12">
+            <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
+              Browse Categories
+            </GradientHeading>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+              Explore our extensive range of AI services and products organized by category. 
+              Find exactly what you're looking for to enhance your business or personal projects.
+            </p>
+          </div>
+          
+          {/* Reuse the Categories Section component */}
+          <CategoriesSection showTitle={false}/>
+        </div>
+      </div>
+      
+    </>);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+}

@@ -53,7 +53,7 @@ serve(async (req) => {
       .single();
 
     if (error) {
-      console.error("Error saving shared whitepaper:", error);
+      // console.error("Error saving shared whitepaper:", error);
       throw new Error(`Failed to create shared whitepaper: ${error.message}`);
     }
 
@@ -67,7 +67,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in create-shared-whitepaper function:", error);
+    // console.error("Error in create-shared-whitepaper function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
