@@ -1,40 +1,6 @@
 import { useEffect, useState } from 'react';
 type Note = {
   id: string;
-  targetType: string;
-  targetId: string,;
-  text: string,;
-  authorId: string,;
-  createdAt: number;
-},;
-export default function AdminNotesConsole() {;
-  const [isAdmin, setIsAdmin] = useState(true),;
-  const [notes, setNotes] = useState<Note[]>([]),;
-  const [loading, setLoading] = useState(false),;
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true),;
-      try {;
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),;
-        if (!res.ok) return,;
-        const data = await res.json();
-        setNotes(data.notes || []);
-      } finally {;
-        setLoading(false);
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin]),
-
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">Admin Notes</h1>
-        <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <span>Admin</span>
-        </label>
-      </div>
   title: string;
   content: string;
   author: string;
@@ -86,53 +52,6 @@ const AdminNotesPage: React.FC = () => {
   const [isAdmin, setIsAdmin] = useState(true);
 
   useEffect(() => {
-    async function load() {
-      setLoading(true);
-      try {
-        const res = await fetch('/api/admin/notes-all', {
-          headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
-        });
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || []);
-      } finally {
-        setLoading(false);
-      }
-    }
-    if (isAdmin) load();
-  }, [isAdmin]);
-
-  return (
-    <div className='space-y-4'>
-      <div className='flex items-center justify-between'>
-        <h1 className='text-xl font-semibold'>Admin Notes</h1>
-        <label className='inline-flex items-center gap-2 text-sm'>
-          <input
-            type='checkbox'
-            checked={isAdmin}
-            onChange={e => setIsAdmin(e.target.checked)}
-          />
-          <span>Admin</span>
-        </label>
-      </div>
-
-      {loading ? (
-        <div>Loading…</div>
-      ) : notes.length === 0 ? (
-        <div className='opacity-70'>No notes found.</div>
-      ) : (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-          {notes.map(n => (
-            <div key={n.id} className='rounded border p-3 text-sm'>
-              <div className='opacity-60 text-xs mb-1'>
-                {new Date(n.createdAt).toLocaleString()} • {n.authorId}
-              </div>
-              <div className='font-medium mb-1'>
-                {n.targetType} • {n.targetId}
-              </div>
-              <div>{n.text}</div>
-            </div>
-          ))}
     // Simulate loading notes
     setTimeout(() => {
       setNotes(mockNotes);
@@ -163,7 +82,9 @@ const AdminNotesPage: React.FC = () => {
           <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
             Add New Note
           </button>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/notes.tsx
 
       {loading ? (
         <div>Loading…</div>
@@ -182,8 +103,8 @@ const AdminNotesPage: React.FC = () => {
       )}
     </div>;
   );
-}
-}
 };
 
 export default AdminNotesPage;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/notes.tsx

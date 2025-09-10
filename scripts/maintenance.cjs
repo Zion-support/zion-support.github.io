@@ -1,23 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("child_process");"const path = require("child_process");"const { execSync } = require("child_process")class MaintenanceScript { constructor() { this.projectRoot = process.cwd()" this.reportsDir = path.join(this.projectRoot, "maintenance-reports") this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {" fs.mkdirSync(this.reportsDir, { recursive: true })} }" log(message, level = "info") { const timestamp = new Date().toISOString() const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}` console.log(logMessage)} async cleanCache() {" this.log(" Cleaning cache.")" const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"] let cleaned = 0 for (const dir of cacheDirs) { const dirPath = path.join(this.projectRoot, dir) if (fs.existsSync(dirPath)) { try {"` execSync(`rm -rf "${dirPath}"`, { cwd: this.projectRoot })"` this.log(` Cleaned: ${dir}`) cleaned++} catch (error) {"` this.log(` Failed to clean ${dir}: ${error.message}`, "warning")} } }` this.log(` Cache cleaning completed. Cleaned ${cleaned} directories.`) return cleaned} async cleanLogs() {" this.log(" Cleaning old log files.")" const logDirs = ["logs", "automation-reports", "maintenance-reports"] let cleaned = 0 for (const dir of logDirs) { const dirPath = path.join(this.projectRoot, dir) if (fs.existsSync(dirPath)) { try { const files = fs.readdirSync(dirPath) const oldFiles = files.filter(file => { const filePath = path.join(dirPath, file) const stats = fs.statSync(filePath) const daysOld = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60 * 24) return daysOld > 7 / Remove files older than 7 days}) for (const file of oldFiles) { const filePath = path.join(dirPath, file) fs.unlinkSync(filePath)"` this.log(` Removed old log: ${file}`) cleaned++} } catch (error) {"` this.log(` Failed to clean logs in ${dir}: ${error.message}`, "warning")} } }` this.log(` Log cleaning completed. Removed ${cleaned} old files.`) return cleaned} async optimizeDependencies() {" this.log(" Optimizing dependencies.") try { / Remove unused dependencies" execSync("npm prune", { cwd: this.projectRoot, stdio: "inherit" })" this.log(" Removed unused dependencies") / Update package-lock.json" execSync("npm install --package-lock-only", { cwd: this.projectRoot, stdio: "inherit" })" this.log(" Updated package-lock.json")" return { success: true } } catch (error) {"` this.log(` Dependency optimization failed: ${error.message}`, "warning")" return { success: false, error: error.message } } } async checkDiskSpace() {" this.log(" Checking disk space.") try {" const result = execSync("df -h .", { cwd: this.projectRoot, encoding: "utf8" })"` this.log(` Disk space info: \n${result}`)" return { success: true, output: result } } catch (error) {"` this.log(` Failed to check disk space: ${error.message}`, "warning")" return { success: false, error: error.message } } } async generateReport() {" this.log(" Generating maintenance report.") const report = {" timestamp: new Date().toISOString();" summary: {cacheCleaned: true,logsCleaned: true,dependenciesOptimized: true; diskSpaceChecked: true};" recommendations: ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated";" "Clean logs regularly"]}` const reportFile = path.join(this.reportsDir, `maintenance-report-${Date.now()}.json`) fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))"` this.log(` Maintenance report saved to: ${reportFile}`) return reportFile} displaySummary() {" console.log("\n" + "=".repeat(60))" console.log(" MAINTENANCE SCRIPT SUMMARY")" console.log("=".repeat(60))" console.log(" Cache cleaned")" console.log(" Logs cleaned")" console.log(" Dependencies optimized")" console.log(" Disk space checked")" console.log("=".repeat(60))" console.log(" Report saved to maintenance-reports/ directory")} async run() { try {" this.log(" Starting Maintenance Script") await this.cleanCache() await this.cleanLogs() await this.optimizeDependencies() await this.checkDiskSpace() await this.generateReport() this.displaySummary()" this.log(" Maintenance Script completed successfully")" return { success: true } } catch (error) {"` this.log(` Maintenance failed: ${error.message}`, "error") await this.generateReport() this.displaySummary()" return { success: false, error: error.message } } }}/ Run the maintenance scriptif (require.main === module) { const maintenance = new MaintenanceScript() maintenance.run().then(result => { process.exit(result.success ? 0 : 1)})}module.exports = MaintenanceScript"`"`
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    this.ensureDirectories()}
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
+  }
+  log(message, level = "info") {
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
+    }
+  async cleanCache() {
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     this.log("🧹 Cleaning cache...")
@@ -27,13 +24,231 @@ const { execSync } = require("child_process")
           this.log(`⚠ Failed to clean ${dir}: ${error.message}`, "warning"`)
     this.log("🧹 Cleaning old log files...")
     const logDirs = ["logs", "automation-reports", "maintenance-reports"]
-<<<<<<< HEAD
-<<<<<<< HEAD
+    let cleaned = 0
+    for (const dir of logDirs) {
+      const dirPath = path.join(this.projectRoot, dir)
+      if (fs.existsSync(dirPath)) {
+        try {
+          const files = fs.readdirSync(dirPath)
+          const oldFiles = files.filter(file => {
+            const filePath = path.join(dirPath, file)
+            const stats = fs.statSync(filePath)
+            const daysOld = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60 * 24)
+            return daysOld > 7 // Remove files older than 7 days})
+          for (const file of oldFiles) {
+            const filePath = path.join(dirPath, file)
+            fs.unlinkSync(filePath)
+            this.log(`✅ Removed old "log": ${file}`)
+            cleaned++}
+        } catch (error) {
+          this.log(`⚠️ Failed to clean logs in ${dir}: ${error.message}`, "warning")}
+      }
+    }
+    this.log(`🧹 Log cleaning completed. Removed ${cleaned} old files.`)
+    return cleaned}
+  async optimizeDependencies() {
+    this.log("🔧 Optimizing dependencies...")
+    try {
+      // Remove unused dependencies
+      execSync("npm prune", { "cwd": this.projectRoot, "stdio": "inherit" })
+      this.log("✅ Removed unused dependencies")
+      // Update package-lock.json
+      execSync("npm install --package-lock-only", { "cwd": this.projectRoot, "stdio": "inherit" })
+      this.log("✅ Updated package-lock.json")
+      return { "success": true }
+    } catch (error) {
+      this.log(`⚠️ Dependency optimization "failed": ${error.message}`, "warning")
+      return { "success": false, "error": error.message }
+=======
+const fs = require("fs")
+const path = require("fs")
+const { execSync } = require("child_process")
+class MaintenanceScript {
+  constructor() {
+    this.projectRoot = process.cwd()
+    this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
+    this.ensureDirectories(),,
+}
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
+  }
 
+  log(message, level = "info") {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    console.log(logMessage)}
+
+  async cleanCache() {
+    this.log("🧹 Cleaning cache...");
+    const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"];
+    let cleaned = 0;
+
+    for (const dir of cacheDirs) {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {
+        try {
+          execSync(`rm -rf "${dirPath}"`, { cwd: this.projectRoot })
+          this.log(`✅ Cleaned: ${dir}`)
+          cleaned++,,
+} catch (error) {
+          this.log(`⚠️ Failed to clean ${dir}: ${error.message}`, "warning"),,
+}
+      }
+    }
+    this.log(`🧹 Cache cleaning completed. Cleaned ${cleaned} directories.`)
+    return cleaned,,
+}
+  async cleanLogs() {
+    this.log("🧹 Cleaning old log files...")
+    const logDirs = ["logs", "automation-reports", "maintenance-reports"]
+    let cleaned = 0;
+
+    for (const dir of logDirs) {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {
+        try {
+          const files = fs.readdirSync(dirPath);
+          const oldFiles = files.filter(file => {
+            const filePath = path.join(dirPath, file)
+            const stats = fs.statSync(filePath)
+            const daysOld = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60 * 24)
+            return daysOld > 7 // Remove files older than 7 days,,
+})
+
+          for (const file of oldFiles) {
+            const filePath = path.join(dirPath, file)
+            fs.unlinkSync(filePath)
+            this.log(`✅ Removed old log: ${file}`)
+            cleaned++,,
+}
+        } catch (error) {
+          this.log(`⚠️ Failed to clean logs in ${dir}: ${error.message}`, "warning"),,
+}
+      }
+    }
+    this.log(`🧹 Log cleaning completed. Removed ${cleaned} old files.`)
+    return cleaned,,
+}
+  async optimizeDependencies() {
+    this.log("🔧 Optimizing dependencies...")
+    try {
+      // Remove unused dependencies;
+      execSync("npm prune", { cwd: this.projectRoot, stdio: "inherit" })
+      this.log("✅ Removed unused dependencies")
+
+      // Update package-lock.json;
+      execSync("npm install --package-lock-only", { cwd: this.projectRoot, stdio: "inherit" })
+      this.log("✅ Updated package-lock.json")
+
+      return { success: true }
+    } catch (error) {
+      this.log(`⚠️ Dependency optimization failed: ${error.message}`, "warning")
+      return { success: false, error: error.message }
+>>>>>>> origin/automation-fixes
+    }
+  }
+
+  async checkDiskSpace() {
+    this.log("💾 Checking disk space...");
+    try {
+<<<<<<< HEAD
+      const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8" })
+      this.log(`💾 Disk space "info": \n${result}`)
+      return { "success": true, "output": result }
+    } catch (error) {
+      this.log(`⚠️ Failed to check disk "space": ${error.message}`, "warning")
+      return { "success": false, "error": error.message }
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      const result = execSync("df -h .", { cwd: this.projectRoot, encoding: "utf8" })
+      this.log(`💾 Disk space info:\n${result}`)
+      return { success: true, output: result }
+    } catch (error) {
+      this.log(`⚠️ Failed to check disk space: ${error.message}`, "warning")
+      return { success: false, error: error.message }
+>>>>>>> origin/automation-fixes
+    }
+  }
+
+  async generateReport() {
+    this.log("📊 Generating maintenance report...");
+    const report = {
+<<<<<<< HEAD
+      "timestamp": new Date().toISOString();
+      summary: {cacheCleaned: true,"logsCleaned": true,"dependenciesOptimized": true;
+        diskSpaceChecked: true};
+      "recommendations": ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated";
+        "Clean logs regularly"]}
+    const reportFile = path.join(this.reportsDir, `maintenance-report-${Date.now()}.json`)
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+    this.log(`📄 Maintenance report saved "to": ${reportFile}`)
+    return reportFile}
+  displaySummary() {
+    )
+    )
+    )
+    }
+  async run() {
+    try {
+      this.log("🎯 Starting Maintenance Script")
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      timestamp: new Date().toISOString(),
+      summary: {
+        cacheCleaned: true,
+        logsCleaned: true,
+        dependenciesOptimized: true,
+        diskSpaceChecked: true,,
+},
+      recommendations: [
+        "Run maintenance script weekly",
+        "Monitor disk space usage",
+        "Keep dependencies updated",
+        "Clean logs regularly"],,
+}
+    const reportFile = path.join(this.reportsDir, `maintenance-report-${Date.now()}.json`)
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+    this.log(`📄 Maintenance report saved to: ${reportFile}`)
+    return reportFile,,
+}
+  displaySummary() {
+    console.log("\n" + "=".repeat(60))
+    console.log("🔧 MAINTENANCE SCRIPT SUMMARY")
+    console.log("=".repeat(60))
+    console.log("✅ Cache cleaned")
+    console.log("✅ Logs cleaned")
+    console.log("✅ Dependencies optimized")
+    console.log("✅ Disk space checked")
+    console.log("=".repeat(60))
+    console.log("📄 Report saved to maintenance-reports/ directory"),,
+}
+  async run() {
+    try {
+      this.log("🎯 Starting Maintenance Script")
+
+>>>>>>> origin/automation-fixes
+      await this.cleanCache()
+      await this.cleanLogs()
+      await this.optimizeDependencies()
+      await this.checkDiskSpace()
+<<<<<<< HEAD
+      await this.generateReport()
+      this.displaySummary()
+      this.log("🎉 Maintenance Script completed successfully")
+      return { "success": true }
+    } catch (error) {
+      this.log(`💥 Maintenance failed: ${error.message}`, "error");
+      await this.generateReport();
+      this.displaySummary();
+      return { success: false, error: error.message }
+    }
+  }
+}
+// Run the maintenance script
+if (require.main === module) {
+  const maintenance = new MaintenanceScript()
+  maintenance.run().then(result => {
+    process.exit(result.success ? 0 : 1)})}
+module.exports = MaintenanceScript
             this.log(` Removed old "log"`)
           this.log(`⚠ Failed to clean logs in ${dir}: ${error.message}`, "warning"`)
     this.log(" Optimizing dependencies...")
@@ -69,25 +284,28 @@ const { execSync } = require("child_process")
       this.log("� Maintenance Script completed successfully")
       return { "success"}
       this.log(`� Maintenance "failed": ${error.message}`, "error"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      return { "success": false, "error"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
       return { "success": false, "error"}
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      return { "success": false, "error"}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+      await this.generateReport()
+      this.displaySummary()
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      this.log("🎉 Maintenance Script completed successfully")
+      return { success: true }
+    } catch (error) {
+      this.log(`💥 Maintenance failed: ${error.message}`, "error")
+      await this.generateReport()
+      this.displaySummary()
+      return { success: false, error: error.message }
+    }
+  }
+}
+// Run the maintenance script;
+if (require.main === module) {
+  const maintenance = new MaintenanceScript()
+  maintenance.run().then(result => {
+    process.exit(result.success ? 0 : 1),,
+}),,
+}
+module.exports = MaintenanceScript
+>>>>>>> origin/automation-fixes

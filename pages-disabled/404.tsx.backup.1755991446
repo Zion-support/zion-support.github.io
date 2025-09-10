@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-export default function NotFound() {
-  return <div>Not Found</div>;
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
