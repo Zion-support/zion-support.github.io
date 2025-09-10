@@ -57,7 +57,7 @@ serve(async (req) => {
         }
       }
     } catch (authError) {
-      console.log("Auth error:", authError);
+      // console.log("Auth error:", authError);
       // Continue without user identity
     }
 
@@ -104,7 +104,7 @@ serve(async (req) => {
         }
       }
     } catch (openAIError) {
-      console.error("OpenAI error:", openAIError);
+      // console.error("OpenAI error:", openAIError);
       // Continue without AI analysis
     }
     
@@ -135,7 +135,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Error in process-quote function:', error);
+    // console.error('Error in process-quote function:', error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
