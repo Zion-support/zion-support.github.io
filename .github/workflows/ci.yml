@@ -3,9 +3,8 @@ name: CI/CD Pipeline
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  push:
     branches: [ main, develop ]
-  pull_request:
+  push:
     branches: [ main, develop ]
 
 permissions:
@@ -26,7 +25,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -35,13 +34,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Verify build output
+      - name: Verify build output (Vite)
         run: |
-          if [ ! -d .next ]; then
-            echo "Build failed: .next folder not found"
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
             exit 1
           fi
-          echo "Build successful: .next folder found"
+          echo "Build successful: dist folder found"
 
   test:
     name: Test
@@ -54,11 +53,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Build project
         run: npm run build
