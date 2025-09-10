@@ -30,7 +30,7 @@ export default [
       'test_build/**',
       'tests/**',
       '__tests__/**',
-      'types/**',
+      // 'types/**',
       'supabase/**',
       'scripts/**',
       'automation/**'
