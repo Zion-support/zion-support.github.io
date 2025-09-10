@@ -154,4 +154,142 @@ export default function Careers() {
   const filteredJobs = jobListings.filter(job => 
     selectedCategory === 'all' || job.category === selectedCategory
   );
-<<<<<<< HEAD
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO 
+        title="Careers at Zion Tech Group"
+        description="Join our team of innovators and help shape the future of technology. Explore exciting career opportunities at Zion Tech Group."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+          >
+            Join Our <span className="text-blue-600">Innovation</span> Team
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+          >
+            Help us build the future of technology. We're looking for passionate individuals 
+            who want to make a real impact in AI, quantum computing, and digital transformation.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Job Listings */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap gap-4 mb-8 justify-center">
+            {departments.map((dept) => (
+              <button
+                key={dept.id}
+                onClick={() => setSelectedCategory(dept.id)}
+                className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                  selectedCategory === dept.id
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                {dept.name} ({dept.count})
+              </button>
+            ))}
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredJobs.map((job) => (
+              <Card key={job.id} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl">{job.title}</CardTitle>
+                  <CardDescription className="flex items-center gap-4 text-sm">
+                    <span className="flex items-center gap-1">
+                      <MapPin className="h-4 w-4" />
+                      {job.location}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      {job.type}
+                    </span>
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">{job.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold text-green-600">
+                      {job.salary}
+                    </span>
+                    <Button variant="outline" size="sm">
+                      Apply Now <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Work With Us?
+            </h2>
+            <p className="text-xl text-gray-600">
+              We offer competitive benefits and a culture that values innovation and growth.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Make an Impact?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join our team and help us build the future of technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary">
+              View All Positions
+            </Button>
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+              Contact Us
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
