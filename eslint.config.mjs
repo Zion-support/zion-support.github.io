@@ -1,7 +1,8 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from 'typescript-eslint';
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
   {
@@ -38,13 +39,17 @@ export default [
     ],
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tseslint.parser,
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module',
+        projectService: true,
+      },
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -90,13 +95,17 @@ export default [
       parserOptions: {
         ecmaFeatures: {
           jsx: true
-        },
-        project: false
+        }
       }
     },
-    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tseslint.plugin },
+    plugins: {
+      '@typescript-eslint': tsPlugin,
+      react,
+      'react-hooks': reactHooks
+    },
     rules: {
       ...js.configs.recommended.rules,
+      ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
