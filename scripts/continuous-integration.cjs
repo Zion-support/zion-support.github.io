@@ -1,14 +1,4 @@
 <<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
-/**
- * Continuous Integration Automation;
- * Comprehensive CI pipeline with build, test, and quality checks;
- */
-
-<<<<<<< HEAD
 
     const stages = [{
         "name": 'install-dependencies',
@@ -108,9 +98,7 @@ if (require.main === module) {
 
 module.exports = ContinuousIntegration;
 =======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-const { execSync } = require('child_process')
+=======const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
     this.logDir = 'automation-reports'

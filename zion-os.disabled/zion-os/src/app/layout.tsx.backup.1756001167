@@ -2,53 +2,6 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
 
-<<<<<<< HEAD
-export const metadata: Metadata = {
-  title: "Zion Tech Group - AI-Powered Technology Solutions",
-  description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative digital transformation services. Transform your business with cutting-edge AI technology.",
-  keywords: "AI, artificial intelligence, autonomous systems, quantum computing, technology solutions, digital transformation, Zion Tech Group",
-  authors: [{ name: "Zion Tech Group" }],
-  creator: "Zion Tech Group",
-  publisher: "Zion Tech Group",
-  robots: "index, follow",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://ziontechgroup.com",
-    title: "Zion Tech Group - AI-Powered Technology Solutions",
-    description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative digital transformation services.",
-    siteName: "Zion Tech Group",
-    images: [
-      {
-        url: "https://ziontechgroup.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Zion Tech Group - AI Technology Solutions",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zion Tech Group - AI-Powered Technology Solutions",
-    description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative digital transformation services.",
-    images: ["https://ziontechgroup.com/og-image.jpg"],
-    creator: "@ziontechgroup",
-    site: "@ziontechgroup",
-  },
-  verification: {
-    google: "your-google-verification-code",
-  },
-  alternates: {
-    canonical: "https://ziontechgroup.com",
-  },
-=======
-export const metadata = {
-  title: "Zion Tech Group - AI-Powered Technology Solutions",
-  description: "Leading provider of AI-powered technology solutions, cybersecurity, quantum computing, and autonomous business operations. Transform your business with cutting-edge technology.",
-  keywords: "AI, artificial intelligence, cybersecurity, quantum computing, autonomous business, technology solutions",
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-};
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -94,9 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   Get Started
                 </a>
               </div>
-            </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-          </div>
+            </div>          </div>
         </header>
 
         {/* Main Content */}

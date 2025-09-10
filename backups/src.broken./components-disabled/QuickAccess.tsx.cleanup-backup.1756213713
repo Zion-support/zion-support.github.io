@@ -1,26 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from 'react';
 =======
-<<<<<<< HEAD
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Briefcase, 
-  Settings, 
-  ShoppingCart, 
-  MessageSquare, 
-  BarChart3,
-  Zap,
-  Globe,
-  Shield,
-  Clock
-} from 'lucide-react';
-
 const quickAccessItems = [
   {
     title: 'Find Talent',
@@ -210,13 +189,9 @@ export function QuickAccess() {
   );
 }
 =======
-import React from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+import React from 'react';=======
 
-import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
+import React from 'react';import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
 
 export const QuickAccess: React.FC = () => {
   const quickLinks = [

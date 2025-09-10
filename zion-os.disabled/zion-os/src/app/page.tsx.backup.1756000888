@@ -45,38 +45,6 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-<<<<<<< HEAD
-  const services = [
-    {
-      title: 'AI Autonomous Systems',
-      description: 'Next-generation AI systems that operate independently, making intelligent decisions and driving business transformation.',
-      href: '/ai-autonomous-systems',
-      icon: '🤖',
-      features: ['Autonomous Decision Making', 'Self-Learning Algorithms', 'Business Process Automation']
-    },
-    {
-      title: 'Quantum Computing Solutions',
-      description: 'Harness the power of quantum computing for complex problem-solving and advanced computational capabilities.',
-      href: '/quantum-computing',
-      icon: '⚛️',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography & Security']
-    },
-    {
-      title: 'Advanced Cybersecurity',
-      description: 'Comprehensive security solutions powered by AI to protect your digital assets and infrastructure.',
-      href: '/cybersecurity-solutions',
-      icon: '🔒',
-      features: ['Threat Detection', 'AI-Powered Security', 'Compliance Automation']
-    },
-    {
-      title: 'IT Infrastructure Services',
-      description: 'Modern, scalable infrastructure solutions designed for the digital age.',
-      href: '/it-infrastructure',
-      icon: '🏗️',
-      features: ['Cloud Architecture', 'DevOps Automation', 'Performance Optimization']
-    }
-  ];
-
   const stats = [
     { number: '500+', label: 'AI Models Deployed' },
     { number: '50+', label: 'Enterprise Clients' },
@@ -433,9 +401,7 @@ export default function HomePage() {
                 <Link href="/quantum-services" className="btn-secondary">
                   All Quantum Services
                 </Link>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ce0d
-            </div>
+              </div>            </div>
           </div>
         </section>
 

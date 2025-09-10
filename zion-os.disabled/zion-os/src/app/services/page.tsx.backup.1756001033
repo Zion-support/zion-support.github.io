@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from "next/link";
-
 export const metadata = {
   title: "Services - Zion Tech Group | AI, Quantum & Autonomous Solutions",
   description: "Discover Zion Tech Group's comprehensive range of AI, quantum computing, autonomous systems, and technology services. Transform your business with cutting-edge solutions.",
@@ -904,9 +901,7 @@ export default function ServicesPage() {
           >
             Call Now
           </a>
-        </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0b6b
-      </div>
+        </div>      </div>
     </div>
   );
 }

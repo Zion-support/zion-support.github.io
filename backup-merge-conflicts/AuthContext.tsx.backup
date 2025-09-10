@@ -1,34 +1,4 @@
-<<<<<<< HEAD:src/context/auth/AuthContext.tsx
-=======
-<<<<<<< HEAD
-=======
-import React, { createContext, useContext } from 'react';
-;
-interface User {;
-
   "id": "string;
-<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
-  "email": string;
-=======
-interface User {
-  "id": string;
-  email: string;
->>>>>>> main
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string"}
-;
-interface AuthTokens {;
-
-  "accessToken": "string | null;
-  "refreshToken": string | null"}
-;
-interface AuthContextType {;
-
   "user": "Use r | null;
   "isLoading": boolean;
   "onboardingStep": number;
@@ -50,9 +20,7 @@ export const useAuth = ("props": "any) => {;
 =======
   updatedAt?: string}
 =======
-  "email": string;  updatedAt?: string}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/context/auth/AuthContext.tsx
-interface AuthTokens {
+  "email": string;  updatedAt?: string}interface AuthTokens {
   "accessToken": string | null;
   refreshToken: string | null}
 interface AuthContextType {
@@ -71,9 +39,7 @@ login: (email: string, "password": string)  => Promise<any>;
   loginWithTwitter: ()  => Promise<any>;
   loginWithWeb3: ()  => Promise<any>}
 const AuthContext = createContext<AuthContextType | null>(null);
-export const useAuth = (props) => {;
->>>>>>> main
-  const context = useContext(AuthContext);
+export const useAuth = (props) => {;  const context = useContext(AuthContext);
   if (context = == null) {;';';
     throw new Error('useAuth must be used within an AuthProvider');
 ;
