@@ -1,7 +1,25 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import { CheckCircle, Star, Users, Award, ArrowRight } from 'lucide-react';
+import Head from 'next/head';
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+import { 
+  MapPin, 
+  Clock, 
+  Users, 
+  Heart, 
+  Zap, 
+  Award, 
+  BookOpen, 
+  Coffee, 
+  Laptop, 
+  Globe, 
+  ArrowRight, 
+  CheckCircle,
+  DollarSign,
+  GraduationCap
+} from 'lucide-react';
 
 const openPositions = [
   {

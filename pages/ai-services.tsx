@@ -2,7 +2,72 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Users, Award } from 'lucide-react';
+import { 
+  Brain, 
+  Eye, 
+  MessageSquare, 
+  BarChart3, 
+  CheckCircle, 
+  ArrowRight, 
+  Clock, 
+  Star, 
+  DollarSign, 
+  Award, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Bot, 
+  FileText, 
+  Image, 
+  Video, 
+  Mic, 
+  Code, 
+  Settings, 
+  Cog,
+  Monitor, 
+  Smartphone, 
+  Cloud, 
+  Server, 
+  Network, 
+  Car, 
+  Rocket, 
+  Heart, 
+  Building, 
+  Sprout, 
+  Mail, 
+  Search, 
+  Target, 
+  TrendingUp, 
+  Package, 
+  Calendar, 
+  BookOpen, 
+  ShoppingCart, 
+  Home, 
+  Trash2, 
+  Camera, 
+  HardDrive,
+  Database,
+  Phone,
+  MapPin,
+  Zap,
+  Users,
+  Shield,
+  Wifi,
+  Laptop,
+  Truck,
+  GraduationCap,
+  PieChart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Gamepad2
+} from 'lucide-react';
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 const aiServices = [
   {
@@ -1040,24 +1105,9 @@ const aiServices = [
   }
 ];
 
-const industries = [
-  { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
-  { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
-  { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
-  { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
-  { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
-  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
-];
-
-const benefits = [
-  {
-    icon: Zap,
-    title: 'Increased Efficiency',
-    description: 'Automate repetitive tasks and processes',
-    stat: '40%'
-  },
-  {
-    icon: TrendingUp,
+const additionalServices = [
+    {
+      icon: TrendingUp,
       name: 'Predictive Analytics & Forecasting',
       description: 'Advanced machine learning models for demand forecasting, revenue prediction, and business intelligence.',
       features: [
