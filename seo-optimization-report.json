@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-10T16:04:43.106Z",
+  "timestamp": "2025-09-10T16:39:14.447Z",
   "optimizations": [
     {
       "type": "sitemap",
@@ -11,6 +11,36 @@
     }
   ],
   "recommendations": [
+    {
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/about/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/about/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/about/index.html",
+      "priority": "medium"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/contact/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/contact/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/contact/index.html",
+      "priority": "medium"
+    },
     {
       "type": "meta_tags",
       "message": "Missing meta description in dist/debug-logs.html",
@@ -35,6 +65,21 @@
       "type": "meta_tags",
       "message": "Missing meta description in dist/offline.html",
       "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/privacy/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/privacy/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/privacy/index.html",
+      "priority": "medium"
     },
     {
       "type": "meta_tags",
@@ -77,13 +122,63 @@
       "priority": "high"
     },
     {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/about/index.html",
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/request-quote/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/request-quote/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/request-quote/index.html",
       "priority": "medium"
     },
     {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/contact/index.html",
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/services/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/services/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/services/index.html",
+      "priority": "medium"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/solutions/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/solutions/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/solutions/index.html",
+      "priority": "medium"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing title tag in dist/terms/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing meta description in dist/terms/index.html",
+      "priority": "high"
+    },
+    {
+      "type": "meta_tags",
+      "message": "Missing viewport meta tag in dist/terms/index.html",
       "priority": "medium"
     },
     {
@@ -98,28 +193,13 @@
     },
     {
       "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/privacy/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
       "message": "Multiple h1 tags (2) in dist/reports/page-validation/index.html",
       "priority": "medium"
     },
     {
       "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/services/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/solutions/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "headings",
-      "message": "Multiple h1 tags (2) in dist/terms/index.html",
-      "priority": "medium"
+      "message": "Missing h1 tag in dist/services/index.html",
+      "priority": "high"
     },
     {
       "type": "links",
@@ -144,11 +224,6 @@
     {
       "type": "links",
       "message": "External link missing rel=\"noopener\" in dist/request-quote/index.html",
-      "priority": "medium"
-    },
-    {
-      "type": "links",
-      "message": "External link missing rel=\"noopener\" in dist/services/index.html",
       "priority": "medium"
     },
     {
