@@ -1,175 +1,61 @@
+import React from 'react';
 
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { SERVICES } from "@/data/servicesData";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
-import { useEffect, useState } from "react";
-import apiClient from "@/services/apiClient";
-import retry from "@/utils/retry";
-import { toast } from "@/hooks/use-toast";
-
-
-function getRandomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-function generateRandomService(idNum: number): ProductListing {
-  const templates = [
+const ServicesPage: React.FC = () => {
+  const services = [
     {
-      title: "AI Automation Consulting",
-      category: "Consulting",
-      min: 4000,
-      max: 12000,
-      tags: ["Automation", "AI Strategy", "Optimization"],
+      title: "AI & Machine Learning",
+      description: "Advanced AI solutions including natural language processing, computer vision, and predictive analytics.",
+      icon: "🤖"
     },
     {
-      title: "Cloud Migration & Support",
-      category: "Management",
-      min: 3000,
-      max: 9000,
-      tags: ["Cloud", "Migration", "DevOps"],
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions including threat detection, vulnerability assessment, and incident response.",
+      icon: "🔒"
     },
     {
-      title: "Advanced Cybersecurity Suite",
-      category: "Security",
-      min: 5000,
-      max: 15000,
-      tags: ["Cybersecurity", "PenTesting", "Compliance"],
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions including migration, optimization, and management services.",
+      icon: "☁️"
     },
     {
-      title: "Big Data Engineering",
-      category: "Analytics",
-      min: 3500,
-      max: 11000,
-      tags: ["Data Engineering", "Analytics", "ETL"],
+      title: "Web Development",
+      description: "Modern web applications using React, Node.js, and other cutting-edge technologies.",
+      icon: "🌐"
     },
     {
-      title: "AI Model Training Service",
-      category: "Development",
-      min: 4500,
-      max: 13000,
-      tags: ["Machine Learning", "Model Training", "AI"],
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications for iOS and Android.",
+      icon: "📱"
     },
     {
-      title: "Digital Transformation Strategy",
-      category: "Strategy",
-      min: 6000,
-      max: 14000,
-      tags: ["Transformation", "Strategy", "Business"],
-    },
-  ];
-
-  const authors = [
-    "Global AI Experts",
-    "InnovateTech",
-    "SecureFuture",
-    "CloudOps Partners",
-    "DataVisor",
-    "NexGen Solutions",
-  ];
-
-  const images = [
-    "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
-  ];
-
-  const template = getRandomItem(templates);
-  const author = getRandomItem(authors);
-  const price = Math.round(
-    Math.random() * (template.max - template.min) + template.min
-  );
-
-  return {
-    id: `auto-service-${idNum}`,
-    title: template.title,
-    description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
-    category: template.category,
-    price,
-    currency: "$",
-    tags: template.tags,
-    author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
-    images: [getRandomItem(images)],
-    createdAt: new Date().toISOString(),
-    aiScore: Math.floor(90 + Math.random() * 10),
-    rating: parseFloat((4 + Math.random()).toFixed(1)),
-    reviewCount: Math.floor(50 + Math.random() * 150),
-  };
-}
-
-// Filter options specific to services
-const SERVICE_FILTERS = [
-  { label: 'Development', value: 'development' },
-  { label: 'Management', value: 'management' },
-  { label: 'Security', value: 'security' },
-  { label: 'Analytics', value: 'analytics' },
-  { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' },
-];
-
-export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
-
-  useEffect(() => {
-    async function load() {
-      try {
-        // apiClient prepends '/api', so this requests '/api/services'
-        const res = await retry(() => apiClient.get('/services'), {
-          retries: 3,
-          minTimeout: 500,
-        });
-        setListings(res.data as ProductListing[]);
-      } catch (err) {
-        console.error('Failed to fetch services', err);
-        toast.error('Failed to load services. Showing sample data.');
-        setListings(SERVICES);
-      }
+      title: "DevOps & Automation",
+      description: "CI/CD pipelines, infrastructure as code, and automated deployment solutions.",
+      icon: "⚙️"
     }
-    load();
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
-    }, 120000);
-
-    return () => clearInterval(interval);
-  }, []);
+  ];
 
   return (
-    <>
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
-              </Button>
-            </Link>
-          </div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology solutions tailored to your business needs
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+              <p className="text-gray-300">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-      <DynamicListingPage
-        title="IT & AI Services"
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        categorySlug="services"
-        listings={listings}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
-        itemsPerPage={10}
-      />
-      <TrustedBySection />
-    </>
+    </div>
   );
-}
+};
+
+export default ServicesPage;

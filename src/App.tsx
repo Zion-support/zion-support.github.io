@@ -1,123 +1,71 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import PwaInstallButton from "./components/PwaInstallButton";
-import {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes
-} from './routes';
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import MoreTalentsPage from './pages/MoreTalentsPage';
-import AdditionalTalentsPage from './pages/AdditionalTalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
-import NewServicesPage from './pages/NewServicesPage';
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-import WishlistPage from './pages/Wishlist';
-import CartPage from './pages/Cart';
-import Checkout from './pages/Checkout';
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
 
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/register', element: <Signup /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/more-talents', element: <MoreTalentsPage /> },
-  { path: '/additional-talents', element: <AdditionalTalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <CartPage /> },
-  { path: '/checkout', element: <Checkout /> },
-];
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
+const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 
-const App = () => {
-  console.log("App.tsx: Start");
-  // Ensure each navigation starts at the top of the page
-  useScrollToTop();
-  console.log("App.tsx: Rendering Tree");
+// Service Pages
+const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
+const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+      <p className="text-gray-400">Loading...</p>
+    </div>
+  </div>
+);
+
+// Error fallback component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="text-center">
+      <h2 className="text-2xl font-bold text-red-500 mb-4">Something went wrong</h2>
+      <p className="text-gray-400 mb-4">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
+
+// Main App component
+function App() {
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <ErrorBoundary>
-          <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-          </ErrorBoundary>
-        </Suspense>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-        <PwaInstallButton />
-      </ThemeProvider>
-    </WhitelabelProvider>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <BrowserRouter>
+        <div className="min-h-screen bg-gray-900 text-white">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/services/ai-solutions" element={<AISolutions />} />
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
+        </div>
+      </BrowserRouter>
+    </ErrorBoundary>
   );
-};
+}
 
 export default App;
