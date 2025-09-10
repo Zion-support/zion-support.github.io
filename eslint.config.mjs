@@ -46,15 +46,24 @@ export default [
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: false
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly'
       }
     },
+    settings: {
+      react: { version: 'detect' }
+    },
     plugins: {
+      '@typescript-eslint': tsPlugin,
       react,
       'react-hooks': reactHooks,
       '@typescript-eslint': tsPlugin
     },
     rules: {
       ...js.configs.recommended.rules,
+      ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
