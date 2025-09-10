@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-
 console.log("Starting enhanced error detector...");
 
 async function detectAllErrors() {
@@ -20,16 +14,10 @@ console.log(`"🔍 Starting enhanced error detector...")
 
 async function $1() {
   const errors = {
-  typescript: [],
->>>>>>> origin/automation-fixes
-    linting: [],
+  typescript: [],    linting: [],
     build: [],
     dependencies: [],
     syntax: [],
-<<<<<<< HEAD
-    timestamp: new Date().toISOString()
-  };
-
   try {
     // 1. Detect TypeScript errors
     console.log("Detecting TypeScript errors...");
@@ -399,17 +387,10 @@ async function detectSyntaxErrors() {
   file: file,message: `Could not read file: ${error.message}`,
               type: "syntax",,
 }),
-}
->>>>>>> origin/automation-fixes
-        }
+}        }
       }
     }
   }
-<<<<<<< HEAD
-  
-  return errors;
-}
-
 function getAllFiles(dir) {
   const files = [];
   
@@ -466,49 +447,12 @@ function checkSyntaxErrors(content", filePath) {
   const lines = content.split("\n")
 
   for (let i = 0; i < lines.length; i++) {
-  const line = lines[i]
->>>>>>> origin/automation-fixes
-    const lineNumber = i + 1;
+  const line = lines[i]    const lineNumber = i + 1;
     // Check for unmatched brackets;
     const openBrackets = (line.match(/\{/g) || []).length;
     const closeBrackets = (line.match(/\}/g) || []).length;
     const openParens = (line.match(/\(/g) || []).length;
     const closeParens = (line.match(/\)/g) || []).length;
-<<<<<<< HEAD
-    
-    if (openBrackets !== closeBrackets || openParens !== closeParens) {
-      errors.push({
-        file: filePath,
-        line: lineNumber,
-        message: "Potential unmatched brackets or parentheses",
-        type: "syntax"
-      });
-    }
-    
-    // Check for missing semicolons in JS/TS files
-    if ((filePath.endsWith(".js") || filePath.endsWith(".ts")) && 
-        line.trim() && 
-        !line.trim().endsWith(";") && 
-        !line.trim().endsWith("{") && 
-        !line.trim().endsWith("}") && 
-        !line.includes("import") && 
-        !line.includes("export") && 
-        !line.includes("function") && 
-        !line.includes("const") && 
-        !line.includes("let") && 
-        !line.includes("var")) {
-      errors.push({
-        file: filePath,
-        line: lineNumber,
-        message: "Missing semicolon",
-        type: "syntax"
-      });
-    }
-  }
-  
-  return errors;
-}
-
 // Run the error detection
 if (require.main === module) {
   detectAllErrors()
@@ -587,4 +531,3 @@ if (require.main === module) {
 }),
 }
 module.exports = { detectAllErrors }}}}}}}}})))
->>>>>>> origin/automation-fixes

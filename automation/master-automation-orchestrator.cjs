@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync, spawn } = require('child_process');
-class MasterAutomationOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.results = {
-      dependencyFix: { success: false, duration: 0, errors: [] },
-=======
-#!/usr/bin/env node;
-
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
@@ -20,51 +6,10 @@ class $1 {
   this.projectRoot = process.cwd()
     this.startTime = new Date()
     this.results = {
-  dependencyFix: { success: false, duration: 0, errors: [] },
->>>>>>> origin/automation-fixes
-      typescriptFix: { success: false, duration: 0, errors: [] },
+  dependencyFix: { success: false, duration: 0, errors: [] },      typescriptFix: { success: false, duration: 0, errors: [] },
       healthCheck: { success: false, duration: 0, errors: [] },
       securityScan: { success: false, duration: 0, errors: [] },
       performanceOptimize: { success: false, duration: 0, errors: [] },
-<<<<<<< HEAD
-      buildTest: { success: false, duration: 0, errors: [] },
-    };
-      "dependencyFix": { success: false, "duration": 0, "errors": [] },
-      "typescriptFix": { success: false, "duration": 0, "errors": [] },
-      "healthCheck": { success: false, "duration": 0, "errors": [] },
-      "securityScan": { success: false, "duration": 0, "errors": [] },
-      "performanceOptimize": { success: false, "duration": 0, "errors": [] },
-      "buildTest": { success: false, "duration": 0, "errors": [] }};
-  }
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-  }
-  async runScript(scriptName, scriptPath) {
-  const startTime = Date.now();
-    this.log(`🚀 Running ${scriptName}...`);
-    try {
-  const result = execSync(`node ${scriptPath}`, {
-  cwd: this.projectRoot,;
-        stdio: "inherit",;
-        encoding: "utf8";});
-      const duration = Date.now() - startTime;
-      this.log(`✅ ${scriptName} completed successfully in ${duration}ms`);
-      return {
-  success: true,;
-        duration,;
-        errors: [];
-}
-      ;,;,
-} catch (error) {;
-  const duration = Date.now() - startTime;
-      this.log(`❌ ${scriptName} failed: ${error.message}`, "ERROR");
-      return {
-  success: false,;
-        duration,;
-        errors: [error.message];}
-    }
-  }
-
   async runDependencyFix() {
   this.log("\\n🔧 PHASE 1: DEPENDENCY FIXING");
     this.log("==");
@@ -277,13 +222,6 @@ main
 // Run the orchestrator;
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
-
 
 
 const fs = require('fs')
@@ -472,4 +410,3 @@ const { execSync, spawn } = require('child_process')
 // Run the orchestrator;
 const orchestrator = new MasterAutomationOrchestrator()
 orchestrator.run().catch(console.error)
->>>>>>> origin/automation-fixes

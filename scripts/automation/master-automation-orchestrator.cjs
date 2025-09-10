@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -674,35 +668,10 @@ if (require.main === module) {
       execSync("pm2 stop all", { stdio: "pipe" })
       this.log("✅ All automation processes stopped"),
 } catch (error) {this.log(`⚠️ Error stopping processes: ${error.message}`, "WARN"),
-}
->>>>>>> origin/automation-fixes
-  }
+}  }
 }
 // Run the orchestrator;
 if (require.main === module) {
-<<<<<<< HEAD
-  const orchestrator = new MasterAutomationOrchestrator();
-  // Handle graceful shutdown;
-  process.on("SIGINT", async () => {
-  displayDashboard(dashboard) {
-    dashboard.recommendations.forEach(rec => );
-  displayDashboard(dashboard) {
-    dashboard.recommendations.forEach(rec => );`);
-    }
-;
-  async stop() {
-  this.log("🛑 Stopping Master Automation Orchestrator...");
-    try {
-  // Stop PM2 processes;
-      execSync("pm2 stop all", { "stdio": "pipe" });
-      this.log("✅ All automation processes stopped")} catch (error) {this.log(`⚠️ Error stopping "processes": ${error.message}`, "WARN")}
-  }
-}
-;
-// Run the orchestrator;
-if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-
   // Handle graceful shutdown;
   process.on("SIGINT", async () => {
   console.log("\n🛑 Received SIGINT, shutting down gracefully...");
@@ -868,4 +837,3 @@ const { execSync, spawn } = require("child_process")
   orchestrator.run().catch(console.error),
 }
 module.exports = MasterAutomationOrchestrator}}}
->>>>>>> origin/automation-fixes

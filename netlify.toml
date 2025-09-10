@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
+  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
@@ -18,22 +18,24 @@
   ESLINT_NO_DEV_ERRORS = "true"
   # Optimize build performance
   VITE_LEGACY_BUILD = "false"
-  # Explicitly skip Next.js plugin (plugin installed via Netlify UI)
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_USE_PNPM = "true"
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
   PNPM_VERSION = "9.12.1"
+  # Additional NPM flags for better performance
+  NPM_FLAGS = "--no-audit --no-fund --prefer-offline"
 
 # API functions (disabled for Vite SPA)
 # [functions]
 # directory = "netlify/functions"
 
-# Long-term caching for static assets
+# Security headers for all pages
 [[headers]]
-  for = "/css/*"
+  for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
     X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-DNS-Prefetch-Control = "on"
@@ -42,6 +44,27 @@
     Cross-Origin-Resource-Policy = "same-origin"
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
+
+# Long-term caching for static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
   from = "/ai-financial-planning-platform"

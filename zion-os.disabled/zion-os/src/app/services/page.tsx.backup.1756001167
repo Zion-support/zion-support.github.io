@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
 import { useState } from "react";
 
 interface Service {
@@ -966,8 +963,6 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-    </div>
+      </section>    </div>
   );
 }
