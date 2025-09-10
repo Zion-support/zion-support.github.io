@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { _Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
 
 import { Shield } from 'lucide-react';
@@ -15,44 +16,76 @@ const solutions = [];
 const implementation = [];
 const _Consulting = () => {
     const _consultingServices = [
+=======
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
+const Consulting = () => {
+    const consultingServices = [
+>>>>>>> origin/clean-error-fixing-automation
         {
             icon: Lightbulb,
             title: "Technology Strategy",
             description: "Strategic technology planning and digital transformation roadmaps",
+<<<<<<< HEAD
             features: ["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
+=======
+            features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
+>>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Target,
             title: "AI & ML Consulting",
             description: "Expert guidance on AI implementation and machine learning strategies",
+<<<<<<< HEAD
             features: ["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
+=======
+            features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
+>>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Shield,
             title: "Cybersecurity Consulting",
             description: "Comprehensive security assessments and risk management strategies",
+<<<<<<< HEAD
             features: ["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
+=======
+            features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
+>>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Globe,
             title: "Cloud Strategy",
             description: "Cloud migration planning and multi-cloud optimization strategies",
+<<<<<<< HEAD
             features: ["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
+=======
+            features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
+>>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Database,
             title: "Data Strategy",
             description: "Data governance, analytics, and business intelligence consulting",
+<<<<<<< HEAD
             features: ["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
+=======
+            features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
+>>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Zap,
             title: "Digital Innovation",
             description: "Emerging technology consulting and innovation acceleration",
+<<<<<<< HEAD
             features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
         }
     ];
     const _industries = [
+=======
+            features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
+        }
+    ];
+    const industries = [
+>>>>>>> origin/clean-error-fixing-automation
         {
             title: "Financial Services",
             description: "Banking, insurance, and fintech consulting",
@@ -84,7 +117,11 @@ const _Consulting = () => {
             icon: Briefcase
         }
     ];
+<<<<<<< HEAD
     const _benefits = [
+=======
+    const benefits = [
+>>>>>>> origin/clean-error-fixing-automation
         "Expert guidance from industry professionals",
         "Proven methodologies and best practices",
         "Customized solutions for your specific needs",
@@ -92,7 +129,11 @@ const _Consulting = () => {
         "Measurable results and ROI",
         "Access to cutting-edge technology insights"
     ];
+<<<<<<< HEAD
     const _process = [
+=======
+    const process = [
+>>>>>>> origin/clean-error-fixing-automation
         {
             phase: "Discovery",
             description: "Understanding your business needs and objectives",
@@ -281,6 +322,10 @@ const _Consulting = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>);
 };
+=======
+    </div>)};
+>>>>>>> origin/clean-error-fixing-automation
 export default Consulting;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {';
 export const _useTheme = (props: any) => {;';';
@@ -32,3 +33,33 @@ interface ThemeContextType {
   setTheme: (theme: Them e) => void;
   isDark: boolean}
 export 
+=======
+"use client";
+import * as React from "react";
+const initialState = {
+  theme: "dark",
+    setTheme: () => null,
+  
+
+};
+export const ThemeProvider({ children }) {
+    const [theme] = useState("dark");
+    useEffect(() => {
+        const root = window.document.documentElement;
+        root.classList.remove("light", "dark");
+        root.classList.add("dark")}, []);
+    const value = {
+  theme,
+  setTheme: () => { 
+
+},
+    };
+    return (<ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>)}
+export const useTheme = () => {
+    const context = useContext(ThemeProviderContext);
+    if (context === null)
+        throw new Error("useTheme must be used within a ThemeProvider");
+    return context};
+>>>>>>> origin/clean-error-fixing-automation

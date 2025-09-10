@@ -21,6 +21,6 @@ const ComprehensiveServicesShowcase2029 = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ComprehensiveServicesShowcase2029;

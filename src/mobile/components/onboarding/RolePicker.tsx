@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { _useTranslation } from "react-i18next";
 import { _Card, CardContent } from "@/components/ui/card";
 import { _Briefcase, Users, Check } from "lucide-react";
@@ -8,6 +9,15 @@ export function RolePicker({ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();
     const _handleSelect = (role) => {
+=======
+import { useTranslation } from "react-i18next";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from "lucide-react";
+export function RolePicker(_{ onSelect }) {
+    const [selectedRole, setSelectedRole] = useState(null);
+    const { t } = useTranslation();
+    const handleSelect = (role) => {
+>>>>>>> origin/clean-error-fixing-automation
         setSelectedRole(role);
         onSelect(role);
     };
