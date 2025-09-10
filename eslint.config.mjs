@@ -42,7 +42,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tseslint.parser,
+      parser: tsParser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: false
@@ -50,7 +50,8 @@ export default [
     },
     plugins: {
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tsPlugin
     },
     rules: {
       ...js.configs.recommended.rules,
