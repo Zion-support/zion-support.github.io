@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import Navigation from './components/Navigation';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -50,6 +51,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="App">
+          <Navigation />
           <Suspense fallback={<EnhancedLoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
