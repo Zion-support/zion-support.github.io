@@ -12,8 +12,11 @@ interface EmailOptions {
   };
 }
 
-export async function sendEmailWithSendGrid(_{
-  to, _templateId, _dynamicTemplateData, }: EmailOptions): Promise<void> {
+export async function sendEmailWithSendGrid({
+  to,
+  templateId,
+  dynamicTemplateData,
+}: EmailOptions): Promise<void> {
   const apiKey = process.env.SENDGRID_API_KEY;
 
   if (!apiKey) {
@@ -25,27 +28,27 @@ export async function sendEmailWithSendGrid(_{
   sgMail.setApiKey(apiKey);
 
   const msg = {
-    to: to,
-    from: process.env.SENDGRID_FROM_EMAIL || 'noreply@example.com', // It's good practice to set a verified sender email in SendGrid
-    templateId: templateId,
-    dynamicTemplateData: dynamicTemplateData,
-  };
+    to,
+    from: process.env.SENDGRID_FROM_EMAIL || 'noreply@example.com',
+    templateId,
+    dynamicTemplateData,
+  } as const;
 
   try {
     await sgMail.send(msg);
     logInfo(`Email sent to ${to} using template ${templateId}`);
-  } catch (error: unknown) {
-    logErrorToProduction('Error sending email with SendGrid:', { data: error.toString() });
+  } catch (error: any) {
+    logErrorToProduction('Error sending email with SendGrid:', { data: String(error) });
     // Optionally, rethrow the error or handle it as needed by your application's error handling strategy
     // For example, if the error response from SendGrid is available:
-    if (error.response) {
+    if (error?.response) {
       logErrorToProduction('SendGrid error response:', { data: error.response.body });
     }
     // Consider logging this to a more persistent error tracking service in production
   }
 }
 
-export async function sendResetEmail(email: string, token: string, ): Promise<void> {
+export async function sendResetEmail(email: string, token: string): Promise<void> {
   const apiKey = process.env.SENDGRID_API_KEY;
   if (!apiKey) {
     logErrorToProduction('SENDGRID_API_KEY is not set. Reset email not sent.');
@@ -69,9 +72,9 @@ export async function sendResetEmail(email: string, token: string, ): Promise<vo
   try {
     await sgMail.send(msg);
     logInfo(`Password reset email sent to ${email}`);
-  } catch (error: unknown) {
-    logErrorToProduction('Error sending password reset email:', { data: error.toString() });
-    if (error.response) {
+  } catch (error: any) {
+    logErrorToProduction('Error sending password reset email:', { data: String(error) });
+    if (error?.response) {
       logErrorToProduction('SendGrid error response:', { data: error.response.body });
     }
   }
