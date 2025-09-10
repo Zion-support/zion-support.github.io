@@ -7,6 +7,9 @@ import { _ProfileSetup } from "@/components/onboarding/ProfileSetup";
 import { _Steps, Step } from "@/components/ui/steps";
 import { _supabase } from "@/integrations/supabase/client";
 import { _toast } from "@/hooks/use-toast";
+
+import { useAuth } from '@/hooks/useAuth';
+const integrations = [];
 export default function Onboarding() {
     const { user, updateProfile, isLoading } = useAuth();
     const [currentStep, setCurrentStep] = useState(0);

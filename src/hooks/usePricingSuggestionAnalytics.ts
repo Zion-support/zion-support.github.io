@@ -1,6 +1,8 @@
 import { _useState, useEffect, useCallback } from 'react';
 import { _supabase } from '@/integrations/supabase/client';
 
+const integrations = [];
+
 interface PricingSuggestionAnalytics {
   totalSuggestions: number;
   acceptanceRate: number;

@@ -1,5 +1,11 @@
+import { _Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud, Brain } from 'lucide-react';
 import React from 'react';
-import { _Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+const _features = [];
+const _benefits = [];
+const _solutions = [];
+const _securityFeatures = [];
+const _securitySolutions = [];
+const _implementation = [];
 const _AIPoweredSecurity = () => {
     const _securityFeatures = [
         {
@@ -148,14 +154,14 @@ const _AIPoweredSecurity = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
+            {securityFeatures.map((_feature, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {feature.features.map((_item, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {item}
                     </li>))}
@@ -179,14 +185,14 @@ const _AIPoweredSecurity = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securitySolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
+            {securitySolutions.map((_solution, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <solution.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-300 mb-4">{solution.description}</p>
                 <ul className="space-y-2">
-                  {solution.capabilities.map((capability, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {solution.capabilities.map((_capability, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {capability}
                     </li>))}
@@ -209,7 +215,7 @@ const _AIPoweredSecurity = () => {
                 that continuously learns and improves.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((_benefit, _index) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -246,7 +252,7 @@ const _AIPoweredSecurity = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {implementation.map((phase, index) => (<div key={index} className="text-center">
+            {implementation.map((_phase, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}
                 </div>

@@ -6,6 +6,12 @@ import { _Button } from "@/components/ui/Button";
 import { _Leaf, Server, Cloud } from "lucide-react";
 import { _Link } from "react-router-dom";
 
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Cloud } from 'lucide-react';
+const technologies = [];
+const solutions = [];
+
 export default function GreenIT() {
     const _greenITSolutions = [
         {

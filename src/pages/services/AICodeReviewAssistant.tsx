@@ -1,8 +1,17 @@
+import { _CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight, CheckCircle, Check, Code } from 'lucide-react';
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Helmet } from 'react-helmet-async';
 import { _motion } from 'framer-motion';
-import { _CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+const _features = [];
+const _benefits = [];
+const _useCases = [];
+const _pricingPlans = [];
+const _integrations = [];
+const _services = [];
 const _AICodeReviewAssistant = () => {
     const _features = [
         {
@@ -135,7 +144,7 @@ const _AICodeReviewAssistant = () => {
             
             {/* Key Metrics */}
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
-              {benefits.map((benefit, index) => (<div key={index} className="text-center">
+              {benefits.map((_benefit, _index) => (<div key={index} className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
                   <div className="text-sm text-gray-300">{benefit.description}</div>
                 </div>))}
@@ -165,7 +174,7 @@ const _AICodeReviewAssistant = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }}>
+              {features.map((_feature, _index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }}>
                   <div className="text-blue-400 mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -187,7 +196,7 @@ const _AICodeReviewAssistant = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
+              {pricingPlans.map((_plan, _index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-blue-400 bg-blue-900/20'
                 : 'border-white/20 hover:border-white/40'}`} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }}>
                   {plan.popular && (<div className="text-center mb-4">
@@ -206,7 +215,7 @@ const _AICodeReviewAssistant = () => {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
+                    {plan.features.map((_feature, _idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                         {feature}
                       </li>))}
@@ -230,7 +239,7 @@ const _AICodeReviewAssistant = () => {
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Seamless Integrations</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {integrations.map((integration, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
+                  {integrations.map((_integration, _index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
                       <span className="text-gray-300">{integration}</span>
                     </div>))}
@@ -241,7 +250,7 @@ const _AICodeReviewAssistant = () => {
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
                 <div className="space-y-3">
-                  {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
+                  {useCases.map((_useCase, _index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
                       <Star className="w-5 h-5 text-yellow-400 mr-3"/>
                       <span className="text-gray-300">{useCase}</span>
                     </div>))}

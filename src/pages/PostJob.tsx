@@ -3,6 +3,9 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/co
 import { _SEO } from "@/components/SEO";
 import { _useAuth } from "@/hooks/useAuth";
 import { _useIsMobile } from "@/hooks/use-mobile";
+
+import SEO from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
 export default function PostJob() {
     const { isAuthenticated, isLoading } = useAuth();
     const _isMobile = useIsMobile();

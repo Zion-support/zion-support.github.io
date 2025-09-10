@@ -6,6 +6,9 @@ import { _PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // 
 import { _toast } from '@/hooks/use-toast'; // Assuming this hook exists
 // Placeholder for the actual API call, to be implemented in a later step
 import { _resetPassword } from '@/services/auth';
+
+import { useParams } from 'react-router-dom';
+const services = [];
 export default function ResetPasswordPage() {
     const { token } = useParams();
     const _navigate = useNavigate();

@@ -6,6 +6,8 @@ import { _Skeleton } from "@/components/ui/skeleton";
 import { _toast } from "@/hooks/use-toast";
 import { _KanbanColumn } from "./KanbanColumn";
 import { _useIsMobile } from "@/hooks/use-mobile";
+
+const applications = [];
 // Define the kanban board columns based on application statuses
 const _COLUMNS = [
     {

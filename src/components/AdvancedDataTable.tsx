@@ -3,6 +3,9 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { _useVirtualScroll } from '../hooks/useVirtualScroll';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
 export const _AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -17,7 +20,7 @@ export const _AdvancedDataTable = ({ data, columns, height = 500, enableSearch =
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting
     const _processedData = useMemo(() => {
-        let _result = [...data];
+        const _result = [...data];
         // Apply search
         if (searchQuery.trim()) {
             result = result.filter(item => columns.some(col => {

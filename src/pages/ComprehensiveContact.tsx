@@ -6,6 +6,16 @@ import { _Textarea } from '@/components/ui/textarea';
 import { _Label } from '@/components/ui/label';
 import { _Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
 import { _SERVICE_CATEGORIES } from '@/data/enhancedServices';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const industries = [];
+const services = [];
+const solutions = [];
 export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',

@@ -16,6 +16,13 @@ export default function Page(props: any) {
 import { _EnhancedHeader } from ./components/EnhancedHeaderexport default function Page(props: any) {
 export default function Page(props: any) {
   import { _EnhancedFooter } from ./components/EnhancedFooterexport default function Page(props: any) {
+
+import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
+const securityServices = [];
+const services = [];
+const solutions = [];
 export default function Page(props: any) {
 // Optimized lazy loading with preloading hints;
 const _createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {  const _LazyComponent = lazy(importFn)

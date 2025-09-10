@@ -1,3 +1,7 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const solutions = [];
+
 
 export default function SolutionsPage() {
   const _solutions = [

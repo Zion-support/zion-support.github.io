@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const testimonials = [];
+const services = [];
+const solutions = [];
 const _testimonials = [
     {
         id: 1,

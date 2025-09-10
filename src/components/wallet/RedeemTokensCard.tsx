@@ -4,6 +4,9 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/co
 import { _Button } from "@/components/ui/button";
 import { _Gift, ArrowRight, ExternalLink } from "lucide-react";
 import { _Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
+
+import { Link } from 'react-router-dom';
+const features = [];
 const REWARD_OPTIONS = [
     {
         id: 'premium-week',

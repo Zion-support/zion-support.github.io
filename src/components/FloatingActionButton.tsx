@@ -1,3 +1,5 @@
+import { Settings } from 'lucide-react';
+
 
 Plus,
   MessageCircle,

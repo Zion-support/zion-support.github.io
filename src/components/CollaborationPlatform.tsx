@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { _Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff } from 'lucide-react';
+
+const implementation = [];
 const _mockParticipants = [
     { id: '1', name: 'John Smith', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: true, avatar: '👨‍💼' },
     { id: '2', name: 'Sarah Johnson', isVideoOn: false, isAudioOn: true, isScreenSharing: true, isSpeaking: false, avatar: '👩‍💻' },

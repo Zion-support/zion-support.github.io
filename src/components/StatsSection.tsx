@@ -1,5 +1,8 @@
 
 import React from 'react';
+
+const industries = [];
+const implementation = [];
 export function StatsSection() {
     const _stats = [
         {

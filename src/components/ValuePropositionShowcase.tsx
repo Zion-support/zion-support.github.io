@@ -1,6 +1,20 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
 import { 
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
   TrendingUp, 
   Target, 
   Award, 

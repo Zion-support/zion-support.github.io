@@ -5,6 +5,15 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/co
 import { _Button } from "@/components/ui/button";
 import { _Link } from "react-router-dom";
 import { _Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const benefits = [];
+const services = [];
 export default function HowItWorks() {
     const _clientSteps = [
         {

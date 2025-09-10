@@ -1,6 +1,10 @@
 import { _ProductListing } from "@/types/listings";
 import { _REGIONS } from "@/data/filterConstants";
 
+import { Cloud } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { Code } from 'lucide-react';
+
 // Category definitions with average price ranges
 const _categories = [
   { name: "AI Models & APIs", priceRange: [1000, 3000] },

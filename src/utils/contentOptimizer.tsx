@@ -1,3 +1,11 @@
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const applications = [];
+const solutions = [];
+
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
@@ -60,7 +68,7 @@ export class ContentOptimizer {
     static countSyllables(text) {
         // Simplified syllable counting
         const _words = text.toLowerCase().split(/\s+/);
-        let _syllableCount = 0;
+        const _syllableCount = 0;
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
@@ -74,7 +82,7 @@ export class ContentOptimizer {
         return syllableCount;
     }
     static calculateSEOScore(content, page) {
-        let _score = 100;
+        const _score = 100;
         // Check for title
         if (!content.includes('<title>'))
             score -= 20;

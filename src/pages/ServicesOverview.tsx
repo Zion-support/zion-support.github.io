@@ -3,6 +3,22 @@ import { _SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { _motion } from 'framer-motion';
 import { _Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function ServicesOverview() {
     const _serviceCategories = [
         {

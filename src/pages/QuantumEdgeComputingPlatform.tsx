@@ -1,6 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { _Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Zap } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const pricingPlans = [];
+const industries = [];
+const applications = [];
+const implementation = [];
 const _QuantumEdgeComputingPlatform = () => {
     const _features = [
         "Quantum-accelerated edge processing",

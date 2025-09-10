@@ -3,6 +3,8 @@ import { _cn } from "../../utils/cn";
 ;
 interface SwitchProps {;
 import { _cn } from "@/lib/utils"
+
+import { Check } from 'lucide-react';
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;const _Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,

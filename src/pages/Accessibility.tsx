@@ -1,5 +1,14 @@
 import React from 'react';
 import { _Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const technologies = [];
+const complianceStandards = [];
+const services = [];
 const _Accessibility = () => {
     const _accessibilityFeatures = [
         {

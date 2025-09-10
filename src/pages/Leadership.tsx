@@ -1,6 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { _Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+const technologies = [];
+const applications = [];
+const solutions = [];
 const _Leadership = () => {
     const _leadershipTeam = [
         {

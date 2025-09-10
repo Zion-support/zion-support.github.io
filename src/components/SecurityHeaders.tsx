@@ -1,6 +1,12 @@
 
 import React from 'react';
 import { _Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+const securityFeatures = [];
 export function SecurityHeaders({ className }) {
     const _securityFeatures = [
         {

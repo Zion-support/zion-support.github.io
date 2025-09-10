@@ -3,6 +3,10 @@ import { _ProductSubmissionForm } from "@/components/ProductSubmissionForm";
 import { _useAuth } from "@/hooks/useAuth";
 import { _Navigate } from "react-router-dom";
 import { _SEO } from "@/components/SEO";
+
+import SEO from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+const services = [];
 export default function PublishProduct() {
     const { isAuthenticated, isLoading } = useAuth();
     // Show loading while checking authentication

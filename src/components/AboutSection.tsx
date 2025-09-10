@@ -1,6 +1,16 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Award, Users, Globe, Target, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const technologies = [];
+const solutions = [];
 export function AboutSection() {
     const _achievements = [
         { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },

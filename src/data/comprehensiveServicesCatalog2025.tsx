@@ -1,3 +1,9 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const services = [];
+
 :src/data/comprehensiveServicesCatalog2025.tsx;
 ;
 export interface ComprehensiveService2025 {

@@ -2,6 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { _Link, useLocation } from 'react-router-dom';
 import { _motion, AnimatePresence } from 'framer-motion';
 import {;
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
+const services = [];
+const applications = [];
+const solutions = [];
   Menu,;
   X,;
   ChevronDown,;

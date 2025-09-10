@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const implementation = [];
 export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
@@ -12,10 +21,10 @@ export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, a
         setIsAnalyzing(true);
         const _issues = [];
         const _suggestions = [];
-        let _wordCount = 0;
-        let _readabilityScore = 100;
-        let _seoScore = 100;
-        let _engagementScore = 100;
+        const _wordCount = 0;
+        const _readabilityScore = 100;
+        const _seoScore = 100;
+        const _engagementScore = 100;
         // Get all content elements
         const _contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
@@ -251,7 +260,7 @@ export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, a
         if (!analysis)
             return;
         const _fixableIssues = analysis.issues.filter(issue => issue.fixable);
-        let _fixedCount = 0;
+        const _fixedCount = 0;
         fixableIssues.forEach(issue => {
             if (issue.element) {
                 switch (issue.id.split('-')[0]) {

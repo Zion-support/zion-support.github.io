@@ -1,3 +1,6 @@
+const services = [];
+const _solutions = [];
+
 
 export default function Cybersecurity() {
   return (
@@ -57,3 +60,5 @@ export default function Cybersecurity() {
     </div>
   );
 }
+
+export { Cybersecurity };

@@ -1,5 +1,7 @@
 
 import { _motion } from 'framer-motion';
+
+import { motion } from 'framer-motion';
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
     const _sizeClasses = {
         sm: 'w-6 h-6',

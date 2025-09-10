@@ -4,6 +4,10 @@ import { _GeneratedDescriptionDisplay } from "@/components/services/GeneratedDes
 import { _SEO } from "@/components/SEO";
 import { _useAuth } from "@/hooks/useAuth";
 import { _Navigate } from "react-router-dom";
+
+import SEO from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+const services = [];
 export default function ServiceDescriptionGenerator() {
     const { isAuthenticated, isLoading } = useAuth();
     const [generatedDescription, setGeneratedDescription] = useState(null);

@@ -11,6 +11,11 @@ import useJobDetails from '@/hooks/useJobDetails';
 import { _ApplyToJobModal } from '@/components/messaging/job-application';
 import { _SEO } from '@/components/SEO';
 import { _useWhitelabel } from '@/context/WhitelabelContext';
+
+import SEO from '@/components/SEO';
+import { DollarSign } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams();

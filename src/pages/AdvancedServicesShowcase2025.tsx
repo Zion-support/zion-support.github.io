@@ -4,6 +4,18 @@ import { _Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, Exte
 import { _advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
 import { _specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
 import SEOHead from '../components/SEOHead';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');

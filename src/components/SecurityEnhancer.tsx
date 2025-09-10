@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { 
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
   Shield, 
   Lock, 
   Eye, 

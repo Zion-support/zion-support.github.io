@@ -5,6 +5,18 @@ import { _Badge } from "@/components/ui/badge";
 import { _SEO } from "@/components/SEO";
 import { _BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
 import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const testimonials = [];
+const pricingPlans = [];
+const integrations = [];
 export default function AIAnalyticsDashboard() {
     const _features = [
         {

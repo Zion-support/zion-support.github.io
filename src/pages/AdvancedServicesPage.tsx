@@ -6,6 +6,19 @@ import { _Badge } from '@/components/ui/badge';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { _Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { _SEO } from '@/components/SEO';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const technologies = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function AdvancedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

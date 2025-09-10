@@ -10,6 +10,11 @@ import { _formatDistanceToNow } from "date-fns";
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { useParams } from 'react-router-dom';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 // Mock user data
 const _mockUser = {
     id: "user1",

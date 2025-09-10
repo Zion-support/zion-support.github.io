@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { _Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const services = [];
+const implementation = [];
 export function SiteHealthDashboard() {
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);

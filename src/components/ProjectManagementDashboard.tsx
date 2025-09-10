@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { _Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _mockProjects = [
     {
         id: '1',

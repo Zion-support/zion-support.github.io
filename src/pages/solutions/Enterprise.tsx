@@ -1,6 +1,11 @@
+import { _Building2, Shield, Globe, Zap, Users, BarChart3, Lock, Cloud, Building2, Icon } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-import { _Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+const _features = [];
+const _industries = [];
+const _services = [];
+const _solutions = [];
 const _EnterpriseSolutions = () => {
     const _solutions = [
         {
@@ -112,7 +117,7 @@ const _EnterpriseSolutions = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {
+            {solutions.map((_solution, _index) => {
             const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -125,7 +130,7 @@ const _EnterpriseSolutions = () => {
                   <p className="text-gray-300 mb-6">{solution.description}</p>
                   
                   <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
+                    {solution.features.map((_feature, _featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-gray-300">{feature}</span>
                       </li>))}
@@ -151,7 +156,7 @@ const _EnterpriseSolutions = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => {
+            {industries.map((_industry, _index) => {
             const _Icon = industry.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -164,7 +169,7 @@ const _EnterpriseSolutions = () => {
                   <p className="text-gray-300 mb-6">{industry.description}</p>
                   
                   <div className="grid grid-cols-1 gap-3">
-                    {industry.solutions.map((solution, solutionIndex) => (<div key={solutionIndex} className="bg-gray-700/50 rounded-lg p-3">
+                    {industry.solutions.map((_solution, _solutionIndex) => (<div key={solutionIndex} className="bg-gray-700/50 rounded-lg p-3">
                         <span className="text-gray-300">{solution}</span>
                       </div>))}
                   </div>
@@ -198,7 +203,7 @@ const _EnterpriseSolutions = () => {
                 description: 'Round-the-clock support with dedicated account managers.',
                 icon: Users
             }
-        ].map((benefit, index) => {
+        ].map((_benefit, _index) => {
             const _Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">

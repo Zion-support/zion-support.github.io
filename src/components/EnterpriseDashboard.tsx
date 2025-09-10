@@ -2,6 +2,13 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const services = [];
 export const _EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -173,7 +180,7 @@ export const _EnterpriseDashboard = () => {
     }, [refreshInterval, refreshData]);
     // Filtered data
     const _filteredSecurityAlerts = useMemo(() => {
-        let _filtered = securityAlerts;
+        const _filtered = securityAlerts;
         if (filterStatus !== 'all') {
             filtered = filtered.filter(alert => alert.status === filterStatus);
         }
@@ -185,7 +192,7 @@ export const _EnterpriseDashboard = () => {
         return filtered;
     }, [securityAlerts, filterStatus, searchQuery]);
     const _filteredUserActivities = useMemo(() => {
-        let _filtered = userActivities;
+        const _filtered = userActivities;
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||

@@ -7,6 +7,23 @@ import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { _Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { _CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
 import { _SEO } from '@/components/SEO';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function ServicesPricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const _filteredServices = selectedCategory === 'all'

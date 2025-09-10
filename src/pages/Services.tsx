@@ -1,5 +1,10 @@
 import React from 'react';
 
+import { Cloud } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const solutions = [];
+
 export default function Services() {
   const services = [
     {

@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Icon } from 'lucide-react';
 export const _FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
     const _sizeClasses = {
         small: 'w-8 h-8',

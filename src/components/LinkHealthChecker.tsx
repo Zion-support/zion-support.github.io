@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { _CheckCircle, XCircle, AlertTriangle, ExternalLink } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _LinkHealthChecker = ({ links, className = '' }) => {
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);

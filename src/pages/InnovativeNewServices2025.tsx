@@ -4,6 +4,20 @@ import { _Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin,
 import { _SEOHead } from '../components/SEOHead';
 import { _INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
 import { _SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 const _InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');

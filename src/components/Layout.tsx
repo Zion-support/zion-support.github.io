@@ -34,6 +34,9 @@ const "Layout": "React.FC<LayoutProps> = ({ children "}) => {;
 export default Layout;
 </LayoutProps>import Header from './Header';
 import Footer from './Footer';
+
+const services = [];
+const solutions = [];
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;

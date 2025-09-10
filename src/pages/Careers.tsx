@@ -4,6 +4,12 @@ import { _GradientHeading } from "@/components/GradientHeading";
 import { _Button } from "@/components/ui/button";
 import { _Card, CardContent } from "@/components/ui/card";
 import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import SEO from '@/components/SEO';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const features = [];
+const benefits = [];
+const technologies = [];
 export default function Careers() {
     // Sample job listings
     const _jobs = {

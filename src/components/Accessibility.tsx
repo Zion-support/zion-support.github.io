@@ -3,6 +3,10 @@ import React, { useState, useEffect, createContext, useContext } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 import { _Button } from '../ui/button';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
 const _AccessibilityContext = createContext(undefined);
 export const _useAccessibility = () => {
     const _context = useContext(AccessibilityContext);

@@ -1,5 +1,14 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const services = [];
+const solutions = [];
+
                 </p>;
                 {/* Contact Information */}
                 <div className="space-y-3">;

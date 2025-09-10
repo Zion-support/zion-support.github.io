@@ -1,6 +1,10 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 ;
 export function SimpleFooter("props": "any) {;
   const _currentYear = new Date().getFullYear();

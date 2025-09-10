@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 import { _Link, useLocation } from 'react-router-dom';import {;
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const services = [];
+const solutions = [];
   Home,;
   Zap,;
   Brain,;

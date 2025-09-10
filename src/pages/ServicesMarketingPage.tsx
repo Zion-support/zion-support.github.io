@@ -2,6 +2,10 @@ import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
 import { _EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 const _ServicesMarketingPage = () => {
     const _allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,

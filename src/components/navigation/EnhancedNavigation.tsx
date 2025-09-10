@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ;
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Code } from 'lucide-react';
+const services = [];
+const applications = [];
+const solutions = [];
   Menu, ;
   X, ;
   ChevronDown, ;

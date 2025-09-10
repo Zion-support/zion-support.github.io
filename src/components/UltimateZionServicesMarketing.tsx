@@ -1,3 +1,7 @@
+const technologies = [];
+const services = [];
+const solutions = [];
+
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ';

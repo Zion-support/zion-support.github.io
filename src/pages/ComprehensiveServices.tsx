@@ -4,6 +4,11 @@ import { _motion } from 'framer-motion';
 import { _SEO } from '@/components/SEO';
 import ComprehensiveServicesShowcase from '@/components/ComprehensiveServicesShowcase';
 
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+const services = [];
+const solutions = [];
+
 const ComprehensiveServices: React.FC = () => {
   return (
     <>

@@ -4,6 +4,8 @@ import { _Input } from "@/components/ui/input";
 import { _Textarea } from "@/components/ui/textarea";
 import { _Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
+
+import { Code } from 'lucide-react';
 export function ApiPlayground({ method, path, params = [] }) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({});
@@ -15,7 +17,7 @@ export function ApiPlayground({ method, path, params = [] }) {
     };
     const _sendRequest = async () => {
         const _baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
-        let _url = `${baseUrl}${path}`;
+        const _url = `${baseUrl}${path}`;
         const _searchParams = new URLSearchParams();
         if (method === "GET" || method === "DELETE") {
             params.forEach((p) => {

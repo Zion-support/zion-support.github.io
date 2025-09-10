@@ -1,3 +1,8 @@
+import { motion } from 'framer-motion';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+const services = [];
+
 
   "};    pageViews: number;    clicks: number;
     scrolls: number;

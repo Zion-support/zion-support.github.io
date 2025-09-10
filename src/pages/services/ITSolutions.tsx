@@ -1,6 +1,12 @@
+import { _Shield, Database, Monitor, Shield, Settings, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { _SEO } from "@/components/SEO";
-import { _Shield, Database, Monitor } from 'lucide-react';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+const _features = [];
+const _benefits = [];
+const _services = [];
+const _solutions = [];
 const _ITSolutions = () => {
     const _features = [
         {
@@ -67,7 +73,7 @@ const _ITSolutions = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+            {features.map((_feature, _index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-teal-600"/>
                 </div>
@@ -90,7 +96,7 @@ const _ITSolutions = () => {
             </div>
 
             <div className="space-y-6">
-              {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+              {benefits.map((_benefit, _index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">
                     <TrendingUp className="w-4 h-4 text-teal-600"/>
                   </div>

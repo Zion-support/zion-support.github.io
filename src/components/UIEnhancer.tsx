@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
+
+import { motion } from 'framer-motion';
 export const _UIEnhancer = ({ showFloatingActions = true, enableParticles = true, enableScrollEffects = true }) => {
     const [theme, setTheme] = useState('dark');
     const [isParticleMode, setIsParticleMode] = useState(enableParticles);

@@ -1,4 +1,9 @@
 import { _ import { motion, AnimatePresence  } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+const services = [];
+const solutions = [];
 ;
 export default function Page("props": "any) {;
     setExpandedSections(newExpanded)"};

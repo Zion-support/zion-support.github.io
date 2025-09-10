@@ -1,6 +1,13 @@
+import { _Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3, Code } from 'lucide-react';
 import React from 'react';
 import { _SEO } from '../../components/SEO';
-import { _Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
+import SEO from '@/components/SEO';
+const _features = [];
+const _benefits = [];
+const _industries = [];
+const _services = [];
+const _applications = [];
+const _solutions = [];
 export default function MicroSAASSolutions() {
     const _services = [
         {
@@ -120,7 +127,7 @@ export default function MicroSAASSolutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (<div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
+            {services.map((_service, _index) => (<div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -131,7 +138,7 @@ export default function MicroSAASSolutions() {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-zion-slate">
+                  {service.features.map((_feature, _idx) => (<li key={idx} className="flex items-center text-sm text-zion-slate">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                       {feature}
                     </li>))}
@@ -155,7 +162,7 @@ export default function MicroSAASSolutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">
+            {benefits.map((_benefit, _index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white"/>
                 </div>
@@ -183,7 +190,7 @@ export default function MicroSAASSolutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (<div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+            {industries.map((_industry, _index) => (<div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -220,3 +227,6 @@ export default function MicroSAASSolutions() {
       </section>
     </div>);
 }
+
+
+export { MicroSaaSSolutions };

@@ -3,6 +3,16 @@ import React, { useState } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 const _aiServices = [
     {
         id: 'ai-chat',

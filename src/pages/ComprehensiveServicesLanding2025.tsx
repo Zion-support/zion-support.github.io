@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
+
+import { Link } from 'react-router-dom';
+const features = [];
+const integrations = [];
+const technologies = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _ComprehensiveServicesLanding2025 = () => {
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const _industries = [

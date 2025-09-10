@@ -5,6 +5,21 @@ import { _Badge } from "../ui/badge";
 import { _Link } from "react-router-dom";
 import { _Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
 import { _TrustedBySection } from "../TrustedBySection";
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const useCases = [];
+const services = [];
+const applications = [];
+const blockchainServices = [];
+const solutions = [];
 const _blockchainServices = [
     {
         id: "smart-contracts",

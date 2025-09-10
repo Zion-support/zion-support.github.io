@@ -3,6 +3,14 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui
 import { _Badge } from './ui/badge';
 import { _Button } from './ui/button';
 import { _Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export function ServiceShowcase({ services }) {
     const _getCategoryIcon = (category) => {
         switch (category) {

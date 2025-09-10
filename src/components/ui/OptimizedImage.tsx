@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { _cn } from '@/lib/utils';
 import { _motion, AnimatePresence } from 'framer-motion';
+
+import { motion } from 'framer-motion';
 export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [hasError, setHasError] = useState(false);

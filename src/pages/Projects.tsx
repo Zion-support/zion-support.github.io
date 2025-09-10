@@ -6,6 +6,9 @@ import { _Button } from "@/components/ui/button";
 import { _Badge } from "@/components/ui/badge";
 import { _Link } from "react-router-dom";
 import { _Clock, Briefcase } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 function ProjectsContent() {
     const { projects, isLoading } = useProjects();
     return (<>

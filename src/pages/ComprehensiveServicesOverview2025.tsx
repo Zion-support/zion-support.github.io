@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
+
+import { Link } from 'react-router-dom';
+import { Target } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const useCases = [];
+const integrations = [];
+const services = [];
+const solutions = [];
+const securityFeatures = [];
 const _ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');

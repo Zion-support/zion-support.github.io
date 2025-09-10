@@ -1,5 +1,8 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { _LoadingSpinner } from './ui/loading-spinner';
+
+import { Target } from 'lucide-react';
+const features = [];
 // Lazy load heavy components
 const _LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 // Memoized component for expensive calculations

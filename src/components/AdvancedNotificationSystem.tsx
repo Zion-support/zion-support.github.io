@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { _Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _mockNotifications = [
     {
         id: '1',

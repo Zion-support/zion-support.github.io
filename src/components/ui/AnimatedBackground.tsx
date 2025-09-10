@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+
+import { Code } from 'lucide-react';
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
     const _canvasRef = useRef(null);
     useEffect(() => {
@@ -9,7 +11,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         if (!ctx)
             return;
         let animationFrameId;
-        let _particles = [];
+        const _particles = [];
         const _resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;

@@ -1,3 +1,7 @@
+const services = [];
+const applications = [];
+const solutions = [];
+
 export class SitemapGenerator {
     config;
     constructor(config) {

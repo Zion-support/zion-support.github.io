@@ -1,6 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { _Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
 ;
 export function Footer("props": "any) {;
   const _currentYear = new Date().getFullYear();

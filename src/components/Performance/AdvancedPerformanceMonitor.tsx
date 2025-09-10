@@ -26,3 +26,5 @@ const React,{ useEffect,useState } from "react" import { _motion } from "framer-
 import { _useEffect } from 'react';,
 import { _useState } from 'react';,
 import _React,{ useEffect,useState } from 'react' import { _motion } from 'framer-motioninterface PerformanceMetrics {fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: Reac t.FC = () => { const [metrics,setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible,setIsVisible] = useState<any>(false) useEffect(() => { </any> </PerformanceMetrics>;';';
+
+import { motion } from 'framer-motion';

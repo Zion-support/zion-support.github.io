@@ -1,5 +1,13 @@
+import { _Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings, Cloud, Package } from 'lucide-react';
 import React from 'react';
-import { _Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
+const _features = [];
+const _benefits = [];
+const _technologies = [];
+const _industries = [];
+const _microsaasServices = [];
+const _services = [];
+const _applications = [];
+const _solutions = [];
 const _MicroSAAS = () => {
     const _microsaasServices = [
         {
@@ -154,14 +162,14 @@ const _MicroSAAS = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microsaasServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
+            {microsaasServices.map((_service, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {service.features.map((_feature, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
                     </li>))}
@@ -184,7 +192,7 @@ const _MicroSAAS = () => {
                 to building profitable, scalable software businesses with recurring revenue.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((_benefit, _index) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -223,7 +231,7 @@ const _MicroSAAS = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {technologies.map((_tech, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -248,7 +256,7 @@ const _MicroSAAS = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {industries.map((_industry, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white"/>
                 </div>

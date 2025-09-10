@@ -5,6 +5,9 @@ import { _getStripe } from '@/utils/getStripe';
 import CardForm from '@/components/checkout/CardForm';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 import { _NEW_PRODUCTS } from '@/data/newProductsData';
+
+import { Check } from 'lucide-react';
+import { useParams } from 'react-router-dom';
 export default function CheckoutPage() {
     const _router = useRouter();
     const { id: rawId } = router.query;

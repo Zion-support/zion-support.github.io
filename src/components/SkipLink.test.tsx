@@ -5,6 +5,8 @@ import { _render, screen } from &apos;@testing-library/react',';';';';';
     ',';';';';
     ';';';';';
 import SkipLink from &apos;./SkipLink';
+
+import { Link } from 'react-router-dom';
 describe(&apos;SkipLink&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render(&apos}}&apos;<SkipLink  />)';

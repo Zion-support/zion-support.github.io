@@ -2,6 +2,10 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
 const _AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({

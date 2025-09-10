@@ -11,6 +11,13 @@ import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "
 import { _toast } from "sonner";
 import { _supabase } from "@/integrations/supabase/client";
 import { _Switch } from "@/components/ui/switch";
+
+import SEO from '@/components/SEO';
+import { Check } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const integrations = [];
+const services = [];
 export default function TenantOnboarding() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("company");

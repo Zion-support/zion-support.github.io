@@ -1,6 +1,8 @@
 import React from "react";
 import { _QrCode } from "lucide-react";
 import { _AppStoreButtons } from "./AppStoreButtons";
+
+import { Code } from 'lucide-react';
 export const _QrCodeDownload = () => {
     // App store links - these would come from environment variables in production
     const _appStoreUrl = "#"; // Replace with actual App Store URL

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { _advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { _specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+
+import { Target } from 'lucide-react';
+const features = [];
+const technologies = [];
+const services = [];
+const solutions = [];
 const _EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');

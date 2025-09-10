@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { _REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
 import { _EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 const _RevolutionaryServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');

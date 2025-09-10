@@ -4,6 +4,19 @@ import { _Button } from '@/components/ui/button';
 import { _Badge } from '@/components/ui/badge';
 import { _Link } from 'react-router-dom';
 import { _Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const technologies = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _AIServices = [
     {
         title: "AI Strategy Consulting",

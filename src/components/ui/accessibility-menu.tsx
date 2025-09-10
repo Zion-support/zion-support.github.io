@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
 import { _Button } from './button';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({

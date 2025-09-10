@@ -7,6 +7,25 @@ import { _Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Datab
 import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
 import enhancedAIServices2025 from '../data/enhancedAIServices2025';
 import enhancedITServices2025 from '../data/enhancedITServices2025';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const technologies = [];
+const services = [];
+const implementation = [];
 const _ComprehensivePricing = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [billingCycle, setBillingCycle] = useState('monthly');

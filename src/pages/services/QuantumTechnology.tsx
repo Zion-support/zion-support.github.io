@@ -1,6 +1,11 @@
+import { Shield, Cloud, Cube, Cpu, ShieldCheck, Check, Icon } from 'lucide-react';
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _CubeIcon, CpuChipIcon, BoltIcon, GlobeAltIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+const _services = [];
+const _solutions = [];
 const _QuantumTechnology = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}

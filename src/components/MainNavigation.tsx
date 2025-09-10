@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { _Link, useLocation } from 'react-router-dom';
 import { _Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const industries = [];
+const services = [];
+const solutions = [];
 export function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);

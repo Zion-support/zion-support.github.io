@@ -5,6 +5,23 @@ import { _Badge } from "@/components/ui/badge";
 import { _SEO } from "@/components/SEO";
 import { _PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const useCases = [];
+const testimonials = [];
+const pricingPlans = [];
+const integrations = [];
+const solutions = [];
+const contentTypes = [];
 export default function AIContentGenerator() {
     const _features = [
         {

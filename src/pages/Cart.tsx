@@ -3,6 +3,11 @@ import Link from 'next/link';
 import { _useState, useEffect } from 'react';
 import Skeleton from '@/components/ui/skeleton';
 import { _useAuth } from '@/hooks/useAuth';
+
+import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 export default function CartPage() {
     const _navigate = useNavigate();
     const { items, dispatch } = useCart();

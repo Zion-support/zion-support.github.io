@@ -1,3 +1,7 @@
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+
 * CategoriesSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;

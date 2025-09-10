@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+const features = [];
+const solutions = [];
+
     "description": "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
   },;
   {;

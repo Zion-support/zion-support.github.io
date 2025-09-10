@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { _CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _notificationStyles = {
     success: {
         icon: CheckCircle,

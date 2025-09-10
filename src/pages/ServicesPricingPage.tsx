@@ -6,6 +6,16 @@ import { _Badge } from '@/components/ui/badge';
 import { _Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
 import { _COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { _SEO } from '@/components/SEO';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
     const _servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {

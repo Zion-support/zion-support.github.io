@@ -1,5 +1,10 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
+
+import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
+const services = [];
+const solutions = [];
 ;
 export function SEOHead(props: any) {
   const _fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';

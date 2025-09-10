@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import { _Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope } from 'lucide-react';
+
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const industries = [];
+const services = [];
+const solutions = [];
 const _IndustrySolutions = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedIndustry, setSelectedIndustry] = useState('all');

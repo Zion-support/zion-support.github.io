@@ -1,3 +1,11 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const services = [];
+const applications = [];
+const solutions = [];
+
 export interface InnovativeMicroSaasService2027 {
   id: string;
   title: string;

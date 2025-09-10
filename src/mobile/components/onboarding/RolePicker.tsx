@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { _useTranslation } from "react-i18next";
 import { _Card, CardContent } from "@/components/ui/card";
 import { _Briefcase, Users, Check } from "lucide-react";
+
+import { Check } from 'lucide-react';
 export function RolePicker({ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();

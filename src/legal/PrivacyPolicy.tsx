@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import { _Header } from '@/components/Header';
 import { _Footer } from '@/components/Footer';
 import { _SEO } from '@/components/SEO';
+
+import SEO from '@/components/SEO';
 const _markdown = `
 # Privacy Policy
 

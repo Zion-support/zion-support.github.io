@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Cog } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
 const _WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
     const [isOpen, setIsOpen] = useState(showOnLoad);
     const [activeTab, setActiveTab] = useState('overview');

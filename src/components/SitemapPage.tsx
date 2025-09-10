@@ -1,3 +1,8 @@
+import SEO from '@/components/SEO';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+
 
       title: 'Main Pages',
       links: [

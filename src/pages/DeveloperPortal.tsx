@@ -5,6 +5,18 @@ import { _Button } from '../ui/button';
 import { _Badge } from '../ui/badge';
 import { _Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
 import { _Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const integrations = [];
+const services = [];
+const applications = [];
 export default function DeveloperPortal() {
     const _apiFeatures = [
         {

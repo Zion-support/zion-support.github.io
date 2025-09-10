@@ -1,6 +1,13 @@
 import React from 'react';
 import { _cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
 import { _specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
+
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _InnovationServicesMarketing = () => {
     const _allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const _categories = Array.from(new Set(allServices.map(service => service.category)));

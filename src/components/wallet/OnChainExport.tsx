@@ -5,6 +5,9 @@ import { _Wallet, Info, Check, ArrowUpRight } from "lucide-react";
 import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
 import { _useToast } from "@/hooks/use-toast";
 import { _useAuth } from "@/hooks/useAuth";
+
+import { Check } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);

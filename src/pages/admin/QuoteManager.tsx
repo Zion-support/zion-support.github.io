@@ -8,6 +8,11 @@ import { _ProtectedRoute } from "@/components/ProtectedRoute";
 import { _QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { _ExportToCSV } from "@/components/quotes/ExportToCSV";
 import { _QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
+
+import { useAuth } from '@/hooks/useAuth';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import QuoteDetails from '@/components/QuoteDetails';
 export default function QuoteManager() {
     const { user } = useAuth();
     const _isAdmin = user?.userType === 'admin';

@@ -3,6 +3,12 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
 import { _useBlockchainWeb3 } from '../hooks/useBlockchainWeb3';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const features = [];
 export const _BlockchainWeb3Dashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,

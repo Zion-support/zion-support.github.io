@@ -2,6 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
 import { _Button } from './button';
+
+import { motion } from 'framer-motion';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);

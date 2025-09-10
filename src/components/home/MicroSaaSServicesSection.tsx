@@ -4,6 +4,18 @@ import { _Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users } 
 import { _getFeaturedMicroSaasServices } from '@/data/microSaasServices';
 import { _Button } from '@/components/ui/button';
 import { _Badge } from '@/components/ui/badge';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const benefits = [];
+const services = [];
+const solutions = [];
 export function MicroSaasServicesSection() {
     const _featuredServices = getFeaturedMicroSaasServices().slice(0, 3);
     const _ServiceCard = ({ service }) => (<div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-zion-purple/20">

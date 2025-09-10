@@ -1,3 +1,5 @@
+const solutions = [];
+
 
 export default function AISolutions() {
   return (
@@ -57,3 +59,5 @@ export default function AISolutions() {
     </div>
   );
 }
+
+export { AISolutions };

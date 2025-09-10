@@ -1,5 +1,10 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
+
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { Target } from 'lucide-react';
 const _AIAutonomousMarketing = () => {
     return (<>
       <Helmet>

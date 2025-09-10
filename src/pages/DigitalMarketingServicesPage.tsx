@@ -4,6 +4,16 @@ import { _Button } from '@/components/ui/button';
 import { _Badge } from '@/components/ui/badge';
 import { _Link } from 'react-router-dom';
 import { _Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const solutions = [];
 const _MarketingServices = [
     {
         title: "Search Engine Optimization (SEO)",

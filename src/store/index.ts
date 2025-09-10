@@ -13,7 +13,7 @@ export const _store = configureStore({
   },
 });
 
-let _lastStorageUpdate = 0;
+const _lastStorageUpdate = 0;
 const STORAGE_UPDATE_THROTTLE = 100;
 
 store.subscribe(() => {

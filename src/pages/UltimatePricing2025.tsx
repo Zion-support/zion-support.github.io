@@ -1,5 +1,13 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+const features = [];
+const benefits = [];
+const integrations = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _UltimatePricing2025 = () => {
     const _pricingTiers = [
         {

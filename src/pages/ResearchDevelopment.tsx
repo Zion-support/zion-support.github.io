@@ -1,5 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const technologies = [];
+const applications = [];
+const solutions = [];
 const _ResearchDevelopment = () => {
     const _researchAreas = [
         {

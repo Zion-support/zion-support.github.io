@@ -12,6 +12,11 @@ import { _useAuth } from '@/hooks/useAuth';
 import { _useTranslation } from 'react-i18next';
 import { _cn } from '@/lib/utils';
 import { _Button } from '@/components/ui/button';
+
+import { Link } from 'react-router-dom';
+import { Settings } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { Icon } from 'lucide-react';
 export function MobileMenu({ className }) {
     const { user, isAuthenticated } = useAuth();
     const _location = useLocation();

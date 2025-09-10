@@ -4,6 +4,31 @@ import { _Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucid
 import { _Link } from 'react-router-dom';
 import { _Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const useCases = [];
+const testimonials = [];
+const pricingPlans = [];
+const technologies = [];
+const industries = [];
+const services = [];
+const solutions = [];
 
 
       {/* Hero Section */}

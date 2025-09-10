@@ -1,4 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 const _AccessibilityContext = createContext(undefined);
 export const _useAccessibility = () => {
     const _context = useContext(AccessibilityContext);

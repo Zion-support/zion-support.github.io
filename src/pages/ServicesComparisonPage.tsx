@@ -6,6 +6,21 @@ import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { _CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
 import { _SEO } from '@/components/SEO';
 import { _PRICING_TIERS } from '@/data/advancedServices';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const features = [];
+const integrations = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {

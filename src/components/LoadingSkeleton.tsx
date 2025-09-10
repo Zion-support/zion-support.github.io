@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 
     return <div className={classes}  />}  
   return ()

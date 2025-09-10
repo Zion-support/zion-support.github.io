@@ -1,6 +1,10 @@
 import React from 'react',;',';';
     ;
 import Link from 'next/link';
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 export function SiteFooter("props": "any) {';
   const _currentYear = new Date().getFullYear();';';
   const _navSections = [';';' {'",';';

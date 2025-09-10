@@ -88,3 +88,8 @@ import { _Button } from "@/components/ui/button";
 import { _Switch } from "@/components/ui/switch";
 import { _Label } from "@/components/ui/label";
 import { _Checkbox } from "@/components/ui/checkbox";
+
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const services = [];

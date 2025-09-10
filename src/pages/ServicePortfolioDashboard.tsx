@@ -4,6 +4,19 @@ import { _BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocke
 import AdvancedServicePortfolioDashboard from '../components/AdvancedServicePortfolioDashboard';
 import { _Button } from '../components/ui/button';
 import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const technologies = [];
+const solutions = [];
 const _ServicePortfolioDashboard = () => {
     const _features = [
         {

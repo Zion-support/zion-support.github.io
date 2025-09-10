@@ -1,6 +1,16 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Code, Shield, Zap, Users, BarChart3, Target, CheckCircle } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
 export default function AICodeReview() {
     const _features = [
         {

@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 const _services = [
     {
         id: 'ai-automation',

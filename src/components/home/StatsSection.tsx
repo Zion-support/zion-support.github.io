@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { _motion, useInView  } from 'framer-motion';
 import { _useRef  } from 'react';
 import { _TrendingUp, Award, Users, Clock  } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { TrendingUp } from 'lucide-react';
 ;
 interface Stat {;
   "number": "string;

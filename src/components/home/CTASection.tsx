@@ -2,6 +2,11 @@ import React from 'react';
 import { _motion  } from 'framer-motion';
 import { _Link  } from 'react-router-dom';
 import { _ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+const features = [];
+const solutions = [];
 ;
 const "CTASection": "React.FC = (): JSX.Element => {;
   const _features = [;

@@ -3,6 +3,16 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
 import { _Button } from './button';
 import { _Badge } from './badge';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');

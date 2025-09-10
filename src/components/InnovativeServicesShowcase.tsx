@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 import { _INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { _innovativeITServices2025 } from '../data/innovativeITServices2025';
 import { _innovativeAIServices2025 } from '../data/innovativeAIServices2025';
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 const _InnovativeServicesShowcase = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);

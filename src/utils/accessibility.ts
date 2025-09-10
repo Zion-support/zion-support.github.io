@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
+
 /**
  * Accessibility utilities and helpers
  */
@@ -217,7 +221,7 @@ export class LiveRegionManager {
 export function initFocusVisible() {
   if (typeof window === 'undefined') return;
   
-  let _hadKeyboardEvent = true;
+  const _hadKeyboardEvent = true;
   let keyboardThrottleTimeout: NodeJS.Timeout;
   
   function onPointerDown() {

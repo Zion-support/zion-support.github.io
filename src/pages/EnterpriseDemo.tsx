@@ -5,6 +5,15 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/co
 import { _Button } from "@/components/ui/button";
 import { _Calendar, Clock, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function EnterpriseDemo() {
     return (<>
       <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https://ziontechgroup.com/enterprise/demo"/>

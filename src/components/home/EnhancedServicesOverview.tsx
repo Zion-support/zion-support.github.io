@@ -4,6 +4,18 @@ import { _Button } from '../ui/button';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { _Badge } from '../ui/badge';
 import { _Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 // Mock data for enhanced services
 const ENHANCED_SERVICES = [
     {

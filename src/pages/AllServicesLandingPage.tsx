@@ -7,6 +7,25 @@ import { _Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users,
 import { _EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { _TrustedBySection } from '@/components/TrustedBySection';
 import { _SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
 export default function AllServicesLandingPage() {
     const _getCategoryIcon = (category) => {
         switch (category) {

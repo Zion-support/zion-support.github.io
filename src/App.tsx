@@ -4,6 +4,9 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 
+import { Helmet } from 'react-helmet-async';
+const services = [];
+
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));

@@ -1,3 +1,9 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+
 export const _contactInfo = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",

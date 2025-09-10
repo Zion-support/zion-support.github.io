@@ -2,6 +2,13 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const technologies = [];
+const industries = [];
+const services = [];
+const solutions = [];
 export const _AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,

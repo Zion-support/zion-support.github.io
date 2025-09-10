@@ -1,6 +1,19 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const pricingPlans = [];
+const integrations = [];
+const industries = [];
 const _AIAutonomousLegalResearchAssistant = () => {
     const _features = [
         "Autonomous case law analysis",

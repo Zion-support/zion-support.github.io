@@ -1,4 +1,11 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+const features = [];
+const services = [];
+const soc2Criteria = [];
+const automationBenefits = [];
+const complianceTools = [];
 const _Soc2ComplianceAutomation = () => {
     const _features = [
         {

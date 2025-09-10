@@ -3,6 +3,8 @@ import AdminLayout from '@/components/admin/AdminLayout';
 import { _Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '@/components/ui/table';
 import { _Input } from '@/components/ui/input';
 import { _Switch } from '@/components/ui/switch';
+
+import { Check } from 'lucide-react';
 const _initialProducts = [
     { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
     { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },

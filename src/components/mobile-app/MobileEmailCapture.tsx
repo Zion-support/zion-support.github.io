@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { _Button } from "@/components/ui/button";
 import { _Input } from "@/components/ui/input";
 import { _useEnqueueSnackbar } from '@/context';
+
+const features = [];
+const implementation = [];
 export const _MobileEmailCapture = () => {
     const [email, setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);

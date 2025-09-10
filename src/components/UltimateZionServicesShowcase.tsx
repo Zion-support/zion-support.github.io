@@ -1,3 +1,5 @@
+const services = [];
+
 const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
   const [searchTerm, setSearchTerm] = useState<any>('');';

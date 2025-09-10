@@ -7,6 +7,8 @@ import { _DollarSign } from "lucide-react";
 import { _RatingStars } from "@/components/RatingStars";
 import { _FavoriteButton } from "@/components/FavoriteButton";
 import Image from 'next/image'; // Import next/image
+
+import { DollarSign } from 'lucide-react';
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
     const _isGrid = view === 'grid';
     const _navigate = useNavigate();

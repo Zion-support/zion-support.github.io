@@ -2,6 +2,19 @@ import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Shield, Rocket, Target, Brain, Cloud, Zap } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+
 export default function ServicesShowcase() {
   const _serviceCategories = [
     {

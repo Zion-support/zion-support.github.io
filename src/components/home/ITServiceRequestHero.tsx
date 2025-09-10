@@ -1,11 +1,16 @@
+import React, { useState } from 'react';';';
+import { _motion  } from 'framer-motion';';';
+import React, { useState } from 'react';
+import { _motion  } from 'framer-motion';  const _features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
+import { _motion  } from 'framer-motion';
+import { _Link  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Zap } from 'lucide-react';
 
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-import React, { useState } from 'react';';';
-import { _motion  } from 'framer-motion';';';
 ;
-import React, { useState } from 'react';
-import { _motion  } from 'framer-motion';  const _features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
     { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
@@ -36,9 +41,9 @@ import { _motion  } from 'framer-motion';  const _features = [{ "icon": "Cloc k"
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-import React, { useState } from 'react';
-import { _motion  } from 'framer-motion';
-import { _Link  } from 'react-router-dom';
+
+const features = [];
+const services = [];
 ;
 ,";
     { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },";

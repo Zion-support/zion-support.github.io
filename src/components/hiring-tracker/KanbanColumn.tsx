@@ -2,6 +2,8 @@ import { _Droppable } from "@hello-pangea/dnd";
 import { _Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { _Badge } from "@/components/ui/badge";
 import { _CandidateCard } from "./CandidateCard";
+
+const applications = [];
 export function KanbanColumn({ id, title, description, applications, count }) {
     // Add color based on column type
     const _getBadgeVariant = (columnId) => {

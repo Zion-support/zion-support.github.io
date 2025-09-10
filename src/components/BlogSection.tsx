@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
 export function BlogSection() {
     const _blogPosts = [
         {
