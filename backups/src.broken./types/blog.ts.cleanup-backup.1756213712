@@ -12,10 +12,6 @@ export interface BlogPost {
   image: string;
   readTime: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 export const generateRandomBlogPost = (): BlogPost => {
   const titles = [
     'The Future of AI in Business',
@@ -70,7 +66,5 @@ export const BLOG_POSTS: BlogPost[] = [
     image: '/images/web-apps.jpg',
     readTime: 12,
   },
-];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+];=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

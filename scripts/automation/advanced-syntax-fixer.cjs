@@ -1,31 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-function fixAdvancedSyntaxErrors(filePath) {
-  try {
-  let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
-    let fixes = 0;
-    // Fix script tags with malformed comments and JSX structure;
-    const scriptTagRegex = /<script type="application\/ld\+json \/\/ "TODO": Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
-    content = content.replace(scriptTagRegex, "<script type=""application/ld""+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>");
-    // Fix script tags with malformed comments and JSX structure;
-    const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO": Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
-    content = content.replace(scriptTagRegex, "<script type=""application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>");
-    // Fix malformed JSX return statements;
-    const malformedReturnRegex = /return \(<>\s*<script[^>]*><\/script>\s*<Header \/>\s*<main[^>]*>/g;
-    content = content.replace(malformedReturnRegex, (match) => {
-  return match.replace(/<script[^>]*><\/script>\s*/, ")});
-    // Fix duplicate useEffect comments;
-    const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g"";
-    content = content.replace(duplicateCommentsRegex, "  // "TODO": Add dependencies if needed");
-=======
-#!/"usr/bin/env" node;
-const fs = require("fs")
-const path = require("path")
-
 console.log(`"[INFO] 🔧 Starting advanced syntax error fix automation...")
 
 function fixAdvancedSyntaxErrors(filePath) {
@@ -48,32 +21,10 @@ function fixAdvancedSyntaxErrors(filePath) {
 })
     // Fix duplicate useEffect comments;
     const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g"";
-    content = content.replace(duplicateCommentsRegex, "  // TODO: Add dependencies if needed")
->>>>>>> origin/automation-fixes
-    // Fix malformed useEffect with extra commas;
+    content = content.replace(duplicateCommentsRegex, "  // TODO: Add dependencies if needed")    // Fix malformed useEffect with extra commas;
     const malformedUseEffectRegex = /}, \[\]\), \[\]\)/g;
     content = content.replace(malformedUseEffectRegex, "}, [])")
     // Fix orphaned closing braces and semicolons;
-<<<<<<< HEAD
-    const orphanedPatterns = ["/^\s*}", "\[\"]\);\s*$/gm,
-      /^\s*}, \[\]\);\s*$/gm,
-    // Fix duplicate useEffect comments;
-    const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if "needed/g";
-    content = content.replace(duplicateCommentsRegex, "  // "TODO": Add dependencies if needed");
-    // Fix malformed useEffect with extra commas;
-    const malformedUseEffectRegex = /}, \[\]\), \[\]\);/g;
-    content = content.replace(malformedUseEffectRegex, "}, []);");
-    // Fix orphaned closing braces and semicolons;
-    const orphanedPatterns = ["/^\s*}", "\[\"]\);\s*$/gm,
-      /^\s*}, \[\]\);\s*$/gm,
-      /^\s*}, \[\]\), \[\]\);\s*$/gm];
-      /^\s*}, \[\]\);\s*$/gm,      /^\s*}, \[\]\), \[\]\);\s*$/gm];
-    orphanedPatterns.forEach(pattern => {
-  content = content.replace(pattern, ")});
-=======
-    const orphanedPatterns = ["/^\s*}", "\[\"]\)\s*$/gm,
-      /^\s*}, \[\]\)\s*$/gm,
-
     // Fix duplicate useEffect comments;
     const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if "needed/g";
     content = content.replace(duplicateCommentsRegex, "  // TODO: Add dependencies if needed")
@@ -92,9 +43,7 @@ function fixAdvancedSyntaxErrors(filePath) {
 
     orphanedPatterns.forEach(pattern => {
   content = content.replace(pattern, "),
-})
->>>>>>> origin/automation-fixes
-    // Fix malformed JSX closing tags;
+})    // Fix malformed JSX closing tags;
     const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
     content = content.replace(malformedJSXCloseRegex, "</>");
     // Fix missing closing parentheses in function declarations;
@@ -102,11 +51,6 @@ function fixAdvancedSyntaxErrors(filePath) {
     content = content.replace(missingParenRegex, (match, offset, string) => {
   // Fix malformed JSX closing tags;
     const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
-<<<<<<< HEAD
-    content = content.replace(malformedJSXCloseRegex, "</>");
-=======
-    content = content.replace(malformedJSXCloseRegex, "</>")
-
 >>>>>>> origin/automation-fixes
     // Fix missing closing parentheses in function declarations;
     const missingParenRegex = /^\s*}\s*$/gm;
@@ -125,20 +69,11 @@ function fixAdvancedSyntaxErrors(filePath) {
   return "})";
 }
       return match;
-})
->>>>>>> origin/automation-fixes
-    // Fix import statements with orphaned closing braces;
+})    // Fix import statements with orphaned closing braces;
     const orphanedImportRegex = /^\s*\} from "lucide-react";\s*$/gm;
     content = content.replace(orphanedImportRegex, "");
     // Fix malformed try-catch blocks;
     const malformedTryCatchRegex = /^\s*\}\s*catch\s*\(/gm;
-<<<<<<< HEAD
-    content = content.replace(malformedTryCatchRegex, "  } catch (");
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content, `utf8`);
-      fixes++;
-      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});}
-
     return fixes;} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}``);
     return 0;}
 }
@@ -314,4 +249,3 @@ fs.writeFileSync(
   JSON.stringify(report, null, 2)
 )
 console.log(`📊 Report generated: "logs/advanced-syntax-fixes.json"`)
->>>>>>> origin/automation-fixes

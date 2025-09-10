@@ -17,11 +17,10 @@
 ### 3. Current Status
 ```
 🏥 Overall Health Assessment:
-=============================
+=
 ✅ All workflows are healthy! Background agents should work properly.
 
 📊 Workflow Health Summary:
-============================
   Total workflows: 450
   Valid YAML: 450
   Invalid YAML: 0
@@ -112,7 +111,7 @@ node scripts/trigger-workflows.cjs --ref main --wait --max-parallel 3
    ```bash
    # Test core workflows
    node scripts/trigger-workflows.cjs --only "ci.yml,pr-smoke.yml,playwright-smoke.yml" --ref main
-   
+
    # Test security workflows
    node scripts/trigger-workflows.cjs --only "security.yml,security-audit.yml,security-scan.yml" --ref main
    ```

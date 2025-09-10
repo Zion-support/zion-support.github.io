@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -9,7 +8,6 @@ const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
@@ -44,7 +42,6 @@ const features = [
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -97,7 +94,6 @@ export default function CloudDevOpsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Comprehensive cloud and DevOps solutions to modernize your infrastructure.
               </p>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -126,7 +122,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -231,7 +226,6 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
       </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
     </>
   );
 }

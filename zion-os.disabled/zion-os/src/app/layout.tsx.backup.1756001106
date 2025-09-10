@@ -1,15 +1,5 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-<<<<<<< HEAD
-import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
-=======
-import { SessionProvider } from "next-auth/react";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { OnboardingWalkthrough } from "@/components/OnboardingWalkthrough";
-import { LayoutWrapper } from "@/components/LayoutWrapper";
->>>>>>> origin/cursor/improve-user-onboarding-and-guided-walkthrough-0414
-
 export const metadata = {
   title: "Zion Tech Group - AI-Powered Enterprise Solutions & Autonomous Systems",
   description: "Leading provider of AI-powered enterprise solutions, autonomous business systems, quantum computing, and next-generation technology services. Transform your business with cutting-edge AI technology.",
@@ -168,9 +158,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </LayoutWrapper>
             <OnboardingWalkthrough />
           </AuthProvider>
-        </SessionProvider>
->>>>>>> origin/cursor/improve-user-onboarding-and-guided-walkthrough-0414
-      </body>
+        </SessionProvider>      </body>
     </html>
   );
 }
