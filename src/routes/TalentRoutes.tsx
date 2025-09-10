@@ -1,6 +1,15 @@
-<<<<<<< HEAD:src_backup_temp/routes/TalentRoutes.tsx
 import React from 'react';
-import { Route, Routes  } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import TalentDirectory from '../pages/TalentDirectory'; import TalentsPage from '../pages/TalentsPage'; import TalentProfilePage from '../pages/TalentProfilePage'; import SavedTalentsPage from '../pages/SavedTalentsPage'; import CreateTalentProfile from '../pages/CreateTalentProfile'; import ProfilePage from '../pages/ProfilePage'; ; export default function TalentRoutes("props": "any) {; return (; <>; <Route path = "directory" element={<TalentDirectory  />"} />;" <Route path="list" element={<TalentsPage  />} />;";" </>;";" ) }";
-=======
-import { Route, Routes  } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import TalentDirectory from '../pages/TalentDirectory'; import TalentsPage from '../pages/TalentsPage'; import TalentProfilePage from '../pages/TalentProfilePage'; import SavedTalentsPage from '../pages/SavedTalentsPage'; import CreateTalentProfile from '../pages/CreateTalentProfile'; import ProfilePage from '../pages/ProfilePage'; export default function TalentRoutes() {; return(; <>; <Route path = "directory" element={<TalentDirectory />} />;";"";" <Route path="list" element={<TalentsPage />} />;";" </>;";" );"";" }";"";";
->>>>>>> origin/automation-fixes:src/routes/TalentRoutes.tsx
+import { Routes, Route } from 'react-router-dom';
+
+// Talent-related routes
+const TalentRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/talent" element={<div>Talent Directory</div>} />
+      <Route path="/talent/:id" element={<div>Talent Profile</div>} />
+      <Route path="/talent/search" element={<div>Talent Search</div>} />
+    </Routes>
+  );
+};
+
+export default TalentRoutes;

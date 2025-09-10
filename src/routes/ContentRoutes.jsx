@@ -1,18 +1,15 @@
-<<<<<<< HEAD:src_backup_temp/routes/ContentRoutes.jsx
-import React from "react";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// Content-related routes
+const ContentRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/content" element={<div>Content Hub</div>} />
+      <Route path="/content/blog" element={<div>Blog</div>} />
+      <Route path="/content/resources" element={<div>Resources</div>} />
+    </Routes>
   );
 };
+
 export default ContentRoutes;
-;
-export {ContentRoutes};
-;
-export {ContentRoutes};
-;
-export {ContentRoutes};
-;
-export {ContentRoutes};
-;
-export {ContentRoutes};
-=======
-import React from "react" )}; export default ContentRoutes; export {ContentRoutes}; export {ContentRoutes}; export {ContentRoutes}; export {ContentRoutes}; export {ContentRoutes};
->>>>>>> origin/automation-improvements:src/routes/ContentRoutes.jsx
