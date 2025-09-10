@@ -1,7 +1,9 @@
 #!/usr/bin/env node;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
+
 class SmartGitAutomator {
   // TODO: Implement
 }
@@ -183,10 +185,12 @@ class SmartGitAutomator {
   // TODO: Implement
       const conflicts = [];
 
+
       if (status.includes('UU')) {
         const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
         }).split('\n').filter(Boolean);`;
         this.log(`🔧 Resolving conflicts in ${conflictedFiles.length} files`);
+
 
         for (const file of conflictedFiles) {
           const resolution = await this.intelligentConflictResolution(file);
@@ -221,8 +225,10 @@ class SmartGitAutomator {
       const content = fs.readFileSync(filePath, 'utf8');
         return { type: 'none', success: true };
 
+
       // Simple conflict resolution strategies;
       const strategies = [
+
         this.resolveByIncomingChange,
         this.resolveByCurrentChange,
         this.resolveByCombination,
@@ -321,12 +327,14 @@ class SmartGitAutomator {
     return `feat: ${message}`;
 
   async generateReport() {
+
     const branches = await this.getAllBranches();
     
     const report = {
       timestamp: new Date().toISOString(),
       currentBranch: status?.currentBranch,
       branchStatus: status,
+
       branches,
       recentMerges: this.branchHistory.slice(-10),
       conflicts: this.mergeConflicts,

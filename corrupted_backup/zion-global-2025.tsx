@@ -1,5 +1,3 @@
-export { default } from './summit';
-export { default } from './summit';
 import React from 'react';
 export default function Page() {
   return (
