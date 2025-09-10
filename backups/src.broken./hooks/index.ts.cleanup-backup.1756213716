@@ -1,0 +1,10 @@
+import React from 'react';
+
+export function useAuth() {
+  // Simple auth hook
+  return {
+    user: null,
+    isAuthenticated: false
+  };
+}=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
