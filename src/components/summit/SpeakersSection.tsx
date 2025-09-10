@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const _speakers = [
+=======
+const speakers = [
+>>>>>>> origin/clean-error-fixing-automation
     {
         name: 'Alex Zion',
         title: 'Founder & CEO',

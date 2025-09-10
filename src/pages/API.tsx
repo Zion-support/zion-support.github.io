@@ -1,9 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { _Helmet } from 'react-helmet-async';
 
 import { Helmet } from 'react-helmet-async';
 const services = [];
 const _API = () => {
+=======
+import { Helmet } from 'react-helmet-async';
+const API = () => {
+>>>>>>> origin/clean-error-fixing-automation
     return (<>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
@@ -26,6 +31,10 @@ const _API = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </>);
 };
+=======
+    </>)};
+>>>>>>> origin/clean-error-fixing-automation
 export default API;

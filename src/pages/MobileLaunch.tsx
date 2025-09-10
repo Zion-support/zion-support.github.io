@@ -1,10 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import { _Helmet } from 'react-helmet-async';
 
 import { Helmet } from 'react-helmet-async';
 const services = [];
 const applications = [];
 const _MobileLaunch = () => {
+=======
+import { Helmet } from 'react-helmet-async';
+const MobileLaunch = () => {
+>>>>>>> origin/clean-error-fixing-automation
     return (<>
       <Helmet>
         <title>Mobile Launch - Zion Tech Group</title>
@@ -27,6 +32,10 @@ const _MobileLaunch = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </>);
 };
+=======
+    </>)};
+>>>>>>> origin/clean-error-fixing-automation
 export default MobileLaunch;
