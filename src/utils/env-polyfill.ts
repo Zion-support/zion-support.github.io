@@ -49,7 +49,7 @@ export const safeEnv = {
 } as const;
 
 // Safe environment getter function
-export function getEnv(key: string, _defaultValue = ''): string {
+export function getEnv(key: string, defaultValue = ''): string {
   if (typeof process !== 'undefined' && process.env && typeof process.env[key] === 'string') {
     return process.env[key];
   }

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-export const generateRandomBlogPost = () => {
-    return {
-        id: Math.random().toString(36).substr(2, 9),
-        title: 'Sample Blog Post',
-        excerpt: 'This is a sample blog post excerpt.',
-        content: 'This is sample blog post content.',
-        author: 'Zion Tech Group',
-        publishedAt: new Date().toISOString(),
-        tags: ['sample', 'blog']
-=======
 export function generateRandomBlogPost() {
     const titles = [
         'The Future of AI in Technology',
@@ -39,6 +28,5 @@ export function generateRandomBlogPost() {
         category: 'Technology',
         readTime: Math.floor(Math.random() * 10) + 5,
         featuredImage: `/blog/${randomId}.jpg`
->>>>>>> origin/chore/fix-links-and-build
     };
-};
+}
