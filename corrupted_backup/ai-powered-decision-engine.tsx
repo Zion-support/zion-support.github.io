@@ -1,60 +1,7 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
-export default function AiPoweredDecisionEngine() {
-	return (
-		<ServiceLanding
-			title="AI-Powered Decision Engine"
-			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
-			subtitle="Make better decisions, continuously"
-			pricePerMonthUSD={279}
-			implementationWeeks="3-7 days"
-			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
-			features={[
-				"Policy and risk decisioning with constraints",
-				"Online experimentation (A/B, multi-armed bandits)",
-				"Explainability and audit trails",
-				"Rules + ML hybrid strategies",
-				"Real-time feature engineering and caching",
-				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
-				"Drift monitoring and alerts",
-				"Versioned strategies with canary rollouts"
-			]}
-			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine";
-		/>;
-	);
-}
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-export default function AiPoweredDecisionEngine() {
-  return (
-    <ServiceLanding
-      title='AI-Powered Decision Engine'
-      description='Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes.'
-      subtitle='Make better decisions, continuously'
-      pricePerMonthUSD={279}
-      implementationWeeks='3-7 days'
-      roiNote='Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation'
-      features={[
-        'Policy and risk decisioning with constraints',
-        'Online experimentation (A/B, multi-armed bandits)',
-        'Explainability and audit trails',
-        'Rules + ML hybrid strategies',
-        'Real-time feature engineering and caching',
-        'Integrations: Kafka, Snowflake, Redis, REST/gRPC',
-        'Drift monitoring and alerts',
-        'Versioned strategies with canary rollouts',
-      ]}
-      industries={['Fintech', 'SaaS', 'Marketplaces', 'Logistics']}
-      canonical='https://ziontechgroup.com/ai-powered-decision-engine'
-    />
-  );
-}
 const AIPoweredDecisionEngine: React.FC = () => {
   return (
     <Layout>
@@ -131,3 +78,5 @@ const AIPoweredDecisionEngine: React.FC = () => {
 };
 
 export default AIPoweredDecisionEngine;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-powered-decision-engine.tsx

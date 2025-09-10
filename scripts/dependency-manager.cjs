@@ -1,120 +1,395 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class DependencyManager {" constructor() {this.projectRoot = process.cwd(),this.reportsDir = path.join(this.projectRoot, "dependency-reports"),this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir, { recursive: true })} } log(message) { console.log(`[${new Date().toISOString()}] ${message}`)} analyzeDependencies() {" this.log(" Analyzing dependencies."); try {" const packageJsonPath = path.join(this.projectRoot, "package.json");" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")); const dependencies = packageJson.dependencies | {}; const devDependencies = packageJson.devDependencies | {}; const allDeps = { .dependencies, .devDependencies }; / Check for outdated packages let outdatedPackages = []; try {'"`'"`
 #!/usr/bin/env node
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 class DependencyManager {
-  // TODO: Implement
-}
-
+  constructor() {this.projectRoot = process.cwd(),this.reportsDir = path.join(this.projectRoot, 'dependency-reports'),this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
+  }
   log(message) {
-    .toISOString()}] ${message})}
-  analyzeDependencies() {"
-
+    .toISOString()}] ${message}`)}
+  analyzeDependencies() {
+    this.log('📦 Analyzing dependencies...');
+    try {
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       const dependencies = packageJson.dependencies || {};
       const devDependencies = packageJson.devDependencies || {};
       const allDeps = { ...dependencies, ...devDependencies };
-      // Check for outdated packages;
+      // Check for outdated packages
       let outdatedPackages = [];
-  // TODO: Implement
-
+      try {
+        const outdatedResult = execSync('npm outdated --json', {"stdio": 'pipe',"cwd": this.projectRoot;
+          encoding: 'utf8'});
+        const outdatedResult = execSync('npm outdated --json', {
+          stdio: 'pipe',
+          cwd: this.projectRoot,
+          encoding: 'utf8'
         });
         outdatedPackages = JSON.parse(outdatedResult)} catch (error) {
-        // npm outdated returns non-zero exit code when packages are outdated;
+        // npm outdated returns non-zero exit code when packages are outdated
         if (error.stdout) {
-  // TODO: Implement
-
-      // Check for security vulnerabilities;
+          try {
+            outdatedPackages = JSON.parse(error.stdout)} catch (parseError) {
+            this.log('⚠️ Could not parse outdated packages info')}
+        }
+      }
+      // Check for security vulnerabilities
       let vulnerabilities = {};
-  // TODO: Implement
-
+      try {
+        const auditResult = execSync('npm audit --json', {"stdio": 'pipe',"cwd": this.projectRoot;
+          encoding: 'utf8'});
         const auditData = JSON.parse(auditResult);
         vulnerabilities = auditData.vulnerabilities || {}} catch (error) {
-  // TODO: Implement
+        if (error.stdout) {
+          try {
             const auditData = JSON.parse(error.stdout);
             vulnerabilities = auditData.vulnerabilities || {}} catch (parseError) {
-
-      // Analyze package sizes;
+            this.log('⚠️ Could not parse audit data')}
+        }
+      }
+      // Analyze package sizes
       const packageSizes = {};
-  // TODO: Implement
-
+      try {
+        const sizeResult = execSync('npm list --depth=0 --json', {"stdio": 'pipe',"cwd": this.projectRoot;
+          encoding: 'utf8'});
+        const sizeData = JSON.parse(sizeResult);
+        // This is a simplified analysis - in reality you'd need more sophisticated tools
+      } catch (error) {
+        this.log('⚠️ Could not analyze package sizes')}
+      this.log(`✅ Found ${Object.keys(allDeps).length} total dependencies`);
+      this.log(`📊 ${Object.keys(outdatedPackages).length} packages have updates available`);
       this.log(`🛡️ ${Object.keys(vulnerabilities).length} packages have security vulnerabilities`);
-      return {"success": true,"totalDependencies": Object.keys(allDeps).length,"dependencies": Object.keys(dependencies).length;"
-        devDependencies: Object.keys(devDependencies).length;,
-  outdatedPackages: Object.keys(outdatedPackages).length;
-        vulnerabilities: Object.keys(vulnerabilities).length;,
-  outdatedDetails: outdatedPackages;
-        vulnerabilityDetails: vulnerabilities;,
-
-      return {"success": false,"error": error.message;"
+      return {"success": true,"totalDependencies": Object.keys(allDeps).length,"dependencies": Object.keys(dependencies).length;
+        devDependencies: Object.keys(devDependencies).length;
+        outdatedPackages: Object.keys(outdatedPackages).length;
+        vulnerabilities: Object.keys(vulnerabilities).length;
+        outdatedDetails: outdatedPackages;
+        vulnerabilityDetails: vulnerabilities;
+        timestamp: new Date().toISOString()}} catch (error) {
+      this.log(`❌ Dependency analysis "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
         timestamp: new Date().toISOString()}}
-  updateDependencies() {"
-
+  }
+  updateDependencies() {
+    this.log('🔄 Updating dependencies...');
+    try {
+      // Update package-lock.json
+      execSync('npm update', {"stdio": 'pipe',"cwd": this.projectRoot});
+      this.log('✅ Dependencies updated successfully');
+      return {"success": true,"message": 'Dependencies updated successfully';
+        timestamp: new Date().toISOString()}} catch (error) {
+      this.log(`❌ Dependency update "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
+        timestamp: new Date().toISOString()}}
+  }
+  auditDependencies() {
+    this.log('🔍 Auditing dependencies for security issues...');
+    try {
+      const auditResult = execSync('npm audit --audit-level=moderate', {"stdio": 'pipe',"cwd": this.projectRoot;
+        encoding: 'utf8'});
+      this.log('✅ Security audit completed');
+      return {"success": true,"output": auditResult;
+        timestamp: new Date().toISOString()}} catch (error) {
+      this.log(`⚠️ Security audit found "issues": ${error.message}`);
+      return {"success": false,"error": error.message,"output": error.stdout || '';
+        timestamp: new Date().toISOString()}}
+  }
+  cleanDependencies() {
+    this.log('🧹 Cleaning dependencies...');
+    try {
+      // Remove node_modules and package-lock.json
+      if (fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {
+        execSync('rm -rf node_modules', { "cwd": this.projectRoot });
+        this.log('🗑️ Removed node_modules')}
+      if (fs.existsSync(path.join(this.projectRoot, 'package-lock.json'))) {fs.unlinkSync(path.join(this.projectRoot, 'package-lock.json')),this.log('🗑️ Removed package-lock.json')}
+      // Reinstall dependencies
+      execSync('npm install', {"stdio": 'pipe',"cwd": this.projectRoot});
+      this.log('✅ Dependencies cleaned and reinstalled');
+      return {"success": true,"message": 'Dependencies cleaned and reinstalled';
+        timestamp: new Date().toISOString()}} catch (error) {
+      this.log(`❌ Dependency cleaning "failed": ${error.message}`);
+      return {"success": false,"error": error.message;
+        timestamp: new Date().toISOString()}}
+  }
+  generateReport() {
+    this.log('📊 Generating dependency management report...');
     const analysis = this.analyzeDependencies();
     const audit = this.auditDependencies();
     const report = {
-      "timestamp": new Date().toISOString();"
+      "timestamp": new Date().toISOString();
       analysis;
-      audit;"
-      summary: {totalDependencies: analysis.success ? analysis.totalDependencies : 0,"outdatedPackages": analysis.success ? analysis.outdatedPackages : 0,"vulnerabilities": analysis.success ? analysis.vulnerabilities: 0;",
-  auditSuccessful: audit.success}
-    };`;
+      audit;
+      summary: {totalDependencies: analysis.success ? analysis.totalDependencies : 0,"outdatedPackages": analysis.success ? analysis.outdatedPackages : 0,"vulnerabilities": analysis.success ? analysis.vulnerabilities : 0;
+        auditSuccessful: audit.success}
+    };
     const reportFile = path.join(this.reportsDir, `dependency-report-${Date.now()}.json`);
-<<<<<<< HEAD
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-<<<<<<< HEAD
+    return report}
+  async run() {
+    try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
+      return report} catch (error) {
+      this.log(`💥 Dependency manager "error": ${error.message}`);
+      throw error}
+  }
+}
+// Run the dependency manager
+if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
 =======
-    
-    
-    
-    
-    
-    
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+#!/usr/bin/env node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class DependencyManager {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'dependency-reports');
+    this.ensureDirectories()}
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`)}
+
+  analyzeDependencies() {
+    this.log('📦 Analyzing dependencies...');
+
+    try {
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+      const dependencies = packageJson.dependencies || {}
+      const devDependencies = packageJson.devDependencies || {}
+      const allDeps = { ...dependencies, ...devDependencies }
+
+      // Check for outdated packages;
+      let outdatedPackages = []
+      try {
+        const outdatedResult = execSync('npm outdated --json', {
+          stdio: 'pipe',
+          cwd: this.projectRoot,
+          encoding: 'utf8';
+})
+        outdatedPackages = JSON.parse(outdatedResult),
+} catch (error) {
+        // npm outdated returns non-zero exit code when packages are outdated;
+        if (error.stdout) {
+          try {
+            outdatedPackages = JSON.parse(error.stdout),
+} catch (parseError) {
+            this.log('⚠️ Could not parse outdated packages info'),
+}
+        }
+      }
+      // Check for security vulnerabilities;
+      let vulnerabilities = {}
+      try {
+        const auditResult = execSync('npm audit --json', {
+          stdio: 'pipe',
+          cwd: this.projectRoot,
+          encoding: 'utf8';
+})
+        const auditData = JSON.parse(auditResult)
+        vulnerabilities = auditData.vulnerabilities || {},
+} catch (error) {
+        if (error.stdout) {
+          try {
+            const auditData = JSON.parse(error.stdout)
+            vulnerabilities = auditData.vulnerabilities || {},
+} catch (parseError) {
+            this.log('⚠️ Could not parse audit data'),
+}
+        }
+      }
+      // Analyze package sizes;
+      const packageSizes = {}
+      try {
+        const sizeResult = execSync('npm list --depth=0 --json', {
+          stdio: 'pipe',
+          cwd: this.projectRoot,
+          encoding: 'utf8';
+})
+        const sizeData = JSON.parse(sizeResult)
+        // This is a simplified analysis - in reality you'd need more sophisticated tools;
+} catch (error) {
+        this.log('⚠️ Could not analyze package sizes'),
+}
+      this.log(`✅ Found ${Object.keys(allDeps).length} total dependencies`)
+      this.log(`📊 ${Object.keys(outdatedPackages).length} packages have updates available`)
+      this.log(`🛡️ ${Object.keys(vulnerabilities).length} packages have security vulnerabilities`)
+
+      return {
+        success: true,
+        totalDependencies: Object.keys(allDeps).length,
+        dependencies: Object.keys(dependencies).length,
+        devDependencies: Object.keys(devDependencies).length,
+        outdatedPackages: Object.keys(outdatedPackages).length,
+        vulnerabilities: Object.keys(vulnerabilities).length,
+        outdatedDetails: outdatedPackages,
+        vulnerabilityDetails: vulnerabilities,
+        timestamp: new Date().toISOString(),
+},
+} catch (error) {
+      this.log(`❌ Dependency analysis failed: ${error.message}`)
+      return {
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString(),
+},
+}
+  }
+  updateDependencies() {
+    this.log('🔄 Updating dependencies...')
+
+    try {
+      // Update package-lock.json;
+      execSync('npm update', {
+        stdio: 'pipe',
+        cwd: this.projectRoot ;
+})
+
+      this.log('✅ Dependencies updated successfully')
+
+      return {
+        success: true,
+        message: 'Dependencies updated successfully',
+        timestamp: new Date().toISOString(),
+},
+} catch (error) {
+      this.log(`❌ Dependency update failed: ${error.message}`)
+      return {
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString(),
+},
+}
+  }
+  auditDependencies() {
+    this.log('🔍 Auditing dependencies for security issues...')
+
+    try {
+      const auditResult = execSync('npm audit --audit-level=moderate', {
+        stdio: 'pipe',
+        cwd: this.projectRoot,
+        encoding: 'utf8';
+})
+
+      this.log('✅ Security audit completed')
+
+      return {
+        success: true,
+        output: auditResult,
+        timestamp: new Date().toISOString(),
+},
+} catch (error) {
+      this.log(`⚠️ Security audit found issues: ${error.message}`)
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || '',
+        timestamp: new Date().toISOString(),
+},
+}
+  }
+  cleanDependencies() {
+    this.log('🧹 Cleaning dependencies...')
+
+    try {
+      // Remove node_modules and package-lock.json;
+      if (fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {
+        execSync('rm -rf node_modules', { cwd: this.projectRoot })
+        this.log('🗑️ Removed node_modules'),
+}
+      if (fs.existsSync(path.join(this.projectRoot, 'package-lock.json'))) {
+        fs.unlinkSync(path.join(this.projectRoot, 'package-lock.json'))
+        this.log('🗑️ Removed package-lock.json'),
+}
+      // Reinstall dependencies;
+      execSync('npm install', {
+        stdio: 'pipe',
+        cwd: this.projectRoot ;
+})
+
+      this.log('✅ Dependencies cleaned and reinstalled')
+
+      return {
+        success: true,
+        message: 'Dependencies cleaned and reinstalled',
+        timestamp: new Date().toISOString(),
+},
+} catch (error) {
+      this.log(`❌ Dependency cleaning failed: ${error.message}`)
+      return {
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString(),
+},
+}
+  }
+  generateReport() {
+    this.log('📊 Generating dependency management report...')
+
+    const analysis = this.analyzeDependencies()
+    const audit = this.auditDependencies()
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      analysis,
+      audit,
+      summary: {
+        totalDependencies: analysis.success ? analysis.totalDependencies : 0,
+        outdatedPackages: analysis.success ? analysis.outdatedPackages : 0,
+        vulnerabilities: analysis.success ? analysis.vulnerabilities : 0,
+        auditSuccessful: audit.success;
+}
+    }
+
+    const reportFile = path.join(this.reportsDir, `dependency-report-${Date.now()}.json`)
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+
+    this.log(`📄 Report saved to: ${reportFile}`)
 
     // Print summary;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    return report}
-  async run() {"
-    try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
+    console.log('\n📦 DEPENDENCY MANAGER SUMMARY')
+    console.log('=' * 50)
+    console.log(`Total Dependencies: ${report.summary.totalDependencies}`)
+    console.log(`Outdated Packages: ${report.summary.outdatedPackages}`)
+    console.log(`Security Vulnerabilities: ${report.summary.vulnerabilities}`)
+    console.log(`Security Audit: ${report.summary.auditSuccessful ? '✅ Passed' : '❌ Issues Found'}`)
+    console.log(`Report: ${reportFile}`)
 
-      throw error}
+    return report;
+}
+  async run() {
+    try {
+      this.log('🚀 Starting Dependency Manager')
+
+      const report = this.generateReport()
+
+      this.log('✅ Dependency management completed')
+
+      return report;
+} catch (error) {
+      this.log(`💥 Dependency manager error: ${error.message}`)
+      throw error;
+}
+  }
+}
 // Run the dependency manager;
-if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
+if (require.main === module) {
+  const manager = new DependencyManager()
+  manager.run().catch(console.error),
+}
+>>>>>>> origin/automation-fixes
 module.exports = DependencyManager;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = DependencyManager;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = DependencyManager;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

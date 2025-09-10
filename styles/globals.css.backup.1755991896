@@ -23,11 +23,7 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -51,15 +47,6 @@
   --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
 
@@ -69,12 +56,9 @@
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Revolutionary new effects */
   --quantum-holographic: 0 0 150px rgba(0, 255, 255, 0.2);
   --neural-quantum: 0 0 120px rgba(16, 185, 129, 0.3);
@@ -83,12 +67,8 @@
   --ai-futuristic: 0 0 160px rgba(139, 92, 246, 0.2);
   --quantum-entanglement-advanced: 0 0 250px rgba(139, 92, 246, 0.1);
   --holographic-matrix-advanced: 0 0 300px rgba(139, 92, 246, 0.08);
-<<<<<<< HEAD
-<<<<<<< HEAD
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 
 
@@ -96,39 +76,27 @@
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 =======
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Base styles */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #1f2937;
     background-color: #ffffff;
-<<<<<<< HEAD
-=======
-  }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Typography scale */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.025em;
-<<<<<<< HEAD
   h1 {
     font-size: 2.5rem;
     line-height: 1.1;
@@ -143,58 +111,18 @@
   /* Paragraph styles */
   p {
     margin-bottom: 1rem;
-=======
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
-
-  h4 {
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  /* Paragraph styles */
-  p {
-    margin-bottom: 1rem;
-  }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Link styles */
   a {
     color: #2563eb;
     text-decoration: none;
     transition: color 0.2s ease;
-<<<<<<< HEAD
   a:hover {
     color: #1d4ed8;
-=======
-  }
-
-  a:hover {
-    color: #1d4ed8;
-  }
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Component styles */
 @layer components {
   /* Button base styles */
   .btn {
     @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-<<<<<<< HEAD
   .btn-primary {
     @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:scale-105;
   .btn-secondary {
@@ -209,54 +137,13 @@
     @apply block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
   .form-label {
     @apply block text-sm font-medium text-gray-700 mb-2;
-=======
-  }
-
-  .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:scale-105;
-  }
-
-  .btn-secondary {
-    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500;
-  }
-
-  .btn-outline {
-    @apply border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 focus:ring-blue-500;
-  }
-
-  /* Card styles */
-  .card {
-    @apply bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg hover:border-gray-300 transition-all duration-200;
-  }
-
-  /* Form styles */
-  .form-input {
-    @apply block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
-  }
-
-  .form-label {
-    @apply block text-sm font-medium text-gray-700 mb-2;
-  }
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
   border-radius: 4px;
   transition: all 0.3s ease;
-<<<<<<< HEAD
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
   box-shadow: var(--quantum-glow);
-=======
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
-  box-shadow: var(--quantum-glow);
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 900;
@@ -264,36 +151,16 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-<<<<<<< HEAD
 h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 800;
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
-=======
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 800;
-}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Futuristic font for special elements */
 .futuristic-font {
   font-family: 'Orbitron', monospace;
   letter-spacing: 0.1em;
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .particles-bg::before {
   content: '';
   position: absolute;
@@ -301,11 +168,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   background:
-=======
-  background: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
@@ -318,14 +181,11 @@ h3 {
   pointer-events: none;
   z-index: -1;
   animation: backgroundFloat 30s ease-in-out infinite;
-<<<<<<< HEAD
 /* Futuristic Grid Pattern */
 body::after {
   position: fixed;
-<<<<<<< HEAD
   background-image:
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
->>>>>>> main
 =======
   top: 0;
 
@@ -335,7 +195,6 @@ body::after {
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
 
@@ -345,17 +204,11 @@ body::after {
   position: fixed;
   top: 0;
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   left: 0;
   width: 100%;
   height: 100%;
   background-image: 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -363,58 +216,25 @@ body::after {
   z-index: -1;
   animation: gridMove 20s linear infinite;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Quantum Particle Effects */
 body::after {
   content: '';
   position: absolute;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(236, 73, 153, 0.8), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.8), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(245, 158, 11, 0.8), transparent),
-    radial-gradient(1px 1px at 200px 60px, rgba(59, 130, 246, 0.8), transparent),
-    radial-gradient(2px 2px at 240px 90px, rgba(168, 85, 247, 0.8), transparent),
-    radial-gradient(1px 1px at 280px 20px, rgba(0, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 320px 50px, rgba(139, 92, 246, 0.8), transparent),
-    radial-gradient(1px 1px at 360px 80px, rgba(236, 73, 153, 0.8), transparent);
-  background-repeat: repeat;
-  background-size: 400px 100px;
-  pointer-events: none;
-  z-index: -1;
-  animation: particleFloat 30s linear infinite;
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Quantum Grid */
 .quantum-grid {
   position: fixed;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 =======
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   background-image:
   background-image: 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -422,10 +242,8 @@ body::after {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   background-image: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
     radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
     radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
@@ -434,23 +252,7 @@ body::after {
   background-repeat: repeat;
   background-size: 200px 100px;
   animation: particle-float 20s linear infinite;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
   opacity: 0.3;
-<<<<<<< HEAD
-=======
-=======
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
-  z-index: -1;
-  animation: gridPulse 20s ease-in-out infinite;
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Holographic Matrix */
 .holographic-matrix {
   position: fixed;
@@ -503,31 +305,18 @@ body::after {
     radial-gradient(circle at 30% 70%, rgba(236, 73, 153, 0.1) 0%, transparent 60%),
     radial-gradient(circle at 70% 30%, rgba(236, 73, 153, 0.1) 0%, transparent 60%);
   animation: cyberpunkPulse 16s ease-in-out infinite;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
-<<<<<<< HEAD
 }
 =======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-=======
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Animations */
 @keyframes backgroundFloat {
   opacity: 0.3;}
-<<<<<<< HEAD
->>>>>>> main
 =======
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -539,7 +328,6 @@ body::after {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   opacity: 0.3;
 }
@@ -551,7 +339,6 @@ body::after {
 
 /* Enhanced Animations */
 @keyframes backgroundFloat {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -790,22 +577,14 @@ h3 {
 }
 
 .neural-network-bg {
-<<<<<<< HEAD
   background:
-=======
-  background: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
 }
 
 .quantum-matrix-bg {
-<<<<<<< HEAD
   background:
-=======
-  background: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -851,11 +630,7 @@ h3 {
 
 /* Grid Background */
 .grid-bg {
-<<<<<<< HEAD
   background-image:
-=======
-  background-image: 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -902,11 +677,7 @@ h3 {
   .futuristic-card:hover {
     transform: translateY(-5px) scale(1.01);
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .particle-bg::before {
     background-size: 100px 50px;
   }
@@ -915,21 +686,7 @@ h3 {
 /* Dark Mode Enhancements */
 @media (prefers-color-scheme: dark) {
   .futuristic-card {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
     background: rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
-=======
-=======
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  25% { transform: translateY(-10px) rotate(1deg); }
-  50% { transform: translateY(-5px) rotate(-1deg); }
-  75% { transform: translateY(-15px) rotate(0.5deg); }
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -1092,13 +849,9 @@ h3 {
     background-size: 75px 75px;
   .cyberpunk-elements {
     background-size: 100px 100px;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
   }
 =======
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 =======
 
 
@@ -1106,13 +859,8 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     background: rgba(0, 0, 0, 0.3);  }
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -1120,14 +868,12 @@ h3 {
     background: rgba(0, 0, 0, 0.3);  }
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     background: rgba(0, 0, 0, 0.3);
   }
   }
     background: rgba(0, 0, 0, 0.3);  }
     background: rgba(0, 0, 0, 0.3);  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 /* High Contrast Mode */
@@ -1135,11 +881,7 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .futuristic-btn {
     border: 2px solid white;
   }
@@ -1153,12 +895,6 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 
@@ -1167,9 +903,7 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /* Enhanced Focus States */
 .quantum-button:focus,
@@ -1197,23 +931,12 @@ h3 {
   .cyberpunk-pulse {
     display: none;
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   body {
     background: white;
     color: black;
   }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> main
 =======
 
 
@@ -1222,7 +945,5 @@ h3 {
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
