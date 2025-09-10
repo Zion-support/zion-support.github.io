@@ -28,7 +28,7 @@ serve(async (req) => {
       throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`);
     }
 
-    console.log(`Scheduled ${scheduledCount} retention emails`);
+    // console.log(`Scheduled ${scheduledCount} retention emails`);
 
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
@@ -62,7 +62,7 @@ serve(async (req) => {
 
           if (!reminderResponse.ok) {
             const errorText = await reminderResponse.text();
-            console.error(`Failed to process job ${job.id}: ${errorText}`);
+            // console.error(`Failed to process job ${job.id}: ${errorText}`);
             
             // Update job status to failed
             await supabase
@@ -75,7 +75,7 @@ serve(async (req) => {
             processedJobs.push(job.id);
           }
         } catch (error) {
-          console.error(`Error processing job ${job.id}:`, error);
+          // console.error(`Error processing job ${job.id}:`, error);
           
           // Update job status to failed
           await supabase
@@ -101,7 +101,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error in process-retention-emails function:", error);
+    // console.error("Error in process-retention-emails function:", error);
 
     return new Response(
       JSON.stringify({ 
