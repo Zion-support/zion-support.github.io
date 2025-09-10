@@ -1,51 +1,61 @@
-import React, { Component, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle } from 'lucide-react';
 
-import {logErrorToProduction} from '@/utils/productionLogger';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
-    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    })
+    
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo)
+    
+    // Send to error reporting service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      })
+    }
   }
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div style={{ border: '5px solid red', padding: '20px', textAlign: 'center', backgroundColor: 'lightyellow' }}>
-          <h1>CUSTOM ERROR BOUNDARY (ErrorBoundary.tsx) TRIGGERED!</h1>
-          <p>If you see this, the page component crashed.</p>
-          {this.state.error && <pre>{this.state.error.message}</pre>}
-          <button onClick={() => window.location.reload()}>Refresh Page</button>
-          <button onClick={() => window.location.href = '/'}>Go Home</button>
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo.componentStack}
+          </details>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
+
+export default ErrorBoundary

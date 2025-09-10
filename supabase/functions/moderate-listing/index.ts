@@ -52,7 +52,7 @@ serve(async (req) => {
       });
       const modData = await modRes.json();
       results.push({ field: "description", result: modData });
-      flagged ||= modData.results?.some((r: any) => r.flagged);
+      flagged ||= modData.results?.some((r: unknown) => r.flagged);
 
       for (const img of images) {
         const imgRes = await fetch("https://api.openai.com/v1/moderations", {
@@ -62,7 +62,7 @@ serve(async (req) => {
         });
         const imgData = await imgRes.json();
         results.push({ field: "image", url: img, result: imgData });
-        flagged ||= imgData.results?.some((r: any) => r.flagged);
+        flagged ||= imgData.results?.some((r: unknown) => r.flagged);
       }
     }
 
@@ -94,7 +94,7 @@ serve(async (req) => {
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error) {
-    console.error("Error moderating listing:", error);
+    // console.error("Error moderating listing:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }

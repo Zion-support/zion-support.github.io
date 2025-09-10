@@ -90,14 +90,14 @@ serve(async (req) => {
           const jsonMatch = responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
             enhancedContent = JSON.parse(jsonMatch[0]);
-            console.log("Enhanced content generated:", enhancedContent);
+            // console.log("Enhanced content generated:", enhancedContent);
           }
         } catch (jsonError) {
-          console.error("Error parsing AI response:", jsonError);
+          // console.error("Error parsing AI response:", jsonError);
           // Continue without enhanced content
         }
       } catch (aiError) {
-        console.error("Error generating enhanced content:", aiError);
+        // console.error("Error generating enhanced content:", aiError);
         // Continue without enhanced content
       }
     }
@@ -137,7 +137,7 @@ serve(async (req) => {
       .limit(1);
       
     if (adminError) {
-      console.error("Error fetching admin users:", adminError);
+      // console.error("Error fetching admin users:", adminError);
     }
     
     let adminId: string | undefined = undefined;
@@ -163,7 +163,7 @@ serve(async (req) => {
         });
         
       if (notificationError) {
-        console.error("Error creating admin notification:", notificationError);
+        // console.error("Error creating admin notification:", notificationError);
       }
     }
     
@@ -191,7 +191,7 @@ serve(async (req) => {
         },
       });
       
-      console.log("Email sending result:", emailResponse);
+      // console.log("Email sending result:", emailResponse);
     }
 
     return new Response(
@@ -206,7 +206,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error processing hire request:", error.message);
+    // console.error("Error processing hire request:", error.message);
     
     return new Response(
       JSON.stringify({ 

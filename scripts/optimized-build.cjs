@@ -16,8 +16,6 @@ const optimizedEnv = {
   NEXT_TELEMETRY_DISABLED: "1",
   CI: "true",
   SKIP_TYPE_CHECK: "true", // Skip type checking to speed up build
-  SKIP_SENTRY_BUILD: "true", // Skip Sentry during React 19 transition
-  SKIP_DATADOG: "true", // Skip Datadog native modules during build
   
   // CRITICAL: Anti-hanging optimizations
   NEXT_DISABLE_CSS_INLINE: "true",
@@ -344,20 +342,8 @@ async function executeBuildSequence() {
         // ... (original report logs) ...
         console.log(`- Build time: ✅ ${buildTime} seconds`);
 
-        // Apply Netlify self fix
         try {
-          console.log("\n🔧 Applying Netlify self reference fix...");
-          const netlifyFix = require('./netlify-self-fix.cjs');
-          netlifyFix.main();
-          console.log("✅ Netlify self fix applied successfully.");
-        } catch (fixError) {
-          console.error("❌ Netlify self fix failed:", fixError.message);
-          // This is critical for Netlify deployment
-          process.exit(1);
-        }
-
-        try {
-          console.log("\n🔍 Running Post-Build Analysis & Reporting (from deploy-optimization.cjs)...");
+          console.log("\n🔍 Running Post-Build Analysis & Reporting (from deploy-optimization.js)...");
           await analyzeAndReport(); // Call the imported function
           console.log("✅ Post-Build Analysis & Reporting Completed.");
         } catch (reportError) {

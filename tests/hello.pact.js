@@ -1,9 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 import path from 'path';
 import { Pact, Matchers } from '@pact-foundation/pact';
-// Use the global fetch API so this test can run without the optional
-// `node-fetch` dependency.
-const fetch = global.fetch;
+import fetch from 'node-fetch';
 
 const provider = new Pact({
   consumer: 'HelloConsumer',

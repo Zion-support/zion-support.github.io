@@ -29,12 +29,12 @@ serve(async (req) => {
       );
     }
 
-    console.log(`Received request to notify legal team for whitepaper:
-      ID: ${whitepaperId}
-      Token Name: ${tokenName}
-      Link: ${sharableLink}
-      Submitted By: ${submittedBy || 'N/A'}
-    `);
+    // console.log(`Received request to notify legal team for whitepaper:
+    //   ID: ${whitepaperId}
+    //   Token Name: ${tokenName}
+    //   Link: ${sharableLink}
+    //   Submitted By: ${submittedBy || 'N/A'}
+    // `);
 
     // In a real scenario, this is where you would integrate with an email service (e.g., SendGrid, Resend)
     // or an internal notification system.
@@ -63,7 +63,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in notify-legal-team function:", error);
+    // console.error("Error in notify-legal-team function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
