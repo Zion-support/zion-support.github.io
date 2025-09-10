@@ -1,0 +1,17 @@
+
+  return res.status(200).json({
+
+
+
+    instanceId: state.config.instanceId,
+
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+    scope: requestedScope
+  });
+}
+
+
+
+
+
