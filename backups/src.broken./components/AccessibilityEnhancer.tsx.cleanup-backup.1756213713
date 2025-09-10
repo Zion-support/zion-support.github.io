@@ -1,22 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as Switch from '@radix-ui/react-switch';
-import * as Label from '@radix-ui/react-label';
-import { Separator } from '@/components/ui/separator';
-=======
-// Switch component replaced with checkbox
-// Label component replaced with simple label
-// Separator component replaced with simple div
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -116,21 +100,6 @@ export function AccessibilityEnhancer() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        size="icon"
-=======
-        size="sm"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-        size="icon"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10"
-        aria-label="Accessibility Settings"
-      >
-        <span className="text-zion-cyan">A</span>
-      </Button>
-
       {/* Accessibility Panel */}
       {isOpen && (
         <Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
@@ -146,9 +115,7 @@ export function AccessibilityEnhancer() {
 <<<<<<< HEAD
                 size="icon"
 =======
-                size="sm"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+                size="sm"=======
                 size="icon"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 onClick={() => setIsOpen(false)}

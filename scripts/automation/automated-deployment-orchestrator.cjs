@@ -19,186 +19,6 @@ const fs = require("fs");
 const path = require("path");
 const { promisify } = require("util");
 // Configuration;
-<<<<<<< HEAD
-const CONFIG = {}
-  "PROJECT_ROOT": process.cwd(),
-  "LOG_DIR": "./logs",
-  "DEPLOYMENT_AUTOMATION_MODE": process.env.DEPLOYMENT_AUTOMATION_MODE === "true",
-  "AUTO_DEPLOY_ENABLED": process.env.AUTO_DEPLOY_ENABLED === "true",
-  "ROLLBACK_ENABLED": process.env.ROLLBACK_ENABLED === "true",
-  "PM2_PATH": process.env.PM2_PATH || "pm2",
-  // Deployment environments;
-  "ENVIRONMENTS": {}
-  development: {}
-  name: "development",
-      "branch": "develop",
-      "path": "/""workspace/development""",
-      "autoDeploy": true,
-      "healthChecks": ["build", "test", "lint"],
-      "rollbackThreshold": 2},
-    "staging": {}
-  name: "staging",
-      "branch": "staging",
-      "path": "/""workspace/staging""",
-      "autoDeploy": true,
-      "healthChecks": ["build", "test", "lint", "type-check"],
-      "rollbackThreshold": 1},
-    "production": {}
-  name: "production",
-      "branch": "main",
-      "path": "/""workspace/production""",
-      "autoDeploy": false, // Manual approval required;
-      "healthChecks": ["build", "test", "lint", "type-check", "security-scan"],
-      "rollbackThreshold": 0};
-  },
-  // Health check configurations;
-  "HEALTH_CHECKS": {}
-  build: {}
-  command: "npm run build",
-      "timeout": 300000, // 5 minutes;
-      "retries": 2},
-    "test": {}
-  command: "npm test -- --watchAll=false",
-      "timeout": 180000, // 3 minutes;
-      "retries": 1},
-    "lint": {}
-  command: "npm run lint",
-      "timeout": 60000, // 1 minute;
-      "retries": 1},type-check": {}
-  "command": "npm run type-check",
-      "timeout": 120000, // 2 minutes;
-      "retries": 1},security-scan": {}
-  "command": "npm audit",
-      "timeout": 120000, // 2 minutes;
-      "retries": 1};
-  },
-  // Rollback strategies;
-  "ROLLBACK_STRATEGIES": {}
-  immediate: "immediate",
-    "gradual": "gradual",
-    "intelligent": "intelligent"};
-};
-// Utility functions;
-const log = (message, level = "INFO") => {}
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}`;
-  const logMessage = `[${timestamp}] [${level}] ${message}`;`
-  console.log("logMessage);
-  // Ensure log directory exists;
-  if (!fs.existsSync(CONFIG.LOG_DIR)) {}
-  fs.mkdirSync(CONFIG.LOG_DIR, { "recursive": true })};
-  ;
-  // Write to log file;
-  fs.appendFileSync(path.join(CONFIG.LOG_DIR, "automated-deployment-orchestrator.log"), logMessage + "\n")};
-const executeCommand = (command, options = {}) => {}
-  try {}
-  const result = execSync(command, {})
-  "cwd": CONFIG.PROJECT_ROOT,
-      "encoding": "utf8",
-      "stdio": options.silent ? "pipe" : "inherit",
-      ...options}
-});
-    return { "success": true, "output": result };
-  } catch (error) {}
-  return { "success": false, "error": error.message, "output": error.stdout || ""   };
-  };
-};
-} catch (error) {}
-  return { "success": false, "error": error.message, "output": error.stdout || "" };")}")};");
-`);
-const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`)};
-;
-const npmCommand = (command, options = {}) => {return executeCommand(`npm ${command}`, options)};
-// Deployment State Management;
-class $1 {}
-  constructor() {}
-  this.stateFile = path.join(CONFIG.LOG_DIR, "deployment-state.json");
-    this.state = this.loadState()};
-  ;
-  loadState() {}
-  try {}
-  if (fs.existsSync(this.stateFile)) {}
-  return JSON.parse(fs.readFileSync(this.stateFile, "utf8"));
-// Deployment State Management;
-class DeploymentState {}
-  constructor() {}
-  this.stateFile = path.join(CONFIG.LOG_DIR, "deployment-state.json");
-    this.state = this.loadState()};
-  ;
-  loadState() {}
-  try {}
-  if (fs.existsSync(this.stateFile)) {}
-  return JSON.parse(fs.readFileSync(this.stateFile, "utf8"))};
-    } catch (error) {  log(`Failed to load deployment "state": ${error.message  }`, "ERROR")};
-    ;
-    return {}
-  "deployments": [],
-      "rollbacks": [],
-      "currentDeployment": null,
-      "lastUpdated": new Date().toISOString()};
-  };
-  ;
-  saveState() {}
-  try {}
-  this.state.lastUpdated = new Date().toISOString();
-      fs.writeFileSync(this.stateFile, JSON.stringify(this.state, null, 2))} catch (error) {  log(`Failed to save deployment "state": ${error.message  }`, "ERROR")};
-  };
-  ;
-  addDeployment(deployment) {}
-  this.state.deployments.push(deployment);
-    this.state.currentDeployment = deployment;
-    this.saveState()};
-  ;
-  addRollback(rollback) {}
-  this.state.rollbacks.push(rollback);
-    this.saveState()};
-  ;
-  getCurrentDeployment() {}
-  return this.state.currentDeployment};
-  ;
-  getDeploymentHistory(limit = 10) {}
-  return this.state.deployments.slice(-limit)};
-  ;
-  getRollbackHistory(limit = 10) {}
-  return this.state.rollbacks.slice(-limit)};
-};
-;
-// Health Check System;
-class HealthCheckSystem {}
-  constructor() {}
-  this.healthChecks = CONFIG.HEALTH_CHECKS};
-  ;
-  async runHealthChecks(environment) {log(`Running health checks for ${environment.name} environment`);
-    const results = {}
-  "environment": environment.name,
-      "timestamp": new Date().toISOString(),
-      "checks": {},
-      "overall": { passed: true, "score": 0, "totalChecks": 0 };
-    };
-    ;
-    const requiredChecks = environment.healthChecks;
-    let passedChecks = 0;
-    for (const checkName of requiredChecks) {}
-  const checkConfig = this.healthChecks[checkName];
-      if (!checkConfig) {log(`Health check configuration not found "for": ${checkName}`, "WARN");
-        continue};
-      log(`Running health "check": ${checkName}`);
-      const checkResult = await this.runHealthCheck(checkName, checkConfig);
-      results.checks[checkName] = checkResult;
-      results.overall.totalChecks++;
-      if (checkResult.passed) {}
-  passedChecks++};
-    };
-    ;
-=======
-const CONFIG = {
-  PROJECT_ROOT: process.cwd(),
-  LOG_DIR: "./logs",
-  DEPLOYMENT_AUTOMATION_MODE: process.env.DEPLOYMENT_AUTOMATION_MODE === "true",
-  AUTO_DEPLOY_ENABLED: process.env.AUTO_DEPLOY_ENABLED === "true",
-  ROLLBACK_ENABLED: process.env.ROLLBACK_ENABLED === "true",
-  PM2_PATH: process.env.PM2_PATH || "pm2",
-
   // Deployment environments;
   ENVIRONMENTS: {
   development: {
@@ -378,105 +198,9 @@ class HealthCheckSystem {
       if (checkResult.passed) {
   passedChecks++;}
     }
-
->>>>>>> origin/automation-fixes
     // Calculate overall score;
     results.overall.score = Math.round((passedChecks / results.overall.totalChecks) * 100);
     results.overall.passed = results.overall.score >= 80; // 80% threshold;
-<<<<<<< HEAD
-    log(`Health checks completed for ${environment.name}. "Score": ${results.overall.score}%`);
-    return results};
-  ;
-  async runHealthCheck(checkName, checkConfig) {}
-  const result = {}
-  "name": checkName,
-      "command": checkConfig.command,
-      "passed": false,
-      "output": "",
-      "error": null,
-      "duration": 0,
-      "retries": 0};
-    ;
-    const startTime = Date.now();
-    for (let attempt = 0; attempt <= checkConfig.retries; attempt++) {}
-  try {log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
-        const checkResult = executeCommand(checkConfig.command, {})
-  "silent": true,
-          "timeout": checkConfig.timeout;
-        const checkResult = executeCommand(checkConfig.command, {})
-  "silent": true,
-          "timeout": checkConfig.timeout }
-});
-        if (checkResult.success) {}
-  result.passed = true;
-          result.output = checkResult.output;
-          result.duration = Date.now() - startTime;
-          result.retries = attempt;log(`Health check ${checkName} passed on attempt ${attempt + 1}`);
-          break} else {}
-  result.error = checkResult.error;
-          result.output = checkResult.output;
-          result.retries = attempt;
-          if (attempt < checkConfig.retries) {log(`Health check ${checkName} failed on attempt ${attempt + 1}, retrying...`, "WARN");
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry} else {log(`Health check ${checkName} failed after ${checkConfig.retries + 1} attempts`, "ERROR")};
-        };
-      } catch (error) {}
-  result.error = error.message;
-        result.retries = attempt;
-        if (attempt < checkConfig.retries) {log(`Health check ${checkName  } error on attempt ${attempt + 1}, retrying...`, "WARN");
-          await new Promise(resolve => setTimeout(resolve, 2000))} else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, "ERROR")};
-      };
-    };
-    ;
-    result.duration = Date.now() - startTime;
-    return result};
-};
-;
-// Deployment System;
-class DeploymentSystem {}
-  constructor() {}
-  // Deployment System;
-class DeploymentSystem {}
-  constructor() {}
-  this.state = new DeploymentState();
-    this.healthChecker = new HealthCheckSystem()};
-  ;
-  async deploy(environmentName, options = {}) {}
-  const environment = CONFIG.ENVIRONMENTS[environmentName];
-    if (!environment) {throw new Error(`Unknown "environment": ${environmentName}`)};
-    log(`Starting deployment to ${environment.name} environment`);
-    // Check if auto-deploy is enabled;
-    if (!environment.autoDeploy && !options.force) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, "WARN");
-      return {}
-  "success": false,
-        "error": "Auto-deploy disabled for this environment",
-        "requiresApproval": true};
-    };
-    ;
-    try {}
-  // Pre-deployment health checks;
-      log("Running pre-deployment health checks");
-      const preDeploymentHealth = await this.healthChecker.runHealthChecks(environment);
-      if (!preDeploymentHealth.overall.passed) {log(`Pre-deployment health checks failed. "Score": ${preDeploymentHealth.overall.score}%`, "ERROR");
-        return {}
-  "success": false,
-          "error": "Pre-deployment health checks failed",
-          "healthCheckResults": preDeploymentHealth};
-      };
-      ;
-      // Create deployment record;
-      const deployment = {}
-  "id": this.generateDeploymentId(),
-        "environment": environment.name,
-        "branch": environment.branch,
-        "timestamp": new Date().toISOString(),
-        "status": "in-progress",
-        "healthChecks": preDeploymentHealth,
-        options};
-      ;
-      this.state.addDeployment(deployment);
-=======
-    log(`Health checks completed for ${environment.name}. Score: ${results.overall.score}%`)
-
     return results;}
   async runHealthCheck(checkName, checkConfig) {
   const result = {
@@ -570,16 +294,9 @@ class DeploymentSystem {
         healthChecks: preDeploymentHealth,
         options;
 }
-      this.state.addDeployment(deployment)
->>>>>>> origin/automation-fixes
-      // Execute deployment;
+      this.state.addDeployment(deployment)      // Execute deployment;
       const deploymentResult = await this.executeDeployment(environment, deployment);
       // Update deployment record;
-<<<<<<< HEAD
-      deployment.status = deploymentResult.success ? "completed" : "failed";
-      // Execute deployment;
-      const deploymentResult = await this.executeDeployment(environment, deployment);
-
       // Update deployment record;
       deployment.status = deploymentResult.success ? "completed" : "failed";
       deployment.result = deploymentResult;
@@ -1220,16 +937,9 @@ class DeploymentSystem {
         reason: options.reason || `Manual rollback`,
         status: `in-progress`;
 }
-      this.state.addRollback(rollback)
->>>>>>> origin/automation-fixes
-      // Execute rollback;
+      this.state.addRollback(rollback)      // Execute rollback;
       const rollbackResult = await this.executeRollback(environment, rollback);
       // Update rollback record;
-<<<<<<< HEAD
-      rollback.status = rollbackResult.success ? "completed" : "failed";
-      // Execute rollback;
-      const rollbackResult = await this.executeRollback(environment, rollback);
-
       // Update rollback record;
       rollback.status = rollbackResult.success ? "completed" : "failed";
       rollback.result = rollbackResult;
@@ -1751,4 +1461,3 @@ module.exports = {
   DeploymentState,
   main;
 }}}}}}}}}}}
->>>>>>> origin/automation-fixes

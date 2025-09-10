@@ -1,17 +1,14 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/custom.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
 const features = [;
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';const features = [;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   {}
     title: 'Tailored Solutions,',
     description: 'Bespoke software solutions designed specifically for your unique business needs,',

@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -306,37 +300,10 @@ class $1 {
                   key.toLowerCase().includes("password") || ;
                   key.toLowerCase().includes(`key`) ||;
                   key.toLowerCase().includes(`token`)) {
-  if (value && value.length > 0) {
->>>>>>> origin/automation-fixes
-  // Check for sensitive data patterns;
+  if (value && value.length > 0) {  // Check for sensitive data patterns;
               if (key.toLowerCase().includes("secret") || ;
                   key.toLowerCase().includes("password") || ;
                   key.toLowerCase().includes("key") ||;
-<<<<<<< HEAD
-                  key.toLowerCase().includes("token")) {}
-  if (value && value.length > 0) {}
-  // Check for sensitive data patterns;
-              if (key.toLowerCase().includes("secret") || ;
-                  key.toLowerCase().includes("password") || ;
-                  key.toLowerCase().includes("key") ||;
-                  key.toLowerCase().includes("token")) {}
-  if (value.length < 10) {securityIssues.push(`Weak ${key} in ${envFile}`)};
-              };
-            };
-          };
-        };
-      };
-    };
-    ;
-    if (securityIssues.length > 0) {this.log(`Found ${securityIssues.length} potential environment variable security issues`, "warn");
-      this.errorsFound.push(...securityIssues)} else {}
-  this.log("No environment variable security issues found", "success")};
-    ;
-    return securityIssues};
-;
-  async fixSecurityIssues() {}
-  this.log("Attempting to fix security issues...");
-
     // Try to fix vulnerabilities;
     const fixResult = await this.runCommand("npm audit fix");
     if (fixResult.success) {}
@@ -476,4 +443,3 @@ monitor.run().catch(console.error);
 // Run the security monitor;
 const monitor = new SecurityMonitor()
 monitor.run().catch(console.error)}}}}}}}}}}
->>>>>>> origin/automation-fixes

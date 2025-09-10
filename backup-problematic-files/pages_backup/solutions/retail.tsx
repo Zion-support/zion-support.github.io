@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -29,7 +28,6 @@ const features = [
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -75,7 +73,6 @@ export default function RetailSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
               </p>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -89,7 +86,6 @@ export default function RetailSolutionsPage() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
@@ -131,7 +127,6 @@ export default function RetailSolutionsPage() {
           </div>
         </section>
       </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
     </>
   );
 }

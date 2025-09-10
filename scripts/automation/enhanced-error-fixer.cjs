@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-
 console.log("Starting enhanced error fixer automation...");
 
 // Get automation interval from environment variable (default: 10 minutes)
@@ -174,9 +168,7 @@ async function runEnhancedErrorFixer() {
       summary: Enhanced error fixer completed - Fixed ${totalErrorsFixed} errors and ${totalWarningsFixed} warnings,
       status: `completed`,
       details: {
-  typescriptErrors: tsErrorsFixed,
->>>>>>> origin/automation-fixes
-        eslintErrors: eslintErrorsFixed,
+  typescriptErrors: tsErrorsFixed,        eslintErrors: eslintErrorsFixed,
         unusedImports: unusedFixed,
         unescapedEntities: entitiesFixed,
         jsxErrors: jsxFixed,
@@ -184,11 +176,6 @@ async function runEnhancedErrorFixer() {
         unnecessaryEscapes: escapeFixed,
         anyTypes: anyTypesFixed,
         functionRedeclarations: redeclarationFixed,
-<<<<<<< HEAD
-        prototypeAccess: prototypeFixed
-      }
-    };
-
     const reportPath = path.join(process.cwd(), "enhanced-error-fixer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`Enhanced error fixer report saved to ${reportPath}`);
@@ -1286,4 +1273,3 @@ process.on("SIGTERM", () => {
 runContinuous().catch(error => {
   console.error("❌ Failed to start enhanced error fixer: ", error)  process.exit(1),
 })}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
->>>>>>> origin/automation-fixes

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-let services: unknown[] = [];
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const getFilteredServices = () => {;
-    let services: unknown[] = [];
-    switch (activeTab) {;
-      case 'microsaas':        services = innovativeMicroSaasServices2030;
-        break;';
-      case 'it': unknown;
-        services = comprehensiveITServices2030;
-        break;';
-      case 'ai': unknown;
-        services = comprehensiveAIServices2030;
-        break}
-
     // Filter by price range;
     services = services.filter(service => {;
       if (activeTab === 'it') {;
@@ -601,6 +582,4 @@ export { ComprehensivePricingGuide2030 };
 export { ComprehensivePricingGuide2030 };
 export { ComprehensivePricingGuide2030 };
 export { ComprehensivePricingGuide2030 };
-=======
 import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function ComprehensivePricingGuide2030(props: any) {return ( <div className="min-h-screen bg-white"> <SEO title="ComprehensivePricingGuide2030 - Zion Tech Group" description="Professional ComprehensivePricingGuide2030 services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricingGuide2030</h1> <p className="text-gray-300 text-lg"> Professional ComprehensivePricingGuide2030 services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
->>>>>>> origin/automation-improvements
