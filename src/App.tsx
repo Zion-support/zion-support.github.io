@@ -72,12 +72,12 @@ const ITInfrastructure = React.lazy(() => import('./pages/Index')); // Placehold
 const AIBusinessIntelligence = React.lazy(() => import('./pages/Index')); // Placeholder
 const MicroSaaSProducts = React.lazy(() => import('./pages/Index')); // Placeholder
 
-// Import the new pages
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
-const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
-const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
-const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+// Import the new pages - using placeholders for non-existent ones
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Index')); // Placeholder
+const Zion2026ServicesOverview = React.lazy(() => import('./pages/Index')); // Placeholder
+const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Index')); // Placeholder
+const Sitemap = React.lazy(() => import('./pages/Index')); // Placeholder
 
 // Simple placeholder pages for missing ones
 const Signup = () => (
