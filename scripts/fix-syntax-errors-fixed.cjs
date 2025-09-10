@@ -2,37 +2,3 @@
 #!/usr/bin/env node;
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`)}
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8");
-      let originalContent = content;
-      let fixed = false;
-      // Fix unterminated strings with &apos;
-      content = content.replace(/&apos;s\s*""\s*$/gm, "&apos;s"");
-      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s">");
-      content = content.replace(/&apos;s\s*""\s*,/gm, "&apos;s", ");
-      // Fix unterminated strings with escaped quotes;
-      content = content.replace(/we\\"ll\s*""\s*$/gm, "we\\"ll"");
-      content = content.replace(/we\\"ll\s*""\s*,/gm, "we\\"ll", ");
-      // Fix unterminated strings in general;
-      content = content.replace(/""\s*$/gm, """);
-      content = content.replace(/""\s*>/gm, "">");
-      content = content.replace(/""\s*,/gm, ", ");
-      content = content.replace(/""\s*\)/gm, "")");
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, "utf8");
-        this.fixedFiles.push(filePath);
-        fixed = true;
-        this.log(`✅ Fixed syntax errors in ${filePath}`),}
-;
-      return fixed,} catch (error) {;
-      this.errors.push({ "file": filePath, "error": error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false,}
-  }
-;
-  fixAllFiles() {;
-    this.log("🔧 Starting syntax error fixing...");
-    const filesToFix = [;
-const fs = require("fs")

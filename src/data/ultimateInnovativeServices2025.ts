@@ -21,22 +21,3 @@ contactInfo: {
     phone: string;
     email: string;
     website: string};
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
-  competitors?: string[];
-  caseStudies?: string[]}
-export const SERVICE_CATEGORIES = [
-  'AI & Automation',
-  'Quantum Computing',
-  'Blockchain & Web3',
-  'Cybersecurity',;
-  'IoT & Edge Computing',;
-  'Metaverse & AR/VR',;
-  'Robotics & Automation',;
-  'Biotechnology',;
-  'Space Technology',;
-  'Green Technology';

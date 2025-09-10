@@ -12,5 +12,3 @@ async function getAllFiles(dirPath, arrayOfFiles = []) {
 // Run the analysis;
 if (require.main === module) {
   identifyMissingPages(),,
-}
-module.exports = { identifyMissingPages }}}

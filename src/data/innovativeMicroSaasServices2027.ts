@@ -25,7 +25,7 @@ export interface InnovativeMicroSaasService2027 {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};  images: string[];
+    verified: boolean}  images: string[];
   createdAt: string;
   technologyStack: string[];
   useCases: string[];
@@ -33,7 +33,7 @@ export interface InnovativeMicroSaasService2027 {
   compliance: string[];
   support: string[]}
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] =
-  [// AI-Powered Business Solutions
+  [// AI-Powered Business Solutions;
     {
 
       id: "quantum-neural-network-platform",      title: "Quantum Neural Network Platform Pro",
@@ -818,5 +818,3 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"},
       marketSize: "$67.2 billion by 2027"},
-  ];
-export default INNOVATIVE_MICRO_SAAS_SERVICES_2027;

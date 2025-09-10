@@ -20,34 +20,3 @@ class ConflictResolver {
   }
 
   resolveConflictsInFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        return false;
-      }
-
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Check if file has merge conflicts
-        .replace(/<<<<<<< [^\n]+\n?/g, '')
-
-      // Clean up any remaining artifacts
-      content = content
-        .replace(/\n{3,}/g, '\n\n') // Remove excessive newlines
-        .replace(/^\s*\n/gm, '') // Remove empty lines at start
-        .trim();
-
-      fs.writeFileSync(filePath, content);
-      this.resolvedFiles.push(filePath);
-      return true;
-    } catch (error) {
-      this.log(`❌ Failed to resolve ${filePath}: ${error.message}`);
-      this.failedFiles.push({ file: filePath, error: error.message });
-      return false;
-    }
-  }
-
-  async resolveAllConflicts() {
-    this.log('🚀 Starting conflict resolution...');
-    
-    // Get all files with merge conflicts
-    try {

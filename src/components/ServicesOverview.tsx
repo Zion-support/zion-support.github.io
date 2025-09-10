@@ -9,10 +9,3 @@ import {  import { motion  } from 'framer-motion';
       {/* Background effects */}";
       <div className="absolute inset-0 opacity-10">";
         <div className="cyber-grid w-full h-full"></div>;
-      </div>;
-";
-      <div className="container-responsive relative z-10">;
-        {/* Header */}
-        <motion.div";
-          className="text-center mb-16";
-          initial = {;

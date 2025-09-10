@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix all semicolons in JSX attributes;
-function fixAllJSXSemicolons(filePath) {
+function fixAllJSXSemicolons() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;

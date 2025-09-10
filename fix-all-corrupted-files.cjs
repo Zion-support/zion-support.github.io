@@ -2,7 +2,8 @@
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file is corrupted;
-function isCorrupted(content) {
+function isCorrupted() {
+
   // Check for common corruption patterns;
   const corruptionPatterns = [;
   /import.*from.*import/,  // Double imports;

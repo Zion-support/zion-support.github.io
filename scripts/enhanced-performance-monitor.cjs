@@ -51,9 +51,3 @@ console.log('=')
       "action"
       log('warn', 'Performance "Alerts")
       log('info', 'Performance "Recommendations")
-// Run the performance monitor;
-const monitor = new PerformanceMonitor()
-monitor;
-  .run()
-  .then(report => {)    console.log("✅ Performance monitoring completed successfully")";    process.exit(0),"})
-  .catch(error => {)    console.error("❌ Performance monitoring "failed":", error.message)";    process.exit(1),"})

@@ -16,7 +16,3 @@ function walkDirectory(dir) {;  const files = fs.readdirSync(dir);
 }
   }
 }
-
-// Fix components directory;
-walkDirectory('./components');
-console.log('Import fixing completed!');

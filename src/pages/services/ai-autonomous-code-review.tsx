@@ -1,6 +1,7 @@
 import React from "react";
 import { Code, Shield, Zap, Brain, Users, TrendingUp, CheckCircle, Star } from "lucide-react";
 export default function AIAutonomousCodeReview() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       {/* comment */}
@@ -12,23 +13,23 @@ export default function AIAutonomousCodeReview() {
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Autonomous Code Review
+            AI Autonomous Code Review;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Revolutionize your development workflow with AI-powered code analysis, security scanning, and automated quality assurance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="https://ziontechgroup.com/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
             >
-              Get Started
+              Get Started;
             </a>
-            <a
+            <a;
               href="#demo"
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300"
             >
-              Watch Demo
+              Watch Demo;
             </a>
           </div>
         </div>
@@ -37,7 +38,7 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Intelligent Code Analysis Features
+            Intelligent Code Analysis Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700 hover:border-blue-500 transition-all duration-300">
@@ -101,7 +102,7 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Transparent Pricing Plans
+            Transparent Pricing Plans;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* comment */}
@@ -131,196 +132,3 @@ export default function AIAutonomousCodeReview() {
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Email support
-                </li>
-              </ul>
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 block text-center"
-              >
-                Get Started
-              </a>
-            </div>
-            {/* comment */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-xl border-2 border-blue-500 transform scale-105">
-              <div className="text-center mb-6">
-                <div className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">
-                  MOST POPULAR
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
-                <div className="text-4xl font-bold text-white mb-2">$149<span className="text-lg text-blue-100">/month</span></div>
-                <p className="text-blue-100">Ideal for growing development teams</p>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-yellow-300 mr-3"   />
-                  Up to 25 developers
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-yellow-300 mr-3"   />
-                  Advanced AI analysis
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-yellow-300 mr-3"   />
-                  Custom security rules
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-yellow-300 mr-3"   />
-                  Multi-repository support
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-yellow-300 mr-3"   />
-                  Priority support
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-yellow-300 mr-3"   />
-                  Custom integrations
-                </li>
-              </ul>
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 block text-center"
-              >
-                Get Started
-              </a>
-            </div>
-            {/* comment */}
-            <div className="bg-zinc-800/50 p-8 rounded-xl border border-zinc-700 hover:border-blue-500 transition-all duration-300">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Enterprise</h3>
-                <div className="text-4xl font-bold text-blue-400 mb-2">Custom</div>
-                <p className="text-gray-400">For large organizations with specific needs</p>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
-                  Unlimited developers
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
-                  Custom AI models
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
-                  On-premise deployment
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
-                  Dedicated support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
-                  SLA guarantees
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
-                  Custom training
-                </li>
-              </ul>
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 block text-center"
-              >
-                Contact Sales
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* comment */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Why Choose AI Autonomous Code Review?
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-500/20 p-2 rounded-lg mr-4">
-                    <Star className="w-6 h-6 text-blue-400"   />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Reduce Code Review Time by 80%</h3>
-                    <p className="text-gray-400">
-                      AI automatically identifies issues, allowing developers to focus on high-level architecture and business logic.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-green-500/20 p-2 rounded-lg mr-4">
-                    <Shield className="w-6 h-6 text-green-400"   />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Catch Security Vulnerabilities Early</h3>
-                    <p className="text-gray-400">
-                      Proactive security scanning prevents costly breaches and ensures compliance with industry standards.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-purple-500/20 p-2 rounded-lg mr-4">
-                    <TrendingUp className="w-6 h-6 text-purple-400"   />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Improve Code Quality Consistently</h3>
-                    <p className="text-gray-400">
-                      Maintain high coding standards across teams with automated quality checks and best practice enforcement.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-xl border border-blue-500/30">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Metrics</h3>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">80%</div>
-                  <div className="text-gray-300">Faster Reviews</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
-                  <div className="text-gray-300">Bug Detection</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                  <div className="text-gray-300">Cost Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                  <div className="text-gray-300">Availability</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* comment */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Code Review Process?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join thousands of developers who trust AI Autonomous Code Review for better, faster, and more secure code.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://ziontechgroup.com/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-            >
-              Start Free Trial
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-          <p className="text-blue-100 mt-6">
-            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="underline hover:text-white">kleber@ziontechgroup.com</a>
-          </p>
-        </div>
-      </section>
-    </div>
-  );

@@ -136,17 +136,3 @@ export function useAuth() {;
     }
   }
   return {;
-    ...authState;
-    login;
-    logout;
-    register;
-  }
-}          setAuthState({
-            user: nul l,
-            isAuthenticated: fals e,
-            isLoading: fals e
-          }
-    );
-        }
-      } catch (error) {
-        console.error('Error parsing stored user:', error);

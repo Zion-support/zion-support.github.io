@@ -28,14 +28,13 @@ export interface InnovativeService {}
   contactInfo: {}
     mobile: string;
     email: string;
-    website: string};
+    website: string}
   technicalSpecs?: {}
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[]}}
-;export const innovativeServices2025: InnovativeService[] = [// AI & Machine Learning Services;
+    security: string[]}}export const innovativeServices2025: InnovativeService[] = [// AI & Machine Learning Services;
   {}
 "
     id: "ai-autonomous-research-assistant","
@@ -566,9 +565,3 @@ export interface InnovativeService {}
     link: "https://ziontechgroup.com/services/digital-transformation-suite","""
     icon: "🔄","""
     color: "from-orange-600 to-red-700",
-    featured: true}
-];
-;
-export { innovativeServices2025 };
-export default innovativeServices2025;
-'

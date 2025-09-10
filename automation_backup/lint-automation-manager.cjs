@@ -9,10 +9,11 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 class $1 {
   constructor() {
+
   this.isRunning = false;
     this.watcher = null;
     this.logFile = path.join(__dirname, "logs", `lint-automation.log`);
-    this.ensureLogDirectory();,
+    this.ensureLogDirectory();
 }
 
   ensureLogDirectory() {;
@@ -23,17 +24,3 @@ class $1 {
   }
 
   log(message) {;
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);,
-}
-
-  async runLint() {;
-  try {;
-  this.log(`🔍 Running ESLint...`);
-      const result = execSync("npm run lint", {;
-  encoding: "utf8",
-        stdio: "pipe";,
-});
-      this.log(`✅ Lint completed successfully`);

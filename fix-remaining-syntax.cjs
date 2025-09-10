@@ -2,20 +2,3 @@
 #!/usr/bin/env node;
     return false;,
 } catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
-}
-}
-
-function findFiles(dir, extensions = [".js", ".jsx", ".ts", ".tsx"]) {;
-  const files = [];
-  function traverse(currentDir) {;
-  const items = fs.readdirSync(currentDir);
-    for (const item of items) {;
-  const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
-  traverse(fullPath);,
-} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
-  files.push(fullPath);,
-}

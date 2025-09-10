@@ -4,9 +4,10 @@ const path = require("path");
 const glob = require("glob");
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
     this.removedCount = 0;
-    this.fixedCount = 0;,
+    this.fixedCount = 0;
 }
 
   async cleanupEmptyTests() {;
@@ -18,15 +19,3 @@ class $1 {
       ...glob.sync("**/*.test.ts", { cwd: this.projectRoot }),
     ];
     for (const testFile of testFiles) {;
-  const filePath = path.join(this.projectRoot, testFile);
-      await this.processTestFile(filePath);,
-}
-
-    console.log(`✅ Cleanup completed: ${this.removedCount} files removed, ${this.fixedCount} files fixed`);,
-}
-
-  async processTestFile(filePath) {;
-  try {;
-  const content = fs.readFileSync(filePath, "utf8");
-      // Check if file has actual tests;
-      const hasTests = this.hasActualTests(content);

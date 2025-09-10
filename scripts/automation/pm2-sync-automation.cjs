@@ -15,3 +15,4 @@
  * - Security scanning;
  * - Automated testing;
  */;
+<<<<<<< HEAD

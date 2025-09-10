@@ -3,9 +3,10 @@ const fs = require("fs")
 const path = require("path")
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
     this.cleanedFiles = 0;
-    this.errors = [];,
+    this.errors = [];
 }
 
   log(message) {;

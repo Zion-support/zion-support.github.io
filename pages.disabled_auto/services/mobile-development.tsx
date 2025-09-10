@@ -291,4 +291,3 @@ const MobileDevelopment: NextPage = () => {
     </Layout>;
   );
 };
-export default MobileDevelopment;

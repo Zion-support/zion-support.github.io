@@ -10,5 +10,3 @@ describe("AICodeGenerator", () => {
   it("handles user interactions', () => {
     render(<AICodeGenerator  />);
 // Add interaction tests based on component functionality
-  });
-});

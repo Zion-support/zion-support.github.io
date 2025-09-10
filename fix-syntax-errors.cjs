@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 // Function to find and fix all relevant files
@@ -27,19 +26,3 @@ function fixAllFiles() {
     }
     
     return fixedCount;
-  }
-  
-  return walkDir('.');
-}
-// Main execution
-const fixedCount = fixFilesInDirectory('./src');
-const pagesDir = '/workspace/pages';
-const pageFiles = getAllPageFiles(pagesDir);
-console.log(`Found ${pageFiles.length} page files to check...`);
-let fixedCount = 0;
-for (const file of pageFiles) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
-}
-console.log(`Fixed ${fixedCount} files out of ${pageFiles.length} total files.`);

@@ -137,19 +137,3 @@ const CONFIG = {
   ENABLE_AUTO_FIX: process.env.ENABLE_AUTO_FIX !== "false",
   ENABLE_TYPE_CHECK: process.env.ENABLE_TYPE_CHECK !== "false",
   ENABLE_LINT_FIX: process.env.ENABLE_LINT_FIX !== "false",,
-}
-class $1 {
-  constructor() {
-  this.fixesApplied = 0;
-    this.errorsFixed = []
-    this.startTime = new Date(),
-}
-  async run() {
-  try {
-  console.log(`🔄 Starting error fixing cycle at ${this.startTime.toISOString()}";
-      )
-
-      // Create logs directory if it doesn"t exist;
-      this.ensureLogsDirectory()
-
-      // Run all error fixing operations;

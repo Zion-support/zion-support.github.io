@@ -1,8 +1,31 @@
 #!/""usr/bin/env"" node;
-  async checkBuildHealth() {
-  this.log("Checking build health...");
+=======
+#!/"usr/bin/env" node;
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 
-    const result = await this.runCommand("npm run build");
-    if (result.success) {
-  this.log(`Build completed successfully`, `success`);
-      return true;} else {this.log(`Build failed: ${result.output}`, `error`);this.errorsFound.push(`Build failed: ${result.output}`);
+<<<<<<< HEAD;
+const fs = require('fs');
+const path = require('path');
+const { exec, execSync } = require('child_process');
+
+class BuildMonitor {
+  constructor() {
+
+    this.projectRoot = '/workspace';
+    this.logDir = path.join(this.projectRoot, 'logs');
+    this.checkInterval = 10 * 60 * 1000; // 10 minutes;
+    this.isRunning = false;
+    this.fixesApplied = [];
+    this.errorsFound = [];
+    this.startTime = Date.now();
+    
+    this.ensureDirectories();
+    this.setupSignalHandlers();
+  }
+
+  ensureDirectories() {
+
+    if (!fs.existsSync(this.logDir)) {
+      fs.mkdirSync(this.logDir, { recursive: true });

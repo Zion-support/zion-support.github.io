@@ -16,22 +16,3 @@ const filesToFix = [ "pages/ai-services.tsx",
   "components/ContactForm.tsx",
   "components/TestimonialsSection.tsx" ];
 function fixStringLiterals(content) {;
-  // Fix corrupted string literals in JavaScript/TypeScript code;
-  content = content.replace(/= &apos;([^&]+)&apos;/g, "= "$1"");
-  content = content.replace(/&apos;([^&]+)&apos;/g, ""$1"");
-  content = content.replace(/= &quot;([^&]+)&quot;/g, "= "$1"");
-  content = content.replace(/&quot;([^&]+)&quot;/g, ""$1"");
-  return content;,
-}
-
-function fixFile(filePath) {;
-  try {;
-  if (!fs.existsSync(filePath)) {;
-  console.log(`File not found: ${filePath}`);
-      return false;,
-}
-
-    let content = fs.readFileSync(filePath, "utf8");
-    const originalContent = content;
-    
-    content = fixStringLiterals(content);

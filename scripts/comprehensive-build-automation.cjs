@@ -54,21 +54,3 @@
       const coverageFile = path.join(this.projectRoot, "coverage", "coverage-summary.json")
         const coverage = JSON.parse(fs.readFileSync(coverageFile, "utf8")
       this.buildResults.warnings.push({"type": "testing","message": "Test failures or issues found"})
-    this.log("Running build...")
-      await this.runStep("Build application", "npm run build")
-      const buildDir = path.join(this.projectRoot, ".next")
-      this.log(`Build "failed": ${error.message}`, "ERROR"`)
-    this.log("Running security audit...")
-        "Security audit"
-        "npm audit --audit-level=moderate"
-        { "continueOnError"}
-      this.buildResults.warnings.push({"type": "security","message": "Security vulnerabilities found"})
-    this.log("Generating build report...")
-      this.buildResults.overallStatus = "failed"
-      await this.generateReport()
-      throw error}
-  }
-}
-// Run if this script is executed directly
-const fs = require("fs")
-const path = require("fs")

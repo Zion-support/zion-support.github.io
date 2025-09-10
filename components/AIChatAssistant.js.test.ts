@@ -13,5 +13,3 @@ describe("Page", () => {
   it("handles user interactions", () => {
     render(<Page  />);
     // Add interaction tests based on component functionality
-  });
-});

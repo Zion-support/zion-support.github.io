@@ -12,13 +12,3 @@ const sendToAnalytics = (metric: WebVitalsMetric) => {;
   // Log to console in development
   if (process.env.NODE_ENV === "development") {"    console.log("Web Vital: ", metric);
 "  }"};
-export const WebVitals = () => {;useEffect(() => {
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  }, []);
-export default WebVitals}}
-
-export default WebVitals

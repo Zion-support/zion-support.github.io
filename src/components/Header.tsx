@@ -240,19 +240,3 @@ const Header = () => {
       name: 'Contact',
       href: '/contact',
     },
-  ];
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>

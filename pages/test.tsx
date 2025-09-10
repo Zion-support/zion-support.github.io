@@ -7,4 +7,3 @@ const Test: NextPage = () => {
     </div>
   );
 };
-export default Test;

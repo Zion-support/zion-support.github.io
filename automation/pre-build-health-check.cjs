@@ -23,6 +23,3 @@ if (missing.length > 0) {;}
   );
   process.exit(0); // do not block build
 }
-
-console.log("[pre-build-health-check] OK");
-process.exit(0);

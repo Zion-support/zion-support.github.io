@@ -10,5 +10,3 @@ describe("AIChatbotSystem", () => {
   it("handles user interactions', () => {
     render(<AIChatbotSystem  />);
 // Add interaction tests based on component functionality
-  });
-});

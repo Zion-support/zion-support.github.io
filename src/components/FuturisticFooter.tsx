@@ -85,36 +85,3 @@ const "FuturisticFooter": "React.FC = ("props": any) => {;
                   Leading the future of technology with cutting-edge AI services, innovative solutions, ;
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.;
                 </p>;
-                {/* Contact Information */}
-                <div className="space-y-3">;
-                  <div className="flex items-center space-x-3 text-slate-300 "hover": "text-cyan-400 transition-colors duration-300">;
-                    <Phone className="w-4 h-4 text-cyan-400" />;
-                    <a href={`"tel":${contactInfo.mobile"}`} className=""hover": "text-cyan-400 transition-colors duration-300">;
-                      {contactInfo.mobile"}
-                    </a>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-slate-300 "hover": "text-cyan-400 transition-colors duration-300">;
-                    <Mail className="w-4 h-4 text-cyan-400" />;
-                    <a href={`"mailto":${contactInfo.email"}`} className=""hover": "text-cyan-400 transition-colors duration-300">;
-                      {contactInfo.email"}
-                    </a>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-slate-300">;
-                    <MapPin className="w-4 h-4 text-cyan-400" />;
-                    <span>{contactInfo.address}</span>;
-                  </div>;
-                </div>;
-                {/* Social Links */}
-                <div className="flex space-x-4">;
-                  {socialLinks.map((social) => (;
-                    <motion.a;
-                      key={social.name}
-                      href={social.href}
-                      target="_blank";
-                      rel="noopener noreferrer";
-                      whileHover={{ "scale": "1.1", "y": "-2 "}}
-                      whileTap={{ "scale": "0.95 "}}
-                      className={`p-2 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-slate-300 ${social.color} "hover": "bg-cyan-400/10 "hover":border-cyan-400/40 transition-all duration-300`"}
-                    >;
-                      <social.icon className="w-5 h-5" />;
-                    </motion.a>;

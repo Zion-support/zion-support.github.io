@@ -18,7 +18,3 @@ const securityHeaders = [;
     value: "nosniff"},
   {;
   key: "Referrer-Policy",
-    value: "origin-when-cross-origin"}
-];
-
-module.exports = { securityHeaders };

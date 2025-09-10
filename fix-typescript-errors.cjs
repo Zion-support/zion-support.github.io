@@ -30,15 +30,3 @@ const fixes = [
   pattern: /import:\s*([^,]+),\s*from,\s*"([^"]+)"/g,
     replacement: "import $1 from "$2",,,
 },
-];
-function fixFile(filePath) {
-  try {
-  let content = fs.readFileSync(filePath, `utf8`);
-    let originalContent = content;
-
-    // Apply all fixes;
-    for (const fix of fixes) {;
-  content = content.replace(fix.pattern, fix.replacement);,
-}
-
-    // Write back if changed;

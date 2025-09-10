@@ -37,10 +37,3 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;const "Comprehensive
   const getFilteredServices = (props) => {;
     let "services": an y[] = [];
     switch(activeTab) {
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;';
-        break;';';
-      case 'it':
-        services = comprehensiveITServices2030;';
-        break;';';
-      case 'ai':

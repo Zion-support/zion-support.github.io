@@ -16,32 +16,3 @@ class $1 {
   async createTypeDeclarations() {
   this.log("📝 Creating comprehensive type declarations...")
     const typeDeclarations = `// Global type declarations;declare module "*.svg" {
-  const content: string;
-  export default content;
-}
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
-declare module "*.jpg" {
-  const content: string;
-  export default content;
-}
-declare module "*.jpeg" {
-  const content: string;
-  export default content;
-}
-declare module "*.gif" {
-  const content: string;
-  export default content;
-}
-declare module "*.webp" {
-  const content: string;
-  export default content;
-}
-declare module "*.css" {
-    for (const dir of filesToFix) {
-  const dirPath = path.join(this.projectRoot, dir)
-      if (fs.existsSync(dirPath)) {
-  this.fixFilesInDirectory(dirPath),
-}

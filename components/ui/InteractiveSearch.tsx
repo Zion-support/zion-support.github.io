@@ -1,16 +1,15 @@
 import React from "react"
 interface InteractiveSearchProps {
   placeholder?: string;
-  onSearch?: (query: string) => void,;
+  onSearch?: (query: string) => void;
   className?: string}
-;
 export default function InteractiveSearch() {;
 export default function InteractiveSearch() {
 
-  const handleSubmit = (e: React.FormEvent) => {,
-    e.preventDefault(),,
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
     const formData = new FormData(e.target as HTMLFormElement),"
-    const query = formData.get("search") as string,
+    const query = formData.get("search") as string;
     onSearch?.(query)}
 
   return ("
@@ -25,10 +24,3 @@ export default function InteractiveSearch() {
         >"
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"   />
-          </svg>
-        </button>
-      </div>
-    </form>
-  )
-
-}}""

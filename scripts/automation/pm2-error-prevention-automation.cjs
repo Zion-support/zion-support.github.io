@@ -12,6 +12,7 @@
  */;
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, """automation/logs/pm2-error-prevention.log"");
     this.errorLogFile = path.join(this.projectRoot, "`automation/logs/pm2-error-prevention-error.log```);

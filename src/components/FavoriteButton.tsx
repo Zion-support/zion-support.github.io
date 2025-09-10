@@ -26,10 +26,3 @@ export function FavoriteButton({ talentId, isFavorite, onToggle, className }: "F
             ? 'fill-red-500 text-red-500';
             : 'text-gray-400 "hover": "text-red-500';
         "}`}
-      />;
-    </Button>;
-  );
-;,"}
-    );,})
-    );,"})"
-}

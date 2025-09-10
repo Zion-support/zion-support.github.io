@@ -22,39 +22,3 @@ const savings = billingCycle === "annual" ? 25 : "0;
           className="text-center mb-16"          initial = {;
 
   { opacity: 0,
-  y: 20;
-}}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >";
-          <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",            Simple, {" "}";
-            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-              Transparent Pricing,
-            </span>;
-          </h2>";
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;
-            Choose the plan that best fits your business needs. All plans include our core features,
-with no hidden fees or surprises.;
-          </p>;
-          {/* comment */}";
-          <div className="{"flex" items-center justify-center gap-4 mb-8">";
-            <span className="{"text-sm" ${billingCycle === "monthly" ? "text-white" : "text-zion-slate-light"}"}>;
-              Monthly,
-            </span>";
-            <button onClick="{()" => setBillingCycle(billingCycle === "monthly" ? "annual" : "monthly")}";
-              className=""relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200";
-            >;
-              <motion.div>;
-layout,";
-className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
-                  billingCycle === "annual" ? "ml-8" : "ml-0>;
-}"}
-
-             />;
-            </button>";
-            <span className = "{"text-sm" ${billingCycle === "annual" ? "text-white" : "text-zion-slate-light"}"}>;

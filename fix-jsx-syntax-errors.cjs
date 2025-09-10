@@ -2,7 +2,8 @@
 const fs = require('fs');
 
 // Function to fix JSX syntax errors;
-function fixJSXSyntaxErrors(filePath) {
+function fixJSXSyntaxErrors() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;

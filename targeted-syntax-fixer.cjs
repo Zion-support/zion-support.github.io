@@ -7,36 +7,3 @@
   }
 
   fixFile(filePath) {
-  try {
-  const content = fs.readFileSync(filePath, "utf8");
-      let fixedContent = content;
-      let hasChanges = false;
-      // Fix specific patterns found in the linting errors;
-      const fixes = [;
-  // Fix missing semicolons after import statements;
-        {
-  pattern: /^import\s+.*from\s+[""][^""]+[""]\s*$/gm,;
-          replacement: (match) => match.endsWith(";") ? match : match + ";";},;
-        // Fix missing semicolons after export statements;
-        {
-  pattern: /^export\s+.*from\s+[""][^""]+[""]\s*$/gm,;
-          replacement: (match) => match.endsWith(";") ? match : match + ";";},;
-        // Fix unterminated string literals;
-        {
-  pattern: /([""])([^""]*?)(\n|$)/g,;
-          replacement: (match, quote, content, newline) => {
-  if (content.includes("\\" + quote) || content.includes("`")) return match;
-            return quote + content + quote + ";" + newline;}
-        },;
-        // Fix missing commas in object literals;
-        {
-  pattern: /(\w+)\s*:\s*([^}]+)(\s*[^}])/g,;
-          replacement: (match, key, value, next) => {
-  if (next.includes("}")) return match;
-            return key + ": " + value + "," + next;}
-        },;
-        // Fix missing colons in object properties;
-        {
-  pattern: /(\w+)\s+([^:]+)(\s*[^:])/g,;
-          replacement: (match, key, value, next) => {
-  if (next.includes(":")) return match;

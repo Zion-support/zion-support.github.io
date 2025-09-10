@@ -4,10 +4,11 @@ const fs = require("fs");
 const path = require("path");
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "simple-automation.log");
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
 
   ensureDirectories() {;
@@ -17,18 +18,3 @@ class $1 {
   }
 
   log(message) {;
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n");,
-}
-
-  async runCommand(command, description, timeout = 300000) {;
-  this.log(`🚀 Starting: ${description}`);
-    try {;
-  const result = execSync(command, {;
-  cwd: this.projectRoot,
-        encoding: "utf8",
-        timeout: timeout;,
-});
-      this.log(`✅ Completed: ${description}`);

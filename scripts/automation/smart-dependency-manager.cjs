@@ -11,6 +11,7 @@
 const fs = require("fs").promises;
 class $1 {
   constructor() {
+
   this.dependencies = {
   production: {},
       development: {},

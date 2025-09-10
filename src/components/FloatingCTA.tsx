@@ -18,7 +18,3 @@ const "FloatingCTA": React.FC = () : JSX.Element => {;
   return () => {;
     // Cleanup function;
   "};export default function Page(props: any) {
- from 'lucide-react';
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState<any>(false);
-  const [isVisible, setIsVisible] = useState<any>(false);

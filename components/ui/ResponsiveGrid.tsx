@@ -8,7 +8,7 @@ interface ResponsiveGridProps {
     md?: number;
     lg?: number;
     xl?: number;
-  };
+  }
   gap?: number;
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ 
   children,
@@ -36,10 +36,3 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     
     return colClasses.join(" ");
   };
-  return (
-    <div className={"grid ${getGridCols()} gap-${gap} ${className}"}>
-      {children}
-    </div>
-  );
-};
-export default ResponsiveGrid;

@@ -96,18 +96,3 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
       <div className="flex items-center mb-4">
         <Shield className="w-5 h-5 mr-2 text-blue-500" />
         <h3 className="text-lg font-semibold">Security Audit
-      </div>
-      <div className="space-y-3">
-        {checks.map((check, index) => (
-          <div
-            key={index}
-            className={`p-3 rounded-lg border ${getStatusColor(check.status)}`}
-          >;
-            <div className="flex items-center justify-between">;
-              <div className="flex items-center">;
-                {getStatusIcon(check.status)}
-                <span className="ml-2 font-medium">{check.name}</span>;
-              </div>;
-            </div>;
-            <p className="text-sm text-gray-600 mt-1">{check.message}</p>;
-          </div>;

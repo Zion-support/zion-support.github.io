@@ -19,7 +19,7 @@ const About: NextPage = () => {
               About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              We are a leading technology solutions provider dedicated to transforming businesses 
+              We are a leading technology solutions provider dedicated to transforming businesses;
               through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -27,29 +27,3 @@ const About: NextPage = () => {
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Our Mission</h3>
                 <p className="text-gray-300">
                   To empower businesses with cutting-edge technology solutions that drive growth,
-                  efficiency, and innovation in the digital age.
-                </p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3>
-                <p className="text-gray-300">
-                  To be the global leader in AI-powered technology solutions,
-                  setting the standard for innovation and excellence.
-                </p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
-                <h3 className="text-2xl font-bold mb-4 text-pink-400">Our Values</h3>
-                <p className="text-gray-300">
-                  Innovation, integrity, excellence, and client success are the 
-                  core values that guide everything we do.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer  />
-    </>
-  );
-};
-export default About;

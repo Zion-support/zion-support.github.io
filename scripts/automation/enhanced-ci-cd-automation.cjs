@@ -3,6 +3,7 @@ console.log(`"🚀 Starting Enhanced "CI/CD" Automation...")
 
 class $1 {
   constructor() {
+
   this.ciResults = {
   dependencies: { status: "pending", result: null },
       linting: { status: "pending", result: null },
@@ -14,9 +15,3 @@ class $1 {
     this.reportDir = path.join(process.cwd(), "ci-cd-reports")
     this.ensureReportDirectory()
     this.startTime = Date.now(),
-}
-  ensureReportDirectory() {
-  if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { recursive: true }),
-}
-  }

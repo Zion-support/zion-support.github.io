@@ -4,6 +4,7 @@
  * Console Error Fixer Automation;
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/console-error-fixer.log``);
     this.ensureLogDirectory();

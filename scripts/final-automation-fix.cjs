@@ -2,21 +2,3 @@
 #!/usr/bin/env node;
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`)}
-
-  fixFileSyntax(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8");
-      let originalContent = content;
-      // Fix common syntax issues from merge conflicts;
-      content = content.replace(/import:\s*/g, "import ");
-      content = content.replace(/const:\s*/g, "const ");
-      content = content.replace(/interface:\s*/g, "interface ");
-      content = content.replace(/type:\s*/g, "type ");
-      content = content.replace(/from:\s*/g, "from ");
-      content = content.replace(/=\s*\(\s*\)\s*=>\s*,\s*\{/g, "= () => {");
-      content = content.replace(/,\s*\{/g, " {");
-      content = content.replace(/;\s*\{/g, " {");
-      content = content.replace(/;\s*\[/g, " [");
-      content = content.replace(/;\s*\(/g, " (");
-const fs = require("fs")
-const path = require("fs")

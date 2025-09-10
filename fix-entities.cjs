@@ -16,21 +16,3 @@ const filesToFix = [ "pages/ai-services.tsx",
   "components/ContactForm.tsx",
   "components/TestimonialsSection.tsx" ];
 function fixUnescapedEntities(content) {;
-  // Fix unescaped apostrophes in JSX text content;
-  // This is a more targeted approach to avoid breaking existing HTML entities;
-  content = content.replace(/(?<!&)(?<!&#39)(?<!&apos)(?<!&lsquo)(?<!&rsquo)(?<!&amp)"/g, "&apos;");
-  // Fix unescaped quotes in JSX text content  ;
-  content = content.replace(/(?<!&)(?<!&quot)(?<!&ldquo)(?<!&rdquo)(?<!&&#34)(?<!&amp)"/g, "&quot;");
-  return content;,
-}
-
-function fixFile(filePath) {;
-  try {;
-  if (!fs.existsSync(filePath)) {;
-  console.log(`File not found: ${filePath}`);
-      return false;,
-}
-
-    let content = fs.readFileSync(filePath, "utf8");
-    const originalContent = content;
-    content = fixUnescapedEntities(content);

@@ -23,15 +23,3 @@ export default function Loading("props": "any) {';';';
       {text && (;
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>;
       );
-      )}
-    </div>;
-  );
-}
-    </div>;
-  );
-}
-  );
-  if (fullScreen) {;
-    return (;
-    <div className="min-h-screen bg-white">;  return (
-        <div className="min-h-screen bg-white">

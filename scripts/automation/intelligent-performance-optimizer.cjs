@@ -1,12 +1,12 @@
 #!/""usr/bin/env"" node;
 /**;
  * Intelligent Performance Optimizer - PM2 Automation;
- * Automatically analyzes and optimizes React performance, bundle size,;
+ * Automatically analyzes and optimizes React performance, bundle size;
  * and runtime efficiency using intelligent pattern recognition;
  */;
 #!/"usr/bin/env" node;
 /**;
  * Intelligent Performance Optimizer - PM2 Automation;
- * Automatically analyzes and optimizes React performance, bundle size,;
+ * Automatically analyzes and optimizes React performance, bundle size;
  * and runtime efficiency using intelligent pattern recognition;
  */;

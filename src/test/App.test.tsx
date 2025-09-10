@@ -4,14 +4,3 @@ import { BrowserRouter   } from 'react-router-dom';';';
 import App from '../App'
 ';
 // Mock the components that might not exist yet';';
-vi.mock('../components/ChatAssistant', () => ({ ChatAssistant: () => <div data-testid="chat-assistant">Chat Assistant</div>
-  }))';
-';';
-vi.mock('../layout/AppHeader', () => ({ AppHeader: () => <div data-testid="app-header">App Header</div>
-  }))';
-';';
-vi.mock('../components/Footer', () => ({ Footer: () => <div data-testid="footer">Footer</div>
-  }))';
-';';
-describe('App', () => {';';
-  it('renders without crashing', () => {

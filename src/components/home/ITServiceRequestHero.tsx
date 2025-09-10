@@ -37,12 +37,3 @@
   const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },;
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },;
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
-  ];
-import React, { useState } from 'react';';';
-import { motion  } from 'framer-motion';';';
-;
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';  const features = [{ "icon": "Cloc k", "text": "24/7 Availability", "color": "text-zion-cyan" },;
-    { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },;
-    { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" }, { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};

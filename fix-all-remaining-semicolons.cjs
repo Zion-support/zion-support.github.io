@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix all remaining semicolons;
-function fixAllRemainingSemicolons(filePath) {
+function fixAllRemainingSemicolons() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
