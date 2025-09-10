@@ -5,8 +5,8 @@ import { HireRequestNotificationParams } from './types';
 /**
  * Creates a hire request notification for admin and talent
  */
-export async function createHireRequestNotifications(_{
-  talentId, _adminId, _requesterName, _requesterEmail, _projectType, _projectSummary, hireRequestId
+export async function createHireRequestNotifications({
+  talentId, adminId, requesterName, requesterEmail, projectType, projectSummary, hireRequestId
 }: HireRequestNotificationParams) {
   const projectInfo = projectType 
     ? `${projectType} project` 

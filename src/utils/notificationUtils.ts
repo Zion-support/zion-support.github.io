@@ -16,8 +16,8 @@ type NotificationType =
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
-export async function createNotification(_{
-  userId, _title, _message, _type, _relatedId = null, _sendEmail = false, _actionUrl = null, _actionText = null, }: {
+export async function createNotification({
+  userId, title, message, type, relatedId = null, sendEmail = false, actionUrl = null, actionText = null, }: {
   userId: string;
   title: string;
   message: string;

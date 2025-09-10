@@ -138,10 +138,10 @@ export class PerformanceOptimizer {
         const memory = (performance as any).memory;
         if (memory.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
           // console.warn('High memory usage detected:', {
-            used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
-            total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
-            limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)}MB`
-          });
+          //   used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
+          //   total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
+          //   limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)}MB`
+          // });
         }
       }, 30000); // Check every 30 seconds
     }

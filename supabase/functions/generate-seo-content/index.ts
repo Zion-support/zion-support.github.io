@@ -7,12 +7,12 @@ const FINE_TUNED_MODEL_ID = "gpt-3.5-turbo"; // Placeholder - Replace with actua
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
 
 // console.log(JSON.stringify({
-  timestamp: new Date().toISOString(),
-  level: 'INFO',
-  message: 'Function "generate-seo-content" initializing.',
-  serviceName: 'generate-seo-content',
-  functionVersion: '1.0.0' // Example version
-}));
+//   timestamp: new Date().toISOString(),
+//   level: 'INFO',
+//   message: 'Function "generate-seo-content" initializing.',
+//   serviceName: 'generate-seo-content',
+//   functionVersion: '1.0.0' // Example version
+// }));
 
 serve(async (req) => {
   const requestTimestamp = new Date().toISOString();

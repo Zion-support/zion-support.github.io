@@ -1,4 +1,4 @@
-export async function fetchWithRetry(url: string, options: RequestInit = {}, _retries = 3, _backoff = 500, _timeout = 20000): Promise<unknown> {
+export async function fetchWithRetry(url: string, options: RequestInit = {}, retries = 3, backoff = 500, timeout = 20000): Promise<unknown> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeout);
   try {

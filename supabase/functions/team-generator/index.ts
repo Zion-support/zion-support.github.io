@@ -113,7 +113,7 @@ Important Constraints: ${optimizationInstructions}
   }
 }
 
-async function findMatchingTalent(roles: Omit<RecommendedRole, _'matchedTalent'>[]): Promise<RecommendedRole[]> {
+async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[]): Promise<RecommendedRole[]> {
   const rolesWithTalent: RecommendedRole[] = [];
 
   for (const role of roles) {
