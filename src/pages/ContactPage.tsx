@@ -18,7 +18,10 @@ const ContactPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Form submitted:', formData);
+    }
+    // TODO: Implement actual form submission logic
   };
 
   return (
