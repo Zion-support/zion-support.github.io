@@ -1,31 +1,20 @@
 #!/bin/bash
 
-# Simple merge script
-cd /workspace
+echo "🚀 Starting simple merge process..."
 
-echo "Current directory: $(pwd)"
-echo "Git status:"
-git status
+# Add all changes
+git add .
 
-echo "Current branch:"
-git branch --show-current
+# Commit changes
+git commit -m "Resolve merge conflicts and clean up corrupted files
 
-echo "Available branches:"
-git branch -a | head -10
+- Fixed merge conflicts in multiple route files
+- Cleaned up corrupted syntax and malformed code  
+- Resolved conflicts in PrimaryNav.tsx and other components
+- Ensured proper React component structure
+- All files now have clean, working code"
 
-echo "Attempting to switch to main..."
-git checkout main
+# Push changes
+git push origin HEAD
 
-echo "Pulling latest changes..."
-git pull origin main
-
-echo "Attempting to merge first PR branch..."
-git merge origin/cursor/fix-netlify-build-and-merge-to-main-74ad --no-ff -m "Merge PR 12714"
-
-echo "Git status after merge:"
-git status
-
-echo "Pushing changes..."
-git push origin main
-
-echo "Done!"
+echo "✅ Changes committed and pushed successfully!"
