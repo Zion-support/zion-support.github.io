@@ -197,17 +197,46 @@ export default function ServicePage() {
             />
           </div>
 
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-                "Commission calculations",
-
+        {/* Industry-Specific Features */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Industry-Specific Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeatureCategory
+              title="Healthcare Features"
+              icon="🏥"
+              features={[
+                'HIPAA-compliant data storage',
+                'Patient consent management',
+                'Medical coding automation',
+                'Insurance eligibility verification',
+                'Prescription drug monitoring',
+                'Telehealth integration',
+              ]}
+            />
+            <FeatureCategory
+              title="Financial Features"
+              icon="💰"
+              features={[
+                'Real-time fraud detection',
+                'Credit scoring algorithms',
+                'Regulatory reporting automation',
+                'Anti-money laundering checks',
+                'Customer due diligence',
+                'Risk assessment models',
+              ]}
+            />
+            <FeatureCategory
+              title="Real Estate Features"
+              icon="🏠"
+              features={[
+                'MLS integration',
+                'Property valuation models',
+                'Lead scoring algorithms',
+                'Market trend analysis',
+                'Virtual tour creation',
+                'Commission calculations',
               ]}
             />
           </div>
@@ -221,29 +250,29 @@ export default function ServicePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <IntegrationCategory"
               title="Healthcare Integrations"
-              platforms={["
-                "Epic","
-                "Cerner","
-                "Allscripts","
-                "NextGen","
-                "athenahealth",
-              ]}"
+              platforms={[
+                'Epic',
+                'Cerner',
+                'Allscripts',
+                'NextGen',
+                'athenahealth',
+              ]}
               icon="🏥"
             />
-            <IntegrationCategory"
-              title="Financial Integrations""
-              platforms={["Fiserv", "FIS", "Jack Henry", "Temenos", "Mambu"]}"
+            <IntegrationCategory
+              title="Financial Integrations"
+              platforms={['Fiserv', 'FIS', 'Jack Henry', 'Temenos', 'Mambu']}
               icon="🏦"
             />
             <IntegrationCategory"
               title="Real Estate Integrations"
-              platforms={["
-                "MLS","
-                "Zillow","
-                "Realtor.com","
-                "ShowingTime","
-                "DocuSign",
-              ]}"
+              platforms={[
+                'MLS',
+                'Zillow',
+                'Realtor.com',
+                'ShowingTime',
+                'DocuSign',
+              ]}
               icon="🏠"
             />
           </div>
@@ -260,13 +289,13 @@ export default function ServicePage() {
               starterPrice="$199/month""
               professionalPrice="$499/month""
               enterprisePrice="$999/month"
-              features={["
-                "HIPAA compliance included","
-                "Medical coding automation","
-                "Insurance verification","
-                "Telemedicine integration","
-                "24/7 support",
-              ]}"
+              features={[
+                'HIPAA compliance included',
+                'Medical coding automation',
+                'Insurance verification',
+                'Telemedicine integration',
+                '24/7 support',
+              ]}
               icon="🏥"
             />
             <IndustryPricingPlan"
@@ -274,13 +303,13 @@ export default function ServicePage() {
               starterPrice="$299/month""
               professionalPrice="$699/month""
               enterprisePrice="$1,499/month"
-              features={["
-                "PCI DSS compliance","
-                "Fraud detection","
-                "Risk assessment","
-                "Regulatory reporting","
-                "Dedicated support",
-              ]}"
+              features={[
+                'PCI DSS compliance',
+                'Fraud detection',
+                'Risk assessment',
+                'Regulatory reporting',
+                'Dedicated support',
+              ]}
               icon="🏦"
             />
             <IndustryPricingPlan"
@@ -288,13 +317,13 @@ export default function ServicePage() {
               starterPrice="$149/month""
               professionalPrice="$399/month""
               enterprisePrice="$799/month"
-              features={["
-                "MLS integration","
-                "Lead management","
-                "Virtual tours","
-                "Market analytics","
-                "Commission tracking",
-              ]}"
+              features={[
+                'MLS integration',
+                'Lead management',
+                'Virtual tours',
+                'Market analytics',
+                'Commission tracking',
+              ]}
               icon="🏠"
             />
           </div>

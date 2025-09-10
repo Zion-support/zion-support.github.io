@@ -11,20 +11,6 @@ class IntelligentErrorDetector {
     this.errors = [];
     this.fixes = [];
     this.patterns = {
-          conflictType = 'branch';
-          continue;
-        } else if (line.includes('>>>>>>>')) {
-          // End of conflict - choose the newer version (branch content)
-          if (branchContent.length > 0) {
-            fixedLines.push(...branchContent);
-          } else if (headContent.length > 0) {
-            fixedLines.push(...headContent);
-          inConflict = false;
-          conflictType = null;
-          headContent = [];
-          branchContent = [];
-        if (inConflict) {
-
             branchContent.push(line);
         } else {
   // TODO: Implement
@@ -302,26 +288,29 @@ class IntelligentErrorDetector {
     return files;
   }
 
-  async generateErrorReport(errors) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalErrors: Object.values(errors).reduce(
-        (sum, arr) => sum + arr.length,
-        0
-      ),
-      errorsByCategory: Object.entries(errors).reduce(
-        (acc, [category, errorList]) => {
-    acc[category] = errorList.length,
-    return acc
-  },
-        {}
-      ),
-      details: errors,
-    this.projectRoot = process.cwd();
-    this.errors = [];
-    this.fixes = [];
-    this.patterns = {
-          conflictType = 'branch';
+  isRelevantFile(filename) {
+    const extensions = ['.tsx', '.ts', '.jsx', '.js', '.cjs', '.mjs'];
+    return extensions.some(ext => filename.endsWith(ext));
+  }
+
+  async fixMergeConflicts(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inConflict = false;
+      let conflictType = null;
+      let headContent = [];
+      let branchContent = [];
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('')) {
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+        } else if (line.includes('')) {          conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {
           // End of conflict - choose the newer version (branch content)

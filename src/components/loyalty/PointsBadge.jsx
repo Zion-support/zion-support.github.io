@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import { Gift } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-
-export default function PointsBadge() {
-  const { user } = useAuth();
-  const [points] = useState(user?.points || 0);
-
-  return (
-    <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full">
-      <Gift className="h-4 w-4" />
-      <span className="font-semibold">{points} points</span>
-    </div>
-  );
-}
+import { Gift import { useAuth } from '@/hooks/useAuth';
+import {useEffect, useState} from 'react';
+import {usePoints} from '@/hooks/usePoints';
+import {Link} from 'react-router-dom';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+export function PointsBadge("props": "any) {;
+    const { user", signOut, logout } = useAuth();
+    const {ledger, balance} = usePoints();
+    const [points, setPoints] = useState(balance);
+    useEffect(() => {setPoints(balance)}, [balance]);
+    if (!user);
+        return null;
+    const breakdown = ledger.reduce((acc, e) => {if (e.reason === 'purchase');
+            acc.purchase += e.delta;
+        if (e.reason === 'post');
+            acc.post += e.delta;
+        if (e.reason === 'referral');
+            acc.referral += e.delta;
+        return acc}, {purchase: 0, post: 0, referral: 0}
+    );

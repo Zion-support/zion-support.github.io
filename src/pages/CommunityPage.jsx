@@ -1,62 +1,227 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-import Header from '@/components/Header';
-import { Footer } from '@/components/Footer';
-
-export default function CommunityPage() {
-  return (
-    <>
-      <SEO
-        title="Community - Zion Tech Group"
-        description="Join our community of developers, entrepreneurs, and technology enthusiasts."
-        keywords="community, developers, entrepreneurs, technology, networking"
-        canonical="https://ziontechgroup.com/community"
-      />
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-white mb-4">Community</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our community of developers, entrepreneurs, and technology enthusiasts
+import React from "react"
+import { useState } from "react";""""
+import CreatePostButton from "@/components/community/CreatePostButton";""""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""""
+import SEO from "@/components/SEO";""""
+import ForumCategories from "@/components/community/ForumCategories";""""
+import PostCard from "@/components/community/PostCard";""""
+import { useAuth } from "@/hooks/useAuth";
+// Mock data for featured posts;
+const featuredPosts = []
+    {}
+"""
+""""
+        id: "1",""""
+        title: "Best practices for AI model fine-tuning",""""
+        content: "I"ve been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+        author: {}
+"""
+""""
+            id: "user1",""""
+            name: "Alex Johnson",""""
+            avatar: "https://i.pravatar.cc/150?img=3",""""
+            role: "Verified Talent""""
+        },""""
+        authorId: "user1",""""
+        category: "ai-tools",""""
+        categoryId: "ai-tools",""""
+        tags["machine-learning", "fine-tuning", "gpt"],;""""
+        createdAt: "2025-04-01T12:00:00Z",""""
+        updatedAt: "2025-04-01T12:00:00Z",
+        replies[],;
+        likes: 48,
+        views: 120,
+        upvotes: 48,
+        downvotes: 2,
+        replyCount: 12,
+        isPinned: false,
+        isLocked: false,"""
+        isAnswered: true,""""
+        authorName: "Alex Johnson",""""
+        authorAvatar: "https://i.pravatar.cc/150?img=3",""""
+        authorRole: "Verified Talent"""
+    },
+    {}
+"""
+""""
+        id: "2",""""
+        title: "How to build an effective AI talent profile?","""""
+        content: "I"m looking to improve my profile to get more client attention. What are the key elements I should focus on?",
+        author: {}
+"""
+""""
+            id: "user2",""""
+            name: "Sarah Chen",""""
+            avatar: "https://i.pravatar.cc/150?img=5",""""
+            role: "Verified Talent""""
+        },""""
+        authorId: "user2",""""
+        category: "getting-hired",""""
+        categoryId: "getting-hired",""""
+        tags["profile", "tips", "hiring"],;""""
+        createdAt: "2025-04-03T09:15:00Z",""""
+        updatedAt: "2025-04-03T09:15:00Z",
+        replies[],;
+        likes: 32,
+        views: 89,
+        upvotes: 32,
+        downvotes: 0,
+        replyCount: 8,
+        isPinned: true,
+        isLocked: false,"""
+        isAnswered: false,""""
+        authorName: "Sarah Chen",""""
+        authorAvatar: "https://i.pravatar.cc/150?img=5",""""
+        authorRole: "Verified Talent"""
+];
+// Mock data for recent posts;
+const recentPosts = []
+    {}
+"""
+""""
+        id: "3",""""
+        title: "Looking for feedback on my automated testing approach","""""
+        content: "I"ve set up a CI/CD pipeline with the following testing strategy...",
+        author: {}
+"""
+""""
+            id: "user3",""""
+            name: "Michael Wong",""""
+            avatar: "https://i.pravatar.cc/150?img=7",""""
+            role: "Developer""""
+        },""""
+        authorId: "user3",""""
+        category: "project-help",""""
+        categoryId: "project-help",""""
+        tags["testing", "automation", "ci-cd"],;""""
+        createdAt: "2025-04-10T14:30:00Z",""""
+        updatedAt: "2025-04-10T14:30:00Z",
+        replies[],;
+        likes: 5,
+        views: 45,
+        upvotes: 5,
+        downvotes: 0,
+        replyCount: 2,
+        isPinned: false,
+        isLocked: false,"""
+        isAnswered: false,""""
+        authorName: "Michael Wong",""""
+        authorAvatar: "https://i.pravatar.cc/150?img=7",""""
+        authorRole: "Developer"""
+    },
+    {}
+"""
+""""
+        id: "4",""""
+        title: "Feature request: Team collaboration tools",""""
+        content: "It would be really helpful if we could have built-in tools for team collaboration...",
+        author: {}
+"""
+""""
+            id: "user4",""""
+            name: "Emma Davis",""""
+            avatar: "https://i.pravatar.cc/150?img=9",""""
+            role: "Product Manager""""
+        },""""
+        authorId: "user4",""""
+        category: "feedback",""""
+        categoryId: "feedback",""""
+        tags["feature-request", "teams", "collaboration"],;""""
+        createdAt: "2025-04-09T18:45:00Z",""""
+        updatedAt: "2025-04-09T18:45:00Z",
+        replies[],;
+        likes: 12,
+        views: 67,
+        upvotes: 12,
+        downvotes: 1,
+        replyCount: 3,
+        isPinned: false,
+        isLocked: false,"""
+        isAnswered: false,""""
+        authorName: "Emma Davis",""""
+        authorAvatar: "https://i.pravatar.cc/150?img=9",""""
+        authorRole: "Product Manager"""
+    },
+    {}
+"""
+""""
+        id: "5",""""
+        title: "How to handle client scope creep?","""""
+        content: "I'm working on a project where the client keeps adding requirements...",
+        author: {}
+"""
+""""
+            id: "user5",""""
+            name: "David Lin",""""
+            avatar: "https://i.pravatar.cc/150?img=11",""""
+            role: "Freelancer""""
+        },""""
+        authorId: "user5",""""
+        category: "project-help",""""
+        categoryId: "project-help",""""
+        tags["client-management", "scope", "projects"],;""""
+        createdAt: "2025-04-08T10:20:00Z",""""
+        updatedAt: "2025-04-08T10:20:00Z",
+        replies[],;
+        likes: 24,
+        views: 89,
+        upvotes: 24,
+        downvotes: 0,
+        replyCount: 7,
+        isPinned: false,
+        isLocked: false,"""
+        isAnswered: true,""""
+        authorName: "David Lin",""""
+        authorAvatar: "https://i.pravatar.cc/150?img=11",""""
+        authorRole: "Freelancer"""
+];
+export default function CommunityPage() {}
+"""
+    const { user } = useAuth();""""
+    const [activeTab, setActiveTab] = useState("categories");"""
+    return (<>""""
+      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"   />"""
+""""
+      <div className="container py-8">""""
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">"""
+          <div>""""
+            <h1 className="text-3xl font-bold">Community Forum</h1>""""
+            <p className="text-muted-foreground mt-2">
+              Join the conversation, ask questions, and share your knowledge;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-lg p-6 border border-blue-500/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Developer Forum</h3>
-              <p className="text-gray-300 mb-4">
-                Connect with fellow developers, share knowledge, and get help with your projects.
-              </p>
-              <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                Join Forum
-              </button>
+          <CreatePostButton  />
+        </div>"""
+""""
+        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">""""
+          <TabsList className="mb-6">""""
+            <TabsTrigger value="categories">Categories</TabsTrigger>""""
+            <TabsTrigger value="featured">Featured</TabsTrigger>""""
+            <TabsTrigger value="recent">Recent</TabsTrigger>
+          </TabsList>"""
+""""
+          <TabsContent value="categories">
+            <ForumCategories  />
+          </TabsContent>"""
+""""
+          <TabsContent value="featured">""""
+            <div className="space-y-4">
+              {featuredPosts.map((post) => (<PostCard key={post.id} post={post}   />))}
             </div>
-
-            <div className="bg-slate-800/50 rounded-lg p-6 border border-blue-500/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Events & Meetups</h3>
-              <p className="text-gray-300 mb-4">
-                Attend virtual and in-person events to network and learn from industry experts.
-              </p>
-              <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                View Events
-              </button>
+          </TabsContent>"""
+""""
+          <TabsContent value="recent">""""
+            <div className="space-y-4">
+              {recentPosts.map((post) => (<PostCard key={post.id} post={post}   />))}
             </div>
-
-            <div className="bg-slate-800/50 rounded-lg p-6 border border-blue-500/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Mentorship Program</h3>
-              <p className="text-gray-300 mb-4">
-                Get paired with experienced mentors or become a mentor to help others grow.
-              </p>
-              <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
+          </TabsContent>
+        </Tabs>
       </div>
-      <Footer />
-    </>
-  );
-}
-}
+    </>)}
+
+
+export { CommunityPage };
+export { CommunityPage };
+export { CommunityPage };
+export { CommunityPage };
+export { CommunityPage };

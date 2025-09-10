@@ -11,7 +11,7 @@ import React from "react";
       </Head>;
       <Navigation  />;
       ";
-      <main className="min-h-screen bg-white">,;
+      <main className="min-h-screen bg-white">,
         {/* comment */}";
         <section className="bg-gradient-to-br from-blue-50 to-cyan-100 py-20">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
@@ -22,26 +22,25 @@ import React from "react";
                 </div>;
               </div>";
               <h1 className="text-5xl font-bold text-gray-900 mb-6">";
-                Cloud & <span className="text-blue-600">DevOps</span> Services,;
+                Cloud & <span className="text-blue-600">DevOps</span> Services,
               </h1>";
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">;
-                Accelerate your digital transformation with our comprehensive cloud migration and DevOps services. ,;
+                Accelerate your digital transformation with our comprehensive cloud migration and DevOps services. ,
                 Scale your infrastructure, improve deployment speed, and reduce operational costs.;
               </p>";
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                 <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-                  Start Migration,;
+                  Start Migration,
                 </Link>";
                 <Link href="/solutions" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">;
-                  View Solutions,;
+                  View Solutions,
                 </Link>;
               </div>;
         </section>;
-,;
         {/* comment */}";
         <section className="py-20 bg-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,;
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
               {stats.map((stat, index) => (";
                 <div key="{index}" className="text-center">";
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>";
@@ -58,18 +57,18 @@ import React from "react";
             <div className="text-center mb-16">";
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cloud & DevOps Services</h2>";
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-                Comprehensive cloud and DevOps solutions to modernize your infrastructure and accelerate development,;
+                Comprehensive cloud and DevOps solutions to modernize your infrastructure and accelerate development,
               </p>;
             </div>;
             ";
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
               {services.map((service, index) => (";
                 <div key="{index}" className="bg-white rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow">";
                   <div className="flex items-center mb-6">";
                     <div className="p-3 bg-blue-100 rounded-lg mr-4">";
                       <service.icon className="w-8 h-8 text-blue-600" />;
                     </div>;
-                    <div>",;
+                    <div>",
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>";
                       <p className="text-gray-600">{service.description}</p>;
                     </div>;
@@ -80,125 +79,3 @@ import React from "react";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />";
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
-                    ))}
-
-                  </ul>;
-                </div>;
-              ))}
-
-            </div>;
-        </section>;
-        {/* comment */}";
-        <section className="py-20 bg-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Technologies We Use</h2>";
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-                We work with leading cloud platforms and DevOps tools to deliver the best solutions,;
-              </p>;
-            </div>;
-            ";
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">,;
-              {technologies.map((tech, index) => (";
-                <div key="{index}" className="text-center">";
-                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">";
-                    <tech.icon className="w-8 h-8 text-blue-600" />;
-                  </div>";
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{tech.name}</h3>";
-                  <p className="text-sm text-gray-600">{tech.description}</p>;
-                </div>;
-              ))}
-
-            </div>;
-        </section>;
-        {/* comment */}";
-        <section className="py-20 bg-gray-50">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Migration Process</h2>";
-              <p className="text-lg text-gray-600">;
-                A proven methodology for successful cloud migration and DevOps implementation,;
-              </p>;
-            </div>;
-            ";
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">";
-              <div className="text-center">";
-                <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Assessment</h3>";
-                <p className="text-gray-600">Analyze current infrastructure and identify migration opportunities</p>;
-              </div>";
-              <div className="text-center">";
-                <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Planning</h3>";
-                <p className="text-gray-600">Design cloud architecture and create migration roadmap</p>;
-              </div>";
-              <div className="text-center">";
-                <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Migration</h3>";
-                <p className="text-gray-600">Execute migration with minimal downtime and risk</p>;
-              </div>";
-              <div className="text-center">";
-                <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimization</h3>";
-                <p className="text-gray-600">Optimize performance and costs for maximum efficiency</p>;
-              </div>;
-        </section>;
-,;
-        {/* comment */}";
-        <section className="py-20 bg-white">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits of Cloud & DevOps</h2>";
-              <p className="text-lg text-gray-600">;
-                Transform your business with modern cloud and DevOps practices,;
-              </p>;
-            </div>;
-            ";
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-              <div className="text-center">";
-                <div className="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">";
-                  <Zap className="w-8 h-8 text-green-600"  />;
-                </div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Faster Deployment</h3>";
-                <p className="text-gray-600">Deploy applications 10x faster with automated CI/CD pipelines</p>;
-              </div>";
-              <div className="text-center">";
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">";
-                  <Database className="w-8 h-8 text-blue-600"  />;
-                </div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost Optimization</h3>";
-                <p className="text-gray-600">Reduce infrastructure costs by up to 50% with cloud optimization</p>;
-              </div>";
-              <div className="text-center">";
-                <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">";
-                  <Network className="w-8 h-8 text-purple-600"  />;
-                </div>";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalability</h3>";
-                <p className="text-gray-600">Scale your infrastructure automatically based on demand</p>;
-              </div>;
-        </section>;
-,;
-        {/* comment */}";
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";
-            <h2 className="text-3xl font-bold text-white mb-6">;
-              Ready to Transform Your Infrastructure?;
-            </h2>";
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
-              Let us help you migrate to the cloud and implement modern DevOps practices for better performance and efficiency.;
-            </p>";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
-                Start Migration,;
-              </Link>";
-              <Link href="/case-studies" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
-                View Case Studies,;
-              </Link>;
-            </div>;
-        </section>;
-      </main>;
-      <Footer  />;
-    </>;
-  )}
-
-"export default CloudDevOps

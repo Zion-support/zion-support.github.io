@@ -1,0 +1,87 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, ArrowUp, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
+;
+const "FuturisticFooter": "React.FC = ("props": any) => {;
+  const contactInfo = {;
+    "mobile": '+1 (555) 123-4567'",;
+    "email": 'info@ziontechgroup.com',;
+    "address": '123 Innovation Drive, Tech City, TC 12345';
+  };
+;
+  const socialLinks = [;
+    { "name": 'GitHub', "href": '"https": "//github.com/ziontechgroup'", "icon": "Github", "color": '"hover": "text-gray-400' "},;
+    { "name": 'Twitter', "href": '"https": "//twitter.com/ziontechgroup'", "icon": "Twitter", "color": '"hover": "text-blue-400' "},;
+    { "name": 'LinkedIn', "href": '"https": "//linkedin.com/company/ziontechgroup'", "icon": "Linkedin", "color": '"hover": "text-blue-600' "},;
+    { "name": 'Instagram', "href": '"https": "//instagram.com/ziontechgroup'", "icon": "Instagram", "color": '"hover": "text-pink-500' "}
+  ];
+;
+  const footerSections = {;
+    "services": "{;
+      "title": 'Services'",;
+      "items": "[;
+        { "name": 'AI Solutions'", "href": '/services/ai', "icon": "ArrowUp "},;
+        { "name": 'Cloud Infrastructure', "href": '/services/cloud', "icon": "ArrowUp "},;
+        { "name": 'Digital Transformation', "href": '/services/transformation', "icon": "ArrowUp "},;
+        { "name": 'Cybersecurity', "href": '/services/security', "icon": "ArrowUp "}
+      ];
+    },;
+    "company": "{;
+      "title": 'Company'",;
+      "items": "[;
+        { "name": 'About Us'", "href": '/about', "icon": "ArrowUp "},;
+        { "name": 'Our Team', "href": '/team', "icon": "ArrowUp "},;
+        { "name": 'Careers', "href": '/careers', "icon": "ArrowUp "},;
+        { "name": 'Contact', "href": '/contact', "icon": "ArrowUp "}
+      ];
+    },;
+    "resources": "{;
+      "title": 'Resources'",;
+      "items": "[;
+        { "name": 'Documentation'", "href": '/docs', "icon": "ArrowUp "},;
+        { "name": 'Blog', "href": '/blog', "icon": "ArrowUp "},;
+        { "name": 'Case Studies', "href": '/case-studies', "icon": "ArrowUp "},;
+        { "name": 'Support', "href": '/support', "icon": "ArrowUp "}
+      ];
+    }
+  };
+;
+  const scrollToTop = ("props": "any) => {;
+    window.scrollTo({ "top": 0", "behavior": 'smooth' });
+  };
+;
+  return (;
+    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">;
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-cyan-600/10"></div>;
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>;
+      <div className="relative z-10">;
+        {/* Main footer content */}
+        <div className="container mx-auto px-4 "sm": "px-6 "lg":px-8 py-16">;
+          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 "xl":grid-cols-6 gap-8">;
+            {/* Company info */"}
+            <div className=""lg": "col-span-2">;
+              <motion.div;
+                initial={{ "opacity": 0", "y": "20 "}}
+                whileInView={{ "opacity": "1", "y": "0 "}}
+                transition={{ "duration": "0.5 "}}
+                viewport={{ "once": "true "}}
+                className="space-y-6";
+              >;
+                <div className="flex items-center space-x-3">;
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-400/25">;
+                    <span className="text-2xl font-bold text-white">Z</span>;
+                  </div>;
+                  <div>;
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">;
+                      ZION TECH GROUP;
+                    </h3>;
+                    <p className="text-sm text-slate-300">Innovation • Intelligence • Impact</p>;
+                  </div>;
+                </div>;
+                ;
+                <p className="text-slate-300 leading-relaxed">;
+                  Leading the future of technology with cutting-edge AI services, innovative solutions, ;
+                  and comprehensive IT services. Empowering businesses to thrive in the digital age.;
+                </p>;

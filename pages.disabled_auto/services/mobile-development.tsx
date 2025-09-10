@@ -1,8 +1,3 @@
-import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-import { CheckCircle, Smartphone, Zap, Shield, BarChart, Users, Award } from 'lucide-react';
-
 const MobileDevelopment: NextPage = () => {
   return (;
     <Layout;
@@ -294,5 +289,5 @@ const MobileDevelopment: NextPage = () => {
         </div>;
       </section>;
     </Layout>;
-  )}
-export default MobileDevelopment;
+  );
+};

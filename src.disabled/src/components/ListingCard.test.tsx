@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ListingCard from '../components/ListingCard';'
-describe('ListingCard', () => {test('renders without crashing', () => {render(<ListingCard />)expect(screen.getByTestId('listingcard')).toBeInTheDocument()})test('displays correct content', () => {render(<ListingCard />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ListingCard />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ListingCard />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ListingCard from &apos;./ListingCard; describe(&apos;ListingCard&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ListingCard / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ListingCard from &apos;./ListingCard; describe(&apos;ListingCard&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ListingCard / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ListingCard from &apos;./ListingCard; describe(&apos;ListingCard&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<ListingCard / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

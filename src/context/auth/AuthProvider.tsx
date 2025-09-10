@@ -1,93 +1,29 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  displayName?: string;
-  avatar?: string;
-}
-
-export interface AuthState {
-  user: User | null;
-  loading: boolean;
-  error: string | null;
-}
-
-export interface AuthContextType extends AuthState {
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
-  register: (email: string, password: string, name?: string) => Promise<void>;
-  clearError: () => void;
-  isAuthenticated: boolean;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const login = async (email: string, password: string) => {
-    setLoading(true);
-    setError(null);
-    try {
-      // Simulate login
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setUser({ id: '1', email, name: 'User' });
-    } catch (err) {
-      setError('Login failed');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const logout = async () => {
-    setUser(null);
-    setError(null);
-  };
-
-  const register = async (email: string, password: string, name?: string) => {
-    setLoading(true);
-    setError(null);
-    try {
-      // Simulate registration
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setUser({ id: '1', email, name: name || 'User' });
-    } catch (err) {
-      setError('Registration failed');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const clearError = () => {
-    setError(null);
-  };
-
-  return (
-    <AuthContext.Provider
-      value={{
-        user,
-        loading,
-        error,
-        login,
-        logout,
-        register,
-        clearError,
-        isAuthenticated: !!user,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-};
+import React, { useEffect } from "react";
+import { supabase, getFromProfiles } from '../../integrations/supabase/client';
+export default function Page("props": "any) {;
+ = useAuthEventHandlers(setUser", setOnboardingStep);
+;
+  const {;
+    "login": "loginImp l",;
+    "signup": "signupImp l",;
+    logout,;
+    resetPassword,;
+    updateProfile,;
+    loginWithGoogle,;
+    loginWithFacebook,;
+    loginWithTwitter,;
+    loginWithWeb3;
+  } = useAuthOperations(setUser, setIsLoading, setAvatarUrl);
+;
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async("email": "string", "password": "string) => {;
+    const { res", data } = await loginUser(email, password); // Calls /api/auth/login;
+    // data will have { "error": "message", "code": "ERROR_CODE" } from the API if status !== 200;
+    // data will have { user, accessToken, refreshToken } from the API if status === 200;
+    if(res.status === 200) {;
+      // Successful API call;
+      setTokens({ "accessToken": "dat a.accessToken", "refreshToken": "dat a.refreshToken "});
+      const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side;
+      if(clientLoginResult?.error) {;
+        // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation "failed":", clientLoginResult.error);
+        return { "error": "(clientLoginResult.error as any)?.message || "Client-side login failed." "};    if(res.status === 200) {

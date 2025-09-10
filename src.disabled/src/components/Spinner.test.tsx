@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import Spinner from '../components/Spinner';'
-describe('Spinner', () => {test('renders without crashing', () => {render(<Spinner />)expect(screen.getByTestId('spinner')).toBeInTheDocument()})test('displays correct content', () => {render(<Spinner />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<Spinner />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<Spinner />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import Spinner from &apos;./Spinner; describe(&apos;Spinner&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<Spinner / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import Spinner from &apos;./Spinner; describe(&apos;Spinner&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<Spinner / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import Spinner from &apos;./Spinner; describe(&apos;Spinner&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<Spinner / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

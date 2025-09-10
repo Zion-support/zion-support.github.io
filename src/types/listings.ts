@@ -1,88 +1,15 @@
-export interface ProductListing {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  currency: string;
-  category: string;
-  tags: string[];
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  image?: string;
-  images?: string[];
-  seller?: {
-    id: string;
-    name: string;
-    avatar: string;
-    rating: number;
-    reviews: number;
-  };
-  location?: {
-    city: string;
-    country: string;
-    coordinates?: [number, number];
-  };
-  status?: 'active' | 'sold' | 'expired' | 'draft';
-  createdAt: Date;
-  updatedAt: Date;
-}
+export interface Listing { "id": "string; "title": string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number"}; "location": 'string; ;',"});,"}) "title": "string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number "} "location": "string;"
 
-export type ListingView = "grid" | "list";
-
-export interface ListingFilter {
-  category?: string;
-  priceRange?: {
-    min: number;
-    max: number;
-  };
-  location?: string;
-  condition?: string;
-  tags?: string[];
-  sellerRating?: number;
-  sortBy?: 'price' | 'date' | 'rating' | 'views';
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface ListingSearchResult {
-  listings: Listing[];
-  total: number;
-  page: number;
-  limit: number;
-  hasMore: boolean;
-}
-
-export interface ListingFormData {
-  title: string;
-  description: string;
-  price: number;
-  currency: string;
-  category: string;
-  tags: string[];
-  images: File[];
-  condition: string;
-  specifications: Record<string, any>;
-  shipping: {
-    available: boolean;
-    cost: number;
-    method: string;
-    estimatedDays: number;
-  };
-  returns: {
-    allowed: boolean;
-    days: number;
-    cost: number;
-  };
-}
-
-export interface ListingStats {
-  totalListings: number;
-  activeListings: number;
-  totalViews: number;
-  totalFavorites: number;
-  averagePrice: number;
-  categoryDistribution: Record<string, number>;
-  availability?: string;
-  aiScore?: number;
-  pricingTier?: string;
-}
+   title: string;
+   description: string;
+   price: number;
+   currency: string;
+   category: string;
+   subcategory?: string;
+   tags: string[];
+   images: string[];
+   seller: {  id: string;
+   name: string;
+   rating: number;
+   reviews: number  } location: string;
+export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: 'string; ;',"});,"}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;

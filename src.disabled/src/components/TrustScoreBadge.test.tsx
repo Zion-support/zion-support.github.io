@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import TrustScoreBadge from '../components/TrustScoreBadge';'
-describe('TrustScoreBadge', () => {test('renders without crashing', () => {render(<TrustScoreBadge />)expect(screen.getByTestId('trustscorebadge')).toBeInTheDocument()})test('displays correct content', () => {render(<TrustScoreBadge />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<TrustScoreBadge />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<TrustScoreBadge />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import TrustScoreBadge from &apos;./TrustScoreBadge; describe(&apos;TrustScoreBadge&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<TrustScoreBadge / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import TrustScoreBadge from &apos;./TrustScoreBadge; describe(&apos;TrustScoreBadge&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<TrustScoreBadge / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import TrustScoreBadge from &apos;./TrustScoreBadge; describe(&apos;TrustScoreBadge&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<TrustScoreBadge / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

@@ -559,7 +559,6 @@ module.exports = checkAutomationStatus;
       process.exit(1);
 
 module.exports = { checkAutomationStatus };
-
 #!/usr/bin/env node;
 
 

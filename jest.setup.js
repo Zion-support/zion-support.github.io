@@ -1,22 +1,18 @@
-import "@testing-library/jest-dom";
+require('@testing-library/jest-dom');
 
-
-
-
-  return function MockedImage({ src, alt, ...props }) {
-    return React.createElement("img", { src, alt, ...props });
+// Mock Next.js Image to plain img
+jest.mock('next/image', () => {
+  const React = require('react');
+  return function MockedImage(props) {
+    const { src, alt, ...rest } = props || {};
+    return React.createElement('img', { src, alt, ...rest });
   };
 });
 
-// Mock Next.js Link component
-jest.mock("next/link", () => {
-  const React = require("react");
-  return {
-    _esModule: true,
-    default: ({ children, href, ...props }) => {
-      return React.createElement("a", { href, ...props }, children);
-    },
-  };
+// Mock Next.js Link to anchor
+jest.mock('next/link', () => {
+  const React = require('react');
+  return ({ children, href, ...rest }) => React.createElement('a', { href, ...rest }, children);
 });
 
 // Mock IntersectionObserver
@@ -36,42 +32,16 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Global test setup,
-beforeEach(() => {
-  // Reset all mocks before each test,
-jest.clearAllMocks()
-}),
-beforeEach(() => {
-  // Reset all mocks before each test
-  jest.clearAllMocks();
-
-});
-
-// Global test setup
-beforeEach(() => {
-  jest.clearAllMocks();
 });

@@ -1,0 +1,14 @@
+import React from "react";
+import SEOHead from "../src/components/SEOHead";
+const RDPage = () => {
+  return (
+    <>
+      <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs."   />
+      <main className="max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-6">Research & Development</h1>
+        <p className="text-gray-600">We invest in cutting-edge research across AI, cloud, and edge computing to build the future.</p>
+      </main>
+    </>
+  );
+};
+export default RDPage;

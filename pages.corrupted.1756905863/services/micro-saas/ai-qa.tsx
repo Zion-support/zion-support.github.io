@@ -8,3 +8,5 @@ interface AiqaProps {
       <p>This component is currently under development.</p>
     </div>
   );
+
+}

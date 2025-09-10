@@ -8,3 +8,5 @@ interface CloudfinopsProps {
       <p>This component is currently under development.</p>
     </div>
   );
+
+}

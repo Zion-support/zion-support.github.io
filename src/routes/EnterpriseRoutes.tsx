@@ -1,8 +1,20 @@
-// Routes have been converted to Next.js pages structure
-// This component is no longer needed since Next.js uses file-based routing
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import EnterprisePlans from '../pages/EnterprisePlans';
+import EnterpriseAdmin from '../pages/EnterpriseAdmin';
+import CompWorkspace from '../pages/CompWorkspace';
+import EnterpriseBilling from '../pages/EnterpriseBilling';
+import EnterpriseDemo from '../pages/EnterpriseDemo';
 
-const EnterpriseRoutes = () => {
-  return null;
-};
-
-export default EnterpriseRoutes;
+export default function EnterpriseRoutes() {
+  return (
+    <Routes>
+      <Route path="/enterprise" element={<EnterprisePlans />} />
+      <Route path="/plans/enterprise" element={<EnterprisePlans />} />
+      <Route path="/admin" element={<EnterpriseAdmin />} />
+      <Route path="/workspace" element={<CompWorkspace />} />
+      <Route path="/billing" element={<EnterpriseBilling />} />
+      <Route path="/demo" element={<EnterpriseDemo />} />
+    </Routes>
+  );
+}

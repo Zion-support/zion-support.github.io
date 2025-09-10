@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node;
 /*
   Automated syntax repair for widespread mangling and merge markers.
@@ -21,7 +20,6 @@ function listFiles(dir) {}
 function stripConflictMarkers(content) {}
   // Prefer the right side of conflicts (after ) since HEAD often contains broken text;
   // "Pattern": ... \n(left)\n\n(right)\n...
-  return content.replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, left, right) => {}
     // "Heuristic": choose the side with more balanced braces/quotes; default to right;
     const score = (s) => {}
       const open = (s.match(/[{(\[]/g) || []).length;}
@@ -30,7 +28,6 @@ function stripConflictMarkers(content) {}
       return -(Math.abs(open - close) + (quotes % 2))};
     const rightScore = score(right);
     const leftScore = score(left);
-    return rightScore >= leftScore ? right : left}).replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, only) => {}
     // Two-way conflict without middle separator; keep inner content;
     return only})};
 function fixCommonMangles(content) {}

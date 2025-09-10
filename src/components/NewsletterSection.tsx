@@ -1,0 +1,11 @@
+      description: "Get exclusive access to tech trends and analysis";
+},    {;
+      icon: Zap,";
+      title: "Early Access",";
+      description: "Be the first to know about beta programs and launches"};  ];
+  if(isSubscribed) {;
+    return (";
+      <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">";
+        <div className="max-w-4xl mx-auto px-6 text-center">;
+          <motion.div;
+            initial = {;

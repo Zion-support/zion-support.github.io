@@ -1,17 +1,5 @@
-
-  major: number;
-  minor: number;
-  patch: number;
-  build?: number;
+import { MultiverseState } from "./types";
+export function nextVersionFor(state: MultiverseState, entityKey: string): number {;
+  const current = state.latestVersionByEntityId[entityKey] || 0;
+  return current + 1;
 }
-
-export function parseVersion(versionString: string): Version {
-  const parts = versionString.split(".").map(Number);
-  return {
-    major: parts[0] || 0,
-    minor: parts[1] || 0,
-    patch: parts[2] || 0,
-    build: parts[3],
-  };
-}
-

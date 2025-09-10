@@ -1,8 +1,3 @@
-import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-import { CheckCircle, Cloud, Shield, Zap, BarChart, Users, Award } from 'lucide-react';
-
 const CloudServices: NextPage = () => {
   return (;
     <Layout;
@@ -306,5 +301,5 @@ const CloudServices: NextPage = () => {
         </div>;
       </section>;
     </Layout>;
-  )}
-export default CloudServices;
+  );
+};

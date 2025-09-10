@@ -1,33 +1,33 @@
-}});
-;
-console.log(`Fixed ${fixedCount} files`);
-};
-// Function to process a file
-function processFile(filePath) {
+// Ultimate fix script for resolving syntax errors
+const fs = require('fs');
+const path = require('path');
+
+let fixedCount = 0;
+
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8')
-    const fixedContent = fixAllRemainingIssues(content)
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent)
-      console.log(`Fixed: ${filePath}`)
-      return true
-    };
-    return false
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    // Fix common syntax errors
+    content = content.replace(/,\s*;/g, ';');
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content);
+    fixedCount++;
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false
-  };
-};
-// Process the specific files that have errors
-const errorFiles = [
-  'pages/about.tsxpages/accessibility.tsxpages/ai-services.tsxpages/api.tsxpages/blog.tsx'
-]
-console.log(`Processing ${errorFiles.length} files with errors`)
-let fixedCount = 0
-errorFiles.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++
-  };
-});
-;
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Process files
+const files = [
+  'test-next.js',
+  'test-utils.jsx',
+  'utils/messageChannelHandler.ts',
+  'utils/test-utils.tsx'
+];
+
+files.forEach(fixSyntaxErrors);
+
 console.log(`Fixed ${fixedCount} files`);

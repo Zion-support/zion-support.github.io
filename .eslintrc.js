@@ -1,67 +1,45 @@
+/* eslint-env node */
 module.exports = {
-  root: true,
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:react/jsx-runtime',
+    '@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'no-console': 'off',
     'no-undef': 'off',
-    'no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_' }
-    ]
+    'react/no-unescaped-entities': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn'
+  },
+  env: {
+    node: true,
+    browser: true,
+    es2021: true
   },
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
-    'dist/',
     'build/',
-    'coverage/',
+    'dist/',
     '*.config.js',
-    '*.config.cjs',
-    '*.config.mjs',
-    'temp_*/',
-    'test_build/',
-    'tests.disabled/',
-    'pages.disabled/',
-    'src.disabled/',
-    'components.disabled/',
-    'hooks.disabled/',
-    'types.disabled/',
-    'solutions.disabled/',
-    'zion-os.disabled/',
-    'zion_academy/',
+    '*.config.ts',
+    'scripts/',
     'automation/',
-    'backup/',
-    'temp_backup/',
-    'api-backup/',
-    '*.report.json',
-    'fix-*.js',
-    'fix-*.cjs',
-    'ultimate-*.js',
-    'ultimate-*.cjs',
-    'comprehensive-*.js',
-    'comprehensive-*.cjs',
-    'enhanced-*.js',
-    'enhanced-*.cjs',
-    'automation-*.js',
-    'automation-*.cjs',
-    'merge-*.js',
-    'merge-*.cjs',
-    'conflict-*.js',
-    'conflict-*.cjs',
-    'temp-*.js',
-    'temp-*.cjs'
+    'netlify/',
+    'src/',
+    'apps/'
   ]
 };

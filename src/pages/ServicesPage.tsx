@@ -1,34 +1,60 @@
-import React from 'react';
-import SEO from '@/components/SEO';
+import React from "react";
+const ServicesPage: React.FC = () => {
+  const services = [
+    {
+      title: "AI & Machine Learning",
+      description: "Advanced AI solutions including natural language processing, computer vision, and predictive analytics.",
+      icon: "🤖"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions including threat detection, vulnerability assessment, and incident response.",
+      icon: "🔒"
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions including migration, optimization, and management services.",
+      icon: "☁️"
+    },
+    {
+      title: "Web Development",
+      description: "Modern web applications using React, Node.js, and other cutting-edge technologies.",
+      icon: "🌐"
+    },
+    {
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications for iOS and Android.",
+      icon: "📱"
+    },
+    {
+      title: "DevOps & Automation",
+      description: "CI/CD pipelines, infrastructure as code, and automated deployment solutions.",
+      icon: "⚙️"
+    }
+  ];
 
-const ServicesPage = () => {
-    return (
-        <>
-            <SEO 
-                title="Services - Zion Tech Group" 
-                description="Comprehensive range of IT and AI services to transform your business operations." 
-            />
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-                <div className="container mx-auto px-4 py-20">
-                    <div className="text-center mb-16">
-                        <h1 className="text-5xl font-bold text-white mb-6">Services</h1>
-                        <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                            Comprehensive range of IT and AI services to transform your business operations. 
-                            From automation to cybersecurity, we've got you covered.
-                        </p>
-                    </div>
-                    <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
-                        <div className="text-center">
-                            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-                            <p className="text-zion-slate-light mb-6">
-                                Our services page is currently under development.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology solutions tailored to your business needs
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+              <p className="text-gray-300">{service.description}</p>
             </div>
-        </>
-    );
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ServicesPage;

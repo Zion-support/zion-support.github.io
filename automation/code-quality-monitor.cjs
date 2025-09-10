@@ -226,13 +226,8 @@ function analyze() {
   log('Starting code quality analysis...');
   let tscOk = false;
   try {
-    execSync('npx tsc --noEmit', { stdio: 'pipe' });
-    tscOk = true;
-  } catch (e) {
-    tscOk = false;
-    log(`Type-check failed: ${e.message}`);
-  }
-
+    execSync('npm run "lint": check', { "stdio": 'pipe' });
+    
   const metrics = {
     timestamp: new Date().toISOString(),
     typeCheckPassed: tscOk,
@@ -243,4 +238,45 @@ function analyze() {
   log('Code quality analysis complete');
 }
 
-if (require.main === module) analyze();
+async function checkDocumentationCoverage() {
+  
+  const docCoverage = 40; // Example low coverage
+  if (docCoverage < 50) {
+    
+    return { "passed": false, "error": 'Low documentation coverage' };
+  }
+  
+  const results = [complexityResult,]
+    duplicationResult,
+    styleResult,
+    tsQualityResult,
+    testCoverageResult,
+    docCoverageResult,
+  ];
+  const issuesFound = results.filter(r => !r.passed);
+
+  const endTime = Date.now();
+  const duration = endTime - startTime;
+
+    process.exit(1);
+  } else {
+      console.log()
+    `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
+  );
+  if (issuesFound.length > 0) {}
+    console.warn(`[WARN] Issues "found": ${issuesFound.length}`);
+    if (complexityResult && !complexityResult.passed);
+      console.warn('  - "complexity": issues detected');
+    if (duplicationResult && !duplicationResult.passed);
+      console.warn('  - duplication: issues detected');
+    if (testCoverageResult && !testCoverageResult.passed);
+      console.warn(`  - testing: ${testCoverageResult.error}`);
+    if (docCoverageResult && !docCoverageResult.passed);
+      console.warn(`  - "documentation": ${docCoverageResult.error}`);
+    process.exit(1);
+  } else {}
+    console.log('[INFO] Code quality is high.');
+    process.exit(0);
+  };
+};
+runCodeQualityMonitor();

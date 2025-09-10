@@ -348,11 +348,11 @@ export const real2026Q2Additions = [
     use_cases: [
       'MSPs and IT providers',
       'Internal IT for SMBs',
-      'BYOD governance',
-    ],
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
-    competitors: ['Atera', 'NinjaOne'],
-    price: '$4',
+      'BYOD governance',;
+    ],;
+    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],;
+    competitors: ['Atera', 'NinjaOne'],;
+    price: '$4',;
 ;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
@@ -447,11 +447,11 @@ export const real2026Q2Additions = [
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
-  },
-  {
-    id: 'ecommerce - returns - orchestrator',
-    name: 'E‑commerce Returns Orchestrator',
-    category: 'Developer Tools',
+  },;
+  {;
+    id: 'ecommerce - returns - orchestrator',;
+    name: 'E‑commerce Returns Orchestrator',;
+    category: 'Developer Tools',;
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',;
     description:;
       'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
@@ -1009,11 +1009,11 @@ export const real2026Q2Additions = [
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
-    price: '$4',
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
-  },
-
+    price: '$4',;
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
+  },;
+;
 ;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 

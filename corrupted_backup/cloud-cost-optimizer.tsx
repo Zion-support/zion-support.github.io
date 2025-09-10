@@ -11,9 +11,8 @@ import Head from \'next/head.ts\'; import Link from \'next/link\'; export defaul
       <h1>Cloudcostoptimizer</h1>
       <p>This component is currently under development.</p>
     </div>
-  ) 
+  );
 }
 }
 }
 }
-    </div>"

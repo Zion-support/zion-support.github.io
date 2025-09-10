@@ -1,38 +1,32 @@
-export class ContentOptimizer {
-  static analyzeContent(content, page) {
-    const suggestions = [];
-    
-    // Check for basic SEO elements
-    if (!content.title || content.title.length < 30) {
-      suggestions.push('Add a more descriptive title (30+ characters)');
-    }
-    
-    if (!content.description || content.description.length < 120) {
-      suggestions.push('Add a meta description (120-160 characters)');
-    }
-    
-    if (!content.headings || content.headings.length === 0) {
-      suggestions.push('Add proper heading structure (H1, H2, H3)');
-    }
-    
-    // Check for content quality
-    if (content.wordCount < 300) {
-      suggestions.push('Increase content length (aim for 300+ words)');
-    }
-    
-    if (!content.images || content.images.length === 0) {
-      suggestions.push('Add relevant images to improve engagement');
-    }
-    
-    return suggestions;
-  }
-  
-  static optimizeContent(content, page) {
-    const suggestions = this.analyzeContent(content, page);
-    const optimizationComments = suggestions
-      .map(suggestion => `<!-- TODO: ${suggestion} -->`)
-      .join('\n');
-    
-    return `${optimizationComments}\n\n${content}`;
-  }
-}
+
+export class ContentOptimizer {;
+    static MIN_WORD_COUNT = 300;
+    static MIN_HEADING_COUNT = 2;
+    static MIN_IMAGE_COUNT = 1;
+    static MIN_LINK_COUNT = 3;
+;
+    static analyzeContent(content, page) {;
+        const wordCount = this.countWords(content);
+        const headingCount = this.countHeadings(content);
+        const imageCount = this.countImages(content);
+        const linkCount = this.countLinks(content);
+        const readabilityScore = this.calculateReadabilityScore(content);
+        const seoScore = this.calculateSEOScore(content, page);
+        const issues = this.identifyIssues(content, page, {
+            wordCount,
+            headingCount,
+            imageCount,
+            linkCount
+        }
+    );
+        const suggestions = this.generateSuggestions(issues, page);
+;
+        return {page,;
+            wordCount,;
+            headingCount,;
+            imageCount,;
+            linkCount,;
+            readabilityScore,;
+            seoScore,;
+            issues,;
+            suggestions};

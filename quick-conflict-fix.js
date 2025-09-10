@@ -18,21 +18,21 @@ function fixConflictsInFile(filePath) {
     if (!fs.existsSync(filePath)) {
       return false;
     }
-    
+
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     if (!content.includes('')) {
       return false;
     }
-    
+
     console.log(`🔧 Fixing: ${filePath}`);
-    
+
     // Simple resolution: keep the incoming changes (after )
     const lines = content.split('\n');
     const resolved = [];
     let inConflict = false;
     let keepIncoming = false;
-    
+
     for (const line of lines) {
       if (line.includes('')) {
         inConflict = true;
@@ -46,12 +46,12 @@ function fixConflictsInFile(filePath) {
         keepIncoming = false;
         continue;
       }
-      
+
       if (!inConflict || keepIncoming) {
         resolved.push(line);
       }
     }
-    
+
     const newContent = resolved.join('\n');
     fs.writeFileSync(filePath, newContent, 'utf8');
     console.log(`✅ Fixed: ${filePath}`);

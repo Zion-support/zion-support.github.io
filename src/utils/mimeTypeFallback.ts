@@ -1,9 +1,7 @@
-interface MimeTypeMapping {
-  [key: string]: string;
-}
+type MimeTypeMapping = Record<string, string>;
 
 class MimeTypeFallback {
-  private static mimeTypes: MimeTypeMapping = {
+  private mimeTypes: MimeTypeMapping = {
     '.js': 'application/javascript',
     '.mjs': 'application/javascript',
     '.css': 'text/css',
@@ -34,48 +32,8 @@ class MimeTypeFallback {
     '.ogg': 'video/ogg',
     '.mp3': 'audio/mpeg',
     '.wav': 'audio/wav',
-    '.flac': 'audio/flac'
+    '.flac': 'audio/flac',
   };
 
-  private fallbackUrls: Map<string, string> = new Map();
-  private cdnFallbacks = [
-    'https://cdn.jsdelivr.net',
-    'https://unpkg.com',
-    'https://cdnjs.cloudflare.com'
-  ];
-
-  constructor() {
-    this.initializeFallbacks();
-  }
-
-  private initializeFallbacks(): void {
-    // Initialize fallback URLs for common resources
-    this.fallbackUrls.set('react', 'https://unpkg.com/react@18/umd/react.production.min.js');
-    this.fallbackUrls.set('react-dom', 'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js');
-    this.fallbackUrls.set('lodash', 'https://unpkg.com/lodash@4.17.21/lodash.min.js');
-  }
-
-  getMimeType(filename: string): string {
-    const extension = this.getFileExtension(filename);
-    return MimeTypeFallback.mimeTypes[extension] || 'application/octet-stream';
-  }
-
-  private getFileExtension(filename: string): string {
-    const lastDot = filename.lastIndexOf('.');
-    return lastDot !== -1 ? filename.substring(lastDot) : '';
-  }
-
-  getFallbackUrl(moduleName: string): string | null {
-    return this.fallbackUrls.get(moduleName) || null;
-  }
-
-  addFallbackUrl(moduleName: string, url: string): void {
-    this.fallbackUrls.set(moduleName, url);
-  }
-
-  getCdnFallbacks(): string[] {
-    return [...this.cdnFallbacks];
-  }
-}
-
-export default MimeTypeFallback;
+  private fallbackUrls = new Map<string, string>();
+  private cdnFallbacks = ['https://cdn.jsdelivr.net', 'https://unpkg.com', 'https://cdnjs.cloudflare.com'];
