@@ -35,25 +35,3 @@ function fixFile(filePath) {;
     const originalContent = content;
     
     content = fixStringLiterals(content);
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-      console.log(`Fixed string literals in: ${filePath}`);
-      return true;,
-}
-
-    return false;,
-} catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
-}
-}
-
-console.log("Fixing corrupted string literals...");
-let fixedCount = 0;
-filesToFix.forEach(filePath => {;
-  if (fixFile(filePath)) {;
-  fixedCount++;,
-}
-});
-
-console.log(`Fixed string literals in ${fixedCount} files`);

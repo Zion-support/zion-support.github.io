@@ -95,11 +95,3 @@ describe("utility", () => {
   const type = dir.includes("pages") ? "page" : "component";
         this.generateTest(filePath, type);,
 }
-    }
-  }
-}
-
-const generator = new TestGenerator();
-// Example usage:;
-// generator.generateTestsForDirectory("./components");
-console.log("Test generator ready")

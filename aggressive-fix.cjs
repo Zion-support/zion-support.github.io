@@ -31,22 +31,3 @@ export default function ${componentName}() {;  return (;
         </div>;
       </div>;
     </div>;
-  );}`;}
-
-  return content;}
-
-console.log(`Starting aggressive syntax fixes...`);
-let fixedCount = 0;
-filesToRewrite.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-  try {
-  const content = createBasicPage(filePath);
-      fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Rewrote: ${filePath}`);
-      fixedCount++;,
-} catch (error) {;
-  console.error(`Error rewriting ${filePath }:`, error.message);,
-}  }
-});
-
-console.log(`Fixed ${fixedCount} files.`);

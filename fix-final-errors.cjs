@@ -1,6 +1,6 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
+const fs = require("fs")
+const path = require("path")
 function fixFile(filePath) {
   try {
   let content = fs.readFileSync(filePath, "utf8");
@@ -84,35 +84,3 @@ function fixFile(filePath) {
 
     return false;} catch (error) {
   console.error(`Error fixing ${filePath }:`, error.message);
-    return false;}
-}
-
-function getAllFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-  const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-  files.push(...getAllFiles(fullPath));} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {
-  files.push(fullPath);}
-  }
-
-  return files;}
-
-// Main execution;
-const srcDir = path.join(process.cwd(), `src`);
-if (fs.existsSync(srcDir)) {
-  const files = getAllFiles(srcDir);
-  let fixedCount = 0;
-  for (const file of files) {;
-  if (fixFile(file)) {;
-  fixedCount++;,
-}
-  }
-
-  console.log(`\nFixed ${fixedCount} files.`);,
-} else {;
-  console.log(`src directory not found`);,
-}
-}}}}}}}}}}}}}}}}}}

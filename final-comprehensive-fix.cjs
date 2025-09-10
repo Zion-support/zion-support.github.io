@@ -169,30 +169,3 @@ console.log('✨ Final comprehensive fixes completed!');
       return true;}
     return false;} catch (error) {
   console.error(`Error processing ${filePath }:`, error.message);
-    return false;}
-}
-
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  files.forEach(file => {
-  const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-  if (![`node_modules`, ".git", ".next", "out", "dist"].includes(file)) {
-  fixedCount += processDirectory(filePath);}
-    } else if (;
-      file.endsWith(".tsx") ||;
-      file.endsWith(".ts") ||;
-      file.endsWith(".jsx") ||;
-      file.endsWith(".js");
-    ) {
-  if (fixFile(filePath)) {
-  fixedCount++;}
-    }
-  });
-  return fixedCount;}
-
-console.log("Starting final comprehensive syntax fixes...");
-const fixedCount = processDirectory("./src');
-console.log(`Fixed ${fixedCount} files.`)}}}))

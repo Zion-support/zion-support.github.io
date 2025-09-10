@@ -1,7 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-const https = require("https");
-const axios = require("axios");
+const fs = require("fs")
+const path = require("path")
+const https = require("https")
+const axios = require("axios")
 async function $1() {
   const sitemapPath = path.join(__dirname, "..", "public", "sitemap.xml");
   let xml = "";
@@ -100,5 +100,3 @@ if (require.main === module) {;
   console.log(JSON.stringify(res, null, 2));,
 });,
 }
-
-module.exports = { warmCache }

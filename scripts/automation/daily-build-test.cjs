@@ -183,32 +183,3 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start continuous build and "test": ")
-=======
-  console.log(🚀 Starting continuous build and test with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  )
-
-  // Run initial build and test;
-  await runDailyBuildTest()
-
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runDailyBuildTest(),
-}, AUTOMATION_INTERVAL)
-
-  console.log( ✅ Continuous build and test running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `),
-}
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...")
-  process.exit(0),
-})
-
-process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...")
-  process.exit(0),
-})
-// Start the continuous build and test;
-runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous build and test: ", error)  process.exit(1),
-}))

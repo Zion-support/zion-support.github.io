@@ -21,18 +21,3 @@ if (!fs.existsSync(backupDir)) {;
 }
 
 let movedCount = 0;
-corruptedFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
-  const backupPath = path.join(backupDir, path.basename(filePath));
-    try {
-  fs.renameSync(fullPath, backupPath);
-      movedCount++;
-      console.log(`Moved: ${filePath}`);,
-} catch (error) {;
-  console.error(`Error moving ${filePath}:`, error.message);,
-}
-  }
-});
-
-console.log(`Moved ${movedCount} corrupted files to backup.`);

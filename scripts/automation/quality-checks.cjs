@@ -184,32 +184,3 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start continuous quality "checks": ")
-=======
-  console.log(🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  )
-
-  // Run initial quality checks;
-  await runQualityChecks()
-
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runQualityChecks(),
-}, AUTOMATION_INTERVAL)
-
-  console.log( ✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `),
-}
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...")
-  process.exit(0),
-})
-
-process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...")
-  process.exit(0),
-})
-// Start the continuous quality checks;
-runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous quality checks: ", error)  process.exit(1),
-}))

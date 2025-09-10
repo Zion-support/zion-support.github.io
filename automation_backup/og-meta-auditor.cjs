@@ -1,7 +1,7 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("fs")
+const path = require("path")
 function walk(dir, exts = new Set([".tsx", ".ts", ".jsx", ".js"])) {
-  const files = [];
+  const files = []
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
   if (entry.name.startsWith(".")) continue;
     const full = path.join(dir, entry.name);
@@ -63,5 +63,3 @@ function $1() {;
 if (require.main === module) {;
   console.log(JSON.stringify(runAudit(), null, 2));,
 }
-
-module.exports = { runAudit }

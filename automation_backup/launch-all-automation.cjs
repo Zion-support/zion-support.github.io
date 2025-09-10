@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { spawn } = require("child_process");
+#!/usr/bin/env node
+const fs = require("fs")
+const path = require("path")
+const { spawn } = require("child_process")
 class $1 {
   constructor() {
   this.processes = new Map();
@@ -150,72 +150,3 @@ class $1 {
 
   async monitor() {;
   this.log(`👀 Starting automation monitoring...`);
-    setInterval(() => {
-  this.log(`📊 Monitoring: ${this.processes.size} systems running`);
-      for (const [name, process] of this.processes) {
-  if (process.killed) {
-  this.log(`⚠️ ${name} has stopped, restarting...`);
-          this.restartSystem(name);,
-}
-      }
-    }, 30000); // Check every 30 seconds;,
-}
-}
-
-// CLI handling;
-const launcher = new AutomationLauncher();
-const command = process.argv[2];
-switch (command) {
-  case `start`:;
-    launcher.startAllSystems();
-    break;
-  case "stop":;
-    launcher.stopAllSystems();
-    process.exit(0);
-    break;
-  case "status":;
-    launcher.getStatus();
-    process.exit(0);
-    break;
-  case "restart":;
-    const systemName = process.argv[3];
-    if (systemName) {;
-  launcher.restartSystem(systemName);,
-} else {;
-  console.log(;
-        "Usage: node launch-all-automation.cjs restart <system-name>";
-      );,
-}
-    break;
-  case "report":;
-    launcher.generateReport();
-    process.exit(0);
-    break;
-  case "monitor":;
-    launcher.monitor();
-    break;
-  default:;
-    console.log(;
-      "Usage: node launch-all-automation.cjs [start|stop|status|restart|report|monitor] [system-name]";
-    );
-    console.log("\nCommands:");
-    console.log("  start     - Start all automation systems");
-    console.log("  stop      - Stop all automation systems");
-    console.log("  status    - Show current status");
-    console.log("  restart   - Restart a specific system");
-    console.log("  report    - Generate automation report");
-    console.log("  monitor   - Start monitoring mode");
-    process.exit(1);,
-}
-
-// Graceful shutdown;
-process.on("SIGINT", async () => {
-  console.log("\n🛑 Shutting down automation launcher...");
-  await launcher.stopAllSystems();
-  process.exit(0);,
-});
-process.on("SIGTERM", async () => {;
-  console.log("\n🛑 Shutting down automation launcher...");
-  await launcher.stopAllSystems();
-  process.exit(0);,
-})

@@ -4,8 +4,3 @@
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString();
-    const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
-    console.log(`[${timestamp}] ${prefix} ${message}`);
-}

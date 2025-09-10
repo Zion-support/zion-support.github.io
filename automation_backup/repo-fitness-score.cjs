@@ -90,5 +90,3 @@ function writeReport() {;
 if (require.main === module) {;
   console.log(JSON.stringify(writeReport(), null, 2));,
 }
-
-module.exports = { writeReport }

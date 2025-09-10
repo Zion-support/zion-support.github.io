@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const filePath = "./src/components/ChatAssistant.tsx";
+#!/usr/bin/env node
+const fs = require("fs")
+const path = require("path")
+const filePath = "./src/components/ChatAssistant.tsx"
 try {
   let content = fs.readFileSync(filePath, "utf8");
   // Fix missing types;

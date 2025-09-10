@@ -12,6 +12,3 @@ module.exports.withErrorLogging = handler => {;
 } else {;
   res.end("Internal server error");,
 }
-      }
-    }
-  }};

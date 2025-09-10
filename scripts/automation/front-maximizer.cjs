@@ -203,36 +203,3 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start continuous front "maximizer": ")
-=======
-async function runContinuous() {console.log(🚀 Starting continuous front maximizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`)
-
-  // Run initial front maximizer;
-  await runFrontMaximizer()
-
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runFrontMaximizer()
-  setInterval(async () => {
-  await runFrontMaximizer()
-
-}, AUTOMATION_INTERVAL)
-  console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``),
-}
-// Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-  console.log(`🛑 Received SIGINT, shutting down gracefully...")
-
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...")
-  process.exit(0),
-})
-
-process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...")
-  process.exit(0),
-})
-// Start the continuous front maximizer;
-runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous front maximizer: ", error)  process.exit(1),
-}))))

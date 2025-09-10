@@ -31,23 +31,3 @@ class $1 {
     fs.writeFileSync(metricsFile, JSON.stringify(metrics, null, 2))
     return metrics;
 }
-  getDirectorySize(dir) {
-  let size = 0;
-    if (!fs.existsSync(dir)) {
-  return size;
-}
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-  const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-  size += this.getDirectorySize(fullPath),
-} else {
-  size += stat.size;
-}
-    }
-    return size;
-}
-}
-const monitor = new PerformanceMonitor()
-monitor.monitorPerformance()

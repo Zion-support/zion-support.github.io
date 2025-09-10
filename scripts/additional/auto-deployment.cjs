@@ -24,5 +24,3 @@ class $1 {
 }
   }
 }
-const deployment = new AutoDeployment()
-deployment.deploy()

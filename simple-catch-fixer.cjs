@@ -29,4 +29,3 @@ function fixCatchBlocks(filePath) {;
     fixCatchBlocks(file);
 }
 });
-console.log('All catch blocks fixed!');

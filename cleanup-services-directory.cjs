@@ -1,6 +1,6 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
+const fs = require("fs")
+const path = require("path")
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -75,4 +75,3 @@ class $1 {
 
 // Run the cleaner;
 const cleaner = new ServicesDirectoryCleaner();
-cleaner.run().catch(console.error)

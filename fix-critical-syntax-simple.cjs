@@ -59,5 +59,3 @@ class $1 {
     this.log(`✅ Fixed ${this.fixedCount} files`);,
 }
 }
-
-new SimpleSyntaxFixer().run().catch(console.error)

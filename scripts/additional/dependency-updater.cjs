@@ -26,5 +26,3 @@ class $1 {
 }
   }
 }
-const updater = new DependencyUpdater()
-updater.updateDependencies()

@@ -38,25 +38,3 @@ function fixFile(filePath) {;
     const originalContent = content;
     
     content = fixUnescapedEntities(content);
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;,
-}
-
-    return false;,
-} catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
-}
-}
-
-console.log("Fixing unescaped entities in files...');
-let fixedCount = 0;
-filesToFix.forEach(filePath => {;
-  if (fixFile(filePath)) {;
-  fixedCount++;,
-}
-});
-
-console.log(`Fixed ${fixedCount} files`);

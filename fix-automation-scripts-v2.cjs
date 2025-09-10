@@ -105,18 +105,3 @@ class $1 {
     );
 
     this.log(`📁 Found ${scriptFiles.length} script files to check`);
-    for (const file of scriptFiles) {
-  const filePath = path.join(this.scriptsDir, file);
-      await this.fixFile(filePath);,
-}
-
-    this.log(`\n📊 Fixing Summary:`);
-    this.log(`✅ Fixed: ${this.fixedCount} files`);
-    this.log(`❌ Errors: ${this.errorCount} files`);
-    this.log(`🎉 V2 automation script fixing completed!`);,
-}
-}
-
-// Run the fixer;
-const fixer = new AutomationScriptFixerV2();
-fixer.fixAllScripts().catch(console.error);

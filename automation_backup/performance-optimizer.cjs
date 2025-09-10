@@ -33,4 +33,3 @@ class $1 {;
 }
 
 const optimizer = new PerformanceOptimizer();
-optimizer.optimizeBundle()

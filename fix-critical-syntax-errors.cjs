@@ -148,4 +148,3 @@ function cleanupCorruptedDirs() {
 }
 // Run the fixer;
 const fixer = new CriticalSyntaxErrorFixer();
-fixer.fixCriticalFiles().catch(console.error)

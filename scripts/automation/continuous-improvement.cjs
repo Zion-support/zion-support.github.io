@@ -139,35 +139,3 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start continuous "improvement": ")
-=======
-  console.log(🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
-  )
-
-  // Run initial improvement;
-  await runContinuousImprovement()
-
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runContinuousImprovement(),
-}, AUTOMATION_INTERVAL)
-
-  console.log( ✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `),
-}
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...")
-process.on(`SIGINT`, () => {
-  console.log("🛑 Received SIGINT, shutting down gracefully...")
-
-  process.exit(0),
-})
-
-process.on("SIGTERM", () => {
-  console.log("🛑 Received SIGTERM, shutting down gracefully...")
-  process.exit(0),
-})
-// Start the continuous improvement;
-runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous improvement: ", error)  process.exit(1),
-})))

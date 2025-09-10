@@ -36,4 +36,3 @@ class $1 {;
 }
 
 const monitor = new CodeQualityMonitor();
-monitor.analyzeCodeQuality()

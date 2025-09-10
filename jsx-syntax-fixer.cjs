@@ -1,6 +1,6 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
+const fs = require("fs")
+const path = require("path")
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -74,40 +74,3 @@ class $1 {
   async fixAllJSXFiles() {;
   this.log("🚀 Starting JSX syntax fixing...");
     const jsxFiles = [];
-    const walkDir = (dir) => {
-  const files = fs.readdirSync(dir);
-      for (const file of files) {
-  const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {;
-  walkDir(filePath);,
-} else if (stat.isFile() && (file.endsWith(".tsx") || file.endsWith(".jsx"))) {;
-  jsxFiles.push(filePath);,
-}
-      }
-    }
-    walkDir(this.projectRoot);
-    for (const file of jsxFiles) {;
-  if (await this.fixFile(file)) {;
-  this.fixedFiles++;,
-}
-    }
-
-    this.log(`🎉 Fixed JSX syntax in ${this.fixedFiles} files`);,
-}
-}
-
-if (require.main === module) {;
-  const fixer = new JSXSyntaxFixer();
-  fixer.fixAllJSXFiles();
-    .then(() => {
-  console.log("✅ JSX syntax fixing completed");
-      process.exit(0);,
-});
-    .catch((error) => {;
-  console.error("❌ JSX syntax fixing failed:", error.message);
-      process.exit(1);,
-});,
-}
-
-module.exports = JSXSyntaxFixer

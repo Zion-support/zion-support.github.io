@@ -67,26 +67,3 @@ class $1 {;
 
   generateSuggestions(issues) {;
   const suggestions = [];
-    for (const issue of issues) {
-  switch (issue.type) {
-  case `missing-title`:;
-          suggestions.push(`Add <title> tag to ${issue.route}`);
-          break;
-        case `missing-description`:;
-          suggestions.push(`Add meta description to ${issue.route}`);
-          break;
-        case `missing-og`:;
-          suggestions.push(`Add Open Graph tags to ${issue.route}`);
-          break;
-        case `missing-structured-data`:;
-          suggestions.push(`Add structured data to ${issue.route}`);
-          break;,
-}
-    }
-
-    return suggestions;,
-}
-}
-
-const optimizer = new SEOOptimizer();
-optimizer.analyzeSEO()
