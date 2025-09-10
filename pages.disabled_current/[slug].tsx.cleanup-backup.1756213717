@@ -6,50 +6,6 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  const service = useMemo(() => {
-    if (!slug) return undefined;
-    const all: any[] = ([] as any[])
-      .concat(
-        enhancedRealMicroSaasServices as any,
-        extraServices as any,
-        additionalEnhancedServices as any,
-        innovativeAIServices as any,
-        quantumSpaceServices as any,
-        enterpriseITServices as any,
-        newRealServices as any,
-        marketReadyServices as any,
-        realMarketServices as any,
-        new2025Services as any,
-        newRealInnovations as any,
-        emergingTechnologyServices as any,
-        comprehensiveITSolutions as any,
-        marketValidatedServices as any,
-        curatedMarketServices as any,
-        cuttingEdgeITServices as any,
-        nextGenerationAIServices as any,
-        nextGenAIServices as any,
-        industryRealServices as any,
-        professionalServices as any,
-        realEnterpriseServices2025 as any,
-        realImplementationServices2025 as any
-      );
-    const byLink = all.find(s => {
-      try {
-        const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
-      } catch {
-        return false;
-      }
-    });
-    if (byLink) return byLink;
-<<<<<<< HEAD
-=======
-// Node modules will be required inside getStaticPaths to avoid client bundling
-
 type Service = typeof servicesData[number];
 
 function getAllServices(): Service[] {
@@ -121,9 +77,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices();
-  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   let service: Service | undefined = services.find((s) => {

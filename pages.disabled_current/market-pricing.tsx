@@ -59,17 +59,6 @@ export default function MarketPricingPage() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
             </div>
-<<<<<<< HEAD
-            <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-2">Vector Search & RAG Infra</h2>
-              <ul className="list-disc list-inside text-slate-300 space-y-1">
-                <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</a></li>
-                <li>Weaviate pricing: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</a></li>
-                <li>Qdrant Cloud: <a className="text-cyan-400 underline" href={`https://qdrant.tech/pricing/`} target="_blank" rel="noopener noreferrer">qdrant.tech/pricing</a></li>
-              </ul>
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month based on dimensions, throughput, and replicas.</div>
-=======
-
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -127,9 +116,7 @@ export default function MarketPricingPage() {
                 <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</a></li>
                 <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
               </ul>
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
->>>>>>> origin/main
-            </div>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { MessageCircle, Calendar, Users, Award, ArrowRight, CheckCircle } from 'lucide-react';
-
 export default function CommunityPage() {
   const communityFeatures = [
     {
@@ -182,4 +177,3 @@ export default function CommunityPage() {
 		</div>
 	);
 }
->>>>>>> origin/automation/changelog

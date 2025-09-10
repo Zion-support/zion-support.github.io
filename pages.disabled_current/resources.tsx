@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-
-const resources = [;
-  {}
-    title: "Documentation","
-    description: "Comprehensive guides and technical documentation","
-    icon: FileText,
-    href: "/docs","
-    color: "from-blue-500 to-blue-600","
-    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]"
-  },
-  {}
-    title: "Case Studies","
-    description: "Real-world success stories and implementations","
-    icon: BarChart3,
-    href: "/case-studies","
-    color: "from-green-500 to-green-600","
-    items: ["Client Success Stories", "Implementation Examples", "ROI Analysis", "Lessons Learned"]"
-  },
-  {}
-    title: "Blog","
-    description: "Latest insights, trends, and technical articles","
-    icon: MessageSquare,
-    href: "/blog","
-    color: "from-purple-500 to-purple-600","
-    items: ["Technology Trends", "Industry Insights", "Technical Tutorials", "Company News"]"
-  },
-  {}
-    title: "API Reference","
-    description: "Complete API documentation and examples","
-    icon: Settings,
-    href: "/api-docs","
-    color: "from-orange-500 to-orange-600","
-    items: ["REST API", "GraphQL", "SDKs", "Code Examples"]"
-  }
-;];
-
 const quickLinks = [;
   { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },"
   { title: "Video Tutorials", href: "/tutorials", icon: Video },"
@@ -523,7 +486,5 @@ export default function ResourcesPage() {
       </section>
 
       <EnhancedFooter />
-    </>
->>>>>>> origin/automation/changelog
-  );
+    </>  );
 }

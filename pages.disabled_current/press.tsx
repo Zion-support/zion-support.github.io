@@ -1,23 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  ExternalLink, 
-  FileText, 
-  Globe, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ArrowRight,
-  CheckCircle,
-  Award,
-  Users,
-  TrendingUp
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
 const pressReleases = [
   {
     title: "Zion Tech Group Launches Revolutionary AI-Powered Drug Discovery Platform",
@@ -289,4 +270,3 @@ export default function PressPage() {
 		</>
 	);
 }
->>>>>>> origin/automation/changelog

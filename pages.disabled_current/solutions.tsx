@@ -1,32 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Rocket, 
-  Users, 
-  Brain, 
-  Network, 
-  Lock, 
-  TrendingUp, 
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Globe,
-  Zap,
-  Cloud,
-  Code,
-  Heart,
-  ShoppingCart,
-  Settings,
-  GraduationCap,
-  Building
-} from 'lucide-react';
-
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -528,73 +500,10 @@ const Solutions: NextPage = () => {
                 >
                   {solution.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> origin/automation/changelog
-                        Most Popular
+                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">                        Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
-                  
-                  <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6`}>
-                    <solution.icon className="text-white" size={32} />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {solution.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    {solution.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-600">
-                          <CheckCircle className="text-green-500 mr-2" size={16} />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {solution.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-gray-600 text-sm">
-                          • {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <div className="text-2xl font-bold text-gray-900">
-                        {solution.pricing}
-                      </div>
-                      <div className="text-sm text-gray-500">
-                        Timeline: {solution.timeline}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <Link 
-                    href={`/contact?solution=${solution.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center block"
-                  >
-                    Learn More
-                    <ArrowRight className="inline-block ml-2" size={16} />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -763,9 +672,7 @@ const Solutions: NextPage = () => {
           </div>
         </section>
       </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> origin/automation/changelog
-  );
+    </UltraAdvancedFuturisticBackground>  );
 };
 
 export default Solutions;

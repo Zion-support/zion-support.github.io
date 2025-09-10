@@ -1,29 +1,25 @@
 [build]
-  command = "corepack enable && corepack prepare pnpm@9.12.1 --activate && pnpm install --frozen-lockfile --prefer-offline && pnpm run build"
+  command = "npm ci --no-audit --no-fund --omit=optional && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "22.12.0"
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  # Skip Sharp postinstall to avoid NAPI issues
-  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
-  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
-  # Force Vite build
-  VITE_BUILD = "true"
-  # Ensure proper build environment
-  NODE_ENV = "production"
-  CI = "true"
-  # Disable linting during build to prevent failures
-  ESLINT_NO_DEV_ERRORS = "true"
-  # Optimize build performance
-  VITE_LEGACY_BUILD = "false"
-  NETLIFY_USE_PNPM = "true"
-  SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
-  PNPM_VERSION = "9.12.1"
-  # Additional NPM flags for better performance
-  NPM_FLAGS = "--no-audit --no-fund --prefer-offline"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+NODE_VERSION = "22.12.0"
+NODE_OPTIONS = "--max-old-space-size=6144"
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
+SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+# Skip Sharp postinstall to avoid NAPI issues
+SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
+SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+# Force Vite build
+VITE_BUILD = "true"
+# Ensure proper build environment
+NODE_ENV = "production"
+CI = "true"
+# Disable linting during build to prevent failures
+ESLINT_NO_DEV_ERRORS = "true"
+# Optimize build performance
+VITE_LEGACY_BUILD = "false"
 
 # API functions (disabled for Vite SPA)
 # [functions]

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
-
 const solutions = [
   {
     title: 'AI-Powered Medical Imaging',
@@ -86,9 +80,7 @@ const solutions = [
     description: 'AI-powered clinical decision support system for healthcare professionals.',
     icon: Stethoscope,
     features: ['Evidence-based Recommendations', 'Drug Interaction Alerts', 'Treatment Guidelines', 'Risk Stratification'],
-    benefits: ['Improved accuracy', 'Reduced errors', 'Better outcomes', 'Enhanced safety']
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  }
+    benefits: ['Improved accuracy', 'Reduced errors', 'Better outcomes', 'Enhanced safety']  }
 ];
 
 const challenges = [
@@ -119,51 +111,6 @@ const challenges = [
 
 const benefits = [
   {
-<<<<<<< HEAD
-    title: 'Improved Patient Care',
-    description: 'AI-powered tools help provide better and more accurate patient care',
-    icon: Heart
-  },
-  {
-    title: 'Enhanced Security',
-    description: 'Advanced security measures protect sensitive patient data',
-    icon: Shield
-  },
-  {
-    title: 'Better Outcomes',
-    description: 'Data-driven insights help improve treatment outcomes',
-    icon: Activity
-  },
-  {
-    title: 'Operational Efficiency',
-    description: 'Automated processes reduce administrative burden and costs',
-    icon: CheckCircle
-=======
-    icon: Activity,
-    title: 'Improved Patient Outcomes',
-    description: 'AI-powered diagnostics and treatment recommendations lead to better patient care.',
-    metric: '40%'
-  },
-  {
-    icon: Clock,
-    title: 'Faster Diagnosis',
-    description: 'Reduce diagnostic time with automated analysis and AI assistance.',
-    metric: '60%'
-  },
-  {
-    icon: DollarSign,
-    title: 'Cost Reduction',
-    description: 'Optimize operations and reduce unnecessary procedures through data insights.',
-    metric: '25%'
-  },
-  {
-    icon: Users,
-    title: 'Enhanced Care',
-    description: 'Personalized treatment plans based on comprehensive patient data analysis.',
-    metric: '95%'
-  }
-];
-
 const caseStudies = [
   {
     title: 'Major Hospital Network',
@@ -181,142 +128,12 @@ const caseStudies = [
     title: 'Specialty Clinic',
     description: 'AI-driven treatment optimization for chronic disease management.',
     results: ['35% better outcomes', '20% fewer complications', '45% patient satisfaction'],
-    icon: Heart
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  }
+    icon: Heart  }
 ];
 
 export default function Healthcare() {
   return (
-<<<<<<< HEAD
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-=======
-    <Layout
-      title="Healthcare Technology Solutions - Zion Tech Group"
-      description="Transform healthcare with AI-powered solutions, telemedicine platforms, and advanced analytics for better patient outcomes."
-      keywords="healthcare technology, medical AI, telemedicine, patient data analytics, healthcare software, medical imaging"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">            <motion.div
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                Healthcare <span className="text-blue-600">Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform healthcare delivery with AI-powered medical imaging, electronic health records, 
-                and telemedicine solutions that improve patient outcomes.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View AI Services
-=======
-                Healthcare{' '}
-                <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
-                  Technology
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform healthcare delivery with AI-powered solutions, telemedicine platforms, and advanced analytics for better patient outcomes.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Healthcare Solution
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View Case Studies
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Solutions Section */}
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Healthcare Solutions</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed specifically for healthcare providers.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold">{solution.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-=======
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Healthcare Solutions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed specifically for healthcare organizations.
-              </p>
-            </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions.map((solution, index) => {
                 const IconComponent = solution.icon;
@@ -414,61 +231,11 @@ export default function Healthcare() {
                     </div>
                   </motion.div>
                 );
-              })}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-            </div>
+              })}            </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Healthcare Solutions?</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our solutions are designed to address the unique challenges faced by healthcare providers.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </motion.div>
-              ))}
-=======
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Healthcare Benefits
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Measurable improvements in patient care, operational efficiency, and cost savings.
-              </p>
-            </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
@@ -542,9 +309,7 @@ export default function Healthcare() {
                     </div>
                   </motion.div>
                 );
-              })}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-            </div>
+              })}            </div>
           </div>
         </section>
 
@@ -596,9 +361,7 @@ export default function Healthcare() {
                   Get Healthcare Consultation
                 </Link>
                 <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">
-                  View All Industries                </Link>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-              </div>
+                  View All Industries                </Link>              </div>
             </motion.div>
           </div>
         </section>

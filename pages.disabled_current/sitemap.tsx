@@ -3,20 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Home, 
-  Brain, 
-  Network, 
-  Target, 
-  Users, 
-  Shield, 
-  Cloud, 
-  BarChart3, 
-  Settings, 
-  Globe, 
-  ArrowRight 
-} from 'lucide-react';
-
 const sitemapData = [
   {
     category: 'Main Pages',
@@ -750,4 +736,3 @@ export default function SitemapPage() {
     </div>
   );
 }
->>>>>>> origin/automation/changelog

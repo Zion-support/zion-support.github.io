@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Brain, Atom, Cpu, Shield, Database, Cloud,
-  ArrowRight, CheckCircle, Zap, Sparkles
-} from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
-import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
-=======
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
-import Link from 'next/link';
-
 // Import the new 2024 services
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
@@ -35,8 +12,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const serviceCategories = [
   {
     id: 'ai-services',
@@ -119,19 +94,6 @@ export default function Services2024Page() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },
-    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },
-    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },
-    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },
-    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },
-    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },
-    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },
-    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length }
-  ];
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -169,18 +131,9 @@ export default function Services2024Page() {
         return b.popular ? 1 : -1;
     }
   });
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   return (
     <>
       <Head>
-<<<<<<< HEAD
-        <title>2024 Revolutionary Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
-      </Head>
-
       <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
 
       <div className="relative z-10 min-h-screen">
@@ -205,32 +158,11 @@ export default function Services2024Page() {
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            <motion.div
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  Future-Ready
-                </span>
-                <br />
-                <span className="text-white">Solutions</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
-                Transform your business with our revolutionary 2024 service portfolio.
-              </p>
-
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
                 <div className="text-center">
@@ -384,43 +316,9 @@ export default function Services2024Page() {
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Highest Rated</option>
-              </select>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            </div>
+              </select>            </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            {filteredServices.length === 0 ? (
-              <div className="text-center py-20">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
-                    <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-                      {/* Service Header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
-                          {React.createElement(getVariantIcon(service.variant), { 
-                            className: `w-6 h-6 text-cyan-400` 
-                          })}
-                        </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">per month</div>
-                        </div>
-                      </div>
 
                       {/* Service Info */}
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
@@ -653,9 +551,7 @@ export default function Services2024Page() {
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-pink-300">{contactInfo.address}</p>
               </div>
-            </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-          </div>
+            </div>          </div>
         </section>
 
         {/* CTA Section */}

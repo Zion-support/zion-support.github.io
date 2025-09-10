@@ -1,37 +1,4 @@
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-=======
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-import { 
-  Brain, 
-  Users, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-<<<<<<< HEAD
-  ArrowRight,
-  Rocket,
-  Lightbulb,
-  Handshake
-=======
-  ArrowRight, 
-  Star, 
-  Rocket, 
-  Code
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-} from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-<<<<<<< HEAD
 const values = [
   {
     icon: Lightbulb,
@@ -564,4 +531,3 @@ export default function AboutPage() {
     </MainLayout>
   );
 }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

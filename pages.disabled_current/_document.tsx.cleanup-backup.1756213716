@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Html, Head, Main, NextScript } from 'next/document';
-
 export default function Document() {
   return (
     <Html lang="en">
@@ -34,6 +31,4 @@ export default class MyDocument extends Document {
 				</body>
 			</Html>
 		)
-	}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-}
+	}}

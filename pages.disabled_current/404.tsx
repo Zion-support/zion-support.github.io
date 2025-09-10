@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Home, ArrowLeft } from 'lucide-react';
-
 export default function Custom404() {
   return (
     <Layout title="404 - Page Not Found">
@@ -54,4 +48,3 @@ const NotFoundPage: NextPage = () => {
 };
 
 export default NotFoundPage;
->>>>>>> origin/automation/changelog

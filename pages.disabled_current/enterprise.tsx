@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
-import { 
-  Building, 
-  Users, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Globe,
-  Database,
-  Lock
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-
 const features = [
   {
     icon: Building,
@@ -275,4 +255,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 export default function EnterpriseRedirect() { return null; }
->>>>>>> origin/automation/changelog

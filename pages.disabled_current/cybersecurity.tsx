@@ -1,9 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
-
 export default function Cybersecurity() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -224,9 +220,7 @@ export default function CybersecurityPage() {
               </a>
             </div>
           </section>
-        </div>
->>>>>>> origin/automation/changelog
-      </div>
+        </div>      </div>
     </>
   );
 }

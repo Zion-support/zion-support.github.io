@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-=======
-:pages/sitemap.tsx.backup
-  Users, 
-  Briefcase, 
-  Phone, 
-  FileText, 
-  HelpCircle, 
-  DollarSign,
-  Shield,
-  Cookie,
-  Scale,
-  MapPin,
-  Mail,
-  Phone as PhoneIcon,
-  Globe,
-  ArrowRight;
-} from 'lucide-react';
-
 const sitemapData = {}
   main: [;
     { path: "/", label: "Home", description: "Welcome to Zion Tech Group" },"
@@ -392,9 +373,7 @@ const siteMap = [
       { name: 'Home', href: '/', description: 'Main landing page' },
       { name: 'About Us', href: '/about', description: 'Company information and team' },
       { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
-      { name: 'Careers', href: '/careers', description: 'Job opportunities' }    ]
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-import React from 'react';
+      { name: 'Careers', href: '/careers', description: 'Job opportunities' }    ]import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -435,39 +414,6 @@ const sitemapData = [
   },
   {
     category: 'Solutions',
-<<<<<<< HEAD
-=======
-:pages/sitemap.tsx.backup
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-    pages: [
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },
-      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
-    ]
-  },
-  {
-    category: 'Resources',
-    pages: [
-      { name: 'Documentation', url: '/docs', icon: Globe },
-      { name: 'API Documentation', url: '/api-docs', icon: Settings },
-      { name: 'Guides', url: '/guides', icon: Globe },
-      { name: 'FAQ', url: '/faq', icon: Users }
-    ]
-  }
-];
-
-<<<<<<< HEAD
-=======
-:pages/sitemap.tsx.backup
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-export default function SitemapPage() {
-  return (
-    <>
-      <Head>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
-      </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -478,107 +424,6 @@ export default function SitemapPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Complete overview of all pages and sections on our website.
-=======
-:pages/sitemap.tsx.backup
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Complete overview of all pages and sections on our website.
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Site <span className="text-yellow-400">Map</span>
-              </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Navigate through all our pages, services, and resources
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Sitemap Content */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {sitemapData.map((section, sectionIndex) => (
-                <motion.div
-                  key={sectionIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6"
-                >
-                  <h2 className="text-xl font-semibold mb-4 text-blue-600">{section.category}</h2>
-                  <div className="space-y-3">
-                    {section.pages.map((page, pageIndex) => (
-                      <Link
-                        key={pageIndex}
-                        href={page.url}
-                        className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
-                      >
-                        <page.icon className="w-4 h-4 mr-2" />
-                        <span>{page.name}</span>
-                        <ArrowRight className="w-3 h-3 ml-auto" />
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-:pages/sitemap.tsx.backup
-              </div>
-            </div>
-          </div>
-        </section>              transition={{ duration: 0.8 }}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Can't Find What You're Looking For?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact us and we'll help you find the information you need.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-<<<<<<< HEAD
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-=======
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"                >
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-                  Contact Us
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/search"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  Search
-                </Link>
-<<<<<<< HEAD
-=======
-                <Link
-                  href="/help"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
-                >
-                  Get Help
-                </Link>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
               </div>
             </motion.div>
           </div>
