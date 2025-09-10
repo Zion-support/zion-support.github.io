@@ -3,19 +3,15 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  
-  // Image optimization
+
   images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-    ],
+    domains: ['localhost', 'ziontechgroup.com', 'images.unsplash.com'],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  webpack: (config, { dev, isServer }) => {
+
+  webpack: (config, { dev }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
@@ -55,6 +51,7 @@ const nextConfig = {
     }
     return config;
   },
+<<<<<<< HEAD
   async headers() {
     return [
       {
@@ -64,10 +61,22 @@ const nextConfig = {
           { key: "X-Frame-Options", value: "DENY" },
           { key: "X-XSS-Protection", value: "1; mode=block" },
           { key: "Referrer-Policy", value: "origin-when-cross-origin" },
+=======
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-c52b
         ],
       },
     ];
-  }
-}
+  },
+};
 
 export default nextConfig;

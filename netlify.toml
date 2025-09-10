@@ -1,16 +1,17 @@
 [build]
-  command = "pnpm run build"
-  publish = "dist"
+  command = "npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
-NODE_VERSION = "22"
+NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
-NETLIFY_NEXT_PLUGIN_SKIP = "true"
-NETLIFY_USE_PNPM = "true"
-SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
-# API functions (disabled for Vite SPA)
+# Enable Next.js plugin for proper routing and SSR on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# API functions (if needed)
 # [functions]
 # directory = "netlify/functions"
 
@@ -59,8 +60,3 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
