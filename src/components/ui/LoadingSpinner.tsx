@@ -1,115 +1,41 @@
-<<<<<<< HEAD
-import React, { memo } from 'react';
-=======
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
->>>>>>> origin/chore/fix-links-and-build
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+type LoadingSpinnerProps = {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
-}
+};
 
-<<<<<<< HEAD
-const LoadingSpinner = memo(function LoadingSpinner({ 
-=======
-export function LoadingSpinner({
+const SIZE_MAP: Record<NonNullable<LoadingSpinnerProps['size']>, string> = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12',
+};
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  color = 'primary',
-  customColor,
-  className,
-  text = 'Loading...',
-  showText = false
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    primary: 'border-zion-purple',
-    secondary: 'border-zion-cyan',
-    white: 'border-white',
-    custom: ''
-  };
-
-  const borderColor = customColor || colorClasses[color];
-
+  className = '',
+  text,
+}) => {
   return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <motion.div
-        className={cn(
-          'border-2 border-t-transparent rounded-full animate-spin',
-          sizeClasses[size],
-          borderColor
-        )}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div
+        className={`${SIZE_MAP[size]} animate-spin rounded-full border-2 border-cyan-400 border-t-transparent`}
         role="status"
-        aria-label="Loading"
-export function LoadingSpinner({ 
->>>>>>> origin/chore/fix-links-and-build
-  size = 'md', 
-  className = '', 
-  text = 'Loading...' 
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
-  return (
-<<<<<<< HEAD
-    <div className={`flex flex-col items-center justify-center min-h-[200px] ${className}`}>
-      <div 
-        className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-cyan-400 border-t-transparent`}
-        role="status"
-        aria-label={text}
-      ></div>
+        aria-label={text || 'Loading'}
+      />
       {text && (
         <p className="mt-2 text-sm text-gray-300 animate-pulse">{text}</p>
-=======
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} ${colorClasses[color]} border-2 rounded-full animate-spin`}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        style={{
-          borderTopColor: customColor && color === 'custom' ? customColor : undefined
-        }}
-      />
-      
-      {showText && (
-        <motion.p
-          className="mt-3 text-sm text-zion-slate-light text-center"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.3 }}
-          className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
-        >
-          {text}
-        </motion.p>
->>>>>>> origin/chore/fix-links-and-build
       )}
     </div>
   );
-});
+};
 
-<<<<<<< HEAD
 export default LoadingSpinner;
-=======
+
 // Skeleton loading component for content
 export function SkeletonLoader({
   className,
@@ -296,4 +222,3 @@ export function ContentPlaceholder({
     </div>
   );
 }
->>>>>>> origin/chore/fix-links-and-build
