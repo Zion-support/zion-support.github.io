@@ -1,4 +1,14 @@
-const fs = require('fs');
+') && !content.includes('>>>>>>>')) {
+      return false; // No conflicts in this file
+    }
+
+    console.log(`🔧 Resolving conflicts in: ${filePath}`);
+
+    // Remove all merge conflict markers and keep the incoming changes (after )
+    let resolvedContent = content;
+
+    // Pattern 1: Conflicts with file paths
+    resolvedContent = resolvedContent.replace(/const fs = require('fs');
 const path = require('path');
 
 console.log('Starting automatic merge conflict resolution...');
@@ -10,8 +20,7 @@ function resolveConflicts(filePath) {
         // Check if file has conflicts
         if (!content.includes('
         // Remove any remaining conflict markers
-        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
-        content = content.replace(/
+        content = content.replace(/        content = content.replace(/
         // Clean up multiple empty lines
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
         fs.writeFileSync(filePath, content);
