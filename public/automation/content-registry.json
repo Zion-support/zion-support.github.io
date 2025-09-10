@@ -1040,6 +1040,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "file": "pages/reports/patterns/pattern-2025-08-15-055359.tsx",
       "route": "/reports/patterns/pattern-2025-08-15-055359"
     },
@@ -4266,6 +4267,8 @@
       "route": "/reports/updates/update-2025-08-15T05-50"
     },
     {
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "file": "pages/reports/updates/update-2025-08-15T05-40.tsx",
       "route": "/reports/updates/update-2025-08-15T05-40"
     },
@@ -5361,6 +5364,7 @@
       "route": "/reports/updates/update-2025-08-14-2311"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10232,6 +10236,8 @@
       "route": "/reports/patterns/pattern-2025-08-15-055002"
     },
     {
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "file": "pages/reports/patterns/pattern-2025-08-15-054010.tsx",
       "route": "/reports/patterns/pattern-2025-08-15-054010"
     },
@@ -10336,6 +10342,7 @@
       "route": "/reports/patterns/pattern-2025-08-15-021207"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10923,6 +10930,8 @@
       "route": "/reports/innovations/insight-2025-08-15T05-50"
     },
     {
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "file": "pages/reports/innovations/insight-2025-08-15T05-40.tsx",
       "route": "/reports/innovations/insight-2025-08-15T05-40"
     },
@@ -11015,6 +11024,7 @@
       "route": "/reports/innovations/insight-2025-08-15T02-12"
     },
     {
+<<<<<<< HEAD
       "file": "pages/reports/innovations/insight-2025-08-15-0657.tsx",
       "route": "/reports/innovations/insight-2025-08-15-0657"
     },
@@ -11247,6 +11257,8 @@
       "route": "/reports/innovations/insight-2025-08-15-0550"
     },
     {
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "file": "pages/reports/innovations/insight-2025-08-15-0540.tsx",
       "route": "/reports/innovations/insight-2025-08-15-0540"
     },
@@ -11331,6 +11343,7 @@
       "route": "/reports/innovations/insight-2025-08-15-0213"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "file": "pages/reports/innovations/insight-2025-08-15-0211.tsx",
       "route": "/reports/innovations/insight-2025-08-15-0211"
@@ -12509,6 +12522,10 @@
     {
       "file": "pages/reports/guides/guide-2025-08-15-055002.tsx",
       "route": "/reports/guides/guide-2025-08-15-055002"
+=======
+      "file": "pages/reports/innovations/insight-2025-08-15-0211.tsx",
+      "route": "/reports/innovations/insight-2025-08-15-0211"
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
     },
     {
       "file": "pages/reports/guides/guide-2025-08-15-054010.tsx",
@@ -12615,6 +12632,7 @@
       "route": "/reports/guides/guide-2025-08-15-021207"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -16280,6 +16298,8 @@
       "route": "/reports/cases/case-2025-08-15-055002"
     },
     {
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "file": "pages/reports/cases/case-2025-08-15-054010.tsx",
       "route": "/reports/cases/case-2025-08-15-054010"
     },
@@ -22358,6 +22378,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T05:54:11.772Z",
   "items": [
     {
@@ -22510,10 +22531,20 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T05:52:47.977Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T05-52-53-592Z
+=======
+  "generatedAt": "2025-08-15T05:55:02.028Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-055503",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:55:03.805Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22553,10 +22584,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T05:52:47.977Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T05-52-53-592Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-055503",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:55:03.805Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23227,4 +23264,12 @@
     }
   ]
 >>>>>>> origin/automation/git-sync/2025-08-15T05-52-53-592Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-055503",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:55:03.805Z",
+      "source": "cloud-deep-research-factory"
+    }
+  ]
+>>>>>>> origin/automation/git-sync/2025-08-15T05-55-09-935Z
 }
