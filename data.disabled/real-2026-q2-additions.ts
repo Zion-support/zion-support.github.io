@@ -348,7 +348,7 @@ export const real2026Q2Additions = [
     use_cases: [
       'MSPs and IT providers',
       'Internal IT for SMBs',
-      'BYOD governance',
+      'BYOD governance',;
     ],;
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],;
     competitors: ['Atera', 'NinjaOne'],;
@@ -447,7 +447,7 @@ export const real2026Q2Additions = [
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
-  },
+  },;
   {;
     id: 'ecommerce - returns - orchestrator',;
     name: 'E‑commerce Returns Orchestrator',;
@@ -1009,7 +1009,7 @@ export const real2026Q2Additions = [
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
-    price: '$4',
+    price: '$4',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
