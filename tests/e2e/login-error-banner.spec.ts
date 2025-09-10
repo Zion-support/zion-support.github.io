@@ -1,11 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { skipIfNoServer } from './helpers/server-check';
 
 // Ensure login failure shows banner without crashing
 
-test('shows error banner on failed login', async ({ page }, testInfo) => {
-  const serverURL = await skipIfNoServer(testInfo);
-  if (!serverURL) return;
+test('shows error banner on failed login', async ({ page }) => {
   const errors: Error[] = [];
   page.on('pageerror', err => errors.push(err));
 
@@ -13,7 +10,7 @@ test('shows error banner on failed login', async ({ page }, testInfo) => {
     route.fulfill({ status: 401, body: 'Unauthorized' });
   });
 
-  await page.goto(`${serverURL}/login`);
+  await page.goto('/login');
   await page.getByLabelText(/email/i).fill('user@example.com');
   await page.getByLabelText(/password/i).fill('wrong');
   await page.getByRole('button', { name: /login/i }).click();

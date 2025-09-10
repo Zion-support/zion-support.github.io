@@ -14,13 +14,8 @@ serve(async (req) => {
     { auth: { persistSession: false } }
   );
 
-  const useTest = Deno.env.get("STRIPE_TEST_MODE") === "true";
-  const stripeKey = useTest
-    ? Deno.env.get("STRIPE_TEST_SECRET_KEY") ||
-      Deno.env.get("STRIPE_SECRET_KEY") || ""
-    : Deno.env.get("STRIPE_SECRET_KEY") || "";
-  const stripe = new Stripe(stripeKey, {
-    apiVersion: "2023-10-16",
+  const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+    apiVersion: "2025-05-28.basil", // Updated to the expected version
   });
 
   try {
@@ -101,7 +96,7 @@ serve(async (req) => {
         );
     }
   } catch (err) {
-    console.error("escrow-service error", err);
+    // console.error("escrow-service error", err);
     return new Response(
       JSON.stringify({ error: err.message }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }

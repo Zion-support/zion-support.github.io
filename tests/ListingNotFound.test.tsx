@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Custom404 from '@/pages/404';
+import Custom404 from '../pages/404';
 import { getStaticProps } from '@/pages/marketplace/listing/[slug]';
 
 test('visit unknown slug shows 404 page', async () => {
@@ -12,5 +12,7 @@ test('visit unknown slug shows 404 page', async () => {
   }
 
   expect(show404).toBe(true);
-  expect(screen.getByText('404 – Page Not Found')).toBeInTheDocument();
+  expect(
+    screen.getByRole('button', { name: /back to marketplace/i })
+  ).toBeInTheDocument();
 });

@@ -4,16 +4,18 @@ const baseURL = process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
 const fallbackURL = baseURL.replace('3000', '3001');
 let cachedURL: string | null = null;
 
-async function isServerRunning(url: string): Promise<boolean> {
+function fetchWithTimeout(url: string, options: RequestInit = {}, timeout = 2000) {
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 2000);
+  const id = setTimeout(() => controller.abort(), timeout);
+  return fetchFn(url, { ...options, signal: controller.signal }).finally(() => clearTimeout(id));
+}
+
+async function isServerRunning(url: string): Promise<boolean> {
   try {
-    const res = await fetchFn(url, { method: 'HEAD', signal: controller.signal });
-    return res.ok;
+    const res = await fetchFn(`${url}/api/health`, { method: 'HEAD' });
+    return res.status < 500;
   } catch {
     return false;
-  } finally {
-    clearTimeout(timeout);
   }
 }
 
