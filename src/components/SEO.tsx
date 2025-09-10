@@ -18,7 +18,7 @@ interface SEOProps {
   structuredData?: Record<string, any>;
 }
 
-export function SEO({
+export default function SEO({
   title = 'Zion Tech Group - Revolutionary AI & Technology Solutions',
   description = 'Leading provider of cutting-edge AI, cloud computing, and digital transformation services. Transform your business with Zion Tech Group\'s innovative solutions.',
   keywords = [
