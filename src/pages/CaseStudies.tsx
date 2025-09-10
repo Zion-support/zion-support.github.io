@@ -1,116 +1,79 @@
 import React from 'react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO';
 
-const CaseStudies: React.FC = () => {
+const CaseStudies = () => {
   const caseStudies = [
     {
-      id: 1,
       title: "AI-Powered Healthcare Platform",
       client: "MedTech Solutions",
       industry: "Healthcare",
-      challenge: "Needed to implement AI-driven patient diagnosis and treatment recommendations",
-      solution: "Developed a comprehensive AI platform with machine learning algorithms for medical data analysis",
-      results: "40% improvement in diagnosis accuracy, 60% reduction in processing time",
-      image: "/api/placeholder/400/300"
+      challenge: "Needed to process large volumes of medical data and provide real-time insights",
+      solution: "Implemented custom AI models for medical image analysis and predictive diagnostics",
+      results: "40% reduction in diagnosis time, 95% accuracy in image analysis"
     },
     {
-      id: 2,
-      title: "Enterprise Cybersecurity Suite",
-      client: "Global Finance Corp",
+      title: "Cloud Migration for Financial Services",
+      client: "FinanceCorp",
       industry: "Financial Services",
-      challenge: "Required advanced threat detection and prevention across multiple systems",
-      solution: "Implemented AI-powered cybersecurity monitoring with real-time threat analysis",
-      results: "99.9% threat detection rate, 50% reduction in security incidents",
-      image: "/api/placeholder/400/300"
+      challenge: "Legacy systems causing performance issues and high maintenance costs",
+      solution: "Complete cloud migration with enhanced security and scalability",
+      results: "60% cost reduction, 99.9% uptime, 3x faster processing"
     },
     {
-      id: 3,
-      title: "Smart Manufacturing Optimization",
-      client: "Industrial Dynamics",
-      industry: "Manufacturing",
-      challenge: "Optimize production processes and reduce waste in manufacturing operations",
-      solution: "Deployed IoT sensors and AI analytics for predictive maintenance and process optimization",
-      results: "25% increase in efficiency, 30% reduction in waste",
-      image: "/api/placeholder/400/300"
+      title: "Cybersecurity Implementation",
+      client: "TechStart Inc",
+      industry: "Technology",
+      challenge: "Growing security threats and compliance requirements",
+      solution: "Comprehensive cybersecurity suite with threat detection and response",
+      results: "Zero security incidents, 100% compliance, 24/7 monitoring"
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Case Studies - Zion Tech Group"
-        description="Explore our successful projects and client case studies showcasing our AI and technology expertise."
-        keywords="case studies, success stories, client projects, ai solutions, technology implementations"
+        description="Real-world success stories of our AI and technology solutions."
+        keywords={["case studies", "success stories", "client results", "AI implementation"]}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Case Studies
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how we've helped businesses transform their operations with cutting-edge AI and technology solutions.
-              </p>
-            </div>
+      
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Case Studies</h1>
+          <p className="text-xl text-gray-300">
+            Real-world success stories from our clients
+          </p>
+        </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                    <span className="text-white text-lg font-semibold">Case Study {study.id}</span>
+        <div className="space-y-12">
+          {caseStudies.map((study, index) => (
+            <div key={index} className="bg-slate-800/50 rounded-lg p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <div className="flex items-center mb-4">
+                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                      {study.industry}
+                    </span>
+                    <span className="text-gray-400">{study.client}</span>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3">{study.title}</h3>
-                  
-                  <div className="space-y-2 mb-4">
-                    <p className="text-sm text-gray-300">
-                      <span className="font-semibold text-purple-400">Client:</span> {study.client}
-                    </p>
-                    <p className="text-sm text-gray-300">
-                      <span className="font-semibold text-purple-400">Industry:</span> {study.industry}
-                    </p>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="text-sm font-semibold text-purple-400 mb-1">Challenge</h4>
-                      <p className="text-sm text-gray-300">{study.challenge}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-sm font-semibold text-purple-400 mb-1">Solution</h4>
-                      <p className="text-sm text-gray-300">{study.solution}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-sm font-semibold text-purple-400 mb-1">Results</h4>
-                      <p className="text-sm text-gray-300">{study.results}</p>
-                    </div>
-                  </div>
-
-                  <button className="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
-                    Read Full Case Study
-                  </button>
+                  <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                  <p className="text-gray-300 mb-4">{study.challenge}</p>
                 </div>
-              ))}
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Our Solution</h4>
+                  <p className="text-gray-300 mb-4">{study.solution}</p>
+                  
+                  <h4 className="text-lg font-semibold text-white mb-2">Results</h4>
+                  <p className="text-green-400 font-semibold">{study.results}</p>
+                </div>
+              </div>
             </div>
-
-            <div className="text-center mt-16">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Start Your Success Story?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Let's discuss how we can help transform your business with our AI and technology solutions.
-              </p>
-              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
-                Get Started Today
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
