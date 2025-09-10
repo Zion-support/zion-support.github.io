@@ -1,3 +1,4 @@
+/* global URL */
 export class LinkValidator {
     static EXTERNAL_DOMAINS = [
         'linkedin.com',
