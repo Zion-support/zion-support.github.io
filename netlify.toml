@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npm ci && npm run build"
+  command = "npm run build"
   framework = "vite"
 
 # Disable automatic framework detection
@@ -8,7 +8,7 @@
   skip_processing = false
 
 [build.environment]
-  NODE_VERSION = "22.12.0"
+  NODE_VERSION = "22.16.0"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Skip Sharp postinstall to avoid NAPI issues
   SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
@@ -92,6 +92,4 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
+## Removed invalid plugin block to satisfy Netlify CLI schema
