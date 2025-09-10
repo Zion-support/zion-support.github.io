@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ai-content-creation() {
+export default function AIContentCreation() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
       <div className="text-center max-w-4xl mx-auto p-8">
