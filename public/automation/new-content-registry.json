@@ -76,6 +76,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:29.410Z",
 =======
 <<<<<<< HEAD
@@ -180,10 +181,20 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:48:45.883Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-48-49-727Z
+=======
+  "generatedAt": "2025-08-15T11:53:49.108Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-115349",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:53:49.064Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/guides/guide-2025-08-15-112901",
@@ -199,10 +210,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T11:48:45.883Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T11-48-49-727Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-115349",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:53:49.064Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/patterns/pattern-2025-08-15-112901",
@@ -2867,10 +2884,16 @@
 >>>>>>> origin/automation/git-sync/2025-08-15T11-45-22-088Z
 =======
       "href": "/reports/patterns/pattern-2025-08-15-114845",
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-115349",
+>>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T11:48:45.883Z",
+      "createdAt": "2025-08-15T11:53:49.064Z",
       "source": "cloud-deep-research-factory"
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T11-48-49-727Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T11-53-53-485Z
     }
   ]
 =======
