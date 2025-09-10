@@ -60,7 +60,7 @@ export async function createNotification({
 /**
  * Creates a hire request notification for admin and talent
  */
-export async function createHireRequestNotifications(_{
+export async function createHireRequestNotifications({
   talentId, _adminId, _requesterName, _requesterEmail, _projectType, _projectSummary, _hireRequestId, }: {
   talentId: string;
   adminId?: string;
