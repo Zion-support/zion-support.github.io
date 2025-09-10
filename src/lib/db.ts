@@ -5,20 +5,20 @@ const DB_VERSION = 1;
 const CART_STORE = 'cart';
 const WISHLIST_STORE = 'wishlist';
 
-let indexedDBAvailable = true;
+let indexedDBAvailable = typeof globalThis.indexedDB !== 'undefined';
 const memoryStore: Record<string, any[]> = {
   [CART_STORE]: [],
   [WISHLIST_STORE]: []
 };
 
-function openDB(): Promise<IDBDatabase | null> {
+function openDB(): Promise<globalThis.IDBDatabase | null> {
   if (!indexedDBAvailable) {
     return Promise.resolve(null);
   }
   return new Promise((resolve) => {
-    let request: IDBOpenDBRequest;
+    let request: globalThis.IDBOpenDBRequest;
     try {
-      request = indexedDB.open(DB_NAME, DB_VERSION);
+      request = globalThis.indexedDB.open(DB_NAME, DB_VERSION);
     } catch (err) {
       logWarn('IndexedDB not available. Falling back to in-memory store.', { data: err });
       indexedDBAvailable = false;

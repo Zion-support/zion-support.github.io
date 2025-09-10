@@ -1,7 +1,7 @@
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 import { supabase, isSupabaseConfigured } from '@/integrations/supabase/client';
 
-async function logEventToSupabase(eventName: string, eventParams?: Record<string, _unknown>) {
+async function logEventToSupabase(eventName: string, eventParams?: Record<string, unknown>) {
   if (!isSupabaseConfigured) return;
 
   try {
