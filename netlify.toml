@@ -1,12 +1,12 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
 NODE_VERSION = "22"
 NODE_OPTIONS = "--max-old-space-size=4096"
-SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
 
 # API functions (disabled for Vite SPA)
 # [functions]
