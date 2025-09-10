@@ -10,8 +10,8 @@
     "lint": "eslint --no-error-on-unmatched-pattern \"src/{layout,lib}/**/*.{ts,tsx}\"",
     "lint:fix": "eslint \"src/{components,layout,lib,hooks,utils,store}/**/*.{ts,tsx}\" --fix",
     "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
-    "test": "echo 'Tests temporarily disabled due to corrupted suites' && exit 0",
-    "test:watch": "jest --watch",
+    "test": "jest --config jest.config.cjs",
+    "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage",
     "test:integration": "jest --testPathPattern=integration",
     "test:e2e": "playwright test",
@@ -20,16 +20,14 @@
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
-    "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
-    "test:watch": "jest --watch --config jest.config.ts",
     "analyze": "ANALYZE=true npm run build",
     "dev:fast": "npm run dev -- --turbo",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
-    "lint:check": "eslint . --max-warnings 0",
+    "lint:check": "eslint \"src/**/*.{ts,tsx}\" \"app/**/*.{ts,tsx}\" \"pages/**/*.{ts,tsx}\" --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
@@ -242,5 +240,6 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
