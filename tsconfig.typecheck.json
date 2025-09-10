@@ -1,34 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
+    "noEmit": true,
+    "skipLibCheck": true
   },
-  "files": [
-    "next-env.d.ts"
-  ],
   "include": [],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "__tests__",
-    "tests",
-    "utils/**",
-    "zion-os",
-    "zion-os/**",
-    "zion-website",
-    "zion-website/**",
-    "public-backup",
-    "pages-backup",
-    "src_backup*",
-    "**/*.disabled/**",
-    "**/*.bak/**",
-    "**/*.backup/**",
-    "**/*_backup/**",
-    "**/*-backup/**",
-    "temp_*",
-    "temp-*/**",
-    ".next"
+  "exclude": ["**/*"],
+  "files": [
+    "src/main.tsx",
+    "src/AppMinimal.tsx",
+    "src/components/SEO.tsx"
   ]
 }
 

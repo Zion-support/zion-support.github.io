@@ -9,8 +9,13 @@
     "start": "vite preview",
     "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
-    "type-check": "echo 'Skipping type check in CI' && exit 0",
-    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config jest.config.mjs --passWithNoTests",
+<<<<<<< HEAD
+    "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
+    "test": "jest --config jest.config.cjs",
+=======
+    "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
+    "test": "jest --config jest.config.cjs",
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f21c
     "test:coverage": "jest --coverage",
     "test:integration": "jest --testPathPattern=integration",
     "test:e2e": "playwright test",
