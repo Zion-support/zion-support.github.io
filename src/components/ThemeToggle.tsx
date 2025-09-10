@@ -4,38 +4,37 @@ import { Sun, Moon, Monitor } from 'lucide-react';
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
-  className?: string;
+  theme: Theme;
+  onThemeChange: (theme: Theme) => void;
 }
 
-export function ThemeToggle({ className = '' }: ThemeToggleProps) {
-  const [theme, setTheme] = React.useState<Theme>('dark');
-
-  const toggleTheme = () => {
-    setTheme(prev => {
-      if (prev === 'dark') return 'light';
-      if (prev === 'light') return 'system';
-      return 'dark';
-    });
-  };
-
-  const getIcon = () => {
-    switch (theme) {
-      case 'light':
-        return <Sun className="w-4 h-4" />;
-      case 'system':
-        return <Monitor className="w-4 h-4" />;
-      default:
-        return <Moon className="w-4 h-4" />;
-    }
-  };
-
+export default function ThemeToggle({ theme, onThemeChange }: ThemeToggleProps) {
   return (
-    <button
-      onClick={toggleTheme}
-      className={`p-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors ${className}`}
-      title={`Current theme: ${theme}`}
-    >
-      {getIcon()}
-    </button>
+    <div className="flex items-center space-x-2">
+      <button
+        onClick={() => onThemeChange('light')}
+        className={`p-2 rounded-md ${
+          theme === 'light' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
+        }`}
+      >
+        <Sun size={16} />
+      </button>
+      <button
+        onClick={() => onThemeChange('dark')}
+        className={`p-2 rounded-md ${
+          theme === 'dark' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
+        }`}
+      >
+        <Moon size={16} />
+      </button>
+      <button
+        onClick={() => onThemeChange('system')}
+        className={`p-2 rounded-md ${
+          theme === 'system' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'
+        }`}
+      >
+        <Monitor size={16} />
+      </button>
+    </div>
   );
 }
