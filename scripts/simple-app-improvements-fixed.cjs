@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-    this.log(`Total improvements: ${this.improvements.length}`);
-    this.log(`Total errors: ${this.errors.length}`);
-    this.log(`Duration: ${duration}ms`);
-    
-    if (this.improvements.length > 0) {
-      this.log('\\n✅ Improvements created:');
-      this.improvements.forEach((improvement, index) => {
-        this.log(`  ${index + 1}. ${improvement}`);
-      });
-    }
-    
-    if (this.errors.length > 0) {
-      this.log('\\n❌ Errors encountered:');
-      this.errors.forEach((error, index) => {
-        this.log(`  ${index + 1}. ${error}`);
-      });
-    }
-
     this.log('\\n🎉 App improvements completed!');
   }
 }
@@ -26,9 +7,7 @@ const improvements = new SimpleAppImprovements();
 improvements.runAllImprovements().catch(console.error);
 =======
 =======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
+=======#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

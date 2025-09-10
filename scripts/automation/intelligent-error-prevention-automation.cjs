@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -941,4 +935,3 @@ if (require.main === module) {
 }
 }
 module.exports = IntelligentErrorPreventionAutomation}}}}}}}}}}}}}}}}}}}}}}}})))))
->>>>>>> origin/automation-fixes

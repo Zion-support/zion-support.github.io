@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
 import React,{ useEffect,useState } from \'react\'; import { motion } from \'framer-motion\'; interface PerformanceMetrics { \"fcp\": \'number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number;\' } const \"AdvancedPerformanceMonitor\": React.FC = () => { const [metrics,setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible,setIsVisible] = useState(false); useEffect(() => {}})
 const React,{ useEffect,useState } from "react"; import { motion } from "framer-motion"; interface PerformanceMetrics { fcp: "number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number;" } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics,setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible,setIsVisible] = useState(false); useEffect(() => {}})'"'"
 import _React,{ useEffect,useState } from 'react'; import { motion } from 'framer-motion'; interface PerformanceMetrics { "fcp": 'number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number;' } const "AdvancedPerformanceMonitor": _React.FC = () => { const [metrics,setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible,setIsVisible] = useState(false); useEffect(() => {}})
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

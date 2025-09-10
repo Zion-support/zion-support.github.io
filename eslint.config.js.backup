@@ -1,23 +1,7 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-      },
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-<<<<<<< HEAD
-export default [{
-    "ignores": [
-=======
-
 export default [
   {
-    ignores: [
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-      'node_modules/',
+    ignores: [      'node_modules/',
       '.next/',
       'out/',
       'dist/',

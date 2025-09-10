@@ -1,138 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users
-} from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "@/components/TrustedBySection";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-<<<<<<<< HEAD:src/pages/ServicesPage.tsx
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
-========
-<<<<<<< HEAD
-import { Globe, ExternalLink, Star, Clock, Shield, Zap, Database, Code, Smartphone, Blockchain, Cpu, BarChart3 } from "lucide-react";
-=======
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
->>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ServicesPage.tsx.backup.1756208062
-import { useEffect, useState } from "react";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-=======
-import { EXPANDED_SERVICES } from "@/data/expandedServices";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-
-import { ProductListing } from "@/types/listings";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
-import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
-// Enhanced service listings with new micro SAAS services
-const SERVICE_LISTINGS: ProductListing[] = [
-  // AI & Machine Learning Services
-  {
-    id: "ai-content-generation",
-    title: "AI Content Generator Pro",
-    description: "Generate high-quality content, code, and creative assets with our advanced AI models. Perfect for marketers, developers, and content creators.",
-    category: "AI & ML",
-    price: 29,
-    currency: "$",
-    tags: ["AI Content", "Text Generation", "Code Generation", "Creative Writing"],
-    author: {
-      name: "Zion AI Labs",
-      id: "zion-ai-labs",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-    aiScore: 98,
-    rating: 4.9,
-    reviewCount: 156,
-  },
-  {
-    id: "ai-media-editing",
-    title: "AI Image & Video Editor",
-    description: "Professional-grade AI-powered image and video editing tools for creators and businesses. Remove backgrounds, enhance quality, and generate variations.",
-    category: "AI & ML",
-    price: 19,
-    currency: "$",
-    tags: ["Image Editing", "Video Editing", "AI Enhancement", "Background Removal"],
-    author: {
-      name: "Zion Media Studio",
-      id: "zion-media-studio",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-20T14:30:00.000Z",
-    aiScore: 95,
-    rating: 4.8,
-    reviewCount: 89,
-  },
-  {
-    id: "ai-code-assistant",
-    title: "AI Code Assistant",
-    description: "Intelligent code completion, debugging, and optimization powered by advanced language models. Support for 50+ programming languages with IDE integrations.",
-    category: "AI & ML",
-    price: 39,
-    currency: "$",
-    tags: ["Code Completion", "Debugging", "Code Review", "IDE Integration"],
-    author: {
-      name: "Zion Dev Tools",
-      id: "zion-dev-tools",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-25T09:15:00.000Z",
-    aiScore: 97,
-    rating: 4.9,
-    reviewCount: 203,
-  },
-  {
-    id: "ai-analytics",
-    title: "AI Data Analytics Platform",
-    description: "Transform raw data into actionable insights with our AI-powered analytics suite. Advanced data visualization, predictive analytics, and automated reporting.",
-    category: "AI & ML",
-    price: 199,
-    currency: "$",
-    tags: ["Data Analytics", "Predictive Analytics", "Data Visualization", "Business Intelligence"],
-    author: {
-      name: "Zion Analytics",
-      id: "zion-analytics",
-      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-01T11:00:00.000Z",
-    aiScore: 96,
-    rating: 4.8,
-    reviewCount: 67,
-  },
-
   // Cybersecurity Services
   {
     id: "ai-threat-detection",
@@ -659,85 +526,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <>
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="IT & AI Services - Zion Tech Group" 
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        keywords="IT services, AI services, technology consulting, Zion Tech Group"
-        url="https://ziontechgroup.com/services"
-      />
-      
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-            <Link to="/enhanced-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Enhanced AI & IT Services
-              </Button>
-            </Link>
-=======
-      <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-              Zion Micro SAAS Services
-            </h1>
-            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto">
-              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations. 
-              From AI content generation to cybersecurity, we have the tools you need to succeed.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Brain className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">AI & ML Services</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $19/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Shield className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cybersecurity</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $99/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Cloud className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cloud Solutions</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $49/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Users className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Business Tools</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $29/month</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
-            <Link to="/it-onsite-services">
+          <div className="flex flex-wrap justify-center gap-4">            <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
@@ -752,7 +541,6 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
                 <MessageCircle className="h-4 w-4 mr-2" />
                 Contact Sales
-=======
             <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -761,25 +549,11 @@ export default function ServicesPage() {
             </Link>
             <Link to="/contact">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </Button>
+                Request a Quote              </Button>
             </Link>
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find expert technology service providers for your business needs, from AI development to infrastructure management.
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((service) => (
@@ -788,7 +562,7 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
                 <p className="text-zion-slate-light">{service.description}</p>
               </div>
-              
+
               <div className="flex items-center justify-between mb-4">
                 <div className="text-2xl font-bold text-zion-purple">
                   ${service.price?.toLocaleString()}
@@ -818,8 +592,6 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
       <DynamicListingPage 
         title="Comprehensive Micro SAAS Solutions"
         description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
@@ -828,11 +600,7 @@ export default function ServicesPage() {
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 19, max: 5000 }}
       />
-      
+
       <TrustedBySection />
-    </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  );
+    </>  );
 }

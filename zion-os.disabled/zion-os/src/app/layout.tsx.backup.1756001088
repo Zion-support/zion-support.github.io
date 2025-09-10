@@ -1,8 +1,5 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-<<<<<<< HEAD
-import Link from "next/link";
-
 export const metadata = {
   title: "Zion Tech Group - AI & Quantum Computing Solutions",
   description: "Pioneering the future of AI-powered autonomous systems, quantum computing, and next-generation technology solutions. Transform your business with cutting-edge innovation.",
@@ -29,25 +26,10 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false,
->>>>>>> origin/cursor/enhance-accessibility-and-site-performance-5d26
-};
+  userScalable: false,};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-<<<<<<< HEAD
-    <html lang="en">
-      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
-        <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
-            <a href="/" className="font-semibold">Zion OS</a>
-            <a href="/services" className="text-sm opacity-80 hover:opacity-100">Services</a>
-            <a href="/multiverse/launch" className="text-sm opacity-80 hover:opacity-100">Launch</a>
-            <a href="/admin/os-deploy" className="text-sm opacity-80 hover:opacity-100">Admin Deploy</a>
-            <a href="/admin/instances" className="text-sm opacity-80 hover:opacity-100">Instances</a>
-          </div>
-        </nav>
-
         {/* Main Content */}
         <main className="min-h-screen">{children}</main>
 
@@ -166,9 +148,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main id="main-content" className="max-w-6xl mx-auto px-4 py-8" role="main">
             {children}
           </main>
-        </ThemeProvider>
->>>>>>> origin/cursor/enhance-accessibility-and-site-performance-5d26
-      </body>
+        </ThemeProvider>      </body>
     </html>
   );
 }

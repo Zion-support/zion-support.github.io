@@ -3,19 +3,6 @@
 
 /**;
  * Intelligent Repository Manager;
-<<<<<<< HEAD
- * 
-* This automation "handles": * - Intelligent branch management
- * - Automated PR creation and review
- * - Smart conflict resolution
- * - Repository health monitoring
- * - Automated merging strategies
- * - Code quality gates */
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
-
 class IntelligentRepositoryManager {
 
             if (result.success) {log(`Resolved conflict in ${file} using default strategy`);}
@@ -143,9 +130,7 @@ class IntelligentRepositoryManager {
 
     conservative: () => {
   // Always use `theirs` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs ${file}`, { silent: true })log(`Resolved conflict in ${file} using conservative strategy`)}),
->>>>>>> origin/automation-fixes
-}
+      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs ${file}`, { silent: true })log(`Resolved conflict in ${file} using conservative strategy`)}),}
 // Main execution
 if (require.main === module) {
     const manager = new IntelligentRepositoryManager();
@@ -197,37 +182,6 @@ module.exports = IntelligentRepositoryManager;            if (result.success) {l
       conflictedFiles.forEach(file => {gitCommand(`checkout --theirs ${file}`, { "silent": true });log(`Resolved conflict in ${file} using conservative strategy`)})}
   }
   const strategy = resolutionStrategies[CONFIG.CONFLICT_RESOLUTION_MODE] || resolutionStrategies.intelligent;
-<<<<<<< HEAD
-  strategy()}
-;
-const mergeBranch = async (branchName) => {log(`Attempting to merge "branch": ${branchName}`);
-  // Checkout main branchlet result = gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { "silent": true });
-  if (!result.success) {log(`Failed to checkout ${CONFIG.MAIN_BRANCH}: ${result.error}`, "ERROR");
-    return false}
-  ;
-  // Pull latest changesresult = gitCommand(`pull origin ${CONFIG.MAIN_BRANCH}`, { "silent": true });
-  if (!result.success) {log(`Failed to pull latest "changes": ${result.error}`, "ERROR");
-    return false}
-  ;
-  // Attempt mergeresult = gitCommand(`merge --no-edit origin/${branchName}`, { "silent": true });
-  if (result.success) {log(`Successfully merged ${branchName} into ${CONFIG.MAIN_BRANCH}`);
-    // Push changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { "silent": true });
-    if (pushResult.success) {log("Pushed merged changes to remote");
-      // Clean up merged branchgitCommand(`push origin --delete ${branchName}`, { "silent": true });log(`Deleted remote "branch": ${branchName}`);
-      return true} else {log(`Failed to push merged "changes": ${pushResult.error}`, "ERROR");
-      return false}
-  } else {
-  // Handle merge conflictslog(`Merge conflict detected for "branch": ${branchName}`);
-    // Get conflicted files;
-    const conflictedFilesResult = gitCommand("diff --name-only --diff-filter=U", { "silent": true });
-    if (conflictedFilesResult.success) {
-  const conflictedFiles = conflictedFilesResult.output.split("\n").filter(line => line.trim());
-      if (conflictedFiles.length > 0) {log(`Conflicted "files": ${conflictedFiles.join(", ")}`);
-=======
-  strategy(),
-}
-const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${branchName}`)
-
 const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${branchName}`);
 
     // Push changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true })
@@ -245,25 +199,9 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
     const conflictedFilesResult = gitCommand(`diff --name-only --diff-filter=U`, { silent: true })
     if (conflictedFilesResult.success) {
   const conflictedFiles = conflictedFilesResult.output.split(`\n`).filter(line => line.trim())
-      if (conflictedFiles.length > 0) {log(`Conflicted files: ${conflictedFiles.join(", ")}`)
->>>>>>> origin/automation-fixes
-        // Resolve conflicts intelligently;
+      if (conflictedFiles.length > 0) {log(`Conflicted files: ${conflictedFiles.join(", ")}`)        // Resolve conflicts intelligently;
         intelligentConflictResolution(conflictedFiles, branchName);
         // Stage resolved files;
-<<<<<<< HEAD
-        gitCommand("add .", { "silent": true });
-        // Commit resolutionconst commitResult = gitCommand(`commit -m Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { "silent": true });        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`);
-          // Push resolved changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { "silent": true });
-          if (pushResult.success) {log("Pushed conflict resolution to remote");
-            // Clean up merged branchgitCommand(`push origin --delete ${branchName}`, { "silent": true });log(`Deleted remote "branch": ${branchName}`);
-            return true} else {log(`Failed to push conflict "resolution": ${pushResult.error}`, "ERROR");
-            return false}
-        } else {log(`Failed to commit conflict "resolution": ${commitResult.error}`, "ERROR");
-          return false}
-=======
-        gitCommand(`add .`, { silent: true })
-        // Commit resolutionconst commitResult = gitCommand(`commit -m Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true })        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`)
-
           // Push resolved changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true })
           if (pushResult.success) {log(`Pushed conflict resolution to remote`)
 
@@ -275,25 +213,9 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
 }
         } else {log(`Failed to commit conflict resolution: ${commitResult.error}`, `ERROR`)
           return false;
-}
->>>>>>> origin/automation-fixes
-      }
+}      }
     }
     // Abort merge if we get here;
-<<<<<<< HEAD
-    gitCommand("merge --abort", { "silent": true });log(`Aborted merge for "branch": ${branchName}`);
-    // Abort merge if we get here;
-    gitCommand("merge --abort", { "silent": true });log(`Aborted merge for "branch": ${branchName}`);
-    return false}
-}
-;
-const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.length} branches for intelligent merging`);
-  const branchAnalysis = branches.map(branch => {
-  const info = getBranchInfo(branch);
-    const priority = calculateBranchPriority(branch, info);
-=======
-    gitCommand(`merge --abort`, { silent: true })log(`Aborted merge for branch: ${branchName}`)
-
     // Abort merge if we get here;
     gitCommand("merge --abort", { silent: true })log(`Aborted merge for branch: ${branchName}`)
     return false;
@@ -303,65 +225,28 @@ const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.lengt
 
   const branchAnalysis = branches.map(branch => {
   const info = getBranchInfo(branch)
-    const priority = calculateBranchPriority(branch, info)
->>>>>>> origin/automation-fixes
-    return {
+    const priority = calculateBranchPriority(branch, info)    return {
   branch,
       ...info,
       priority,
-<<<<<<< HEAD
-      "mergeable": info.commits > 0 && info.files.length > 0}
-  });
-  // Sort by priority (highest first);
-  return branchAnalysis.sort((a, b) => b.priority - a.priority)}
-;
-=======
-      mergeable: info.commits > 0 && info.files.length > 0;
-}
-  })
-
   // Sort by priority (highest first)
   return branchAnalysis.sort((a, b) => b.priority - a.priority),
-}
->>>>>>> origin/automation-fixes
-const calculateBranchPriority = (branch, info) => {
+}const calculateBranchPriority = (branch, info) => {
   let priority = 0;
   // Base priority on commit count;
   priority += info.commits * 10;
-<<<<<<< HEAD
-  // Base priority on commit count;
-  priority += info.commits * 10;
-  // Priority based on file types;
-  const fileTypes = info.files.map(file => path.extname(file));
-  const codeFiles = fileTypes.filter(ext => [".js", ".ts", ".jsx", ".tsx"].includes(ext)).length;
-=======
-
   // Base priority on commit count;
   priority += info.commits * 10;
 
   // Priority based on file types;
   const fileTypes = info.files.map(file => path.extname(file))
-  const codeFiles = fileTypes.filter(ext => [`.js`, `.ts`, ".jsx", ".tsx"].includes(ext)).length;
->>>>>>> origin/automation-fixes
-  const configFiles = fileTypes.filter(ext => [".json", ".yml", ".yaml", ".toml"].includes(ext)).length;
+  const codeFiles = fileTypes.filter(ext => [`.js`, `.ts`, ".jsx", ".tsx"].includes(ext)).length;  const configFiles = fileTypes.filter(ext => [".json", ".yml", ".yaml", ".toml"].includes(ext)).length;
   const docFiles = fileTypes.filter(ext => [".md", ".txt", ".rst"].includes(ext)).length;
   priority += codeFiles * 5;      // Code files are high priority;
   priority += configFiles * 3;    // Config files are medium priority;
   priority += docFiles * 1;       // Documentation is lower priority;
   // Priority based on branch name patterns;
   if (branch.includes("hotfix") || branch.includes("critical")) {
-<<<<<<< HEAD
-  priority += 100} else if (branch.includes("feature")) {
-  priority += 50} else if (branch.includes("bugfix")) {
-  priority += 75}
-  ;
-  // Priority based on age (newer branches get higher priority);
-  const branchAge = getBranchAge(branch);
-  if (branchAge < 24) { // Less than 24 hours;
-    priority += 25;} else if (branchAge < 168) { // Less than 1 week;
-    priority += 15;}
-  return priority;}
-
 const getBranchAge = (branchName) => {const result = gitCommand(`log -1 --format=%ct origin/${branchName}`, { silent: true });
   if (!result.success) return 999; // Default to old if can`t determine;
   if (!result.success) return 999; // Default to old if can"t determine;
@@ -455,9 +340,7 @@ const executeIntelligentMerging = async () => {
     } catch (error) {
   failureCount++;log(`Error processing branch ${branchInfo.branch}: ${error.message}`, "ERROR");}
     // Small delay between merges;
-    // Small delay between merges;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    await new Promise(resolve => setTimeout(resolve, 1000));}
+    // Small delay between merges;    await new Promise(resolve => setTimeout(resolve, 1000));}
   // Summarylog(`Merge cycle completed. Success: ${successCount}, Failures: ${failureCount}`);
 
   if (successCount > 0) {log(`Successfully merged ${successCount} branches. Backup available at: ${backupBranch}`);}
@@ -855,103 +738,6 @@ const main = async () => {
     const cleanedCount = cleanupOldBranches();
     // Generate summary report;
     const summary = {
-<<<<<<< HEAD
-  "timestamp": new Date().toISOString(),
-      healthMetrics,
-      "cleanedBranches": cleanedCount,
-      "status": "completed"}
-    log(`Repository management cycle completed "successfully": ${JSON.stringify(summary, null, 2)}`)} catch (error) {  log(`Repository management cycle "failed": ${error.message  }`, "ERROR");log(`Stack "trace": ${error.stack}`, "ERROR")}
-}
-// Handle process signals;
-process.on("SIGINT", () => {
-  log("Received SIGINT. Shutting down gracefully...");
-  process.exit(0)});
-// Start the manager if run directly
-if (require.main === module) {
-  const manager = new IntelligentRepositoryManager();
-  manager.start().catch(error => {
-    console.error('Failed to start Intelligent Repository "Manager": ', error);
-    process.exit(1)})}
-module.exports = IntelligentRepositoryManager;
-* This automation "handles"
-            console.error('Failed to write to log "file")
-                "stdio"
-            const result = await this.executeCommand('git', { "args"})
-            this.log(`Failed to get current "branch"`)
-            const branches = await this.executeCommand('git', { "args"})
-            const localBranches = await this.executeCommand('git', { "args"})
-                "remote"
-                "local"
-            this.log(`Failed to get branch "info"`)
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-                "args"
-            const status = await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-                "severity"
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-                "severity"
-            const eslintResult = await this.executeCommand('npm', { "args"})
-            const tscResult = await this.executeCommand('npx', { "args"})
-                "overall"
-            this.log(`Failed to assess code "quality"`)
-            return { "overall"}
-            "severity"
-            "severity"
-            const files = await this.executeCommand('find', { "args"})
-                "riskLevel"
-            return { "fileCount": 0, "estimatedComplexity": 0, "riskLevel"}
-            const testResult = await this.executeCommand('npm', { "args": ['run', '"test"})]
-                "status"
-            this.log(`Failed to get test "coverage"`)
-            return { "percentage": 0, "status"}
-            const auditResult = await this.executeCommand('npm', { "args"})
-            this.log(`Failed to check security "vulnerabilities"`)
-            return { "vulnerabilities": {}, "riskLevel"
-                "args"
-            this.log(`PR created "successfully"`)
-            this.log(`Failed to create "PR"`)
-                await this.executeCommand('npm', { "args": ['run', '"lint"})]
-                await this.executeCommand('npx', { "args"})
-                await this.executeCommand('npm', { "args"})
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args": ['commit', '-m', 'Auto-"fix"})]
-            await this.executeCommand('git', { "args"})
-            this.log(`Auto-fixes completed for "branch"`)
-            this.log(`Failed to auto-fix "issues"`)
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-                    await this.executeCommand('git', { "args"})
-                    await this.executeCommand('git', { "args"})
-                "default": await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-            await this.executeCommand('git', { "args"})
-            this.log(`Cleaned up "branch"`)
-            this.log(`Repository health monitoring completed. Overall "health"`)
-            this.log(`Failed to monitor repository "health"`)
-            recommendations.push('� "Critical")
-            recommendations.push('� "Warning")
-            this.log(`Failed to cleanup stale "branches"`)
-                "args"
-      this.log(`Error analyzing pull "requests"`)
-      "riskLevel"
-      this.log(`Error in intelligent "merge"`)
-      await this.executeCommand('git commit -m "Resolve merge conflicts automatically")
-      this.log(`Error resolving "conflicts"`)
-          this.log(`Error in monitoring "loop"`)
-      this.log(`Error starting Intelligent Repository "Manager"`)
-    console.error('Failed to start Intelligent Repository "Manager")
-=======
-  timestamp: new Date().toISOString(),
-      healthMetrics,
-      cleanedBranches: cleanedCount,
-      status: `completed`;
-}
-    log(`Repository management cycle completed successfully: ${JSON.stringify(summary, null, 2)}`)
-
 } catch (error) {  log(`Repository management cycle failed: ${error.message  }`, `ERROR`)log(`Stack trace: ${error.stack}`, `ERROR`),
 }
 }
@@ -960,4 +746,3 @@ process.on(`SIGINT`, () => {
   log("Received SIGINT. Shutting down gracefully...")
   process.exit(0),
 })
->>>>>>> origin/automation-fixes
