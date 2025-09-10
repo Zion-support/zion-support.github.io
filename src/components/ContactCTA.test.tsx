@@ -1,13 +1,9 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import ContactCTA from &apos;./ContactCTA;
-describe(&apos;ContactCTA&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<ContactCTA / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { render } from '@testing-library/react';
+import ContactCTA from './ContactCTA';
+
+describe('ContactCTA', () => {
+  it('renders without crashing', () => {
+    const { container } = render(<ContactCTA />);
+    expect(container).toBeTruthy();
+  });
+});
