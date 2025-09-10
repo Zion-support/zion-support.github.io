@@ -1,8 +1,6 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import EnhancedImageLoader from '../components/EnhancedImageLoader';'
-describe('EnhancedImageLoader', () => {test('renders without crashing', () => {render(<EnhancedImageLoader />)expect(screen.getByTestId('enhancedimageloader')).toBeInTheDocument()})test('displays correct content', () => {render(<EnhancedImageLoader />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<EnhancedImageLoader />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<EnhancedImageLoader />)// Add styling tests here;'
-  })})
+<<<<<<< HEAD
+=======
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedImageLoader from &apos;./EnhancedImageLoader; describe(&apos;EnhancedImageLoader&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedImageLoader / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedImageLoader from &apos;./EnhancedImageLoader; describe(&apos;EnhancedImageLoader&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedImageLoader / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedImageLoader from &apos;./EnhancedImageLoader; describe(&apos;EnhancedImageLoader&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<EnhancedImageLoader / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

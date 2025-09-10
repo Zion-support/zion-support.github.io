@@ -135,11 +135,12 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-12">;
             Strategic Global Locations;
-          </h3>;
-}}
+          </h3>;}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
+          
+
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 4 gap-8">;
             {globalOffices.map((office", index) => (<motion.div;
                 key={office.city}
@@ -231,8 +232,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
             <p className="text-gray - 300 text-lg max - w-2xl mx -auto">;
               Our distributed team and cloud infrastructure ensure seamless service delivery              across all time zones and regions, with local expertise and global capabilities.</p>;
           </div>;
-        </motion.div>;
-}}
+        </motion.div>;}}
         >
           <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">
             <div className="w-24 h-24 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-full flex items - center justify - center mx - auto mb-6">
@@ -243,6 +243,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
               Our distributed team and cloud infrastructure ensure seamless service delivery              across all time zones and regions, with local expertise and global capabilities.</p>
           </div>
         </motion.div>
+
         <motion.div;
           className="text-center"          initial = {;
 <<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
@@ -293,8 +294,7 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
                 <Globe className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;
-}}
+        </motion.div>;}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">

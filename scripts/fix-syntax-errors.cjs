@@ -17,32 +17,9 @@ class SyntaxErrorFixer {
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-class SyntaxErrorFixer {
-  constructor() {
-    this.fixes = 0;
-    this.errors = []}
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;);
-    }
-  async fixSyntaxErrors() {
-    this.log('🔧 Starting syntax error fixing...');
-    try {
-      // Run ESLint with auto-fix
-      this.log('Running ESLint auto-fix...');
-      execSync('npm run "lint": fix', { "stdio": 'inherit' });
-      this.fixes++;
-      // Run TypeScript compiler to check for errors
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { "stdio": 'inherit' });
-      // Format code with Prettier
-      this.log('Formatting code with Prettier...');
-      execSync('npm run format', { "stdio": 'inherit' });
-      this.fixes++;
-      this.log(`✅ Syntax fixing completed successfully. Applied ${this.fixes} fixes.`);
-      return { "success": true, "fixes": this.fixes }} catch (error) {
-      this.log(`❌ Syntax fixing "failed": ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
-      return { "success": false, "error": error.message, "fixes": this.fixes }}
+<<<<<<< HEAD
+    
+=======
   }
   log(message) {
     console.log(`🔧 ${message}`);
@@ -83,6 +60,7 @@ class SyntaxErrorFixer {
     content = content.replace(/([^;}])\n/g, '$1;\n');
     // Fix merge conflict markers
     content = content.replace(/[\s\S]*?[\s\S]*?    
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects

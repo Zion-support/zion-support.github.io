@@ -1,58 +1,10 @@
-const fs = require("fs");
-const path = require("path");
-function fixMergeConflicts(filePath) {
-  try {
-  let content = fs.readFileSync(filePath, "utf8");
-    // Remove merge conflict markers and keep the content after the last marker;
-    content = content.replace(/;
-    content = content.replace(/;
-    // Fix common syntax issues;
-    content = content.replace(/},\s*}/g, "}");
-    content = content.replace(/},\s*]/g, "]");
-    content = content.replace(/},\s*\)/g, ")");
-    fs.writeFileSync(filePath, content);
 <<<<<<< HEAD
-    } catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message)}
-}
-;
-function findAndFixFiles(dir) {
 =======
-    console.log(`Fixed: ${filePath}`);,
-} catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);,
-}
-}
-
-function findAndFixFiles(dir) {;
->>>>>>> origin/automation-fixes
-  const files = fs.readdirSync(dir);
-  for (const file of files) {
-  const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-<<<<<<< HEAD
-    if (stat.isDirectory() && !file.includes("node_modules") && !file.includes(".git")) {
-  findAndFixFiles(filePath)} else if (file.match(/\.(tsx?|jsx?)$/)) {
-  const content = fs.readFileSync(filePath, "utf8");
-      if (content.includes("") || content.includes("") || content.includes(">>>>>>>")) {
-  fixMergeConflicts(filePath)}
-    }
-  }
-}
-;
 =======
-    if (stat.isDirectory() && !file.includes("node_modules") && !file.includes(".git")) {;
-  findAndFixFiles(filePath);,
-} else if (file.match(/\.(tsx?|jsx?)$/)) {;
-  const content = fs.readFileSync(filePath, "utf8");
-      if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>>")) {;
-  fixMergeConflicts(filePath);,
-}
-    }
-  }
-}
-
-console.log("Starting merge conflict resolution...");
->>>>>>> origin/automation-fixes
-findAndFixFiles(".");
-console.log("Merge conflict resolution completed!")
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+const fs = require('fs');
+const path = require('path');
+function fixMergeConflicts(filePath) {}
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Remove merge conflict markers and keep the newer version (after );

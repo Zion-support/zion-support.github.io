@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+const fs = // // require('fs');
+=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -53,8 +56,8 @@ if (require.main === module) {
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
-module.exports = PerformanceOptimizer;
-const fs = // // require('fs');
+module.exports = PerformanceOptimizer;const fs = // // require('fs');
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 const path = // // require('path');
 const glob = // // require('glob');
 class PerformanceOptimizer {
@@ -62,12 +65,7 @@ class PerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+<<<<<<< HEAD
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -75,9 +73,15 @@ class PerformanceOptimizer {
   }
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
     console.log(`[${timestamp}] ${message}`)}
+=======
+    this.ensureDirectories();
+  }
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }    console.log(`[${timestamp}] ${message}`)}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
@@ -107,16 +111,17 @@ class PerformanceOptimizer {
               /export default function (\w+)/g,
               'export default React.memo(function $1'
             );
-            fileOptimizations++;
-          }
+<<<<<<< HEAD
             fileOptimizations++}
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
-            fileOptimizations++;
-          }
             fileOptimizations++}
+=======
+            fileOptimizations++;
+          }            fileOptimizations++}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
             fileOptimizations++;
@@ -150,14 +155,7 @@ class PerformanceOptimizer {
         }
         if (newContent !== content) {
           fs.writeFileSync(filePath, newContent, 'utf8');
-          this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
-        }
-        results.processed++;
-        results.optimizations += fileOptimizations;
-      } catch (error) {
-        results.errors.push({ file, error: error.message });
-        this.log(`❌ Error optimizing ${file}: ${error.message}`);
-      }
+<<<<<<< HEAD
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
@@ -181,6 +179,16 @@ class PerformanceOptimizer {
     return report;
   }
     this.log(`📊 Report "generated": ${reportPath}`);
+=======
+          this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
+        }
+        results.processed++;
+        results.optimizations += fileOptimizations;
+      } catch (error) {
+        results.errors.push({ file, error: error.message });
+        this.log(`❌ Error optimizing ${file}: ${error.message}`);
+      }    this.log(`📊 Report "generated": ${reportPath}`);
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report}
   async createPerformanceMonitoringScript() {
@@ -191,13 +199,7 @@ const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      pageLoadTime: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0
-    };
-  }
+<<<<<<< HEAD
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -212,6 +214,15 @@ class PerformanceMonitor {
         this.reportMetrics();
       });
         this.reportMetrics()});
+=======
+      pageLoadTime: 0,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: 0,
+      firstInputDelay: 0
+    };
+  }        this.reportMetrics()});
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
@@ -234,8 +245,7 @@ class PerformanceMonitor {
             }
           }
         });
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
+<<<<<<< HEAD
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
@@ -244,16 +254,15 @@ class PerformanceMonitor {
       console.log('Performance Metrics:', this.metrics);
     }
       console.log('Performance "Metrics": ', this.metrics)}
+=======
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }      console.log('Performance "Metrics": ', this.metrics)}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
       Object.entries(this.metrics).forEach(([key, value]) => {
         gtag('event', key, {
-          event_category: 'Performance',
-          value: Math.round(value),
-          non_interaction: true
-        });
-      });
-    }
+<<<<<<< HEAD
           "event_category": 'Performance',
           "value": Math.round(value),
           "non_interaction": true
@@ -270,6 +279,14 @@ export default PerformanceMonitor;";
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
       fs.mkdirSync(utilsDir, { "recursive": true })}
+=======
+          event_category: 'Performance',
+          value: Math.round(value),
+          non_interaction: true
+        });
+      });
+    }      fs.mkdirSync(utilsDir, { "recursive": true })}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
 }
@@ -283,6 +300,12 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch((error) => {
+<<<<<<< HEAD
+      console.error('❌ Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+=======
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
     });
@@ -292,6 +315,4 @@ module.exports = PerformanceOptimizer;
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const glob = require('glob'); class PerformanceOptimizer { constructor() { this.projectRoot = process.cwd(); this.srcDir = path.join(this.projectRoot,'src'); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: 'true' })} } log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async optimizePerformance() { this.log('⚡ Starting performance optimization'); const files = glob.sync('***.test.*','**node_modules/**'] }); const results = { processed: '0',optimizations: '0',errors: '[]' }; for (const file of files) { const filePath = path.join(this.srcDir,file); try { const content = fs.readFileSync(filePath,'utf8'); let newContent = content; let fileOptimizations = 0; if (file.endsWith('.tsx') || file.endsWith('.jsx')) { if (content.includes('export default function') && !content.includes('React.memo')) { newContent = newContent.replace( /export default function (\w+)/g,'export default React.memo(function $1' ); newContent = newContent.replace( /export default function (\w+)/g,'export default React.memo(function $1' ); fileOptimizations++} if (content.includes('onClick') && !content.includes('useCallback')) { fileOptimizations++} if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) { fileOptimizations++} } const importLines = newContent.split('\n').filter(line => line.trim().startsWith('import')); const usedImports = new Set(); importLines.forEach(importLine => { const matches = importLine.match(/import\s*\{([^}]+)\}/); if (matches) { const imports = matches[1].split(',').map(imp => imp.trim()); imports.forEach(imp => { if (newContent.includes(imp) && !importLine.includes(imp)) { usedImports.add(imp)} })} }); if (file.endsWith('.tsx') || file.endsWith('.jsx')) { if (newContent.includes('React.memo') && !newContent.includes("import React,{ memo }")) { newContent = newContent.replace( /import React from 'react';/g,"import React,{ memo,useCallback,useMemo } from 'react';" ); fileOptimizations++} } if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`)} results.processed++; results.optimizations += fileOptimizations} catch (error) { results.errors.push({ file,error: 'error.message' }); this.log(`❌ Error optimizing ${file}: ${error.message}`)} } const report = { timestamp: new Date().toISOString(),summary: { filesProcessed: results.processed,optimizationsApplied: 'results.optimizations',errors: 'results.errors.length' },details: 'results' }; const reportPath = path.join(this.reportsDir,'performance-optimization-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.log(`📊 Report generated: ${reportPath}`); this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`); return report} async createPerformanceMonitoringScript() { this.log('📊 Creating performance monitoring script'); const monitoringScript = `#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceMonitor { constructor() { this.metrics = { pageLoadTime: '0',firstContentfulPaint: '0',largestContentfulPaint: '0',cumulativeLayoutShift: '0',firstInputDelay: '0' }} startMonitoring() { if (typeof window !== 'undefined') { window.addEventListener('load',() => { this.metrics.pageLoadTime = performance.now(); this.reportMetrics()}); if ('PerformanceObserver' in window) { const observer = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { switch (entry.entryType) { case 'paint': if (entry.name === 'first-contentful-paint') { this.metrics.firstContentfulPaint = entry.startTime} break; case 'largest-contentful-paint': this.metrics.largestContentfulPaint = entry.startTime; break; case 'layout-shift': this.metrics.cumulativeLayoutShift += entry.value; break; case 'first-input': this.metrics.firstInputDelay = entry.processingStart - entry.startTime; break} } }); observer.observe({ entryTypes: ['paint','largest-contentful-paint','layout-shift','first-input'] })} } } reportMetrics() { if (process.env.NODE_ENV === 'development') { console.log('Performance Metrics:',this.metrics)} if (typeof gtag !== 'undefined') { Object.entries(this.metrics).forEach(([key,value]) => { gtag('event',key,{ event_category: 'Performance',value: Math.round(value),non_interaction: 'true' })})} } } export default PerformanceMonitor;`; const scriptPath = path.join(this.srcDir,'utils','PerformanceMonitor.js'); const utilsDir = path.dirname(scriptPath); if (!fs.existsSync(utilsDir)) { fs.mkdirSync(utilsDir,{ recursive: 'true' })} fs.writeFileSync(scriptPath,monitoringScript); this.log(`✅ Performance monitoring script created: ${scriptPath}`)} } if (require.main === module) { const optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance() .then(() => optimizer.createPerformanceMonitoringScript()) .then(() => { console.log('🎉 Performance optimization completed successfully'); process.exit(0)}) .catch((error) => { console.error('❌ Performance optimization failed:',error); process.exit(1)})} module.exports = PerformanceOptimizer;
->>>>>>> origin/automation-improvements
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

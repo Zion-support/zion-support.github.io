@@ -221,84 +221,11 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
           }
         }
       }
-  ERROR')';;
-;
-  async: createPackageJson() {
-    const packageJson = {
-      name: 'zion-ap,p, ';
-      private: tru,e
-      version:
-  0.0.0', ';
-      type: 'modul,e, ';
-      scripts: {;
-  dev': 'vit,e, ';
-  build': 'tsc: && vite build, ';
-  lint': eslint: . --ext ts,tsx --report-unused-disable-directives --max-warnings 0, ';
-  ,';preview': 'vite: preview}, ';
-      dependencies: {;
-  react': '^18.2.,0, ';
-  react-dom': '^18.2.0, ';
-  react-router-dom': '^6.8.1, ';
-  react-helmet-async': '^1.3.0, ';
-  framer-motion': '^10.12.16, ';
-  lucide-react': '^0.263.1, ';
-  date-fns': '^2.29.3, ';
-  clsx': '^1.2.1, ';
-  tailwind-merge': '^1.13.2, ';
-  react-hook-form': '^7.43.9, ';
-  @hookform/resolvers': '^2.9.11, ';
-  zod': '^3.20.6}, ';
-      devDependencies: {
-  @types/react': '^18.0.28, ';
-  @types/react-dom': '^18.0.11, ';
-  @typescript-eslint/eslint-plugin': '^5.57.1, ';
-  @typescript-eslint/parser': '^5.57.1, ';
-  @vitejs/plugin-react': '^3.1.0, ';
-  autoprefixer': '^10.4.14, ';
-  eslint': '^8.38.0, ';
-  eslint-plugin-react-hooks': '^4.6.0, ';
-  eslint-plugin-react-refresh': '^0.3.4, ';
-  postcss': '^8.4.23, ';
-  tailwindcss': '^3.2.7, ';
-  typescript': '^4.9.3, ';
-  vite': '^4.2.0}';
-;
-      private: true,
-      version:
-  0.0.0'
-      type: 'module
-      scripts: {',
-  dev': 'vite
-  build': 'tsc && vite build
-  lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
-  ,;preview': 'vite preview}
-      dependencies: {'
-  react': '^18.2.0
-  react-dom': '^18.2.0
-  react-router-dom': '^6.8.1
-  react-helmet-async': '^1.3.0
-  framer-motion': '^10.12.16
-  lucide-react': '^0.263.1
-  date-fns': '^2.29.3
-  clsx': '^1.2.1
-  tailwind-merge': '^1.13.2
-  react-hook-form': '^7.43.9
-  @hookform/resolvers': '^2.9.11
-  zod': '^3.20.6}
-      devDependencies: {
-  @types/react': '^18.0.28
-  @types/react-dom': '^18.0.11
-  @typescript-eslint/eslint-plugin': '^5.57.1
-  @typescript-eslint/parser': '^5.57.1
-  @vitejs/plugin-react': '^3.1.0
-  autoprefixer': '^10.4.14
-  eslint': '^8.38.0
-  eslint-plugin-react-hooks': '^4.6.0
-  eslint-plugin-react-refresh': '^0.3.4
-  postcss': '^8.4.23
-  tailwindcss': '^3.2.7
-  typescript': '^4.9.3
-  vite': '^4.2.0}
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       this.integrityChecks++;
       this.issuesFound += issues.length;
       if (issues.length > 0) {}

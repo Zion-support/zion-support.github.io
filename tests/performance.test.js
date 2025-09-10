@@ -18,3 +18,15 @@ test('Performance test - Page load time', async ({ page }) => {
   expect(consoleErrors.length).toBe(0)});
 
 
+export default function Performance.test({ }: Performance.testProps) {
+  return (
+    <div>
+      <h1>Performance.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

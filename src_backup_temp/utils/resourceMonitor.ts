@@ -86,9 +86,6 @@ class ResourceMonitor {;
     // Monitor DOM changes for new resources;
     if(window.MutationObserver) {;
               this.monitorElement(element)}
-          })})});
-      observer.observe(document.head, { "childList": "tru e", "subtree": "tru e "});
-      observer.observe(document.body, { "childList": "tru e", "subtree": "tru e "})}
           })})}
     );
       observer.observe(document.head, { childList: tru e, subtree: tru e }
@@ -323,22 +320,11 @@ class ResourceMonitor {;
   clearErrors() {;
     this.errors = [];
     this.retryAttempts.clear()}
-=======
-    return 'other'}
 
-  getErrors(): ResourceError[] {;
-
-    return [...this.errors]}
-  clearErrors() {;
-    this.errors = [];
-    this.retryAttempts.clear()}
-
->>>>>>> origin/automation-fixes:src/utils/resourceMonitor.ts
-  getErrorSummary() {;
-    this.errors.forEach(error => {;
-      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
   getErrorSummary() {
+    
     this.errors.forEach(error => {
+
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}
     );
     return summary}
@@ -348,5 +334,6 @@ class ResourceMonitor {;
 
 >>>>>>> origin/automation-fixes:src/utils/resourceMonitor.ts
 // Create singleton instance;
+
 export default resourceMonitor;
 '`;

@@ -1,22 +1,24 @@
 #!/bin/bash
 
+# Script to resolve merge conflicts by choosing HEAD version
+echo "Resolving merge conflicts..."
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+# Find all files with merge conflicts
+files_with_conflicts=$(find pages -name "*.tsx" | xargs grep -l "<<<<<<< HEAD")
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
+for file in $files_with_conflicts; do
+    echo "Processing $file..."
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove conflict markers and choose HEAD version
+    # This is a simple approach - remove everything between ======= and >>>>>>> 
+    # and remove the <<<<<<< HEAD line
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/,/>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985/d' "$file"
+    
+    echo "Resolved conflicts in $file"
 done
 
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
-
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11928: Fix Netlify build and merge to main - Resolved conflicts by choosing main branch version"
+echo "Conflict resolution complete!"

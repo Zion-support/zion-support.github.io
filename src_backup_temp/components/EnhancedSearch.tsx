@@ -29,12 +29,10 @@ export function EnhancedSearch({;
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
-  "}) ;
-    type: [],
+  "}) ;    type: [],
     category: [],
     tags: []
   }
@@ -83,15 +81,7 @@ export function EnhancedSearch({;
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
-  const [filters, setFilters] = useState<SearchFilter>({;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
-  const [filters, setFilters] = useState<SearchFilter>({
-    type: [],
-    category: [],
-    tags: []
-  }
-    );
-    "type": "[]",;
+  const [filters, setFilters] = useState<SearchFilter>({;    "type": "[]",;
     "category": "[]",;
     "tags": "[];
   "}) ;
@@ -308,14 +298,12 @@ handleResultClick(results[selectedIndex])}      }
                           result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
+;
       return matchesQuery && matchesFilters}) ;
 <<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
 ;
       return matchesQuery && matchesFilters}
-    );
-=======
->>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
-    setIsOpen(false);
+    );    setIsOpen(false);
     setQuery('')};
     onSearch?.(suggestion.text)};
     setFilters({ type[], category[], tags[] }) };
@@ -656,44 +644,7 @@ setFilters(prev: > ({;
                   <p className="text-gray-600">;
                     Try adjusting your search terms or filters;
                   </p>;
-                </div>) "}
-                </div>
-              ) : ("
-                <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    No results found
-                  "
-                  <p className="text-gray-600">
-                    Try adjusting your search terms or filters
-                  </p>
-                </div>) }
-            </div>;
-          </motion.div>;) };
-      </AnimatePresence>;
-    </div>;) }
-<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
-'"`;
-;,"});})";
-;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</SearchFilter>;
-</any>;
-</any>;
-</SearchSuggestion>;
-</SearchResult>;
-</any>;
-</any>;
-</any>;
-</SearchFilter>;
-</any>;
-</any>;
-</SearchSuggestion>;
-</SearchResult>;
-</any>;
-'"`
+                </div>) "}'"`
 ;,"}
     );,})";
 </motion>

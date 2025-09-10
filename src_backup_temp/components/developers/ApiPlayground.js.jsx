@@ -5,9 +5,6 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import CodeBlock from "./CodeBlock.jsx";
-export function ApiPlayground("props": "any) {;
-    const [apiKey", setApiKey] = useLocalStorage("zion_api_key", "");
-    const [paramValues, setParamValues] = useState({});    const [body, setBody] = useState("{}");
 export function ApiPlayground(props: any) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({}
@@ -25,10 +22,6 @@ export function ApiPlayground(props: any) {
         if (method === "GET" || method === "DELETE") {}
             params.forEach((p) => {}
                 const val = paramValues[p.name];
-                if(val)`;
-                    searchParams.append(p.name, val)});``;
-            const query = searchParams.toString();```;
-            if (query)````;
                 if(val)`
                     searchParams.append(p.name, val)}
     );``
@@ -58,10 +51,6 @@ export function ApiPlayground(props: any) {
         catch(err) {}
             setResponse(err.message)}
         finally {}
-            setLoading(false)}""";
-    };"""";
-    return (<div className="space-y-4">"""";
-      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>"""";
             setLoading(false)}"""
     };""""
     return (

@@ -108,8 +108,7 @@ export function ServicesOverview(...args[]):  {;
                     {category.name"}
                   </h3>;
 ";
-                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">;
-                  {/* Category Info */}"
+                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">;                  {/* Category Info */}"
                   <h3 className="text-lg font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
 "
@@ -204,8 +203,7 @@ export function ServicesOverview(...args[]):  {;
                     <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors duration-300">;
                       {service.title"}
                     </h3>";
-                    <p className="text-zion-slate-light leading-relaxed mb-3">;
-}}
+                    <p className="text-zion-slate-light leading-relaxed mb-3">;}}
                 whileHover={{ y: -5 }}
 "
                 <div className="flex items-start justify-between mb-4">"

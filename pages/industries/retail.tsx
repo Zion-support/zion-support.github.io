@@ -34,8 +34,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Increased Sales',
-    description: 'AI-powered personalization and optimization drive higher conversion rates',
-    icon: ShoppingCart
+    description: 'AI-powered personalization and optimization drive higher conversion rates'
   },
   {
     title: 'Better Customer Experience',

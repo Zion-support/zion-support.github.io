@@ -1,16 +1,11 @@
 <<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    // Remove merge conflict markers
-    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/    // Clean up any remaining conflict markers
-    content = content.replace(/^    content = content.replace(/^.*$/gm, "");
-    content = content.replace(/^    
+    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/^<<<<<<< .*$/gm, "");
+    content = content.replace(/^=======.*$/gm, "");
+    content = content.replace(/^>>>>>>> .*$/gm, "");
+    
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     fs.writeFileSync(filePath, content);
@@ -110,7 +105,9 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting lint error fixes.");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove merge conflict markers""
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

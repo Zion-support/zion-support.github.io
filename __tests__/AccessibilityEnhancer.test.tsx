@@ -70,10 +70,8 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
+<<<<<<< HEAD
 });
 =======
-test('renders accessibility enhancer', () => {;
-  render(<AccessibilityEnhancer />);
-  // Add more tests as needed;
-})
->>>>>>> origin/automation-fixes
+});
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

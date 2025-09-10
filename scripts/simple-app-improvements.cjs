@@ -1,4 +1,7 @@
-#!/usr/bin/env node/usr/bin/env node;const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log(" Simple App Improvements System");"console.log("=====");class SimpleAppImprovements { constructor() { this.improvements = []; this.errors = [];''"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 <<<<<<< HEAD
 const { execSync } = require('child_process');

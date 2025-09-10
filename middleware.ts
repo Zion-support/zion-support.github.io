@@ -2,25 +2,24 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 <<<<<<< HEAD
 
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/blog",
-  "/services",
-  "/ai-services",
-  "/blog",
-  "/docs",
-  "/careers",
-  "/privacy",
-  "/terms"
+const publicPaths = [
+  '/',
+  '/about',
+  '/services',
+  '/contact',
+  '/blog',
+  '/auth/login',
+  '/auth/register',
+  '/auth/forgot-password',
+  '/auth/reset-password',
+  '/auth/verify'
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
+  // Allow public paths
+  if (publicPaths.includes(pathname)) {
     return NextResponse.next();
   }
   

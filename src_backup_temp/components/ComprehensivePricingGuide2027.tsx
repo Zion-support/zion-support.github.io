@@ -34,15 +34,13 @@ export default function Page() {;
   // Filter services based on search and category;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
+;
     return matchesSearch && matchesCategory && matchesPrice}) ;
   // Sort services;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-  ;
-    return matchesSearch && matchesCategory && matchesPrice}
+  ;    return matchesSearch && matchesCategory && matchesPrice}
     );
   // Sort services
-=======
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
+  
     switch(sortBy) {;
       case 'name': ";
         return a.title.localeCompare(b.title);
@@ -52,13 +50,7 @@ export default function Page() {;
       "default":;
         return 0"}
   });
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-;
-      default:;
-        return 0}
-  }
-    );
-  ;
+;  ;
 ';
   "phone": '+1 302 464 0950',';
     "email": 'kleber@ziontechgroup.com',;  ;
@@ -319,8 +311,7 @@ export default function Page() {;
                     <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors duration-300">;
                       {service.title"}
                     </h3>";
-                    <p className="text-gray-300 text-sm leading-relaxed">;
-}}"
+                    <p className="text-gray-300 text-sm leading-relaxed">;}}"
               className="group relative"
 "
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover: scal e-105 hover: borde r-zion-cyan/40 hover: shado w-2xl hover: shado w-zion-cyan/25">
@@ -442,8 +433,7 @@ export default function Page() {;
             <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">;
               <a";
                 href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
-  { duration: 0.8,
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";  { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
@@ -472,6 +462,7 @@ export default function Page() {;
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
+
                 Get Custom Quote";
                 <ArrowRight className="w-4 h-4"   />              </a>;
               <a";

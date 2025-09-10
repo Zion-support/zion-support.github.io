@@ -1,8 +1,6 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import ComprehensiveOptimizer from '../components/ComprehensiveOptimizer';'
-describe('ComprehensiveOptimizer', () => {test('renders without crashing', () => {render(<ComprehensiveOptimizer />)expect(screen.getByTestId('comprehensiveoptimizer')).toBeInTheDocument()})test('displays correct content', () => {render(<ComprehensiveOptimizer />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<ComprehensiveOptimizer />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<ComprehensiveOptimizer />)// Add styling tests here;'
-  })})
+<<<<<<< HEAD
+=======
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ComprehensiveOptimizer from &apos;./ComprehensiveOptimizer; describe(&apos;ComprehensiveOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ComprehensiveOptimizer / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ComprehensiveOptimizer from &apos;./ComprehensiveOptimizer; describe(&apos;ComprehensiveOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ComprehensiveOptimizer / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ComprehensiveOptimizer from &apos;./ComprehensiveOptimizer; describe(&apos;ComprehensiveOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<ComprehensiveOptimizer / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

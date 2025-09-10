@@ -1,26 +1,6 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ImageOptimizer from '../components/ImageOptimizer';
-
-
-  test('renders without crashing', () => {
-
-    render(<ImageOptimizer />);
-    expect(screen.getByTestId('imageoptimizer)).toBeInTheDocument()});
-
-
-  test('displays correct content', () => {
-    render(<ImageOptimizer />);
-
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-
-    render(<ImageOptimizer />);
-    // Add interaction tests based on component functionality});
-;
-  test('applies correct styling', () => {
-    render(<ImageOptimizer />);
-    // Add styling tests if needed;
+<<<<<<< HEAD
+import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
+=======
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ImageOptimizer from "./components/ImageOptimizer" describe("ImageOptimizer",() => {" test("renders without crashing",() => {" render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ImageOptimizer / / />) }) test("handles user interactions",() => {" render(<ImageOptimizer / / />) }) test("applies correct styling",() => {" render(<ImageOptimizer / / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
