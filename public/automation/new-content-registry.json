@@ -1,18 +1,25 @@
 {
-  "generatedAt": "2025-08-16T17:24:03.561Z",
+  "generatedAt": "2025-08-16T17:48:58.343Z",
   "items": [
     {
-      "title": "Guide — Zion Tech Implementation",
-      "href": "/reports/guides/guide-2025-08-16-172403",
+      "title": "Case Study — Cloud Improving",
+      "href": "/reports/cases/case-2025-08-16-174858",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-16T17:24:03.514Z",
+      "createdAt": "2025-08-16T17:48:58.277Z",
       "source": "cloud-deep-research-factory"
     },
     {
-      "title": "Pattern — Cloud Improving Continuously",
-      "href": "/reports/patterns/pattern-2025-08-16-172403",
+      "title": "Guide — Cloud Improving Implementation",
+      "href": "/reports/guides/guide-2025-08-16-174858",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-16T17:24:03.514Z",
+      "createdAt": "2025-08-16T17:48:58.277Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Pattern — Automation Trends 2025",
+      "href": "/reports/patterns/pattern-2025-08-16-174858",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-16T17:48:58.277Z",
       "source": "cloud-deep-research-factory"
     }
   ]
