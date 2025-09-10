@@ -1,22 +1,13 @@
-  on_close: () => void;
-}
-
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 interface NotificationFooterProps {
   onClose: () => void;
 }
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
-  const navigate = useNavigate(),
-  
-  const handleViewAll = () => {
-    onClose(),
-    navigate('/notifications')
-  },
-  
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   onClose,
-}) => {};
+}) => {
   const navigate = useNavigate();
 
   const handleViewAll = () => {
@@ -32,6 +23,20 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({}
         className="text-zion-slate-light text-xs"
 
         onClick={handleViewAll}>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        onClick={handleViewAll}
+
+=======
+        onClick={handleViewAll}
+<<<<<<< HEAD
+      >
+        View all notifications
+      </Button>
+    </div>
+  );
+};
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
 
   on_close,

@@ -25,6 +25,7 @@ export function ITServicePricingTable() {
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
+
     // Filter by search query
 let filteredData = [...onsiteServicePricing];
 // Filter by search query
@@ -39,15 +40,33 @@ let filteredData = [...onsiteServicePricing];
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
       }
-      // Check condition
-if ( {) {
-  $2
-}
-        return sort_config.direction === "ascending" ? 1 : -1;
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1;
       }
+      return 0;
+    });
+
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
+      direction:
+        sortConfig.key === key && sortConfig.direction === "ascending"
+          ? "descending"
+          : "ascending",
+    });
+  };
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
 import { useState, useMemo } from "react",;
@@ -120,5 +139,3 @@ import { Button } from "@/components/ui/button",;
     </div>
   );
 }
-
-

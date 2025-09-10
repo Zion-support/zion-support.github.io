@@ -1,18 +1,3 @@
-
-  FormField,
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form",
-import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form",
-import { BasicInfoFormData } from "./schema",
-
 import {
 
 
@@ -100,12 +85,15 @@ function PersonalInfoFields() {
             <FormLabel>Phone</FormLabel>
             <FormControl>
               <Input placeholder="+1 234 567 8900" {...field} />
-
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="email";
-        render={({ field }) => (
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
   );
-};
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
