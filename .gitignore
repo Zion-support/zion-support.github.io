@@ -12,6 +12,9 @@ yarn.lock
 public/toolkit_assets/media_kit.zip
 __pycache__/
 
+# Build outputs
+dist/
+
 # Automation logs and data (continuously changing)
 automation/logs/*.log
 automation/logs/*.runtime.log
