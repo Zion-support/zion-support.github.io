@@ -29,7 +29,7 @@ serve(async (req) => {
     }
     
     // Create a prompt based on the email type and user data
-    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.";
+    const systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.";
     let userPrompt = "";
     
     // Subject line context
@@ -92,8 +92,8 @@ serve(async (req) => {
     try {
       generatedContent = JSON.parse(generatedContentText);
     } catch (e) {
-      console.error("Failed to parse GPT response as JSON:", e);
-      console.log("Raw response:", generatedContentText);
+      // console.error("Failed to parse GPT response as JSON:", e);
+      // console.log("Raw response:", generatedContentText);
       // Try to extract JSON using regex as fallback
       const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
@@ -112,7 +112,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error in personalize-email function:", error);
+    // console.error("Error in personalize-email function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
