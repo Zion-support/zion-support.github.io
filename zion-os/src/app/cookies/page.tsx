@@ -1,4 +1,5 @@
-export default function CookiesPage() {return (;
+export default function CookiesPage() {;
+  return (;
     <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb-20">;
