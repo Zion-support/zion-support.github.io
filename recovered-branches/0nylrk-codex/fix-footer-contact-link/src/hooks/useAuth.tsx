@@ -1,24 +1,128 @@
-  id?: string;
-  name?: string;
-  email?: string;
-  user_type?: string;
-  display_name?: string;
-  avatar_url?: string;
-  headline?: string;
-  profile_complete?: boolean;
-  role?: string;
+<<<<<<< HEAD:src/hooks/useAuth.tsx
+<<<<<<< HEAD
 
-  id?: string;
-  name?: string;
-  email?: string;
+interface User {
+
+  id: string;
+  email: string;
+  name: string;
+  role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
-  avatarUrl?: string;
-  headline?: string;
-  profileComplete?: boolean;
-  role?: string;
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
-import { supabase } from "@/integrations/supabase/client",
+:src/hooks/useAuth.tsx;
+  avatarUrl?: string}
+  avatarUrl?: string}
+
+interface AuthState {
+
+  user: User | null;
+  isAuthenticated: boolean;
+:src/hooks/useAuth.tsx;
+  isLoading: boolean;
+  isLoading: boolean}
+
+}
+
+export function useAuth(...args: unknown[]): unknown {;
+  const [authState, setAuthState] = useState<AuthState>({;
+
+    user: null,
+    isAuthenticated: false,
+    isLoading: true});
+  useEffect(: unknown {;
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.);
+:src/hooks/useAuth.tsx;
+
+      if(storedUser && token) {;
+
+        try {;
+          setAuthState({;
+
+            user,
+            isAuthenticated: true,
+:src/hooks/useAuth.tsx;
+            isLoading: false})} catch(error) {;
+
+          // console.error('Error parsing stored user:', error);
+            isLoading: false,,
+})} catch(error) {;
+          console.error('Error parsing stored user:', error);
+          setAuthState({;
+
+            user: null,
+            isAuthenticated: false,
+:src/hooks/useAuth.tsx;
+            isLoading: false})}
+            isLoading: false,,
+})}
+      } else {;
+
+        setAuthState({;
+
+          user: null,
+          isAuthenticated: false,
+:src/hooks/useAuth.tsx;
+          isLoading: false})}
+    };
+    checkAuth()}, []);
+          isLoading: false,,
+})}
+    };
+    checkAuth()}, []);
+    setAuthState({;
+
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false});
+    // Store user data in localStorage';
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
+:src/hooks/useAuth.tsx;
+    return { success: true, user: mockUser }};
+    // Clear localStorage';
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
+    return { success: true, user: mockUser }};
+    // Clear localStorage;
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
+    setAuthState({;
+
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false});
+    // Store user data in localStorage';
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
+    return { success: true, user: mockUser }};
+:src/hooks/useAuth.tsx;
+      setAuthState(prev => ({;
+
+:src/hooks/useAuth.tsx;
+        ...prev,
+        user: updatedUser}));
+      // Update localStorage';
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+      // Update localStorage;
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+  };
+  return {;
+
+    ...authState,
+    login,
+    logout,
+    register,
+:src/hooks/useAuth.tsx;
+    updateProfile}}
+';
+    updateProfile,,
+}}
+=======
+interface User { id: string; email: string; name: string; role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl?: string} interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading: boolean} export function useAuth(props: any) { const [authState,setAuthState] = useState<AuthState>({ user: nul l,isAuthenticated: fals e,isLoading: tru e }); useEffect(: unknown { :src/hooks/useAuth.tsx if(storedUser && token) { try { setAuthState({ user,isAuthenticated: tru e,:src/hooks/useAuth.tsx isLoading: fals e})} catch(error) { isLoading: fals e,})} catch(error) { console.error('Error parsing stored user:',error); setAuthState({ user: nul l,isAuthenticated: fals e,isLoading: fals e })} } catch (error) { console.error('Error parsing stored user:',error); setAuthState({ user: nul l,isAuthenticated: fals e,isLoading: fals e })} }; checkAuth()},[]); isLoading: fals e,})} }; checkAuth()},[]); setAuthState({ user: mockUse r,isAuthenticated: tru e,isLoading: fals e }); localStorage.setItem('zion_user',JSON.stringify(mockUser)); localStorage.setItem('authToken','mock-jwt-token'); return { success: tru e,user: mockUse r }}; localStorage.removeItem('zion_user'); localStorage.removeItem('authToken')}; return { success: tru e,user: mockUse r }}; localStorage.removeItem('zion_user'); localStorage.removeItem('authToken')}; const register = async (email: string,password: string,name: string) => { const mockUser: Use r = { id: '1',email,name,role: 'user',userType: 'individual',displayName: nam e,avatarUrl: '/default-avatar.png' }; setAuthState({ user: mockUse r,isAuthenticated: tru e,isLoading: fals e }); localStorage.setItem('zion_user',JSON.stringify(mockUser)); localStorage.setItem('authToken','mock-jwt-token'); return { success: tru e,user: mockUse r }}; const updateProfile = (props: any) => { if (authState.user) { const updatedUser = { ...authState.user,...updates }; setAuthState(prev => ({ ...prev,user: updatedUse r })); localStorage.setItem('zion_user',JSON.stringify(updatedUser))} }; return { ...authState,login,logout,register,:src/hooks/useAuth.tsx updateProfile}} ' updateProfile,}} </AuthState>
+>>>>>>> origin/automation-improvements
+=======
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
@@ -116,88 +220,4 @@ export function useAuth(): AuthContextType {
   }
   return context;
 }
-
-// Custom hook to use the auth context
-export function useAuth(): AuthContextType {;
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-
-      console.warn("No wallet detected"),
-      return;
-;
-// Create a provider component;
-export function AuthProvider() { return null; }
-    }),;
-    return { error: null }
-  },;
-  const signOut = async () => {;
-    // This would be replaced with actual Supabase auth;"
-    // // // console.log("Sign out attempted"),;
-    setUser(null);
-  },;
-  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
-    // This would be replaced with actual Supabase auth;"
-    // // // console.log("Sign up attempted with:", email, userData),;
-    // Mock successful sign-up;
-    setUser({;"
-      id: "mock-user-id",;
-      email,;
-      displayName: userData?.name || "New User",;
-      name: userData?.name || "New User",;
-      userType: userData?.userType,;
-      profileComplete: false;
-    });
-    return { error: null }
-  };
-  const resetPassword = async (email: string) => {;
-    // Mock implementation;"
-    console && console.log("Password reset requested for:", email);
-    return { error: null }
-  };
-  const updateProfile = async (data: Partial<UserDetails>) => {;
-    // Mock implementation;"
-    console && console.log("Profile update requested with:", data);
-    if (user) {;
-      setUser({ ...user, ...data });      displayName: "Google User",;
-      name: "Google User",;
-      profileComplete: true;
-    })
-};  },;  const loginWithFacebook = async () => {;
-    console && console.log("Facebook login requested");
-    // Mock implementation;
-    setUser({ ;
-      id: "facebook-user-id", ;
-      email: "facebook@example && example.com", ;
-      displayName: "Facebook User", ;
-      name: "Facebook User",;
-      profileComplete: true;
-    })
-};
-  const loginWithTwitter = async () => {;
-    console && console.log("Twitter login requested");
-    // Mock implementation;
-    setUser({;
-      id: "twitter-user-id",;
-      email: "twitter@example.com",;
-      displayName: "Twitter User",;
-      name: "Twitter User",;
-      profileComplete: true;
-    });      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-      await ethereum.request ({
-        method: 'personal_sign',
-        params: [address, address];
-      });
-      set_user ({
-        id: address,
-        display_name: address,
-        profile_complete: true;
-      });
-    } catch (err) {
-      console.error ('Web3 login failed', err);
-    }
-  }    isLoading;
-    signIn;
-    signOut;
-    signUp;
+>>>>>>> origin/automation/changelog:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAuth.tsx

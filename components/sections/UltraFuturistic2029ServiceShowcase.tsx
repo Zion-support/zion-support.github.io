@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard2036';
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 
 type Service = CuttingEdgeInnovation2029 | any;
@@ -54,22 +54,18 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .sort((a, b) => {
       switch (sortBy) {
-        case 'innovation': {
+        case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
           const aLevel = (a as any).innovationLevel || 'Advanced';
           const bLevel = (b as any).innovationLevel || 'Advanced';
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 } as const;
-          return (innovationOrder[bLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[aLevel as keyof typeof innovationOrder] || 0);
-        }
-        case 'price': {
+          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
+          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
+        case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        }
-        case 'rating': {
+        case 'rating':
           return b.rating - a.rating;
-        }
-        default: {
+        default:
           return 0;
-        }
       }
     })
     .slice(0, maxServices);
@@ -189,7 +185,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <UltraFuturisticServiceCard
                 service={service}
-                className="h-full transform group-hover:scale-105 transition-transform duration-300"
+                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
               />
             </motion.div>
           ))}

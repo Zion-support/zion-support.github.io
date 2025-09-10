@@ -1,33 +1,35 @@
 <<<<<<< HEAD
-import React from 'react';';
-import Head from 'next/head';';
-
-export default function ContactPage() {;
+<<<<<<< HEAD
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Mail, Phone, MapPin } from 'lucide-react';
+const Contact: NextPage = () => {;
   return (;
     <div className="min-h-screen bg-gray-50">";
       <Head>;
         <title>Contact Us - Zion Tech Group</title>;
         <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />";
       </Head>;
-      ;
-      <div className="container mx-auto px-4 py-20">";
-        <div className="max-w-4xl mx-auto">";
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">";
-            Contact Us;
-          </h1>;
-          ;
-          <div className="bg-white rounded-lg shadow-lg p-8">";
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-              <div>;
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">";
-                  Get in Touch;
-                </h2>;
-                <p className="text-gray-600 mb-6">";
-                  Ready to transform your business with cutting-edge technology? ;
-                  Our expert team is here to help you succeed.;
-                </p>;
-                ;
-                <div className="space-y-4">";
+      <Navigation />;
+      <main className="min-h-screen bg-gray-900 pt-16">;
+        <div className="container mx-auto px-4 py-16">;
+          <div className="max-w-6xl mx-auto">;
+            <div className="text-center mb-16">;
+              <h1 className="text-5xl font-bold text-white mb-6">;
+                Contact <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Us</span>;
+              </h1>;
+              <p className="text-xl text-gray-300">;
+                Ready to transform your business? Let's discuss how we can help.;
+              </p>;
+            </div>;
+            <div className="grid lg:grid-cols-2 gap-12">;
+              {/* Contact Form */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">;
+                <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>;
+                <form className="space-y-6">;
                   <div>;
                     <h3 className="font-semibold text-gray-900">Email</h3>";
                     <p className="text-gray-600">kleber@ziontechgroup.com</p>";
@@ -60,7 +62,6 @@ export default function ContactPage() {;
                       required;
                     />;
                   </div>;
-                  ;
                   <div>;
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">";
                       Email;
@@ -73,11 +74,18 @@ export default function ContactPage() {;
                       required;
                     />;
                   </div>;
-                  ;
                   <div>;
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">";
-                      Message;
-                    </label>;
+                    <label htmlFor="company" className="block text-white mb-2">Company</label>;
+                    <input;
+                      type="text";
+                      id="company";
+                      name="company";
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400";
+                      placeholder="Your company";
+                    />;
+                  </div>;
+                  <div>;
+                    <label htmlFor="message" className="block text-white mb-2">Message</label>;
                     <textarea;
                       id="message"";
                       name="message"";
@@ -86,7 +94,6 @@ export default function ContactPage() {;
                       required;
                     ></textarea>;
                   </div>;
-                  ;
                   <button;
                     type="submit"";
                     className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"";
@@ -95,32 +102,97 @@ export default function ContactPage() {;
                   </button>;
                 </form>;
               </div>;
+              {/* Contact Info */}
+              <div className="space-y-8">;
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">;
+                  <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>;
+                  <div className="space-y-6">;
+                    <div className="flex items-start space-x-4">;
+                      <Mail className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />;
+                      <div>;
+                        <h3 className="text-white font-semibold mb-1">Email</h3>;
+                        <p className="text-gray-300">info@ziontechgroup.com</p>;
+                        <p className="text-gray-300">support@ziontechgroup.com</p>;
+                      </div>;
+                    </div>;
+                    <div className="flex items-start space-x-4">;
+                      <Phone className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />;
+                      <div>;
+                        <h3 className="text-white font-semibold mb-1">Phone</h3>;
+                        <p className="text-gray-300">+1 (555) 012-3456</p>;
+                        <p className="text-gray-300">24/7 Support Available</p>;
+                      </div>;
+                    </div>;
+                    <div className="flex items-start space-x-4">;
+                      <MapPin className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />;
+                      <div>;
+                        <h3 className="text-white font-semibold mb-1">Office</h3>;
+                        <p className="text-gray-300">;
+                          123 Tech Street<br />;
+                          San Francisco, CA 94105<br />;
+                          United States;
+                        </p>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">;
+                  <h3 className="text-xl font-bold text-white mb-4">Business Hours</h3>;
+                  <div className="space-y-2 text-gray-300">;
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>;
+                    <p>Saturday: 10:00 AM - 4:00 PM PST</p>;
+                    <p>Sunday: Closed</p>;
+                    <p className="text-blue-400 mt-4">Emergency support available 24/7</p>;
+                  </div>;
+                </div>;
+              </div>;
             </div>;
           </div>;
         </div>;
-      </div>;
-    </div>;
-  );,
+      </main>;
+      <Footer />;
+    </>;
+  );
+};
+export default Contact;
+>>>>>>> origin/automation-fixes
 =======
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
+  Mail, Phone, MapPin, Clock, MessageSquare, Send, 
+  Globe, Building, Users, Award, Shield, Rocket
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 
-const Contact: NextPage = () => {
+const ContactPage: React.FC = () => {
+=======
+  Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle,
+  ArrowRight, MessageSquare, Calendar, Building, Users
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    budget: '',
+    timeline: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -130,776 +202,666 @@ const Contact: NextPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add actual form submission logic here
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitted(true);
+    setIsSubmitting(false);
+    
+    // Reset form after 5 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+        budget: '',
+        timeline: ''
+      });
+    }, 5000);
   };
+
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: 'Call Us',
+      value: '+1 (302) 464-0950',
+      description: 'Available 24/7 for urgent inquiries',
+      color: 'from-blue-500 to-cyan-500',
+      action: 'tel:+13024640950'
+    },
+    {
+      icon: Mail,
+      title: 'Email Us',
+      value: 'kleber@ziontechgroup.com',
+      description: 'Response within 2 hours guaranteed',
+      color: 'from-green-500 to-emerald-500',
+      action: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      icon: MapPin,
+      title: 'Visit Us',
+      value: 'Middletown, DE',
+      description: 'Global headquarters and innovation center',
+      color: 'from-purple-500 to-pink-500',
+      action: 'https://maps.google.com/?q=Middletown,DE'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: '24/7 Support',
+      description: 'Always here when you need us',
+      color: 'from-orange-500 to-red-500',
+      action: '#'
+    }
+  ];
+
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Don't wait to transform your business. Contact us today for a free consultation 
+              and discover how our revolutionary micro SaaS services can accelerate your growth.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Button 
+                href="/services" 
+                variant="primary" 
+                size="lg"
+                className="group relative overflow-hidden"
+              >
+                Explore Services
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                href="/pricing" 
+                variant="secondary" 
+                size="lg"
+                className="group relative overflow-hidden"
+              >
+                View Pricing
+                <DollarSign className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              </Button>
+            </div>
+
+            <div className="text-sm text-gray-400 space-y-2">
+              <p>✓ Free consultation and ROI analysis</p>
+              <p>✓ 30-day free trial on all services</p>
+              <p>✓ 24/7 AI support and emergency hotline</p>
+              <p>✓ Custom implementation and training</p>
+=======
+  const services = [
+    'AI Business Intelligence',
+    'Quantum Cybersecurity',
+    'Edge Computing Orchestration',
+    'Space Technology Innovation',
+    'Neural Interface Development',
+    'Autonomous DevOps',
+    'AI Customer Experience',
+    'Quantum Neural Networks',
+    'Other (Please specify)'
+  ];
+
+  const budgets = [
+    'Under $10,000',
+    '$10,000 - $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $500,000',
+    '$500,000+',
+    'To be discussed'
+  ];
+
+  const timelines = [
+    'Immediate (1-2 weeks)',
+    'Quick (1-2 months)',
+    'Standard (3-6 months)',
+    'Extended (6+ months)',
+    'Flexible timeline',
+    'To be discussed'
+  ];
+
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {
+  Mail, Phone, MapPin, ArrowRight, MessageSquare,
+  Clock, Globe, Building, Users, Award, Shield, Home, ChevronRight, Brain
+} from 'lucide-react';
 
   return (
     <>
       <Head>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI services, IT solutions, and micro SAAS platforms. Get free consultation and expert advice for your technology needs." />
-        <meta name="keywords" content="contact Zion Tech Group, AI services consultation, IT solutions contact, micro SAAS support" />
+        <title>Contact Zion Tech Group | Get in Touch for Technology Solutions</title>
+        <meta name="description" content="Contact Zion Tech Group for revolutionary quantum AI solutions, autonomous systems, and cutting-edge technology platforms. Get expert consultation today." />
+        <meta name="keywords" content="contact Zion Tech Group, technology consultation, AI solutions, quantum computing, autonomous systems" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Get in Touch with Our Experts
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Ready to transform your business with cutting-edge technology? 
-              Let's discuss your project and explore how we can help you succeed.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your company"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-development">AI Development</option>
-                    <option value="cloud-solutions">Cloud Solutions</option>
-                    <option value="blockchain">Blockchain Solutions</option>
-                    <option value="iot-platforms">IoT Platforms</option>
-                    <option value="micro-saas">Micro SAAS Solutions</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="data-analytics">Data Analytics</option>
-                    <option value="consultation">General Consultation</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project and how we can help..."
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below, 
-                  and we'll get back to you within 24 hours.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                    <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700 text-lg">
-                      +1 302 464 0950
-                    </a>
-                    <p className="text-gray-600 text-sm">Mon-Fri 9AM-6PM EST</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                    <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 text-lg">
-                      kleber@ziontechgroup.com
-                    </a>
-                    <p className="text-gray-600 text-sm">We respond within 24 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                    <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
-                    <p className="text-gray-600">
-                      364 E Main St STE 1008<br />
-                      Middletown DE 19709<br />
-                      United States
-                    </p>
-                  </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Navigation */}
+        <nav className="bg-black/20 backdrop-blur-md border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
                 </div>
               </div>
-
-              {/* Quick Contact Options */}
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Contact Options</h3>
-                <div className="space-y-3">
-                  <a href="https://calendly.com/ziontechgroup" className="block bg-white text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-3 rounded-lg font-semibold transition-colors text-center">
-                    📅 Schedule a Call
-                  </a>
-                  <a href="https://wa.me/13024640950" className="block bg-green-600 text-white hover:bg-green-700 px-4 py-3 rounded-lg font-semibold transition-colors text-center">
-                    💬 WhatsApp Chat
-                  </a>
-                  <a href="https://linkedin.com/company/ziontechgroup" className="block bg-blue-700 text-white hover:bg-blue-800 px-4 py-3 rounded-lg font-semibold transition-colors text-center">
-                    💼 LinkedIn Connect
-                  </a>
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                    Home
+                  </Link>
+                  <Link href="/zion-tech-group" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                    About
+                  </Link>
+                  <Link href="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium">
+                    Contact
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </nav>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get quick answers to common questions about our services and processes.
-            </p>
+        {/* Breadcrumb */}
+        <div className="bg-black/20 border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav className="flex" aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-4">
+                <li>
+                  <div>
+                    <Link href="/" className="text-gray-300 hover:text-white">
+                      <Home className="h-4 w-4" />
+                      <span className="sr-only">Home</span>
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <span className="ml-4 text-sm font-medium text-white">Contact</span>
+                  </div>
+                </li>
+              </ol>
+            </nav>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly can you start my project?</h3>
-                <p className="text-gray-600">Most projects can begin within 1-2 weeks after initial consultation and contract signing. Rush projects may be accommodated based on availability.</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you offer ongoing support?</h3>
-                <p className="text-gray-600">Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and regular updates.</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What's included in the free consultation?</h3>
-                <p className="text-gray-600">Our free consultation includes project analysis, technology recommendations, timeline estimation, and a detailed proposal with pricing.</p>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you work with small businesses?</h3>
-                <p className="text-gray-600">Absolutely! We work with businesses of all sizes, from startups to enterprise companies. Our micro SAAS solutions are perfect for small businesses.</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can you integrate with our existing systems?</h3>
-                <p className="text-gray-600">Yes, we specialize in seamless integrations with existing systems and can work with most popular business software and platforms.</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What technologies do you use?</h3>
-                <p className="text-gray-600">We use modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and blockchain technologies, choosing the best fit for each project.</p>
-              </div>
+        </div>
+
+        {/* Hero Section */}
+        <div className="relative overflow-hidden py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                <span className="block">Get in Touch</span>
+                <span className="block text-purple-400">With Our Team</span>
+              </h1>
+              <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Ready to transform your business with revolutionary quantum AI solutions? Our team of experts is here to help you navigate the future of technology.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-    </>
-  );
-};
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> main
 
-export default function ContactPage() {
-  return (
-    <MainLayout 
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
-    >
-=======
-<<<<<<< HEAD
-import Layout from '../components/layout/Layout';
+        {/* Contact Form Section */}
+        <div className="py-16 bg-black/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+              {/* Contact Form */}
+              <div className="lg:col-span-1">
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                  <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+                  <form className="space-y-6">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                      <div>
+                        <label htmlFor="first-name" className="block text-sm font-medium text-gray-300">
+                          First name
+                        </label>
+                        <input
+                          type="text"
+                          name="first-name"
+                          id="first-name"
+                          className="mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
+                          placeholder="John"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="last-name" className="block text-sm font-medium text-gray-300">
+                          Last name
+                        </label>
+                        <input
+                          type="text"
+                          name="last-name"
+                          id="last-name"
+                          className="mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
+                          placeholder="Doe"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        className="mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300">
+                        Company
+                      </label>
+                      <input
+                        type="text"
 
-export default function ContactPage() {
-  return (
-    <Layout>
-=======
-export default function ContactPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
-        <meta name="keywords" content="contact, support, consultation, technology services" />
-      </Head>
-import Layout from '../components/Layout';
->>>>>>> main
-
-export default function ContactPage() {
-  return (
-    <Layout 
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
-      keywords="contact, support, technology consulting, AI services, IT services, micro SaaS"
-    >
->>>>>>> main
->>>>>>> main
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div,
-    initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Get In{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Ready to transform your business? Contact our expert team for a free consultation and discover how we can help you achieve your goals.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-          {/* Contact Information */}
-=======
-<<<<<<< HEAD
-          {/* Contact Info Cards */}
-=======
-{/* Contact Information Cards */}
->>>>>>> main
->>>>>>> main
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
-            <motion.div,
-    className="bg-white rounded-lg shadow-lg p-6 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}
-            >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">+1 302 464 0950</p>
-            </motion.div>
-=======
-              viewport={{ once:true }}
-=======
->>>>>>> main
-
-      {/* Contact Information */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Contact Methods */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Contact Information
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Multiple Ways to Connect
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-              Multiple ways to reach us. Choose what works best for you.
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Choose the method that works best for you. We're here to help 24/7.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-gray-600 mb-2">
-                  <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">
-                    +1 302 464 0950
-                  </a>
-                </p>
-                <p className="text-sm text-gray-500">24/7 Support Available</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-                <p className="text-gray-600 mb-2">
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-800">
-                    kleber@ziontechgroup.com
-                  </a>
-                </p>
-                <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
-                <p className="text-gray-600 mb-2">
-                  <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     className="text-purple-600 hover:text-purple-800">
-                    364 E Main St STE 1008<br />
-                    Middletown, DE 19709
-                  </a>
-                </p>
-                <p className="text-sm text-gray-500">Schedule a visit</p>
-              </div>
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactMethods.map((method, index) => (
+              <motion.div
+                key={method.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <a
+                  href={method.action}
+                  target={method.action.startsWith('http') ? '_blank' : '_self'}
+                  rel={method.action.startsWith('http') ? 'noopener noreferrer' : ''}
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${method.color} p-4 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <method.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
+                  <p className="text-cyan-400 font-semibold text-lg mb-2">{method.value}</p>
+                  <p className="text-white/70 text-sm">{method.description}</p>
+                </a>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
->>>>>>> main
-            >
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Send Us a Message
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.
-              </p>
-            </motion.div>
-<<<<<<< HEAD
-
-            <motion.div,
-    className="bg-white rounded-lg shadow-lg p-6 text-center"
-=======
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
->>>>>>> main
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">kleber@ziontechgroup.com</p>
-            </motion.div>
-<<<<<<< HEAD
-
-            <motion.div,
-    className="bg-white rounded-lg shadow-lg p-6 text-center"
-=======
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 text-center"
-              className="bg-white rounded-lg shadow-xl p-8"
->>>>>>> main
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
-              <p className="text-gray-600">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
-              </p>
-            </motion.div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<<<<<<< HEAD
-            <motion.div,
-    className="bg-white rounded-lg shadow-lg p-8"
-              initial={{ opacity: 0, x:-30 }}
-=======
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-8"
-              initial={{ opacity: 0, x: -30 }}
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                Send us a Message
-              </h2>
-=======
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
->>>>>>> main
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name *
-                    </label>
-<<<<<<< HEAD
-                    <input,
-    type="text"
-                      id="name"
-                      name="name"
-=======
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
->>>>>>> main
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="John"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name *
-                    </label>
-<<<<<<< HEAD
-                    <input,
-    type="email"
-                      id="email"
-                      name="email"
-=======
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
->>>>>>> main
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Doe"
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
-                  </label>
-                  <input,
-    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Company Name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select,
-    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="\">Select a service</option>
-                    <option value="ai-services">AI Services</option>
-                    <option value="it-services">IT Services</option>
-                    <option value="micro-saas">Micro SaaS</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea,
-    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or how we can help you..."
-                    required
-                  ></textarea>
-                </div>
-                
-<<<<<<< HEAD
-                <button,
-    type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  Send Message
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </form>
-            </motion.div>
-<<<<<<< HEAD
-
-=======
-          </div>
-
-          <motion.div,
-    className="bg-white rounded-lg shadow-lg p-8"
-=======
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="newsletter"
-                    name="newsletter"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-700">
-                    Subscribe to our newsletter for the latest technology insights
-                  </label>
-                </div>
-                
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Send Message
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </button>
-                </div>
-              </form>
-            </motion.div>
->>>>>>> main
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-8"
->>>>>>> main
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">24/7 Support</h3>
-                    <p className="text-gray-600 text-sm">Round-the-clock technical support and assistance</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Expert Consultation</h3>
-                    <p className="text-gray-600 text-sm">Free consultation with our technology experts</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <ArrowRight className="w-5 h-5 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Rapid Response</h3>
-                    <p className="text-gray-600 text-sm">Quick response time and fast project delivery</p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Business Hours</h3>
-                <p className="text-gray-600 text-sm mb-2">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                <p className="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM EST</p>
-                <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-      </div>
-    </MainLayout>
-=======
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section id="contact-form" className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Get Started?
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Start Your Project
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help you achieve your technology goals.
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              Tell us about your project and we'll get back to you within 2 hours with a personalized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Call Now: +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-              >
-                Email Us
+          </motion.div>
+
+          {isSubmitted ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="text-center py-20"
+            >
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-green-500/20 flex items-center justify-center">
+                <CheckCircle className="w-12 h-12 text-green-400" />
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">Thank You!</h3>
+              <p className="text-white/70 text-lg mb-6">
+                Your message has been sent successfully. We'll get back to you within 2 hours.
+              </p>
+              <div className="text-white/60">
+                <p>In the meantime, you can:</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                  <a
+                    href="/services"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Explore Our Services
+                  </a>
+                  <a
+                    href="/about"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Learn More About Us
+                  </a>
+=======
+                        name="company"
+                        id="company"
+                        className="mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
+                        placeholder="Your Company"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        rows={4}
+                        className="mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm"
+                        placeholder="Tell us about your project and how we can help..."
+                      />
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                      >
+                        Send Message
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="mt-12 lg:mt-0 lg:col-span-1">
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+                  <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <Phone className="h-5 w-5 text-white" />
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-medium text-white">Phone</h3>
+                        <p className="text-gray-300">+1 (302) 464-0950</p>
+                        <p className="text-sm text-gray-400">Available 24/7 for urgent matters</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <Mail className="h-5 w-5 text-white" />
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-medium text-white">Email</h3>
+                        <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                        <p className="text-sm text-gray-400">We respond within 2 hours</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <MapPin className="h-5 w-5 text-white" />
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-medium text-white">Address</h3>
+                        <p className="text-gray-300">364 E Main St STE 1008</p>
+                        <p className="text-gray-300">Middletown, DE 19709</p>
+                        <p className="text-sm text-gray-400">United States</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-white" />
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-medium text-white">Business Hours</h3>
+                        <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                        <p className="text-sm text-gray-400">Weekend consultations by appointment</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quick Contact Options */}
+                  <div className="mt-8 pt-8 border-t border-gray-700">
+                    <h3 className="text-lg font-medium text-white mb-4">Quick Contact Options</h3>
+                    <div className="space-y-3">
+                      <Link href="tel:+13024640950" className="flex items-center justify-center w-full px-4 py-2 border border-purple-400 text-purple-400 rounded-md hover:bg-purple-400 hover:text-white transition-colors">
+                        <Phone className="h-4 w-4 mr-2" />
+                        Call Now
+                      </Link>
+                      <Link href="mailto:kleber@ziontechgroup.com" className="flex items-center justify-center w-full px-4 py-2 border border-purple-400 text-purple-400 rounded-md hover:bg-purple-400 hover:text-white transition-colors">
+                        <Mail className="h-4 w-4 mr-2" />
+                        Send Email
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choose Us Section */}
+        <div className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We're not just another technology company. We're the architects of tomorrow, building solutions that will define the next decade of innovation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+                <p className="text-gray-300">
+                  Our team consists of industry experts with decades of experience in quantum computing, AI, and emerging technologies.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Proven Track Record</h3>
+                <p className="text-gray-300">
+                  We've successfully delivered cutting-edge solutions to Fortune 500 companies and innovative startups alike.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Security First</h3>
+                <p className="text-gray-300">
+                  All our solutions are built with enterprise-grade security and compliance standards in mind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-purple-600">
+          <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              <span className="block">Ready to Start Your Project?</span>
+            </h2>
+            <p className="mt-4 text-lg leading-6 text-purple-100">
+              Let's discuss how our revolutionary technology solutions can transform your business.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/zion-tech-group" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50">
+                Learn More About Us
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <a href="tel:+13024640950" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700">
+                <Phone className="mr-2 h-4 w-4" />
+                Call Now
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+
+        {/* Footer */}
+        <footer className="bg-black/40">
+          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+              <div className="space-y-8 xl:col-span-1">
+                <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
+                <p className="text-gray-300 text-base">
+                  Leading the future with revolutionary quantum AI solutions and autonomous systems.
+                </p>
+              </div>
+              <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                <div className="md:grid md:grid-cols-2 md:gap-8">
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                    <ul className="mt-4 space-y-4">
+                      <li>
+                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+                          Quantum AI
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+                          Autonomous Systems
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+                          Technology Platforms
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="mt-12 md:mt-0">
+                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul className="mt-4 space-y-4">
+                      <li>
+                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+                          About
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/contact" className="text-base text-gray-300 hover:text-white">
+                          Contact
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 border-t border-gray-700 pt-8">
+              <p className="text-base text-gray-400 xl:text-center">
+                &copy; 2025 Zion Tech Group. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
-    </Layout>
->>>>>>> main
+    </>
   );
->>>>>>> main
+};
+
+export default ContactPage;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Phone, Mail, MapPin } from 'lucide-react';
+
+export default function ContactPage() {
+	const contact = {
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709'
+	};
+	return (
+		<Layout>
+=======
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { Phone, Mail, MapPin } from 'lucide-react';
+
+export default function ContactPage() {
+	const contact = {
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709',
+		website: 'https://ziontechgroup.com'
+	};
+
+	return (
+		<UltraFuturisticBackground variant="quantum" intensity="high">
+			<Head>
+				<title>Contact | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/contact" />
+			</Head>
+			<div className="container mx-auto px-4 py-20 text-white">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Talk to Us</h1>
+				<p className="text-gray-300 mb-10 max-w-2xl">We ship outcomes in weeks. Call, email, or visit to get a tailored plan and pricing.</p>
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<a href={`tel:${contact.mobile}`} className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover:border-cyan-500/50">
+						<Phone className="w-5 h-5 text-cyan-400" />
+						<div className="mt-3 font-semibold">Call</div>
+						<div className="text-gray-300">{contact.mobile}</div>
+					</a>
+					<a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover:border-purple-500/50">
+						<Mail className="w-5 h-5 text-purple-400" />
+						<div className="mt-3 font-semibold">Email</div>
+						<div className="text-gray-300">{contact.email}</div>
+					</a>
+					<a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover:border-pink-500/50">
+						<MapPin className="w-5 h-5 text-pink-400" />
+						<div className="mt-3 font-semibold">Visit</div>
+						<div className="text-gray-300 text-sm">{contact.address}</div>
+					</a>
+				</div>
+			</div>
+		</UltraFuturisticBackground>
+	);
 }
+>>>>>>> origin/automation/changelog

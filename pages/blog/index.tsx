@@ -1,129 +1,41 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Card from '../../components/ui/Card';
 
-const blogPosts = [
-  {
-    id: 'ai-transformation-business',
-    title: 'How AI is Transforming Business Operations in 2024',
-    excerpt: 'Discover the latest AI technologies that are revolutionizing how businesses operate and compete in the digital age.',
-    author: 'Zion Tech Team',
-    date: '2024-01-15',
-    category: 'AI & Technology',
-    readTime: '5 min read',
-    image: '/images/blog/ai-transformation.jpg',
-    featured: true
-  },
-  {
-    id: 'micro-saas-trends',
-    title: 'The Rise of Micro SaaS: Small Solutions, Big Impact',
-    excerpt: 'Explore how micro SaaS applications are changing the software landscape and creating new opportunities for businesses.',
-    author: 'Sarah Johnson',
-    date: '2024-01-10',
-    category: 'Micro SaaS',
-    readTime: '4 min read',
-    image: '/images/blog/micro-saas.jpg'
-  },
-  {
-    id: 'cybersecurity-best-practices',
-    title: 'Essential Cybersecurity Best Practices for 2024',
-    excerpt: 'Learn the critical security measures every business should implement to protect against evolving cyber threats.',
-    author: 'Mike Chen',
-    date: '2024-01-05',
-    category: 'Cybersecurity',
-    readTime: '6 min read',
-    image: '/images/blog/cybersecurity.jpg'
-  },
-  {
-    id: 'cloud-migration-guide',
-    title: 'Complete Guide to Cloud Migration: Planning to Execution',
-    excerpt: 'A comprehensive guide to successfully migrating your business infrastructure to the cloud.',
-    author: 'Alex Rodriguez',
-    date: '2024-01-01',
-    category: 'Cloud Computing',
-    readTime: '8 min read',
-    image: '/images/blog/cloud-migration.jpg'
-  },
-  {
-    id: 'data-analytics-insights',
-    title: 'Turning Data into Business Insights: A Practical Approach',
-    excerpt: 'Learn how to leverage data analytics to make informed business decisions and drive growth.',
-    author: 'Emily Davis',
-    date: '2023-12-28',
-    category: 'Data Analytics',
-    readTime: '7 min read',
-    image: '/images/blog/data-analytics.jpg'
-  },
-  {
-    id: 'digital-transformation-strategy',
-    title: 'Building a Successful Digital Transformation Strategy',
-    excerpt: 'Key considerations and steps for creating an effective digital transformation roadmap for your organization.',
-    author: 'David Kim',
-    date: '2023-12-20',
-    category: 'Digital Transformation',
-    readTime: '9 min read',
-    image: '/images/blog/digital-transformation.jpg'
-  }
+const posts = [
+  { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
+  { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
+  { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
+  { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
+  { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
+  { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
 ];
 
-const categories = [
-  'All Posts',
-  'AI & Technology',
-  'Micro SaaS',
-  'Cybersecurity',
-  'Cloud Computing',
-  'Data Analytics',
-  'Digital Transformation'
-];
-
-export default function BlogPage() {
+export default function BlogIndexPage() {
   return (
-    <MainLayout
-      title="Blog - Zion Tech Group"
-      description="Latest insights, trends, and best practices in AI, technology, and digital transformation from Zion Tech Group experts."
-      keywords="technology blog, AI insights, digital transformation, cybersecurity, cloud computing"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Technology Insights & Trends
-              </h1>
-              <p className="text-xl text-blue-100 mb-8">
-                Stay ahead with the latest insights, best practices, and industry trends from our technology experts.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+    <UltraFuturisticBackground  intensity="medium">
+      <Head>
+        <title>Blog | Zion Tech Group</title>
+        <meta name="description" content="Insights on AI, cloud, automation, and platform engineering." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Head>
 
-        {/* Blog Content */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            {/* Categories Filter */}
-            <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category, index) => (
-                  <button
-                    key={category}
-                    className={`px-6 py-2 rounded-full transition-colors ${
-                      index === 0
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+            Insights & Guides
+          </h1>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((p) => (
+            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
+              <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
+              <p className="text-gray-400 mb-4">{p.excerpt}</p>
+              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
             </div>
 
             {/* Featured Post */}
@@ -259,6 +171,7 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </UltraFuturisticBackground>
   );
 }
+

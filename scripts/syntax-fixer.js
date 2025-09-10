@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+#!/usr/bin/env node  module.exports = {};
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node console.log("scripts/syntax-fixer: noop"); module.exports = {};'"'"
+#!/usr/bin/env node _console.log('scripts/syntax-"fixer": noop'); module.exports = {};
+=======
 #!/usr/bin/env node;
 
 /**;
@@ -258,7 +263,9 @@ if (require.main === module) {
     .then(() => {
       process.exit(0)});
     .catch((error) => {
-      console.error('Syntax fixer failed:', error);
-      process.exit(1)})}
-
+      console.error('Syntax fixer failed:', error)
+      process.exit(1),
+}),
+}
 module.exports = SyntaxFixer;)
+>>>>>>> origin/automation-fixes

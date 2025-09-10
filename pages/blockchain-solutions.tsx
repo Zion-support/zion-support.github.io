@@ -1,7 +1,65 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
+const BlockchainSolutions: NextPage = () => {;
+  const services = [;
+    {;
+      icon: Shield,
+      title: 'Smart Contract Development',
+      description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise applications',
+      features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing frameworks'];
+},
+    {;
+      icon: Zap,
+      title: 'DeFi Solutions',
+      description: 'Decentralized finance platforms including DEXs, lending protocols, and yield farming',
+      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools'];
+},
+    {;
+      icon: Globe,
+      title: 'Cross-Chain Integration',
+      description: 'Multi-blockchain solutions for seamless asset transfers and interoperability',
+      features: ['Bridge development', 'Cross-chain swaps', 'Multi-chain wallets', 'Interoperability protocols'];
+},
+    {;
+      icon: Lock,
+      title: 'Security Audits',
+      description: 'Comprehensive security audits for smart contracts and blockchain applications',
+      features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checks'];
+}
+  ];
+  return (;
+    <>;
+      <Head>;
+        <title>Blockchain Solutions - Zion Tech Group</title>;
+        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services." />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+      </Head>;
+      <Layout ;
+        title="Blockchain Solutions";
+        description="Transform your business with cutting-edge blockchain technology and decentralized solutions">;
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
+          <div className="container mx-auto px-4 text-center">;
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">;
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blockchain</span> Solutions;
+            </h1>;
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">;
+              Transform your business with cutting-edge blockchain technology, smart contracts, and decentralized solutions;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">;
+                Get Started;
+                <ArrowRight className="ml-2 w-5 h-5" />;
+              </button>;
+              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+                View Portfolio;
+              </button>;
+            </div>;
+          </div>;
+        </section>;
 
 const BlockchainSolutions = () => {
   return (
@@ -107,4 +165,41 @@ const BlockchainSolutions = () => {
   );
 };
 
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>;
+          <div className=container mx-auto px-4 text-center">;
+            <h2 className="text-4xl font-bold mb-6>Ready to Build on Blockchain?</h2>;
+            <p className=text-xl mb-8 max-w-2xl mx-auto">;
+              Let's discuss your blockchain project and create a solution that drives innovation;
+            </p>;
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300>;
+              Start Your Project;
+              <ArrowRight className=ml-2 w-5 h-5" />;
+            </button>;
+          </div>;
+        </section>;
+      </Layout>;
+    </>;
+  )};
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const BlockchainSolutions: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>BlockchainSolutions - Zion Tech Solutions</title>
+        <meta name="description" content="BlockchainSolutions page" />
+      </Head>
+      
+      <main>
+        <h1>BlockchainSolutions</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  );
+};
+
+>>>>>>> origin/automation/changelog
 export default BlockchainSolutions;

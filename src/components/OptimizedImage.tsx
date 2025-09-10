@@ -1,53 +1,83 @@
-import: Image from 'next/image' 
-;;' 
-import: { useState } from 'react' 
-;;' 
+<<<<<<< HEAD
+import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
+export default function Page() {;
+) => {;
 
-interface: OptimizedImageProps {
-  src: string,;,
-  alt: string,;,
-  width?: number 
-  height?: number 
-  className?: string 
-  priority?: boolean 
-  quality?: number}
+  const [imageSrc, setImageSrc] = useState<any>(src);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  // Intersection Observer for lazy loading;
+  // Intersection Observer for lazy loading      }) ;
+    observerRef.current.observe(imgRef.current) ;
+    return () => {;
+      if(observerRef.current) {;
 
-export: default function OptimizedImage({
-  src,
-  alt,
-  width = 800,
-  height = 600, 
-  className: = ''', 
-; 
-  priority: = false,
-  quality = 75
-}: OptimizedImageProps) {
-  const: [isLoading, setIsLoading] = useState(true) 
-  const: [hasError, setHasError] = useState(false) 
+        observerRef.current.disconnect()}
+    }}, [priority, lazy]) ;
+  // Handle image load;
+    setIsLoaded(true) ;
+    onLoad?.() };
+  // Handle image error;
+      setHasError(false);
+      setIsLoading(true)} else {;
+      setHasError(true);
+      setIsLoading(false);
+      onError?.(new Error(`Failed to load image: any${src}`))}
+  };
+  // Cleanup on unmount;
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 
-  return: (
-    <div className={`relative overflow-hidden ${className}`}>` 
-      {isLoading: && ( 
-        <div: className="absolute inset-0 bg-gray-200 animate-pulse" />";";" 
-      )}
-      <Image: src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        priority={priority}
-        quality={quality}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}';';` 
-        onLoad={() => setIsLoading(false)}
-        onError={() => {
-          setHasError(true) 
-          setIsLoading(false)}}
-        placeholder="blur"";";" 
-        blurDataURL="data: image/jpegbase6,4,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="";";" 
-      />
-      {hasError: && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">";";" 
-          <span: className="text-gray-500">Failed to load image</span>";";" 
-        </div>
-      )}
-    </div>
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+    return () => {;
+      if(observerRef.current) {;
+
+        observerRef.current.disconnect()}
+    }}, []) ;
+  // Generate optimized src with quality parameter;
+  const getOptimizedSrc = (src: anystring) => {;
+    if(src.startsWith ('data:') || src.startsWith('blob:') ) {;
+      return src;
+}
+    // Add quality parameter for external images if possible;
+    try {;
+      if(url.searchParams.has('quality')) {;
+
+        return src}
+      url.searchParams.set('quality', quality.toString());
+      return url.toString()} catch {;
+
+      return src}
+  };
+  // Base classes;
+  // Loading skeleton;
+  if(!isIntersecting) {;
+    return (<div;
+        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}        style={{ width, height }}
+      >;
+        <div className="w-full h-full flex items-center justify-center">";
+          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />;
+        </div>;
+      </div>) }
+  // Error state;
+  if(hasError) {;
+    return (<div;
+        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}
+        style={{ width, height }}
+      >;
+        <div className="text-center">;
+          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />;
+          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>;
+        </div>;
+      </div>) ;
+}}) => {;
+
+    </div>;
   )}
+export default OptimizedImage;";";
+=======
+import { ImageIcon,AlertCircle,Loader2 } from 'lucide-react'; export default function Page(props: any) { ) => { const [imageSrc,setImageSrc] = useState<any>(src); const [isLoading,setIsLoading] = useState<any>(true); const [hasError,setHasError] = useState<any>(false); observerRef.current.observe(imgRef.current) ; return () => { if(observerRef.current) { observerRef.current.disconnect()} }},[priority,lazy]) ; setIsLoaded(true) ; onLoad?.() }; setHasError(false); setIsLoading(true)} else { setHasError(true); setIsLoading(false); onError?.(new Error(`Failed to load image: an y${src}`))} }; useEffect(() => { return () => { }},[]);,[]); return () => { if(observerRef.current) { observerRef.current.disconnect()} }},[]) ; const getOptimizedSrc = (props: any) => { if(src.startsWith ('data:') || src.startsWith('blob:') ) { return src} try { if(url.searchParams.has('quality')) { return src} url.searchParams.set('quality',quality.toString()); return url.toString()} catch { return src} }; if(!isIntersecting) { return (<div className={`${baseClasses} bg-gray - 200 dark: b g-gray - 700 animate - pulse`} style={{ width,height }} > <div className="w-full h-full flex items-center justify-center">" <Loader2 className="w-8 h-8 text-gray-400 animate-spin" /> </div> </div>) } if(hasError) { return (<div className={`${baseClasses} bg-gray - 100 dark: b g-gray - 800 flex items - center justify - center`} style={{ width,height }} > <div className="text-center"> <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" /> <p className="text-sm text-gray - 500 dark: tex t-gray -400">Image failed to load</p> </div> </div>) }}) => { </div> )} export default OptimizedImage;"; ;" </any> </any> </any>
+>>>>>>> origin/automation-improvements

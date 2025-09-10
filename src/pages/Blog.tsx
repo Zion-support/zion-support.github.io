@@ -1,16 +1,22 @@
-import: React from 'react' 
-;;' 
-import: { motion } from 'framer-motion' 
-;;' 
-import: { Link } from 'react-router-dom' 
-;;' 
-import: { SEO } from '../components/SEO' 
-;;' 
-import: { 
-  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
-  Brain, Atom, Rocket, Shield, Globe, Code 
-} from 'lucide-react' 
-;;' 
+<<<<<<< HEAD
+import React from 'react'; const Blog = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Our Blog </h1> <p className="text-xl text-gray-600"> Insights,updates,and thought leadership from our team. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">The Future of AI in Business</h3> <p className="text-gray-600 mb-4">Exploring how artificial intelligence is transforming modern business operations.</p> <span className="text-sm text-blue-600">Read More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity Best Practices</h3> <p className="text-gray-600 mb-4">Essential security measures every business should implement.</p> <span className="text-sm text-blue-600">Read More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Migration Strategies</h3> <p className="text-gray-600 mb-4">A comprehensive guide to successful cloud adoption.</p> <span className="text-sm text-blue-600">Read More</span> </div> </div> </div> </div> )}; export default Blog;
+=======
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from 'lucide-react'
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 export: default function Blog() {
   const blogPosts = [
@@ -288,4 +294,6 @@ export: default function Blog() {
         </div>
       </div>
     </>
-  )}
+  );
+}
+>>>>>>> origin/automation/changelog

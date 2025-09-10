@@ -1,20 +1,21 @@
+<<<<<<< HEAD
+=======
 import React  from "react";interface StatItem {
-  label: string,;
-value: string | number,;
+  label: string,
+value: string | number,
 description?: string}
 
-:components/ui/InteractiveStats.tsx,;
+:components/ui/InteractiveStats.tsx,
 interface StatItem {
-
-  label: string,;
-  value: string | number,;
+  label: string,
+  value: string | number,
   description?: string}
 
 interface InteractiveStatsProps {
-  stats: StatItem[],;
+  stats: StatItem[],
   className?: string}
 
-export default function InteractiveStats() {
+export default function InteractiveStats() {;
   return (;
     <div className="{className}">;
       {stats.map((stat, index) => (";
@@ -38,5 +39,8 @@ export default function InteractiveStats() {
 
     </div>;
 :components/ui/InteractiveStats.tsx;
-  )}
-  )}:components/disabled/ui/InteractiveStats.tsx}"'
+  );
+}
+  );
+}:components/disabled/ui/InteractiveStats.tsx}"'
+>>>>>>> origin/automation-fixes

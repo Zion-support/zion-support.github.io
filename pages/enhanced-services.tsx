@@ -1,129 +1,160 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { 
-  ArrowRight, 
-  Award, 
-  Star, 
-  Shield, 
-  Users, 
-  CheckCircle, 
-  Zap, 
-  Phone, 
-  Mail, 
-  Globe 
+import { ;
+  ArrowRight,
+  Award,
+  CheckCircle,
+  Zap,
+  Shield,
+  Brain,
+  Bot,
+  Eye,
+  MessageSquare,
+  BarChart3,
+  Globe,
+  Lock,
+  Cpu,
+  Smartphone,
+  Code,
+  Target,
+  TrendingUp,
+  Users,
+  Clock,
+  DollarSign,
+  Star,
+  Phone,
+  Mail;
 } from "lucide-react";
 
-export default function EnhancedServices() {
-  const serviceCategories = [
-    {
+export default function EnhancedServices() {;
+  const serviceCategories = [;
+    {;
       id: 1,
-      name: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions to automate processes and gain insights",
-      icon: "🤖",
-      services: [
-        {
-          name: "AI Strategy Consulting",
-          description: "Comprehensive AI strategy development and implementation planning",
-          features: ["AI readiness assessment", "Technology roadmap", "ROI analysis", "Change management"],
-          pricing: "Starting at $5,000",
-          delivery: "2-4 weeks",
-          roi: "200-400%",
-          benefits: "Transform your business with AI-driven insights and automation"
-        },
-        {
-          name: "Machine Learning Models",
-          description: "Custom ML models tailored to your specific business needs",
-          features: ["Data preprocessing", "Model training", "Validation", "Deployment"],
-          pricing: "Starting at $10,000",
-          delivery: "4-8 weeks",
-          roi: "300-500%",
-          benefits: "Predictive analytics and intelligent decision-making"
-        },
-        {
-          name: "Natural Language Processing",
-          description: "Advanced NLP solutions for text analysis and language understanding",
-          features: ["Sentiment analysis", "Text classification", "Entity extraction", "Chatbots"],
-          pricing: "Starting at $8,000",
-          delivery: "3-6 weeks",
-          roi: "250-400%",
-          benefits: "Enhance customer experience with intelligent text processing"
-        }
-      ]
-    },
-    {
+      name: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence services that automate and optimize business processes",
+      icon: Brain,
+      services: [;
+        {;
+          name: "AI Business Intelligence Platform",
+          description: "Advanced analytics and insights platform powered by machine learning",
+          features: ["Real-time analytics", "Predictive modeling", "Custom dashboards", "Data visualization"],
+          pricing: "$499 - $2,999/month",
+          delivery: "4-6 weeks",
+          benefits: "Increase decision-making speed by 300% and reduce manual analysis by 80%",
+          roi: "Expected ROI: 400-600% within 6 months";
+},
+        {;
+          name: "AI Customer Experience Analytics",
+          description: "Comprehensive customer journey analysis and optimization platform",
+          features: ["Customer journey mapping", "Sentiment analysis", "Behavioral insights", "Personalization engine"],
+          pricing: "$299 - $1,999/month",
+          delivery: "3-5 weeks",
+          benefits: "Improve customer satisfaction by 250% and increase retention by 40%",
+          roi: "Expected ROI: 350-500% within 4 months";
+},
+        {;
+          name: "AI DevOps Automation Platform",
+          description: "Intelligent DevOps pipeline with automated testing, deployment, and monitoring",
+          features: ["Automated testing", "CI/CD optimization", "Performance monitoring", "Incident response"],
+          pricing: "$399 - $2,499/month",
+          delivery: "5-8 weeks",
+          benefits: "Reduce deployment time by 70% and eliminate 90% of manual errors",
+          roi: "Expected ROI: 300-450% within 5 months";
+}
+      ];
+},
+    {;
       id: 2,
       name: "Cloud & Infrastructure",
-      description: "Scalable cloud solutions and infrastructure management for modern businesses",
-      icon: "☁️",
-      services: [
-        {
-          name: "Cloud Migration",
-          description: "Seamless migration to cloud platforms with zero downtime",
-          features: ["Assessment", "Migration planning", "Data transfer", "Optimization"],
-          pricing: "Starting at $15,000",
-          delivery: "6-12 weeks",
-          roi: "150-300%",
-          benefits: "Reduce costs and improve scalability with cloud infrastructure"
-        },
-        {
-          name: "DevOps Implementation",
-          description: "Complete DevOps pipeline setup for continuous integration and deployment",
-          features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring", "Security"],
-          pricing: "Starting at $12,000",
-          delivery: "4-8 weeks",
-          roi: "200-350%",
-          benefits: "Accelerate development and improve deployment reliability"
-        },
-        {
-          name: "Microservices Architecture",
-          description: "Modern microservices architecture for scalable and maintainable applications",
-          features: ["Service design", "API development", "Containerization", "Orchestration"],
-          pricing: "Starting at $20,000",
-          delivery: "8-16 weeks",
-          roi: "300-500%",
-          benefits: "Build resilient and scalable applications with microservices"
-        }
-      ]
-    },
-    {
+      description: "Scalable cloud solutions and infrastructure management services",
+      icon: Globe,
+      services: [;
+        {;
+          name: "Cloud FinOps Optimizer",
+          description: "Intelligent cloud cost optimization and financial operations management",
+          features: ["Cost optimization", "Resource monitoring", "Budget forecasting", "Automated scaling"],
+          pricing: "$199 - $1,299/month",
+          delivery: "2-4 weeks",
+          benefits: "Reduce cloud costs by 35% and improve resource utilization by 60%",
+          roi: "Expected ROI: 250-400% within 3 months";
+},
+        {;
+          name: "Cybersecurity Suite",
+          description: "Comprehensive security platform with threat detection and response",
+          features: ["Threat detection", "Vulnerability scanning", "Incident response", "Compliance monitoring"],
+          pricing: "$599 - $3,999/month",
+          delivery: "6-10 weeks",
+          benefits: "Reduce security incidents by 95% and ensure compliance with industry standards",
+          roi: "Expected ROI: 200-350% within 6 months";
+},
+        {;
+          name: "Platform Engineering Solutions",
+          description: "Modern platform engineering with microservices and containerization",
+          features: ["Microservices architecture", "Container orchestration", "API management", "Service mesh"],
+          pricing: "$799 - $4,999/month",
+          delivery: "8-12 weeks",
+          benefits: "Improve system reliability by 80% and reduce development time by 50%",
+          roi: "Expected ROI: 300-500% within 8 months";
+}
+      ];
+},
+    {;
       id: 3,
-      name: "Cybersecurity & Compliance",
-      description: "Comprehensive security solutions to protect your business and ensure compliance",
-      icon: "🔒",
-      services: [
-        {
-          name: "Security Assessment",
-          description: "Complete security audit and vulnerability assessment",
-          features: ["Penetration testing", "Vulnerability scanning", "Compliance check", "Remediation plan"],
-          pricing: "Starting at $8,000",
+      name: "Micro SaaS Solutions",
+      description: "Specialized software-as-a-service solutions for specific business needs",
+      icon: Zap,
+      services: [;
+        {;
+          name: "AI Quality Assurance Platform",
+          description: "Automated testing and quality assurance with AI-powered test generation",
+          features: ["Automated test generation", "Performance testing", "Security testing", "Regression testing"],
+          pricing: "$249 - $1,499/month",
+          delivery: "3-5 weeks",
+          benefits: "Reduce testing time by 75% and increase test coverage by 200%",
+          roi: "Expected ROI: 280-420% within 4 months";
+},
+        {;
+          name: "AI SEO Auditor",
+          description: "Intelligent SEO analysis and optimization platform",
+          features: ["Technical SEO audit", "Content optimization", "Keyword research", "Competitor analysis"],
+          pricing: "$149 - $899/month",
+          delivery: "2-3 weeks",
+          benefits: "Improve search rankings by 150% and increase organic traffic by 300%",
+          roi: "Expected ROI: 400-600% within 3 months";
+},
+        {;
+          name: "Smart Contract AI",
+          description: "AI-powered smart contract development and auditing platform",
+          features: ["Contract generation", "Security auditing", "Deployment automation", "Monitoring"],
+          pricing: "$399 - $2,499/month",
+          delivery: "4-6 weeks",
+          benefits: "Reduce development time by 80% and eliminate security vulnerabilities",
+          roi: "Expected ROI: 350-550% within 5 months";
+},
+        {;
+          name: "AI Lead Enrichment",
+          description: "Intelligent lead data enrichment and qualification platform",
+          features: ["Data enrichment", "Lead scoring", "Contact discovery", "CRM integration"],
+          pricing: "$199 - $1,299/month",
           delivery: "2-4 weeks",
-          roi: "Prevent costly breaches",
-          benefits: "Identify and fix security vulnerabilities before they become problems"
-        },
-        {
-          name: "Compliance Management",
-          description: "Ensure compliance with industry standards and regulations",
-          features: ["GDPR compliance", "SOC 2 preparation", "HIPAA compliance", "Audit support"],
-          pricing: "Starting at $10,000",
-          delivery: "4-8 weeks",
-          roi: "Avoid penalties",
-          benefits: "Stay compliant and avoid costly regulatory penalties"
-        },
-        {
-          name: "Security Monitoring",
-          description: "24/7 security monitoring and incident response",
-          features: ["Threat detection", "Incident response", "Security analytics", "Alerting"],
-          pricing: "Starting at $5,000/month",
-          delivery: "2-4 weeks",
-          roi: "Peace of mind",
-          benefits: "Continuous protection with round-the-clock monitoring"
-        }
-      ]
-    }
+          benefits: "Increase lead quality by 200% and improve conversion rates by 150%",
+          roi: "Expected ROI: 300-450% within 3 months";
+},
+        {;
+          name: "Smart Churn Predictor",
+          description: "AI-powered customer churn prediction and retention platform",
+          features: ["Churn prediction", "Retention campaigns", "Customer segmentation", "Risk scoring"],
+          pricing: "$299 - $1,999/month",
+          delivery: "3-5 weeks",
+          benefits: "Reduce churn by 40% and increase customer lifetime value by 60%",
+          roi: "Expected ROI: 250-400% within 4 months";
+}
+      ];
+}
   ];
 
-  const stats = [
+  const stats = [;
     { label: "Projects Completed", value: "500+", icon: Award },
     { label: "Client Satisfaction", value: "99.9%", icon: Star },
     { label: "Uptime Guarantee", value: "99.9%", icon: Shield },
@@ -140,30 +171,28 @@ export default function EnhancedServices() {
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Enhanced Technology Services
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth, 
-              enhance security, and drive innovation across all digital touchpoints.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors">
-                <span>View Innovative Services</span>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <section className="py-20 px-4">;
+          <div className="max-w-6xl mx-auto text-center">;
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">;
+              Enhanced Technology Services;
+            </h1>;
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+              Comprehensive technology solutions designed to accelerate your business growth,
+              enhance security, and drive innovation across all digital touchpoints.;
+            </p>;
+            <div className="flex justify-center space-x-4">;
+              <Link href="/contact";
+                className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">;
+                <span>Get Started</span>;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Link>;
+              <Link href="/innovative-services";
+                className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors">;
+                <span>View Innovative Services</span>;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
 
         {/* Stats Section */}
         <section className="py-16 px-4 bg-white">
@@ -171,47 +200,45 @@ export default function EnhancedServices() {
             <div className="grid md:grid-cols-4 gap-8">
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
-                return (
-                  <div key={index} className="text-center">
-                    <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                    <div className="text-gray-600">{stat.label}</div>
-                  </div>
+                return (;
+                  <div key={index} className="text-center">;
+                    <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />;
+                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>;
+                    <div className="text-gray-600">{stat.label}</div>;
+                  </div>;
                 );
-              })}
-            </div>
-          </div>
-        </section>
+})}
+            </div>;
+          </div>;
+        </section>;
 
         {/* Service Categories */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Service Categories</h2>
-            <div className="space-y-16">
-              {serviceCategories.map((category) => {
-                const IconComponent = () => <span className="text-4xl">{category.icon}</span>;
-                return (
-                  <div key={category.id} className="bg-white rounded-lg shadow-lg p-8">
-                    <div className="flex items-center mb-8">
-                      <IconComponent />
-                      <div className="ml-6">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-2">{category.name}</h3>
-                        <p className="text-lg text-gray-600">{category.description}</p>
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {category.services.map((service, index) => (
-                        <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                          <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>
-                          <p className="text-gray-600 mb-4">{service.description}</p>
-
-                          <div className="mb-4">
-                            <h5 className="font-semibold text-gray-900 mb-2">Key Features:</h5>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {service.features.map((feature, featureIndex) => (
-                                <li key={featureIndex} className="flex items-center">
-                                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Service Categories</h2>;
+            <div className="space-y-16">;
+              {serviceCategories.map((category) => {;
+                const IconComponent = category.icon;
+                return (;
+                  <div key={category.id} className="bg-white rounded-lg shadow-lg p-8">;
+                    <div className="flex items-center mb-8">;
+                      <IconComponent className="w-16 h-16 text-blue-600 mr-6" />;
+                      <div>;
+                        <h3 className="text-3xl font-bold text-gray-900 mb-2">{category.name}</h3>;
+                        <p className="text-lg text-gray-600">{category.description}</p>;
+                      </div>;
+                    </div>;
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
+                      {category.services.map((service, index) => (;
+                        <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">;
+                          <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>;
+                          <p className="text-gray-600 mb-4">{service.description}</p>;
+                          <div className="mb-4">;
+                            <h5 className="font-semibold text-gray-900 mb-2">Key Features:</h5>;
+                            <ul className="text-sm text-gray-600 space-y-1">;
+                              {service.features.map((feature, featureIndex) => (;
+                                <li key={featureIndex} className="flex items-center">;
+                                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                                   {feature}
                                 </li>
                               ))}
@@ -245,13 +272,13 @@ export default function EnhancedServices() {
                           </Link>
                         </div>
                       ))}
-                    </div>
-                  </div>
+                    </div>;
+                  </div>;
                 );
-              })}
-            </div>
-          </div>
-        </section>
+})}
+            </div>;
+          </div>;
+        </section>;
 
         {/* Why Choose Us Section */}
         <section className="py-16 px-4 bg-gray-100">
@@ -284,43 +311,42 @@ export default function EnhancedServices() {
         </section>
 
         {/* Contact Section */}
-        <section className="bg-blue-600 text-white py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Let's discuss how our enhanced technology services can drive your business forward. 
-              Contact us today for a free consultation.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <Phone className="w-8 h-8 mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Phone</h3>
-                <p>+1 302 464 0950</p>
-              </div>
-              <div className="text-center">
-                <Mail className="w-8 h-8 mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Email</h3>
-                <p>kleber@ziontechgroup.com</p>
-              </div>
-              <div className="text-center">
-                <Globe className="w-8 h-8 mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Website</h3>
-                <p>https://ziontechgroup.com</p>
-              </div>
-            </div>
-            <div className="text-center mb-8">
-              <p className="text-lg font-semibold">Address:</p>
-              <p>364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-600 font-medium rounded-lg transition-colors">
-              <span>Contact Us Today</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </section>
-      </div>
-    </>
+        <section className="bg-blue-600 text-white py-20 px-4">;
+          <div className="max-w-6xl mx-auto text-center">;
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>;
+            <p className="text-xl mb-8 max-w-3xl mx-auto">;
+              Let's discuss how our enhanced technology services can drive your business forward. ;
+              Contact us today for a free consultation.;
+            </p>;
+            <div className="grid md:grid-cols-3 gap-8 mb-8">;
+              <div className="text-center">;
+                <Phone className="w-8 h-8 mx-auto mb-4" />;
+                <h3 className="font-semibold mb-2">Phone</h3>;
+                <p>+1 302 464 0950</p>;
+              </div>;
+              <div className="text-center">;
+                <Mail className="w-8 h-8 mx-auto mb-4" />;
+                <h3 className="font-semibold mb-2">Email</h3>;
+                <p>kleber@ziontechgroup.com</p>;
+              </div>;
+              <div className="text-center">;
+                <Globe className="w-8 h-8 mx-auto mb-4" />;
+                <h3 className="font-semibold mb-2">Website</h3>;
+                <p>https://ziontechgroup.com</p>;
+              </div>;
+            </div>;
+            <div className="text-center mb-8">;
+              <p className="text-lg font-semibold">Address:</p>;
+              <p>364 E Main St STE 1008, Middletown DE 19709</p>;
+            </div>;
+            <Link href="/contact";
+              className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-600 font-medium rounded-lg transition-colors">;
+              <span>Contact Us Today</span>;
+              <ArrowRight className="w-5 h-5 ml-2" />;
+            </Link>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 }

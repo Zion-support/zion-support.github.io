@@ -1,8 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-import Header from '../Header';
-import Footer from '../Footer';
-
+<<<<<<< HEAD
+=======
 interface MainLayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -11,52 +11,37 @@ interface MainLayoutProps {
   ogImage?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ 
-  children, 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
-  type = 'website', 
-  noindex = false, 
-  nofollow = false, 
-  canonical 
-}) => {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-        
-        {/* Open Graph */}
-        <meta property="og:type" content={type} />
-        <meta property="og:title" content={title || 'Zion Tech Group'} />
-        <meta property="og:description" content={description || 'Leading technology solutions provider'} />
-        {image && <meta property="og:image" content={image} />}
-        {url && <meta property="og:url" content={url} />}
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title || 'Zion Tech Group'} />
-        <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
-        {image && <meta name="twitter:image" content={image} />}
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
+  ogImage = '/og-image.jpg';
+}) => {;
+  return (;
+    <>;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="keywords" content={keywords} />;
+        <meta property="og:title" content={title} />;
+        <meta property="og:description" content={description} />;
+        <meta property="og:image" content={ogImage} />;
+        <meta property="og:type" content="website" />;
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={title} />;
+        <meta name="twitter:description" content={description} />;
+        <meta name="twitter:image" content={ogImage} />;
+        <link rel="canonical" href="https://ziontechgroup.com" />;
+      </Head>;
+      <div className="min-h-screen bg-white">;
+        {children}
+      </div>;
+    </>;
   );
-}
-
+};
 export default MainLayout;
+>>>>>>> origin/automation-fixes
+=======
+import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer'; interface MainLayoutProps { children: React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string} const MainLayout: React.FC<MainLayoutProps> = ({ children,title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.',keywords = 'technology solutions,AI development,cloud architecture,digital transformation,micro SaaS,IT services',ogImage = '/og-image.jpg',}) => { return ( <> <Head> <title>{title}</title> <meta name="description" content={description} /> <meta name="keywords" content={keywords} /> <meta property="og:title" content={title} /> <meta property="og:description" content={description} /> <meta property="og:image" content={ogImage} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg.jpg','/services-bg.jpg','/team-bg.jpg',]} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer> <div className='min-h-screen flex flex-col'> <Header /> <main id='main-content' className='flex-grow' role='main'> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> )}; export default MainLayout;
+>>>>>>> origin/automation-improvements

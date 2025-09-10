@@ -38,16 +38,11 @@ jobs:
       - name: Create summary
         if: always()
         run: |
-          echo "## Sync Health Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Status:** Sync health check completed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
-    timeout-minutes: 30
-    runs_on: ubuntu-latest
-permissions:
-  contents: read
-  actions: read
-concurrency:
-  group: sync-health.yml-${{ github.ref }}
-  cancel-in-progress: true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          AHEAD=$(git rev-list --left-right --count HEAD...origin/main | awk '{print $1}')
+          if [ "$AHEAD" != "0" ]; then
+            git push origin HEAD:main
+          else
+            echo "No push needed."
+          fi

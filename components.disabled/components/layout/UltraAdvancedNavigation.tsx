@@ -1,2 +1,10 @@
-export: default function UltraAdvancedNavigation() {
-  return null}
+<<<<<<< HEAD
+module.exports = default function UltraAdvancedNavigation() { return null;}
+export default function UltraAdvancedNavigation() {}
+  return null;
+};
+=======
+export: default function UltraAdvancedNavigation() {;
+  return null;,
+}
+>>>>>>> origin/automation-fixes
