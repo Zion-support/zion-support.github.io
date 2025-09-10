@@ -1,19 +1,8 @@
-  it(displays expected content", () => {;
-    render(<ProductReviews  />)";
-import { render, screen } from &apos;@testing - library/react",
-import ProductReviews from &apos;./ProductReviews;
-describe(&apos;ProductReviews&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
-}
-  it(&apos;displays expected content&apos, () => {;
-    render();
-}
-    // comment;
-    render(<ProductReviews / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
-})";
-";
-}}))
+import { render, screen  } from '@testing-library/reactimport ProductReviews from ./ProductReviewsdescribe(ProductReviews, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<ProductReviews  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<ProductReviews  />)';
+    // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport ProductReviews from ./ProductReviewsdescribe(ProductReviews,() => {' it(renders without crashing',() => {' render(<ProductReviews />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ProductReviews />)
