@@ -1,4 +1,4 @@
-// Global type declarations
+// Global module declarations and env/window typing
 declare module "*.svg" { const content: string; export default content }
 declare module "*.png" { const content: string; export default content }
 declare module "*.jpg" { const content: string; export default content }

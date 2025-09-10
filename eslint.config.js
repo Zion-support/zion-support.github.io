@@ -1,6 +1,6 @@
-import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
 
 export default [
   {
@@ -11,8 +11,17 @@ export default [
       'coverage/**',
       '.next/**',
       '**/.next/**',
-      'zion-os.disabled/**',
       'zion-os/**',
+      'zion-os.disabled/**',
+      'apps/**',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'zion-website/**',
+      'zion_academy/**',
       'api/**',
       'api-backup/**',
       'api-disabled/**',
@@ -31,9 +40,9 @@ export default [
       'tests/**',
       '__tests__/**',
       'types/**',
-      'supabase/**',
-      'scripts/**',
-      'automation/**'
+      '*.cjs',
+      '*.mjs',
+      'supabase/**'
     ],
   },
   js.configs.recommended,
@@ -91,8 +100,9 @@ export default [
       }
     },
     plugins: {
-      react,
-      'react-hooks': reactHooks
+      '@typescript-eslint': tseslint,
+      'react': react,
+      'react-hooks': reactHooks,
     },
     rules: {
       ...js.configs.recommended.rules,

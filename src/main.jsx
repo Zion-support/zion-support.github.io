@@ -1,14 +1,21 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import AppMinimal from './AppMinimal'
+import React from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App.jsx';
+// import './index.css';
 
-const container = document.getElementById('root')
-if (container) {
-  const root = createRoot(container)
-  root.render(
-    <React.StrictMode>
-      <AppMinimal />
-    </React.StrictMode>
-  )
+const rootElement = document.getElementById('root');
+
+const app = (
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+if (rootElement?.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else if (rootElement) {
+  createRoot(rootElement).render(app);
 }
