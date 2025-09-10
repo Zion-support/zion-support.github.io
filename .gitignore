@@ -22,3 +22,6 @@ automation/data/*.json
 !automation/data/autonomous-config.json
 .next/
 core
+
+# TypeScript build info
+*.tsbuildinfo
