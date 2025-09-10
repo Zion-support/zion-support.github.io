@@ -18,7 +18,7 @@ export const _useAICodeGeneration = () => {
         try {
             // Simulate AI processing - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 3000));
-            let _generatedCode = '';
+            const _generatedCode = '';
             // Generate code based on options
             if (options.language === 'typescript' && options.framework === 'react') {
                 generatedCode = generateReactTypeScriptCode(prompt, options);
@@ -116,7 +116,7 @@ export const _useAICodeGeneration = () => {
         try {
             // Simulate AI optimization - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2500));
-            let _optimizedCode = code;
+            const _optimizedCode = code;
             switch (focus) {
                 case 'performance':
                     optimizedCode = optimizeForPerformance(code);
@@ -147,7 +147,7 @@ export const _useAICodeGeneration = () => {
         try {
             // Simulate AI test generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
-            let _testCode = '';
+            const _testCode = '';
             if (language === 'typescript' || language === 'javascript') {
                 testCode = generateJestTests(code);
             }
@@ -173,7 +173,7 @@ export const _useAICodeGeneration = () => {
         try {
             // Simulate AI documentation generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 1500));
-            let _docs = '';
+            const _docs = '';
             if (language === 'typescript' || language === 'javascript') {
                 docs = generateJSDoc(code);
             }
@@ -201,8 +201,8 @@ export const _useAICodeGeneration = () => {
     }, [trackEvent]);
     // Export generated code
     const _exportCode = useCallback((format) => {
-        let _exportContent = '';
-        let _filename = '';
+        const _exportContent = '';
+        const _filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
                 code: generatedCode,

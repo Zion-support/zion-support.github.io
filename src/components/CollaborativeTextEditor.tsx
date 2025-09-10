@@ -170,7 +170,7 @@ export const _CollaborativeTextEditor = ({ roomId, userId, userName, initialCont
     // Apply AI suggestion
     const _applySuggestion = useCallback((suggestion) => {
         setEditorState(prev => {
-            let _newContent = prev.content;
+            const _newContent = prev.content;
             if (suggestion.type === 'completion') {
                 newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position);
             }
@@ -201,7 +201,7 @@ export const _CollaborativeTextEditor = ({ roomId, userId, userName, initialCont
     }, [editorState.content, onSave, trackEvent]);
     // Export content
     const _handleExport = useCallback((format) => {
-        let _exportContent = editorState.content;
+        const _exportContent = editorState.content;
         if (format === 'html') {
             exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`;
         }

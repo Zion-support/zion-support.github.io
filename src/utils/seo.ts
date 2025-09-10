@@ -66,7 +66,7 @@ export function updateSEO(data: SEOData) {
 function updateMetaTag(name: string, content: string | undefined, attribute = 'name') {
   if (!content) return;
   
-  let _meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+  const _meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
   
   if (!meta) {
     meta = document.createElement('meta');
@@ -81,7 +81,7 @@ function updateMetaTag(name: string, content: string | undefined, attribute = 'n
 function updateCanonicalURL(url?: string) {
   if (!url) return;
   
-  let _canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  const _canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   
   if (!canonical) {
     canonical = document.createElement('link');
@@ -169,7 +169,7 @@ export function getSEOMetrics() {
 
 // Calculate SEO score based on best practices
 function calculateSEOScore(metrics: any): number {
-  let _score = 0;
+  const _score = 0;
   const _maxScore = 100;
   
   // Title length (30-60 characters is optimal)
@@ -240,7 +240,7 @@ export function generateBreadcrumbs(path: string, baseUrl: string = '') {
     { name: 'Home', url: baseUrl }
   ];
   
-  let _currentPath = baseUrl;
+  const _currentPath = baseUrl;
   segments.forEach((segment, index) => {
     currentPath += `/${segment}`;
     const _name = segment

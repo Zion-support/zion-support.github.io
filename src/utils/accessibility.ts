@@ -221,7 +221,7 @@ export class LiveRegionManager {
 export function initFocusVisible() {
   if (typeof window === 'undefined') return;
   
-  let _hadKeyboardEvent = true;
+  const _hadKeyboardEvent = true;
   let keyboardThrottleTimeout: NodeJS.Timeout;
   
   function onPointerDown() {

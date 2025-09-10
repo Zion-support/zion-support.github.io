@@ -20,7 +20,7 @@ export const _AdvancedDataTable = ({ data, columns, height = 500, enableSearch =
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting
     const _processedData = useMemo(() => {
-        let _result = [...data];
+        const _result = [...data];
         // Apply search
         if (searchQuery.trim()) {
             result = result.filter(item => columns.some(col => {

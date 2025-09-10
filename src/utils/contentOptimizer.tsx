@@ -68,7 +68,7 @@ export class ContentOptimizer {
     static countSyllables(text) {
         // Simplified syllable counting
         const _words = text.toLowerCase().split(/\s+/);
-        let _syllableCount = 0;
+        const _syllableCount = 0;
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
@@ -82,7 +82,7 @@ export class ContentOptimizer {
         return syllableCount;
     }
     static calculateSEOScore(content, page) {
-        let _score = 100;
+        const _score = 100;
         // Check for title
         if (!content.includes('<title>'))
             score -= 20;

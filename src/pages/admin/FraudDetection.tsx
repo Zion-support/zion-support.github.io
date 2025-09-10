@@ -67,7 +67,7 @@ export default function FraudDetection() {
     }, []);
     // Apply filters
     useEffect(() => {
-        let _result = [...flags];
+        const _result = [...flags];
         // Apply search filter
         if (searchQuery) {
             const _query = searchQuery.toLowerCase();

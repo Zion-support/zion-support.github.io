@@ -21,10 +21,10 @@ export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, a
         setIsAnalyzing(true);
         const _issues = [];
         const _suggestions = [];
-        let _wordCount = 0;
-        let _readabilityScore = 100;
-        let _seoScore = 100;
-        let _engagementScore = 100;
+        const _wordCount = 0;
+        const _readabilityScore = 100;
+        const _seoScore = 100;
+        const _engagementScore = 100;
         // Get all content elements
         const _contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
@@ -260,7 +260,7 @@ export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, a
         if (!analysis)
             return;
         const _fixableIssues = analysis.issues.filter(issue => issue.fixable);
-        let _fixedCount = 0;
+        const _fixedCount = 0;
         fixableIssues.forEach(issue => {
             if (issue.element) {
                 switch (issue.id.split('-')[0]) {

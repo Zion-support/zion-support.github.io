@@ -17,7 +17,7 @@ export function ApiPlayground({ method, path, params = [] }) {
     };
     const _sendRequest = async () => {
         const _baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
-        let _url = `${baseUrl}${path}`;
+        const _url = `${baseUrl}${path}`;
         const _searchParams = new URLSearchParams();
         if (method === "GET" || method === "DELETE") {
             params.forEach((p) => {

@@ -243,7 +243,7 @@ export default function Marketplace() {
             product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         const _matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-        let _matchesPrice = true;
+        const _matchesPrice = true;
         if (selectedPriceRange === 'free') {
             matchesPrice = product.price === 0;
         }

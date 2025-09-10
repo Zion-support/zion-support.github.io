@@ -99,7 +99,7 @@ export default function ComprehensiveServicesOverview() {
     const [priceRange, setPriceRange] = useState('all');
     const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
     const _filteredServices = useMemo(() => {
-        let _filtered = ALL_SERVICES;
+        const _filtered = ALL_SERVICES;
         // Search filter
         if (searchQuery) {
             const _lowerQuery = searchQuery.toLowerCase();

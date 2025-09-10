@@ -11,7 +11,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         if (!ctx)
             return;
         let animationFrameId;
-        let _particles = [];
+        const _particles = [];
         const _resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;

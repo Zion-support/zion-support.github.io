@@ -180,7 +180,7 @@ export const _EnterpriseDashboard = () => {
     }, [refreshInterval, refreshData]);
     // Filtered data
     const _filteredSecurityAlerts = useMemo(() => {
-        let _filtered = securityAlerts;
+        const _filtered = securityAlerts;
         if (filterStatus !== 'all') {
             filtered = filtered.filter(alert => alert.status === filterStatus);
         }
@@ -192,7 +192,7 @@ export const _EnterpriseDashboard = () => {
         return filtered;
     }, [securityAlerts, filterStatus, searchQuery]);
     const _filteredUserActivities = useMemo(() => {
-        let _filtered = userActivities;
+        const _filtered = userActivities;
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||

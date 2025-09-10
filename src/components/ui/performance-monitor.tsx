@@ -33,8 +33,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     });
     // Performance monitoring functions
     const _measureFPS = useCallback(() => {
-        let _frameCount = 0;
-        let _lastTime = performance.now();
+        const _frameCount = 0;
+        const _lastTime = performance.now();
         const _countFrame = () => {
             frameCount++;
             const _currentTime = performance.now();

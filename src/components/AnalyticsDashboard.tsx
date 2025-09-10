@@ -56,7 +56,7 @@ export const _AnalyticsDashboard = ({ className = '', showRealTime = true, refre
     const _getPerformanceScore = () => {
         if (!performanceMetrics)
             return 0;
-        let _score = 100;
+        const _score = 100;
         // Deduct points for poor performance
         if (performanceMetrics.pageLoadTime > 3000)
             score -= 20;

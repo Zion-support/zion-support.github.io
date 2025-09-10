@@ -112,7 +112,7 @@ const _AdvancedServiceRecommendation = () => {
         }
     ];
     const _calculateMatchScore = (service, profile) => {
-        let _score = 0;
+        const _score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
             score += 25;

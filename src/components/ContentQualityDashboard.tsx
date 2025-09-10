@@ -83,7 +83,7 @@ const _ContentQualityDashboard = ({ className = '' }) => {
     const _getFilteredPages = () => {
         if (!report)
             return [];
-        let _filtered = report.pageMetrics;
+        const _filtered = report.pageMetrics;
         // Apply search filter
         if (searchTerm) {
             filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

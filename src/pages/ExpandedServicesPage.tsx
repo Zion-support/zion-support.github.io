@@ -24,7 +24,7 @@ export default function ExpandedServicesPage() {
     const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
-        let _filtered = EXPANDED_SERVICES;
+        const _filtered = EXPANDED_SERVICES;
         // Filter by search query
         if (searchQuery) {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

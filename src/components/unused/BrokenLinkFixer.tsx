@@ -181,7 +181,7 @@ export const _BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails
     // Auto-fix broken links
     const _autoFixBrokenLinks = useCallback(() => {
         const _brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
-        let _fixedCount = 0;
+        const _fixedCount = 0;
         brokenLinks.forEach(link => {
             if (link.element && link.url.startsWith('#')) {
                 // Fix broken anchor links
