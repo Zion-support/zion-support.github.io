@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -29,7 +28,6 @@ export default function DigitalTransformationPage() {
       icon: TrendingUp,
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
   ];
   return (
     <MainLayout
@@ -37,7 +35,6 @@ export default function DigitalTransformationPage() {
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
@@ -46,7 +43,6 @@ export default function DigitalTransformationPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -69,7 +65,6 @@ export default function DigitalTransformationPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -84,7 +79,6 @@ export default function DigitalTransformationPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -106,7 +100,6 @@ export default function DigitalTransformationPage() {
                   </motion.div>;
                 );
               })}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
             </div>
           </div>
         </section>

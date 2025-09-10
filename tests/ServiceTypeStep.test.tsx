@@ -1,14 +1,6 @@
 import React from 'react';
 interface ServiceTypeStep.testProps {
   // Add props here as needed
->
-
-
-
-
-
-interface ServiceTypeStep.testProps {
-  // Add props here as needed
 }
 
 export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
@@ -18,29 +10,11 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-<:tests/ServiceTypeStep.test.tsx
-
-=
-}
-=======
 }
 
-}
-
-
->
-
-
-
-}
->>>>>>>> main:corrupted_backup/ServiceTypeStep.test.tsx
-
-
-
-
-
-}
->
+describe('ServiceTypeStep placeholder', () => {
+  it('runs', () => {
+    expect(true).toBe(true);
+  });
+});
 

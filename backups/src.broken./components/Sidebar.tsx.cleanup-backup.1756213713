@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
-import { 
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
-  Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
-  Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
-  TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
-  LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
-=======
-
 import React from 'react';
 import { motion } from 'framer-motion';
 =======
@@ -29,19 +16,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
   Home, 
-import React, { useState } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';import { Link, useLocation } from 'react-router-dom';
 import { 
-<<<<<<< HEAD
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
-  Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
-  Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
-  TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
-  LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Github, Youtube
-} from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -226,60 +202,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   Calendar,
   Clock,
   Mail,
-<<<<<<< HEAD
-  Phone,
-  MapPin,
-  Globe2,
-  Heart,
-  ThumbsUp,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ExternalLink
-=======
-  MapPin
-} from 'lucide-react';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Database, Code, BarChart3, Target, Heart, Building, Rocket, Lock, Network, Eye, Workflow, Palette, Server, Clock, Zap, Star, TrendingUp, ShoppingCart, Calendar, Video, FileText } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Zap, FileText, HelpCircle, Settings, Rocket, Brain, Database, Lock, Cloud, Code, BarChart3, Palette, Target, Lightbulb, BookOpen, Calendar, MessageSquare, Star, Award, TrendingUp, Cpu, Network, Server, ShieldCheck, Globe2, Smartphone, Wifi, Satellite, Atom, TestTube, Microscope, Car, Plane, Ship, Truck, Building2, Heart, Pill, Stethoscope, Gavel, Scale, Factory, Cog, Bot, Eye, Key, QrCode, Wallet, Coins, Leaf, Sun, Wind, Store, Cookie, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Handshake } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
-=======
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Lock, Code, Rocket, Target, Lightbulb, Sparkles } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Target } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, FileText } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { useSidebar } from '../context/SidebarContext';
-
 export default function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
 =======
@@ -1508,9 +1430,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   Zap,
   ChevronRight,
   Menu,
-  X
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-} from 'lucide-react';
+  X} from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
 interface SidebarProps {
@@ -3211,138 +3131,6 @@ export function Sidebar() {
       icon: Briefcase,
       children: [
 <<<<<<< HEAD
-        { name: 'AI Solutions', path: '/services/ai-solutions', icon: Brain },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
-        { name: 'Green IT', path: '/green-it', icon: Leaf },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
-=======
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
-        { name: 'Cybersecurity', path: '/security', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/services/cloud', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/transformation', icon: Zap },
-        { name: 'Green IT', path: '/green-it', icon: Leaf },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
-        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
-        { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
-      ]
-    },
-    {
-      name: 'Talent',
-      path: '/talent',
-      icon: Users,
-      children: [
-        { name: 'Browse Talents', path: '/talents', icon: Users2 },
-        { name: 'Talent Directory', path: '/talent-directory', icon: FileSearch },
-        { name: 'AI Matcher', path: '/ai-matcher', icon: Brain },
-        { name: 'Hire Now', path: '/hire-now', icon: Briefcase },
-        { name: 'Post a Job', path: '/post-job', icon: FileText }
-      ]
-    },
-    {
-      name: 'Marketplace',
-      path: '/marketplace',
-      icon: ShoppingCart,
-      children: [
-        { name: 'Equipment', path: '/equipment', icon: Wrench },
-        { name: 'Categories', path: '/categories', icon: Settings },
-        { name: 'Featured', path: '/featured', icon: Star },
-        { name: 'Deals', path: '/deals', icon: Zap }
-      ]
-    },
-    {
-      name: 'Company',
-      path: '/company',
-      icon: Building,
-      children: [
-        { name: 'About Us', path: '/about', icon: Building },
-        { name: 'Our Team', path: '/team', icon: Users2 },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Press', path: '/press', icon: FileText },
-        { name: 'Research & Development', path: '/research-development', icon: Lightbulb }
-      ]
-    },
-    {
-      name: 'Resources',
-      path: '/resources',
-      icon: FileText,
-      children: [
-        { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
-<<<<<<< HEAD
-        { name: 'Tutorials', path: '/tutorials', icon: Code },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-=======
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        { name: 'Documentation', path: '/documentation', icon: Code },
-        { name: 'API Reference', path: '/api', icon: Code },
-        { name: 'Developer Portal', path: '/developer', icon: Code }
-      ]
-    },
-    {
-      name: 'Support',
-      path: '/support',
-      icon: HelpCircle,
-      children: [
-<<<<<<< HEAD
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
-        { name: 'Live Chat', path: '/chat', icon: MessageSquare },
-=======
-        { name: 'Help Center', path: '/help', icon: HelpCircle },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        { name: 'Status', path: '/status', icon: BarChart3 },
-        { name: 'Request Quote', path: '/request-quote', icon: MessageSquare }
-      ]
-    },
-    {
-      name: 'Enterprise',
-      path: '/enterprise',
-      icon: Building,
-      children: [
-        { name: 'Enterprise Solutions', path: '/solutions', icon: Target },
-        { name: 'Custom Solutions', path: '/solutions', icon: Target },
-<<<<<<< HEAD
-        { name: 'Community', path: '/community', icon: Users2 },
-        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart }
-=======
-        { name: 'Community', path: '/community', icon: Users2 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      ]
-    },
-    {
-      name: 'Analytics',
-      path: '/analytics',
-      icon: BarChart3,
-      children: [
-        { name: 'Performance Metrics', path: '/analytics/performance', icon: Activity },
-        { name: 'User Analytics', path: '/analytics/users', icon: Users },
-        { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
-<<<<<<< HEAD
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-        { name: 'Reports', path: '/reports', icon: BarChart }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      ]
-    }
-  ];
-
-<<<<<<< HEAD
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -3629,8 +3417,5 @@ export function Sidebar() {
 }
 
 <<<<<<< HEAD
+export default Sidebar;=======
 export default Sidebar;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-export default Sidebar;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

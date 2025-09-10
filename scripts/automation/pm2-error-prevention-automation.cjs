@@ -10,12 +10,6 @@
  * Continuously monitors and fixes common project errors;
  * Runs every 5 minutes to prevent build failures;
  */;
-<<<<<<< HEAD
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-const glob = require("glob");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -732,30 +726,9 @@ class $1 {
       this.errorCount++;
 }
   }
-}
->>>>>>> origin/automation-fixes
-// Run the automation;
+}// Run the automation;
 const automation = new ErrorPreventionAutomation();
 // Handle process signals;
-<<<<<<< HEAD
-process.on("SIGINT", () => {}
-  automation.log("Received SIGINT, shutting down gracefully...");
-  process.exit(0)}
-});
-process.on("SIGTERM", () => {}
-  automation.log("Received SIGTERM, shutting down gracefully...");
-  process.exit(0)}
-});
-// Run the automation;
-automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
-  process.exit(1)}
-});
-=======
-process.on(`SIGINT`, () => {
-  automation.log(`Received SIGINT, shutting down gracefully...`)
-  process.exit(0),
-})
-
 process.on("SIGTERM", () => {
   automation.log("Received SIGTERM, shutting down gracefully...");
   process.exit(0);});
@@ -764,4 +737,3 @@ process.on("SIGTERM", () => {
 automation.run().catch(error => {automation.log(`Unhandled error: ${error.message}`, true)
   process.exit(1),
 })}}}}}}}}}}}}}}}}))))
->>>>>>> origin/automation-fixes

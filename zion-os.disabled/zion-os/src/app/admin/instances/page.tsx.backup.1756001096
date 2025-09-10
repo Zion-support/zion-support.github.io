@@ -54,14 +54,6 @@ export default async function InstancesPage() {
 
   return (
     <div className="space-y-8">
-<<<<<<< HEAD
-      <header>
-        <h1 className="text-3xl font-bold text-high-contrast">Instances</h1>
-        <p className="text-[var(--fg-secondary)] mt-2">
-          Manage and monitor your deployed Zion instances, API keys, and governance settings.
-        </p>
-      </header>
-
       <section aria-labelledby="instances-list">
         <h2 id="instances-list" className="sr-only">Instances List</h2>
         
@@ -282,8 +274,6 @@ export default async function InstancesPage() {
             Deploy First Instance
           </a>
         </div>
-      )}
->>>>>>> origin/cursor/enhance-update-item-design-and-functionality-9c4a
-    </div>
+      )}    </div>
   );
 }

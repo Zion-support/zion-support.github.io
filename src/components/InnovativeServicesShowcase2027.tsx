@@ -1,27 +1,6 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-;
-export default function Page("props": "any) {;
-      "},;
-      { "threshold": "0.1 "}
-=======
-export default function Page() {;
-},
-      { threshold: 0.1 }
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-    );
-    if(element) {  ;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-  ;
-  ;
-  "address": '364 E Main St STE 1008 Middletown DE 19709';
-  };
-=======
-
   address: '364 E Main St STE 1008 Middletown DE 19709';
-};
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-  return (";
+};  return (";
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
       {/* Animated Background Elements */}";
       <div className="absolute inset-0 overflow-hidden">";
@@ -34,17 +13,6 @@ export default function Page() {;
         {/* Header Section */}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0;
-"} : "{ "opacity": 0", "y": "3 0 "}}
-          transition={{ "duration": "0.8 "}}";
-=======
-
   { opacity: 0,
   y: 30;
 }}
@@ -53,9 +21,7 @@ export default function Page() {;
   isVisible ? { opacity: 1,
   y: 0;
 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}";
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-          className="text-center mb-16";
+          transition={{ duration: 0.8 }}";          className="text-center mb-16";
 ";
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">";
             <Star className="w-5 h-5 text-zion-cyan mr-2"   />"            <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>;
@@ -76,20 +42,6 @@ export default function Page() {;
         {/* Category Filter */}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0;
-"} : "{ "opacity": 0", "y": "2 0 "}}
-          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.2;
-"}}";
-=======
-
   { opacity: 0,
   y: 20;
 }}
@@ -102,74 +54,13 @@ export default function Page() {;
 
   { duration: 0.8,
   delay: 0.2;
-}}";
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-          className="mb-12";
+}}";          className="mb-12";
 ";
           <div className="flex flex-wrap justify-center gap-3">;
             <button';
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All'';
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'';
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-                  : 'bg-zion-slate-light/50 text-gray-300 "hover": "b g-zion-slate-light/70 "hover": tex t-white';`;
-              "}`};
-            >;
-              All Categories;
-            </button> {serviceCategories2027.map((category) => {;
-              ;
-=======
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`;
-}`};
-            >;
-              All Categories;
-            </button>;
-            {serviceCategories2027.map((category) => {;
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-              return ()                <button;
-                  key = {category}
-                  onClick={() => setSelectedCategory(category)}`;
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category';
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'';
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-                      : 'bg-zion-slate-light/50 text-gray-300 "hover": "b g-zion-slate-light/70 "hover": tex t-white'`;
-                  "}`};
-=======
-                      : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`;
-}`};
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-                >;";
-                  {Icon && <Icon className="w-4 h-4"   />} {category};
-                </button>;) }) }          </div>;
-        </motion.div>;
-        {/* Services Grid */}
-        <motion.div;
-          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-  { "opacity": "0",;
-  "y": "3 0 "}}          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.4 "}}"          className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16";
-        >;
-          {filteredServices.map((service", index) => (;
-            <motion.div;
-              key={service.id}
-              initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-              animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0;
-"} : "{ "opacity": 0", "y": "2 0 "}}
-              transition = {;
-  { "duration": "0.6",;
-  "delay": "inde x * 0.1;
-"}}";
-=======
-
   { opacity: 0,
   y: 30 }}          animate = {;
 
@@ -195,9 +86,7 @@ export default function Page() {;
 
   { duration: 0.6,
   delay: index * 0.1;
-}}";
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-              className="group relative";
+}}";              className="group relative";
 ";
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 "hover": "scal e-105 "hover": borde r-zion-cyan/40 "hover": shado w-2xl "hover": shado w-zion-cyan/25">;
                 {/* Service Header */"}";
@@ -245,40 +134,6 @@ export default function Page() {;
                     <div className="text-zion-purple font-bold text-lg">{service.roi}</div>";
                     <div className="text-gray-400 text-xs">ROI</div>;
                   </div>;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-                </div> {/* Price & CTA */}";
-=======
-                </div>;
-                {/* Price & CTA */}";
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-                <div className="flex items-center justify-between mb-4">;";
-                  <div className="text-2xl font-bold text-white">{service.price}</div>;
-                  <button;
-                    onClick={() => toggleServiceExpansion(service.id)}";
-                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": "shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
-                    {expandedService === service.id ? 'Less' : 'Learn More'"}";
-                    {expandedService === service.id ? <ChevronUp className="w-4 h-4"   /> : "<ChevronDown className="w-4 h-4"   />"}                  </button>;
-                </div>;
-                {/* Expanded Service Details */}
-                <AnimatePresence>;
-                  {expandedService === service.id && ;
-                    <motion.div;
-                      initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-  { "opacity": "0",;
-  "height": "0;
-"}}
-                      animate = {;
-  { "opacity": "1",;
-  "height": 'auto';
-}}
-                      exit = {;
-  { "opacity": "0",;
-  "height": "0;
-"}}
-                      transition={{ "duration": "0.3 "}}";
-=======
-
   { opacity: 0,
   height: 0;
 }}
@@ -292,9 +147,7 @@ export default function Page() {;
   { opacity: 0,
   height: 0;
 }}
-                      transition={{ duration: 0.3 }}";
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-                      className="overflow-hidden";
+                      transition={{ duration: 0.3 }}";                      className="overflow-hidden";
 ";
                       <div className="border-t border-zion-cyan/20 pt-4 space-y-4">;
                         {/* Features */}
@@ -347,15 +200,6 @@ export default function Page() {;
         {/* Contact Section */}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InnovativeServicesShowcase2027.tsx
-  { "opacity": "0",;
-  "y": "3 0 "}}          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.6 "}}"          className="text-center";
-=======
-
   { opacity: 0,
   y: 30 }}          animate = {;
 
@@ -363,9 +207,7 @@ export default function Page() {;
   y: 0 } : { opacity: 0, y: 30 }}          transition = {;
 
   { duration: 0.8,
-  delay: 0.6 }}"          className="text-center";
->>>>>>> origin/automation-fixes:src/components/InnovativeServicesShowcase2027.tsx
-";
+  delay: 0.6 }}"          className="text-center";";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";
             <h3 className="text-3xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;

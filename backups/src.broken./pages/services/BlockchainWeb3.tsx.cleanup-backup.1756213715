@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import { 
-  Blockchain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Users, 
-  TrendingUp,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-
 const BlockchainWeb3: React.FC = () => {
   const services = [
     {
@@ -216,11 +202,6 @@ const BlockchainWeb3: React.FC = () => {
 
 export default BlockchainWeb3;
 =======
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import Link from 'next/link';
-import { Check, Link as LinkIcon, Shield, Zap, Globe, Target, Activity, Smartphone, Server, Cloud, Database, Users } from 'lucide-react';
-
 export default function BlockchainWeb3Services() {
   const blockchainServices = [
     {
@@ -381,9 +362,7 @@ export default function BlockchainWeb3Services() {
     'Global accessibility and inclusion',
     'Innovative business models'
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { Link } from 'react-router-dom';
+=======import { Link } from 'react-router-dom';
 import { Link as LinkIcon, Shield, Zap, Users, Globe, Cpu, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
 
 const BlockchainWeb3: React.FC = () => {
@@ -457,12 +436,6 @@ const BlockchainWeb3: React.FC = () => {
       description: "Fast consensus protocol",
       icon: "AVAX"
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  ];
-
   const useCases = [
     {
 <<<<<<< HEAD
@@ -570,9 +543,7 @@ const BlockchainWeb3: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      title: "Financial Services",
+=======      title: "Financial Services",
       description: "DeFi protocols, payment systems, and asset tokenization",
       icon: TrendingUp
     },
@@ -677,33 +648,6 @@ const BlockchainWeb3: React.FC = () => {
                     <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
 <<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="space-y-2">
-                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="text-sm text-gray-600">
-                      <span className="font-medium">✓</span> {benefit}
-                    </div>
-                  ))}
-                </div>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-50">
@@ -765,9 +709,7 @@ const BlockchainWeb3: React.FC = () => {
                   </div>
                 </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      {/* Web3 Technologies */}
+=======      {/* Web3 Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -821,16 +763,6 @@ const BlockchainWeb3: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -879,9 +811,7 @@ const BlockchainWeb3: React.FC = () => {
                 Schedule Assessment
               </Link>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+=======      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -915,15 +845,6 @@ const BlockchainWeb3: React.FC = () => {
                   <p>• Token economics</p>
                 </div>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            </div>
-          </div>
-        </div>
-      </section>
-
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Industries Section */}
@@ -1043,9 +964,7 @@ const BlockchainWeb3: React.FC = () => {
                 </p>
               </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      {/* Development Process */}
+=======      {/* Development Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1084,15 +1003,6 @@ const BlockchainWeb3: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>
               <p className="text-gray-300">Testing, auditing, and mainnet deployment</p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1117,9 +1027,7 @@ const BlockchainWeb3: React.FC = () => {
               Explore All Services
             </Link>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+=======      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Build on the Blockchain?
@@ -1141,26 +1049,8 @@ const BlockchainWeb3: React.FC = () => {
             >
               View Solutions
             </a>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
+export default BlockchainWeb3;>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 };
 
 export default BlockchainWeb3;
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-};
-
-export default BlockchainWeb3;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

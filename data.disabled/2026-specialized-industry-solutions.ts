@@ -518,7 +518,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     customers: 28,
     rating: 4.7,
     reviews: 58
->>>>>>> origin/cursor/expand-services-and-deploy-updates-619a
   }
 ];
 

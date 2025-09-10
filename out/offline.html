@@ -5,206 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
+            margin: 0;
+            padding: 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
         }
-        
         .container {
+            text-align: center;
             max-width: 600px;
             padding: 2rem;
         }
-        
-        .icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .logo {
             font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
-        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
         }
-        
         p {
             font-size: 1.2rem;
+            color: #94a3b8;
             margin-bottom: 2rem;
-            opacity: 0.9;
             line-height: 1.6;
         }
-        
-        .status {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            font-family: monospace;
-        }
-        
         .retry-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(45deg, #06b6d4, #8b5cf6);
             color: white;
+            border: none;
             padding: 1rem 2rem;
-            border-radius: 8px;
             font-size: 1.1rem;
+            border-radius: 0.5rem;
             cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            transition: transform 0.2s;
         }
-        
         .retry-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
         }
-        
         .features {
             margin-top: 3rem;
-            text-align: left;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
-        
-        .features h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+        .feature {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
         }
-        
-        .features ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .features li:before {
-            content: "✓";
-            color: #4ade80;
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            p {
-                font-size: 1rem;
-            }
-            
-            .icon {
-                width: 80px;
-                height: 80px;
-                font-size: 2rem;
-            }
+        .feature h3 {
+            color: #06b6d4;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="icon">📡</div>
+        <div class="logo">Zion Tech Group</div>
         <h1>You're Offline</h1>
-        <p>It looks like you've lost your internet connection. Don't worry, some features are still available offline!</p>
+        <p>It looks like you've lost your internet connection. Don't worry, some features are still available offline.</p>
         
-        <div class="status">
-            <div>Status: <span id="status">Checking connection...</span></div>
-            <div>Last online: <span id="lastOnline">Unknown</span></div>
-        </div>
-        
-        <a href="/" class="retry-btn" onclick="retryConnection()">Try Again</a>
+        <button class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </button>
         
         <div class="features">
-            <h3>Available Offline:</h3>
-            <ul>
-                <li>View previously loaded pages</li>
-                <li>Access cached content</li>
-                <li>Use basic app functionality</li>
-                <li>View your saved data</li>
-            </ul>
+            <div class="feature">
+                <h3>AI Solutions</h3>
+                <p>Explore our AI development services</p>
+            </div>
+            <div class="feature">
+                <h3>Cybersecurity</h3>
+                <p>Protect your business with our security solutions</p>
+            </div>
+            <div class="feature">
+                <h3>Cloud Computing</h3>
+                <p>Scale your infrastructure with our cloud services</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        // Check connection status
-        function updateStatus() {
-            const statusEl = document.getElementById('status');
-            const lastOnlineEl = document.getElementById('lastOnline');
-            
-            if (navigator.onLine) {
-                statusEl.textContent = 'Connected';
-                statusEl.style.color = '#4ade80';
-                // Redirect to main app when online
-                setTimeout(() => {
-                    window.location.href = '/';
-                }, 1000);
-            } else {
-                statusEl.textContent = 'Offline';
-                statusEl.style.color = '#f87171';
-            }
-            
-            // Show last online time
-            const lastOnline = localStorage.getItem('lastOnline');
-            if (lastOnline) {
-                lastOnlineEl.textContent = new Date(parseInt(lastOnline)).toLocaleString();
-            }
-        }
-        
-        // Retry connection
-        function retryConnection() {
-            if (navigator.onLine) {
-                window.location.href = '/';
-            } else {
-                // Try to reload the page
-                window.location.reload();
-            }
-        }
-        
-        // Listen for online/offline events
-        window.addEventListener('online', () => {
-            updateStatus();
-        });
-        
-        window.addEventListener('offline', () => {
-            updateStatus();
-        });
-        
-        // Update last online time when connection is restored
-        window.addEventListener('online', () => {
-            localStorage.setItem('lastOnline', Date.now().toString());
-        });
-        
-        // Initial status check
-        updateStatus();
-        
-        // Check connection every 5 seconds
-        setInterval(updateStatus, 5000);
-    </script>
 </body>
 </html>
