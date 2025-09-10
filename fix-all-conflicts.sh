@@ -2,17 +2,14 @@
 
 echo "Fixing all remaining merge conflicts..."
 
-# Find all files with merge conflicts and fix them
-find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
-  if [ -f "$file" ] && grep -q "
-    echo "Fixing conflicts in: $file"
-
-
-    sed -i '/^
-    # Remove any remaining  markers
-    sed -i '/^$/d' "$file"
-    echo "Fixed: $file"
-  fi
+# Find all files with merge conflict markers
+files_with_conflicts=$(grep -r "/d' "$file"
+    
+    # Check if file is empty or has only whitespace
+    if [ ! -s "$file" ] || [ -z "$(cat "$file" | tr -d '[:space:]')" ]; then
+        echo "File $file is empty, adding placeholder content..."
+        echo "// Placeholder content - file was empty after conflict resolution" > "$file"
+    fi
 done
 
 echo "All merge conflicts fixed!"

@@ -1,50 +1,50 @@
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path');
 
-function fixExtraBraces(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Remove extra closing parentheses and braces at the end
-    // Pattern: } followed by ); followed by }
-    content = content.replace(/\s*\);\s*}\s*$/g, '');
-    // Remove any stray commit hashes
-    content = content.replace(/[a-f0-9]{40}/g, '');
-    // Remove any remaining merge conflict markers
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    // Clean up any extra whitespace at the end
-    content = content.trim() + '\n';
-    const originalContent = fs.readFileSync(filePath, 'utf8');
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
-    }
-    return modified;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
+console.log('🔧 Fixing extra braces...');
 
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir);
+function fixExtraBraces() {
+  // Find all TypeScript/JavaScript files
+  const files = execSync('find . -name "*.tsx" -o -name "*.ts" | grep -v node_modules', { encoding: 'utf8' })
+    .split('\n')
+    .filter(f => f.trim());
+  
   let fixedCount = 0;
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      fixedCount += findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx')) {
-      if (fixExtraBraces(filePath)) {
-        console.log(`Fixed extra braces in: ${filePath}`);
+  
+  for (const file of files) {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      let originalContent = content;
+      
+      // Fix extra }); at the end of files
+      if (content.trim().endsWith('});')) {
+        content = content.replace(/\s*}\);$/, '');
+      }
+      
+      // Fix extra }); after export default
+      content = content.replace(/export default \w+;\s*}\);$/gm, 'export default $1;');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content);
+        console.log(`✅ Fixed ${file}`);
         fixedCount++;
       }
+    } catch (error) {
+      console.log(`❌ Error fixing ${file}: ${error.message}`);
     }
-  });
+  }
+  
+  console.log(`\n📊 Fixed ${fixedCount} files`);
   return fixedCount;
 }
 
-console.log('Starting extra braces cleanup...');
-const fixedCount = findAndFixFiles('./app');
-console.log(`Fixed extra braces in ${fixedCount} files.`);
+// Run the fixer
+const fixedCount = fixExtraBraces();
+
+if (fixedCount > 0) {
+  console.log('\n🎉 Extra braces fixed successfully!');
+} else {
+  console.log('\n✅ No extra braces found - all clean!');
+}

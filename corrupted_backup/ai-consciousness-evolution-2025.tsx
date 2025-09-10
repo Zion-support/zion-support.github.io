@@ -1,58 +1,7 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
-export default function AIConsciousnessEvolution2025() {
-	return (
-		<ServiceLanding
-			title="AI Consciousness Evolution 2025"
-			slug="ai-consciousness-evolution-2025"
-			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
-			subtitle="From narrow tasks to contextual understanding with emotional intelligence."
-			pricePerMonthUSD={4999}
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Strategic R&D with demonstrable prototypes and IP"
-			features={[
-				"Affective signals and sentiment grounding",
-				"Self-reflection loops and memory consolidation",
-				"Safety layers for alignment and guardrails",
-				"Evaluation harness for subjective tasks",
-				"Multi-modal context fusion (text, voice, UI)",
-				"Partnered research roadmap and governance"
-			]}
-			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025";
-		/>;
-	);
-}
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-export default function AIConsciousnessEvolution2025() {
-  return (
-    <ServiceLanding
-      title='AI Consciousness Evolution 2025'
-      slug='ai-consciousness-evolution-2025'
-      description='Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent.'
-      subtitle='From narrow tasks to contextual understanding with emotional intelligence.'
-      pricePerMonthUSD={4999}
-      implementationWeeks='Implementation: 6–12 weeks'
-      roiNote='Strategic R&D with demonstrable prototypes and IP'
-      features={[
-        'Affective signals and sentiment grounding',
-        'Self-reflection loops and memory consolidation',
-        'Safety layers for alignment and guardrails',
-        'Evaluation harness for subjective tasks',
-        'Multi-modal context fusion (text, voice, UI)',
-        'Partnered research roadmap and governance',
-      ]}
-      industries={['R&D', 'Healthcare', 'Education', 'Assistive Tech']}
-      canonical='https://ziontechgroup.com/ai-consciousness-evolution-2025'
-    />
-  );
-}
 const AIConsciousnessEvolution2025: React.FC = () => {
   return (
     <Layout>
@@ -129,3 +78,5 @@ const AIConsciousnessEvolution2025: React.FC = () => {
 };
 
 export default AIConsciousnessEvolution2025;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-consciousness-evolution-2025.tsx
