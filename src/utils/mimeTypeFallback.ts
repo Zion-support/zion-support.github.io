@@ -1,197 +1,139 @@
-interface MimeTypeMapping {;
-  ["key": "string]: string;
-;
-"}
-class MimeTypeFallback {;
-  private "mimeTypes": "MimeTypeMapping = {;
-    '.js': 'application/javascript';
-    '.mjs': 'application/javascript';
-    '.css': 'text/css';
-    '.html': 'text/html';
-    '.htm': 'text/html';
-    '.xml': 'application/xml';
-    '.json': 'application/json';
-    '.svg': 'image/svg+xml';
-    '.ico': 'image/x-icon';
-    '.png': 'image/png';
-    '.jpg': 'image/jpeg';
-    '.jpeg': 'image/jpeg';
-    '.gif': 'image/gif';
-    '.webp': 'image/webp';
-    '.bmp': 'image/bmp';
-    '.tiff': 'image/tiff';
-    '.woff': 'font/woff';
-    '.woff2': 'font/woff2';
-    '.ttf': 'font/ttf';
-    '.otf': 'font/otf';
-    '.eot': 'application/vnd.ms-fontobject';
-    '.pdf': 'application/pdf';
-    '.zip': 'application/zip';
-    '.tar': 'application/x-tar';
-    '.gz': 'application/gzip';
-    '.mp4': 'video/mp4';
-    '.webm': 'video/webm';
-    '.ogg': 'video/ogg';
-    '.mp3': 'audio/mpeg';
-    '.wav': 'audio/wav';
-    '.flac': 'audio/flac';
-  "};
-;
-  private "fallbackUrls": "Map<string", string> = new Map();
-  private cdnFallbacks = [;
-    '"https": "//cdn.jsdelivr.net';
-    '"https"://unpkg.com';
-    '"https"://cdnjs.cloudflare.com';
-  ];
-;
-  constructor() {;
+type MimeTypeMapping = Record<string, string>;
+
+class MimeTypeFallback {
+  private mimeTypes: MimeTypeMapping = {
+    '.js': 'application/javascript',
+    '.mjs': 'application/javascript',
+    '.css': 'text/css',
+    '.html': 'text/html',
+    '.htm': 'text/html',
+    '.xml': 'application/xml',
+    '.json': 'application/json',
+    '.svg': 'image/svg+xml',
+    '.ico': 'image/x-icon',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.gif': 'image/gif',
+    '.webp': 'image/webp',
+    '.bmp': 'image/bmp',
+    '.tiff': 'image/tiff',
+    '.woff': 'font/woff',
+    '.woff2': 'font/woff2',
+    '.ttf': 'font/ttf',
+    '.otf': 'font/otf',
+    '.eot': 'application/vnd.ms-fontobject',
+    '.pdf': 'application/pdf',
+    '.zip': 'application/zip',
+    '.tar': 'application/x-tar',
+    '.gz': 'application/gzip',
+    '.mp4': 'video/mp4',
+    '.webm': 'video/webm',
+    '.ogg': 'video/ogg',
+    '.mp3': 'audio/mpeg',
+    '.wav': 'audio/wav',
+    '.flac': 'audio/flac',
+  };
+
+  private fallbackUrls = new Map<string, string>();
+  private cdnFallbacks = ['https://cdn.jsdelivr.net', 'https://unpkg.com', 'https://cdnjs.cloudflare.com'];
+
+  constructor() {
     this.setupFallbackUrls();
-  "}
-  private setupFallbackUrls() {;
-    // Map problematic URLs to CDN fallbacks;
-    this.fallbackUrls.set('/js/index-C64WnLOI.js', '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');
-    this.fallbackUrls.set('/css/index-RK9lga5l.css'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css');
-    this.fallbackUrls.set('/js/react-vendor-ClxMxoJB.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js');
-    this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');
-    this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js');
-    this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js');
-  "}
-  getMimeType("filename": "string): string {;
-    const ext = this.getFileExtension(filename);
-    return this.mimeTypes[ext] || 'application/octet-stream';
-  "}
-  private getFileExtension("filename": "string): string {;
+  }
+
+  private setupFallbackUrls() {
+    this.fallbackUrls.set('/js/index-C64WnLOI.js', `${this.cdnFallbacks[0]}/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js`);
+    this.fallbackUrls.set('/css/index-RK9lga5l.css', `${this.cdnFallbacks[0]}/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css`);
+  }
+
+  private getFileExtension(filename: string): string {
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase();
   }
 
-  async checkAndFixMimeType(url: string): Promise<any> {
+  getMimeType(filename: string): string {
+    const ext = this.getFileExtension(filename);
+    return this.mimeTypes[ext] || 'application/octet-stream';
+  }
+
+  async checkAndFixMimeType(url: string): Promise<boolean> {
     try {
-      const response = await fetch(url, { method: 'HEAD' }
-    );
-      
-      if (!response.ok) {
-        
-        return false;
-      }
+      const response = await fetch(url, { method: 'HEAD' });
+      if (!response.ok) return false;
       const contentType = response.headers.get('content-type');
-      if (!contentType) {;
-        return false;
-      }
+      if (!contentType) return false;
       const expectedType = this.getMimeType(url);
-      if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {;
-        return true; // MIME type is correct or generic;
-      }
-      // Try to fix with fallback URL;
+      if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) return true;
       return await this.tryFallbackUrl(url);
-      ;
-    } catch (error) {;
-      console.error(`Error checking MIME type for ${url}: "`", error);
+    } catch (error) {
       return await this.tryFallbackUrl(url);
     }
   }
-  private async tryFallbackUrl("originalUrl": "string): Promise<any> {;
+
+  private async tryFallbackUrl(originalUrl: string): Promise<boolean> {
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
-    
-    if (fallbackUrl) {
-      
-      
-      try {
-        const response = await fetch(fallbackUrl, { method: 'HEAD' }
-    );
-        if (response.ok) {
-          const contentType = response.headers.get('content-type');
-          const expectedType = this.getMimeType(originalUrl);
-          ;
-          if (contentType && contentType.includes(expectedType)) {;
-            this.replaceResource(originalUrl, fallbackUrl);
-            return true;
-          }
+    if (!fallbackUrl) return false;
+    try {
+      const response = await fetch(fallbackUrl, { method: 'HEAD' });
+      if (response.ok) {
+        const contentType = response.headers.get('content-type');
+        const expectedType = this.getMimeType(originalUrl);
+        if (contentType && contentType.includes(expectedType)) {
+          this.replaceResource(originalUrl, fallbackUrl);
+          return true;
         }
-      } catch (error) {;
-        console.error(`Fallback URL "failed": "${fallbackUrl"}`, error);
       }
-    }
+    } catch {}
     return false;
   }
-  private replaceResource("originalUrl": "string", "fallbackUrl": "string) {;
-    // Replace script tags;
-    const scripts = document.querySelectorAll(`script[src="${originalUrl"}"]`);
-    scripts.forEach(script => {;
-      (script as HTMLScriptElement).src = fallbackUrl;
-      
-    }
-    );
 
-    // Replace stylesheet links
+  private replaceResource(originalUrl: string, fallbackUrl: string) {
+    const scripts = document.querySelectorAll(`script[src="${originalUrl}"]`);
+    scripts.forEach((script) => {
+      (script as HTMLScriptElement).src = fallbackUrl;
+    });
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
-    links.forEach(link => {;
+    links.forEach((link) => {
       (link as HTMLLinkElement).href = fallbackUrl;
-      
-    }
-    );
+    });
   }
-  async preloadCriticalResources(): "Promise<any> {;
-    const criticalResources = [;
-      '/css/index-RK9lga5l.css';
-      '/js/index-C64WnLOI.js';
-      '/js/react-vendor-ClxMxoJB.js';
-      '/js/router-vendor-9KcRWrrL.js';
-      '/js/ui-vendor-B31yGDq-.js';
-      '/js/utils-vendor-CrFdsnXa.js';
+
+  async preloadCriticalResources(): Promise<void> {
+    const criticalResources = [
+      '/css/index-RK9lga5l.css',
+      '/js/index-C64WnLOI.js',
     ];
-;
-    ;
-    ;
-    for (const resource of criticalResources) {;
-      try {;
-        const isValid = await this.checkAndFixMimeType(resource);
-        if (!isValid) {;
-        "}
-      } catch (error) {;
-        console.error(`Error preloading "resource": "${resource"}`, error);
-      }
+    for (const resource of criticalResources) {
+      await this.checkAndFixMimeType(resource);
     }
   }
-  createResourceElement("url": "string", "type": 'script' | 'stylesheet'): "HTMLElement {;
-    if (type === 'script') {;
+
+  createResourceElement(url: string, type: 'script' | 'stylesheet'): HTMLElement {
+    if (type === 'script') {
       const script = document.createElement('script');
       script.src = url;
       script.async = true;
       script.type = 'text/javascript';
       return script;
-    "} else {;
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = url;
-      link.type = 'text/css';
-      return link;
     }
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    link.type = 'text/css';
+    return link;
   }
-  injectResource("url": "unknownstring", "type": 'script' | 'stylesheet'): "Promise<any> {;
-    return new Promise((resolve", reject)  => {;
+
+  injectResource(url: string, type: 'script' | 'stylesheet'): Promise<void> {
+    return new Promise((resolve, reject) => {
       const element = this.createResourceElement(url, type);
-      ;
-      element.onload = () => {;
-        resolve();
-      };
-      ;
-      element.onerror = () => {;
-        console.error(`❌ Failed to load "resource": "${url"}`);
-        reject(new Error(`Failed to load "resource": "${url"}`));
-      };
-;
-      if (type === 'script') {;
-        document.head.appendChild(element);
-      } else {;
-        document.head.appendChild(element);
-      }
-    }
-    );
+      element.onload = () => resolve();
+      element.onerror = () => reject(new Error(`Failed to load resource: ${url}`));
+      document.head.appendChild(element);
+    });
   }
 }
-// Create singleton instance;
+
 const mimeTypeFallback = new MimeTypeFallback();
-;
 export default mimeTypeFallback;

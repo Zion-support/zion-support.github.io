@@ -1,186 +1,87 @@
-export const safeStorage = {;
-export default safeStorage;
-// In - memory storage for fallback with optimizationsconst inMemoryStore = {};
-let localStorageAvailable = null; // Cache the availability check;
-let lastAvailabilityCheck = 0;
-const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
+export type SafeStorage = {
+  getItem: (key: string) => string | null;
+  setItem: (key: string, value: string) => boolean;
+  removeItem: (key: string) => boolean;
+  clear: () => boolean;
+  key: (index: number) => string | null;
+  readonly length: number;
+};
 
-function isLocalStorageAvailable("props": "any) {;
-  const now = Date.now();
-  // Use cached result if checked recently;
-  if();
-    localStorageAvailable !== null &&;
-    now-lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL;
-  ) {;
-<<<<<<< HEAD:src_backup_temp/utils/safeStorage.tsx
-    return localStorageAvailable;
-  "}
-=======
-
-    return localStorageAvailable;
-}
-
->>>>>>> origin/automation-fixes:src/utils/safeStorage.tsx
-  lastAvailabilityCheck = now;
-  try {;
-    if(typeof window === 'undefined') {;
-      localStorageAvailable = false;
-      return false;
-<<<<<<< HEAD:src_backup_temp/utils/safeStorage.tsx
-    }
-=======
-}
-
->>>>>>> origin/automation-fixes:src/utils/safeStorage.tsx
+function isLocalStorageAvailable(): boolean {
+  try {
+    if (typeof window === 'undefined') return false;
     const testKey = '__localStorage_test__';
-    localStorage.setItem(testKey,test');
-    localStorage.removeItem(testKey);
-    localStorageAvailable = true;
+    window.localStorage.setItem(testKey, 'test');
+    window.localStorage.removeItem(testKey);
     return true;
-<<<<<<< HEAD:src_backup_temp/utils/safeStorage.tsx
-  } catch {;
-    localStorageAvailable = false;
+  } catch {
     return false;
   }
 }
-function safeConsoleError("props": "any) {;
-=======
-} catch {;
 
-    localStorageAvailable = false;
-    return false;
-}
-}
+const memoryStore = new Map<string, string>();
 
-function safeConsoleError(message, error) {;
-
->>>>>>> origin/automation-fixes:src/utils/safeStorage.tsx
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-  // Prevent infinite recursion in console logging';
-  if(env === 'production') return;
-  try {;
-<<<<<<< HEAD:src_backup_temp/utils/safeStorage.tsx
-    // console.error(message", error);
-  } catch {;
-    // Silent fail if console.error causes recursion;
-  }}
-=======
-    // console.error(message, error);
-} catch {;
-
-    // Silent fail if console.error causes recursion;
-}}
-
->>>>>>> origin/automation-fixes:src/utils/safeStorage.tsx
-export const safeStorage = {;
-  "getItem": "ke y => {;
-    try {;
-      return localStorage.getItem(key);
-<<<<<<< HEAD:src_backup_temp/utils/safeStorage.tsx
-    "} catch(error) {;
-      // ;
+export const safeStorage: SafeStorage = {
+  getItem: (key) => {
+    try {
+      if (isLocalStorageAvailable()) return window.localStorage.getItem(key);
+      return memoryStore.get(key) ?? null;
+    } catch {
       return null;
     }
-  }
-  "setItem": "(key", value) => {;
-    try {;
-      localStorage.setItem(key, value);
+  },
+  setItem: (key, value) => {
+    try {
+      if (isLocalStorageAvailable()) {
+        window.localStorage.setItem(key, value);
+      } else {
+        memoryStore.set(key, value);
+      }
       return true;
-    } catch(error) {;
-      // ;
+    } catch {
       return false;
     }
-  }
-  "removeItem": "ke y => {;
-    try {;
-      localStorage.removeItem(key);
+  },
+  removeItem: (key) => {
+    try {
+      if (isLocalStorageAvailable()) {
+        window.localStorage.removeItem(key);
+      } else {
+        memoryStore.delete(key);
+      }
       return true;
-    "} catch(error) {;
-      // ;
+    } catch {
       return false;
     }
-  }
-  "clear": "() => {;
-    try {;
-      localStorage.clear();
+  },
+  clear: () => {
+    try {
+      if (isLocalStorageAvailable()) {
+        window.localStorage.clear();
+      } else {
+        memoryStore.clear();
+      }
       return true;
-    "} catch(error) {;
-      // ;
+    } catch {
       return false;
     }
-  }
-  "key": "inde x => {;
-    try {;
-      return localStorage.key(index);
-    "} catch(error) {;
-      // ;
-      return null;    }
-  }
-  get length() {;
-    try {;
-      return localStorage.length;
-    } catch(error) {;
-      // ;
-=======
-} catch(error) {;
-
-      // console.warn('Failed to get item from localStorage:', error);
+  },
+  key: (index) => {
+    try {
+      if (isLocalStorageAvailable()) return window.localStorage.key(index);
+      return Array.from(memoryStore.keys())[index] ?? null;
+    } catch {
       return null;
-}
+    }
   },
-
-  setItem: (key, value) => {;
-
-    try {;
-      localStorage.setItem(key, value);
-      return true;
-} catch(error) {;
-
-      // console.warn('Failed to set item in localStorage:', error);
-      return false;
-}
+  get length() {
+    try {
+      if (isLocalStorageAvailable()) return window.localStorage.length;
+      return memoryStore.size;
+    } catch {
+      return 0;
+    }
   },
+};
 
-  removeItem: key => {;
-
-    try {;
-      localStorage.removeItem(key);
-      return true;
-} catch(error) {;
-
-      // console.warn('Failed to remove item from localStorage:', error);
-      return false;
-}
-  },
-
-  clear: () => {;
-    try {;
-      localStorage.clear();
-      return true;
-} catch(error) {;
-
-      // console.warn('Failed to clear localStorage:', error);
-      return false;
-}
-  },
-
-  key: index => {;
-
-    try {;
-      return localStorage.key(index);
-} catch(error) {;
-
-      // console.warn('Failed to get key from localStorage:', error);
-      return null;    }
-  },
-
-  get length() {;
-    try {;
-      return localStorage.length;
-} catch(error) {;
-
-      // console.warn('Failed to get localStorage length:', error);
->>>>>>> origin/automation-fixes:src/utils/safeStorage.tsx
-      return 0;    }
-  }};
 export default safeStorage;
