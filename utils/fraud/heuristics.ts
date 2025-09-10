@@ -1,45 +1,52 @@
-export interface FraudCheckResult {
-  isFraud: boolean;
-  confidence: number;
-  reasons: string[];
+export interface FraudEvent {
+  id: string;
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  timestamp: string;
 }
 
-export function checkFraudHeuristics(data: any): FraudCheckResult {
-  const reasons: string[] = [];
-  let confidence = 0;
+export interface HeuristicEvaluation {
+  score: number;
+  flags: string[];
+  recommendation: 'pass' | 'review' | 'block';
+}
+
+export interface MonitoredSource {
+  type: 'email' | 'message' | 'profile' | 'review';
+  id: string;
+}
+
+export function evaluateHeuristics(text: string, source: MonitoredSource): HeuristicEvaluation {
+  const flags: string[] = [];
+  let score = 0;
 
   // Check for suspicious patterns
-  if (data.email && data.email.includes('+')) {
-    reasons.push('Email contains suspicious characters');
-    confidence += 0.3;
+  if (text.includes('urgent') || text.includes('immediately')) {
+    flags.push('urgency_language');
+    score += 20;
   }
 
-  if (data.phone && data.phone.length < 10) {
-    reasons.push('Phone number too short');
-    confidence += 0.2;
+  if (text.includes('click here') || text.includes('verify now')) {
+    flags.push('action_required');
+    score += 30;
   }
 
-  if (data.name && data.name.length < 2) {
-    reasons.push('Name too short');
-    confidence += 0.4;
+  if (text.includes('$') && text.includes('free')) {
+    flags.push('money_offers');
+    score += 25;
   }
 
-  if (data.ip && data.ip.startsWith('192.168.')) {
-    reasons.push('Internal IP address');
-    confidence += 0.1;
+  let recommendation: 'pass' | 'review' | 'block' = 'pass';
+  if (score >= 50) {
+    recommendation = 'block';
+  } else if (score >= 25) {
+    recommendation = 'review';
   }
 
-  // Check for duplicate submissions
-  if (data.submissionCount && data.submissionCount > 5) {
-    reasons.push('Multiple submissions detected');
-    confidence += 0.5;
-  }
-
-  const isFraud = confidence > 0.5;
-  
   return {
-    isFraud,
-    confidence: Math.min(confidence, 1),
-    reasons
+    score,
+    flags,
+    recommendation
   };
 }
