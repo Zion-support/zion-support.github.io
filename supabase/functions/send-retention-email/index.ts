@@ -22,7 +22,7 @@ interface EmailData {
   display_name: string;
   user_type: string;
   days_inactive?: number;
-  onboarding_status?: any;
+  onboarding_status?: unknown;
   job_id?: string;
   job_title?: string;
 }
@@ -114,7 +114,7 @@ serve(async (req) => {
       }
     );
   } catch (error) {
-    console.error("Error in send-retention-email function:", error);
+    // console.error("Error in send-retention-email function:", error);
 
     return new Response(
       JSON.stringify({
@@ -132,7 +132,7 @@ serve(async (req) => {
   }
 });
 
-async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string; html: string }> {
+async function generateEmail(emailData: EmailData, userData: unknown): Promise<{ subject: string; html: string }> {
   const { email_type, display_name, user_type } = emailData;
   const firstName = display_name?.split(" ")[0] || "there";
 

@@ -4,37 +4,29 @@ This guide provides detailed instructions for setting up environment variables f
 
 ## Quick Setup
 
-Create a `.env.local` file in the project root with the following configuration for **local development**. All production variables are configured in Netlify's UI.
+Create a `.env.local` file in the project root with the following configuration:
 
 ```bash
-# =============================================================================
-# AUTH0 AUTHENTICATION (Primary Authentication System)
-# =============================================================================
-AUTH0_SECRET=your-auth0-secret-key-here
+# # AUTH0 AUTHENTICATION (Primary Authentication System)
+# AUTH0_SECRET=your-auth0-secret-key-here
 AUTH0_BASE_URL=http://localhost:3000
 AUTH0_ISSUER_BASE_URL=https://your-auth0-domain.auth0.com
 AUTH0_CLIENT_ID=your-auth0-client-id
 AUTH0_CLIENT_SECRET=your-auth0-client-secret
 
-# =============================================================================
-# DATABASE CONFIGURATION
-# =============================================================================
-DATABASE_URL=postgresql://username:password@localhost:5432/zion_db
+# # DATABASE CONFIGURATION
+# DATABASE_URL=postgresql://username:password@localhost:5432/zion_db
 MONGODB_URI=mongodb://localhost:27017/zion
 
-# =============================================================================
-# PAYMENT PROCESSING (STRIPE)
-# =============================================================================
-STRIPE_PUBLISHABLE_KEY=pk_test_your-stripe-publishable-key
+# # PAYMENT PROCESSING (STRIPE)
+# STRIPE_PUBLISHABLE_KEY=pk_test_your-stripe-publishable-key
 STRIPE_SECRET_KEY=sk_test_your-stripe-secret-key
 STRIPE_WEBHOOK_SECRET=whsec_your-webhook-secret
 STRIPE_TEST_MODE=true
 NEXT_PUBLIC_STRIPE_TEST_MODE=true
 
-# =============================================================================
-# ESSENTIAL SERVICES
-# =============================================================================
-SENDGRID_API_KEY=your-sendgrid-api-key
+# # ESSENTIAL SERVICES
+# SENDGRID_API_KEY=your-sendgrid-api-key
 SENDGRID_FROM_EMAIL=noreply@yourdomain.com
 OPENAI_API_KEY=your-openai-api-key
 NEXT_PUBLIC_SENTRY_DSN=https://your-sentry-dsn@sentry.io/project-id
@@ -91,7 +83,7 @@ npm run dev  # runs env:dev automatically
 
 ## Security Notes
 
-- Never commit `.env.local` to version control. Production secrets are stored in Netlify and should not appear in the repository.
+- Never commit `.env.local` to version control
 - Use different secrets for each environment
 - Rotate secrets regularly
 - Use strong, unique values for AUTH0_SECRET and JWT_SECRET 

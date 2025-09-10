@@ -92,8 +92,8 @@ serve(async (req) => {
     try {
       generatedContent = JSON.parse(generatedContentText);
     } catch (e) {
-      console.error("Failed to parse GPT response as JSON:", e);
-      console.log("Raw response:", generatedContentText);
+      // console.error("Failed to parse GPT response as JSON:", e);
+      // console.log("Raw response:", generatedContentText);
       // Try to extract JSON using regex as fallback
       const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
@@ -112,7 +112,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error in personalize-email function:", error);
+    // console.error("Error in personalize-email function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },

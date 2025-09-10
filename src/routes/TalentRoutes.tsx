@@ -1,8 +1,18 @@
-// Routes have been converted to Next.js pages structure
-// This component is no longer needed since Next.js uses file-based routing
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { ProtectedRoute } from '../components/ProtectedRoute';
+import TalentDirectory from '../pages/TalentDirectory';
+import TalentsPage from '../pages/TalentsPage';
+import TalentProfilePage from '../pages/TalentProfilePage';
+import SavedTalentsPage from '../pages/SavedTalentsPage';
+import CreateTalentProfile from '../pages/CreateTalentProfile';
+import ProfilePage from '../pages/ProfilePage';
 
-const TalentRoutes = () => {
-  return null;
-};
-
-export default TalentRoutes;
+export default function TalentRoutes() {
+  return (
+    <>
+      <Route path="directory" element={<TalentDirectory />} />
+      <Route path="list" element={<TalentsPage />} />
+    </>
+  );
+}
