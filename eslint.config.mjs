@@ -3,7 +3,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 
-module.exports = [
+export default [
   {
     ignores: [
       'node_modules/**',
@@ -95,17 +95,15 @@ module.exports = [
       }
     },
     plugins: {
-      '@typescript-eslint': tsPlugin,
+      '@typescript-eslint': tseslint.plugin,
       react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint.plugin
+      'react-hooks': reactHooks
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...tsPlugin.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...tseslint.configs.recommendedTypeChecked?.rules,
+      ...(tseslint.configs.recommendedTypeChecked?.rules ?? {}),
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
