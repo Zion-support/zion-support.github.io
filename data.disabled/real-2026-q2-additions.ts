@@ -352,7 +352,7 @@ export const real2026Q2Additions = [
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
-    price: '$4',
+    price: '$4',;
 ;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
@@ -451,7 +451,7 @@ export const real2026Q2Additions = [
   {
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
-    category: 'Developer Tools',
+    category: 'Developer Tools',;
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',;
     description:;
       'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
@@ -1013,7 +1013,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
   },
-
+;
 ;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
