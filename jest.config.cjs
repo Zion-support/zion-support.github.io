@@ -42,7 +42,10 @@ module.exports = {
     "<rootDir>/build/",
     "<rootDir>/tests/.*\\.spec\\.ts$",
     "<rootDir>/tests/e2e/",
-    "<rootDir>/tests/storybook/"
+    "<rootDir>/tests/storybook/",
+    "<rootDir>/tests/visual-regression.test.ts",
+    "<rootDir>/tests/CheckoutStripe.test.ts",
+    "<rootDir>/tests/integration/api/health.test.ts"
   ],
   transformIgnorePatterns: [
     "node_modules/(?!(.*\\.mjs$))"

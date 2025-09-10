@@ -1,13 +1,9 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import CaseStudies from &apos;./CaseStudies;
-describe(&apos;CaseStudies&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<CaseStudies / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { render, screen } from '@testing-library/react'
+import CaseStudies from './CaseStudies'
+
+describe('CaseStudies', () => {
+  it('renders', () => {
+    render(<CaseStudies />)
+    expect(screen.getByText(/./)).toBeTruthy()
+  })
+})

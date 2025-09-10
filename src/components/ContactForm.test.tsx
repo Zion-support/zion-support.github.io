@@ -1,13 +1,10 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import ContactForm from &apos;./ContactForm;
-describe(&apos;ContactForm&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<ContactForm / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { render, screen } from '@testing-library/react'
+import ContactForm from './ContactForm'
+
+describe('ContactForm', () => {
+  it('renders the form', () => {
+    render(<ContactForm />)
+    // Smoke assertion: presence of a form element or any text
+    expect(screen.getByRole('form', { hidden: true }) || screen.getByText(/./)).toBeTruthy()
+  })
+})
