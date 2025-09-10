@@ -87,7 +87,7 @@ serve(async (req) => {
     //   promptSystemMessage: systemMessage,
     //   promptUserMessageLength: finalUserPrompt.length,
     //   contentType: contentType
-    }));
+    // }));
 
     const chatCompletion = await openai.chat.completions.create({
       messages: [

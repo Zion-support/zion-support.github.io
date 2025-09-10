@@ -63,7 +63,7 @@ export async function trackReferral(userId, email) {
             localStorage.removeItem('referral_code');
         }
     }
-    catch {
-        // Error tracking referral silently
+    catch (_error) {
+        // console.error('Error tracking referral:', _error);
     }
 }

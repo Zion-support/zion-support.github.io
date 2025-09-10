@@ -33,8 +33,8 @@ function registerValidSW(swUrl) {
         };
       };
     })
-    .catch(() => {
-      // Service worker registration failed silently
+    .catch((_error) => {
+      // // console.error('Error during service worker registration:', _error);
     });
 }
 
@@ -63,8 +63,8 @@ export function unregisterServiceWorker() {
       .then((registration) => {
         registration.unregister();
       })
-      .catch(() => {
-        // Service worker unregistration failed silently
+      .catch((_error) => {
+        // // console.error(error.message);
       });
   }
 }
@@ -83,8 +83,8 @@ export function registerBackgroundSync(tag = 'background-sync') {
   if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
     navigator.serviceWorker.ready.then((registration) => {
       return registration.sync.register(tag);
-    }).catch(() => {
-      // Background sync registration failed silently
+    }).catch((_error) => {
+      // // console.error('Background sync registration failed:', _error);
     });
   }
 }
