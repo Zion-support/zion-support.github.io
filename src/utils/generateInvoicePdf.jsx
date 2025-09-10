@@ -1,7 +1,7 @@
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
-export async function generateInvoicePdf(_order) {
+export async function generateInvoicePdf(order) {
     const itemsTable = [
         ['Item', 'Qty', 'Price'],
         ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
