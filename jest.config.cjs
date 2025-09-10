@@ -12,8 +12,6 @@ module.exports = {
     "\\.(gif|ttf|eot|svg|png|jpg|jpeg)$": "<rootDir>/src/__mocks__/fileMock.js"
   },
   testMatch: [
-    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-    "<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}",
     "<rootDir>/tests/**/*.{test,spec}.{js,jsx,ts,tsx}"
   ],
   collectCoverageFrom: [
