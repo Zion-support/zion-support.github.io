@@ -18,6 +18,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   "generatedAt": "2025-08-15T11:53:49.108Z",
@@ -215,17 +216,25 @@
 >>>>>>> origin/automation/git-sync/2025-08-15T12-10-10-545Z
 =======
   "generatedAt": "2025-08-15T13:41:07.366Z",
+=======
+  "generatedAt": "2025-08-15T13:51:01.439Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T13-51-06-065Z
   "items": [
     {
       "title": "Reference Architecture — Autonomous Content Mesh",
-      "href": "/reports/blueprints/blueprint-2025-08-15-134107",
+      "href": "/reports/blueprints/blueprint-2025-08-15-135101",
       "desc": "New autonomous content",
+<<<<<<< HEAD
       "createdAt": "2025-08-15T13:41:07.333Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T13-41-11-951Z
+=======
+      "createdAt": "2025-08-15T13:51:01.406Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T13-51-06-065Z
       "source": "cloud-blueprint-factory"
     },
     {
       "title": "Playbook — Autonomous Delivery",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,8 +348,11 @@
     {
 =======
       "href": "/reports/playbooks/playbook-2025-08-15-134107",
+=======
+      "href": "/reports/playbooks/playbook-2025-08-15-135101",
+>>>>>>> origin/automation/git-sync/2025-08-15T13-51-06-065Z
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T13:41:07.298Z",
+      "createdAt": "2025-08-15T13:51:01.372Z",
       "source": "cloud-playbook-factory"
     },
     {
@@ -351,6 +363,7 @@
     {
 >>>>>>> origin/automation/git-sync/2025-08-15T13-48-43-267Z
       "title": "Case Study — Automation Autonomous",
+<<<<<<< HEAD
       "href": "/reports/cases/case-2025-08-15-134838",
       "desc": "New autonomous content",
 <<<<<<< HEAD
@@ -363,10 +376,16 @@
 =======
       "createdAt": "2025-08-15T13:48:38.212Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T13-48-43-267Z
+=======
+      "href": "/reports/cases/case-2025-08-15-135101",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T13:51:01.328Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T13-51-06-065Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -441,10 +460,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T13:48:38.212Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T13-48-43-267Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-135101",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T13:51:01.328Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T13-51-06-065Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3541,6 +3566,12 @@
 >>>>>>> origin/automation/git-sync/2025-08-15T13-41-11-951Z
 =======
 >>>>>>> origin/automation/git-sync/2025-08-15T13-48-43-267Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-135101",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T13:51:01.328Z",
+      "source": "cloud-deep-research-factory"
+>>>>>>> origin/automation/git-sync/2025-08-15T13-51-06-065Z
     }
   ]
 =======
