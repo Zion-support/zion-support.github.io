@@ -1,0 +1,1 @@
+const { useEffect,useState } from "react"; import { useNavigate,useSearchParams } from "react-router-dom"; import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"; import { generateSearchSuggestions } from "@/data/marketplaceData"; import { useAISearch } from "@/hooks/useAISearch"; export default function SearchPage() { return
