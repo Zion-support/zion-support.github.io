@@ -25,10 +25,10 @@ export function register(config?: Config) {
       if (isLocalhost) {
         checkValidServiceWorker(swUrl, config)
         navigator.serviceWorker.ready.then(() => {
-          // // console.log(
-            'This web app is being served cache-first by a service ' +
-            'worker. To learn more, visit https://bit.ly/CRA-PWA'
-          )
+          // console.log(
+          //   'This web app is being served cache-first by a service ' +
+          //   'worker. To learn more, visit https://bit.ly/CRA-PWA'
+          // )
         })
       } else {
         registerValidSW(swUrl, config)
@@ -50,16 +50,16 @@ function registerValidSW(swUrl: string, config?: Config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // // console.log(
-                'New content is available and will be used when all ' +
-                'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
-              )
+              // console.log(
+              //   'New content is available and will be used when all ' +
+              //   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
+              // )
 
               if (config && config.onUpdate) {
                 config.onUpdate(registration)
               }
             } else {
-              // // console.log('Content is cached for offline use.')
+              // console.log('Content is cached for offline use.')
 
               if (config && config.onSuccess) {
                 config.onSuccess(registration)
@@ -94,9 +94,9 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       }
     })
     .catch(() => {
-      // // console.log(
-        'No internet connection found. App is running in offline mode.'
-      )
+      // console.log(
+      //   'No internet connection found. App is running in offline mode.'
+      // )
     })
 }
 
