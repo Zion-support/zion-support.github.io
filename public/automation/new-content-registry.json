@@ -47,6 +47,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:29.410Z",
 =======
 <<<<<<< HEAD
@@ -117,9 +118,15 @@
       "source": "cloud-playbook-factory"
     },
     {
+=======
+  "generatedAt": "2025-08-15T09:36:42.964Z",
+  "items": [
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-36-46-604Z
       "title": "Case Study — Automation Autonomous",
-      "href": "/reports/cases/case-2025-08-15-093051",
+      "href": "/reports/cases/case-2025-08-15-093642",
       "desc": "New autonomous content",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "createdAt": "2025-08-15T09:08:45.244Z",
 =======
@@ -148,10 +155,14 @@
 =======
       "createdAt": "2025-08-15T09:30:51.079Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T09-30-54-985Z
+=======
+      "createdAt": "2025-08-15T09:36:42.921Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-36-46-604Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,10 +190,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T09:30:51.079Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T09-30-54-985Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-093642",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:36:42.921Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-36-46-604Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1968,8 +1985,11 @@
 >>>>>>> origin/automation/git-sync/2025-08-15T09-23-02-138Z
 =======
       "href": "/reports/patterns/pattern-2025-08-15-093051",
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-093642",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-36-46-604Z
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T09:30:51.079Z",
+      "createdAt": "2025-08-15T09:36:42.921Z",
       "source": "cloud-deep-research-factory"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-30-54-985Z
     }
