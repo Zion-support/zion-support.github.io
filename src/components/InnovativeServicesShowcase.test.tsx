@@ -1,19 +1,8 @@
-  it(displays expected content", () => {;
-    render(<InnovativeServicesShowcase  />)";
-import { render, screen } from &apos;@testing - library/react",
-import InnovativeServicesShowcase from &apos;./InnovativeServicesShowcase;
-describe(&apos;InnovativeServicesShowcase&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
-}
-  it(&apos;displays expected content&apos, () => {;
-    render();
-}
-    // comment;
-    render(<InnovativeServicesShowcase / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
-})";
-";
-}}))
+import { render, screen  } from '@testing-library/reactimport InnovativeServicesShowcase from ./InnovativeServicesShowcasedescribe(InnovativeServicesShowcase, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<InnovativeServicesShowcase  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<InnovativeServicesShowcase  />)';
+    // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport InnovativeServicesShowcase from ./InnovativeServicesShowcasedescribe(InnovativeServicesShowcase,() => {' it(renders without crashing',() => {' render(<InnovativeServicesShowcase />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<InnovativeServicesShowcase />)

@@ -1,19 +1,8 @@
-  it(displays expected content", () => {;
-    render(<HomeHero  />)";
-import { render, screen } from &apos;@testing - library/react",
-import HomeHero from &apos;./HomeHero;
-describe(&apos;HomeHero&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
-}
-  it(&apos;displays expected content&apos, () => {;
-    render();
-}
-    // comment;
-    render(<HomeHero / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
-})";
-";
-}}))
+import { render, screen  } from '@testing-library/reactimport HomeHero from ./HomeHerodescribe(HomeHero, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<HomeHero  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<HomeHero  />)';
+    // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport HomeHero from ./HomeHerodescribe(HomeHero,() => {' it(renders without crashing',() => {' render(<HomeHero />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<HomeHero />)
