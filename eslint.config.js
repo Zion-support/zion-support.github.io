@@ -3,8 +3,8 @@ import eslintJs from "@eslint/js";
 import globals from "globals";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
+import eslintReact from "eslint-plugin-react";
+import eslintReactHooks from "eslint-plugin-react-hooks";
 
 export default [
   {
@@ -85,8 +85,8 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tseslint,
-      react,
-      "react-hooks": reactHooks,
+      react: eslintReact,
+      "react-hooks": eslintReactHooks,
     },
     rules: {
       "no-unused-vars": "off",
