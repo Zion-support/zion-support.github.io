@@ -1,108 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-import Layout from "../../components/Layout";";
-=======
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
-import React from 'react';
-:pages/solutions/digital-transformation.tsx
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  BarChart3,
-  Clock,
-  Award,
-  Brain,
-  Cloud,
-  Shield,
-  Target,
-  TrendingUp,
-  Globe,
-  Building,
-  Rocket,
-  DollarSign,
-  ShoppingCart,
-  BookOpen
-} from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
-const transformationSteps = [
-  {
-    step: '01',
-    title: 'Assessment & Strategy',
-    description: 'We analyze your current systems, processes, and identify opportunities for digital transformation.',
-    icon: Target,
-    duration: '2-4 weeks',
-    features: ['Current state analysis', 'Gap identification', 'ROI projections', 'Strategic roadmap']
-  },
-  {
-    step: '02',
-    title: 'Technology Integration',
-    description: 'Implement cutting-edge technologies including AI, cloud solutions, and automation tools.',
-    icon: Brain,
-    duration: '4-12 weeks',
-    features: ['AI implementation', 'Cloud migration', 'API integration', 'Data modernization']
-  },
-  {
-    step: '03',
-    title: 'Process Optimization',
-    description: 'Streamline workflows and optimize business processes for maximum efficiency.',
-    icon: Zap,
-    duration: '6-16 weeks',
-    features: ['Workflow automation', 'Process redesign', 'Performance monitoring', 'Continuous improvement']
-  },
-  {
-    step: '04',
-    title: 'Training & Support',
-    description: 'Comprehensive training programs and ongoing support to ensure successful adoption.',
-    icon: Users,
-    duration: '2-8 weeks',
-    features: ['Team training', 'Documentation', 'Change management', '24/7 support']
-  }
-];
-const benefits = [
-  {
-    icon: TrendingUp,
-    title: 'Increased Efficiency',
-    description: 'Automate repetitive tasks and streamline workflows to boost productivity by up to 40%.',
-    metric: '40%'
-  },
-  {
-    icon: DollarSign,
-    title: 'Cost Reduction',
-    description: 'Reduce operational costs through automation and optimized processes.',
-    metric: '25%'
-  },
-  {
-    icon: BarChart3,
-    title: 'Better Analytics',
-    description: 'Gain actionable insights from your data with advanced analytics and reporting.',
-    metric: '60%'
-  },
-  {
-    icon: Shield,
-    title: 'Enhanced Security',
-    description: 'Implement robust security measures to protect your digital assets.',
-    metric: '99.9%'
-  }
-];
-const industries = [
-  { name: 'Healthcare', icon: Building, description: 'Patient care optimization and medical data management' },
-  { name: 'Finance', icon: DollarSign, description: 'Fraud detection and automated financial processes' },
-  { name: 'Manufacturing', icon: Building, description: 'Smart manufacturing and supply chain optimization' },
-  { name: 'Retail', icon: ShoppingCart, description: 'Customer experience enhancement and inventory management' },
-  { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },
-  { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
-];
-export default function DigitalTransformation() {import Layout from "../../components/Layout";";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-import { motion } from 'framer-motion';
+import Layout from "../../components/Layout";";import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 export default function DigitalTransformationPage() {
   const transformationServices = [;
@@ -130,7 +27,6 @@ export default function DigitalTransformationPage() {
       icon: TrendingUp,
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
-<<<<<<< HEAD
   ];
   return (
     <MainLayout
@@ -138,24 +34,13 @@ export default function DigitalTransformationPage() {
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
-      <div className="min-h-screen bg-gray-50">
-=======
-;  ];
-  return (;
-    <Layout );
-      title="Digital Transformation - Zion Tech Group"";
-      description="Complete digital transformation solutions to modernize your business and drive innovation."";
-    >;
-      <div className="min-h-screen bg-gray-50">";      <div className="min-h-screen bg-gray-50">
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gray-50">        {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -178,22 +63,7 @@ export default function DigitalTransformationPage() {
             </motion.div>
           </div>
         </section>
-        {/* Services Section */}
-=======
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Digital Transformation;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Transform your business for the digital age with our comprehensive transformation solutions. 
-                Modernize processes, enhance efficiency, and drive innovation.,
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;        {/* Services Section */}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        <section className="py-20">"
+        {/* Services Section */}        <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {transformationServices.map((service, index) => {}
@@ -206,7 +76,6 @@ export default function DigitalTransformationPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -231,27 +100,7 @@ export default function DigitalTransformationPage() {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
-=======
-:pages/solutions/digital-transformation.tsx
-                  >
-                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
-                      {step.step}
-                    </div>
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-8 h-8 mx-auto" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                    <p className="text-gray-600 mb-4">{step.description}</p>
-                    <div className="text-sm text-blue-600 font-semibold mb-4">
-                      Duration: {step.duration}
-                    </div>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {step.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />        {/* CTA Section */}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
+        {/* CTA Section */}        <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Start Your Digital Journey;

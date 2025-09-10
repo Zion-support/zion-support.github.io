@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-
 class EnhancedErrorFixingAutomation {
   constructor() {
     this.projectRoot = process.cwd();
@@ -1091,4 +1086,3 @@ if (require.main === module) {
   automation.run().catch(console.error),
 }
 module.exports = EnhancedErrorFixingAutomation}}}}}}}}}}}}}})))
->>>>>>> origin/automation-fixes

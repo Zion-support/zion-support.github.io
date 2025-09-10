@@ -1,18 +1,5 @@
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
-<<<<<<< HEAD
-=======
-import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const categories = [
   {
     title: "Comprehensive Services",
@@ -33,49 +20,12 @@ const categories = [
     description: "Cutting-edge AI and machine learning services",
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
-    color: "from-pink-500 to-rose-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  },
+    color: "from-pink-500 to-rose-600",  },
   {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
-<<<<<<< HEAD
-    color: "from-zion-cyan to-zion-blue",
-    gradient: "from-zion-cyan/20 to-zion-blue/20",
-    features: ["AI Experts", "Global Network", "Verified Profiles"],
-    stats: "10K+ Experts"
-=======
-    color: "from-cyan-500 to-blue-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  },
-  {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
-    link: "/equipment",
-<<<<<<< HEAD
-    color: "from-zion-cyan-light to-zion-cyan",
-    gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-    features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
-    stats: "1000+ Devices"
-  },
-  {
-    title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/category/innovation",
-    color: "from-zion-purple-light to-zion-purple",
-    gradient: "from-zion-purple-light/20 to-zion-purple/20",
-    features: ["Latest Tech", "AI Solutions", "Future-Ready"],
-    stats: "100+ Innovations"
-=======
-    color: "from-amber-500 to-orange-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  },
-];
-
 const specialServices = [
   {
     title: "Enhanced AI & IT Services",
@@ -118,9 +68,7 @@ const specialServices = [
   },
   {
     title: "Cybersecurity",
-    link: "/cybersecurity"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  }
+    link: "/cybersecurity"  }
 ];
 
 interface CategoriesSectionProps {
@@ -128,21 +76,6 @@ interface CategoriesSectionProps {
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -378,9 +311,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
-        </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-      </div>
+        </div>      </div>
     </section>
   );
 }

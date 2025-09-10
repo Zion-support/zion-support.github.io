@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -336,23 +333,11 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-                </label>
+                  Email Address                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-<<<<<<< HEAD
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40"
-                  placeholder="Enter your email"
-                />
-              </div>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="company" className="block text-sm font-medium mb-1">
@@ -363,37 +348,12 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-                  Company
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">                  Company
                 </label>
                 <input
                   type="text"
                   id="company"
                   name="company"
-<<<<<<< HEAD
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40"
-                  placeholder="Enter company name"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-1">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full p-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40"
-                  placeholder="Enter phone number"
-                />
-              </div>
-            </div>
-
             <div>
               <label htmlFor="service" className="block text-sm font-medium mb-1">
                 Service of Interest
@@ -543,9 +503,7 @@ export default function ContactPage() {
               >
                 Send Message
               </button>
-            </form>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-          </div>
+            </form>          </div>
         </div>
       </div>
 
