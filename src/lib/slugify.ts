@@ -6,4 +6,3 @@ export function slugify(text: string, separator: string = '-'): string {
     .replace(/[^\w\s-]/g, '') // Remove special characters
     .replace(/[\s_-]+/g, separator) // Replace spaces and underscores with separator
     .replace(new RegExp(`^${separator}+|${separator}+$`, 'g'), ''); // Remove leading/trailing separators
-}
