@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 export function SocialShareSection() {
     const _socialPlatforms = [
         { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' },

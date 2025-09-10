@@ -4,6 +4,8 @@ import { _toast } from '@/hooks/use-toast';
 import { _Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { _EmptyMatchesCard } from './EmptyMatchesCard';
 import { _JobMatchCard } from './JobMatchCard';
+
+const integrations = [];
 ;
 export function SuggestedTalents("props": "any) {;
   const [talents", setTalents] = useState<any[]>([]); // Added type for talents;

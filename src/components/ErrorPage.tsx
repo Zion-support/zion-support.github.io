@@ -1,6 +1,9 @@
 import React from 'react';
 import { _Button } from '../ui/button';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { Code } from 'lucide-react';
 export const _ErrorPage = ({ statusCode = 404, title = 'Page Not Found', message = 'The page you are looking for does not exist.' }) => {
     return (<div className="min-h-screen bg-zion-blue flex items-center justify-center">
       <div className="text-center text-white">

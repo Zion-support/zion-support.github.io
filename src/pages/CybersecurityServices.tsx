@@ -5,6 +5,22 @@ import { _Badge } from "@/components/ui/badge";
 import { _SEO } from "@/components/SEO";
 import { _Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const testimonials = [];
+const pricingPlans = [];
+const integrations = [];
+const securityServices = [];
+const services = [];
+const solutions = [];
+const securitySolutions = [];
 export default function CybersecurityServices() {
     const _services = [
         {

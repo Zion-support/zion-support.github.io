@@ -1,5 +1,16 @@
 import React from 'react';
 import { _Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+const features = [];
+const benefits = [];
+const solutions = [];
+const securityFeatures = [];
+const securitySolutions = [];
+const implementation = [];
 const _AIPoweredSecurity = () => {
     const _securityFeatures = [
         {

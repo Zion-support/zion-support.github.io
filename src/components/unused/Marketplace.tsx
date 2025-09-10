@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const applications = [];
+const solutions = [];
 export default function Marketplace() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

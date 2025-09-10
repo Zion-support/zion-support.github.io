@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { _BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
+
+import { Settings } from 'lucide-react';
 const _mockChartData = [
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },

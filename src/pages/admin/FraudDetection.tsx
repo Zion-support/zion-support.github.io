@@ -7,6 +7,10 @@ import { _toast } from "@/hooks/use-toast";
 import { _supabase } from "@/integrations/supabase/client";
 // Import refactored components
 import { _FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
+
+import SEO from '@/components/SEO';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const integrations = [];
 export default function FraudDetection() {
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);

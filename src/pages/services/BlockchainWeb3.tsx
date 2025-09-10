@@ -1,5 +1,19 @@
 import React from 'react';
 import { _Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const services = [];
+const applications = [];
+const blockchainServices = [];
+const web3Technologies = [];
+const solutions = [];
 const _BlockchainWeb3 = () => {
     const _blockchainServices = [
         {

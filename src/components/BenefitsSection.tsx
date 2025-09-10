@@ -3,6 +3,15 @@ import React, { useState } from 'react';
 import { _motion } from 'framer-motion';
 import { _Bot, Clock, Globe, TrendingDown, Zap, Shield, Users } from 'lucide-react';
 
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { _cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
 import { _specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
+
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
 const _CuttingEdgeServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedIndustry, setSelectedIndustry] = useState('All');

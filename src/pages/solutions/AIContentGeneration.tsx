@@ -1,5 +1,15 @@
 import React from 'react';
 import { _Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
+
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const solutions = [];
+const contentFeatures = [];
+const contentTypes = [];
+const implementation = [];
 const _AIContentGeneration = () => {
     const _contentFeatures = [
         {

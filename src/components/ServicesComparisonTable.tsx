@@ -5,6 +5,10 @@ import { _Button } from './ui/button';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { _Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import { _COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
+
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
 export function ServicesComparisonTable() {
     const _serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
     const _getCategoryServices = (category) => {

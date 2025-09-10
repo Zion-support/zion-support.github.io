@@ -4,6 +4,9 @@ import { _SEO } from '@/components/SEO';
 import { _VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { _Button } from '@/components/ui/button';
 import { _toast } from 'sonner';
+
+import SEO from '@/components/SEO';
+import { useParams } from 'react-router-dom';
 export default function VideoCall() {
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.

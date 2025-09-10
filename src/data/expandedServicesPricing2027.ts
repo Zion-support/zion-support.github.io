@@ -1,3 +1,10 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const integrations = [];
+const industries = [];
+const services = [];
+const implementation = [];
+
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 export interface ExpandedServicePricing {

@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { _BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 export const _AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,

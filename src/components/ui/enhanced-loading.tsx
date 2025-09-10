@@ -1,6 +1,11 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Sparkles, Zap, Shield, Rocket } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',

@@ -1,3 +1,6 @@
+const features = [];
+const solutions = [];
+
 
 export default function PricingPage() {
   const _plans = [

@@ -1,6 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { _Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 const _HealthcareSolutions = () => {
     const _solutions = [
         {

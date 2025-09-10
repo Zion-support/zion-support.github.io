@@ -3,6 +3,24 @@ import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
 import { _Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
 import { _SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const useCases = [];
+const testimonials = [];
+const services = [];
+const applications = [];
 const _features = [
     {
         title: "Automated Code Analysis",

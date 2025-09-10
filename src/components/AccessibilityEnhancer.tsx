@@ -1,5 +1,9 @@
 
 import { _useLocation } from 'react-router-dom';interface AccessibilitySettings {
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Icon } from 'lucide-react';
   fontSize: number;
   highContrast: boolean;
   largeText: boolean;

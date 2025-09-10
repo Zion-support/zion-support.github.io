@@ -5,6 +5,14 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/co
 import { _Badge } from '@/components/ui/badge';
 import { _ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
 import { _SERVICE_CATEGORIES } from '@/data/expandedServices';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
 export function ExpandedServicesPreview() {
     const _getCategoryIcon = (category) => {
         switch (category) {

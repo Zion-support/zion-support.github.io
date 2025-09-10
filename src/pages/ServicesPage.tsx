@@ -3,6 +3,16 @@ import { _Link } from 'react-router-dom';
 import { _ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+
 // Sample data for services
 const _microSaaS = [
   {

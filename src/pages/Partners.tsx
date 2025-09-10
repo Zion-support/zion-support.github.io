@@ -5,6 +5,8 @@ import { _Footer } from '@/components/Footer';
 import { _SEO } from '@/components/SEO';
 import { _GradientHeading } from '@/components/GradientHeading';
 
+import SEO from '@/components/SEO';
+
 export default function Partners() {
     return (
         <>

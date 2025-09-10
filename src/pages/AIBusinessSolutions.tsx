@@ -1,5 +1,14 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function AIBusinessSolutions() {
     const _businessSolutions = [
         {

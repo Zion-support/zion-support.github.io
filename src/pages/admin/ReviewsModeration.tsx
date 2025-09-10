@@ -6,6 +6,10 @@ import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { _Star, AlertTriangle } from "lucide-react";
 import { _toast } from "@/components/ui/use-toast";
+
+import SEO from '@/components/SEO';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 function ReviewsModerationContent() {
     const [activeTab, setActiveTab] = useState("pending");
     const [reviews, setReviews] = useState([]);

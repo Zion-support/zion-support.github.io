@@ -1,5 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { _ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Code } from 'lucide-react';
+const features = [];
+const technologies = [];
+const solutions = [];
 const _portfolioProjects = [
     {
         id: '1',

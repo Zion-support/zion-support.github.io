@@ -112,6 +112,21 @@ import {Star,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+
 export default function MicroSaasServicesPage() {}
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');

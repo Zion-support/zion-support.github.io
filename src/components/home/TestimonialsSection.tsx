@@ -1,4 +1,8 @@
 import React from 'react';
+
+const testimonials = [];
+const solutions = [];
+const implementation = [];
 export function TestimonialsSection() {
     const _testimonials = [
         {

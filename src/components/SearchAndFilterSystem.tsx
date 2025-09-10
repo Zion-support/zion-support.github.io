@@ -1,4 +1,7 @@
 import { _ import { motion, AnimatePresence  } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+const services = [];
 ;
 export default function Page("props": "any) {;
 > {;

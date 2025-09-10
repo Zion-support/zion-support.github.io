@@ -1,6 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import { _Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const industries = [];
+const solutions = [];
 export default function ManufacturingSolutions() {
     const _solutions = [
         {

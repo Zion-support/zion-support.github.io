@@ -1,3 +1,10 @@
+import SEO from '@/components/SEO';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const technologies = [];
+
 export interface InnovativeMicroSaasService2025 {
   "id": string;
   title: string;

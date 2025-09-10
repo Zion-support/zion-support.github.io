@@ -1,5 +1,10 @@
 import React from "react"
 
+import { motion } from 'framer-motion';
+const industries = [];
+const services = [];
+const solutions = [];
+
 interface Service {
   category: string;
 icon: React.ComponentType<{ className?: string;

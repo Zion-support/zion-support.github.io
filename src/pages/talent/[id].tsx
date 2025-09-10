@@ -3,6 +3,10 @@ import { _useParams } from 'react-router-dom';
 import { _SEO } from '@/components/SEO';
 import { _ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { _ProfileErrorState } from '@/components/profile/ProfileErrorState';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { useParams } from 'react-router-dom';
 export default function TalentProfilePage() {
     const { id } = useParams();
     const [profile, setProfile] = useState(null);

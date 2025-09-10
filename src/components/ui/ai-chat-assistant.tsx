@@ -2,6 +2,15 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
 import { _Button } from './button';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);

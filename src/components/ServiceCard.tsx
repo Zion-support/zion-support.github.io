@@ -1,6 +1,12 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
 const _ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
     const _cardVariants = {
         hidden: { opacity: 0, y: 20, scale: 0.95 },

@@ -1,4 +1,7 @@
 import React from 'react';
+
+const services = [];
+const solutions = [];
 export function FaqSection() {
     return (<div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

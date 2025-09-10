@@ -1,6 +1,10 @@
 import React from "react";
 import Head from "next/head";
 
+import SEO from '@/components/SEO';
+const services = [];
+const solutions = [];
+
 interface SEOHeadProps {
   title?: string;
   description?: string;

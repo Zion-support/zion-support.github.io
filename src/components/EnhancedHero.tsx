@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
 const _EnhancedHero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);

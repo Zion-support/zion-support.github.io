@@ -1,5 +1,18 @@
 import React from 'react';
 import { _Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const applications = [];
+const solutions = [];
+const quantumFeatures = [];
+const implementation = [];
 const _QuantumNeuralNetwork = () => {
     const _quantumFeatures = [
         {

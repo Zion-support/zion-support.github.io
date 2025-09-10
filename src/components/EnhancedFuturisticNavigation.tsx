@@ -1,5 +1,12 @@
 import React from 'react';
 import { _ import { motion, AnimatePresence  } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+const services = [];
+const applications = [];
+const solutions = [];
 export default function Page("props": "any) {;
 ", [location.pathname]) ;
 ;

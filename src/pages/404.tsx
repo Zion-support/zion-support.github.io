@@ -1,6 +1,14 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Home, ArrowLeft, Search, Users, Brain, Shield, Zap } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
 const _NotFoundPage = () => {
     const _popularServices = [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Transform your business with AI' },

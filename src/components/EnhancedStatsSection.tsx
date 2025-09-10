@@ -1,4 +1,6 @@
 import { _ import { motion, useAnimation  } from 'framer-motion';
+
+import { motion } from 'framer-motion';
  from 'lucide-react';
 ;
 interface Stat {;

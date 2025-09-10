@@ -1,6 +1,10 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _MagnifyingGlassIcon, LightBulbIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { Search } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _AIAutonomousResearchAssistant = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}

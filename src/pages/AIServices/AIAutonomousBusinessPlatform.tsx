@@ -3,6 +3,19 @@ import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
 import { _Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
 import SEO from '../SEO';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
 const _features = [
     {
         title: "Unified Business Platform",

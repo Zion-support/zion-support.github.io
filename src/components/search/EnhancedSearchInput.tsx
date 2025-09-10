@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { _Search, X, ArrowDown } from 'lucide-react';
+
+const services = [];
 export const _EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
     const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);

@@ -1,5 +1,18 @@
 import React from 'react';
 import { _Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const applications = [];
+const solutions = [];
+const edgeFeatures = [];
+const implementation = [];
 const _QuantumEdgeComputing = () => {
     const _edgeFeatures = [
         {

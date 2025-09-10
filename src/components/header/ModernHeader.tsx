@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+
+const services = [];
 export function ModernHeader() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 

@@ -5,6 +5,21 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/co
 import { _Badge } from '@/components/ui/badge';
 import { _Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin } from 'lucide-react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const services = [];
+const solutions = [];
 const _ServiceCategory = ({ category, services }) => {
     const _categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
     if (categoryServices.length === 0)

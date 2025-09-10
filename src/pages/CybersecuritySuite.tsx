@@ -5,6 +5,17 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/co
 import { _Badge } from "@/components/ui/badge";
 import { _Check, Shield, AlertTriangle, Eye } from "lucide-react";
 import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const pricingPlans = [];
+const integrations = [];
+const securityServices = [];
+const solutions = [];
 export default function CybersecuritySuite() {
     const _features = [
         "24/7 threat monitoring and detection",

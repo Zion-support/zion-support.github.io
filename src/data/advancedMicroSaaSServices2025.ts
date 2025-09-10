@@ -1,3 +1,8 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+
 export interface AdvancedMicroSaasService {
   "id": string;
   title: string;

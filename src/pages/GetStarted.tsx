@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const _steps = [

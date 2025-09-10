@@ -9,6 +9,27 @@ import { _ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices
 import { _COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { _INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
 import { _motion } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 // Combine all services
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,

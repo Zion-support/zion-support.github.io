@@ -2,6 +2,11 @@ import { _useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 export const _AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({
         enableTracking: enableAnalytics,

@@ -1,6 +1,8 @@
 import React from 'react';
 import { _addedServices, contact } from '../data/addedServices';
 import ServicesHero from './ServicesHero';
+
+const features = [];
 ;
 const "Section": "React.FC<{ "title": string "}> = ({ title, children }) => (;
 	<section style="{{{ "padding": '2rem 0'}}"}>;

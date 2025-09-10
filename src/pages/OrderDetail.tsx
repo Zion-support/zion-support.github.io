@@ -6,6 +6,11 @@ import { _generateInvoicePdf } from '@/utils/generateInvoicePdf';
 import { _useAuth } from '@/hooks/useAuth';
 import { _supabase } from '@/integrations/supabase/client';
 import { _toast } from '@/hooks/use-toast';
+
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+const integrations = [];
 export default function OrderDetailPage() {
     const { orderId } = useParams();
     const { user } = useAuth();

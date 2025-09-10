@@ -2,6 +2,24 @@ import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _motion } from 'framer-motion';
 import { _Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const cloudServices = [];
+const technologies = [];
+const cloudProviders = [];
+const services = [];
+const applications = [];
+const solutions = [];
 export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
     const _cloudProviders = [

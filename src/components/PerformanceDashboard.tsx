@@ -14,6 +14,10 @@ import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 import X from 'lucide-react/dist/esm/icons/x';
 import Info from 'lucide-react/dist/esm/icons/info';
 import { _cn } from '@/lib/utils';
+
+import { motion } from 'framer-motion';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
 export function PerformanceDashboard({ className, showDetails = false, onClose }) {
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
     const [isExpanded, setIsExpanded] = useState(showDetails);

@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { _motion } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+import { Code } from 'lucide-react';
 export const _QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => {
     const _canvasRef = useRef(null);
     const _particlesRef = useRef(null);

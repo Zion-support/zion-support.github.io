@@ -2,6 +2,11 @@
 import React, { useState } from 'react';
 import { _motion } from 'framer-motion';
 import { 
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
     Calendar,
     User,
     Tag,

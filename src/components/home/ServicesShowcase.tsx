@@ -5,6 +5,10 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/co
 import { _Badge } from '@/components/ui/badge';
 import { _COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { _ArrowRight } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 export function ServicesShowcase() {
     const _featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
     return (<section className="py-20 relative">

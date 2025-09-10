@@ -12,6 +12,13 @@ import { _ClientOnboardingSteps } from "@/components/onboarding/ClientOnboarding
 import { _ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { _UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { _useIsMobile } from "@/hooks/use-mobile";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const applications = [];
 function ClientDashboardContent() {
     const [activeTab, setActiveTab] = useState("all");
     const { jobs, isLoading } = useJobs();

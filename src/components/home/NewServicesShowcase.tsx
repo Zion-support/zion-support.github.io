@@ -5,6 +5,15 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/co
 import { _Badge } from '@/components/ui/badge';
 import { _SERVICE_CATEGORIES } from '@/data/microSaasServices';
 import { _Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export function NewServicesShowcase() {
     // Get featured services from each category
     const _featuredServices = SERVICE_CATEGORIES.map(category => category.services[0]).filter(Boolean);

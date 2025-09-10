@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { _LinkValidator } from '../utils/linkValidator';
+
+import { Link } from 'react-router-dom';
 export const _LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);

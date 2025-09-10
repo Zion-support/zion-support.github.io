@@ -5,6 +5,25 @@ import { _Badge } from "@/components/ui/badge";
 import { _SEO } from "@/components/SEO";
 import { _Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
 import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const testimonials = [];
+const pricingPlans = [];
+const integrations = [];
+const cloudPlatforms = [];
+const services = [];
+const applications = [];
+const solutions = [];
 export default function CloudMigrationServices() {
     const _services = [
         {

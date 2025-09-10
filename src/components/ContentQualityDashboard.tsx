@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { _BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from '../utils/contentQualityAnalyzer';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
 const _ContentQualityDashboard = ({ className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);

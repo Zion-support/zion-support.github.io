@@ -3,6 +3,8 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;';';
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');';';
   const [searchTerm, setSearchTerm] = useState<any>('');';';
 import React from 'react';
+
+const services = [];
 const "ComprehensiveServicesShowcase2030": "React.FC = () => {;
   const [activeTab", setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>('');

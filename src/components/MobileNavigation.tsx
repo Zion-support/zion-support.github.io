@@ -2,6 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { _Link, useLocation } from 'react-router-dom';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _X, ChevronDown, Search, User, Bell } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const industries = [];
+const services = [];
+const solutions = [];
 const _MobileNavigation = ({ isOpen, onToggle }) => {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');

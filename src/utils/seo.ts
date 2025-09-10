@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+
 /**
  * SEO utilities and helpers
  */

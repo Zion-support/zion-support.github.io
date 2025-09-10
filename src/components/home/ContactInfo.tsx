@@ -5,6 +5,11 @@ import { _Badge } from "@/components/ui/badge";
 import { _Link } from "react-router-dom";
 import { _FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
 import { _Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const solutions = [];
 export function ContactInfo() {
     const _contactMethods = [
         {

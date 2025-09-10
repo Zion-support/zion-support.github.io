@@ -5,6 +5,11 @@ import { _TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { _useAuth } from "@/hooks/useAuth";
 import { _Navigate } from "react-router-dom";
+
+import SEO from '@/components/SEO';
+import { Check } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 export default function WhitelabelManager() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("tenants");

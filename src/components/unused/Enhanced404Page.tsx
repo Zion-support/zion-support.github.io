@@ -2,6 +2,13 @@ import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _motion } from 'framer-motion';
 import { _HomeIcon, MagnifyingGlassIcon, ArrowLeftIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Search } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
 export const _Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
     const _defaultSuggestions = [
         '/services',

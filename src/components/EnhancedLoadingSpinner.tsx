@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {;
   size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum';

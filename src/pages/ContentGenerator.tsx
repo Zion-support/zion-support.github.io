@@ -13,6 +13,12 @@ import { _supabase } from "@/integrations/supabase/client";
 import { _useAuth } from "@/hooks/useAuth";
 import { _ScrollArea } from "@/components/ui/scroll-area";
 import { _useRouter } from "next/router";
+
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const integrations = [];
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
     const _router = useRouter();

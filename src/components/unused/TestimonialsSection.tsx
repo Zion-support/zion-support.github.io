@@ -1,6 +1,12 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
 import { _StarIcon } from '@heroicons/react/24/solid';
+
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
+const testimonials = [];
+const services = [];
+const solutions = [];
 export function TestimonialsSection() {
     const _testimonials = [
         {

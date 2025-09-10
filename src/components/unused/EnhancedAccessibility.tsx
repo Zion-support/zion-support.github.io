@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 const _EnhancedAccessibility = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({

@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+
+import { Link } from 'react-router-dom';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 const _AdvancedInnovativeServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');

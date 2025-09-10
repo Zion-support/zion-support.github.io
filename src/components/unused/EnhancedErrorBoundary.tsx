@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { _motion } from 'framer-motion';
 import { _ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
+
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
 class EnhancedErrorBoundary extends Component {
     constructor(props) {
         super(props);

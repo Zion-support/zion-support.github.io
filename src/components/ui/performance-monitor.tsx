@@ -3,6 +3,12 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
 import { _Button } from './button';
 import { _Badge } from './badge';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);

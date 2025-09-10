@@ -1,5 +1,8 @@
 import React from 'react';
 
+const services = [];
+const solutions = [];
+
 const AppHeader: React.FC = () => {
   return (
     <header className="bg-white shadow-sm border-b">

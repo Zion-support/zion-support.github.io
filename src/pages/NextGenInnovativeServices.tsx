@@ -2,6 +2,20 @@ import React, { useState, useMemo } from 'react';
 import { _motion } from 'framer-motion';
 import { _Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
 import { _NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function NextGenInnovativeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

@@ -2,6 +2,25 @@ import React from 'react';
 import { _SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { _Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const technologies = [];
+const industries = [];
+const iotServices = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function IoTEdgeComputingServices() {
     const _iotServices = [
         {

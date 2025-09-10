@@ -1,12 +1,26 @@
 import React, { useState } from 'react';';
-export default ComprehensiveNewServicesShowcase2025;';';
 import React, { useState } from 'react';
 import { ;
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+export default ComprehensiveNewServicesShowcase2025;';';
   NEW_MICRO_SAAS_SERVICES_2025,;
   NEW_IT_SERVICES_2025,;
   NEW_INNOVATIVE_SERVICES_2025;
 } from '../data/servicesData';
-import { ;
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
   Zap, ;
   Brain, ;
   Server, ;

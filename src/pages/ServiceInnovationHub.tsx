@@ -5,6 +5,15 @@ import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovatio
 import { _Button } from '../components/ui/button';
 import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { _Badge } from '../components/ui/badge';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+const technologies = [];
+const industries = [];
+const services = [];
+const solutions = [];
 const _ServiceInnovationHub = () => {
     const _innovationAreas = [
         {

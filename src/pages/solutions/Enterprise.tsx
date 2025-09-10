@@ -1,6 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import { _Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const industries = [];
+const services = [];
+const solutions = [];
 const _EnterpriseSolutions = () => {
     const _solutions = [
         {

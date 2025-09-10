@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const implementation = [];
 export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);

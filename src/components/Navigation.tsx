@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+const services = [];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

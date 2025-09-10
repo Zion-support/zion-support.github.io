@@ -5,6 +5,10 @@ import { _Button } from "../ui/button";
 import { _Badge } from "../ui/badge";
 import { _Link } from "react-router-dom";
 import { _Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 export function ContactInfo() {
     return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">

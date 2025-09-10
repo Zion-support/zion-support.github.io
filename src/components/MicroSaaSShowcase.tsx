@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export function MicroSaasShowcase() {
     const [activeCategory, setActiveCategory] = useState('all');
     const _categories = [

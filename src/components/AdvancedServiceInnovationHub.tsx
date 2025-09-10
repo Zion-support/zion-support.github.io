@@ -5,6 +5,20 @@ import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { _Button } from './ui/button';
 import { _Badge } from './ui/badge';
 import { _Input } from './ui/input';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const industries = [];
+const services = [];
+const applications = [];
 const _AdvancedServiceInnovationHub = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImpact, setSelectedImpact] = useState('all');

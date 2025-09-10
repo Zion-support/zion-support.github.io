@@ -12,6 +12,10 @@ import { _ServiceDetailsSection } from "@/components/services/PageSections/Servi
 import { _ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 import { _ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { _EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const services = [];
 export default function ITOnsiteServicesPage() {
     const [searchParams] = useSearchParams();
     const [selectedCountry, setSelectedCountry] = useState(null);

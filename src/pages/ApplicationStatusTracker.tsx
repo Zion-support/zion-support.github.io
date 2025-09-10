@@ -4,6 +4,10 @@ import { _Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { _Inbox } from "lucide-react";
 import { _ProtectedRoute } from "@/components/ProtectedRoute";
 import { _useIsMobile } from "@/hooks/use-mobile";
+
+import SEO from '@/components/SEO';
+import ProtectedRoute from '@/components/ProtectedRoute';
+const applications = [];
 function ApplicationStatusTrackerContent() {
     const _isMobile = useIsMobile();
     return (<>

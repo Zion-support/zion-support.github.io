@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+
+import { Code } from 'lucide-react';
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
     const _canvasRef = useRef(null);
     useEffect(() => {

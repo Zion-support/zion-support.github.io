@@ -1,5 +1,18 @@
 import React from 'react';
 import { _Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const applications = [];
+const solutions = [];
+const researchFeatures = [];
 const _AIAutonomousResearch = () => {
     const _researchFeatures = [
         {

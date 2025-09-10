@@ -3,6 +3,10 @@ import { _motion } from 'framer-motion';
 import { _Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
 import { _useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Target } from 'lucide-react';
+const benefits = [];
 export const _CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,

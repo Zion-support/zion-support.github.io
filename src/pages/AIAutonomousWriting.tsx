@@ -1,5 +1,8 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
+
+import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
 const _AIAutonomousWriting = () => {
     return (<>
       <Helmet>

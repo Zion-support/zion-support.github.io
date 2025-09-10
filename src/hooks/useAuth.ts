@@ -3,3 +3,5 @@ import { _useState,useEffect } from 'react'; interface User { "id": "string; "em
 import { _useEffect } from 'react';,
 import { _useState } from 'react';,
 import { _useState,useEffect } from 'react'; interface User { id: string; email: string; name: string;" role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string';'} interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading boolean'} export function useAuth() { const [authState,setAuthState] = useState<AuthState>({ user: nul l,isAuthenticated: fals e,isLoading: tru e';'}); useEffect(() => { })} } else { setAuthState({ user: nul l,isAuthenticated: fals e,isLoading: fals e';'});'} }; checkAuth();';'},[]); const _login = async (email: string,password: string) => { };'} ";';';';
+
+import { useAuth } from '@/hooks/useAuth';

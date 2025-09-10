@@ -1,5 +1,7 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
+
+import { motion } from 'framer-motion';
 export const _FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
     const _getVariantStyles = () => {
         const _intensityMultiplier = {

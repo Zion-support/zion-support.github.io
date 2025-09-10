@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { _motion, useInView } from 'framer-motion';
 import { _EnhancedLoading } from './EnhancedLoading';
+
+import { motion } from 'framer-motion';
 const _LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md' }) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isInView, setIsInView] = useState(false);

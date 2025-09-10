@@ -1,3 +1,11 @@
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const applications = [];
+const solutions = [];
+
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;

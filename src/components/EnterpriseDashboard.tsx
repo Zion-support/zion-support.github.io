@@ -2,6 +2,13 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const services = [];
 export const _EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,

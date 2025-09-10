@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { _advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { _specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const features = [];
+const integrations = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
 const _ComprehensivePricing2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');

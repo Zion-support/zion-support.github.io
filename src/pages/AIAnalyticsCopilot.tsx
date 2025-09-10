@@ -1,6 +1,15 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
 import { _BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Database } from 'lucide-react';
+
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
 const _AIAnalyticsCopilot = () => {
     return (<>
       <Helmet>

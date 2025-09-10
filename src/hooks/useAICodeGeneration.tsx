@@ -476,6 +476,11 @@ if __name__ == "__main__":
         return `import { _render, screen, fireEvent } from '@testing-library/react';
 import GeneratedComponent from './GeneratedComponent';
 
+import { motion } from 'framer-motion';
+import { Target } from 'lucide-react';
+import { Code } from 'lucide-react';
+const implementation = [];
+
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
     render(<GeneratedComponent />);

@@ -4,6 +4,21 @@ import { _Button } from '@/components/ui/button';
 import { _Badge } from '@/components/ui/badge';
 import { _Link } from 'react-router-dom';
 import { _Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 const _ITServices = [
     {
         title: "Cloud Infrastructure Management",

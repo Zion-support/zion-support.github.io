@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { _Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
 const _mockParticipants = [
     {
         id: '1',

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import SEO from '../SEO';
+
+import SEO from '@/components/SEO';
+import { Settings } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const solutions = [];
 export default function DisputeManagement() {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>

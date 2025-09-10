@@ -1,4 +1,6 @@
 import React from 'react';
+
+const features = [];
 export function FeaturesGuideSection() {
     const _features = [
         {

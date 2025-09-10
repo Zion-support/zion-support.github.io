@@ -1,5 +1,22 @@
 import React from 'react';
 import { _Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const technologies = [];
+const industries = [];
+const microsaasServices = [];
+const services = [];
+const applications = [];
+const solutions = [];
 const _MicroSAAS = () => {
     const _microsaasServices = [
         {

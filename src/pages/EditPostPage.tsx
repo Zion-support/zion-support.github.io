@@ -5,6 +5,12 @@ import { _Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { _useToast } from "@/hooks/use-toast";
 import { _useAuth } from "@/hooks/useAuth";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Check } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 // Mock post data
 const _mockPost = {
     id: "1",

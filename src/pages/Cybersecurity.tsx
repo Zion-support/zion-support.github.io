@@ -1,6 +1,19 @@
 import React from 'react';
 import { _SEO } from "@/components/SEO";
 import { _Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
+
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const securityServices = [];
+const services = [];
+const solutions = [];
+const securityFeatures = [];
+const implementation = [];
 const _Cybersecurity = () => {
     const _securityServices = [
         {

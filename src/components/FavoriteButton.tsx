@@ -1,6 +1,8 @@
 import React from 'react';
 import { _Heart } from 'lucide-react';
 import { _Button } from '@/components/ui/button';
+
+import { Heart } from 'lucide-react';
 interface FavoriteButtonProps {;
   "talentId": "string;
   "isFavorite": boolean;

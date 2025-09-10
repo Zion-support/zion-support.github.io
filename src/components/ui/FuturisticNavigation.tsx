@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
 const _navigationItems = [
     {
         name: 'Home',

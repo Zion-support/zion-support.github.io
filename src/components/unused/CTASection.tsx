@@ -2,6 +2,12 @@ import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
 import { _RocketLaunchIcon, PhoneIcon, EnvelopeIcon, CalendarIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
 export function CTASection() {
     const _ctaOptions = [
         {

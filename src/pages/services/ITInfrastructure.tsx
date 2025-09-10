@@ -1,6 +1,16 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Helmet } from 'react-helmet-async';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
+const features = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 const _ITInfrastructure = () => {
     const _features = [
         {

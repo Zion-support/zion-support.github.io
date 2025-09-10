@@ -12,6 +12,13 @@ import { _useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import { _useToast } from "@/components/ui/use-toast";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 // Mock data for a forum post
 const _mockPost = {
     id: "1",

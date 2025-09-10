@@ -1,5 +1,8 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
+
+import { Helmet } from 'react-helmet-async';
+import { Code } from 'lucide-react';
 const _AIAutonomousOptimization = () => {
     return (<>
       <Helmet>

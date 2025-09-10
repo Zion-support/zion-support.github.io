@@ -1,6 +1,19 @@
 import { _useState } from 'react';
 import { _motion } from 'framer-motion';
 import { _Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function RequestQuote() {
     const [formData, setFormData] = useState({
         firstName: '',

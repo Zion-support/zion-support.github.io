@@ -4,6 +4,8 @@ import { _Button } from '@/components/ui/button';
 import { _NEW_PRODUCTS } from '@/data/newProductsData';
 import { _useCart } from '@/context/CartContext';
 import { _toast } from '@/hooks/use-toast';
+
+import { useParams } from 'react-router-dom';
 export default function ProductPage() {
     const { id } = useParams();
     const _product = NEW_PRODUCTS.find(p => p.id === id);

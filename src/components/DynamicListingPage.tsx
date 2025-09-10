@@ -10,6 +10,8 @@ import { _Slider } from "@/components/ui/slider";
 import { _Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { _toast } from "@/hooks/use-toast";
 import { _Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
+
+import { Link } from 'react-router-dom';
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {
     const _navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");

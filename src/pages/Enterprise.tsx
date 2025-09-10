@@ -3,6 +3,14 @@ import { _SEO } from '@/components/SEO';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { _Button } from '@/components/ui/button';
 import { _Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
+
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const integrations = [];
+const solutions = [];
 export default function Enterprise() {
     const _features = [
         {

@@ -1,6 +1,25 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
 
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const industries = [];
+const services = [];
+const applications = [];
+
 
 const _AIAutonomousResearchAssistant = () => {
     const _features = [

@@ -9,6 +9,9 @@ import { _ChatMessage } from "./ChatMessage";
 import { _QuickReplyButton } from "./QuickReplyButton";
 import { _Send, Loader2 } from "lucide-react";
 import { _useTheme } from "@/hooks/useTheme";
+
+import { Check } from 'lucide-react';
+const implementation = [];
 // Define suggested quick replies
 const QUICK_REPLIES = [
     { id: "hire", text: "How do I hire?" },

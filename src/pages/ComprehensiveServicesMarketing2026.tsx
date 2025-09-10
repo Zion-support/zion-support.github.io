@@ -3,6 +3,28 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _Brain, Shield, Atom, Cpu, Network, Heart, Scale, DollarSign, Factory, Satellite, Code, Users, Globe, Server, Zap, Star, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon, ExternalLink, Rocket, Award, MessageCircle, ChevronRight, ChevronDown } from 'lucide-react';
 import { _SEO } from '@/components/SEO';
 import { _EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '@/data/expandedInnovativeServices2026';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const features = [];
+const benefits = [];
+const integrations = [];
+const industries = [];
+const services = [];
+const solutions = [];
 
 export default function ComprehensiveServicesMarketing2026() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);

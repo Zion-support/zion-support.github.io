@@ -2,6 +2,8 @@ import { _Route, Routes  } from 'react-router-dom';
 import { _Suspense, lazy } from 'react';
 import { _ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
+
+import ProtectedRoute from '@/components/ProtectedRoute';
 ';
 // Lazy load dashboard pages';';
 const _Dashboard = lazy(() => import('../pages/Dashboard'));';';

@@ -14,6 +14,12 @@ import { _motion", AnimatePresence  } from 'framer-motion';
 ;
 export const EnhancedMobileNavigation: React.FC = () => {
 import { _motion, AnimatePresence  } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
  from 'lucide-react';
 ;
 >} from 'lucide-react';

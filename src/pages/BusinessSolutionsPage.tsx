@@ -4,6 +4,15 @@ import { _Button } from '@/components/ui/button';
 import { _Badge } from '@/components/ui/badge';
 import { _Link } from 'react-router-dom';
 import { _Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const solutions = [];
 const _BusinessSolutions = [
     {
         title: "Business Strategy Consulting",

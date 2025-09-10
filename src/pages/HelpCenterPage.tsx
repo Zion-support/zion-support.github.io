@@ -6,6 +6,13 @@ import { _Button } from '@/components/ui/button';
 import { _Input } from '@/components/ui/input';
 import { _Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings } from 'lucide-react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Settings } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+const features = [];
+const services = [];
 export default function HelpCenterPage() {
     const _helpCategories = [
         {

@@ -2,6 +2,17 @@ import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
 import { _Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const services = [];
+const solutions = [];
 export const _EnhancedAbout = () => {
     const _companyValues = [
         {

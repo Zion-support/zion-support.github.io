@@ -5,6 +5,12 @@ import { _innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-se
 import { _expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
 import { _emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
 import { _enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+
+import { motion } from 'framer-motion';
+const features = [];
+const useCases = [];
+const services = [];
+const solutions = [];
 const _InnovativeServicesOverview = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');

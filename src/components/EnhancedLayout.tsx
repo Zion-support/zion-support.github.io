@@ -1,3 +1,7 @@
+import SEO from '@/components/SEO';
+const services = [];
+const solutions = [];
+
 "children": "ReactNod e;
   title?: string;
   description?: string;

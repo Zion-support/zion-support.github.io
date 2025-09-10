@@ -29,6 +29,9 @@ export default function Page(props: any) {
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {;
 import { _motion, AnimatePresence  } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+const testimonials = [];
 ;
 export default function Page(props: any) {;
 ,;

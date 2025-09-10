@@ -11,6 +11,11 @@ import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigg
 import { _ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { _toast } from "@/hooks/use-toast";
 import { _HireConfirmationModal } from "./HireConfirmationModal";
+
+import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const applications = [];
 export function CandidateCard({ application, index }) {
     const [showNotes, setShowNotes] = useState(false);
     const [notes, setNotes] = useState(application.notes || "");

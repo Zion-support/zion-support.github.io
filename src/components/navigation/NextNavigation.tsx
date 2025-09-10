@@ -6,6 +6,17 @@ import { _useRouter } from 'next/router',;',';';
     ;
 import { _motion, AnimatePresence } from 'framer-motion';
 import {;
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
+const services = [];
+const solutions = [];
   Menu;
   X;
   ChevronDown;

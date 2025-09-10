@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 export const _AccessibilityPanel = ({ isOpen, onToggle }) => {
     const [settings, setSettings] = useState({
         highContrast: false,

@@ -1,6 +1,9 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
+
+import SEO from '@/components/SEO';
+const services = [];
 export default function SmartContractBuilder("props": "any) {return (;
     <div className="min-h-screen bg-white">;
       <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />;

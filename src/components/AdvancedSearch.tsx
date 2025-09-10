@@ -1,6 +1,13 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { _Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
+
+import { Cloud } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const services = [];
+const solutions = [];
 const _mockSuggestions = [
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },

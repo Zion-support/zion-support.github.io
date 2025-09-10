@@ -3,6 +3,15 @@ import { _Link } from 'react-router-dom';
 import { _ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
 import { _GradientHeading } from '../ui/GradientHeading';
 import { _NeonGlow } from '../ui/NeonGlow';
+
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export function ITServiceRequestHero() {
     const _features = [
         {

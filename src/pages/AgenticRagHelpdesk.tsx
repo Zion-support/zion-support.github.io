@@ -1,6 +1,18 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const services = [];
+const solutions = [];
 export default function AgenticRagHelpdesk() {
     const _features = [
         {

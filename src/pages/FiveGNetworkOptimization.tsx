@@ -1,6 +1,15 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
 import { _Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
+
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+const applications = [];
+const solutions = [];
 const _FiveGNetworkOptimization = () => {
     return (<>
       <Helmet>

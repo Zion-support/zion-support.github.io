@@ -1,8 +1,7 @@
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';';
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 ';';
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 ;
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 type Theme = 'dark' | 'light' | 'system';
 ;
 interface ThemeToggleProps {;

@@ -2,6 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices';
+
+import { motion } from 'framer-motion';
+const features = [];
+const benefits = [];
+const technologies = [];
+const services = [];
+const solutions = [];
 const _ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (<motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}} transition={{ duration: 0.6, delay: index * 0.1 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>

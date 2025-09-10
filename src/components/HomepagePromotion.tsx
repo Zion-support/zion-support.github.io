@@ -1,6 +1,14 @@
 import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 export function HomepagePromotion() {
     const _featuredServices = [
         {

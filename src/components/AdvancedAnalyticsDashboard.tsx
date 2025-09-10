@@ -5,6 +5,15 @@ import { _TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieCha
 import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { _Button } from './ui/button';
 import { _Badge } from './ui/badge';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
 const _AdvancedAnalyticsDashboard = () => {
     const [timeRange, setTimeRange] = useState('30d');
     const [selectedMetric, setSelectedMetric] = useState('overview');

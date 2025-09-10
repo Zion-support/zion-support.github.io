@@ -3,6 +3,17 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
 import { _useAICodeGeneration } from '../hooks/useAICodeGeneration';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const implementation = [];
 export const _AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,

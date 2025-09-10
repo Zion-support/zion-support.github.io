@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const features = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _InteractiveServiceShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [hoveredService, setHoveredService] = useState(null);

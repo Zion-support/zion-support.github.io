@@ -3,6 +3,22 @@ import { _Link } from 'react-router-dom';
 import { _Helmet } from 'react-helmet-async';
 import { _motion } from 'framer-motion';
 import { _CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const pricingPlans = [];
+const integrations = [];
+const services = [];
 const _IncidentResponsePlatform = () => {
     const _features = [
         {

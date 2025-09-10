@@ -1,5 +1,8 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+const solutions = [];
 const _Docs = () => {
     const _docCategories = [
         {

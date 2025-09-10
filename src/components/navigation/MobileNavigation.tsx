@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 import { _Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
 import { _Button } from '@/components/ui/button';
+
+import { Link } from 'react-router-dom';
+const services = [];
 const _mobileMenuItems = [
     { name: 'Services', icon: <Briefcase className="w-5 h-5"/>, href: '/services' },
     { name: 'Talent', icon: <Users className="w-5 h-5"/>, href: '/talent' },

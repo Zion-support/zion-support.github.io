@@ -1,5 +1,8 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
+
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 const _AIAutonomousTrading = () => {
     return (<>
       <Helmet>

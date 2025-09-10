@@ -1,3 +1,7 @@
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
+const technologies = [];
+
 
             in cutting - edge technologies and proven methodologies.</p>;
         </motion.div>;

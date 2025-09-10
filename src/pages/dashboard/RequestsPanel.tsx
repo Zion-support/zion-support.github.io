@@ -5,6 +5,13 @@ import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { _QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { _RequestsHeader, QuoteRequestsList } from "@/components/quotes";
 import { _ProtectedRoute } from "@/components/ProtectedRoute";
+
+import { useAuth } from '@/hooks/useAuth';
+import { useTalentQuotes } from '@/hooks/useTalentQuotes';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import RequestsHeader from '@/components/RequestsHeader';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import QuoteDetails from '@/components/QuoteDetails';
 export default function RequestsPanel() {
     const { user } = useAuth();
     const _isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';

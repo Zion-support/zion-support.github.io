@@ -1,3 +1,9 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+
 
   "};export default function Page(props: any) {
  from 'lucide-react';

@@ -5,6 +5,9 @@ import { _usePoints } from '@/hooks/usePoints';
 import { _Link } from 'react-router-dom';
 import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 export function PointsBadge() {
     const { user, signOut, logout } = useAuth();
     const { ledger, balance } = usePoints();

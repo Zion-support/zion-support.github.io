@@ -1,6 +1,19 @@
 import React from 'react';
 import { _SEO } from '../../components/SEO';
 import { _Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
+
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
 export default function MicroSAASSolutions() {
     const _services = [
         {

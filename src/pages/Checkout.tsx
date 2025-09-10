@@ -6,6 +6,8 @@ import { _safeStorage } from '@/utils/safeStorage';
 import { _getCartKey } from '@/utils/cartUtils';
 import { _getStripe } from '@/utils/getStripe';
 import { _apiClient } from '@/utils/apiClient';
+
+import { Check } from 'lucide-react';
 export default function CheckoutPage() {
     const _navigate = useNavigate();
     const { t } = useTranslation();

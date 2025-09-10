@@ -5,6 +5,9 @@ import { _Card } from "@/components/ui/card";
 import { _MapPin, Clock, CheckCircle2 } from "lucide-react";
 import { _FavoriteButton } from "@/components/FavoriteButton";
 import { _useNavigate } from "react-router-dom";
+
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
 const _TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => {
     const _navigate = useNavigate();
     const _handleMessage = (e) => {

@@ -2,6 +2,20 @@ import React from 'react';
 import { _Helmet } from 'react-helmet-async';
 import { _motion } from 'framer-motion';
 import { _Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
 const _FiveGEnterpriseSolutions = () => {
     const _features = [
         {

@@ -6,6 +6,18 @@ import { _Badge } from '@/components/ui/badge';
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { _EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { _TrustedBySection } from '@/components/TrustedBySection';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
 export default function ExpandedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

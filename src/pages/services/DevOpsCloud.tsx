@@ -2,6 +2,26 @@ import React from 'react';
 import { _SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { _Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const technologies = [];
+const devopsServices = [];
+const cloudProviders = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function DevOpsCloudServices() {
     const _devopsServices = [
         {

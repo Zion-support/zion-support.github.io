@@ -8,6 +8,9 @@ import { _captureException } from "@/utils/sentry";
 import { _Skeleton } from "@/components/ui/skeleton";
 import { _useDebounce } from "@/hooks/useDebounce";
 import { _z } from "zod";
+
+const services = [];
+const solutions = [];
 const _listingSchema = z.object({
     id: z.string(),
     title: z.string(),

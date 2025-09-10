@@ -6,6 +6,11 @@ import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { _SEO } from "@/components/SEO";
 import { _ProtectedRoute } from "@/components/ProtectedRoute";
 import { _Briefcase } from "lucide-react";
+
+import SEO from '@/components/SEO';
+import { useParams } from 'react-router-dom';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 function HiringTrackerContent() {
     const { jobId } = useParams();
     const [activeTab, setActiveTab] = useState("kanban");

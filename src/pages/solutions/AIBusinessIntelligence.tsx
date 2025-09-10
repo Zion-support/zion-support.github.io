@@ -1,5 +1,15 @@
 import React from 'react';
 import { _Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
+
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const solutions = [];
+const biFeatures = [];
+const biSolutions = [];
+const implementation = [];
 const _AIBusinessIntelligence = () => {
     const _biFeatures = [
         {

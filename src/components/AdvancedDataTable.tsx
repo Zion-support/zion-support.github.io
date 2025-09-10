@@ -3,6 +3,9 @@ import { _motion, AnimatePresence } from 'framer-motion';
 import { _ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { _useVirtualScroll } from '../hooks/useVirtualScroll';
 import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
 export const _AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,

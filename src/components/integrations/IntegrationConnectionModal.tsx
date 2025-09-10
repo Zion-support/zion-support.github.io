@@ -4,6 +4,9 @@ import { _Button } from "@/components/ui/button";
 import { _Label } from "@/components/ui/label";
 import { _Checkbox } from "@/components/ui/checkbox";
 import { _toast } from "sonner";
+
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
 export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
     const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({

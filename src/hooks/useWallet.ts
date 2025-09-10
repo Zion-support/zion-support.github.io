@@ -2,4 +2,7 @@ import { _useEffect,useState,useCallback } from 'react'; import { _useAuth } fro
 import { _useEffect, useState, useCallback } from 'react'; // Added useCallback
 import { _useAuth } from '@/hooks/useAuth';
 import { _supabase } from '@/integrations/supabase/client';
+
+import { useAuth } from '@/hooks/useAuth';
+const integrations = [];
  from '@/types/tokens';

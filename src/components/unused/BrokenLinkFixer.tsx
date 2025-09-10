@@ -1,6 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _LinkIcon, ExclamationTriangleIcon, CheckCircleIcon, XMarkIcon, ArrowPathIcon, WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const services = [];
+const implementation = [];
 export const _BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails = true, fixBrokenLinks = true }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [links, setLinks] = useState([]);

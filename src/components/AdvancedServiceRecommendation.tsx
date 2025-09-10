@@ -4,6 +4,19 @@ import { _Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } fro
 import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { _Button } from './ui/button';
 import { _Badge } from './ui/badge';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 const _AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
         industry: '',

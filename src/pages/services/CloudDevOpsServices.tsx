@@ -1,6 +1,21 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const cloudServices = [];
+const cloudPlatforms = [];
+const technologies = [];
+const services = [];
+const applications = [];
+const solutions = [];
 const _CloudDevOpsServices = () => {
     const _cloudServices = [
         {

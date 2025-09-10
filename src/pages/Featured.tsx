@@ -1,5 +1,7 @@
 import { _FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { _GradientHeading } from "@/components/GradientHeading";
+
+const services = [];
 export default function Featured() {
     return (<>
       

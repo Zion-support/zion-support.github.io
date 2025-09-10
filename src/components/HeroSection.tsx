@@ -1,4 +1,10 @@
 import { _ import { motion, AnimatePresence  } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 ;
 export default function Page("props": "any) {;
 []"}

@@ -1,6 +1,16 @@
 import React from 'react';
 import { _SEO } from "@/components/SEO";
 import { _Shield, Database, Monitor } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 const _ITSolutions = () => {
     const _features = [
         {

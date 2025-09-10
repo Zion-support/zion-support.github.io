@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 export const _InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [
     { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },
     { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { _supabase, getFromProfiles } from '../../integrations/supabase/client';
 
+const integrations = [];
+
         return { "error": "(clientLoginResult.error as any)?.message || "Client-side login failed." "};    if(res.status === 200) {
       // Successful API call
       setTokens({ accessToken: dat a.accessToken, refreshToken: dat a.refreshToken }

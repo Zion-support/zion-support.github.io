@@ -1,5 +1,12 @@
 import React from 'react';
 import { _Helmet } from 'react-helmet-async';
+
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
+import { Code } from 'lucide-react';
+const technologies = [];
+const applications = [];
+const solutions = [];
 const _AIAutonomousDevelopment = () => {
     return (<>
       <Helmet>

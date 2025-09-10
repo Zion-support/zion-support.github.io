@@ -1,6 +1,20 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const technologies = [];
+const securityServices = [];
+const complianceStandards = [];
+const securityTechnologies = [];
+const services = [];
+const solutions = [];
 const _CybersecurityServices = () => {
     const _securityServices = [
         {

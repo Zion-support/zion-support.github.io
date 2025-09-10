@@ -11,6 +11,18 @@ import { _INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfr
 import { _IOT_EDGE_COMPUTING_SERVICES } from '../data/iotEdgeComputingServices';
 import { _INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+
 
 
     const _getCategoryIcon = (category) => {

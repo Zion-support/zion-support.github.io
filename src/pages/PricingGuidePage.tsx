@@ -5,6 +5,17 @@ import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/co
 import { _Badge } from '@/components/ui/badge';
 import { _Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
 import { _SEO } from '@/components/SEO';
+
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const integrations = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function PricingGuidePage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const _filteredServices = selectedCategory === 'all'

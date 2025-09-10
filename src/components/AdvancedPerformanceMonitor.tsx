@@ -1,3 +1,5 @@
+import { Zap } from 'lucide-react';
+
 
       if(metrics.lcp !== null) {;
         validMetrics++;

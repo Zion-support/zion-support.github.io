@@ -1,6 +1,9 @@
 import React from 'react';
 import { _Play, Download, Users, Zap, ArrowRight } from 'lucide-react';
 
+import { Zap } from 'lucide-react';
+const solutions = [];
+
 export const _FeatureCTAs = () => {
   const _ctaItems = [
     {

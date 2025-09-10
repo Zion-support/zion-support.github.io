@@ -17,6 +17,13 @@ import { _SocialShareSection } from "@/components/SocialShareSection";
 import { _useTranslation } from "react-i18next";
 import { _useLanguage } from "@/context/LanguageContext";
 import { _ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const features = [];
+const services = [];
 export default function Index() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();
