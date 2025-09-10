@@ -14,6 +14,7 @@
     "src/utils/linkChecker.ts",
     "src/utils/performance.ts",
     "src/utils/**",
+    "src/layout/**",
     "src/pages/**",
     "src/pages.disabled/**",
     "src/routes/**",

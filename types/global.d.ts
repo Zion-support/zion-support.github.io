@@ -40,10 +40,7 @@ declare module "*.module.scss" {
   export default content;
 }
 
-<<<<<<< HEAD
-=======
 // Node.js environment variables
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3a91
 declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: "development" | "production" | "test";
