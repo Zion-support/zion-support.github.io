@@ -73,11 +73,9 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 
 // Import the new pages
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
-const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
-const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
-const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025.tsx'));
+// Removed missing imports
+// Removed missing Sitemap import
 
 // Simple placeholder pages for missing ones
 const Signup = () => (
@@ -138,7 +136,7 @@ function App() {
                       <Route path="/privacy" element={<Privacy />} />
                       <Route path="/terms" element={<Terms />} />
                       <Route path="/cookies" element={<Cookies />} />
-                      <Route path="/sitemap" element={<Sitemap />} />
+                      {/* Removed missing Sitemap route */}
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/pricing" element={<Pricing />} />
                       <Route path="/services" element={<Services />} />
@@ -176,9 +174,7 @@ function App() {
                       <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                       <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                       <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-                      <Route path="/zion-2026-services" element={<Zion2026InnovativeServicesShowcase />} />
-                      <Route path="/zion-2026-overview" element={<Zion2026ServicesOverview />} />
-                      <Route path="/zion-2026-pricing" element={<Zion2026ComprehensivePricingGuide />} />
+                      {/* Removed missing routes */}
 
                       {/* Service Routes - only for existing pages */}
                       <Route path="/services/cloud-devops" element={<CloudDevOps />} />
