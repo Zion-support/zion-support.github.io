@@ -77,7 +77,7 @@ export async function getInvestorMatches(industry: string, location: string, sta
     return industryMatch && locationMatch && stageMatch;
   });
 
-  return filtered.slice(0, limit).map(inv => ({
+  return filtered.slice(0, _limit).map(inv => ({
     investor: inv,
     score: Math.floor(Math.random() * 40) + 60,
     reason: `Invests in ${inv.industries.join(', ')} at ${inv.stages.join(', ')} stages`

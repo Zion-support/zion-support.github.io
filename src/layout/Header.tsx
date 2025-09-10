@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header(): JSX.Element {
+export default function Header(): React.ReactElement {
   return (
     <header className="w-full border-b border-gray-200 bg-white/90">
       <div className="max-w-7xl mx-auto px-4 py-4">
