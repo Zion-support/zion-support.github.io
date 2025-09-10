@@ -40,12 +40,12 @@ import {
   Building,
   Truck
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { ALL_INNOVATIVE_SERVICES_2026 } from "@/data/innovativeMicroSaasServices2026";
-import { ALL_INDUSTRY_SOLUTIONS_2026 } from "@/data/specializedIndustrySolutions2026";
-import { ALL_BLOCKCHAIN_WEB3_SERVICES_2026 } from "@/data/blockchainWeb3Services2026";
-import { ALL_IOT_EDGE_SERVICES_2026 } from "@/data/iotEdgeComputingServices2026";
+import SEO from "../components/SEO";
+import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "../data/innovativeMicroSaasServices2025";
+import { ALL_INNOVATIVE_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
+import { ALL_INDUSTRY_SOLUTIONS_2026 } from "../data/specializedIndustrySolutions2026";
+import { ALL_BLOCKCHAIN_WEB3_SERVICES_2026 } from "../data/blockchainWeb3Services2026";
+import { ALL_IOT_EDGE_SERVICES_2026 } from "../data/iotEdgeComputingServices2026";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');

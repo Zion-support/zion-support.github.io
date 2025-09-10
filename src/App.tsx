@@ -89,6 +89,11 @@ const Signup = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
       <p className="text-xl text-gray-300">Join our platform</p>
+      <div className="mt-8">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+          Get Started
+        </button>
+      </div>
     </div>
   </div>
 );
@@ -102,6 +107,11 @@ const Marketplace = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
       <p className="text-xl text-gray-300">Explore our solutions</p>
+      <div className="mt-8">
+        <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+          Browse Solutions
+        </button>
+      </div>
     </div>
   </div>
 );
