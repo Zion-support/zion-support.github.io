@@ -1,4 +1,4 @@
-exports.handler = async function() {
+export const handler = async function() {
   const { execSync } = require('child_process');
   function run(cmd){ execSync(cmd, { stdio: 'inherit', shell: true }); }
   try {

@@ -2,7 +2,11 @@
 
 const https = require('https');
 
-const GITHUB_TOKEN = 'ghs_1VMCBXZRrk3YhQKYmTVlXYqmL6Z3O220nXyz';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+if (!GITHUB_TOKEN) {
+  console.error('GITHUB_TOKEN is not set. Set it in your environment before running this script.');
+  process.exit(1);
+}
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 
