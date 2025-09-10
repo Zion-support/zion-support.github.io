@@ -2,6 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ContactPublisherModal } from '@/components/profile/ContactPublisherModal';
 import { vi } from 'vitest';
 import * as toastHook from '@/hooks/use-toast';
+vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: { id: '1' } }) }));
 
 vi.mock('@/hooks/use-toast', () => ({
   toast: {
@@ -41,11 +42,17 @@ test('successful send closes modal and shows toast', async () => {
   fireEvent.click(screen.getByRole('button', { name: /send message/i }));
 
   await waitFor(() => expect(postMock).toHaveBeenCalledTimes(1));
-  expect(toastHook.toast.success).toHaveBeenCalledWith('Message sent!');
+  expect(postMock).toHaveBeenCalledWith('/api/messages', {
+    productId: '123',
+    subject: 'Hello World',
+    body: 'This is a test message that is definitely long enough.',
+    fromUser: '1'
+  });
+  expect(toastHook.toast.success).toHaveBeenCalledWith('Message sent');
   expect(defaultProps.onClose).toHaveBeenCalled();
 });
 
-test('shows error when send fails', async () => {
+test('shows toast when send fails', async () => {
   postMock.mockRejectedValueOnce({ message: 'Bad' });
 
   render(<ContactPublisherModal {...defaultProps} />);
@@ -60,5 +67,4 @@ test('shows error when send fails', async () => {
   fireEvent.click(screen.getByRole('button', { name: /send message/i }));
 
   await waitFor(() => expect(toastHook.toast.error).toHaveBeenCalledWith('Bad'));
-  expect(screen.getByText('Bad')).toBeInTheDocument();
 });

@@ -83,7 +83,7 @@ serve(async (req) => {
         throw new Error("Could not extract JSON from response");
       }
     } catch (e) {
-      console.error("Error parsing OpenAI response:", e);
+      // console.error("Error parsing OpenAI response:", e);
       
       // Fallback parsing approach if the standard parsing fails
       const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
@@ -108,7 +108,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in profile-summary-generator function:", error);
+    // console.error("Error in profile-summary-generator function:", error);
     
     return new Response(
       JSON.stringify({ error: error.message }),
