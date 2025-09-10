@@ -1,8 +1,13 @@
 /*
   Minimal React type declarations.
+<<<<<<< HEAD
   These are only used if @types/react is not present.
 */
 
+=======
+  These are fallback stubs to avoid TS errors when @types/react is unavailable.
+*/
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3a91
 declare module "react" {
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
     type: T;
