@@ -15,6 +15,9 @@
     "**/*.spec.tsx",
     "**/*.stories.ts",
     "**/*.stories.tsx",
+    "dist",
+    "out",
+    "public",
     "apps/**",
     "apps.backup/**",
     "backup/**",
@@ -37,13 +40,16 @@
     "src/data/**",
     "pages/**",
     "src/pages/**",
+    "src/pages/services/**",
+    "src/legal/**",
+    "src/mobile/**",
+    "src/layout/**",
+    "src/lib/**",
     "app/**",
     "src/app/**",
     "supabase/**",
-    "src/layout/**",
-    "src/legal/**",
-    "src/mobile/**",
-    "src/lib/**"
+    "src.broken/**",
+    "src.corrupted/**"
   ]
 }
 
