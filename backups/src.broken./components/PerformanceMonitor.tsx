@@ -103,10 +103,10 @@ const PerformanceMonitor: React.FC = () => {
 
   const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null): 'good' | 'needsImprovement' | 'poor' => {
     if (value === null) return 'good';
-    
+
     const threshold = PERFORMANCE_THRESHOLDS[metric];
     if (!threshold) return 'good';
-    
+
     if (value <= threshold.good) return 'good';
     if (value <= threshold.needsImprovement) return 'needsImprovement';
     return 'poor';
@@ -139,12 +139,11 @@ const PerformanceMonitor: React.FC = () => {
   si: number; // Speed Index
   tti: number; // Time to Interactive
 }
-=======
   };
 
   const formatMetric = (metric: keyof PerformanceMetrics, value: number | null): string => {
     if (value === null) return 'N/A';
-    
+
     switch (metric) {
       case 'fcp':
       case 'lcp':
@@ -166,7 +165,6 @@ const PerformanceMonitor: React.FC = () => {
 
 interface PerformanceScore {
   overall: number;
-=======
   AlertTriangle, 
   CheckCircle, 
   TrendingUp,
@@ -196,7 +194,7 @@ interface PerformanceMetrics {
       ttfb: calculateScore(metrics.ttfb, { good: 800, needsImprovement: 1800 }),
       overall: 0
     };
-    
+
     window.addEventListener('popstate', handleRouteChange);
     return () => window.removeEventListener('popstate', handleRouteChange);
   }, [measurePerformance]);
@@ -256,23 +254,21 @@ const PerformanceMonitor: React.FC = () => {
 
   const getScore = useCallback((metrics: Omit<PerformanceMetrics, 'score' | 'memory'>): number => {
     let score = 100;
-    
+
     if (metrics.fcp && metrics.fcp > thresholds.fcp.needsImprovement) score -= 20;
     else if (metrics.fcp && metrics.fcp > thresholds.fcp.good) score -= 10;
-    
+
     if (metrics.lcp && metrics.lcp > thresholds.lcp.needsImprovement) score -= 20;
     else if (metrics.lcp && metrics.lcp > thresholds.lcp.good) score -= 10;
-    
+
     if (metrics.fid && metrics.fid > thresholds.fid.needsImprovement) score -= 20;
     else if (metrics.fid && metrics.fid > thresholds.fid.good) score -= 10;
-    
+
     if (metrics.cls && metrics.cls > thresholds.cls.needsImprovement) score -= 20;
     else if (metrics.cls && metrics.cls > thresholds.cls.good) score -= 10;
-    
+
     if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.needsImprovement) score -= 20;
     else if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.good) score -= 10;
-=======
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -338,32 +334,32 @@ const PerformanceMonitor: React.FC = () => {
   // Calculate performance score
   const calculateScore = useCallback((metrics: PerformanceMetrics): number => {
     let score = 100;
-    
+
     // FCP scoring
     if (metrics.fcp > thresholds.fcp.poor) score -= 20;
     else if (metrics.fcp > thresholds.fcp.good) score -= 10;
-    
+
     // LCP scoring
     if (metrics.lcp > thresholds.lcp.poor) score -= 20;
     else if (metrics.lcp > thresholds.lcp.good) score -= 10;
-    
+
     // FID scoring
     if (metrics.fid > thresholds.fid.poor) score -= 15;
     else if (metrics.fid > thresholds.fid.good) score -= 7;
-    
+
     // CLS scoring
     if (metrics.cls > thresholds.cls.poor) score -= 15;
     else if (metrics.cls > thresholds.cls.good) score -= 7;
-    
+
     // TTFB scoring
     if (metrics.ttfb > thresholds.ttfb.poor) score -= 10;
     else if (metrics.ttfb > thresholds.ttfb.good) score -= 5;
-    
+
     // Memory scoring
     const memoryUsage = metrics.memory.used / metrics.memory.limit;
     if (memoryUsage > thresholds.memory.poor) score -= 10;
     else if (memoryUsage > thresholds.memory.good) score -= 5;
-    
+
     return Math.max(0, score);
   }, [thresholds]);
 
@@ -380,7 +376,7 @@ const PerformanceMonitor: React.FC = () => {
         const memory = (performance as any).memory;
         setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }));
       };
-      
+
       updateMemoryUsage();
       const interval = setInterval(updateMemoryUsage, 5000);
       return () => clearInterval(interval);
@@ -455,7 +451,7 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const score = getPerformanceScore(metrics);
     setPerformanceScore(score);
-    
+
     // Show monitor if performance is poor
     if (score < 70) {
       setIsVisible(true);
@@ -591,7 +587,7 @@ const PerformanceMonitor: React.FC = () => {
             ×
           </button>
         </div>
-        
+
         {/* Overall Score */}
         <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg">
           <div className="flex items-center justify-between">
@@ -701,7 +697,6 @@ const PerformanceMonitor: React.FC = () => {
                 />
               ))}
             </div>
-=======
         {/* Collapsed View */}
         {!isExpanded && (
           <div className="p-3">
@@ -720,11 +715,10 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
       </div>
-=======
   // Analyze performance and generate issues
   const analyzePerformance = useCallback((metrics: PerformanceMetrics): PerformanceIssue[] => {
     const newIssues: PerformanceIssue[] = [];
-    
+
     if (metrics.fcp > thresholds.fcp.poor) {
       newIssues.push({
         id: 'fcp-slow',
@@ -742,7 +736,7 @@ const PerformanceMonitor: React.FC = () => {
         suggestion: 'Consider lazy loading non-critical resources'
       });
     }
-    
+
     if (metrics.lcp > thresholds.lcp.poor) {
       newIssues.push({
         id: 'lcp-slow',
@@ -752,7 +746,7 @@ const PerformanceMonitor: React.FC = () => {
         suggestion: 'Optimize images, implement lazy loading, use CDN'
       });
     }
-    
+
     if (metrics.cls > thresholds.cls.poor) {
       newIssues.push({
         id: 'cls-high',
@@ -762,7 +756,7 @@ const PerformanceMonitor: React.FC = () => {
         suggestion: 'Set explicit dimensions for images and media elements'
       });
     }
-    
+
     const memoryUsage = metrics.memory.used / metrics.memory.limit;
     if (memoryUsage > thresholds.memory.poor) {
       newIssues.push({
@@ -773,7 +767,7 @@ const PerformanceMonitor: React.FC = () => {
         suggestion: 'Check for memory leaks, optimize component rendering'
       });
     }
-    
+
     return newIssues;
   }, [thresholds]);
 
@@ -783,19 +777,19 @@ const PerformanceMonitor: React.FC = () => {
       // Use Performance Observer for Core Web Vitals
       if ('PerformanceObserver' in window) {
         let fcp = 0, lcp = 0, fid = 0, cls = 0;
-        
+
         // FCP
         new PerformanceObserver((entryList) => {
           const entries = entryList.getEntries();
           fcp = entries[entries.length - 1].startTime;
         }).observe({ entryTypes: ['paint'] });
-        
+
         // LCP
         new PerformanceObserver((entryList) => {
           const entries = entryList.getEntries();
           lcp = entries[entries.length - 1].startTime;
         }).observe({ entryTypes: ['largest-contentful-paint'] });
-        
+
         // Calculate FID (First Input Delay)
         if ('PerformanceObserver' in window) {
           const observer = new PerformanceObserver((list) => {
@@ -821,24 +815,24 @@ const PerformanceMonitor: React.FC = () => {
           });
           observer.observe({ entryTypes: ['layout-shift'] });
         }
-        
+
         // Wait a bit for metrics to be collected
         setTimeout(() => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const ttfb = navigation.responseStart - navigation.requestStart;
-          
+
           const memory = (performance as any).memory || {
             usedJSHeapSize: 0,
             totalJSHeapSize: 0,
             jsHeapSizeLimit: 0
           };
-          
+
           const network = (navigator as any).connection || {
             effectiveType: 'unknown',
             downlink: 0,
             rtt: 0
           };
-          
+
           const metrics: PerformanceMetrics = {
             fcp,
             lcp,
@@ -857,7 +851,7 @@ const PerformanceMonitor: React.FC = () => {
             },
             score: 0
           };
-          
+
           metrics.score = calculateScore(metrics);
           resolve(metrics);
         }, 1000);
@@ -883,7 +877,7 @@ const PerformanceMonitor: React.FC = () => {
   // Start monitoring
   const startMonitoring = useCallback(async () => {
     setIsMonitoring(true);
-    
+
     const collectAndUpdate = async () => {
       try {
         const newMetrics = await collectMetrics();
@@ -894,13 +888,13 @@ const PerformanceMonitor: React.FC = () => {
         console.error('Error collecting performance metrics:', error);
       }
     };
-    
+
     // Initial collection
     await collectAndUpdate();
-    
+
     // Set up interval for continuous monitoring
     const interval = setInterval(collectAndUpdate, 10000); // Every 10 seconds
-    
+
     return () => clearInterval(interval);
   }, [collectMetrics, analyzePerformance]);
 
@@ -940,14 +934,9 @@ const PerformanceMonitor: React.FC = () => {
       >
         <Activity className="w-6 h-6" />
       </motion.button>
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { Zap, Clock, HardDrive, Wifi, AlertTriangle } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState } from 'react';=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
+import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -1220,7 +1209,7 @@ const PerformanceMonitor: React.FC = () => {
           {/* Core Web Vitals */}
           <div className="space-y-3 mb-4">
             <h4 className="text-sm font-medium text-gray-300">Core Web Vitals</h4>
-            
+
             {metrics.fcp !== null && (
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">FCP</span>
@@ -1261,7 +1250,7 @@ const PerformanceMonitor: React.FC = () => {
           {/* Additional Metrics */}
           <div className="space-y-3 mb-4">
             <h4 className="text-sm font-medium text-gray-300">Additional Metrics</h4>
-            
+
             {metrics.ttfb !== null && (
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">TTFB</span>
@@ -1325,7 +1314,7 @@ const PerformanceMonitor: React.FC = () => {
                   <Zap className="w-4 h-4" />
                   <span>Core Web Vitals</span>
                 </h4>
-                
+
                 <div className="grid grid-cols-2 gap-3">
                   <MetricCard
                     label="FCP"
@@ -1356,7 +1345,7 @@ const PerformanceMonitor: React.FC = () => {
                   <Cpu className="w-4 h-4" />
                   <span>System Metrics</span>
                 </h4>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-600 dark:text-gray-400">Memory Usage</span>
@@ -1397,7 +1386,7 @@ const PerformanceMonitor: React.FC = () => {
                     <AlertTriangle className="w-4 h-4" />
                     <span>Issues Found ({issues.length})</span>
                   </h4>
-                  
+
                   <div className="space-y-2">
                     {issues.map((issue) => (
                       <div
@@ -1449,7 +1438,7 @@ const PerformanceMonitor: React.FC = () => {
                     <TrendingUp className="w-4 h-4" />
                     <span>Performance Trend</span>
                   </h4>
-                  
+
                   <div className="h-20 flex items-end space-x-1">
                     {history.map((entry, index) => (
                       <div
@@ -1485,7 +1474,7 @@ const PerformanceMonitor: React.FC = () => {
             }`} />
             <span>{isMonitoring ? 'Monitoring' : 'Stopped'}</span>
           </div>
-          
+
           <div className="flex space-x-2">
             {isMonitoring ? (
               <button
@@ -1506,7 +1495,6 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </motion.div>
     </AnimatePresence>
-=======
     newScore.overall = Math.round(
       (newScore.fcp + newScore.lcp + newScore.fid + newScore.cls + newScore.ttfb) / 5
     );
@@ -1594,7 +1582,7 @@ const PerformanceMonitor: React.FC = () => {
                 ×
               </button>
             </div>
-            
+
             {/* Overall Score */}
             <div className="mt-3 text-center">
               <div className="text-3xl font-bold">{score.overall}</div>
@@ -1627,7 +1615,7 @@ const PerformanceMonitor: React.FC = () => {
                 <Zap className="w-4 h-4" />
                 <span>Core Web Vitals</span>
               </h4>
-              
+
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
                   <div className="flex items-center justify-between">
@@ -1681,7 +1669,7 @@ const PerformanceMonitor: React.FC = () => {
                 <Gauge className="w-4 h-4" />
                 <span>System Info</span>
               </h4>
-              
+
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
                   <div className="text-xs text-gray-600 dark:text-gray-400">Memory Usage</div>
@@ -1697,7 +1685,6 @@ const PerformanceMonitor: React.FC = () => {
                   <div className="text-xs text-gray-600 dark:text-gray-400">Network</div>
                   <div className="text-sm font-medium">{networkInfo.effectiveType}</div>
                   <div className="text-xs text-gray-500">{networkInfo.downlink} Mbps</div>
-=======
 interface PerformanceRecommendation {
   type: 'critical' | 'warning' | 'info';
   message: string;
@@ -1741,7 +1728,7 @@ const PerformanceMonitor: React.FC = () => {
 
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [];
-    
+
     if (metrics.fcp > thresholds.fcp.poor) {
       recs.push({
         type: 'critical',
@@ -1750,7 +1737,7 @@ const PerformanceMonitor: React.FC = () => {
         action: 'Optimize critical rendering path, reduce server response time'
       });
     }
-    
+
     if (metrics.lcp > thresholds.lcp.poor) {
       recs.push({
         type: 'critical',
@@ -1759,7 +1746,7 @@ const PerformanceMonitor: React.FC = () => {
         action: 'Optimize images, implement lazy loading, reduce bundle size'
       });
     }
-    
+
     if (metrics.fid > thresholds.fid.poor) {
       recs.push({
         type: 'warning',
@@ -1768,7 +1755,7 @@ const PerformanceMonitor: React.FC = () => {
         action: 'Reduce JavaScript execution time, implement code splitting'
       });
     }
-    
+
     if (metrics.cls > thresholds.cls.poor) {
       recs.push({
         type: 'warning',
@@ -1777,7 +1764,7 @@ const PerformanceMonitor: React.FC = () => {
         action: 'Set explicit dimensions for images and media elements'
       });
     }
-    
+
     if (metrics.bundleSize > 500000) { // 500KB
       recs.push({
         type: 'info',
@@ -1786,7 +1773,7 @@ const PerformanceMonitor: React.FC = () => {
         action: 'Implement tree shaking, code splitting, and lazy loading'
       });
     }
-    
+
     return recs;
   }, []);
 
@@ -1869,10 +1856,10 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Initial measurement
     const timer = setTimeout(measurePerformance, 1000);
-    
+
     // Set up periodic monitoring
     const interval = setInterval(measurePerformance, 30000); // Every 30 seconds
-    
+
     return () => {
       clearTimeout(timer);
       clearInterval(interval);
@@ -1955,7 +1942,7 @@ const PerformanceMonitor: React.FC = () => {
                 <Zap className="w-4 h-4 mr-2 text-yellow-500" />
                 Core Web Vitals
               </h4>
-              
+
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-600 dark:text-gray-400">FCP:</span>
@@ -1991,7 +1978,7 @@ const PerformanceMonitor: React.FC = () => {
                   <Clock className="w-4 h-4 mr-2 text-blue-500" />
                   Timing Metrics
                 </h4>
-                
+
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
@@ -2028,7 +2015,7 @@ const PerformanceMonitor: React.FC = () => {
                   <AlertTriangle className="w-4 h-4 mr-2 text-orange-500" />
                   Recommendations
                 </h4>
-                
+
                 {recommendations.slice(0, isExpanded ? undefined : 2).map((rec, index) => (
                   <div
                     key={index}
@@ -2048,7 +2035,7 @@ const PerformanceMonitor: React.FC = () => {
                     </div>
                   </div>
                 ))}
-                
+
                 {!isExpanded && recommendations.length > 2 && (
                   <button
                     onClick={() => setIsExpanded(true)}
@@ -2101,7 +2088,6 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
     <div className={`p-3 rounded-lg ${getStatusBg(status)}`}>
       <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">{label}</div>
       <div className={`font-mono font-semibold ${getStatusColor(status)}`}>{value}</div>
-=======
           </>
         ) : (
           <div className="text-center py-4">
@@ -2120,13 +2106,10 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
 };
 
 export default PerformanceMonitor;
-=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
-=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
-=======
 }
 
 export const PerformanceMonitor: React.FC = () => {
@@ -2184,7 +2167,6 @@ export const PerformanceMonitor: React.FC = () => {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // Measure Time to First Byte
-=======
         // Time to First Byte (TTFB)        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
           setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
@@ -2195,7 +2177,7 @@ export const PerformanceMonitor: React.FC = () => {
           const timing = (performance as any).timing;
           const domLoadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
           setMetrics(prev => ({ ...prev, domLoad: domLoadTime }));
-          
+
           // Window Load
           const windowLoadTime = timing.loadEventEnd - timing.navigationStart;
           setMetrics(prev => ({ ...prev, windowLoad: windowLoadTime }));
@@ -2250,7 +2232,7 @@ export const PerformanceMonitor: React.FC = () => {
   const getMetricValue = (metric: keyof PerformanceMetrics): string => {
     const value = metrics[metric];
     if (value === null) return 'N/A';
-    
+
     switch (metric) {
       case 'fcp':
       case 'lcp':
@@ -2280,49 +2262,49 @@ export const PerformanceMonitor: React.FC = () => {
           ✕
         </button>
       </div>
-      
+
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
           <span>FCP:</span>
           <span className="font-mono">{getMetricValue('fcp')}</span>
           <span>{getPerformanceScore('fcp')}</span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>LCP:</span>
           <span className="font-mono">{getMetricValue('lcp')}</span>
           <span>{getPerformanceScore('lcp')}</span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>FID:</span>
           <span className="font-mono">{getMetricValue('fid')}</span>
           <span>{getPerformanceScore('fid')}</span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>CLS:</span>
           <span className="font-mono">{getMetricValue('cls')}</span>
           <span>{getPerformanceScore('cls')}</span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>TTFB:</span>
           <span className="font-mono">{getMetricValue('ttfb')}</span>
           <span>{getPerformanceScore('ttfb')}</span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>DOM Load:</span>
           <span className="font-mono">{getMetricValue('domLoad')}</span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>Window Load:</span>
           <span className="font-mono">{getMetricValue('windowLoad')}</span>
         </div>
       </div>
-      
+
       <div className="mt-3 pt-2 border-t border-gray-600">
         <button
           onClick={() => window.location.reload()}

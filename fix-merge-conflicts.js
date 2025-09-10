@@ -21,21 +21,21 @@ import { execSync } from 'child_process';
           // Skip files that can't be read;
 }      }
     });
-    
+
     // Handle conflicts without file paths
     const simpleConflictRegex = /
-    
+
     resolvedContent = resolvedContent.replace(simpleConflictRegex, (match, headContent, incomingContent) => {
       const head = headContent.trim();
       const incoming = incomingContent.trim();
-      
+
       if (incoming.length > head.length * 0.8) {
         return incoming + '\n';
       } else {
         return head + '\n';
       }
     });
-    
+
     // Write resolved content back to file
     fs.writeFileSync(filePath, resolvedContent);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -49,15 +49,15 @@ import { execSync } from 'child_process';
 // Function to find all files with merge conflicts
 function findConflictFiles(dir) {
   const conflictFiles = [];
-  
+
   function scanDirectory(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
-      
+
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           // Skip certain directories
           if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
@@ -148,8 +148,4 @@ try {
 } catch (error) {
   console.log('TypeScript check found some issues, but continuing...');
 }
-<<<<<<< HEAD
 console.log('\nMerge conflict fixing complete!');
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

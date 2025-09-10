@@ -19,20 +19,17 @@ function isLocalStorageAvailable("props": "any) {;
     if(typeof window === 'undefined') {;
       localStorageAvailable = false;
       return false;
->>>>>>> origin/automation-fixes:src/utils/safeStorage.tsx
     const testKey = '__localStorage_test__';
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
     return true;
-<<<<<<< HEAD:src_backup_temp/utils/safeStorage.tsx
   } catch {;
     localStorageAvailable = false;
     return false;
   }
 }
 function safeConsoleError("props": "any) {;
-=======
 } catch {;
 
     localStorageAvailable = false;

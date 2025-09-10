@@ -17,7 +17,6 @@ const stats = [;
 ;];
 
 export default function IndustriesPage() {
-=======
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
@@ -111,7 +110,6 @@ export default function IndustriesPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
           <div className="container mx-auto px-4 relative z-10">
-=======
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -134,7 +132,6 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-=======
                 Industry-Specific{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Technology Solutions
@@ -206,7 +203,6 @@ export default function IndustriesPage() {
                   <motion.div);
                     key={index}
         <section className="py-20 bg-white">"
-=======
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -219,7 +215,6 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Why Choose Our Industry Solutions?
@@ -240,7 +235,6 @@ export default function IndustriesPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >,
-=======
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-blue-600" />
@@ -264,7 +258,6 @@ export default function IndustriesPage() {
                 viewport={{ once: true }}
         {/* Stats Section */}
         <section className="py-20 bg-gray-50">"
-=======
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Cloud className="w-8 h-8 text-purple-600" />
@@ -293,7 +286,6 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-=======
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -382,10 +374,7 @@ export default function IndustriesPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-=======
     </SimpleLayout>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     </Layout>
 
   );

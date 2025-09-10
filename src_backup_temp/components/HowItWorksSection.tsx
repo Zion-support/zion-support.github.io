@@ -47,7 +47,6 @@ import { motion, AnimatePresence  } from 'framer-motion';
           variants={containerVariants"}";
           initial="hidden";
           whileInView="visible";
->>>>>>> origin/automation-fixes:src/components/HowItWorksSection.tsx
           {stats.map((stat, index) => (;
             <motion.div;
               key={index}
@@ -180,10 +179,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
           </div>;
         </motion.div>;
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/HowItWorksSection.tsx
     </section>;) "}
 ;
-=======
     </section>;) }
 }
 '"`;

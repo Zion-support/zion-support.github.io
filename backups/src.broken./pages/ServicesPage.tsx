@@ -541,7 +541,6 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
                 <MessageCircle className="h-4 w-4 mr-2" />
                 Contact Sales
-=======
             <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -563,7 +562,7 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
                 <p className="text-zion-slate-light">{service.description}</p>
               </div>
-              
+
               <div className="flex items-center justify-between mb-4">
                 <div className="text-2xl font-bold text-zion-purple">
                   ${service.price?.toLocaleString()}
@@ -593,8 +592,6 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
       <DynamicListingPage 
         title="Comprehensive Micro SAAS Solutions"
         description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
@@ -603,9 +600,7 @@ export default function ServicesPage() {
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 19, max: 5000 }}
       />
-      
+
       <TrustedBySection />
-    </>=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  );
+    </>  );
 }

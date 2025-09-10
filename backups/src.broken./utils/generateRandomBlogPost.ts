@@ -90,9 +90,9 @@ export function generateRandomBlogPost(): BlogPost {
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
   const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
-  
+
   const title = `${adjective} ${noun} for ${topic}`;
-  
+
   return {
     id: Math.random().toString(36).substr(2, 9),
     title,
@@ -115,4 +115,4 @@ export function generateMultipleBlogPosts(count: number): BlogPost[] {
     posts.push(generateRandomBlogPost());
   }
   return posts;
-}=======
+}

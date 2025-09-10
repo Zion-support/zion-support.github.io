@@ -98,12 +98,9 @@ export function CaseStudiesSection("props": any) {;
           </div>;
         </motion.div>;
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/CaseStudiesSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/CaseStudiesSection.tsx
 export default CaseStudiesSection;";
             <span className="text-2xl">→</span>;
           </div>;

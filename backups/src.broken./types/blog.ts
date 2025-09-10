@@ -66,5 +66,4 @@ export const BLOG_POSTS: BlogPost[] = [
     image: '/images/web-apps.jpg',
     readTime: 12,
   },
-];=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+];

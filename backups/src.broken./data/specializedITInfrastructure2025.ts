@@ -25,13 +25,7 @@ export interface SpecializedITInfrastructureService2025 {
   documentationUrl?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======  // Quantum-Ready Cloud Infrastructure
-=======
-  // Quantum Network Infrastructure
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-  {
+  // Quantum-Ready Cloud Infrastructure  {
     id: "quantum-network-infrastructure",
     title: "Quantum Network Infrastructure",
     description: "Next-generation quantum network infrastructure that enables quantum communications, quantum key distribution, and quantum internet protocols for ultra-secure data transmission.",
@@ -264,7 +258,6 @@ export interface SpecializedITInfrastructureService2025 {
     category: "IT Infrastructure",
     subcategory: "Cloud Orchestration",
     price: 1900,
-=======
   // Hybrid Cloud Infrastructure Platform
   {
     id: "hybrid-cloud-infrastructure-platform",

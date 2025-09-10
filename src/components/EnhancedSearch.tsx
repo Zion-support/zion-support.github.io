@@ -23,14 +23,12 @@ import { motion, AnimatePresence  } from 'framer-motion';
   }
     );
   const [showFilters, setShowFilters] = useState<any>(false);
-=======
 
     type: [],
     category: [],
     tags: [];
 }) ;
   const [showFilters, setShowFilters] = useState(false);
->>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 // Mock suggestions;
   className = '',
@@ -49,13 +47,11 @@ import { motion, AnimatePresence  } from 'framer-motion';
     "tags": "[];
   "}) ;
 ;
-=======
 
     type: [],
     category: [],
     tags: [];
 }) ;
->>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
   const navigate = useNavigate () ;
@@ -226,10 +222,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
                     <button;
                       key={result.id}
                       onClick={() => handleResultClick(result)}`;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedSearch.tsx
                       className={`w-full text-left p-3 "hover": "b g-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`;
                       "}`}
-=======
                       className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`;
 }`}                    >";
                       <div className="flex items-start gap-3">";
@@ -286,6 +280,4 @@ import { motion, AnimatePresence  } from 'framer-motion';
 </SearchResult>
 </any>
 </any>
-=======
 '"`;"});})";
->>>>>>> origin/automation-fixes:src/components/EnhancedSearch.tsx

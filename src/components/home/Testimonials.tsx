@@ -126,12 +126,9 @@ return ();
         </motion.div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
   )"};
 ;
-=======
   )};
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
 export default Testimonials}}}'"`;
 </motion>;
 </button>;

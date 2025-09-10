@@ -27,13 +27,11 @@ const AgenticRAG: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/agentic-rag.tsx
 
 	const plans = [
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
 		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] },
 		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }],
-
 
 export default function AgenticRAGPage() {_const _contactInfo = {
 		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
@@ -42,7 +40,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
 		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 	return (_<UltraFuturisticMatrixBackground>
 			<Head>
@@ -62,5 +59,3 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 				</div>
 
 export default AgenticRAG;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/agentic-rag.tsx

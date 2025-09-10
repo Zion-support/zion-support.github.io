@@ -129,12 +129,9 @@ export function TechSolutionsSection("props": any) {;
           </div>;
         </motion.div>;
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/TechSolutionsSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/TechSolutionsSection.tsx
 export default TechSolutionsSection;";
             <span className="text-2xl">→</span>;
           </div>;

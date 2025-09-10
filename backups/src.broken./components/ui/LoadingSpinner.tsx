@@ -55,8 +55,8 @@ interface LoadingSpinnerProps {
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         style={{
           borderTopColor: customColor && color === 'custom' ? customColor : undefined
-        }}=======      />
-      
+        }}      />
+
       {showText && (
         <motion.p
 // Button loading state
@@ -147,6 +147,6 @@ export function ContentPlaceholder({
             className="h-4 bg-white/10 rounded-lg animate-pulse"
           />
         ))
-      )}=======    </div>
+      )}    </div>
   );
 }

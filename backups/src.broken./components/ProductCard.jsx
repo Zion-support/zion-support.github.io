@@ -39,7 +39,7 @@ export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) 
       enqueueSnackbar("Please log in to add items to your cart", { variant: "warning" });
       return;
     }
-    
+
     dispatch(addItem({
       id: product.id,
       title: productTitle,
@@ -47,7 +47,7 @@ export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) 
       image: imageUrl || null,
       quantity: 1
     }));
-    
+
     enqueueSnackbar("Item added to cart", { variant: "success" });
   };
 
@@ -98,11 +98,11 @@ export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) 
             </div>
           )}
         </div>
-        
+
         <Link href={`/marketplace/listing/${product.id}`}>
           <h3 className="font-semibold mb-1 line-clamp-2">{productTitle}</h3>
         </Link>
-        
+
         {product.price != null && (
           <p className="text-sm text-muted-foreground">
             {product.currency} {product.price}
@@ -146,7 +146,6 @@ export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) 
 }
 
 export { ProductCard };
-=======
 
 export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) {
   return (

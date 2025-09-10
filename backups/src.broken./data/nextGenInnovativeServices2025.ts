@@ -890,7 +890,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
-    innovationScore: 9.2=======  }
+    innovationScore: 9.2  }
 ];
 
 export default nextGenInnovativeServices2025;

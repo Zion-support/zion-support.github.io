@@ -4,9 +4,8 @@ export default function TermsOfService() {
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
-      
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======      <div className="space-y-6 text-zion-slate-light">
+
+      <div className="space-y-6 text-zion-slate-light">
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
           <p className="mb-4">
@@ -76,9 +75,7 @@ export default function TermsOfService() {
             If you have any questions about these Terms of Service, please contact us at{' '}
             <a href="mailto:legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
               legal@ziontechgroup.com
-            </a>=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-          </p>
+            </a>          </p>
         </section>
       </div>
     </div>

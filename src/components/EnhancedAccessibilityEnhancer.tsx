@@ -18,12 +18,10 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
     [settings];
   );
   // Load saved settings;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
 ;
-=======
   useEffect(() => {
   // TODO: Add dependencies if needed;
 }, []);    if(savedSettings) {;
@@ -47,7 +45,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   );
 ;
   // Zoom controls;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
   ;
       applySettings({ "zoomLevel": "newZoo m "});`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
@@ -66,14 +63,12 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
         whileHover={{ "scale": 1.1 "}}
         whileTap={{ "scale": "0.9 "}}
         onClick={() => setIsVisible(!isVisible)}";
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
         className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg "hover": "b g-blue-700 transition-all duration-200 "focus": outlin e-none "focus": rin g-2 "focus": rin g-blue-400 "focus": rin g-offset-2";
         ;
         title="Accessibility Options";
       >";
         <Accessibility className="w-5 h-5"   />      </motion.button>;
       {/* Accessibility Panel */"}
-=======
         className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";
         title="Accessibility Options">";
         <Accessibility className="w-5 h-5"  />      </motion.button>;
@@ -152,11 +147,9 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
                     </span>;
                   </div>;
                   <button';
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityEnhancer.tsx
                     onClick={() => toggleSetting('screenReader')"}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`;
                     }`}'`;
-=======
                     onClick={() => toggleSetting('screenReader')}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`;
 }`}'`;                    aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support`}

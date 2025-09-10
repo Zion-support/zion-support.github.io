@@ -33,7 +33,6 @@
       </CardContent>
     </Card>);
 }
-=======
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );

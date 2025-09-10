@@ -13,7 +13,6 @@ import React from 'react';
                     // Product listings with IDs go to product detail page`;
                     router.push(`/marketplace/listing/${sugg.id;
 '`;
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
                     // Documentation suggestions navigate directly to their path';
                     router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {;
                     // Blog posts navigate to blog detail page`;
@@ -93,7 +92,6 @@ import React from 'react';
           {isOpen && ;
             <motion.div;
               initial = {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
   { "opacity": "0",;
   "height": "0;
 "}}
@@ -108,7 +106,6 @@ import React from 'react';
               transition={{ "duration": "0.3 "}}";
               className=""lg": "hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10";
             >";
-=======
 
   { opacity: 0,
   height: 0;

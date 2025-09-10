@@ -5,7 +5,6 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {;
   size?: 'sm' | 'md' | 'lg';
   ;
 "}}
-=======
   text?: string;
   fullScreen?: boolean}
 
@@ -31,7 +30,6 @@ export function LoadingSpinner({;
   "repeat": "Infinit y;
 
 "}}
-=======
   { opacity: [0.7, 1,
   0.7];
 }}
@@ -54,7 +52,6 @@ export function LoadingSpinner({;
   "delay": "0.5;
 
 "}}
-=======
   { opacity: [0.5, 1,
   0.5];
 }}
@@ -84,7 +81,6 @@ export function SkeletonLoader(...args[]):  {;
 
   {;
 
-=======
             opacity: [0.5, 1, 0.5],
             backgroundPosition: ['200% 0',-200% 0'];}}
           transition = {;
@@ -92,7 +88,6 @@ export function SkeletonLoader(...args[]):  {;
   {;
 
 "}}
-=======
             duration: 1.5,
             repeat: Infinity,
   delay: index * 0.1;

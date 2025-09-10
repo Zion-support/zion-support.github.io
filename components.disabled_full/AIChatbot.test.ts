@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import AIChatbot from './AIChatbot;
 describe('AIChatbot', () => {;
   it('renders without crashing', () => {;
@@ -13,8 +12,4 @@ describe('AIChatbot', () => {
     render(<AIChatbot />);
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
 // Add interaction tests based on component functionality})});
-<<<<<<< HEAD
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
-=======
-import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

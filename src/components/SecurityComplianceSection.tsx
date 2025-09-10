@@ -88,7 +88,6 @@ import {  import { motion  } from 'framer-motion';
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
-          
 
           <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-8">;
             {complianceFeatures.map((category", index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">;
@@ -175,12 +174,9 @@ import {  import { motion  } from 'framer-motion';
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/SecurityComplianceSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/SecurityComplianceSection.tsx
 export default SecurityComplianceSection;";
             <span className="text-2xl">→</span>;
           </div>;

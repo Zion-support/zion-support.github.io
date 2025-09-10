@@ -118,7 +118,7 @@ export const FeaturesGuideSection: React.FC = () => {
             Discover the comprehensive suite of features designed to accelerate your business growth and digital transformation
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {FEATURES.map((feature) => (
             <Card key={feature.id} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -135,7 +135,7 @@ export const FeaturesGuideSection: React.FC = () => {
                 <p className="text-gray-600 mb-6 text-center">
                   {feature.description}
                 </p>
-                
+
                 <div className="space-y-2">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Benefits:</h4>
                   {feature.benefits.map((benefit, index) => (
@@ -149,7 +149,7 @@ export const FeaturesGuideSection: React.FC = () => {
             </Card>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -171,4 +171,4 @@ export const FeaturesGuideSection: React.FC = () => {
       </div>
     </section>
   );
-};=======
+};

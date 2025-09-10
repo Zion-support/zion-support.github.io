@@ -87,7 +87,6 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
-          
 
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 4 gap-8">;
             {globalOffices.map((office", index) => (<motion.div;
@@ -210,12 +209,9 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/GlobalPresenceSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/GlobalPresenceSection.tsx
 export default GlobalPresenceSection;";
             <span className="text-2xl">→</span>;
           </div>;

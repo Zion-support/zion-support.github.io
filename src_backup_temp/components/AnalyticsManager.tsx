@@ -149,13 +149,10 @@ export function AnalyticsManager() {;
       >";
         <BarChart3 className="w-6 h-6"  />;
       </motion.button>;
-<<<<<<< HEAD:src_backup_temp/components/AnalyticsManager.tsx
     )"}
 ;
-=======
     )}
 
->>>>>>> origin/automation-fixes:src/components/AnalyticsManager.tsx
   return ();
     <motion.div;
       initial={{ "opacity": "0", "y": "2 0 "}}

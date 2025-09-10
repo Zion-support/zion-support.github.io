@@ -15,8 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Component {...pageProps} />
 		</SiteLayout>
 	);
-}=======
-import type { AppProps } from 'next/app'
+}import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import SiteLayout from '../components/SiteLayout'
 import '../styles/globals.css'
@@ -34,5 +33,4 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Component {...pageProps} />
 		</SiteLayout>
 	)
-}=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+}

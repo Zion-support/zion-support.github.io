@@ -75,14 +75,12 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
           </div>;
         </motion.div>;
         {/* comment */}";
->>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
               >;
                 {/* comment */}
 
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>";
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">";
-<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
                       <Star className="{"w-4" h-4 fill-current"   />;
                       Most Popular,;
                     </div>;
@@ -95,7 +93,6 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
                   </div> {/* comment */}";
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}"}>;
-=======
                       <Star className="{"w-4" h-4 fill-current"  />;
                       Most Popular,
                     </div>;

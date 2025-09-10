@@ -51,7 +51,6 @@ const mockAnalyticsData: AnalyticsData = {
     { name: 'Data Analytics', usage: 42 }
   ],
   userSatisfaction: 4.7
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 
 const AdminUsageAnalyticsPage: React.FC = () => {
@@ -64,8 +63,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
     // Simulate loading analytics data
     setTimeout(() => {
       setAnalytics(mockAnalyticsData);
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
       setLoading(false);
     }
   }, [start, end, userType]),
@@ -108,8 +105,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
       </>
     );
   }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
 
   return (
     <EnhancedLayout>
@@ -139,8 +134,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
               <option value="users">Users</option>
               <option value="revenue">Revenue</option>
               <option value="projects">Projects</option>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
             </select>
           </div>
         </div>
@@ -230,8 +223,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
                     </div>
                     <span className="text-sm text-gray-600">{feature.usage}%</span>
                   </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
                 </div>
               ))}
             </div>
@@ -256,9 +247,6 @@ const AdminUsageAnalyticsPage: React.FC = () => {
               Optional providers supported (setup via env): Plausible, PostHog.
             </p>
           </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx
         </div>
 
 export default AdminUsageAnalyticsPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/usage-analytics.tsx

@@ -6,7 +6,6 @@ import { motion, AnimatePresence  } from 'framer-motion';
     // Cleanup function;
   "};
 }, []);, []);
-=======
 export default function Page() {;
     { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
   ];
@@ -51,7 +50,6 @@ return (";
       <SEO title="PerformanceOptimizedHero - Zion Tech Group"";
         description="Professional PerformanceOptimizedHero services by Zion Tech Group"",;
         keywords="performanceoptimizedhero, technology, services"   />";
-=======
 }, 3000) ;
     return () => clearInterval(interval)}, [features.length]);
     // // // // // // // // console.log('Hero CTA clicked');
@@ -94,6 +92,5 @@ useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % 
 </div>;
 </any>;
 </any>
-=======
 
 export default PerformanceOptimizedHero;

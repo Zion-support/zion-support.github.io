@@ -10,9 +10,7 @@ export interface ListingFilter {
   category?: string;
   priceRange?: {
     min: number;
-    max: number;=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  };
+    max: number;  };
   location?: string;
 export interface ListingSearchResult {
   listings: Listing[];
@@ -51,9 +49,7 @@ export interface ListingStats {
   totalViews: number;
   totalFavorites: number;
   averagePrice: number;
-  categoryDistribution: Record<string, number>;=======
-  availability?: string;
+  categoryDistribution: Record<string, number>;  availability?: string;
   aiScore?: number;
   pricingTier?: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

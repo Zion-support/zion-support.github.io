@@ -166,7 +166,6 @@ For support and questions:
 ---
 
 **Note**: This changelog is automatically maintained by GitHub Actions. For detailed information about each release, please refer to the GitHub releases page.
-=======
 Generated on 2025-08-24T03:55:58.628Z
 
 ## 2025-08-24

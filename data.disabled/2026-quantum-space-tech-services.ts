@@ -22,5 +22,4 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     }
   }
 ];
-=======
 export const quantumSpaceTech2026Services: Array<Record<string, any>> = []

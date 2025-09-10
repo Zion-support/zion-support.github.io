@@ -170,13 +170,12 @@ export default function HomePage() {
           </section>
         </div>
       </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>
         <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
         <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
       </Head>
-      
+
       <main className="container mx-auto px-4 py-16">
         <div className="text-center text-white">
           <h1 className="text-5xl font-bold mb-6">
@@ -186,7 +185,7 @@ export default function HomePage() {
             Leading technology solutions provider helping businesses transform their digital presence 
             with cutting-edge AI, cloud architecture, and innovative development services.
           </p>
-          
+
           <div className="flex justify-center gap-6 mb-12">
             <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Our Services
@@ -195,7 +194,7 @@ export default function HomePage() {
               Get in Touch
             </Link>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">AI Development</h3>
@@ -212,7 +211,6 @@ export default function HomePage() {
           </div>
         </div>
       </main>    </div>
-=======
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Cpu, Target, Microscope, TestTube } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
@@ -757,11 +755,10 @@ export default function Home() {
           </div>
         </section>
               </UltraFuturisticBackground2028>
-      
+
       {/* Footer */}
       <UltraFuturisticFooter2029 />
     </>  );
-=======
 export default function HomePage() {
 	return (
 		<Layout>

@@ -67,8 +67,7 @@ export function ThemeProvider({
       },
     }),
     [theme, storageKey]
-  );=======
-  return (
+  );  return (
     <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
@@ -88,4 +87,4 @@ export const useTheme = () => {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
-};=======
+};

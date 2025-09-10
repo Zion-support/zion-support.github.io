@@ -1,7 +1,6 @@
 import React from 'react';
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 ';
-<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
   'Advanced': 1", 'Cutting-edge': "2",;  ;
   ;
   ;
@@ -92,7 +91,6 @@ import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativ
   ;
   ;
   ;
-=======
               <button      onClick = {;
   () => {;
                   setSearchTerm('');

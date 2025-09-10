@@ -35,7 +35,6 @@ import { JobSchemaType } from './validation';
 }  };
   if(isLoading || isFormLoading) {;
     return <div className="flex items-center justify-center p-8">Loading...</div>;
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
   return (<Form {...form}>;
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
         <div>;
@@ -54,7 +53,6 @@ import { JobSchemaType } from './validation';
         </div>
         <BasicInfoFields control={form.control}  />
         <DateFields startDate={startDate} 
-=======
 
         <BasicInfoFields control={form.control} />;
         <DateFields ;

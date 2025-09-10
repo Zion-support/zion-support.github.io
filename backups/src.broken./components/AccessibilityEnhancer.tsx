@@ -37,25 +37,25 @@ export function AccessibilityEnhancer() {
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
+
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-    
+
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
+
     if (newSettings.focusIndicator) {
       root.classList.add('focus-visible');
     } else {
@@ -111,14 +111,7 @@ export function AccessibilityEnhancer() {
               </CardTitle>
               <Button
                 variant="ghost"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                size="icon"
-=======
-                size="sm"=======
-                size="icon"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-                onClick={() => setIsOpen(false)}
+                size="icon"                onClick={() => setIsOpen(false)}
                 aria-label="Close accessibility settings"
               >
                 ×
@@ -128,7 +121,7 @@ export function AccessibilityEnhancer() {
               Customize your experience for better accessibility
             </CardDescription>
           </CardHeader>
-          
+
           <CardContent className="space-y-4">
             {/* Visual Enhancements */}
             <div className="space-y-3">
@@ -136,10 +129,8 @@ export function AccessibilityEnhancer() {
                 <span>👁️</span>
                 Visual Enhancements
               </h4>
-              
+
               <div className="flex items-center justify-between">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Label.Root htmlFor="high-contrast" className="text-sm">
                   High Contrast
                 </Label.Root>
@@ -152,7 +143,7 @@ export function AccessibilityEnhancer() {
                   <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
                 </Switch.Root>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <Label.Root htmlFor="large-text" className="text-sm">
                   Large Text
@@ -166,7 +157,7 @@ export function AccessibilityEnhancer() {
                   <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
                 </Switch.Root>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <Label.Root htmlFor="focus-indicator" className="text-sm">
                   Enhanced Focus
@@ -178,45 +169,10 @@ export function AccessibilityEnhancer() {
                   className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
                 >
                   <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-=======
-                <Label htmlFor="high-contrast" className="text-sm">
-                  High Contrast
-                </Label>
-                <Switch
-                  id="high-contrast"
-                  checked={settings.highContrast}
-                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="large-text" className="text-sm">
-                  Large Text
-                </Label>
-                <Switch
-                  id="large-text"
-                  checked={settings.largeText}
-                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="focus-indicator" className="text-sm">
-                  Enhanced Focus
-                </Label>
-                <Switch
-                  id="focus-indicator"
-                  checked={settings.focusIndicator}
-                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
-                />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </div>
+                </Switch.Root>              </div>
             </div>
-            
+
             <Separator />
-<<<<<<< HEAD
-=======
                 <label htmlFor="high-contrast" className="text-sm">
                   High Contrast
                 </label>
@@ -228,7 +184,7 @@ export function AccessibilityEnhancer() {
                   className="ml-2"
                 />
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <label htmlFor="large-text" className="text-sm">
                   Large Text
@@ -241,7 +197,7 @@ export function AccessibilityEnhancer() {
                   className="ml-2"
                 />
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <label htmlFor="focus-indicator" className="text-sm">
                   Enhanced Focus
@@ -255,74 +211,11 @@ export function AccessibilityEnhancer() {
                 />
               </div>
             </div>
-            
+
             <div className="border-t border-border my-2" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            
-            {/* Motion and Navigation */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold flex items-center gap-2">
-                <span>🖱️</span>
-                Navigation & Motion
-              </h4>
-              
-              <div className="flex items-center justify-between">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Label.Root htmlFor="reduced-motion" className="text-sm">
-                  Reduced Motion
-                </Label.Root>
-                <Switch.Root
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label.Root htmlFor="keyboard-nav" className="text-sm">
-                  Keyboard Navigation
-                </Label.Root>
-                <Switch.Root
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-=======
-                <Label htmlFor="reduced-motion" className="text-sm">
-                  Reduced Motion
-                </Label>
-                <Switch
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="keyboard-nav" className="text-sm">
-                  Keyboard Navigation
-                </Label>
-                <Switch
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </div>
             </div>
-            
+
             <Separator />
-<<<<<<< HEAD
-=======
                 <label htmlFor="reduced-motion" className="text-sm">
                   Reduced Motion
                 </label>
@@ -334,7 +227,7 @@ export function AccessibilityEnhancer() {
                   className="ml-2"
                 />
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <label htmlFor="keyboard-nav" className="text-sm">
                   Keyboard Navigation
@@ -348,47 +241,8 @@ export function AccessibilityEnhancer() {
                 />
               </div>
             </div>
-            
+
             <div className="border-t border-border my-2" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-            
-            {/* Screen Reader */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold flex items-center gap-2">
-                <span>🔊</span>
-                Screen Reader
-              </h4>
-              
-              <div className="flex items-center justify-between">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Label.Root htmlFor="screen-reader" className="text-sm">
-                  Enhanced Support
-                </Label.Root>
-                <Switch.Root
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-=======
-                <label htmlFor="screen-reader" className="text-sm">
-                  Enhanced Support
-                </label>
-                <input
-                  type="checkbox"
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
-                  className="ml-2"
-                />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-                <Label htmlFor="screen-reader" className="text-sm">
                   Enhanced Support
                 </Label>
                 <Switch
@@ -396,10 +250,9 @@ export function AccessibilityEnhancer() {
                   checked={settings.screenReader}
                   onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
                 />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </div>
             </div>
-            
+
             {/* Quick Actions */}
             <div className="pt-2">
               <Button
@@ -433,18 +286,18 @@ export const accessibilityStyles = `
     --input: 0 0% 100%;
     --ring: 0 0% 100%;
   }
-  
+
   /* Large Text Mode */
   .large-text {
     font-size: 1.2em;
     line-height: 1.6;
   }
-  
+
   .large-text h1 { font-size: 2.5em; }
   .large-text h2 { font-size: 2em; }
   .large-text h3 { font-size: 1.75em; }
   .large-text p { font-size: 1.2em; }
-  
+
   /* Reduced Motion */
   .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
     animation-duration: 0.01ms !important;
@@ -452,13 +305,13 @@ export const accessibilityStyles = `
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   /* Focus Indicator */
   .focus-visible:focus {
     outline: 3px solid hsl(var(--ring));
     outline-offset: 2px;
   }
-  
+
   /* Screen Reader Only */
   .sr-only {
     position: absolute;
@@ -471,7 +324,7 @@ export const accessibilityStyles = `
     white-space: nowrap;
     border: 0;
   }
-  
+
   /* Focus visible utility */
   .focus-visible:focus-visible {
     outline: 2px solid hsl(var(--ring));

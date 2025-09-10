@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Blog: NextPage = () => {
   const blogPosts = [;
-=======
 import type { NextPage } from 'next' 
 import Layout from '../components/Layout' 
 import Link from 'next/link' 
@@ -202,7 +201,6 @@ const "Blog": NextPag e = () => {
 export default function BlogPage() {
   return (;
     <MainLayout>;
-=======
       "id": 6,
       "title": "Blockchain Technology: Beyond Cryptocurrency",
       "excerpt": "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",
@@ -273,7 +271,6 @@ export default function BlogPage() {
         </div>;
       </section>;
 
->>>>>>> origin/automation-fixes
       {/* Blog Content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -529,7 +526,6 @@ export default function BlogPage() {
                     </div>
                   </article>
                 ))}
-<<<<<<< HEAD
               </div>
               {/* Load More Button */}
               <div className="text-center mt-12">

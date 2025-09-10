@@ -1,5 +1,4 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
     return () => observer.disconnect () }, []) ;
   // Combine all services;
 ';

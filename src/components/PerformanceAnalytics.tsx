@@ -219,9 +219,7 @@ import {  import { motion  } from 'framer-motion';
             {isMonitoring
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
             }
-=======
 }
->>>>>>> origin/automation-fixes:src/components/PerformanceAnalytics.tsx
           </p>;
           {isMonitoring && (";
             <div className="mt-4 text-sm text-green-400">";

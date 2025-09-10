@@ -17,9 +17,7 @@ import { ProductListing } from "@/types/listings";
     },
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T11:45:00.000Z",
-    rating: 4.9,=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    reviewCount: 134,
+    rating: 4.9,    reviewCount: 134,
     featured: true,
     location: "Global",
     availability: "3-4 Weeks",
@@ -32,9 +30,7 @@ import { ProductListing } from "@/types/listings";
     subcategory: "Business Operations",
     price: 199,
     currency: "$",
-    tags: ["Inventory Management", "Barcode Scanning", "Automated Reordering", "Analytics"],=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    author: {
+    tags: ["Inventory Management", "Barcode Scanning", "Automated Reordering", "Analytics"],    author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
@@ -56,10 +52,8 @@ import { ProductListing } from "@/types/listings";
       email: "kleber@ziontechgroup.com",
     },
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-15T09:30:00.000Z",=======
-    images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-15T09:30:00.000Z",    images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     rating: 4.9,
     reviewCount: 78,
     featured: true,
@@ -291,4 +285,4 @@ export const CONTACT_INFO = {
   website: "https://ziontechgroup.com",
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
   responseTime: "24-48 hours for initial response"
-};=======
+};

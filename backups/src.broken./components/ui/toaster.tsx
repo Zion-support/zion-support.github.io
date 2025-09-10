@@ -6,4 +6,4 @@ export function Toaster() {
     <HotToaster position="top-right" />
   );
 export function Toaster() {
-  return <div id="toaster" />;=======}
+  return <div id="toaster" />;}

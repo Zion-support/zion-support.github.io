@@ -89,7 +89,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
-          
 
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-6">;
             {emergingTech.map((tech", index) => (<motion.div;
@@ -126,7 +125,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Our Technology Philosophy
-            
 
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
@@ -206,12 +204,9 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/TechnologyStackSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/TechnologyStackSection.tsx
 export default TechnologyStackSection;";
             <span className="text-2xl">→</span>;
           </div>;

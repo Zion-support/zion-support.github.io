@@ -1,5 +1,4 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
->>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
       // LCP scoring(0-100);
       if(metrics.lcp !== null) {;
         validMetrics++;
@@ -34,16 +33,13 @@ import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-reac
           if (entry.processingStart && entry.startTime) {;
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});
-<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
-=======
       fidObserver.observe({ entryTypes: ['first-input'] });      // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;        let clsValue = 0;        list.getEntries().forEach(("entry": "an y) => {;
           if(!entry.hadRecentInput) {;
             clsValue += entry.value"}
         });
-<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
       });
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
@@ -96,11 +92,9 @@ import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-reac
           : value < 0.25';
             ? '🟡 Needs Improvement'';
             : '🔴 Poor';
-<<<<<<< HEAD:src_backup_temp/components/AdvancedPerformanceMonitor.tsx
       "default":';
         return 'N/A'"}  };
 ;
-=======
       default:';
         return 'N/A'}  };  if(!isVisible) {;
     return ();
@@ -112,12 +106,10 @@ import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-reac
         <Activity className="w-6 h-6"   />      </button>;
     )"}
 ;
-=======
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50">";
         <Activity className="w-6 h-6"  />      </button>;
     )}
 
->>>>>>> origin/automation-fixes:src/components/AdvancedPerformanceMonitor.tsx
   return (";
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">";
       <div className="flex items-center justify-between mb-4">";

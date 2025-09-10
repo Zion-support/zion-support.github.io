@@ -39,13 +39,10 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
                 setSelectedCategory(category) ;
                 setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category';
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'';
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
                   : 'bg-slate-700 text-gray-300 "hover": "b g-slate-600 "hover": tex t-white'`;
               "}`}
-=======
                   : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`;
 }`}
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
             >;
               {category}
             </button>;
@@ -89,12 +86,9 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
 export default InteractiveTestimonials;";
             <span className="text-2xl">→</span>;
           </div>;

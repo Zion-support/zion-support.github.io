@@ -43,16 +43,13 @@
           `HTTP ${response.status}: "${response.statusText"}`;
         );
         return}
->>>>>>> origin/automation-fixes:src/utils/resourceMonitor.ts
       if(!contentType) {;
         this.handleResourceError(url,other',No content-type header');
         return}
       // Check for MIME type issues';
       if(url.endsWith('.js') && !contentType.includes('javascript')) {;
-<<<<<<< HEAD:src_backup_temp/utils/resourceMonitor.ts
         this.handleResourceError(url, 'script', `Incorrect MIME "type": "${contentType"} (expected javascript)`)} else if(url.endsWith('.css') && !contentType.includes('css')) {;
         this.handleResourceError(url, 'stylesheet', `Incorrect MIME "type": "${contentType"} (expected css)`)}
-=======
         this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if(url.endsWith('.css') && !contentType.includes('css')) {;
         this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
         this.handleResourceError();
@@ -130,15 +127,13 @@
     );
       return 'font';
   getErrorSummary() {
-    
+
     this.errors.forEach(error => {
 
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}
     );
     return summary}
 }
-<<<<<<< HEAD:src_backup_temp/utils/resourceMonitor.ts
-=======
 // Create singleton instance;
 
 export default resourceMonitor;

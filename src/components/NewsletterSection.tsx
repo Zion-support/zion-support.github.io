@@ -187,12 +187,9 @@
           </motion.div>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/NewsletterSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/NewsletterSection.tsx
 export default NewsletterSection}}}'";
 </motion>;
 </motion>;

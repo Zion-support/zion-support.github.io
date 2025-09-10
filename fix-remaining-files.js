@@ -56,9 +56,7 @@ const __dirname = path.dirname(__filename);
         </div>;
       </section>;
     </div>;
-<<<<<<< HEAD
   )}
-=======
   );,
 }`;
 // Function to extract service name from file path;
@@ -70,10 +68,8 @@ function getDisplayName(serviceName) {
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-<<<<<<< HEAD
     .trim()}
 ;
-=======
     .trim();,
 }
 // Fix corrupted files;

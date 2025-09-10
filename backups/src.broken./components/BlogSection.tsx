@@ -60,7 +60,7 @@ export const BlogSection: React.FC = () => {
             Stay informed with our latest articles on AI, technology trends, and business innovation
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredPosts.map((post) => (
             <Card key={post.id} className="hover:shadow-lg transition-shadow">
@@ -85,7 +85,7 @@ export const BlogSection: React.FC = () => {
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                
+
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center space-x-2">
                     <img
@@ -106,7 +106,7 @@ export const BlogSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <Link
                   href={`/blog/${post.id}`}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
@@ -118,7 +118,7 @@ export const BlogSection: React.FC = () => {
             </Card>
           ))}
         </div>
-        
+
         <div className="text-center">
           <Link
             href="/blog"
@@ -131,4 +131,4 @@ export const BlogSection: React.FC = () => {
       </div>
     </section>
   );
-};=======
+};

@@ -71,7 +71,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
     letterSpacing: 0,
     wordSpacing: 0}
     );
-=======
 
     highContrast: false,
     largeText: false,
@@ -83,7 +82,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
     lineHeight: 1.5,
     letterSpacing: 0,
     wordSpacing: 0});
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
@@ -134,7 +132,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
     [settings];
   );
   // Load settings from localStorage;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityPanel.tsx
   useEffect(() => {;
 // "TODO": "Add dependencies if needed;
   return () => {;
@@ -149,7 +146,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
 </AccessibilitySettings>;
 </any>;
 </any>
-=======
   useEffect(() => {
   // TODO: Add dependencies if needed;
 

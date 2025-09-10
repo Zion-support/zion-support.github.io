@@ -19,7 +19,6 @@ export default function Dashboard() {
       });
     }
   };
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
   return (
@@ -66,7 +65,7 @@ import { Helmet } from 'react-helmet-async';
                   </div>
                 </div>
               </div>
-              
+
               {/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
@@ -83,7 +82,7 @@ import { Helmet } from 'react-helmet-async';
                 </div>
               </div>
             </div>
-            
+
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -101,7 +100,7 @@ import { Helmet } from 'react-helmet-async';
                     </Button>
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
                     <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>
@@ -112,7 +111,7 @@ import { Helmet } from 'react-helmet-async';
                     <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>
                   </div>
                 </div>
-                
+
                 {/* Badges Preview */}
                 <div className="mb-8">
                   <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
@@ -143,7 +142,7 @@ import { Helmet } from 'react-helmet-async';
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Community Section */}
                 <div>
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
@@ -155,12 +154,11 @@ import { Helmet } from 'react-helmet-async';
         </div>
       </div>
       <Footer />
-=======
       <Helmet>
         <title>Dashboard - Zion Tech Group</title>
         <meta name="description" content="Access your Zion Tech Group dashboard. Monitor projects, manage services, and track your technology solutions." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -169,7 +167,7 @@ import { Helmet } from 'react-helmet-async';
               Monitor your projects, manage services, and track your technology solutions in one comprehensive dashboard.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Dashboard coming soon. We're building a comprehensive client dashboard.

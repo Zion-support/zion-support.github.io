@@ -37,7 +37,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
-          
 
           <div className="grid grid - cols - 1 "md": "gri d - cols - 2 gap-8">;
             {researchAreas.map((area", index) => (<motion.div;
@@ -108,7 +107,6 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
-            
 
             <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-6">;
               <div className="text-center">;
@@ -188,12 +186,9 @@ function InnovationResearchSection("props": "any) {export function InnovationRes
           </div>
         </motion.div>
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/InnovationResearchSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/InnovationResearchSection.tsx
 export default InnovationResearchSection;";
             <span className="text-2xl">→</span>;
           </div>;
