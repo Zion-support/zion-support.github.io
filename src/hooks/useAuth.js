@@ -17,17 +17,17 @@ export const useAuth = () => {
     const logout = () => {
         setUser(null);
     };
+    const register = async (email, password) => {
+        // Simulate register
+        return { success: true, email };
+    };
     return {
         user,
         loading,
         login,
-<<<<<<< HEAD
-        logout
-=======
         logout,
         register,
         isAuthenticated: !!user,
         isAdmin: user?.role === 'admin'
->>>>>>> origin/chore/fix-links-and-build
     };
 };
