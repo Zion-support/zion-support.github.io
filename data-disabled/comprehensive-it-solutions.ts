@@ -12,7 +12,6 @@ export interface ComprehensiveItSolution {
     mobile: string;
     email: string;
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [;
-<<<<<<< HEAD:data-disabled/comprehensive-it-solutions.ts
   {
     id: "full-stack-development",;
     name: "Full-Stack Development Services",;

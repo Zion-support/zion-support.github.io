@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { SEO } from "../components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 export default function Privacy() {
     return (<>
       <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
@@ -42,8 +41,3 @@ export default function Privacy() {
       </main>
       <Footer />
     </>)}
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

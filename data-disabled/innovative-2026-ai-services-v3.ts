@@ -12,7 +12,6 @@ export interface Innovative2026AiServiceV3 {
     mobile: string;
     email: string;
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [;
-<<<<<<< HEAD:data-disabled/innovative-2026-ai-services-v3.ts
   {
     id: "2026-innovative-ai-v3",;
     name: "2026 Innovative AI Platform V3",;

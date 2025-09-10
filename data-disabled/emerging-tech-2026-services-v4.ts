@@ -38,7 +38,6 @@ export interface EmergingTech2026ServiceV4 {
   rating: number;
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
   // Neuromorphic Computing Platform;
-<<<<<<< HEAD:data-disabled/emerging-tech-2026-services-v4.ts
   {
     id: "neuromorphic-computing-platform",;
     name: "Neuromorphic Computing Platform",;

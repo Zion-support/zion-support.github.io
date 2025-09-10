@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ChatAssistant } from "@/components/ChatAssistant";
-import { apiClient } from "@/utils/apiClient";
+import { Button } from "../components/ui/button";
+import { ChatAssistant } from "../components/ChatAssistant";
+import { apiClient } from "../utils/apiClient";
 export function ChatAssistantTrigger() {
     const [isOpen, setIsOpen] = useState(false);
     // Handle sending messages to the AI chat assistant

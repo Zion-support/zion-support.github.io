@@ -1,15 +1,15 @@
 import { _useState, useEffect } from "react";
 import { _useNavigate } from "react-router-dom";
-import { _GradientHeading } from "@/components/GradientHeading";
-import { _ProductListingCard } from "@/components/ProductListingCard";
-import { _Button } from "@/components/ui/button";
-import { _Input } from "@/components/ui/input";
-import { _Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { _Skeleton } from "@/components/ui/skeleton";
-import { _Slider } from "@/components/ui/slider";
+import { _GradientHeading } from "../components/GradientHeading";
+import { _ProductListingCard } from "../components/ProductListingCard";
+import { _Button } from "../components/ui/button";
+import { _Input } from "../components/ui/input";
+import { _Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "../components/ui/select";
+import { _Skeleton } from "../components/ui/skeleton";
+import { _Slider } from "../components/ui/slider";
 import { _Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { _toast } from "@/hooks/use-toast";
-import { _Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
+import { _toast } from "../hooks/use-toast";
+import { _Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "../components/ui/pagination";
 
 import { Link } from 'react-router-dom';
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {

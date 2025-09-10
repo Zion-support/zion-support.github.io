@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 
 export function Select({ children, className = '', value, onValueChange, disabled = false }) {
@@ -77,15 +76,3 @@ export function SelectContent({ children, className = '' }) {
   );
 }
 
-=======
-export function SelectItem({ children, className = '', value, ...props }) {
-    return (<div className={`
-        relative flex w-full cursor-pointer select-none items-center 
-        rounded-sm px-3 py-2 text-sm text-white outline-none 
-        hover:bg-zion-blue/20 focus:bg-zion-blue/20 
-        focus:text-white transition-colors
-        ${className}
-      `} data-value={value} {...props}>
-      {children}
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

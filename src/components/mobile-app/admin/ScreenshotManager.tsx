@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "../../../components/ui/card";
+import { Button } from "../../../components/ui/button";
 import { Upload, Trash2, Plus } from "lucide-react";
 import { toast } from "sonner";
 export const ScreenshotManager = ({ platform }) => {

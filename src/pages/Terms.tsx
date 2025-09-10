@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import TermsOfService from "@/legal/TermsOfService";
+import { SEO } from "../components/SEO";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import TermsOfService from "../legal/TermsOfService";
 export default function Terms() {
     return (<>
       <SEO title="Terms of Service" description="The terms and conditions for using the Zion platform." canonical="https://ziontechgroup.com/terms"/>
@@ -14,8 +13,3 @@ export default function Terms() {
       </main>
       <Footer />
     </>)}
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

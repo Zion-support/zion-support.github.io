@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { _MessageCircle } from "lucide-react";
-import { _Button } from "@/components/ui/button";
-import { _Input } from "@/components/ui/input";
-import { _Textarea } from "@/components/ui/textarea";
-import { _Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { _Card, CardContent } from "@/components/ui/card";
-import { _Separator } from "@/components/ui/separator";
+import { _Button } from "../components/ui/button";
+import { _Input } from "../components/ui/input";
+import { _Textarea } from "../components/ui/textarea";
+import { _Avatar, AvatarFallback } from "../components/ui/avatar";
+import { _Card, CardContent } from "../components/ui/card";
+import { _Separator } from "../components/ui/separator";
 const _initialPosts = [
     {
         id: 1,

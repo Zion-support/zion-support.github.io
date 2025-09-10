@@ -1,5 +1,5 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/creator/CreatorSidebar";
+import { SidebarProvider, SidebarTrigger } from "../components/ui/sidebar";
+import { AppSidebar } from "../components/creator/CreatorSidebar";
 export default function CreatorDashboard() {
     return (<SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">

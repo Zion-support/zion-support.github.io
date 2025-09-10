@@ -1,12 +1,12 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { useAuth } from '../hooks/useAuth';
+import { useGetOrdersQuery } from '../hooks/useOrders';
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from '@/components/ui/table';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from '../components/ui/table';
+import { Skeleton } from '../components/ui/skeleton';
 
-import { EmptyState } from '@/components/ui/empty-state';
+import { EmptyState } from '../components/ui/empty-state';
 export default function OrdersPage() {
 
     const { user } = useAuth();

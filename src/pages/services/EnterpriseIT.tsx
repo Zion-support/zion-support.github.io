@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Cog, Icon } from 'lucide-react';
 import React from 'react';
 
@@ -7,11 +6,6 @@ import { _Link } from 'react-router-dom';
 import { _CogIcon } from '@heroicons/react/24/outline';
 
 import { Link } from 'react-router-dom';
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
->>>>>>> origin/clean-error-fixing-automation
 const $service = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -32,11 +26,6 @@ const $service = () => {
           </Link>
         </div>
       </section>
-<<<<<<< HEAD
 
 
-=======
-    </div>);
-};
->>>>>>> origin/clean-error-fixing-automation
 export default $service;

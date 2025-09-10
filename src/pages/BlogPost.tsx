@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import { SEO } from "../components/SEO";
+import { Button } from "../components/ui/button";
 import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "../components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { BLOG_POSTS } from "../data/blog-posts";
 export default function BlogPost() {
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -31,8 +30,13 @@ export default function BlogPost() {
     if (!post) {
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
-      </div>)}
-    // Helper function title = encodeURIComponent(post.title);
+      </div>);
+    }
+
+    // Helper function
+    const getShareUrl = (platform: string) => {
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(post.title);
         switch (platform) {
             case 'facebook':
                 return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
@@ -41,14 +45,11 @@ export default function BlogPost() {
             case 'linkedin':
                 return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
             default:
-                return '#'}
+                return '#';
+        }
     };
     return (<>
-      <SEO title={post.title} description={post.excerpt} keywords = {
-  post.tags.join(",
-  ")
-
-} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
+      <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}
@@ -171,29 +172,6 @@ export default function BlogPost() {
           </div>
         </div>
       </div>
-    </>)}
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-
-const BlogPost: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Blog Post - Zion Tech Group"
-        description="Read our latest blog post."
-      />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center text-white">
-          <h1 className="text-4xl font-bold mb-4">Blog Post</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Read our latest insights and updates.
-          </p>
-        </div>
-      </div>
-    </div>
+    </>
   );
-};
-
-export default BlogPost;
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
+}

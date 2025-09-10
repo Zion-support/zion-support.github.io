@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { _Button } from '@/components/ui/button';
+import { _Button } from '../components/ui/button';
 export const _InstallPrompt = () => {
     const [deferred, setDeferred] = useState(null);
     useEffect(() => {

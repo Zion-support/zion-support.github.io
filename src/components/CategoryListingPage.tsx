@@ -1,10 +1,10 @@
 import { _useState, useEffect } from "react";
-import { _Footer } from "@/components/Footer";
-import { _GradientHeading } from "@/components/GradientHeading";
-import { _ListingScoreCard } from "@/components/ListingScoreCard";
-import { _Button } from "@/components/ui/button";
-import { _Input } from "@/components/ui/input";
-import { _Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { _Footer } from "../components/Footer";
+import { _GradientHeading } from "../components/GradientHeading";
+import { _ListingScoreCard } from "../components/ListingScoreCard";
+import { _Button } from "../components/ui/button";
+import { _Input } from "../components/ui/input";
+import { _Select, SelectTrigger, SelectContent, SelectItem } from "../components/ui/select";
 import { _Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react";
 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
     { label: 'Newest First', value: 'newest' },

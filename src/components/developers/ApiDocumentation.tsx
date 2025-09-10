@@ -1,33 +1,19 @@
-<<<<<<< HEAD
 import { _useState } from "react";
 import { _BookOpen, Terminal } from "lucide-react";
-import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Alert, AlertDescription } from "@/components/ui/alert";
-import { _Badge } from "@/components/ui/badge";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
+import { _Alert, AlertDescription } from "../../components/ui/alert";
+import { _Badge } from "../../components/ui/badge";
 import CodeBlock from "./CodeBlock";
 import json
 import { BookOpen } from 'lucide-react';
 import { Code } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-=======
-import { useState } from "react";
-import { BookOpen, Terminal } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
-import CodeBlock from "./CodeBlock";
->>>>>>> origin/clean-error-fixing-automation
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 export function ApiDocumentation() {
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-<<<<<<< HEAD
           <BookOpen className="mr-2" size={20}/> API Documentation
-=======
-          <BookOpen className="mr-2" size={20}      /> API Documentation
->>>>>>> origin/clean-error-fixing-automation
         </CardTitle>
         <CardDescription className="text-zinc-400">
           Reference documentation for integrating with the Zion Marketplace API.
@@ -36,11 +22,7 @@ export function ApiDocumentation() {
       
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
-<<<<<<< HEAD
           <Terminal className="h-4 w-4"/>
-=======
-          <Terminal className="h-4 w-4"      />
->>>>>>> origin/clean-error-fixing-automation
           <AlertDescription>
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
@@ -66,11 +48,7 @@ export function ApiDocumentation() {
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-<<<<<<< HEAD
             javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/jobs?limit=10&category=development', {
-=======
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/jobs?limit=10&category=development', {
->>>>>>> origin/clean-error-fixing-automation
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -78,13 +56,8 @@ export function ApiDocumentation() {
   }
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
-=======
-const data = await response.json();
-// // console.log(data);`,
->>>>>>> origin/clean-error-fixing-automation
             python: `import requests
 
 headers = {
@@ -126,7 +99,6 @@ print(data)`
     "limit": 10
   }
 }`
-<<<<<<< HEAD
         }}/>
             
             <EndpointSection method="GET" endpoint="/api/jobs/:id" description="Get detailed information about a specific job." note="" params={[
@@ -137,21 +109,6 @@ print(data)`
   -H "Content-Type: application/json"`,
             javascript: `const _jobId = 'job_abc123';
 const _response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`, {
-=======
-        }}      />
-            <EndpointSection method="GET" endpoint="/api/jobs/:id" description="Get detailed information about a specific job." note="" params = {
-  [
-            { name: "id", type: "string", description: "The job ID",
-  required: true 
-}
-        ]} codeExamples = {
-  {
-            curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs/job_abc123" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`,
-            javascript: `const jobId = 'job_abc123';
-const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`, {
->>>>>>> origin/clean-error-fixing-automation
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -159,13 +116,8 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`
   }
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
-=======
-const data = await response.json();
-// // console.log(data);`,
->>>>>>> origin/clean-error-fixing-automation
             python: `import requests
 
 headers = {
@@ -201,19 +153,10 @@ print(data)`
     "application_count": 12
   }
 }`
-<<<<<<< HEAD
         }}/>
             
             <EndpointSection method="POST" endpoint="/api/jobs" description="Create a new job listing." note="Requires jobs:write scope" params={[
             { name: "title", type: "string", description: "Job title", required: true },
-=======
-        }}      />
-            <EndpointSection method="POST" endpoint="/api/jobs" description="Create a new job listing." note="Requires jobs:write scope" params = {
-  [
-            { name: "title", type: "string", description: "Job title",
-  required: true 
-},
->>>>>>> origin/clean-error-fixing-automation
             { name: "description", type: "string", description: "Detailed job description", required: true },
             { name: "category", type: "string", description: "Job category", required: true },
             { name: "skills", type: "string[]", description: "Required skills", required: true },
@@ -237,11 +180,7 @@ print(data)`
     },
     "deadline": "2025-06-30T23:59:59Z"
   }'`,
-<<<<<<< HEAD
             javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/jobs', {
-=======
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/jobs', {
->>>>>>> origin/clean-error-fixing-automation
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -261,16 +200,9 @@ print(data)`
   })
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
             python: `import requests
-=======
-const data = await response.json();
-// // console.log(data);`,
-            python: `import requests
-import json
->>>>>>> origin/clean-error-fixing-automation
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -317,11 +249,7 @@ print(data)`
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
-<<<<<<< HEAD
         }}/>
-=======
-        }}      />
->>>>>>> origin/clean-error-fixing-automation
           </TabsContent>
           
           <TabsContent value="talent" className="space-y-6">
@@ -334,11 +262,7 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-<<<<<<< HEAD
             javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/talent?skills=react,typescript', {
-=======
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/talent?skills=react,typescript', {
->>>>>>> origin/clean-error-fixing-automation
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -346,13 +270,8 @@ print(data)`
   }
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
-=======
-const data = await response.json();
-// // console.log(data);`,
->>>>>>> origin/clean-error-fixing-automation
             python: `import requests
 
 headers = {
@@ -388,7 +307,6 @@ print(data)`
     "limit": 20
   }
 }`
-<<<<<<< HEAD
         }}/>
             
             <EndpointSection method="GET" endpoint="/api/talent/:id" description="Get detailed information about a specific talent profile." note="" params={[
@@ -399,21 +317,6 @@ print(data)`
   -H "Content-Type: application/json"`,
             javascript: `const _talentId = 'talent_abc123';
 const _response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId}\`, {
-=======
-        }}      />
-            <EndpointSection method="GET" endpoint="/api/talent/:id" description="Get detailed information about a specific talent profile." note="" params = {
-  [
-            { name: "id", type: "string", description: "The talent ID",
-  required: true 
-}
-        ]} codeExamples = {
-  {
-            curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`,
-            javascript: `const talentId = 'talent_abc123';
-const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId}\`, {
->>>>>>> origin/clean-error-fixing-automation
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -421,13 +324,8 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
   }
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
-=======
-const data = await response.json();
-// // console.log(data);`,
->>>>>>> origin/clean-error-fixing-automation
             python: `import requests
 
 headers = {
@@ -472,11 +370,7 @@ print(data)`
     ]
   }
 }`
-<<<<<<< HEAD
         }}/>
-=======
-        }}      />
->>>>>>> origin/clean-error-fixing-automation
           </TabsContent>
           
           <TabsContent value="quotes" className="space-y-6">
@@ -505,11 +399,7 @@ print(data)`
     "requester_name": "John Doe",
     "requester_email": "john@example.com"
   }'`,
-<<<<<<< HEAD
             javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
-=======
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
->>>>>>> origin/clean-error-fixing-automation
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -528,18 +418,11 @@ print(data)`
   })
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
             python: `import requests
 
 const technologies = [];
-=======
-const data = await response.json();
-// // console.log(data);`,
-            python: `import requests
-import json
->>>>>>> origin/clean-error-fixing-automation
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -585,30 +468,17 @@ print(data)`
     "created_at": "2025-05-16T14:30:15Z"
   }
 }`
-<<<<<<< HEAD
         }}/>
             
             <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params={[
             { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-=======
-        }}      />
-            <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params = {
-  [
-            { name: "page", type: "integer",
-  description: "Page number for pagination (default: 1)" 
-},
->>>>>>> origin/clean-error-fixing-automation
             { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
             { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
         ]} codeExamples={{
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-<<<<<<< HEAD
             javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
-=======
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
->>>>>>> origin/clean-error-fixing-automation
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -616,13 +486,8 @@ print(data)`
   }
 });
 
-<<<<<<< HEAD
 const _data = await response.json();
 // console.log(data);`,
-=======
-const data = await response.json();
-// // console.log(data);`,
->>>>>>> origin/clean-error-fixing-automation
             python: `import requests
 
 headers = {
@@ -659,11 +524,7 @@ print(data)`
     "limit": 20
   }
 }`
-<<<<<<< HEAD
         }}/>
-=======
-        }}      />
->>>>>>> origin/clean-error-fixing-automation
           </TabsContent>
           
           <TabsContent value="webhooks" className="space-y-6">
@@ -685,15 +546,9 @@ print(data)`
               <CodeBlock code={`import crypto from 'crypto';
 
 // Function to verify webhook signature
-<<<<<<< HEAD
 function verifyWebhookSignature(payload, signature, secret) {
   const _hmac = crypto.createHmac('sha256', secret);
   const _expectedSignature = hmac.update(payload).digest('hex');
-=======
-function verifyWebhookSignature(_payload, _signature, _secret) {
-  const hmac = crypto.createHmac('sha256', secret);
-  const expectedSignature = hmac.update(payload).digest('hex');
->>>>>>> origin/clean-error-fixing-automation
   return crypto.timingSafeEqual(
     Buffer.from(signature),
     Buffer.from(expectedSignature)
@@ -702,28 +557,17 @@ function verifyWebhookSignature(_payload, _signature, _secret) {
 
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
-<<<<<<< HEAD
   const _signature = req.headers['x-zion-signature'];
   const _payload = req.body.toString();
   const _webhookSecret = process.env.WEBHOOK_SECRET;
-=======
-  const signature = req.headers['x-zion-signature'];
-  const payload = req.body.toString();
-  const webhookSecret = process.env.WEBHOOK_SECRET;
->>>>>>> origin/clean-error-fixing-automation
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature');
   }
   
   // Process the webhook event
-<<<<<<< HEAD
   const _event = JSON.parse(payload);
   // console.log('Received valid webhook:', event);
-=======
-  const event = JSON.parse(payload);
-  // // console.log('Received valid webhook:', event);
->>>>>>> origin/clean-error-fixing-automation
   
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received');
@@ -875,11 +719,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     </Card>);
 }
 // Helper component for API endpoint documentation
-<<<<<<< HEAD
 function EndpointSection({ method, endpoint, description, note, params = [], codeExamples, responseExamples }) {
-=======
-function EndpointSection(_{ method, _endpoint, _description, _note, _params = [], _codeExamples, _responseExamples }) {
->>>>>>> origin/clean-error-fixing-automation
     const [activeTab, setActiveTab] = useState("curl");
     return (<div className="border border-zinc-800 rounded-md">
       <div className="p-4">

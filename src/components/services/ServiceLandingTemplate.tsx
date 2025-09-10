@@ -1,19 +1,12 @@
 import React from "react";
-<<<<<<< HEAD
-import { _GradientHeading } from "@/components/GradientHeading";
-import { _Button } from "@/components/ui/button";
-import { _Card, CardContent, CardFooter } from "@/components/ui/card";
+import { _GradientHeading } from "../../components/GradientHeading";
+import { _Button } from "../../components/ui/button";
+import { _Card, CardContent, CardFooter } from "../../components/ui/card";
 
 import { Link } from 'react-router-dom';
 const _benefits = [];
 const _testimonials = [];
 export const _ServiceLandingTemplate = ({ title, subtitle, heroImage, description, benefits, testimonials, ctaText, ctaLink, }) => {
-=======
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description, benefits, testimonials, ctaText, ctaLink, }) => {
->>>>>>> origin/clean-error-fixing-automation
     return (<div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
         <div className="container mx-auto">
@@ -41,11 +34,7 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
             Benefits
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
             {benefits.map((_benefit, _idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
-=======
-            {benefits.map((benefit, idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
->>>>>>> origin/clean-error-fixing-automation
                 {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
                   </div>)}
@@ -62,11 +51,7 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
             {testimonials.map((_t, _idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">
-=======
-            {testimonials.map((t, idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">
->>>>>>> origin/clean-error-fixing-automation
                 <CardContent className="pt-6">
                   <p className="text-gray-200 mb-6">"{t.text}"</p>
                 </CardContent>

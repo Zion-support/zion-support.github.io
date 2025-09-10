@@ -12,7 +12,7 @@ import {
   Settings,
   Globe
 } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 const CloudFinOpsOptimizer: React.FC = () => {
   const features = [

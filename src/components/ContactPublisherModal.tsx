@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { _focusManagement } from '@/utils/accessibility';
+import { _focusManagement } from '../utils/accessibility';
 import { _sendMessage } from '../services/messages';
-import { _toast } from '@/hooks/use-toast';
+import { _toast } from '../hooks/use-toast';
 
 const services = [];
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {

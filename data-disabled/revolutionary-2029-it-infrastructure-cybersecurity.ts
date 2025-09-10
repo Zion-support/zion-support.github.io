@@ -43,7 +43,6 @@ export interface RevolutionaryITInfrastructureService2029 {
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] =;
   [;
     // Zero Trust Network Access;
-<<<<<<< HEAD:data-disabled/revolutionary-2029-it-infrastructure-cybersecurity.ts
     {
       id: "zero-trust-network-access",;
       name: "Zero Trust Network Access",;

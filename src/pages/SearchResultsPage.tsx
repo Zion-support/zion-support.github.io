@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchResultCard } from "@/components/search/SearchResultCard";
-import { SearchBar } from "@/components/SearchBar";
+import { generateSearchSuggestions } from "../data/marketplaceData";
+import { SearchResultCard } from "../components/search/SearchResultCard";
+import { SearchBar } from "../components/SearchBar";
 const LIMIT = 20;
 export default function SearchResultsPage() {
     const router = useRouter();

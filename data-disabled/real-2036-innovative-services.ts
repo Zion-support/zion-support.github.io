@@ -1,5 +1,4 @@
 export const real2036InnovativeServices = [;
-<<<<<<< HEAD:data-disabled/real-2036-innovative-services.ts
   {
     id: "ai-autonomous-business-process-automation",;
     name: "AI Autonomous Business Process Automation",;

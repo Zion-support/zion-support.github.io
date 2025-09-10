@@ -1,12 +1,12 @@
 import { _useState, useEffect } from 'react';
 import { _Star  } from 'lucide-react';
-import { _ReviewStats } from '@/components/reviews/ReviewStats';
-import { _ReviewsList } from '@/components/reviews/ReviewsList';
-import { _useReviews } from '@/hooks/useReviews';
-import { _Button } from '@/components/ui/button';
-import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { _ReviewStats } from '../../components/reviews/ReviewStats';
+import { _ReviewsList } from '../../components/reviews/ReviewsList';
+import { _useReviews } from '../../hooks/useReviews';
+import { _Button } from '../../components/ui/button';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 ;
 export function ProfileRatings("props": "any) {;
   const { reviews", isLoading, fetchUserReviews, reportReview } = useReviews();

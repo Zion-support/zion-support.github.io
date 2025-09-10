@@ -1,13 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { _Helmet } from 'react-helmet-async';
 
 import { Helmet } from 'react-helmet-async';
 const _Talent = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-const Talent = () => {
->>>>>>> origin/clean-error-fixing-automation
     return (<>
       <Helmet>
         <title>Talent - Zion Tech Group</title>
@@ -30,10 +25,6 @@ const Talent = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>);
 };
-=======
-    </>)};
->>>>>>> origin/clean-error-fixing-automation
 export default Talent;

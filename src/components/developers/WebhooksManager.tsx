@@ -1,19 +1,19 @@
 import { _useState, useEffect } from "react";
 import { _format } from "date-fns";
 import { _Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
-import { _useWebhooks } from "@/hooks/useWebhooks";
-import { _Button } from "@/components/ui/button";
-import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { _Input } from "@/components/ui/input";
-import { _Checkbox } from "@/components/ui/checkbox";
-import { _Label } from "@/components/ui/label";
-import { _Badge } from "@/components/ui/badge";
-import { _Switch } from "@/components/ui/switch";
-import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { _AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-import { _ScrollArea } from "@/components/ui/scroll-area";
-import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { _useWebhooks } from "../../hooks/useWebhooks";
+import { _Button } from "../../components/ui/button";
+import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../components/ui/card";
+import { _Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../../components/ui/dialog";
+import { _Input } from "../../components/ui/input";
+import { _Checkbox } from "../../components/ui/checkbox";
+import { _Label } from "../../components/ui/label";
+import { _Badge } from "../../components/ui/badge";
+import { _Switch } from "../../components/ui/switch";
+import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../components/ui/dropdown-menu";
+import { _AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "../../components/ui/alert-dialog";
+import { _ScrollArea } from "../../components/ui/scroll-area";
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select";
 
 import { Check } from 'lucide-react';
 export function WebhooksManager() {

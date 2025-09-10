@@ -1,12 +1,12 @@
 
 import { _useEffect, useState } from "react";
-import { _Input } from "@/components/ui/input";
-import { _Card } from "@/components/ui/card";
+import { _Input } from "../../components/ui/input";
+import { _Card } from "../../components/ui/card";
 import { _Search } from "lucide-react";
-import { _ListingScoreCard } from "@/components/ListingScoreCard";
-import { _captureException } from "@/utils/sentry";
-import { _Skeleton } from "@/components/ui/skeleton";
-import { _useDebounce } from "@/hooks/useDebounce";
+import { _ListingScoreCard } from "../../components/ListingScoreCard";
+import { _captureException } from "../../utils/sentry";
+import { _Skeleton } from "../../components/ui/skeleton";
+import { _useDebounce } from "../../hooks/useDebounce";
 import { _z } from "zod";
 
 const services = [];

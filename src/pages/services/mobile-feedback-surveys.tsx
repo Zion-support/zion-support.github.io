@@ -12,7 +12,7 @@ import {
   TrendingUp,
   CheckCircle
 } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 const MobileFeedbackSurveys: React.FC = () => {
   const features = [

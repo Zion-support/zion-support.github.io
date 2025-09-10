@@ -1,5 +1,5 @@
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { GradientHeading } from "@/components/GradientHeading";
+import { CategoriesSection } from "../components/CategoriesSection";
+import { GradientHeading } from "../components/GradientHeading";
 export default function Categories() {
     return (<>
       
