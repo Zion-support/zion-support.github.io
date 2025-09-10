@@ -29,7 +29,8 @@ export default defineConfig({
     }
   },
   css: {
-    postcss: './postcss.config.cjs'
+    postcss: './postcss.config.cjs',
+    devSourcemap: true,
   },
   esbuild: {
     loader: 'tsx',
@@ -128,10 +129,7 @@ export default defineConfig({
     host: true,
     open: true
   },
-  css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js'
-  },
+  
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
