@@ -1,53 +1,7 @@
-#!/usr/bin/env node;
-<<<<<<< HEAD
-const fs = require("$1");
-const path = require("path");
-class AccessibilityEnhancer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.accessibilityEnhancements = [],}
-;
-  log(message) {;
-    .toISOString()}] ${message}`),}
-;
-  async createAccessibilityConfig() {;
-    this.log("♿ Creating accessibility configuration...");
-    try {;
-      const accessibilityConfig = "// Accessibility configuration;
-export const accessibilityConfig = {;
-  // ARIA labels for common elements;
-  "ariaLabels": {;
-    navigation: "Main navigation",
-    "footer": "Site footer",
-    "search": "Search",
-    "menu": "Menu",
-    "close": "Close",
-    "open": "Open",
-    "next": "Next",
-    "previous": "Previous",
-    "loading": "Loading",
-    "error": "Error",
-    "success": "Success",
-    "warning": "Warning",},
-  // Focus management;
-  "focusManagement": {;
-    skipToContent: true,
-    "focusTrap": true,
-    "focusVisible": true,},
-  // Color contrast;
-  "colorContrast": {;
-    minimumRatio: 4.5,
-    "enhancedRatio": 7.0,},
-  // Keyboard navigation;
-  "keyboardNavigation": {;
-    tabIndex: 0,
-    "arrowKeys": true,
-    "escapeKey": true,
-    "enterKey": true,
-    "spaceKey": true,}
-=======
-const fs = require("fs")
-const path = require("path")
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
 class AccessibilityEnhancer {
   constructor() {
     this.projectRoot = process.cwd()
@@ -452,78 +406,5 @@ export const accessibilityUtils = {
 }
 >>>>>>> origin/automation-fixes
 }
-// Run the accessibility enhancer;
-<<<<<<< HEAD
-const accessibilityEnhancer = new AccessibilityEnhancer();
-accessibilityEnhancer.run().catch(console.error)
-const fs = require("$1")
-const path = require("path")
-    this.log("♿ Creating accessibility configuration...")
-      const accessibilityConfig = "
-  "ariaLabels"
-    navigation: "Main navigation"
-    "footer": "Site footer"
-    "search": "Search"
-    "menu": "Menu"
-    "close": "Close"
-    "open": "Open"
-    "next": "Next"
-    "previous": "Previous"
-    "loading": "Loading"
-    "error": "Error"
-    "success": "Success"
-    "warning": "Warning"
-  "focusManagement"
-    "focusTrap"
-    "focusVisible"
-  "colorContrast"
-    "enhancedRatio"
-  "keyboardNavigation"
-    "arrowKeys"
-    "escapeKey"
-    "enterKey"
-    "spaceKey"
-  "generateId": (prefix = "id") => \"\${prefix}-\${Math.random().toString(36).substr(2, 9)}\"
-  "isVisible"
-    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"
-  "announce"
-    const announcement = document.createElement("div")
-    announcement.setAttribute("aria-live", "polite")
-    announcement.setAttribute("aria-atomic", "true")
-    announcement.className = "sr-only"
-};"
-      const configDir = path.join(this.projectRoot, "lib")
-        fs.mkdirSync(configDir, { "recursive"})
-      fs.writeFileSync(path.join(configDir, "accessibility.ts")
-      this.accessibilityEnhancements.push("accessibility configuration created")
-      this.log(" Accessibility configuration created successfully")
-      this.log(` Failed to create accessibility "config"`)
-    this.log("� Creating accessibility styles...")
-      const accessibilityStyles = "
-  "position"
-  white-"space"
-.sr-only-"focusable"
-  "outline"
-@media (prefers-"contrast")
-    background-"color"
-@media (prefers-reduced-"motion")
-    animation-"duration"
-  "position"
-.skip-to-"content"
-  "position"
-.focus-"trap"
-.focus-"trap"
-  "position"
-  overflow: hidden,}"
-      const stylesDir = path.join(this.projectRoot, "styles")
-        fs.mkdirSync(stylesDir, { "recursive"})
-      fs.writeFileSync(path.join(stylesDir, "accessibility.css")
-      this.accessibilityEnhancements.push("accessibility styles created")
-      this.log(" Accessibility styles created successfully")
-      this.log(` Failed to create accessibility "styles"`)
-    this.log("♿ Starting accessibility enhancement...")
-    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
-=======
-const accessibilityEnhancer = new AccessibilityEnhancer()
-accessibilityEnhancer.run().catch(console.error)
->>>>>>> origin/automation-fixes
+
+module.exports = AccessibilityEnhancer;

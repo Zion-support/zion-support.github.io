@@ -5,7 +5,157 @@ import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Avatar } from "@/components/ui/avatar",
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import {;
+  MessageSquare,;
+  User,;
+  FileText,;
+  MoreVertical,;
+  Calendar,;
+  AlertTriangle,;
+<<<<<<< HEAD
+  BriefcaseIcon,;
+} from "lucide-react";
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+
+=======
+  BriefcaseIcon,;
+} from "lucide-react";
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+interface CandidateCardProps {;
+import { useState  } from './react';
+import { Draggable  } from './react - beautiful - dnd';
+import { formatDistanceToNow  } from './date - fns';
+import { Link  } from './react-router-dom';
+import { JobApplication  } from '@/types / jobs';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Avatar  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+
+
+  MessageSquare,
+  User,
+  FileText,
+  MoreVertical,
+  Calendar,
+  AlertTriangle,
+
+
+  BriefcaseIcon
+} from "lucide-react",
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { 
+  MessageSquare;
+  User;
+  FileText;
+  MoreVertical;
+  Calendar;
+  AlertTriangle;
+  BriefcaseIcon
+} from "lucide-react",
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+interface CandidateCardProps {
+  application: JobApplication;
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { 
+  MessageSquare,
+  User, 
+  FileText, 
+  MoreVertical, 
+  Calendar,
+  AlertTriangle,
+  BriefcaseIcon,;
+} from "lucide-react";
+  BriefcaseIcon
+} from "lucide-react",
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+<<<<<<< HEAD
+<<<<<<< HEAD
+DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+<<<<<<< HEAD
+interface CandidateCardProps {;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { useState  } from './react';
+import { Draggable  } from './react - beautiful - dnd';
+import { formatDistanceToNow  } from './date - fns';
+import { Link  } from './react-router-dom';
+import { JobApplication  } from '@/types / jobs';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Avatar  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+  MessageSquare,
+  User,
+  FileText,
+  MoreVertical,
+  Calendar,
+  AlertTriangle,
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+=======
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",

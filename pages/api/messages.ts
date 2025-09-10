@@ -49,6 +49,61 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
+  res.setHeader("AllowGET, POST");
+  res.status(405).end("Method Not Allowed");
 }
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+<<<<<<< HEAD
+res.setHeader("AllowGET, POST");
+=======
+  res.setHeader("AllowGET, POST");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+res.setHeader("AllowGET, POST");
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  res.status(405).end("Method Not Allowed");
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+=======
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

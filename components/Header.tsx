@@ -87,9 +87,189 @@ const quickLinks = [
   { name: 'Support', href: '/support' }
 ];
 
-export default function Header() {
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+
+=======
+
+
+CreditCard,
+
+  CreditCard,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  Menu
+  X
+  ChevronDown
+  Code
+  Smartphone
+  Cloud
+  Database
+  Shield
+  Zap
+  Building
+  ShoppingCart
+  Heart
+  GraduationCap
+  Factory
+  Truck
+  CreditCard
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  CreditCard,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Code,;
+  Smartphone,;
+  Cloud,;
+  Database,;
+  Shield,;
+  Zap,;
+  Building,;
+  ShoppingCart,;
+  Heart,;
+  GraduationCap,;
+  Factory,;
+  Truck,;
+  CreditCard,;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+} from "lucide-react";
+
+<<<<<<< HEAD
+  CreditCard,;
+
+  CreditCard,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+} from "lucide-react";
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default function Header() {;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+} from './lucide-react';
+;
+export default /**
+ * Header - Function description
+ */
+function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState (false);
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState (false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+;
+  const toggle_menu = () =>: any setIsMenuOpen (!isMenuOpen);
+  const close_menu = () =>: any setIsMenuOpen (false);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 0);
+    }
+    window.addEventListener ("scroll", handle_scroll);
+    return () => window.removeEventListener ("scroll", handle_scroll);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }, []);
+;
+  const services_dropdown = [;
+    {
+<<<<<<< HEAD
+
+  const servicesDropdown = [
+    {
+      title: "Web Development",
+      description: "Custom websites and web applications",
+      href: "/services/web-development",
+      icon: Code,
+    },
+    {
+      title: "Mobile Development",
+      description: "iOS and Android applications",
+      href: "/services/mobile-development",
+      icon: Smartphone,
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure",
+      href: "/services/cloud-solutions",
+      icon: Cloud,
+    },
+    {
+      title: "Database Management",
+      description: "Database design and optimization",
+      href: "/services/database-management",
+      icon: Database,
+    },
+    {
+      title: "Security Services",
+      description: "Cybersecurity and data protection",
+      href: "/services/security",
+      icon: Shield,
+    },
+    {
+      title: "Performance Optimization",
+      description: "Speed and efficiency improvements",
+      href: "/services/performance",
+      icon: Zap,
+    },
+  ];
+
+  const solutionsDropdown = [
+    {
+      title: "Enterprise Solutions",
+      description: "Comprehensive business technology solutions",
+      href: "/solutions/enterprise",
+      icon: Building,
+    },
+    {
+      title: "E-commerce Platforms",
+      description: "Online store development and management",
+      href: "/solutions/ecommerce",
+      icon: ShoppingCart,
+    },
+    {
+      title: "Healthcare Technology",
+      description: "Specialized healthcare IT solutions",
+      href: "/solutions/healthcare",
+      icon: Heart,
+    },
+    {
+      title: "Educational Platforms",
+      description: "Learning management systems",
+      href: "/solutions/education",
+      icon: GraduationCap,
+    },
+  ];
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

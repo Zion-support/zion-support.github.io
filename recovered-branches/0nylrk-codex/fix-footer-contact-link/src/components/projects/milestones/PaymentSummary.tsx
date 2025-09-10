@@ -1,16 +1,34 @@
-import React from 'react',;
-import { Milestone } from '@/hooks/useMilestones',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { CreditCard } from 'lucide-react';;
-interface PaymentSummaryProps {;
-  milestones: Milestone[],;
+import React from "react";
+import { Milestone } from "@/hooks/useMilestones";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CreditCard } from "lucide-react";
+interface PaymentSummaryProps {
+  milestones: Milestone[];
   paymentTerms: string | null;
 }
 
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString()), 
-    const paidAmount = milestones
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
+  milestones,
+  paymentTerms,
+}) => {
+  const totalPayment = milestones
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+
+  const paidAmount = milestones
+    .filter((m) => m.status === "paid")
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
+  milestones,
+  paymentTerms,
+}) => {
+  const totalPayment = milestones
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+
+  const paidAmount = milestones
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
@@ -37,27 +55,14 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             </p>
           </div>
 
-import {Milestone} from '@/hooks/useMilestones';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {CreditCard} from 'lucide-react';
-interface PaymentSummaryProps {;
-  milestones: Milestone[],;
-  paymentTerms: string | null;
-}
-
-            <p className="font-medium">
-              ${paidAmount}          </div>
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+            <p className="font-medium">${paidAmount}</p>
+          </div>
         </div>
       </CardContent>
     </Card>
-            </p>;
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
   );
-  );  );
-  )
 };
 import React from './react';
 import { Milestone  } from '@/hooks / use_milestones';

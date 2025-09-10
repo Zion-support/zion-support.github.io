@@ -59,6 +59,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+  res.setHeader("AllowPATCH");
+  res.status(405).end("Method Not Allowed");
+}
+
+
+
+  res.setHeader("AllowPATCH");
+  res.status(405).end("Method Not Allowed");
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }

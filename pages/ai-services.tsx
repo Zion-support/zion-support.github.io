@@ -1,5 +1,74 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import Layout from "../components/Layout";
+export default function AIServices() {
+  return (
+    <Layout
+      title="AI Services - Zion Tech Group"
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Services
+            </h1>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and services.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">AI Services page is under construction.</p>
+
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+
+
+
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import Link from 'next/link',
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD

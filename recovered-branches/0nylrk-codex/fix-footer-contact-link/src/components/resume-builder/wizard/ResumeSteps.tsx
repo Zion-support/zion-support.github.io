@@ -15,7 +15,17 @@ export const ResumeSteps = ({
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
       {steps.map((step) => (
         <TabsTrigger key={step.id} value={step.id}>
-  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+          {step.label}
+        </TabsTrigger>
+      ))}
+    </TabsList>
+  );
 };
 
   active_tab,

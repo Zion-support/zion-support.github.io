@@ -1,6 +1,25 @@
-import React from 'react' 
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ErrorBoundary from "./src/components/ErrorBoundary";
+import Header from "./src/components/Header";
+import Sidebar from "./src/components/layout/Sidebar";
+import Footer from "./src/components/Footer";
+import HomePage from "./src/pages/Home";
+import AboutPage from "./src/pages/About";
+import ContactPage from "./src/pages/Contact";
+import ServicesPage from "./src/pages/Services";
+import PricingPage from "./src/pages/Pricing";
 
-const App: React.FC = () => {
+export default function App() {
+<<<<<<< HEAD
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
+  const handleMenuClick = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-8">
@@ -37,9 +56,7 @@ const App: React.FC = () => {
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  ) 
-} 
-
-export default App 
+      </Router>
+    </ErrorBoundary>
+  );
+}

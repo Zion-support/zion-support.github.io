@@ -1,25 +1,14 @@
-import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
-import App from '../src/App';
-describe('App', () => {
-  it('renders without crashing', () => {
-    render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-  it('has proper heading structure', () => {
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "../src/App";
+;
+describe("App", (); => {;
+  test("renders without crashing", (); => {;
     render(<App />);
 <<<<<<< HEAD
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
-=======
-    const heading = screen.getByRole('heading', { level: '1' });
-    expect(heading).toBeInTheDocument();
-  });
-});
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
-  });
-});
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+;
