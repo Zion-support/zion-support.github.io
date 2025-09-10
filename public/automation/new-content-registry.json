@@ -74,6 +74,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:29.410Z",
 =======
 <<<<<<< HEAD
@@ -2813,6 +2814,30 @@
       "createdAt": "2025-08-15T11:35:57.220Z",
       "source": "cloud-deep-research-factory"
 >>>>>>> origin/automation/git-sync/2025-08-15T11-36-01-327Z
+=======
+  "generatedAt": "2025-08-15T11:45:18.000Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-114517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:45:17.957Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — Cloud Improving Implementation",
+      "href": "/reports/guides/guide-2025-08-15-114517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:45:17.957Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Pattern — Cloud Improving Continuously",
+      "href": "/reports/patterns/pattern-2025-08-15-114517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T11:45:17.957Z",
+      "source": "cloud-deep-research-factory"
+>>>>>>> origin/automation/git-sync/2025-08-15T11-45-22-088Z
     }
   ]
 =======
