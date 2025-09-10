@@ -1,4 +1,4 @@
-/* global navigator, window, console, Notification, document, caches, PerformanceObserver, deferredPrompt */
+/* global navigator, window, Notification, document, caches, PerformanceObserver, deferredPrompt */
 // Service Worker Registration
 export function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
@@ -33,8 +33,8 @@ function registerValidSW(swUrl) {
         };
       };
     })
-    .catch((error) => {
-      // // console.error('Error during service worker registration:', error);
+    .catch(() => {
+      // Service worker registration failed silently
     });
 }
 
@@ -63,8 +63,8 @@ export function unregisterServiceWorker() {
       .then((registration) => {
         registration.unregister();
       })
-      .catch((error) => {
-        // // console.error(error.message);
+      .catch(() => {
+        // Service worker unregistration failed silently
       });
   }
 }
@@ -83,8 +83,8 @@ export function registerBackgroundSync(tag = 'background-sync') {
   if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
     navigator.serviceWorker.ready.then((registration) => {
       return registration.sync.register(tag);
-    }).catch((error) => {
-      // // console.error('Background sync registration failed:', error);
+    }).catch(() => {
+      // Background sync registration failed silently
     });
   }
 }

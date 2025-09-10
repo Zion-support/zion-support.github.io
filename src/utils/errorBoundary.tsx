@@ -1,7 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-interface Props extends React.PropsWithChildren<{}> {
+interface Props extends React.PropsWithChildren<Record<string, unknown>> {
   children: ReactNode;
   fallback?: ReactNode;
 }
@@ -89,7 +89,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+              We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             
             <div className="space-y-3">

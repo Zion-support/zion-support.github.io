@@ -214,7 +214,7 @@ class EnhancedErrorCollector {
 
   private generateFingerprint(error: Error, context: ErrorContext): string {
     const key = `${error.name}-${error.message}-${context.component || 'unknown'}-${context.route || 'unknown'}`;
-    return btoa(key).replace(/[/+=]/g, '').substring(0, 16);
+    return Buffer.from(key).toString('base64').replace(/[/+=]/g, '').substring(0, 16);
   }
 
   private categorizeError(error: Error, context: ErrorContext): {
