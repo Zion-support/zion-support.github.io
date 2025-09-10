@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-:src/pages/Services.tsx
 import { 
   Brain, 
   Shield, 
@@ -17,7 +16,8 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-export function Services() {
+
+export default function Services() {
   const services = [
     {
       id: 'ai-solutions',
@@ -47,13 +47,13 @@ export function Services() {
       href: '/services/cybersecurity'
     },
     {
-      id: 'cloud-devops',
-      title: 'Cloud DevOps',
-      description: 'Streamline your development and deployment processes with modern cloud infrastructure and automation.',
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      description: 'Build scalable, secure, and efficient cloud solutions tailored to your business needs.',
       icon: Cloud,
       color: 'from-green-600 to-blue-600',
-      features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging'],
-      href: '/services/cloud-devops'
+      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery'],
+      href: '/services/cloud-infrastructure'
     },
     {
       id: 'data-analytics',
@@ -61,301 +61,205 @@ export function Services() {
       description: 'Transform raw data into actionable insights with advanced analytics and visualization tools.',
       icon: TrendingUp,
       color: 'from-yellow-600 to-orange-600',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Data Mining'],
+      features: ['Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Predictive Modeling'],
       href: '/services/data-analytics'
     },
     {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure',
-      description: 'Build robust, scalable IT infrastructure that supports your business growth and digital transformation.',
-      icon: HardDrive,
+      id: 'digital-transformation',
+      title: 'Digital Transformation',
+      description: 'Modernize your business processes and operations with comprehensive digital solutions.',
+      icon: Zap,
       color: 'from-indigo-600 to-purple-600',
-      features: ['Network Design', 'Server Management', 'Storage Solutions', 'Backup & Recovery'],
-      href: '/services/it-infrastructure'
+      features: ['Process Automation', 'Legacy Modernization', 'Workflow Optimization', 'Change Management'],
+      href: '/services/digital-transformation'
     }
   ];
-  const microSaasServices = [
+
+  const pricingTiers = [
     {
-      title: 'AI Sales Copilot',
-      description: 'Intelligent sales assistant that helps your team close more deals',
-      href: '/services/ai-sales-copilot'
+      name: 'Starter',
+      price: '$5,000',
+      period: 'per month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Basic AI Integration',
+        'Standard Security',
+        'Cloud Storage (100GB)',
+        'Email Support',
+        'Monthly Reports'
+      ],
+      cta: 'Get Started',
+      popular: false
     },
     {
-      title: 'Cloud FinOps Optimizer',
-      description: 'Optimize your cloud spending with AI-powered cost management',
-      href: '/services/cloud-finops-optimizer'
+      name: 'Professional',
+      price: '$15,000',
+      period: 'per month',
+      description: 'Ideal for growing companies',
+      features: [
+        'Advanced AI Solutions',
+        'Enhanced Security',
+        'Cloud Storage (1TB)',
+        'Priority Support',
+        'Weekly Reports',
+        'Custom Integrations'
+      ],
+      cta: 'Choose Professional',
+      popular: true
     },
     {
-      title: 'AI Compliance Assistant',
-      description: 'Automate compliance monitoring and reporting',
-      href: '/services/ai-compliance-assistant'
-    },
-    {
-      title: 'AI Business Intelligence',
-      description: 'Get insights from your data with AI-powered analytics',
-      href: '/services/ai-business-intelligence'export default function Services() {
-  const services = [
-    {
-      title: "AI Solutions",
-      description: "Custom AI applications, machine learning models, and intelligent automation systems.",
-      icon: "🤖",
-      href: "/services/ai-services"
-    },
-    {
-      title: "Micro SaaS Development",
-      description: "End-to-end SaaS product development with modern tech stacks and scalable architecture.",
-      icon: "🚀",
-      href: "/services/micro-saas"
-    },
-    {
-      title: "IT Services",
-      description: "Cloud migration, DevOps, infrastructure management, and technical support.",
-      icon: "⚙️",
-      href: "/services/it-services"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions including threat assessment and compliance.",
-      icon: "🔒",
-      href: "/services/cybersecurity"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "AWS, Azure, and GCP cloud solutions with optimization and cost management.",
-      icon: "☁️",
-      href: "/services/cloud-infrastructure"
-    },
-    {
-      title: "Data Analytics",
-      description: "Business intelligence, data visualization, and advanced analytics solutions.",
-      icon: "📊",
-      href: "/services/data-analytics"
+      name: 'Enterprise',
+      price: 'Custom',
+      period: 'contact us',
+      description: 'For large organizations with complex needs',
+      features: [
+        'Full AI Suite',
+        'Enterprise Security',
+        'Unlimited Cloud Storage',
+        '24/7 Dedicated Support',
+        'Real-time Monitoring',
+        'Custom Development',
+        'On-site Consulting'
+      ],
+      cta: 'Contact Sales',
+      popular: false
     }
   ];
+
   return (
-:src/pages/Services.tsx
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-blue-900 to-purple-900">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to transform your business 
-              and drive innovation across all industries.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Comprehensive technology solutions designed to accelerate your digital transformation 
+              and drive business growth.
             </p>
           </div>
         </div>
       </section>
-      {/* Core Services */}
+
+      {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Services</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Enterprise-grade solutions built with cutting-edge technology
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div key={service.id} className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Link
                   to={service.href}
-                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-transform duration-300"
                 >
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Micro SAAS Services */}
-      <section className="py-20 bg-gray-800/50">
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Micro SAAS Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Flexible Pricing Plans
+            </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Specialized tools designed to solve specific business challenges
+              Choose the plan that best fits your business needs and budget
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {microSaasServices.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <Link
-                      to={service.href}
-                      className="text-purple-400 hover:text-purple-300 font-semibold flex items-center"
-                    >
-                      Explore Service
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div 
+                key={index} 
+                className={`relative bg-gray-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                  tier.popular 
+                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    : 'border-gray-700 hover:border-blue-500'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
                   </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center ml-4">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">{tier.price}</div>
+                  <div className="text-gray-400">{tier.period}</div>
+                  <p className="text-gray-300 mt-4">{tier.description}</p>
                 </div>
+
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button 
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                      : 'border-2 border-gray-600 text-white hover:border-blue-500 hover:bg-blue-500/10'
+                  }`}
+                >
+                  {tier.cta}
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Why Choose Our Services */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Services?</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We deliver results that matter to your business
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-              <p className="text-gray-300">
-                World-class engineers and technology experts with proven track records
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
-              <p className="text-gray-300">
-                Rapid development and deployment with agile methodologies
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Cost Effective</h3>
-              <p className="text-gray-300">
-                Competitive pricing with transparent, value-based billing
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-              <p className="text-gray-300">
-                Round-the-clock support and maintenance for your peace of mind
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our services can transform your business
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our services can help transform your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
             >
-              Get Free Consultation
+              Contact Us Today
             </Link>
             <Link
-              to="/request-quote"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+              to="/about"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
-              Request Quote
+              Learn More
             </Link>
           </div>
         </div>
       </section>
     </div>
-  );
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
-      </div>
-      {/* Additional Services Section */}
-      <div className="mt-16">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Specialized Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Enterprise Solutions</h3>
-            <p className="text-gray-600 mb-4">
-              Large-scale digital transformation projects for enterprise clients with complex requirements.
-            </p>
-            <ul className="text-sm text-gray-600 space-y-2">
-              <li>• Legacy system modernization</li>
-              <li>• Enterprise architecture design</li>
-              <li>• Integration and API development</li>
-              <li>• Change management and training</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Startup Solutions</h3>
-            <p className="text-gray-600 mb-4">
-              Rapid prototyping and MVP development for startups and growing businesses.
-            </p>
-            <ul className="text-sm text-gray-600 space-y-2">
-              <li>• MVP development and validation</li>
-              <li>• Scalable architecture planning</li>
-              <li>• Technical co-founder services</li>
-              <li>• Growth and scaling support</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-function ServiceCard({ title, description, icon, href }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-  href: string; 
-}) {
-  return (
-    <Link 
-      to={href}
-      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-    </Link>
   );
 }

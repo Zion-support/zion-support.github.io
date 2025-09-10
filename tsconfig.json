@@ -19,6 +19,7 @@
     
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./*"]
     }
   },
@@ -57,5 +58,33 @@
     "zion-os/**",
     "zion-website",
     "zion-website/**"
+=======
+      "@/*": ["./src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "src",
+    "pages",
+    "components",
+    "data",
+    "types",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next/**",
+    "dist/**",
+    "temp_components/**",
+    "zion-os/**"
+>>>>>>> origin/backup-improvements-20250827-015311
   ]
 }
