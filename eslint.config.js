@@ -40,7 +40,7 @@ export default [
         sourceType: 'module'
       }
     },
-    settings: { react: { version: '18.0' } },
+    settings: { react: { version: '19.0' } },
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
@@ -48,7 +48,8 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
