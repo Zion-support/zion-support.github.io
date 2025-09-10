@@ -1,31 +1,29 @@
-<<<<<<< HEAD:src_backup_temp/context/SidebarContext.jsx
-import React, {useState} from 'react';
-const SidebarProvider({children}) {;
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const toggleSidebar = ("props": "any) => {;
-        setIsSidebarOpen(!isSidebarOpen);
-    "};
-    return (<SidebarContext.Provider value = {;
-  { isSidebarOpen, setIsSidebarOpen,;
-  toggleSidebar ;
+import React, { createContext, useContext, useState } from 'react';
 
-;
+const SidebarContext = createContext(null);
 
-;
+export function SidebarProvider({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-;
-}}>;
+  return (
+    <SidebarContext.Provider value={{
+      isSidebarOpen,
+      setIsSidebarOpen,
+      toggleSidebar
+    }}>
       {children}
-    </SidebarContext.Provider>)}
-export function useSidebar("props": "any) {;
-    const context = useContext(SidebarContext);
-    if (context === null) {;
-        throw new Error('useSidebar must be used within a SidebarProvider');
-;
-    return context;
-"}
-;
-</SidebarContext>
-=======
-import React,{useState} from 'react'; const SidebarProvider({children}) { const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = (props: any) => { setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen,toggleSidebar }}> {children} </SidebarContext.Provider>)} export function useSidebar(props: any) { const context = useContext(SidebarContext); if (context === null) { throw new Error('useSidebar must be used within a SidebarProvider'); return context} </SidebarContext>
->>>>>>> origin/automation-improvements:src/context/SidebarContext.jsx
+    </SidebarContext.Provider>
+  );
+}
+
+export function useSidebar() {
+  const context = useContext(SidebarContext);
+  if (context === null) {
+    throw new Error('useSidebar must be used within a SidebarProvider');
+  }
+  return context;
+}

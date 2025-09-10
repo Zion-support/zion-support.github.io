@@ -1,114 +1,95 @@
-<<<<<<< HEAD:src_backup_temp/context/auth/useAuthState.tsx
-: "src/context/auth/useAuthState.tsx;
-interface User {;
-  "id": string;
-  "email": string;
-=======
-:src/context/auth/useAuthState.tsx;
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface User {
   id: string;
   email: string;
->>>>>>> origin/automation-fixes:src/context/auth/useAuthState.tsx
   displayName?: string;
   avatar?: string;
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string;
-<<<<<<< HEAD:src_backup_temp/context/auth/useAuthState.tsx
-"}
-;
-interface AuthTokens {;
-  "accessToken": "string | null;
-  "refreshToken": string | null"}
-;
-  "accessToken": "string | null;
-  "refreshToken": string | null;
-"}
-;
-export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unknown {;
-  const [user", setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState<typeof true>(true);
-  const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
-  const [tokens, setTokens] = useState<any>({;
-    "accessToken": "nul l",;
-    "refreshToken": "nul l;
-  "});
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-"}, []);
-    // Check for existing auth state on mount;
-: "src/context/auth/useAuthState.tsx;
-    ;    accessToken: nul l,
-    refreshToken: nul l
+}
+
+interface AuthTokens {
+  accessToken: string | null;
+  refreshToken: string | null;
+}
+
+interface AuthState {
+  user: User | null;
+  tokens: AuthTokens | null;
+  isLoading: boolean;
+  isAuthenticated: boolean;
+}
+
+interface AuthContextType extends AuthState {
+  setUser: (user: User | null) => void;
+  setTokens: (tokens: AuthTokens | null) => void;
+  setLoading: (loading: boolean) => void;
+  logout: () => void;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const useAuthState = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuthState must be used within an AuthProvider');
   }
-    );
+  return context;
+};
+
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [tokens, setTokens] = useState<AuthTokens | null>(null);
+  const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    // Check for existing auth state on mount
-:src/context/auth/useAuthState.tsx
-    
-        if(typeof window !== 'null') {;
-          if(auth) {;
-        if(typeof window !== 'null') {;
-          if(auth) {;
-            if(parsed.user && parsed.token) {;
-              setUser(parsed.user);
-              setTokens({;
-<<<<<<< HEAD:src_backup_temp/context/auth/useAuthState.tsx
-                "accessToken": parse d.token",;
-: "src/context/auth/useAuthState.tsx;
-                "refreshToken": parse d.refreshToken || null';
-        // // // // // // // // console.error('Error checking auth "state":'", error)} finally {;
-=======
-
-                accessToken: parsed.token,
-:src/context/auth/useAuthState.tsx;
-                refreshToken: parsed.refreshToken || null';
-        // // // // // // // // console.error('Error checking auth state:', error)} finally {;
-
->>>>>>> origin/automation-fixes:src/context/auth/useAuthState.tsx
-        setIsLoading(false)})}
-                "refreshToken": "parse d.refreshToken || null;
-        // // // // // // // console.error('Error checking auth "state":'", error)} finally {;
-        setIsLoading(false)})}
-          }
+    // Load auth state from localStorage on mount
+    const loadAuthState = () => {
+      try {
+        const storedUser = localStorage.getItem('auth_user');
+        const storedTokens = localStorage.getItem('auth_tokens');
+        
+        if (storedUser) {
+          setUser(JSON.parse(storedUser));
         }
-      } catch(error) {;
-        // console.error('Error checking auth "state":', error)} finally {;
-        setIsLoading(false)}
+        
+        if (storedTokens) {
+          setTokens(JSON.parse(storedTokens));
+        }
+      } catch (error) {
+        console.error('Error loading auth state:', error);
+      } finally {
+        setLoading(false);
+      }
     };
-    checkAuthState()}, []);
-  return {;
-<<<<<<< HEAD:src_backup_temp/context/auth/useAuthState.tsx
-    user,;
-    setUser,;
-    isLoading,;
-    setIsLoading,;
-    onboardingStep,;
-    setOnboardingStep,;
-    tokens,;
-    setTokens;
-  }};
-;
-</any>;
-</typeof>;
-</typeof>;
-</any>;
-</any>;
-</React>
-=======
 
+    loadAuthState();
+  }, []);
+
+  const logout = () => {
+    setUser(null);
+    setTokens(null);
+    localStorage.removeItem('auth_user');
+    localStorage.removeItem('auth_tokens');
+  };
+
+  const value: AuthContextType = {
     user,
-    setUser,
-    isLoading,
-    setIsLoading,
-    onboardingStep,
-    setOnboardingStep,
     tokens,
-    setTokens;
-}};
->>>>>>> origin/automation-fixes:src/context/auth/useAuthState.tsx
+    isLoading,
+    isAuthenticated: !!user,
+    setUser,
+    setTokens,
+    setLoading,
+    logout
+  };
+
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
