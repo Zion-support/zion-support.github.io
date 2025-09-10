@@ -6,7 +6,7 @@ const path = require('path');
 console.log('🔐 Environment Security Check Starting...\n');
 
 // Check for sensitive files
-const sensitiveFiles = [
+const sensitiveFiles = [;
   '.env.local',
   '.env.production',
   '.env.development',
@@ -16,7 +16,7 @@ const sensitiveFiles = [
 ];
 
 // Check for hardcoded secrets
-const secretPatterns = [
+const secretPatterns = [;
   /password\s*=\s*['"][^'"]+['"]/gi,
   /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
   /secret\s*=\s*['"][^'"]+['"]/gi,
@@ -28,18 +28,18 @@ const secretPatterns = [
 function scanForSecrets() {
   console.log('🔍 Scanning for hardcoded secrets...');
   
-  const filesToScan = [
+const filesToScan = [;
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     'lib/**/*.{js,jsx,ts,tsx}',
     'utils/**/*.{js,jsx,ts,tsx}'
   ];
   
-  const foundSecrets = [];
+  let foundSecrets = [];
   
   filesToScan.forEach(pattern => {
     try {
-      const files = execSync(`find . -name "${pattern}" -type f`, { encoding: 'utf8' })
+const files = execSync(`find . -name "${pattern}" -type f`, { encoding: 'utf8' });
         .split('\n')
         .filter(file => file.trim());
       
@@ -83,7 +83,7 @@ function scanForSecrets() {
 function checkSensitiveFiles() {
   console.log('🔍 Checking for sensitive files...');
   
-  const foundSensitive = [];
+  let foundSensitive = [];
   
   sensitiveFiles.forEach(file => {
     if (fs.existsSync(file)) {
@@ -114,7 +114,7 @@ function checkGitignore() {
   }
   
   const gitignore = fs.readFileSync('.gitignore', 'utf8');
-  const requiredIgnores = [
+const requiredIgnores = [;
     '.env',
     '.env.local',
     '.env.production',
@@ -125,7 +125,7 @@ function checkGitignore() {
     'build'
   ];
   
-  const missingIgnores = [];
+  let missingIgnores = [];
   requiredIgnores.forEach(ignore => {
     if (!gitignore.includes(ignore)) {
       missingIgnores.push(ignore);
