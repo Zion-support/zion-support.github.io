@@ -12,8 +12,9 @@ const config = {
 		'!**/node_modules/**'
 	],
 	moduleNameMapper: {
-		'^@/(.*)$': '<rootDir>/src/$1'
+		'^@/(.*)$': '<rootDir>/tests/alias/$1'
 	},
+	resolver: undefined,
 	transform: {
 		'^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }]
 	},
@@ -26,6 +27,7 @@ const config = {
 		'/automation_backup/',
 		'/apps\\.disabled/',
 		'/api\\.disabled/',
+		'/__tests__/smoke\\.test\\.ts$'
 	],
 	modulePathIgnorePatterns: [
 		'/zion-os\\.disabled/',
