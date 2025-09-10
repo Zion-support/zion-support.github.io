@@ -1,0 +1,135 @@
+import "./globals.css";
+import type { ReactNode } from "react";
+import { Navigation } from "@/components/Navigation";
+import { Analytics } from "@/components/Analytics";
+import { StructuredData } from "@/components/StructuredData";
+
+export const metadata = {
+  title: "Zion Tech Group - Sovereign AI-Powered Digital Economies",
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
+  keywords: "AI, digital economy, blockchain, governance, marketplace, deployment, Zion, Web3, DAO, cryptocurrency, token economics, KYC, identity verification",
+  authors: [{ name: "Zion Tech Group" }],
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  openGraph: {
+    title: "Zion OS - Sovereign AI-Powered Digital Economies",
+    description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
+    type: "website",
+    locale: "en_US",
+    url: "https://ziontechgroup.com",
+    siteName: "Zion OS",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zion OS - Sovereign AI-Powered Digital Economies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zion OS - Sovereign AI-Powered Digital Economies",
+    description: "Launch sovereign AI-powered digital economies with one click",
+    images: ["/og-image.jpg"],
+    creator: "@ziontechgroup",
+  },
+  alternates: {
+    canonical: "https://ziontechgroup.com",
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zion OS - Sovereign AI-Powered Digital Economies",
+    description: "Launch sovereign AI-powered digital economies with one click",
+    images: ["/og-image.jpg"]
+  },
+  alternates: {
+    canonical: "https://ziontechgroup.com"
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code"
+  }
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+              {/* Services */}
+              <div>
+                <h4 className="font-semibold mb-4 text-white">Services</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="/ai-autonomous-business-manager" className="hover:text-white transition-colors">AI Business Manager</a></li>
+                  <li><a href="/ai-autonomous-business-operations" className="hover:text-white transition-colors">Business Operations</a></li>
+                  <li><a href="/quantum-services" className="hover:text-white transition-colors">Quantum Computing</a></li>
+                  <li><a href="/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</a></li>
+                  <li><a href="/enterprise-it" className="hover:text-white transition-colors">Enterprise IT</a></li>
+                  <li><a href="/services" className="hover:text-white transition-colors">View All Services</a></li>
+                </ul>
+              </div>
+
+              {/* Company */}
+              <div>
+                <h4 className="font-semibold mb-4 text-white">Company</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="/case-studies" className="hover:text-white transition-colors">Case Studies</a></li>
+                  <li><a href="/news" className="hover:text-white transition-colors">News</a></li>
+                  <li><a href="/events" className="hover:text-white transition-colors">Events</a></li>
+                  <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+              </div>
+
+              {/* Platform & Support */}
+              <div>
+                <h4 className="font-semibold mb-4 text-white">Platform & Support</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="/multiverse/launch" className="hover:text-white transition-colors">Launch Wizard</a></li>
+                  <li><a href="/docs" className="hover:text-white transition-colors">Documentation</a></li>
+                  <li><a href="/admin/instances" className="hover:text-white transition-colors">Instances</a></li>
+                  <li><a href="/admin/os-deploy" className="hover:text-white transition-colors">Admin Deploy</a></li>
+                  <li><a href="/docs" className="hover:text-white transition-colors">Documentation</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Features</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li>Marketplace & Jobs</li>
+                  <li>AI Governance</li>
+                  <li>Token Systems</li>
+                  <li>Identity & KYC</li>
+                  <li>AI-Powered Tools</li>
+                  <li>Modular Architecture</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Support</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="/docs" className="hover:text-white transition-colors">Documentation</a></li>
+                  <li><a href="/api" className="hover:text-white transition-colors">API Reference</a></li>
+                  <li><a href="/community" className="hover:text-white transition-colors">Community</a></li>
+                  <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
+              <p>&copy; 2024 Zion Tech Group. All rights reserved. | <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></p>
+            </div>
+=======
+    <html lang="en">
+      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
+        <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+            <a href="/" className="font-semibold">Zion OS</a>
+            <a href="/services" className="text-sm opacity-80 hover:opacity-100">Services</a>
+            <a href="/multiverse/launch" className="text-sm opacity-80 hover:opacity-100">Launch</a>
+            <a href="/admin/os-deploy" className="text-sm opacity-80 hover:opacity-100">Admin Deploy</a>
+            <a href="/admin/instances" className="text-sm opacity-80 hover:opacity-100">Instances</a>          </div>
+        </footer>
+        <Analytics />
+      </body>
+    </html>
+  );
+}

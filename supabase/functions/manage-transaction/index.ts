@@ -64,7 +64,7 @@ serve(async (req) => {
     }
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
-      apiVersion: "2023-10-16",
+      apiVersion: "2025-05-28.basil", // Updated to the expected version
     });
 
     let result;
@@ -148,7 +148,7 @@ serve(async (req) => {
       status: 200,
     });
   } catch (error) {
-    console.error("Transaction management error:", error.message);
+    // console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
