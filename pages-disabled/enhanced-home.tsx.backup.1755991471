@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function EnhancedHomePage() {
-  return <div>Enhanced Home</div>;
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
