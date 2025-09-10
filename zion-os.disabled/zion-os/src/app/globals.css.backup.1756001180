@@ -7,28 +7,6 @@
   --fg: #ffffff;
   --primary: #3b82f6;
   --primary-dark: #1d4ed8;
-<<<<<<< HEAD
-  --secondary: #64748b;
-  --accent: #f59e0b;
-  --success: #10b981;
-  --error: #ef4444;
-  --warning: #f59e0b;
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-hover: rgba(255, 255, 255, 0.08);
-=======
-  --accent: #8b5cf6;
-  --accent-dark: #7c3aed;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
-  --muted: #6b7280;
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
-}
-
 * {
   box-sizing: border-box;
 }
@@ -80,17 +58,9 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
-  -webkit-background-clip: text;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-<<<<<<< HEAD
-/* Button styles */
-.btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl;
 }
 
 .btn-secondary {
@@ -231,6 +201,4 @@ body {
 
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
-}
+  to { opacity: 1; transform: translateY(0); }}

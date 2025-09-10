@@ -8,22 +8,17 @@ console.log('🚀 Starting comprehensive merge conflict resolution and PR mergin
 function resolveConflicts(filePath) {
     try {
         if (!fs.existsSync(filePath)) return;
-        
+
         let content = fs.readFileSync(filePath, 'utf8');
         let hasConflicts = false;
-        
+
         // Remove merge conflict markers and keep the latest version (HEAD)
-        if (content.includes('<<<<<<< HEAD')) {
-            hasConflicts = true;
-            content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-            content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        }
-        
+        if (content.includes('            hasConflicts = true;
+            content = content.replace(/            content = content.replace(/        }
+
         // Remove any remaining conflict markers
-        content = content.replace(/<<<<<<< [^\n]+/g, '');
-        content = content.replace(/=======/g, '');
-        content = content.replace(/>>>>>>> [^\n]+/g, '');
-        
+        content = content.replace(/        content = content.replace(//g, '');
+        content = content.replace(/        
         // Fix common syntax issues
         content = content.replace(/;\s*;/g, ';'); // Remove double semicolons
         content = content.replace(/,\s*;/g, ';'); // Fix comma-semicolon issues
@@ -31,7 +26,7 @@ function resolveConflicts(filePath) {
         content = content.replace(/\{\s*;/g, '{'); // Remove semicolons after opening braces
         content = content.replace(/;\s*\}/g, '}'); // Remove semicolons before closing braces
         content = content.replace(/export\s+const\s+\w+\s*:\s*\w+\[\]\s*=\s*\[\s*;/g, 'export const $1: $2[] = ['); // Fix array declarations
-        
+
         if (hasConflicts) {
             fs.writeFileSync(filePath, content);
             console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -50,7 +45,7 @@ function cleanupBackupFiles() {
         '*.conflicted',
         '*.cleanup-backup.*'
     ];
-    
+
     patterns.forEach(pattern => {
         try {
             execSync(`find . -name "${pattern}" -type f -delete`, { stdio: 'pipe' });
@@ -63,24 +58,23 @@ function cleanupBackupFiles() {
 // Function to find and resolve all merge conflicts
 function resolveAllConflicts() {
     console.log('🔧 Resolving all merge conflicts...');
-    
+
     try {
         // Find all files with merge conflicts
-        const conflictFiles = execSync('grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" --include="*.css" --include="*.html" -l', { encoding: 'utf8' })
-            .split('\n')
+        const conflictFiles = execSync('grep -r "            .split('\n')
             .filter(file => file.trim() && fs.existsSync(file.trim()));
-        
+
         console.log(`Found ${conflictFiles.length} files with conflicts`);
-        
+
         conflictFiles.forEach(file => {
             resolveConflicts(file.trim());
         });
-        
+
         // Also handle .conflicted files
         const conflictedFiles = execSync('find . -name "*.conflicted" -type f', { encoding: 'utf8' })
             .split('\n')
             .filter(file => file.trim());
-        
+
         conflictedFiles.forEach(file => {
             const newName = file.replace(/\.conflicted$/, '');
             try {
@@ -91,7 +85,7 @@ function resolveAllConflicts() {
                 console.log(`❌ Error renaming ${file}:`, error.message);
             }
         });
-        
+
     } catch (error) {
         console.log('Error finding conflict files:', error.message);
     }
@@ -100,7 +94,7 @@ function resolveAllConflicts() {
 // Function to fix specific problematic files
 function fixProblematicFiles() {
     console.log('🔧 Fixing specific problematic files...');
-    
+
     const problematicFiles = [
         'data/real-market-services.ts',
         'data/real-augmented-services-2025-batch3.ts.conflicted',
@@ -115,11 +109,11 @@ function fixProblematicFiles() {
         'data/real-2027-q1-additions.ts.conflicted',
         'data/additional-live-services-2025.ts.conflicted'
     ];
-    
+
     problematicFiles.forEach(file => {
         if (fs.existsSync(file)) {
             resolveConflicts(file);
-            
+
             // If it's a .conflicted file, rename it
             if (file.endsWith('.conflicted')) {
                 const newName = file.replace(/\.conflicted$/, '');
@@ -137,12 +131,12 @@ function fixProblematicFiles() {
 // Function to merge PRs
 function mergePRs() {
     console.log('🔄 Merging PRs...');
-    
+
     try {
         // Switch to main branch
         execSync('git checkout main', { stdio: 'inherit' });
         execSync('git pull origin main', { stdio: 'inherit' });
-        
+
         // Merge the first PR branch
         try {
             execSync('git merge origin/cursor/fix-netlify-build-and-merge-to-main-7161 --no-ff -m "Merge PR #12711: Fix Netlify build and merge to main"', { stdio: 'inherit' });
@@ -150,7 +144,7 @@ function mergePRs() {
         } catch (error) {
             console.log('⚠️ Could not merge PR #12711:', error.message);
         }
-        
+
         // Merge the second PR branch
         try {
             execSync('git merge origin/cursor/fix-netlify-build-and-merge-to-main-4a00 --no-ff -m "Merge PR #12710: Fix Netlify build and merge to main"', { stdio: 'inherit' });
@@ -158,7 +152,7 @@ function mergePRs() {
         } catch (error) {
             console.log('⚠️ Could not merge PR #12710:', error.message);
         }
-        
+
     } catch (error) {
         console.log('❌ Error merging PRs:', error.message);
     }
@@ -167,11 +161,11 @@ function mergePRs() {
 // Function to verify build
 function verifyBuild() {
     console.log('🔍 Verifying build...');
-    
+
     try {
         // Install dependencies
         execSync('npm install', { stdio: 'inherit' });
-        
+
         // Run build
         execSync('npm run build', { stdio: 'inherit' });
         console.log('✅ Build successful!');
@@ -185,7 +179,7 @@ function verifyBuild() {
 // Function to push changes
 function pushChanges() {
     console.log('📤 Pushing changes...');
-    
+
     try {
         execSync('git add .', { stdio: 'inherit' });
         execSync('git commit -m "Resolve all merge conflicts and merge PRs into main branch"', { stdio: 'inherit' });
@@ -200,19 +194,19 @@ function pushChanges() {
 async function main() {
     try {
         console.log('Starting merge conflict resolution and PR merging process...');
-        
+
         // Clean up backup files first
         cleanupBackupFiles();
-        
+
         // Resolve all conflicts
         resolveAllConflicts();
-        
+
         // Fix specific problematic files
         fixProblematicFiles();
-        
+
         // Merge PRs
         mergePRs();
-        
+
         // Verify build
         if (verifyBuild()) {
             // Push changes
@@ -221,7 +215,7 @@ async function main() {
         } else {
             console.log('⚠️ Build verification failed. Please check the errors above.');
         }
-        
+
     } catch (error) {
         console.log('❌ Error in main process:', error.message);
     }
