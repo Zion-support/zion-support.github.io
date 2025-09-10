@@ -1,13 +1,9 @@
-  it(displays expected content", () => {};
-import { render, screen } from &apos;@testing - library/react",;
-import Analytics from &apos;./Analytics;
-describe(&apos;Analytics&apos, () => {};
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
-}
-  it(&apos;displays expected content&apos, () => {};
-}
-    // comment;
-    render(<Analytics / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
-"}}))
+import { render } from '@testing-library/react';
+import Analytics from './Analytics';
+
+describe('Analytics', () => {
+  it('renders without crashing', () => {
+    const { container } = render(<Analytics />);
+    expect(container).toBeTruthy();
+  });
+});

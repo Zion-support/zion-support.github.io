@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"noEmit": true
@@ -43,5 +44,47 @@
 		"src.broken/**",
 		"src.corrupted/**"
 	]
+=======
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "apps/**",
+    "apps.backup/**",
+    "backup/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "broken_files_backup/**",
+    "corrupted_backup/**",
+    "_conflicted_disabled/**",
+    "components-disabled/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "src/components-disabled/**",
+    "api-backup/**",
+    "api-disabled/**",
+    "api.disabled/**",
+    "api.disabled.temp/**",
+    "src_backup/**",
+    "temp_components/**",
+    "data/**",
+    "src/data/**",
+    "pages/**",
+    "src/pages/**",
+    "app/**",
+    "src/app/**",
+    "supabase/**"
+  ]
+>>>>>>> origin/main
 }
 
