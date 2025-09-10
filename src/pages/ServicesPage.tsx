@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react';
