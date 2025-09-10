@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-=======
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
