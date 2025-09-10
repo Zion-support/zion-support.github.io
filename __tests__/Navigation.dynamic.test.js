@@ -1,11 +1,17 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import @testing-library/jest-dom';
-import Navigationdynamic from "../components/Navigation.dynamic";
-
-  test('renders without crashing', () => {
-    render(<NavigationDynamic />);
-    expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()})
-'
-  test('displays correct content', () => {
-    render(<NavigationDynamic />);
-
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Navigation from "../components/Navigation.dynamic";
+;
+describe("Navigation", (); => {;
+  test("renders without crashing", (); => {;
+    render(<Navigation />);
+    expect(screen.getByTestId("navigation");).toBeInTheDocument();
+  });
+;
+  test("displays navigation items", (); => {;
+    render(<Navigation />);
+    // Test navigation items;
+  });
+});
+;

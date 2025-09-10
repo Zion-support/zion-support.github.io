@@ -1,15 +1,16 @@
 #!/usr/bin/env node;
-
 const fs = require("fs");
 const path = require("path");
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();}
+class $1 {;
+  constructor() {;
+  this.projectRoot = process.cwd();,
+}
 
-  log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);}
+  log(message) {;
+  console.log(`[${new Date().toISOString()}] ${message}`);,
+}
 
-  createWorkingPricingGuide() {
+  createWorkingPricingGuide() {;
   const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
     const content = `import React from "react";
 import Head from "next/head";
@@ -18,50 +19,49 @@ import { CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Brain, Cloud, Networ
 import { Layout  } from "../components/Layout";
 export default function $1() {
   const costSavingTips = [;
-  {
-  question: "Can I change my plan at any time?", ;
-      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\"ll prorate any billing differences.";},;
-    {
-  question: "Is there a free trial available?", ;
-      answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.";},;
-    {
-  question: "What payment methods do you accept?",;
-      answer: "We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.";},;
-    {
-  question: "Do you offer discounts for annual subscriptions?",;
-      answer: "Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.";}
+  {;
+  question: "Can I change my plan at any time?",
+      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\"ll prorate any billing differences.";,
+},
+    {;
+  question: "Is there a free trial available?",
+      answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.";,
+},
+    {;
+  question: "What payment methods do you accept?",
+      answer: "We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.";,
+},
+    {;
+  question: "Do you offer discounts for annual subscriptions?",
+      answer: "Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.";,
+}
   ];
-
   const pricingFactors = [;
-  {
-  factor: "Project Complexity",;
-      description: "The complexity of your project directly impacts development time and resources required.",;
-      details: [;
-  "Simple websites: 1-2 weeks",;
-        "E-commerce platforms: 4-8 weeks",;
-        "Custom applications: 8-16 weeks",;
-        "Enterprise solutions: 16+ weeks";
-      ];},;
-    {
-  factor: "Team Size",;
-      description: "The number of developers and specialists needed for your project.",;
-      details: [;
-  "Solo developer: $75-125/hour",;
-        "Small team (2-3): $100-150/hour",;
-        "Medium team (4-6): $125-175/hour",;
-        "Large team (7+): $150-200/hour";
-      ];},;
-    {
-  factor: "Technology Stack",;
-      description: "The technologies and frameworks used in your project.",;
-      details: [;
-  "Standard web technologies: Base rate",;
-        "Modern frameworks (React, Vue): +15%",;
-        "Mobile development: +25%",;
-        "AI/ML integration: +50%";
-      ];}
+  {;
+  factor: "Project Complexity",
+      description: "The complexity of your project directly impacts development time and resources required.",
+      details: [ "Simple websites: 1-2 weeks",
+        "E-commerce platforms: 4-8 weeks",
+        "Custom applications: 8-16 weeks",
+        "Enterprise solutions: 16+ weeks" ];,
+},
+    {;
+  factor: "Team Size",
+      description: "The number of developers and specialists needed for your project.",
+      details: [ "Solo developer: $75-125/hour",
+        "Small team (2-3): $100-150/hour",
+        "Medium team (4-6): $125-175/hour",
+        "Large team (7+): $150-200/hour" ];,
+},
+    {;
+  factor: "Technology Stack",
+      description: "The technologies and frameworks used in your project.",
+      details: [ "Standard web technologies: Base rate",
+        "Modern frameworks (React, Vue): +15%",
+        "Mobile development: +25%",
+        "AI/ML integration: +50%" ];,
+}
   ];
-
   return (;
     <Layout;
       title="Pricing Guide - Zion Tech Group";
@@ -70,7 +70,6 @@ export default function $1() {
       <Head>;
         <title>Pricing Guide - Zion Tech Group</title>;
       </Head>;
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -92,7 +91,6 @@ export default function $1() {
           </motion.div>;
         </div>;
       </section>;
-
       {/* Pricing Factors */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -110,7 +108,6 @@ export default function $1() {
               Several factors influence the cost of your project. Here"s how we calculate pricing:;
             </p>;
           </motion.div>;
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingFactors.map((factor, index) => (;
               <motion.div;
@@ -147,7 +144,6 @@ export default function $1() {
           </div>;
         </div>;
       </section>;
-
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -165,7 +161,6 @@ export default function $1() {
               Get answers to common questions about our pricing and services.;
             </p>;
           </motion.div>;
-
           <div className="max-w-3xl mx-auto">;
             {costSavingTips.map((item, index) => (;
               <motion.div;
@@ -187,7 +182,6 @@ export default function $1() {
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600">
         <div className="container mx-auto px-4 text-center">
@@ -223,12 +217,14 @@ export default function $1() {
         </div>;
       </section>;
     </Layout>;
-  );}`;
+  );,
+}`;
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Created working pricing-guide.tsx");
-    return true;}
+    return true;,
+}
 
-  createWorkingSitemap() {
+  createWorkingSitemap() {;
   const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
     const content = `import React from "react";
 import Head from "next/head";
@@ -238,40 +234,43 @@ import { Layout  } from "../components/Layout";
 import { Card  } from "../components/ui/Card";
 export default function SitemapPage() {
   const siteStructure = [;
-  {
-  title: "Main Pages",;
+  {;
+  title: "Main Pages",
       links: [;
-  { name: "Home", url: "/", description: "Main landing page" },;
-        { name: "About", url: "/about", description: "Learn about our company" },;
-        { name: "Services", url: "/services", description: "Our technology services" },;
+  { name: "Home", url: "/", description: "Main landing page" },
+        { name: "About", url: "/about", description: "Learn about our company" },
+        { name: "Services", url: "/services", description: "Our technology services" },
         { name: "Contact", url: "/contact", description: "Get in touch with us" }
-      ];},;
-    {
-  title: "Services",;
+      ];,
+},
+    {;
+  title: "Services",
       links: [;
-  { name: "AI Development", url: "/ai-services", description: "Artificial Intelligence solutions" },;
-        { name: "Web Development", url: "/web-development", description: "Custom web applications" },;
-        { name: "Cloud Services", url: "/cloud-services", description: "Cloud infrastructure and migration" },;
+  { name: "AI Development", url: "/ai-services", description: "Artificial Intelligence solutions" },
+        { name: "Web Development", url: "/web-development", description: "Custom web applications" },
+        { name: "Cloud Services", url: "/cloud-services", description: "Cloud infrastructure and migration" },
         { name: "Mobile Development", url: "/mobile-development", description: "iOS and Android apps" }
-      ];},;
-    {
-  title: "Resources",;
+      ];,
+},
+    {;
+  title: "Resources",
       links: [;
-  { name: "Blog", url: "/blog", description: "Technology insights and updates" },;
-        { name: "Case Studies", url: "/case-studies", description: "Success stories and examples" },;
-        { name: "Documentation", url: "/docs", description: "Technical documentation" },;
+  { name: "Blog", url: "/blog", description: "Technology insights and updates" },
+        { name: "Case Studies", url: "/case-studies", description: "Success stories and examples" },
+        { name: "Documentation", url: "/docs", description: "Technical documentation" },
         { name: "Support", url: "/support", description: "Help and support center" }
-      ];},;
-    {
-  title: "Company",;
+      ];,
+},
+    {;
+  title: "Company",
       links: [;
-  { name: "Careers", url: "/careers", description: "Join our team" },;
-        { name: "Privacy Policy", url: "/privacy", description: "Privacy and data protection" },;
-        { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },;
+  { name: "Careers", url: "/careers", description: "Join our team" },
+        { name: "Privacy Policy", url: "/privacy", description: "Privacy and data protection" },
+        { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
         { name: "Sitemap", url: "/sitemap", description: "Complete site navigation" }
-      ];}
+      ];,
+}
   ];
-
   return (;
     <Layout;
       title="Sitemap - Zion Tech Group";
@@ -280,7 +279,6 @@ export default function SitemapPage() {
       <Head>;
         <title>Sitemap - Zion Tech Group</title>;
       </Head>;
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -302,7 +300,6 @@ export default function SitemapPage() {
           </motion.div>;
         </div>;
       </section>;
-
       {/* Sitemap Content */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -343,12 +340,14 @@ export default function SitemapPage() {
         </div>;
       </section>;
     </Layout>;
-  );}`;
+  );,
+}`;
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Created working sitemap.tsx");
-    return true;}
+    return true;,
+}
 
-  async createWorkingPages() {
+  async createWorkingPages() {;
   this.log("🔧 Creating working pages...");
     let createdCount = 0;
 
@@ -356,7 +355,8 @@ export default function SitemapPage() {
     if (this.createWorkingSitemap()) createdCount++;
 
     this.log(`🎉 Created ${createdCount} working pages!`);
-    return createdCount > 0;}
+    return createdCount > 0;,
+}
 }
 
 // Run the creator;
@@ -366,10 +366,13 @@ creator;
   .then(success => {
   if (success) {
   console.log("✅ Working pages created successfully!");
-      process.exit(0);} else {
+      process.exit(0);,
+} else {;
   console.log("❌ No pages were created.");
-      process.exit(0);}
+      process.exit(0);,
+}
   });
   .catch(error => {
   console.error("❌ Fatal error:", error);
-    process.exit(1);})
+    process.exit(1);,
+})

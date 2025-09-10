@@ -18,7 +18,6 @@ const AccessibilityManager: React.FC = () => {
   });
 
   useEffect(() => {
-    // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibilitySettings');
     if (savedSettings) {
       try {
@@ -30,37 +29,31 @@ const AccessibilityManager: React.FC = () => {
   }, []);
 
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = { ...settings, [key]: value } as AccessibilitySettings;
     setSettings(newSettings);
     localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
-
-    // Apply accessibility styles
     applyAccessibilityStyles(newSettings);
   };
 
-  const applyAccessibilityStyles = (settings: AccessibilitySettings) => {
+  const applyAccessibilityStyles = (settingsValue: AccessibilitySettings) => {
     const root = document.documentElement;
 
-    // High contrast mode
-    if (settings.highContrast) {
+    if (settingsValue.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Font size
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xlarge');
-    root.classList.add(`font-${settings.fontSize}`);
+    root.classList.add(`font-${settingsValue.fontSize}`);
 
-    // Reduced motion
-    if (settings.reducedMotion) {
+    if (settingsValue.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
-    // Focus visible
-    if (settings.focusVisible) {
+    if (settingsValue.focusVisible) {
       root.classList.add('focus-visible');
     } else {
       root.classList.remove('focus-visible');

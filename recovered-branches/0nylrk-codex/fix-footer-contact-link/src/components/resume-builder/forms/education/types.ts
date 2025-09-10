@@ -17,25 +17,29 @@ export interface EducationFormProps {};
   onBack: () => void;
 }
 export interface EducationItemProps {
+  education: Education;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+}
 
-  education: Education;
-  onEdit: (education: Education) => void;
-  onDelete: (id: string) => void;
-}
-  education: Education;
-  onEdit: (education: Education) => void;
-  onDelete: (id: string) => void;
-}
 export interface EducationFormFieldsProps {
-
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
   onCancel: () => void;
 }
-
-import { Education  } from '@/types / resume';
-export interface EducationFormProps {};
-  resume_id: string;
-  education_entries: Education[];
-  on_complete: () => void;
-  on_back: () => void;
+;
+export interface EducationItemProps {;
+  education: Education,;
+  onEdit: (education: Education) => void,;
+  onDelete: (id: string) => void;
+}
+;
+export interface EducationFormFieldsProps {;
+  isEditing: boolean;
+  onSubmit: (data: any) => Promise<void>;
+  onCancel: () => void;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

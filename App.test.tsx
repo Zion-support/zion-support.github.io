@@ -1,20 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import UnknownComponent from './App';
+import App from './App';
 
-describe('UnknownComponent', () => {
+describe('App', () => {
   it('renders without crashing', () => {
-    render(<UnknownComponent />);
+    render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-
-  it('displays correct content', () => {
-    render(<UnknownComponent />);
-    // Add specific content checks based on component functionality
-  });
-
-  it('handles user interactions', () => {
-    render(<UnknownComponent />);
-    // Add interaction tests based on component functionality
-  });
-});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

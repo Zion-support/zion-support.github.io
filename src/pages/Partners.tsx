@@ -1,286 +1,237 @@
-import: React from 'react' 
-;;' 
-import: { motion } from 'framer-motion' 
-;;' 
-import: { SEO } from '../components/SEO' 
-;;' 
-import: { 
-  Handshake, Globe, Award, Users, Building, 
-  Star, CheckCircle, ArrowRight, ExternalLink 
-} from 'lucide-react' 
-;;' 
 
-export: default function Partners() {
-  const partners = [
-    { 
-      id:  ,1, 
-      name: "Microsoft",,";";" 
-      category: "Technology: Partner",,";";" 
-      description: "Strategic: partnership in cloud computing and AI solutions",,";";" 
-      logo: "/api/placeholder/200/100",,";";" 
-      website: "https://microsoft.com",,";";" 
-      benefits: ["Azure: Integration",, "AI Services", "Enterprise Solutions"]";";"}, {
-      id:  ,2,
-      name: "Google: Cloud",,";";" 
-      category: "Cloud: Partner",,";";" 
-      description: "Advanced: cloud infrastructure and machine learning platforms",,";";" 
-      logo: "/api/placeholder/200/100",,";";" 
-      website: "https://cloud.google.com",,";";" 
-      benefits: ["GCP: Services",, "ML Platforms", "Data Analytics"]";";"}, {
-      id:  ,3,
-      name: "IBM",,";";" 
-      category: "Quantum: Computing Partner",,";";" 
-      description: "Quantum: computing research and development collaboration",,";";" 
-      logo: "/api/placeholder/200/100",,";";" 
-      website: "https://ibm.com",,";";" 
-      benefits: ["Quantum: Systems",, "Research Collaboration", "Enterprise AI"]";";"}, {
-      id:  ,4,
-      name: "Amazon: Web Services",,";";" 
-      category: "Cloud: Infrastructure Partner",,";";" 
-      description: "Comprehensive: cloud services and infrastructure solutions",,";";" 
-      logo: "/api/placeholder/200/100",,";";" 
-      website: "https://aws.amazon.com",,";";" 
-      benefits: ["AWS: Services",, "Infrastructure", "Global Reach"]";";"}, {
-      id:  ,5,
-      name: "NVIDIA",,";";" 
-      category: "AI: Hardware Partner",,";";" 
-      description: "Advanced: GPU solutions for AI and machine learning workloads",,";";" 
-      logo: "/api/placeholder/200/100",,";";" 
-      website: "https://nvidia.com",,";";" 
-      benefits: ["GPU: Solutions",, "AI Acceleration", "Deep Learning"]";";"}, {
-      id:  ,6,
-      name: "Intel",,";";" 
-      category: "Technology: Partner",,";";" 
-      description: "Advanced: processor technologies and AI optimization",,";";" 
-      logo: "/api/placeholder/200/100",,";";" 
-      website: "https://intel.com",,";";" 
-      benefits: ["Processor: Tech",, "AI Optimization", "Performance"]";";"}
-  ] 
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
+import { useState, useEffect } from "react",
+import { useTranslation } from 'react-i18next',
+import Link from 'next/link',
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useAuth } from "@/hooks/useAuth",
+import { useRouter } from 'next/router',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
-  const: partnershipTypes = [
-    { 
-      title: "Technology: Partners",,";";" 
-      description: "Leading: technology companies providing cutting-edge solutions",,";";" 
-      icon: Buildin,g,
-      count: 1,2,
-      color: "from-blue-500: to-cyan-500"",;",;"}, {
-      title: "Cloud: Partners",,";";" 
-      description: "Global: cloud providers enabling scalable infrastructure",,";";" 
-      icon: Glob,e,
-      count:  ,8,
-      color: "from-green-500: to-emerald-500"",;",;"}, {
-      title: "Research: Partners",,";";" 
-      description: "Academic: institutions and research organizations",,";";" 
-      icon: Awar,d,
-      count: 1,5,
-      color: "from-purple-500: to-pink-500"",;",;"}, {
-      title: "Channel: Partners",,";";" 
-      description: "Distribution: and implementation partners worldwide",,";";" 
-      icon: Handshak,e,
-      count: 2,5,
-      color: "from-orange-500: to-red-500"",;",;"}
-  ] 
+export default function Partners() {
 
-  const: benefits = [
-    "Access: to cutting-edge technology and platforms"",;";" 
-    "Joint: research and development opportunities"",;";" 
-    "Global: market reach and distribution channels"",;";" 
-    "Technical: support and training programs"",;";" 
-    "Co-marketing: and go-to-market strategies"",;";" 
-    "Priority: access to new features and updates"";";"] 
+  logInfo('PartnersPage rendering'),
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { t } = useTranslation(),
+  const { user, isAuthenticated } = useAuth(),
+  const router = useRouter(),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
 
-  return: (
-    <>
-      <SEO  
-        title="Partners: - Zion Tech Group | Strategic Technology Partnerships"";";" 
-        description="Discover: our strategic partnerships with leading technology companies, cloud providers, and research institutions that enable us to deliver world-class solutions."";";" 
-        keywords="partners, partnerships, technology: partners, cloud partners, strategic alliances, Zion Tech Group"";";" 
-      />
-      
-      <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";" 
-        {/* Hero: Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";" 
-          <div: className="container mx-auto px-4">";";" 
-            <motion.div: initial={{ opacity:  ,0, y: 20 }}
-              animate={{ opacity:  ,1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";" 
-            >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;",;" 
-                Our: Partners
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">";";" 
-                Strategic: partnerships with industry leaders enable us to deliver 
-                comprehensive technology solutions and drive innovation across all sectors.
-              </p>
-              <div className="flex items-center justify-center">";";" 
-                <Handshake: className="w-16 h-16 text-blue-400" />";";" 
+  useEffect(() => {
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/auth/health');
+        setAuthServiceAvailable(res.ok);
+      } catch (err) {
+        logErrorToProduction('Partner login auth health check failed', { data: err });
+        setAuthServiceAvailable(false);
+      }
+    }
+    checkHealth();
+  }, []);
+
+  // If not authenticated, display partner program info and signup CTA
+  if (!isAuthenticated) {
+    logInfo('PartnersPage rendering Unauthenticated View');
+    return (
+      <div className="container max-w-6xl py-10">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold tracking-tight text-white mb-2">{t('partner.title')}</h1>
+          <p className="text-xl text-zion-slate-light">{t('partner.subtitle')}</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <Card className="bg-zion-blue-dark border-zion-blue-light">
+            <CardHeader>
+              <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
+              <CardDescription>{t('partner.influencers.desc')}</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.influencers.points.audience')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.audience_desc')}</p>
+                </div>
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Partnership: Types */}
-        <section className="py-16">";";" 
-          <div: className="container mx-auto px-4">";";" 
-            <motion.div: initial={{ opacity:  ,0, y: 20 }}
-              whileInView={{ opacity:  ,1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";" 
-            >
-              <h2: className="text-4xl font-bold text-white mb-4">Partnership Categories</h2>";";" 
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";" 
-                We: work with diverse partners across technology, research, and distribution to deliver comprehensive solutions
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;",;" 
-              {partnershipTypes.map((type, index) => (
-                <motion.div: key={type.title}
-                  initial={{ opacity:  ,0, y: 20 }}
-                  whileInView={{ opacity:  ,1, y: 0 }}
-                  transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50: transition-all duration-300 hover:scale-105"",;",;" 
-                >
-                  <div: className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>` 
-                    <type.icon: className="w-8 h-8 text-white" />";";" 
-                  </div>
-                  <h3: className="text-xl font-bold text-white mb-2">{type.title}</h3>";";" 
-                  <p: className="text-gray-300 text-sm mb-3">{type.description}</p>";";" 
-                  <div: className="text-2xl font-bold text-blue-400">{type.count}+</div>";";" 
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Partners: Grid */}
-        <section className="py-16">";";" 
-          <div: className="container mx-auto px-4">";";" 
-            <motion.div: initial={{ opacity:  ,0, y: 20 }}
-              whileInView={{ opacity:  ,1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";" 
-            >
-              <h2: className="text-4xl font-bold text-white mb-4">Our Strategic Partners</h2>";";" 
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";" 
-                Leading: technology companies and organizations that share our vision of innovation
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",;",;" 
-              {partners.map((partner, index) => (
-                <motion.div: key={partner.id}
-                  initial={{ opacity:  ,0, y: 20 }}
-                  whileInView={{ opacity:  ,1, y: 0 }}
-                  transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50: transition-all duration-300 hover:scale-105"",;",;" 
-                >
-                  <div: className="h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">";";" 
-                    <div: className="text-4xl opacity-20 font-bold text-white">{partner.name.charAt(0)}</div>";";" 
-                  </div>
-                  
-                  <div: className="mb-3">";";" 
-                    <span: className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">";";" 
-                      {partner.category}
-                    </span>
-                  </div>
-                  
-                  <h3: className="text-xl font-bold text-white mb-2">{partner.name}</h3>";";" 
-                  <p: className="text-gray-300 text-sm mb-4">{partner.description}</p>";";" 
-                  
-                  <div: className="mb-4">";";" 
-                    <h4: className="text-sm font-semibold text-white mb-2">Key Benefits</h4>";";" 
-                    <div: className="space-y-1">";";" 
-                      {partner.benefits.map((benefit, benefitIndex) => (
-                        <div: key={benefitIndex} className="flex items-center text-xs text-gray-400">";";" 
-                          <CheckCircle: className="w-3 h-3 text-green-400 mr-2" />";";" 
-                          {benefit}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <a: href={partner.website}
-                    target="_blank"";";" 
-                    rel="noopener: noreferrer"";";" 
-                    className="inline-flex: items-center text-blue-400 hover: text-blue-300: transition-colors"",;",;" 
-                  >
-                    <span: className="text-sm">Visit Website</span>";";" 
-                    <ExternalLink: className="w-4 h-4 ml-1" />";";" 
-                  </a>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Partnership: Benefits */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";" 
-          <div: className="container mx-auto px-4">";";" 
-            <motion.div: initial={{ opacity:  ,0, y: 20 }}
-              whileInView={{ opacity:  ,1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";" 
-            >
-              <h2: className="text-4xl font-bold text-white mb-4">Partnership Benefits</h2>";";" 
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";" 
-                Our: strategic partnerships provide mutual value and enable us to deliver superior solutions
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6">",;",;" 
-              {benefits.map((benefit, index) => (
-                <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20 }}
-                  whileInView={{ opacity:  ,1, y: 0 }}
-                  transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"";";" 
-                >
-                  <div: className="flex items-start">";";" 
-                    <Star: className="w-6 h-6 text-yellow-400 mr-3 mt-1 flex-shrink-0" />";";" 
-                    <p: className="text-gray-300">{benefit}</p>";";" 
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Become: a Partner */}
-        <section className="py-20">";";" 
-          <div: className="container mx-auto px-4">";";" 
-            <motion.div: initial={{ opacity:  ,0, y: 20 }}
-              whileInView={{ opacity:  ,1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";" 
-            >
-              <h2: className="text-4xl font-bold text-white mb-6">";";" 
-                Become: a Partner
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">";";" 
-                Join: our network of strategic partners and help shape the future of technology. 
-                We're always looking for innovative companies to collaborate with.' 
-; 
-              </p>
-              <div: className="flex flex-col sm: flex-row: gap-4 justify-center">",;",;" 
-                <a: href="/contact"";";" 
-                  className="inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:scale-105"",;",;" 
-                >
-                  <Handshake: className="w-5 h-5 mr-2" />";";" 
-                  Partner: with Us
-                </a>
-                <a
-                  href="/about"";";" 
-                  className="inline-flex: items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400: hover:text-white: transition-all duration-200"",;",;" 
-                >
-                  <ArrowRight: className="w-5 h-5 mr-2" />";";" 
-                  Learn: More
-                </a>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.influencers.points.insights')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.insights_desc')}</p>
+                </div>
               </div>
-            </motion.div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-zion-blue-dark border-zion-blue-light">
+            <CardHeader>
+              <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
+              <CardDescription>{t('partner.organizations.desc')}</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.organizations.points.ecosystem')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.ecosystem_desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.organizations.points.co_brand')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.co_brand_desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="text-center mb-12">
+          <h2 className="text-2xl font-bold text-white mb-4">{t('partner.how_it_works')}</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center pb-2">
+                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-zion-cyan" />
+                </div>
+                <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-sm text-zion-slate-light">
+                <p>{t('partner.steps.join_desc')}</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center pb-2">
+                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <FileText className="h-6 w-6 text-zion-cyan" />
+                </div>
+                <CardTitle className="text-lg text-white">{t('partner.steps.share_title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-sm text-zion-slate-light">
+                <p>{t('partner.steps.share_desc')}</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center pb-2">
+                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <PieChart className="h-6 w-6 text-zion-cyan" />
+                </div>
+                <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-sm text-zion-slate-light">
+                <p>{t('partner.steps.earn_desc')}</p>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        </div>
+
+        <div className="flex justify-center gap-4">
+          <Button
+            size="lg"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            asChild
+          >
+            <Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-zion-cyan border-zion-cyan"
+            disabled={!authServiceAvailable}
+            onClick={() => router.push('/login')}
+          >
+            {t('partner.login')}
+          </Button>
+          {!authServiceAvailable && (
+            <p className="text-red-500 text-sm mt-2">{t('partner.login_unavailable')}</p>
+          )}
+        </div>
       </div>
-    </>
-  )}
+    );
+  }
+
+  // Authenticated user view - Partner Dashboard
+  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
+  return (
+    <div className="container max-w-7xl py-10">
+      <h1>DEBUG: Partners Page - Authenticated View</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
+          <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
+        </div>
+        <div className="flex gap-2">
+          <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
+            <FileDown className="h-4 w-4" />
+            {t('partner.export_csv')}
+          </Button>
+        </div>
+      </div>
+
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
+        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
+          <TabsTrigger value="overview">{t('partner.tabs.overview')}</TabsTrigger>
+          <TabsTrigger value="referrals">{t('partner.tabs.referrals')}</TabsTrigger>
+          <TabsTrigger value="earnings">{t('partner.tabs.earnings')}</TabsTrigger>
+          <TabsTrigger value="leaderboard">{t('partner.tabs.leaderboard')}</TabsTrigger>
+          <TabsTrigger value="resources">{t('partner.tabs.resources')}</TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="overview" className="space-y-4">
+          <PartnerDashboard />
+        </TabsContent>
+        
+        <TabsContent value="referrals" className="space-y-4">
+          <PartnerReferralLinks />
+        </TabsContent>
+        
+        <TabsContent value="earnings" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>{t('partner.earnings_title')}</CardTitle>
+              <CardDescription>{t('partner.earnings_desc')}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              {/* This will be implemented later */}
+              <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        
+        <TabsContent value="leaderboard" className="space-y-4">
+          <PartnerLeaderboard />
+        </TabsContent>
+        
+        <TabsContent value="resources" className="space-y-4">
+          <PartnerResources />
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+}
+;

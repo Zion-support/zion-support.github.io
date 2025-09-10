@@ -1,20 +1,6 @@
-  test('renders without crashing', () => {
-
-    render(<ContactForm />);
-    expect(screen.getByTestId('contactform)).toBeInTheDocument()});
-
-
-  test('displays correct content', () => {
-    render(<ContactForm />);
-
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-
-    render(<ContactForm />);
-    // Add interaction tests based on component functionality});
-;
-  test('applies correct styling', () => {
-    render(<ContactForm />);
-    // Add styling tests if needed;
+<<<<<<< HEAD
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
+=======
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactForm from "./components/ContactForm" describe("ContactForm",() => {" test("renders without crashing",() => {" render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactForm / / />) }) test("handles user interactions",() => {" render(<ContactForm / / />) }) test("applies correct styling",() => {" render(<ContactForm / / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import ContactForm from '../components/ContactForm" describe('ContactForm',() => {' test('renders without crashing',() => {' render(<ContactForm / / />) expect(screen.getByTestId("contactform")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactForm / / />) }) test('handles user interactions',() => {' render(<ContactForm / / />) }) test('applies correct styling',() => {' render(<ContactForm / / />) }) })
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

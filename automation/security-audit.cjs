@@ -375,50 +375,10 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  "summary": {"
-    total: totalCount,"
-    "successful": successCount,""
-    "failed": totalCount - successCount}};""
-const reportsDir = path.join(process.cwd(), 'automation-reports');
-
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });"
-const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
-fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-
-
-
-
-
-main
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 
 const fs = require('fs')

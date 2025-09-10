@@ -1,8 +1,6 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import Search from '../components/Search';'
-describe('Search', () => {test('renders without crashing', () => {render(<Search />)expect(screen.getByTestId('search')).toBeInTheDocument()})test('displays correct content', () => {render(<Search />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<Search />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<Search />)// Add styling tests here;'
-  })})
+<<<<<<< HEAD
+=======
+expect(screen.getByRole(main\") || screen.getByText(/.*/)).toBeInTheDocument();} import { render,screen } from &apos;@testing - library/react\",; import Search from &apos;./Search; describe(&apos;Search&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<Search / >)\"; expect(screen.getByRole(\"main\') || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}})
+expect(screen.getByRole(main") | screen.getByText(/.*/)).toBeInTheDocument();} import { render,screen } from &apos;@testing - library/react",; import Search from &apos;./Search; describe(&apos;Search&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<Search / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}})"""
+expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument()} import { render,screen } from &apos;@testing - library/react",; import Search from &apos;./Search; describe(&apos;Search&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<Search / >)"; expect(screen.getByRole("main') || screen.getByText(/.*/)).toBeInTheDocument()})"; "}})
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

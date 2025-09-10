@@ -4,6 +4,21 @@ interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
+export function ServiceDetailsSection({
+  selectedCountry
+  setSelectedCountry
+}: ServiceDetailsSectionProps) {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceSelector } from "../CountryServiceSelector";
+interface ServiceDetailsSectionProps {
+  selectedCountry: CountryPricing | null;
+  setSelectedCountry: (country: CountryPricing | null) => void;
+}
 
           </p>
         </div>

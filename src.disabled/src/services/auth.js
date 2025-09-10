@@ -1,5 +1,7 @@
-
-
+<<<<<<< HEAD
+// comment;
+export class authService {}}
+;
   async get() {};
       const response = await fetch("${this && this.baseUrl}/auth")}
       return await response && response.json()}
@@ -17,15 +19,5 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth");,} return await response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-
-
-export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth");,} return await response && response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth"),} return await response && response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth"),} return await response && response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-
-
-export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

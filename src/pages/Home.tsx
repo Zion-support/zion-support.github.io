@@ -1,212 +1,145 @@
-import: React from 'react' 
-;;' 
-import: { motion } from 'framer-motion' 
-;;' 
-import: { Link } from 'react-router-dom' 
-;;' 
-import: { SEO } from '../components/SEO' 
-;;' 
-import: EnhancedHero from '../components/EnhancedHero' 
-;;' 
-import: { 
-  Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, 
-  Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 
-  Database, Network, Smartphone, Building, Heart, Award, MessageCircle, 
-  Phone, Mail, MapPin 
-} from 'lucide-react' 
-;;' 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Zap, Shield, Globe, Lightbulb, Code, Database, Smartphone,
+  Cloud, Users, Award, CheckCircle, Star, ArrowRight,
+} from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Button } from '../components/ui/button';
+import GradientHeading from '../components/GradientHeading';
 
 export: default React.memo(function Home() {
   const features = [
-    {  
-      icon: Brai,n,  
-      title: 'AI-Powered: Solutions',, ' 
-; 
-      description: 'Cutting-edge: artificial intelligence that transforms business operations and drives innovation.',, ' 
-; 
-      color: 'from-purple-500: to-pink-500' ', 
-,;}, { 
-      icon: Ato,m, 
-      title: 'Quantum: Computing',, ' 
-; 
-      description: 'Next-generation: quantum solutions that solve complex problems beyond classical computing.',, ' 
-; 
-      color: 'from-orange-500: to-red-500' ', 
-,;}, { 
-      icon: Rocke,t, 
-      title: 'Micro: SAAS Platform',, ' 
-; 
-      description: 'Innovative: software-as-a-service solutions that scale with your business needs.',, ' 
-; 
-      color: 'from-blue-500: to-cyan-500' ', 
-,;}, { 
-      icon: Shiel,d, 
-      title: 'Enterprise: Security',, ' 
-; 
-      description: 'Military-grade: cybersecurity and compliance solutions for enterprise protection.',, ' 
-; 
-      color: 'from-green-500: to-emerald-500' ', 
-,;}
-  ] 
+    {
+      icon: <Zap className="h-8 w-8 text-blue-500" />,
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge artificial intelligence to automate and optimize your business processes.',
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-green-500" />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance with industry standards.',
+    },
+    {
+      icon: <Globe className="h-8 w-8 text-purple-500" />,
+      title: 'Global Scale',
+      description: 'Deploy and manage your solutions across multiple regions with our global infrastructure.',
+    },
+    {
+      icon: <Lightbulb className="h-8 w-8 text-yellow-500" />,
+      title: 'Innovation First',
+      description: 'Stay ahead with our continuous innovation and cutting-edge technology solutions.',
+    },
+  ];
 
-  const: stats = [
-    { number: '500+',, label: 'Projects: Completed',, icon: CheckCircle },' 
-; 
-    { number: '50+',, label: 'Team: Members',, icon: Users },' 
-; 
-    { number: '25+',, label: 'Countries: Served',, icon: Globe },' 
-; 
-    { number: '99%',, label: 'Client: Satisfaction',, icon: Star }' 
-;] 
+  const serviceCards = [
+    {
+      title: 'AI Development',
+      description: 'Custom AI solutions tailored to your business needs',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services',
+      features: ['AWS/Azure/GCP', 'Containerization', 'DevOps'],
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights',
+      features: ['Business Intelligence', 'Predictive Analytics', 'Real-time Dashboards'],
+    },
+  ];
 
-  const: services = [
-    {  
-      title: 'AI: Services',, ' 
-; 
-      description: 'Comprehensive: AI solutions for business automation and intelligence',, ' 
-; 
-      href: '/ai-services',, ' 
-; 
-      icon: Brai,n, 
-      color: 'from-purple-500: to-pink-500' ', 
-,;}, { 
-      title: 'IT: Infrastructure',, ' 
-; 
-      description: 'Enterprise-grade: IT solutions and cloud architecture',, ' 
-; 
-      href: '/it-services',, ' 
-; 
-      icon: Serve,r, 
-      color: 'from-green-500: to-emerald-500' ', 
-,;}, { 
-      title: 'Quantum: Solutions',, ' 
-; 
-      description: 'Cutting-edge: quantum computing and technology services',, ' 
-; 
-      href: '/services/quantum-computing',, ' 
-; 
-      icon: Ato,m, 
-      color: 'from-orange-500: to-red-500' ', 
-,;}, { 
-      title: 'Micro: SAAS',, ' 
-; 
-      description: 'Innovative: software solutions for modern businesses',, ' 
-; 
-      href: '/micro-saas',, ' 
-; 
-      icon: Rocke,t, 
-      color: 'from-blue-500: to-cyan-500' ', 
-,;}
-  ] 
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CEO, TechCorp',
+      content: 'Zion Tech Group transformed our business with their AI solutions. We\'ve seen a 300% increase in efficiency.',
+      rating: 5,
+    },
+    {
+      name: 'Mike Chen',
+      role: 'CTO, InnovateLab',
+      content: 'Their cloud migration service was flawless. We were up and running in record time with zero downtime.',
+      rating: 5,
+    },
+    {
+      name: 'Emily Davis',
+      role: 'VP Engineering, DataFlow',
+      content: 'The data analytics platform they built for us has revolutionized how we make business decisions.',
+      rating: 5,
+    },
+  ];
 
-  return: (
-    <>
-      <SEO  
-        title="Zion: Tech Group - Leading AI & Quantum Technology Solutions"";";" 
-        description="Transform: your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Enterprise-grade technology solutions for the future."";";" 
-        keywords="AI: services, quantum computing, micro SAAS, IT infrastructure, cybersecurity, Zion Tech Group, technology solutions"";";" 
-      />
-      <EnhancedHero: />
-      
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";" 
-        <div: className="container mx-auto px-4">";";" 
-          <div: className="grid grid-cols-2 md: grid-cols-4: gap-8">",;",;" 
-            {stats.map((stat, index) => (
-              <motion.div: key={stat.label}
-                initial={{ opacity:  ,0, y: 20 }}
-                whileInView={{ opacity:  ,1, y: 0 }}
-                transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                className="text-center"";";" 
-              >
-                <div: className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">";";" 
-                  <stat.icon: className="w-12 h-12 text-cyan-400 mx-auto mb-4" />";";" 
-                  <div: className="text-3xl font-bold text-white mb-2">{stat.number}</div>";";" 
-                  <div: className="text-gray-300">{stat.label}</div>";";" 
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' },
+  ];
 
-      <section: className="py-20">";";" 
-        <div: className="container mx-auto px-4">";";" 
-          <motion.div: initial={{ opacity:  ,0, y: 20 }}
-            whileInView={{ opacity:  ,1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center: mb-16"";";" 
-          >
-            <h2: className="text-4xl md: text-5xl: font-bold text-white mb-4">",;",;" 
-              Why: Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">";";" 
-              We: combine cutting-edge technology with proven business strategies to deliver 
-              solutions that transform industries and drive success.
-            </p>
-          </motion.div>
+  // Track scroll depth
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;",;" 
-            {features.map((feature, index) => (
-              <motion.div: key={feature.title}
-                initial={{ opacity:  ,0, y: 20 }}
-                whileInView={{ opacity:  ,1, y: 0 }}
-                transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50: transition-all duration-300 hover:scale-105"",;",;" 
-              >
-                <div: className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>` 
-                  <feature.icon: className="w-8 h-8 text-white" />";";" 
-                </div>
-                <h3: className="text-xl font-bold text-white mb-3">{feature.title}</h3>";";" 
-                <p: className="text-gray-300 leading-relaxed">{feature.description}</p>";";" 
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      // Track scroll depth (placeholder function)
+      if (scrollPercent > 25 && scrollPercent <= 50) {
+        console.log('Scroll depth: 25%');
+      } else if (scrollPercent > 50 && scrollPercent <= 75) {
+        console.log('Scroll depth: 50%');
+      } else if (scrollPercent > 75 && scrollPercent <= 90) {
+        console.log('Scroll depth: 75%');
+      } else if (scrollPercent > 90) {
+        console.log('Scroll depth: 100%');
+      }
+    };
 
-      <section: className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";" 
-        <div: className="container mx-auto px-4">";";" 
-          <motion.div: initial={{ opacity:  ,0, y: 20 }}
-            whileInView={{ opacity:  ,1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center: mb-16"";";" 
-          >
-            <h2: className="text-4xl md: text-5xl: font-bold text-white mb-4">",;",;" 
-              Our: Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">";";" 
-              Comprehensive: technology solutions designed to meet the evolving needs of modern businesses
-            </p>
-          </motion.div>
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;",;" 
-            {services.map((service, index) => (
-              <motion.div: key={service.title}
-                initial={{ opacity:  ,0, y: 20 }}
-                whileInView={{ opacity:  ,1, y: 0 }}
-                transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                className="group"";";" 
-              >
-                <Link: to={service.href} className="block">";";" 
-                  <div: className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 group-hover: border-cyan-400/50: transition-all duration-300 group-hover:scale-105: h-full">",;",;" 
-                    <div: className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}>` 
-                      <service.icon: className="w-8 h-8 text-white" />";";" 
-                    </div>
-                    <h3: className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400: transition-colors">",;",;" 
-                      {service.title}
-                    </h3>
-                    <p: className="text-gray-300 leading-relaxed">{service.description}</p>";";" 
-                    <div: className="mt-4 flex items-center text-cyan-400 group-hover: text-cyan-300: transition-colors">",;",;" 
-                      <span: className="text-sm font-medium">Learn More</span>";";" 
-                      <ArrowRight: className="w-4 h-4 ml-2 group-hover: translate-x-1: transition-transform" />",;",;" 
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  const serviceItems = [
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: 'AI Services',
+      description: 'Custom AI solutions powered by machine learning and deep learning technologies',
+      href: '/services/ai-services',
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: 'IT Services',
+      description: 'Comprehensive IT infrastructure and digital transformation solutions',
+      href: '/services/it-services',
+    },
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: 'Micro SaaS',
+      description: 'Scalable software-as-a-service solutions for growing businesses',
+      href: '/services/micro-saas',
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets',
+      href: '/services/cybersecurity',
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services',
+      href: '/services/cloud-solutions',
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Data Analytics',
+      description: 'Transform data into actionable insights with advanced analytics',
+      href: '/services/data-analytics',
+    },
+  ];
 
       <section: className="py-20">";";" 
         <div: className="container mx-auto px-4">";";" 
@@ -242,21 +175,28 @@ export: default React.memo(function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";" 
-        <div: className="container mx-auto px-4">";";" 
-          <div: className="max-w-4xl mx-auto">";";" 
-            <motion.div: initial={{ opacity:  ,0, y: 20 }}
-              whileInView={{ opacity:  ,1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";" 
-            >
-              <h2: className="text-3xl md: text-4xl: font-bold text-white mb-4">",;",;" 
-                Get: in Touch
-              </h2>
-              <p className="text-lg text-gray-300">";";" 
-                Ready: to discuss your technology needs? Contact us today.
-              </p>
-            </motion.div>
+  const featureItems = [
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Lightning Fast',
+      description: 'Optimized solutions that deliver exceptional performance',
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security with 99.9% uptime guarantee',
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: 'Expert Team',
+      description: 'Experienced professionals with deep technical expertise',
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients',
+    },
+  ];
 
             <div className="grid grid-cols-1 md: grid-cols-3: gap-8">",;",;" 
               <motion.div: initial={{ opacity:  ,0, y: 20 }}
@@ -294,7 +234,112 @@ export: default React.memo(function Home() {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-    </>
-  )
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+              <p className="text-xl text-gray-600">
+                We deliver exceptional results through innovation and expertise
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {featureItems.map((feature, index) => (
+                <div key={index} className="p-6 text-center hover:shadow-lg transition-shadow bg-white rounded-lg">
+                  <div className="flex justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+              <p className="text-xl text-gray-600">
+                Comprehensive technology solutions for modern businesses
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {serviceCards.map((service, index) => (
+                <div key={index} className="p-8 hover:shadow-lg transition-shadow bg-white rounded-lg">
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <p className="text-xl text-gray-600">
+                Don't just take our word for it - hear from our satisfied clients
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="p-6 bg-white rounded-lg">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">&ldquo;{testimonial.content}&rdquo;</p>
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-500">{testimonial.role}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let&apos;s discuss how we can help you achieve your technology goals.
+            </p>
+            <div className="space-x-4">
+              <Button size="lg" variant="secondary" asChild>
+                <Link to="/contact">Get Started Today</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600" asChild>
+                <Link to="/pricing">View Pricing</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;

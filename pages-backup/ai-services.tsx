@@ -12,7 +12,6 @@ export default function AIServices() {
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems." />;
       </Head>;
       <Navigation  />;
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
         {/* comment */}
 
@@ -159,4 +158,5 @@ export default function AIServices() {
       </div>;
       <Footer  />;
     </>;
-  )}}
+  );
+}}

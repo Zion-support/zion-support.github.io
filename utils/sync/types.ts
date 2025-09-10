@@ -1,36 +1,49 @@
 export type SyncScope = "full" | "dao" | "marketplace";
-
-export interface InstanceMeta {
+export interface Peer {;
+  id: string;
+  baseUrl: string, // e.g., https: //zion-latam.example.org;
+  scope?: SyncScope;
+  paused?: boolean;
+}
+;
+export interface InstanceConfig {;
+  instanceId: string;
+  optIn: boolean;
+  paused: boolean;
+  scope: SyncScope;
+  peers: Peer[];
+  secretConfigured: boolean;
+}
+;
+export type SyncEventType =;
+  | "proposal";
+  | "token_transfer";
+  | "talent_mobility";
+  | "dao_endorsement";
+  | "leaderboard_entry";
+export interface BaseEventPayload {;
   id: string;
   name: string;
   baseUrl: string; // e.g., https://latam.zion.app
   publicKey?: string; // optional public key for signature verification
 }
-
-export interface Proposal {
-  id: string; // globally unique (instance-prefixed)
-  title: string;
-  description?: string;
-  createdAt: number; // epoch ms
-  updatedAt: number; // epoch ms
-  status: "draft" | "active" | "closed";
-  daoId: string;
-  authorId?: string;
-  tags?: string[];
-  version: number; // monotonic version
-}
-
-export interface Vote {
-  id: string; // unique id for vote record
-  proposalId: string;
+;
+export interface ProposalVoteEntry {;
   voterId: string;
-  choice: string; // e.g., yes/no/abstain or option id
-  weight: number; // token-weighted, quadratic, etc.
-  timestamp: number; // epoch ms
+  weight: number;
+  choice: string;
 }
-
-export interface TokenTransfer {
-  id: string; // unique id
+;
+export interface ProposalPayload extends BaseEventPayload {;
+  proposalId: string;
+  title: string;
+  votes: ProposalVoteEntry[];
+}
+;
+export interface TokenTransferPayload extends BaseEventPayload {;
+  txId: string;
+  token: string;
+  amount: number;
   fromSubnet: string;
   toSubnet: string;
   token: string;
@@ -38,23 +51,21 @@ export interface TokenTransfer {
   escrowId?: string;
   timestamp: number;
 }
-
-export interface TalentMove {
-  id: string;
+;
+export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
-  fromNation?: string;
+  fromNation: string;
   toNation: string;
   role: string;
-  startDate: number;
-  endDate?: number;
+  startDate: string;
+  endDate?: string;
 }
-
-export interface Endorsement {
-  id: string;
-  fromDaoId: string;
-  toDaoId: string;
-  resolutionId?: string;
-  message?: string;
+;
+export interface DaoEndorsementPayload extends BaseEventPayload {;
+  fromDAO: string;
+  toDAO: string;
+  resolutionId: string;
+  decision: "endorse" | "reject";
   timestamp: number;
 }
 
@@ -63,50 +74,32 @@ export interface LeaderboardEntry {
   category: "grants" | "contributors" | "treasury" | "milestones";
   subjectId: string; // winner or contributor id
   score: number;
-  period: string; // e.g., 2025-Q3
+  category: string, // e.g., grants, contributions;
+  rank?: number;
+  period?: string, // e.g., 2025-Q3;
 }
-
-export interface VotesMerkleBundle {
-  leaves: string[]; // hashed leaves (hex)
-  root: string; // hex
-  proofs: Record<string, string[]>; // voteId -> merkle proof (array of hex sibling hashes)
-  signature?: string; // signature over root
-  algorithm: "sha256";
-}
-
-export interface SyncEnvelope {
-  from: InstanceMeta;
-  scope: SyncScope;
+;
+export type SyncEventPayload =;
+  | ProposalPayload;
+  | TokenTransferPayload;
+  | TalentMobilityPayload;
+  | DaoEndorsementPayload;
+  | LeaderboardEntryPayload;
+export interface SyncEvent {;
+  eventId: string;
+  type: SyncEventType;
+  payload: SyncEventPayload;
+  originInstanceId: string;
+  version: number;
   timestamp: number;
-  proposals?: Proposal[];
-  votes?: Vote[];
-  tokenTransfers?: TokenTransfer[];
-  talentMoves?: TalentMove[];
-  endorsements?: Endorsement[];
-  leaderboard?: LeaderboardEntry[];
-  votesMerkle?: VotesMerkleBundle; // verification bundle for votes
-  instanceVectorClock?: Record<string, number>; // instanceId -> logical time
+  merkleRoot?: string, // required for proposal events;
 }
-
-export interface SyncConfig {
-  enabled: boolean;
-  paused: boolean; // DAO can pause globally
-  scope: SyncScope;
-  instance: InstanceMeta;
-  peers: InstanceMeta[]; // other instances
-  requireSignatures: boolean;
-  p2pEnabled: boolean;
-  pollIntervalSec: number; // default 60
-}
-
-export interface MergeResult {
-  applied: {
-    proposals: number;
-    votes: number;
-    tokenTransfers: number;
-    talentMoves: number;
-    endorsements: number;
-    leaderboard: number;
-  };
-  skipped: number;
+;
+export interface MultiverseState {;
+  config: InstanceConfig;
+  lastSyncedAt: number;
+  seenEventIds: Record<string true>;
+  latestVersionByEntityId: Record<string, number>;
+  proposalMerkleById: Record<string, string>;
+  events: SyncEvent[];
 }

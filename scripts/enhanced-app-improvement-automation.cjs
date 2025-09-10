@@ -1,119 +1,265 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process');
+const timestamp = new Date().toISOString(;);
+const report = {
+  timestamp,
+  "improvements": [],
+  "errors": [],
+  "summary": {
+    totalImprovements: 0,
+    "successfulImprovements": 0,
+    "failedImprovements": 0
+  }
+};
+// Utility function to run commands safely
+function runCommand(command, description) {
+  try {
+    // Install bundle analyzer if not present
+    try {
+      execSync('npm run export', { "stdio": 'pipe' });
+      return 'Static export generated'} catch (error) {
+      // Export might not be configured, that's okay
+      return 'Static export skipped (not configured)'}
+  });
+  deploymentReport.status = 'success';
+  } catch (error) {
+  deploymentReport.status = 'failed';
+  }
+// Save report
+fs.writeFileSync('deployment-automation-report.json', JSON.stringify(deploymentReport, null, 2));
+process.exit(deploymentReport.status === 'success' ? 0 : 1);
+";
+  fs.writeFileSync('scripts/deployment-automation.cjs', deploymentContent);
+  }
+// Function to create monitoring script
+function createMonitoringScript() {
+  const monitoringContent = "#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process');
+const monitoringReport = {
+  "timestamp": new Date().toISOString(),
+  "metrics": {},
+  "alerts": [],
+  "status": 'monitoring'};
+// Function to get file sizes
+function getDirectorySize(dirPath) {
+  let totalSize = ;0;
+  try {
+    const files = fs.readdirSync(dirPath;);
+    for (const file of files) {
+      const filePath = path.join(dirPath, file;);
+      const stats = fs.statSync(filePath;);
+      if () {
+        totalSize += getDirectorySize(filePath)} else {
+        totalSize += stats.size}
+    }
+  } catch (error) {
+    // Directory might not exist
+  }
+  return totalSize) {
+    ) {
+        totalSize += getDirectorySize(filePath)} else {
+        totalSize += stats.size}
+    }
+  } catch (error) {
+    // Directory might not exist
+  }
+  return totalSize}}
+// Function to format bytes
+function formatBytes(bytes) {
+  if (return '0 Bytes) {
+    return '0 Bytes}';
+  const k = 10;2;4;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k;););
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
+// Collect metrics
+// Build size
+try {
+  if () {
+    const buildSize = getDirectorySize('.next) {
+    ) {
+    const buildSize = getDirectorySize('.next}';);
+    monitoringReport.metrics.buildSize = {
+      "bytes": buildSize,
+      "formatted": formatBytes(buildSize)
+    };
+    }")}
+} catch (error) {
+  monitoringReport.alerts.push('Could not measure build size')}
+// Node modules size
+try {
+  if () {
+    const nodeModulesSize = getDirectorySize('node_modules) {
+    ) {
+    const nodeModulesSize = getDirectorySize('node_modules}';);
+    monitoringReport.metrics.nodeModulesSize = {
+      "bytes": nodeModulesSize,
+      "formatted": formatBytes(nodeModulesSize)
+    };
+    }")}
+} catch (error) {
+  monitoringReport.alerts.push('Could not measure node_modules size')}
+// Count files
+try {
+  const pagesDir = path.join(process.cwd(), 'pages;';);
+  const componentsDir = path.join(process.cwd(), 'components;';);
+  let pageCount = ;0;
+  let componentCount = ;0;
+  if () {
+    const pages = fs.readdirSync(pagesDir) {
+    ) {
+    const pages = fs.readdirSync(pagesDir});
+    pageCount = pages.filter(file => file.endsWith('.tsx') || file.endsWith('.jsx')).length}
+  if () {
+    const components = fs.readdirSync(componentsDir) {
+    ) {
+    const components = fs.readdirSync(componentsDir});
+    componentCount = components.filter(file => file.endsWith('.tsx') || file.endsWith('.jsx')).length}
+  monitoringReport.metrics.fileCounts = {
+    "pages": pageCount,
+    "components": componentCount
+  };
+  } catch (error) {
+  monitoringReport.alerts.push('Could not count files')}
+// Check for large files
+try {
+  const largeFiles = [];
+  function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB
+    const files = fs.readdirSync(dir;);
+    for (const file of files) {
+      const filePath = path.join(dir, file;);
+      const stats = fs.statSync(filePath;);
+      if (&& stats.size > maxSize) {
+        largeFiles.push({
+          "path": filePath,
+          "size": formatBytes(stats.size)
+        })} else if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+        findLargeFiles(filePath, maxSize)}
+=======
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 
 class EnhancedAppImprovementAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.improvements = [];
-    this.errors = [];
-    this.startTime = Date.now();
+    this.projectRoot = process.cwd()
+    this.improvements = []
+    this.errors = []
+    this.startTime = Date.now()
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    const timestamp = new Date().toISOString()
+    console.log(`[${timestamp}] [${level}] ${message}`)
   }
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Running: ${description}`)
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return result.toString();
+      })
+      this.log(`✅ ${description} completed successfully`)
+      return result.toString()
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      this.errors.push({ command, description, error: error.message });
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR')
+      this.errors.push({ command, description, error: error.message })
       return null;
     }
   }
 
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
+    this.log('🖼️ Optimizing images...')
     
     try {
       // Check if sharp is available for image optimization
-      const sharpAvailable = await this.runCommand('npm list sharp', 'Check Sharp availability');
+      const sharpAvailable = await this.runCommand('npm list sharp', 'Check Sharp availability')
       
       if (!sharpAvailable) {
-        await this.runCommand('npm install sharp --save', 'Install Sharp for image optimization');
+        await this.runCommand('npm install sharp --save', 'Install Sharp for image optimization')
       }
       
       // Create image optimization script
       const imageOptimizerScript = `
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
+const sharp = require('sharp')
+const fs = require('fs')
+const path = require('path')
 
 async function optimizeImages() {
-  const publicDir = path.join(process.cwd(), 'public');
-  const images = [];
+  const publicDir = path.join(process.cwd(), 'public')
+  const images = []
   
   function findImages(dir) {
-    const files = fs.readdirSync(dir);
+    const files = fs.readdirSync(dir)
     files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+      const filePath = path.join(dir, file)
+      const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
-        findImages(filePath);
+        findImages(filePath)
       } else if (/\.(jpg|jpeg|png|webp)$/i.test(file)) {
-        images.push(filePath);
+        images.push(filePath)
       }
-    });
+    })
   }
   
-  findImages(publicDir);
+  findImages(publicDir)
   
   for (const imagePath of images) {
     try {
-      const outputPath = imagePath.replace(/\\.(jpg|jpeg|png)$/i, '.webp');
+      const outputPath = imagePath.replace(/\\.(jpg|jpeg|png)$/i, '.webp')
       await sharp(imagePath)
         .webp({ quality: 80 })
-        .toFile(outputPath);
-      console.log(\`Optimized: \${imagePath} -> \${outputPath}\`);
+        .toFile(outputPath)
+      console.log(\`Optimized: \${imagePath} -> \${outputPath}\`)
     } catch (error) {
-      console.error(\`Failed to optimize \${imagePath}:\`, error.message);
+      console.error(\`Failed to optimize \${imagePath}:\`, error.message)
     }
   }
 }
 
-optimizeImages().catch(console.error);
+optimizeImages().catch(console.error)
       `;
       
-      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'optimize-images.cjs'), imageOptimizerScript);
-      await this.runCommand('node scripts/optimize-images.cjs', 'Image Optimization');
+      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'optimize-images.cjs'), imageOptimizerScript)
+      await this.runCommand('node scripts/optimize-images.cjs', 'Image Optimization')
       
-      this.improvements.push('Image optimization completed');
-      this.log('✅ Image optimization completed');
+      this.improvements.push('Image optimization completed')
+      this.log('✅ Image optimization completed')
     } catch (error) {
-      this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR')
     }
   }
 
   async optimizeBundle() {
-    this.log('📦 Optimizing bundle size...');
+    this.log('📦 Optimizing bundle size...')
     
     try {
       // Analyze bundle
-      await this.runCommand('npm run build', 'Build for analysis');
+      await this.runCommand('npm run build', 'Build for analysis')
       
       // Create bundle analyzer script
       const bundleAnalyzerScript = `
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 
 async function analyzeBundle() {
   try {
     // Install bundle analyzer if not present
     try {
-      execSync('npm list @next/bundle-analyzer', { stdio: 'pipe' });
+      execSync('npm list @next/bundle-analyzer', { stdio: 'pipe' })
     } catch {
       execSync('npm install @next/bundle-analyzer --save-dev', { stdio: 'pipe' });
     }
@@ -368,24 +514,144 @@ improvePerformance();
       return report;
       
     } catch (error) {
-      this.log(`💥 Enhanced App Improvement Automation failed: ${error.message}`, 'ERROR');
-      await this.generateReport();
-      process.exit(1);
+      this.log(`💥 Enhanced App Improvement Automation failed: ${error.message}`, 'ERROR')
+      await this.generateReport()
+      process.exit(1)
+>>>>>>> origin/automation-fixes
     }
   }
+  findLargeFiles(process.cwd())) {
+    && stats.size > maxSize) {
+        largeFiles.push({
+          "path": filePath,
+          "size": formatBytes(stats.size)
+        })} else if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+        findLargeFiles(filePath, maxSize)}
+    }
+  }
+  findLargeFiles(process.cwd())}
+  monitoringReport.metrics.largeFiles = largeFiles;
+  if ( {
+    ) {
+     {
+    }
+    largeFiles.forEach(file => {
+      })} else {
+    }
+} catch (error) {
+  monitoringReport.alerts.push('Could not check for large files')}
+// Save report
+fs.writeFileSync('monitoring-report.json', JSON.stringify(monitoringReport, null, 2));
+if ( {
+  ) {
+     {
+  }
+  monitoringReport.alerts.forEach(alert => )}
+";
+  fs.writeFileSync('scripts/monitoring-automation.cjs', monitoringContent);
+  }
+// Main execution
+async function main() {
+  try {
+    // Create automation scripts
+    createHealthCheckScript();
+    report.improvements.push('Health check script created');
+    createTestingScript();
+    report.improvements.push('Automated testing script created');
+    createDeploymentScript();
+    report.improvements.push('Deployment automation script created');
+    createMonitoringScript();
+    report.improvements.push('Monitoring automation script created');
+    // Run the new scripts
+    const testResult = runCommand('node scripts/automated-testing.cjs', 'Automated Testing;';);
+    if ( {
+      report.improvements.push('Automated tests passed')} else {
+      report.errors.push('Automated tests failed')}
+    ) {
+     {
+      report.improvements.push('Automated tests passed')} else {
+      report.errors.push('Automated tests failed')}
+    }
+    const healthResult = runCommand('node scripts/health-check.cjs', 'Health Check;';);
+    if ( {
+      report.improvements.push('Health check passed')} else {
+      report.errors.push('Health check failed')}
+    ) {
+     {
+      report.improvements.push('Health check passed')} else {
+      report.errors.push('Health check failed')}
+    }
+    const monitoringResult = runCommand('node scripts/monitoring-automation.cjs', 'Monitoring;';);
+    if ( {
+      report.improvements.push('Monitoring completed')} else {
+      report.errors.push('Monitoring failed')}
+    // Update summary
+    report.summary.totalImprovements = report.improvements.length
+    report.summary.successfulImprovements = report.improvements.length
+    report.summary.failedImprovements = report.errors.length
+    // Save report
+    fs.writeFileSync('enhanced-app-improvement-report.json', JSON.stringify(report, null, 2))) {
+     {
+      report.improvements.push('Monitoring completed')} else {
+      report.errors.push('Monitoring failed')}
+    // Update summary
+    report.summary.totalImprovements = report.improvements.length
+    report.summary.successfulImprovements = report.improvements.length
+    report.summary.failedImprovements = report.errors.length
+    // Save report
+    fs.writeFileSync('enhanced-app-improvement-report.json', JSON.stringify(report, null, 2))}
+    } catch (error) {
+    console.error('💥 Automation "failed": ', error.message);
+    report.errors.push(error.message);
+    fs.writeFileSync('enhanced-app-improvement-report.json', JSON.stringify(report, null, 2));
+    process.exit(1)}
 }
+<<<<<<< HEAD
+main();
+const { execSync } = require('child_process')
+// console.log(' Starting Enhanced App Improvement Automation')
+console.log('======')
+    const output = execSync(command, { "encoding": 'utf8', "stdio"})
+  "status"
+      "status"
+      "status"
+    execSync('npm run build', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+      "status"
+      "status"
+  execSync('npm run build', { "stdio"})
+  execSync('npm run lint', { "stdio"})
+  execSync('npm run type-check', { "stdio"})
+    execSync('npm audit --audit-level=moderate', { "stdio"})
+  "status"
+      "status"
+      "status"
+      execSync('rm -rf .next', { "stdio"})
+      execSync('rm -rf out', { "stdio"})
+      execSync('rm -rf .next', { "stdio"})
+      execSync('rm -rf out', { "stdio"})
+    execSync('npm install', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+    execSync('npm run build', { "stdio"})
+      execSync('npm run export', { "stdio"})
+  "status"
+    console.error('� Automation "failed")
+=======
 
 // Run the automation if this script is executed directly
 if (require.main === module) {
-  const automation = new EnhancedAppImprovementAutomation();
+  const automation = new EnhancedAppImprovementAutomation()
   automation.run().then(report => {
-    console.log('\n📋 Final Report:');
-    console.log(JSON.stringify(report, null, 2));
-    process.exit(report.summary.totalErrors > 0 ? 1 : 0);
+    console.log('\n📋 Final Report:')
+    console.log(JSON.stringify(report, null, 2))
+    process.exit(report.summary.totalErrors > 0 ? 1 : 0)
   }).catch(error => {
-    console.error('💥 Automation failed:', error);
-    process.exit(1);
-  });
+    console.error('💥 Automation failed:', error)
+    process.exit(1)
+  })
 }
 
 module.exports = EnhancedAppImprovementAutomation;
+>>>>>>> origin/automation-fixes

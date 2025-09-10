@@ -11,19 +11,18 @@ class IntelligentErrorDetector {
     this.errors = [];
     this.fixes = [];
     this.patterns = {
-          conflictType = 'branch';
-          continue;
-        } else if (line.includes('>>>>>>>')) {
-          // End of conflict - choose the newer version (branch content)
-          if (branchContent.length > 0) {
-            fixedLines.push(...branchContent);
-          } else if (headContent.length > 0) {
-            fixedLines.push(...headContent);
-          inConflict = false;
-          conflictType = null;
-          headContent = [];
-          branchContent = [];
-        if (inConflict) {
+<<<<<<< HEAD
+=======
+      mergeConflicts: /[\s\S]*?>>>>>>>/g,
+      syntaxErrors: /SyntaxError|ParseError|Unexpected token/g,
+      typeErrors: /TypeError|Cannot read property|is not defined/g,
+      importErrors: /Cannot resolve module|Module not found/g,
+      lintingErrors: /warning|error.*eslint/g,
+      consoleStatements: /console\.(log|warn|error|info)/g,
+      unusedImports: /import.*from.*['"][^'"]*['"];?\s*$/gm,
+      unescapedEntities: /[^\\]'|[^\\]"/g
+    };
+  }
 
             branchContent.push(line);
         } else {
@@ -302,25 +301,30 @@ class IntelligentErrorDetector {
     return files;
   }
 
-  async generateErrorReport(errors) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalErrors: Object.values(errors).reduce(
-        (sum, arr) => sum + arr.length,
-        0
-      ),
-      errorsByCategory: Object.entries(errors).reduce(
-        (acc, [category, errorList]) => {
-    acc[category] = errorList.length,
-    return acc
-  },
-        {}
-      ),
-      details: errors,
-    this.projectRoot = process.cwd();
-    this.errors = [];
-    this.fixes = [];
-    this.patterns = {
+  isRelevantFile(filename) {
+    const extensions = ['.tsx', '.ts', '.jsx', '.js', '.cjs', '.mjs'];
+    return extensions.some(ext => filename.endsWith(ext));
+  }
+
+  async fixMergeConflicts(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inConflict = false;
+      let conflictType = null;
+      let headContent = [];
+      let branchContent = [];
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('')) {
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+        } else if (line.includes('')) {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {

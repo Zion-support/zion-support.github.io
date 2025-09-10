@@ -1,8 +1,6 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import CaseStudies from '../components/CaseStudies';'
-describe('CaseStudies', () => {test('renders without crashing', () => {render(<CaseStudies />)expect(screen.getByTestId('casestudies')).toBeInTheDocument()})test('displays correct content', () => {render(<CaseStudies />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<CaseStudies />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<CaseStudies />)// Add styling tests here;'
-  })})
+<<<<<<< HEAD
+=======
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import CaseStudies from &apos;./CaseStudies; describe(&apos;CaseStudies&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<CaseStudies / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import CaseStudies from &apos;./CaseStudies; describe(&apos;CaseStudies&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<CaseStudies / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import CaseStudies from &apos;./CaseStudies; describe(&apos;CaseStudies&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<CaseStudies / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

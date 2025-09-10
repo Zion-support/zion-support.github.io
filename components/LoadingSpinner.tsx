@@ -1,30 +1,38 @@
-<<<<<<< HEAD
-import React from 'react;
-import { Loader2 } from 'lucide-react;
-
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg;
-  text?: string;'  className?: string}
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'blue' | 'gray' | 'white';
+  text?: string;
+  className?: string;
+}
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
-  size = 'md', text,'  className = ;
-}) => {'  const sizeClasses = {'    sm: 'w-4 h-4',;
-    md: 'w-8 h-8',;
-    md: '    lg: 'w-12 h-12'}
-  return (;
-    <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
-        <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>)}
-export default LoadingSpinner;
-=======
-import React from 'react';
+export default function LoadingSpinner({ 
+  size = 'md', 
+  color = 'blue', 
+  text,
+  className = '' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
 
-const LoadingSpinner: React.FC = () => {
+  const colorClasses = {
+    blue: 'text-blue-600',
+    gray: 'text-gray-600',
+    white: 'text-white'
+  };
+
   return (
-    <div className="flex justify-center items-center p-4">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}>
+        <span className="sr-only">Loading...</span>
+      </div>
+      {text && (
+        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
+          {text}
+        </p>
+      )}
     </div>
   );
-};
-
-export default LoadingSpinner;
->>>>>>> pr-12866
+}

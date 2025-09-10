@@ -1,12 +1,45 @@
-#!/usr/bin/env node;
-const fs = require("$1");
-const path = require("$1");
-const { execSync } = require("child_process");
-class $1 {
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class AutomationScriptFixer {
   constructor() {
-  this.projectRoot = process.cwd();
-    this.scriptsDir = path.join(this.projectRoot, "scripts");    this.fixedCount = 0;
+    this.projectRoot = process.cwd();
+    this.scriptsDir = path.join(this.projectRoot, 'scripts');
+    this.fixedCount = 0;
     this.errors = []}
+<<<<<<< HEAD
+  log(message) {
+    .toISOString()}] ${message}`)}
+  fixMergeConflicts(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (
+      ) {
+        this.log(`Fixing merge conflicts "in": ${filePath}`);
+        // Simple merge conflict resolution - take the HEAD version
+        let fixedContent = content
+          .replace(
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationScriptFixer { constructor() { this.projectRoot = process.cwd();" this.scriptsDir = path.join(this.projectRoot, "scripts"); this.fixedCount = 0; this.errors = []} log(message) { console.log(`[${new Date().toISOString()}] ${message}`)} fixMergeConflicts(filePath) { try {" const content = fs.readFileSync(filePath, "utf8"); if ('`'"`
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.scriptsDir = path.join(this.projectRoot, 'scripts')
+      const content = fs.readFileSync(filePath, 'utf8')
+        content.includes('')
+        content.includes('')
+        content.includes('>>>>>>>')
+            '$1'
+            '$1'
+      const content = fs.readFileSync(filePath, 'utf8')
+      if (content.includes("console.log(`"Checking"`)
+          "console.log(`"Checking"`)
+          'console.log(`"Checking"`)
+        "encoding"
+      ' Automation Script Fixer and Runner "failed"
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
 
   log(message) {
   console.log(`[${new Date().toISOString()}] ${message}`);`}
@@ -117,7 +150,8 @@ class $1 {
 const fixer = new AutomationScriptFixer();
 fixer;
   .run();
-  .then(report => {;);    console.log('✅ Automation Script Fixer and Runner completed successfully');';    process.exit(0)});
-  .catch(error => {;);    console.error(;);      '❌ Automation Script Fixer and Runner "failed":'',;      error.message;
+  .then(report => {);    console.log("✅ Automation Script Fixer and Runner completed successfully");    process.exit(0)});
+  .catch(error => {);    console.error();      "❌ Automation Script Fixer and Runner "failed":",';      error.message;
     );
-    process.exit(1)});
+    process.exit(1)})
+>>>>>>> origin/automation-fixes

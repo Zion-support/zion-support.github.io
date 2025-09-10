@@ -1,11 +1,26 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Starting Master Automation Orchestrator...')
+console.log('=====')
+    "status"
+      "encoding"
+      "stdio"
+const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
+  console.log('\n "Recommendations")
+=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Master Automation Orchestrator');
-console.log('==================================');
+console.log('🚀 Master Automation Orchestrator')
+console.log('==================================')
 
 class MasterAutomationOrchestrator {
   constructor() {
@@ -162,9 +177,9 @@ class MasterAutomationOrchestrator {
       return report;
       
     } catch (error) {
-      this.log(`💥 Master Automation Orchestrator failed: ${error.message}`, 'error');
-      await this.generateReport();
-      process.exit(1);
+      this.log(`💥 Master Automation Orchestrator failed: ${error.message}`, 'error')
+      await this.generateReport()
+      process.exit(1)
     }
   }
 }
@@ -177,9 +192,10 @@ if (require.main === module) {
     console.log(JSON.stringify(report, null, 2));
     process.exit(report.summary.failedSteps > 0 ? 1 : 0);
   }).catch(error => {
-    console.error('💥 Orchestrator failed:', error);
-    process.exit(1);
-  });
+    console.error('💥 Orchestrator failed:', error)
+    process.exit(1)
+  })
 }
 
 module.exports = MasterAutomationOrchestrator;
+>>>>>>> origin/automation-fixes

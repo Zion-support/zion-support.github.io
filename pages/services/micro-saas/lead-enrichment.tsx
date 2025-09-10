@@ -1,32 +1,34 @@
-import React from 'react';
-import Head from 'next/head';
+export default function LeadEnrichment() {;
+  return (;
+    <Article;
+      title="Lead Enrichment API";
+      subtitle="Company, technographic, and intent signals from an email or domain";
+      price="from $149/mo";
+      bullets={[;
+        'Firmographics: size, industry, location, funding stage',
+        'Technographics: CMS, analytics, ads, cloud stack',
+        'Buying signals: hiring, product launches, traffic spikes',
+        'REST API + Zapier + native HubSpot/Salesforce connectors';
+      ]}
+      links={{ website: 'https://ziontechgroup.com', contact: 'mailto:kleber@ziontechgroup.com' }}
+    />;
+  );
+}
 
-export default function LeadEnrichment() {
-  return (
-    <>
-      <Head>
-        <title>Lead Enrichment - Zion Tech Group</title>
-        <meta name="description" content="AI-powered lead enrichment and data enhancement solutions" />
-      </Head>
-      <main className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Lead Enrichment</h1>
-        <div className="bg-gray-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">AI-Powered Lead Enrichment</h2>
-          <p className="text-gray-600 mb-6">
-            Automated lead data enrichment and enhancement powered by artificial intelligence.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-lg font-semibold mb-2">Data Enhancement</h3>
-              <p className="text-gray-600">AI-driven lead data enrichment and validation</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-lg font-semibold mb-2">Lead Scoring</h3>
-              <p className="text-gray-600">Intelligent lead scoring and prioritization</p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
+function Article({ title, subtitle, price, bullets, links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {;
+  return (;
+    <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>;
+      <h1 style={{ marginTop: 0 }}>{title}</h1>;
+      <p><strong>{subtitle}</strong></p>;
+      <p><strong>Pricing:</strong> {price}</p>;
+      <ul>;
+        {bullets.map((b) => (;
+          <li key={b}>{b}</li>;
+        ))}
+      </ul>;
+      <p>;
+        Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> · Email: <a href={links.contact}>kleber@ziontechgroup.com</a>;
+      </p>;
+    </main>;
   );
 }

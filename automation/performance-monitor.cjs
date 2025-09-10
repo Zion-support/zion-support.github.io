@@ -895,10 +895,9 @@ monitor.start().catch(error => {})
 
 // Run if called directly
 if (require.main === module) {
-    const monitor = new PerformanceMonitor(),
-    monitor.monitorPerformance().catch(console.error)
-  }
-module.exports = PerformanceMonitor;
+  const monitor = new PerformanceMonitor();
+  monitor.monitorPerformance().catch(console.error);
+}
 
 module.exports = PerformanceMonitor;
 

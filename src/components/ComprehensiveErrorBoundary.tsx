@@ -1,13 +1,1 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from "react" interface Props {";";"; children: ReactNode, fallback?: ReactNode; onError?: (error Erro,r, errorInfo: ErrorInfo) => voi,d} interface State { hasError: boolean, error: Error | nul,l, errorInfo: ErrorInfo | nul,l} class ComprehensiveErrorBoundary extends Component < Props, State> { constructor (props: Props) { super (props) this.state = { hasError: fals,e, error: nul,l, errorInfo: null} } static: getDerivedStateFromError (error: Error) : State: { return { hasError tru,e, error, errorInfo: null} } componentDidCatch: (error Erro,r, errorInfo: ErrorInfo) { this.setState ({ erro,r, errorInfo }) ";";";'}}
-=======
-import: React { Component, ErrorInfo, ReactNode } from 'react' interface Props {' 
-; 
-  children: ReactNode,;,
-   fallback?: ReactNode 
-   onError?: (error: Erro,r, errorInfo: ErrorInfo) => voi,d} interface: State {
-  hasError: boolean,;,
-   error: Error: | nul,l,
-   errorInfo: ErrorInfo: | nul,l} class ComprehensiveErrorBoundary extends Component < Props, State> { constructor (props: Props) { super: (props) this.state = { hasError: fals,e, error: nul,l, errorInfo: null } } static: getDerivedStateFromError (error: Error) : State: { return { hasError: tru,e, error, errorInfo: null } } componentDidCatch: (error: Erro,r, errorInfo: ErrorInfo) { this.setState: ({ erro,r, errorInfo }) ' 
-;;' 
->>>>>>> cursor/check-fix-push-and-merge-to-main-649b
+import React,{ Component,ErrorInfo,ReactNode } from 'react'; interface Props { children: ReactNod e; fallback?: ReactNode; onError?: (error: Erro r,errorInfo: ErrorInf o) => void} interface State { hasError: boolean; error: Erro r | null; errorInfo: ErrorInf o | null} class ComprehensiveErrorBoundary extends Component<Props,State> { constructor(props: Prop s) { super(props); this.state = { hasError: fals e,error: nul l,errorInfo: nul l }} static getDerivedStateFromError(error: Erro r): State { return { hasError: tru e,error,errorInfo: nul l }} componentDidCatch(error: Erro r,errorInfo: ErrorInf o) { this.setState({ error,errorInfo }); </Props>

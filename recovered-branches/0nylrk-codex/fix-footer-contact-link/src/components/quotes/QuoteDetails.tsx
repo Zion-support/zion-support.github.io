@@ -12,21 +12,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-import React from "react";
-import { 
-  Dialog,
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { QuoteStatusBadge } from "./QuoteStatusBadge",
-import type { QuoteRequest } from "@/types/quotes",
-import { format } from "date-fns",interface QuoteDetailsProps {
+import { format } from "date-fns";
+interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
@@ -43,7 +30,9 @@ import { format } from "date-fns",interface QuoteDetailsProps {
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
-<Separator className="my-4" />
+
+        <Separator className="my-4" />
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
@@ -109,7 +98,7 @@ import { format } from "date-fns",interface QuoteDetailsProps {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 };
 
       return date_string;

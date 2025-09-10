@@ -1,5 +1,35 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
+ * Performance Monitor
+ * Basic performance monitoring for the Zion Tech Group website
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {};
+    this.optimizations = [];
+    this.projectRoot = process.cwd();
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  // Monitor bundle size
+  async monitorBundleSize() {
+    this.log('📦 Monitoring bundle size...');
+    try {
+      const nextDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(nextDir)) {
+        this.log('✅ Bundle size monitoring completed');
+        this.optimizations.push('Bundle size monitoring');
+=======
+#!/usr/bin/env node;
+/**;
  * Performance Monitor;
  * Monitors and optimizes application performance;
  */
@@ -156,50 +186,123 @@ const result = execSync("du -sh .next", { encoding: "utf8" });
             pattern: "useEffect with empty dependency array and fetch",;
             line: content.split("\n").findIndex(line => line.includes("useEffect(() => {}, [])"))})}
         if (content.includes("console.log") && !fullPath.includes("test")) {
-          antiPatterns.push({;
-            file: fullPath,;
-            pattern: "console.log in production code",;
-            line: content.split("\n").findIndex(line => line.includes("console.log"))})}
+          antiPatterns.push({
+            file: fullPath,
+            pattern: "console.log in production code",
+            line: content.split("\n").findIndex(line => line.includes("console.log")),,
+}),,
+}
+>>>>>>> origin/automation-fixes
       }
+    } catch (error) {
+      this.log(`⚠️ Bundle size monitoring failed: ${error.message}`);
+    }
+  }
+<<<<<<< HEAD
+
+  // Add performance optimizations
+  async addPerformanceOptimizations() {
+    this.log('🚀 Adding performance optimizations...');
+    try {
+      const optimizationsScript = `// Performance optimization utilities
+export const lazyLoadImages = () => {
+  if (typeof window === 'undefined') return;
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        observer.unobserve(img);
+      }
+    });
+  });
+  images.forEach(img => imageObserver.observe(img));
+};`;
+
+      fs.writeFileSync(path.join(this.projectRoot, 'utils/performance-optimizations.js'), optimizationsScript);
+      this.log('✅ Performance optimizations added');
+      this.optimizations.push('Performance optimizations');
+    } catch (error) {
+      this.log(`⚠️ Performance optimizations failed: ${error.message}`);
     }
   }
 
-  async generatePerformanceReport() {
-    const report = {
-      timestamp: new Date().toISOString(),;
-      metrics: this.metrics,;
-      optimizations: this.optimizations,;
-      recommendations: [;
-        "Implement code splitting for large components",;
-        "Use lazy loading for non-critical components",;
-        "Optimize images and assets",;
-        "Remove unused dependencies",;
-        "Implement proper caching strategies",;
-        "Use React.memo for expensive components",;
-        "Optimize bundle size with webpack analysis"]}
-    const reportPath = path.join(this.projectRoot, "performance-monitor-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Performance report saved to ${reportPath}`, "success");
-    return report}
-
-  async run() {
-    this.log("Starting Performance Monitor");
+  // Run all performance monitoring
+  async runAllPerformanceMonitoring() {
+    this.log('🚀 Starting Performance Monitoring...\n');
+    
     try {
-      await this.measureBundleSize();
-      await this.measureBuildTime();
-      await this.analyzePerformance();
-      const report = await this.generatePerformanceReport();
-      this.log("Performance Monitor completed");
-      this.log(`Summary: ${report.optimizations.length} optimizations found`);
-      return report} catch (error) {
-      this.log(`Performance monitor failed: ${error.message}`, "error');
-      throw error}
+      await this.monitorBundleSize();
+      await this.addPerformanceOptimizations();
+
+      this.log('\n📊 Performance Monitoring Summary:');
+      this.log(`- Optimizations applied: ${this.optimizations.length}`);
+      
+      if (this.optimizations.length > 0) {
+        this.log('\n✅ Applied optimizations:');
+        this.optimizations.forEach(opt => this.log(`  - ${opt}`));
+      }
+
+      return {
+        timestamp: new Date().toISOString(),
+        metrics: this.metrics,
+        optimizations: this.optimizations
+      };
+    } catch (error) {
+      this.log(`❌ Performance monitoring failed: ${error.message}`);
+      throw error;
+    }
   }
 }
 
-// Run the performance monitor;
+// Run if called directly
 if (require.main === module) {
   const monitor = new PerformanceMonitor();
   monitor.run().catch(console.error)}
 
+module.exports = PerformanceMonitor;
+=======
+  async generatePerformanceReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: this.metrics,
+      optimizations: this.optimizations,
+      recommendations: [
+        "Implement code splitting for large components",
+        "Use lazy loading for non-critical components",
+        "Optimize images and assets",
+        "Remove unused dependencies",
+        "Implement proper caching strategies",
+        "Use React.memo for expensive components",
+        "Optimize bundle size with webpack analysis"],,
+}
+    const reportPath = path.join(this.projectRoot, "performance-monitor-report.json")
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
+    this.log(`Performance report saved to ${reportPath}`, "success")
+    return report,,
+}
+  async run() {
+    this.log("Starting Performance Monitor")
+    try {
+      await this.measureBundleSize()
+      await this.measureBuildTime()
+      await this.analyzePerformance()
+      const report = await this.generatePerformanceReport()
+      this.log("Performance Monitor completed")
+      this.log(`Summary: ${report.optimizations.length} optimizations found`)
+      return report,,
+} catch (error) {
+      this.log(`Performance monitor failed: ${error.message}`, "error')
+      throw error,,
+}
+  }
+}
+// Run the performance monitor;
+if (require.main === module) {
+  const monitor = new PerformanceMonitor()
+  monitor.run().catch(console.error),,
+}
 module.exports = PerformanceMonitor
+>>>>>>> origin/automation-fixes

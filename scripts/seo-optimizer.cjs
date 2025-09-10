@@ -1,4 +1,6 @@
-#!/usr/bin/env node;
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SEOOptimizer { constructor() { this.projectRoot = process.cwd();" this.reportFile = path.join(__dirname, "./logs/seo-report.json"); }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`); }"`"`
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
@@ -98,7 +100,7 @@ class SEOOptimizer {
   async generateSitemap() {
     this.log('🗺️ Generating sitemap...');
     try {
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
+      const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>

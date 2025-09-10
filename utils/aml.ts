@@ -1,7 +1,6 @@
-interface AmlMatch {
-  list: string;
-  name: string;
-  score: number;
+export interface AmlResult {
+  status: 'clear' | 'match' | 'review';
+  details?: any;
 }
 
 interface AmlResult {
@@ -76,5 +75,5 @@ class MockAmlProvider implements AmlProvider {    }
   }
 }
 export function getAmlProvider(): AmlProvider {
-  return provider;
   return new MockAmlProvider();
+}

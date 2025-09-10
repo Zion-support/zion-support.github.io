@@ -1,4 +1,20 @@
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
+import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
+interface ProfileExperienceProps {
+  experience: ProfileExperienceType[];
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+interface ProfileExperienceProps {
+  experience: ProfileExperienceType[];
+}
+export function ProfileExperience({ experience }: ProfileExperienceProps) {
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Experience</h3>
+
       <div className="space-y-6">
         {experience.map((exp) => (
           <div key={exp.id} className="flex">

@@ -33,13 +33,15 @@ const footerSections = [
       { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
       { name: 'AI Evaluation Orchestrator', href: '/ai-evaluation-orchestrator', featured: true },
       { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
+      { name: 'Helpdesk & Support', href: '/helpdesk-automation' },
+      { name: 'Learning Management (LMS)', href: '/lms-platform' },
+      { name: 'E‑commerce Returns', href: '/ecommerce-returns-management' },
+      { name: 'SEO Content Optimizer', href: '/seo-content-optimizer' },
+      { name: 'Keyword Research Engine', href: '/keyword-research-engine' },
+      { name: 'Privacy Analytics Suite', href: '/analytics-suite' },
+      { name: 'Invoice Studio', href: '/invoice-studio' },
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
-      { name: 'Managed Postgres HA', href: '/managed-postgres-ha' },
-      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },
-      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud' },
-      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation' },
-      { name: 'API Performance Testing', href: '/api-performance-testing' },
-      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' }
+      { name: 'Managed Postgres HA', href: '/managed-postgres-ha' }
     ]
   },
   {
@@ -129,7 +131,9 @@ const footerSections = [
       { name: 'Blog', href: '/blog' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Support Center', href: '/support' },
+      { name: 'Developer Portal', href: '/developer' },
       { name: 'Training & Certification', href: '/training' },
+      { name: 'Community Forum', href: '/community' },
       { name: 'Market Pricing', href: '/market-pricing' },
       { name: 'Services Advertising', href: '/services-advertising' }
     ]
@@ -137,11 +141,11 @@ const footerSections = [
 ];
 
 const socialLinks = [
-  { name: 'X', href: 'https://x.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-  { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-  { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 ];
 
@@ -208,14 +212,18 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </p>
 
                 {/* Contact Info */}
-                <div className="space-y-3 text-sm">
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-2 text-cyan-300 hover:text-cyan-200"><Phone className="w-4 h-4" /> {contactInfo.mobile}</a>
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 text-purple-300 hover:text-purple-200"><Mail className="w-4 h-4" /> {contactInfo.email}</a>
-                  <div className="flex items-start gap-2 text-pink-300"><MapPin className="w-4 h-4" /> <span className="text-xs">{contactInfo.address}</span></div>
-                  <div className="pt-2">
-                    <Link href="/market-pricing" className="inline-flex items-center gap-2 text-cyan-300 hover:text-white"><BarChart3 className="w-4 h-4" /> Market Pricing</Link>
-                    <span className="mx-2 text-gray-600">|</span>
-                    <Link href="/services-advertising" className="inline-flex items-center gap-2 text-cyan-300 hover:text-white"><Sparkles className="w-4 h-4" /> Services Advertising</Link>
+                <div className="space-y-3">
+                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+                    <Phone className="w-4 h-4" />
+                    <span>{contactInfo.mobile}</span>
+                  </a>
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200">
+                    <Mail className="w-4 h-4" />
+                    <span>{contactInfo.email}</span>
+                  </a>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <MapPin className="w-4 h-4" />
+                    <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
 
