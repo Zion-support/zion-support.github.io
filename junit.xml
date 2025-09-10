@@ -1,296 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="49" failures="12" errors="0" time="12.339">
-  <testsuite name="Page Crashes Fix - Issue #3" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:28" time="0.114" tests="17">
-    <testcase classname="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 environment variables are required" name="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 environment variables are required" time="0.002">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Environment Configuration should detect placeholder vs real Auth0 values" name="Page Crashes Fix - Issue #3 Environment Configuration should detect placeholder vs real Auth0 values" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 secret format" name="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 secret format" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Page Error Boundary should render children when no error occurs" name="Page Crashes Fix - Issue #3 Page Error Boundary should render children when no error occurs" time="0.017">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Page Error Boundary should handle Auth0 configuration errors specifically" name="Page Crashes Fix - Issue #3 Page Error Boundary should handle Auth0 configuration errors specifically" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Page Error Boundary should detect different types of configuration errors" name="Page Crashes Fix - Issue #3 Page Error Boundary should detect different types of configuration errors" time="0">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Environment File Validation should not contain git merge conflicts" name="Page Crashes Fix - Issue #3 Environment File Validation should not contain git merge conflicts" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Environment File Validation should contain required Auth0 configuration" name="Page Crashes Fix - Issue #3 Environment File Validation should contain required Auth0 configuration" time="0.004">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Environment File Validation should not contain legacy Supabase configuration" name="Page Crashes Fix - Issue #3 Environment File Validation should not contain legacy Supabase configuration" time="0">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Page Loading Validation should validate critical pages are accessible" name="Page Crashes Fix - Issue #3 Page Loading Validation should validate critical pages are accessible" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Page Loading Validation should handle page navigation gracefully" name="Page Crashes Fix - Issue #3 Page Loading Validation should handle page navigation gracefully" time="0">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Error Recovery should provide retry mechanisms" name="Page Crashes Fix - Issue #3 Error Recovery should provide retry mechanisms" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Error Recovery should provide support contact information" name="Page Crashes Fix - Issue #3 Error Recovery should provide support contact information" time="0">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Production Configuration should validate production environment variables template" name="Page Crashes Fix - Issue #3 Production Configuration should validate production environment variables template" time="0.001">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Production Configuration should validate Auth0 dashboard configuration requirements" name="Page Crashes Fix - Issue #3 Production Configuration should validate Auth0 dashboard configuration requirements" time="0">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Issue Resolution Validation should confirm all affected routes are covered" name="Page Crashes Fix - Issue #3 Issue Resolution Validation should confirm all affected routes are covered" time="0">
-    </testcase>
-    <testcase classname="Page Crashes Fix - Issue #3 Issue Resolution Validation should validate the complete fix implementation" name="Page Crashes Fix - Issue #3 Issue Resolution Validation should validate the complete fix implementation" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="fetchProductById" errors="0" failures="3" skipped="0" timestamp="2025-09-10T11:03:29" time="0.083" tests="4">
-    <testcase classname="fetchProductById should fetch and return product data on success" name="fetchProductById should fetch and return product data on success" time="0.001">
-    </testcase>
-    <testcase classname="fetchProductById should return null and log a warning if product is not found (404)" name="fetchProductById should return null and log a warning if product is not found (404)" time="0.001">
-      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
-
-Expected: &quot;Product with ID \&quot;unknown-id\&quot; not found.&quot;
-
-Number of calls: 0
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/productService.test.ts:66:28)</failure>
-    </testcase>
-    <testcase classname="fetchProductById should throw an error and log details for other server errors (e.g., 500)" name="fetchProductById should throw an error and log details for other server errors (e.g., 500)" time="0.001">
-      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
-
-Expected: &quot;Error fetching product error-id: 500 Internal Server Error&quot;, &quot;Server Error Occurred&quot;
-
-Number of calls: 0
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/productService.test.ts:81:29)</failure>
-    </testcase>
-    <testcase classname="fetchProductById should re-throw error and log details if fetch itself fails (e.g., network error)" name="fetchProductById should re-throw error and log details if fetch itself fails (e.g., network error)" time="0">
-      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
-
-Expected: &quot;An error occurred in fetchProductById:&quot;, [Error: Network failure]
-
-Number of calls: 0
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/productService.test.ts:95:29)</failure>
-    </testcase>
-  </testsuite>
-  <testsuite name="Auth Service" errors="0" failures="4" skipped="0" timestamp="2025-09-10T11:03:29" time="0.125" tests="4">
-    <testcase classname="Auth Service resetPassword should call fetch with correct parameters and return data on success" name="Auth Service resetPassword should call fetch with correct parameters and return data on success" time="0.051">
-      <failure>AxiosError: Network Error
-    at XMLHttpRequest.handleError (/workspace/node_modules/axios/lib/adapters/xhr.js:110:14)
-    at XMLHttpRequest.invokeTheCallbackFunction (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/generated/EventHandlerNonNull.js:14:28)
-    at XMLHttpRequest.&lt;anonymous&gt; (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/helpers/create-event-accessor.js:35:32)
-    at innerInvokeEventListeners (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
-    at invokeEventListeners (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
-    at XMLHttpRequestImpl._dispatch (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
-    at fireAnEvent (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
-    at requestErrorSteps (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/xhr/xhr-utils.js:130:3)
-    at Object.dispatchError (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/xhr/xhr-utils.js:59:3)
-    at Request.&lt;anonymous&gt; (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/xhr/XMLHttpRequest-impl.js:655:18)
-    at Request.emit (node:events:530:35)
-    at ClientRequest.&lt;anonymous&gt; (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/helpers/http-request.js:127:14)
-    at ClientRequest.emit (node:events:518:28)
-    at emitErrorEvent (node:_http_client:104:11)
-    at Socket.socketErrorListener (node:_http_client:518:5)
-    at Socket.emit (node:events:518:28)
-    at emitErrorNT (node:internal/streams/destroy:170:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
-    at processTicksAndRejections (node:internal/process/task_queues:90:21)
-    at Axios.request (/workspace/node_modules/axios/lib/core/Axios.js:45:41)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at resetPassword (/workspace/src/services/auth.ts:29:17)
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:24:22)</failure>
-    </testcase>
-    <testcase classname="Auth Service resetPassword should throw an error if the fetch call is not ok" name="Auth Service resetPassword should throw an error if the fetch call is not ok" time="0.005">
-      <failure>Error: expect(received).rejects.toThrow(expected)
-
-Expected substring: &quot;Invalid token&quot;
-Received message:   &quot;Network Error&quot;
-
-      27 |   const API_URL = process.env.NEXT_PUBLIC_API_URL || &apos;&apos;;
-      28 |   try {
-    &gt; 29 |     const res = await axios.post(`${API_URL}/auth/reset-password`, { token, newPassword });
-         |                 ^
-      30 |     return { res, data: res.data };
-      31 |   } catch (err: unknown) {
-      32 |     logErrorToProduction(&apos;Reset password error:&apos;, { data: err });
-
-      at XMLHttpRequest.handleError (node_modules/axios/lib/adapters/xhr.js:110:14)
-      at Axios.request (node_modules/axios/lib/core/Axios.js:45:41)
-      at resetPassword (src/services/auth.ts:29:17)
-      at Object.&lt;anonymous&gt; (src/services/__tests__/auth.test.ts:47:7)
-    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:49:10)
-    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
-    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
-    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
-    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
-    </testcase>
-    <testcase classname="Auth Service resetPassword should throw a generic error if the response is not ok and no message is present" name="Auth Service resetPassword should throw a generic error if the response is not ok and no message is present" time="0.004">
-      <failure>Error: expect(received).rejects.toThrow(expected)
-
-Expected substring: &quot;Error 500: Failed to reset password&quot;
-Received message:   &quot;Network Error&quot;
-
-      27 |   const API_URL = process.env.NEXT_PUBLIC_API_URL || &apos;&apos;;
-      28 |   try {
-    &gt; 29 |     const res = await axios.post(`${API_URL}/auth/reset-password`, { token, newPassword });
-         |                 ^
-      30 |     return { res, data: res.data };
-      31 |   } catch (err: unknown) {
-      32 |     logErrorToProduction(&apos;Reset password error:&apos;, { data: err });
-
-      at XMLHttpRequest.handleError (node_modules/axios/lib/adapters/xhr.js:110:14)
-      at Axios.request (node_modules/axios/lib/core/Axios.js:45:41)
-      at resetPassword (src/services/auth.ts:29:17)
-      at Object.&lt;anonymous&gt; (src/services/__tests__/auth.test.ts:62:7)
-    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:64:10)
-    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
-    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
-    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
-    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
-    </testcase>
-    <testcase classname="Auth Service resetPassword should handle non-JSON error responses gracefully" name="Auth Service resetPassword should handle non-JSON error responses gracefully" time="0.003">
-      <failure>Error: expect(received).rejects.toThrow(expected)
-
-Expected substring: &quot;Error 503: Failed to reset password&quot;
-Received message:   &quot;Network Error&quot;
-
-      27 |   const API_URL = process.env.NEXT_PUBLIC_API_URL || &apos;&apos;;
-      28 |   try {
-    &gt; 29 |     const res = await axios.post(`${API_URL}/auth/reset-password`, { token, newPassword });
-         |                 ^
-      30 |     return { res, data: res.data };
-      31 |   } catch (err: unknown) {
-      32 |     logErrorToProduction(&apos;Reset password error:&apos;, { data: err });
-
-      at XMLHttpRequest.handleError (node_modules/axios/lib/adapters/xhr.js:110:14)
-      at Axios.request (node_modules/axios/lib/core/Axios.js:45:41)
-      at resetPassword (src/services/auth.ts:29:17)
-      at Object.&lt;anonymous&gt; (src/services/__tests__/auth.test.ts:77:9)
-    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:79:12)
-    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
-    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
-    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
-    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
-    </testcase>
-  </testsuite>
-  <testsuite name="i18n Initialization" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:31" time="0.48" tests="4">
-    <testcase classname="i18n Initialization should be initialized" name="i18n Initialization should be initialized" time="0.101">
-    </testcase>
-    <testcase classname="i18n Initialization should have fallback language configured" name="i18n Initialization should have fallback language configured" time="0.101">
-    </testcase>
-    <testcase classname="i18n Initialization should have English resources loaded" name="i18n Initialization should have English resources loaded" time="0.101">
-    </testcase>
-    <testcase classname="i18n Initialization should have Spanish resources loaded" name="i18n Initialization should have Spanish resources loaded" time="0.101">
-    </testcase>
-  </testsuite>
-  <testsuite name="signup service" errors="0" failures="2" skipped="0" timestamp="2025-09-10T11:03:32" time="0.071" tests="4">
-    <testcase classname="signup service returns data on 201 response" name="signup service returns data on 201 response" time="0.001">
-    </testcase>
-    <testcase classname="signup service throws on 400 response" name="signup service throws on 400 response" time="0.003">
-      <failure>Error: expect(received).rejects.toThrow(expected)
-
-Expected substring: &quot;bad&quot;
-Received message:   &quot;Unexpected status 400&quot;
-
-      53 |     } else {
-      54 |       // Other error
-    &gt; 55 |       throw new Error(err.message || &apos;Signup failed&apos;);
-         |             ^
-      56 |     }
-      57 |   }
-      58 | }
-
-      at signup (src/services/signupApi.ts:55:13)
-      at Object.&lt;anonymous&gt; (src/services/__tests__/signupApi.test.ts:20:5)
-    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/signupApi.test.ts:20:72)
-    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
-    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
-    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
-    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
-    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
-    </testcase>
-    <testcase classname="signup service throws on 409 response" name="signup service throws on 409 response" time="0.001">
-      <failure>Error: expect(received).rejects.toThrow(expected)
-
-Expected substring: &quot;Email already exists&quot;
-Received message:   &quot;Unexpected status 409&quot;
-
-      53 |     } else {
-      54 |       // Other error
-    &gt; 55 |       throw new Error(err.message || &apos;Signup failed&apos;);
-         |             ^
-      56 |     }
-      57 |   }
-      58 | }
-
-      at signup (src/services/signupApi.ts:55:13)
-      at Object.&lt;anonymous&gt; (src/services/__tests__/signupApi.test.ts:25:5)
-    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
-    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/signupApi.test.ts:25:72)
-    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
-    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
-    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
-    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
-    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
-    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
-    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
-    </testcase>
-    <testcase classname="signup service throws on network error" name="signup service throws on network error" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="feedbackService" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:32" time="0.062" tests="2">
-    <testcase classname="feedbackService saves feedback to storage" name="feedbackService saves feedback to storage" time="0.001">
-    </testcase>
-    <testcase classname="feedbackService calculates stats correctly" name="feedbackService calculates stats correctly" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="currency utils" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:34" time="0.066" tests="3">
-    <testcase classname="currency utils maps locales to currencies" name="currency utils maps locales to currencies" time="0.001">
-    </testcase>
-    <testcase classname="currency utils converts USD amounts using exchange rates" name="currency utils converts USD amounts using exchange rates" time="0">
-    </testcase>
-    <testcase classname="currency utils formats prices using locale currency" name="currency utils formats prices using locale currency" time="0.013">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2025-09-10T11:03:34" time="0.323" tests="1">
-    <testcase classname=" Checkout page renders header" name=" Checkout page renders header" time="0.126">
+<testsuites name="jest tests" tests="49" failures="12" errors="0" time="10.907">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2025-09-10T11:13:24" time="0.653" tests="1">
+    <testcase classname=" Checkout page renders header" name=" Checkout page renders header" time="0.152">
       <failure>Error: expect(received).toMatchSnapshot()
 
 Snapshot name: `Checkout page renders header 1`
@@ -1260,34 +971,132 @@ Snapshot name: `Checkout page renders header 1`
     at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2025-09-10T11:03:35" time="0.095" tests="1">
-    <testcase classname=" filters posts when typing in search" name=" filters posts when typing in search" time="0.009">
-      <failure>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it&apos;s defined in, or you might have mixed up default and named imports.
-    at createFiberFromTypeAndProps (/workspace/node_modules/react-dom/cjs/react-dom.development.js:28478:17)
-    at createFiberFromElement (/workspace/node_modules/react-dom/cjs/react-dom.development.js:28504:15)
-    at reconcileSingleElement (/workspace/node_modules/react-dom/cjs/react-dom.development.js:13986:23)
-    at reconcileChildFibers (/workspace/node_modules/react-dom/cjs/react-dom.development.js:14044:35)
-    at reconcileChildren (/workspace/node_modules/react-dom/cjs/react-dom.development.js:19186:28)
-    at updateContextProvider (/workspace/node_modules/react-dom/cjs/react-dom.development.js:21193:3)
-    at beginWork (/workspace/node_modules/react-dom/cjs/react-dom.development.js:21688:14)
-    at beginWork$1 (/workspace/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
-    at performUnitOfWork (/workspace/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
-    at workLoopSync (/workspace/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
-    at renderRootSync (/workspace/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
-    at recoverFromConcurrentError (/workspace/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
-    at performConcurrentWorkOnRoot (/workspace/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
-    at flushActQueue (/workspace/node_modules/react/cjs/react.development.js:2667:24)
-    at act (/workspace/node_modules/react/cjs/react.development.js:2582:11)
-    at /workspace/node_modules/@testing-library/react/dist/act-compat.js:47:25
-    at renderRoot (/workspace/node_modules/@testing-library/react/dist/pure.js:190:26)
-    at render (/workspace/node_modules/@testing-library/react/dist/pure.js:292:10)
-    at Object.&lt;anonymous&gt; (/workspace/tests/BlogSearch.test.tsx:6:9)
+  <testsuite name="Auth Service" errors="0" failures="4" skipped="0" timestamp="2025-09-10T11:13:25" time="0.121" tests="4">
+    <testcase classname="Auth Service resetPassword should call fetch with correct parameters and return data on success" name="Auth Service resetPassword should call fetch with correct parameters and return data on success" time="0.047">
+      <failure>AxiosError: Network Error
+    at XMLHttpRequest.handleError (/workspace/node_modules/axios/lib/adapters/xhr.js:110:14)
+    at XMLHttpRequest.invokeTheCallbackFunction (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/generated/EventHandlerNonNull.js:14:28)
+    at XMLHttpRequest.&lt;anonymous&gt; (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/helpers/create-event-accessor.js:35:32)
+    at innerInvokeEventListeners (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+    at invokeEventListeners (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+    at XMLHttpRequestImpl._dispatch (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+    at fireAnEvent (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/helpers/events.js:18:36)
+    at requestErrorSteps (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/xhr/xhr-utils.js:130:3)
+    at Object.dispatchError (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/xhr/xhr-utils.js:59:3)
+    at Request.&lt;anonymous&gt; (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/xhr/XMLHttpRequest-impl.js:655:18)
+    at Request.emit (node:events:530:35)
+    at ClientRequest.&lt;anonymous&gt; (/workspace/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/helpers/http-request.js:127:14)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:104:11)
+    at Socket.socketErrorListener (node:_http_client:518:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (/workspace/node_modules/axios/lib/core/Axios.js:45:41)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at resetPassword (/workspace/src/services/auth.ts:29:17)
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:24:22)</failure>
+    </testcase>
+    <testcase classname="Auth Service resetPassword should throw an error if the fetch call is not ok" name="Auth Service resetPassword should throw an error if the fetch call is not ok" time="0.005">
+      <failure>Error: expect(received).rejects.toThrow(expected)
+
+Expected substring: &quot;Invalid token&quot;
+Received message:   &quot;Network Error&quot;
+
+      27 |   const API_URL = process.env.NEXT_PUBLIC_API_URL || &apos;&apos;;
+      28 |   try {
+    &gt; 29 |     const res = await axios.post(`${API_URL}/auth/reset-password`, { token, newPassword });
+         |                 ^
+      30 |     return { res, data: res.data };
+      31 |   } catch (err: unknown) {
+      32 |     logErrorToProduction(&apos;Reset password error:&apos;, { data: err });
+
+      at XMLHttpRequest.handleError (node_modules/axios/lib/adapters/xhr.js:110:14)
+      at Axios.request (node_modules/axios/lib/core/Axios.js:45:41)
+      at resetPassword (src/services/auth.ts:29:17)
+      at Object.&lt;anonymous&gt; (src/services/__tests__/auth.test.ts:47:7)
+    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:49:10)
     at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
     at new Promise (&lt;anonymous&gt;)
     at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
     at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
     at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
     at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="Auth Service resetPassword should throw a generic error if the response is not ok and no message is present" name="Auth Service resetPassword should throw a generic error if the response is not ok and no message is present" time="0.003">
+      <failure>Error: expect(received).rejects.toThrow(expected)
+
+Expected substring: &quot;Error 500: Failed to reset password&quot;
+Received message:   &quot;Network Error&quot;
+
+      27 |   const API_URL = process.env.NEXT_PUBLIC_API_URL || &apos;&apos;;
+      28 |   try {
+    &gt; 29 |     const res = await axios.post(`${API_URL}/auth/reset-password`, { token, newPassword });
+         |                 ^
+      30 |     return { res, data: res.data };
+      31 |   } catch (err: unknown) {
+      32 |     logErrorToProduction(&apos;Reset password error:&apos;, { data: err });
+
+      at XMLHttpRequest.handleError (node_modules/axios/lib/adapters/xhr.js:110:14)
+      at Axios.request (node_modules/axios/lib/core/Axios.js:45:41)
+      at resetPassword (src/services/auth.ts:29:17)
+      at Object.&lt;anonymous&gt; (src/services/__tests__/auth.test.ts:62:7)
+    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:64:10)
+    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="Auth Service resetPassword should handle non-JSON error responses gracefully" name="Auth Service resetPassword should handle non-JSON error responses gracefully" time="0.004">
+      <failure>Error: expect(received).rejects.toThrow(expected)
+
+Expected substring: &quot;Error 503: Failed to reset password&quot;
+Received message:   &quot;Network Error&quot;
+
+      27 |   const API_URL = process.env.NEXT_PUBLIC_API_URL || &apos;&apos;;
+      28 |   try {
+    &gt; 29 |     const res = await axios.post(`${API_URL}/auth/reset-password`, { token, newPassword });
+         |                 ^
+      30 |     return { res, data: res.data };
+      31 |   } catch (err: unknown) {
+      32 |     logErrorToProduction(&apos;Reset password error:&apos;, { data: err });
+
+      at XMLHttpRequest.handleError (node_modules/axios/lib/adapters/xhr.js:110:14)
+      at Axios.request (node_modules/axios/lib/core/Axios.js:45:41)
+      at resetPassword (src/services/auth.ts:29:17)
+      at Object.&lt;anonymous&gt; (src/services/__tests__/auth.test.ts:77:9)
+    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/auth.test.ts:79:12)
+    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
     at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
     at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
     at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
@@ -1295,8 +1104,8 @@ Snapshot name: `Checkout page renders header 1`
     at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2025-09-10T11:03:39" time="0.122" tests="1">
-    <testcase classname=" renders blog article from slug" name=" renders blog article from slug" time="0.015">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2025-09-10T11:13:25" time="0.094" tests="1">
+    <testcase classname=" renders blog article from slug" name=" renders blog article from slug" time="0.022">
       <failure>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it&apos;s defined in, or you might have mixed up default and named imports.
 
 Check the render method of `BlogPost`.
@@ -1333,30 +1142,221 @@ Check the render method of `BlogPost`.
     at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:39" time="0.063" tests="4">
-    <testcase classname=" removes accents from strings" name=" removes accents from strings" time="0.001">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2025-09-10T11:13:25" time="0.081" tests="1">
+    <testcase classname=" filters posts when typing in search" name=" filters posts when typing in search" time="0.008">
+      <failure>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it&apos;s defined in, or you might have mixed up default and named imports.
+    at createFiberFromTypeAndProps (/workspace/node_modules/react-dom/cjs/react-dom.development.js:28478:17)
+    at createFiberFromElement (/workspace/node_modules/react-dom/cjs/react-dom.development.js:28504:15)
+    at reconcileSingleElement (/workspace/node_modules/react-dom/cjs/react-dom.development.js:13986:23)
+    at reconcileChildFibers (/workspace/node_modules/react-dom/cjs/react-dom.development.js:14044:35)
+    at reconcileChildren (/workspace/node_modules/react-dom/cjs/react-dom.development.js:19186:28)
+    at updateContextProvider (/workspace/node_modules/react-dom/cjs/react-dom.development.js:21193:3)
+    at beginWork (/workspace/node_modules/react-dom/cjs/react-dom.development.js:21688:14)
+    at beginWork$1 (/workspace/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+    at performUnitOfWork (/workspace/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+    at workLoopSync (/workspace/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+    at renderRootSync (/workspace/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+    at recoverFromConcurrentError (/workspace/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+    at performConcurrentWorkOnRoot (/workspace/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+    at flushActQueue (/workspace/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/workspace/node_modules/react/cjs/react.development.js:2582:11)
+    at /workspace/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/workspace/node_modules/@testing-library/react/dist/pure.js:190:26)
+    at render (/workspace/node_modules/@testing-library/react/dist/pure.js:292:10)
+    at Object.&lt;anonymous&gt; (/workspace/tests/BlogSearch.test.tsx:6:9)
+    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
+    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
     </testcase>
-    <testcase classname=" treats underscores as spaces" name=" treats underscores as spaces" time="0">
+  </testsuite>
+  <testsuite name="fetchProductById" errors="0" failures="3" skipped="0" timestamp="2025-09-10T11:13:25" time="0.074" tests="4">
+    <testcase classname="fetchProductById should fetch and return product data on success" name="fetchProductById should fetch and return product data on success" time="0.001">
+    </testcase>
+    <testcase classname="fetchProductById should return null and log a warning if product is not found (404)" name="fetchProductById should return null and log a warning if product is not found (404)" time="0">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &quot;Product with ID \&quot;unknown-id\&quot; not found.&quot;
+
+Number of calls: 0
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/productService.test.ts:66:28)</failure>
+    </testcase>
+    <testcase classname="fetchProductById should throw an error and log details for other server errors (e.g., 500)" name="fetchProductById should throw an error and log details for other server errors (e.g., 500)" time="0.002">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &quot;Error fetching product error-id: 500 Internal Server Error&quot;, &quot;Server Error Occurred&quot;
+
+Number of calls: 0
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/productService.test.ts:81:29)</failure>
+    </testcase>
+    <testcase classname="fetchProductById should re-throw error and log details if fetch itself fails (e.g., network error)" name="fetchProductById should re-throw error and log details if fetch itself fails (e.g., network error)" time="0.001">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &quot;An error occurred in fetchProductById:&quot;, [Error: Network failure]
+
+Number of calls: 0
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/productService.test.ts:95:29)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="signup service" errors="0" failures="2" skipped="0" timestamp="2025-09-10T11:13:25" time="0.062" tests="4">
+    <testcase classname="signup service returns data on 201 response" name="signup service returns data on 201 response" time="0.001">
+    </testcase>
+    <testcase classname="signup service throws on 400 response" name="signup service throws on 400 response" time="0.002">
+      <failure>Error: expect(received).rejects.toThrow(expected)
+
+Expected substring: &quot;bad&quot;
+Received message:   &quot;Unexpected status 400&quot;
+
+      53 |     } else {
+      54 |       // Other error
+    &gt; 55 |       throw new Error(err.message || &apos;Signup failed&apos;);
+         |             ^
+      56 |     }
+      57 |   }
+      58 | }
+
+      at signup (src/services/signupApi.ts:55:13)
+      at Object.&lt;anonymous&gt; (src/services/__tests__/signupApi.test.ts:20:5)
+    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/signupApi.test.ts:20:72)
+    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="signup service throws on 409 response" name="signup service throws on 409 response" time="0">
+      <failure>Error: expect(received).rejects.toThrow(expected)
+
+Expected substring: &quot;Email already exists&quot;
+Received message:   &quot;Unexpected status 409&quot;
+
+      53 |     } else {
+      54 |       // Other error
+    &gt; 55 |       throw new Error(err.message || &apos;Signup failed&apos;);
+         |             ^
+      56 |     }
+      57 |   }
+      58 | }
+
+      at signup (src/services/signupApi.ts:55:13)
+      at Object.&lt;anonymous&gt; (src/services/__tests__/signupApi.test.ts:25:5)
+    at Object.toThrow (/workspace/node_modules/expect/build/index.js:218:22)
+    at Object.&lt;anonymous&gt; (/workspace/src/services/__tests__/signupApi.test.ts:25:72)
+    at Promise.then.completed (/workspace/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/workspace/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/workspace/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/workspace/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/workspace/node_modules/jest-circus/build/run.js:121:9)
+    at run (/workspace/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/workspace/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/workspace/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/workspace/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="signup service throws on network error" name="signup service throws on network error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="i18n Initialization" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:25" time="0.471" tests="4">
+    <testcase classname="i18n Initialization should be initialized" name="i18n Initialization should be initialized" time="0.1">
+    </testcase>
+    <testcase classname="i18n Initialization should have fallback language configured" name="i18n Initialization should have fallback language configured" time="0.1">
+    </testcase>
+    <testcase classname="i18n Initialization should have English resources loaded" name="i18n Initialization should have English resources loaded" time="0.101">
+    </testcase>
+    <testcase classname="i18n Initialization should have Spanish resources loaded" name="i18n Initialization should have Spanish resources loaded" time="0.101">
+    </testcase>
+  </testsuite>
+  <testsuite name="Page Crashes Fix - Issue #3" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:25" time="0.062" tests="17">
+    <testcase classname="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 environment variables are required" name="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 environment variables are required" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Environment Configuration should detect placeholder vs real Auth0 values" name="Page Crashes Fix - Issue #3 Environment Configuration should detect placeholder vs real Auth0 values" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 secret format" name="Page Crashes Fix - Issue #3 Environment Configuration should validate Auth0 secret format" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Page Error Boundary should render children when no error occurs" name="Page Crashes Fix - Issue #3 Page Error Boundary should render children when no error occurs" time="0.003">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Page Error Boundary should handle Auth0 configuration errors specifically" name="Page Crashes Fix - Issue #3 Page Error Boundary should handle Auth0 configuration errors specifically" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Page Error Boundary should detect different types of configuration errors" name="Page Crashes Fix - Issue #3 Page Error Boundary should detect different types of configuration errors" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Environment File Validation should not contain git merge conflicts" name="Page Crashes Fix - Issue #3 Environment File Validation should not contain git merge conflicts" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Environment File Validation should contain required Auth0 configuration" name="Page Crashes Fix - Issue #3 Environment File Validation should contain required Auth0 configuration" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Environment File Validation should not contain legacy Supabase configuration" name="Page Crashes Fix - Issue #3 Environment File Validation should not contain legacy Supabase configuration" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Page Loading Validation should validate critical pages are accessible" name="Page Crashes Fix - Issue #3 Page Loading Validation should validate critical pages are accessible" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Page Loading Validation should handle page navigation gracefully" name="Page Crashes Fix - Issue #3 Page Loading Validation should handle page navigation gracefully" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Error Recovery should provide retry mechanisms" name="Page Crashes Fix - Issue #3 Error Recovery should provide retry mechanisms" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Error Recovery should provide support contact information" name="Page Crashes Fix - Issue #3 Error Recovery should provide support contact information" time="0">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Production Configuration should validate production environment variables template" name="Page Crashes Fix - Issue #3 Production Configuration should validate production environment variables template" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Production Configuration should validate Auth0 dashboard configuration requirements" name="Page Crashes Fix - Issue #3 Production Configuration should validate Auth0 dashboard configuration requirements" time="0.003">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Issue Resolution Validation should confirm all affected routes are covered" name="Page Crashes Fix - Issue #3 Issue Resolution Validation should confirm all affected routes are covered" time="0.001">
+    </testcase>
+    <testcase classname="Page Crashes Fix - Issue #3 Issue Resolution Validation should validate the complete fix implementation" name="Page Crashes Fix - Issue #3 Issue Resolution Validation should validate the complete fix implementation" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="currency utils" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.058" tests="3">
+    <testcase classname="currency utils maps locales to currencies" name="currency utils maps locales to currencies" time="0.001">
+    </testcase>
+    <testcase classname="currency utils converts USD amounts using exchange rates" name="currency utils converts USD amounts using exchange rates" time="0">
+    </testcase>
+    <testcase classname="currency utils formats prices using locale currency" name="currency utils formats prices using locale currency" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.046" tests="4">
+    <testcase classname=" removes accents from strings" name=" removes accents from strings" time="0">
+    </testcase>
+    <testcase classname=" treats underscores as spaces" name=" treats underscores as spaces" time="0.001">
     </testcase>
     <testcase classname=" removes special characters" name=" removes special characters" time="0">
     </testcase>
-    <testcase classname=" allows custom separators" name=" allows custom separators" time="0.001">
+    <testcase classname=" allows custom separators" name=" allows custom separators" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Analytics" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:39" time="0.057" tests="1">
+  <testsuite name="feedbackService" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.045" tests="2">
+    <testcase classname="feedbackService saves feedback to storage" name="feedbackService saves feedback to storage" time="0.001">
+    </testcase>
+    <testcase classname="feedbackService calculates stats correctly" name="feedbackService calculates stats correctly" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Analytics" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.043" tests="1">
     <testcase classname="Analytics renders without crashing" name="Analytics renders without crashing" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="smoke" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:39" time="0.048" tests="1">
+  <testsuite name="smoke" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.041" tests="1">
+    <testcase classname="smoke runs" name="smoke runs" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="smoke" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.045" tests="1">
     <testcase classname="smoke runs" name="smoke runs" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="sanity" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:39" time="0.046" tests="1">
+  <testsuite name="sanity" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:13:26" time="0.041" tests="1">
     <testcase classname="sanity runs a basic assertion" name="sanity runs a basic assertion" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="smoke" errors="0" failures="0" skipped="0" timestamp="2025-09-10T11:03:39" time="0.047" tests="1">
-    <testcase classname="smoke runs" name="smoke runs" time="0">
     </testcase>
   </testsuite>
 </testsuites>
