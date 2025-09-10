@@ -3,24 +3,6 @@
 /**
  * Comprehensive Error Fixer;
  * Automatically fixes common syntax and logical errors in the codebase;
-<<<<<<< HEAD
- */
-const fs = require("child_process");
-const path = require("child_process");
-=======
- */;
-const fs = require("fs")
-const path = require("fs")
->>>>>>> origin/automation-fixes
-const { execSync } = require("child_process")
-class ComprehensiveErrorFixer {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.logs = []
-    this.errors = []
-<<<<<<< HEAD
-    this.fixes = []}
-
   log(message, type = "info") {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -353,4 +335,3 @@ if (require.main === module) {
   fixer.run().catch(console.error),,
 }
 module.exports = ComprehensiveErrorFixer
->>>>>>> origin/automation-fixes

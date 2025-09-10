@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { 
-  Rocket, 
-  Settings, 
-  Globe, 
-  Users, 
-  Sparkles,
-  ArrowRight,
-  Zap,
-  Shield
-} from "lucide-react";
-=======
-import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ac8e
-
 export default function HomePage() {
   const featuredServices = services.slice(0, 6);
 
@@ -426,8 +411,6 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ac8e
-    </div>
+      </section>    </div>
   );
 }

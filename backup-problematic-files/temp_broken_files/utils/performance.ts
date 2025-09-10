@@ -20,4 +20,3 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {;
           observer.unobserve(image)};
       };
 }})),'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/performance.ts

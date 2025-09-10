@@ -1,9 +1,3 @@
-<<<<<<< HEAD
->>>>>>> main
-=======
-// comment;
-export const serviceMapper = {}
-
     // Interface for the existing service structure;
     id: string;
     title: string;
@@ -75,4 +69,3 @@ export const serviceMapper = {}
     compliance: ['SOC 2',ISO 27001'], // Default compliance;
 }))}
 '";
->>>>>>> origin/automation-fixes

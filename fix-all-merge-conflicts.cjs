@@ -1,41 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-        if (!['node_modules', '.git', '.next', 'dist', 'build')]
-          const content = fs.readFileSync(filePath, 'utf8')
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')
-          // Skip files that can'
-      // Skip files/directories that can'
-  resolved = resolved.replace(/\n?/g, '')
-  resolved = resolved.replace(/\n?/g, '')
-  resolved = resolved.replace(/[a-f0-9]+\n?/g, '')
-  console.log(' Searching for files with merge conflicts...')
-  const filesWithConflicts = findFilesWithConflicts('.')
-// console.log(' No merge conflicts found!')
-  console.log('\n Resolving merge conflicts...')
-      const originalContent = fs.readFileSync(filePath, 'utf8')
-        fs.writeFileSync(filePath, resolvedContent, 'utf8')
-    console.log('\n✨ Merge conflicts resolved! You can now commit the changes.')
-=======
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();
-    this.fixedFiles = [];,
-}
-// Function to recursively find all files with merge conflicts;
-function findFilesWithMergeConflicts(;
-  dir,
-  fileExtensions = [".tsx", ".ts", ".jsx", ".js"];
-) {
-  const files = [];
-  log(message) {;
-  console.log(`[${new Date().toISOString()}] ${message}`);,
-}
-
   getAllFiles(dir, extensions = [".tsx", ".ts", ".jsx", ".js"]) {;
   const files = [];
     const scanDirectory = (currentDir) => {
@@ -277,4 +240,3 @@ try {
 
 console.log("\nCleanup script completed successfully!");
 console.log("You can now try running npm run build again.")}}})))))
->>>>>>> origin/automation-fixes

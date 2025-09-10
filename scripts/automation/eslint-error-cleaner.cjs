@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -99,21 +93,10 @@ class $1 {
   if (error.stdout) {
   const errors = this.parseESLintErrors(error.stdout)this.log(❌ ESLint check failed with ${errors.length  } errors`)
         const errors = this.parseESLintErrors(error.stdout)this.log(❌ ESLint check failed with ${errors.length} errors`)
-        return { success: false, output: error.stdout, errors }
->>>>>>> origin/automation-fixes
-      }
+        return { success: false, output: error.stdout, errors }      }
       return { success: false, output: error.message, errors: [] }
     }
   }
-<<<<<<< HEAD
-;
-  parseESLintErrors(output) {
-  const errors = [];
-    const lines = output.split(`\n`);
-    for (const line of lines) {
-  if (line.includes(`error`) || line.includes(`warning`)) {
-  const lines = output.split("\n");
-
     for (const line of lines) {
   if (line.includes("error") || line.includes("warning")) {
   const match = line.match(/(.+):(\d+):(\d+)\s*(\w+)\s+(.+)/);
@@ -228,81 +211,10 @@ class $1 {
       if (lineIndex < 0 || lineIndex >= lines.length) {
   return false;
 }
-      const originalLine = lines[lineIndex]
->>>>>>> origin/automation-fixes
-      let fixedLine = originalLine;
+      const originalLine = lines[lineIndex]      let fixedLine = originalLine;
       let fixed = false;
       // Apply fixes based on error message;
       if (error.message.includes("no-unused-vars")) {
-<<<<<<< HEAD
-  fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-console")) {
-  fixedLine = await this.fixConsoleStatementError(;
-          error,
-          lines,
-          lineIndex;
-        );
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-undef")) {
-  fixedLine = await this.fixUndefinedVariableError(;
-          error,
-          lines,
-      // Apply fixes based on error message;
-      if (error.message.includes("no-unused-vars")) {
-  fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-console")) {
-  fixedLine = await this.fixConsoleStatementError(;
-          error,
-          lines,
-          lineIndex;
-        );
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-undef")) {
-  fixedLine = await this.fixUndefinedVariableError(;
-          error,
-          lines,
-          lineIndex;
-        );
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-extra-semi")) {
-  fixedLine = await this.fixExtraSemicolonError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-prototype-builtins")) {
-  fixedLine = await this.fixPrototypeBuiltinsError(;
-          error,
-          lines,
-          lineIndex;
-        );
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-useless-escape")) {
-  fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine} else {
-} else if (error.message.includes("no-prototype-builtins")) {
-  fixedLine = await this.fixPrototypeBuiltinsError(;
-          error,
-          lines,
-          lineIndex;
-        );
-        fixed = fixedLine !== originalLine} else if (error.message.includes("no-useless-escape")) {
-  fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine} else {
-  // Generic fix attempt} else {
-  // Generic fix attempt;
-fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine}
-;
-      if (fixed) {
-  lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join("\n"));
-=======
-  fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex)
-        fixed = fixedLine !== originalLine;
-} else if (error.message.includes("no-console")) {
-  fixedLine = await this.fixConsoleStatementError(
-          error,
-          lines,
-          lineIndex;
-        );
-        fixed = fixedLine !== originalLine;} else if (error.message.includes("no-undef")) {
-  fixedLine = await this.fixUndefinedVariableError(;
-          error,;
-          lines,;
-
       // Apply fixes based on error message;
       if (error.message.includes("no-unused-vars")) {
   fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex)
@@ -356,25 +268,9 @@ fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
 }
       if (fixed) {
   lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join(`\n`))
->>>>>>> origin/automation-fixes
-        this.log(✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})`;
+        fs.writeFileSync(filePath, lines.join(`\n`))        this.log(✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})`;
         fs.writeFileSync(filePath, lines.join("\n"));
         this.log(✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})";
-<<<<<<< HEAD
-        );
-        return true}
-;
-      return false} catch (fixError) {
-  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR"} catch (fixError) {
-  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";
-      );
-      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";
-      );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      return false;}
-  }
-
   async fixUnusedVariableError(error, lines, lineIndex) {
   const line = lines[lineIndex];
     // Comment out unused variables;
@@ -453,43 +349,10 @@ fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
     return line;
 }
   async fixConsoleStatementError(error, lines, lineIndex) {
-  const line = lines[lineIndex]
->>>>>>> origin/automation-fixes
-    // Comment out console statements;
+  const line = lines[lineIndex]    // Comment out console statements;
     if (;
       line.includes("console.log") ||;
       line.includes("console.error") ||;
-<<<<<<< HEAD
-      line.includes("console.warn");
-    ) {
-  return "// " + line}
-;
-    return line}
-;
-  async fixUndefinedVariableError(error, lines, lineIndex) {
-  const line = lines[lineIndex];
-    // Try to find the variable definition;
-    const variableMatch = line.match(/(\w+)/);
-    if (variableMatch) {
-  const variable = variableMatch[1];
-      // Look for variable definition in previous lines;
-      for (let i = lineIndex - 1; i >= Math.max(0, lineIndex - 10); i--) {
-  const prevLine = lines[i];
-        if (;
-          prevLine.includes("const ${variable}") ||prevLine.includes("let ${variable}") ||prevLine.includes("var ${variable}");
-        ) {
-  // Variable is defined, this might be a scope issue;
-          return line}
-=======
-      line.includes(`console.warn`)
-    ) {
-  return `// ` + line;
-}
-    return line;
-}
-  async fixUndefinedVariableError(error, lines, lineIndex) {
-  const line = lines[lineIndex]
-
     // Try to find the variable definition;
     const variableMatch = line.match(/(\w+)/)
     if (variableMatch) {
@@ -502,44 +365,9 @@ fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
         ) {
   // Variable is defined, this might be a scope issue;
           return line;
-}
->>>>>>> origin/automation-fixes
-      }
+}      }
 
       // Variable not found, add declaration;
-<<<<<<< HEAD
-      if (line.includes("=")) {return "const ${line}";
-      // Variable not found, add declaration;
-      if (line.includes("=")) {return `const ${line}`;}
-    }
-;
-    return line}
-;
-  async fixExtraSemicolonError(error, lines, lineIndex) {
-  const line = lines[lineIndex];
-    // Remove extra semicolons;
-    return line.replace(/;+/g, ";")}
-;
-  async fixPrototypeBuiltinsError(error, lines, lineIndex) {
-  const line = lines[lineIndex];
-    // Replace direct prototype access with safer alternatives;
-    if (line.includes(`.hasOwnProperty(`)) {
-  // Replace direct prototype access with safer alternatives;
-    if (line.includes(".hasOwnProperty(")) {
-  return line.replace(/\.hasOwnProperty\(/g, ".hasOwnProperty.call(this, ")}
-;
-    return line}
-;
-  async fixUselessEscapeError(error, lines, lineIndex) {
-  const line = lines[lineIndex];
-    // Remove unnecessary escape characters;
-    return line.replace(/\\([^\\])/g, "$1")}
-;
-  async fixGenericESLintError(error, lines, lineIndex) {
-  const line = lines[lineIndex];
-=======
-      if (line.includes(`=`)) {return `const ${line}`;
-
       // Variable not found, add declaration;
       if (line.includes("=")) {return `const ${line}`;
 }
@@ -566,27 +394,13 @@ fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
     return line.replace(/\\([^\\])/g, "$1"),
 }
   async fixGenericESLintError(error, lines, lineIndex) {
-  const line = lines[lineIndex]
->>>>>>> origin/automation-fixes
-    // Generic fixes for common issues;
+  const line = lines[lineIndex]    // Generic fixes for common issues;
     let fixedLine = line;
     // Fix missing semicolons;
     if (;
       line.trim() &&;
       !line.trim().endsWith(";") &&;
       !line.trim().endsWith("{") &&;
-<<<<<<< HEAD
-      !line.trim().endsWith("}");
-    ) {
-  fixedLine = line + "}
-;
-    // Fix extra spaces;
-    fixedLine = fixedLine.replace(/\s+/g, " ");
-    // Fix trailing spaces;
-    fixedLine = fixedLine.replace(/\s+$/, "");
-    // Generic fixes for common issues;
-    let fixedLine = line;
-
     // Fix missing semicolons;
     if (;
       line.trim() &&;
@@ -895,9 +709,7 @@ this.log(`📄 Report generated: ${reportFile}`)
 }
     } catch (error) {  this.log(`💥 ESLint Error Cleaner failed: ${error.message  }`, `ERROR`)
       throw error;
-}
->>>>>>> origin/automation-fixes
-  }
+}  }
 }
 
 // Run the automation if called directly;

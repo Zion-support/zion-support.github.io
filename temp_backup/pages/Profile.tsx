@@ -82,10 +82,8 @@ export default function Profile() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:temp_backup/pages/Profile.tsx
       <Footer />
-=======
-      
+
 const Profile: React.FC = () => {
   return (
     <>
@@ -93,7 +91,7 @@ const Profile: React.FC = () => {
         <title>Profile - Zion Tech Group</title>
         <meta name="description" content="Manage your Zion Tech Group profile. Update your information, preferences, and account settings." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -102,7 +100,7 @@ const Profile: React.FC = () => {
               Manage your account information, preferences, and settings in one place.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Profile management coming soon. We're building comprehensive profile features.
@@ -110,7 +108,6 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/chore/fix-links-and-build:src/pages/Profile.tsx
     </>
   );
 }

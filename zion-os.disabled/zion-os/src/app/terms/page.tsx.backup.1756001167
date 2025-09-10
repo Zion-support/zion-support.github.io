@@ -1,45 +1,6 @@
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20">
-      {/* Hero Section */}
-      <section className="relative mb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Terms of <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Service</span>
-            </h1>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto">
-              The terms and conditions that govern your use of our website and services.
-            </p>
-          </div>
-=======
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Terms of Service
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services.
-          </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-        </div>
-      </section>
-
       {/* Terms Content */}
-<<<<<<< HEAD
-      <section className="mb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
-              <p className="text-white/80">
-                By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-              </p>
-            </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Description of Service</h2>
               <p className="text-white/80 mb-4">
@@ -185,26 +146,7 @@ export default function TermsPage() {
               <p className="text-gray-600 mb-4">
                 Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.
               </p>
-              <p className="text-gray-600">
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-                By using our services, you consent to the collection and use of your information as described in our Privacy Policy.
-              </p>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>
-              <p className="text-white/80 mb-4">
-                To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
-              </p>
-              <ul className="text-white/70 space-y-2 mb-4">
-                <li>• Loss of profits, data, or business opportunities</li>
-                <li>• Service interruptions or technical failures</li>
-                <li>• Damages resulting from third-party actions</li>
-                <li>• Any other damages arising from your use of our services</li>
-              </ul>
-              <p className="text-white/80">
-                Our total liability shall not exceed the amount you paid for our services in the twelve months preceding the claim.
+              <p className="text-gray-600">                By using our services, you consent to the collection and use of your information as described in our Privacy Policy.
               </p>
             </div>
 
@@ -337,9 +279,7 @@ export default function TermsPage() {
                 </p>
                 <p className="text-gray-600 mb-2">
                   <strong>Address:</strong> Zion Tech Group, 123 Innovation Drive, Tech Valley, CA 94000, United States
-                </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-              </div>
+                </p>              </div>
             </div>
           </div>
         </div>
@@ -379,9 +319,7 @@ export default function TermsPage() {
               Contact Us
             </a>
             <a href="/privacy" className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg text-lg font-semibold hover:border-gray-400 transition-colors">
-              View Privacy Policy
->>>>>>> origin/cursor/website-audit-and-enhancement-821c
-            </a>
+              View Privacy Policy            </a>
           </div>
         </div>
       </section>
