@@ -1332,10 +1332,10 @@ export default function ITServices() {
                       Get Started
                     </Link>
                   </div>
-                </div>;
-              ))};
-            </div>;
-          </div>;
+                </div>
+              ))}
+            </div>
+          </div>
         </section>;
       </main>;
       <Footer />;
