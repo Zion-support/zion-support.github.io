@@ -1,12 +1,9 @@
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
-const react = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
-const typescript = require('@typescript-eslint/eslint-plugin');
-const tsparser = require('@typescript-eslint/parser');
-const globals = require('globals');
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import typescript from '@typescript-eslint/eslint-plugin';
 
-module.exports = [
+export default [
   js.configs.recommended,
   {
     ignores: [
