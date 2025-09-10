@@ -101,6 +101,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2151,6 +2152,10 @@
     {
       "file": "pages/reports/playbooks/playbook-2025-08-15-021207.tsx",
       "route": "/reports/playbooks/playbook-2025-08-15-021207"
+=======
+      "file": "pages/reports/updates/update-2025-08-15T09-58.tsx",
+      "route": "/reports/updates/update-2025-08-15T09-58"
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
     },
     {
       "file": "pages/reports/updates/update-2025-08-15T09-08.tsx",
@@ -4537,6 +4542,7 @@
       "route": "/reports/updates/update-2025-08-14-2311"
     },
     {
+<<<<<<< HEAD
       "file": "pages/reports/innovations/insight-2025-08-15T09-08.tsx",
       "route": "/reports/innovations/insight-2025-08-15T09-08"
     },
@@ -12997,6 +13003,24 @@
     },
     {
 <<<<<<< HEAD
+=======
+      "file": "pages/reports/playbooks/playbook-2025-08-15-095824.tsx",
+      "route": "/reports/playbooks/playbook-2025-08-15-095824"
+    },
+    {
+      "file": "pages/reports/playbooks/playbook-2025-08-15-094807.tsx",
+      "route": "/reports/playbooks/playbook-2025-08-15-094807"
+    },
+    {
+      "file": "pages/reports/playbooks/playbook-2025-08-15-093051.tsx",
+      "route": "/reports/playbooks/playbook-2025-08-15-093051"
+    },
+    {
+      "file": "pages/reports/playbooks/playbook-2025-08-15-091831.tsx",
+      "route": "/reports/playbooks/playbook-2025-08-15-091831"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "file": "pages/reports/playbooks/playbook-2025-08-15-090845.tsx",
       "route": "/reports/playbooks/playbook-2025-08-15-090845"
     },
@@ -14941,6 +14965,13 @@
       "route": "/reports/playbooks/playbook-2025-08-15-051010"
     },
     {
+<<<<<<< HEAD
+=======
+      "file": "pages/reports/playbooks/playbook-2025-08-15-050014.tsx",
+      "route": "/reports/playbooks/playbook-2025-08-15-050014"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "file": "pages/reports/playbooks/playbook-2025-08-15-050013.tsx",
       "route": "/reports/playbooks/playbook-2025-08-15-050013"
     },
@@ -15023,10 +15054,17 @@
     {
       "file": "pages/reports/playbooks/playbook-2025-08-15-021207.tsx",
       "route": "/reports/playbooks/playbook-2025-08-15-021207"
+<<<<<<< HEAD
 =======
       "file": "pages/reports/innovations/insight-2025-08-15-0211.tsx",
       "route": "/reports/innovations/insight-2025-08-15-0211"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-56-02-298Z
+=======
+    },
+    {
+      "file": "pages/reports/innovations/insight-2025-08-15T09-58.tsx",
+      "route": "/reports/innovations/insight-2025-08-15T09-58"
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
     },
     {
       "file": "pages/reports/innovations/insight-2025-08-15T09-08.tsx",
@@ -31529,10 +31567,29 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "file": "pages/reports/cases/case-2025-08-15-090000.tsx",
       "route": "/reports/cases/case-2025-08-15-090000"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
 =======
+=======
+      "file": "pages/reports/cases/case-2025-08-15-100356.tsx",
+      "route": "/reports/cases/case-2025-08-15-100356"
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-15-095824.tsx",
+      "route": "/reports/cases/case-2025-08-15-095824"
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-15-094807.tsx",
+      "route": "/reports/cases/case-2025-08-15-094807"
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-15-094806.tsx",
+      "route": "/reports/cases/case-2025-08-15-094806"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "file": "pages/reports/cases/case-2025-08-15-093051.tsx",
       "route": "/reports/cases/case-2025-08-15-093051"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-36-46-604Z
@@ -48726,6 +48783,7 @@
     {
       "file": "pages/reports/cases/case-2025-08-15-021207.tsx",
       "route": "/reports/cases/case-2025-08-15-021207"
+<<<<<<< HEAD
 =======
       "file": "pages/reports/guides/guide-2025-08-15-082820.tsx",
       "route": "/reports/guides/guide-2025-08-15-082820"
@@ -48755,10 +48813,13 @@
       "file": "pages/reports/guides/guide-2025-08-15-082757.tsx",
       "route": "/reports/guides/guide-2025-08-15-082757"
 >>>>>>> origin/automation/git-sync/2025-08-15T08-33-59-104Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
     },
     {
       "file": "pages/main/front/index.tsx",
       "route": "/main/front"
+<<<<<<< HEAD
     },
     {
 <<<<<<< HEAD
@@ -56748,6 +56809,8 @@
       "file": "pages/reports/cases/case-2025-08-15-021207.tsx",
       "route": "/reports/cases/case-2025-08-15-021207"
 >>>>>>> origin/automation/git-sync/2025-08-15T08-33-59-104Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
     }
   ],
   "docs": [
@@ -56790,6 +56853,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T08:19:04.602Z",
   "items": [
     {
@@ -56803,10 +56867,20 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T08:19:06.198Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T08-19-10-639Z
+=======
+  "generatedAt": "2025-08-15T10:15:32.678Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-101534",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:15:34.061Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/guides/guide-2025-08-15-081722",
       "desc": "New autonomous content",
@@ -56816,10 +56890,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T08:19:06.198Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T08-19-10-639Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-101534",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:15:34.061Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/patterns/pattern-2025-08-15-081722",
       "desc": "New autonomous content",
@@ -87319,4 +87399,12 @@
     }
   ]
 >>>>>>> origin/automation/git-sync/2025-08-15T10-07-07-171Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-101534",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:15:34.061Z",
+      "source": "cloud-deep-research-factory"
+    }
+  ]
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
 }

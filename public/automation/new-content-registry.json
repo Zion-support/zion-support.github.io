@@ -56,6 +56,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:29.410Z",
 =======
 <<<<<<< HEAD
@@ -259,20 +260,28 @@
 >>>>>>> origin/automation/git-sync/2025-08-15T10-00-15-309Z
 =======
   "generatedAt": "2025-08-15T10:03:56.053Z",
+=======
+  "generatedAt": "2025-08-15T10:15:34.101Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
   "items": [
     {
       "title": "Case Study — Automation Autonomous",
-      "href": "/reports/cases/case-2025-08-15-100356",
+      "href": "/reports/cases/case-2025-08-15-101534",
       "desc": "New autonomous content",
+<<<<<<< HEAD
       "createdAt": "2025-08-15T10:03:56.011Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T10-03-59-971Z
 =======
       "createdAt": "2025-08-15T10:07:03.148Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T10-07-07-171Z
+=======
+      "createdAt": "2025-08-15T10:15:34.061Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,10 +357,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T10:07:03.148Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T10-07-07-171Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-101534",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T10:15:34.061Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2206,10 +2221,16 @@
 >>>>>>> origin/automation/git-sync/2025-08-15T10-00-15-309Z
 =======
       "href": "/reports/patterns/pattern-2025-08-15-100356",
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-101534",
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T10:03:56.011Z",
+      "createdAt": "2025-08-15T10:15:34.061Z",
       "source": "cloud-deep-research-factory"
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T10-03-59-971Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T10-15-38-149Z
     }
   ]
 =======
