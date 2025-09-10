@@ -9,11 +9,6 @@ export default function AutonomousManufacturingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing'));
   if (!service) return null;
   const contactInfo = service.contactInfo;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   return (
     <Layout>
       <Head>
@@ -50,9 +45,7 @@ export default function AutonomousManufacturingPage() {
                   {service.rating.toFixed(1)}
                 </div>
 =======
-                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>=======
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </div>

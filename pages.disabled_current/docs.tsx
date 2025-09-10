@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-const categories = [
-  {
-    title: 'Getting Started',
-    description: 'Quick start guides and setup instructions',
-    icon: BookOpen,
-    color: 'from-blue-500 to-cyan-500,',
-    docs: [;
-      { title: 'Quick Start Guide, description: 'Get up and running in minutes, time: '5 min read' },',
-      { title: 'Installation Guide, description: 'Step-by-step installation instructions, time: '10 min read' },',
-      { title: 'Configuration, description: 'Configure your environment, time: '15 min read' },',
-      { title: 'First Project, description: 'Create your first project, time: '20 min read' }',
-    ];
-  },
-  {
-    title: 'API Reference',
-    description: 'Complete API documentation and endpoints',
-    icon: Code,
-  },
-  {
-    title: 'Tutorials',
-    description: 'Step-by-step tutorials and examples',
-    icon: FileText,
-  },
-  {
-    title: 'Best Practices',
-    description: 'Recommended practices and guidelines',
-    icon: CheckCircle,
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> origin/automation/changelog
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -206,7 +172,5 @@ ursor/website-audit-and-update-with-deployment-9cae
 				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
 			</section>
 		</Layout>
-	);
->>>>>>> origin/automation/changelog
-}
+	);}
 

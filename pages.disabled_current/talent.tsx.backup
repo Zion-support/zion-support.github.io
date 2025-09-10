@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { Users, MapPin, Clock, Star } from 'lucide-react';
-
 const talentPositions = [
   {
     id: 1,
@@ -532,7 +526,5 @@ export default function TalentPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  );
+    </MainLayout>  );
 }

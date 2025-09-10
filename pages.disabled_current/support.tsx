@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  FileText, 
-  Video, 
-  Users 
-} from 'lucide-react';
-
 const supportChannels = [
   {
     icon: MessageCircle,
@@ -387,9 +369,7 @@ export default function Support() {
                   </div>
                 </div>
               </motion.div>
-            ))}
->>>>>>> origin/automation/changelog
-          </div>
+            ))}          </div>
         </section>
 
         {/* Support Channels */}
@@ -426,38 +406,6 @@ export default function Support() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Contact Info */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">Contact Information</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                  <p className="text-gray-600">+1 302 464 0950</p>
-                </div>
-                <div className="text-center">
-                  <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Email</h3>
-                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
-                </div>
-                <div className="text-center">
-                  <Users className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Address</h3>
-                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -550,4 +498,3 @@ export default Support;
 };
 
 export default SupportPage;
->>>>>>> origin/automation/changelog

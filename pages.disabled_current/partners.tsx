@@ -1,10 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Globe, Cloud, Zap, Users, Shield, Award, Handshake, ArrowRight } from 'lucide-react';
-
 const partners = [
   {
     name: 'Microsoft',
@@ -418,25 +413,10 @@ export default function PartnersPage() {
                     </ul>
                   </div>
                   
-                  <div className="flex items-center justify-between">
->>>>>>> origin/automation/changelog
-                    <a
+                  <div className="flex items-center justify-between">                    <a
                       href={partner.website}
                       target="_blank"
                       rel="noopener noreferrer"
-<<<<<<< HEAD
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      Visit Website
-                      <Globe className="ml-2 w-4 h-4" />
-                    </a>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Partnership Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -555,4 +535,3 @@ export default function PartnersPage() {
     </div>
   );
 }
->>>>>>> origin/automation/changelog

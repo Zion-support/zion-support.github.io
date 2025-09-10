@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { User, Calendar, ArrowRight, Tag } from 'lucide-react';
-
 const blogPosts = [
   {
     id: 'ai-transformation-2025',
@@ -148,17 +141,10 @@ const blogPosts = [
     date: "2024-01-03",
     category: "Development",
     readTime: "6 min read",
-<<<<<<< HEAD
-    image: "/api/placeholder/600/300"
-  }
-];
-
 =======
     image: "/api/placeholder/600/300",
     tags: ["API", "Development", "Design"]
-  }]
->>>>>>> main
-export default function BlogPage() {
+  }]export default function BlogPage() {
   return (
     <Layout
       title="Blog - Zion Tech Group"
@@ -170,37 +156,6 @@ export default function BlogPage() {
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
       </Head>
-<<<<<<< HEAD
-      
-      <div className="min-h-screen bg-gray-50">
-=======
-      <div className="min-h-screen bg-white">
->>>>>>> main
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Technology 
-              <span className="text-blue-400"> Insights & Trends</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-blue-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Stay ahead of the curve with our expert insights on the latest technology trends, 
-              best practices, and industry developments.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
       {/* Featured Post */}
       {featuredPost && (
         <section className="py-16 bg-gray-50">
@@ -360,9 +315,7 @@ export default function BlogPage() {
 =======
                       viewport={{ once: true }}>
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                      </div>
->>>>>>> main
-                      <div className="p-6">
+                      </div>                      <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
                           <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
                             {post.category}
@@ -397,9 +350,7 @@ export default function BlogPage() {
                       </div>
                     </motion.article>
                   ))}
-                </div>
->>>>>>> main
-              </div>
+                </div>              </div>
             </div>
           </div>
         </div>

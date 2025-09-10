@@ -2,36 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  FileText, 
-  Video, 
-  Users 
-=======
-import Layout from '../components/Layout';
-import { 
-  Phone, 
-  Mail, 
-  MessageSquare, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight,
-  HelpCircle,
-  BookOpen,
-  FileText,
-  Users,
-  Zap,
-  Shield
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-} from 'lucide-react';
-
 const supportChannels = [
   {
     icon: MessageCircle,
@@ -43,68 +13,6 @@ const supportChannels = [
     icon: Phone,
     title: 'Phone Support',
     description: 'Speak directly with our technical experts',
-<<<<<<< HEAD
-    availability: 'Mon-Fri 9AM-6PM EST'
-=======
-    contact: '+1 302 464 0950',
-    hours: '24/7 Emergency Support',
-    response: 'Immediate'
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  },
-  {
-    icon: Mail,
-    title: 'Email Support',
-    description: 'Send us detailed questions and get comprehensive answers',
-<<<<<<< HEAD
-    availability: '24/7'
-  },
-  {
-    icon: Video,
-    title: 'Video Calls',
-    description: 'Schedule screen sharing sessions for complex issues',
-    availability: 'By appointment'
-=======
-    contact: 'kleber@ziontechgroup.com',
-    hours: 'Monday - Friday: 9 AM - 6 PM EST',
-    response: 'Within 2 hours'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Live Chat',
-    description: 'Get instant help through our live chat system',
-    contact: 'Available on website',
-    hours: 'Monday - Friday: 9 AM - 6 PM EST',
-    response: 'Immediate'
-  }
-];
-
-const faqs = [
-  {
-    question: 'What support do you provide after project completion?',
-    answer: 'We provide 30 days of free support after project completion, including bug fixes, minor adjustments, and technical guidance. Extended support plans are available for ongoing maintenance.'
-  },
-  {
-    question: 'How quickly do you respond to support requests?',
-    answer: 'We respond to emergency requests within 1 hour, standard requests within 2-4 hours, and general inquiries within 24 hours during business days.'
-  },
-  {
-    question: 'Do you provide training for the solutions you build?',
-    answer: 'Yes, we provide comprehensive training sessions for all team members who will be using the solutions we develop. This includes documentation, video tutorials, and hands-on training sessions.'
-  },
-  {
-    question: 'What if I need changes to my existing solution?',
-    answer: 'We offer flexible maintenance and enhancement services. Small changes can often be handled quickly, while larger modifications will be quoted separately based on scope and complexity.'
-  },
-  {
-    question: 'Do you provide 24/7 monitoring for critical systems?',
-    answer: 'Yes, we offer 24/7 monitoring services for critical business systems. This includes real-time alerts, automated backups, and immediate response to any issues.'
-  },
-  {
-    question: 'How do I escalate a critical issue?',
-    answer: 'For critical issues, call our emergency hotline at +1 302 464 0950. You can also email kleber@ziontechgroup.com with "URGENT" in the subject line for immediate attention.'
-  }
-];
-
 const resources = [
   {
     icon: BookOpen,
@@ -128,20 +36,11 @@ const resources = [
     icon: Zap,
     title: 'Status Page',
     description: 'Real-time status of all our services and systems',
-    href: '/status'
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  }
+    href: '/status'  }
 ];
 
 export default function SupportPage() {
   return (
-<<<<<<< HEAD
-    <>
-      <Head>
-        <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for all your technology needs." />
-      </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -155,42 +54,11 @@ export default function SupportPage() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-            <motion.div
+          <div className="container mx-auto px-4 text-center">            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Support Center</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                We're here to help you succeed with comprehensive support options.
-=======
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Support Center</h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                We're here to help you succeed. Get expert technical support, find answers to common questions, 
-                and access comprehensive resources to maximize your success with our solutions.
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Call +1 302 464 0950
-                </a>
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Submit Ticket
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Support Channels */}
 <<<<<<< HEAD
         <section className="py-16 px-4">
@@ -291,16 +159,10 @@ export default function SupportPage() {
                       >
                         Start Chat
                       </Link>
-                    )}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-                  </div>
+                    )}                  </div>
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
         {/* Contact Info */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -411,9 +273,7 @@ export default function SupportPage() {
                   </Link>
                 </motion.div>
               ))}
-            </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-          </div>
+            </div>          </div>
         </section>
 
         {/* CTA Section */}
@@ -472,7 +332,5 @@ export default function SupportPage() {
           </div>
         </div>
       </section>
-    </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  );
+    </div>  );
 }

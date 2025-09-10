@@ -1,10 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
-import { Search, ArrowRight, FileText, Users, Briefcase, Building2 } from 'lucide-react';
-import Layout from '../components/Layout';
-
 // Mock search results data;
 const searchResults = [
   {
@@ -479,18 +473,10 @@ export default function SearchPage() {
                   />
                   <button
                     onClick={performSearch}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
->>>>>>> origin/automation/changelog
-                  >
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"                  >
                     Search
                   </button>
                 </div>
-<<<<<<< HEAD
-              </form>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Search Results */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -922,4 +908,3 @@ export default function SearchPage() {
     </div>
   );
 }
->>>>>>> origin/automation/changelog
