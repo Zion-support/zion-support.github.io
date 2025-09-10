@@ -11,7 +11,7 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import SEO from './components/SEO';
 
 // Core pages
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/Index'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/ContactPage'));
 const Blog = React.lazy(() => import('./pages/Blog'));

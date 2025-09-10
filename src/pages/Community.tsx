@@ -1,19 +1,23 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
-export default function Community() {
+const Community = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
-      <div className="text-center max-w-4xl mx-auto p-8">
-        <h1 className="text-6xl font-bold text-white mb-6">
-          Community
-        </h1>
-        <p className="text-xl text-slate-300 mb-8">
-          community content coming soon
-        </p>
-        <div className="text-cyan-400 text-lg">
-          Community page under development
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Community - Zion Tech Group"
+        description="Join our vibrant community of developers, technologists, and AI enthusiasts."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-white">
+          <h1 className="text-5xl font-bold mb-8 text-center">Community</h1>
+          <div className="text-center">
+            <p className="text-lg text-gray-400">Community features coming soon...</p>
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Community;
