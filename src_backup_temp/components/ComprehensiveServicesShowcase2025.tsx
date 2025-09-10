@@ -1,37 +1,6 @@
 import React from 'react';
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
-export default function Page("props": "any) {;
-", { "id": 'Metaverse', "name": 'Metaverse', "count": "allService s.filter(s => s.category === 'Metaverse').length", "icon": '🌍' }, { "id": 'Edge Computing', "name": 'Edge Computing', "count": "allService s.filter(s => s.category === 'Edge Computing').length", "icon": '🌐' }, { "id": 'Cybersecurity', "name": 'Cybersecurity', "count": "allService s.filter(s => s.category === 'Cybersecurity').length", "icon": '🛡️' };
-  ] { "id": 'all', "name": 'All Levels', "icon": '🌟' }, { "id": 'Advanced', "name": 'Advanced', "icon": '🚀' }, { "id": 'Cutting-edge', "name": 'Cutting-edge', "icon": '⚡' }, { "id": 'Revolutionary', "name": 'Revolutionary', "icon": '💫' };
-=======
-export default function Page() {;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
-  ];
-    { id: 'all', name: 'All Levels', icon: '🌟' },
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
->>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
-  ];
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    ;
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
-;
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
-    );    switch(sortBy) {;
-      case 'price': ";
-        return a.price - b.price;      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'innovation':;
-
 ';
-<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
   'Advanced': 1", 'Cutting-edge': "2",;  ;
   ;
   ;
@@ -122,10 +91,7 @@ export default function Page() {;
   ;
   ;
   ;
-=======
               <button      onClick = {;
-
->>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
   () => {;
                   setSearchTerm('');
                   setActiveCategory('all');
@@ -149,20 +115,6 @@ export default function Page() {;
 
             <motion.div;
               initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensiveServicesShowcase2025.tsx
-  { "scale": "0.9",;
-  "opacity": "0;
-"}}
-              animate = {;
-  { "scale": "1",;
-  "opacity": "1;
-"}}
-              exit = {;
-  { "scale": "0.9",;
-  "opacity": "0;
-"}}";
-=======
-
   { scale: 0.9,
   opacity: 0;
 }}
@@ -175,9 +127,7 @@ export default function Page() {;
 
   { scale: 0.9,
   opacity: 0;
-}}";
->>>>>>> origin/automation-fixes:src/components/ComprehensiveServicesShowcase2025.tsx
-              className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
+}}";              className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()}
 ";
               <div className="p-8">;

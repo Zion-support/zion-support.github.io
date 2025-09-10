@@ -1,6 +1,4 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/test-runner.js
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/test-runner.js
-#!/usr/bin/env node
+>#!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
 class TestRunner {
@@ -23,10 +21,7 @@ class TestRunner {
       }
     });
     if (testFilesFound === 0) {
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/test-runner.js
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/test-runner.js
-      console.log('⚠️ No test files found')} else {
+>      console.log('⚠️ No test files found')} else {
       console.log(`✅ Found ${testFilesFound} test files`)}
     return testFilesFound}
   checkPackageJsonScripts() {
@@ -34,10 +29,7 @@ class TestRunner {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
         console.log('⚠️ No test script found in package.json');
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/test-runner.js
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/test-runner.js
-        return false}
+>        return false}
       console.log('✅ Test script found in package.json');
       return true} catch (error) {
       console.log('❌ Error reading package."json": ', error.message);
@@ -57,4 +49,3 @@ class TestRunner {
 }
 if (require.main === module) {
   const runner = new TestRunner();
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

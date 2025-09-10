@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
@@ -237,8 +234,6 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bccd
-    </div>
+      </section>    </div>
   );
 }

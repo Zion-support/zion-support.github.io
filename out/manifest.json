@@ -1,7 +1,6 @@
 {
   "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
-<<<<<<< HEAD
   "description": "Leading provider of AI-powered solutions and technology consulting services",
   "start_url": "/",
   "display": "standalone",
@@ -9,26 +8,10 @@
   "theme_color": "#3b82f6",
   "icons": [
     {
-      "src": "/icon-192.png",
-=======
-  "description": "Leading-edge technology solutions and autonomous innovation platform",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#1e293b",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
-  "icons": [
-    {
-      "src": "/icon-192x192.png",
->>>>>>> origin/automation/changelog
-      "sizes": "192x192",
+      "src": "/icon-192.png",      "sizes": "192x192",
       "type": "image/png"
     },
     {
-<<<<<<< HEAD
       "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
@@ -38,92 +21,3 @@
   "lang": "en",
   "orientation": "portrait-primary"
 }
-=======
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Homepage"
-    },
-    {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Homepage"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Launch Economy",
-      "short_name": "Launch",
-      "description": "Quick access to launch your digital economy",
-      "url": "/multiverse/launch",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our AI and technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icons/services-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with us",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
-        }
-      ]
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ]
-}
->>>>>>> origin/automation/changelog

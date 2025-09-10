@@ -4,29 +4,6 @@ export default function HomePage() {
   const { user, isAuthenticated } = useAuth();
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transform Your Business with
-            <span className="block text-blue-200">AI-Powered Technology</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Leading provider of cutting-edge AI solutions, cybersecurity, quantum computing, and autonomous business operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </a>
-            <a href="/solutions" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Explore Solutions
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -318,8 +295,6 @@ export default function HomePage() {
             Start Building Now
           </a>
         </div>
-      </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
-    </div>
+      </div>    </div>
   );
 }

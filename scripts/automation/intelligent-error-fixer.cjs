@@ -1,45 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-async function $1() {
-  let totalFixes = 0;
-  try {
-  .toISOString()}";
-    );
-    // 1. Fix missing dependencies;
-async function fixAllErrors() {
-  let totalFixes = 0;
-  try {
-  .toISOString()}`;
-    );
-    // 1. Fix missing dependencies;
-    totalFixes += await fixMissingDependencies();
-    // 2. Fix TypeScript errors;
-    totalFixes += await fixTypeScriptErrors();
-    // 3. Fix linting errors;
-    totalFixes += await fixLintingErrors();
-    // 4. Fix build errors;
-    totalFixes += await fixBuildErrors();
-    // 5. Fix syntax errors;
-    totalFixes += await fixSyntaxErrors();
-    // 6. Run auto-fix commands;
-    totalFixes += await runAutoFixCommands();
-    // Generate report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "totalFixes": totalFixes,
-      "status": "completed",
-      "summary": Intelligent error fixer completed with ${totalFixes} fixes applied"}
-    const reportPath = path.join(;
-      process.cwd(),intelligent-error-fixer-report.json";
-    totalFixes += await fixMissingDependencies();
-
     // 2. Fix TypeScript errors;
     console.log("🔧 Fixing TypeScript errors...");
     totalFixes += await fixTypeScriptErrors();
@@ -483,33 +442,10 @@ async function fixSyntaxErrors() {
       // Fix common syntax issues;
       const syntaxFixes = [`// Fix missing semicolons;
         {
-  pattern: /(\w+)\s*=\s*(\w+)\s*$/gm`, "replacement: "$1 = $2;", "condition: line =>;
->>>>>>> origin/automation-fixes
-            !line.includes("import") &&;
+  pattern: /(\w+)\s*=\s*(\w+)\s*$/gm`, "replacement: "$1 = $2;", "condition: line =>;            !line.includes("import") &&;
             !line.includes("export") &&;
             !line.includes("function")", "}", "// Fix unmatched brackets;
         {
-<<<<<<< HEAD
-  "pattern": /{\s*$/gm", ""replacement": "{\n"", ""condition": () => true", "}", "// Fix trailing commas;
-        {
-  "pattern": /", "\s*}/g", ""replacement": "}"", ""condition": () => true", "}", ""];
-      for (const fix of syntaxFixes) {
-  if (fix.pattern.test(content)) {
-  content = content.replace(fix.pattern, fix.replacement);
-          fixes++}
-      }
-;
-      if (content !== originalContent) {
-  fs.writeFileSync(file, content)}
-    } catch (error) {  }
-  }
-;
-  return fixes}
-;
-async function runAutoFixCommands() {
-  let fixes = 0;
-  const autoFixCommands = ["npm run lint -- --fix", "npx prettier --write .", "npm run format", "];
-
   for (const command of autoFixCommands) {
   try {
   const autoFixCommands = [`npm run lint -- --fix``, "npx prettier --write .", "npm run format``, ``];
@@ -763,4 +699,3 @@ if (require.main === module) {
 }),
 }
 module.exports = { fixAllErrors }}}}}}}}}}}}}}}}}})))))
->>>>>>> origin/automation-fixes
