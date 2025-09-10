@@ -1,12 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  Users, 
-  Settings, 
-  DollarSign, 
-  Phone
-} from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import {
+  Home,
+  Users,
+  Settings,
+  DollarSign,
+  Phone,
+  Menu
+} from 'lucide-react'
 
 const Sidebar = () => {
   const navigation = [
@@ -40,7 +41,6 @@ const Sidebar = () => {
         </nav>
       </div>
     </aside>
-  );
-};
-
-export default Sidebar;
+  )
+}
+export default Sidebar
