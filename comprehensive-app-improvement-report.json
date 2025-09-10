@@ -1,26 +1,16 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T20:26:00.682Z",
-  "totalDuration": 118499,
+  "timestamp": "2025-09-06T05:02:25.511Z",
+  "totalDuration": 75662,
   "successfulTasks": 4,
-=======
-  "timestamp": "2025-09-06T18:02:23.333Z",
-  "totalDuration": 105291,
-  "successfulTasks": 6,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "totalTasks": 8,
   "results": {
     "performanceOptimization": {
-      "success": true,
-<<<<<<< HEAD
-      "duration": 55035,
+      "success": false,
+      "duration": 35295,
       "errors": [
-        "Command failed: npm run optimize:images\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/optimize-images.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./pages/api/admin/analytics/summary.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | import { ensureAdminFromApi } from '../../../../utils/auth',\n\n./pages/api/admin/kyc-queue.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import type { KycProfile } from '../../../utils/kyc',\n  3 | import fs from 'fs',\n  4 | import path from 'path',\n\n./pages/api/admin/learn/course.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),\n\n./pages/api/admin/moderation/flags/[id].ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',\n  3 | import { getFlagById } from '../../../../../utils/moderationDb',\n  4 | export default async function handler(req: NextApiRequest, res: NextApiResponse) {\n\n./pages/api/admin/moderation/flags/[id]/action.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',\n  3 | import { updateFlagStatus } from '../../../../../../utils/moderationDb',\n  4 | import type { ModerationStatus } from '../../../../../../types/moderation',\n\n\n> Build failed because of webpack errors\n",
+        "Command failed: npm run optimize:images\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/optimize-images.js:8\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/optimize-images.js:8:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
       ],
-=======
-      "duration": 53198,
-      "errors": [],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "improvements": [
         "Implement code splitting for better bundle size",
         "Add image optimization and lazy loading",
@@ -30,13 +20,11 @@
       ]
     },
     "securityEnhancement": {
-      "success": true,
-<<<<<<< HEAD
-      "duration": 1163,
-=======
-      "duration": 713,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      "errors": [],
+      "success": false,
+      "duration": 184,
+      "errors": [
+        "Command failed: npm run security:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/security-audit.js:8\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/security-audit.js:8:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
+      ],
       "improvements": [
         "Implement Content Security Policy (CSP)",
         "Add security headers middleware",
@@ -46,17 +34,9 @@
       ]
     },
     "accessibilityImprovement": {
-      "success": false,
-<<<<<<< HEAD
-      "duration": 120,
-      "errors": [
-        "Command failed: npm run automation:accessibility\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/automation/accessibility-checker.cjs:2\n>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159\n^^^\n\nSyntaxError: Unexpected token '>>>'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-=======
-      "duration": 100,
-      "errors": [
-        "Command failed: npm run automation:accessibility\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/automation/accessibility-checker.cjs:65\n      timestam: p: new Date().toISOString(),\n                 ^\n\nSyntaxError: Unexpected token ':'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      ],
+      "success": true,
+      "duration": 257,
+      "errors": [],
       "improvements": [
         "Add ARIA labels and roles",
         "Implement keyboard navigation",
@@ -67,11 +47,7 @@
     },
     "seoOptimization": {
       "success": true,
-<<<<<<< HEAD
-      "duration": 147,
-=======
-      "duration": 241,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      "duration": 258,
       "errors": [],
       "improvements": [
         "Optimize meta tags and descriptions",
@@ -83,16 +59,9 @@
     },
     "codeQualityEnhancement": {
       "success": false,
-<<<<<<< HEAD
-      "duration": 50002,
+      "duration": 8373,
       "errors": [
-        "Command failed: npm run quality:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/automation/ai-code-quality-analyzer.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n",
-        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nTypeError: context.getAncestors is not a function\nOccurred while linting /workspace/app/services/ai-chatbot-builder/page.tsx:9\nRule: \"@next/next/no-duplicate-head\"\n    at ReturnStatement (/workspace/node_modules/@next/eslint-plugin-next/dist/rules/no-duplicate-head.js:29:41)\n    at ruleErrorHandler (/workspace/node_modules/eslint/lib/linter/linter.js:1173:33)\n    at /workspace/node_modules/eslint/lib/linter/source-code-visitor.js:76:46\n    at Array.forEach (<anonymous>)\n    at SourceCodeVisitor.callSync (/workspace/node_modules/eslint/lib/linter/source-code-visitor.js:76:30)\n    at /workspace/node_modules/eslint/lib/linter/source-code-traverser.js:291:18\n    at Array.forEach (<anonymous>)\n    at SourceCodeTraverser.traverseSync (/workspace/node_modules/eslint/lib/linter/source-code-traverser.js:290:10)\n    at runRules (/workspace/node_modules/eslint/lib/linter/linter.js:1214:12)\n    at #flatVerifyWithoutProcessors (/workspace/node_modules/eslint/lib/linter/linter.js:2101:4)\n"
-=======
-      "duration": 43852,
-      "errors": [
-        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4831) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ],
       "improvements": [
         "Implement comprehensive error handling",
@@ -103,17 +72,9 @@
       ]
     },
     "userExperienceImprovement": {
-<<<<<<< HEAD
-      "success": false,
-      "duration": 126,
-      "errors": [
-        "Command failed: npm run optimize:ux\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/scripts/ux-optimizer.cjs:6\n        this.improvements.push('Loading optimization completed')\n                          ^\n\nTypeError: Cannot read properties of undefined (reading 'push')\n    at Object.<anonymous> (/workspace/scripts/ux-optimizer.cjs:6:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      ],
-=======
       "success": true,
-      "duration": 102,
+      "duration": 256,
       "errors": [],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "improvements": [
         "Implement responsive design improvements",
         "Add loading states and error boundaries",
@@ -123,18 +84,9 @@
       ]
     },
     "monitoringSetup": {
-<<<<<<< HEAD
-      "success": false,
-      "duration": 210,
-      "errors": [
-        "Command failed: npm run monitor:health\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/health-monitor-enhanced.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n",
-        "Command failed: npm run monitor:continuous\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/automation/continuous-intelligence-monitor.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n"
-      ],
-=======
       "success": true,
-      "duration": 188,
+      "duration": 211,
       "errors": [],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "improvements": [
         "Set up application performance monitoring",
         "Implement error tracking and alerting",
@@ -144,13 +96,11 @@
       ]
     },
     "deploymentOptimization": {
-      "success": true,
-<<<<<<< HEAD
-      "duration": 3273,
-=======
-      "duration": 3516,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      "errors": [],
+      "success": false,
+      "duration": 30824,
+      "errors": [
+        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./pages/api/admin/analytics/summary.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | import { ensureAdminFromApi } from '../../../../utils/auth',\n\n./pages/api/admin/kyc-queue.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import type { KycProfile } from '../../../utils/kyc',\n  3 | import fs from 'fs',\n  4 | import path from 'path',\n\n./pages/api/admin/learn/course.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),\n\n./pages/api/admin/moderation/flags/[id].ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',\n  3 | import { getFlagById } from '../../../../../utils/moderationDb',\n  4 | export default async function handler(req: NextApiRequest, res: NextApiResponse) {\n\n./pages/api/admin/moderation/flags/[id]/action.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',\n  3 | import { updateFlagStatus } from '../../../../../../utils/moderationDb',\n  4 | import type { ModerationStatus } from '../../../../../../types/moderation',\n\n\n> Build failed because of webpack errors\n"
+      ],
       "improvements": [
         "Implement CI/CD pipeline optimization",
         "Set up automated testing in deployment",
@@ -161,18 +111,13 @@
     }
   },
   "summary": {
-    "performanceOptimized": true,
-    "securityEnhanced": true,
-    "accessibilityImproved": false,
+    "performanceOptimized": false,
+    "securityEnhanced": false,
+    "accessibilityImproved": true,
     "seoOptimized": true,
     "codeQualityEnhanced": false,
-<<<<<<< HEAD
-    "userExperienceImproved": false,
-    "monitoringSetup": false,
-=======
     "userExperienceImproved": true,
     "monitoringSetup": true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    "deploymentOptimized": true
+    "deploymentOptimized": false
   }
 }

@@ -19,6 +19,4 @@ class ErrorBoundary extends React.Component {
   return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
 
 
-  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
-
-
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import React from 'react';
