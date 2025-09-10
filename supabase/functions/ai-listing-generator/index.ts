@@ -54,7 +54,7 @@ Format the response as a JSON object with the following structure:
 }`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-4o",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.7,
     });
@@ -72,8 +72,8 @@ Format the response as a JSON object with the following structure:
       const jsonString = jsonMatch[1].trim();
       parsedResponse = JSON.parse(jsonString);
     } catch (error) {
-      console.error("Failed to parse AI response as JSON:", error);
-      console.log("Raw response:", responseText);
+      // console.error("Failed to parse AI response as JSON:", error);
+      // console.log("Raw response:", responseText);
       
       // Provide a fallback structured response
       parsedResponse = {
@@ -93,7 +93,7 @@ Format the response as a JSON object with the following structure:
       }
     );
   } catch (error) {
-    console.error("Error in AI listing generator:", error);
+    // console.error("Error in AI listing generator:", error);
     
     return new Response(
       JSON.stringify({ 
