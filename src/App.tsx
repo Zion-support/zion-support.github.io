@@ -6,7 +6,7 @@ import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturis
 import ChatAssistant from './components/ChatAssistant';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { ModernUIEnhancer } from './components/ModernUIEnhancer';
+// import { ModernUIEnhancer } from './components/ModernUIEnhancer';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 
