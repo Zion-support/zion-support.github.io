@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
-=======
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Heart, 
-  Brain, 
-  Shield, 
-  Users, 
-  BarChart3, import {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   Heart,
   Brain,
   Shield,
@@ -33,7 +19,7 @@ import { Heart,
   Camera,
   FileText;
 } from 'lucide-react';
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -97,6 +83,7 @@ const services = [
       'Outcome tracking systems'';
     ];
   }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 ];
 =======
 import Layout from '../../components/Layout';';
@@ -126,33 +113,26 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
     icon: Shield;
   }
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 ];
 const caseStudies = [
   {
-    title: 'Enhanced Security',
-    description: 'Advanced security measures protect sensitive patient data',
-    icon: Shield
+    title: 'AI Diagnostic System Implementation',
+    description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',
+    results: ['60% faster diagnosis', '25% accuracy improvement', '40% cost reduction']
   },
-  {
-    title: 'Better Outcomes',
-    description: 'Data-driven insights help improve treatment outcomes',
-    icon: Activity
-  },
-  {
-    title: 'Operational Efficiency',
-    description: 'Automated processes reduce administrative burden and costs',
-    icon: CheckCircle
-  }
-];
-=======
-;];
-const caseStudies = [;
   {}
-    title: 'AI Diagnostic System Implementation,',
-    description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
-    results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+    title: 'Telemedicine Platform Deployment,',
+    description: 'Enabled remote care for 50,000+ patients during the pandemic with 99.9% uptime.',',
+    results: ['50,000+ patients served', '99.9% uptime', '95% patient satisfaction']',
+  },
+  {}
+    title: 'EHR Integration Project,',
+    description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',
+    results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
+  }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
+];
 export default function HealthcarePage() {
   return (
     <Layout>
@@ -232,7 +212,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -243,29 +223,15 @@ export default function HealthcarePage() {
                 from hospitals to private practices.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
                 <motion.div
-                  key={index}
+                  key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-=======
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Healthcare Technology Services;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive technology solutions designed specifically for healthcare organizations, 
-                from hospitals to private practices.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {services.map((service, index) => (,
-                <motion.div}),                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className="w-6 h-6 text-white" />
@@ -281,7 +247,7 @@ export default function HealthcarePage() {
                   </ul>
                 </motion.div>
               ))}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             </div>
           </div>
         </section>
@@ -293,6 +259,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
               className="text-center mb-16"
 =======
             </div>,
@@ -324,7 +291,7 @@ export default function HealthcarePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             </div>
           </div>
         </section>
@@ -335,6 +302,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
               className="text-center mb-16"
 =======
             </div>,
@@ -357,27 +325,23 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </motion.div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{study.description}</p>
+                  <div className="space-y-2">
+                    {study.results.map((result, resultIndex) => (
+                      <div key={resultIndex} className="flex items-center text-sm text-green-600">
+                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                        {result}
+                      </div>,
+                    ))}
+                  </div>,
+                </motion.div>;
               ))}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             </div>
-=======
-                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
-                >;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
-                  <p className="text-gray-600 mb-6 leading-relaxed">{study.description}</p>"
-                  <div className="space-y-2">";
-                    {study.results.map((result, resultIndex) => (,
-                      <div key={resultIndex} className="flex items-center text-sm text-green-600">"
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";            </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           </div>
         </section>
 
@@ -388,30 +352,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Healthcare?;
-              </h2>;
-              <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">";
-                Let our healthcare technology experts help you implement solutions that improve;
-                patient care and operational efficiency.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Start Your Healthcare Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Healthcare?

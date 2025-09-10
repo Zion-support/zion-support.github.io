@@ -1,11 +1,5 @@
-export interface User {
-  id: string;
-  email: string;
-  role: 'admin' | 'user';
-  name?: string;
-}
-
-export type CurrentUser = {
+import { NextApiRequest, NextApiResponse } from 'next';
+export type CurrentUser = {;
   userId: string;
   role: 'client' | 'talent' | 'admin';
 };

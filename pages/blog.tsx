@@ -1,48 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { User, Calendar, ArrowRight, Tag } from 'lucide-react';
-
-const blogPosts = [
-  {
-    id: 'ai-transformation-2025',
-    title: 'AI Transformation Trends for 2025',
-    excerpt: 'Discover the latest AI trends and how they\'re reshaping business operations across industries.',
-    author: 'Zion Tech Team',
-    date: '2024-01-15',
-    readTime: '5 min read',
-    tags: ['AI', 'Technology', 'Innovation']
-  },
-  {
-    id: 'micro-saas-success',
-    title: 'Building Successful Micro SAAS Solutions',
-    excerpt: 'Learn the key strategies for developing and scaling micro SAAS products that solve real business problems.',
-    author: 'Kleber Santos',
-    date: '2024-01-10',
-    readTime: '7 min read',
-    tags: ['Micro SAAS', 'Business', 'Strategy']
-  },
-  {
-    id: 'cloud-migration-guide',
-    title: 'Complete Guide to Cloud Migration',
-    excerpt: 'Everything you need to know about migrating your infrastructure to the cloud successfully.',
-    author: 'IT Solutions Team',
-    date: '2024-01-05',
-    readTime: '8 min read',
-    tags: ['Cloud', 'Migration', 'IT Services']
-  },
-  {
-    id: 'cybersecurity-best-practices',
-    title: 'Cybersecurity Best Practices for 2025',
-    excerpt: 'Essential cybersecurity measures every business should implement to protect their digital assets.',
-    author: 'Security Team',
-    date: '2024-01-01',
-    readTime: '6 min read',
-    tags: ['Cybersecurity', 'Security', 'Best Practices']
-  }
-];
+import Layout from '../components/layout/Layout';
 
 export default function BlogPage() {
   return (
@@ -437,4 +395,6 @@ export default function BlogPage() {
       </section>
     </Layout>
   );
-}
+};
+
+export default BlogPage;

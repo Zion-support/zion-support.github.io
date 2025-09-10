@@ -1,1 +1,67 @@
-const [isVisible, setIsVisible] = useState (false) useEffect ( () => { const toggleVisibility = () => { if (window.pageYOffset > 300) { setIsVisible (true) } else { setIsVisible (false) const [isVisible, setIsVisible] = useState (false) useEffect ( () => { const toggleVisibility = () => { if (window.pageYOffset > 300) { setIsVisible (true) } else { setIsVisible (false) } } window.addEventListener ("scroll", toggleVisibility) return () => window.removeEventListener ("scroll", toggleVisibility) }, []) const scrollToTop = () => { window.scrollTo ({ top: ,0, behavior: "smooth,"})} return: (className = "fixed bottom - 8 right - 8 w - 14 h - 14 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - full shadow - lg hover: shadow - xl transition - all duration - 300 flex items - center justify - center z - 50") aria - label"Back to top" initial = ,{} { opacity: ,0, scale: 0, y 20} } window.addEventListener ("scroll", toggleVisibility) return () => window.removeEventListener ("scroll", toggleVisibility) }, []) const scrollToTop = () => { window.scrollTo ({ top: ,0, behavior: "smooth,"})} return: () <AnimatePresence> {isVisible && (<motion.button onClick={scrollToTop}" className="fixed bottom - 8 right - 8 z - 50 w - 12 h - 12 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - full shadow - lg hover: shadow: - xl transform hover:-translate: - y-1 transition - all duration - 300 focus:outline: - none focus:ring: - 2 focus:ring: - blue - 500 focus:ring - offset - 2" aria - label="Scroll to top" initial = { { opacity: ,0, scale: ,0, y: 20}} animate: = { { opacity: ,1, scale: ,1, y: 0}} exit: = { { opacity: ,0, scale: ,0, y: 20}} whileHover: = { { scale: 1.,1, y: -,2," boxShadow: "0 20px 25px - 5px rgba (5,9, 130, 246, 0.3) , 0 10px 10px - 5px rgba (59, 130, 246," 0.2) "";""'}}}})
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+import React from 'react';
+interface ScrollToTopProps {
+  // Add props here as needed
+
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from 'react';
+interface ScrollToTopProps {
+  // Add props here as needed
+}
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+export default function ScrollToTop({ }: ScrollToTopProps) {
+  return (
+    <div>
+      <h1>ScrollToTop</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+}
+:src.disabled/components/ScrollToTop.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/ScrollToTop.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

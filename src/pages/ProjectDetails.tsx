@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React, { useState, useEffect } from "react",
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
 import {
   Card,
   CardContent,
@@ -681,3 +681,4 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   );
 }
+;

@@ -1,4 +1,31 @@
-export type MilestoneStatus = 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type MilestoneStatus =;
+  | 'Pending';
+  | 'In Progress';
+  | 'Submitted';
+  | 'Approved';
+  | 'Paid';
+export type MilestoneAttachment = {;
+  id: string;
+  type: 'link' | 'file';
+  url: string;
+  label?: string;
+  uploadedByUserId: string;
+  uploadedAt: string, // ISO date;
+};
+export type Milestone = {;
+  id: string;
+  title: string;
+  description?: string;
+  dueDate: string, // ISO date;
+  amountUsd: number;
+  status: MilestoneStatus;
+  attachments?: MilestoneAttachment[];
+  submittedByUserId?: string;
+  approvedByUserId?: string;
+  paidAt?: string, // ISO date;
+  createdAt: string, // ISO date;
+  updatedAt: string, // ISO date;
+};
 export type ProjectParticipantRole = 'client' | 'talent';
 
 export interface Milestone {
@@ -11,20 +38,4 @@ export interface Milestone {
   status: MilestoneStatus;
   createdAt: string;
   updatedAt: string;
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  clientId: string;
-  talentId: string;
-  milestones: Milestone[];
-  status: 'active' | 'completed' | 'cancelled';
-  createdAt: string;
-  updatedAt: string;
-}
-
-export function isMilestoneStatus(status: string): status is MilestoneStatus {
-  return ['Pending', 'In Progress', 'Submitted', 'Approved', 'Paid'].includes(status);
 }

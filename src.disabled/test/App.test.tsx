@@ -1,17 +1,1 @@
-
-  ', () => {'  it(
-  'renders without crashing', () => {
-
-
-  '    render('      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    )
-    // Basic test to ensure the app renders
-
-  'app-header')).toBeInTheDocument()
-  '    expect(screen.getByTestId('footer
-  ')).toBeInTheDocument()'  })'})
-
-
-
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

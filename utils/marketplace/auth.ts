@@ -1,36 +1,30 @@
-import { NextApiRequest } from 'next';
-
-export interface MarketplaceUser {
-  id: string;
-  email: string;
-  role: 'client' | 'talent' | 'admin';
-  talentSlug?: string;
-  verified: boolean;
+import { NextApiRequest } from "next";
+type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string };
+export function getDemoUser(req: NextApiRequest): DemoUser {;
+  // Prefer headers for server-side calls, fallback to cookies-like header or defaults;
+  const role = (req.headers["x-demo-user-role"] as string) || "client";
+  const id = (req.headers["x-demo-user-id"] as string) || (role === "client" ? "client-1" : "talent-1");
+  const talentSlug = (req.headers["x-demo-talent-slug"] as string) || undefined;
+  return { id, role: role === "talent" ? "talent" : "client", talentSlug }
 }
-
-export function getMarketplaceUser(req: NextApiRequest): MarketplaceUser | null {
-  const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return null;
+;
+export function assertClient(req: NextApiRequest): DemoUser {;
+  const u = getDemoUser(req);
+  if (u.role !== "client") {;
+    const err = new Error("Client role required");
+    // @ts-ignore add code;
+    err.statusCode = 403;
+    throw err;
   }
-
-  const token = authHeader.substring(7);
-  if (token === 'demo-token') {
-    return {
-      id: 'demo-user-123',
-      email: 'demo@example.com',
-      role: 'client',
-      verified: true
-    };
-  }
-
-  return null;
+  return u;
 }
-
-export function requireMarketplaceAuth(req: NextApiRequest): MarketplaceUser {
-  const user = getMarketplaceUser(req);
-  if (!user) {
-    throw new Error('Authentication required');
-  }
-  return user;
+;
+export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string, talentSlug: string }, talentSlugHeader?: string): DemoUser {;
+  const u = getDemoUser(req);
+  if (u.role === "client" && u.id === offer.clientId) return u;
+  if (u.role === "talent" && (u.talentSlug || talentSlugHeader) === offer.talentSlug) return u;
+  const err = new Error("Not authorized for this offer");
+  // @ts-ignore;
+  err.statusCode = 403;
+  throw err;
 }

@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react",
+import { useRouter } from "next/router",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 
@@ -26,8 +26,8 @@ export default function ProfileDetail() {
       setError(null);
       try {
         if (!profileId) {
-          setError("Profile ID is missing.");
-          return;
+          setError("Profile ID is missing."),
+          return
         }
 
         const { data, error } = await supabase
@@ -82,12 +82,91 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
+    )
+import { useState, useEffect } from "react",;
+import { useRouter } from "next/router",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Header } from "@/components/Header",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+export default function ProfileDetail() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter(),;
+  const profileId = router.query.profileId as string,;
+  const [profileData, setProfileData] = useState<any>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true),;
+      setError(null),;
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing."),;
+          return;
+        }
+;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single(),;
+        if (error) {;
+          throw new Error(error.message);
+        }
+;
+        if (!data) {;
+          setError("Profile not found."),;
+          return;
+        }
+;
+        setProfileData(data);
+      } catch (err: any) {;
+        setError(err.message || "Failed to fetch profile."),;
+        toast({;
+          title: "Error",;
+          description: err.message || "Failed to fetch profile.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchProfile();
+  }, [profileId]),;
+  if (isLoading) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Loading profile...</p>;
+      </div>;
     );
   }
-
-  return (
-    <>
-      <SEO
+;
+  if (error) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Error: {error}</p>;
+      </div>;
+    );
+  }
+;
+  if (!profileData) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Profile not found.</p>;
+      </div>;
+    );
+  }
+;
+  return (;
+    <>;
+      <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
       />
@@ -303,3 +382,4 @@ export default function ProfileDetail() {
     </>
   );
 }
+;

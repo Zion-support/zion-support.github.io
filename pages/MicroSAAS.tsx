@@ -1,35 +1,48 @@
 import React from 'react';
+import Head from 'next/head';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages/MicroSAAS.tsx
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+import { 
+  Video, 
+  Palette, 
+  QrCode, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
-export default function MicroSAAS() {
-  const microSAASServices = [
-    {
-      name: "AI Invoice Generator Pro",
-      description: "Intelligent invoice creation and payment tracking platform with AI-powered templates, automated follow-ups, and multi-currency support.",
-      price: "$29/month",
-      features: [
-        "AI-powered invoice generation",
-        "Automated payment reminders",
-        "Multi-currency support",
-        "Client management system",
-        "Payment tracking dashboard",
-        "Custom branding options",
-        "Tax calculation automation",
-        "Integration with accounting software"
-      ],
-      benefits: [
-        "Save 80% time on invoicing",
-        "Reduce payment delays by 60%",
-        "Professional invoice templates",
-        "Automated follow-up system"
-      ],
-      marketPrice: "$49-79/month",
-      savings: "Save up to $50/month",
-      category: "Financial Tools"
-    }
-  ];
+const microSaasServices = [
+  {
+    title: 'Video Analytics Platform',
+    description: 'AI-powered video analysis for business insights and security monitoring.',
+    icon: Video,
+    features: ['Real-time analysis', 'Object detection', 'Behavior tracking', 'Custom dashboards'],
+    price: '$299/month',
+    benefits: ['Enhanced security', 'Business insights', 'Automated monitoring', 'Cost savings']
+  },
+  {
+    title: 'Design System Builder',
+    description: 'Create and manage consistent design systems for your products.',
+    icon: Palette,
+    features: ['Component library', 'Style guide', 'Version control', 'Team collaboration'],
+    price: '$199/month',
+    benefits: ['Consistent design', 'Faster development', 'Team efficiency', 'Brand consistency']
+  },
+  {
+    title: 'QR Code Generator Pro',
+    description: 'Advanced QR code generation and analytics for marketing campaigns.',
+    icon: QrCode,
+    features: ['Custom designs', 'Analytics tracking', 'Bulk generation', 'API integration'],
+    price: '$99/month',
+    benefits: ['Marketing insights', 'Easy tracking', 'Professional appearance', 'Scalable solution']
+  }
+];
 
+export default function MicroSAASPage() {
   return (
     <Layout
       title="Micro SAAS Services - Zion Tech Group"

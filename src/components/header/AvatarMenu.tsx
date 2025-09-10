@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import React from 'react',
+import Link from 'next/link',
+import { useAuth } from '@/hooks/useAuth',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -72,4 +72,4 @@ export const AvatarMenu: React.FC = () => {
   );
 };
 
-export default AvatarMenu;
+export default AvatarMenu,

@@ -1,32 +1,30 @@
-import { useRouter } from 'next/router';
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
-import ProductCard from '@/components/ProductCard';
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AuthModal } from '@/components/auth/AuthModal';
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { ErrorState } from '@/components/jobs/applications/ErrorState';
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { ProductListing } from '@/types/listings';
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-
-/**
- * Marketplace component props
- */
-export interface MarketplaceProps {
-  // All props removed - component now fetches data independently
+import { useRouter } from 'next/router',;
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',;
+import ProductCard from '@/components/ProductCard',;
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react',;
+import { useTranslation } from 'react-i18next',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { AuthModal } from '@/components/auth/AuthModal',;
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
+import { SkeletonCard } from '@/components/ui/skeleton',;
+import { ErrorState } from '@/components/jobs/applications/ErrorState',;
+import { ProductsEmptyState } from '@/components/marketplace/EmptyState',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { Card, CardContent } from '@/components/ui/card',;
+import Spinner from '@/components/ui/spinner',;
+import { ProductListing } from '@/types/listings',;
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',;
+import { useToast } from '@/hooks/use-toast',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { MARKETPLACE_LISTINGS } from '@/data/listingData',;
+import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+/**;
+ * Marketplace component props;
+ */;
+export interface MarketplaceProps {;
+  // All props removed - component now fetches data independently;
 }
 
 // Market insights component
@@ -116,12 +114,11 @@ const FilterControls: React.FC<{
         {categories.map(category => (
           <option key={category} value={category}>{category}</option>
         ))}
-      </select>
-    </div>
-    
-    <div className="flex items-center gap-2">
-      <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select
+      </select>;
+    </div>;
+    <div className="flex items-center gap-2">;
+      <SortAsc className="h-4 w-4 text-muted-foreground" />;
+      <select;
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
         className="bg-background border border-border px-3 py-2 rounded"
@@ -173,19 +170,18 @@ const FilterControls: React.FC<{
       <select
         value={minRating}
         onChange={(e) => setMinRating(Number(e.target.value))}
-        className="bg-background border border-border px-2 py-1 rounded"
-      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-
-    <div className="flex items-center gap-2">
-      <select
+        className="bg-background border border-border px-2 py-1 rounded";
+      >;
+        <option value={0}>Any</option>;
+        <option value={5}>5</option>;
+        <option value={4}>4</option>;
+        <option value={3}>3</option>;
+        <option value={2}>2</option>;
+        <option value={1}>1</option>;
+      </select>;
+    </div>;
+    <div className="flex items-center gap-2">;
+      <select;
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
         className="bg-background border border-border px-3 py-2 rounded"
@@ -642,7 +638,7 @@ export default function Marketplace() {
                   AI {product.aiScore}
                 </Badge>
               )}
-              
+;
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10">
@@ -650,26 +646,25 @@ export default function Marketplace() {
                   Featured
                 </Badge>
               )}
-            </motion.div>
+            </motion.div>;
           ))}
-        </AnimatePresence>
-      </motion.div>
-
+        </AnimatePresence>;
+      </motion.div>;
       {/* Loading More Indicator */}
-      {(isFetching || loading) && (
-        <motion.div
-          className="mt-8"
+      {(isFetching || loading) && (;
+        <motion.div;
+          className="mt-8";
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <SkeletonCard key={`loading-${i}`} />
+        >;
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
+            {Array.from({ length: 4 }).map((_, i) => (;
+              <SkeletonCard key={`loading-${i}`} />;
             ))}
-          </div>
-        </motion.div>
+          </div>;
+        </motion.div>;
       )}
-
+;
       {/* End of Results */}
       {!hasMore && products.length > 0 && (
         <motion.div
@@ -685,23 +680,24 @@ export default function Marketplace() {
           </div>
         </motion.div>
       )}
-
+;
       {/* Scroll to Top Button */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
+      <AnimatePresence>;
+        {showScrollTop && (;
+          <motion.button;
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
-          </motion.button>
+          >;
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
+          </motion.button>;
         )}
       </AnimatePresence>
     </div>
   );
 }
+;

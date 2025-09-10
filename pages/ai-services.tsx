@@ -1,37 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import Layout from "../components/Layout";
+import Head from 'next/head';
+import ErrorBoundary from '../components/ErrorBoundary';
+// import { Brain, TrendingUp, FileText, Eye, Database, Shield, Mic, Zap, Cog, Search, Users, Code } from 'lucide-react';
 export default function AIServices() {
   return (
     <Layout
@@ -2167,46 +2137,9 @@ const additionalServices = [
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
       ]
-      }
-];
-
-const categories = [
-  { name: "All", count: aiServices.length },
-  { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
-  { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
-  { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
-  { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length },
-  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
-  { name: "Process Automation", count: aiServices.filter(s => s.category === "Process Automation").length },
-  { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length },
-  { name: "Supply Chain AI", count: aiServices.filter(s => s.category === "Supply Chain AI").length },
-  { name: "Healthcare AI", count: aiServices.filter(s => s.category === "Healthcare AI").length },
-  { name: "Marketing AI", count: aiServices.filter(s => s.category === "Marketing AI").length },
-  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length },
-  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
-  { name: "Process AI", count: aiServices.filter(s => s.category === "Process AI").length },
-  { name: "Customer Service AI", count: aiServices.filter(s => s.category === "Customer Service AI").length },
-  { name: "Image AI", count: aiServices.filter(s => s.category === "Image AI").length },
-  { name: "Finance AI", count: aiServices.filter(s => s.category === "Finance AI").length },
-  { name: "Autonomous AI", count: aiServices.filter(s => s.category === "Autonomous AI").length },
-  { name: "Development AI", count: aiServices.filter(s => s.category === "Development AI").length },
-  { name: "Energy AI", count: aiServices.filter(s => s.category === "Energy AI").length },
-  { name: "Legal AI", count: aiServices.filter(s => s.category === "Legal AI").length },
-  { name: "Personalization AI", count: aiServices.filter(s => s.category === "Personalization AI").length },
-  { name: "Quality AI", count: aiServices.filter(s => s.category === "Quality AI").length },
-  { name: "HR AI", count: aiServices.filter(s => s.category === "HR AI").length },
-  { name: "Real Estate AI", count: aiServices.filter(s => s.category === "Real Estate AI").length },
-  { name: "Gaming AI", count: aiServices.filter(s => s.category === "Gaming AI").length },
-  { name: "Climate AI", count: aiServices.filter(s => s.category === "Climate AI").length }
-=======
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-export default function AIServices() {;
-  const title = 'AI Services — Zion Tech Group';
-  const description =;
-    'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
+    }
+  ];
+  */
 
   const aiServices = [;
   {;
@@ -3708,251 +3641,64 @@ export default function AIServices() {;
       icon: FileText,
       description: 'Content creation and synthesis';
 ];
-  const benefits = [;
-  {;
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and processes',
-      icon: Zap,
-      stat: '80%';
-},
-    {;
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation',
-      icon: TrendingUp,
-      stat: '60%';
-},
-    {;
-      title: 'Enhanced Accuracy',
-      description: 'Minimize human errors with AI precision',
-      icon: Target,
-      stat: '95%';
-},
-    {;
-      title: '24/7 Availability',
-      description: 'Round-the-clock AI-powered services',
-      icon: Clock,
-      stat: '99.9%';
->>>>>>> origin/automation-fixes
-];
-
-export default function AIServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredServices = aiServices.filter(service => {
-    const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = (service.title && service.description) ? 
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) : false;
-    return matchesCategory && matchesSearch;
-  });
-
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
   return (
-    <Layout
-      title="AI Services - Zion Tech Group | 100+ Cutting-Edge AI Solutions"
-      description="Comprehensive AI services including machine learning, computer vision, NLP, analytics, and automation. 100+ AI solutions with competitive pricing and proven results."
-      keywords="AI services, machine learning, computer vision, NLP, AI automation, AI consulting, artificial intelligence solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+<meta name="description" content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary>
+        <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/ai-services`} />
+      </Head>
+      
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1 
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
                 AI Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions designed to drive innovation and efficiency.
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                100+ Advanced Artificial Intelligence Solutions
               </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 md:mb-0">
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <a href="tel:+13024640950" className="hover:text-blue-300">{contactInfo.phone}</a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">{contactInfo.email}</a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <span className="text-blue-200 text-xs md:text-sm">24/7 AI Support Available</span>
-              </div>
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Harness the power of artificial intelligence with our comprehensive suite of AI services. 
+                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions 
+                to transform your business operations.
+              </p>
             </div>
-          </motion.div>
+          </section>
+
+          {/* Category Filter */}
+}
+
+import React from 'react';
+import Head from 'next/head';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices() {
+  return (
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services and solutions" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-12">
+          <h1 className="text-4xl font-bold text-gray-800 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
-      </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-8 md:py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="mb-6 md:mb-8">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search AI services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm md:text-base"
-                  />
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 justify-center">
-                {categories.map((category) => (
-                  <button
-                    key={category.name}
-                    onClick={() => setSelectedCategory(category.name)}
-                    className={`px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
-                      selectedCategory === category.name
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section id="services" className="py-12 md:py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {filteredServices.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <motion.div
-                    key={service.id}
-                    className="bg-white rounded-lg shadow-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="flex items-center justify-between mb-3 md:mb-4">
-                      <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
-                        <IconComponent className="w-6 h-6 md:w-8 md:h-8" />
-                      </div>
-                      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">
-                        {service.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-3 md:mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    <div className="mb-3 md:mb-4">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-base md:text-lg font-bold text-green-600">
-                          {service.price}
-                        </span>
-                        <span className="text-xs md:text-sm text-gray-500 line-through">
-                          {service.marketPrice}
-                        </span>
-                      </div>
-                      <div className="text-xs text-green-600 font-medium">
-                        Save up to 40% vs market rate
-                      </div>
-                    </div>
-                    
-                    <div className="mb-3 md:mb-4">
-                      <h4 className="text-xs md:text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
-                      <ul className="text-xs text-gray-600 space-y-1">
-                        {service.features.slice(0, 4).map((feature, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-3 md:mb-4">
-                      <h4 className="text-xs md:text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {service.benefits.slice(0, 2).map((benefit, idx) => (
-                          <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
-                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3 md:mb-4">
-                      <span>Setup: {service.setupTime}</span>
-                      <span>Target: {service.targetUsers.split(',')[0]}</span>
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      <Link
-                        href="/contact"
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 md:px-4 rounded-lg text-xs md:text-sm font-semibold transition-colors"
-                      >
-                        Get Quote
-                      </Link>
-                      <Link
-                        href="/contact"
-                        className="px-3 md:px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg text-xs md:text-sm font-semibold transition-colors"
-                      >
-                        Learn More
-                      </Link>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Business with AI?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let our AI experts help you implement intelligent solutions that drive real results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your AI Journey
-                </Link>
-                <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View All Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
       </div>
-    </Layout>
+    </>
   );
 }

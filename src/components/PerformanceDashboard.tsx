@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
-
-interface PerformanceMetrics {
-  buildSize: string;
-  pageCount: number;
-  loadTime: number;
+import React, { useState } from 'react',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react';
+interface PerformanceMetrics {;
+  buildSize: string,;
+  pageCount: number,;
+  loadTime: number,;
   healthStatus: 'healthy' | 'warning' | 'error';
 }
 
@@ -215,7 +214,21 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default PerformanceDashboard; 
+export default PerformanceDashboard, 
+      <div className="flex space-x-4">;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
+          <Shield className="h-4 w-4 mr-2" />;
+          Check Health Status;
+        </Button>;
+        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
+          <TrendingUp className="h-4 w-4 mr-2" />;
+          Bundle Analysis;
+        </Button>;
+      </div>;
+    </div>;
+  );
+},;
+export default PerformanceDashboard;

@@ -1,56 +1,25 @@
-<<<<<<< HEAD
-const categories = [
-  {
-    title: 'Getting Started',
-    description: 'Quick start guides and setup instructions',
-    icon: BookOpen,
-    color: 'from-blue-500 to-cyan-500,',
-    docs: [;
-      { title: 'Quick Start Guide, description: 'Get up and running in minutes, time: '5 min read' },',
-      { title: 'Installation Guide, description: 'Step-by-step installation instructions, time: '10 min read' },',
-      { title: 'Configuration, description: 'Configure your environment, time: '15 min read' },',
-      { title: 'First Project, description: 'Create your first project, time: '20 min read' }',
-    ];
-  },
-  {
-    title: 'API Reference',
-    description: 'Complete API documentation and endpoints',
-    icon: Code,
-  },
-  {
-    title: 'Tutorials',
-    description: 'Step-by-step tutorials and examples',
-    icon: FileText,
-  },
-  {
-    title: 'Best Practices',
-    description: 'Recommended practices and guidelines',
-    icon: CheckCircle,
-=======
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> origin/automation/changelog
+import MainLayout from '../src/components/layout/MainLayout';
 
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-];
-
-ursor/website-audit-and-update-with-deployment-9cae
-const popularDocs = [
-  { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
-  { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
-  { title: 'Building a Web App', description: 'Complete tutorial for web application development', category: 'Tutorials', views: '3.2k' },
-  { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
-];
-
-ursor/website-audit-and-update-with-deployment-9cae
-export default function DocsPage() {
-<<<<<<< HEAD
+const Page = () => {
   return (
     <SimpleLayout
       title="Documentation - Zion Tech Group"
@@ -194,19 +163,6 @@ ursor/website-audit-and-update-with-deployment-9cae
     </Layout>
     </SimpleLayout>
   );
-=======
-	return (
-		<Layout>
-			<Head>
-				<title>Documentation | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/docs" />
-			</Head>
-			<section className="container mx-auto px-4 py-24">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
-				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
-			</section>
-		</Layout>
-	);
->>>>>>> origin/automation/changelog
-}
+};
 
+export default Page;

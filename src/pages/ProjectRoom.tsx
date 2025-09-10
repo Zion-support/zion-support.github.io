@@ -1,37 +1,36 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router'; // Changed from useParams
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react'
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';
-import { toast } from 'sonner';
-
-export default function ProjectRoom() {
-  const router = useRouter();
-  const { projectId: rawProjectId } = router.query;
-  const projectId = typeof rawProjectId === 'string' ? rawProjectId : ''; // Ensure string, default to empty if not
-  const [activeTab, setActiveTab] = useState('chat');
-  const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string;
-    name: string;
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
+import React, { useState } from 'react',;
+import { useRouter } from 'next/router', // Changed from useParams;
+import { Header } from '@/components/Header',;
+import { SEO } from '@/components/SEO',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { toast } from 'sonner',;
+export default function ProjectRoom() {;
+  const router = useRouter(),;
+  const { projectId: rawProjectId } = router.query,;
+  const projectId = typeof rawProjectId === 'string' ? rawProjectId : '', // Ensure string, default to empty if not;
+  const [activeTab, setActiveTab] = useState('chat'),;
+  const [isInCall, setIsInCall] = useState(false),;
+  const [callParticipants, setCallParticipants] = useState<Array<{;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    isMuted?: boolean,;
+    isVideoEnabled?: boolean,;
+    isScreenSharing?: boolean,;
     isHost?: boolean;
-  }>>([
-    {
-      id: 'user-1',
-      name: 'You',
-      isHost: true,
-      isVideoEnabled: true,
-      isMuted: false
+  }>>([;
+    {;
+      id: 'user-1',;
+      name: 'You',;
+      isHost: true,;
+      isVideoEnabled: true,;
+      isMuted: false;
     }
-  ]);
+  ]),
   
   const startVideoCall = () => {
     setIsInCall(true);
@@ -234,3 +233,4 @@ export default function ProjectRoom() {
     </>
   );
 }
+;

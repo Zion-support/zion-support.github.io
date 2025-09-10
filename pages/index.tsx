@@ -1,27 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-import SEOHead from '../components/SEOHead';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  Building2,
-  Rocket,
-  Factory,
-  Brain,
-  Cloud,
-  Shield,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import Head from 'next/head';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -70,13 +51,15 @@ const services = [
 
 export default function HomePage() {
   return (
-    <Layout
-      title="Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider"
-      description="Zion Tech Group provides cutting-edge AI services, IT solutions, and innovative micro SAAS platforms. Transform your business with our comprehensive technology services and solutions."
-      keywords="AI development, cloud solutions, blockchain, IoT platforms, micro SAAS, IT services, technology solutions"
-      canonical="https://ziontechgroup.com"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
+      <Head>
+        <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
+        <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for businesses worldwide." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">

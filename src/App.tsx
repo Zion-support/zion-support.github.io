@@ -1,15 +1,47 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ThemeProvider } from './context/ThemeContext'
-import { NotificationProvider } from './context/NotificationContext'
-import AppLayout from './layout/AppLayout'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ServicesPage from './pages/ServicesPage'
-import ContactPage from './pages/ContactPage'
-import './index.css'
-
-function App() {
+;
+import React from 'react',;
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',;
+import { Header } from './components/Header',;
+import { Footer } from './components/layout/Footer',;
+import { Sidebar } from './components/layout/Sidebar',;
+import { ErrorBoundary } from './components/ErrorBoundary',;
+,;
+// Import pages,;
+import HomePage from '../pages/index',;
+import AboutPage from '../pages/about',;
+import ContactPage from '../pages/contact',;
+import ServicesPage from '../pages/services',;
+import PricingPage from '../pages/pricing',;
+,;
+export default function App() {,;
+  return (,;
+    <ErrorBoundary>,;
+      <Router>,;
+        <div className="min-h-screen bg-gray-50">,;
+          <Header />,;
+          <Sidebar />,;
+          <main className="flex-1: lg: ml-80">,;
+            <Routes>,;
+              <Route path="/" element={<HomePage />} />,;
+              <Route path="/about" element={<AboutPage />} />,;
+              <Route path="/contact" element={<ContactPage />} />,;
+              <Route path="/services" element={<ServicesPage />} />,;
+              <Route path="/pricing" element={<PricingPage />} />,;
+            </Routes>,;
+          </main>,;
+          <Footer />,;
+        </div>,;
+      </Router>;
+    </ErrorBoundary>);
+};
+import React, { Suspense, lazy } from 'react';
+import Footer from './components/Footer';
+// Enhanced Components
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+// Lazy load pages for better performance - only import existing pages
+const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
+// Service Pages
   return (
     <ThemeProvider>
       <NotificationProvider>
@@ -27,5 +59,4 @@ function App() {
     </ThemeProvider>
   )
 }
-
-export default App
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

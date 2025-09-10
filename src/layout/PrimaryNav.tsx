@@ -1,59 +1,54 @@
-<<<<<<< HEAD
-import React from 'react'; router.push(`/search/${slugify(query)}`); setQuery(''); router.push(`/search/${slugify(query)}`); setQuery('')} const [isDark,setIsDark] = useState<typeof false>(false); const toggleTheme = (...args: unknow n[]): unknown => {; setIsDark(!isDark)}; return () <> <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" data-testid="header" " <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm: p x-6"> <Logo /> {}" <div className="hidden md: block order-1 flex-shrink-0"> <ResponsiveNavigation /> </div> onSelectSuggestion = { (sugg) => { if(sugg.id) { router.push(`/marketplace/listing/${sugg.id '` }`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) { router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) { router.push(`/blog/${sugg.slug}`)} else { router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}; setQuery(''); if(typeof window !== 'null' && window.gtag) { window.gtag('event',search_suggestion_click',{ search_term: sug g.text,suggestion_type: sug g.type,suggestion_id: sug g.id || sugg.slug })} }} searchSuggestions = {suggestions} /> </form> {}" <div className="flex items-center gap-1"> <PointsBadge /> <HoverCard openDelay={100}> <HoverCardTrigger asChild> <Link" href="/cart" className="relative p-1" aria-label= { t('nav.cart',Cart') } >" <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover: tex t-primary" /> {cartCount > 0 && (" <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center"> {cartCount} </span> )} </Link> </HoverCardTrigger> <HoverCardContent>" <div className="p-4">" <p className="text-sm text-muted-foreground">Cart preview</p> </div> </HoverCardContent> </HoverCard> </div> {}" <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1"> <ModeToggle /> <LanguageSelector /> </div> {}" <div className="flex items-center gap-1 flex-wrap"> {!isLoggedIn && ( <> <Link" href="/auth/login" className="text-sm hover: tex t-primary whitespace-nowrap" data-testid="login-link" {t('auth.login')} </Link> <Link" href="/signup" className="text-sm hover: tex t-primary whitespace-nowrap" {t('auth.signup')} </Link> </> )} {isLoggedIn && <UserMenu />} </div> </div> {} <button onClick={() => setIsOpen(!isOpen)}" className="lg: hidden text-white hover: tex t-cyan-400 transition-colors duration-200" >" {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />} </button> </div> {} <AnimatePresence> {isOpen && <motion.div initial = { { opacity: 0,height: 0 }} animate = { { opacity: 1,height: 'auto' }} exit = { { opacity: 0,height: 0 }} transition={{ duration: 0.3 }}" className="lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10" >" <div className="px-4 py-6 space-y-4"> {services.map((category,index) => ( <div key={index}>" <h3 className="text-sm font-semibold text-cyan-400 mb-2"> {category.category} </h3>" <div className="space-y-2 ml-4"> {category.items.map((service: unknow n,serviceIndex: unknow n <Link key={serviceIndex} to={service.path}" className="block text-gray-300 hover: tex t-white transition-colors duration-200" onClick={( setIsOpen(false)} > {service.name} </Link> ))} </div> </div> ))} <div className="pt-4 border-t border-white/10 space-y-2"> <Link to="/solutions" className="block text-gray-300 hover: tex t-white transition-colors duration-200" onClick={: unknown setIsOpen(false)} > Solutions </Link> <Link to="/about" className="block text-gray-300 hover: tex t-white transition-colors duration-200" onClick={: unknown setIsOpen(false)} > About </Link> <Link to="/blog" className="block text-gray-300 hover: tex t-white transition-colors duration-200" onClick={: unknown setIsOpen(false)} > Blog </Link> <Link to="/contact" className="block text-gray-300 hover: tex t-white transition-colors duration-200" onClick={: unknown setIsOpen(false)} > Contact </Link> </div>; </div>; </motion.div>; )}; </AnimatePresence>; </nav>; </header>; )} '"` </motion> </typeof>
-=======
-import { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X } from 'lucide-react'
-import { useTranslation } from 'react-i18next';
-import { CartDrawer } from '@/components/cart/CartDrawer';
-import { LoginModal } from '@/components/auth/LoginModal';
-
-export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { user } = useAuth();
-  const isLoggedIn = !!user;
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const suggestions = generateSearchSuggestions();
-
-  let unreadCount = 0;
-  try {
-    const messaging = useMessaging();
+import { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Logo } from '@/components/header/Logo',;
+import { PointsBadge } from '@/components/loyalty/PointsBadge',;
+import { UserMenu } from '@/components/header/UserMenu',;
+import { LanguageSelector } from '@/components/header/LanguageSelector',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { generateSearchSuggestions } from '@/data/marketplaceData',;
+import { slugify } from '@/lib/slugify',;
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next',;
+import { CartDrawer } from '@/components/cart/CartDrawer',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+export function PrimaryNav() {;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
+  const [loginOpen, setLoginOpen] = useState(false),;
+  const { user } = useAuth(),;
+  const isLoggedIn = !!user,;
+  const isMobile = useIsMobile(),;
+  const { t } = useTranslation(),;
+  const router = useRouter(),;
+  const [query, setQuery] = useState(''),;
+  const suggestions = generateSearchSuggestions(),;
+  let unreadCount = 0,;
+  try {;
+    const messaging = useMessaging(),;
     unreadCount = messaging.unreadCount;
-  } catch {
-    // context not available
+  } catch {;
+    // context not available;
   }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const trimmed = query.trim();
-    if (trimmed) {
-      logDebug('PrimaryNav search submit:', { query: trimmed });
-      router
-        .push(`/search?q=${encodeURIComponent(trimmed)}`)
-        .then(() => setQuery(''))
+;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    const trimmed = query.trim(),;
+    if (trimmed) {;
+      logDebug('PrimaryNav search submit:', { query: trimmed }),;
+      router;
+        .push(`/search?q=${encodeURIComponent(trimmed)}`);
+        .then(() => setQuery(''));
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
     }
-  };
+  },
 
   return (
     <>
@@ -204,4 +199,4 @@ export function PrimaryNav() {
     </>
   );
 }
->>>>>>> origin/automation/changelog
+;

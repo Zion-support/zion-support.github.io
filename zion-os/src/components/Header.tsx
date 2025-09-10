@@ -1,23 +1,11 @@
-  const navigation = [;
-    { name: 'Home', href: '/' }'
-    { name: 'About', href: '/about' }'
-    { name: 'Services', href: '/services' }'
-    { name: 'AI Solutions', href: '/ai-solutions' }'
-    { name: 'Quantum Computing', href: '/quantum-computing' }'
-    { name: 'Research & Development', href: '/research-development' }'
-    { name: 'Case Studies', href: '/case-studies' }'
-    { name: 'News', href: '/news' }'
-    { name: 'Contact', href: '/contact' }];
-
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
+'use client',;
+import { useState, useEffect } from 'react',;
+import Link from 'next/link',;
+export default function Header() {;
+  const [isMenuOpen, setIsMenuOpen] = useState(false),;
+  const [isScrolled, setIsScrolled] = useState(false),;
+  useEffect(() => {;
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -192,10 +180,9 @@ pr-12325
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
-            </svg>
-          </button>
-        </div>
-
+            </svg>;
+          </button>;
+        </div>;
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div 
@@ -243,7 +230,7 @@ pr-12325
             </div>
           </div>
         )}
-      </div>
-    </header>
+      </div>;
+    </header>;
   );
-};
+}

@@ -1,14 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ErrorBoundary from "./src/components/ErrorBoundary";
-import Header from "./src/components/Header";
-import Sidebar from "./src/components/layout/Sidebar";
-import Footer from "./src/components/Footer";
-import HomePage from "./src/pages/Home";
-import AboutPage from "./src/pages/About";
-import ContactPage from "./src/pages/Contact";
-import ServicesPage from "./src/pages/Services";
-import PricingPage from "./src/pages/Pricing";
+import React from 'react';
+import Header from './src/components/Header';
+import Footer from './src/components/Footer';
+import ServiceCard from './src/components/ServiceCard';
+import TestimonialCarousel from './src/components/TestimonialCarousel';
+import ContactSection from './src/components/ContactSection';
+import BenefitsSection from './src/components/BenefitsSection';
+import HowItWorksSection from './src/components/HowItWorksSection';
+import FaqSection from './src/components/FaqSection';
+import ChatAssistant from './src/components/ChatAssistant';
+import ScrollToTop from './src/components/ScrollToTop';
+import ParticleBackground from './src/components/ParticleBackground';
 
 export default function App() {
   const services = [
@@ -54,27 +55,14 @@ export default function App() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export default function App(): JSX.Element {
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <ParticleBackground />
-      <Header />
+    <main>
 
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center">
-          <div className="container mx-auto max-w-6xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Your trusted partner for AI and IT solutions. We help businesses transform through
-              cutting-edge technology and innovative solutions.
-            </p>
-          </div>
-        </div>
-      </Router>
-    </ErrorBoundary>
+    </main>
   );
 }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

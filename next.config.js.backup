@@ -1,29 +1,82 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  compress: true,
+<<<<<<< HEAD
+compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
-  
-  // Image optimization
+  generateEtags: true,
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+=======
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+  images: {
+    domains: [
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+    ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },
-  
-  // Webpack optimizations
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize bundle size only in production
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/pages_backup*/**',
+          '**/pages.*/**',
+          '**/pages-*/**',
+          '**/pages_disabled*/**',
+          '**/pages.disabled*/**',
+          '**/pages.broken*/**',
+          '**/pages.corrupted*/**',
+          '**/pages.old*/**',
+          '**/pages._*/**',
+          '**/pages.__*/**',
+          '**/backup-pages/**',
+          '**/src.pages.disabled/**',
+          '**/lib_backup*/**',
+          '**/src_backup*/**',
+          '**/corrupted-files-backup*/**',
+          '**/performance-reports*/**',
+          '**/log-analysis-reports*/**',
+          '**/link-reports*/**',
+          '**/lint-target*/**',
+          '**/monitoring*/**',
+          '**/pm2-automation*/**',
+          '**/automation/logs*/**',
+          '**/automation/backup*/**',
+          '**/performance-*.json',
+          '**/performance-*.js',
+          '**/performance-*.cjs',
+          '**/performance-*.sh',
+          '**/performance-*.html',
+          '**/performance-*.md',
+<<<<<<< HEAD
+'**/performance-*.txt'
+        ],
+        poll: 1000,
+        aggregateTimeout: 300
+      }
+    }
+    
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -31,89 +84,56 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all',
+chunks: 'all',
           },
         },
       };
     }
     
     return config;
-  },
-  
-  // Headers for security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
+  }
+	reactStrictMode: false,
+	trailingSlash: true,
+	output: 'export',
+	images: {
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	async redirects() {
+		return [
+			{ source: '/api-documentation', destination: '/api-docs', permanent: true },
+			{ source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
+		];
+	},
+	webpack: (config, { isServer }) => {
+		// Exclude problematic directories from webpack compilation
+		config.watchOptions = {
+			...config.watchOptions,
+			ignored: ['**/apps/**', '**/temp_conflicts/**', '**/node_modules/**']
+		};
+
+		// Add custom webpack rule to ignore apps directory
+		config.module.rules.push({
+			test: /\.(ts|tsx|js|jsx)$/,
+			include: /apps\//,
+			use: 'ignore-loader'
+		});
+
+		return config;
+	}
+};
+
+export default nextConfig;
+
+=======
         ],
-      },
-      {
-        source: '/api/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
-  
-  // Output configuration
-  // output: 'standalone', // Commented out for development
-  
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Base path
-  basePath: '',
-  
-  // Asset prefix
-  assetPrefix: '',
-  
-  // Generate ETags
-  generateEtags: true,
-  
-  // Dist directory
-  distDir: '.next',
-  
-  // Build ID
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
+      };
+    }
+    return config;
   },
 };
 
 export default nextConfig;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

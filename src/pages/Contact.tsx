@@ -1,56 +1,66 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { useNotifications } from '@/context/NotificationContext';
-import SEOHead from '@/components/SEOHead';
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const validateForm = () => {
-    const errors: string[] = [];
-
-    if (!formData.name.trim()) errors.push('Name is required');
-    if (!formData.email.trim()) errors.push('Email is required');
-    if (!formData.message.trim()) errors.push('Message is required');
-
-    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errors.push('Please enter a valid email address');
-    }
-
-    if (formData.message && formData.message.length < 10) {
-      errors.push('Message must be at least 10 characters long');
-    }
-
-    return errors;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const errors = validateForm();
-    if (errors.length > 0) {
-      toast({
-        title: 'Validation Error',
-        description: errors.join(', '),
-        variant: 'destructive',
-      });
+import { useState } from 'react',;
+import { Header } from '@/components/Header',;
+import { SEO } from '@/components/SEO',;
+import { GradientHeading } from '@/components/GradientHeading',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Card } from '@/components/ui/card',;
+import { toast } from '@/components/ui/use-toast',;
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from '@/components/ui/tooltip',;
+import z from 'zod',;
+import { ChatAssistant } from '@/components/ChatAssistant',;
+import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
+export default function Contact() {;
+  const [formData, setFormData] = useState({;
+    name: '',;
+    email: '',;
+    message: ''}),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [errors, setErrors] = useState<{;
+    name?: string,;
+    email?: string,;
+    message?: string;
+  }>({}),;
+  const [isChatOpen, setIsChatOpen] = useState(false),;
+  const [submitted, setSubmitted] = useState(false),;
+  const handleChange = (;
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
+    const { name, value } = e.target,;
+    setFormData((prev) => ({ ...prev, [name]: value })),;
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  },;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    logInfo('[ContactForm] handleSubmit triggered.'),;
+    logInfo('[ContactForm] formData:', { data: formData }),;
+    const schema = z.object({;
+      name: z.string().min(2, 'Name must be at least 2 characters'),;
+      email: z.string().email('Invalid email address'),;
+      message: z.string().min(10, 'Message must be at least 10 characters')}),;
+    const result = schema.safeParse(formData),;
+    logInfo('[ContactForm] Zod validation result:', { data: result }),;
+    if (!result.success) {;
+      const fieldErrors: Record<string string> = {},;
+      for (const err of result.error.errors) {;
+        if (err.path[0]) {;
+          fieldErrors[err.path[0] as string] = err.message;
+        }
+      }
+      setErrors(fieldErrors),;
+      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again',;
+      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } }),;
+      toast({;
+        title: 'Form Validation Error',;
+        description: validationErrorMsg,;
+        variant: 'destructive'}),;
       return;
     }
 
@@ -490,4 +500,4 @@ export default function Contact() {
     </>
   );
 }
->>>>>>> origin/automation/changelog
+;

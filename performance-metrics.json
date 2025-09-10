@@ -1,13 +1,24 @@
 {
-  "timestamp": "2025-09-05T14:45:56.942Z",
-  "memory": {
-    "rss": 44457984,
-    "heapTotal": 5308416,
-    "heapUsed": 3644848,
-    "external": 1178203,
-    "arrayBuffers": 10515
+  "timestamp": "2025-09-05T20:55:04.458Z",
+  "bundleSize": {
+    ".next": {
+      "size": 183864,
+      "sizeMB": "0.18"
+    },
+    "node_modules": {
+      "size": 820676108,
+      "sizeMB": "782.66"
+    }
   },
-  "uptime": 0.010950716,
-  "platform": "linux",
-  "nodeVersion": "v22.16.0"
+  "fileCounts": {
+    ".tsx": 26,
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+    ".ts": 0,
+    ".jsx": 0,
+    ".js": 0,
+    ".css": 2,
+    ".json": 0
+  },
+  "recommendations": []
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }

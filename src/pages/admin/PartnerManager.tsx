@@ -1,34 +1,33 @@
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { toast } from "@/hooks/use-toast";
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useRouter } from 'next/router',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
-
+import { supabase } from "@/integrations/supabase/client",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { EmptyState } from "@/components/ui/empty-state",
 interface PartnerProfile {
-  id: string;
-  user_id: string;
-  name: string;
-  status: 'pending' | 'approved' | 'rejected';
-  created_at: string;
-  niche: string;
-  audience_size: string;
-  social_media?: Record<string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-  commission_rate?: number;
+  id: string,
+  user_id: string,
+  name: string,
+  status: 'pending' | 'approved' | 'rejected',
+  created_at: string,
+  niche: string,
+  audience_size: string,
+  social_media?: Record<string string>,
+  website?: string,
+  bio?: string,
+  payout_method?: string,
+  fraud_flags?: number,
+  commission_rate?: number
 }
 
 export default function PartnerManager() {
@@ -615,21 +614,21 @@ interface PartnerTableProps {
   getStatusBadge: (status: string) => JSX.Element;
   getFraudFlagBadge: (flags?: number) => JSX.Element | null;
 }
-
-function PartnerTable({ 
-  partners, 
-  isLoading, 
-  onViewDetails, 
-  onUpdateStatus,
-  onOpenSettings,
-  getStatusBadge,
-  getFraudFlagBadge
-}: PartnerTableProps) {
-  if (isLoading) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-zion-slate-light">Loading partner data...</p>
-      </div>
+;
+function PartnerTable({;
+  partners,;
+  isLoading,;
+  onViewDetails,;
+  onUpdateStatus,;
+  onOpenSettings;
+  getStatusBadge;
+  getFraudFlagBadge;
+}: PartnerTableProps) {;
+  if (isLoading) {;
+    return (;
+      <div className="text-center py-8">;
+        <p className="text-zion-slate-light">Loading partner data...</p>;
+      </div>;
     );
   }
   
@@ -665,14 +664,14 @@ function PartnerTable({
               <div className="flex items-center gap-2">
                 {partner.name}
                 {getFraudFlagBadge(partner.fraud_flags)}
-              </div>
-            </TableCell>
-            <TableCell>{partner.niche}</TableCell>
-            <TableCell>
-              {partner.audience_size.replace('k', ',000').replace('-', ' - ').replace('over', 'Over ')}
-            </TableCell>
-            <TableCell>{getStatusBadge(partner.status)}</TableCell>
-            <TableCell>
+              </div>;
+            </TableCell>;
+            <TableCell>{partner.niche}</TableCell>;
+            <TableCell>;
+              {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
+            </TableCell>;
+            <TableCell>{getStatusBadge(partner.status)}</TableCell>;
+            <TableCell>;
               {new Date(partner.created_at).toLocaleDateString()}
             </TableCell>
             <TableCell className="text-right">
@@ -725,3 +724,4 @@ function PartnerTable({
     </Table>
   );
 }
+;

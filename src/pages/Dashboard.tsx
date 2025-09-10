@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-import React from 'react'; const Dashboard = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Dashboard </h1> <p className="text-xl text-gray-600"> Monitor your services and track performance metrics. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Active Services</h3> <p className="text-3xl font-bold text-blue-600">12</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Uptime</h3> <p className="text-3xl font-bold text-green-600">99.9%</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Performance</h3> <p className="text-3xl font-bold text-yellow-600">95%</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Alerts</h3> <p className="text-3xl font-bold text-red-600">2</p> </div> </div> </div> </div> )}; export default Dashboard;
-=======
-import React from 'react';
-import dynamic from 'next/dynamic';
-import { useAuth } from "@/hooks/useAuth";
-import { useRequireAuth } from "@/hooks/useAuthGuard";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Badge } from "@/components/ui/badge";
+import React from 'react',
+import dynamic from 'next/dynamic',
+import { useAuth } from "@/hooks/useAuth",
+import { useRequireAuth } from "@/hooks/useAuthGuard",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Badge } from "@/components/ui/badge",
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import { useFavorites } from '@/hooks/useFavorites';
@@ -387,4 +384,4 @@ export default function Dashboard() {
     </>
   );
 }
->>>>>>> origin/automation/changelog
+;

@@ -1,102 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  ReactNode,
-  useContext,
-} from 'react';
-import { AuthContext } from '../../context/auth/AuthContext';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react'
-
->>>>>>> origin/automation/changelog
-export interface Message {
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
+import React, {;
+  useState,;
+  useEffect,;
+  useRef,;
+  ReactNode,;
+  useContext} from 'react',;
+import { AuthContext } from '../../context/auth/AuthContext',;
+import { useDebounce } from '../../hooks/useDebounce',;
+import { useLocalStorage } from '../../hooks/useLocalStorage',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { Button } from '@/components/ui/button',;
+import { X } from 'lucide-react';
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
   read?: boolean;
-};
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {;
-
-<<<<<<< HEAD
-  isOpen?: boolean;
-  onClose?: () => void}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
-  const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<any>([]);
-  const [inputMessage, setInputMessage] = useState('');
-      timestamp: new Date(),
-
-};    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
-    // Simulate AI response;
-    setTimeout(: unknown {;
-      const aiMessage: Message = {;
-
-  id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        message: 'Thank you for your message! Our team will get back to you soon.',
-        timestamp: new Date(),
-
-};
-      setMessages(prev => [...prev, aiMessage]);
-}, 1000);
-};
-    e.preventDefault();
-    handleSendMessage(inputMessage)};
-    setIsChatOpen(!isChatOpen)};
-  const closeChat = (...args: unknown[]): unknown => {;    setIsChatOpen(false);
-    if(onClose) onClose()};
-  if(!isChatOpen) {;
-
-    return ();
-      <button;
-        onClick = {toggleChat}
-        className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50">;";
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;";
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />;
-        </svg>;
-      </button>;
-    )}
-  return ("    <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">;
-      {/* Header */}";
-      <div className="bg-zion-cyan text-zion-blue-dark p-4 rounded-t-lg flex items-center justify-between">";
-        <h3 className="font-semibold">Chat with Zion Tech Group</h3>;
-        <button;
-          onClick={closeChat}";
-          className="text-zion-blue-dark hover:text-zion-blue-dark/80 transition-colors";
-
-          <X size={20}   />;
-        </button>;
-      </div>;
-  );"}";
-=======
-import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function ChatAssistant(props: any) {return ( <div className="min-h-screen bg-white"> <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1> <p className="text-gray-300 text-lg"> Professional ChatAssistant services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
->>>>>>> origin/automation-improvements
-=======
-export interface ChatAssistantProps {
-  isOpen: boolean;
-  onClose: () => void;
-  recipient: {
-    id: string;
-    name: string;
-    avatarUrl?: string;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
     role?: string;
-  };
-  conversationId?: string;
-  initialMessages?: Message[];
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-  contextHeader?: ReactNode;
-  /** Optional canned questions shown when the chat is empty */
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
+  contextHeader?: ReactNode,;
+  /** Optional canned questions shown when the chat is empty */;
   starterQuestions?: string[];
 }
 
@@ -131,94 +68,108 @@ export function ChatAssistant({
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{
     message: string;
     conversationId?: string;
-  } | null>(null);
-  const [showGuestModal, setShowGuestModal] = useState(false);
-  const [guestMessage, setGuestMessage] = useState<string | null>(null);
-
-  // Effect for guest user messages
-  useEffect(() => {
-    if (isGuest) {
-      // Priority: initialMessages prop > localStorage > empty array
-      if (initialMessages && initialMessages.length > 0) {
-        setDisplayGuestMessages(initialMessages);
-        setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided
-      } else {
+  } | null>(null),;
+  const [showGuestModal, setShowGuestModal] = useState(false),;
+  const [guestMessage, setGuestMessage] = useState<string | null>(null),;
+  // Effect for guest user messages;
+  useEffect(() => {;
+    if (isGuest) {;
+      // Priority: initialMessages prop > localStorage > empty array;
+      if (initialMessages && initialMessages.length > 0) {;
+        setDisplayGuestMessages(initialMessages),;
+        setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided;
+      } else {;
         setDisplayGuestMessages(storedGuestMessages);
       }
     }
-  }, [
-    isGuest,
-    initialMessages,
-    storedGuestMessages,
-    setStoredGuestMessages,
-    recipient.id,
-  ]);
-
-  // Effect for logged-in user messages
-  useEffect(() => {
-    if (!isGuest) {
-      // Update state if initialMessages prop changes (e.g. new conversation loaded)
+  }, [;
+    isGuest,;
+    initialMessages,;
+    storedGuestMessages,;
+    setStoredGuestMessages,;
+    recipient.id]),;
+  // Effect for logged-in user messages;
+  useEffect(() => {;
+    if (!isGuest) {;
+      // Update state if initialMessages prop changes (e.g. new conversation loaded);
       setLoggedInMessages(initialMessages);
     }
-  }, [isGuest, initialMessages, recipient.id]);
-
-  // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
-  const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[]) => Message[]),
-  ) => {
-    if (isGuest) {
-      const newMessages =
-        valueOrFn instanceof Function
-          ? valueOrFn(displayGuestMessages)
-          : valueOrFn;
-      setDisplayGuestMessages(newMessages);
-      setStoredGuestMessages(newMessages); // Always update localStorage for guests
-    } else {
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
+  }, [isGuest, initialMessages, recipient.id]),;
+  // Determine currentMessages and setCurrentMessages based on isGuest;
+  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
+  const setCurrentMessages = (;
+    valueOrFn: Message[] | ((val: Message[]) => Message[])) => {;
+    if (isGuest) {;
+      const newMessages =;
+        valueOrFn instanceof Function;
+          ? valueOrFn(displayGuestMessages);
+          : valueOrFn,;
+      setDisplayGuestMessages(newMessages),;
+      setStoredGuestMessages(newMessages), // Always update localStorage for guests;
+    } else {;
+      const newMessages =;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,;
       setLoggedInMessages(newMessages);
     }
-  };
-
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
-
-  useEffect(() => {
-    if (debouncedApiCallParams) {
-      onSendMessage(
-        debouncedApiCallParams.message,
-        debouncedApiCallParams.conversationId,
-      );
+  },;
+  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
+  useEffect(() => {;
+    if (debouncedApiCallParams) {;
+      onSendMessage(;
+        debouncedApiCallParams.message,;
+        debouncedApiCallParams.conversationId);
     }
-  }, [debouncedApiCallParams, onSendMessage]);
-
-  useEffect(() => {
+  }, [debouncedApiCallParams, onSendMessage]),;
+  useEffect(() => {;
     scrollToBottom();
-  }, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
-
-  const scrollToBottom = () => {
+  }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
+  const scrollToBottom = () => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return;
-
-    if (!isGuest) {
-      // Logged-in user
-      const newMessage: Message = {
-        id: Date.now().toString(),
-        role: 'user',
-        message: messageContent,
-        timestamp: new Date(),
-      };
-      setCurrentMessages((prev: Message[]) => [...prev, newMessage]);
+  },;
+  const handleSendMessage = async (messageContent: string) => {;
+    if (!messageContent.trim()) return,;
+    if (!isGuest) {;
+      // Logged-in user;
+      const newMessage: Message = {;
+        id: Date.now().toString(),;
+        role: 'user',;
+        message: messageContent,;
+        timestamp: new Date()},;
+      setCurrentMessages((prev: Message[]) => [...prev, newMessage]),;
       setPendingApiCallParams({ message: messageContent, conversationId });
     } else {
       // Guest user
       setGuestMessage(messageContent);
       setShowGuestModal(true);
     }
-  };
+  },;
+  const handleModalSendConfirm = () => {;
+    if (!guestMessage) return,;
+    const newMessage: Message = {;
+      id: Date.now().toString(),;
+      role: 'user',;
+      message: guestMessage,;
+      timestamp: new Date()},;
+    setCurrentMessages((prev: Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
+    setPendingApiCallParams({ message: guestMessage, conversationId }),;
+    setShowGuestModal(false),;
+    setGuestMessage(null);
+  },;
+  const handleModalCancel = () => {;
+    setShowGuestModal(false),;
+    setGuestMessage(null);
+  },;
+  useEffect(() => {;
+    if (!isOpen) return,;
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === 'Escape') {;
+        e.preventDefault(),;
+        onClose();
+      }
+    },
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, onClose]),
 
   const handleModalSendConfirm = () => {
     if (!guestMessage) return;
@@ -321,11 +272,11 @@ export function ChatAssistant({
                   ))}
                 </div>
               )}
-            </div>
-          ) : (
-            currentMessages.map((msg) => (
-              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
-            ))
+            </div>;
+          ) : (;
+            currentMessages.map((msg) => (;
+              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />;
+            ));
           )}
           <div ref={messagesEndRef} />
         </div>
@@ -374,4 +325,4 @@ export function ChatAssistant({
     </div>
   );
 }
->>>>>>> origin/automation/changelog
+;

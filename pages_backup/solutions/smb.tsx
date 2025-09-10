@@ -1,6 +1,42 @@
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';  return (
+import { 
+  Building2, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const smbServices = [
+  {
+    icon: DollarSign,
+    title: 'Cost-Effective IT',
+    description: 'Affordable technology solutions for small and medium businesses'
+  },
+  {
+    icon: Zap,
+    title: 'Quick Setup',
+    description: 'Fast implementation to get you up and running quickly'
+  },
+  {
+    icon: Users,
+    title: 'Dedicated Support',
+    description: 'Personal support team for your business needs'
+  },
+  {
+    icon: Building2,
+    title: 'Scalable Solutions',
+    description: 'Grow with your business as it expands'
+  }
+];
+
+export default function SMBSolutionsPage() {
+  return (
     <>
       <Head>
         <title>SMB Solutions - Zion Tech Group</title>
@@ -15,18 +51,53 @@ import { DollarSign, Zap, Users, Building2 } from 'lucide-react';  return (
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                SMB Solutions;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Technology solutions designed specifically for small and medium businesses. 
-                Get enterprise-level capabilities at SMB-friendly prices.;
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;        {/* CTA Section */}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                Technology solutions designed specifically for small and medium businesses.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
+
+        {/* Services Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">SMB Services</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Affordable technology solutions that grow with your business.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {smbServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-20 bg-purple-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
