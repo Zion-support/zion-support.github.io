@@ -2,7 +2,6 @@ import React from 'react';
 import { Server, Network, Shield, Settings } from 'lucide-react';
 import SEO from '../../components/SEO';
 
-<<<<<<< HEAD
 const ITInfrastructure = () => {
   const features = [
     {
@@ -76,23 +75,11 @@ const ITInfrastructure = () => {
                 <li>• Compliance and auditing</li>
               </ul>
             </div>
-=======
-export default function ITInfrastructure() {
-  return (
-    <>
-      <SEO 
-        title="IT Infrastructure - Zion Tech Group"
-        description="Comprehensive IT infrastructure solutions and services."
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">IT Infrastructure</h1>
-            <p className="text-xl text-slate-300">Comprehensive IT infrastructure solutions.</p>
->>>>>>> 2e76c8f17382c83630cd66eed177eb9d0ef16e40
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default ITInfrastructure;
