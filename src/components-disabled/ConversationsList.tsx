@@ -13,11 +13,8 @@ interface ConversationsListProps {
   markAsRead: (conversationId: string) => Promise<void>;
 }
 
-export function ConversationsList({
-  conversations,
-  activeConversation,
-  setActiveConversation,
-  markAsRead
+export function ConversationsList(_{
+  conversations, _activeConversation, _setActiveConversation, markAsRead
 }: ConversationsListProps) {
   const itemSize = 80;
 

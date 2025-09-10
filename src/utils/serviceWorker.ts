@@ -24,7 +24,7 @@ export function registerServiceWorker(): void {
         });
       })
       .catch(error => {
-        console.error('Service worker registration failed:', error);
+        // // console.error('Service worker registration failed:', error);
       });
   }
 }

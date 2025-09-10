@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
 import { Button } from './button';
 import { Badge } from './badge';
-export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
+export function Card3DGallery(_{ enabled = true, _items, _columns = 3, _autoPlay = false, _showFilters = true, _onCardClick, _onAction, _className = "" }) {
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
@@ -358,7 +358,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       </AnimatePresence>
     </div>);
 }
-function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
+function Card3D(_{ item, _index, _onClick, onAction: _onAction, _getStatusColor, _getComplexityColor, _getCategoryIcon, _isCarousel = false }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
     const x = useMotionValue(0);

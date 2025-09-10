@@ -68,7 +68,7 @@ class ErrorMonitor {
     if (this.isProduction) {
       this.reportToService(error, fullContext);
     } else {
-      console.error('Error captured:', error, fullContext);
+      // // console.error('Error captured:', error, fullContext);
     }
   }
 
@@ -89,7 +89,7 @@ class ErrorMonitor {
       });
     } catch (reportingError) {
       // Silently fail if error reporting fails
-      console.warn('Failed to report error:', reportingError);
+      // // console.warn('Failed to report error:', reportingError);
     }
   }
 

@@ -8,7 +8,7 @@ interface ShippingRate {};
 interface Props {};
   onSelect?: (rate: ShippingRate) => void}
 ;
-export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {};
+export function CheckoutShippingOptions(_{ toAddress, onSelect }: Props) {};
   return null;
 }
 };,
@@ -17,9 +17,9 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {};
     ;
       try {};
           setRates(data.rates || [])} else {};
-          console.error('Rates error', data)}
+          // // console.error('Rates error', data)}
       } catch(err) {};
-        console.error('Rates error', err)} finally {};
+        // // console.error('Rates error', err)} finally {};
         setLoading(false)}
     }
     fetchRates()}, [toAddress]);

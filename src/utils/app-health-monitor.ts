@@ -429,7 +429,7 @@ class AppHealthMonitor {
         const errorLogger = (window as any).enhancedErrorLogger;
         const errors = errorLogger.getErrors();
         const fiveMinutesAgo = Date.now() - (5 * 60 * 1000);
-        return errors.filter((error: any) => error.lastSeen > fiveMinutesAgo).length;
+        return errors.filter((error: unknown) => error.lastSeen > fiveMinutesAgo).length;
       }
     } catch {
       // Fallback to simple error counting
@@ -447,10 +447,10 @@ class AppHealthMonitor {
         
         // Log warnings and critical issues
         if (report.status !== 'healthy') {
-          console.warn('🏥 Health issue detected:', report);
+          // // console.warn('🏥 Health issue detected:', report);
         }
       }).catch(error => {
-        console.error('Health monitoring error:', error);
+        // // console.error('Health monitoring error:', error);
       });
     }, 30000);
 

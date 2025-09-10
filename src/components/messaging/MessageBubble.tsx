@@ -10,7 +10,7 @@ interface MessageBubbleProps {
   isUserMessage: boolean;
 }
 
-export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+export function MessageBubble(_{ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
       "flex",

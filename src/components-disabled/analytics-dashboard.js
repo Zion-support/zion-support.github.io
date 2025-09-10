@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
 import { Button } from './button';
-export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
+export function AnalyticsDashboard(_{ enabled = true, _isExpanded = false, _onMetricClick, _className = '' }) {
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [selectedMetric, setSelectedMetric] = useState(null);

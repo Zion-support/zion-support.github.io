@@ -11,7 +11,7 @@ export interface ResumeTabProps {
   isSubmitting?: boolean;
 }
 
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {
+export function ResumeTab(_{ selectedResumeId, _onSelectResume, _onResumeSelected, _onApply, isSubmitting = false }: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
       onResumeSelected(resume);

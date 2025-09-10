@@ -30,7 +30,7 @@ export class PerformanceMonitor {
       vitalsObserver.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
       this.observers.push(vitalsObserver);
     } catch (error) {
-      console.warn('Performance monitoring not available:', error);
+      // // console.warn('Performance monitoring not available:', error);
     }
 
     // Monitor resource loading
@@ -46,7 +46,7 @@ export class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-      console.warn('Resource monitoring not available:', error);
+      // // console.warn('Resource monitoring not available:', error);
     }
   }
 
@@ -55,7 +55,7 @@ export class PerformanceMonitor {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric: ${name} = ${value}ms`);
+      // // console.log(`Performance Metric: ${name} = ${value}ms`);
     }
   }
 
@@ -129,7 +129,7 @@ export class PerformanceErrorBoundary extends React.Component<
     const monitor = PerformanceMonitor.getInstance();
     monitor.recordMetric('error_boundary_triggered', 1);
     
-    console.error('Performance Error Boundary caught an error:', error, errorInfo);
+    // // console.error('Performance Error Boundary caught an error:', error, errorInfo);
   }
 
   render() {

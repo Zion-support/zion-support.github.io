@@ -3,7 +3,7 @@ import { vi } from 'vitest'
 import React, { ReactElement } from 'react'
 
 // Mock data generators
-export const generateMockUser = (overrides: Partial<any> = {}) => ({
+export const generateMockUser = (overrides: Partial<unknown> = {}) => ({
   id: '1',
   name: 'John Doe',
   email: 'john@example.com',
@@ -13,7 +13,7 @@ export const generateMockUser = (overrides: Partial<any> = {}) => ({
   ...overrides,
 });
 
-export const generateMockPost = (overrides: Partial<any> = {}) => ({
+export const generateMockPost = (overrides: Partial<unknown> = {}) => ({
   id: '1',
   title: 'Test Post',
   content: 'This is a test post content',
@@ -23,7 +23,7 @@ export const generateMockPost = (overrides: Partial<any> = {}) => ({
   ...overrides,
 });
 
-export const generateMockComment = (overrides: Partial<any> = {}) => ({
+export const generateMockComment = (overrides: Partial<unknown> = {}) => ({
   id: '1',
   content: 'This is a test comment',
   author: generateMockUser(),
@@ -44,7 +44,7 @@ export const mockApiError = (message: string = 'API Error', status: number = 500
 };
 
 // Mock fetch
-export const mockFetch = (responses: Record<string, any>) => {
+export const mockFetch = (responses: Record<string, unknown>) => {
   const originalFetch = global.fetch;
   
   global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {

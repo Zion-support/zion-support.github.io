@@ -15,7 +15,7 @@ export interface SignupResponse {
     email: string;
     display_name?: string;
   };
-  session?: any;
+  session?: unknown;
   emailVerificationRequired?: boolean;
 }
 
@@ -31,7 +31,7 @@ export async function signup(payload: SignupPayload): Promise<SignupResponse> {
     }
     // Handle unexpected success status codes
     throw new Error(`Unexpected status ${res.status}`);
-  } catch (err: any) {
+  } catch (err: unknown) {
     logErrorToProduction('Signup error:', { data: err });
     
     if (err.response) {

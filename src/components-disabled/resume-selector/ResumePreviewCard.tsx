@@ -13,7 +13,7 @@ interface ResumePreviewCardProps {
   isLoading: boolean;
 }
 
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
+export function ResumePreviewCard(_{ resume, _onDownload, isLoading }: ResumePreviewCardProps) {
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">

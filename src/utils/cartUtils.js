@@ -2,7 +2,7 @@
 export const cartUtils = {
   // Placeholder utility functions
   init: () => {
-    console.log('cartUtils initialized');
+    // // console.log('cartUtils initialized');
   },
 };
 

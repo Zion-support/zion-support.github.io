@@ -1,5 +1,5 @@
 import { apiClient } from '@/utils/apiClient';
-export async function register(name, email, password) {
+export async function register(_name, _email, _password) {
     const res = await apiClient('/api/auth/register', {
         method: 'POST',
         headers: {

@@ -137,7 +137,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Error generating contract:', error);
+    // console.error('Error generating contract:', error);
     return new Response(
       JSON.stringify({ 
         success: false, 

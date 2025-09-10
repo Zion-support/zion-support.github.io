@@ -3,11 +3,7 @@ import { jsPDF } from 'jspdf';
 import { ResumeBasicInfo } from '@/types/resume';
 import { PdfThemeColors } from '@/utils/pdf/themeConfig';
 
-export function addBasicInfoSection(
-  doc: jsPDF,
-  basicInfo: ResumeBasicInfo,
-  colors: PdfThemeColors
-): number {
+export function addBasicInfoSection(doc: jsPDF, basicInfo: ResumeBasicInfo, colors: PdfThemeColors): number {
   // Add header with name and title
   doc.setFontSize(24);
   doc.setTextColor(colors.heading);

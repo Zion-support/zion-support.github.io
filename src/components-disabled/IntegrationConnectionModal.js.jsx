@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
+export function IntegrationConnectionModal(_{ isOpen, _onClose, _integration }) {
     const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({
         autoCreateContacts: true,

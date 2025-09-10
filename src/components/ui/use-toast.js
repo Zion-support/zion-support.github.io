@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 export const toast = (message) => {
-    console.log('Toast:', message);
+    // // console.log('Toast:', message);
     // Simple toast implementation
 =======
 import { useState } from 'react';

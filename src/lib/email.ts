@@ -8,15 +8,12 @@ interface EmailOptions {
     orderId?: string;
     downloadLinks?: string[]; // Assuming download links are an array of strings
     supportContact?: string;
-    [key: string]: any; // Allow other dynamic data
+    [key: string]: unknown; // Allow other dynamic data
   };
 }
 
-export async function sendEmailWithSendGrid({
-  to,
-  templateId,
-  dynamicTemplateData,
-}: EmailOptions): Promise<void> {
+export async function sendEmailWithSendGrid(_{
+  to, _templateId, _dynamicTemplateData, }: EmailOptions): Promise<void> {
   const apiKey = process.env.SENDGRID_API_KEY;
 
   if (!apiKey) {
@@ -37,7 +34,7 @@ export async function sendEmailWithSendGrid({
   try {
     await sgMail.send(msg);
     logInfo(`Email sent to ${to} using template ${templateId}`);
-  } catch (error: any) {
+  } catch (error: unknown) {
     logErrorToProduction('Error sending email with SendGrid:', { data: error.toString() });
     // Optionally, rethrow the error or handle it as needed by your application's error handling strategy
     // For example, if the error response from SendGrid is available:
@@ -48,10 +45,7 @@ export async function sendEmailWithSendGrid({
   }
 }
 
-export async function sendResetEmail(
-  email: string,
-  token: string,
-): Promise<void> {
+export async function sendResetEmail(email: string, token: string, ): Promise<void> {
   const apiKey = process.env.SENDGRID_API_KEY;
   if (!apiKey) {
     logErrorToProduction('SENDGRID_API_KEY is not set. Reset email not sent.');
@@ -75,7 +69,7 @@ export async function sendResetEmail(
   try {
     await sgMail.send(msg);
     logInfo(`Password reset email sent to ${email}`);
-  } catch (error: any) {
+  } catch (error: unknown) {
     logErrorToProduction('Error sending password reset email:', { data: error.toString() });
     if (error.response) {
       logErrorToProduction('SendGrid error response:', { data: error.response.body });
@@ -111,7 +105,7 @@ export async function sendFeedbackEmail(data: {
   try {
     await sgMail.send(msg);
     logInfo(`Feedback email sent to ${to}`);
-  } catch (error: any) {
+  } catch (error: unknown) {
     logErrorToProduction('Error sending feedback email:', { data: error.toString() });
     if (error.response) {
       logErrorToProduction('SendGrid error response:', { data: error.response.body });

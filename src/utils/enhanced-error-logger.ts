@@ -11,7 +11,7 @@ interface ErrorContext {
   environment: string;
   errorBoundary?: boolean;
   componentStack?: string;
-  errorInfo?: any;
+  errorInfo?: unknown;
   performanceMetrics?: {
     memory?: number;
     timing?: number;
@@ -153,7 +153,7 @@ class EnhancedErrorLogger {
     filename?: string;
     lineno?: number;
     colno?: number;
-    context?: any;
+    context?: unknown;
   }): void {
     if (!this.isEnabled) return;
 
@@ -194,9 +194,9 @@ class EnhancedErrorLogger {
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
         console.group(`🚨 Enhanced Error [${enhancedError.severity}]`);
-        console.error(enhancedError.message);
-        console.log('Context:', enhancedError.context);
-        console.log('Breadcrumbs:', this.breadcrumbs.slice(-5));
+        // // console.error(enhancedError.message);
+        // // console.log('Context:', enhancedError.context);
+        // // console.log('Breadcrumbs:', this.breadcrumbs.slice(-5));
         console.groupEnd();
       }
 
@@ -206,11 +206,11 @@ class EnhancedErrorLogger {
       }
 
     } catch (loggerError) {
-      console.error('Error in enhanced error logger:', loggerError);
+      // // console.error('Error in enhanced error logger:', loggerError);
     }
   }
 
-  private shouldIgnoreError(error: Error, errorData: any): boolean {
+  private shouldIgnoreError(error: Error, errorData: unknown): boolean {
     const ignoredMessages = [
       'ResizeObserver loop limit exceeded',
       'Script error',
@@ -225,7 +225,7 @@ class EnhancedErrorLogger {
     return ignoredMessages.some(ignored => message.includes(ignored));
   }
 
-  private calculateSeverity(error: Error, errorData: any): EnhancedError['severity'] {
+  private calculateSeverity(error: Error, errorData: unknown): EnhancedError['severity'] {
     // Critical errors
     if (error.name === 'TypeError' && error.message.includes('Cannot read properties')) {
       return 'critical';
@@ -257,7 +257,7 @@ class EnhancedErrorLogger {
     return `${source}-${name}-${message}-${stackLine}`.replace(/[^\w-]/g, '').substring(0, 100);
   }
 
-  private gatherContext(errorData: any): ErrorContext {
+  private gatherContext(errorData: unknown): ErrorContext {
     const context: ErrorContext = {
       timestamp: Date.now(),
       environment: process.env.NODE_ENV || 'unknown',
@@ -338,7 +338,7 @@ class EnhancedErrorLogger {
         })
       });
     } catch (reportError) {
-      console.error('Failed to report error:', reportError);
+      // // console.error('Failed to report error:', reportError);
     }
   }
 
@@ -374,7 +374,7 @@ class EnhancedErrorLogger {
   }
 
   // React Error Boundary integration
-  public captureReactError(error: Error, errorInfo: any, componentStack?: string): void {
+  public captureReactError(error: Error, errorInfo: unknown, componentStack?: string): void {
     this.captureError({
       message: `React Error: ${error.message}`,
       error,

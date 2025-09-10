@@ -234,7 +234,7 @@ jest.mock('date-fns', () => ({
 
 // Setup test utilities
 export const testUtils = {
-  mockFetch: (response: any, status = 200) => {
+  mockFetch: (response: unknown, status = 200) => {
     ;(global.fetch as any).mockResolvedValueOnce({
       ok: status >= 200 && status < 300,
       status,

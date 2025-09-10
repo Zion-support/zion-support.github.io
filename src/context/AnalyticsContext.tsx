@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
   isEnabled: boolean;
   setEnabled: (enabled: boolean) => void;
 }
@@ -25,23 +25,23 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const [isEnabled, setIsEnabled] = useState(true);
 
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     
     // In a real implementation, you would send this to your analytics service
-    console.log('Analytics Event:', { eventName, properties, timestamp: new Date().toISOString() });
+    // // console.log('Analytics Event:', { eventName, properties, timestamp: new Date().toISOString() });
   };
 
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     
-    console.log('Page View:', { pageName, properties, timestamp: new Date().toISOString() });
+    // // console.log('Page View:', { pageName, properties, timestamp: new Date().toISOString() });
   };
 
-  const setUser = (userId: string, properties?: Record<string, any>) => {
+  const setUser = (userId: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     
-    console.log('User Set:', { userId, properties, timestamp: new Date().toISOString() });
+    // // console.log('User Set:', { userId, properties, timestamp: new Date().toISOString() });
   };
 
   const setEnabled = (enabled: boolean) => {

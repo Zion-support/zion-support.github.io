@@ -1,5 +1,5 @@
 export const getCartKey = (userId) => `cart_${userId || 'guest'}`;
-export function mergeCartItems(base, extra) {
+export function mergeCartItems(_base, _extra) {
     const map = new Map();
     base.forEach(i => map.set(i.id, { ...i }));
     extra.forEach(i => {

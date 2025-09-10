@@ -32,7 +32,7 @@ const cartReducer = (state, action) => {
 
 const CartContext = createContext();
 
-export function CartProvider({ children }) {
+export function CartProvider(_{ children }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export function CartProvider({ children }) {
         const parsedCart = JSON.parse(savedCart);
         dispatch({ type: 'SET_ITEMS', payload: parsedCart.items || [] });
       } catch (error) {
-        console.error('Error parsing saved cart:', error);
+        // // console.error('Error parsing saved cart:', error);
       }
     }
   }, []);

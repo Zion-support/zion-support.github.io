@@ -11,7 +11,7 @@ const mockCodeSnippets = [
 interface UseApiOptions<T> {
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  body?: any;
+  body?: unknown;
   headers?: Record<string, string>;
 }
 
@@ -254,7 +254,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue;
     }
   });
@@ -265,7 +265,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
+      // // console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
   };
 
@@ -321,7 +321,7 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
                 id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives: [

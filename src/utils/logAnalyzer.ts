@@ -452,11 +452,7 @@ class LogAnalyzer {
 const logAnalyzer = new LogAnalyzer();
 
 // Enhanced error logging function that includes analysis
-export function logErrorWithAnalysis(
-  message: string, 
-  error?: Error | unknown, 
-  context?: Record<string, unknown>
-): ErrorAnalysis | null {
+export function logErrorWithAnalysis(message: string, error?: Error | unknown, context?: Record<string, unknown>): ErrorAnalysis | null {
   // Log the error normally
   logErrorToProduction(message, error, context);
 

@@ -32,23 +32,23 @@ const mockSentry = {
   finishTransaction: noop,
   
   // Error boundary and React integration
-  ErrorBoundary: ({ children }: any) => children,
-  withErrorBoundary: (component: any) => component,
+  ErrorBoundary: ({ children }: unknown) => children,
+  withErrorBoundary: (component: unknown) => component,
   showReportDialog: noop,
   
   // Browser-specific methods
   onLoad: noop,
-  wrap: <T extends (...args: any[]) => any>(fn: T) => fn,
+  wrap: <T extends (...args: unknown[]) => any>(fn: T) => fn,
   
   // Server-specific methods (Node.js)
   Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: () => void) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: () => void) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: () => void) => next(),
+    requestHandler: () => (_req: unknown, _res: unknown, next: () => void) => next(),
+    errorHandler: () => (_err: unknown, _req: unknown, _res: unknown, next: () => void) => next(),
+    tracingHandler: () => (_req: unknown, _res: unknown, next: () => void) => next(),
   },
   
   // Next.js specific
-  withSentryConfig: (config: any) => config,
+  withSentryConfig: (config: unknown) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}

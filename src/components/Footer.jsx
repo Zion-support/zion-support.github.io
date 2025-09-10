@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from "./FooterNewsletter.jsx";
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -116,5 +116,4 @@ export function Footer() {
   );
 }
 
-// Also export as default for compatibility
 export default Footer;

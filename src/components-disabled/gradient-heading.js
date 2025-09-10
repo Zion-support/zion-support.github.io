@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-export function GradientHeading({ children, className = '', size = '4xl', gradient = 'zion', customColors }) {
+export function GradientHeading(_{ children, _className = '', _size = '4xl', _gradient = 'zion', _customColors }) {
     const sizeClasses = {
         sm: 'text-sm',
         md: 'text-base',

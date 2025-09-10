@@ -31,7 +31,7 @@ i18n
     } // Ensure this 'detection' object is the last in 'init' options and has no trailing comma
   }) // Closing parenthesis for init()
   .catch(error => {
-    console.error("Error initializing i18next or its detector:", error);
+    // // console.error("Error initializing i18next or its detector:", error);
   }); // Semicolon to end the statement
 
 // For RTL language support

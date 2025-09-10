@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-export function FuturisticBackground({ variant = 'particles', intensity = 'medium', className = '' }) {
+export function FuturisticBackground(_{ variant = 'particles', _intensity = 'medium', _className = '' }) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -195,7 +195,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         }}/>);
 }
 // Neon text component
-export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
+export function NeonText(_{ children, _color = '#00ffff', _glowIntensity = 'medium', _className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
     return (<span className={className} style={{
             color: color,
@@ -210,7 +210,7 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
     </span>);
 }
 // Futuristic card component
-export function FuturisticCard({ children, className = '', glowColor = '#00ffff', intensity = 'medium' }) {
+export function FuturisticCard(_{ children, _className = '', _glowColor = '#00ffff', _intensity = 'medium' }) {
     const glowSize = intensity === 'high' ? '0 0 30px' : intensity === 'medium' ? '0 0 20px' : '0 0 10px';
     return (<div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`} style={{
             boxShadow: `0 0 ${glowSize} ${glowColor}`,

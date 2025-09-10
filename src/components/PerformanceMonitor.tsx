@@ -2196,7 +2196,7 @@ export const PerformanceMonitor: React.FC = () => {
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       } catch (e) {
-        console.warn('CLS measurement not supported');
+        // // console.warn('CLS measurement not supported');
       }
     }
 
@@ -2212,7 +2212,7 @@ export const PerformanceMonitor: React.FC = () => {
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
       } catch (e) {
-        console.warn('FID measurement not supported');
+        // // console.warn('FID measurement not supported');
       }
     }
 
@@ -2232,12 +2232,12 @@ export const PerformanceMonitor: React.FC = () => {
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚀 Performance Metrics');
-      console.log('First Contentful Paint (FCP):', currentMetrics.fcp ? `${currentMetrics.fcp.toFixed(2)}ms` : 'N/A');
-      console.log('Largest Contentful Paint (LCP):', currentMetrics.lcp ? `${currentMetrics.lcp.toFixed(2)}ms` : 'N/A');
-      console.log('First Input Delay (FID):', currentMetrics.fid ? `${currentMetrics.fid.toFixed(2)}ms` : 'N/A');
-      console.log('Cumulative Layout Shift (CLS):', currentMetrics.cls ? currentMetrics.cls.toFixed(4) : 'N/A');
-      console.log('Time to First Byte (TTFB):', currentMetrics.ttfb ? `${currentMetrics.ttfb.toFixed(2)}ms` : 'N/A');
-      console.log('Load Time:', currentMetrics.loadTime ? `${currentMetrics.loadTime.toFixed(2)}ms` : 'N/A');
+      // // console.log('First Contentful Paint (FCP):', currentMetrics.fcp ? `${currentMetrics.fcp.toFixed(2)}ms` : 'N/A');
+      // // console.log('Largest Contentful Paint (LCP):', currentMetrics.lcp ? `${currentMetrics.lcp.toFixed(2)}ms` : 'N/A');
+      // // console.log('First Input Delay (FID):', currentMetrics.fid ? `${currentMetrics.fid.toFixed(2)}ms` : 'N/A');
+      // // console.log('Cumulative Layout Shift (CLS):', currentMetrics.cls ? currentMetrics.cls.toFixed(4) : 'N/A');
+      // // console.log('Time to First Byte (TTFB):', currentMetrics.ttfb ? `${currentMetrics.ttfb.toFixed(2)}ms` : 'N/A');
+      // // console.log('Load Time:', currentMetrics.loadTime ? `${currentMetrics.loadTime.toFixed(2)}ms` : 'N/A');
       console.groupEnd();
     }
 
@@ -2292,13 +2292,13 @@ export const PerformanceMonitor: React.FC = () => {
       
       // Alert for poor performance
       if (fcp && fcp > 3000) {
-        console.warn('⚠️ Poor FCP detected:', fcp);
+        // // console.warn('⚠️ Poor FCP detected:', fcp);
       }
       if (lcp && lcp > 4000) {
-        console.warn('⚠️ Poor LCP detected:', lcp);
+        // // console.warn('⚠️ Poor LCP detected:', lcp);
       }
       if (cls && cls > 0.25) {
-        console.warn('⚠️ Poor CLS detected:', cls);
+        // // console.warn('⚠️ Poor CLS detected:', cls);
       }
     };
 

@@ -28,7 +28,7 @@ export default function CheckoutPage() {
           { id: 1, name: 'Sample Product', price: 25, quantity: 1 }
         ]);
       } catch (error) {
-        console.error('Error loading cart items:', error);
+        // // console.error('Error loading cart items:', error);
       }
     };
 
@@ -58,7 +58,7 @@ export default function CheckoutPage() {
       // Redirect to success page
       navigate('/order-success');
     } catch (error) {
-      console.error('Payment failed:', error);
+      // // console.error('Payment failed:', error);
       alert('Payment failed. Please try again.');
     } finally {
       setLoading(false);

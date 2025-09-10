@@ -97,7 +97,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             <FormField
               control={form.control}
               name="title"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: unknown }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
@@ -116,7 +116,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             <FormField
               control={form.control}
               name="keyFeatures"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: unknown }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
                   <FormControl>
@@ -135,7 +135,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             <FormField
               control={form.control}
               name="targetAudience"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: unknown }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
                   <FormControl>

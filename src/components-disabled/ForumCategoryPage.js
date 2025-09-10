@@ -59,7 +59,7 @@ const iconMap = {
     "FileText": FileText,
     "Megaphone": Megaphone
 };
-function CategoryContent({ categoryId, category, IconComponent, user, }) {
+function CategoryContent(_{ categoryId, _category, _IconComponent, _user, _}) {
     const [searchQuery, setSearchQuery] = useState("");
     const { posts = [], loading, } = usePostsByCategory(categoryId);
     const errorMessage = null;

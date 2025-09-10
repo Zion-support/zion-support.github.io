@@ -13,16 +13,16 @@ export interface NextRouter {
   isReady: boolean;
   isPreview: boolean;
   events: {
-    on: (event: string, handler: (...args: any[]) => void) => void;
-    off: (event: string, handler: (...args: any[]) => void) => void;
-    emit: (event: string, ...args: any[]) => void;
+    on: (event: string, handler: (...args: unknown[]) => void) => void;
+    off: (event: string, handler: (...args: unknown[]) => void) => void;
+    emit: (event: string, ...args: unknown[]) => void;
   };
-  push: (url: string, as?: string, options?: any) => Promise<boolean>;
-  replace: (url: string, as?: string, options?: any) => Promise<boolean>;
+  push: (url: string, as?: string, options?: unknown) => Promise<boolean>;
+  replace: (url: string, as?: string, options?: unknown) => Promise<boolean>;
   reload: () => void;
   back: () => void;
-  prefetch: (url: string, as?: string, options?: any) => Promise<void>;
-  beforePopState: (cb: (state: any) => boolean) => void;
+  prefetch: (url: string, as?: string, options?: unknown) => Promise<void>;
+  beforePopState: (cb: (state: unknown) => boolean) => void;
   fallback: boolean;
   isFallback: boolean;
   isSsr: boolean;

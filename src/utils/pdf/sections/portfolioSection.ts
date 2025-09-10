@@ -3,13 +3,7 @@ import { jsPDF } from 'jspdf';
 import { PortfolioProject } from '@/types/resume';
 import { PdfThemeColors } from '@/utils/pdf/themeConfig';
 
-export function addPortfolioSection(
-  doc: jsPDF,
-  projects: PortfolioProject[],
-  colors: PdfThemeColors,
-  startY: number,
-  maxProjects: number = 2
-): number {
+export function addPortfolioSection(doc: jsPDF, projects: PortfolioProject[], colors: PdfThemeColors, startY: number, maxProjects: number = 2): number {
   if (projects.length === 0) return startY;
   
   let yPos = startY;

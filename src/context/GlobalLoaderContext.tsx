@@ -12,8 +12,8 @@ import axios from 'axios';
 export interface GlobalLoaderContextType {
   loading: boolean;
   setLoading: (value: boolean) => void;
-  error: any;
-  setError: (error: any) => void;
+  error: unknown;
+  setError: (error: unknown) => void;
   showLoader: () => void;
   hideLoader: () => void;
 }
@@ -33,7 +33,7 @@ export const useGlobalLoader = () => useContext(GlobalLoaderContext);
 
 export function AppLoaderProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
+  const [error, setError] = useState<unknown>(null);
   const router = useRouter(); // Changed from useLocation
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -41,15 +41,15 @@ export function AppLoaderProvider({ children }: { children: ReactNode }) {
   const hideLoader = () => setLoading(false);
 
   useEffect(() => {
-    const onRequest = (config: any) => {
+    const onRequest = (config: unknown) => {
       showLoader();
       return config;
     };
-    const onResponse = (response: any) => {
+    const onResponse = (response: unknown) => {
       hideLoader();
       return response;
     };
-    const onError = (err: any) => {
+    const onError = (err: unknown) => {
       hideLoader();
       setError(err);
       return Promise.reject(err);

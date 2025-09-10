@@ -72,7 +72,7 @@ export function ChatBotPanel() {
 
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      // // console.error("Error in AI chat:", error);
       toast({
         title: "Communication Error",
         description: "We're having trouble connecting to our support service.",

@@ -25,7 +25,7 @@ import { useRouter } from "next/router";
 import { useEnqueueSnackbar } from "@/context/SnackbarContext";
 import { captureException } from "@sentry/nextjs";
 
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {
+export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
   const [imageError, setImageError] = useState(false);
@@ -175,7 +175,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
 export { ProductCard };
 =======
 
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {
+export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) {
   return (
     <Card className="p-4">
       <div className="space-y-2">

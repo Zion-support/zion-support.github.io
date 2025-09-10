@@ -5,7 +5,7 @@ const apiClient = axios.create({
     baseURL: '/api',
     withCredentials: true,
 });
-export function setAuthToken(token) {
+export function setAuthToken(_token) {
     apiClient.defaults.headers.common.Authorization = `Bearer ${token}`;
 }
 apiClient.interceptors.response.use((response) => response, async (error) => {
@@ -14,7 +14,7 @@ apiClient.interceptors.response.use((response) => response, async (error) => {
             await supabase.auth.signOut({ scope: 'global' });
         }
         catch (e) {
-            console.error('Failed to logout after 401', e);
+            // // console.error('Failed to logout after 401', e);
         }
         if (typeof window !== 'undefined') {
             window.location.assign('/login');

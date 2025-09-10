@@ -62,7 +62,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
   }
 
   const maxRetries = 3;
-  let lastError: any;
+  let lastError: unknown;
 
   for (let i = 0; i < maxRetries; i++) {
     try {

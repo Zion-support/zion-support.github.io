@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
-export function ProjectCard({ project, onEdit, onDelete }) {
+export function ProjectCard(_{ project, _onEdit, _onDelete }) {
     const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
     const handleDelete = () => {
         if (project.id) {

@@ -1,10 +1,7 @@
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 import { supabase, isSupabaseConfigured } from '@/integrations/supabase/client';
 
-async function logEventToSupabase(
-  eventName: string,
-  eventParams?: Record<string, any>
-) {
+async function logEventToSupabase(eventName: string, eventParams?: Record<string, _unknown>) {
   if (!isSupabaseConfigured) return;
 
   try {
@@ -39,7 +36,7 @@ export const initGA = () => {
 };
 export const fireEvent = async (
   eventName: string,
-  eventParams?: Record<string, any>
+  eventParams?: Record<string, unknown>
 ) => {
   if (!window.gtag) {
     logErrorToProduction('gtag is not defined. Make sure GA4 is initialized.', new Error('gtag not defined'), { eventName, context: 'GoogleAnalyticsEvent' });

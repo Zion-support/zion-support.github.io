@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp } from "lucide-react";
-export function MainNavigation({ className }) {
+export function MainNavigation(_{ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>

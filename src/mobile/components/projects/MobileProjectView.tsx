@@ -42,7 +42,7 @@ interface ProjectViewProps {
   milestones: Milestone[];
 }
 
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+export function MobileProjectView(_{ project, milestones }: ProjectViewProps) {
   const router = useRouter();
   
   const startProjectCall = () => {

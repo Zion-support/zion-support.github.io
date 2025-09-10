@@ -6,10 +6,8 @@ interface LoadingProps {
   fullScreen?: boolean;
 }
 
-export default function Loading({ 
-  size = 'md', 
-  text = 'Loading...', 
-  fullScreen = false 
+export default function Loading(_{ 
+  size = 'md', _text = 'Loading...', fullScreen = false 
 }: LoadingProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',

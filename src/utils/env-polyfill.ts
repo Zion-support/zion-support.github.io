@@ -49,7 +49,7 @@ export const safeEnv = {
 } as const;
 
 // Safe environment getter function
-export function getEnv(key: string, defaultValue = ''): string {
+export function getEnv(key: string, _defaultValue = ''): string {
   if (typeof process !== 'undefined' && process.env && typeof process.env[key] === 'string') {
     return process.env[key];
   }
@@ -74,6 +74,6 @@ export const processEnv = typeof process !== 'undefined' ? process.env : {
   NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
 };
 
-console.log('✅ Environment polyfill loaded successfully');
+// // console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;

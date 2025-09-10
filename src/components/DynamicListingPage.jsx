@@ -10,7 +10,7 @@ import { Slider } from "@/components/ui/slider";
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
-export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {
+export function DynamicListingPage(_{ title, _description, _categorySlug, listings: allListings, _categoryFilters, initialPrice = { min: 0, max: 10000 }, _detailBasePath = '/marketplace/listing' }) {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("all");
@@ -157,7 +157,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                       size="sm" 
                       onClick={() => {
 <<<<<<< HEAD
-                        console.log("Rating selected:", rating);
+                        // // console.log("Rating selected:", rating);
                         setSelectedRating(rating);
                       }} 
                       aria-pressed={selectedRating === rating} 
@@ -176,7 +176,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     </Button>
                   ))}
 =======
-                console.log("Rating selected:", rating);
+                // // console.log("Rating selected:", rating);
                 setSelectedRating(rating);
               }}
               aria-pressed={selectedRating === rating} 
@@ -199,7 +199,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
               </div>
               
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={() => {
-            console.log("Resetting filters");
+            // // console.log("Resetting filters");
             setSearchQuery("");
             setSelectedCategory("all");
             setCurrentPriceFilter([0, priceRange.max]);
@@ -233,7 +233,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     placeholder="Search listings..." 
                     value={searchQuery} 
                     onChange={(e) => {
-                      console.log("Search query:", e.target.value);
+                      // // console.log("Search query:", e.target.value);
                       setSearchQuery(e.target.value);
                     }} 
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white" 

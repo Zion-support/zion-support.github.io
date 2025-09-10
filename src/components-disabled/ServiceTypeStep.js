@@ -14,7 +14,7 @@ const listingSchema = z.object({
     image: z.string().optional(),
 });
 const listingsSchema = z.array(listingSchema);
-export function ServiceTypeStep({ formData, updateFormData }) {
+export function ServiceTypeStep(_{ formData, _updateFormData }) {
     const [searchQuery, setSearchQuery] = useState("");
     const debouncedQuery = useDebounce(searchQuery, 300);
     const [listings, setListings] = useState([]);
@@ -48,7 +48,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                 catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
-                            console.error('Failed to load services:', err);
+                            // // console.error('Failed to load services:', err);
                         }
                         else {
                             captureException(err);

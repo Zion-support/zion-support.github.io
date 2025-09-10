@@ -24,11 +24,8 @@ export interface MessageTalentModalProps {
   jobTitle?: string;
 }
 
-export function MessageTalentModal({
-  talent,
-  isOpen,
-  onClose,
-  jobTitle
+export function MessageTalentModal(_{
+  talent, _isOpen, _onClose, jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
   const router = useRouter();

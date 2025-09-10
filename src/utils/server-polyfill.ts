@@ -40,7 +40,7 @@ if (typeof window === 'undefined') {
     removeEventListener: () => {},
     dispatchEvent: () => {},
     requestAnimationFrame: (callback: () => void) => setTimeout(callback, 16),
-    cancelAnimationFrame: (id: any) => clearTimeout(id),
+    cancelAnimationFrame: (id: unknown) => clearTimeout(id),
     localStorage: {
       getItem: () => null,
       setItem: () => {},
@@ -66,7 +66,7 @@ if (typeof window === 'undefined') {
     crypto: global.crypto || {
       randomUUID: () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
       subtle: {},
-      getRandomValues: (arr: any) => {
+      getRandomValues: (arr: unknown) => {
         for (let i = 0; i < arr.length; i++) {
           arr[i] = Math.floor(Math.random() * 256);
         }
@@ -146,7 +146,7 @@ if (typeof performance === 'undefined') {
 // Export for explicit imports
 export const initServerPolyfills = () => {
   // The polyfills are already applied when this module is imported
-  console.log('🔧 Server polyfills initialized');
+  // // console.log('🔧 Server polyfills initialized');
 };
 
 export default initServerPolyfills;

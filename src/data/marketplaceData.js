@@ -218,7 +218,7 @@ export function generateSearchSuggestions() {
   ];
 }
 
-export function generateFilterOptions(listings) {
+export function generateFilterOptions(_listings) {
   const productTypes = [...new Set(listings.map(listing => listing.category))];
   const locations = [...new Set(listings.map(listing => listing.location).filter(Boolean))];
   const availability = [...new Set(listings.map(listing => listing.availability).filter(Boolean))];

@@ -236,7 +236,7 @@ interface PerformanceReport {
     styles: number;
     images: number;
   };
-  memory: any;
+  memory: unknown;
   userAgent: string;
 }
 

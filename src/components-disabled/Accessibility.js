@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
 import { Button } from './button';
-export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
+export function AccessibilityPanel(_{ enabled = true, _className = "", _onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,

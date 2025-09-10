@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export function EnhancedCard({ children, className, variant = 'default', hover = true, onClick, as: Component = 'div', href }) {
+export function EnhancedCard(_{ children, _className, _variant = 'default', _hover = true, _onClick, as: Component = 'div', _href }) {
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {
         default: 'bg-zion-blue-dark border border-zion-blue-light',
@@ -21,19 +21,19 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
     </Component>);
 }
 // Enhanced Card Header component
-export function EnhancedCardHeader({ children, className }) {
+export function EnhancedCardHeader(_{ children, _className }) {
     return (<div className={cn('p-6 pb-0', className)}>
       {children}
     </div>);
 }
 // Enhanced Card Content component
-export function EnhancedCardContent({ children, className }) {
+export function EnhancedCardContent(_{ children, _className }) {
     return (<div className={cn('p-6', className)}>
       {children}
     </div>);
 }
 // Enhanced Card Footer component
-export function EnhancedCardFooter({ children, className }) {
+export function EnhancedCardFooter(_{ children, _className }) {
     return (<div className={cn('p-6 pt-0', className)}>
       {children}
     </div>);

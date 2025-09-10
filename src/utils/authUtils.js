@@ -5,6 +5,6 @@ export const cleanupAuthState = () => {
     localStorage.removeItem('auth');
     sessionStorage.removeItem('auth');
   } catch (error) {
-    console.warn('Failed to cleanup auth state:', error);
+    // // console.warn('Failed to cleanup auth state:', error);
   }
 };

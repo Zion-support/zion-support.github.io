@@ -13,7 +13,7 @@ class ComponentErrorBoundary extends Component<
   { children: React.ReactNode; fallback?: React.ComponentType },
   { hasError: boolean }
 > {
-  constructor(props: any) {
+  constructor(props: unknown) {
     super(props);
     this.state = { hasError: false };
   }
@@ -23,7 +23,7 @@ class ComponentErrorBoundary extends Component<
   }
 
   componentDidCatch(error: Error) {
-    console.error('Component loading error:', error);
+    // // console.error('Component loading error:', error);
   }
 
   render() {
@@ -74,14 +74,10 @@ const DefaultFallback: React.FC = () => {
 };
 
 // Safe dynamic component loader
-export function createSafeComponent(
-  importPath: string,
-  fallbackComponent?: React.ComponentType,
-  options?: {
+export function createSafeComponent(importPath: string, fallbackComponent?: React.ComponentType, options?: {
     loading?: React.ComponentType;
     ssr?: boolean;
-  }
-) {
+  }) {
   const SafeComponent = dynamic(
     () => {
       return import(importPath)
@@ -93,11 +89,11 @@ export function createSafeComponent(
           }
           
           // Wrap component to ensure it has proper structure
-          const WrappedComponent: React.FC<any> = (props) => {
+          const WrappedComponent: React.FC<unknown> = (props) => {
             try {
               return React.createElement(Component, props);
             } catch (error) {
-              console.error(`Error rendering component from ${importPath}:`, error);
+              // // console.error(`Error rendering component from ${importPath}:`, error);
               const Fallback = fallbackComponent || DefaultFallback;
               return React.createElement(Fallback);
             }
@@ -105,11 +101,11 @@ export function createSafeComponent(
           
           // Ensure getInitialProps is safe
           if ((Component as any).getInitialProps) {
-            (WrappedComponent as any).getInitialProps = async (ctx: any) => {
+            (WrappedComponent as any).getInitialProps = async (ctx: unknown) => {
               try {
                 return await (Component as any).getInitialProps(ctx);
               } catch (error) {
-                console.error(`Error in getInitialProps for ${importPath}:`, error);
+                // // console.error(`Error in getInitialProps for ${importPath}:`, error);
                 return {};
               }
             };
@@ -118,7 +114,7 @@ export function createSafeComponent(
           return { default: WrappedComponent };
         })
         .catch(error => {
-          console.error(`Failed to load component from ${importPath}:`, error);
+          // // console.error(`Failed to load component from ${importPath}:`, error);
           const Fallback = fallbackComponent || DefaultFallback;
           return { default: Fallback };
         });
@@ -136,7 +132,7 @@ export function createSafeComponent(
   );
 
   // Return component wrapped in error boundary
-  const BoundedComponent: React.FC<any> = (props) => {
+  const BoundedComponent: React.FC<unknown> = (props) => {
     return React.createElement(
       ComponentErrorBoundary,
       { fallback: fallbackComponent },

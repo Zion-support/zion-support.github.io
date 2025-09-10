@@ -4,12 +4,7 @@ import { Education } from '@/types/resume';
 import { PdfThemeColors } from '@/utils/pdf/themeConfig';
 import { formatDate } from '@/utils/pdf/formatters';
 
-export function addEducationSection(
-  doc: jsPDF,
-  education: Education[],
-  colors: PdfThemeColors,
-  startY: number
-): number {
+export function addEducationSection(doc: jsPDF, education: Education[], colors: PdfThemeColors, startY: number): number {
   if (education.length === 0) return startY;
   
   let yPos = startY;

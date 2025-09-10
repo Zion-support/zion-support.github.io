@@ -45,7 +45,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({ errorInfo });
 
     // Log error to console
-    console.error('Error caught by boundary:', error, errorInfo);
+    // // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -81,7 +81,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      console.error('Failed to report error:', reportError);
+      // // console.error('Failed to report error:', reportError);
     }
   }
 
@@ -119,7 +119,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         this.setState({ reportSent: false });
       }, 3000);
     } catch (error) {
-      console.error('Failed to report error:', error);
+      // // console.error('Failed to report error:', error);
     } finally {
       this.setState({ isReporting: false });
     }
@@ -141,7 +141,7 @@ Timestamp: ${new Date().toISOString()}
         await navigator.clipboard.writeText(errorText);
         // You could show a toast notification here
       } catch (err) {
-        console.error('Failed to copy error details:', err);
+        // // console.error('Failed to copy error details:', err);
       }
     }
   };

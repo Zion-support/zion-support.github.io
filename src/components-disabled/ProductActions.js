@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'react-toastify';
 import { Button } from '@/components/ui/button';
-export function ProductActions({ onAddToCart }) {
+export function ProductActions(_{ onAddToCart }) {
     const [loading, setLoading] = useState(false);
     const [label, setLabel] = useState('Add to Cart');
     const addToCart = async () => {

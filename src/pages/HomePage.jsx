@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Globe } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { AnimatedButton } from '../components/ui/AnimatedButton';

@@ -25,7 +25,7 @@ export default function Profile() {
           avatar: null
         });
       } catch (error) {
-        console.error('Error loading user:', error);
+        // // console.error('Error loading user:', error);
       } finally {
         setIsLoading(false);
       }

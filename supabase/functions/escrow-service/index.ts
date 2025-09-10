@@ -96,7 +96,7 @@ serve(async (req) => {
         );
     }
   } catch (err) {
-    console.error("escrow-service error", err);
+    // console.error("escrow-service error", err);
     return new Response(
       JSON.stringify({ error: err.message }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }

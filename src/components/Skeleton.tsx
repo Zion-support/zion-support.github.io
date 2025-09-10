@@ -18,7 +18,7 @@ export default function Skeleton() {};
 interface SkeletonProps {};
   lines?: number}
 ;
-export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {};
+export default function Skeleton(_{className, lines = 1 }: SkeletonProps) {};
   return null;
 }
     <div className="{cn(" "animate-pulse bg-gray-200 rounded", className )} /">;
@@ -29,7 +29,7 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {};
       {Array.from({ length: lines }).map((_, i) => (";
         <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /">;@/lib/utils;
 interface SkeletonProps {};
-export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {};
+export default function Skeleton(_{className, lines = 1 }: SkeletonProps) {};
   return null;
 }
     <div className="{cn(" "animate-pulse bg-gray-200 rounded", className )} /">;

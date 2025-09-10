@@ -1,4 +1,4 @@
-/* global console, URL, window, localStorage, document */
+/* global URL, window, localStorage, document */
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
 /**
@@ -15,8 +15,8 @@ export function formatDate(date) {
         }
         return format(date, 'MMM d, yyyy');
     }
-    catch (e) {
-        console.error('Error formatting date:', e);
+    catch {
+        // console.error('Error formatting date:', e);
         return '-';
     }
 }
@@ -63,7 +63,12 @@ export async function trackReferral(userId, email) {
             localStorage.removeItem('referral_code');
         }
     }
+<<<<<<< HEAD
+    catch {
+        // console.error('Error tracking referral:', error);
+=======
     catch (error) {
-        console.error('Error tracking referral:', error);
+        // // console.error('Error tracking referral:', error);
+>>>>>>> 3f6a3fdc80e0ae64b253cde3105d1d919a755900
     }
 }

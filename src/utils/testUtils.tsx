@@ -122,7 +122,7 @@ export const mockProjects = Array.from({ length: 5 }, (_, i) =>
 export const waitForLoadingToFinish = () => 
   new Promise(resolve => setTimeout(resolve, 0))
 
-export const mockFetch = (data: any, status = 200) => {
+export const mockFetch = (data: unknown, status = 200) => {
   global.fetch = vi.fn(() =>
     Promise.resolve({
       ok: status >= 200 && status < 300,

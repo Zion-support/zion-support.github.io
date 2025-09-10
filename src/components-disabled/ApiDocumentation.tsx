@@ -53,7 +53,7 @@ export function ApiDocumentation() {
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 
 headers = {
@@ -113,7 +113,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 
 headers = {
@@ -197,7 +197,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 import json
 
@@ -268,7 +268,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 
 headers = {
@@ -322,7 +322,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 
 headers = {
@@ -416,7 +416,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 import json
 
@@ -483,7 +483,7 @@ print(data)`
 });
 
 const data = await response.json();
-console.log(data);`,
+// // console.log(data);`,
             python: `import requests
 
 headers = {
@@ -542,7 +542,7 @@ print(data)`
               <CodeBlock code={`import crypto from 'crypto';
 
 // Function to verify webhook signature
-function verifyWebhookSignature(payload, signature, secret) {
+function verifyWebhookSignature(_payload, _signature, _secret) {
   const hmac = crypto.createHmac('sha256', secret);
   const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual(
@@ -563,7 +563,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   
   // Process the webhook event
   const event = JSON.parse(payload);
-  console.log('Received valid webhook:', event);
+  // // console.log('Received valid webhook:', event);
   
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received');
@@ -715,7 +715,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     </Card>);
 }
 // Helper component for API endpoint documentation
-function EndpointSection({ method, endpoint, description, note, params = [], codeExamples, responseExamples }) {
+function EndpointSection(_{ method, _endpoint, _description, _note, _params = [], _codeExamples, _responseExamples }) {
     const [activeTab, setActiveTab] = useState("curl");
     return (<div className="border border-zinc-800 rounded-md">
       <div className="p-4">

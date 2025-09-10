@@ -13,9 +13,8 @@ interface GeneratedDescriptionDisplayProps {
   onSave: (editedDescription: string) => void;
 }
 
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
+export function GeneratedDescriptionDisplay(_{ 
+  description, onSave 
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);

@@ -22,7 +22,7 @@ const userTypeMap = {
   null: null as null,
 };
 
-export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
+export function mapProfileToUser(user: SupabaseUser, profile: unknown): UserProfile {
   const userType = profile.user_type ? userTypeMap[profile.user_type as keyof typeof userTypeMap] : null;
   return {
     id: user.id,

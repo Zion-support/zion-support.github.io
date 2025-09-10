@@ -5,7 +5,7 @@ import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useFavorites } from "@/hooks/useFavorites";
-export function MobileBottomNav({ unreadCount = 0 }) {
+export function MobileBottomNav(_{ unreadCount = 0 }) {
     const location = useLocation();
     const { user } = useAuth();
     const isAuthenticated = !!user;
