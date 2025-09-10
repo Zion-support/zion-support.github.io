@@ -2032,19 +2032,19 @@ export default function MicroSaaSPage() {}
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {}
+            {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
-              return ()
-                <motion.div;
-                  key={index};
-className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${`}
-                    product.popular ? 'ring-2 ring-purple-200' : ''
-                  }`};`
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
-                  whileHover={{ y: -5 }};
+              return (
+                <motion.div
+                  key={index}
+className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+                    product.popular ? "ring-2 ring-purple-200" : ''
+                  }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
                 >
                   {product.popular && (})
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -2200,16 +2200,16 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (})
-              <motion.div;
-                key={index};
-                className={`p-8 rounded-xl shadow-lg ${`}
-                  tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
-                }`};`
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.8, delay: index * 0.1 }};
-                viewport={{ once: true }};
+                    {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={index}
+                className={`p-8 rounded-xl shadow-lg ${
+                  tier.popular ? "bg-purple-50 border-2 border-purple-200" : 'bg-white'
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 {tier.popular && (})
                   <div className="text-center mb-4">
