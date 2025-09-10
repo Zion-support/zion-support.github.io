@@ -1,14 +1,44 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+"use client";
 
-export type Theme = "dark" | "light" | "system";
+import * as React from "react";
 
-interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export type Theme = "dark" | "light" | "system"
+
+type ThemeProviderProps = {
+  children: React.ReactNode
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export type ThemeProviderState = {
+  theme: Theme
+  setTheme: (theme: Theme) => void
+}
 
+const initialState: ThemeProviderState = {
+  theme: "dark",
+  setTheme: () => null,
+}
+
+export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
+
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme] = useState<Theme>("dark")
+
+  useEffect(() => {
+    const root = window.document.documentElement
+    root.classList.remove("light", "dark")
+    root.classList.add("dark")
+  }, [])
+
+  const value = {
+    theme,
+    setTheme: () => {},
+  }
+<<<<<<< HEAD
+=======
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: string;
@@ -17,17 +47,17 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ 
   children, 
-  defaultTheme = "dark", 
+  defaultTheme = "system", 
   storageKey = "vite-ui-theme" 
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<string>(() => {
+  const [theme, setTheme] = React.useState<string>(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem(storageKey) || defaultTheme;
     }
     return defaultTheme;
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
 
@@ -45,13 +75,16 @@ export function ThemeProvider({
   const value = React.useMemo(
     () => ({
       theme,
-      setTheme: (newTheme: string) => {
-        localStorage.setItem(storageKey, newTheme);
-        setTheme(newTheme);
+      setTheme: (theme: string) => {
+        localStorage.setItem(storageKey, theme);
+        setTheme(theme);
       },
     }),
     [theme, storageKey]
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <ThemeContext.Provider value={value}>
@@ -60,10 +93,34 @@ export function ThemeProvider({
   );
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export const useTheme = (): ThemeProviderState => {
+  const context = useContext(ThemeProviderContext)
+
+  if (context === undefined)
+    throw new Error("useTheme must be used within a ThemeProvider")
+
+  return context
+}
+<<<<<<< HEAD
+=======
+interface ThemeContextType {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
+
 export const useTheme = () => {
-  const context = useContext(ThemeContext);
+  const context = React.useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

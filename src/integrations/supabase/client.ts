@@ -1,28 +1,77 @@
-// Minimal safe Supabase client shim for build/type-check
-export const isSupabaseConfigured = (): boolean => {
-	return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
-};
+import { createClient } from '@supabase/supabase-js';
+import { supabaseStorageAdapter } from './safeStorageAdapter';
+<<<<<<< HEAD
+=======
+// Mock Supabase client for development
+// In production, this would be the actual Supabase client
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
-// Provide a tiny surface used by code that imports this module
-export const supabase = {
-	from: (_table: string) => ({
-		select: async () => ({ data: null, error: null }),
-		insert: async (_: unknown) => ({ data: null, error: null }),
-		update: async (_: unknown) => ({ data: null, error: null }),
-	}),
-};
-
-export async function checkOnline(): Promise<boolean> {
-	try {
-		return typeof navigator !== 'undefined' && (navigator as any).onLine;
-	} catch {
-		return false;
-	}
+interface SupabaseClient {
+  auth: {
+    signUp: (credentials: any) => Promise<any>;
+    signIn: (credentials: any) => Promise<any>;
+    signOut: () => Promise<any>;
+    user: () => any;
+    onAuthStateChange: (callback: any) => any;
+  };
+  from: (table: string) => any;
+  storage: {
+    from: (bucket: string) => any;
+  };
 }
 
-export async function safeFetch(url: string, options: RequestInit = {}) {
-	if (!(await checkOnline())) {
-		throw new Error('Failed to connect to Supabase');
-	}
-	return fetch(url, options);
-}
+// Mock implementation
+const createMockSupabaseClient = (): SupabaseClient => ({
+  auth: {
+    signUp: async (credentials: any) => {
+      console.log('Mock signUp:', credentials);
+      return { data: { user: { id: '1', email: credentials.email } }, error: null };
+    },
+    signIn: async (credentials: any) => {
+      console.log('Mock signIn:', credentials);
+      return { data: { user: { id: '1', email: credentials.email } }, error: null };
+    },
+    signOut: async () => {
+      console.log('Mock signOut');
+      return { error: null };
+    },
+    user: () => ({ id: '1', email: 'user@example.com' }),
+    onAuthStateChange: (callback: any) => {
+      console.log('Mock onAuthStateChange');
+      return { data: { subscription: { unsubscribe: () => {} } } };
+    },
+  },
+  from: (table: string) => ({
+    select: (columns: string) => ({
+      eq: (column: string, value: any) => ({
+        single: async () => ({ data: null, error: null }),
+        execute: async () => ({ data: [], error: null }),
+      }),
+      execute: async () => ({ data: [], error: null }),
+    }),
+    insert: (data: any) => ({
+      execute: async () => ({ data: null, error: null }),
+    }),
+    update: (data: any) => ({
+      eq: (column: string, value: any) => ({
+        execute: async () => ({ data: null, error: null }),
+      }),
+    }),
+    delete: () => ({
+      eq: (column: string, value: any) => ({
+        execute: async () => ({ data: null, error: null }),
+      }),
+    }),
+  }),
+  storage: {
+    from: (bucket: string) => ({
+      upload: async (path: string, file: File) => ({ data: null, error: null }),
+      download: async (path: string) => ({ data: null, error: null }),
+      remove: async (paths: string[]) => ({ data: null, error: null }),
+    }),
+  },
+});
+
+export const supabase = createMockSupabaseClient();

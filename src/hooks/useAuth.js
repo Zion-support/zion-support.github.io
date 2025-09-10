@@ -1,25 +1,133 @@
 import { useState, useEffect } from 'react';
-export const useAuth = () => {
+export function useAuth() {
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        // Simulate auth check
-        setLoading(false);
+        // Check if user is logged in from localStorage or session
+        const storedUser = localStorage.getItem('zion_user');
+        if (storedUser) {
+            try {
+                setUser(JSON.parse(storedUser));
+            }
+            catch (error) {
+                console.error('Error parsing stored user:', error);
+                localStorage.removeItem('zion_user');
+            }
+        }
+        setIsLoading(false);
     }, []);
     const login = async (email, password) => {
-        // Simulate login
-        setUser({
+        setIsLoading(true);
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const mockUser = {
+                id: '1',
+                name: 'Demo User',
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+            };
+            setUser(mockUser);
+            localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        }
+        catch (error) {
+            console.error('Login failed:', error);
+            throw error;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    };
+    const logout = async () => {
+        setIsLoading(true);
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 500));
+            setUser(null);
+            localStorage.removeItem('zion_user');
+        }
+        catch (error) {
+            console.error('Logout failed:', error);
+            throw error;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    };
+    const signup = async (email, password, name) => {
+        setIsLoading(true);
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const mockUser = {
+                id: '1',
+                name,
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+            };
+            setUser(mockUser);
+            localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        }
+        catch (error) {
+            console.error('Signup failed:', error);
+            throw error;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    };
+    return {
+        user,
+        login,
+        logout,
+        signup,
+        isLoading
+=======
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+        const checkAuth = () => {
+            const storedUser = localStorage.getItem('zion_user');
+            if (storedUser) {
+                try {
+                    setUser(JSON.parse(storedUser));
+                }
+                catch (error) {
+                    console.error('Error parsing stored user:', error);
+                }
+            }
+            setLoading(false);
+        };
+        checkAuth();
+    }, []);
+    const login = async (email, password) => {
+        // Implement actual login logic here
+        const mockUser = {
             id: '1',
             email,
-            name: 'User'
-        });
+            name: 'User',
+            role: 'user'
+        };
+        setUser(mockUser);
+        localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        return mockUser;
     };
     const logout = () => {
         setUser(null);
+        localStorage.removeItem('zion_user');
     };
-    const register = async (email, password) => {
-        // Simulate register
-        return { success: true, email };
+    const register = async (email, password, name) => {
+        // Implement actual registration logic here
+        const mockUser = {
+            id: '1',
+            email,
+            name,
+            role: 'user'
+        };
+        setUser(mockUser);
+        localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        return mockUser;
     };
     return {
         user,
@@ -29,5 +137,6 @@ export const useAuth = () => {
         register,
         isAuthenticated: !!user,
         isAdmin: user?.role === 'admin'
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     };
-};
+}

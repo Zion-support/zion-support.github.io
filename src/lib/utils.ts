@@ -1,19 +1,26 @@
+import clsx, { type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+<<<<<<< HEAD
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+=======
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-export function cn(...inputs: ClassValue[]): string {
+export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
+export function formatCurrency(amount: number, currency = 'USD'): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
     currency,
   }).format(amount);
 }
 
 export function formatPhoneNumber(phoneNumber: string): string {
-  const cleaned = phoneNumber.replace(/\D/g, "");
+  const cleaned = phoneNumber.replace(/\D/g, '');
   const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   if (match) {
     return `(${match[1]}) ${match[2]}-${match[3]}`;
@@ -36,20 +43,18 @@ export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
-  let inThrottle = false;
+  let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => {
-        inThrottle = false;
-      }, limit);
+      setTimeout(() => inThrottle = false, limit);
     }
   };
 }
 
 export function generateId(): string {
-  return Math.random().toString(36).substring(2, 11);
+  return Math.random().toString(36).substr(2, 9);
 }
 
 export function isValidEmail(email: string): boolean {
@@ -59,14 +64,18 @@ export function isValidEmail(email: string): boolean {
 
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
-  return `${text.slice(0, maxLength)}...`;
+  return text.slice(0, maxLength) + '...';
 }
 
-export function capitalizeFirst(text: string): string {
-  if (!text) return text;
-  return text.charAt(0).toUpperCase() + text.slice(1);
+export function capitalizeFirst(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 export function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise(resolve => setTimeout(resolve, ms));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
