@@ -1,4 +1,5 @@
-export default function ResearchPage() {return (;
+export default function ResearchPage() {;
+  return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-20">;
