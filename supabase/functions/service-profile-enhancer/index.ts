@@ -94,7 +94,7 @@ serve(async (req) => {
     const responseData = await response.json();
     
     if (!response.ok) {
-      console.error("OpenAI API error:", responseData);
+      // console.error("OpenAI API error:", responseData);
       return new Response(
         JSON.stringify({
           error: "Failed to generate enhanced profile content",
@@ -116,7 +116,7 @@ serve(async (req) => {
         { headers, status: 200 }
       );
     } catch (error) {
-      console.error("Error parsing AI response:", error);
+      // console.error("Error parsing AI response:", error);
       return new Response(
         JSON.stringify({
           error: "Failed to parse AI response",
@@ -126,7 +126,7 @@ serve(async (req) => {
       );
     }
   } catch (error) {
-    console.error("Function error:", error);
+    // console.error("Function error:", error);
     return new Response(
       JSON.stringify({
         error: "Internal server error",
