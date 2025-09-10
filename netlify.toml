@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
+  command_timeout = "30m"
 
 [build.environment]
 NODE_VERSION = "20"
