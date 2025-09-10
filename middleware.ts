@@ -1,53 +1,39 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Define public routes that don't require authentication;
 const publicRoutes = [
-  "/"
-  "/about"
-  "/contact"
-  "/blog"
-  "/services"
-  "/products"
-  "/talent"
-  "/test"
-  "/auth/login"
-  "/auth/register"
-  "/auth/forgot-password"
-  "/auth/reset-password"
-  "/auth/verify"
+  "/",
+  "/about",
+  "/contact",
+  "/services",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/pricing",
+  "/careers",
+  "/case-studies",
+  "/webinars",
+  "/white-papers",
+  "/guides",
+  "/industries",
+  "/api",
+  "/api-docs"
 ];
 
-export function middleware() {
-
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
-  // Allow public routes;
+  
+  // Allow public routes
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
-
-  // Check for authentication cookie;
-  const authCookie = request.cookies.get("auth-token");
-
-  if() {
-
-    // Redirect to login if not authenticated;
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-  }
-
+  
+  // Add any additional middleware logic here
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    "/((?!api|_next/static|_next/image|favicon.ico).*)"
-  ]
-}
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+  ],
+};
