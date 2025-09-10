@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npm ci && npm run build"
+  command = "npm run build"
   framework = "vite"
 
 # Disable automatic framework detection
@@ -8,7 +8,7 @@
   skip_processing = false
 
 [build.environment]
-  NODE_VERSION = "22.12.0"
+  NODE_VERSION = "20.19.0"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Skip Sharp postinstall to avoid NAPI issues
   SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
@@ -22,6 +22,13 @@
   ESLINT_NO_DEV_ERRORS = "true"
   # Optimize build performance
   VITE_LEGACY_BUILD = "false"
+  # Explicitly skip Next.js plugin (plugin installed via Netlify UI)
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[functions]
+  # Ensure Netlify bundles TS/JS functions with esbuild
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
 
 # SPA routing redirects for Vite build
 [[redirects]]
@@ -84,3 +91,5 @@
     Cross-Origin-Resource-Policy = "same-origin"
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
+
+ 

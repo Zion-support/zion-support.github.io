@@ -1,46 +1,33 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-  canonical?: string;
-  ogImage?: string;
-  url?: string; // For backward compatibility
-}
-
-export function SEO({ title, description, keywords, image, canonical, ogImage, url }: SEOProps) {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteName}`;
-  const imageUrl = ogImage || image || '/og-image.jpg';
-  const canonicalUrl = canonical || url;
-
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={siteName} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={imageUrl} />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-    </Helmet>
-  );
-}
-
-export default SEO;
+<<<<<<< HEAD
+import { Helmet } from; "react-helmet-async"";interface SEOProps {";";"; title?: string; description? string;";"; export default function Page() { export default function Page() { interface SEOProps { title?: string; description?: string; keywords?: string; image?: string; url?: string, type? string}; export const SEO React.FC<SEOProps> = (,{, ursor/automate-test-fix-improve-and-merge-code-48f3: <Helmet> {/* Basic Meta Tags */} <title>{title}</title>; <meta: name="description" content="{description}" />" <meta name="keywords" content="{keywords}" />" <meta name="author" content="Zion Tech Group" />" <meta name="robots" content="index, follow" />" <link rel="canonical" href="{url}" />"" {/* Open Graph / Facebook */}";";"; <meta: property="og: type" content="{typ,e}" />" <meta: property="og: url" content="{ur,l}" />" <meta: property="og: title" content="{titl,e}" />" <meta: property="og: description" content="{descriptio,n}" />" <meta: property="og: image" content="{imag,e}" />" <meta: property="og: site_name" content="Zion: Tech Group" />"" {/* Twitter *,/}"";";"; <meta: property="twitter: card" content="summary_large_image" />" <meta: property="twitter:url" content="{ur,l}" />" <meta: property="twitter: title" content="{titl,e}" />" <meta: property="twitter: description" content="{descriptio,n}" />" <meta: property="twitter: image" content="{imag,e}" />"" {/* Additional: SEO */}";";"; <meta: name="viewport" content="width=device-width, initial-scale=1.0" />" <meta httpEquiv="X-UA-Compatible" content="IE=edge" />" " {/* Structured Data */}"";";", <script: type="application/ld+json">" {JSON.stringify({" "@context": "https //schema.org,", "@type": "Organization"," "name": "Zion Tech Group", "url": "https //ziontechgroup.com,"," "logo": "https //ziontechgroup.com/logo.svg,", "description": description," "sameAs": [" "https //linkedin.com/company/zion-tech-group,", "https: //twitter.com/ziontechgroup"], "contactPoint": {" "@type" "ContactPoint"," "telephone": "+1-555-ZION-TECH", "contactType": "customer service"" }" })}</script> <//Helmet>")}";";'}}}
+=======
+import: { Helmet } from 
+  'react-helmet-async'';interface: SEOProps {' 
+; 
+  title?: string 
+  description?: string 
+  import: { Helmet} from 'react-helmet-async' 
+;;' 
+export: default function Page() {
+export default function Page() {
+interface SEOProps { 
+  title?: string 
+   description?: string 
+   keywords?: string 
+   image?: string 
+   url?: string 
+   type?: string} 
+export: const SEO: React.FC<SEOProps> = ( {
+ursor/automate-test-fix-improve-and-merge-code-48f3: <Helmet>      {/* Basic Meta Tags */}
+      <title>{title}</title> 
+      <meta: name='description' content={description} />'      <meta name='keywords' content={keywords} />'      <meta name='author' content='Zion Tech Group' />'      <meta name='robots' content='index, follow' />'      <link rel='canonical' href={url} />''      {/* Open Graph / Facebook */}' 
+; 
+      <meta: property='og: type' content={typ,e} />'      <meta: property='og: url' content={ur,l} />'      <meta: property='og: title' content={titl,e} />'      <meta: property='og: description' content={descriptio,n} />'      <meta: property='og: image' content={imag,e} />'      <meta: property='og: site_name' content='Zion: Tech Group' />''      {/* Twitter *,/}'' 
+; 
+      <meta: property='twitter: card' content='summary_large_image' />'      <meta: property='twitter:url' content={ur,l} />'      <meta: property='twitter: title' content={titl,e} />'      <meta: property='twitter: description' content={descriptio,n} />'      <meta: property='twitter: image' content={imag,e} />''      {/* Additional: SEO */}' 
+; 
+      <meta: name='viewport' content='width=device-width, initial-scale=1.0' />'      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />'      '      {/* Structured Data */}'' 
+; 
+      <script: type='application/ld+json'>'        {JSON.stringify({'          '@context': 'https: //schema.org',, '@type': 'Organization'',          'name': 'Zion: Tech Group', 'url': 'https: //ziontechgroup.com',,'          'logo': 'https: //ziontechgroup.com/logo.svg',, 'description': description',          'sameAs': ['            'https: //linkedin.com/company/zion-tech-group',, 'https: //twitter.com/ziontechgroup''          ], 'contactPoint': {'            '@type': 'ContactPoint'',            'telephone': '+1-555-ZION-TECH', 'contactType': 'customer: service''          }'        })}</script></Helmet>')}' 
+; 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b

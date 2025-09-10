@@ -79,15 +79,15 @@ serve(async (req) => {
     }
 
     // console.log(JSON.stringify({
-      timestamp: new Date().toISOString(),
-      level: 'INFO',
-      type: 'openai_request',
-      serviceName: 'generate-seo-content',
-      model: FINE_TUNED_MODEL_ID,
-      promptSystemMessage: systemMessage,
-      promptUserMessageLength: finalUserPrompt.length,
-      contentType: contentType
-    }));
+    //   timestamp: new Date().toISOString(),
+    //   level: 'INFO',
+    //   type: 'openai_request',
+    //   serviceName: 'generate-seo-content',
+    //   model: FINE_TUNED_MODEL_ID,
+    //   promptSystemMessage: systemMessage,
+    //   promptUserMessageLength: finalUserPrompt.length,
+    //   contentType: contentType
+    // }));
 
     const chatCompletion = await openai.chat.completions.create({
       messages: [
