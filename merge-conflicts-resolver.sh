@@ -1,128 +1,75 @@
 #!/bin/bash
 
-# Merge Conflicts Resolver Script
-# This script will resolve merge conflicts and merge all open PRs into main
+# Merge conflicts resolver script
+# This script will automatically resolve merge conflicts by preferring the main branch version
 
-set -e
+echo "Starting merge conflicts resolution..."
 
-echo "🚀 Starting Merge Conflicts Resolution Process..."
-
-# Function to check if a branch can be merged
-check_merge_status() {
-    local branch=$1
-    echo "Checking merge status for $branch..."
+# Function to resolve conflicts by taking main branch version
+resolve_conflicts() {
+    local branch_name="$1"
+    echo "Attempting to merge branch: $branch_name"
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet refs/remotes/origin/$branch; then
-        echo "❌ Branch $branch does not exist"
-        return 1
-    fi
-    
-    # Check if branch is already merged
-    if git merge-base --is-ancestor origin/$branch origin/main; then
-        echo "✅ Branch $branch is already merged into main"
-        return 0
-    fi
-    
-    echo "⚠️  Branch $branch needs to be merged"
-    return 2
-}
-
-# Function to merge a branch
-merge_branch() {
-    local branch=$1
-    echo "🔄 Attempting to merge $branch..."
-    
-    # Create a temporary branch for merging
-    local temp_branch="temp-merge-$branch"
-    
-    # Checkout main and create temp branch
-    git checkout main
-    git checkout -b $temp_branch
-    
-    # Try to merge
-    if git merge origin/$branch --no-ff -m "Merge $branch into main"; then
-        echo "✅ Successfully merged $branch"
-        
-        # Update main
-        git checkout main
-        git merge $temp_branch --ff-only
-        git push origin main
-        
-        # Clean up temp branch
-        git branch -D $temp_branch
-        
+    # Try to merge the branch
+    if git merge --no-ff "$branch_name" --no-edit 2>/dev/null; then
+        echo "✅ Successfully merged $branch_name"
         return 0
     else
-        echo "❌ Merge conflict detected for $branch"
+        echo "⚠️  Merge conflicts detected in $branch_name, resolving automatically..."
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts for $branch..."
+        # Get list of conflicted files
+        local conflicted_files=$(git diff --name-only --diff-filter=U)
+        
+        if [ -n "$conflicted_files" ]; then
+            echo "Conflicted files: $conflicted_files"
             
-            # Auto-resolve conflicts by preferring main branch
-            git checkout --ours .
-            git add .
+            # For each conflicted file, resolve by taking main branch version
+            for file in $conflicted_files; do
+                echo "Resolving conflicts in $file..."
+                
+                # Check if file exists in main branch
+                if git show HEAD:"$file" >/dev/null 2>&1; then
+                    # Take main branch version
+                    git checkout --ours "$file"
+                    git add "$file"
+                    echo "✅ Resolved $file by taking main branch version"
+                else
+                    # File doesn't exist in main, take the incoming version
+                    git checkout --theirs "$file"
+                    git add "$file"
+                    echo "✅ Resolved $file by taking incoming version"
+                fi
+            done
             
-            # Commit the resolution
-            git commit -m "Resolve merge conflicts for $branch (auto-resolved)"
-            
-            # Update main
-            git checkout main
-            git merge $temp_branch --ff-only
-            git push origin main
-            
-            # Clean up temp branch
-            git branch -D $temp_branch
-            
-            echo "✅ Conflicts resolved and merged $branch"
+            # Complete the merge
+            git commit --no-edit
+            echo "✅ Successfully resolved conflicts and merged $branch_name"
+            return 0
         else
-            echo "❌ Failed to merge $branch"
-            git checkout main
-            git branch -D $temp_branch
+            echo "❌ No conflicted files found, aborting merge"
+            git merge --abort
             return 1
         fi
     fi
 }
 
-# Get list of unmerged branches
-echo "📋 Finding unmerged branches..."
-unmerged_branches=$(git branch -r --no-merged origin/main | grep "cursor/fix-netlify-build-and-merge-to-main" | head -10)
+# List of branches to merge (most recent and important ones)
+branches=(
+    "origin/working-build-fixed"
+    "origin/working-build-fixes"
+    "origin/chore/netlify-build-fix"
+    "origin/chore/netlify-pnpm"
+    "origin/fix/netlify-build-pnpm"
+    "origin/fix/netlify-node-22-16-0"
+)
 
-if [ -z "$unmerged_branches" ]; then
-    echo "✅ No unmerged branches found"
-    exit 0
-fi
-
-echo "Found unmerged branches:"
-echo "$unmerged_branches"
-
-# Process each branch
-for branch in $unmerged_branches; do
-    # Remove 'origin/' prefix
-    branch_name=${branch#origin/}
-    
-    echo ""
-    echo "🔄 Processing branch: $branch_name"
-    
-    # Check merge status
-    check_merge_status $branch_name
-    status=$?
-    
-    if [ $status -eq 0 ]; then
-        echo "⏭️  Skipping $branch_name (already merged)"
-        continue
-    elif [ $status -eq 2 ]; then
-        # Try to merge
-        if merge_branch $branch_name; then
-            echo "✅ Successfully processed $branch_name"
-        else
-            echo "❌ Failed to process $branch_name"
-        fi
+# Merge each branch
+for branch in "${branches[@]}"; do
+    if git show-ref --verify --quiet "refs/remotes/$branch"; then
+        resolve_conflicts "$branch"
+    else
+        echo "⚠️  Branch $branch not found, skipping..."
     fi
 done
 
-echo ""
-echo "🎉 Merge conflicts resolution process completed!"
-echo "📊 Final status:"
-git status
+echo "Merge conflicts resolution completed!"
