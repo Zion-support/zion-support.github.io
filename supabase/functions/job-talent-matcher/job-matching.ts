@@ -14,7 +14,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
  * @param talents Array of talent profiles
  * @returns Array of matches with talent IDs, scores, and reasons
  */
-export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
+export async function processJobMatching(job: JobData, talents: unknown[]): Promise<MatchResult[]> {
   try {
     // Normalize job skills and generate embeddings via OpenAI
     const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills);
@@ -32,7 +32,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     const bestMatches = await findBestMatches(jobDetails, talents);
     return bestMatches;
   } catch (error) {
-    console.error("Error in processJobMatching:", error);
+    // console.error("Error in processJobMatching:", error);
     throw error;
   }
 }
@@ -55,7 +55,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       });
     
     if (matchError) {
-      console.error(`Error storing match for talent ${match.talentId}:`, matchError);
+      // console.error(`Error storing match for talent ${match.talentId}:`, matchError);
     } else {
       // Create notifications for each matched talent
       await supabase.rpc('create_notification', {
