@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-;,"});})";
-;,"}
-    );,})";
-=======
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
@@ -233,4 +229,4 @@ export function AIServicesShowcase() {
       </div>
     </section>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

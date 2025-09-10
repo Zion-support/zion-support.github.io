@@ -1,21 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-<<<<<<< HEAD
-const ServicesPage = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services and solutions" />
-      </Head>
-      <div className="min-h-screen bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
-          <p className="text-center text-gray-600">Comprehensive technology solutions for your business needs.</p>
-        </div>
-      </section>
-=======
+
 // Sample data for services
 const microSaaS = [
 	{
@@ -110,7 +96,7 @@ const aiServices = [
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
->>>>>>> origin/backup-improvements-20250827-015311
+
 
       {/* Contact Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
@@ -146,34 +132,7 @@ export default function Services() {
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                href="/contact"
-                variant="primary"
-                size="lg"
-                className="group"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                href="/pricing"
-                variant="secondary"
-                size="lg"
-              >
-                View Pricing
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-};
 
-export default ServicesPage;
-=======
 						{/* Cloud Platforms */}
 						<div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
 							<div className="flex items-center gap-x-3">
@@ -453,4 +412,4 @@ export default ServicesPage;
 		</PageTransition>
 	)
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

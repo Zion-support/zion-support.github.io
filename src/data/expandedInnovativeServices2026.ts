@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export interface ExpandedInnovativeService2026 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string;   }; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[];   }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; }; export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;
-=======
+
 // Expanded Innovative Services for 2026 - Zion Tech Group
 export const EXPANDED_INNOVATIVE_SERVICES_2026 = [
     // AI-Powered Business Intelligence & Analytics
@@ -813,4 +811,4 @@ export const SERVICE_BENEFITS_SUMMARY = {
     compliance: "Built-in regulatory compliance and security",
     integration: "Seamless integration with existing systems"
 };
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+

@@ -110,26 +110,7 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
     </div>);
 }
 export default function ForumCategoryPage() {
-<<<<<<< HEAD:temp_backup/pages/ForumCategoryPage.tsx
-  const { categoryId } = useParams();
-  const { user } = useAuth();
 
-  if (!categoryId || !categoriesInfo[categoryId]) {
-    return <NotFound />;
-  }
-
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
-
-  return (
-    <>
-      <SEO
-        title={`${category.name} | Community Forum | Zion AI Marketplace`}
-        description={category.description}
-        keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
-        canonical={`https://app.ziontechgroup.com/community/category/${categoryId}`}
-      />
-=======
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {
@@ -139,7 +120,7 @@ export default function ForumCategoryPage() {
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ForumCategoryPage.tsx
+
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>

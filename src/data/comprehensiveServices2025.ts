@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export interface ComprehensiveService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: string;   }; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]; compliance: string[];   }; competitors: string[]; marketTrend: string; aiModel?: string; trainingData?: string; marketingContent: { headline: string; valueProposition: string; keyFeatures: string[]; competitiveAdvantages: string[]; testimonials?: string[]; caseStudies?: string[];   }; }; export const COMPREHENSIVE_SERVICES_2025: ComprehensiveService[] = [;
-=======
+
 export interface ServiceContact {
   phone: string;
   email: string;
@@ -2534,4 +2532,4 @@ export const allServices = {
   itServices: enhancedITServices2025,
   aiServices: enhancedAIServices2025
 };
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+

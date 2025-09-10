@@ -1,11 +1,5 @@
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
- from "framer-motion";
- from "react-router-dom";
-import { import { motion  } from "framer-motion";
-  );
-export default Component
-=======
+
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
@@ -207,4 +201,4 @@ export function CategoriesSection({ showTitle = true }) {
       </div>
     </section>);
 }
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+

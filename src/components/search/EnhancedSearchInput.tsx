@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
-import { Search, X  } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-export function EnhancedSearchInput({
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = "Search...",
-  searchSuggestions
-}: EnhancedSearchInputProps) {
-=======
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowDown } from 'lucide-react';
 export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
@@ -129,4 +116,4 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
         </div>)}
     </div>);
 };
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+

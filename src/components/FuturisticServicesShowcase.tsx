@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-;,"});});
-;,"}
-    );,})
-    );,"})"
-}
-=======
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices';
@@ -229,4 +223,4 @@ export const FuturisticServicesShowcase = () => {
       </div>
     </div>);
 };
->>>>>>> origin/backup-improvements-20250827-015311
+

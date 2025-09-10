@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';';';
-=======
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 export function BlogSection() {
@@ -45,4 +43,4 @@ export function BlogSection() {
       </div>
     </section>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

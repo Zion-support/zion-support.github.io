@@ -16,16 +16,7 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 // Define the form schema with zod
 const productSchema = z.object({
-<<<<<<< HEAD:temp_backup/components/ProductSubmissionForm.tsx
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  description: z.string().min(10, "Description must be at least 10 characters"),
-  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-    message: "Price must be a valid number",
-  }),
-  category: z.string().min(1, "Please select a category"),
-  image: z.instanceof(File).optional(),
-  tags: z.string().optional(),
-=======
+
     title: z.string().min(3, "Title must be at least 3 characters"),
     description: z.string().min(10, "Description must be at least 10 characters"),
     price: z
@@ -38,81 +29,10 @@ const productSchema = z.object({
     video: z.instanceof(File).optional(),
     model: z.instanceof(File).optional(),
     tags: z.string().optional(),
->>>>>>> origin/backup-improvements-20250827-015311:src/components/ProductSubmissionForm.tsx
+
 });
 export function ProductSubmissionForm() {
-<<<<<<< HEAD:temp_backup/components/ProductSubmissionForm.tsx
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
-  
-  // Initialize the form
-  const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productSchema),
-    defaultValues: {
-      title: "",
-      description: "",
-      price: "",
-      category: "",
-      tags: "",
-    },
-  });
-  
-  // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      form.setValue("image", file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
-  // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
-    
-    // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
-    form.setValue("price", averagePrice);
-    
-    // Switch to the manual tab to show applied content
-    setActiveTab("manual");
-  };
-
-  // Handle form submission
-  const onSubmit = async (values: ProductFormValues) => {
-    if (!user) {
-      toast({
-        title: "Authentication Required",
-        description: "You must be logged in to publish products",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    try {
-      // Create the product listing
-      const productData = {
-        title: values.title,
-        description: values.description,
-        price: parseFloat(values.price),
-        category: values.category,
-        currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
-        author: {
-          name: user.displayName || "Anonymous Creator",
-          id: user.id,
-=======
     const { user } = useAuth();
     const { toast } = useToast();
     const navigate = useNavigate();
@@ -130,7 +50,7 @@ export function ProductSubmissionForm() {
             video: undefined,
             model: undefined,
             tags: "",
->>>>>>> origin/backup-improvements-20250827-015311:src/components/ProductSubmissionForm.tsx
+
         },
     });
     // Handle image upload preview
@@ -144,24 +64,7 @@ export function ProductSubmissionForm() {
             };
             reader.readAsDataURL(file);
         }
-<<<<<<< HEAD:temp_backup/components/ProductSubmissionForm.tsx
-        
-        // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(imagePath);
-          
-        // Update the product with the image URL
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ 
-            images: [publicUrlData.publicUrl]
-          })
-          .eq('id', productRecord.id);
-          
-        if (updateError) {
-          throw new Error(updateError.message);
-=======
+
     };
     const handleVideoChange = (e) => {
         const file = e.target.files?.[0];
@@ -290,7 +193,7 @@ export function ProductSubmissionForm() {
             });
             // Redirect to product page
             navigate(`/marketplace/listing/${productRecord.id}`);
->>>>>>> origin/backup-improvements-20250827-015311:src/components/ProductSubmissionForm.tsx
+
         }
         catch (error) {
             toast({
@@ -389,26 +292,16 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                   
-<<<<<<< HEAD:temp_backup/components/ProductSubmissionForm.tsx
-                  {imagePreview && (
-                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
-                      <AspectRatio ratio={3/2}>
-                        <img 
-                          src={imagePreview} 
-                          alt="Preview" 
-                          className="w-full h-full object-cover"
-                        />
-=======
+
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3 / 2}>
                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover"/>
->>>>>>> origin/backup-improvements-20250827-015311:src/components/ProductSubmissionForm.tsx
+
                       </AspectRatio>
                     </div>)}
                 </FormItem>)}/>
 
-<<<<<<< HEAD:temp_backup/components/ProductSubmissionForm.tsx
-=======
+
             <FormField control={form.control} name="video" render={() => (<FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -431,7 +324,7 @@ export function ProductSubmissionForm() {
                   <FormMessage />
                 </FormItem>)}/>
 
->>>>>>> origin/backup-improvements-20250827-015311:src/components/ProductSubmissionForm.tsx
+
             <div className="flex justify-end">
               <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 {isSubmitting ? "Publishing..." : "Publish Product"}

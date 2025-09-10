@@ -1,10 +1,6 @@
-<<<<<<< HEAD:temp_backup/pages/Notifications.tsx
 
-import React, { useState } from 'react';
-import { Footer } from "@/components/Footer";
-=======
 import React from 'react';
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Notifications.tsx
+
 import { useNotifications } from "@/context/notifications/NotificationContext";
 import { formatDistanceToNow } from "date-fns";
 import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";
@@ -102,30 +98,12 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     </div>);
 };
 export default function NotificationsPage() {
-<<<<<<< HEAD:temp_backup/pages/Notifications.tsx
-  const {
-    filteredNotifications,
-    unreadCount,
-    markAsRead,
-    markAllAsRead,
-    dismissNotification,
-    loading,
-    filter,
-    setFilter
-  } = useNotifications() as NotificationContextType;
-  
-  return (
-    <>
-      <SEO 
-        title="Notifications | Zion AI Marketplace" 
-        description="View and manage your notifications on the Zion AI Marketplace." 
-      />
-=======
+
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Notifications.tsx
+
       <main className="container mx-auto px-4 py-8 min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -169,13 +147,8 @@ export default function NotificationsPage() {
           </Tabs>
         </div>
       </main>
-<<<<<<< HEAD:temp_backup/pages/Notifications.tsx
-      <Footer />
-    </>
-  );
-}
-=======
+
       
     </>);
 }
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Notifications.tsx
+

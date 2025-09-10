@@ -31,16 +31,11 @@ function cleanMergeConflicts(filePath) {
     let fixed = false;
 
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('') || content.includes('>>>>>>>')) {
       log(`🔧 Cleaning conflicts in: ${filePath}`, 'yellow');
       
       // Strategy 1: Remove merge conflict markers and keep HEAD version (first part)
-      content = content.replace(/<<<<<<< HEAD[^\n]*\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n?/g, '$1');
-      
-      // Strategy 2: Remove any remaining conflict markers
-      content = content.replace(/<<<<<<< [^\n]*\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
+      content = content.replace(/
       
       // Strategy 3: Clean up malformed syntax
       content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove excessive blank lines

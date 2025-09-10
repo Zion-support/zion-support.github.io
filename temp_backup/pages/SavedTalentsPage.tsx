@@ -5,36 +5,7 @@ import { TalentCard } from "@/components/talent/TalentCard";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
-<<<<<<< HEAD:temp_backup/pages/SavedTalentsPage.tsx
-import { useNavigate, useLocation } from "react-router-dom";
 
-export default function SavedTalentsPage() {
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    if (!user) {
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-    }
-  }, [user, navigate, location]);
-
-  useEffect(() => {
-    const fetchSavedTalents = async () => {
-      setIsLoading(true);
-      try {
-        if (!user) {
-          console.warn("User not authenticated.");
-          return;
-        }
-
-        const { data, error } = await supabase
-          .from("saved_talents")
-          .select(
-            `
-=======
 import { useNavigate } from "react-router-dom";
 export default function SavedTalentsPage() {
     const { user } = useAuth();
@@ -52,7 +23,7 @@ export default function SavedTalentsPage() {
                 const { data, error } = await supabase
                     .from("saved_talents")
                     .select(`
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/SavedTalentsPage.tsx
+
             talent_profile (
               id,
               user_id,
@@ -165,38 +136,12 @@ export default function SavedTalentsPage() {
                 variant: "destructive",
             });
         }
-<<<<<<< HEAD:temp_backup/pages/SavedTalentsPage.tsx
-  
-        if (talentData) {
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
-          toast({
-            title: "Talent Saved",
-            description: "Talent saved to your list.",
-          });
-        }
-      }
-    } catch (error) {
-      console.error("Error toggling saved talent:", error);
-      toast({
-        title: "Error",
-        description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive",
-      });
-    }
-  };
 
-  return (
-    <>
-      <SEO
-        title="Saved Talents | Zion AI Marketplace"
-        description="View and manage your saved talents in the Zion AI Marketplace"
-      />
-=======
     };
     return (<>
       <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/SavedTalentsPage.tsx
+
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
         <p className="text-muted-foreground">
@@ -207,12 +152,8 @@ export default function SavedTalentsPage() {
             {savedTalents.map((talent) => (<TalentCard key={talent.id} talent={talent} onViewProfile={handleViewProfile} onRequestHire={handleRequestHire} isSaved={true} onToggleSave={handleToggleSave} isAuthenticated={!!user}/>))}
           </div>)}
       </div>
-<<<<<<< HEAD:temp_backup/pages/SavedTalentsPage.tsx
-      <Footer />
-    </>
-  );
-=======
+
       
     </>);
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/SavedTalentsPage.tsx
+
 }

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import {  import { motion  } from 'framer-motion';';
-;';;';
-import { import { motion } from 'framer-motion';
-import { import { motion } from &apos;framer-motion&apos;; ;&apos;;&apos;;
-const { import { motion } from "framer-motion"; ;";";''"
-import { import { motion } from 'framer-motion'; ;';';''
-=======
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -292,4 +285,4 @@ export function ServicesShowcase() {
       </div>
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

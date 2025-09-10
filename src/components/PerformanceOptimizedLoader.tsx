@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React, { memo } from 'react';
-export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({;
-import { motion  } from 'framer-motion';
-;
-export default function Page("props": "any) {;
-;  const textSizes = {;
-export default function Page() {;  const textSizes = {;
-';
-"
-=======
+
 import { motion } from 'framer-motion';
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
     const sizeClasses = {
@@ -115,4 +105,4 @@ export function PageSkeleton({ className = "" }) {
       </div>
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

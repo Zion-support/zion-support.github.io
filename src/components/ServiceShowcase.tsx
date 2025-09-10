@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: Reac t.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-';
-</string>;';;';
-import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-;
-</string>;import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const "ServiceShowcase": "React.FC = React.memo(() => {; const [selectedCategory", setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-;
-</string>;
-import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-</string>
-=======
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -117,4 +106,4 @@ export function ServiceShowcase({ services }) {
       </div>
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

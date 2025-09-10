@@ -1,9 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-<<<<<<< HEAD:temp_backup/pages/CategoryDetail.tsx
-import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer";
-=======
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/CategoryDetail.tsx
+
+
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";
@@ -121,15 +118,7 @@ export default function CategoryDetail() {
             description: "Enterprise AI integrations and services",
             icon: <Briefcase className="w-6 h-6"/>
         }
-<<<<<<< HEAD:temp_backup/pages/CategoryDetail.tsx
-      });
-    }
-  };
 
-  return (
-    <>
-      <Header />
-=======
     };
     useEffect(() => {
         setIsLoading(true);
@@ -203,7 +192,7 @@ export default function CategoryDetail() {
     };
     return (<>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/CategoryDetail.tsx
+
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
@@ -233,12 +222,8 @@ export default function CategoryDetail() {
             </div>)}
         </div>
       </div>
-<<<<<<< HEAD:temp_backup/pages/CategoryDetail.tsx
-      <Footer />
-    </>
-  );
-=======
+
       
     </>);
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/CategoryDetail.tsx
+
 }

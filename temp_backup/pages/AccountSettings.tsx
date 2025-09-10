@@ -27,22 +27,7 @@ export default function AccountSettings() {
                 setEnableBackup(!!parsed.enableBackup);
             }
         }
-<<<<<<< HEAD:temp_backup/pages/AccountSettings.tsx
-      } catch (error) {
-        console.error('ENS lookup error:', error);
-      }
-      
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet');
-    }
-  };
 
-  return (
-    <>
-      <SEO title="Account Settings" description="Manage your account" />
-      <Header />
-=======
         catch (e) {
             console.error('Error loading account settings', e);
         }
@@ -102,7 +87,7 @@ export default function AccountSettings() {
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/AccountSettings.tsx
+
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
@@ -234,12 +219,8 @@ export default function AccountSettings() {
           </Card>
         </div>
       </main>
-<<<<<<< HEAD:temp_backup/pages/AccountSettings.tsx
-      <Footer />
-    </>
-  );
-=======
+
       
     </>);
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/AccountSettings.tsx
+
 }

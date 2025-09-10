@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-;,"});});
-;,"}
-    );,})
-    );,"})"
-}
-=======
+
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -136,4 +130,4 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
 ;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> origin/backup-improvements-20250827-015311
+
