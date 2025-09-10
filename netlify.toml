@@ -1,7 +1,7 @@
 [build]
   command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
   publish = "dist"
-  command_timeout = "15m"
+  command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "22.12.0"
