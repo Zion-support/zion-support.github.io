@@ -1,9 +1,16 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import AppMinimal from './AppMinimal'
+import { createRoot } from 'react-dom/client'
+import App from './AppClean'
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root')
+if (!container) {
+	throw new Error('Root element with id "root" not found in index.html')
+}
+
+const root = createRoot(container)
+root.render(
 	<React.StrictMode>
-		<AppMinimal />
+		<App />
 	</React.StrictMode>,
 )
