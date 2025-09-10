@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
+import { _Link } from 'react-router-dom';
+import { _Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
-const GetStarted = () => {
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+const _GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
-    const steps = [
+    const _steps = [
         {
             number: 1,
             title: "Discovery Call",
@@ -33,7 +46,7 @@ const GetStarted = () => {
             color: "from-orange-500 to-red-500"
         }
     ];
-    const services = [
+    const _services = [
         {
             title: "AI & Autonomous Systems",
             description: "Transform your operations with intelligent automation",
@@ -63,7 +76,7 @@ const GetStarted = () => {
             features: ["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Free initial consultation",
         "Customized solution design",
         "Expert implementation team",

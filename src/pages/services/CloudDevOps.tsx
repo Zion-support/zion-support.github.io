@@ -1,183 +1,19 @@
+import { Shield, Cloud, Zap, Cpu } from 'lucide-react';
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+const _features = [];
+const _cloudServices = [];
+const _cloudPlatforms = [];
+const _services = [];
+const _applications = [];
+const _solutions = [];
+const _implementation = [];
 
-const CloudDevOps: React.FC = () => {
-  const features = [
-    {
-      icon: Cloud,
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud platforms with minimal downtime",
-      features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
-      icon: "☁️"
-    },
-    {
-      title: "DevOps Automation",
-      description: "Streamline development and operations with automated pipelines",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Deployment Automation"],
-      icon: "⚡"
-    },
-    {
-      title: "Container Orchestration",
-      description: "Manage and scale containerized applications efficiently",
-      features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
-      icon: "📦"
-import { Link } from 'react-router-dom';
-import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 
-const CloudDevOps: React.FC = () => {
-  const cloudServices = [
-    {
-      icon: Cloud,
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
-    },
-    {
-      icon: Server,
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
-      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
-      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
-      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
-    },
-    {
-      icon: GitBranch,
-      title: "CI/CD Pipelines",
-      description: "Version-controlled infrastructure management and deployment",
-      features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
-      description: "Version-controlled infrastructure management and deployment",
-      features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
-      description: "Seamless migration to cloud platforms with minimal downtime",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"],
-      icon: "☁️"
-    },
-    {
-      title: "DevOps Implementation",
-      description: "Streamline development and operations with modern DevOps practices",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Monitoring & Logging"],
-      icon: "🔄"
-    },
-    {
-      title: "Container Orchestration",
-      description: "Manage containerized applications at scale with Kubernetes",
-      features: ["Cluster Management", "Service Discovery", "Load Balancing", "Auto-scaling"],
-      icon: "📦"
-    },
-    {
-      title: "Infrastructure Management",
-      description: "Automate and manage cloud infrastructure efficiently",
-      features: ["Terraform/CloudFormation", "Cost Optimization", "Security Hardening", "Backup & Recovery"],
-      icon: "🏗️"
-    }
-  ];
-
-  const cloudPlatforms = [
-    { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
-    { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
-    { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
-  ];
-
-  const devOpsTools = [
-    { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
-    { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
-    { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
-    { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
-  ];
-
-  return (
-    <>
-=======
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
-const CloudDevOps = () => {
-    const features = [
-        {
-            icon: Cloud,
-            title: "Cloud Migration",
-            description: "Seamless migration to cloud platforms with minimal downtime",
-            features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
-            icon: "☁️"
-        },
-        {
-            title: "DevOps Automation",
-            description: "Streamline development and operations with automated pipelines",
-            features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Deployment Automation"],
-            icon: "⚡"
-        },
-        {
-            title: "Container Orchestration",
-            description: "Manage and scale containerized applications efficiently",
-            features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
-            icon: "📦",
-            import: { Link }, from, 'react-router-dom': ,
-            import: { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield }, from, 'lucide-react': ,
-            const: CloudDevOps, React, : .FC = () => {
-                const cloudServices = [
-                    {
-                        icon: Cloud,
-                        title: "Cloud Migration",
-                        description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
-                        features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
-                    },
-                    {
-                        icon: Server,
-                        title: "Infrastructure as Code",
-                        description: "Automated infrastructure provisioning and management using modern DevOps practices.",
-                        features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
-                    },
-                    {
-                        icon: GitBranch,
-                        title: "CI/CD Pipelines",
-                        description: "Version-controlled infrastructure management and deployment",
-                        features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
-                        description: "Seamless migration to cloud platforms with minimal downtime",
-                        features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"],
-                        icon: "☁️"
-                    },
-                    {
-                        title: "DevOps Implementation",
-                        description: "Streamline development and operations with modern DevOps practices",
-                        features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Monitoring & Logging"],
-                        icon: "🔄"
-                    },
-                    {
-                        title: "Container Orchestration",
-                        description: "Manage containerized applications at scale with Kubernetes",
-                        features: ["Cluster Management", "Service Discovery", "Load Balancing", "Auto-scaling"],
-                        icon: "📦"
-                    },
-                    {
-                        title: "Infrastructure Management",
-                        description: "Automate and manage cloud infrastructure efficiently",
-                        features: ["Terraform/CloudFormation", "Cost Optimization", "Security Hardening", "Backup & Recovery"],
-                        icon: "🏗️"
-                    }
-                ];
-                const cloudPlatforms = [
-                    { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
-                    { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
-                    { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
-                ];
-                const devOpsTools = [
-                    { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
-                    { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
-                    { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
-                    { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
-                ];
-                return (<>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       <Helmet>
         <title>Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services</title>
         <meta name="description" content="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices."/>
@@ -197,7 +33,7 @@ const CloudDevOps = () => {
     }
   ];
 
-  const platforms = [
+  const _platforms = [
     {name}: "AWS",
       description: "Amazon Web Services cloud platform solutions",
       icon: "☁️"
@@ -259,14 +95,14 @@ const CloudDevOps = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cloudServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+            {cloudServices.map((_service, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  {service.features.map((_feature, _featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {feature}
                     </li>))}
@@ -289,22 +125,14 @@ const CloudDevOps = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {platforms.map((platform, index) => (<div key={index} className="text-center">
+            {platforms.map((_platform, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
                   {platform.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
                 <p className="text-gray-300">{platform.description}</p>
-<<<<<<< HEAD
-              </div>))}
-=======
-<<<<<<< HEAD
-              </div>
-            ))}
-=======
-              </div>))}
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+
+
           </div>
         </div>
       </section>
@@ -409,7 +237,7 @@ const CloudDevOps = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cloudServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              {cloudServices.map((_service, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -417,7 +245,7 @@ const CloudDevOps = () => {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                      {service.features.map((_feature, _idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
                         </li>))}
@@ -441,10 +269,10 @@ const CloudDevOps = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              {cloudPlatforms.map((_platform, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-4">{platform.name}</h3>
                   <div className="space-y-2">
-                    {platform.features.map((feature, idx) => (<div key={idx} className="text-gray-300 flex items-center">
+                    {platform.features.map((_feature, _idx) => (<div key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {feature}
                       </div>))}
@@ -472,7 +300,7 @@ const CloudDevOps = () => {
                         { step: "Planning", icon: "📋", description: "Design DevOps strategy and toolchain architecture" },
                         { step: "Implementation", icon: "🚀", description: "Deploy tools and establish CI/CD pipelines" },
                         { step: "Optimization", icon: "⚡", description: "Continuous improvement and performance tuning" }
-                    ].map((phase, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:border-white/40 transition-all duration-300">
+                    ].map((_phase, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:border-white/40 transition-all duration-300">
                   <div className="text-4xl mb-4">{phase.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{phase.step}</h3>
                   <p className="text-sm text-gray-300">{phase.description}</p>
@@ -494,10 +322,10 @@ const CloudDevOps = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {devOpsTools.map((category, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {devOpsTools.map((_category, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-lg font-semibold text-white mb-4">{category.category}</h3>
                   <div className="space-y-2">
-                    {category.tools.map((tool, idx) => (<div key={idx} className="text-gray-300 text-sm">
+                    {category.tools.map((_tool, _idx) => (<div key={idx} className="text-gray-300 text-sm">
                         {tool}
                       </div>))}
                   </div>
@@ -526,7 +354,7 @@ const CloudDevOps = () => {
                         { title: "Better Collaboration", description: "Foster teamwork between development and operations", icon: "🤝" },
                         { title: "Scalability", description: "Easily scale applications based on demand", icon: "📈" },
                         { title: "Security", description: "Built-in security practices and compliance", icon: "🔒" }
-                    ].map((benefit, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:border-white/40 transition-all duration-300">
+                    ].map((_benefit, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:border-white/40 transition-all duration-300">
                   <div className="text-4xl mb-4">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -606,23 +434,8 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>
-  );
-=======
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
-    </>);
-                div >
-                ;
-            }
-        }
-    ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+
+
 };
 ;
 ;

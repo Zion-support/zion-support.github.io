@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
+import { _Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap } from 'lucide-react';
+import { _Button } from '@/components/ui/button';
+import { _Input } from '@/components/ui/input';
+import { _Badge } from '@/components/ui/badge';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { _TrustedBySection } from '@/components/TrustedBySection';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
 export default function ExpandedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
-        let filtered = EXPANDED_SERVICES;
+        const _filtered = EXPANDED_SERVICES;
         // Filter by search query
         if (searchQuery) {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -35,7 +47,7 @@ export default function ExpandedServicesPage() {
         });
         setFilteredServices(filtered);
     }, [searchQuery, selectedCategory, sortBy]);
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
@@ -44,7 +56,7 @@ export default function ExpandedServicesPage() {
             default: return '⚡';
         }
     };
-    const getPricingModelColor = (model) => {
+    const _getPricingModelColor = (model) => {
         switch (model) {
             case 'subscription': return 'bg-blue-100 text-blue-800';
             case 'project-based': return 'bg-purple-100 text-purple-800';

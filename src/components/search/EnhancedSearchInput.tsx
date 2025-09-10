@@ -1,15 +1,18 @@
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowDown } from 'lucide-react';
-export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
+import { _Search, X, ArrowDown } from 'lucide-react';
+
+const services = [];
+export const _EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
     const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
     const [selectedIndex, setSelectedIndex] = useState(-1);
-    const inputRef = useRef(null);
-    const suggestionsRef = useRef(null);
+    const _inputRef = useRef(null);
+    const _suggestionsRef = useRef(null);
     useEffect(() => {
         if (query.trim()) {
-            const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
+            const _filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
                 suggestion.description?.toLowerCase().includes(query.toLowerCase()));
             setFilteredSuggestions(filtered.slice(0, 5));
             setShowSuggestions(true);
@@ -21,7 +24,7 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
         }
     }, [query, suggestions]);
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const _handleClickOutside = (event) => {
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
                 setShowSuggestions(false);
             }
@@ -29,29 +32,29 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    const handleInputChange = (e) => {
+    const _handleInputChange = (e) => {
         setQuery(e.target.value);
     };
-    const handleClear = () => {
+    const _handleClear = () => {
         setQuery('');
         setShowSuggestions(false);
         inputRef.current?.focus();
     };
-    const handleSubmit = (e) => {
+    const _handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim() && onSearch) {
             onSearch(query.trim());
             setShowSuggestions(false);
         }
     };
-    const handleSuggestionClick = (suggestion) => {
+    const _handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.title);
         setShowSuggestions(false);
         if (onSearch) {
             onSearch(suggestion.title);
         }
     };
-    const handleKeyDown = (e) => {
+    const _handleKeyDown = (e) => {
         if (!showSuggestions)
             return;
         switch (e.key) {
@@ -115,3 +118,4 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
         </div>)}
     </div>);
 };
+

@@ -1,7 +1,20 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
-const AdvancedServices2025 = () => {
-    const advancedServices = [
+import SEO from '@/components/SEO';
+import { Cloud } from 'lucide-react';
+import { Target } from 'lucide-react';
+const features = [];
+const benefits = [];
+const integrations = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
+const _AdvancedServices2025 = () => {
+    const _advancedServices = [
         {
             category: "Enterprise AI & Machine Learning",
             description: "Advanced artificial intelligence solutions for enterprise-scale operations",

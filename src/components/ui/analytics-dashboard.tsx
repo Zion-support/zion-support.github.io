@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
-import { Button } from './button';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
+import { _Button } from './button';
+
+import { motion } from 'framer-motion';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +21,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     useEffect(() => {
         if (!enabled || !isExpanded)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             setMetrics(prev => ({
                 ...prev,
                 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500,
@@ -27,16 +31,16 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         return () => clearInterval(interval);
     }, [enabled, isExpanded]);
     // Handle metric click
-    const handleMetricClick = useCallback((metricId) => {
+    const _handleMetricClick = useCallback((metricId) => {
         setSelectedMetric(metricId);
         onMetricClick?.(metricId);
     }, [onMetricClick]);
     // Calculate progress percentage
-    const calculateProgress = (current, target) => {
+    const _calculateProgress = (current, target) => {
         return Math.min((current / target) * 100, 100);
     };
     // Refresh data
-    const refreshData = useCallback(async () => {
+    const _refreshData = useCallback(async () => {
         setIsLoading(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));

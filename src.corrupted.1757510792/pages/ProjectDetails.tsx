@@ -1,41 +1,4 @@
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-import React, { useState, useEffect } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { format } from "date-fns",
-import { useAuth } from "@/hooks/useAuth",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Project, ProjectStatus } from "@/types/projects",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-=======
+
 import React, { useState, useEffect } from "react";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -48,19 +11,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger, } from "@/components/ui/tabs";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog";
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
-=======
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
 function ProjectDetailsContent() {
     const router = useRouter();
     // Get projectId from Next.js router query params
@@ -105,104 +65,7 @@ function ProjectDetailsContent() {
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-        .eq("project_id", projectId)
-        .order("created_at", { ascending: false });
-      
-      if (error) throw error;
-      
-      setNotes(data || []);
-    } catch (err: any) {
-      logErrorToProduction('Error fetching project notes:', { data: err });
-      toast({
-        title: "Failed to load notes",
-        description: err.message || "An error occurred while loading project notes.",
-        variant: "destructive",
-      });
-    }
-  };
-  
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
-    
-    setIsSubmittingNote(true);
-    
-    try {
-      const { data, error } = await supabase
-        .from("project_notes")
-        .insert({
-          project_id: project.id,
-          user_id: user.id,
-          content: newNote,
-        })
-        .select();
-      
-      if (error) throw error;
-      
-      // Refresh notes
-      fetchProjectNotes(project.id);
-      setNewNote("");
-      
-      toast({
-        title: "Note added",
-        description: "Your note has been added to the project.",
-      });
-    } catch (err: any) {
-      logErrorToProduction('Error adding note:', { data: err });
-      toast({
-        title: "Failed to add note",
-        description: err.message || "An error occurred while adding note.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmittingNote(false);
-    }
-  };
-  
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
-    
-    const success = await updateProjectStatus(project.id, newStatus);
-    
-    if (success) {
-      setProject({
-        ...project,
-        status: newStatus,
-      });
-      
-      // If offer was accepted, show a special toast
-      if (newStatus === "offer_accepted") {
-        toast({
-          title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!",
-        });
-      }
-    }
-  };
-  
-  const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {
-      case "offer_sent":
-        return <Badge variant="outline">Offer Sent</Badge>;
-      case "offer_accepted":
-        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
-      case "changes_requested":
-        return <Badge variant="secondary">Changes Requested</Badge>;
-      case "in_progress":
-        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
-      case "completed":
-        return <Badge variant="default">Completed</Badge>;
-      case "canceled":
-        return <Badge variant="destructive">Canceled</Badge>;
-      default:
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  };
-  
-  if (isLoading) {
-    return (
-      <div className="container mx-auto py-8">
-=======
+
                 .eq("project_id", projectId)
                 .order("created_at", { ascending: false });
             if (error)
@@ -286,7 +149,7 @@ function ProjectDetailsContent() {
     };
     if (isLoading) {
         return (<div className="container mx-auto py-8">
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
         <div className="flex justify-center items-center h-64">
           <div className="text-center">
             <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
@@ -309,31 +172,7 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-      </div>
-    );
-  }
-  
-  // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-  
-  if (!isClient && !isTalent) {
-    router.push("/unauthorized");
-    return null;
-  }
-  
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-  
-  return (
-    <>
-      <SEO 
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
-        description="View and manage your project details and collaboration."
-      />
-=======
+
       </div>);
     }
     // Check if user is either the client or the talent
@@ -349,7 +188,7 @@ function ProjectDetailsContent() {
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
@@ -417,29 +256,19 @@ function ProjectDetailsContent() {
                   </AlertDialogContent>
                 </AlertDialog>)}
               
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-              {isActiveProject && (
-                <Button variant="default" asChild>
-                  <Link href={`/project/[id]/milestones`}>
-                    <Layers className="mr-2 h-4 w-4" /> Milestones
-=======
+
               {isActiveProject && (<Button variant="default" asChild>
                   <Link href={`/project/${project.id}/milestones`}>
                     <Layers className="mr-2 h-4 w-4"/> Milestones
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
                   </Link>
                 </Button>)}
 
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-              {isActiveProject && (
-                <Button variant="outline" asChild>
-                  <Link href={`/project/[id]/room`}>
-                    <Video className="mr-2 h-4 w-4" /> Project Room
-=======
+
               {isActiveProject && (<Button variant="outline" asChild>
                   <Link href={`/project/${project.id}/room`}>
                     <Video className="mr-2 h-4 w-4"/> Project Room
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
                   </Link>
                 </Button>)}
               
@@ -577,19 +406,9 @@ function ProjectDetailsContent() {
                         {notes.length > 0 ? (notes.map((note) => (<div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-                                  {note.created_by_profile?.avatar_url ? (
-                                    <img
-                                      src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
-                                      loading="lazy"
-                                    />
-                                  ) : (
-                                    <User className="h-4 w-4" />
-                                  )}
-=======
+
                                   {note.created_by_profile?.avatar_url ? (<img loading="lazy" src={note.created_by_profile.avatar_url} alt={note.created_by_profile.display_name}/>) : (<User className="h-4 w-4"/>)}
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
                                 </Avatar>
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
@@ -633,19 +452,9 @@ function ProjectDetailsContent() {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-                      {project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-=======
+
                       {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_url} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
@@ -662,19 +471,9 @@ function ProjectDetailsContent() {
                   
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-                      {project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-=======
+
                       {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_url} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
@@ -749,13 +548,10 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD:src.corrupted.1757510792/pages/ProjectDetails.tsx
-    </>
-  );
-=======
+
       
     </>);
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/ProjectDetails.tsx
+
 }
 export default function ProjectDetails() {
     return (<ProtectedRoute>

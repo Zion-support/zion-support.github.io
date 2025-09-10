@@ -1,10 +1,14 @@
-import { useState } from "react";
-import { BookOpen, Terminal } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import { _useState } from "react";
+import { _BookOpen, Terminal } from "lucide-react";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Alert, AlertDescription } from "@/components/ui/alert";
+import { _Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
+import json
+import { BookOpen } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 export function ApiDocumentation() {
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -44,7 +48,7 @@ export function ApiDocumentation() {
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/jobs?limit=10&category=development', {
+            javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/jobs?limit=10&category=development', {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -52,8 +56,8 @@ export function ApiDocumentation() {
   }
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
 
 headers = {
@@ -103,8 +107,8 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-            javascript: `const jobId = 'job_abc123';
-const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`, {
+            javascript: `const _jobId = 'job_abc123';
+const _response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`, {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -112,8 +116,8 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`
   }
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
 
 headers = {
@@ -176,7 +180,7 @@ print(data)`
     },
     "deadline": "2025-06-30T23:59:59Z"
   }'`,
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/jobs', {
+            javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/jobs', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -196,10 +200,9 @@ print(data)`
   })
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
-import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -259,7 +262,7 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/talent?skills=react,typescript', {
+            javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/talent?skills=react,typescript', {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -267,8 +270,8 @@ print(data)`
   }
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
 
 headers = {
@@ -312,8 +315,8 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-            javascript: `const talentId = 'talent_abc123';
-const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId}\`, {
+            javascript: `const _talentId = 'talent_abc123';
+const _response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId}\`, {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -321,8 +324,8 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
   }
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
 
 headers = {
@@ -396,7 +399,7 @@ print(data)`
     "requester_name": "John Doe",
     "requester_email": "john@example.com"
   }'`,
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
+            javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -415,10 +418,11 @@ print(data)`
   })
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
-import json
+
+const technologies = [];
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -474,7 +478,7 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-            javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
+            javascript: `const _response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -482,8 +486,8 @@ print(data)`
   }
 });
 
-const data = await response.json();
-console.log(data);`,
+const _data = await response.json();
+// console.log(data);`,
             python: `import requests
 
 headers = {
@@ -543,8 +547,8 @@ print(data)`
 
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
-  const hmac = crypto.createHmac('sha256', secret);
-  const expectedSignature = hmac.update(payload).digest('hex');
+  const _hmac = crypto.createHmac('sha256', secret);
+  const _expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual(
     Buffer.from(signature),
     Buffer.from(expectedSignature)
@@ -553,17 +557,17 @@ function verifyWebhookSignature(payload, signature, secret) {
 
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
-  const signature = req.headers['x-zion-signature'];
-  const payload = req.body.toString();
-  const webhookSecret = process.env.WEBHOOK_SECRET;
+  const _signature = req.headers['x-zion-signature'];
+  const _payload = req.body.toString();
+  const _webhookSecret = process.env.WEBHOOK_SECRET;
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature');
   }
   
   // Process the webhook event
-  const event = JSON.parse(payload);
-  console.log('Received valid webhook:', event);
+  const _event = JSON.parse(payload);
+  // console.log('Received valid webhook:', event);
   
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received');

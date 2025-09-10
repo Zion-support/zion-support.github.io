@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
-import { specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
+import { _motion } from 'framer-motion';
+import { _Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { _advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
+import { _specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
 import SEOHead from '../components/SEOHead';
-const AdvancedServicesShowcase2025 = () => {
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+const _AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
-    const allServices = [...advancedRealServices2025, ...specializedITServices2025];
-    const categories = [
+    const _allServices = [...advancedRealServices2025, ...specializedITServices2025];
+    const _categories = [
         'all',
         'AI & Machine Learning',
         'Cybersecurity',
@@ -31,7 +43,7 @@ const AdvancedServicesShowcase2025 = () => {
         'API Management',
         'Network Security'
     ];
-    const filteredServices = allServices
+    const _filteredServices = allServices
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -49,8 +61,8 @@ const AdvancedServicesShowcase2025 = () => {
                 return a.name.localeCompare(b.name);
         }
     });
-    const getCategoryIcon = (category) => {
-        const icons = {
+    const _getCategoryIcon = (category) => {
+        const _icons = {
             'AI & Machine Learning': '🤖',
             'Cybersecurity': '🔐',
             'Healthcare Technology': '🏥',
@@ -72,7 +84,7 @@ const AdvancedServicesShowcase2025 = () => {
         };
         return icons[category] || '🚀';
     };
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -81,7 +93,7 @@ const AdvancedServicesShowcase2025 = () => {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

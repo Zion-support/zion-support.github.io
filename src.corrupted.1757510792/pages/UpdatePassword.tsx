@@ -3,23 +3,17 @@ import { useRouter } from 'next/router';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { z } from "zod";
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-import { LockKeyhole } from 'lucide-react'
 
-=======
 import { LockKeyhole } from "lucide-react";
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { cleanupAuthState } from "@/utils/authUtils";
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
 // Form validation schema
 const updatePasswordSchema = z
     .object({
@@ -34,103 +28,7 @@ const updatePasswordSchema = z
     path: ["confirmPassword"],
 });
 export default function UpdatePassword() {
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const router = useRouter();
 
-  // Initialize react-hook-form
-  const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver(updatePasswordSchema),
-    defaultValues: {
-      password: "",
-      confirmPassword: "",
-    },
-  });
-
-  useEffect(() => {
-    // Extract access token from URL hash on the client
-    const hash = typeof window !== 'undefined' ? window.location.hash : "";
-    const hashParams = new URLSearchParams(hash.substring(1));
-    const token = hashParams.get("access_token");
-    
-    if (token) {
-      setAccessToken(token);
-    } else {
-      setError("No access token found. Please request a new password reset link.");
-    }
-
-    // Clean up auth state to prevent issues
-    cleanupAuthState();
-  }, []);
-
-  // Form submission handler
-  const onSubmit = async (data: UpdatePasswordFormValues) => {
-    if (!accessToken) {
-      setError("No access token found. Please request a new password reset link.");
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      // Set the session with the access token
-      await supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: '',
-      });
-
-      // Update the password
-      const { error } = await supabase.auth.updateUser({
-        password: data.password,
-      });
-
-      if (error) {
-        toast({
-          title: "Password update failed",
-          description: error.message,
-          variant: "destructive",
-        });
-        setError(error.message);
-        return;
-      }
-
-      // Show success message and clean up auth state
-      setSuccess(true);
-      toast({
-        title: "Password updated successfully",
-        description: "You can now log in with your new password.",
-      });
-
-      // Clean auth state and redirect after a delay
-      cleanupAuthState();
-      setTimeout(() => {
-        router.push("/login");
-      }, 3000);
-    } catch (error: any) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' });
-      toast({
-        title: "Password update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive",
-      });
-      setError(error.message || "An unexpected error occurred");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
-    if (firstError) {
-      form.setFocus(firstError);
-    }
-  };
-
-  return (
-    <>
-=======
     const [isLoading, setIsLoading] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
     const [error, setError] = useState(null);
@@ -217,7 +115,7 @@ export default function UpdatePassword() {
     };
     return (<>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -233,15 +131,9 @@ export default function UpdatePassword() {
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-                  <Button 
-                    className="mt-3 text-xs"
-                    variant="outline"
-                    onClick={() => router.push('/forgot-password')}
-                  >
-=======
+
                   <Button className="mt-3 text-xs" variant="outline" onClick={() => navigate('/forgot-password')}>
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
                     Request new reset link
                   </Button>
                 </div>)}
@@ -259,15 +151,9 @@ export default function UpdatePassword() {
                   </p>
                 </div>) : (<Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-                    <FormField
-                      control={form.control}
-                      name="password"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
-                        <FormItem>
-=======
+
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
                             <Input type="password" placeholder="Enter password" aria-label="New password" aria-invalid={!!form.formState.errors.password} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}/>
@@ -275,15 +161,9 @@ export default function UpdatePassword() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
 
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-                    <FormField
-                      control={form.control}
-                      name="confirmPassword"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
-                        <FormItem>
-=======
+
                     <FormField control={form.control} name="confirmPassword" render={({ field }) => (<FormItem>
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>
                             <Input type="password" placeholder="Enter password" aria-label="Confirm password" aria-invalid={!!form.formState.errors.confirmPassword} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}/>
@@ -296,16 +176,9 @@ export default function UpdatePassword() {
                     </Button>
 
                     <div className="text-center">
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-                      <Button
-                        variant="link"
-                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
-                        onClick={() => router.push("/login")}
-                        type="button"
-                      >
-=======
+
                       <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => navigate("/login")} type="button">
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
                         Back to login
                       </Button>
                     </div>
@@ -327,12 +200,9 @@ export default function UpdatePassword() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:src.corrupted.1757510792/pages/UpdatePassword.tsx
-    </>
-  );
-=======
+
       
     </>);
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/UpdatePassword.tsx
+
 }
 ;

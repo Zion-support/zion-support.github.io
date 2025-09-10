@@ -1,10 +1,12 @@
 import React from "react";
-import { QrCode } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
-export const QrCodeDownload = () => {
+import { _QrCode } from "lucide-react";
+import { _AppStoreButtons } from "./AppStoreButtons";
+
+import { Code } from 'lucide-react';
+export const _QrCodeDownload = () => {
     // App store links - these would come from environment variables in production
-    const appStoreUrl = "#"; // Replace with actual App Store URL
-    const googlePlayUrl = "#"; // Replace with actual Google Play URL
+    const _appStoreUrl = "#"; // Replace with actual App Store URL
+    const _googlePlayUrl = "#"; // Replace with actual Google Play URL
     return (<section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">

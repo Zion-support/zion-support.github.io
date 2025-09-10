@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
+import { _Link, useLocation } from 'react-router-dom';
+import { _Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const industries = [];
+const services = [];
+const solutions = [];
 export function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
-    const location = useLocation();
+    const _location = useLocation();
     useEffect(() => {
-        const handleScroll = () => {
+        const _handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    const navigation = [
+    const _navigation = [
         {
             name: 'Services',
             href: '/services',
@@ -71,7 +77,7 @@ export function MainNavigation() {
             ]
         }
     ];
-    const isActive = (path) => {
+    const _isActive = (path) => {
         if (path === '/')
             return location.pathname === '/';
         return location.pathname.startsWith(path);

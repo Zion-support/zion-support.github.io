@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
+import { _Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const services = [];
+const implementation = [];
 export function SiteHealthDashboard() {
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         // Simulate health check data collection
-        const performHealthCheck = async () => {
+        const _performHealthCheck = async () => {
             setIsLoading(true);
             // Simulate API calls to various monitoring services
             await new Promise(resolve => setTimeout(resolve, 2000));
-            const healthCategories = [
+            const _healthCategories = [
                 {
                     name: 'Performance',
                     icon: Zap,
@@ -213,13 +224,13 @@ export function SiteHealthDashboard() {
             ];
             setHealthData(healthCategories);
             // Calculate overall score
-            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0);
+            const _totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0);
             setOverallScore(Math.round(totalScore / healthCategories.length));
             setIsLoading(false);
         };
         performHealthCheck();
     }, []);
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
@@ -228,7 +239,7 @@ export function SiteHealthDashboard() {
             default: return 'text-gray-500 bg-gray-50 border-gray-200';
         }
     };
-    const getStatusIcon = (status) => {
+    const _getStatusIcon = (status) => {
         switch (status) {
             case 'excellent': return <CheckCircle className="w-4 h-4"/>;
             case 'good': return <CheckCircle className="w-4 h-4"/>;
@@ -237,7 +248,7 @@ export function SiteHealthDashboard() {
             default: return <Clock className="w-4 h-4"/>;
         }
     };
-    const getScoreColor = (score) => {
+    const _getScoreColor = (score) => {
         if (score >= 90)
             return 'text-green-500';
         if (score >= 75)
@@ -286,7 +297,7 @@ export function SiteHealthDashboard() {
       {/* Health Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {healthData.map((category, index) => {
-            const IconComponent = category.icon;
+            const _IconComponent = category.icon;
             return (<div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-center justify-between mb-4">

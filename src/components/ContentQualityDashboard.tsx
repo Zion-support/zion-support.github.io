@@ -1,20 +1,27 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
+import { _BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from '../utils/contentQualityAnalyzer';
-const ContentQualityDashboard = ({ className = '' }) => {
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
+const _ContentQualityDashboard = ({ className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [report, setReport] = useState(null);
     const [selectedPage, setSelectedPage] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterStatus, setFilterStatus] = useState('all');
-    const contentAnalyzer = ContentQualityAnalyzer.getInstance();
-    const analyzeAllPages = useCallback(async () => {
+    const _contentAnalyzer = ContentQualityAnalyzer.getInstance();
+    const _analyzeAllPages = useCallback(async () => {
         setIsLoading(true);
         try {
             // Simulate analyzing all pages in the application
             // In a real implementation, you would analyze actual page content
-            const samplePages = [
+            const _samplePages = [
                 {
                     url: '/',
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',
@@ -59,11 +66,11 @@ const ContentQualityDashboard = ({ className = '' }) => {
             for (const page of samplePages) {
                 contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links);
             }
-            const newReport = contentAnalyzer.generateReport();
+            const _newReport = contentAnalyzer.generateReport();
             setReport(newReport);
         }
         catch (error) {
-            console.error('Error analyzing pages:', error);
+            // console.error('Error analyzing pages:', error);
         }
         finally {
             setIsLoading(false);
@@ -73,10 +80,10 @@ const ContentQualityDashboard = ({ className = '' }) => {
         // Auto-analyze pages when component mounts
         analyzeAllPages();
     }, [analyzeAllPages]);
-    const getFilteredPages = () => {
+    const _getFilteredPages = () => {
         if (!report)
             return [];
-        let filtered = report.pageMetrics;
+        const _filtered = report.pageMetrics;
         // Apply search filter
         if (searchTerm) {
             filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -99,7 +106,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
         }
         return filtered;
     };
-    const getStatusColor = (score) => {
+    const _getStatusColor = (score) => {
         if (score >= 80)
             return 'text-green-600 bg-green-50 border-green-200';
         if (score >= 60)
@@ -108,7 +115,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
             return 'text-orange-600 bg-orange-50 border-orange-200';
         return 'text-red-600 bg-red-50 border-red-200';
     };
-    const getStatusText = (score) => {
+    const _getStatusText = (score) => {
         if (score >= 80)
             return 'Excellent';
         if (score >= 60)
@@ -117,10 +124,10 @@ const ContentQualityDashboard = ({ className = '' }) => {
             return 'Fair';
         return 'Poor';
     };
-    const exportReport = () => {
+    const _exportReport = () => {
         if (!report)
             return;
-        const csvContent = [
+        const _csvContent = [
             ['Page URL', 'Title', 'Word Count', 'SEO Score', 'Overall Score', 'Issues', 'Recommendations'],
             ...report.pageMetrics.map(page => [
                 page.pageUrl,
@@ -132,15 +139,15 @@ const ContentQualityDashboard = ({ className = '' }) => {
                 page.recommendations.join('; ')
             ])
         ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
-        const blob = new Blob([csvContent], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
+        const _blob = new Blob([csvContent], { type: 'text/csv' });
+        const _url = window.URL.createObjectURL(blob);
+        const _a = document.createElement('a');
         a.href = url;
         a.download = 'content-quality-report.csv';
         a.click();
         window.URL.revokeObjectURL(url);
     };
-    const filteredPages = getFilteredPages();
+    const _filteredPages = getFilteredPages();
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>
       {/* Floating Action Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">

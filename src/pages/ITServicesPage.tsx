@@ -1,10 +1,25 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Badge } from '@/components/ui/badge';
+import { _Link } from 'react-router-dom';
+import { _Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
-const ITServices = [
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
+const _ITServices = [
     {
         title: "Cloud Infrastructure Management",
         description: "Comprehensive cloud services including AWS, Azure, and Google Cloud",
@@ -154,7 +169,7 @@ const ITServices = [
         link: "/request-quote?service=24-7-support"
     }
 ];
-const categories = [
+const _categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "Cloud", value: "cloud", icon: <Cloud className="h-4 w-4"/> },
     { name: "Security", value: "security", icon: <Shield className="h-4 w-4"/> },
@@ -174,7 +189,7 @@ const categories = [
 ];
 export default function ITServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
-    const filteredServices = selectedCategory === "all"
+    const _filteredServices = selectedCategory === "all"
         ? ITServices
         : ITServices.filter(service => service.category.toLowerCase() === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">

@@ -1,6 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { _Link } from 'react-router-dom';
 import { 
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const industries = [];
+const services = [];
+const solutions = [];
   Building2, 
   Heart, 
   DollarSign, 
@@ -16,7 +33,7 @@ import {
 } from 'lucide-react';
 
 export default function Solutions() {
-  const solutions = [
+  const _solutions = [
     {
       id: 'enterprise',
       title: 'Enterprise Solutions',
@@ -115,7 +132,7 @@ export default function Solutions() {
     }
   ];
 
-  const industries = [
+  const _industries = [
     'Healthcare',
     'Finance',
     'Manufacturing',

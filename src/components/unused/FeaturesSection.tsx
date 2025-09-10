@@ -1,8 +1,21 @@
 import React from 'react';
+import { _motion } from 'framer-motion';
+import { _CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
+
 import { motion } from 'framer-motion';
-import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
+import { Cog } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const technologies = [];
+const industries = [];
+const services = [];
+const solutions = [];
 export function FeaturesSection() {
-    const features = [
+    const _features = [
         {
             icon: CheckCircleIcon,
             title: "Proven Track Record",
@@ -40,7 +53,7 @@ export function FeaturesSection() {
             color: "text-zion-purple"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -49,7 +62,7 @@ export function FeaturesSection() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

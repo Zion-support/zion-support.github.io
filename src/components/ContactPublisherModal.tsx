@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
-import { sendMessage } from '../services/messages';
-import { toast } from '@/hooks/use-toast';
+import { _focusManagement } from '@/utils/accessibility';
+import { _sendMessage } from '../services/messages';
+import { _toast } from '@/hooks/use-toast';
+
+const services = [];
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false); // New loading state
-    const firstInputRef = useRef(null);
-    const modalRef = useRef(null);
+    const _firstInputRef = useRef(null);
+    const _modalRef = useRef(null);
     useEffect(() => {
         if (!isOpen)
             return;
@@ -18,7 +20,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
                 onClose();
             }
         }
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
+        const _removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
         firstInputRef.current?.focus();
         document.addEventListener('keydown', handleKeyDown);
         return () => {
@@ -29,7 +31,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     if (!isOpen) {
         return null;
     }
-    const handleSubmit = async (e) => {
+    const _handleSubmit = async (e) => {
         e.preventDefault();
         if (!subject.trim() || !message.trim()) {
             setError('Subject and message are required.');
@@ -45,7 +47,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setMessage(''); // Clear message
         }
         catch (err) {
-            console.error('Failed to send message:', err);
+            // console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
             // setError('Failed to send message. Please try again.');

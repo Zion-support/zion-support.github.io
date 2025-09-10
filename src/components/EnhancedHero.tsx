@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
-const EnhancedHero = () => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
+const _EnhancedHero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-    const heroSlides = [
+    const _heroSlides = [
         {
             id: 1,
             title: "Transform Your Business",
@@ -41,29 +48,29 @@ const EnhancedHero = () => {
     useEffect(() => {
         if (!isAutoPlaying)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             if (isPlaying) {
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
             }
         }, 5000);
         return () => clearInterval(interval);
     }, [isPlaying, isAutoPlaying, heroSlides.length]);
-    const nextSlide = () => {
+    const _nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     };
-    const prevSlide = () => {
+    const _prevSlide = () => {
         setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     };
-    const goToSlide = (index) => {
+    const _goToSlide = (index) => {
         setCurrentSlide(index);
     };
-    const togglePlayPause = () => {
+    const _togglePlayPause = () => {
         setIsPlaying(!isPlaying);
     };
-    const toggleMute = () => {
+    const _toggleMute = () => {
         setIsMuted(!isMuted);
     };
-    const toggleAutoPlay = () => {
+    const _toggleAutoPlay = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
             setIsPlaying(true);

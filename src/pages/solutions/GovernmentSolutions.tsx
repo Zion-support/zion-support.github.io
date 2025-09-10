@@ -1,8 +1,14 @@
+import { _Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building2, Check, Icon } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+const _features = [];
+const _benefits = [];
+const _services = [];
+const _solutions = [];
+const _caseStudies = [];
 export default function GovernmentSolutions() {
-    const solutions = [
+    const _solutions = [
         {
             icon: Building2,
             title: "Digital Government",
@@ -40,7 +46,7 @@ export default function GovernmentSolutions() {
             features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Improved citizen satisfaction and engagement",
         "Enhanced operational efficiency and cost savings",
         "Better compliance and risk management",
@@ -48,7 +54,7 @@ export default function GovernmentSolutions() {
         "Faster service delivery and response times",
         "Enhanced data security and privacy protection"
     ];
-    const caseStudies = [
+    const _caseStudies = [
         {
             organization: "State Government Agency",
             specialty: "Digital Services",
@@ -107,8 +113,8 @@ export default function GovernmentSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            {solutions.map((_solution, _index) => {
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white"/>
@@ -116,7 +122,7 @@ export default function GovernmentSolutions() {
                   <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>
                   <p className="text-gray-300 mb-6">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                    {solution.features.map((_feature, _featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
                         {feature}
                       </li>))}
@@ -140,7 +146,7 @@ export default function GovernmentSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">
+            {benefits.map((_benefit, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-white"/>
                 </div>
@@ -163,7 +169,7 @@ export default function GovernmentSolutions() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">
+            {caseStudies.map((_study, _index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-4">
                   <Star className="w-5 h-5 text-yellow-400 mr-2"/>
                   <span className="text-sm text-gray-400">{study.specialty}</span>
@@ -213,3 +219,6 @@ export default function GovernmentSolutions() {
       </section>
     </div>);
 }
+
+
+export { GovernmentSolutions };

@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
-const DialogContext = createContext(undefined);
+const _DialogContext = createContext(undefined);
 export function Dialog({ children, open, onOpenChange }) {
     const [internalOpen, setInternalOpen] = useState(false);
-    const isControlled = open !== undefined;
-    const isOpen = isControlled ? open : internalOpen;
-    const setIsOpen = (newOpen) => {
+    const _isControlled = open !== undefined;
+    const _isOpen = isControlled ? open : internalOpen;
+    const _setIsOpen = (newOpen) => {
         if (!isControlled) {
             setInternalOpen(newOpen);
         }
@@ -19,7 +19,7 @@ export function Dialog({ children, open, onOpenChange }) {
     </DialogContext.Provider>);
 }
 export function DialogTrigger({ children, asChild = false }) {
-    const context = useContext(DialogContext);
+    const _context = useContext(DialogContext);
     if (!context)
         throw new Error('DialogTrigger must be used within Dialog');
     if (asChild) {
@@ -32,7 +32,7 @@ export function DialogTrigger({ children, asChild = false }) {
     </div>);
 }
 export function DialogContent({ children, className = '' }) {
-    const context = useContext(DialogContext);
+    const _context = useContext(DialogContext);
     if (!context)
         throw new Error('DialogContent must be used within Dialog');
     if (!context.isOpen)

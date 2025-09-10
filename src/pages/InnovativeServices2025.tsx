@@ -1,7 +1,16 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
-const InnovativeServices2025 = () => {
-    const innovativeServices = [
+const features = [];
+const benefits = [];
+const useCases = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
+const _InnovativeServices2025 = () => {
+    const _innovativeServices = [
         {
             category: "AI-Powered Micro SAAS Solutions",
             description: "Intelligent software-as-a-service solutions that automate and optimize business processes",

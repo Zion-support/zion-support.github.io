@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { _Header } from '@/components/Header';
+import { _Footer } from '@/components/Footer';
 import ConnectWalletButton from '@/components/ConnectWalletButton';
-import { useWallet } from '@/context/WalletContext';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-const CHAINS = [
+import { _useWallet } from '@/context/WalletContext';
+import { _Button } from '@/components/ui/button';
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { _Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Input } from '@/components/ui/input';
+const _CHAINS = [
     { id: 'ethereum', name: 'Ethereum', logo: '/logos/ethereum-logo.svg' },
     { id: 'polygon', name: 'Polygon', logo: '/logos/polygon-logo.svg' },
     { id: 'arbitrum', name: 'Arbitrum', logo: '/logos/arbitrum-logo.svg' },
@@ -33,7 +33,7 @@ export default function TokenIntegrations() {
     const [region, setRegion] = useState('');
     const [stake, setStake] = useState(0);
     const [suggested, setSuggested] = useState(null);
-    const handleBridge = () => {
+    const _handleBridge = () => {
         setStatus('Bridging...');
         setTxHash(null);
         // TODO: integrate actual LayerZero bridge logic
@@ -44,8 +44,8 @@ export default function TokenIntegrations() {
             setStatus(`ZION$ arrived on ${toChain} in 12s`);
         }, 1200);
     };
-    const handleSuggest = () => {
-        const chain = suggestChain(region.toLowerCase(), stake);
+    const _handleSuggest = () => {
+        const _chain = suggestChain(region.toLowerCase(), stake);
         setSuggested(chain);
     };
     return (<div>

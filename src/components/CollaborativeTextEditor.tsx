@@ -1,9 +1,13 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { _motion } from 'framer-motion';
+import { _Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
+import { _useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
 import { motion } from 'framer-motion';
-import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
-import { useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
+import { Target } from 'lucide-react';
+const benefits = [];
+export const _CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -20,10 +24,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const [showCollaborators, setShowCollaborators] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
     const [lastSaved, setLastSaved] = useState(null);
-    const editorRef = useRef(null);
-    const collaborationRef = useRef(null);
+    const _editorRef = useRef(null);
+    const _collaborationRef = useRef(null);
     // Initialize real-time collaboration
-    const collaboration = useRealTimeCollaboration({
+    const _collaboration = useRealTimeCollaboration({
         roomId,
         userId,
         userName,
@@ -35,13 +39,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         messageRetention: 1000
     });
     // Handle text changes
-    const handleTextChange = useCallback((event) => {
-        const newContent = event.target.value;
-        const selectionStart = event.target.selectionStart;
-        const selectionEnd = event.target.selectionEnd;
-        const selectedText = newContent.slice(selectionStart, selectionEnd);
+    const _handleTextChange = useCallback((event) => {
+        const _newContent = event.target.value;
+        const _selectionStart = event.target.selectionStart;
+        const _selectionEnd = event.target.selectionEnd;
+        const _selectedText = newContent.slice(selectionStart, selectionEnd);
         setEditorState(prev => {
-            const change = {
+            const _change = {
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',
                 position: Math.min(selectionStart, prev.content.length),
@@ -72,11 +76,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         trackEvent('editor', 'text_changed', 'content_modified', newContent.length);
     }, [enableCollaboration, collaboration, editorState.version, trackEvent]);
     // Handle selection change
-    const handleSelectionChange = useCallback((event) => {
-        const target = event.target;
-        const start = target.selectionStart;
-        const end = target.selectionEnd;
-        const text = target.value.slice(start, end);
+    const _handleSelectionChange = useCallback((event) => {
+        const _target = event.target;
+        const _start = target.selectionStart;
+        const _end = target.selectionEnd;
+        const _text = target.value.slice(start, end);
         setEditorState(prev => ({
             ...prev,
             selection: { start, end, text }
@@ -87,23 +91,23 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         }
     }, [enableCollaboration, collaboration]);
     // Handle cursor movement
-    const handleCursorMove = useCallback((event) => {
+    const _handleCursorMove = useCallback((event) => {
         if (!enableCollaboration || !collaboration.isConnected)
             return;
-        const rect = event.currentTarget.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
+        const _rect = event.currentTarget.getBoundingClientRect();
+        const _x = event.clientX - rect.left;
+        const _y = event.clientY - rect.top;
         collaboration.updateCursor(x, y, 'editor');
     }, [enableCollaboration, collaboration]);
     // Generate AI suggestions
-    const generateAISuggestions = useCallback(async () => {
+    const _generateAISuggestions = useCallback(async () => {
         if (!enableAI || !editorState.content.trim())
             return;
         setIsProcessing(true);
         try {
             // Simulate AI processing - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
-            const suggestions = [];
+            const _suggestions = [];
             // Grammar suggestions
             if (editorState.content.includes('its')) {
                 suggestions.push({
@@ -154,7 +158,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length);
         }
         catch (error) {
-            console.error('Failed to generate AI suggestions:', error);
+            // console.error('Failed to generate AI suggestions:', error);
             trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -164,15 +168,15 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         }
     }, [enableAI, editorState.content, trackEvent]);
     // Apply AI suggestion
-    const applySuggestion = useCallback((suggestion) => {
+    const _applySuggestion = useCallback((suggestion) => {
         setEditorState(prev => {
-            let newContent = prev.content;
+            const _newContent = prev.content;
             if (suggestion.type === 'completion') {
                 newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position);
             }
             else if (suggestion.type === 'grammar' || suggestion.type === 'style') {
                 // For grammar and style, we need to find and replace the text
-                const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length);
+                const _searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length);
                 newContent = newContent.replace(searchText, suggestion.text);
             }
             return {
@@ -184,20 +188,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         // Focus editor and set cursor position
         if (editorRef.current) {
             editorRef.current.focus();
-            const newPosition = suggestion.position + suggestion.text.length;
+            const _newPosition = suggestion.position + suggestion.text.length;
             editorRef.current.setSelectionRange(newPosition, newPosition);
         }
         trackEvent('editor', 'ai_suggestion_applied', suggestion.type, undefined, { suggestionId: suggestion.id });
     }, [editorState.content, trackEvent]);
     // Save content
-    const handleSave = useCallback(() => {
+    const _handleSave = useCallback(() => {
         onSave?.(editorState.content);
         setLastSaved(new Date());
         trackEvent('editor', 'content_saved', 'save_completed');
     }, [editorState.content, onSave, trackEvent]);
     // Export content
-    const handleExport = useCallback((format) => {
-        let exportContent = editorState.content;
+    const _handleExport = useCallback((format) => {
+        const _exportContent = editorState.content;
         if (format === 'html') {
             exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`;
         }
@@ -209,9 +213,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         }
         else {
             // Default export behavior
-            const blob = new Blob([exportContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
+            const _blob = new Blob([exportContent], { type: 'text/plain' });
+            const _url = window.URL.createObjectURL(blob);
+            const _a = document.createElement('a');
             a.href = url;
             a.download = `document.${format}`;
             a.click();
@@ -221,7 +225,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect(() => {
-        const handleCollaborationTextChange = (event) => {
+        const _handleCollaborationTextChange = (event) => {
             const { message } = event.detail;
             if (message.type === 'text_change' && message.userId !== userId) {
                 // Handle incoming text changes from other users
@@ -248,7 +252,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     useEffect(() => {
         if (!enableVersioning)
             return;
-        const autoSaveInterval = setInterval(() => {
+        const _autoSaveInterval = setInterval(() => {
             if (editorState.content !== initialContent) {
                 handleSave();
             }
@@ -259,7 +263,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     useEffect(() => {
         if (!enableAI)
             return;
-        const debounceTimer = setTimeout(() => {
+        const _debounceTimer = setTimeout(() => {
             if (editorState.content.length > 100) {
                 generateAISuggestions();
             }

@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
-const EnhancedAccessibility = () => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const _EnhancedAccessibility = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -14,25 +19,25 @@ const EnhancedAccessibility = () => {
     });
     useEffect(() => {
         // Load saved settings from localStorage
-        const savedSettings = localStorage.getItem('accessibility-settings');
+        const _savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
             try {
-                const parsed = JSON.parse(savedSettings);
+                const _parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
                 applySettings({ ...settings, ...parsed });
             }
             catch (error) {
-                console.warn('Failed to load accessibility settings:', error);
+                // console.warn('Failed to load accessibility settings:', error);
             }
         }
         // Check for user preferences
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const _prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReducedMotion) {
             setSettings(prev => ({ ...prev, reducedMotion: true }));
         }
     }, []);
-    const applySettings = (newSettings) => {
-        const root = document.documentElement;
+    const _applySettings = (newSettings) => {
+        const _root = document.documentElement;
         // High contrast mode
         if (newSettings.highContrast) {
             root.classList.add('high-contrast');
@@ -64,24 +69,24 @@ const EnhancedAccessibility = () => {
         // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
     };
-    const updateSetting = (key, value) => {
-        const newSettings = { ...settings, [key]: value };
+    const _updateSetting = (key, value) => {
+        const _newSettings = { ...settings, [key]: value };
         setSettings(newSettings);
         applySettings(newSettings);
     };
-    const toggleHighContrast = () => {
+    const _toggleHighContrast = () => {
         updateSetting('highContrast', !settings.highContrast);
     };
-    const increaseFontSize = () => {
-        const newSize = Math.min(settings.fontSize + 2, 24);
+    const _increaseFontSize = () => {
+        const _newSize = Math.min(settings.fontSize + 2, 24);
         updateSetting('fontSize', newSize);
     };
-    const decreaseFontSize = () => {
-        const newSize = Math.max(settings.fontSize - 2, 12);
+    const _decreaseFontSize = () => {
+        const _newSize = Math.max(settings.fontSize - 2, 12);
         updateSetting('fontSize', newSize);
     };
-    const resetSettings = () => {
-        const defaultSettings = {
+    const _resetSettings = () => {
+        const _defaultSettings = {
             highContrast: false,
             fontSize: 16,
             reducedMotion: false,
@@ -93,15 +98,15 @@ const EnhancedAccessibility = () => {
         setSettings(defaultSettings);
         applySettings(defaultSettings);
     };
-    const speakText = (text) => {
+    const _speakText = (text) => {
         if ('speechSynthesis' in window) {
-            const utterance = new SpeechSynthesisUtterance(text);
+            const _utterance = new SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
             speechSynthesis.speak(utterance);
         }
     };
-    const announcePageChange = (pageName) => {
+    const _announcePageChange = (pageName) => {
         speakText(`Navigated to ${pageName}`);
     };
     return (<>

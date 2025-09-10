@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; BarChart3,; Users,; Eye,; MousePointer,; Clock,; TrendingUp,; TrendingDown,; Activity,; Globe,; Smartphone,; Monitor,; MapPin,; Calendar,; Download,; Share2,; Filter,; RefreshCw,; X,; ChevronDown,; ChevronUp;  } from 'lucide-react'; import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'; ; interface AnalyticsData { "pageViews": "number; "uniqueVisitors": number; "bounceRate": number; "avgSessionDuration": number; "topPages": Arra y<{ "page": string; "views": number; "change": number   "}>; "trafficSources": "Arra y<{ "source": string; "percentage": number; "color": string   "}>; "deviceTypes": "Arra y<{ "device": string; "percentage": number; "color": string   "}>; "geographicData": "Arra y<{ "country": string; "visitors": number; "change": number   "}>; "hourlyTraffic": "Arra y<{ "hour": number; "visitors": number   "}>; "weeklyTrends": "Arra y<{ "week": string; "visitors": number; "pageViews": number   "}>; }; interface AnalyticsDashboardProps {;
- showPanel?: "boolean; autoRefresh?: boolean; refreshInterval?: number; ;
-"}; export function AnalyticsDashboard("props": "any) {; const [isOpen", setIsOpen] = useState<any>(false); const [isExpanded, setIsExpanded] = useState<any>(false); const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h'); const [isLoading, setIsLoading] = useState<any>(false); const [lastUpdate, setLastUpdate] = useState<Date>(new Date()); ; const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({; "pageViews": "0",; "uniqueVisitors": "0",; "bounceRate": "0",; "avgSessionDuration": "0",; "topPages": "[]",; "trafficSources": "[]",; "deviceTypes": "[]",; "geographicData": "[]",; "hourlyTraffic": "[]",; "weeklyTrends": "[]; "}); ;
-;
-</AnalyticsData>;
-</Date>;
-</any>;
-</any>;
-import React, { useState, useEffect, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; BarChart3,; Users,; Eye,; MousePointer,; Clock,; TrendingUp,; TrendingDown,; Activity,; Globe,; Smartphone,; Monitor,; MapPin,; Calendar,; Download,; Share2,; Filter,; RefreshCw,; X,; ChevronDown,; ChevronUp;  } from 'lucide-react'; import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'; ; interface AnalyticsData { pageViews: number; uniqueVisitors: number; bounceRate: number; avgSessionDuration: number; topPages: Arra y<{ page: string; views: number; change: number   }>; trafficSources: Arra y<{ source: string; percentage: number; color: string   }>; deviceTypes: Arra y<{ device: string; percentage: number; color: string   }>; geographicData: Arra y<{ country: string; visitors: number; change: number   }>; hourlyTraffic: Arra y<{ hour: number; visitors: number   }>; weeklyTrends: Arra y<{ week: string; visitors: number; pageViews: number   }>; }; interface AnalyticsDashboardProps {
- showPanel?: boolean; autoRefresh?: boolean; refreshInterval?: number; 
-}; export function AnalyticsDashboard(props: any) {; const [isOpen, setIsOpen] = useState<any>(false); const [isExpanded, setIsExpanded] = useState<any>(false); const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h'); const [isLoading, setIsLoading] = useState<any>(false); const [lastUpdate, setLastUpdate] = useState<Date>(new Date()); ; const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({; pageViews: 0,; uniqueVisitors: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: [],; geographicData: [],; hourlyTraffic: [],; weeklyTrends: []; }
-    ); ;
-</AnalyticsData>
-</Date>
-</any>
-</any>
-</any>
-=======
+
 import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+import { _BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+export const _AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
         enablePerformanceTracking: true,
@@ -34,14 +19,14 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     useEffect(() => {
         if (!showRealTime)
             return;
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             updateAnalyticsSummary();
         }, refreshInterval);
         return () => clearInterval(interval);
     }, [showRealTime, refreshInterval]);
     // Update analytics summary
-    const updateAnalyticsSummary = () => {
-        const summary = getAnalyticsSummary();
+    const _updateAnalyticsSummary = () => {
+        const _summary = getAnalyticsSummary();
         if (summary) {
             setAnalyticsSummary(summary);
         }
@@ -51,15 +36,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         updateAnalyticsSummary();
     }, [events, currentSession]);
     // Track dashboard interactions
-    const handleDashboardInteraction = (action, metadata) => {
+    const _handleDashboardInteraction = (action, metadata) => {
         trackEvent('dashboard', action, 'dashboard_interaction', undefined, metadata);
     };
     // Track conversion goal
-    const handleTrackConversion = () => {
+    const _handleTrackConversion = () => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange });
     };
     // Get events by category for chart
-    const getEventsByCategory = () => {
+    const _getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory)
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
@@ -68,10 +53,10 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         }));
     };
     // Get performance score
-    const getPerformanceScore = () => {
+    const _getPerformanceScore = () => {
         if (!performanceMetrics)
             return 0;
-        let score = 100;
+        const _score = 100;
         // Deduct points for poor performance
         if (performanceMetrics.pageLoadTime > 3000)
             score -= 20;
@@ -88,15 +73,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         return Math.max(0, score);
     };
     // Format duration
-    const formatDuration = (seconds) => {
+    const _formatDuration = (seconds) => {
         if (seconds < 60)
             return `${seconds}s`;
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
+        const _minutes = Math.floor(seconds / 60);
+        const _remainingSeconds = seconds % 60;
         return `${minutes}m ${remainingSeconds}s`;
     };
     // Format number with K/M suffix
-    const formatNumber = (num) => {
+    const _formatNumber = (num) => {
         if (num >= 1000000)
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000)
@@ -309,4 +294,4 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       </div>
     </div>);
 };
->>>>>>> origin/backup-improvements-20250827-015311
+

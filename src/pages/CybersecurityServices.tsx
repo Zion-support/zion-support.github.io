@@ -1,12 +1,28 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Badge } from "@/components/ui/badge";
+import { _SEO } from "@/components/SEO";
+import { _Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
+import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const testimonials = [];
+const pricingPlans = [];
+const integrations = [];
+const securityServices = [];
+const services = [];
+const solutions = [];
+const securitySolutions = [];
 export default function CybersecurityServices() {
-    const services = [
+    const _services = [
         {
             title: "Penetration Testing",
             description: "Comprehensive security assessments to identify vulnerabilities in your systems",
@@ -32,7 +48,7 @@ export default function CybersecurityServices() {
             price: "From $500"
         }
     ];
-    const securitySolutions = [
+    const _securitySolutions = [
         {
             title: "Network Security",
             description: "Firewall configuration, intrusion detection, and network monitoring",
@@ -64,7 +80,7 @@ export default function CybersecurityServices() {
             icon: <Shield className="h-8 w-8 text-zion-blue"/>
         }
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Basic Security",
             price: "$299",
@@ -110,7 +126,7 @@ export default function CybersecurityServices() {
             popular: false
         }
     ];
-    const testimonials = [
+    const _testimonials = [
         {
             name: "Michael Chen",
             role: "CISO, FinTech Solutions",

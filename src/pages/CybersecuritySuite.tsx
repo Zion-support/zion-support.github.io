@@ -1,12 +1,23 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Shield, AlertTriangle, Eye } from "lucide-react";
-import { Link } from "react-router-dom";
+import { _SEO } from "@/components/SEO";
+import { _Button } from "@/components/ui/button";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Badge } from "@/components/ui/badge";
+import { _Check, Shield, AlertTriangle, Eye } from "lucide-react";
+import { _Link } from "react-router-dom";
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const pricingPlans = [];
+const integrations = [];
+const securityServices = [];
+const solutions = [];
 export default function CybersecuritySuite() {
-    const features = [
+    const _features = [
         "24/7 threat monitoring and detection",
         "Real-time security incident response",
         "Advanced threat intelligence feeds",
@@ -20,7 +31,7 @@ export default function CybersecuritySuite() {
         "Incident response automation",
         "Security metrics and dashboards"
     ];
-    const pricingPlans = [
+    const _pricingPlans = [
         {
             name: "Essential",
             price: "$199",
@@ -73,7 +84,7 @@ export default function CybersecuritySuite() {
             popular: false
         }
     ];
-    const securityServices = [
+    const _securityServices = [
         {
             title: "Threat Detection & Response",
             description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",
@@ -95,7 +106,7 @@ export default function CybersecuritySuite() {
             icon: <Shield className="h-8 w-8 text-zion-purple"/>
         }
     ];
-    const complianceFrameworks = [
+    const _complianceFrameworks = [
         "GDPR (General Data Protection Regulation)",
         "HIPAA (Health Insurance Portability and Accountability Act)",
         "SOC 2 (System and Organization Controls)",

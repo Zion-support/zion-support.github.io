@@ -1,8 +1,11 @@
-import { useRouter } from 'next/router';
+import { _useRouter } from 'next/router';
 import Link from 'next/link';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+
+import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
 export default function OrderConfirmation() {
-    const router = useRouter();
+    const _router = useRouter();
     const { orderId } = router.query;
     if (!orderId)
         return null;

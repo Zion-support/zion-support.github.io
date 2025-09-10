@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
+import { _Link } from 'react-router-dom';
+import { _Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const applications = [];
+const solutions = [];
 export default function Marketplace() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const [sortBy, setSortBy] = useState('featured');
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Products', icon: Globe, count: 24 },
         { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 8 },
         { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
@@ -14,7 +28,7 @@ export default function Marketplace() {
         { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 },
         { id: 'iot-platforms', name: 'IoT Platforms', icon: Smartphone, count: 2 }
     ];
-    const priceRanges = [
+    const _priceRanges = [
         { id: 'all', name: 'All Prices' },
         { id: 'free', name: 'Free' },
         { id: 'under-100', name: 'Under $100' },
@@ -22,7 +36,7 @@ export default function Marketplace() {
         { id: '500-1000', name: '$500 - $1,000' },
         { id: 'over-1000', name: 'Over $1,000' }
     ];
-    const sortOptions = [
+    const _sortOptions = [
         { id: 'featured', name: 'Featured' },
         { id: 'price-low', name: 'Price: Low to High' },
         { id: 'price-high', name: 'Price: High to Low' },
@@ -30,7 +44,7 @@ export default function Marketplace() {
         { id: 'popular', name: 'Most Popular' },
         { id: 'rating', name: 'Highest Rated' }
     ];
-    const marketplaceProducts = [
+    const _marketplaceProducts = [
         {
             id: 1,
             name: 'AI Autonomous Business Manager',
@@ -224,12 +238,12 @@ export default function Marketplace() {
             type: 'service'
         }
     ];
-    const filteredProducts = marketplaceProducts.filter(product => {
-        const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _filteredProducts = marketplaceProducts.filter(product => {
+        const _matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-        let matchesPrice = true;
+        const _matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+        const _matchesPrice = true;
         if (selectedPriceRange === 'free') {
             matchesPrice = product.price === 0;
         }
@@ -247,7 +261,7 @@ export default function Marketplace() {
         }
         return matchesSearch && matchesCategory && matchesPrice;
     });
-    const sortedProducts = [...filteredProducts].sort((a, b) => {
+    const _sortedProducts = [...filteredProducts].sort((a, b) => {
         switch (sortBy) {
             case 'price-low':
                 return a.price - b.price;
@@ -263,17 +277,17 @@ export default function Marketplace() {
                 return b.featured ? 1 : -1;
         }
     });
-    const formatPrice = (price, currency) => {
+    const _formatPrice = (price, currency) => {
         if (price === 0)
             return 'Free';
         return `${currency} ${price.toLocaleString()}`;
     };
-    const getCategoryIcon = (categoryId) => {
-        const category = categories.find(cat => cat.id === categoryId);
+    const _getCategoryIcon = (categoryId) => {
+        const _category = categories.find(cat => cat.id === categoryId);
         return category ? category.icon : Globe;
     };
-    const getCategoryName = (categoryId) => {
-        const category = categories.find(cat => cat.id === categoryId);
+    const _getCategoryName = (categoryId) => {
+        const _category = categories.find(cat => cat.id === categoryId);
         return category ? category.name : 'Unknown';
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

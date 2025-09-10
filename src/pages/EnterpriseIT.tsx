@@ -1,7 +1,15 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _motion } from 'framer-motion';
+import { _Building2, Server, Shield, Zap, Users, Globe, ArrowRight } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const services = [];
+const solutions = [];
 export default function EnterpriseIT() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}

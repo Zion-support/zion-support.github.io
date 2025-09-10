@@ -1,21 +1,18 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: Reac t.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-';
-</string>;';;';
-import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-;
-</string>;import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const "ServiceShowcase": "React.FC = React.memo(() => {; const [selectedCategory", setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-;
-</string>;
-import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { allServices, contactInfo } from '../data/services'; ; const ServiceShowcase: React.FC = React.memo(() => {; const [selectedCategory, setSelectedCategory] = useState<string>('all'); const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity'); ;
-</string>
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
+
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { _Badge } from './ui/badge';
+import { _Button } from './ui/button';
+import { _Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
+
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export function ServiceShowcase({ services }) {
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return <Zap className="h-5 w-5"/>;
             case 'Security': return <Shield className="h-5 w-5"/>;
@@ -24,7 +21,7 @@ export function ServiceShowcase({ services }) {
             default: return <Star className="h-5 w-5"/>;
         }
     };
-    const getCategoryColor = (category) => {
+    const _getCategoryColor = (category) => {
         switch (category) {
             case 'AI Services': return 'from-purple-500 to-pink-500';
             case 'Security': return 'from-red-500 to-orange-500';
@@ -117,4 +114,4 @@ export function ServiceShowcase({ services }) {
       </div>
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

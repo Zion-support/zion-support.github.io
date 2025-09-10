@@ -1,10 +1,28 @@
 import React, { useState } from 'react';
+import { _Link } from 'react-router-dom';
+import { _motion } from 'framer-motion';
+import { _Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const cloudServices = [];
+const technologies = [];
+const cloudProviders = [];
+const services = [];
+const applications = [];
+const solutions = [];
 export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
-    const cloudProviders = [
+    const _cloudProviders = [
         {
             id: 'aws',
             name: 'Amazon Web Services',
@@ -30,7 +48,7 @@ export default function CloudInfrastructure() {
             icon: Globe
         }
     ];
-    const cloudServices = [
+    const _cloudServices = [
         {
             title: 'Infrastructure as Code',
             description: 'Automate cloud infrastructure deployment and management',
@@ -68,7 +86,7 @@ export default function CloudInfrastructure() {
             features: ['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management']
         }
     ];
-    const benefits = [
+    const _benefits = [
         { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },
         { title: 'Cost Optimization', description: 'Pay only for what you use with smart resource management', icon: DollarSign },
         { title: 'High Availability', description: '99.9%+ uptime with multi-region deployments', icon: Shield },
@@ -76,7 +94,7 @@ export default function CloudInfrastructure() {
         { title: 'Performance', description: 'Global CDN and edge computing for optimal speed', icon: Zap },
         { title: 'Disaster Recovery', description: 'Automated backup and recovery solutions', icon: HardDrive }
     ];
-    const stats = [
+    const _stats = [
         { number: '99.9%', label: 'Uptime SLA', icon: Shield },
         { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
         { number: '10x', label: 'Faster Deployment', icon: Zap },

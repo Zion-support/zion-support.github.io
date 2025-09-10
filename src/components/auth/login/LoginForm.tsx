@@ -1,47 +1,37 @@
-<<<<<<< HEAD
-import React from "react";
-import { SEO } from "@/components/SEO";
-export default function LoginForm("props": "any) {return (;
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="LoginForm - Zion Tech Group" description="Professional LoginForm services by Zion Tech Group"   />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">LoginForm</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional LoginForm services to help your business grow.;
-        </p>;
-      </div>;
-  );""}";</div>
-=======
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
-import { Link } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+
+import { _useState } from "react";
+import { _useForm } from "react-hook-form";
+import { _useNavigate } from "react-router-dom";
+import { _zodResolver } from "@hookform/resolvers/zod";
+import { _z } from "zod";
+import { _LogIn, User, Eye, EyeOff } from "lucide-react";
+import { _useAuth } from "@/hooks/useAuth";
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { _Link } from "react-router-dom";
+import { _LoadingOverlay } from "@/components/LoadingOverlay";
+
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 // Form validation schema
-const loginSchema = z.object({
+const _loginSchema = z.object({
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),
     password: z.string().min(6, "Password must be at least 6 characters"),
 });
 export function LoginForm() {
     const { login, isLoading } = useAuth();
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+    const _form = useForm({
         resolver: zodResolver(loginSchema),
         defaultValues: {
             email: "",
             password: "",
         },
     });
-    const onSubmit = async (data) => {
+    const _onSubmit = async (data) => {
         if (isSubmitting)
             return;
         try {
@@ -109,4 +99,4 @@ export function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

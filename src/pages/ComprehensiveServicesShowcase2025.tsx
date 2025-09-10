@@ -1,27 +1,38 @@
 import React, { useState } from 'react';
+import { _motion } from 'framer-motion';
+import { _Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
+import { _CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
+import { _SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
+
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
-const ComprehensiveServicesShowcase2025 = () => {
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const _ComprehensiveServicesShowcase2025 = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
-    const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-    const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
+    const _allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
+    const _categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const _industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
     // Filter services based on selection
-    const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesIndustry = selectedIndustry === 'all' ||
+    const _filteredServices = allServices.filter(service => {
+        const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const _matchesIndustry = selectedIndustry === 'all' ||
             ('industry' in service ? service.industry === selectedIndustry : true);
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesCategory && matchesIndustry && matchesSearch;
     });
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -30,7 +41,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

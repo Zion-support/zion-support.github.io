@@ -1,28 +1,39 @@
 import React, { useState } from 'react';
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { _EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
+import { _SEO } from '@/components/SEO';
+
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const features = [];
+const integrations = [];
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function PricingGuidePage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
+    const _filteredServices = selectedCategory === 'all'
         ? EXPANDED_SERVICES
         : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
-    const getCategoryStats = (category) => {
-        const services = EXPANDED_SERVICES.filter(s => s.category === category);
-        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
-        const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
+    const _getCategoryStats = (category) => {
+        const _services = EXPANDED_SERVICES.filter(s => s.category === category);
+        const _avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
+        const _avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
         return { count: services.length, avgPrice, avgRating };
     };
-    const formatPrice = (price) => {
+    const _formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(1)}K`;
         }
         return `$${price}`;
     };
-    const getServiceTier = (price) => {
+    const _getServiceTier = (price) => {
         if (price < 2000)
             return { tier: "Starter", color: "bg-green-100 text-green-800" };
         if (price < 5000)
@@ -97,7 +108,7 @@ export default function PricingGuidePage() {
               All Services ({EXPANDED_SERVICES.length})
             </Button>
             {SERVICE_CATEGORIES.map(category => {
-            const stats = getCategoryStats(category.name);
+            const _stats = getCategoryStats(category.name);
             return (<Button key={category.id} variant={selectedCategory === category.name ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.name)} className={selectedCategory === category.name ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}>
                   {category.name} ({stats.count})
                 </Button>);
@@ -121,7 +132,7 @@ export default function PricingGuidePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => {
-            const tier = getServiceTier(service.price || 0);
+            const _tier = getServiceTier(service.price || 0);
             return (<Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="relative">
                   <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>

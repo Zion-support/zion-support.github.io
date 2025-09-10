@@ -1,21 +1,42 @@
 import React, { useState, useMemo } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
+import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Button } from '@/components/ui/button';
+import { _Badge } from '@/components/ui/badge';
+import { _Input } from '@/components/ui/input';
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { _Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';
+import { _ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
+import { _COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { _INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
+import { _motion } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 // Combine all services
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,
     ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
-const categoryIcons = {
+const _categoryIcons = {
     'AI & Legal Tech': FileText,
     'AI & FinTech': DollarSign,
     'AI & Healthcare': Heart,
@@ -41,7 +62,7 @@ const categoryIcons = {
     'AI & Cloud Management': Cloud,
     'AI & DevOps': Code
 };
-const categoryColors = {
+const _categoryColors = {
     'AI & Legal Tech': 'from-blue-500 to-indigo-500',
     'AI & FinTech': 'from-green-500 to-emerald-500',
     'AI & Healthcare': 'from-red-500 to-pink-500',
@@ -67,7 +88,7 @@ const categoryColors = {
     'AI & Cloud Management': 'from-blue-500 to-cyan-500',
     'AI & DevOps': 'from-orange-500 to-red-500'
 };
-const supportLevelColors = {
+const _supportLevelColors = {
     'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
     'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
@@ -77,11 +98,11 @@ export default function ComprehensiveServicesOverview() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
-    const filteredServices = useMemo(() => {
-        let filtered = ALL_SERVICES;
+    const _filteredServices = useMemo(() => {
+        const _filtered = ALL_SERVICES;
         // Search filter
         if (searchQuery) {
-            const lowerQuery = searchQuery.toLowerCase();
+            const _lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
                 (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
@@ -95,26 +116,26 @@ export default function ComprehensiveServicesOverview() {
             switch (priceRange) {
                 case 'low':
                     filtered = filtered.filter(service => {
-                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+                        const _price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price <= 1000;
                     });
                     break;
                 case 'medium':
                     filtered = filtered.filter(service => {
-                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+                        const _price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price > 1000 && price <= 3000;
                     });
                     break;
                 case 'high':
                     filtered = filtered.filter(service => {
-                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+                        const _price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price > 3000;
                     });
                     break;
             }
         }
     });
-    const getServicePrice = (service) => {
+    const _getServicePrice = (service) => {
         if (typeof service.price === 'number') {
             return service.price;
         }

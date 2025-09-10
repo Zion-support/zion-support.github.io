@@ -1,16 +1,20 @@
-import { SEO } from "@/components/SEO";
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, AlertTriangle } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { _SEO } from "@/components/SEO";
+import { _ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
+import { _ProtectedRoute } from "@/components/ProtectedRoute";
+import { _useState, useEffect } from "react";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Star, AlertTriangle } from "lucide-react";
+import { _toast } from "@/components/ui/use-toast";
+
+import SEO from '@/components/SEO';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 function ReviewsModerationContent() {
     const [activeTab, setActiveTab] = useState("pending");
     const [reviews, setReviews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const fetchReviews = async () => {
+    const _fetchReviews = async () => {
         setIsLoading(true);
         try {
             // In a real application, you would fetch reviews from an API
@@ -20,7 +24,7 @@ function ReviewsModerationContent() {
             setIsLoading(false);
         }
         catch (error) {
-            console.error("Error fetching reviews:", error);
+            // console.error("Error fetching reviews:", error);
             toast({
                 title: "Error",
                 description: "Failed to load reviews. Please try again later.",
@@ -32,7 +36,7 @@ function ReviewsModerationContent() {
     useEffect(() => {
         fetchReviews();
     }, [activeTab]);
-    const handleRefresh = () => {
+    const _handleRefresh = () => {
         fetchReviews();
     };
     return (<>

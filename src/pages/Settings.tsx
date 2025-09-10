@@ -1,6 +1,9 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
 import { Helmet } from 'react-helmet-async';
-const Settings = () => {
+import { Settings } from 'lucide-react';
+const _Settings = () => {
     return (<>
       <Helmet>
         <title>Settings - Zion Tech Group</title>

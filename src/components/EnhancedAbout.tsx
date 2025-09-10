@@ -1,9 +1,20 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
-export const EnhancedAbout = () => {
-    const companyValues = [
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+const services = [];
+const solutions = [];
+export const _EnhancedAbout = () => {
+    const _companyValues = [
         {
             icon: Brain,
             title: 'Innovation First',
@@ -29,7 +40,7 @@ export const EnhancedAbout = () => {
             color: 'zion-purple'
         }
     ];
-    const teamMembers = [
+    const _teamMembers = [
         {
             name: 'Kleber',
             role: 'CEO & Founder',
@@ -55,7 +66,7 @@ export const EnhancedAbout = () => {
             avatar: '🔒'
         }
     ];
-    const milestones = [
+    const _milestones = [
         {
             year: '2020',
             title: 'Company Founded',
@@ -87,7 +98,7 @@ export const EnhancedAbout = () => {
             achievement: '95% client satisfaction rate'
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -96,7 +107,7 @@ export const EnhancedAbout = () => {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
@@ -107,7 +118,7 @@ export const EnhancedAbout = () => {
             }
         }
     };
-    const cardVariants = {
+    const _cardVariants = {
         hidden: { scale: 0.9, opacity: 0 },
         visible: {
             scale: 1,
@@ -126,7 +137,7 @@ export const EnhancedAbout = () => {
             }
         }
     };
-    const timelineVariants = {
+    const _timelineVariants = {
         hidden: { opacity: 0, x: -50 },
         visible: {
             opacity: 1,

@@ -1,154 +1,16 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _SEO } from '@/components/SEO';
+import { _motion } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
+import SEO from '@/components/SEO';
+const _features = [];
+const _services = [];
+const _solutions = [];
 
-const DigitalTransformation: React.FC = () => {
-  const transformationServices = [
-    {
-      title: "Process Automation",
-      description: "Streamline operations with intelligent automation solutions",
-      features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
-      icon: "🤖"
-    },
-    {
-      title: "Workflow Optimization",
-      description: "Redesign and optimize business workflows for maximum efficiency",
-      features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
-      icon: "📊"
-    },
-    {
-      title: "Change Management",
-      description: "Guide your organization through digital transformation with expert change management",
-      features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
-      icon: "🔄"
-    },
-    {
-      title: "Business Process Optimization",
-      description: "Streamline operations and improve efficiency through digital workflows",
-      features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
-      icon: "⚡"
-      features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
-      icon: "⚡"
-    },
-    {
-      title: "Customer Experience Enhancement",
-      description: "Create seamless digital experiences that delight your customers",
-      features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
-      icon: "🎯"
-      features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
-      icon: "🎯"
-    },
-    {
-      title: "Data & Analytics Strategy",
-      description: "Leverage data insights to drive informed business decisions",
-      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
-      icon: "📊"
-      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
-      icon: "📊"
-    },
-    {
-      title: "Technology Infrastructure",
-      description: "Modernize your technology stack for scalability and performance",
-      features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
-      icon: "🏗️"
-    }
-  ];
 
-  const benefits = [
-    "Increased operational efficiency by 50%",
-    "Enhanced customer experience and satisfaction",
-    "Reduced operational costs and waste",
-    "Improved decision-making with real-time data",
-    "Competitive advantage in the digital marketplace"
-  ];
-
-  const transformationApproach = [
-    { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
-    { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
-    { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
-    { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      <SEO 
-        title="Digital Transformation - Zion Tech Group"
-        description="Transform your business for the digital age with our comprehensive digital transformation services."
-        keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
-        canonical="https://ziontechgroup.com/services/digital-transformation"
-      />
-=======
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
-import { ArrowRight } from 'lucide-react';
-const DigitalTransformation = () => {
-    const transformationServices = [
-        {
-            title: "Process Automation",
-            description: "Streamline operations with intelligent automation solutions",
-            features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
-            icon: "🤖"
-        },
-        {
-            title: "Workflow Optimization",
-            description: "Redesign and optimize business workflows for maximum efficiency",
-            features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
-            icon: "📊"
-        },
-        {
-            title: "Change Management",
-            description: "Guide your organization through digital transformation with expert change management",
-            features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
-            icon: "🔄"
-        },
-        {
-            title: "Business Process Optimization",
-            description: "Streamline operations and improve efficiency through digital workflows",
-            features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
-            icon: "⚡"
-        },
-        {
-            title: "Customer Experience Enhancement",
-            description: "Create seamless digital experiences that delight your customers",
-            features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
-            icon: "🎯"
-        },
-        {
-            title: "Data & Analytics Strategy",
-            description: "Leverage data insights to drive informed business decisions",
-            features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
-            icon: "📊"
-        },
-        {
-            title: "Technology Infrastructure",
-            description: "Modernize your technology stack for scalability and performance",
-            features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
-            icon: "🏗️"
-        }
-    ];
-    const benefits = [
-        "Increased operational efficiency by 50%",
-        "Enhanced customer experience and satisfaction",
-        "Reduced operational costs and waste",
-        "Improved decision-making with real-time data",
-        "Competitive advantage in the digital marketplace"
-    ];
-    const transformationApproach = [
-        { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
-        { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
-        { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
-        { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      <SEO title="Digital Transformation - Zion Tech Group" description="Transform your business for the digital age with our comprehensive digital transformation services." keywords="digital transformation, process automation, digital strategy, change management, performance optimization" canonical="https://ziontechgroup.com/services/digital-transformation"/>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -185,7 +47,7 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+            {transformationServices.map((_service, _index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <div className="text-5xl mb-6">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -193,22 +55,14 @@ const DigitalTransformation = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                    {service.features.map((_feature, _idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
                       </li>))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-              </motion.div>))}
-=======
-<<<<<<< HEAD
-              </motion.div>
-            ))}
-=======
-              </motion.div>))}
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+
+
           </div>
         </div>
       </section>
@@ -272,22 +126,14 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {transformationApproach.map((step, index) => (<motion.div key={index} className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+            {transformationApproach.map((_step, _index) => (<motion.div key={index} className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{step.step}</h3>
                 <p className="text-gray-300">{step.description}</p>
-<<<<<<< HEAD
-              </motion.div>))}
-=======
-<<<<<<< HEAD
-              </motion.div>
-            ))}
-=======
-              </motion.div>))}
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+
+
           </div>
         </div>
       </section>
@@ -307,23 +153,5 @@ const DigitalTransformation = () => {
           </Link>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-export default DigitalTransformation;
-=======
-<<<<<<< HEAD
-    </div>
-  );
-=======
-    </div>);
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
-};
-export default DigitalTransformation;
-<<<<<<< HEAD
-};
 
-export default DigitalTransformation;
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+

@@ -1,9 +1,17 @@
 import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
-import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const SecurityComplianceDashboard = ({ className = '' }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
+import { _useSecurityCompliance } from '../hooks/useSecurityCompliance';
+import { _useAnalytics } from '../hooks/useAnalytics';
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+export const _SecurityComplianceDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -12,38 +20,38 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
     const { securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity } = useSecurityCompliance();
-    const handleStartMonitoring = useCallback(() => {
+    const _handleStartMonitoring = useCallback(() => {
         startMonitoring();
         trackEvent('security', 'dashboard', 'monitoring_started');
     }, [startMonitoring, trackEvent]);
-    const handleStopMonitoring = useCallback(() => {
+    const _handleStopMonitoring = useCallback(() => {
         stopMonitoring();
         trackEvent('security', 'dashboard', 'monitoring_stopped');
     }, [stopMonitoring, trackEvent]);
-    const handleCheckCompliance = useCallback(async () => {
+    const _handleCheckCompliance = useCallback(async () => {
         await checkCompliance();
         trackEvent('security', 'dashboard', 'compliance_checked');
     }, [checkCompliance, trackEvent]);
-    const handleGenerateReport = useCallback(() => {
-        const report = generateSecurityReport();
+    const _handleGenerateReport = useCallback(() => {
+        const _report = generateSecurityReport();
         navigator.clipboard.writeText(report);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
         trackEvent('security', 'dashboard', 'report_generated');
     }, [generateSecurityReport, trackEvent]);
-    const handleExportAuditLog = useCallback(() => {
-        const auditLog = exportAuditLog();
-        const blob = new Blob([auditLog], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
+    const _handleExportAuditLog = useCallback(() => {
+        const _auditLog = exportAuditLog();
+        const _blob = new Blob([auditLog], { type: 'application/json' });
+        const _url = URL.createObjectURL(blob);
+        const _a = document.createElement('a');
         a.href = url;
         a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`;
         a.click();
         URL.revokeObjectURL(url);
         trackEvent('security', 'dashboard', 'audit_log_exported');
     }, [exportAuditLog, trackEvent]);
-    const handleAddComplianceRule = useCallback(() => {
-        const newRule = {
+    const _handleAddComplianceRule = useCallback(() => {
+        const _newRule = {
             name: 'Custom Compliance Rule',
             category: 'custom',
             description: 'Custom compliance requirement',
@@ -54,7 +62,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added');
     }, [addComplianceRule, trackEvent]);
-    const getSeverityColor = (severity) => {
+    const _getSeverityColor = (severity) => {
         switch (severity) {
             case 'critical': return 'text-red-600 bg-red-100';
             case 'high': return 'text-orange-600 bg-orange-100';
@@ -63,7 +71,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             default: return 'text-gray-600 bg-gray-100';
         }
     };
-    const getStatusColor = (status) => {
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'compliant': return 'text-green-600 bg-green-100';
             case 'non_compliant': return 'text-red-600 bg-red-100';
@@ -71,7 +79,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             default: return 'text-gray-600 bg-gray-100';
         }
     };
-    const getThreatLevelColor = (level) => {
+    const _getThreatLevelColor = (level) => {
         switch (level) {
             case 'critical': return 'text-red-600 bg-red-100 border-red-200';
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';

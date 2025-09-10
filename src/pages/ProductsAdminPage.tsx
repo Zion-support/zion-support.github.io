@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
-import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '@/components/ui/table';
-import { Input } from '@/components/ui/input';
-import { Switch } from '@/components/ui/switch';
-const initialProducts = [
+import { _Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '@/components/ui/table';
+import { _Input } from '@/components/ui/input';
+import { _Switch } from '@/components/ui/switch';
+
+import { Check } from 'lucide-react';
+const _initialProducts = [
     { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
     { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
     { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
@@ -11,8 +13,8 @@ const initialProducts = [
 export default function ProductsAdminPage() {
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState(initialProducts);
-    const filtered = products.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
-    const toggleApproval = (id) => {
+    const _filtered = products.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
+    const _toggleApproval = (id) => {
         setProducts((prev) => prev.map((p) => p.id === id
             ? {
                 ...p,

@@ -1,48 +1,37 @@
-<<<<<<< HEAD
-import React from "react";
-import { SEO } from "@/components/SEO";
-export default function EnhancedNewsletterForm("props": "any) {return (;
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="EnhancedNewsletterForm - Zion Tech Group" description="Professional EnhancedNewsletterForm services by Zion Tech Group"   />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">EnhancedNewsletterForm</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional EnhancedNewsletterForm services to help your business grow.;
-        </p>;
-      </div>;
-  );""}";</div>
-=======
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState, useRef } from "react";
-import { Mail } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+
+import { _Button } from "@/components/ui/button";
+import { _Input } from "@/components/ui/input";
+import { _useState, useRef } from "react";
+import { _Mail } from "lucide-react";
+import { _useToast } from "@/hooks/use-toast";
+
+import { Code } from 'lucide-react';
 export function EnhancedNewsletterForm() {
     const [email, setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const { toast } = useToast();
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const lastSubmit = useRef(0);
-    const handleSubmit = async (e) => {
+    const _lastSubmit = useRef(0);
+    const _handleSubmit = async (e) => {
         e.preventDefault();
-        const now = Date.now();
+        const _now = Date.now();
         if (now - lastSubmit.current < 1000)
             return;
         lastSubmit.current = now;
-        const trimmed = email.trim();
+        const _trimmed = email.trim();
         if (!EMAIL_REGEX.test(trimmed)) {
             toast.error("Invalid email");
             return;
         }
         setIsSubmitting(true);
         try {
-            const res = await fetch("/api/newsletter", {
+            const _res = await fetch("/api/newsletter", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: trimmed }),
             });
-            const data = await res.json().catch(() => ({}));
+            const _data = await res.json().catch(() => ({}));
             if (res.ok) {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
@@ -56,12 +45,12 @@ export function EnhancedNewsletterForm() {
             }
             else {
                 // Handle error responses
-                console.error('Newsletter subscription failed:', data);
+                // console.error('Newsletter subscription failed:', data);
                 toast.error(data.error || "Subscription failed. Please try again.");
             }
         }
         catch (err) {
-            console.error('Newsletter subscription error:', err);
+            // console.error('Newsletter subscription error:', err);
             toast.error("Unable to subscribe right now. Please try again later.");
         }
         finally {
@@ -99,4 +88,4 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

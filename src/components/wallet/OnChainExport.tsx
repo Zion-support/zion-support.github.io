@@ -1,20 +1,23 @@
 import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ArrowUpRight } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/button";
+import { _Wallet, Info, Check, ArrowUpRight } from "lucide-react";
+import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
+import { _useToast } from "@/hooks/use-toast";
+import { _useAuth } from "@/hooks/useAuth";
+
+import { Check } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);
     const [exportStatus, setExportStatus] = useState('idle');
     const { toast } = useToast();
     const { user } = useAuth();
-    const handleConnectWallet = async () => {
+    const _handleConnectWallet = async () => {
         try {
             // Check if wallet is available
-            const ethereum = window.ethereum;
+            const _ethereum = window.ethereum;
             if (!ethereum) {
                 toast({
                     title: "Wallet not detected",
@@ -24,10 +27,10 @@ export function OnChainExport() {
                 return;
             }
             // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-            const address = accounts[0];
+            const _accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            const _address = accounts[0];
             // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+            const _message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
                 method: 'personal_sign',
                 params: [address, message]
@@ -46,7 +49,7 @@ export function OnChainExport() {
             });
         }
     };
-    const handleExportTokens = async () => {
+    const _handleExportTokens = async () => {
         setIsExporting(true);
         setExportStatus('processing');
         try {

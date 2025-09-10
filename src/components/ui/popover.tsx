@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-const PopoverContext = createContext(undefined);
+const _PopoverContext = createContext(undefined);
 export function Popover({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<PopoverContext.Provider value={{ isOpen, setIsOpen }}>
@@ -9,7 +9,7 @@ export function Popover({ children }) {
     </PopoverContext.Provider>);
 }
 export function PopoverTrigger({ children, className = '' }) {
-    const context = useContext(PopoverContext);
+    const _context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverTrigger must be used within Popover');
     return (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}>
@@ -17,7 +17,7 @@ export function PopoverTrigger({ children, className = '' }) {
     </div>);
 }
 export function PopoverContent({ children, className = '' }) {
-    const context = useContext(PopoverContext);
+    const _context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverContent must be used within Popover');
     if (!context.isOpen)

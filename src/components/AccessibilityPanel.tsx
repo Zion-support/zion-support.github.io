@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-export const AccessibilityPanel = ({ isOpen, onToggle }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+export const _AccessibilityPanel = ({ isOpen, onToggle }) => {
     const [settings, setSettings] = useState({
         highContrast: false,
         fontSize: 100,
@@ -15,14 +19,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     const [activeTab, setActiveTab] = useState('general');
     useEffect(() => {
         // Load saved settings from localStorage
-        const savedSettings = localStorage.getItem('accessibility-settings');
+        const _savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
             try {
-                const parsed = JSON.parse(savedSettings);
+                const _parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
             }
             catch (error) {
-                console.error('Failed to parse accessibility settings:', error);
+                // console.error('Failed to parse accessibility settings:', error);
             }
         }
     }, []);
@@ -32,8 +36,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(settings));
     }, [settings]);
-    const applySettings = (newSettings) => {
-        const root = document.documentElement;
+    const _applySettings = (newSettings) => {
+        const _root = document.documentElement;
         // High contrast
         if (newSettings.highContrast) {
             root.style.setProperty('--high-contrast', '1');
@@ -72,11 +76,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             root.classList.remove('focus-visible');
         }
     };
-    const updateSetting = (key, value) => {
+    const _updateSetting = (key, value) => {
         setSettings(prev => ({ ...prev, [key]: value }));
     };
-    const resetSettings = () => {
-        const defaultSettings = {
+    const _resetSettings = () => {
+        const _defaultSettings = {
             highContrast: false,
             fontSize: 100,
             reducedMotion: false,
@@ -87,20 +91,20 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         };
         setSettings(defaultSettings);
     };
-    const tabs = [
+    const _tabs = [
         { id: 'general', label: 'General', icon: '⚙️' },
         { id: 'visual', label: 'Visual', icon: '👁️' },
         { id: 'audio', label: 'Audio', icon: '🔊' },
         { id: 'navigation', label: 'Navigation', icon: '⌨️' }
     ];
-    const getScoreColor = (score) => {
+    const _getScoreColor = (score) => {
         if (score >= 90)
             return 'text-green-400';
         if (score >= 70)
             return 'text-yellow-400';
         return 'text-red-400';
     };
-    const getScoreLabel = (score) => {
+    const _getScoreLabel = (score) => {
         if (score >= 90)
             return 'Excellent';
         if (score >= 70)

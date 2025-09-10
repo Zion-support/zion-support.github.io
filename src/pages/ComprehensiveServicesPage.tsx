@@ -1,32 +1,42 @@
 import React, { useState, useMemo } from 'react';
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Input } from '@/components/ui/input';
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { _Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
+import { _COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
+import { _SEO } from '@/components/SEO';
+
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
+const implementation = [];
 export default function ComprehensiveServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
-    const filteredServices = useMemo(() => {
+    const _filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
+            const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+            const _matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing;
         });
     }, [searchTerm, selectedCategory, selectedPricingTier]);
-    const getCategoryIcon = (categoryName) => {
+    const _getCategoryIcon = (categoryName) => {
         return '💼';
     };
-    const getServiceTypeColor = (type) => {
-        const colorMap = {
+    const _getServiceTypeColor = (type) => {
+        const _colorMap = {
             'Micro SAAS': 'bg-blue-100 text-blue-800',
             'IT Services': 'bg-green-100 text-green-800',
             'AI Services': 'bg-purple-100 text-purple-800'

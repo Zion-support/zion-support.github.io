@@ -1,20 +1,25 @@
 import React from 'react';
+import { _motion } from 'framer-motion';
+import { _Sparkles, Zap, Shield, Rocket } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
-const sizeClasses = {
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const _sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
 };
-const iconSizes = {
+const _iconSizes = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
 };
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) {
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -24,7 +29,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             }
         }
     };
-    const iconVariants = {
+    const _iconVariants = {
         hidden: { scale: 0, opacity: 0 },
         visible: {
             scale: 1,
@@ -43,7 +48,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             }
         }
     };
-    const pulseVariants = {
+    const _pulseVariants = {
         pulse: {
             scale: [1, 1.1, 1],
             opacity: [1, 0.7, 1],
@@ -54,7 +59,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             }
         }
     };
-    const bounceVariants = {
+    const _bounceVariants = {
         bounce: {
             y: [0, -20, 0],
             transition: {
@@ -64,7 +69,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             }
         }
     };
-    const waveVariants = {
+    const _waveVariants = {
         wave: {
             y: [0, -15, 0],
             transition: {
@@ -74,7 +79,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             }
         }
     };
-    const icons = [Sparkles, Zap, Shield, Rocket];
+    const _icons = [Sparkles, Zap, Shield, Rocket];
     if (variant === 'pulse') {
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center shadow-lg`} variants={pulseVariants} animate="pulse">

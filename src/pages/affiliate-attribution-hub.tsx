@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-const AffiliateAttributionHub = () => {
-    const features = [
+
+import { Link } from 'react-router-dom';
+const features = [];
+const benefits = [];
+const services = [];
+const _AffiliateAttributionHub = () => {
+    const _features = [
         {
             title: "Multi-Touch Attribution",
             description: "Track customer journey across all touchpoints and channels",
@@ -23,7 +28,7 @@ const AffiliateAttributionHub = () => {
             icon: "💰"
         }
     ];
-    const attributionModels = [
+    const _attributionModels = [
         {
             name: "First-Touch Attribution",
             description: "Credit goes to the first affiliate that introduced the customer",
@@ -45,7 +50,7 @@ const AffiliateAttributionHub = () => {
             useCase: "Long sales cycles"
         }
     ];
-    const platformFeatures = [
+    const _platformFeatures = [
         {
             category: "Affiliate Management",
             features: ["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]
@@ -63,7 +68,7 @@ const AffiliateAttributionHub = () => {
             features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: "Increased Revenue",
             description: "Optimize affiliate performance and maximize conversions"

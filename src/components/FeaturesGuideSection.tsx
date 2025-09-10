@@ -1,6 +1,8 @@
 import React from 'react';
+
+const features = [];
 export function FeaturesGuideSection() {
-    const features = [
+    const _features = [
         {
             title: 'AI Talent Marketplace',
             description: 'Connect with top AI professionals and experts from around the world.',

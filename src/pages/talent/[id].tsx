@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from 'react';
+import { _useParams } from 'react-router-dom';
+import { _SEO } from '@/components/SEO';
+import { _ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import { _ProfileErrorState } from '@/components/profile/ProfileErrorState';
+
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 export default function TalentProfilePage() {
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
-        const fetchProfile = async () => {
+        const _fetchProfile = async () => {
             if (!id) {
                 setError('Profile not found');
                 setLoading(false);
                 return;
             }
             try {
-                const res = await fetch(`/api/talent/${id}`);
+                const _res = await fetch(`/api/talent/${id}`);
                 if (!res.ok)
                     throw new Error('Failed to load profile');
-                const data = await res.json();
+                const _data = await res.json();
                 setProfile(data.profile);
             }
             catch (err) {

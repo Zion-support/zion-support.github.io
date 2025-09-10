@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useRouter } from "next/router";
+import { _Button } from "@/components/ui/button";
+import { _Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { _Textarea } from "@/components/ui/textarea";
+import { _Input } from "@/components/ui/input";
+import { _Switch } from "@/components/ui/switch";
+import { _Label } from "@/components/ui/label";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { _toast } from "sonner";
+import { _Loader2 } from "lucide-react";
+import { _supabase } from "@/integrations/supabase/client";
+import { _useAuth } from "@/hooks/useAuth";
+import { _ScrollArea } from "@/components/ui/scroll-area";
+import { _useRouter } from "next/router";
+
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+const integrations = [];
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
-    const router = useRouter();
+    const _router = useRouter();
     const [contentType, setContentType] = useState('blog');
     const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
@@ -31,7 +37,7 @@ export default function ContentGenerator() {
             router.push("/login?redirect=/content-generator");
         }
     }, [user, isLoading, router]);
-    const generateContent = async () => {
+    const _generateContent = async () => {
         setIsGenerating(true);
         setPreviewContent(null);
         try {
@@ -50,14 +56,14 @@ export default function ContentGenerator() {
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
         }
         catch (error) {
-            console.error("Error generating content:", error);
+            // console.error("Error generating content:", error);
             toast.error("Failed to generate content. Please try again.");
         }
         finally {
             setIsGenerating(false);
         }
     };
-    const sendTestNewsletter = async () => {
+    const _sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
             return;
@@ -81,7 +87,7 @@ export default function ContentGenerator() {
             toast.success(`Test newsletter sent to ${testEmail}!`);
         }
         catch (error) {
-            console.error("Error sending test newsletter:", error);
+            // console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.");
         }
     };

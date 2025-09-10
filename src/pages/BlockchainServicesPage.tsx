@@ -1,11 +1,26 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
-const blockchainServices = [
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { _Button } from "../ui/button";
+import { _Badge } from "../ui/badge";
+import { _Link } from "react-router-dom";
+import { _Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
+import { _TrustedBySection } from "../TrustedBySection";
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const useCases = [];
+const services = [];
+const applications = [];
+const blockchainServices = [];
+const solutions = [];
+const _blockchainServices = [
     {
         id: "smart-contracts",
         title: "Smart Contract Development",
@@ -133,7 +148,7 @@ const blockchainServices = [
         image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     }
 ];
-const blockchainBenefits = [
+const _blockchainBenefits = [
     {
         title: "Transparency",
         description: "Immutable, transparent records that build trust and enable verifiable transactions",
@@ -155,7 +170,7 @@ const blockchainBenefits = [
         icon: <TrendingUp className="h-6 w-6"/>
     }
 ];
-const useCases = [
+const _useCases = [
     {
         title: "Supply Chain Management",
         description: "Track products from origin to consumer with immutable records and real-time visibility",

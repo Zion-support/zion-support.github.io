@@ -1,7 +1,14 @@
+import { _Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard, Brain } from 'lucide-react';
 import React from 'react';
-import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard } from 'lucide-react';
-const QuantumNeuralNetwork = () => {
-    const quantumFeatures = [
+const _features = [];
+const _benefits = [];
+const _industries = [];
+const _applications = [];
+const _solutions = [];
+const _quantumFeatures = [];
+const _implementation = [];
+const _QuantumNeuralNetwork = () => {
+    const _quantumFeatures = [
         {
             icon: Atom,
             title: "Quantum Processing",
@@ -27,7 +34,7 @@ const QuantumNeuralNetwork = () => {
             features: ["Faster training", "Improved accuracy", "Better convergence", "Enhanced scalability"]
         }
     ];
-    const applications = [
+    const _applications = [
         {
             title: "Drug Discovery",
             description: "Accelerate pharmaceutical research with quantum-enhanced molecular modeling",
@@ -65,7 +72,7 @@ const QuantumNeuralNetwork = () => {
             benefits: ["Route optimization", "Supply chain efficiency", "Cost reduction", "Resource allocation"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Exponential speedup for complex computations",
         "Improved accuracy in neural network training",
         "Ability to solve previously intractable problems",
@@ -73,7 +80,7 @@ const QuantumNeuralNetwork = () => {
         "Future-proof technology investment",
         "Competitive advantage in research and development"
     ];
-    const implementation = [
+    const _implementation = [
         {
             phase: "Assessment",
             description: "Evaluate current systems and identify quantum opportunities",
@@ -148,14 +155,14 @@ const QuantumNeuralNetwork = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
+            {quantumFeatures.map((_feature, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {feature.features.map((_item, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {item}
                     </li>))}
@@ -179,14 +186,14 @@ const QuantumNeuralNetwork = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {applications.map((application, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
+            {applications.map((_application, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <application.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{application.title}</h3>
                 <p className="text-gray-300 mb-4">{application.description}</p>
                 <ul className="space-y-2">
-                  {application.benefits.map((benefit, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {application.benefits.map((_benefit, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {benefit}
                     </li>))}
@@ -209,7 +216,7 @@ const QuantumNeuralNetwork = () => {
                 computational power and problem-solving capabilities.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((_benefit, _index) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -246,7 +253,7 @@ const QuantumNeuralNetwork = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {implementation.map((phase, index) => (<div key={index} className="text-center">
+            {implementation.map((_phase, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}
                 </div>

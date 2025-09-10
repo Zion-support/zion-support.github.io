@@ -1,9 +1,21 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Button } from '../ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { _Badge } from '../ui/badge';
+import { _Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
 // Mock data for enhanced services
 const ENHANCED_SERVICES = [
     {
@@ -49,10 +61,10 @@ const ENHANCED_SERVICES = [
         location: "Global"
     }
 ];
-const EnhancedServicesOverview = () => {
+const _EnhancedServicesOverview = () => {
     // Get featured services (first 6)
-    const featuredServices = ENHANCED_SERVICES.slice(0, 6);
-    const getCategoryIcon = (category) => {
+    const _featuredServices = ENHANCED_SERVICES.slice(0, 6);
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'AI & Machine Learning': return <Brain className="w-6 h-6"/>;
             case 'Cybersecurity': return <Shield className="w-6 h-6"/>;
@@ -67,7 +79,7 @@ const EnhancedServicesOverview = () => {
             default: return <Zap className="w-6 h-6"/>;
         }
     };
-    const getAvailabilityColor = (availability) => {
+    const _getAvailabilityColor = (availability) => {
         switch (availability) {
             case 'immediate': return 'text-green-400';
             case 'within-week': return 'text-yellow-400';

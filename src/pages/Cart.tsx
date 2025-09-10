@@ -1,10 +1,15 @@
-import { Button } from '@/components/ui/button';
+import { _Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { _useState, useEffect } from 'react';
 import Skeleton from '@/components/ui/skeleton';
+import { _useAuth } from '@/hooks/useAuth';
+
+import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 export default function CartPage() {
-    const navigate = useNavigate();
+    const _navigate = useNavigate();
     const { items, dispatch } = useCart();
     const { user } = useAuth();
     const [loading, setLoading] = useState(false);
@@ -16,7 +21,7 @@ export default function CartPage() {
             setCartLoading(false);
         }
         else {
-            const stored = safeStorage.getItem('zion_cart');
+            const _stored = safeStorage.getItem('zion_cart');
             if (stored) {
                 try {
                     dispatch(setItemsAction(JSON.parse(stored)));
@@ -32,7 +37,7 @@ export default function CartPage() {
         ;
         load();
     }, [user, dispatch]);
-    const updateQuantity = async (id, qty) => {
+    const _updateQuantity = async (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));
         if (user) {
             try {
@@ -43,7 +48,7 @@ export default function CartPage() {
                 });
             }
             catch (err) {
-                console.error('Failed to update cart', err);
+                // console.error('Failed to update cart', err);
             }
         }
         setCartLoading(false);
@@ -53,18 +58,18 @@ export default function CartPage() {
             setShowEmpty(true);
         }
     }, [cartLoading, items]);
-    const updateQuantity = (id, qty) => {
+    const _updateQuantity = (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));
     };
-    const removeItem = (id) => {
+    const _removeItem = (id) => {
         dispatch(removeItemAction(id));
     };
-    const handleCheckout = () => {
+    const _handleCheckout = () => {
         router.push('/checkout');
     };
-    const applyCode = async () => {
+    const _applyCode = async () => {
         try {
-            const res = await apiClient.post('/coupons/validate', {
+            const _res = await apiClient.post('/coupons/validate', {
                 code,
                 amount: subtotal,
             });
@@ -74,8 +79,8 @@ export default function CartPage() {
             setDiscount(0);
         }
     };
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-    const total = subtotal - discount;
+    const _subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+    const _total = subtotal - discount;
     if (cartLoading) {
         return (<div className="container py-10 space-y-4">
         <Skeleton className="h-8 w-1/3"/>
@@ -91,8 +96,8 @@ export default function CartPage() {
         </Button>
       </div>);
     }
-    const tax = subtotal * 0.1;
-    const total = subtotal + tax;
+    const _tax = subtotal * 0.1;
+    const _total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
       <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
       <ul className="space-y-4">

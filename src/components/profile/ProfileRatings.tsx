@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react';
-import { Star  } from 'lucide-react';
-import { ReviewStats } from '@/components/reviews/ReviewStats';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { useReviews } from '@/hooks/useReviews';
-import { Button } from '@/components/ui/button';
+import { _useState, useEffect } from 'react';
+import { _Star  } from 'lucide-react';
+import { _ReviewStats } from '@/components/reviews/ReviewStats';
+import { _ReviewsList } from '@/components/reviews/ReviewsList';
+import { _useReviews } from '@/hooks/useReviews';
+import { _Button } from '@/components/ui/button';
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 ;
 export function ProfileRatings("props": "any) {;
   const { reviews", isLoading, fetchUserReviews, reportReview } = useReviews();
-=======
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
   // Calculate rating distribution;
-<<<<<<< HEAD:src_backup_temp/components/profile/ProfileRatings.tsx
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
 "}, []);
@@ -30,69 +29,3 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}
     );
-  // Calculate rating distribution
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    if(reviews.length > 0) {
-      const distribution: Recor d<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-      reviews.forEach((review) => {
-        if(review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-        }
-      }
-    );
-      
-      setRatingDistribution(distribution);
-    }
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
-    if(reviews.length > 0) {;
-      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-      reviews.forEach((review) => {;
-        if(review.rating >= 1 && review.rating <= 5) {;
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-}
-      });
-      setRatingDistribution(distribution);
-}
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
-  }, [reviews]);
-  // Fetch reviews when component mounts or userId/fetchUserReviews changes;
-<<<<<<< HEAD:src_backup_temp/components/profile/ProfileRatings.tsx
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-"}, []);
-    fetchUserReviews(userId);
-  }, [userId, fetchUserReviews]); // Added fetchUserReviews;
-  ;
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-}, []);
-    fetchUserReviews(userId);
-}, [userId, fetchUserReviews]); // Added fetchUserReviews;
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
-  return (<div className="space-y-6">;
-      <div className="flex flex-col "md": "fle x-row gap-6">;
-        <div className=""md":w-1/3">;
-          <ReviewStats averageRating={averageRating"}              />
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </div>
-    );
-=======
->>>>>>> origin/automation-fixes:src/components/profile/ProfileRatings.tsx
-}
-;
-</ReviewsList>;
-</ReviewsList>;
-</ReviewsList>;
-</ReviewStats>;
-</number>;
-</number>;
-</Record>

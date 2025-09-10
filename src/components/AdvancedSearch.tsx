@@ -1,46 +1,14 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; Search,; X,; Filter,; TrendingUp,; Clock,; Star,; MapPin,; Users,; Building,; Code,; Shield,; Brain,; Zap,; ArrowRight,; ChevronDown,; CheckCircle,; Sparkles,; Target,; Globe,; Cpu,; Database,; Network,; Smartphone,; Server,; Lock,; Eye,; Settings,; BookOpen,; FileText,; Video,; Microphone,; Camera,; Lightbulb,; Rocket,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageCircle,; BarChart,; Users2,; Palette,; Heart,; Share2,; Download,; ExternalLink;  } from 'lucide-react'; ; interface SearchResult { "id": "string; "title": string; "description": string; "type": 'service' | 'page' | 'article' | 'case-study' | 'tool'; "category": string; "tags": string[]; "url": string; "relevance": number; "lastUpdated": Dat e; "views": number; "rating": number;   "}; interface SearchFilter { "type": "string[]; "category": string[]; "tags": string[]; "dateRange": 'all' | 'week' | 'month' | 'year'; "sortBy": 'relevance' | 'date' | 'popularity' | 'rating';   "}; export function AdvancedSearch("props": "any) {; const [isOpen", setIsOpen] = useState<any>(false); const [query, setQuery] = useState<any>(''); const [results, setResults] = useState<SearchResult[]>([]); const [suggestions, setSuggestions] = useState<string[]>([]); const [filters, setFilters] = useState<SearchFilter>({; "type": "[]",; "category": "[]",; "tags": "[]",; "dateRange": 'all',; "sortBy": 'relevance'; }); const [isSearching, setIsSearching] = useState<any>(false); const [showFilters, setShowFilters] = useState<any>(false); const [recentSearches, setRecentSearches] = useState<string[]>([]); const [popularSearches, setPopularSearches] = useState<string[]>([]); ; const searchInputRef = useRef<HTMLInputElement>(null); const searchTimeoutRef = useRef<NodeJS.Timeout>(); ;
-;
-</NodeJS>;
-</HTMLInputElement>;
-</string>;
-</string>;
-</any>;
-</any>;
-</SearchFilter>;
-</string>;
-</SearchResult>;
-</any>;
-</any>
-import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; Search,; X,; Filter,; TrendingUp,; Clock,; Star,; MapPin,; Users,; Building,; Code,; Shield,; Brain,; Zap,; ArrowRight,; ChevronDown,; CheckCircle,; Sparkles,; Target,; Globe,; Cpu,; Database,; Network,; Smartphone,; Server,; Lock,; Eye,; Settings,; BookOpen,; FileText,; Video,; Microphone,; Camera,; Lightbulb,; Rocket,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageCircle,; BarChart,; Users2,; Palette,; Heart,; Share2,; Download,; ExternalLink;  } from 'lucide-react'; ; interface SearchResult { id: string; title: string; description: string; type: 'service' | 'page' | 'article' | 'case-study' | 'tool'; category: string; tags: string[]; url: string; relevance: number; lastUpdated: Dat e; views: number; rating: number;   }; interface SearchFilter { type: string[]; category: string[]; tags: string[]; dateRange: 'all' | 'week' | 'month' | 'year'; sortBy: 'relevance' | 'date' | 'popularity' | 'rating';   }; export function AdvancedSearch(props: any) {; const [isOpen, setIsOpen] = useState<any>(false); const [query, setQuery] = useState<any>(''); const [results, setResults] = useState<SearchResult[]>([]); const [suggestions, setSuggestions] = useState<string[]>([]); const [filters, setFilters] = useState<SearchFilter>({; type: [],; category: [],; tags: [],; dateRange: 'all',; sortBy: 'relevance'; }
-    ); const [isSearching, setIsSearching] = useState<any>(false); const [showFilters, setShowFilters] = useState<any>(false); const [recentSearches, setRecentSearches] = useState<string[]>([]); const [popularSearches, setPopularSearches] = useState<string[]>([]); ; const searchInputRef = useRef<HTMLInputElement>(null); const searchTimeoutRef = useRef<NodeJS.Timeout>(); ;
-</NodeJS>
-</string>
-</string>
-</any>
-</any>
-</SearchFilter>
-</string>
-</SearchResult>
-</any>
-</any>
-import React,{ useState,useEffect,useRef,useCallback } from &apos;react&apos;; import { motion,AnimatePresence } from &apos;framer-motion&apos;; import { ; Search,; X,; Filter,; TrendingUp,; Clock,; Star,; MapPin,; Users,; Building,; Code,; Shield,; Brain,; Zap,; ArrowRight,; ChevronDown,; CheckCircle,; Sparkles,; Target,; Globe,; Cpu,; Database,; Network,; Smartphone,; Server,; Lock,; Eye,; Settings,; BookOpen,; FileText,; Video,; Microphone,; Camera,; Lightbulb,; Rocket,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageCircle,; BarChart,; Users2,; Palette,; Heart,; Share2,; Download,; ExternalLink} from &apos;lucide-react&apos;; ; interface SearchResult { id: string; title: string; description: string; type: &apos;service&apos; | &apos;page&apos; | &apos;article&apos; | &apos;case-study&apos; | &apos;tool&apos;; category: string; tags: string[]; url: string; relevance: number; lastUpdated: Dat e; views: number; rating: number}; interface SearchFilter { type: string[]; category: string[]; tags: string[]; dateRange: &apos;all&apos; | &apos;week&apos; | &apos;month&apos; | &apos;year&apos;; sortBy: &apos;relevance&apos; | &apos;date&apos; | &apos;popularity&apos; | &apos;rating&apos;}; export function AdvancedSearch($1) {; const [isOpen,setIsOpen] = useState<any>(false); const [query,setQuery] = useState<any>(&quot;); const [results,setResults] = useState<SearchResult[]>([]); const [suggestions,setSuggestions] = useState<string[]>([]); const [filters,setFilters] = useState<SearchFilter>({; type: [],; category: [],; tags: [],; dateRange: &apos;all&apos;,sortBy: &apos;relevance&apos;}); const [isSearching,setIsSearching] = useState<any>(false); const [showFilters,setShowFilters] = useState<any>(false); const [recentSearches,setRecentSearches] = useState<string[]>([]); const [popularSearches,setPopularSearches] = useState<string[]>([]); ; const searchInputRef = useRef<HTMLInputElement>(null); const searchTimeoutRef = useRef<NodeJS.Timeout>(); ; </NodeJS> </HTMLInputElement> </string> </any> </SearchFilter> </string> </SearchResult> </any> </any>;&apos;;&apos;;
-const React,{ useState,useEffect,useRef,useCallback } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { ; Search,; X,; Filter,; TrendingUp,; Clock,; Star,; MapPin,; Users,; Building,; Code,; Shield,; Brain,; Zap,; ArrowRight,; ChevronDown,; CheckCircle,; Sparkles,; Target,; Globe,; Cpu,; Database,; Network,; Smartphone,; Server,; Lock,; Eye,; Settings,; BookOpen,; FileText,; Video,; Microphone,; Camera,; Lightbulb,; Rocket,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageCircle,; BarChart,; Users2,; Palette,; Heart,; Share2,; Download,; ExternalLink} from "lucide-react"; ; interface SearchResult { id: string; title: string; description: string; type:"
-  "service" | "page" | "article" | "case-study" | "tool"; category: string; tags: string[]; url: string; relevance: number; lastUpdated: Dat e; views: number; rating: number}; interface SearchFilter { type: string[]; category: string[]; tags: string[]; dateRange:"
-  "all" | "week" | "month" | "year"; sortBy:"
-  "relevance" | "date" | "popularity" | "rating"}; export function AdvancedSearch($1) {; const [isOpen,setIsOpen] = useState<any>(false); const [query,setQuery] = useState<any>("
-  "); const [results,setResults] = useState<SearchResult[]>([]); const [suggestions,setSuggestions] = useState<string[]>([]); const [filters,setFilters] = useState<SearchFilter>({; type: [],; category: [],; tags: [],; dateRange:"
-  "all",sortBy:"
-  "relevance"}); const [isSearching,setIsSearching] = useState<any>(false); const [showFilters,setShowFilters] = useState<any>(false); const [recentSearches,setRecentSearches] = useState<string[]>([]); const [popularSearches,setPopularSearches] = useState<string[]>([]); ; const searchInputRef = useRef<HTMLInputElement>(null); const searchTimeoutRef = useRef<NodeJS.Timeout>(); ; </NodeJS> </HTMLInputElement> </string> </any> </SearchFilter> </string> </SearchResult> </any> </any>;"
-  ";"
-  ";'"'"
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import _React,{ useState,useEffect,useRef,useCallback } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { ; Search,; X,; Filter,; TrendingUp,; Clock,; Star,; MapPin,; Users,; Building,; Code,; Shield,; Brain,; Zap,; ArrowRight,; ChevronDown,; CheckCircle,; Sparkles,; Target,; Globe,; Cpu,; Database,; Network,; Smartphone,; Server,; Lock,; Eye,; Settings,; BookOpen,; FileText,; Video,; Microphone,; Camera,; Lightbulb,; Rocket,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageCircle,; BarChart,; Users2,; Palette,; Heart,; Share2,; Download,; ExternalLink} from 'lucide-react'; ; interface SearchResult { id: string; title: string; description: string; type: 'service' | 'page' | 'article' | 'case-study' | 'tool'; category: string; tags: string[]; url: string; relevance: number; lastUpdated: Dat e; views: number; rating: number}; interface SearchFilter { type: string[]; category: string[]; tags: string[]; dateRange: 'all' | 'week' | 'month' | 'year'; sortBy: 'relevance' | 'date' | 'popularity' | 'rating'}; export function AdvancedSearch(_) {; const [isOpen,setIsOpen] = useState<any>(false); const [query,setQuery] = useState<any>("); const [results,setResults] = useState<SearchResult[]>([]); const [suggestions,setSuggestions] = useState<string[]>([]); const [filters,setFilters] = useState<SearchFilter>({; type: [],; category: [],; tags: [],; dateRange: 'all,sortBy: 'relevance'}); const [isSearching,setIsSearching] = useState<any>(false); const [showFilters,setShowFilters] = useState<any>(false); const [recentSearches,setRecentSearches] = useState<string[]>([]); const [popularSearches,setPopularSearches] = useState<string[]>([]); ; const searchInputRef = useRef<HTMLInputElement>(null); const searchTimeoutRef = useRef<NodeJS.Timeout>(); ; </NodeJS> </HTMLInputElement> </string> </any> </SearchFilter> </string> </SearchResult> </any> </any>;';';
-=======
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
-const mockSuggestions = [
+import { _Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
+
+import { Cloud } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const services = [];
+const solutions = [];
+const _mockSuggestions = [
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
@@ -56,10 +24,10 @@ export function AdvancedSearch() {
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const searchRef = useRef(null);
-    const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
+    const _searchRef = useRef(null);
+    const _categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const _handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowSuggestions(false);
             }
@@ -69,7 +37,7 @@ export function AdvancedSearch() {
     }, []);
     useEffect(() => {
         if (query.trim()) {
-            const filtered = mockSuggestions
+            const _filtered = mockSuggestions
                 .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()) ||
                 suggestion.category?.toLowerCase().includes(query.toLowerCase()))
                 .sort((a, b) => b.relevance - a.relevance)
@@ -82,20 +50,20 @@ export function AdvancedSearch() {
             setShowSuggestions(false);
         }
     }, [query]);
-    const handleSuggestionClick = (suggestion) => {
+    const _handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.text);
         setShowSuggestions(false);
         // Here you would typically trigger a search
     };
-    const toggleFilter = (category) => {
+    const _toggleFilter = (category) => {
         setSelectedFilters(prev => prev.includes(category)
             ? prev.filter(f => f !== category)
             : [...prev, category]);
     };
-    const clearFilters = () => {
+    const _clearFilters = () => {
         setSelectedFilters([]);
     };
-    const getSuggestionIcon = (type) => {
+    const _getSuggestionIcon = (type) => {
         switch (type) {
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;
@@ -104,7 +72,7 @@ export function AdvancedSearch() {
             default: return <Search className="w-4 h-4 text-zion-slate"/>;
         }
     };
-    const getSuggestionColor = (type) => {
+    const _getSuggestionColor = (type) => {
         switch (type) {
             case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
@@ -190,4 +158,4 @@ export function AdvancedSearch() {
         </div>)}
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState } from 'react';
-const AlertDialogContext = createContext(undefined);
+const _AlertDialogContext = createContext(undefined);
 export function AlertDialog({ children, open, onOpenChange }) {
     const [internalOpen, setInternalOpen] = useState(false);
-    const isControlled = open !== undefined;
-    const isOpen = isControlled ? open : internalOpen;
-    const setIsOpen = (newOpen) => {
+    const _isControlled = open !== undefined;
+    const _isOpen = isControlled ? open : internalOpen;
+    const _setIsOpen = (newOpen) => {
         if (!isControlled) {
             setInternalOpen(newOpen);
         }
@@ -19,7 +19,7 @@ export function AlertDialog({ children, open, onOpenChange }) {
     </AlertDialogContext.Provider>);
 }
 export function AlertDialogTrigger({ children }) {
-    const context = useContext(AlertDialogContext);
+    const _context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
     return (<div onClick={() => context.setIsOpen(true)}>
@@ -27,7 +27,7 @@ export function AlertDialogTrigger({ children }) {
     </div>);
 }
 export function AlertDialogContent({ children, className = '' }) {
-    const context = useContext(AlertDialogContext);
+    const _context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogContent must be used within AlertDialog');
     if (!context.isOpen)
@@ -52,10 +52,10 @@ export function AlertDialogFooter({ children, className = '' }) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
 }
 export function AlertDialogAction({ children, onClick, className = '' }) {
-    const context = useContext(AlertDialogContext);
+    const _context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogAction must be used within AlertDialog');
-    const handleClick = () => {
+    const _handleClick = () => {
         if (onClick)
             onClick();
         context.setIsOpen(false);
@@ -65,7 +65,7 @@ export function AlertDialogAction({ children, onClick, className = '' }) {
     </button>);
 }
 export function AlertDialogCancel({ children, className = '' }) {
-    const context = useContext(AlertDialogContext);
+    const _context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogCancel must be used within AlertDialog');
     return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}>

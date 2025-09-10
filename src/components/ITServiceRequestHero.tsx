@@ -1,10 +1,19 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
+import { _GradientHeading } from '../ui/GradientHeading';
+import { _NeonGlow } from '../ui/NeonGlow';
+
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
-import { GradientHeading } from '../ui/GradientHeading';
-import { NeonGlow } from '../ui/NeonGlow';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 export function ITServiceRequestHero() {
-    const features = [
+    const _features = [
         {
             icon: <Brain className="w-6 h-6"/>,
             title: "AI-Powered Solutions",

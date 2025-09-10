@@ -1,10 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react';
+
+import { _Link } from 'react-router-dom';
+import { _ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
+
 // Sample data for services
-const microSaaS = [
+const _microSaaS = [
   {
     id: 'ai-workflow-automation',
     icon: '🤖',
@@ -34,7 +44,7 @@ const microSaaS = [
   }
 ];
 
-const itServices = [
+const _itServices = [
   {
     id: 'cloud-devops',
     icon: '☁️',
@@ -64,7 +74,7 @@ const itServices = [
   }
 ];
 
-const aiServices = [
+const _aiServices = [
   {
     id: 'ai-autonomous-systems',
     icon: '🧠',
@@ -95,8 +105,8 @@ const aiServices = [
 ];
 
 export default function ServicesPage() {
-  const title = 'Services — Zion Tech Group';
-  const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
+  const _title = 'Services — Zion Tech Group';
+  const _description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
   return (
     <PageTransition>
@@ -111,10 +121,12 @@ export default function ServicesPage() {
               From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
             </p>
           </div>
+
         </div>
       </section>
 
       {/* Services Grid */}
+
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
@@ -248,11 +260,13 @@ export default function ServicesPage() {
                 </dd>
               </div>
             </dl>
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -279,3 +293,4 @@ export default function ServicesPage() {
     </PageTransition>
   );
 }
+

@@ -69,21 +69,13 @@ function cleanMergeConflicts(content) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
-<<<<<<< HEAD
-=======
-
 
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
       findConflictedFiles(filePath, conflictedFiles);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-  content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
-  content = content.replace(/>>>>>>> cursor\/[^\n]+\n?/g, '');
   
-=======
       if (content.includes('') || content.includes('') || content.includes('        conflictedFiles.push(filePath);
       }
     }
@@ -111,21 +103,11 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   // Remove merge conflict markers and keep HEAD version
   content = content.replace(/\n?/g, '');
   content = content.replace(/.*?\n?/g, '');
-  content = content.replace(/  content = content.replace(/  content = content.replace(/  
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  // Clean up any remaining artifacts
+  content = content.replace(/  content = content.replace(/  content = content.replace(/    // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   // Remove any remaining conflict markers
-<<<<<<< HEAD
-=======
-  content = content.replace(/||  
-  // Clean up specific artifacts
-  content = content.replace(/ursor\/[^\n]+\n?/g, '');
-  content = content.replace(/origin\/[^\n]+\n?/g, '');
-  content = content.replace(/ursor\/[^\n]+\n?/g, '');
-
 
 
 
@@ -147,4 +129,3 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   // Remove any remaining conflict markers;
 
 console.log('All merge conflicts cleaned!');
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

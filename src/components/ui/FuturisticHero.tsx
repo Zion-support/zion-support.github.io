@@ -1,19 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
+import { _motion, useScroll, useTransform } from 'framer-motion';
+import { _ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const technologies = [];
+const services = [];
+const solutions = [];
 export default function FuturisticHero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 300], [0, 100]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+    const _y = useTransform(scrollY, [0, 300], [0, 100]);
+    const _opacity = useTransform(scrollY, [0, 300], [1, 0]);
     useEffect(() => {
-        const handleMouseMove = (e) => {
+        const _handleMouseMove = (e) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
-    const floatingIcons = [
+    const _floatingIcons = [
         { icon: <Star className="w-6 h-6"/>, delay: 0, color: 'text-yellow-400' },
         { icon: <Zap className="w-6 h-6"/>, delay: 0.5, color: 'text-cyan-400' },
         { icon: <Brain className="w-6 h-6"/>, delay: 1, color: 'text-purple-400' },

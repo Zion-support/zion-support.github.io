@@ -1,14 +1,15 @@
-<<<<<<< HEAD
-;,"});});
-;,"}
-    );,})
-    );,"})"
-}
-=======
+
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices';
-const ServiceCard = ({ service, index, isVisible }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices';
+
+import { motion } from 'framer-motion';
+const features = [];
+const benefits = [];
+const technologies = [];
+const services = [];
+const solutions = [];
+const _ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (<motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}} transition={{ duration: 0.6, delay: index * 0.1 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
       {/* Animated Background */}
@@ -138,21 +139,21 @@ const ServiceCard = ({ service, index, isVisible }) => {
       </div>
     </motion.div>);
 };
-export const FuturisticServicesShowcase = () => {
+export const _FuturisticServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [visibleServices, setVisibleServices] = useState(new Set());
-    const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
-    const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
+    const _filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
+        const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesCategory && matchesSearch;
     });
     // Set all services as visible initially for better UX
     useEffect(() => {
-        const allIndices = new Set(filteredServices.map((_, index) => index));
+        const _allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices);
     }, [filteredServices]);
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
@@ -229,4 +230,4 @@ export const FuturisticServicesShowcase = () => {
       </div>
     </div>);
 };
->>>>>>> origin/backup-improvements-20250827-015311
+

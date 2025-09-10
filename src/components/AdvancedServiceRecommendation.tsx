@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
+import { _motion } from 'framer-motion';
+import { _Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
+import { _Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { _Button } from './ui/button';
+import { _Badge } from './ui/badge';
+
 import { motion } from 'framer-motion';
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-const AdvancedServiceRecommendation = () => {
+import { CheckCircle } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+const features = [];
+const benefits = [];
+const industries = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+const _AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
         industry: '',
         companySize: '',
@@ -17,35 +30,35 @@ const AdvancedServiceRecommendation = () => {
     const [recommendations, setRecommendations] = useState([]);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [showResults, setShowResults] = useState(false);
-    const industries = [
+    const _industries = [
         'Technology', 'Healthcare', 'Financial Services', 'Manufacturing',
         'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media'
     ];
-    const companySizes = [
+    const _companySizes = [
         'Startup (1-50 employees)', 'Small Business (51-200 employees)',
         'Medium Business (201-1000 employees)', 'Enterprise (1000+ employees)'
     ];
-    const budgets = [
+    const _budgets = [
         'Under $50K', '$50K-$200K', '$200K-$500K', '$500K-$1M', '$1M+'
     ];
-    const timelines = [
+    const _timelines = [
         'Immediate (0-3 months)', 'Short-term (3-6 months)',
         'Medium-term (6-12 months)', 'Long-term (12+ months)'
     ];
-    const technologyMaturityLevels = [
+    const _technologyMaturityLevels = [
         'Early Adopter', 'Growing', 'Mature', 'Advanced', 'Innovation Leader'
     ];
-    const primaryGoals = [
+    const _primaryGoals = [
         'Cost Reduction', 'Revenue Growth', 'Operational Efficiency',
         'Digital Transformation', 'Innovation', 'Competitive Advantage',
         'Customer Experience', 'Risk Management', 'Sustainability'
     ];
-    const challenges = [
+    const _challenges = [
         'Legacy Systems', 'Data Security', 'Scalability Issues',
         'Talent Shortage', 'Regulatory Compliance', 'Integration Complexity',
         'Performance Issues', 'Cost Management', 'Technology Debt'
     ];
-    const mockServices = [
+    const _mockServices = [
         {
             id: 'ai-crm-platform',
             title: 'AI-Powered CRM Platform',
@@ -98,14 +111,14 @@ const AdvancedServiceRecommendation = () => {
             email: 'kleber@ziontechgroup.com'
         }
     ];
-    const calculateMatchScore = (service, profile) => {
-        let score = 0;
+    const _calculateMatchScore = (service, profile) => {
+        const _score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
             score += 25;
         }
         // Budget compatibility
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
+        const _servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (profile.budget === 'Under $50K' && servicePrice < 50)
             score += 20;
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)
@@ -117,7 +130,7 @@ const AdvancedServiceRecommendation = () => {
         else if (profile.budget === '$1M+' && servicePrice >= 1000)
             score += 20;
         // Timeline compatibility
-        const serviceDuration = parseInt(service.duration.split('-')[0]);
+        const _serviceDuration = parseInt(service.duration.split('-')[0]);
         if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3)
             score += 15;
         else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6)
@@ -138,16 +151,16 @@ const AdvancedServiceRecommendation = () => {
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', 'consulting'].includes(service.category))
             score += 20;
         // Goal alignment
-        const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length;
+        const _goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length;
         score += (goalMatches / profile.primaryGoals.length) * 20;
         return Math.min(100, score);
     };
-    const generateRecommendations = () => {
+    const _generateRecommendations = () => {
         setIsAnalyzing(true);
         // Simulate analysis time
         setTimeout(() => {
-            const recs = mockServices.map(service => {
-                const matchScore = calculateMatchScore(service, clientProfile);
+            const _recs = mockServices.map(service => {
+                const _matchScore = calculateMatchScore(service, clientProfile);
                 let priority;
                 if (matchScore >= 80)
                     priority = 'High';
@@ -162,15 +175,15 @@ const AdvancedServiceRecommendation = () => {
                     complexity = 'Moderate';
                 else
                     complexity = 'Simple';
-                const reasoning = [
+                const _reasoning = [
                     `High match with ${clientProfile.industry} industry requirements`,
                     `Budget alignment with ${clientProfile.budget} range`,
                     `Timeline compatibility with ${clientProfile.timeline} expectations`,
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`
                 ];
-                const expectedROI = matchScore >= 80 ? 'High ROI expected' :
+                const _expectedROI = matchScore >= 80 ? 'High ROI expected' :
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';
-                const timeToValue = complexity === 'Simple' ? '2-4 months' :
+                const _timeToValue = complexity === 'Simple' ? '2-4 months' :
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {
                     service,
@@ -187,7 +200,7 @@ const AdvancedServiceRecommendation = () => {
             setShowResults(true);
         }, 2000);
     };
-    const getPriorityColor = (priority) => {
+    const _getPriorityColor = (priority) => {
         switch (priority) {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
@@ -195,7 +208,7 @@ const AdvancedServiceRecommendation = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getComplexityColor = (complexity) => {
+    const _getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Complex': return 'bg-red-100 text-red-800';
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
@@ -203,7 +216,7 @@ const AdvancedServiceRecommendation = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const isFormComplete = () => {
+    const _isFormComplete = () => {
         return clientProfile.industry && clientProfile.companySize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;

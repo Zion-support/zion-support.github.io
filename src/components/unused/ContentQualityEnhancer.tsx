@@ -1,26 +1,35 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
-export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { CheckCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const implementation = [];
+export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [activeTab, setActiveTab] = useState('overview');
     const [selectedElement, setSelectedElement] = useState(null);
     // Analyze content quality
-    const analyzeContent = useCallback(async () => {
+    const _analyzeContent = useCallback(async () => {
         setIsAnalyzing(true);
-        const issues = [];
-        const suggestions = [];
-        let wordCount = 0;
-        let readabilityScore = 100;
-        let seoScore = 100;
-        let engagementScore = 100;
+        const _issues = [];
+        const _suggestions = [];
+        const _wordCount = 0;
+        const _readabilityScore = 100;
+        const _seoScore = 100;
+        const _engagementScore = 100;
         // Get all content elements
-        const contentElements = document.querySelectorAll(targetElements.join(', '));
+        const _contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
-            const text = element.textContent || '';
-            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const _text = element.textContent || '';
+            const _words = text.trim().split(/\s+/).filter(word => word.length > 0);
             wordCount += words.length;
             // Check for empty content
             if (words.length === 0) {
@@ -72,10 +81,10 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for proper heading structure
             if (element.tagName.match(/^H[1-6]$/)) {
-                const level = parseInt(element.tagName.charAt(1));
-                const previousHeadings = Array.from(contentElements).slice(0, index).filter(el => el.tagName.match(/^H[1-6]$/));
+                const _level = parseInt(element.tagName.charAt(1));
+                const _previousHeadings = Array.from(contentElements).slice(0, index).filter(el => el.tagName.match(/^H[1-6]$/));
                 if (previousHeadings.length > 0) {
-                    const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
+                    const _lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
                     if (level - lastLevel > 1) {
                         issues.push({
                             id: `heading-skip-${index}`,
@@ -93,14 +102,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 }
             }
             // Check for keyword stuffing
-            const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = {};
+            const _commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
+            const _wordFrequency = {};
             commonWords.forEach(word => {
                 wordFrequency[word] = (wordFrequency[word] || 0) + 1;
             });
             Object.entries(wordFrequency).forEach(([word, count]) => {
                 if (count > 5 && word.length > 3) {
-                    const density = (count / commonWords.length) * 100;
+                    const _density = (count / commonWords.length) * 100;
                     if (density > 3) {
                         issues.push({
                             id: `keyword-stuffing-${index}-${word}`,
@@ -119,7 +128,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
             // Check for proper meta descriptions
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
-                const content = element.getAttribute('content') || '';
+                const _content = element.getAttribute('content') || '';
                 if (content.length < 50) {
                     issues.push({
                         id: `short-meta-${index}`,
@@ -151,7 +160,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for broken links
             if (element.tagName === 'A') {
-                const href = element.getAttribute('href');
+                const _href = element.getAttribute('href');
                 if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
                     issues.push({
                         id: `broken-link-${index}`,
@@ -169,7 +178,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for images without alt text
             if (element.tagName === 'IMG') {
-                const alt = element.getAttribute('alt');
+                const _alt = element.getAttribute('alt');
                 if (!alt || alt.trim() === '') {
                     issues.push({
                         id: `missing-alt-${index}`,
@@ -233,8 +242,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
         }
         // Calculate overall score
-        const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
-        const analysisResult = {
+        const _overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
+        const _analysisResult = {
             wordCount,
             readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
             seoScore: Math.max(0, Math.min(100, seoScore)),
@@ -247,11 +256,11 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setIsAnalyzing(false);
     }, [targetElements]);
     // Auto-fix content issues
-    const autoFixIssues = useCallback(() => {
+    const _autoFixIssues = useCallback(() => {
         if (!analysis)
             return;
-        const fixableIssues = analysis.issues.filter(issue => issue.fixable);
-        let fixedCount = 0;
+        const _fixableIssues = analysis.issues.filter(issue => issue.fixable);
+        const _fixedCount = 0;
         fixableIssues.forEach(issue => {
             if (issue.element) {
                 switch (issue.id.split('-')[0]) {
@@ -263,7 +272,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         break;
                     case 'missing-alt':
                         if (issue.element.tagName === 'IMG') {
-                            const img = issue.element;
+                            const _img = issue.element;
                             if (!img.alt) {
                                 img.alt = 'Image';
                                 fixedCount++;
@@ -287,7 +296,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         return fixedCount;
     }, [analysis, analyzeContent]);
     // Highlight element in page
-    const highlightElement = useCallback((element) => {
+    const _highlightElement = useCallback((element) => {
         // Remove previous highlights
         document.querySelectorAll('.content-highlight').forEach(el => {
             el.classList.remove('content-highlight');
@@ -306,12 +315,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     // Auto-analyze content
     useEffect(() => {
         if (autoAnalyze) {
-            const timer = setTimeout(analyzeContent, 3000);
+            const _timer = setTimeout(analyzeContent, 3000);
             return () => clearTimeout(timer);
         }
     }, [autoAnalyze, analyzeContent]);
     // Get score color
-    const getScoreColor = (score) => {
+    const _getScoreColor = (score) => {
         if (score >= 80)
             return 'text-green-600';
         if (score >= 60)
@@ -319,7 +328,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         return 'text-red-600';
     };
     // Get score background color
-    const getScoreBgColor = (score) => {
+    const _getScoreBgColor = (score) => {
         if (score >= 80)
             return 'bg-green-100 dark:bg-green-900/20';
         if (score >= 60)
@@ -327,7 +336,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         return 'bg-red-100 dark:bg-red-900/20';
     };
     // Get severity color
-    const getSeverityColor = (severity) => {
+    const _getSeverityColor = (severity) => {
         switch (severity) {
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
@@ -336,7 +345,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         }
     };
     // Get priority color
-    const getPriorityColor = (priority) => {
+    const _getPriorityColor = (priority) => {
         switch (priority) {
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
@@ -555,10 +564,10 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
                   {/* Export Report */}
                   {analysis && (<button onClick={() => {
-                        const report = JSON.stringify(analysis, null, 2);
-                        const blob = new Blob([report], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
+                        const _report = JSON.stringify(analysis, null, 2);
+                        const _blob = new Blob([report], { type: 'application/json' });
+                        const _url = URL.createObjectURL(blob);
+                        const _a = document.createElement('a');
                         a.href = url;
                         a.download = 'content-quality-report.json';
                         a.click();

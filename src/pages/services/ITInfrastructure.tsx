@@ -1,8 +1,18 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import { Helmet } from 'react-helmet-async';
-const ITInfrastructure = () => {
-    const features = [
+import { Cloud } from 'lucide-react';
+const _features = [];
+const _services = [];
+const _applications = [];
+const _solutions = [];
+const _implementation = [];
+const _ITInfrastructure = () => {
+    const _features = [
         {
             title: "Network Management",
             description: "Comprehensive network infrastructure design, implementation, and maintenance",
@@ -28,7 +38,7 @@ const ITInfrastructure = () => {
             icon: "⚡"
         }
     ];
-    const infrastructureFeatures = [
+    const _infrastructureFeatures = [
         { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
         { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
         { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
@@ -58,7 +68,7 @@ const ITInfrastructure = () => {
     }
   ];
 
-  const infrastructureAreas = [
+  const _infrastructureAreas = [
     {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
@@ -114,7 +124,7 @@ const ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              {infrastructureServices.map((_service, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -122,7 +132,7 @@ const ITInfrastructure = () => {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                      {service.features.map((_feature, _idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
                         </li>))}
@@ -146,10 +156,10 @@ const ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {infrastructureAreas.map((_area, _index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (<li key={idx} className="text-gray-300 flex items-center">
+                    {area.solutions.map((_solution, _idx) => (<li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
                       </li>))}

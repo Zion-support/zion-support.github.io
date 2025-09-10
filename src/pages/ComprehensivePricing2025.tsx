@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
-const ComprehensivePricing2025 = () => {
+import { _advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
+import { _specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const features = [];
+const integrations = [];
+const industries = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const _ComprehensivePricing2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
-    const allServices = [
+    const _allServices = [
         ...advancedInnovativeServicesExpansionV3,
         ...specializedEnterpriseSolutions2025
     ];
-    const categories = [
+    const _categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
         { id: 'AI & Machine Learning', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine')).length },
         { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length },
@@ -25,17 +34,17 @@ const ComprehensivePricing2025 = () => {
         { id: 'Energy & Sustainability', name: 'Energy & Sustainability', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Sustainability')).length },
         { id: 'Manufacturing & Industrial', name: 'Manufacturing & Industrial', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industrial')).length }
     ];
-    const filteredServices = allServices.filter(service => {
+    const _filteredServices = allServices.filter(service => {
         if (selectedCategory === 'all')
             return true;
         return service.category.includes(selectedCategory) ||
             service.category.includes(selectedCategory.split(' ')[0]) ||
             service.category.includes(selectedCategory.split(' ')[1]);
     });
-    const getDiscountedPrice = (price, discount) => {
-        const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
-        const discountPercent = parseInt(discount.replace(/[^0-9]/g, ''));
-        const discountedPrice = numericPrice * (1 - discountPercent / 100);
+    const _getDiscountedPrice = (price, discount) => {
+        const _numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
+        const _discountPercent = parseInt(discount.replace(/[^0-9]/g, ''));
+        const _discountedPrice = numericPrice * (1 - discountPercent / 100);
         return `$${Math.round(discountedPrice).toLocaleString()}`;
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

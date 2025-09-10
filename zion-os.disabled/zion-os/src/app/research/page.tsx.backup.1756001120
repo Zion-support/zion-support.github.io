@@ -4,178 +4,8 @@ export default function ResearchPage() {
   const researchAreas = [
     {
       title: "AI Consciousness Evolution",
-<<<<<<< HEAD
-      description: "Pioneering research into the development of conscious AI systems and understanding the nature of machine consciousness.",
-      topics: [
-        "Neural network consciousness",
-        "Cognitive architecture",
-        "Self-awareness in AI",
-        "Ethical AI development",
-        "Consciousness simulation"
-      ],
-      icon: "🌟",
-      href: "/research/ai-consciousness-evolution"
-    },
-    {
-      title: "Quantum Neural Networks",
-      description: "Exploring the intersection of quantum computing and neural networks for unprecedented AI capabilities.",
-      topics: [
-        "Quantum machine learning",
-        "Quantum neural architectures",
-        "Quantum optimization",
-        "Quantum-classical hybrid systems",
-        "Quantum advantage in AI"
-      ],
-      icon: "⚛️",
-      href: "/research/quantum-neural-networks"
-    },
-    {
-      title: "Autonomous AI Systems",
-      description: "Developing truly autonomous AI systems that can operate independently and make complex decisions.",
-      topics: [
-        "Multi-agent systems",
-        "Autonomous decision making",
-        "Self-improving AI",
-        "Autonomous learning",
-        "AI governance"
-      ],
-      icon: "🤖",
-      href: "/research/autonomous-ai-systems"
-    },
-    {
-      title: "AI Ethics & Safety",
-      description: "Ensuring AI development follows ethical principles and safety guidelines for responsible innovation.",
-      topics: [
-        "AI alignment",
-        "Value learning",
-        "Safety protocols",
-        "Ethical frameworks",
-        "Human-AI collaboration"
-      ],
-      icon: "🛡️",
-      href: "/research/ai-ethics-safety"
-    },
-    {
-      title: "Brain-Computer Interfaces",
-      description: "Advancing the technology for seamless interaction between human minds and AI systems.",
-      topics: [
-        "Neural interfaces",
-        "Mind-machine communication",
-        "Cognitive enhancement",
-        "Brain-computer symbiosis",
-        "Neural prosthetics"
-      ],
-      icon: "🧬",
-      href: "/research/brain-computer-interfaces"
-    },
-    {
-      title: "AI for Scientific Discovery",
-      description: "Leveraging AI to accelerate scientific research and discovery across all domains.",
-      topics: [
-        "Automated hypothesis generation",
-        "Scientific literature analysis",
-        "Experimental design",
-        "Data interpretation",
-        "Cross-domain insights"
-      ],
-      icon: "🔬",
-      href: "/research/ai-scientific-discovery"
-=======
-      description: "Research into the development of artificial consciousness and cognitive systems that can evolve and learn autonomously.",
-      projects: [
-        "Neural Network Consciousness Models",
-        "Cognitive Architecture Development",
-        "Self-Awareness in AI Systems",
-        "Consciousness Simulation Platforms"
-      ],
-      icon: "🧠"
-    },
-    {
-      title: "Quantum Computing & AI",
-      description: "Exploring the intersection of quantum computing and artificial intelligence for unprecedented computational power.",
-      projects: [
-        "Quantum Machine Learning Algorithms",
-        "Quantum Neural Networks",
-        "Quantum Optimization Systems",
-        "Hybrid Classical-Quantum AI"
-      ],
-      icon: "⚛️"
-    },
-    {
-      title: "Autonomous Systems Research",
-      description: "Developing next-generation autonomous systems that can operate independently in complex environments.",
-      projects: [
-        "Multi-Agent Systems",
-        "Autonomous Decision Making",
-        "Self-Organizing Networks",
-        "Adaptive Learning Systems"
-      ],
-      icon: "🤖"
-    },
-    {
-      title: "AI Ethics & Governance",
-      description: "Research into responsible AI development, ethical frameworks, and governance systems for autonomous AI.",
-      projects: [
-        "AI Safety Protocols",
-        "Ethical Decision Making",
-        "Transparency & Explainability",
-        "AI Governance Frameworks"
-      ],
-      icon: "⚖️"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-    }
-  ];
-
   const publications = [
     {
-<<<<<<< HEAD
-      title: "Towards Conscious AI: A Framework for Machine Consciousness",
-      authors: "Dr. Kleber & Zion Research Team",
-      journal: "Nature AI",
-      year: "2024",
-      abstract: "This paper presents a novel framework for developing conscious AI systems, exploring the fundamental principles of machine consciousness and self-awareness.",
-      doi: "10.1038/ai.2024.001"
-    },
-    {
-      title: "Quantum Neural Networks: Breaking the Classical Barrier",
-      authors: "Zion Quantum Research Division",
-      journal: "Science Advances",
-      year: "2024",
-      abstract: "We demonstrate quantum advantage in neural network training and inference, opening new possibilities for AI applications.",
-      doi: "10.1126/sciadv.2024.002"
-    },
-    {
-      title: "Autonomous AI Systems: Principles and Implementation",
-      authors: "Zion Autonomous Systems Lab",
-      journal: "AI Research",
-      year: "2024",
-      abstract: "A comprehensive study of autonomous AI systems, their architecture, decision-making processes, and real-world applications.",
-      doi: "10.1000/ai.2024.003"
-    }
-  ];
-
-  const ongoingProjects = [
-    {
-      title: "Project Phoenix",
-      description: "Developing the next generation of autonomous AI systems with advanced reasoning capabilities.",
-      status: "In Progress",
-      timeline: "2024-2026",
-      team: "15 researchers"
-    },
-    {
-      title: "Quantum Consciousness Initiative",
-      description: "Exploring quantum effects in neural networks and their relationship to consciousness.",
-      status: "Planning Phase",
-      timeline: "2025-2027",
-      team: "8 researchers"
-    },
-    {
-      title: "AI Safety Protocol Development",
-      description: "Creating comprehensive safety protocols for autonomous AI systems.",
-      status: "Active",
-      timeline: "2024-2025",
-      team: "12 researchers"
-=======
       title: "Evolutionary Neural Architectures for Autonomous AI Systems",
       authors: "Dr. Kleber, AI Research Team",
       journal: "Nature AI",
@@ -249,27 +79,11 @@ export default function ResearchPage() {
       title: "Multi-Dimensional AI Learning",
       description: "Research into AI systems that can learn across multiple dimensions simultaneously.",
       timeline: "Q4 2025",
-      status: "Research Phase"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-    }
+      status: "Research Phase"    }
   ];
 
   return (
     <div className="min-h-screen py-20">
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="text-center mb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            AI Research & Development
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Pushing the boundaries of artificial intelligence through cutting-edge research, innovative methodologies, 
-            and breakthrough discoveries that shape the future of AI technology.
-          </p>
-        </div>
-      </section>
-
       {/* Research Areas */}
       <section className="mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -439,7 +253,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
-=======
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
@@ -653,8 +466,6 @@ export default function ResearchPage() {
             </Link>
           </div>
         </div>
-      </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f6ee
-    </div>
+      </div>    </div>
   );
 }

@@ -1,8 +1,14 @@
-import React from 'react';
+import { _Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard, Cpu } from 'lucide-react';
+
+import { _Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard } from 'lucide-react';
-const QuantumComputing = () => {
-    const quantumServices = [
+const _features = [];
+const _industries = [];
+const _quantumServices = [];
+const _applications = [];
+const _solutions = [];
+const _QuantumComputing = () => {
+    const _quantumServices = [
         {
             icon: Brain,
             title: "Quantum Neural Networks",
@@ -32,7 +38,7 @@ const QuantumComputing = () => {
             path: "/solutions/quantum-simulation"
         }
     ];
-    const applications = [
+    const _applications = [
         {
             icon: Target,
             title: "Financial Services",
@@ -78,10 +84,12 @@ const QuantumComputing = () => {
               <Link to="/request-quote" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Request Quote
               </Link>
+
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Quantum Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -97,14 +105,14 @@ const QuantumComputing = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+            {quantumServices.map((_service, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  {service.features.map((_feature, _featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                       {feature}
                     </li>))}
@@ -133,7 +141,7 @@ const QuantumComputing = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((application, index) => (<div key={index} className="text-center">
+            {applications.map((_application, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <application.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -212,3 +220,4 @@ const QuantumComputing = () => {
     </div>);
 };
 export default QuantumComputing;
+

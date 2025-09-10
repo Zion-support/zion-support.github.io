@@ -1,7 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-const AccessibilityAuditor = () => {
-    const features = [
+
+import { Link } from 'react-router-dom';
+import { Code } from 'lucide-react';
+const features = [];
+const complianceStandards = [];
+const services = [];
+const solutions = [];
+const _AccessibilityAuditor = () => {
+    const _features = [
         {
             title: "Automated Testing",
             description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
@@ -23,14 +30,14 @@ const AccessibilityAuditor = () => {
             icon: "📋"
         }
     ];
-    const complianceStandards = [
+    const _complianceStandards = [
         "WCAG 2.1 AA",
         "Section 508",
         "ADA Title III",
         "EN 301 549",
         "ISO 9241-171"
     ];
-    const testingAreas = [
+    const _testingAreas = [
         {
             category: "Visual Accessibility",
             items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]

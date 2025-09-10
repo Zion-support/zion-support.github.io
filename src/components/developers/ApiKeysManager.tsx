@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { useApiKeys } from '../../hooks/useApiKeys';
-import { Button } from '../ui/button';
-import { Checkbox } from '../ui/checkbox';
-import { Label } from '../ui/label';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
+import { _useApiKeys } from '../../hooks/useApiKeys';
+import { _Button } from '../ui/button';
+import { _Checkbox } from '../ui/checkbox';
+import { _Label } from '../ui/label';
+import { _Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
+import { _DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
+import { _Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { _AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
 import CodeBlock from './CodeBlock';
-import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
+import { _Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
+
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const applications = [];
 export default function ApiKeysManager() {
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -16,14 +21,14 @@ export default function ApiKeysManager() {
     const [selectedScopes, setSelectedScopes] = useState([]);
     const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
-    const scopeOptions = [
+    const _scopeOptions = [
         { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
         { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
         { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
         { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
         { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }
     ];
-    const handleCreateKey = async () => {
+    const _handleCreateKey = async () => {
         if (!newKeyName.trim() || selectedScopes.length === 0)
             return;
         await createApiKey(newKeyName.trim(), selectedScopes);
@@ -31,12 +36,12 @@ export default function ApiKeysManager() {
         setSelectedScopes([]);
         setShowCreateDialog(false);
     };
-    const handleScopeToggle = (scope) => {
+    const _handleScopeToggle = (scope) => {
         setSelectedScopes(prev => prev.includes(scope)
             ? prev.filter(s => s !== scope)
             : [...prev, scope]);
     };
-    const getExampleCode = (apiKey) => {
+    const _getExampleCode = (apiKey) => {
         return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\
   -H "Authorization: Bearer ${apiKey}" \\
   -H "Content-Type: application/json"`;

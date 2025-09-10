@@ -2,63 +2,18 @@ import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
-<<<<<<< HEAD:temp_backup/pages/Orders.tsx
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-=======
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Orders.tsx
+
 import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {
-<<<<<<< HEAD:temp_backup/pages/Orders.tsx
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
-
-  const getStatusBadge = (status: string) => {
-    switch (status) {
-      case 'in_escrow':
-        return (
-          <Badge variant="warning" className="flex items-center gap-1">
-            <Clock className="h-3 w-3" /> In Escrow
-          </Badge>
-        );
-      case 'released':
-      case 'completed':
-        return (
-          <Badge variant="success" className="flex items-center gap-1">
-            <CheckCircle2 className="h-3 w-3" /> Released
-          </Badge>
-        );
-      case 'disputed':
-        return (
-          <Badge variant="destructive" className="flex items-center gap-1">
-            <ShieldAlert className="h-3 w-3" /> Disputed
-          </Badge>
-        );
-      default:
-        return status;
-    }
-  };
-
-  return (
-    <div className="container max-w-4xl py-10">
-=======
     const { user } = useAuth();
     const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
     const formatDate = (date) => new Date(date).toLocaleDateString();
     return (<div className="container max-w-4xl py-10">
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Orders.tsx
+
       <h1 className="text-3xl font-bold mb-6">Order History</h1>
       {isLoading ? (<Table>
           <TableHeader>

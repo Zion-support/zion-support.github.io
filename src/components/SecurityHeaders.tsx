@@ -1,56 +1,14 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';';
-const SecurityHeaders = ("props": "any) => {';';
-  useEffect(() => {';';';
-    // Add Content Security Policy'",';';
-    ';';';
-    const meta = document.createElement('meta');',';';
-    ';';';
-    meta.httpEquiv = 'Content-Security-Policy',',';';
-    ;
-    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' "https": "//www.googletagmanager.com "https"://www.google-analytics.com; style-src 'self' 'unsafe-inline' "https"://fonts.googleapis.com; font-src 'self' "https"://fonts.gstatic.com; img-src 'self' "data": http "s":; connect-src 'self' "https"://www.google-analytics.com; frame-ancestors 'none;';
-    document.head.appendChild(meta);';';
-    // Add additional security headers via meta tags';';';
-    const securityHeaders = ['",';';
-    ';';' { "httpEquiv": 'X-Frame-Options', "content": 'DENY' },',';';
-    ';';' { "httpEquiv": 'X-Content-Type-Options', "content": 'nosniff' },',';';
-    ';';' { "httpEquiv": 'Referrer-Policy', "content": 'strict-origin-when-cross-origin' },',';';
-    ';';' { "httpEquiv": 'Permissions-Policy', "content": 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' }';';
-    ]';';';
-    securityHeaders.forEach(header => {',';';
-    ';';';
-      const metaTag = document.createElement('meta');
-      metaTag.httpEquiv = header.httpEquiv;
-      metaTag.content = header.content;
-      document.head.appendChild(metaTag);';
-    }
-    );';';
-    return () => {';';';
-      // Cleanup on unmount',';';
-    ';';';
-      const securityMetaTags = document.querySelectorAll('meta[http-equiv]');';';';
-      securityMetaTags.forEach(tag => {',';';
-    ';';';
-        if (tag.getAttribute('http-equiv')?.startsWith('X-') ||',';';
-    ';';';
-            tag.getAttribute('http-equiv') === 'Content-Security-Policy' ||',';';
-    ';';';
-            tag.getAttribute('http-equiv') === 'Referrer-Policy' ||',';';
-    ';';';
-            tag.getAttribute('http-equiv') === 'Permissions-Policy') {;
-          tag.remove();
-        }
-      }
-    );
-    };';
-  }, []);';';
-  return null};';';';
-export default SecurityHeaders;";
-=======
+
 import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
+import { _Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Check } from 'lucide-react';
+const securityFeatures = [];
 export function SecurityHeaders({ className }) {
-    const securityFeatures = [
+    const _securityFeatures = [
         {
             icon: Shield,
             title: "SOC 2 Type II Certified",
@@ -80,7 +38,7 @@ export function SecurityHeaders({ className }) {
             color: "text-zion-purple"
         }
     ];
-    const complianceBadges = [
+    const _complianceBadges = [
         { name: "SOC 2", status: "Certified", year: "2024", icon: CheckCircle },
         { name: "ISO 27001", status: "Certified", year: "2024", icon: CheckCircle },
         { name: "GDPR", status: "Compliant", year: "2024", icon: CheckCircle },
@@ -196,4 +154,4 @@ export function SecurityHeadersCompact({ className }) {
       </div>
     </div>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

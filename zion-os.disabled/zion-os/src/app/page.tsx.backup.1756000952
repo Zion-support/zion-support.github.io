@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-"use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FeatureShowcase } from "@/components/FeatureShowcase";
-=======
 import Link from 'next/link';
 import { ArrowRight, Brain, Rocket, Shield, Globe, Zap, Users, Target } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
@@ -102,36 +96,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text">Zion Tech Group</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Leading the future of technology with cutting-edge AI, quantum computing, 
-              cybersecurity, and enterprise solutions that transform businesses worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started
-              </Link>
-              <Link href="/services" className="btn-secondary text-lg px-8 py-4">
-                Explore Services
-              </Link>
-            </div>
-          </div>
-        </div>
-        
-        {/* Enhanced Background Elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-r from-green-500/20 to-blue-600/20 rounded-full blur-2xl animate-pulse-slow animation-delay-1000"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-gradient-to-r from-purple-500/20 to-pink-600/20 rounded-full blur-2xl animate-pulse-slow animation-delay-2000"></div>
-        </div>
-      </section>
-
       {/* Services Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -157,7 +121,6 @@ export default function HomePage() {
                 Autonomous business operations, intelligent decision-making, and AI-powered content generation.
               </p>
               <Link href="/ai-services" className="text-blue-400 hover:text-blue-300 text-sm font-medium mt-3 inline-block">
-=======
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -204,52 +167,10 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4">
                 Self-managing AI systems that operate independently across your business operations
               </p>
-              <Link href="/services/ai-autonomous-systems" className="text-blue-600 hover:text-blue-700 font-medium">
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-                Learn More →
+              <Link href="/services/ai-autonomous-systems" className="text-blue-600 hover:text-blue-700 font-medium">                Learn More →
               </Link>
             </div>
 
-<<<<<<< HEAD
-            <div className="card group">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
-                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
-              <p className="text-gray-400">
-                Next-generation quantum infrastructure, financial trading algorithms, and cloud solutions.
-              </p>
-              <Link href="/quantum-services" className="text-purple-400 hover:text-purple-300 text-sm font-medium mt-3 inline-block">
-=======
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Rocket className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Intelligence</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced analytics and insights powered by machine learning and AI
-              </p>
-              <Link href="/services/business-intelligence" className="text-purple-600 hover:text-purple-700 font-medium">
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-                Learn More →
-              </Link>
-            </div>
-
-<<<<<<< HEAD
-            <div className="card group">
-              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
-                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
-              <p className="text-gray-400">
-                Advanced threat detection, SOC2 compliance automation, and enterprise security solutions.
-              </p>
-              <Link href="/cybersecurity" className="text-green-400 hover:text-green-300 text-sm font-medium mt-3 inline-block">
-=======
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="w-8 h-8 text-green-600" />
@@ -258,25 +179,7 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4">
                 AI-powered security solutions protecting your digital assets and infrastructure
               </p>
-              <Link href="/services/enterprise-security" className="text-green-600 hover:text-green-700 font-medium">
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-                Learn More →
-              </Link>
-            </div>
-
-<<<<<<< HEAD
-            <div className="card group">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
-                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Enterprise IT</h3>
-              <p className="text-gray-400">
-                Scalable infrastructure, cloud migration, and digital transformation consulting.
-              </p>
-              <Link href="/enterprise-it" className="text-red-400 hover:text-red-300 text-sm font-medium mt-3 inline-block">
-                Learn More →
+              <Link href="/services/enterprise-security" className="text-green-600 hover:text-green-700 font-medium">                Learn More →
               </Link>
             </div>
 
@@ -308,7 +211,6 @@ export default function HomePage() {
               <Link href="/zion-os" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium mt-3 inline-block">
                 Learn More →
               </Link>
-=======
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-orange-600" />
@@ -397,34 +299,7 @@ export default function HomePage() {
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">Future-proof technology stack</span>
                 </li>
-              </ul>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-            </div>
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold gradient-text mb-2">500+</div>
-              <div className="text-gray-400">Global Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold gradient-text mb-2">50+</div>
-              <div className="text-gray-400">Countries Served</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold gradient-text mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold gradient-text mb-2">24/7</div>
-              <div className="text-gray-400">Support Available</div>
-            </div>
+              </ul>            </div>
           </div>
         </div>
       </section>
@@ -451,7 +326,6 @@ export default function HomePage() {
                 View Case Studies
               </Link>
             </div>
-=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -471,9 +345,7 @@ export default function HomePage() {
               className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View All Services
-            </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-          </div>
+            </Link>          </div>
         </div>
       </section>
     </div>

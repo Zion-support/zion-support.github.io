@@ -1,15 +1,15 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CartItem } from '@/types/cart';
-import { safeLocalStorage } from '@/utils/safeStorage';
+import { _createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { _CartItem } from '@/types/cart';
+import { _safeLocalStorage } from '@/utils/safeStorage';
 
 export interface CartState {
   items: CartItem[];
 }
 
-const loadState = (): CartItem[] => {
-  const storage = safeLocalStorage();
+const _loadState = (): CartItem[] => {
+  const _storage = safeLocalStorage();
   if (!storage) return [];
-  const stored = storage.getItem('zion_cart');
+  const _stored = storage.getItem('zion_cart');
   if (!stored) return [];
   try {
     return JSON.parse(stored) as CartItem[];
@@ -22,7 +22,7 @@ const initialState: CartState = {
   items: loadState(),
 };
 
-const cartSlice = createSlice({
+const _cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
       state,
       action: PayloadAction<{ id: string; title: string; price: number }>
     ) => {
-      const existing = state.items.find(i => i.id === action.payload.id);
+      const _existing = state.items.find(i => i.id === action.payload.id);
       if (existing) {
         existing.quantity += 1;
       } else {
@@ -49,7 +49,7 @@ const cartSlice = createSlice({
       state,
       action: PayloadAction<{ id: string; quantity: number }>
     ) => {
-      const item = state.items.find(i => i.id === action.payload.id);
+      const _item = state.items.find(i => i.id === action.payload.id);
       if (item) {
         item.quantity = action.payload.quantity;
       }

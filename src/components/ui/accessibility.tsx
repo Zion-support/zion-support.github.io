@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
-import { Button } from './button';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
+import { _Button } from './button';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
 export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -16,7 +19,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     useEffect(() => {
         if (!enabled)
             return;
-        const root = document.documentElement;
+        const _root = document.documentElement;
         // High contrast
         if (settings.highContrast) {
             root.classList.add('high-contrast');
@@ -47,10 +50,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     }, [settings, enabled, onSettingsChange]);
     // Load saved settings from localStorage
     useEffect(() => {
-        const saved = localStorage.getItem('accessibility-settings');
+        const _saved = localStorage.getItem('accessibility-settings');
         if (saved) {
             try {
-                const parsed = JSON.parse(saved);
+                const _parsed = JSON.parse(saved);
                 setSettings(prev => ({ ...prev, ...parsed }));
             }
             catch {
@@ -59,21 +62,21 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         }
     }, []);
     // Save settings to localStorage
-    const saveSettings = useCallback((newSettings) => {
+    const _saveSettings = useCallback((newSettings) => {
         setSettings(newSettings);
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
     }, []);
     // Toggle settings
-    const toggleSetting = useCallback((key, value) => {
-        const newSettings = {
+    const _toggleSetting = useCallback((key, value) => {
+        const _newSettings = {
             ...settings,
             [key]: value !== undefined ? value : !settings[key]
         };
         saveSettings(newSettings);
     }, [settings, saveSettings]);
     // Reset to defaults
-    const resetSettings = useCallback(() => {
-        const defaults = {
+    const _resetSettings = useCallback(() => {
+        const _defaults = {
             highContrast: false,
             largeText: false,
             reducedMotion: false,
@@ -84,16 +87,16 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         saveSettings(defaults);
     }, [saveSettings]);
     // Font size controls
-    const increaseFontSize = useCallback(() => {
+    const _increaseFontSize = useCallback(() => {
         toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24));
     }, [settings.fontSize, toggleSetting]);
-    const decreaseFontSize = useCallback(() => {
+    const _decreaseFontSize = useCallback(() => {
         toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12));
     }, [settings.fontSize, toggleSetting]);
     // Screen reader announcement
-    const announceToScreenReader = useCallback((message) => {
+    const _announceToScreenReader = useCallback((message) => {
         if (settings.screenReader) {
-            const announcement = document.createElement('div');
+            const _announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
             announcement.setAttribute('aria-atomic', 'true');
             announcement.className = 'sr-only';

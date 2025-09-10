@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-=======
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
->>>>>>> origin/backup-improvements-20250827-015311
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,7 +13,6 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-<<<<<<< HEAD
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@pages': resolve(__dirname, 'src/pages'),
@@ -34,17 +27,6 @@ export default defineConfig({
       '@context': resolve(__dirname, 'src/context'),
       '@constants': resolve(__dirname, 'src/constants')
     }
-=======
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@pages': resolve(__dirname, './src/pages'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@styles': resolve(__dirname, './src/styles'),
-      '@assets': resolve(__dirname, './src/assets'),
-    },
->>>>>>> origin/backup-improvements-20250827-015311
   },
   build: {
     target: 'esnext',
@@ -55,12 +37,9 @@ export default defineConfig({
     emptyOutDir: true,
     assetsInlineLimit: 4096,
     rollupOptions: {
-<<<<<<< HEAD
       input: {
         main: './index.html'
       },
-=======
->>>>>>> origin/backup-improvements-20250827-015311
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -88,19 +67,11 @@ export default defineConfig({
         unsafe_regexp: true,
         unsafe_undefined: true,
       },
-<<<<<<< HEAD
       mangle: {
         safari10: true,
         properties: {}
       }
     }
-=======
-      mangle: { safari10: true },
-    },
-    chunkSizeWarningLimit: 1000,
-    outDir: 'dist',
-    copyPublicDir: true,
->>>>>>> origin/backup-improvements-20250827-015311
   },
   optimizeDeps: {
     include: [
@@ -111,7 +82,6 @@ export default defineConfig({
       'lucide-react',
       'clsx',
       'tailwind-merge',
-<<<<<<< HEAD
       '@radix-ui/react-accordion',
       '@radix-ui/react-alert-dialog',
       '@radix-ui/react-avatar',
@@ -134,11 +104,6 @@ export default defineConfig({
       '@radix-ui/react-tooltip'
     ],
     exclude: ['@radix-ui/react-icons']
-=======
-      'class-variance-authority',
-    ],
-    exclude: ['@modelcontextprotocol/sdk'],
->>>>>>> origin/backup-improvements-20250827-015311
   },
   server: {
     port: 3000,
@@ -147,36 +112,19 @@ export default defineConfig({
     cors: true,
     hmr: {
       overlay: false,
-<<<<<<< HEAD
     }
-=======
-    },
->>>>>>> origin/backup-improvements-20250827-015311
   },
   preview: {
     port: 4173,
     host: true,
-<<<<<<< HEAD
     open: true
   },
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.cjs'
+    postcss: './postcss.config.js'
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   }
 });
-=======
-    open: true,
-  },
-  css: {
-    postcss: './postcss.config.js',
-  },
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    'process.env.VITE_APP_TITLE': JSON.stringify(process.env.VITE_APP_TITLE),
-  },
-})
->>>>>>> origin/backup-improvements-20250827-015311

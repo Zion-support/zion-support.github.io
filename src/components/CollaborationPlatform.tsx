@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff } from 'lucide-react';
-const mockParticipants = [
+import { _Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff } from 'lucide-react';
+
+const implementation = [];
+const _mockParticipants = [
     { id: '1', name: 'John Smith', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: true, avatar: '👨‍💼' },
     { id: '2', name: 'Sarah Johnson', isVideoOn: false, isAudioOn: true, isScreenSharing: true, isSpeaking: false, avatar: '👩‍💻' },
     { id: '3', name: 'Mike Chen', isVideoOn: true, isAudioOn: false, isScreenSharing: false, isSpeaking: false, avatar: '👨‍🔬' },
@@ -25,31 +27,31 @@ export function CollaborationPlatform() {
     const [newMessage, setNewMessage] = useState('');
     const [isRecording, setIsRecording] = useState(false);
     const [meetingDuration, setMeetingDuration] = useState(0);
-    const containerRef = useRef(null);
+    const _containerRef = useRef(null);
     useEffect(() => {
-        const interval = setInterval(() => {
+        const _interval = setInterval(() => {
             setMeetingDuration(prev => prev + 1);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
-    const toggleVideo = () => {
+    const _toggleVideo = () => {
         setLocalUser(prev => ({ ...prev, isVideoOn: !prev.isVideoOn }));
     };
-    const toggleAudio = () => {
+    const _toggleAudio = () => {
         setLocalUser(prev => ({ ...prev, isAudioOn: !prev.isAudioOn }));
     };
-    const toggleScreenShare = () => {
+    const _toggleScreenShare = () => {
         setLocalUser(prev => ({ ...prev, isScreenSharing: !prev.isScreenSharing }));
     };
-    const toggleMute = () => {
+    const _toggleMute = () => {
         setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));
     };
-    const toggleRecording = () => {
+    const _toggleRecording = () => {
         setIsRecording(!isRecording);
     };
-    const sendMessage = () => {
+    const _sendMessage = () => {
         if (newMessage.trim()) {
-            const message = {
+            const _message = {
                 id: Date.now().toString(),
                 user: 'You',
                 message: newMessage,
@@ -59,13 +61,13 @@ export function CollaborationPlatform() {
             setNewMessage('');
         }
     };
-    const formatTime = (seconds) => {
-        const hours = Math.floor(seconds / 3600);
-        const minutes = Math.floor((seconds % 3600) / 60);
-        const secs = seconds % 60;
+    const _formatTime = (seconds) => {
+        const _hours = Math.floor(seconds / 3600);
+        const _minutes = Math.floor((seconds % 3600) / 60);
+        const _secs = seconds % 60;
         return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
-    const toggleChat = () => {
+    const _toggleChat = () => {
         setActiveChat(!activeChat);
     };
     if (!isOpen) {

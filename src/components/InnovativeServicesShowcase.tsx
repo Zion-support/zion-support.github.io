@@ -1,30 +1,22 @@
-<<<<<<< HEAD
-;
-import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: Reac t.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation')
-</any>';
-</string>;';;';
-import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation');
-</any>;
-</string>;import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const "InnovativeServicesShowcase": "React.FC = React.memo(() => { const [selectedCategory", setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation');
-</any>;
-</string>;
-import React, { useState, useMemo } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Link     } from react-router-domimport { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search     } from lucide-reactimport { innovativeServices, InnovativeService   } from ../data/innovative-services-2025const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>(all) const [searchTerm, setSearchTerm] = useState<any>(') const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation' | 'roi'>('innovation')
-</any>
-</string>
-=======
+
 import React, { useState } from 'react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { innovativeITServices2025 } from '../data/innovativeITServices2025';
-import { innovativeAIServices2025 } from '../data/innovativeAIServices2025';
-const InnovativeServicesShowcase = () => {
+import { _INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { _innovativeITServices2025 } from '../data/innovativeITServices2025';
+import { _innovativeAIServices2025 } from '../data/innovativeAIServices2025';
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
+const _InnovativeServicesShowcase = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);
-    const tabs = [
+    const _tabs = [
         { id: 'microsaas', name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
         { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
         { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }
     ];
-    const getServicesByTab = () => {
+    const _getServicesByTab = () => {
         switch (activeTab) {
             case 'microsaas':
                 return INNOVATIVE_MICRO_SAAS_SERVICES_2025;
@@ -36,10 +28,10 @@ const InnovativeServicesShowcase = () => {
                 return [];
         }
     };
-    const handleServiceClick = (service) => {
+    const _handleServiceClick = (service) => {
         setSelectedService(service);
     };
-    const closeModal = () => {
+    const _closeModal = () => {
         setSelectedService(null);
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -296,4 +288,4 @@ const InnovativeServicesShowcase = () => {
     </div>);
 };
 export default InnovativeServicesShowcase;
->>>>>>> origin/backup-improvements-20250827-015311
+

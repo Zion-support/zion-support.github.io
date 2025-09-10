@@ -1,10 +1,14 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { _Link, useLocation } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 ;
 const "Sidebar": "React.FC = ("props": any) => {;
-  const location = useLocation();
+  const _location = useLocation();
 ;
-  const sidebarItems = [;
+  const _sidebarItems = [;
     { "name": 'Home'", "href": '/', "icon": '🏠' },;
     { "name": 'Services', "href": '/services', "icon": '⚙️' },;
     { "name": 'AI Services', "href": '/ai-services', "icon": '🤖' },;
@@ -17,7 +21,7 @@ const "Sidebar": "React.FC = ("props": any) => {;
     { "name": 'Contact', "href": '/contact', "icon": '📞' },;
   ];
 ;
-  const isActive = ("path": "string) => location.pathname === path;
+  const _isActive = ("path": "string) => location.pathname === path;
 ;
   return (;
     <aside className="w-64 bg-white "dark":bg-gray-800 shadow-lg min-h-screen">;

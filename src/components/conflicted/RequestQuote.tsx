@@ -1,6 +1,19 @@
-import { useState } from 'react';
+import { _useState } from 'react';
+import { _motion } from 'framer-motion';
+import { _Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export default function RequestQuote() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -15,7 +28,7 @@ export default function RequestQuote() {
         urgency: 'medium'
     });
     const [submissionStatus, setSubmissionStatus] = useState('idle');
-    const projectTypes = [
+    const _projectTypes = [
         { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications' },
         { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications' },
         { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics' },
@@ -29,7 +42,7 @@ export default function RequestQuote() {
         { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization' },
         { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance' }
     ];
-    const budgetRanges = [
+    const _budgetRanges = [
         { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs' },
         { value: '10k-25k', label: '$10,000 - $25,000', description: 'Medium-sized applications' },
         { value: '25k-50k', label: '$25,000 - $50,000', description: 'Complex applications' },
@@ -37,7 +50,7 @@ export default function RequestQuote() {
         { value: '100k-plus', label: '$100,000+', description: 'Large-scale projects' },
         { value: 'custom', label: 'Custom Pricing', description: 'Let\'s discuss your needs' }
     ];
-    const timelineOptions = [
+    const _timelineOptions = [
         { value: 'asap', label: 'ASAP', description: 'Immediate start required' },
         { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed' },
         { value: '1-month', label: '1 Month', description: 'Standard project timeline' },
@@ -45,20 +58,20 @@ export default function RequestQuote() {
         { value: '3-plus-months', label: '3+ Months', description: 'Long-term project' },
         { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed' }
     ];
-    const urgencyLevels = [
+    const _urgencyLevels = [
         { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
         { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400' },
         { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400' },
         { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
     ];
-    const handleInputChange = (e) => {
+    const _handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: value
         }));
     };
-    const handleSubmit = async (e) => {
+    const _handleSubmit = async (e) => {
         e.preventDefault();
         setSubmissionStatus('submitting');
         // Simulate API call
@@ -82,7 +95,7 @@ export default function RequestQuote() {
             }, 3000);
         }, 2000);
     };
-    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
+    const _isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { BlogPost } from '@/types/blog';
-
 export function generateRandomBlogPost(): BlogPost {
   const titles = [
     'The Future of AI in Technology',
@@ -39,10 +33,6 @@ export function generateRandomBlogPost(): BlogPost {
     featuredImage: `/blog/${randomId}.jpg`
   };
 }
-<<<<<<< HEAD
-=======
-import { BlogPost } from '../types/blog';
-
 const topics = [
   'Artificial Intelligence',
   'Machine Learning',
@@ -100,9 +90,9 @@ export function generateRandomBlogPost(): BlogPost {
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
   const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
-  
+
   const title = `${adjective} ${noun} for ${topic}`;
-  
+
   return {
     id: Math.random().toString(36).substr(2, 9),
     title,
@@ -126,6 +116,3 @@ export function generateMultipleBlogPosts(count: number): BlogPost[] {
   }
   return posts;
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

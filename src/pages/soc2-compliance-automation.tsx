@@ -1,6 +1,13 @@
 import React from 'react';
-const Soc2ComplianceAutomation = () => {
-    const features = [
+
+import { Link } from 'react-router-dom';
+const features = [];
+const services = [];
+const soc2Criteria = [];
+const automationBenefits = [];
+const complianceTools = [];
+const _Soc2ComplianceAutomation = () => {
+    const _features = [
         {
             title: "Automated Monitoring",
             description: "Continuous monitoring of security controls and compliance status",
@@ -22,7 +29,7 @@ const Soc2ComplianceAutomation = () => {
             icon: "📊"
         }
     ];
-    const soc2Criteria = [
+    const _soc2Criteria = [
         {
             principle: "Security",
             description: "Protection against unauthorized access and security incidents",
@@ -49,7 +56,7 @@ const Soc2ComplianceAutomation = () => {
             controls: ["Data minimization", "Consent management", "Data retention", "Privacy by design"]
         }
     ];
-    const automationBenefits = [
+    const _automationBenefits = [
         {
             title: "Time Savings",
             description: "Reduce manual compliance tasks by 80%",
@@ -71,7 +78,7 @@ const Soc2ComplianceAutomation = () => {
             metric: "24/7"
         }
     ];
-    const complianceTools = [
+    const _complianceTools = [
         {
             category: "Control Monitoring",
             tools: ["Real-time dashboards", "Automated alerts", "Control testing", "Exception reporting"]

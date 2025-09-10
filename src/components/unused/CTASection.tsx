@@ -1,9 +1,15 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { _motion } from 'framer-motion';
+import { _Link } from 'react-router-dom';
+import { _RocketLaunchIcon, PhoneIcon, EnvelopeIcon, CalendarIcon } from '@heroicons/react/24/outline';
+
 import { Link } from 'react-router-dom';
-import { RocketLaunchIcon, PhoneIcon, EnvelopeIcon, CalendarIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import { Icon } from 'lucide-react';
+const services = [];
+const solutions = [];
 export function CTASection() {
-    const ctaOptions = [
+    const _ctaOptions = [
         {
             icon: PhoneIcon,
             title: "Call Us",
@@ -29,7 +35,7 @@ export function CTASection() {
             color: "from-zion-blue to-zion-purple"
         }
     ];
-    const containerVariants = {
+    const _containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -38,7 +44,7 @@ export function CTASection() {
             }
         }
     };
-    const itemVariants = {
+    const _itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,

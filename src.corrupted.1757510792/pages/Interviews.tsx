@@ -4,12 +4,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
-<<<<<<< HEAD:src.corrupted.1757510792/pages/Interviews.tsx
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from 'lucide-react'
-=======
+
 import { Calendar, Clock, Video } from "lucide-react";
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Interviews.tsx
+
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
     const { interviews, isLoading, fetchInterviews } = useInterviews();
@@ -65,24 +62,13 @@ function InterviewsContent() {
                     await fetchInterviews();
                 }}/>))}
           </div>
-<<<<<<< HEAD:src.corrupted.1757510792/pages/Interviews.tsx
-        </div>
-      ));
-  };
 
-  return (
-    <>
-      <SEO 
-        title="Interviews | Zion AI Marketplace" 
-        description="Manage your scheduled interviews with clients and talent" 
-      />
-=======
         </div>));
     };
     return (<>
       <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
       
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Interviews.tsx
+
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -136,23 +122,7 @@ function InterviewsContent() {
                 <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4"/>
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
-<<<<<<< HEAD:src.corrupted.1757510792/pages/Interviews.tsx
-              </div>
-            )}
-          </TabsContent>;
-        </Tabs>;
-      </main>;
-    </>;
-  );
-}
-;
-export default function Interviews() {;
-  return (;
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>;
-  );
-=======
+
               </div>)}
           </TabsContent>
         </Tabs>
@@ -164,6 +134,6 @@ export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>);
->>>>>>> origin/backup-improvements-20250827-015311:src/pages/Interviews.tsx
+
 }
 ;

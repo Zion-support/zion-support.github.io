@@ -1,10 +1,26 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
-import { CONTACT_INFO } from '@/data/comprehensiveServices';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { _Button } from './ui/button';
+import { _Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
+import { _CONTACT_INFO } from '@/data/comprehensiveServices';
+
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const services = [];
+const applications = [];
+const solutions = [];
+const implementation = [];
 export function ServicesBenefitsShowcase() {
-    const serviceBenefits = [
+    const _serviceBenefits = [
         {
             category: "AI Services",
             icon: <Brain className="w-12 h-12"/>,
@@ -96,7 +112,7 @@ export function ServicesBenefitsShowcase() {
             support: "Business hours support with priority options"
         }
     ];
-    const industryStats = [
+    const _industryStats = [
         { metric: "95%", label: "Client Satisfaction Rate" },
         { metric: "24/7", label: "Support Availability" },
         { metric: "50+", label: "Countries Served" },

@@ -1,6 +1,9 @@
 import React from 'react';
+import { _Helmet } from 'react-helmet-async';
+
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousTrading = () => {
+const _AIAutonomousTrading = () => {
     return (<>
       <Helmet>
         <title>AI Autonomous Trading Platform | Zion Tech Group</title>

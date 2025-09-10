@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
-import { DragDropContext } from "@hello-pangea/dnd";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { toast } from "@/hooks/use-toast";
-import { KanbanColumn } from "./KanbanColumn";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { _useState, useEffect } from "react";
+import { _DragDropContext } from "@hello-pangea/dnd";
+import { _useJobApplications } from "@/hooks/useJobApplications";
+import { _Card, CardContent, CardHeader } from "@/components/ui/card";
+import { _Skeleton } from "@/components/ui/skeleton";
+import { _toast } from "@/hooks/use-toast";
+import { _KanbanColumn } from "./KanbanColumn";
+import { _useIsMobile } from "@/hooks/use-mobile";
+
+const applications = [];
 // Define the kanban board columns based on application statuses
-const COLUMNS = [
+const _COLUMNS = [
     {
         id: "new",
         title: "Applied",
@@ -37,12 +39,12 @@ const COLUMNS = [
 export function KanbanBoard({ jobId }) {
     const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
     const [columns, setColumns] = useState({});
-    const isMobile = useIsMobile();
+    const _isMobile = useIsMobile();
     // Initialize columns with applications based on their status
     useEffect(() => {
         if (applications) {
             // Group applications by status
-            const groupedApplications = COLUMNS.reduce((acc, column) => {
+            const _groupedApplications = COLUMNS.reduce((acc, column) => {
                 acc[column.id] = applications.filter(app => app.status === column.id);
                 return acc;
             }, {});
@@ -50,7 +52,7 @@ export function KanbanBoard({ jobId }) {
         }
     }, [applications]);
     // Handle drag end event to update the application status
-    const handleDragEnd = async (result) => {
+    const _handleDragEnd = async (result) => {
         const { destination, source, draggableId } = result;
         // If there's no destination or the item is dropped in the same place, do nothing
         if (!destination ||
@@ -59,14 +61,14 @@ export function KanbanBoard({ jobId }) {
             return;
         }
         // Get the application that was dragged
-        const application = applications.find(app => app.id === draggableId);
+        const _application = applications.find(app => app.id === draggableId);
         if (!application)
             return;
         // Update the application status in the database
-        const newStatus = destination.droppableId;
+        const _newStatus = destination.droppableId;
         // Optimistically update the UI
-        const sourceColumn = [...columns[source.droppableId]];
-        const destColumn = [...columns[destination.droppableId]];
+        const _sourceColumn = [...columns[source.droppableId]];
+        const _destColumn = [...columns[destination.droppableId]];
         const [removed] = sourceColumn.splice(source.index, 1);
         destColumn.splice(destination.index, 0, { ...removed, status: newStatus });
         setColumns({

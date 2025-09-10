@@ -1,12 +1,28 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+import { _Button } from '@/components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { _Badge } from '@/components/ui/badge';
+import { _Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle } from 'lucide-react';
+import { _ENHANCED_SERVICES } from '@/data/enhancedServices';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle } from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
-const serviceIcons = {
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Icon } from 'lucide-react';
+
+const technologies = [];
+const services = [];
+const solutions = [];
+const _featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
+const _serviceIcons = {
     'AI Automation': Brain,
     'Cloud Management': Cloud,
     'Cybersecurity': Shield,
@@ -33,7 +49,7 @@ export function EnhancedServicesShowcase() {
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service) => {
-            const IconComponent = serviceIcons[service.category] || Code;
+            const _IconComponent = serviceIcons[service.category] || Code;
             return (<Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">

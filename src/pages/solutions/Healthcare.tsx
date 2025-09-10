@@ -1,8 +1,13 @@
+import { _Heart, Shield, Users, Activity, Microscope, Pill, Heart, Target, Icon } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-const HealthcareSolutions = () => {
-    const solutions = [
+import { Link } from 'react-router-dom';
+const _features = [];
+const _benefits = [];
+const _services = [];
+const _solutions = [];
+const _HealthcareSolutions = () => {
+    const _solutions = [
         {
             title: 'AI-Powered Patient Care',
             description: 'Intelligent patient monitoring and care management systems.',
@@ -56,7 +61,7 @@ const HealthcareSolutions = () => {
             href: '/services/cybersecurity'
         }
     ];
-    const benefits = [
+    const _benefits = [
         {
             title: 'Improved Patient Outcomes',
             description: 'AI-driven insights lead to better diagnosis and treatment.',
@@ -103,8 +108,8 @@ const HealthcareSolutions = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            {solutions.map((_solution, _index) => {
+            const _Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -116,7 +121,7 @@ const HealthcareSolutions = () => {
                   <p className="text-gray-300 mb-6">{solution.description}</p>
                   
                   <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
+                    {solution.features.map((_feature, _featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-gray-300">{feature}</span>
                       </li>))}
@@ -142,8 +147,8 @@ const HealthcareSolutions = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
+            {benefits.map((_benefit, _index) => {
+            const _Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>

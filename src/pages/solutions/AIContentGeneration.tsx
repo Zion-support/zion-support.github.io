@@ -1,7 +1,13 @@
+import { _Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music, Target } from 'lucide-react';
 import React from 'react';
-import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
-const AIContentGeneration = () => {
-    const contentFeatures = [
+const _features = [];
+const _benefits = [];
+const _solutions = [];
+const _contentFeatures = [];
+const _contentTypes = [];
+const _implementation = [];
+const _AIContentGeneration = () => {
+    const _contentFeatures = [
         {
             icon: FileText,
             title: "Text Generation",
@@ -27,7 +33,7 @@ const AIContentGeneration = () => {
             features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
         }
     ];
-    const contentTypes = [
+    const _contentTypes = [
         {
             title: "Marketing Content",
             description: "Engaging marketing materials and campaigns",
@@ -65,7 +71,7 @@ const AIContentGeneration = () => {
             capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
         }
     ];
-    const benefits = [
+    const _benefits = [
         "Significantly faster content creation",
         "Consistent quality and brand voice",
         "Scalable content production",
@@ -73,7 +79,7 @@ const AIContentGeneration = () => {
         "Multilingual content capabilities",
         "24/7 content creation availability"
     ];
-    const implementation = [
+    const _implementation = [
         {
             phase: "Content Strategy",
             description: "Define content goals and requirements",
@@ -148,14 +154,14 @@ const AIContentGeneration = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {contentFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
+            {contentFeatures.map((_feature, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {feature.features.map((_item, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {item}
                     </li>))}
@@ -179,14 +185,14 @@ const AIContentGeneration = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contentTypes.map((contentType, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
+            {contentTypes.map((_contentType, _index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <contentType.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>
                 <p className="text-gray-300 mb-4">{contentType.description}</p>
                 <ul className="space-y-2">
-                  {contentType.capabilities.map((capability, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {contentType.capabilities.map((_capability, _idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {capability}
                     </li>))}
@@ -209,7 +215,7 @@ const AIContentGeneration = () => {
                 manage, and distribute content across all channels.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((_benefit, _index) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -246,7 +252,7 @@ const AIContentGeneration = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {implementation.map((phase, index) => (<div key={index} className="text-center">
+            {implementation.map((_phase, _index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}
                 </div>

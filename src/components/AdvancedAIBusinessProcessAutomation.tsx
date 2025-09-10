@@ -1,6 +1,16 @@
 import React, { useState, useRef } from 'react';
-import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
-const mockBusinessProcesses = [
+import { _Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Icon } from 'lucide-react';
+const _mockBusinessProcesses = [
     {
         id: 'bp-001',
         name: 'Invoice Processing & Approval',
@@ -153,8 +163,8 @@ export function AdvancedAIBusinessProcessAutomation() {
     const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
-    const containerRef = useRef(null);
-    const getStatusColor = (status) => {
+    const _containerRef = useRef(null);
+    const _getStatusColor = (status) => {
         switch (status) {
             case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
@@ -164,7 +174,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
         }
     };
-    const getPriorityColor = (priority) => {
+    const _getPriorityColor = (priority) => {
         switch (priority) {
             case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
@@ -173,7 +183,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
         }
     };
-    const getAutomationLevelColor = (level) => {
+    const _getAutomationLevelColor = (level) => {
         switch (level) {
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
@@ -181,7 +191,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
         }
     };
-    const getCategoryIcon = (category) => {
+    const _getCategoryIcon = (category) => {
         switch (category) {
             case 'finance': return <DollarSign className="w-4 h-4"/>;
             case 'hr': return <Users className="w-4 h-4"/>;
@@ -192,7 +202,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             default: return <FileText className="w-4 h-4"/>;
         }
     };
-    const formatCurrency = (amount) => {
+    const _formatCurrency = (amount) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD',
@@ -200,10 +210,10 @@ export function AdvancedAIBusinessProcessAutomation() {
             maximumFractionDigits: 0
         }).format(amount);
     };
-    const formatPercentage = (value) => {
+    const _formatPercentage = (value) => {
         return `${value}%`;
     };
-    const executeProcess = async (processId) => {
+    const _executeProcess = async (processId) => {
         setIsExecuting(true);
         // Simulate process execution
         await new Promise(resolve => setTimeout(resolve, 2000));
@@ -213,10 +223,10 @@ export function AdvancedAIBusinessProcessAutomation() {
             ? { ...p, lastExecuted: new Date(), status: 'active' }
             : p));
     };
-    const filteredProcesses = businessProcesses.filter(process => {
-        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
-        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
-        const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const _filteredProcesses = businessProcesses.filter(process => {
+        const _matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
+        const _matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
+        const _matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch;
     });
