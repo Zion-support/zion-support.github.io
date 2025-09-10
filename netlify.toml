@@ -23,6 +23,11 @@
   # Optimize build performance
   VITE_LEGACY_BUILD = "false"
 
+[functions]
+  # Ensure Netlify bundles TS/JS functions with esbuild
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
+
 # SPA routing redirects for Vite build
 [[redirects]]
   from = "/*"
