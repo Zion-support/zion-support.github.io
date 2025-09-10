@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "dist"
 
 [build.environment]
 NODE_VERSION = "20"
@@ -51,6 +51,12 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   status = 301
 
 [[redirects]]
-from = "/affiliate-attribution-suite"
-to = "/services/affiliate-attribution-suite/"
-status = 301
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production",
+    "build": "vite build --mode production && cp -f _redirects dist/_redirects || true",
     "start": "vite preview",
     "lint": "eslint --no-error-on-unmatched-pattern \"src/AppMinimal.tsx\" \"src/main.tsx\"",
     "lint:fix": "eslint \"src/AppMinimal.tsx\" \"src/main.tsx\" --fix",

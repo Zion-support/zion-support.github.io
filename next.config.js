@@ -55,40 +55,19 @@ const nextConfig = {
     }
     return config;
   },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824
   async headers() {
     return [
       {
-        source: "/(.*)"
+        source: "/(.*)",
         headers: [
-          {
-            key: "X-Content-Type-Options"
-            value: "nosniff"
-          }
-          {
-            key: "X-Frame-Options"
-            value: "DENY"
-          }
-          {
-            key: "X-XSS-Protection"
-            value: "1; mode=block"
-          }
-          {
-            key: "Referrer-Policy"
-            value: "origin-when-cross-origin"
-          }
-        ]
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8824
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "X-XSS-Protection", value: "1; mode=block" },
+          { key: "Referrer-Policy", value: "origin-when-cross-origin" },
+        ],
+      },
     ];
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default nextConfig
-=======
 export default nextConfig;
