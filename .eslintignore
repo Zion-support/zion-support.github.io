@@ -1,4 +1,30 @@
-# Ignore corrupted and disabled directories
+# Ignore build/dist and dependency dirs
+.next/
+out/
+dist/
+build/
+coverage/
+node_modules/
+
+# Logs and reports
+*.log
+logs/
+automation/logs/
+optimization-reports/
+link-reports/
+log-analysis-reports/
+maintenance-reports/
+improvement-reports/
+
+# Generated files and snapshots
+**/*.generated.*
+*.backup.*
+*.disabled.*
+*.corrupted.*
+*.broken.*
+zion.app/recovered-content/**
+
+# Archived/disabled and backup folders
 pages._archive_corrupted/
 pages.disabled.full/
 pages.disabled_auto/
@@ -16,47 +42,19 @@ temp_broken_files/
 temp_working/
 tests.disabled/
 lib_backup/
-optimization-reports/
-link-reports/
-log-analysis-reports/
-maintenance-reports/
-improvement-reports/
-monitoring/
 hooks.disabled/
 backup/
-scripts/scripts/
+backups/
+**/backup/**
 
-# Ignore specific problematic files
-performance-optimizations.js
-seo-improvements.js
-services-broken.tsx
-test-automation.js
+# Large/generated app folders
+zion-os.disabled/
+zion-os/.next/
+apps/**/.next/
 
-# Ignore build and dist directories
-.next/
-out/
-dist/
-build/
-
-# Ignore node_modules
-node_modules/
-
-# Ignore logs
-*.log
-<<<<<<< HEAD
-logs/
-automation/logs/
-
-# Ignore generated files
-*.generated.*
-*.backup.*
-*.disabled.*
-*.corrupted.*
-*.broken.*
-=======
-**/*.generated.*
-zion.app/recovered-content/**
+# Static vendor bundles not meant for linting
+**/static/**/*.js
+**/static/**/*.jsx
 
 # Netlify functions (serverless functions with different linting rules)
 netlify/functions/
->>>>>>> origin/automation/changelog
