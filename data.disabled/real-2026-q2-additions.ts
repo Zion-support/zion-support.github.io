@@ -445,7 +445,6 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
   },
   {
@@ -453,21 +452,9 @@ export const real2026Q2Additions = [
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description:;
-      'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
-    features: [;
-=======
-    link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory',
-  },
-  {
-    id: 'ecommerce-returns-orchestrator',
-    name: 'E‑commerce Returns Orchestrator',
-    category: 'Developer Tools',
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
     description:
-      'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
+      'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
     features: [
->>>>>>> cursor/check-fix-push-and-merge-to-main-13a1
       'Return portal widgets and hosted flows',
       'Policy rules engine with A / B tests',
       'Carrier label and pickup automation',
@@ -1020,19 +1007,11 @@ export const real2026Q2Additions = [
       'BYOD governance',
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
-<<<<<<< HEAD
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
   },
-=======
-    competitors: ['Atera', 'NinjaOne'],;
-    price: '$4',;
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
-  },;
->>>>>>> cursor/check-fix-push-and-merge-to-main-13a1
 ;
 ;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
