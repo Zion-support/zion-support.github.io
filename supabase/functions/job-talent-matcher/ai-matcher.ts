@@ -20,7 +20,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
         "Authorization": `Bearer ${openAiApiKey}`
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -47,7 +47,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     
     return normalizedSkills;
   } catch (error) {
-    console.error("Error in normalizeSkillsWithAI:", error);
+    // console.error("Error in normalizeSkillsWithAI:", error);
     // If AI normalization fails, return the original skills
     return skills;
   }
@@ -59,7 +59,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
  * @param talents Array of talent profiles
  * @returns Array of matches with scores and reasons
  */
-export async function findBestMatches(jobDetails: any, talents: TalentProfile[]): Promise<MatchResult[]> {
+export async function findBestMatches(jobDetails: unknown, talents: TalentProfile[]): Promise<MatchResult[]> {
   try {
     // Convert job details to string format for AI prompt
     const jobDetailsText = `
@@ -92,7 +92,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
         "Authorization": `Bearer ${openAiApiKey}`
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -140,7 +140,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     
     return aiResponse;
   } catch (error) {
-    console.error("Error in findBestMatches:", error);
+    // console.error("Error in findBestMatches:", error);
     
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents);
@@ -153,7 +153,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
-export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
+export function performBasicSkillMatching(jobDetails: unknown, talents: TalentProfile[]): MatchResult[] {
   const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase());
   
   return talents.map(talent => {
