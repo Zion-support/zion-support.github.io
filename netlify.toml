@@ -1,10 +1,10 @@
 [build]
-  command = "corepack enable && pnpm install --frozen-lockfile=false --prefer-offline --no-frozen-lockfile && pnpm run build"
+  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
 NODE_OPTIONS = "--max-old-space-size=4096"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
 SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
