@@ -3,7 +3,18 @@
   "compilerOptions": {
     "noEmit": true
   },
+  "include": [
+    "src/AppMinimal.tsx",
+    "src/main.tsx"
+  ],
   "exclude": [
+    "src/hooks/**",
+    "src/pages/**",
+    "src/integrations/**",
+    "src/layout/**",
+    "src/routes/**",
+    "src/services/**",
+    "src/mobile/**",
     "src/store/wishlistSlice.ts",
     "src/store/authSlice.tsx",
     "src/store/cartSlice.ts",
@@ -14,11 +25,7 @@
     "src/utils/linkChecker.ts",
     "src/utils/performance.ts",
     "src/utils/**",
-    "src/layout/**",
-    "src/pages/**",
-    "src/pages.disabled/**",
-    "src/routes/**",
-    "src/services/**"
+    "src/pages.disabled/**"
   ]
 }
 
