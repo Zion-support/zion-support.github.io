@@ -42,7 +42,7 @@ serve(async (req) => {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error in cron-daily-retention:", error);
+    // console.error("Error in cron-daily-retention:", error);
 
     return new Response(JSON.stringify({
       success: false,
