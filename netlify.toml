@@ -1,7 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn && pnpm build"
   publish = "dist"
-  command_timeout = "30m"
+  command_timeout = "15m"
 
 [build.environment]
   NODE_VERSION = "22.12.0"
@@ -18,10 +18,8 @@
   ESLINT_NO_DEV_ERRORS = "true"
   # Optimize build performance
   VITE_LEGACY_BUILD = "false"
-  # Explicitly skip Next.js plugin (plugin installed via Netlify UI)
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_USE_PNPM = "true"
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
   PNPM_VERSION = "9.12.1"
 
 # API functions (disabled for Vite SPA)
