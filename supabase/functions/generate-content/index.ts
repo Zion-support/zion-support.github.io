@@ -183,9 +183,9 @@ serve(async (req) => {
         .single();
       
       if (error) {
-        console.error("Error saving blog post:", error);
+        // console.error("Error saving blog post:", error);
       } else {
-        console.log("Blog post saved successfully:", blogPost);
+        // console.log("Blog post saved successfully:", blogPost);
         
         // Create notification about new blog post
         await supabase
@@ -208,7 +208,7 @@ serve(async (req) => {
       status: 200,
     });
   } catch (error) {
-    console.error("Error in generate-content function:", error);
+    // console.error("Error in generate-content function:", error);
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
