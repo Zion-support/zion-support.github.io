@@ -12,11 +12,9 @@ export function TokenDisplay() {
           <CardTitle className="text-xl">ZION$ Balance</CardTitle>
           <CardDescription>Your current token balance</CardDescription>
         </div>
-<<<<<<< HEAD:temp_backup/components/wallet/TokenDisplay.tsx
-        <BadgeDollarSign className="h-6 w-6 text-primary" />
-=======
+
         <BadgeDollarSign aria-hidden="true" className="h-6 w-6 text-primary"/>
->>>>>>> origin/backup-improvements-20250827-015311:src/components/wallet/TokenDisplay.tsx
+
       </CardHeader>
       <CardContent>
         {loading ? (<Skeleton className="h-12 w-28"/>) : (<div className="flex flex-col gap-2">

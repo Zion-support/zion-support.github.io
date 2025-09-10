@@ -94,86 +94,9 @@ export function QuoteWizard({ category }) {
             {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full"/>))}
           </div>)}
 
-<<<<<<< HEAD:temp_backup/components/quote/QuoteWizard.tsx
-interface QuoteWizardProps {
-  category: 'services' | 'talent' | 'equipment';
-}
 
-export function QuoteWizard({ category }: QuoteWizardProps) {
-  const [step, setStep] = useState(1);
-  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
-  const [message, setMessage] = useState('');
-  const [selectionError, setSelectionError] = useState('');
-  const { data, error, mutate, isLoading } = useQuoteWizard(category);
-  const delayedError = useDelayedError(error);
-  const { toast } = useToast();
-
-  useEffect(() => {
-    if (delayedError) {
-      toast({
-        title: 'Unable to load services',
-        variant: 'destructive'
-      });
-    }
-  }, [delayedError, toast]);
-
-  // Use isLoading from SWR for a more direct loading state
-  const loading = isLoading;
-
-  const selectedItem = useMemo(() => {
-    if (!data || !selectedItemId) return null;
-    return data.find(item => item.id === selectedItemId);
-  }, [data, selectedItemId]);
-
-  const handleSelect = (id: string) => {
-    setSelectedItemId(id);
-    setStep(2);
-  };
-
-  const handleContinue = () => {
-    if (!selectedItemId) {
-      setSelectionError(`Please choose at least one ${category === 'services' ? 'service' : category === 'talent' ? 'talent' : 'item'}`);
-      return;
-    }
-    setSelectionError('');
-    // Step transition is handled by handleSelect if needed, or directly if item already selected
-    if (selectedItemId) {
-       setStep(2);
-    }
-  };
-
-  const handleSubmit = async () => {
-    if (!selectedItemId) return;
-    // TODO: Adapt API endpoint and payload based on category if necessary
-    await fetch('/api/quotes', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ item_id: selectedItemId, category: category, user_message: message })
-    });
-    setStep(3);
-  };
-
-  if (step === 1) {
-
-    return (
-      <div className="space-y-6">
-        <StepIndicator step={step} />
-        {loading && !delayedError && (
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-            data-testid="loading-indicator"
-          >
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Skeleton key={i} className="h-[120px] w-full" />
-            ))}
-          </div>
-        )}
-
-        {delayedError && (
-          <div className="space-y-2" data-testid="fetch-error-alert">
-=======
         {delayedError && (<div className="space-y-2" data-testid="fetch-error-alert">
->>>>>>> origin/backup-improvements-20250827-015311:src/components/quote/QuoteWizard.tsx
+
             <Alert variant="destructive">
               <AlertTitle>Error Fetching {category}</AlertTitle>
               <AlertDescription>

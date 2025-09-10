@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import React from "react"
-import { Phone, Mail, MapPin, Globe } from "lucide-react"
 
-interface ContactInfoProps {
-  className?: string
-  showTitle?: boolean
-  variant?: "default" | "compact" | "detailed"
-
-export default function ContactInfo({ 
-  className = "",
-  showTitle = true,
-  variant = "default" 
-}: ContactInfoProps) {
-  const contactDetails = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
-    website: "https://ziontechgroup.com"
-  }
-
-  if (variant === "compact") {
-=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
@@ -240,4 +218,4 @@ export function ContactInfo() {
       </div>
     </section>);
 }
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+

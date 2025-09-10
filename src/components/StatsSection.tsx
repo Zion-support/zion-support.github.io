@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-;,"});});
-;,"}
-    );,})
-    );,"})"
-}
-=======
+
 import React from 'react';
 export function StatsSection() {
     const stats = [
@@ -105,4 +99,4 @@ export function StatsSection() {
       </div>
     </section>);
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

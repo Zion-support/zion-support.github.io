@@ -30,12 +30,7 @@ export function FormField(props: any) {;
 interface FormMessageProps {;
   children?: "React.ReactNode;
   className?: string;
-<<<<<<< HEAD
-;
-"}
-;
-export function FormMessage("props": "any) {;
-=======
+
 }
 
 export function FormLabel({ children, className = '' }: FormLabelProps) {
@@ -59,4 +54,4 @@ export function FormMessage({ children, className = '' }: FormMessageProps) {
     </p>
   );
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

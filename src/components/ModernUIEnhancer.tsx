@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',;',';';
-    ;
-import {SEO } from '@/components/SEO';
-export default function ModernUIEnhancer("props": "any) {return (;
-    <div className="min-h-screen bg-white">;
-      <SEO title="ModernUIEnhancer - Zion Tech Group" description="Professional ModernUIEnhancer services by Zion Tech Group"  />;
-      <div className="container mx-auto px-4 py-20">;
-        <h1 className="text-4xl font-bold text-white mb-8">ModernUIEnhancer</h1>;
-        <p className="text-gray-300 text-lg">;
-          Professional ModernUIEnhancer services to help your business grow.;
-        </p>;
-export default function ModernUIEnhancer(props: any) {return (
-        <div className="min-h-screen bg-white">
-      <SEO title="ModernUIEnhancer - Zion Tech Group" description="Professional ModernUIEnhancer services by Zion Tech Group"  />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">ModernUIEnhancer</h1>
-        <p className="text-gray-300 text-lg">
-          Professional ModernUIEnhancer services to help your business grow.
-        </p>
-      </div>';
-    </div>';';
-  );';';';
-"}";
-=======
+
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
@@ -403,4 +379,4 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     </>);
 };
 export default ModernUIEnhancer;
->>>>>>> origin/backup-improvements-20250827-015311
+

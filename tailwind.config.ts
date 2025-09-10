@@ -1,19 +1,5 @@
 import type { Config } from 'tailwindcss';
-<<<<<<< HEAD
-import defaultTheme from 'tailwindcss/defaultTheme';
-import plugin from 'tailwindcss/plugin';
-      }
-    }
-  }
-  plugins: [
-    require('@tailwindcss/typography')
-    require('@tailwindcss/forms')
-    require('@tailwindcss/aspect-ratio')
-  ]
-}
 
-export default config;
-=======
 
 export default {
   content: [
@@ -469,4 +455,4 @@ export default {
     require("@tailwindcss/line-clamp"),
   ],
 } satisfies Config;
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+

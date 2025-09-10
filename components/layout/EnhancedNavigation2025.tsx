@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
+
 import { Link } from 'react-router-dom';
->>>>>>> origin/backup-improvements-20250827-015311
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown,
@@ -180,192 +178,21 @@ const navigationItems = [
     icon: <Cpu className="w-5 h-5" />,
     description: 'Enterprise solutions and infrastructure',
     children: [
-<<<<<<< HEAD
-      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-healing IT infrastructure' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', description: 'Intelligent development automation' },
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', description: 'Quantum-enhanced cloud computing' },
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
-      { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-managing IT systems' },
-      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Next-gen data centers' },
-      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Seamless cloud transitions' },
-      { name: 'IT Asset Management', href: '/it-asset-management', description: 'Comprehensive asset tracking' },
-      { name: 'Infrastructure Monitoring', href: '/infrastructure-monitoring', description: 'Real-time system monitoring' }
-    ]
-  },
-  {
-    name: 'Blockchain & Web3',
-    href: '/blockchain-web3-services',
-    icon: <Globe className="w-5 h-5" />,
-    description: 'Advanced blockchain and Web3 solutions',
-    badge: 'New',
-    children: [
-      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Intelligent yield farming' },
-      { name: 'NFT Marketplace', href: '/nft-marketplace-management', description: 'Custom NFT platforms' },
-      { name: 'DAO Governance', href: '/dao-governance-management', description: 'Decentralized governance' },
-      { name: 'Cross-Chain Bridge', href: '/cross-chain-bridge-interoperability', description: 'Multi-chain interoperability' },
-      { name: 'Web3 Identity', href: '/web3-identity-authentication', description: 'Decentralized identity' },
-      { name: 'Smart Contract Development', href: '/smart-contract-development', description: 'Advanced contract creation' },
-      { name: 'DeFi Protocol Development', href: '/defi-protocol-development', description: 'Custom DeFi protocols' },
-      { name: 'Web3 Analytics', href: '/web3-analytics', description: 'Blockchain insights' },
-      { name: 'Token Economics', href: '/token-economics', description: 'Token design and modeling' },
-      { name: 'Regulatory Compliance', href: '/web3-compliance', description: 'Compliance automation' }
-=======
+
       { name: 'Quantum Cloud Infrastructure Pro', href: '/quantum-cloud-infrastructure-pro', description: 'Quantum-enhanced cloud platform' },
       { name: 'Edge Computing Orchestrator Pro', href: '/edge-computing-orchestrator-pro', description: 'Advanced edge computing' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Comprehensive zero trust security' },
       { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Intelligent DevOps automation' },
       { name: 'Quantum Database Platform', href: '/quantum-database-platform', description: 'Quantum-enhanced data storage' },
       { name: 'Enterprise Blockchain Platform', href: '/enterprise-blockchain-platform', description: 'Enterprise blockchain solutions' }
->>>>>>> origin/backup-improvements-20250827-015311
+
     ]
   },
   {
     name: 'Micro SaaS',
     href: '/micro-saas',
     icon: <Rocket className="w-5 h-5" />,
-<<<<<<< HEAD
-    description: 'Innovative business solutions for modern enterprises',
-    badge: 'Popular',
-    children: [
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Data-driven insights' },
-      { name: 'AI Content Generation', href: '/ai-content-generation-platform', description: 'Automated content creation' },
-      { name: 'AI Customer Service', href: '/ai-customer-service-automation', description: 'Intelligent support automation' },
-      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Sales performance optimization' },
-      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-suite', description: 'Campaign optimization' },
-      { name: 'AI Project Management', href: '/ai-project-management-platform', description: 'Intelligent project coordination' },
-      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform', description: 'Financial insights and optimization' },
-      { name: 'AI HR Management', href: '/ai-hr-management-platform', description: 'HR operations automation' },
-      { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
-      { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
-    ]
-  },
-  {
-    name: 'Healthcare & Biotech',
-    href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
-    description: 'AI-powered healthcare and biotechnology',
-    badge: 'New',
-    children: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'AI-powered drug development' },
-      { name: 'Precision Medicine', href: '/precision-medicine-genomics', description: 'Personalized healthcare' },
-      { name: 'Medical Imaging AI', href: '/ai-medical-imaging-analysis', description: 'AI image analysis' },
-      { name: 'Digital Health Platform', href: '/digital-health-telemedicine', description: 'Telemedicine solutions' },
-      { name: 'Clinical Trial Management', href: '/clinical-trial-management-optimization', description: 'Trial optimization' },
-      { name: 'Healthcare Analytics', href: '/healthcare-analytics', description: 'Health data insights' },
-      { name: 'Patient Engagement', href: '/patient-engagement-platform', description: 'Patient communication' },
-      { name: 'Medical Device AI', href: '/medical-device-ai', description: 'Smart medical devices' },
-      { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
-      { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
-    ]
-  },
-  {
-    name: 'Healthcare & Biotech',
-    href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
-    description: 'AI-powered healthcare and biotechnology',
-    badge: 'New',
-    children: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'AI-powered drug development' },
-      { name: 'Precision Medicine', href: '/precision-medicine-genomics', description: 'Personalized healthcare' },
-      { name: 'Medical Imaging AI', href: '/ai-medical-imaging-analysis', description: 'AI image analysis' },
-      { name: 'Digital Health Platform', href: '/digital-health-telemedicine', description: 'Telemedicine solutions' },
-      { name: 'Clinical Trial Management', href: '/clinical-trial-management-optimization', description: 'Trial optimization' },
-      { name: 'Healthcare Analytics', href: '/healthcare-analytics', description: 'Health data insights' },
-      { name: 'Patient Engagement', href: '/patient-engagement-platform', description: 'Patient communication' },
-      { name: 'Medical Device AI', href: '/medical-device-ai', description: 'Smart medical devices' },
-      { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
-      { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry-specific solutions',
-    children: [
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
-      { name: 'Metaverse Development', href: '/metaverse-development-studio', description: '3D world creation' },
-      { name: 'Quantum Metaverse', href: '/quantum-metaverse-platform', description: 'Quantum-enhanced experiences' },
-      { name: '3D Design & Modeling', href: '/3d-design-platform', description: 'Advanced 3D creation tools' },
-      { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
-      { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
-    ]
-  },
-  {
-    name: 'Research & Development',
-    href: '/research-development',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Cutting-edge research and development services',
-    children: [
-      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
-      { name: 'Space Technology Research', href: '/space-technology-research', description: 'Space exploration solutions' },
-      { name: 'Biotech AI Research', href: '/biotech-ai-research-platform', description: 'Biological research automation' },
-      { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
-      { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
-    ]
-  },
-  {
-    name: 'Industry Solutions',
-    href: '/industry-solutions',
-    icon: <Truck className="w-5 h-5" />,
-    description: 'Specialized solutions for specific industries',
-    children: [
-      { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
-      { name: 'Financial Services', href: '/financial-ai-solutions', description: 'Fintech AI solutions' },
-      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Industrial automation' },
-      { name: 'Retail AI', href: '/retail-ai-solutions', description: 'Retail optimization' },
-      { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
-      { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
-    ]
-  },
-  {
-    name: 'Pricing & Plans',
-    href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
-    description: 'Flexible pricing options for all services',
-    children: [
-      { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
-      { name: '2026 Pricing', href: '/pricing-2026', description: 'Next year pricing' },
-      { name: 'Enterprise Plans', href: '/enterprise-pricing', description: 'Large organization pricing' },
-      { name: 'Startup Plans', href: '/startup-pricing', description: 'Small business pricing' },
-      { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
-      { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Educational resources and documentation',
-    children: [
-      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
-      { name: 'API Reference', href: '/api-docs', description: 'API documentation' },
-      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
-      { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
-    ]
-  },
-  {
-    name: 'Support',
-    href: '/support',
-    icon: <Settings className="w-5 h-5" />,
-    description: 'Technical support and customer service',
-    children: [
-      { name: 'Help Center', href: '/help', description: 'Self-service support' },
-      { name: 'Contact Support', href: '/contact', description: 'Get in touch' },
-      { name: 'Live Chat', href: '/live-chat', description: 'Real-time assistance' },
-      { name: 'Training Programs', href: '/training', description: 'Skill development' },
-      { name: 'Community Forum', href: '/community', description: 'User community' },
-      { name: 'Status Page', href: '/status', description: 'Service status' }
-=======
+
     description: 'Innovative micro SaaS solutions for modern businesses',
     badge: 'Innovative',
     color: 'from-emerald-500 to-green-600',
@@ -392,7 +219,7 @@ const navigationItems = [
       { name: 'Space Technology Research', href: '/space-technology-research', description: 'Space tech development' },
       { name: 'Neurotechnology Research', href: '/neurotechnology-research', description: 'Brain-computer interface research' },
       { name: 'Climate AI Research Platform', href: '/climate-ai-research-platform', description: 'Climate change AI solutions' }
->>>>>>> origin/backup-improvements-20250827-015311
+
     ]
   }
 ];
@@ -407,10 +234,9 @@ export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-=======
+
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> origin/backup-improvements-20250827-015311
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -439,11 +265,7 @@ export default function EnhancedNavigation2025() {
                 <span>{contactInfo.email}</span>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-300" />
-              <span className="text-xs">{contactInfo.address}</span>
-=======
+
             <div className="flex items-center gap-4">
               <Link to="/contact" className="text-cyan-300 hover:text-white transition-colors">
                 Get Started Today
@@ -451,30 +273,20 @@ export default function EnhancedNavigation2025() {
               <Link to="/support" className="text-cyan-300 hover:text-white transition-colors">
                 Support
               </Link>
->>>>>>> origin/backup-improvements-20250827-015311
+
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-<<<<<<< HEAD
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
-          : 'bg-transparent'
-      }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-=======
+
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
->>>>>>> origin/backup-improvements-20250827-015311
+
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-6 h-6 text-white" />
@@ -487,103 +299,7 @@ export default function EnhancedNavigation2025() {
               </div>
             </Link>
 
-<<<<<<< HEAD
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <button
-                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeSubmenu === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
 
-                  {/* Submenu */}
-                  <AnimatePresence>
-                    {activeSubmenu === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
-                      >
-                        <div className="p-6">
-                          {item.submenu?.map((subitem) => (
-                            <Link
-                              key={subitem.name}
-                              href={subitem.href}
-                              onClick={() => setActiveSubmenu(null)}
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
-                            >
-                              <div className="flex items-start space-x-3">
-                                {subitem.icon && (
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
-                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
-                                  </div>
-                                )}
-                                <div className="flex-1">
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                    {subitem.name}
-                                  </h3>
-                                  <p className="text-sm text-gray-400 mt-1">
-                                    {subitem.description}
-                                  </p>
-                                  {subitem.services && (
-                                    <div className="mt-2 flex flex-wrap gap-1">
-                                      {subitem.services.slice(0, 2).map((service) => (
-                                        <span
-                                          key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
-                                        >
-                                          {service}
-                                        </span>
-                                      ))}
-                                      {subitem.services.length > 2 && (
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
-                                          +{subitem.services.length - 2} more
-                                        </span>
-                                      )}
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link
-                href="/pricing"
-                className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navigationItems.map((item) => (
@@ -677,7 +393,7 @@ export default function EnhancedNavigation2025() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
->>>>>>> origin/backup-improvements-20250827-015311
+
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -693,55 +409,7 @@ export default function EnhancedNavigation2025() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
 
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="ml-8 mt-2 space-y-2"
-                    >
-                      {item.children?.map((child) => (
-                        <Link
-                          key={child.name}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                          onClick={() => setIsOpen(false)}
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
-                        >
-                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                            {subItem.name}
-                          </span>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </div>
-              ))}
-
-              {/* Mobile CTA */}
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-=======
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}
@@ -879,7 +547,7 @@ export default function EnhancedNavigation2025() {
                       {action.icon}
                       <span className="ml-2">{action.name}</span>
                     </Link>
->>>>>>> origin/backup-improvements-20250827-015311
+
                   ))}
                 </div>
 
@@ -923,17 +591,8 @@ export default function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
 
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
-    </>
-  );
-};
-
-export default EnhancedNavigation2025;
-=======
     </nav>
   );
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-interface TabsContextType { "activeTab": 'string;' } "setActiveTab": "("tab": string) => void"} "activeTab": 'string; "setActiveTab": "ta "b": string void' "} ;
-=======
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface TabsContextType {
@@ -96,4 +94,4 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
     </div>
   );
 }
->>>>>>> origin/backup-improvements-20250827-015311
+

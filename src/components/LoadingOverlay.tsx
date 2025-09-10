@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-;,"});});
-;,"}
-    );,})
-    );,"})"
-}
-=======
+
 import React from 'react';
 
 interface LoadingOverlayProps {
@@ -28,4 +22,4 @@ export function LoadingOverlay({ visible, className = '' }: LoadingOverlayProps)
 }
 
 export default LoadingOverlay;
->>>>>>> origin/backup-improvements-20250827-015311
+

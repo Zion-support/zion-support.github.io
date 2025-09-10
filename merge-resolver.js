@@ -22,14 +22,11 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('') || content.includes('>>>>>>>')) {
       log(`🔧 Cleaning conflicts in: ${filePath}`, 'yellow');
       
       // Remove merge conflict markers and keep HEAD version
-      content = content.replace(/<<<<<<< HEAD[^\n]*\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n?/g, '$1');
-      content = content.replace(/<<<<<<< [^\n]*\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
+      content = content.replace(/
       
       // Clean up syntax
       content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

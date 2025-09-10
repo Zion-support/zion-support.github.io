@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-;,"});});
-;,"}
-    );,})
-    );,"})"
-}
-=======
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
@@ -330,4 +324,4 @@ const AdvancedAnalyticsDashboard = () => {
     </div>);
 };
 export default AdvancedAnalyticsDashboard;
->>>>>>> origin/backup-improvements-20250827-015311
+
