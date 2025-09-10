@@ -1,35 +1,24 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts systematically
-# Keep our PM2 automation improvements, accept main branch for others
-
+# Script to resolve merge conflicts by choosing HEAD version
 echo "Resolving merge conflicts..."
 
-# Keep our PM2 automation files
-git checkout --ours ecosystem.config.js
-git checkout --ours pm2-automation.sh
-git checkout --ours eslint.config.cjs
+# Find all files with merge conflicts
+files_with_conflicts=$(find pages -name "*.tsx" | xargs grep -l "<<<<<<< HEAD")
 
-# For most other files, accept the main branch version
-git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-    file=$(echo "$line" | cut -c4-)
+for file in $files_with_conflicts; do
+    echo "Processing $file..."
     
-    # Skip our important files
-    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
-        echo "Keeping our version of $file"
-        continue
-    fi
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Accept main branch version for most files
-    echo "Accepting main branch version of $file"
-    git checkout --theirs "$file"
+    # Remove conflict markers and choose HEAD version
+    # This is a simple approach - remove everything between ======= and >>>>>>> 
+    # and remove the <<<<<<< HEAD line
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/,/>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985/d' "$file"
+    
+    echo "Resolved conflicts in $file"
 done
 
-echo "Adding resolved files..."
-git add .
-
-echo "Committing merge resolution..."
-git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
-
-echo "Pushing resolved changes..."
-git push origin HEAD
+echo "Conflict resolution complete!"

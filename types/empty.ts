@@ -1,2 +1,1 @@
-// Empty types file
-export type Empty = unknown;
+module.exports = type __Empty = unknown;
