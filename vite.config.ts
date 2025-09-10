@@ -28,9 +28,6 @@ export default defineConfig({
       '@constants': resolve(__dirname, 'src/constants')
     }
   },
-  css: {
-    postcss: './postcss.config.cjs'
-  },
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
@@ -129,8 +126,7 @@ export default defineConfig({
     open: true
   },
   css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js'
+    devSourcemap: true
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
