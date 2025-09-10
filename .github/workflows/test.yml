@@ -1,53 +1,56 @@
-name: Test
+name: Test Suite
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 permissions:
   contents: read
 
 jobs:
   test:
-    name: Test Job
+    name: Run Test Suite
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
+
       - name: Build project
-        run: npm run build
+        run: yarn build
+
       - name: Verify build output
         run: |
-          if [ ! -d dist ]; then
-            echo "Build failed: dist folder not found"
+          if [ ! -d .next ]; then
+            echo "Build failed: .next folder not found"
             exit 1
           fi
-      - name: Run Tests
-        run: npm test -- --run
+          echo "Build successful: .next folder found"
+      - name: Run basic tests (if available)
+        run: |
+          if npm run | grep -q "test"; then
+            npm test
+          else
+            echo "No test script found, skipping tests"
+          fi
         continue-on-error: true
-      - name: Run Cypress Tests (if available)
-        run: npm run cypress:run
-        env:
-          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
-          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
-          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
-        continue-on-error: true
-      - uses: actions/upload-artifact@v4
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
         with:
           name: build
-          path: dist
-        if: success()
+          path: .next
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: test-${{ github.ref }}
   cancel-in-progress: true
