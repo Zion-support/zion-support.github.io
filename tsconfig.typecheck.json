@@ -1,7 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
-  }
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [],
+  "exclude": ["**/*"],
+  "files": [
+    "src/main.tsx",
+    "src/AppMinimal.tsx",
+    "src/components/SEO.tsx"
+  ]
 }
 

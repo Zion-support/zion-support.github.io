@@ -7,13 +7,8 @@
     "dev": "vite",
     "build": "vite build --mode production",
     "start": "vite preview",
-<<<<<<< HEAD
     "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
-=======
-    "lint": "eslint --no-error-on-unmatched-pattern \"src/{layout,lib}/**/*.{ts,tsx}\"",
-    "lint:fix": "eslint \"src/{components,layout,lib,hooks,utils,store}/**/*.{ts,tsx}\" --fix",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3a91
     "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
     "test": "jest --config jest.config.cjs",
     "test:coverage": "jest --coverage",
@@ -33,11 +28,7 @@
     "dev:fast": "npm run dev -- --turbo",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
-<<<<<<< HEAD
     "lint:check": "eslint . --max-warnings 0",
-=======
-    "lint:check": "eslint --no-error-on-unmatched-pattern \"src/{layout,lib}/**/*.{ts,tsx}\" --max-warnings 0",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3a91
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
@@ -173,13 +164,9 @@
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
   },
-<<<<<<< HEAD
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.25.9"
   },
-=======
-  "optionalDependencies": {},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3a91
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
@@ -188,10 +175,6 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3a91
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@netlify/plugin-nextjs": "^5.12.1",
