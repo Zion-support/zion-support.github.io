@@ -19,7 +19,7 @@ function getAll(): Record<string, CommentEntry[]> {
   }
 }
 
-function saveAll(data: Record<string, CommentEntry[]>) {
+function saveAll(data: Record<string, _CommentEntry[]>) {
   safeStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
@@ -28,10 +28,7 @@ export function getComments(slug: string): CommentEntry[] {
   return all[slug] || [];
 }
 
-export function addComment(
-  slug: string,
-  entry: Omit<CommentEntry, 'id' | 'createdAt'>
-): CommentEntry {
+export function addComment(slug: string, entry: Omit<CommentEntry, _'id' | 'createdAt'>): CommentEntry {
   const all = getAll();
   const newEntry: CommentEntry = {
     id:

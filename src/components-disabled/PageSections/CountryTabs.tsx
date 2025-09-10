@@ -24,14 +24,8 @@ interface CountryTabsProps {
   setSearchQuery: (query: string) => void;
 }
 
-export function CountryTabs({
-  popularCountries,
-  filteredCountries,
-  handleCountrySelect,
-  onQuote,
-  searchQuery,
-  setSearchQuery,
-}: CountryTabsProps) {
+export function CountryTabs(_{
+  popularCountries, _filteredCountries, _handleCountrySelect, _onQuote, _searchQuery, _setSearchQuery, }: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 

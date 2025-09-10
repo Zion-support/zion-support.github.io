@@ -10,12 +10,12 @@
 
 const noop = () => {};
 const noopReturn = () => null;
-const noopReturnThis = function(this: any) { return this; };
+const noopReturnThis = function(this: unknown) { return this; };
 
 // Mock tracer with all common DD-Trace methods
 const mockTracer = {
   // Core tracing methods
-  trace: (name: string, options?: any, callback?: Function) => {
+  trace: (name: string, options?: unknown, callback?: Function) => {
     if (typeof options === 'function') {
       callback = options;
     }
@@ -78,7 +78,7 @@ const mockSpanContext = {
 // Mock scope
 const mockScope = {
   active: noopReturn,
-  activate: (span: any, callback: Function) => callback(),
+  activate: (span: unknown, callback: Function) => callback(),
   bind: (fn: Function) => fn,
 };
 

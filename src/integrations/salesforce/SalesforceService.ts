@@ -3,7 +3,7 @@ export interface SalesforceLead {
   LastName: string;
   Company: string;
   Email: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export class SalesforceService {

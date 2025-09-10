@@ -1,5 +1,5 @@
 import { captureException } from './sentry';
-export function withErrorLogging(handler) {
+export function withErrorLogging(_handler) {
     return async (req, res) => {
         try {
             return await handler(req, res);

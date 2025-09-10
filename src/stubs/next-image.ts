@@ -14,7 +14,7 @@ interface ImageProps {
   fill?: boolean;
   sizes?: string;
   style?: React.CSSProperties;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export const Image: React.FC<ImageProps> = ({ 

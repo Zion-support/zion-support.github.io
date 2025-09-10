@@ -1,7 +1,7 @@
 export interface MatchResult {
   id: string;
   score: number;
-  item: any;
+  item: unknown;
   reason: string;
 }
 
@@ -18,7 +18,7 @@ export interface MatchResultItem {
   reason: string;
 }
 
-export const findMatches = (query: string, items: any[]): MatchResult[] => {
+export const findMatches = (query: string, items: unknown[]): MatchResult[] => {
   return items.map((item, index) => ({
     id: item.id || index.toString(),
     score: Math.random() * 100,

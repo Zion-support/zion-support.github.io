@@ -2,7 +2,7 @@ import React from "react";
 import { ActiveFilters } from "@/components/talent/ActiveFilters";
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
-export function TalentResults({ talents, totalCount, isLoading, viewProfile, handleBook, handleMessage, isAuthenticated, activeFiltersProps }) {
+export function TalentResults(_{ talents, _totalCount, _isLoading, _viewProfile, _handleBook, _handleMessage, _isAuthenticated, _activeFiltersProps }) {
     return (<div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps}/>

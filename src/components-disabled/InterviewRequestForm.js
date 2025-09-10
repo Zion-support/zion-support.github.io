@@ -27,7 +27,7 @@ const formSchema = z.object({
     title: z.string().min(3, "Please provide a brief title for the interview."),
     notes: z.string().optional(),
 });
-export function InterviewRequestForm({ talent, onClose, userDetails }) {
+export function InterviewRequestForm(_{ talent, _onClose, _userDetails }) {
     const { requestInterview } = useInterviews();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useForm({
@@ -40,7 +40,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             meetingLink: "",
         },
     });
-    async function onSubmit(values) {
+    async function onSubmit(_values) {
         if (!userDetails?.id) {
             toast({
                 title: "Authentication required",
@@ -74,7 +74,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             onClose();
         }
         catch (error) {
-            console.error("Failed to schedule interview:", error);
+            // console.error("Failed to schedule interview:", error);
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",

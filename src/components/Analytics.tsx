@@ -16,7 +16,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize gtag
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
+    function gtag(...args: unknown[]) {
       window.dataLayer.push(args);
     }
     gtag('js', new Date());
@@ -97,7 +97,7 @@ export const trackPerformance = () => {
 // Declare gtag function for TypeScript
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }

@@ -36,7 +36,7 @@ interface MobileChatViewProps {
   onSendMessage: (content: string) => void;
 }
 
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+export function MobileChatView(_{ contact, _messages, _onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState("");
   const router = useRouter();
   

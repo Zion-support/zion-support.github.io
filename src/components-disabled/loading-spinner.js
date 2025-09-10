@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-export function LoadingSpinner({ size = 'md', variant = 'default', className = '', text }) {
+export function LoadingSpinner(_{ size = 'md', _variant = 'default', _className = '', _text }) {
     const sizeClasses = {
         sm: 'w-4 h-4',
         md: 'w-6 h-6',
@@ -35,7 +35,7 @@ export function PageLoader() {
     </div>);
 }
 // Inline loading component
-export function InlineLoader({ size = 'sm', variant = 'default' }) {
+export function InlineLoader(_{ size = 'sm', _variant = 'default' }) {
     return (<div className="inline-flex items-center">
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>

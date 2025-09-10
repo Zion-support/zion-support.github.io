@@ -14,12 +14,8 @@ interface SeverityIndicatorProps {
   className?: string;
 }
 
-export function SeverityIndicator({ 
-  severity, 
-  showIcon = true, 
-  showText = true, 
-  size = "md",
-  className 
+export function SeverityIndicator(_{ 
+  severity, _showIcon = true, _showText = true, _size = "md", className 
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {

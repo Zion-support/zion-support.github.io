@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 const TabsContext = createContext(undefined);
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
+export function Tabs(_{ children, _defaultValue, _value, _onValueChange, _className = '' }) {
     const [activeTab, setActiveTab] = useState(value || defaultValue || '');
     const handleTabChange = (tab) => {
         setActiveTab(tab);
@@ -15,13 +15,13 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     </TabsContext.Provider>);
 }
 ;
-export function TabsList({ children, className = '' }) {
+export function TabsList(_{ children, _className = '' }) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
       {children}
     </div>);
 }
 ;
-export function TabsTrigger({ children, value, className = '' }) {
+export function TabsTrigger(_{ children, _value, _className = '' }) {
     const context = useContext(TabsContext);
     if (!context)
         throw new Error('TabsTrigger must be used within Tabs');
@@ -32,7 +32,7 @@ export function TabsTrigger({ children, value, className = '' }) {
       {children}
     </button>);
 }
-export function TabsContent({ children, value, className = '' }) {
+export function TabsContent(_{ children, _value, _className = '' }) {
     const context = useContext(TabsContext);
     if (!context)
         throw new Error('TabsContent must be used within Tabs');

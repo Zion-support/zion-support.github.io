@@ -9,7 +9,7 @@ interface HelpArticleListProps {
   searchQuery: string;
 }
 
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
+export function HelpArticleList(_{ categoryId, _onArticleSelect, searchQuery }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   
   if (!category) {

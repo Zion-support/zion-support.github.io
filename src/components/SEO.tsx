@@ -76,6 +76,7 @@ const SEO = memo(function SEO({
 });
 
 export { SEO };
+export default SEO;
 
 export const HomePageSEO: React.FC = () => {
   return (

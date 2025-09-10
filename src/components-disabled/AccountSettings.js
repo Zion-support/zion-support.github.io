@@ -26,7 +26,7 @@ export default function AccountSettings() {
             }
         }
         catch (e) {
-            console.error('Error loading account settings', e);
+            // console.error('Error loading account settings', e);
         }
     }, []);
     const handleSave = () => {
@@ -35,11 +35,11 @@ export default function AccountSettings() {
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully');
             }
             catch (e) {
-                console.error('Failed to save settings', e);
+                // console.error('Failed to save settings', e);
                 toast.error('Failed to save settings');
             }
             finally {
@@ -73,7 +73,7 @@ export default function AccountSettings() {
                 }
             }
             catch (error) {
-                console.error('ENS lookup error:', error);
+                // console.error('ENS lookup error:', error);
             }
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
         }

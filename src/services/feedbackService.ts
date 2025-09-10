@@ -22,7 +22,7 @@ export function getFeedback(): FeedbackEntry[] {
   }
 }
 
-export function saveFeedback(entry: Omit<FeedbackEntry, 'id' | 'createdAt'>): FeedbackEntry {
+export function saveFeedback(entry: Omit<FeedbackEntry, _'id' | 'createdAt'>): FeedbackEntry {
   const all = getFeedback();
   const newEntry: FeedbackEntry = {
     id: typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : Math.random().toString(36).slice(2),
@@ -36,7 +36,7 @@ export function saveFeedback(entry: Omit<FeedbackEntry, 'id' | 'createdAt'>): Fe
 
 import axios from 'axios';
 
-export async function postFeedback(entry: Omit<FeedbackEntry, 'id' | 'createdAt'>) {
+export async function postFeedback(entry: Omit<FeedbackEntry, _'id' | 'createdAt'>) {
   try {
     const res = await fetch('/api/feedback', {
       method: 'POST',
@@ -48,7 +48,7 @@ export async function postFeedback(entry: Omit<FeedbackEntry, 'id' | 'createdAt'
       throw new Error(data?.error || `Error ${res.status}: Failed to submit feedback`);
     }
     return data;
-  } catch (err: any) {
+  } catch (err: unknown) {
     throw new Error(err.message || 'Failed to submit feedback');
   }
 }

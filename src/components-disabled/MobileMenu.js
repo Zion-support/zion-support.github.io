@@ -12,7 +12,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-export function MobileMenu({ className }) {
+export function MobileMenu(_{ className }) {
     const { user, isAuthenticated } = useAuth();
     const location = useLocation();
     const { t } = useTranslation();

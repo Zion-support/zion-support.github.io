@@ -9,7 +9,7 @@ import { logErrorToProduction, logDebug } from '@/utils/productionLogger';
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1';
 
 // Global interceptor for all axios instances
-function mapStatusMessage(status?: number, fallback = ''): string {
+function mapStatusMessage(status?: number, _fallback = ''): string {
   switch (status) {
     case 400:
       return 'Validation error';
@@ -25,7 +25,7 @@ function mapStatusMessage(status?: number, fallback = ''): string {
 }
 
 // Define the global error handler (exported for testing purposes)
-export const globalAxiosErrorHandler = (error: any) => {
+export const globalAxiosErrorHandler = (error: unknown) => {
   const contentType = error.response?.headers?.['content-type'];
   if (contentType?.includes('text/html')) {
     showError('html-error', 'Server returned HTML instead of JSON');
@@ -111,7 +111,7 @@ export const globalAxiosErrorHandler = (error: any) => {
 
 // Apply the global interceptor
 axios.interceptors.response.use(
-  (response: any) => response,
+  (response: unknown) => response,
   globalAxiosErrorHandler
 );
 
@@ -120,7 +120,7 @@ const apiClient = axios.create({
   baseURL: `${API_BASE}/api/v1/services`,
 });
 
-apiClient.interceptors.request.use((config: any) => {
+apiClient.interceptors.request.use((config: unknown) => {
   return {
     ...config,
     headers: { ...(config.headers || {}), Accept: 'application/json' },
@@ -138,8 +138,8 @@ axiosRetry(apiClient, {
 });
 
 apiClient.interceptors.response.use(
-  (response: any) => response,
-  async (error: any) => {
+  (response: unknown) => response,
+  async (error: unknown) => {
     const status = error.response?.status;
 
     if (status === 401) {

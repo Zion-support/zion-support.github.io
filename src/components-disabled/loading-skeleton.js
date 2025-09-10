@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export function Skeleton({ className, ...props }) {
+export function Skeleton(_{ className, _...props }) {
     return (<div className={cn("animate-pulse rounded-md bg-zion-slate/20", className)} {...props}/>);
 }
 export function CardSkeleton() {
@@ -33,7 +33,7 @@ export function ProfileSkeleton() {
       </div>
     </div>);
 }
-export function GridSkeleton({ count = 6 }) {
+export function GridSkeleton(_{ count = 6 }) {
     return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {Array.from({ length: count }).map((_, i) => (<CardSkeleton key={i}/>))}
     </div>);

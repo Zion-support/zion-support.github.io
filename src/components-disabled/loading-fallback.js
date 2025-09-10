@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
-export function LoadingFallback({ message = "Loading...", size = 'md', className = "" }) {
+export function LoadingFallback(_{ message = "Loading...", _size = 'md', _className = "" }) {
     const sizeClasses = {
         sm: 'w-6 h-6',
         md: 'w-8 h-8',
@@ -34,13 +34,13 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
     </div>);
 }
 // Full screen loading fallback
-export function FullScreenLoading({ message = "Loading Zion..." }) {
+export function FullScreenLoading(_{ message = "Loading Zion..." }) {
     return (<div className="min-h-screen bg-zion-blue flex items-center justify-center">
       <LoadingFallback message={message} size="lg"/>
     </div>);
 }
 // Inline loading fallback
-export function InlineLoading({ message = "Loading..." }) {
+export function InlineLoading(_{ message = "Loading..." }) {
     return (<div className="flex items-center space-x-2 text-zion-slate-light">
       <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className="w-4 h-4 text-zion-purple">
         <Loader2 className="w-full h-full"/>

@@ -1,4 +1,4 @@
-export type ApiHandler = (req: any, res: any) => any;
+export type ApiHandler = (req: unknown, res: unknown) => any;
 
 import { logErrorToProduction } from '@/utils/productionLogger';
 
@@ -6,7 +6,7 @@ export function withErrorLogging(handler: ApiHandler): ApiHandler {
   return async (req, res) => {
     try {
       return await handler(req, res);
-    } catch (err: any) {
+    } catch (err: unknown) {
       logErrorToProduction(err instanceof Error ? err.message : String(err), err instanceof Error ? err : undefined, {
         route: req.url,
         method: req.method,

@@ -1,22 +1,22 @@
 /// <reference types="../types/orbitdb__core.d.ts" />
 
 // Conditional imports to prevent native module loading during CI/build
-let createOrbitDB: any;
-let createHelia: any;
-let createLibp2p: any;
-let gossipsub: any;
-let identify: any;
-let tcp: any;
-let noise: any;
-let yamux: any;
-let MemoryBlockstore: any;
-let MemoryDatastore: any;
+let createOrbitDB: unknown;
+let createHelia: unknown;
+let createLibp2p: unknown;
+let gossipsub: unknown;
+let identify: unknown;
+let tcp: unknown;
+let noise: unknown;
+let yamux: unknown;
+let MemoryBlockstore: unknown;
+let MemoryDatastore: unknown;
 
 // Check if we're in a build environment
 const isBuildEnv = process.env.CI === 'true' || process.env.NODE_ENV === 'production' && typeof window === 'undefined';
 
 if (isBuildEnv) {
-  console.log('🚫 OrbitDB/LibP2P disabled for CI/build environment');
+  // console.log('🚫 OrbitDB/LibP2P disabled for CI/build environment');
   
   // Provide mock implementations
   createOrbitDB = () => Promise.resolve({
@@ -80,8 +80,8 @@ if (isBuildEnv) {
     
     const datastoreCore = require('datastore-core');
     MemoryDatastore = datastoreCore.MemoryDatastore;
-  } catch (error: any) {
-    console.warn('⚠️ Failed to load native libp2p modules, using mocks:', error.message);
+  } catch (error: unknown) {
+    // console.warn('⚠️ Failed to load native libp2p modules, using mocks:', error.message);
     
     // Fallback to mocks if native modules fail to load
     createOrbitDB = () => Promise.resolve({
@@ -120,9 +120,9 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Types for OrbitDB and its stores might be needed from @orbitdb/core if used directly
 // import { LogStore } from '@orbitdb/core';
 
-let orbit: any = null; // Using 'any' for now, replace with OrbitDB type from @orbitdb/core if available
-let heliaNode: any | null = null;
-let libp2pNode: any | null = null; // Using 'any' for identify service, replace with proper type
+let orbit: unknown = null; // Using 'any' for now, replace with OrbitDB type from @orbitdb/core if available
+let heliaNode: unknown | null = null;
+let libp2pNode: unknown | null = null; // Using 'any' for identify service, replace with proper type
 
 const libp2pOptions = {
   transports: [tcp()],
@@ -137,7 +137,7 @@ const libp2pOptions = {
   datastore: new MemoryDatastore(), // Ephemeral datastore for libp2p
 };
 
-export async function initOrbit(repoPath = './orbitdb-helia') {
+export async function initOrbit(_repoPath = './orbitdb-helia') {
   if (orbit) {
     logInfo('OrbitDB already initialized.');
     return;
@@ -149,12 +149,12 @@ export async function initOrbit(repoPath = './orbitdb-helia') {
     logInfo('Libp2p Initialized. PeerID:', { data: libp2pNode.peerId.toString() });
 
     // Log listening addresses
-    libp2pNode.getMultiaddrs().forEach((addr: any) => {
+    libp2pNode.getMultiaddrs().forEach((addr: unknown) => {
       logInfo('Listening on:', { data: addr.toString() });
     });
 
     // Listen for new connections
-    libp2pNode.addEventListener('peer:connect', (evt: any) => {
+    libp2pNode.addEventListener('peer:connect', (evt: unknown) => {
       logInfo('Peer connected:', { data: evt.detail.toString() });
     });
 
@@ -178,7 +178,7 @@ export async function initOrbit(repoPath = './orbitdb-helia') {
   }
 }
 
-export async function getLog(name: string): Promise<any> { // Replace 'any' with specific OrbitDB LogStore type
+export async function getLog(name: string): Promise<unknown> { // Replace 'any' with specific OrbitDB LogStore type
   if (!orbit) {
     logInfo('OrbitDB not initialized. Initializing now...');
     await initOrbit();

@@ -29,7 +29,7 @@ serve(async (req) => {
       );
     }
 
-    console.log(`Received request to notify legal team for whitepaper:
+    // console.log(`Received request to notify legal team for whitepaper:
       ID: ${whitepaperId}
       Token Name: ${tokenName}
       Link: ${sharableLink}
@@ -63,7 +63,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in notify-legal-team function:", error);
+    // console.error("Error in notify-legal-team function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }

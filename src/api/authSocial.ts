@@ -4,7 +4,7 @@ declare global {
   }
 }
 
-export function openAuthPopup(provider: string): Window | null {
+export function openAuthPopup(provider: string): globalThis.Window | null {
   const width = 600;
   const height = 600;
   const left = window.screenX + (window.innerWidth - width) / 2;

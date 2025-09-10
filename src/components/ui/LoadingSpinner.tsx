@@ -6,10 +6,8 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-const LoadingSpinner = memo(function LoadingSpinner({ 
-  size = 'md', 
-  className = '', 
-  text = 'Loading...' 
+const LoadingSpinner = memo(function LoadingSpinner(_{ 
+  size = 'md', _className = '', text = 'Loading...' 
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',

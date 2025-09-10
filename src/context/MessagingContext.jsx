@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 const MessagingContext = createContext(undefined);
-export function MessagingProvider({ children }) {
+export function MessagingProvider(_{ children }) {
     const [messages, setMessages] = useState([]);
     const sendMessage = (content) => {}
         const newMessage = {}

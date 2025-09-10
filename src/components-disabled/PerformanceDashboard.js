@@ -14,7 +14,7 @@ import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 import X from 'lucide-react/dist/esm/icons/x';
 import Info from 'lucide-react/dist/esm/icons/info';
 import { cn } from '@/lib/utils';
-export function PerformanceDashboard({ className, showDetails = false, onClose }) {
+export function PerformanceDashboard(_{ className, _showDetails = false, _onClose }) {
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
     const [isExpanded, setIsExpanded] = useState(showDetails);
     const getScoreColor = (score) => {
@@ -145,7 +145,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
     </motion.div>);
 }
 // Compact performance indicator
-export function PerformanceIndicator({ className }) {
+export function PerformanceIndicator(_{ className }) {
     const { performanceScore } = usePerformance();
     return (<div className={cn('flex items-center gap-2', className)}>
       <div className={cn('w-2 h-2 rounded-full', performanceScore >= 90 ? 'bg-green-500' :

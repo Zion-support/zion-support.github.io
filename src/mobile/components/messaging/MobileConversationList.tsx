@@ -24,10 +24,8 @@ interface MobileConversationListProps {
   onSelectConversation: (id: string) => void;
 }
 
-export function MobileConversationList({
-  conversations,
-  activeConversation,
-  onSelectConversation
+export function MobileConversationList(_{
+  conversations, _activeConversation, onSelectConversation
 }: MobileConversationListProps) {
   return (
     <div className="space-y-4">

@@ -2,7 +2,7 @@
 export const cache = {
   // Placeholder utility functions
   init: () => {
-    console.log('cache initialized');
+    // console.log('cache initialized');
   },
 };
 export default cache

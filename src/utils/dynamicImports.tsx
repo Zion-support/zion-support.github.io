@@ -20,7 +20,7 @@ const ErrorFallback = ({ error }: { error: Error }) => (
 );
 
 // Enhanced dynamic import with error handling
-export function createDynamicImport<T extends ComponentType<any>>(
+export function createDynamicImport<T extends ComponentType<unknown>>(
   importFn: () => Promise<{ default: T }>,
   options: {
     loading?: () => React.JSX.Element;
@@ -34,7 +34,7 @@ export function createDynamicImport<T extends ComponentType<any>>(
   });
 
   // Wrap with error handling
-  const WrappedComponent = (props: any) => {
+  const WrappedComponent = (props: unknown) => {
     try {
       return <DynamicComponent {...props} />;
     } catch (error) {

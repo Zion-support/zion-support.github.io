@@ -4,11 +4,7 @@ import { generateRandomEquipment } from './generateRandomEquipment';
 import { ALL_FEATURES, Feature } from '@/data/features';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-export async function recommendEquipment(
-  userId: string,
-  supabase: SupabaseClient,
-  limit = 5
-): Promise<ProductListing[]> {
+export async function recommendEquipment(userId: string, supabase: SupabaseClient, _limit = 5): Promise<ProductListing[]> {
   try {
     const { data: favorites, error } = await supabase
       .from('favorites')
@@ -53,11 +49,7 @@ export async function recommendEquipment(
   return Array.from({ length: limit }, () => generateRandomEquipment());
 }
 
-export async function recommendFeatures(
-  userId: string,
-  supabase: SupabaseClient,
-  limit = 3
-): Promise<Feature[]> {
+export async function recommendFeatures(userId: string, supabase: SupabaseClient, _limit = 3): Promise<Feature[]> {
   try {
     const { data: usedEvents, error: usedErr } = await supabase
       .from('analytics_events')

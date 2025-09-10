@@ -2,7 +2,7 @@ import React, { createContext, useContext } from 'react';
 
 const WhitelabelContext = createContext();
 
-export function WhitelabelProvider({ children, config }) {
+export function WhitelabelProvider(_{ children, _config }) {
   return (
     <WhitelabelContext.Provider value={config}>
       {children}

@@ -1,17 +1,15 @@
-import React, { Suspense, lazy, useEffect, memo } from 'react';
+import React, { lazy, useEffect, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
-import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
+import { setupGlobalErrorHandling } from './components/ErrorHandling';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceWrapper from './components/PerformanceWrapper';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
 import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner';
-import { SEO, HomePageSEO } from './components/SEO';
 import EnhancedSEO from './components/EnhancedSEO';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
@@ -30,31 +28,17 @@ const registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
+        .then((_registration) => {
+          // console.log('SW registered: ', _registration);
         })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
+        .catch((_registrationError) => {
+          // console.log('SW registration failed: ', _registrationError);
         });
     });
   }
 };
 
 // Type definitions
-interface FallbackProps {
-  resetErrorBoundary: () => void;
-}
-
-function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
-  return (
-    <div role="alert" className="p-4 text-center space-y-2">
-      <p>Something went wrong</p>
-      <button onClick={resetErrorBoundary} className="underline">
-        Retry
-      </button>
-    </div>
-  );
-}
 
 
 // Create QueryClient instance with optimized settings
@@ -74,7 +58,7 @@ const queryClient = new QueryClient({
 });
 
 // Lazy load pages for better performance with error boundaries and retry logic
-const createLazyComponent = (importFn: () => Promise<any>, componentName: string) => 
+const createLazyComponent = (importFn: () => Promise<unknown>, componentName: string) => 
   lazy(() => importFn().catch(() => ({ 
     default: () => (
       <div className="flex items-center justify-center min-h-[400px] p-8">
@@ -113,7 +97,6 @@ const PartnersPage = createLazyComponent(() => import('./pages/Partners'), 'Part
 const Login = createLazyComponent(() => import('./pages/Login'), 'Login');
 const Signup = createLazyComponent(() => import('./pages/Signup'), 'Signup');
 const ITOnsiteServicesPage = createLazyComponent(() => import('./pages/ITOnsiteServicesPage'), 'IT Onsite Services');
-const ContactPage = createLazyComponent(() => import('./pages/Contact'), 'Contact');
 const ZionHireAI = createLazyComponent(() => import('./pages/ZionHireAI'), 'Zion Hire AI');
 const RequestQuotePage = createLazyComponent(() => import('./pages/RequestQuote'), 'Request Quote');
 const ExpandedServicesPage = createLazyComponent(() => import('./pages/ExpandedServicesPage'), 'Expanded Services');

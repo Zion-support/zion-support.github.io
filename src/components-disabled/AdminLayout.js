@@ -6,7 +6,7 @@ const navItems = [
     { title: 'Users', href: '/admin/users' },
     { title: 'Reports', href: '/admin/reports' },
 ];
-export function AdminLayout({ children }) {
+export function AdminLayout(_{ children }) {
     return (<div className="flex min-h-screen">
       <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">
         <h2 className="font-semibold text-lg mb-4">Back Office</h2>

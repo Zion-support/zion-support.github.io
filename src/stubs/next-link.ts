@@ -8,7 +8,7 @@ interface LinkProps {
   target?: string;
   rel?: string;
   onClick?: (e: React.MouseEvent) => void;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {

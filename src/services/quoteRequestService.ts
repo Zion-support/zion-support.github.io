@@ -18,7 +18,7 @@ export const quoteRequestService = {
     if (error) throw error;
     
     // Format the data to include talent_name
-    return data.map((item: any) => ({
+    return data.map((item: unknown) => ({
       ...item,
       talent_name: item.talent?.display_name || 'Unknown Talent',
     })) as QuoteRequest[];
@@ -59,7 +59,7 @@ export const quoteRequestService = {
   
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status };
+    const updates: unknown = { status };
     
     // If marking as responded, set replied_at
     if (status === 'responded') {

@@ -15,8 +15,8 @@ function pushLog(entry: ConsoleLogEntry) {
 }
 
 function wrap(level: 'log' | 'warn' | 'error') {
-  const original = console[level] as (...args: any[]) => void;
-  console[level] = (...args: any[]) => {
+  const original = console[level] as (...args: unknown[]) => void;
+  console[level] = (...args: unknown[]) => {
     try {
       const message = args
         .map((a) => {

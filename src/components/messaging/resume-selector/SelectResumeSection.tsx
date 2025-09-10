@@ -14,12 +14,8 @@ interface SelectResumeSectionProps {
   isLoading: boolean;
 }
 
-export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
-  isLoading
+export function SelectResumeSection(_{
+  resumeOptions, _selectedResume, _handleResumeSelect, _handleDownloadResume, isLoading
 }: SelectResumeSectionProps) {
   return (
     <div className="space-y-2">

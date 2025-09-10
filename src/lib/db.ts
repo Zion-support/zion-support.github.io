@@ -56,7 +56,7 @@ async function getList(storeName: string): Promise<any[]> {
   });
 }
 
-async function setList(storeName: string, items: any[]): Promise<void> {
+async function setList(storeName: string, items: unknown[]): Promise<void> {
   const db = await openDB();
   if (!db) {
     memoryStore[storeName] = items;
@@ -73,12 +73,12 @@ async function setList(storeName: string, items: any[]): Promise<void> {
 export async function getCart() {
   return getList(CART_STORE);
 }
-export async function saveCart(items: any[]) {
+export async function saveCart(items: unknown[]) {
   await setList(CART_STORE, items);
 }
 export async function getWishlist() {
   return getList(WISHLIST_STORE);
 }
-export async function saveWishlist(items: any[]) {
+export async function saveWishlist(items: unknown[]) {
   await setList(WISHLIST_STORE, items);
 }

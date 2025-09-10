@@ -157,7 +157,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     detectScreenReader();
   }, [enabled]);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   }, []);
 

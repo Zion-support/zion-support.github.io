@@ -206,7 +206,7 @@ Deno.serve(async (req: Request) => {
       JSON.stringify({ status: 'ok', message: 'Thanks! Your request has been submitted. The talent will be in touch soon.', requestId }),
       { status: 200 },
     );
-  } catch (err: any) {
+  } catch (err: unknown) {
     return new Response(JSON.stringify({ error: 'Unexpected error', details: err?.message || String(err) }), { status: 500 });
   }
 });

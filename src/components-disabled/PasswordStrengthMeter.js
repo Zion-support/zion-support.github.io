@@ -1,6 +1,6 @@
 import { calculatePasswordStrength, getStrengthLabel } from "@/utils/passwordStrength";
 import { Progress } from "@/components/ui/progress";
-export function PasswordStrengthMeter({ password }) {
+export function PasswordStrengthMeter(_{ password }) {
     const score = calculatePasswordStrength(password);
     const value = (score / 4) * 100;
     const label = getStrengthLabel(score);

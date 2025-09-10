@@ -1,5 +1,5 @@
 import { supabase } from '@/integrations/supabase/client';
-export async function fetchPostsByCategory(categoryId) {
+export async function fetchPostsByCategory(_categoryId) {
     const { data, error } = await supabase
         .from('forum_posts')
         .select('*')

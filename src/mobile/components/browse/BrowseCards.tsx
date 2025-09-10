@@ -31,7 +31,7 @@ interface BrowseCardsProps {
   onViewDetails: (id: string) => void;
 }
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+export function BrowseCards(_{ items, _type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
   
   const toggleSaved = (id: string) => {

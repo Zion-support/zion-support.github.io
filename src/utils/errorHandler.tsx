@@ -65,7 +65,7 @@ class ErrorHandler {
    * Handle API errors specifically
    */
   public handleApiError(
-    error: any,
+    error: unknown,
     context?: ErrorContext
   ): void {
     const errorInfo = this.createErrorInfo(error, {
@@ -137,7 +137,7 @@ class ErrorHandler {
   /**
    * Extract error code from error object
    */
-  private extractErrorCode(error: any): string | undefined {
+  private extractErrorCode(error: unknown): string | undefined {
     if (typeof error === 'string') return undefined;
     
     return error?.code || 
@@ -149,7 +149,7 @@ class ErrorHandler {
   /**
    * Extract HTTP status code from error object
    */
-  private extractStatusCode(error: any): number | undefined {
+  private extractStatusCode(error: unknown): number | undefined {
     if (typeof error === 'string') return undefined;
     
     return error?.response?.status || 
@@ -162,7 +162,7 @@ class ErrorHandler {
    */
   private logError(errorInfo: ErrorInfo): void {
     // Console logging
-    console.error('Error Handler:', errorInfo);
+    // console.error('Error Handler:', errorInfo);
 
     // Internal log
     this.errorLog.unshift(errorInfo);
@@ -181,7 +181,7 @@ class ErrorHandler {
     // For now, we'll use a simple alert
     if (typeof window !== 'undefined') {
       // You can replace this with your preferred notification system
-      console.warn('User notification:', this.getUserFriendlyMessage(errorInfo));
+      // console.warn('User notification:', this.getUserFriendlyMessage(errorInfo));
     }
   }
 
@@ -216,7 +216,7 @@ class ErrorHandler {
   private sendToMonitoring(errorInfo: ErrorInfo): void {
     // This would integrate with services like Sentry, LogRocket, etc.
     // For now, we'll just log it
-    console.log('Sending to monitoring service:', errorInfo);
+    // console.log('Sending to monitoring service:', errorInfo);
   }
 
   /**
@@ -271,7 +271,7 @@ export const handleError = (error: Error | string, context?: ErrorContext, showT
   errorHandler.handleError(error, context, showToast);
 };
 
-export const handleApiError = (error: any, context?: ErrorContext) => {
+export const handleApiError = (error: unknown, context?: ErrorContext) => {
   errorHandler.handleApiError(error, context);
 };
 
@@ -284,7 +284,7 @@ export class ErrorBoundary extends Component<
   { children: ReactNode; fallback?: ComponentType<{ error: Error }> },
   { hasError: boolean; error?: Error }
 > {
-  constructor(props: any) {
+  constructor(props: unknown) {
     super(props);
     this.state = { hasError: false };
   }
@@ -406,12 +406,12 @@ export class Logger {
 
   public info(message: string, context?: Record<string, unknown>): void {
     const formattedMessage = this.formatMessage('INFO', message, context);
-    console.log(formattedMessage);
+    // console.log(formattedMessage);
   }
 
   public warn(message: string, context?: Record<string, unknown>): void {
     const formattedMessage = this.formatMessage('WARN', message, context);
-    console.warn(formattedMessage);
+    // console.warn(formattedMessage);
   }
 
   public error(message: string, error?: Error | AppError, context?: Record<string, unknown>): void {
@@ -431,7 +431,7 @@ export class Logger {
     };
 
     const formattedMessage = this.formatMessage('ERROR', message, errorContext);
-    console.error(formattedMessage);
+    // console.error(formattedMessage);
 
     // In production, you might want to send errors to a logging service
     if (!this.isDevelopment) {
@@ -443,7 +443,7 @@ export class Logger {
   public debug(message: string, context?: Record<string, unknown>): void {
     if (this.isDevelopment) {
       const formattedMessage = this.formatMessage('DEBUG', message, context);
-      console.debug(formattedMessage);
+      // console.debug(formattedMessage);
     }
   }
 }
@@ -451,12 +451,7 @@ export class Logger {
 export const logger = Logger.getInstance();
 
 
-export function createError(
-  message: string,
-  code: ErrorCodes = ErrorCodes.INTERNAL_ERROR,
-  statusCode = 500,
-  context?: Record<string, unknown>
-): CustomError {
+export function createError(message: string, code: ErrorCodes = ErrorCodes.INTERNAL_ERROR, _statusCode = 500, context?: Record<string, _unknown>): CustomError {
   return new CustomError(message, code, statusCode, true, context);
 }
 
@@ -466,7 +461,7 @@ export const useErrorHandler = () => {
     errorHandler.handleError(error, context, showToast);
   };
 
-  const handleApiError = (error: any, context?: ErrorContext) => {
+  const handleApiError = (error: unknown, context?: ErrorContext) => {
     errorHandler.handleApiError(error, context);
   };
 

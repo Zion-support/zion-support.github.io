@@ -16,7 +16,7 @@ interface ApiPlaygroundProps {
   params?: Param[];
 }
 
-export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
+export function ApiPlayground(_{ method, _path, params = [] }: ApiPlaygroundProps) {
   const [apiKey, setApiKey] = useState("demo_key_123");
   const [paramValues, setParamValues] = useState<Record<string, string>>({});
   const [body, setBody] = useState("{}");
@@ -82,7 +82,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       // Format the response with status information
       const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`;
       setResponse(statusInfo + responseText);
-    } catch (err: any) {
+    } catch (err: unknown) {
       let errorMessage = 'Request failed';
       
       if (err.name === 'AbortError') {

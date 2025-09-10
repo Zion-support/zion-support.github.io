@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-export function FloatingOrbs({ count = 6, className = '' }) {
+export function FloatingOrbs(_{ count = 6, _className = '' }) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;

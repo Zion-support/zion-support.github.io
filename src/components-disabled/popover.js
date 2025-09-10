@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 const PopoverContext = createContext(undefined);
-export function Popover({ children }) {
+export function Popover(_{ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<PopoverContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
@@ -8,7 +8,7 @@ export function Popover({ children }) {
       </div>
     </PopoverContext.Provider>);
 }
-export function PopoverTrigger({ children, className = '' }) {
+export function PopoverTrigger(_{ children, _className = '' }) {
     const context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverTrigger must be used within Popover');
@@ -16,7 +16,7 @@ export function PopoverTrigger({ children, className = '' }) {
       {children}
     </div>);
 }
-export function PopoverContent({ children, className = '' }) {
+export function PopoverContent(_{ children, _className = '' }) {
     const context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverContent must be used within Popover');

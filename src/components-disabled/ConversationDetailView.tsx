@@ -71,7 +71,7 @@ export function ConversationDetailView() {
   }
   
   // Group messages by date
-  const groupedMessages: { date: string; messages: any[] }[] = [];
+  const groupedMessages: { date: string; messages: unknown[] }[] = [];
   
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');

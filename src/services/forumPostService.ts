@@ -2,9 +2,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { ForumPost } from '@/types/community';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-export async function fetchPostsByCategory(
-  categoryId: string,
-  cursor?: string, // Cursor is now a string (e.g., ISO timestamp)
+export async function fetchPostsByCategory(categoryId: string, cursor?: string, _// Cursor is now a string (e.g., _ISO timestamp)
   limit = 20 // Default limit
 ): Promise<{ posts: ForumPost[]; nextCursor: string | null }> {
   let query = supabase

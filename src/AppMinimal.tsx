@@ -1,5 +1,4 @@
 import React from "react";
-import { SEO  } from "@/components/SEO";
 export default function AppMinimal() {
   return (
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center">

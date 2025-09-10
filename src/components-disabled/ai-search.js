@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
 import { Button } from './button';
 import { Badge } from './badge';
-export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
+export function AISearch(_{ enabled = true, _placeholder = "Search for AI services, _talent, _or companies...", _onSearch, _onResultClick, _className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');
     const [isSearching, setIsSearching] = useState(false);

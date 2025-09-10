@@ -18,7 +18,7 @@ interface CountryServiceCardProps {
   isPopular?: boolean;
 }
 
-export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
+export function CountryServiceCard(_{ country, _onSelect, _onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
     if (!countryName) return "🌐";

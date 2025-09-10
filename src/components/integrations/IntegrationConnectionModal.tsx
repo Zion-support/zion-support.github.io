@@ -22,7 +22,7 @@ interface IntegrationConnectionModalProps {
   integration: Integration;
 }
 
-export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
+export function IntegrationConnectionModal(_{ isOpen, _onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false);
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,

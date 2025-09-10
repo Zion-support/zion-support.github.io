@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export function GradientHeading({ children, variant = 'primary', size = '2xl', className = '', customGradient }) {
+export function GradientHeading(_{ children, _variant = 'primary', _size = '2xl', _className = '', _customGradient }) {
     const getGradientClasses = () => {
         const gradients = {
             primary: 'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent',

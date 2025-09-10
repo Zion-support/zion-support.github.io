@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
-export function SecurityHeaders({ className }) {
+export function SecurityHeaders(_{ className }) {
     const securityFeatures = [
         {
             icon: Shield,
@@ -127,7 +127,7 @@ export function SecurityHeaders({ className }) {
     </section>);
 }
 // Compact version for smaller spaces
-export function SecurityHeadersCompact({ className }) {
+export function SecurityHeadersCompact(_{ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
       <div className="flex items-center gap-2 text-zion-cyan text-sm">
         <Shield className="w-4 h-4"/>

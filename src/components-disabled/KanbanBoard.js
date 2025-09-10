@@ -34,7 +34,7 @@ const COLUMNS = [
         description: "Not moving forward",
     },
 ];
-export function KanbanBoard({ jobId }) {
+export function KanbanBoard(_{ jobId }) {
     const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
     const [columns, setColumns] = useState({});
     const isMobile = useIsMobile();

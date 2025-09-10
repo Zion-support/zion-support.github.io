@@ -1,4 +1,4 @@
-export function calculatePasswordStrength(password) {
+export function calculatePasswordStrength(_password) {
     let score = 0;
     if (password.length >= 8)
         score++;
@@ -14,7 +14,7 @@ export function calculatePasswordStrength(password) {
         score = 4;
     return score;
 }
-export function getStrengthLabel(score) {
+export function getStrengthLabel(_score) {
     switch (score) {
         case 0:
             return "Very weak";

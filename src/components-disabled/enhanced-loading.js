@@ -13,7 +13,7 @@ const iconSizes = {
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
 };
-export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) {
+export function EnhancedLoading(_{ size = 'md', _variant = 'default', _text = 'Loading...', _showIcons = true, _className = '' }) {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

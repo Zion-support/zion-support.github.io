@@ -3,7 +3,7 @@ import { apiHelper } from './apiHelper';
 
 interface WalletData {
   points: number;
-  transactions: any[]; // Replace 'any' with a more specific type if available
+  transactions: unknown[]; // Replace 'any' with a more specific type if available
 }
 
 export const getWalletData = async (): Promise<{ data: WalletData | null; error: string | null }> => {

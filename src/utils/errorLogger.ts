@@ -59,7 +59,7 @@ class ErrorLogger {
   logError(errorInfo: ErrorInfo): void {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error logged:', errorInfo);
+      // console.error('Error logged:', errorInfo);
     }
 
     // In production, you would typically send to an error reporting service
@@ -80,9 +80,9 @@ class ErrorLogger {
       //   body: JSON.stringify(errorInfo)
       // });
       
-      console.log('Error would be sent to service:', errorInfo);
+      // console.log('Error would be sent to service:', errorInfo);
     } catch (error) {
-      console.error('Failed to send error to service:', error);
+      // console.error('Failed to send error to service:', error);
     }
   }
 
@@ -98,7 +98,7 @@ class ErrorLogger {
       
       localStorage.setItem('app_errors', JSON.stringify(errors));
     } catch (error) {
-      console.error('Failed to store error locally:', error);
+      // console.error('Failed to store error locally:', error);
     }
   }
 
@@ -107,7 +107,7 @@ class ErrorLogger {
       const stored = localStorage.getItem('app_errors');
       return stored ? JSON.parse(stored) : [];
     } catch (error) {
-      console.error('Failed to retrieve stored errors:', error);
+      // console.error('Failed to retrieve stored errors:', error);
       return [];
     }
   }
@@ -116,7 +116,7 @@ class ErrorLogger {
     try {
       localStorage.removeItem('app_errors');
     } catch (error) {
-      console.error('Failed to clear stored errors:', error);
+      // console.error('Failed to clear stored errors:', error);
     }
   }
 
@@ -133,14 +133,14 @@ class ErrorLogger {
     };
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance metric:', performanceInfo);
+      // console.log('Performance metric:', performanceInfo);
     }
 
     // Store performance metrics
     this.storePerformanceMetric(performanceInfo);
   }
 
-  private storePerformanceMetric(metric: any): void {
+  private storePerformanceMetric(metric: unknown): void {
     try {
       const metrics = this.getStoredPerformanceMetrics();
       metrics.push(metric);
@@ -152,22 +152,22 @@ class ErrorLogger {
       
       localStorage.setItem('app_performance', JSON.stringify(metrics));
     } catch (error) {
-      console.error('Failed to store performance metric:', error);
+      // console.error('Failed to store performance metric:', error);
     }
   }
 
-  getStoredPerformanceMetrics(): any[] {
+  getStoredPerformanceMetrics(): unknown[] {
     try {
       const stored = localStorage.getItem('app_performance');
       return stored ? JSON.parse(stored) : [];
     } catch (error) {
-      console.error('Failed to retrieve stored performance metrics:', error);
+      // console.error('Failed to retrieve stored performance metrics:', error);
       return [];
     }
   }
 
   // User action tracking
-  logUserAction(action: string, details?: any): void {
+  logUserAction(action: string, details?: unknown): void {
     const actionInfo = {
       action,
       details,
@@ -178,14 +178,14 @@ class ErrorLogger {
     };
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('User action:', actionInfo);
+      // console.log('User action:', actionInfo);
     }
 
     // Store user actions
     this.storeUserAction(actionInfo);
   }
 
-  private storeUserAction(action: any): void {
+  private storeUserAction(action: unknown): void {
     try {
       const actions = this.getStoredUserActions();
       actions.push(action);
@@ -197,16 +197,16 @@ class ErrorLogger {
       
       localStorage.setItem('app_user_actions', JSON.stringify(actions));
     } catch (error) {
-      console.error('Failed to store user action:', error);
+      // console.error('Failed to store user action:', error);
     }
   }
 
-  getStoredUserActions(): any[] {
+  getStoredUserActions(): unknown[] {
     try {
       const stored = localStorage.getItem('app_user_actions');
       return stored ? JSON.parse(stored) : [];
     } catch (error) {
-      console.error('Failed to retrieve stored user actions:', error);
+      // console.error('Failed to retrieve stored user actions:', error);
       return [];
     }
   }

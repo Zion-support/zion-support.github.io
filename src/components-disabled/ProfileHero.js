@@ -3,7 +3,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
-export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, rating, reviewCount, aiScore, profileType }) {
+export function ProfileHero(_{ name, _title, _avatarUrl, _coverImageUrl, _location, _rating, _reviewCount, _aiScore, _profileType }) {
     return (<div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3 / 1} className="bg-zion-blue-light">

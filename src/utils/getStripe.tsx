@@ -1,5 +1,5 @@
 import { loadStripe, Stripe } from '@stripe / stripe - js';
-export function getStripe () : Promise < Stripe | null> {;
+export function getStripe() : Promise < Stripe | null> {;
 ;
   let stripePromise: Promise < Stripe | null>;
 ;

@@ -16,7 +16,7 @@ const AUTO_SERVICE_TITLES = [
     "IoT Device Integration Service",
     "Blockchain Data Solutions"
 ];
-function generateInnovationListing(index) {
+function generateInnovationListing(_index) {
     const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length];
     const price = Math.floor(Math.random() * 9500) + 500; // $500 - $10,000
     const rating = Math.floor(Math.random() * 2) + 4; // 4-5 stars

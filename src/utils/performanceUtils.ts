@@ -59,7 +59,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Paint metrics not supported:', error);
+      // console.warn('Paint metrics not supported:', error);
     }
   }
 
@@ -74,7 +74,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('LCP not supported:', error);
+      // console.warn('LCP not supported:', error);
     }
   }
 
@@ -82,7 +82,7 @@ class PerformanceUtils {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (entry.processingStart && entry.startTime) {
             this.metrics.fid = entry.processingStart - entry.startTime;
           }
@@ -92,7 +92,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('FID not supported:', error);
+      // console.warn('FID not supported:', error);
     }
   }
 
@@ -101,7 +101,7 @@ class PerformanceUtils {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
             this.metrics.cls = clsValue;
@@ -112,7 +112,7 @@ class PerformanceUtils {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('CLS not supported:', error);
+      // console.warn('CLS not supported:', error);
     }
   }
 
@@ -146,7 +146,7 @@ class PerformanceUtils {
     const end = performance.now();
     
     const duration = end - start;
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     
     return result;
   }
@@ -157,13 +157,13 @@ class PerformanceUtils {
     const end = performance.now();
     
     const duration = end - start;
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     
     return result;
   }
 
   // Resource timing analysis
-  analyzeResourceTiming(): any[] {
+  analyzeResourceTiming(): unknown[] {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     
     return resources.map(resource => ({

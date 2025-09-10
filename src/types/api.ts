@@ -82,7 +82,7 @@ export interface ErrorReportBody {
     stack?: string;
     name: string;
   };
-  errorInfo?: any;
+  errorInfo?: unknown;
   userFeedback?: string;
   context?: string;
   timestamp: string;

@@ -1,14 +1,14 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.tsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.js';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
+import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./pages/HomePage.jsx'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage.js.tsx'));
-const AboutPage = lazy(() => import('./pages/About.jsx'));
-const ContactPage = lazy(() => import('./pages/Contact.jsx'));
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const AboutPage = lazy(() => import('./pages/About'));
+const ContactPage = lazy(() => import('./pages/Contact'));
 
 function App() {
   return (

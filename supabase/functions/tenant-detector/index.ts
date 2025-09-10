@@ -68,7 +68,7 @@ serve(async (req) => {
         .single();
 
       if (error) {
-        console.error('Database error:', error);
+        // console.error('Database error:', error);
         throw new Error(`Database error: ${error.message}`);
       }
 
@@ -116,7 +116,7 @@ serve(async (req) => {
       },
     );
   } catch (error) {
-    console.error('Tenant detector error:', error);
+    // console.error('Tenant detector error:', error);
     
     // Enhanced error response
     return new Response(

@@ -7,7 +7,7 @@ export const safeStorage = {
       }
       return null;
     } catch (error) {
-      console.warn('Failed to get item from localStorage:', error);
+      // console.warn('Failed to get item from localStorage:', error);
       return null;
     }
   },
@@ -20,7 +20,7 @@ export const safeStorage = {
       }
       return false;
     } catch (error) {
-      console.warn('Failed to set item in localStorage:', error);
+      // console.warn('Failed to set item in localStorage:', error);
       return false;
     }
   },
@@ -33,7 +33,7 @@ export const safeStorage = {
       }
       return false;
     } catch (error) {
-      console.warn('Failed to remove item from localStorage:', error);
+      // console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
   },
@@ -46,7 +46,7 @@ export const safeStorage = {
       }
       return false;
     } catch (error) {
-      console.warn('Failed to clear localStorage:', error);
+      // console.warn('Failed to clear localStorage:', error);
       return false;
     }
   }

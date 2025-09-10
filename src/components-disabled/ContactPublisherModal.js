@@ -18,7 +18,7 @@ const schema = z.object({
         .min(20, 'Message must be at least 20 characters')
         .nonempty('Message is required'),
 });
-export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail, }) {
+export function ContactPublisherModal(_{ isOpen, _onClose, _publisherName, _publisherEmail, _}) {
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const form = useForm({
         resolver: zodResolver(schema),

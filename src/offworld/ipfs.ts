@@ -1,20 +1,20 @@
 // Conditional imports to prevent native module loading during CI/build
-let createHelia: any;
-let heliaJson: any;
-let createLibp2p: any;
-let gossipsub: any;
-let identify: any;
-let tcp: any;
-let noise: any;
-let yamux: any;
-let MemoryBlockstore: any;
-let MemoryDatastore: any;
+let createHelia: unknown;
+let heliaJson: unknown;
+let createLibp2p: unknown;
+let gossipsub: unknown;
+let identify: unknown;
+let tcp: unknown;
+let noise: unknown;
+let yamux: unknown;
+let MemoryBlockstore: unknown;
+let MemoryDatastore: unknown;
 
 // Check if we're in a build environment
 const isBuildEnv = process.env.CI === 'true' || process.env.NODE_ENV === 'production' && typeof window === 'undefined';
 
 if (isBuildEnv) {
-  console.log('🚫 IPFS/Helia/LibP2P disabled for CI/build environment');
+  // console.log('🚫 IPFS/Helia/LibP2P disabled for CI/build environment');
   
   // Provide mock implementations
   createHelia = () => Promise.resolve({
@@ -74,8 +74,8 @@ if (isBuildEnv) {
     
     const datastoreCore = require('datastore-core');
     MemoryDatastore = datastoreCore.MemoryDatastore;
-  } catch (error: any) {
-    console.warn('⚠️ Failed to load native IPFS/libp2p modules, using mocks:', error.message);
+  } catch (error: unknown) {
+    // console.warn('⚠️ Failed to load native IPFS/libp2p modules, using mocks:', error.message);
     
     // Fallback to mocks if native modules fail to load
     createHelia = () => Promise.resolve({
@@ -108,8 +108,8 @@ if (isBuildEnv) {
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { CID } from 'multiformats/cid';
 
-let heliaNode: any | null = null;
-let libp2pNode: any | null = null; // Using 'any' for identify service
+let heliaNode: unknown | null = null;
+let libp2pNode: unknown | null = null; // Using 'any' for identify service
 
 // Simplified libp2p options for this Helia instance
 // Depending on use case, might share libp2p from orbitdb.ts or have more transports
@@ -124,7 +124,7 @@ const libp2pOptions = {
   datastore: new MemoryDatastore(),
 };
 
-async function getHelia(): Promise<any> {
+async function getHelia(): Promise<unknown> {
   if (!heliaNode) {
     logInfo('Initializing Libp2p for general IPFS operations...');
     libp2pNode = await createLibp2p(libp2pOptions);
@@ -149,11 +149,11 @@ export async function saveJSON(data: unknown): Promise<string> {
   return cid.toString();
 }
 
-export async function fetchJSON(cidString: string): Promise<any> {
+export async function fetchJSON(cidString: string): Promise<unknown> {
   const helia = await getHelia();
   const jsonService = heliaJson(helia);
 
-  let parsedCid: any;
+  let parsedCid: unknown;
   try {
     parsedCid = CID.parse(cidString);
   } catch (error) {

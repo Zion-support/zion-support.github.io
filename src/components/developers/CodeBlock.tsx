@@ -12,11 +12,8 @@ interface CodeBlockProps {
   className?: string;
 }
 
-export function CodeBlock({ 
-  code,
-  language = 'bash',
-  showLineNumbers = false,
-  className
+export function CodeBlock(_{ 
+  code, _language = 'bash', _showLineNumbers = false, className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 

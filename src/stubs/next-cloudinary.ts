@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Define components first
-const CldImage = ({ src, alt, width, height, ...props }: any) => {
+const CldImage = ({ src, alt, width, height, ...props }: unknown) => {
   return React.createElement('img', {
     src,
     alt,
@@ -12,18 +12,18 @@ const CldImage = ({ src, alt, width, height, ...props }: any) => {
   });
 };
 
-const CldVideo = ({ src, ...props }: any) => {
+const CldVideo = ({ src, ...props }: unknown) => {
   return React.createElement('video', {
     src,
     ...props,
   });
 };
 
-const CldUploadWidget = ({ children, ...props }: any) => {
+const CldUploadWidget = ({ children, ...props }: unknown) => {
   return children({ cloudinary: { open: () => {} } });
 };
 
-const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: any) => {
+const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: unknown) => {
   const handleClick = () => {
     // Mock upload functionality
     const mockResult = {

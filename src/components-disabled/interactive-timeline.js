@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
 import { Button } from './button';
 import { Badge } from './badge';
-export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
+export function InteractiveTimeline(_{ enabled = true, _events, _autoPlay = false, _showProgress = true, _onEventClick, _onStatusChange, _className = "" }) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [playbackSpeed, setPlaybackSpeed] = useState(1);

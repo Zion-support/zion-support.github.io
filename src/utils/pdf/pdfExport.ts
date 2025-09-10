@@ -25,10 +25,7 @@ const defaultOptions: ExportOptions = {
   fontFamily: 'default'
 };
 
-export async function exportResumeToPDF(
-  resume: Resume, 
-  options: Partial<ExportOptions> = {}
-): Promise<Blob> {
+export async function exportResumeToPDF(resume: Resume, options: Partial<ExportOptions> = {}): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   

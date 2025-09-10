@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-export function ListingCard({ id, title, description, images, category, tags, author, className, profileType = 'service' }) {
+export function ListingCard(_{ id, _title, _description, _images, _category, _tags, _author, _className, _profileType = 'service' }) {
     // Generate a profile ID based on the listing data
     // In a real app, this would be a proper ID from the database
     const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');

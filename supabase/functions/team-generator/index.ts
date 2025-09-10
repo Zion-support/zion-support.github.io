@@ -23,7 +23,7 @@ interface RecommendedRole {
   description: string;
   hourlyRateRange: { min: number; max: number };
   weeklyHours: number;
-  matchedTalent?: any[];
+  matchedTalent?: unknown[];
 }
 
 interface TeamRecommendation {
@@ -108,12 +108,12 @@ Important Constraints: ${optimizationInstructions}
   try {
     return JSON.parse(content);
   } catch (parseError) {
-    console.error('Failed to parse OpenAI response:', content);
+    // console.error('Failed to parse OpenAI response:', content);
     throw new Error('Invalid JSON response from OpenAI API');
   }
 }
 
-async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[]): Promise<RecommendedRole[]> {
+async function findMatchingTalent(roles: Omit<RecommendedRole, _'matchedTalent'>[]): Promise<RecommendedRole[]> {
   const rolesWithTalent: RecommendedRole[] = [];
 
   for (const role of roles) {
@@ -126,7 +126,7 @@ async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[
       .limit(5);
 
     if (error) {
-      console.error('Error fetching talent profiles:', error);
+      // console.error('Error fetching talent profiles:', error);
       rolesWithTalent.push({ ...role, matchedTalent: [] });
       continue;
     }
@@ -179,7 +179,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error('Error in team-generator function:', error);
+    // console.error('Error in team-generator function:', error);
     return new Response(
       JSON.stringify({ error: 'Internal server error' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

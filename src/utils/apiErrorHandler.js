@@ -1,6 +1,6 @@
 // API Error Handler
 export const handleApiError = (error, context = '') => {
-  console.error(`API Error in ${context}:`, error);
+  // console.error(`API Error in ${context}:`, error);
   
   if (error.response) {
     return {
@@ -30,7 +30,7 @@ export const showApiError = (error, context = '') => {
   
   // In a real app, you might want to show this in a toast or notification
   if (process.env.NODE_ENV === 'development') {
-    console.error(`API Error in ${context}:`, errorInfo);
+    // console.error(`API Error in ${context}:`, errorInfo);
   }
   
   return errorInfo;
