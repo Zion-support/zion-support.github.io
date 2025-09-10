@@ -10,12 +10,8 @@
     "lint": "eslint --no-error-on-unmatched-pattern \"src/AppMinimal.tsx\" \"src/main.tsx\"",
     "lint:fix": "eslint \"src/AppMinimal.tsx\" \"src/main.tsx\" --fix",
     "type-check": "tsc --project tsconfig.typecheck.json --noEmit",
-<<<<<<< HEAD
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
-=======
-    "test": "jest",
->>>>>>> b0b7385a5feb8a1badff82b89a7ce1adf3b15bed
     "test:coverage": "jest --coverage",
     "test:integration": "jest --testPathPattern=integration",
     "test:e2e": "cypress run",
@@ -26,11 +22,7 @@
     "format:check": "prettier --check .",
     "test:smoke": "jest --config jest.config.smoke.cjs",
     "lint:check": "eslint . --max-warnings 0",
-<<<<<<< HEAD
     "prebuild": "npm run type-check",
-=======
-    "prebuild": "echo 'Skipping prebuild checks for now'",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4497
     "postbuild": "npm run test:smoke",
     "security:audit": "npm audit",
     "security:fix": "npm audit fix"
