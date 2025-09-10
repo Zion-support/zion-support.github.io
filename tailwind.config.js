@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-
-=======
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
-background: 'var(--background)',
-        foreground: 'var(--foreground)',        primary: {
-=======
         primary: {
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -33,12 +24,5 @@ background: 'var(--background)',
       },
     },
   },
-<<<<<<< HEAD
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-};
-=======
   plugins: [],
 }
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
