@@ -1,16 +1,5 @@
 #!/usr/bin/env node
 const fs = require("fs").promises;
-<<<<<<< HEAD
-const path = require("$1");
-const { exec } = require("$1");
-const util = require("$1");
-const execAsync = util.promisify(exec);
-class BuildHealthCheck {
-  constructor() {
-    this.logFile = path.join(__dirname, "../logs/build-health.log");
-    this.reportFile = path.join(__dirname, "../logs/build-health-report.json");
-    this.projectRoot = path.join(__dirname, "..")}
-
   async log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -146,9 +135,7 @@ class BuildHealthCheck {
     try {
       await this.log("Checking dependencies health", "INFO")";      // Check if node_modules exists and has packages;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")      const stats = await fs.stat(nodeModulesPath)
-      if (!stats.isDirectory()) {
->>>>>>> origin/automation-fixes
-        throw new Error("node_modules not found")}";
+      if (!stats.isDirectory()) {        throw new Error("node_modules not found")}";
       // Check package.json vs package-lock.json;
       const packageJson = JSON.parse();        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8")");      const totalDeps =;
         Object.keys(packageJson.dependencies || {}).length +;

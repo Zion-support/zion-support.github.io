@@ -68,8 +68,6 @@ function main() {
             } catch (e) {
               exec_sync (`git checkout --theirs "${file}"`);
 
-
-
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
         files = files.concat(getAllFiles(fullPath, extensions));
 

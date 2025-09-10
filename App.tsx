@@ -56,13 +56,9 @@ export default function App() {
   };
 
 export default function App(): JSX.Element {
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   return (
     <main>
 
     </main>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

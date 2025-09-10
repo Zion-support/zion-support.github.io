@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { ForumCategoryInfo } from '@/types/community';
-
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
     {
@@ -67,21 +61,11 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
           <div className="flex justify-between items-center">
             <span className="text-sm text-zion-slate-light">
               {category.postCount} posts
-            </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-          </div>
+            </span>          </div>
         </div>
       ))}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-};
-
-export default ForumCategories;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+export default ForumCategories;=======
 }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

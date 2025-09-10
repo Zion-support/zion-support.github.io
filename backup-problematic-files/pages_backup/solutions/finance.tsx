@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/finance.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -35,7 +34,6 @@ const features = [
   },
   {
     icon: Users,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/finance.tsx
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
@@ -82,7 +80,6 @@ export default function FinanceSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our finance solutions are built with security and compliance in mind.
               </p>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/finance.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -96,7 +93,6 @@ export default function FinanceSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/finance.tsx
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -146,7 +142,6 @@ export default function FinanceSolutionsPage() {
           </div>
         </section>
       </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/finance.tsx
     </>
   );
 }

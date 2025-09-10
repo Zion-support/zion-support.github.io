@@ -57,42 +57,6 @@ export const accessibilityConfig = {
 // Accessibility utilities;
 export const accessibilityUtils = {
   // Generate unique IDs for ARIA attributes;
-<<<<<<< HEAD
-  "generateId": (prefix = "id") => \"\${prefix}-\${Math.random().toString(36).substr(2, 9)}\",
-  // Check if element is visible;
-  "isVisible": (element) => {;
-    const style = window.getComputedStyle(element);
-    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0",},
-  // Announce to screen readers;
-  "announce": (message) => {;
-    const announcement = document.createElement("div");
-    announcement.setAttribute("aria-live", "polite");
-    announcement.setAttribute("aria-atomic", "true");
-    announcement.className = "sr-only";
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-    setTimeout(() => {;
-      document.body.removeChild(announcement),}, 1000),}
-};";
-      const configDir = path.join(this.projectRoot, "lib");
-      if (!fs.existsSync(configDir)) {;
-        fs.mkdirSync(configDir, { "recursive": true }),}
-      ;
-      fs.writeFileSync(path.join(configDir, "accessibility.ts"), accessibilityConfig);
-      this.accessibilityEnhancements.push("accessibility configuration created");
-      this.log("✅ Accessibility configuration created successfully"),} catch (error) {;
-      this.log(`❌ Failed to create accessibility "config": ${error.message}`),}
-  }
-;
-  async createAccessibilityStyles() {;
-    this.log("🎨 Creating accessibility styles...");
-    try {;
-      const accessibilityStyles = "/* Accessibility styles */;
-.sr-only {;
-  "position": absolute;
-=======
-  generateId: (prefix = "id") => \`\${prefix}-\${Math.random().toString(36).substr(2, 9)}\`,
-
   // Check if element is visible;
   isVisible: (element) => {
     const style = window.getComputedStyle(element)
@@ -133,180 +97,11 @@ export const accessibilityUtils = {
     try {
       const accessibilityStyles = `/* Accessibility styles */;
 .sr-only {
-  position: absolute;
->>>>>>> origin/automation-fixes
-  width: 1px;
+  position: absolute;  width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
-<<<<<<< HEAD
-  clip: rect(0, 0, 0, 0);
-  white-"space": nowrap;
-  border: 0,}
-;
-.sr-only-"focusable": focus {;
-=======
-  clip: rect(0, 0, 0, 0)
-  white-space: nowrap;
-  border: 0,,
-}
-.sr-only-focusable:focus {
->>>>>>> origin/automation-fixes
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-<<<<<<< HEAD
-  white-space: normal,}
-;
-/* Focus styles */;
-.focus-visible {;
-  "outline": 2px solid #3b82f6;
-  outline-offset: 2px,}
-;
-/* High contrast mode support */;
-@media (prefers-"contrast": high) {;
-  .text-gray-600 {;
-    color: #000000,}
-  ;
-  .bg-gray-100 {;
-    background-"color": #ffffff;
-    border: 1px solid #000000,}
-=======
-  white-space: normal,,
-}
-/* Focus styles */;
-.focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px,,
-}
-/* High contrast mode support */;
-@media (prefers-contrast: high) {
-  .text-gray-600 {
-    color: #000000,,
-}
-  .bg-gray-100 {
-    background-color: #ffffff;
-    border: 1px solid #000000,,
-}
->>>>>>> origin/automation-fixes
-}
-/* Reduced motion support */;
-<<<<<<< HEAD
-@media (prefers-reduced-"motion": reduce) {;
-  *,
-  *::before,
-  *::after {;
-    animation-"duration": 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important,}
-=======
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important,,
-}
->>>>>>> origin/automation-fixes
-}
-/* Skip to content link */;
-<<<<<<< HEAD
-.skip-to-content {;
-  "position": absolute;
-=======
-.skip-to-content {
-  position: absolute;
->>>>>>> origin/automation-fixes
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-<<<<<<< HEAD
-  z-index: 1000,}
-;
-.skip-to-"content": focus {;
-  top: 6px,}
-;
-/* Focus trap */;
-.focus-trap {;
-  "position": relative,}
-;
-.focus-"trap": :before,
-.focus-"trap": :after {;
-=======
-  z-index: 1000,,
-}
-.skip-to-content:focus {
-  top: 6px,,
-}
-/* Focus trap */;
-.focus-trap {
-  position: relative,,
-}
-.focus-trap::before,
-.focus-trap::after {
->>>>>>> origin/automation-fixes
-  content: ;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-<<<<<<< HEAD
-  pointer-events: none,}
-;
-/* ARIA live regions */;
-[aria-live] {;
-  "position": absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden,}";
-      const stylesDir = path.join(this.projectRoot, "styles");
-      if (!fs.existsSync(stylesDir)) {;
-        fs.mkdirSync(stylesDir, { "recursive": true }),}
-      ;
-      fs.writeFileSync(path.join(stylesDir, "accessibility.css"), accessibilityStyles);
-      this.accessibilityEnhancements.push("accessibility styles created");
-      this.log("✅ Accessibility styles created successfully"),} catch (error) {;
-      this.log(`❌ Failed to create accessibility "styles": ${error.message}`),}
-  }
-;
-  async run() {;
-    this.log("♿ Starting accessibility enhancement...");
-    await this.createAccessibilityConfig();
-    await this.createAccessibilityStyles();
-    this.log(`✅ Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", ")}`),}
-=======
-  pointer-events: none,,
-}
-/* ARIA live regions */;
-[aria-live] {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden,,
-}`;
-      const stylesDir = path.join(this.projectRoot, "styles")
-      if (!fs.existsSync(stylesDir)) {
-        fs.mkdirSync(stylesDir, { recursive: true }),,
-}
-      fs.writeFileSync(path.join(stylesDir, "accessibility.css"), accessibilityStyles)
-      this.accessibilityEnhancements.push("accessibility styles created")
-      this.log("✅ Accessibility styles created successfully"),,
-} catch (error) {
-      this.log(`❌ Failed to create accessibility styles: ${error.message}`),,
-}
-  }
-
   analyzeHTMLFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
@@ -403,8 +198,6 @@ export const accessibilityUtils = {
     await this.createAccessibilityConfig()
     await this.createAccessibilityStyles()
     this.log(`✅ Accessibility enhancement completed. Enhancements: ${this.accessibilityEnhancements.join(", ")}`),,
-}
->>>>>>> origin/automation-fixes
-}
+}}
 
 module.exports = AccessibilityEnhancer;
