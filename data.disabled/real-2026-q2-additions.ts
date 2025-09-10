@@ -326,7 +326,7 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Strong enterprise traction with compliance-led buyers',
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
-    link: 'https://ziontechgroup.com-services-ai-governance-compliance-hub',
+    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub',
 
   },
   {
@@ -342,8 +342,8 @@ export const real2026Q2Additions = [
       'Data schema import and auto-profiling',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
-      'Evaluation dashboard with KS-JS metrics',
-      'SDKs for Python-JS and API access',
+      'Evaluation dashboard with KS/JS metrics',
+      'SDKs for Python/JS and API access',
     ],
     use_cases: [
       'MSPs and IT providers',
@@ -375,17 +375,20 @@ export const real2026Q2Additions = [
 
   },
   {
+
+  {
+
     id: 'ecommerce-returns-orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description:
+    description::
       'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
-    features: [
+    features: [:
       'Return portal widgets and hosted flows',
-      'Policy rules engine with A-B tests',
+      'Policy rules engine with A/B tests',
       'Carrier label and pickup automation',
-      'Refund-credit-store-credit workflows',
+      'Refund/credit/store-credit workflows',
       'Disposition tracking and warehouse notifications',
       'Analytics: reasons, preventable returns, CX scores',
     ],
@@ -405,7 +408,7 @@ export const real2026Q2Additions = [
     market_position: 'Ideal for mid-market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
 
-    link: 'https://ziontechgroup.com-services-ecommerce-returns-orchestrator',
+    link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator',
 
   },
   {
@@ -421,13 +424,13 @@ export const real2026Q2Additions = [
       'Generate high-quality, private, and balanced datasets for ML training.',
     description::
       'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',
-    features: [
+    features: [:
       'Differential privacy and k-anonymity options',
       'Data schema import and auto-profiling',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
-      'Evaluation dashboard with KS-JS metrics',
-      'SDKs for Python-JS and API access',
+      'Evaluation dashboard with KS/JS metrics',
+      'SDKs for Python/JS and API access',
     ],
     use_cases: [
       'Training data augmentation',
@@ -442,6 +445,7 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory',
   },
   {
@@ -453,9 +457,9 @@ export const real2026Q2Additions = [
       'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',
     features: [
       'Return portal widgets and hosted flows',
-      'Policy rules engine with A-B tests',
+      'Policy rules engine with A/B tests',
       'Carrier label and pickup automation',
-      'Refund-credit-store-credit workflows',
+      'Refund/credit/store-credit workflows',
       'Disposition tracking and warehouse notifications',
       'Analytics: reasons, preventable returns, CX scores',
     ],
@@ -472,15 +476,15 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Ideal for mid-market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
-    link: 'https://ziontechgroup.com-services-ecommerce-returns-orchestrator',
+    link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator',
   },
   {
     id: 'ai-analytics-observability-kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
-    tagline::
+    tagline:
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',
-    description::
+    description:
       'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',
     features: [
       'Token and cost telemetry with budgets',
@@ -495,7 +499,7 @@ export const real2026Q2Additions = [
       'Model regression monitoring',
       'Cost governance',
     ],
-    integrations: [
+    integrations: [:
 
       'OpenAI',
       'Azure OpenAI',
@@ -512,12 +516,12 @@ export const real2026Q2Additions = [
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
 
-    link: 'https://ziontechgroup.com-services-ai-analytics-observability-kit',
+    link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit',
 
   },
   {
 
-    link: 'https://ziontechgroup.com-services-ai-analytics-observability-kit',
+    link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit',
   },
   {
     id: 'cloud-cost-anomaly-guard',
@@ -527,9 +531,9 @@ export const real2026Q2Additions = [
       'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',
     description::
       'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',
-    features: [
+    features: [:
       'Real-time anomaly detection',
-      'Slack-Teams alerts and triage workflows',
+      'Slack/Teams alerts and triage workflows',
       'Automated remediation playbooks',
       'Kubernetes cost allocation and showback',
       'Tag hygiene and unused resource cleanup',
@@ -549,12 +553,12 @@ export const real2026Q2Additions = [
     market_position: 'Proven ROI for cloud-native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
 
-    link: 'https://ziontechgroup.com-services-cloud-cost-anomaly-guard',
+    link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',
 
   },
   {
 
-    link: 'https://ziontechgroup.com-services-cloud-cost-anomaly-guard',
+    link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',
   },
   {
     id: 'secure-pdf-signing-api',
@@ -563,7 +567,7 @@ export const real2026Q2Additions = [
     tagline: 'REST and SDKs for compliant e-signatures with audit trails.',
     description::
       'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',
-    features: [
+    features: [:
       'Signer authentication and KYC add-ons',
       'Templates and merge fields',
       'Bulk send and reminders',
@@ -585,7 +589,7 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'SMB to mid-market developer teams',
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
-    link: 'https://ziontechgroup.com-services-secure-pdf-signing-api',
+    link: 'https://ziontechgroup.com/services/secure-pdf-signing-api',
 
   },
   {
@@ -599,7 +603,7 @@ export const real2026Q2Additions = [
       'One-click status pages with SLOs, error budgets, and subscribers.',
     description::
       'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',
-    features: [
+    features: [:
       'Multiple environments and components',
       'SLOs and error budget burn tracking',
       'Incident templates and RCAs',
@@ -621,13 +625,13 @@ export const real2026Q2Additions = [
     market_position: 'Great value with SLO-first approach',
     roi: 'Improve uptime communications and reduce churn risk',
 
-    link: 'https://ziontechgroup.com-services-status-slo-plus',
+    link: 'https://ziontechgroup.com/services/status-slo-plus',
 
   },
   {
 
       'Third-party risk programs',
-    link: 'https://ziontechgroup.com-services-status-slo-plus',
+    link: 'https://ziontechgroup.com/services/status-slo-plus',
   },
   {
       'Third-party risk programs',
@@ -638,9 +642,9 @@ export const real2026Q2Additions = [
       'Automate questionnaires, evidence collection, and continuous monitoring.',
     description::
       'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',
-    features: [
+    features: [:
       'Questionnaire templates and AI autofill',
-      'Evidence collection from SOC2-SIG Lite',
+      'Evidence collection from SOC2/SIG Lite',
       'Continuous internet scanning and ratings',
       'Findings, tasks, and remediation playbooks',
       'Board-ready risk reports',
@@ -660,12 +664,12 @@ export const real2026Q2Additions = [
     market_position: 'Sales-assisted and security-led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
 
-    link: 'https://ziontechgroup.com-services-vendor-risk-automation-pro',
+    link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro',
 
   },
   {
 
-    link: 'https://ziontechgroup.com-services-vendor-risk-automation-pro',
+    link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro',
   },
   {
     id: 'ai-docs-search-answers',
@@ -674,7 +678,7 @@ export const real2026Q2Additions = [
     tagline: 'Embeddings + RAG search over docs with answer extraction.',
     description::
       'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',
-    features: [
+    features: [:
       'Doc ingestion from URLs, PDFs, and repos',
       'Embeddings index with incremental updates',
       'RAG with citations and safety checks',
@@ -696,7 +700,7 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'High adoption for self-serve docs',
     roi: 'Reduce tickets by 30% and improve time-to-answer',
-    link: 'https://ziontechgroup.com-services-ai-docs-search-answers',
+    link: 'https://ziontechgroup.com/services/ai-docs-search-answers',
 
   },
   {
@@ -710,8 +714,8 @@ export const real2026Q2Additions = [
       'Manage and secure fleets of endpoints with remote scripts and patches.',
     description::
       'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',
-    features: [
-      'Windows-macOS-Linux agent and lightweight mode',
+    features: [:
+      'Windows/macOS/Linux agent and lightweight mode',
       'Patch automation and health policies',
       'Remote scripts and secure sessions',
       'Inventory, software metering, and alerts',
@@ -1011,7 +1015,7 @@ export const real2026Q2Additions = [
   },
 :
 :
-]:      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+],      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
@@ -1020,14 +1024,14 @@ export const real2026Q2Additions = [
     features: [
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
 
-    period: '/device-month',
+    period: '/device/month',
     trial_days: 14,
     setup_time: 'Fast',
     market_position: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com-services-msp-remote-device-ops',
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
   },
-]:      'Windows-macOS-Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals':
+],      'Windows/macOS/Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals':
     period: '/device/month',
     trialDays: 14,
     setupTime: 'Fast',
@@ -1035,7 +1039,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',:
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',:
   },:
-]:      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+],      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ]:
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance']:
     integrations: ['Azure ADOktaSlackServiceNow']:
@@ -1049,25 +1053,25 @@ export const real2026Q2Additions = [
 ]:
 
 
-    period: '/device-month':
+    period: '/device/month':
     trial_days: 14:
     setup_time: 'Fast':
     market_position: 'Cost-effective RMM for partners and IT teams':
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com-services-msp-remote-device-ops':
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops':
 
 
-export const real2026Q2Additions = [
+export const real2026Q2Additions = [:
   {:
     id: 'ai-governance-compliance-hub',:
     name: 'AI Governance & Compliance Hub',:
     category: 'AI & Data',:
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',:
     description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',:
-    features: [
+    features: [:
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)':
     ],
-    useCases: [
+    useCases: [:
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management':
     ],
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],:
@@ -1086,7 +1090,7 @@ export const real2026Q2Additions = [
     category: 'AI & Data',:
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',:
     description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',:
-    features: [
+    features: [:
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access':
     ],
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'],:
@@ -1106,7 +1110,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',:
     description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',:
-    features: [
+    features: [:
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores':
     ],
     useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'],:
@@ -1126,7 +1130,7 @@ export const real2026Q2Additions = [
     category: 'Observability',:
     tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',:
     description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',:
-    features: [
+    features: [:
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts':
     ],
     useCases: ['GenAI product analyticsModel regression monitoringCost governance'],:
@@ -1146,7 +1150,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',:
     description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',:
-    features: [
+    features: [:
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup':
     ],
     useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'],:
@@ -1166,7 +1170,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'REST and SDKs for compliant e-signatures with audit trails.',:
     description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',:
-    features: [
+    features: [:
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation':
     ],
     useCases: ['Contract workflowsInternal approvalsCustomer onboarding'],:
@@ -1186,7 +1190,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',:
     description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',:
-    features: [
+    features: [:
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding':
     ],
     useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],:
@@ -1206,7 +1210,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',:
     description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',:
-    features: [
+    features: [:
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports':
     ],
     useCases: ['Third-party risk programsSales security reviewsProcurement diligence'],:
@@ -1226,7 +1230,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Embeddings + RAG search over docs with answer extraction.',:
     description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',:
-    features: [
+    features: [:
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support':
     ],
     useCases: ['Developer portalsInternal knowledge basesCustomer docs'],:
@@ -1246,7 +1250,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',:
     description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',:
-    features: [
+    features: [:
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals':
     ],
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'],:
@@ -1272,17 +1276,17 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ]:
-export const real2026Q2Additions = [
+export const real2026Q2Additions = [:
   {:
     id: 'ai-governance-compliance-hub',:
     name: 'AI Governance & Compliance Hub',:
     category: 'AI & Data',:
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
   description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',:
-    features: [
+    features: [:
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)':
     ],
-    useCases: [
+    useCases: [:
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management':
     ],
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],:
@@ -1301,7 +1305,7 @@ export const real2026Q2Additions = [
     category: 'AI & Data',:
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',:
-    features: [
+    features: [:
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access':
     ],
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'],:
@@ -1321,7 +1325,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',,
   description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',:
-    features: [
+    features: [:
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores':
     ],
     useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'],:
@@ -1341,7 +1345,7 @@ export const real2026Q2Additions = [
     category: 'Observability',:
     tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',,
   description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',:
-    features: [
+    features: [:
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts':
     ],
     useCases: ['GenAI product analyticsModel regression monitoringCost governance'],:
@@ -1361,7 +1365,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',,
   description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',:
-    features: [
+    features: [:
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup':
     ],
     useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'],:
@@ -1381,7 +1385,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'REST and SDKs for compliant e-signatures with audit trails.',,
   description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',:
-    features: [
+    features: [:
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation':
     ],
     useCases: ['Contract workflowsInternal approvalsCustomer onboarding'],:
@@ -1401,7 +1405,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',,
   description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',:
-    features: [
+    features: [:
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding':
     ],
     useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],:
@@ -1421,7 +1425,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',,
   description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',:
-    features: [
+    features: [:
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports':
     ],
     useCases: ['Third-party risk programsSales security reviewsProcurement diligence'],:
@@ -1441,7 +1445,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Embeddings + RAG search over docs with answer extraction.',,
   description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',:
-    features: [
+    features: [:
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support':
     ],
     useCases: ['Developer portalsInternal knowledge basesCustomer docs'],:
@@ -1461,7 +1465,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',:
-    features: [
+    features: [:
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals':
     ],
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'],:
@@ -1477,17 +1481,17 @@ export const real2026Q2Additions = [
 
   }
 ]:
-:export const real2026Q2Additions = [
+export const real2026Q2Additions = [
   {:
     id: 'ai-governance-compliance-hub',:
     name: 'AI Governance & Compliance Hub',:
     category: 'AI & Data',:
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
   description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',:
-    features: [
+    features: [:
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)':
     ],
-    useCases: [
+    useCases: [:
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management':
     ],
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],:
@@ -1506,7 +1510,7 @@ export const real2026Q2Additions = [
     category: 'AI & Data',:
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',:
-    features: [
+    features: [:
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access':
     ],
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'],:
@@ -1526,7 +1530,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',,
   description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',:
-    features: [
+    features: [:
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores':
     ],
     useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'],:
@@ -1546,7 +1550,7 @@ export const real2026Q2Additions = [
     category: 'Observability',:
     tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',,
   description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',:
-    features: [
+    features: [:
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts':
     ],
     useCases: ['GenAI product analyticsModel regression monitoringCost governance'],:
@@ -1566,7 +1570,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',,
   description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',:
-    features: [
+    features: [:
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup':
     ],
     useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'],:
@@ -1586,7 +1590,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'REST and SDKs for compliant e-signatures with audit trails.',,
   description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',:
-    features: [
+    features: [:
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation':
     ],
     useCases: ['Contract workflowsInternal approvalsCustomer onboarding'],:
@@ -1606,7 +1610,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',,
   description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',:
-    features: [
+    features: [:
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding':
     ],
     useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],:
@@ -1626,7 +1630,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',,
   description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',:
-    features: [
+    features: [:
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports':
     ],
     useCases: ['Third-party risk programsSales security reviewsProcurement diligence'],:
@@ -1646,7 +1650,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Embeddings + RAG search over docs with answer extraction.',,
   description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',:
-    features: [
+    features: [:
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support':
     ],
     useCases: ['Developer portalsInternal knowledge basesCustomer docs'],:
@@ -1666,7 +1670,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',:
-    features: [
+    features: [:
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals':
     ],
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'],:
@@ -1690,23 +1694,23 @@ export const real2026Q2Additions = [
     marketPosition: 'Cost-effective RMM for partners and IT teams':
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-    period: '/device-month':
+    period: '/device/month':
     trial_days: 14:
     setup_time: 'Fast':
     market_position: 'Cost-effective RMM for partners and IT teams':
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com-services-msp-remote-device-ops':
-export const real2026Q2Additions = [
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops':
+export const real2026Q2Additions = [:
   {:
     id: 'ai-governance-compliance-hub',:
     name: 'AI Governance & Compliance Hub',:
     category: 'AI & Data',:
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
   description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',:
-    features: [
+    features: [:
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)':
     ],
-    useCases: [
+    useCases: [:
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management':
     ],
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],:
@@ -1725,7 +1729,7 @@ export const real2026Q2Additions = [
     category: 'AI & Data',:
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
   description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',:
-    features: [
+    features: [:
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access':
     ],
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'],:
@@ -1745,7 +1749,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',,
   description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',:
-    features: [
+    features: [:
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores':
     ],
     useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'],:
@@ -1765,7 +1769,7 @@ export const real2026Q2Additions = [
     category: 'Observability',:
     tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',,
   description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',:
-    features: [
+    features: [:
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts':
     ],
     useCases: ['GenAI product analyticsModel regression monitoringCost governance'],:
@@ -1785,7 +1789,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',,
   description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',:
-    features: [
+    features: [:
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup':
     ],
     useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'],:
@@ -1805,7 +1809,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'REST and SDKs for compliant e-signatures with audit trails.',,
   description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',:
-    features: [
+    features: [:
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation':
     ],
     useCases: ['Contract workflowsInternal approvalsCustomer onboarding'],:
@@ -1825,7 +1829,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',,
   description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',:
-    features: [
+    features: [:
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding':
     ],
     useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],:
@@ -1845,7 +1849,7 @@ export const real2026Q2Additions = [
     category: 'Quality & Monitoring',:
     tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',,
   description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',:
-    features: [
+    features: [:
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports':
     ],
     useCases: ['Third-party risk programsSales security reviewsProcurement diligence'],:
@@ -1865,7 +1869,7 @@ export const real2026Q2Additions = [
     category: 'Developer Tools',:
     tagline: 'Embeddings + RAG search over docs with answer extraction.',,
   description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',:
-    features: [
+    features: [:
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support':
     ],
     useCases: ['Developer portalsInternal knowledge basesCustomer docs'],:
@@ -1885,7 +1889,7 @@ export const real2026Q2Additions = [
     category: 'Cloud & FinOps',:
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
   description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',:
-    features: [
+    features: [:
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals':
     ],
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'],:
