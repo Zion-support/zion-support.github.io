@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-export default function Home() {
-  return <div>Welcome to Zion</div>;
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

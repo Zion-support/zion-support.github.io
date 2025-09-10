@@ -39,3 +39,5 @@ export default function Button({
     <button onClick={onClick} className={classes}>
 </button>
     </button>)`;
+  );
+};
