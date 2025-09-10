@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pages": [
     {
 <<<<<<< HEAD
@@ -22433,10 +22434,33 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T07:42:13.594Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T07-42-19-758Z
+=======
+  "items": [
+    {
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-053517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:35:17.499Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Playbook — Autonomous Delivery",
+      "href": "/reports/playbooks/playbook-2025-08-15-053517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:35:17.471Z",
+      "source": "cloud-playbook-factory"
+    },
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-053517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:35:17.442Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T05-35-21-856Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/guides/guide-2025-08-15-073430",
@@ -22452,10 +22476,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T07:42:13.594Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T07-42-19-758Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-053517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:35:17.442Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T05-35-21-856Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "href": "/reports/patterns/pattern-2025-08-15-073430",
@@ -23090,4 +23120,12 @@
     }
   ]
 >>>>>>> origin/automation/git-sync/2025-08-15T07-42-19-758Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-053517",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T05:35:17.442Z",
+      "source": "cloud-deep-research-factory"
+    }
+  ]
+>>>>>>> origin/automation/git-sync/2025-08-15T05-35-21-856Z
 }
