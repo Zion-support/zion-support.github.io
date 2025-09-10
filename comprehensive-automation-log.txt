@@ -1,0 +1,86 @@
+[2025-09-03T13:40:03.780Z] 🚀 Starting comprehensive automation runner...
+[2025-09-03T13:40:03.782Z] 🚀 Running: Health Check
+[2025-09-03T13:40:33.806Z] ❌ Failed: Health Check - spawnSync /bin/sh ETIMEDOUT
+[2025-09-03T13:40:33.807Z] 🚀 Running: Performance Monitor
+[2025-09-03T13:40:33.833Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor.cjs
+/workspace/scripts/performance-monitor.cjs:19
+}
+^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-03T13:40:33.834Z] 🚀 Running: Security Audit
+[2025-09-03T13:40:33.857Z] ❌ Failed: Security Audit - Command failed: node scripts/security-audit.cjs
+/workspace/scripts/security-audit.cjs:10
+}
+^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+[2025-09-03T13:40:33.858Z] 🧪 Running comprehensive tests...
+[2025-09-03T13:40:33.858Z] 🧪 Running: Linting check
+[2025-09-03T13:40:34.111Z] ❌ Failed: Linting check - Command failed: npm run lint
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+ReferenceError: Cannot read config file: /workspace/.eslintrc.js
+Error: module is not defined
+    at file:///workspace/.eslintrc.js:1:1
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:400:35)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:427:47)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)
+    at Module._compile (node:internal/modules/cjs/loader:1712:5)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+
+[2025-09-03T13:40:34.111Z] 🧪 Running: Format check
+[2025-09-03T13:41:09.796Z] ❌ Failed: Format check - spawnSync /bin/sh ENOBUFS
+[2025-09-03T13:41:09.797Z] 🧪 Running: Unit tests
+[2025-09-03T13:41:09.900Z] ❌ Failed: Unit tests - Command failed: npm test
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+sh: 1: jest: not found
+
+[2025-09-03T13:41:09.900Z] 🔧 Creating additional improvement scripts...
+[2025-09-03T13:41:09.900Z] ✅ Created enhanced performance monitor
+[2025-09-03T13:41:09.900Z] ✅ Created code quality checker
+[2025-09-03T13:41:09.901Z] ✅ Created enhanced deployment automation
+[2025-09-03T13:41:09.901Z] 📝 Running git operations...
+[2025-09-03T13:41:10.077Z] ✅ Git add completed
+[2025-09-03T13:41:10.181Z] ✅ Git commit completed
+[2025-09-03T13:41:11.505Z] ✅ Git push completed
+[2025-09-03T13:41:11.506Z] 🎉 Comprehensive automation completed!
+[2025-09-03T13:41:11.506Z] 📄 Final report saved to: /workspace/comprehensive-automation-report.json
