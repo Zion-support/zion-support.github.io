@@ -6,7 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+const Contact = React.lazy(() => import('./pages/ContactPage'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
