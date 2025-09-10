@@ -322,7 +322,7 @@ const DefaultErrorFallback: ComponentType<{ error: Error }> = ({ error }) => (
         </div>
       </div>
       <div className="text-sm text-gray-500 mb-4">
-        We're sorry, but something unexpected happened. Please try refreshing the page.
+        We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
       </div>
       <button
         onClick={() => window.location.reload()}

@@ -89,7 +89,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+              We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             
             <div className="space-y-3">

@@ -97,7 +97,6 @@ export function generateRandomBlogPost(): BlogPost {
   
   const title = `${adjective} ${noun} for ${topic}`;
   
->>>>>>> origin/chore/fix-links-and-build
   return {
     id: Math.random().toString(36).substr(2, 9),
     title: 'Sample Blog Post',

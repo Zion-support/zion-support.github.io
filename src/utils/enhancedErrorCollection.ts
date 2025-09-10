@@ -214,7 +214,14 @@ class EnhancedErrorCollector {
 
   private generateFingerprint(error: Error, context: ErrorContext): string {
     const key = `${error.name}-${error.message}-${context.component || 'unknown'}-${context.route || 'unknown'}`;
-    return btoa(key).replace(/[/+=]/g, '').substring(0, 16);
+    // Use a simple hash function instead of btoa for better compatibility
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      const char = key.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32-bit integer
+    }
+    return Math.abs(hash).toString(36).substring(0, 16);
   }
 
   private categorizeError(error: Error, context: ErrorContext): {
