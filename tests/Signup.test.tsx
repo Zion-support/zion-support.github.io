@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Signup from '@/pages/Signup';
+import { vi } from 'vitest';
 import * as authHook from '@/hooks/useAuth';
 import * as toastHook from '@/hooks/use-toast';
 import * as router from 'react-router-dom';
@@ -19,7 +20,7 @@ function setup(success = true, errorMsg?: string, status = success ? 201 : 400) 
     status,
     json: () => Promise.resolve(success ? { token: 'jwt' } : { message: errorMsg }),
   } as Response);
-  global.fetch = fetchSpy as any;
+  vi.stubGlobal('fetch', fetchSpy);
 
   const successSpy = vi.spyOn(toastHook.toast, 'success').mockImplementation(() => {});
   const errorSpy = vi.spyOn(toastHook.toast, 'error').mockImplementation(() => {});
@@ -48,7 +49,7 @@ describe('Signup form', () => {
     fireEvent.click(screen.getByLabelText(/i agree/i));
     fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
     expect(fetchSpy).toHaveBeenCalledWith('/api/auth/register', expect.objectContaining({ method: 'POST' }));
-    expect(successSpy).toHaveBeenCalledWith('Account created');
+    expect(successSpy).toHaveBeenCalledWith('Welcome to ZionAI 🎉');
     expect(navigateMock).toHaveBeenCalledWith('/dashboard');
   });
 
