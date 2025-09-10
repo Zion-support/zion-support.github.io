@@ -6,6 +6,10 @@
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 
+# Enable Next.js plugin for proper routing and SSR on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 # API functions (if needed)
 # [functions]
 # directory = "netlify/functions"
