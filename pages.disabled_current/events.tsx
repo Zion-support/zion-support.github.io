@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  MapPin, 
-  Clock, 
-  Users,
-  ArrowRight,
-  ExternalLink,
-  Video,
-  Mic,
-  BookOpen
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
 const upcomingEvents = [
   {
     title: 'AI Innovation Summit 2024',
@@ -369,4 +353,3 @@ export default function EventsPage() {
 		</>
 	);
 }
->>>>>>> origin/automation/changelog

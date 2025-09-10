@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket, Phone, Mail, MapPin, Headphones } from 'lucide-react';
-import Layout from '../components/Layout';
-
 const contactInfo = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -39,9 +31,7 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const services = [
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  {
+const services = [  {
     title: "Cloud Infrastructure",
     description: "Scalable and secure cloud solutions for modern businesses",
     icon: Cloud,
@@ -100,152 +90,6 @@ const services = [
     setupTime: "2-3 weeks"
   },
   {
-<<<<<<< HEAD
-    title: 'IoT Platform Development & Management',
-    description: 'Comprehensive IoT solutions for device management, data collection, and analytics.',
-    icon: Smartphone,
-    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Remote Monitoring'],
-    pricing: '$2,499 - $9,999/month',
-    category: 'IoT Platforms',
-    benefits: ['Connected Devices', 'Real-time Insights', 'Operational Efficiency', 'Data-Driven Decisions'],
-    marketPrice: '$4,000 - $15,000/month',
-    link: 'https://ziontechgroup.com/iot-platforms',
-    popular: false
-  },
-  {
-    title: 'AI Infrastructure & ML Pipeline Setup',
-    description: 'Complete AI infrastructure setup with machine learning pipelines and model deployment.',
-    icon: Brain,
-    features: ['ML Pipeline Setup', 'Model Training', 'Model Deployment', 'Performance Monitoring'],
-    pricing: '$4,999 - $19,999/month',
-    category: 'AI Infrastructure',
-    benefits: ['Advanced AI Capabilities', 'Scalable ML Operations', 'Automated Workflows', 'High Performance'],
-    marketPrice: '$8,000 - $30,000/month',
-    link: 'https://ziontechgroup.com/ai-infrastructure',
-    popular: true
-  },
-  {
-    title: 'Green IT & Sustainability Solutions',
-    description: 'Eco-friendly IT solutions for reducing carbon footprint and energy consumption.',
-    icon: Globe,
-    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Practices', 'Green Monitoring'],
-    pricing: '$1,999 - $7,999/month',
-    category: 'Green IT',
-    benefits: ['Environmental Impact', 'Cost Savings', 'Sustainability Goals', 'Efficient Operations'],
-    marketPrice: '$3,000 - $12,000/month',
-    link: 'https://ziontechgroup.com/green-it',
-    popular: false
-  },
-  {
-    title: 'AI-Powered DevOps & CI/CD Pipeline',
-    description: 'Intelligent DevOps automation with AI-driven deployment, monitoring, and optimization.',
-    icon: Settings,
-    features: ['AI-driven deployments', 'Automated testing', 'Performance monitoring', 'Rollback automation'],
-    pricing: '$3,999 - $12,999/month',
-    category: 'DevOps & Automation',
-    benefits: ['Faster deployments', 'Reduced errors', 'Automated scaling', 'Better reliability'],
-    marketPrice: '$6,000 - $18,000/month',
-    link: 'https://ziontechgroup.com/ai-devops',
-    popular: true
-  },
-  {
-    title: 'Quantum Computing Integration Services',
-    description: 'Quantum computing solutions for complex problem-solving and optimization challenges.',
-    icon: Cpu,
-    features: ['Quantum algorithm development', 'Hybrid classical-quantum systems', 'Quantum simulation', 'Optimization solutions'],
-    pricing: '$19,999 - $99,999/month',
-    category: 'Quantum Computing',
-    benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology', 'Competitive advantage'],
-    marketPrice: '$30,000 - $150,000/month',
-    link: 'https://ziontechgroup.com/quantum-computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cloud Migration & Optimization',
-    description: 'Intelligent cloud migration with automated optimization and cost management.',
-    icon: Cloud,
-    features: ['Automated migration', 'Cost optimization', 'Performance tuning', 'Security compliance'],
-    pricing: '$4,999 - $19,999/month',
-    category: 'Cloud Services',
-    benefits: ['Reduced migration time', 'Cost savings', 'Better performance', 'Enhanced security'],
-    marketPrice: '$8,000 - $30,000/month',
-    link: 'https://ziontechgroup.com/ai-cloud-migration',
-    popular: true
-  },
-  {
-    title: 'Advanced Threat Intelligence & Response',
-    description: 'AI-driven threat detection and automated response system for enterprise security.',
-    icon: Shield,
-    features: ['Threat intelligence', 'Automated response', 'Behavioral analysis', 'Incident management'],
-    pricing: '$7,999 - $24,999/month',
-    category: 'Cybersecurity',
-    benefits: ['Proactive security', 'Faster threat response', 'Reduced risk', 'Compliance assurance'],
-    marketPrice: '$12,000 - $40,000/month',
-    link: 'https://ziontechgroup.com/threat-intelligence',
-    popular: true
-  },
-  {
-    title: 'Smart Data Center Management',
-    description: 'AI-powered data center optimization with predictive maintenance and energy efficiency.',
-    icon: Server,
-    features: ['Predictive maintenance', 'Energy optimization', 'Capacity planning', 'Automated management'],
-    pricing: '$5,999 - $19,999/month',
-    category: 'Data Center',
-    benefits: ['Reduced downtime', 'Energy savings', 'Better capacity utilization', 'Automated operations'],
-    marketPrice: '$10,000 - $30,000/month',
-    link: 'https://ziontechgroup.com/smart-datacenter',
-    popular: false
-  },
-  {
-    title: 'AI-Powered Network Optimization',
-    description: 'Intelligent network management with automated optimization and performance monitoring.',
-    icon: Network,
-    features: ['Network optimization', 'Traffic analysis', 'Performance monitoring', 'Automated tuning'],
-    pricing: '$3,999 - $14,999/month',
-    category: 'Network Services',
-    benefits: ['Better performance', 'Reduced latency', 'Automated management', 'Cost optimization'],
-    marketPrice: '$6,000 - $20,000/month',
-    link: 'https://ziontechgroup.com/ai-network-optimization',
-    popular: false
-  },
-  {
-    title: 'Intelligent Backup & Disaster Recovery',
-    description: 'AI-driven backup solutions with automated disaster recovery and business continuity.',
-    icon: HardDrive,
-    features: ['Automated backups', 'Disaster recovery', 'Business continuity', 'Data integrity'],
-    pricing: '$2,999 - $9,999/month',
-    category: 'Backup & Recovery',
-    benefits: ['Data protection', 'Fast recovery', 'Business continuity', 'Automated management'],
-    marketPrice: '$5,000 - $15,000/month',
-    link: 'https://ziontechgroup.com/intelligent-backup',
-    popular: true
-  },
-  {
-    title: 'AI-Powered IT Asset Management',
-    description: 'Intelligent IT asset tracking, lifecycle management, and optimization.',
-    icon: Monitor,
-    features: ['Asset tracking', 'Lifecycle management', 'Cost optimization', 'Compliance monitoring'],
-    pricing: '$1,999 - $7,999/month',
-    category: 'Asset Management',
-    benefits: ['Better asset utilization', 'Cost savings', 'Compliance assurance', 'Automated tracking'],
-    marketPrice: '$3,000 - $12,000/month',
-    link: 'https://ziontechgroup.com/ai-asset-management',
-    popular: false
-  },
-  {
-    title: 'Smart IT Service Desk & Automation',
-    description: 'AI-powered IT service desk with automated ticket resolution and intelligent routing.',
-    icon: Headphones,
-    features: ['Automated ticket resolution', 'Intelligent routing', 'Self-service portal', 'Analytics dashboard'],
-    pricing: '$2,499 - $8,999/month',
-    category: 'Service Desk',
-    benefits: ['Faster resolution', 'Reduced costs', 'Better user experience', 'Automated workflows'],
-    marketPrice: '$4,000 - $12,000/month',
-    link: 'https://ziontechgroup.com/smart-service-desk',
-    popular: true
-  }
-];
-
 const categories = [
   { name: "All", count: itServices.length },
   { name: "AI Operations", count: itServices.filter(s => s.category === "AI Operations").length },
@@ -797,6 +641,4 @@ export default function ITServicesPage() {
           </div>
         </div>
       </section>
-    </Layout>  );
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-}
+    </Layout>  );}

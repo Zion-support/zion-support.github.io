@@ -6,21 +6,6 @@ import {
   BarChart3, 
   Shield, 
   Users, 
-<<<<<<< HEAD
-=======
-:pages/solutions/industry.tsx.backup
-  CheckCircle,
-  ArrowRight,
-  Building,
-  Heart,
-  GraduationCap,
-  ShoppingCart,
-  Landmark,
-  Factory,
-  Globe
-} from 'lucide-react';
-import Layout from '../components/Layout';
-
 const industries = [
   {
     name: "Healthcare",
@@ -152,9 +137,7 @@ const caseStudies = [
     company: "Auto Parts Manufacturer",
     challenge: "Quality control and predictive maintenance",
     solution: "IoT sensors and AI-powered quality monitoring",
-    result: "25% improvement in product quality"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  Globe, 
+    result: "25% improvement in product quality"  Globe, 
   ArrowRight, 
   CheckCircle, 
   Building, 
@@ -222,21 +205,6 @@ export default function IndustrySolutionsPage() {
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Industry Solutions</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Tailored technology solutions for specific industries. 
-                From healthcare to finance, we understand your unique challenges.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
 =======
               initial={{ opacity: 0, y: 30 }}              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -447,8 +415,6 @@ export default function IndustrySolutionsPage() {
             </motion.div>
           </div>
         </section>
-
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
         {/* Industries Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">

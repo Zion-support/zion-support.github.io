@@ -1,116 +1,7 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Monitor,
-  Smartphone,
-  Server,
-  Car,
-  Rocket,
-  Heart,
-  Building,
-  Sprout,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  Share2,
-  Receipt,
-  Package,
-  Calendar,
-  Headphones,
-  Kanban,
-  HardDrive,
-  Bell,
-  Home,
-  BookOpen,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Award
-} from 'lucide-react';
-=======
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Code, Database, Smartphone, Server, Lock, BarChart3 } from 'lucide-react';
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-import Layout from '../components/Layout';
-
 const services = [
   {
     category: "AI Services",
     icon: Brain,
-<<<<<<< HEAD
-    href: "/ai-services",
-    features: ["Machine Learning Models", "Computer Vision", "Natural Language Processing", "Predictive Analytics", "AI Chatbots", "Quantum AI"],
-    pricing: "Starting at $2,500/month",
-    color: "from-blue-500 to-purple-500",
-    popular: true
-  },
-  {
-    title: "IT Services",
-    description: "Complete IT infrastructure and cloud solutions for modern businesses with enterprise-grade security and scalability",
-    icon: Network,
-    href: "/it-services",
-    features: ["Cloud Migration", "DevOps Automation", "System Integration", "IT Consulting", "Infrastructure Management", "Technical Support"],
-    pricing: "Starting at $1,800/month",
-    color: "from-green-500 to-teal-500"
-  },
-  {
-    title: "Automation",
-    description: "Streamline your business processes with intelligent automation solutions that reduce costs and increase efficiency",
-    icon: Zap,
-    href: "/automation",
-    features: ["Workflow Automation", "API Integration", "Custom Dashboards", "Data Processing", "Business Intelligence", "Process Optimization"],
-    pricing: "Starting at $1,500/month",
-    color: "from-orange-500 to-red-500"
-  },
-  {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and infrastructure with enterprise-grade protection",
-    icon: Shield,
-    href: "/cybersecurity",
-    features: ["Security Audits", "Penetration Testing", "Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"],
-    pricing: "Starting at $2,000/month",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    title: "Web Development",
-    description: "Modern, responsive web applications built with cutting-edge technologies for optimal performance and user experience",
-    icon: Code,
-    href: "/web-development",
-    features: ["React/Next.js Apps", "E-commerce Solutions", "Progressive Web Apps", "API Development", "Performance Optimization", "SEO Integration"],
-    pricing: "Starting at $2,200/month",
-    color: "from-indigo-500 to-blue-500"
-  },
-  {
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile applications for iOS and Android with modern UI/UX design",
-    icon: Smartphone,
-    href: "/mobile-development",
-    features: ["iOS Development", "Android Development", "React Native", "Flutter Apps", "Mobile UI/UX", "App Store Optimization"],
-    pricing: "Starting at $3,000/month",
-    color: "from-green-500 to-emerald-500"
-  }
-];
-
 const processSteps = [
   {
     title: "Discovery",
@@ -295,51 +186,12 @@ export default function ServicesPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-            <motion.div
+          <div className="container mx-auto px-4 relative z-10">            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Comprehensive Technology Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200">
-                Empowering businesses with cutting-edge technology solutions
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Get Started
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Learn More
-                </motion.button>
-=======
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our{' '}
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Services
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions to transform your business and drive growth. 
-                From AI and cloud services to cybersecurity and custom development.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -423,9 +275,7 @@ export default function ServicesPage() {
                       </Link>
                     </div>
                   </motion.div>
-                ))}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-              </div>
+                ))}              </div>
             </motion.div>
           </div>
         </section>
@@ -490,22 +340,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-        {/* Process Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Process</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow a proven methodology to deliver exceptional results for every project.
-              </p>
-            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
@@ -646,9 +480,7 @@ export default function ServicesPage() {
                     <p className="text-gray-600">{feature.description}</p>
                   </motion.div>
                 ))}
-              </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-            </div>
+              </div>            </div>
           </div>
         </section>
 
@@ -711,9 +543,7 @@ export default function ServicesPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
                   Learn More About Us
-                </Link>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-              </div>
+                </Link>              </div>
             </motion.div>
           </div>
         </section>

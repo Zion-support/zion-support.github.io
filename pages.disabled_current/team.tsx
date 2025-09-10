@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Users } from 'lucide-react';
-
 const teamMembers = [
   {
     name: 'Dr. Sarah Johnson',
@@ -105,4 +100,3 @@ export default function TeamPage() {
 		</>
 	);
 }
->>>>>>> origin/automation/changelog

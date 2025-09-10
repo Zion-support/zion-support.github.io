@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Globe, Cloud, Zap, Users, Shield, Award, Handshake, ArrowRight } from 'lucide-react';
-
 const partners = [
   {
     name: 'Microsoft',
@@ -410,6 +403,4 @@ export default function PartnersPage() {
           </div>;
         </section>;
 
-        {/* Become a Partner */}  );
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-}
+        {/* Become a Partner */}  );}

@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  BookOpen, 
-  Play, 
-  Clock, 
-  Star, 
-  Users, 
-  Award, 
-  ArrowRight,
-  CheckCircle,
-  Target,
-  Zap
-} from 'lucide-react';
-<<<<<<< HEAD
-import Layout from './components/Layout';
-=======
-import Layout from '../components/Layout';
->>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
-
 const courses = [
   {
     id: 1,
@@ -438,49 +416,7 @@ export default function TrainingPage() {
                   <Users className="w-5 h-5" />
                   <span>Global Community</span>
                 </div>
-              </div>
->>>>>>> origin/automation/changelog
-            </motion.div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-=======
-        {/* Category Filters */}
-        <section className="py-10">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-3">
-              {trainingCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
+              </div>            </motion.div>
           </div>
         </section>
 
@@ -566,29 +502,11 @@ export default function TrainingPage() {
                       Enroll Now
                       <ArrowRight className="w-4 h-4" />
                     </a>
-                  </div>
->>>>>>> origin/automation/changelog
-                </motion.div>
+                  </div>                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-        {/* Courses Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Courses</h2>
-              <p className="text-lg text-gray-600">
-                Choose from our comprehensive selection of technology training programs
-              </p>
-            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {courses.map((course, index) => (
@@ -790,158 +708,7 @@ export default function TrainingPage() {
                           </a>
                         </div>
                       </motion.div>
-                    )}
->>>>>>> origin/automation/changelog
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center text-white"
-            >
-              <h2 className="text-3xl font-bold mb-4">Ready to Start Learning?</h2>
-              <p className="text-xl mb-8">
-                Join thousands of professionals who have enhanced their skills with our training programs
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-                  Browse All Courses
-                </button>
-                <button className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">
-                  Contact Us
-                </button>
-=======
-        {/* Learning Paths */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Learning Paths
-              </h2>
-              <p className="text-xl text-gray-400">
-                Structured learning journeys to master complete technology domains
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'AI Consciousness Expert',
-                  description: 'Complete path from fundamentals to advanced AI consciousness development.',
-                  duration: '6-12 months',
-                  courses: 8,
-                  level: 'Beginner to Expert',
-                  icon: <Brain className="w-12 h-12" />,
-                  color: 'cyan',
-                  path: [
-                    'AI Consciousness Fundamentals',
-                    'Consciousness Architecture Design',
-                    'Advanced Implementation',
-                    'Ethics and Governance',
-                    'API Development',
-                    'System Optimization',
-                    'Real-world Applications',
-                    'Expert Certification'
-                  ]
-                },
-                {
-                  title: 'Quantum Computing Specialist',
-                  description: 'Master quantum computing from basic principles to enterprise implementation.',
-                  duration: '8-16 months',
-                  courses: 6,
-                  level: 'Intermediate to Expert',
-                  icon: <Atom className="w-12 h-12" />,
-                  color: 'purple',
-                  path: [
-                    'Quantum Computing Basics',
-                    'Quantum Algorithms',
-                    'Machine Learning Integration',
-                    'Security Implementation',
-                    'Enterprise Solutions',
-                    'Advanced Applications'
-                  ]
-                },
-                {
-                  title: 'Autonomous Operations Leader',
-                  description: 'Lead the transformation to fully autonomous business operations.',
-                  duration: '6-10 months',
-                  courses: 5,
-                  level: 'Intermediate to Advanced',
-                  icon: <Rocket className="w-12 h-12" />,
-                  color: 'green',
-                  path: [
-                    'Business Process Analysis',
-                    'Automation Strategy',
-                    'System Implementation',
-                    'Change Management',
-                    'Performance Optimization'
-                  ]
-                }
-              ].map((path, index) => (
-                <motion.div
-                  key={path.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="text-center mb-6">
-                    <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                      {path.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {path.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {path.description}
-                    </p>
-                    <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{path.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-4 h-4" />
-                        <span>{path.courses} courses</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3 mb-6">
-                    {path.path.map((step, stepIndex) => (
-                      <div key={stepIndex} className="flex items-center gap-3 text-sm">
-                        <div className="w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold">
-                          {stepIndex + 1}
-                        </div>
-                        <span className="text-gray-300">{step}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <a
-                    href="#"
-                    className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
-                  >
-                    Start Learning Path
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+                    )}                  </div>
                 </motion.div>
               ))}
             </div>
@@ -975,19 +742,11 @@ export default function TrainingPage() {
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   Explore Free Resources
-                </a>
->>>>>>> origin/automation/changelog
-              </div>
+                </a>              </div>
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
 export default Training;
->>>>>>> origin/automation/changelog

@@ -1,10 +1,4 @@
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-import Layout from '../components/Layout';
-
 const contactInfo = {
   phone: '+1 (555) 123-4567',
   email: 'hello@ziontechgroup.com',
@@ -454,7 +448,5 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-    </MainLayout>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-  );
+    </MainLayout>  );
 }
