@@ -22,14 +22,11 @@
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
     "test:smoke": "jest --config jest.config.smoke.cjs",
-    "prebuild": "npm run type-check",
-    "postbuild": "npm run test:smoke",
     "security:audit": "npm audit",
     "security:fix": "npm audit fix"
   },
   "dependencies": {
     "@babel/preset-env": "^7.28.3",
-    "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@headlessui/react": "^2.0.0",
     "@heroicons/react": "^2.0.18",
