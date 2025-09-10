@@ -5,6 +5,8 @@
 
 [build.environment]
 NODE_VERSION = "22"
+NPM_VERSION = "10.9.2"
+NODE_ENV = "production"
 NODE_OPTIONS = "--max-old-space-size=4096"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
 SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
