@@ -1,19 +1,8 @@
-  it(displays expected content", () => {;
-    render(<EnhancedMainPage  />)";
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedMainPage from &apos;./EnhancedMainPage;
-describe(&apos;EnhancedMainPage&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
-}
-  it(&apos;displays expected content&apos, () => {;
-    render();
-}
-    // comment;
-    render(<EnhancedMainPage / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
-})";
-";
-}}))
+import { render, screen  } from '@testing-library/reactimport EnhancedMainPage from ./EnhancedMainPagedescribe(EnhancedMainPage, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<EnhancedMainPage  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<EnhancedMainPage  />)';
+    // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport EnhancedMainPage from ./EnhancedMainPagedescribe(EnhancedMainPage,() => {' it(renders without crashing',() => {' render(<EnhancedMainPage />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedMainPage />)

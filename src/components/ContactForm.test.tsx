@@ -1,19 +1,8 @@
-  it(displays expected content", () => {;
-    render(<ContactForm  />)";
-import { render, screen } from &apos;@testing - library/react",
-import ContactForm from &apos;./ContactForm;
-describe(&apos;ContactForm&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();
-}
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
-}
-  it(&apos;displays expected content&apos, () => {;
-    render();
-}
-    // comment;
-    render(<ContactForm / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
-})";
-";
-}}))
+import { render, screen  } from '@testing-library/reactimport ContactForm from ./ContactFormdescribe(ContactForm, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<ContactForm  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<ContactForm  />)';
+    // Add specific test assertions based on component content})});';;';
+import { render,screen } from '@testing-library/reactimport ContactForm from ./ContactFormdescribe(ContactForm,() => {' it(renders without crashing',() => {' render(<ContactForm />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ContactForm />)
