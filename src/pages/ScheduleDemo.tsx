@@ -1,7 +1,75 @@
+import React, { useState } from 'react';
+import { Calendar, Clock, User, Mail, Phone } from 'lucide-react';
+import SEO from '../components/SEO';
+
+const ScheduleDemo = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    date: '',
+    time: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Demo request submitted:', formData);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Schedule Demo - Zion Tech Group"
+        description="Schedule a personalized demo of our AI and technology solutions."
+        keywords={["demo", "schedule", "consultation", "presentation", "trial"]}
+      />
+      
+      <div className="max-w-4xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Schedule a Demo</h1>
+          <p className="text-xl text-gray-300">
+            See our solutions in action with a personalized demonstration
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Schedule a Demo?</h2>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <Calendar className="h-6 w-6 text-blue-400 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Personalized Experience</h3>
+                  <p className="text-gray-300">Get a customized demonstration tailored to your specific needs and use cases.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <Clock className="h-6 w-6 text-green-400 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Expert Guidance</h3>
+                  <p className="text-gray-300">Our experts will guide you through the features and answer all your questions.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <User className="h-6 w-6 text-purple-400 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">No Commitment</h3>
+                  <p className="text-gray-300">Explore our solutions without any obligation or commitment.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-slate-800/50 rounded-lg p-8">
@@ -134,4 +202,6 @@
       </div>
     </div>
   );
-}
+};
+
+export default ScheduleDemo;
