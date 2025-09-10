@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+import SearchModal from './SearchModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,8 +11,8 @@ const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -122,8 +124,9 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

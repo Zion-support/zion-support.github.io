@@ -11,38 +11,39 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD;
-export default function SEOHead({;
-  title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',
-  keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',
-  image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  structuredData;
-}: SEOHeadProps) {;
-  return (;
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta property="og:title" content={title} />;
-      <meta property="og:description" content={description} />;
-      <meta property="og:image" content={image} />;
-      <meta property="og:url" content={url} />;
-      <meta property="og:type" content={type} />;
-      <meta name="twitter:card" content="summary_large_image" />;
-      <meta name="twitter:title" content={title} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={image} />;
-      {structuredData && (;
-        <script type="application/ld+json">;
-          {JSON.stringify(structuredData)}
-        </script>;
-      )}
-    </Head>;
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced Technology Solutions',
+  description = 'Leading AI & Technology Solutions for a Smarter Future. We provide comprehensive AI services, cybersecurity, cloud infrastructure, and custom software development.',
+  keywords = 'AI, technology, cybersecurity, cloud, software development, machine learning, automation',
+  ogImage = '/og-image.jpg',
+  canonical = 'https://ziontechgroup.com',
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonical} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Helmet>
   );
-}
-=======
-import React from 'react'; import { Helmet } from 'react-helmet-async'; ; interface SEOHeadProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'service'; structuredData?: object}; export function SEOHead({; title = 'Zion Tech Group - Leading AI,Quantum Computing & Advanced Technology Solutions',; description = 'Transform your business with cutting-edge AI,quantum computing,cybersecurity,and digital transformation solutions.Trusted by 1000+ companies worldwide.',; keywords = 'AI solutions,quantum computing,cybersecurity,digital transformation,cloud services,DevOps,machine learning,space technology',; image = '/images/zion-tech-group-og.jpg',; url = 'https:
->>>>>>> origin/automation-improvements
+};
+
+export default SEOHead;

@@ -27,40 +27,30 @@ export default function Loading() {;
     );
 }
 
-  return (";
-    <div className = "flex items-center justify-center p-8">;
-      {content}
+const Loading: React.FC<LoadingProps> = ({ text = 'Loading...', fullScreen = false }) => {
+  const containerClasses = fullScreen
+    ? 'fixed inset-0 bg-slate-900 flex items-center justify-center z-50'
+    : 'flex items-center justify-center p-8';
 
-    </div>;
+  return (
+    <div className={containerClasses}>
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div
+          className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+        />
+        <p className="text-gray-300">{text}</p>
+      </motion.div>
+    </div>
   );
 }
 // comment;
 export function SkeletonCard() {;
 
-  return (";
-    <div className = "bg-white rounded-lg p-6 shadow-sm animate-pulse">";
-      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>";
-      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>";
-      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>;
-    </div>;
-  );
-}
-export function SkeletonText() {;
-
-  return (";
-    <div className="animate-pulse space-y-2">;
-      {Array.from({ length: lines,,
-}).map((_, i) => (";
-        <div key="{i}
-          className="{"h-3" bg-gray-200 rounded ${;
-            i === lines - 1 ? "w-2/3" : 'w-full>;
-}"}
-
-        ></di></div>;
-      ))}
-
-    </div>;
-  );"}"
-=======
-import React from 'react',;';'; ';';'; import { Loader2';';';'} from 'lucide-react',';'; ';';'; interface LoadingProps { ';';';';: any; size?: 'sm' | 'md' | 'lg';'; text?: string;';'; fullScreen?: boolean }';';'; export default function Loading(props: any) {';';'; const sizeClasses = {',';'; ';';'; sm: 'w-4 h-4',',';'; ';';'; md: 'w-8 h-8',',';'; ';';'; lg: 'w-12 h-12'}; const content = ( <div className={`flex flex-col items-center justify-center space-y-4`> <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} /> {text && ( <p className=`text-gray-600 text-sm font-medium`}>{text}</p> ) )} </div> )} </div> )} ); if (fullScreen) { return ( <div className="min-h-screen bg-white"> {content} </div> )} return ( <div className="min-h-screen bg-white"> {content} </div> )} export function SkeletonCard(props: any) { return ( <div className="min-h-screen bg-white"> <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div> <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div> <div className="h-3 bg-gray-200 rounded w-2/3"></di></div> </div> )} export function SkeletonText(props: any) { return ( <div className="min-h-screen bg-white"> {Array.from({ length: line s'}).map((_,i) => (';'; <div key={i}';';'; className={`h-3 bg-gray-200 rounded ${',';'; ';';'; i === lines - 1 ? 'w-2/3' : 'w-full'}`} ></di></div> )) )} </div> )}'; </div>';'; );';';'}"';';';';
->>>>>>> origin/automation-improvements
+export default Loading;

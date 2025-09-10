@@ -8,10 +8,29 @@ import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
-interface HowItWorksSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
+const HowItWorksSection = () => {
+  const steps = [
+    {
+      number: '01',
+      title: 'Consultation',
+      description: 'We start with a detailed consultation to understand your business needs and challenges.',
+    },
+    {
+      number: '02',
+      title: 'Strategy & Planning',
+      description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.',
+    },
+    {
+      number: '03',
+      title: 'Implementation',
+      description: 'We implement the solution with minimal disruption to your existing operations.',
+    },
+    {
+      number: '04',
+      title: 'Support & Optimization',
+      description: 'Ongoing support and continuous optimization to ensure maximum value and performance.',
+    },
+  ];
 
 const getSteps = (t: any) => [
   {
@@ -90,5 +109,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
       </div>
     </section>
   );
-}
->>>>>>> origin/automation/changelog
+};
+
+export default HowItWorksSection;
