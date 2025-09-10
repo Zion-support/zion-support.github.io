@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
+import Layout from '../components/Layout';
 import { 
   TrendingUp,
   Building,
@@ -17,12 +17,7 @@ import {
   Zap, 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
+  Star
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -44,7 +39,51 @@ const values = [
   }
 ];
 
-export default function About() {
+const team = [
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Chief Technology Officer',
+    image: '/api/placeholder/300/300',
+    bio: 'Leading AI research and development with 15+ years of experience in machine learning and enterprise solutions.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Head of Engineering',
+    image: '/api/placeholder/300/300',
+    bio: 'Expert in cloud architecture and scalable systems with a passion for building innovative technology solutions.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'VP of Product Strategy',
+    image: '/api/placeholder/300/300',
+    bio: 'Driving product innovation and market strategy with deep expertise in SaaS and micro-services architecture.'
+  }
+];
+
+const achievements = [
+  {
+    number: '500+',
+    label: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries'
+  },
+  {
+    number: '50+',
+    label: 'Enterprise Clients',
+    description: 'Trusted by leading companies worldwide'
+  },
+  {
+    number: '99.9%',
+    label: 'Uptime Guarantee',
+    description: 'Reliable and secure solutions for mission-critical applications'
+  },
+  {
+    number: '24/7',
+    label: 'Support Available',
+    description: 'Round-the-clock technical support and monitoring'
+  }
+];
+
+export default function AboutPage() {
   return (
     <>
       <Head>
@@ -376,105 +415,6 @@ const timeline = [{
           </div>
         </div>
       </section>
-
-      {/* Timeline Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From our founding to today, we've been committed to pushing the boundaries of technology.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start mb-8"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                  {item.year}
-                </div>
-                <div className="ml-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      </div>
-=======
-      {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss how our team can help transform your business with cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Get Started Today
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    </div>
     </Layout>
   );
