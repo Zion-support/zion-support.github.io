@@ -490,6 +490,6 @@ if (typeof window !== 'undefined') {
     }
   }).catch(() => {
     // Fallback if import fails
-    // console.warn('Could not hook into logError for advanced log collection');
+    // // console.warn('Could not hook into logError for advanced log collection');
   });
 } 

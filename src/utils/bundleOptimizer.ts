@@ -148,7 +148,7 @@ class BundleOptimizer {
     });
 
     // This is a simplified version - in production, you'd want more sophisticated purging
-    // console.log(`Found ${usedClasses.size} used CSS classes`);
+    // // console.log(`Found ${usedClasses.size} used CSS classes`);
   }
 
   /**

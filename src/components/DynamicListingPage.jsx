@@ -157,7 +157,7 @@ export function DynamicListingPage(_{ title, _description, _categorySlug, listin
                       size="sm" 
                       onClick={() => {
 <<<<<<< HEAD
-                        // console.log("Rating selected:", rating);
+                        // // console.log("Rating selected:", rating);
                         setSelectedRating(rating);
                       }} 
                       aria-pressed={selectedRating === rating} 
@@ -176,7 +176,7 @@ export function DynamicListingPage(_{ title, _description, _categorySlug, listin
                     </Button>
                   ))}
 =======
-                // console.log("Rating selected:", rating);
+                // // console.log("Rating selected:", rating);
                 setSelectedRating(rating);
               }}
               aria-pressed={selectedRating === rating} 
@@ -199,7 +199,7 @@ export function DynamicListingPage(_{ title, _description, _categorySlug, listin
               </div>
               
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={() => {
-            // console.log("Resetting filters");
+            // // console.log("Resetting filters");
             setSearchQuery("");
             setSelectedCategory("all");
             setCurrentPriceFilter([0, priceRange.max]);
@@ -233,7 +233,7 @@ export function DynamicListingPage(_{ title, _description, _categorySlug, listin
                     placeholder="Search listings..." 
                     value={searchQuery} 
                     onChange={(e) => {
-                      // console.log("Search query:", e.target.value);
+                      // // console.log("Search query:", e.target.value);
                       setSearchQuery(e.target.value);
                     }} 
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white" 

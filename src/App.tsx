@@ -37,7 +37,7 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    // console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {
@@ -81,7 +81,7 @@ function App() {
         };
         
         setPerformanceMetrics(metrics);
-        console.log('Performance Metrics:', metrics);
+        // console.log('Performance Metrics:', metrics);
       }
     };
 

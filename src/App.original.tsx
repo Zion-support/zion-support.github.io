@@ -29,10 +29,10 @@ const registerServiceWorker = () => {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((_registration) => {
-          // console.log('SW registered: ', _registration);
+          // // console.log('SW registered: ', _registration);
         })
         .catch((_registrationError) => {
-          // console.log('SW registration failed: ', _registrationError);
+          // // console.log('SW registration failed: ', _registrationError);
         });
     });
   }

@@ -447,10 +447,10 @@ class AppHealthMonitor {
         
         // Log warnings and critical issues
         if (report.status !== 'healthy') {
-          // console.warn('🏥 Health issue detected:', report);
+          // // console.warn('🏥 Health issue detected:', report);
         }
       }).catch(error => {
-        // console.error('Health monitoring error:', error);
+        // // console.error('Health monitoring error:', error);
       });
     }, 30000);
 

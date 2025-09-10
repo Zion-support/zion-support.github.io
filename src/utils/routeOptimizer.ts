@@ -13,7 +13,7 @@ export const routeOptimizer = {
     return new Promise((resolve) => {
       const timeout = setTimeout(() => {
         // Simulate route preloading
-        // console.log(`Preloading route: ${routePath}`);
+        // // console.log(`Preloading route: ${routePath}`);
         resolve(true);
       }, preloadThreshold);
       
@@ -36,7 +36,7 @@ export const routeOptimizer = {
   ) => {
     return React.lazy(() => 
       importFunc().catch((error) => {
-        // console.error(`Failed to load component ${componentName}:`, error);
+        // // console.error(`Failed to load component ${componentName}:`, error);
         // Return a fallback component
         const FallbackComponent = () => React.createElement('div', {
           className: "flex items-center justify-center min-h-[200px] p-8"
@@ -119,15 +119,15 @@ export const routeOptimizer = {
     const routeOptimizations: Record<string, () => void> = {
       '/': () => {
         // Home page optimizations
-        // console.log('Optimizing home page bundle');
+        // // console.log('Optimizing home page bundle');
       },
       '/services': () => {
         // Services page optimizations
-        // console.log('Optimizing services page bundle');
+        // // console.log('Optimizing services page bundle');
       },
       '/contact': () => {
         // Contact page optimizations
-        // console.log('Optimizing contact page bundle');
+        // // console.log('Optimizing contact page bundle');
       },
     };
 

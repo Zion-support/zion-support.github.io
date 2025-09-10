@@ -17,9 +17,9 @@ export function CheckoutShippingOptions(_{ toAddress, onSelect }: Props) {};
     ;
       try {};
           setRates(data.rates || [])} else {};
-          // console.error('Rates error', data)}
+          // // console.error('Rates error', data)}
       } catch(err) {};
-        // console.error('Rates error', err)} finally {};
+        // // console.error('Rates error', err)} finally {};
         setLoading(false)}
     }
     fetchRates()}, [toAddress]);

@@ -16,7 +16,7 @@ export const ErrorTracking: React.FC<ErrorTrackingProps> = ({
 
     // Track JavaScript errors
     const handleError = (event: ErrorEvent) => {
-      // console.error('JavaScript Error:', event.error);
+      // // console.error('JavaScript Error:', event.error);
       
       // Send to analytics
       if (window.gtag) {
@@ -33,7 +33,7 @@ export const ErrorTracking: React.FC<ErrorTrackingProps> = ({
 
     // Track unhandled promise rejections
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      // console.error('Unhandled Promise Rejection:', event.reason);
+      // // console.error('Unhandled Promise Rejection:', event.reason);
       
       if (window.gtag) {
         window.gtag('event', 'exception', {
@@ -46,7 +46,7 @@ export const ErrorTracking: React.FC<ErrorTrackingProps> = ({
 
     // Track React errors (if using Error Boundary)
     const handleReactError = (error: Error, errorInfo: unknown) => {
-      // console.error('React Error:', error, errorInfo);
+      // // console.error('React Error:', error, errorInfo);
       
       if (window.gtag) {
         window.gtag('event', 'exception', {
@@ -110,7 +110,7 @@ export const ErrorTracking: React.FC<ErrorTrackingProps> = ({
 
 // Utility function to track custom errors
 export const trackError = (error: Error, context?: string) => {
-  // console.error('Custom Error:', error, context);
+  // // console.error('Custom Error:', error, context);
   
   if (window.gtag) {
     window.gtag('event', 'exception', {

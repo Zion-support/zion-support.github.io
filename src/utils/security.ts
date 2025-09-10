@@ -98,7 +98,7 @@ export class SecurityUtils {
       const encrypted = btoa(value); // Simple base64 encoding
       localStorage.setItem(key, encrypted);
     } catch (error) {
-      // console.warn('Failed to store secure item:', error);
+      // // console.warn('Failed to store secure item:', error);
     }
   }
 
@@ -111,7 +111,7 @@ export class SecurityUtils {
       
       return atob(encrypted); // Simple base64 decoding
     } catch (error) {
-      // console.warn('Failed to retrieve secure item:', error);
+      // // console.warn('Failed to retrieve secure item:', error);
       return null;
     }
   }

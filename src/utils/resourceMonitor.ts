@@ -15,13 +15,13 @@ class ResourceMonitor {
   start() {
     if (this.isMonitoring) return;
     this.isMonitoring = true;
-    // // console.log('🔍 Resource Monitor started');
+    // // // console.log('🔍 Resource Monitor started');
     this.setupErrorListeners();
   }
 
   stop() {
     this.isMonitoring = false;
-    // // console.log('🔍 Resource Monitor stopped');
+    // // // console.log('🔍 Resource Monitor stopped');
   }
 
   private setupErrorListeners() {
@@ -61,7 +61,7 @@ class ResourceMonitor {
 
   private recordError(error: ResourceError) {
     this.errors.push(error);
-    // console.error('Resource Error:', error);
+    // // console.error('Resource Error:', error);
   }
 
   getErrors(): ResourceError[] {

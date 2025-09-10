@@ -44,9 +44,9 @@ class PerformanceMonitor {
   private reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
       console.group('🚀 Performance Metrics');
-      // console.log(`Load Time: ${this.metrics.loadTime.toFixed(2)}ms`);
-      // console.log(`Memory Usage: ${this.metrics.memoryUsage.toFixed(2)}MB`);
-      // console.log(`Bundle Size: ${this.metrics.bundleSize}KB`);
+      // // console.log(`Load Time: ${this.metrics.loadTime.toFixed(2)}ms`);
+      // // console.log(`Memory Usage: ${this.metrics.memoryUsage.toFixed(2)}MB`);
+      // // console.log(`Bundle Size: ${this.metrics.bundleSize}KB`);
       console.groupEnd();
     }
   }
@@ -60,11 +60,11 @@ class PerformanceMonitor {
       
       if (process.env.NODE_ENV === 'development') {
         const color = renderTime > 16 ? '🔴' : renderTime > 8 ? '🟡' : '🟢';
-        // console.log(`${color} ${componentName} render time: ${renderTime.toFixed(2)}ms`);
+        // // console.log(`${color} ${componentName} render time: ${renderTime.toFixed(2)}ms`);
         
         // Track slow renders
         if (renderTime > 16) {
-          // console.warn(`⚠️ Slow render detected: ${componentName} took ${renderTime.toFixed(2)}ms`);
+          // // console.warn(`⚠️ Slow render detected: ${componentName} took ${renderTime.toFixed(2)}ms`);
         }
       }
     };
@@ -237,14 +237,14 @@ export const performanceUtils = {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        // console.log('LCP:', lastEntry.startTime);
+        // // console.log('LCP:', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          // console.log('FID:', (entry as any).processingStart - entry.startTime);
+          // // console.log('FID:', (entry as any).processingStart - entry.startTime);
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -257,7 +257,7 @@ export const performanceUtils = {
             clsValue += (entry as any).value;
           }
         });
-        // console.log('CLS:', clsValue);
+        // // console.log('CLS:', clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     }

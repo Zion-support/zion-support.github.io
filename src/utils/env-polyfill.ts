@@ -74,6 +74,6 @@ export const processEnv = typeof process !== 'undefined' ? process.env : {
   NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
 };
 
-// console.log('✅ Environment polyfill loaded successfully');
+// // console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;

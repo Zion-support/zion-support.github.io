@@ -29,19 +29,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (!isEnabled) return;
     
     // In a real implementation, you would send this to your analytics service
-    // console.log('Analytics Event:', { eventName, properties, timestamp: new Date().toISOString() });
+    // // console.log('Analytics Event:', { eventName, properties, timestamp: new Date().toISOString() });
   };
 
   const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     
-    // console.log('Page View:', { pageName, properties, timestamp: new Date().toISOString() });
+    // // console.log('Page View:', { pageName, properties, timestamp: new Date().toISOString() });
   };
 
   const setUser = (userId: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     
-    // console.log('User Set:', { userId, properties, timestamp: new Date().toISOString() });
+    // // console.log('User Set:', { userId, properties, timestamp: new Date().toISOString() });
   };
 
   const setEnabled = (enabled: boolean) => {

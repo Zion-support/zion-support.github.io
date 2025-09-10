@@ -139,7 +139,7 @@ try {
         return originalPush.call(this, chunk);
       } catch (error) {
          
-        // console.warn('Webpack chunk loading error prevented:', error);
+        // // console.warn('Webpack chunk loading error prevented:', error);
         return 0;
       }
     };
@@ -226,7 +226,7 @@ export const verifyPolyfills = () => {
   };
   
    
-  // console.log('Serverless polyfill verification:', checks);
+  // // console.log('Serverless polyfill verification:', checks);
   const result = Object.values(checks).every(Boolean);
   return result;
 };

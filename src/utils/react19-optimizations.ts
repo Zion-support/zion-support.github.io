@@ -59,7 +59,7 @@ export const React19Optimizations = {
       const start = performance.now();
       fn();
       const end = performance.now();
-      // console.log(`React 19 - ${name}: ${end - start}ms`);
+      // // console.log(`React 19 - ${name}: ${end - start}ms`);
     } else {
       fn();
     }
@@ -83,7 +83,7 @@ export const React19Optimizations = {
       }
 
       componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-        // console.error('React 19 Error Boundary:', error, errorInfo);
+        // // console.error('React 19 Error Boundary:', error, errorInfo);
       }
 
       render() {
@@ -114,7 +114,7 @@ export const React19Optimizations = {
    */
   enableStrictModeOptimizations: () => {
     if (process.env.NODE_ENV === 'development') {
-      // console.log('React 19 Strict Mode optimizations enabled');
+      // // console.log('React 19 Strict Mode optimizations enabled');
     }
   },
 };

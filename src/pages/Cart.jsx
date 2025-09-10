@@ -22,7 +22,7 @@ export default function CartPage() {
           setCartLoading(false);
         }, 1000);
       } catch (error) {
-        // console.error('Error loading cart items:', error);
+        // // console.error('Error loading cart items:', error);
         setCartLoading(false);
       }
     };

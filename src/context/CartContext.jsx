@@ -43,7 +43,7 @@ export function CartProvider(_{ children }) {
         const parsedCart = JSON.parse(savedCart);
         dispatch({ type: 'SET_ITEMS', payload: parsedCart.items || [] });
       } catch (error) {
-        // console.error('Error parsing saved cart:', error);
+        // // console.error('Error parsing saved cart:', error);
       }
     }
   }, []);

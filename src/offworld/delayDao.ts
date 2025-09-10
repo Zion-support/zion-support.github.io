@@ -31,7 +31,7 @@ export class DelayTolerantDAO {
 
   async connect() {
     if (isBuildEnv) {
-      // console.log('🚫 DelayTolerantDAO: Native modules disabled for CI/build environment');
+      // // console.log('🚫 DelayTolerantDAO: Native modules disabled for CI/build environment');
       this.ready = true;
       return;
     }
@@ -50,7 +50,7 @@ export class DelayTolerantDAO {
       this.ready = true;
       await this.flushQueues();
     } catch (error: unknown) {
-      // console.warn('⚠️ Failed to load native modules for DelayTolerantDAO:', error.message);
+      // // console.warn('⚠️ Failed to load native modules for DelayTolerantDAO:', error.message);
       this.ready = true; // Continue with mock functionality
     }
   }
@@ -99,7 +99,7 @@ export class DelayTolerantDAO {
       const log = await this.logPromise!;
       await log.add({ type: 'proposal', cid, id: proposal.id });
     } catch (error: unknown) {
-      // console.warn('⚠️ Failed to save proposal:', error.message);
+      // // console.warn('⚠️ Failed to save proposal:', error.message);
     }
   }
 
@@ -111,7 +111,7 @@ export class DelayTolerantDAO {
       const log = await this.logPromise!;
       await log.add({ type: 'vote', cid, proposalId: vote.proposalId, voter: vote.voter, support: vote.support });
     } catch (error: unknown) {
-      // console.warn('⚠️ Failed to save vote:', error.message);
+      // // console.warn('⚠️ Failed to save vote:', error.message);
     }
   }
 }

@@ -162,7 +162,7 @@ class ErrorHandler {
    */
   private logError(errorInfo: ErrorInfo): void {
     // Console logging
-    // console.error('Error Handler:', errorInfo);
+    // // console.error('Error Handler:', errorInfo);
 
     // Internal log
     this.errorLog.unshift(errorInfo);
@@ -181,7 +181,7 @@ class ErrorHandler {
     // For now, we'll use a simple alert
     if (typeof window !== 'undefined') {
       // You can replace this with your preferred notification system
-      // console.warn('User notification:', this.getUserFriendlyMessage(errorInfo));
+      // // console.warn('User notification:', this.getUserFriendlyMessage(errorInfo));
     }
   }
 
@@ -216,7 +216,7 @@ class ErrorHandler {
   private sendToMonitoring(errorInfo: ErrorInfo): void {
     // This would integrate with services like Sentry, LogRocket, etc.
     // For now, we'll just log it
-    // console.log('Sending to monitoring service:', errorInfo);
+    // // console.log('Sending to monitoring service:', errorInfo);
   }
 
   /**
@@ -406,12 +406,12 @@ export class Logger {
 
   public info(message: string, context?: Record<string, unknown>): void {
     const formattedMessage = this.formatMessage('INFO', message, context);
-    // console.log(formattedMessage);
+    // // console.log(formattedMessage);
   }
 
   public warn(message: string, context?: Record<string, unknown>): void {
     const formattedMessage = this.formatMessage('WARN', message, context);
-    // console.warn(formattedMessage);
+    // // console.warn(formattedMessage);
   }
 
   public error(message: string, error?: Error | AppError, context?: Record<string, unknown>): void {
@@ -431,7 +431,7 @@ export class Logger {
     };
 
     const formattedMessage = this.formatMessage('ERROR', message, errorContext);
-    // console.error(formattedMessage);
+    // // console.error(formattedMessage);
 
     // In production, you might want to send errors to a logging service
     if (!this.isDevelopment) {
@@ -443,7 +443,7 @@ export class Logger {
   public debug(message: string, context?: Record<string, unknown>): void {
     if (this.isDevelopment) {
       const formattedMessage = this.formatMessage('DEBUG', message, context);
-      // console.debug(formattedMessage);
+      // // console.debug(formattedMessage);
     }
   }
 }

@@ -116,7 +116,7 @@ try {
             </div>`}
 }
 window.addEventListener('error', (e) => {
-    // console.error('Unhandled error:', e.error || e.message);
+    // // console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
 // Render the app with proper provider structure

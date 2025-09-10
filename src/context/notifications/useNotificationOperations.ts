@@ -28,7 +28,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       setNotifications(data || []);
     } catch (err) {
-      // console.error('Error fetching notifications:', err);
+      // // console.error('Error fetching notifications:', err);
     } finally {
       setLoading(false);
     }
@@ -47,7 +47,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       await fetchNotifications();
     } catch (err) {
-      // console.error('Error marking notification as read:', err);
+      // // console.error('Error marking notification as read:', err);
     }
   }, [userId, fetchNotifications]);
 
@@ -64,7 +64,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       await fetchNotifications();
     } catch (err) {
-      // console.error('Error marking all notifications as read:', err);
+      // // console.error('Error marking all notifications as read:', err);
     }
   }, [userId, fetchNotifications]);
 
@@ -81,7 +81,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error;
       await fetchNotifications();
     } catch (err) {
-      // console.error('Error dismissing notification:', err);
+      // // console.error('Error dismissing notification:', err);
     }
   }, [userId, fetchNotifications]);
 
