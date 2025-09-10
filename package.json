@@ -22,7 +22,7 @@
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
     "test:smoke": "jest --config jest.config.smoke.cjs",
-    "prebuild": "echo 'Skipping type-check for build'",
+    "prebuild": "npm run type-check",
     "postbuild": "npm run test:smoke",
     "security:audit": "npm audit",
     "security:fix": "npm audit fix"
@@ -50,6 +50,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
@@ -104,6 +105,24 @@
   },
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.25.9"
+=======
+    "@tanstack/react-query": "^5.8.4",
+    "@types/node": "^20.8.10",
+    "axios": "^1.6.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.292.0",
+    "next": "^14.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
+    "react-router-dom": "^6.17.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vite": "^4.5.0",
+    "web-vitals": "^3.5.0"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b157
   },
   "devDependencies": {
     "@babel/preset-env": "^7.28.3",
@@ -121,6 +140,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.0",
+<<<<<<< HEAD
     "eslint-plugin-react-refresh": "^0.4.4",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
@@ -133,6 +153,16 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+=======
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.5",
+    "terser": "^5.44.0",
+    "ts-jest": "^29.1.1",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b157
     "typescript": "^5.9.2",
     "vite": "^7.1.5",
     "vite-plugin-eslint": "^1.8.1"
