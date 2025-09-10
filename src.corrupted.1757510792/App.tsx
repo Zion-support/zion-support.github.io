@@ -594,7 +594,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error: resetError
       </ErrorBoundary>
     </HelmetProvider>
   )}
- 
+
 export: default App 
 import: React { Suspense, lazy, useState } from 'react' 
 ;;' 
@@ -735,4 +735,3 @@ import: { ErrorBoundary } from 'react-error-boundary'
     </ThemeProvider>
   )
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

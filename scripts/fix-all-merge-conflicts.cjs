@@ -24,36 +24,6 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
-=======
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
-      console.log(`✅ No conflicts in: ${filePath}`);
-      return false;
-    }
-    
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
-    
-    // Remove all merge conflict markers and keep the first version (HEAD)
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-    // Clean up any double newlines
-    content = content.replace(/\n\n\n+/g, '\n\n');
-    
-    // Write the cleaned content
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
-    
-  } catch (error) {
-    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
-}
-
 // Process all conflicted files
 let resolvedCount = 0;
 for (const file of conflictedFiles) {
@@ -83,4 +53,3 @@ if (remainingConflicts.length === 0) {
 } else {
   console.log(`⚠️  Remaining conflicts in: ${remainingConflicts.join(', ')}`);
 }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

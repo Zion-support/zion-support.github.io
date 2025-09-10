@@ -65,8 +65,6 @@ const AffiliateDashboard: React.FC = () => {
       case 'pending': return 'bg-yellow-100 text-yellow-800';
       case 'paid': return 'bg-blue-100 text-blue-800';
       default: return 'bg-gray-100 text-gray-800';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/affiliate-dashboard.tsx
     }
   }
 
@@ -80,7 +78,6 @@ const AffiliateDashboard: React.FC = () => {
           <div className="text-center py-8">Loading affiliate dashboard...</div>
         </main>
       </Layout>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     );
   }
 
@@ -101,7 +98,6 @@ const AffiliateDashboard: React.FC = () => {
           <div className="bg-white rounded-lg shadow p-6">
             <h3 className="text-sm font-medium text-gray-500 mb-2">Total Earnings</h3>
             <p className="text-3xl font-bold text-green-600">${stats?.totalEarnings.toLocaleString()}</p>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/affiliate-dashboard.tsx
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
@@ -161,5 +157,3 @@ function Stat({ label, value }: { label: string, value: number | string }) {
 };
 
 export default AffiliateDashboard;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/affiliate-dashboard.tsx

@@ -1,5 +1,3 @@
->>>>>>> main
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 export interface InnovativeMicroSaasSolution {
   "id": string;
   name: string;
@@ -771,6 +769,3 @@ export const "innovativeMicroSaasSolutions2025": InnovativeMicroSaasSolution[] =
     "marketDisruption": 'Revolutionizes marketing with AI automation
 ];
 export default innovativeMicroSaasSolutions2025}}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

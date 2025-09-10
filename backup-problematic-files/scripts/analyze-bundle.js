@@ -17,4 +17,3 @@ module.exports = (nextConfig = {}) => {
             "analyzerPort": isServer ? 8888 : 8889,
             "openAnalyzer": true})
         )}
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
