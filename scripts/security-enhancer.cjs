@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-/**
- * Security Enhancer
- * Comprehensive security improvements for the Zion Tech Group website
- */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -298,9 +291,7 @@ class SecurityEnhancer {
             this.securityIssues.push({
               type: "environment",
               issue: `Potential secret exposure in ${envFile}` ,,
-}),,
->>>>>>> origin/automation-fixes
-}
+}),,}
 `;
 
     this.log('📊 Security report saved to security-report.json');
@@ -325,14 +316,6 @@ class SecurityEnhancer {
       if (process.env[varName]) {
         clientVars[varName] = process.env[varName];
       }
-<<<<<<< HEAD
-    });
-    
-    return clientVars;
-  }
-};
-`;
-
       fs.writeFileSync(path.join(this.projectRoot, 'utils/env-security.js'), envSecurityScript);
       this.log('✅ Environment security added');
       this.securityImprovements.push('Environment security');
@@ -497,4 +480,3 @@ if (require.main === module) {
   enhancer.run().catch(console.error),,
 }
 module.exports = SecurityEnhancer
->>>>>>> origin/automation-fixes

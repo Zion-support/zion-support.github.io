@@ -196,17 +196,6 @@ export default function ComprehensiveServicesOverview() {
     return service.price?.monthly || 0;
   };
 
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  const getServiceCurrency = (service: any) => {
-    if (typeof service.price === 'number') {
-      return service.currency || '$';
-    }
-    return service.price?.currency || '$';
-  };
-
   const getServicePricingModel = (service: any) => {
     if (typeof service.price === 'number') {
       return service.pricingModel || 'monthly';
@@ -219,9 +208,7 @@ export default function ComprehensiveServicesOverview() {
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx
 ========
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-<<<<<<< HEAD
+=======<<<<<<< HEAD
               <EnhancedSEO
           title="Comprehensive Services Overview | Zion Tech Group"
           description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."

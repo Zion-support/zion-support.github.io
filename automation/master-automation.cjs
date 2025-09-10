@@ -5,13 +5,6 @@ const { promisify } = require("util");
 
 const execAsync = promisify(exec);
 
-<<<<<<< HEAD
-class MasterAutomation {
-  constructor() {
-    this.logFile = path.join(__dirname, "logs", "master-automation.log");
-    this.pm2Processes = ["error-monitor", "lint-fixer", "build-monitor", "git-automation"];
-  }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -48,21 +41,9 @@ class MasterAutomation {}
         timeout: 30000,
         ...options}
 });
-
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
-<<<<<<< HEAD
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || "",
-        error: error.message
-      };
-    }
-  }
-
   async checkPM2Status() {
     try {
       const { stdout } = await this.runCommand("pm2 list --format json");
@@ -238,9 +219,7 @@ class MasterAutomation {}
     // Check if PM2 is running;
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {}
-      this.log('PM2 is not running, attempting to start processes...');
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-      await this.startPM2Processes();
+      this.log('PM2 is not running, attempting to start processes...');      await this.startPM2Processes();
       return;
     }
 
@@ -248,12 +227,6 @@ class MasterAutomation {}
     const processes = await this.getPM2Processes();
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
-
-<<<<<<< HEAD
-    if (runningProcesses < expectedProcesses) {
-      this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
-      await this.restartPM2Processes();
-    }
 
     this.log("Health check completed.");
   }
@@ -317,15 +290,10 @@ class MasterAutomation {}
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportFile}`);
     return report;
-<<<<<<< HEAD
-  }
-
   async generateReport() {
     return await this.monitorProcesses();
   }
@@ -417,53 +385,9 @@ if (require.main === module) {}
   switch (command) {}
     case 'start':
       automation.start().catch(error => {})
-        console.error('Master Automation "failed": ', error);
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        process.exit(1);
+        console.error('Master Automation "failed": ', error);        process.exit(1);
       });
       break;
-<<<<<<< HEAD
-    case "stop":
-      automation.stop().catch(error => {
-        console.error("Failed to stop Master Automation: ", error);
-=======
-    case 'stop':
-      automation.stop().catch(error => {})
-        console.error('Failed to stop Master "Automation": ', error);
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        process.exit(1);
-      });
-      break;
-<<<<<<< HEAD
-    case "restart":
-      automation.restartPM2Processes().catch(error => {
-        console.error("Failed to restart processes: ", error);
-=======
-    case 'restart':
-      automation.restartPM2Processes().catch(error => {})
-        console.error('Failed to restart "processes": ', error);
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        process.exit(1);
-      });
-      break;
-<<<<<<< HEAD
-    case "status":
-      automation.monitorProcesses().catch(error => {
-        console.error("Failed to get status: ", error);
-=======
-    case 'status':
-      automation.monitorProcesses().catch(error => {})
-        console.error('Failed to get "status": ', error);
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        process.exit(1);
-      });
-      break;
-    default: 
-      console.log('Usage: node master-automation.cjs [start|status]');
-      process.exit(1);
-  }
-}
-
 <<<<<<< HEAD
 module.exports = MasterAutomation;
 =======
@@ -475,4 +399,3 @@ module.exports = MasterAutomation;
   };
 };
 module.exports = MasterAutomation;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

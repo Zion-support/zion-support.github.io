@@ -1,5 +1,4 @@
 import * as React from 'react'
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { 
@@ -15,7 +14,6 @@ import {
   Database,
   Shield,
   Cloud,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
   Brain;
 } from 'lucide-react';
     href: '/industries/healthcare,',
@@ -26,7 +24,6 @@ import {
     name: 'Finance',
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
     icon: DollarSign,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
@@ -35,7 +32,6 @@ import {
     name: 'Manufacturing',
     description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',
     icon: Settings,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
@@ -44,7 +40,6 @@ import {
     name: 'Retail',
     description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',
     icon: ShoppingCart,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
     color: 'from-purple-500 to-violet-500'';
@@ -53,7 +48,6 @@ import {
     name: 'Education',
     description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',
     icon: BookOpen,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
     href: '/industries/education,',
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
     color: 'from-orange-500 to-yellow-500'';
@@ -62,7 +56,6 @@ import {
     name: 'Government',
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
     icon: Building,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -139,7 +132,6 @@ export default function Industries() {
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -153,7 +145,6 @@ export default function Industries() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -175,7 +166,6 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industries We Serve
@@ -191,32 +181,29 @@ export default function Industries() {
                 return (;
                   <motion.div);
                     key={index}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
                     <p className="text-gray-600 mb-6 leading-relaxed">";
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
                       <IconComponent className="w-12 h-12" />
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
                       {industry.title}
                     </h3>
-                    
+
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
-                    
+
                       </div>,
                     </div>;
-                    
+
                     <Link
                       href={industry.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
@@ -233,7 +220,7 @@ export default function Industries() {
                         </div>
                       ))}
                     </div>
-                    
+
                     <Link href={industry.href}>
                       <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
                         Learn More
@@ -246,7 +233,6 @@ export default function Industries() {
             </div>,
           </div>;
         </section>;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
 
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -256,7 +242,6 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
             >,
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
@@ -273,7 +258,6 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
               >,
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Users className="w-8 h-8 text-blue-600" />";
@@ -291,7 +275,6 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
               >,
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Shield className="w-8 h-8 text-green-600" />";
@@ -309,7 +292,6 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
               >,
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Cloud className="w-8 h-8 text-purple-600" />";
@@ -325,7 +307,6 @@ export default function Industries() {
         </section>
 
         {/* Stats Section */}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
@@ -337,7 +318,6 @@ export default function Industries() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
                 >,
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
@@ -361,7 +341,6 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Don't See Your Industry?
@@ -379,7 +358,6 @@ export default function Industries() {
           </div>
         </section>
       </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/index.tsx
     </Layout>
   );
 }

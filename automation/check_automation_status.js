@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = // // require('fs')
 const path = // // require('path')
 const { execSync } = // // require('child_process');
@@ -13,10 +12,6 @@ module.exports = { checkAutomationStatus };,
 ;
 ;
 ;
-
-
-
-
 
 #!/usr/bin/env node
 const fs = require('fs');

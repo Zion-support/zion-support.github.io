@@ -1,9 +1,6 @@
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;,},1000);,;,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 // Accessibility utilities
 
 }"`;
@@ -20,7 +17,6 @@ export const accessibilityUtils = {
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
 
     const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -49,9 +45,7 @@ export const accessibilityUtils = {
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
 
-    
     setTimeout(() => document.body.removeChild(announcement), 1000);
-
 
   // Skip links;
   createSkipLink: (targetId: string, text: string = 'Skip to main content') => {
@@ -70,17 +64,14 @@ export const accessibilityUtils = {
       z-index: 1000;,
   transition: top 0.3s;`;
     `;
-    
+
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
     });
-    
+
     skipLink.addEventListener('blur', () => {
       skipLink.style.top = '-40px';
-    
+
     return skipLink;
 
-
 export default accessibilityUtils;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/accessibility.ts
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/accessibility.ts

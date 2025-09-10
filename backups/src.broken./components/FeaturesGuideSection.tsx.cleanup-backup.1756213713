@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 export function FeaturesGuideSection() {
   const features = [
     {
@@ -51,21 +46,6 @@ export function FeaturesGuideSection() {
     </section>
   );
 }
-<<<<<<< HEAD
-=======
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Lock,
-  BarChart3,
-  Cpu
-} from 'lucide-react';
-
 interface Feature {
   id: string;
   title: string;
@@ -191,7 +171,4 @@ export const FeaturesGuideSection: React.FC = () => {
       </div>
     </section>
   );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+};=======
