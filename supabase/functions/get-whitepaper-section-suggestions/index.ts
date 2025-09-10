@@ -46,12 +46,12 @@ serve(async (req) => {
     });
 
     if (gptError) {
-      console.error("Error invoking zion-gpt for section suggestions:", gptError);
+      // console.error("Error invoking zion-gpt for section suggestions:", gptError);
       throw new Error(`Failed to get suggestions: ${gptError.message}`);
     }
 
     if (!gptData || !gptData.completion) {
-      console.error("Invalid response from zion-gpt for section suggestions:", gptData);
+      // console.error("Invalid response from zion-gpt for section suggestions:", gptData);
       throw new Error("Failed to get completion for suggestions from zion-gpt function.");
     }
 
@@ -63,7 +63,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in get-whitepaper-section-suggestions function:", error);
+    // console.error("Error in get-whitepaper-section-suggestions function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       {

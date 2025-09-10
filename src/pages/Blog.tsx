@@ -1,284 +1,398 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDebounce } from "@/hooks/useDebounce";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { OptimizedImage } from "@/components/ui/OptimizedImage";
-import { BlogPost } from "@/types/blog";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { Search } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { Search, 
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  Shield,
+  Cloud,
+  Brain,
+  BarChart3,
+  ShoppingCart,
+  BookOpen,
+  Rocket
+} from 'lucide-react';
 
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-
-// Categories for filtering
-const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-];
-
-export interface BlogProps {
-  posts?: BlogPost[];
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  authorAvatar: string;
+  publishDate: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
+  featured: boolean;
+  views: number;
+  likes: number;
 }
 
-export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
-  const query = useDebounce(searchQuery, 300);
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+interface Category {
+  name: string;
+  icon: any;
+  count: number;
+  color: string;
+}
 
-  // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
-    return () => {
-      setSearchQuery("");
-      setSelectedCategory("All Categories");
-      setPosts([...initialPosts]);
-    };
-  }, [router.asPath, initialPosts]);
+const categories: Category[] = [
+  { name: 'AI & Machine Learning', icon: Brain, count: 24, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Cloud & DevOps', icon: Cloud, count: 18, color: 'from-green-500 to-emerald-500' },
+  { name: 'Cybersecurity', icon: Shield, count: 15, color: 'from-red-500 to-pink-500' },
+  { name: 'Business Intelligence', icon: BarChart3, count: 12, color: 'from-purple-500 to-indigo-500' },
+  { name: 'Micro SaaS', icon: ShoppingCart, count: 9, color: 'from-orange-500 to-yellow-500' },
+  { name: 'Industry Insights', icon: TrendingUp, count: 21, color: 'from-teal-500 to-cyan-500' },
+  { name: 'Case Studies', icon: BookOpen, count: 16, color: 'from-pink-500 to-rose-500' },
+  { name: 'Technology Trends', icon: Rocket, count: 19, color: 'from-indigo-500 to-purple-500' }
+];
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
-  //   }, 120000); // every 2 minutes
-  //   return () => clearInterval(interval);
-  // }, []);
+const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'AI Autonomous Research: The Future of Knowledge Discovery',
+    excerpt: 'Discover how our revolutionary AI Autonomous Research Assistant is transforming how businesses gather, analyze, and synthesize information across multiple sources.',
+    content: 'Full article content here...',
+    author: 'Dr. Emily Watson',
+    authorAvatar: '/avatars/emily-watson.jpg',
+    publishDate: '2025-01-20',
+    readTime: '10 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Business Intelligence'],
+    image: '/blog/ai-autonomous-research.jpg',
+    featured: true,
+    views: 18250,
+    likes: 945
+  },
+  {
+    id: '2',
+    title: 'Revolutionizing Supply Chains with AI-Powered Optimization',
+    excerpt: 'Learn how AI Supply Chain Optimization is helping businesses predict demand, optimize inventory, and reduce costs with unprecedented accuracy.',
+    content: 'Full article content here...',
+    author: 'Marcus Rodriguez',
+    authorAvatar: '/avatars/marcus-rodriguez.jpg',
+    publishDate: '2025-01-18',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Supply Chain', 'Inventory Optimization', 'Demand Forecasting', 'Cost Reduction'],
+    image: '/blog/ai-supply-chain-optimization.jpg',
+    featured: true,
+    views: 16580,
+    likes: 823
+  },
+  {
+    id: '3',
+    title: 'AI Content Marketing Suite: The Complete Guide to Automated Content Creation',
+    excerpt: 'Explore how AI is revolutionizing content marketing with automated creation, optimization, and distribution for maximum engagement and ROI.',
+    content: 'Full article content here...',
+    author: 'Lisa Thompson',
+    authorAvatar: '/avatars/lisa-thompson.jpg',
+    publishDate: '2025-01-16',
+    readTime: '11 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Content', 'Content Marketing', 'Automation', 'ROI Optimization'],
+    image: '/blog/ai-content-marketing-suite.jpg',
+    featured: true,
+    views: 15230,
+    likes: 756
+  }
+];
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setIsLoading(true);
-      try {
-        const data: BlogPost[] = await fetchWithRetry(
-          `/api/blog?query=${encodeURIComponent(query)}`
-        );
-        setPosts(data);
-      } catch (err) {
-        logErrorToProduction('Failed to fetch blog posts', { data: err });
-      } finally {
-        setIsLoading(false);
-      }
-    };
+export default function Blog(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('date');
 
-    fetchPosts();
-  }, [query]);
-
-  // Filter blog posts based on selected category only.
-  // Search filtering is handled server-side.
-  const filteredPosts = posts.filter(post => {
-    const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory;
-
-    return matchesCategory;
+  // Filter posts based on search and category
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
   });
-  
-  // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured);
 
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts });
-  
+  // Sort posts
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    switch (sortBy) {
+      case 'date':
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      case 'views':
+        return b.views - a.views;
+      case 'likes':
+        return b.likes - a.likes;
+      case 'title':
+        return a.title.localeCompare(b.title);
+      default:
+        return 0;
+    }
+  });
+
   return (
-    <>
-      <SEO
-        title="Blog - Latest from Zion Tech Marketplace"
-        description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough."
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Blog - Zion Tech Group"
+        description="Stay updated with the latest insights in AI, technology, and digital transformation from Zion Tech Group's expert team."
       />
-      <main className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <h1>Blog</h1>
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Blog</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Insights, trends, and expert perspectives on AI, technology, and digital transformation
             </p>
-          </div>
-          
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0];
-            if (!featuredPost) return null;
-            
-            return (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <OptimizedImage
-                    src={featuredPost.featuredImage}
-                    alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.src = "/images/blog-placeholder.svg";
-                    }}
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {featuredPost.category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {featuredPost.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-                  <div className="flex items-center mb-6">
-                    <OptimizedImage
-                      src={featuredPost.author.avatarUrl}
-                      alt={featuredPost.author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
-                    />
-                    <div>
-                      <p className="text-white font-medium">{featuredPost.author.name}</p>
-                      <p className="text-sm text-zion-slate-light">
-                        {featuredPost.publishedDate} • {featuredPost.readTime}
-                      </p>
-                    </div>
-                  </div>
-                  <Button 
-                    asChild
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
-                  >
-                    <Link href={`/blog/${featuredPost.slug}`}>
-                      Read Article
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-            );
-          })()}
-        
-          {/* Filters and Search */}
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
-                <Input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
-                />
-              </div>
-              
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" aria-label="Filter by category">
-                  <SelectValue placeholder="Select Category" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {CATEGORIES.map((category) => (
-                    <SelectItem key={category} value={category} className="text-white">
-                      {category}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            {isLoading && (
-              <div className="text-center py-4 text-white">
-                Loading articles...
-              </div>
-            )}
-          </div>
+          </motion.div>
+        </div>
+      </section>
 
-          {/* Blog Posts Grid */}
-          {!isLoading && filteredPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <Card
+      {/* Search and Filters */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-4">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              >
+                <option value="all">All Categories</option>
+                {categories.map((category) => (
+                  <option key={category.name} value={category.name}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
+
+              {/* Sort */}
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              >
+                <option value="date">Latest</option>
+                <option value="views">Most Viewed</option>
+                <option value="likes">Most Liked</option>
+                <option value="title">Alphabetical</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Grid */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Explore Categories</h2>
+            <p className="text-gray-300">Discover insights in your area of interest</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
+            {categories.map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group cursor-pointer"
+                onClick={() => setSelectedCategory(category.name)}
+              >
+                <div className={`bg-gradient-to-br ${category.color} rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300`}>
+                  <category.icon className="w-8 h-8 text-white mx-auto mb-3" />
+                  <h3 className="text-white font-semibold mb-2">{category.name}</h3>
+                  <p className="text-white/80 text-sm">{category.count} articles</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Posts */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Latest Articles</h2>
+            <p className="text-gray-300">Stay ahead with our expert insights and analysis</p>
+          </motion.div>
+
+          {sortedPosts.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-medium text-gray-300 mb-2">No articles found</h3>
+              <p className="text-gray-400">Try adjusting your search terms or filters</p>
+            </motion.div>
+          ) : (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedPosts.map((post, index) => (
+                <motion.article
                   key={post.id}
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
                 >
-                  <Link href={`/blog/${post.slug}`} className="block group">
-                  <div className="aspect-[16/9] relative overflow-hidden">
-                    <OptimizedImage
-                      src={post.featuredImage}
-                      alt={post.featuredImageAlt || post.title}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <div className="text-xs text-zion-slate-light">
-                        {post.publishedDate} • {post.readTime}
-                      </div>
+                  {/* Featured Badge */}
+                  {post.featured && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Featured
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
+                  )}
+
+                  {/* Post Image */}
+                  <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Lightbulb className="w-16 h-16 text-cyan-400" />
+                    </div>
+                  </div>
+
+                  {/* Post Content */}
+                  <div className="p-6">
+                    {/* Category */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="text-gray-400 text-sm">{post.readTime}</span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-zion-slate-light mb-4 line-clamp-3">
+
+                    {/* Excerpt */}
+                    <p className="text-gray-300 mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center">
-                      <OptimizedImage
-                        src={post.author.avatarUrl}
-                        alt={post.author.name}
-                        className="w-8 h-8 rounded-full mr-2"
-                        onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
-                        }}
-                      />
-                      <span className="text-sm text-white">{post.author.name}</span>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="p-6 pt-0">
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
-                  </CardFooter>
-                  </Link>
-                </Card>
-              ))}
-            </div>
-          ) : null}
 
-          {/* No Results Message - Show only if not loading and no posts */}
-          {!isLoading && filteredPosts.length === 0 && (
-            <div className="text-center py-16">
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Clear all filters
-              </Button>
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.slice(0, 3).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Meta */}
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-2">
+                        <User className="w-4 h-4" />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-2">
+                        <TrendingUp className="w-4 h-4" />
+                        <span>{post.views.toLocaleString()} views</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Lightbulb className="w-4 h-4" />
+                        <span>{post.likes.toLocaleString()} likes</span>
+                      </div>
+                    </div>
+
+                    {/* Read More */}
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200 group-hover:translate-x-1"
+                    >
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+                </motion.article>
+              ))}
             </div>
           )}
         </div>
-      </main>
-    </>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get the latest insights and trends delivered to your inbox
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Subscribe
+              </button>
+            </div>
+            <p className="text-sm text-slate-400 mt-4">
+              No spam, unsubscribe at any time. We respect your privacy.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

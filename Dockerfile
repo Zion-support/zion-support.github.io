@@ -1,16 +1,13 @@
-# Dockerfile for Zion Tech Nexus Market
-# Build stage
-FROM node:20 AS builder
-WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
+FROM python:3.12-slim
 
-# Production stage
-FROM node:20-slim AS runner
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PORT=8000
+
 WORKDIR /app
-COPY --from=builder /app .
-ENV NODE_ENV=production
-EXPOSE 3000
-CMD ["npx", "next", "start", "-p", "3000"]
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+EXPOSE 8000
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

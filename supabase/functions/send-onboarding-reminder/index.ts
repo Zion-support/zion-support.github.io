@@ -126,7 +126,7 @@ serve(async (req: Request) => {
     );
     
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError);
+      // console.error("Failed to create notification:", notificationError);
     }
     
     return new Response(
@@ -140,7 +140,7 @@ serve(async (req: Request) => {
       }
     );
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     return new Response(
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
