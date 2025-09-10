@@ -1,7 +1,22 @@
+<<<<<<< HEAD:temp_backup/pages/Profile.tsx
 
 import React, { useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+=======
+import React from 'react';
+<<<<<<< HEAD
+import { useEffect } from 'react';
+=======
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+
+import React, { useEffect } from 'react';
+=======
+import { useEffect } from 'react';
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -83,7 +98,18 @@ export default function Profile() {
         </div>
       </div>
       <Footer />
+<<<<<<< HEAD
 
+=======
+=======
+      
+<<<<<<< HEAD:temp_backup/pages/Profile.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
 const Profile: React.FC = () => {
   return (
     <>
@@ -110,4 +136,20 @@ const Profile: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD:temp_backup/pages/Profile.tsx
 }
+=======
+};
+
+export default Profile;
+=======
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+    </>);
+}
+;
+export default Profile;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+>>>>>>> origin/backup-improvements-20250827-015311:src/pages/Profile.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createRoot } from 'react-dom/client'
 import App from './App'
 
@@ -24,6 +25,28 @@ const container = document.getElementById('root')
 if (container) {
   const root = createRoot(container)
   root.render(<App />)
+=======
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.js';
+import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+const rootElement = document.getElementById('root');
+
+if (rootElement) {
+  const root = createRoot(rootElement);
+  
+  const app = (
+    <React.StrictMode>
+      <Router>
+        <App />
+      </Router>
+    </React.StrictMode>
+  );
+
+  root.render(app);
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
 } else {
   console.error('Root element not found');
 }
