@@ -73,11 +73,11 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/Index')); // Pla
 const MicroSaaSProducts = React.lazy(() => import('./pages/Index')); // Placeholder
 
 // Import the new pages
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
-const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
-const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
-const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025.tsx'));
+const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const Zion2026ServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview2025'));
+const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const Sitemap = React.lazy(() => import('./pages/Index')); // Placeholder
 
 // Simple placeholder pages for missing ones
 const Signup = () => (
