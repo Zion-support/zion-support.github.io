@@ -22,7 +22,7 @@ export function getFeedback(): FeedbackEntry[] {
   }
 }
 
-export function saveFeedback(entry: Omit<FeedbackEntry, _'id' | 'createdAt'>): FeedbackEntry {
+export function saveFeedback(entry: Omit<FeedbackEntry, 'id' | 'createdAt'>): FeedbackEntry {
   const all = getFeedback();
   const newEntry: FeedbackEntry = {
     id: typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : Math.random().toString(36).slice(2),
@@ -36,7 +36,7 @@ export function saveFeedback(entry: Omit<FeedbackEntry, _'id' | 'createdAt'>): F
 
 import axios from 'axios';
 
-export async function postFeedback(entry: Omit<FeedbackEntry, _'id' | 'createdAt'>) {
+export async function postFeedback(entry: Omit<FeedbackEntry, 'id' | 'createdAt'>) {
   try {
     const res = await fetch('/api/feedback', {
       method: 'POST',
