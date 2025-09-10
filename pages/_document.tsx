@@ -21,5 +21,4 @@ export default function Document() {
       </body>
     </Html>
   );
->>>>>>> pr-12866
 }
