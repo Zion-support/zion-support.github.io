@@ -1,64 +1,54 @@
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-export interface KycDocumentMeta {
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
-  url: string;
-  uploadedAt: string;
-  status: 'pending' | 'approved' | 'rejected';
-}
+
 export interface KycProfile {
+  id: string;
   userId: string;
   role: KycRole;
-  fullLegalName?: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  country?: string;
-  dateOfBirth?: string;
-  documents: KycDocumentMeta[];
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
-  flags?: string[];
-  riskScore?: number;
+  status: KycStatus;
+  documents: KycDocument[];
+  verification: KycVerification;
   createdAt: string;
-  lastUpdatedAt: string;
-  auditTrail: Array<{
-    at: string;
-    by: string;
-    action: string;
-    details?: any
-  }>;
+  updatedAt: string;
 }
-export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'client') {
-    return ['government_id', 'proof_of_address'];
-  } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
-  }
+
+export interface KycDocument {
+  id: string;
+  type: 'passport' | 'drivers_license' | 'utility_bill' | 'bank_statement' | 'business_license';
+  url: string;
+  status: 'pending' | 'approved' | 'rejected';
+  uploadedAt: string;
 }
-export function getOptionalDocuments(role: KycRole): string[] {
-  if (role === 'client') {
-    return ['bank_statement', 'utility_bill'];
-  } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
-  }
+
+export interface KycVerification {
+  identity: boolean;
+  address: boolean;
+  business: boolean;
+  aml: boolean;
 }
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = [];
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
-  }
-  if (!profile.country) {
-    missing.push('country');
-  }
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
-  }
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
-  }
+
+export function createKycProfile(userId: string, role: KycRole): KycProfile {
   return {
-    ok: missing.length === 0
-    missing
-  }
+    id: `kyc_${Date.now()}`,
+    userId,
+    role,
+    status: 'not started',
+    documents: [],
+    verification: {
+      identity: false,
+      address: false,
+      business: false,
+      aml: false
+    },
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+}
+
+export function updateKycStatus(profile: KycProfile, status: KycStatus): KycProfile {
+  return {
+    ...profile,
+    status,
+    updatedAt: new Date().toISOString()
+  };
 }

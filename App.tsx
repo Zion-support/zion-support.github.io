@@ -1,100 +1,68 @@
-import React, { JSX } from 'react';
-<<<<<<< HEAD
+import React from 'react';
+import Header from './src/components/Header';
+import Footer from './src/components/Footer';
+import ServiceCard from './src/components/ServiceCard';
+import TestimonialCarousel from './src/components/TestimonialCarousel';
+import ContactSection from './src/components/ContactSection';
+import BenefitsSection from './src/components/BenefitsSection';
+import HowItWorksSection from './src/components/HowItWorksSection';
+import FaqSection from './src/components/FaqSection';
+import ChatAssistant from './src/components/ChatAssistant';
+import ScrollToTop from './src/components/ScrollToTop';
+import ParticleBackground from './src/components/ParticleBackground';
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const services: Service[] = [
-    {
-      title: 'Micro SaaS Products';
-      description: 'Innovative, focused software solutions for modern businesses',
-      icon: Code;
-      features: ['AI-Powered Video Clip Maker', 'Smart Contract Analyzer', 'Cybersecurity Threat Intelligence', 'Multi-Language Website Translator'],
-      href: '/micro-saas';
-      color: 'blue'
-    },
-    {
-      title: 'AI Services';
-      description: 'Advanced artificial intelligence solutions and automation';
-      icon: Cpu;
-      features: ['Autonomous AI Agents', 'AI-Powered Financial Trading', 'AI Legal Document Analysis', 'AI-Powered Voice Analytics'],
-      href: '/ai-services';
-      color: 'purple'
-    },
-    {
-      title: 'IT & Cloud Services';
-      description: 'Comprehensive IT solutions and cloud infrastructure';
-      icon: Cloud;
-      features: ['Quantum Computing Consulting', 'Blockchain & Web3 Solutions', 'DevSecOps & Security Automation', 'Enterprise Data Platform'],
-      href: '/it-services';
-      color: 'green'
-    },
-    {
-      title: 'Cybersecurity';
-      description: 'Advanced security solutions and threat protection';
-      icon: Shield;
-      features: ['Threat Intelligence', 'Security Audits', 'Penetration Testing', 'Compliance Management'],
-      href: '/cybersecurity';
-      color: 'red'
-    },
-    {
-      title: 'Performance Optimization';
-      description: 'Speed and efficiency improvements for your applications';
-      icon: Zap;
-      features: ['Performance Audits', 'Code Optimization', 'Database Tuning', 'Caching Strategies'],
-      href: '/performance';
-      color: 'yellow'
-    },
-    {
-      title: 'Enterprise Solutions';
-      description: 'Comprehensive business technology solutions';
-      icon: Building;
-      features: ['Custom Software Development', 'System Integration', 'Digital Transformation', 'Process Automation'],
-      href: '/enterprise';
-      color: 'indigo'
-    }
-  ];
-
-  const testimonials: Testimonial[] = [
-    {
-      name: 'Sarah Johnson';
-      company: 'TechCorp Inc.';
-      content: 'Zion Tech Group transformed our business with their AI-powered solutions. The results exceeded our expectations.';
-      rating: 5
-    },
-    {
-      name: 'Michael Chen';
-      company: 'StartupXYZ';
-      content: 'Their micro SaaS products helped us scale rapidly. The team is professional and innovative.';
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez';
-      company: 'Enterprise Solutions Ltd.';
-      content: 'Outstanding IT services and cloud solutions. They delivered on time and within budget.';
-      rating: 5
-    }
-  ];
-
-  const stats = null;
-    { label: 'Happy Clients', value: '500+', icon: Users }
-  ];
-
-  if (isLoading) {
-    return <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />;
-  }
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function App() {
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.',
+      icon: '🤖',
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.',
+      icon: '💻',
+      features: ['System Administration', 'Network Security', 'Cloud Migration', '24/7 Support'],
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
+      icon: '☁️',
+      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling'],
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
+      icon: '🔒',
+      features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
+      icon: '📊',
+      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
+      icon: '🚀',
+      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
+    },
+  ];
+
+  const handleMenuClick = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+export default function App(): JSX.Element {
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   return (
     <main>
-      <h1>Hello App</h1>
+
     </main>
   );
 }
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

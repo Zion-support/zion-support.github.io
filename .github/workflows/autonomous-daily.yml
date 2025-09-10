@@ -1,8 +1,8 @@
-name: Autonomous Daily Automation
+name: Autonomous Daily Automations
 
 on:
   schedule:
-    - cron: '15 3 * * *' # daily at 03:15 UTC
+    - cron: '17 3 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -13,25 +13,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  run-automation:
+  run-daily-automations:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+<<<<<<< HEAD
           ref: main
+=======
+>>>>>>> origin/feat/autonomy-advertise
           fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
+<<<<<<< HEAD
           node-version: '20.x'
+=======
+          node-version: '20'
+>>>>>>> origin/feat/autonomy-advertise
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
+<<<<<<< HEAD
       - name: Run comprehensive automations
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -65,3 +73,32 @@ jobs:
             git commit -m "chore(autonomous-daily): apply automated analyses & updates [skip ci]"
             git push origin HEAD:main
           fi
+=======
+      - name: Run content and design automations
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          APEX_DOMAIN: ${{ secrets.APEX_DOMAIN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          set -euo pipefail
+          npm run design:analyze || true
+          npm run homepage-promo:scan || true
+          npm run responsive:analyze || true
+          npm run variation:analyze || true
+          npm run venture:analyze || true
+          npm run feature-marketing:analyze || true
+          npm run alignment:scan || true
+          node automation/auto-changelog.cjs || true
+          node automation/auto-roadmap.cjs || true
+
+      - name: Auto-commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(automation): daily content/design/marketing updates'
+          commit_user_name: 'Zion Autonomy Bot'
+          commit_user_email: 'autonomy-bot@users.noreply.github.com'
+          branch: main
+        continue-on-error: true
+>>>>>>> origin/feat/autonomy-advertise

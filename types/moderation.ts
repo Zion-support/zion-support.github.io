@@ -1,26 +1,21 @@
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-export interface ModerationAction {
+export type AiScores = {;
+  toxicity: number, // 0-1;
+  nsfw: number, // 0-1;
+  scam: number, // 0-1;
+};
+export type FlaggedContent = {;
   id: string;
-  flagId: string;
-  action: ModerationStatus;
-  adminNotes?: string;
-  adminId: string;
-<<<<<<< HEAD
-  createdAt: string;
-=======
-  reason?: string;
-  createdAt: string
-}
-export interface ModerationFlag {
-  id: string;
-  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
-  content: string;
-  reporterId: string;
-  targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  contentType: ContentType;
+  contentId: string;
+  userId: string;
+  userEmail: string;
+  reason: string;
   status: ModerationStatus;
+  snippet: string, // small preview of content;
+  metadata?: Record<string, any>;
+  aiScores: AiScores;
   createdAt: string;
   updatedAt: string;
-  adminNotes?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-}
+  adminNotes?: string;
+};

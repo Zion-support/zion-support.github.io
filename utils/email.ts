@@ -1,26 +1,42 @@
-import fs from 'fs-extra';
-import path from 'path';
-export interface WarningEmailPayload {
-  toUserId: string;
-  toAddress?: string | null;
-  subject: string;
-  body: string;
-}
 export interface EmailOptions {
   to: string;
   subject: string;
-  body: string;
+  html: string;
+  text?: string;
 }
-export async function sendWarningEmail(
-  payload: WarningEmailPayload
-): Promise<void> {
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
-  await fs.ensureDir(logDir);
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress |'unknown'} subject=${payload.subject} body=${payload.body}\n`;
-  await fs.appendFile(logPath, line, 'utf8');
+  const logDir = path && path.resolve(process && process.cwd(), 'data/fraud');
+  const logPath = path && path.join(logDir, 'emails && emails.log');
+  await fs && fs.ensureDir(logDir);
+
+export interface EmailTemplate {
+  subject: string;
+  html: string;
+  text: string;
 }
-export async function sendEmail(options: EmailOptions): Promise<void> {
-  // Mock implementation - in production, this would send actual emails
-  console.log('Email would be sent:', options);
+
+export function createEmailTemplate(template: EmailTemplate, variables: Record<string, string>): EmailOptions {
+  let html = template.html;
+  let text = template.text;
+  let subject = template.subject;
+
+  // Replace variables in template
+  Object.entries(variables).forEach(([key, value]) => {
+    const regex = new RegExp(`{{${key}}}`, 'g');
+    html = html.replace(regex, value);
+    text = text.replace(regex, value);
+    subject = subject.replace(regex, value);
+  });
+
+  return {
+    to: variables.to || '',
+    subject,
+    html,
+    text
+  };
+}
+
+export function sendEmail(options: EmailOptions): Promise<boolean> {
+  // Mock implementation - in production, integrate with email service
+  console.log('Sending email:', options);
+  return Promise.resolve(true);
 }

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
@@ -45,6 +48,12 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -67,7 +76,8 @@ const talentFixed = talentContent
   .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">')
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
-
+const filesToFix = [
+  'components/ContactForm.tsx',
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -79,6 +89,12 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -92,7 +108,6 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
-
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -101,7 +116,7 @@ const authFixed = authContent
   .replace(/:src\/hooks\/useAuth\.tsx/g, '')
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
-
+console.log(`\n📊 Syntax fixing complete:`)) {
 ) {
     ) {
     if (processFile(file)) {
@@ -109,13 +124,18 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
   }
 }
 }
-
 if ( {
   ) {
      {
+  console.log('\n✅ All syntax errors have been fixed!')}} else {
+  console.log('\n✅ No syntax errors found!')}
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -157,3 +177,137 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
+=======
+const fs = require("fs");
+const path = require("path");
+function fixFile(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
+    let originalContent = content;
+
+    // Remove all duplicate export default function Page() declarations;
+    content = content.replace(
+      /export\s+default\s+function\s+Page\(\)\s*\{[\s\S]*?\}/g,
+      ''
+    );
+
+    // Remove all duplicate export function Page() declarations;
+    content = content.replace(
+      /export\s+function\s+Page\(\)\s*\{[\s\S]*?\}/g,
+      ''
+    );
+
+    // Fix malformed function declarations with imports inside;
+    content = content.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\)\s*\{\s*import\s+\{([^}]+)\}\s+from\s+['"`]([^'"`]+)['"`];/g,
+      "import { $2 } from '$3';"
+    );
+
+    // Fix malformed function declarations;
+    content = content.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\)\s*\{\s*import\s+\{/g,
+      'import {'
+    );
+    content = content.replace(
+      /export\s+function\s+(\w+)\s*\(\)\s*\{\s*import\s+\{/g,
+      'import {'
+    );
+
+    // Fix import statements with extra spaces;
+    content = content.replace(;
+      /import\s+\{\s*([^}]+)\s*\}\s+from\s+[""`]([^""`]+)[""`];/g,;
+      (match, imports, path) => {
+  const cleanImports = imports.replace(/\s+/g, ` `).trim();
+        return `import { ${cleanImports} } from `${path}`;`;}
+    );
+
+    // Fix import paths with spaces;
+    content = content.replace(
+      /from\s+['"`]\.\.\/data\s*\/\s*([^'"`]+)['"`]/g,
+      "from '../data/$1'"
+    );
+    content = content.replace(
+      /from\s+['"`]\.\.\/components\s*\/\s*([^'"`]+)['"`]/g,
+      "from '../components/$1'"
+    );
+
+    // Fix framer-motion imports;
+    content = content.replace(
+      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]framer\s*-\s*motion['"`]/g,
+      "import { $1 } from 'framer-motion'"
+    );
+
+    // Fix lucide-react imports;
+    content = content.replace(
+      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]lucide\s*-\s*react['"`]/g,
+      "import { $1 } from 'lucide-react'"
+    );
+
+    // Fix react-router-dom imports;
+    content = content.replace(
+      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]react\s*-\s*router\s*-\s*dom['"`]/g,
+      "import { $1 } from 'react-router-dom'"
+    );
+
+    // Fix React imports;
+    content = content.replace(
+      /import\s+React\s+from\s+['"`]react\.ts['"`]/g,
+      "import React from 'react'"
+    );
+
+    // Fix missing function declarations;
+    if (;
+      content.includes("import {") &&;
+      !content.includes("export default function") &&;
+      !content.includes("export function");
+    ) {
+  content = content.replace(;
+        /^\s*import\s+\{[^}]*\}\s+from\s+[""`][^""`]*[""`];\s*$/gm,;
+        match => {
+  return match + "\nexport default function Page() {";}
+      );}
+
+    // Fix missing closing braces;
+    if (content.includes("export default function") && !content.includes("}")) {
+  content += "\n}";}
+
+    // Fix JSX syntax issues;
+    content = content.replace(/return\s*\(/g, 'return (');
+    content = content.replace(/return\s*\{/g, 'return {');
+
+    // Remove empty lines and clean up;
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
+    if (content !== originalContent) {
+  fs.writeFileSync(filePath, content, `utf8`);
+      console.log(`Fixed: ${filePath}`);
+      return true;}
+    return false;} catch (error) {
+  console.error(`Error processing ${filePath }:`, error.message);
+    return false;}
+}
+
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  files.forEach(file => {
+  const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {
+  if (![`node_modules`, ".git", ".next", "out", "dist"].includes(file)) {
+  fixedCount += processDirectory(filePath);}
+    } else if (;
+      file.endsWith(".tsx") ||;
+      file.endsWith(".ts") ||;
+      file.endsWith(".jsx") ||;
+      file.endsWith(".js");
+    ) {
+  if (fixFile(filePath)) {
+  fixedCount++;}
+    }
+  });
+  return fixedCount;}
+
+console.log("Starting final comprehensive syntax fixes...");
+const fixedCount = processDirectory("./src');
+console.log(`Fixed ${fixedCount} files.`)}}}))
+>>>>>>> origin/automation-fixes

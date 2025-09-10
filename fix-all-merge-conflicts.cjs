@@ -1,89 +1,28 @@
-const fs = require('fs');
-const path = require('path');
-
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file has merge conflict markers
-    if (
-      content.includes('') ||
-      content.includes('') ||
-    ) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
-
-      // Remove merge conflict markers and keep the content after       const lines = content.split('\n');
-      let fixedLines = [];
-      let inConflict = false;
-      let keepContent = false;
-
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-
-        if (line.includes('')) {
-          inConflict = true;
-          keepContent = false;
-          continue;
-        }
-
-        if (line.includes('')) {
-    keepContent = true,
-    continue
-  }
-
-          inConflict = false;
-          keepContent = false;
-          continue;
-        }
-
-        if (!inConflict || keepContent) {
-          fixedLines.push(line);
-        }
-      }
-
-      fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixMergeConflicts(filePath)) fixedCount++;
-    }
-  }
-
-  return fixedCount;
-}
-
-console.log('Starting comprehensive merge conflict fixes...');
-const fixedCount = processDirectory('.');
-console.log(`Fixed ${fixedCount} files`);
 #!/usr/bin/env node;
+<<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+        if (!['node_modules', '.git', '.next', 'dist', 'build')]
+          const content = fs.readFileSync(filePath, 'utf8')
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')
+          // Skip files that can'
+      // Skip files/directories that can'
+  resolved = resolved.replace(/\n?/g, '')
+  resolved = resolved.replace(/\n?/g, '')
+  resolved = resolved.replace(/[a-f0-9]+\n?/g, '')
+  console.log(' Searching for files with merge conflicts...')
+  const filesWithConflicts = findFilesWithConflicts('.')
+// console.log(' No merge conflicts found!')
+  console.log('\n Resolving merge conflicts...')
+      const originalContent = fs.readFileSync(filePath, 'utf8')
+        fs.writeFileSync(filePath, resolvedContent, 'utf8')
+    console.log('\n✨ Merge conflicts resolved! You can now commit the changes.')
+=======
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class $1 {;
-  constructor() {;
+class $1 {
+  constructor() {
   this.projectRoot = process.cwd();
     this.fixedFiles = [];,
 }
@@ -91,7 +30,7 @@ class $1 {;
 function findFilesWithMergeConflicts(;
   dir,
   fileExtensions = [".tsx", ".ts", ".jsx", ".js"];
-) {;
+) {
   const files = [];
   log(message) {;
   console.log(`[${new Date().toISOString()}] ${message}`);,
@@ -99,10 +38,10 @@ function findFilesWithMergeConflicts(;
 
   getAllFiles(dir, extensions = [".tsx", ".ts", ".jsx", ".js"]) {;
   const files = [];
-    const scanDirectory = (currentDir) => {;
+    const scanDirectory = (currentDir) => {
   if (!fs.existsSync(currentDir)) return;
       const items = fs.readdirSync(currentDir);
-      items.forEach(item => {;
+      items.forEach(item => {
   const itemPath = path.join(currentDir, item);
         const stat = fs.statSync(itemPath);
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
@@ -120,14 +59,14 @@ function findFilesWithMergeConflicts(;
   this.log("Starting comprehensive merge conflict fix...");
     const allFiles = this.getAllFiles(this.projectRoot);
     let totalFixed = 0;
-    for (const file of allFiles) {;
-  try {;
+    for (const file of allFiles) {
+  try {
   let content = fs.readFileSync(file, "utf8");
         const originalContent = content;
         // Check if file has merge conflicts;
         if (content.includes("") || ;
             content.includes("") || ;
-            content.includes("            content.includes("cursor/automate-test-fix-improve-and-merge-code-99d1")) {;
+            content.includes("            content.includes("cursor/automate-test-fix-improve-and-merge-code-99d1")) {
   // Remove all merge conflict markers and their content;
           content = content.replace(/[\s\S]*?[\s\S]*?          content = content.replace(/[\s\S]*?          content = content.replace(/[\s\S]*?                    // Remove cursor merge conflict remnants;
           content = content.replace(/cursor\/automate-test-fix-improve-and-merge-code-99d1[\s\S]*?\n/g, "");
@@ -137,7 +76,7 @@ function findFilesWithMergeConflicts(;
           content = content.replace(/^\s*cursor.*$/gm, "");
           // Fix common syntax issues that might remain;
           content = this.fixCommonSyntaxIssues(content, file);
-          if (content !== originalContent) {;
+          if (content !== originalContent) {
   fs.writeFileSync(file, content);
             this.log(`Fixed merge conflicts in: ${file}`);
             this.fixedFiles.push(file);
@@ -156,11 +95,11 @@ function findFilesWithMergeConflicts(;
   fixCommonSyntaxIssues(content, filePath) {;
   const fileName = path.basename(filePath);
     // If it"s a React component and starts with merge conflict remnant, fix it;
-    if (content.startsWith("ursor") || content.startsWith("cursor")) {;
+    if (content.startsWith("ursor") || content.startsWith("cursor")) {
   const lines = content.split("\n");
       let cleanLines = [];
       let foundValidCode = false;
-      for (let i = 0; i < lines.length; i++) {;
+      for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
         // Skip lines that are clearly merge conflict remnants;
         if (line.includes("ursor") || line.includes("cursor/automate")) {;
@@ -189,11 +128,12 @@ function findFilesWithMergeConflicts(;
 } else if (;
         stat.isFile() &&;
         fileExtensions.some(ext => item.endsWith(ext));
-      ) {;
-  try {;
+      ) {
+  try {
   const content = fs.readFileSync(fullPath, "utf8");
           if (;
             content.includes("            content.includes("") ||;
+            content.includes(`>>>>>>>`);
           ) {;
   files.push(fullPath);,
 }
@@ -221,7 +161,7 @@ function findFilesWithMergeConflicts(;
       this.log("=== Merge Conflict Fix Summary ===");
       this.log(`Files processed: ${this.fixedFiles.length}`);
       this.log(`Total fixes applied: ${fixedCount}`);
-      if (this.fixedFiles.length > 0) {;
+      if (this.fixedFiles.length > 0) {
   this.log("Fixed files:");
         this.fixedFiles.forEach(file => {;
   this.log(`  - ${file}`);,
@@ -237,10 +177,10 @@ function findFilesWithMergeConflicts(;
 }
 
 // Run if this script is executed directly;
-if (require.main === module) {;
+if (require.main === module) {
   const fixer = new MergeConflictFixer();
   fixer.run();
-    .then(count => {;
+    .then(count => {
   console.log(`\n✅ Successfully fixed merge conflicts in ${count} files`);
       process.exit(0);,
 });
@@ -285,7 +225,7 @@ export default function App({ Component, pageProps }: AppProps) {;
 }`;
 // Create a simple _document.tsx;
 const simpleDocumentContent = `import { Html, Head, Main, NextScript  } from "next/document";
-export default function $1() {;
+export default function $1() {
   return (;
     <Html lang=en">;
       <Head>;
@@ -302,7 +242,7 @@ export default function $1() {;
 // Create a simple index.tsx;
 const simpleIndexContent = `import React from "react";
 import Head from "next/head";
-export default function Home() {;
+export default function Home() {
   return (;
     <>;
       <Head>;
@@ -326,7 +266,7 @@ export default function Home() {;
   );,
 }`;
 // Write the simple files;
-try {;
+try {
   fs.writeFileSync("pages/_app.tsx", simpleAppContent);
   fs.writeFileSync("pages/_document.tsx", simpleDocumentContent);
   fs.writeFileSync("pages/index.tsx", simpleIndexContent);
@@ -337,3 +277,4 @@ try {;
 
 console.log("\nCleanup script completed successfully!");
 console.log("You can now try running npm run build again.")}}})))))
+>>>>>>> origin/automation-fixes

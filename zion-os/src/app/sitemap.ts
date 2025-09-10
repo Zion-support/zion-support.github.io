@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
-export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';
+export default function sitemap(): MetadataRoute.Sitemap {;
+  const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
     '';
     '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech';
