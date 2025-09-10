@@ -6,7 +6,7 @@ export interface NextGenAIService {
   longDescription: string;
   icon: string;
   color: string;
-  category: 'ai' | 'machine-learning' | 'deep-learning' | 'nlp' | 'computer-vision' | 'autonomous-systems' | 'ai-ethics' | 'ai-research';
+  category: "ai" | "machine-learning" | "deep-learning" | "nlp" | "computer-vision" | "autonomous-systems" | "ai-ethics" | "ai-research";
   features: string[];
   benefits: string[];
   useCases: string[];

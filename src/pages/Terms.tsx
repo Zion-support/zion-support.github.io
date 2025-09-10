@@ -239,8 +239,3 @@ export default function Terms() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </div>
-    </>
-  );
-}

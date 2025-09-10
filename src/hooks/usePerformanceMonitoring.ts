@@ -24,22 +24,3 @@ export function usePerformanceMonitoring() {;
     );
       }
     };
-;
-    measurePerformance();
-    ;
-    return () => {;
-      measurePerformance();
-    };
-  }, []);
-;
-  return metrics};
-        })}    }
-;
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics)}, [])}
-;
-export function reportWebVitals(metric) {;';
-"';';

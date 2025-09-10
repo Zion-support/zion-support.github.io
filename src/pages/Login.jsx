@@ -27,34 +27,3 @@ export default function Login() {
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
       // The actual authentication state will update via useAuth's listeners,
-      // which should trigger the other useEffect.
-      navigate(location.pathname, { replace: true });
-    }
-  }, [location.search, location.pathname, navigate]);
-
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = location.state?.from?.pathname || '/dashboard';
-      navigate(next, { replace: true });
-    }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
-
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary fallback={<div>Something went wrong. Please try again.</div>}>
-        <LoginContent />
-      </ErrorBoundary>
-    );
-  }
-
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
-  }
-
-  // If authenticated and isLoading is false, the useEffect above should have navigated.
-  // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null;
-}

@@ -341,8 +341,3 @@ export default function Careers() {
               </Button>
             </div>
           </motion.div>
-        </div>
-      </div>
-    </>
-  );
-}

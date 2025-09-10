@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const SolutionsPage: React.FC = () => {
   const solutions = [
     {
@@ -44,11 +43,3 @@ const SolutionsPage: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export { SolutionsPage };
-export default SolutionsPage;

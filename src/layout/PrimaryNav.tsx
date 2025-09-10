@@ -54,36 +54,3 @@ export default function PrimaryNav() {
             placeholder="Search products, docs, or pages..."
           />
         </div>
-
-        {/* User Menu - hidden on mobile, shown on desktop */}
-        <div className="hidden md:block order-3 flex-shrink-0">
-          <UserMenu />
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden order-3 p-2 rounded-md hover:bg-accent"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-primary/20 bg-card">
-          <div className="container px-4 py-4 space-y-4">
-            <ResponsiveNavigation />
-            <SearchBar
-              onSearch={handleSearch}
-              onSelectSuggestion={handleSuggestionSelect}
-              placeholder="Search..."
-            />
-            <UserMenu />
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}

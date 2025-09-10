@@ -18,24 +18,3 @@ export default function Home() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Leading provider of AI, automation, and technology solutions for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/services" 
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Our Services
-              </Link>
-              <Link 
-                href="/contact" 
-                className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-}

@@ -4,9 +4,9 @@ interface Toast {
   id: string;
   title?: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success';
+  variant?: "default" | "destructive" | "success";
   duration?: number
-}
+
 ;
 export function useToast(...args[]):  {
 
@@ -20,44 +20,3 @@ export function useToast(...args[]):  {
     setToasts(prev => [...prev, newToast]);
 
     if (duration > 0) {
-
-      setTimeout(() => {
-        setToasts(prev => prev.filter(toast => toast.id !== id))}, duration)}
-
-    return id}, []);
-
-:src/hooks/use-toast.tsx
-  
-    setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
-
-  
-    setToasts([])}, []);
-  
-    setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
-
-  
-    setToasts([])}, []);
-
-  return {
-
-    toasts,
-    toast,
-    dismiss,
-:src/hooks/use-toast.tsx
-    dismissAll'
-  // // // // // // // // }}}
-
-// Export a default toast function for backward compatibility'
-export 
-  // In a real implementation, this would dispatch to a global toast system;
-  // };
-'
-    dismissAll
-  // // // // // // // }}}
-
-// Export a default toast function for backward compatibility
-export 
-  // In a real implementation, this would dispatch to a global toast system;
-  };
-
-</any>

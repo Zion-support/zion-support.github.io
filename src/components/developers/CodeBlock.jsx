@@ -18,9 +18,3 @@ export default function CodeBlock("props": "any) {;
           Copy
         </button>
       </div>
-      <pre className="text-sm text-gray-100">
-        <code>{text}</code>
-      </pre>
-    </div>
-    );
-}

@@ -111,16 +111,3 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
             </div>;
             <p className="text-sm text-gray-600 mt-1">{check.message}</p>;
           </div>;
-        ))}
-      </div>;
-    </div>;
-  );
-      </div>
-    </div>
-    );
-};
-;
-export default SecurityAudit;
-;
-</any>;
-</SecurityCheck>

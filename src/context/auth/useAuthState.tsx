@@ -22,12 +22,3 @@ interface User {
     };
     checkAuthState()}, []);
   return {;
-    user,
-    setUser,
-    isLoading,
-    setIsLoading,
-    onboardingStep,
-    setOnboardingStep,
-    tokens,
-    setTokens;
-}};

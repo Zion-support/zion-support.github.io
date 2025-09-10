@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const ServicesPage: React.FC = () => {
   const services = [
     {
@@ -52,10 +51,3 @@ const ServicesPage: React.FC = () => {
               <p className="text-gray-300">{service.description}</p>
             </div>
           ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ServicesPage;

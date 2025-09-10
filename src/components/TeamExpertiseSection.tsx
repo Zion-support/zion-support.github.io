@@ -108,37 +108,3 @@ function TeamExpertiseSection("props": "any) {];
             </div>;
           </div>;
         </motion.div>;}}
-        >"
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Work with Experts?
-            "
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our certified professionals are ready to bring their expertise
-              to your project and help you achieve exceptional results.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Schedule Consultation"
-                <Rocket className="ml-2 h-5 w-5"   />
-              </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-blue-600 rounded-lg font-medium transition-colors duration-200">
-                View Team Profiles"
-                <Users className="ml-2 h-5 w-5"   />              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;) "};
-;
-export default TeamExpertiseSection;";
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default TeamExpertiseSection;
-export default TeamExpertiseSection;
-'";
-</motion>;
-</motion>;
-</motion>

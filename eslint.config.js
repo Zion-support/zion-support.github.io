@@ -51,4 +51,3 @@ export default [
       'no-var': 'error'
     }
   }
-];

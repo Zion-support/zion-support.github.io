@@ -6,7 +6,7 @@ export interface IndustrySolution {
   longDescription: string;
   icon: string;
   color: string;
-  industry: 'healthcare' | 'finance' | 'manufacturing' | 'retail' | 'education' | 'government' | 'energy' | 'transportation' | 'real-estate' | 'media' | 'logistics' | 'telecommunications';
+  industry: "healthcare" | "finance" | "manufacturing" | "retail" | "education" | "government" | "energy" | "transportation" | "real-estate" | "media" | "logistics" | "telecommunications";
   features: string[];
   benefits: string[];
   useCases: string[];
