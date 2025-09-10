@@ -1,7 +1,6 @@
 [build]
   publish = "dist"
   command = "npm ci && npm run build"
-  # Explicitly specify this is a Vite build, not Next.js
   framework = "vite"
 
 # Disable automatic framework detection
