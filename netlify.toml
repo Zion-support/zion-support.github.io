@@ -13,20 +13,9 @@
   NODE_ENV = "production"
 >>>>>>> origin/automation/changelog
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-<<<<<<< HEAD
-[functions]
-  directory = "netlify/functions"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-=======
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
+# API functions (if needed)
+# [functions]
+# directory = "netlify/functions"
 
 # Static redirects for exported site
 [[redirects]]
