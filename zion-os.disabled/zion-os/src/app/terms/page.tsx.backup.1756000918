@@ -1,37 +1,10 @@
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Terms of Service - Zion Tech Group',
-  description: 'Zion Tech Group Terms of Service - Read our terms and conditions for using our AI-powered technology solutions.',
-=======
-import Link from "next/link";
-
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
   description: "Zion Tech Group's terms of service outlining the rules and guidelines for using our services and platforms.",
-  keywords: "terms of service, terms and conditions, service agreement, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-};
+  keywords: "terms of service, terms and conditions, service agreement, Zion Tech Group",};
 
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          <p className="text-gray-600 mb-6">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-          
-          <div className="prose prose-lg max-w-none">
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
-              <p className="text-gray-600 mb-4">
-                By accessing and using the services provided by Zion Tech Group ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement.
-              </p>
-              <p className="text-gray-600">
-                If you do not agree to abide by the above, please do not use this service.
-              </p>
-            </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
               <p className="text-gray-600 mb-4">
@@ -568,9 +541,7 @@ export default function TermsPage() {
               Contact Us
             </Link>
           </div>
-        </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-ef5f
-      </div>
+        </section>      </div>
     </div>
   );
 }

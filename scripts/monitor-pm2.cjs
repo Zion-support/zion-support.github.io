@@ -10,81 +10,13 @@ class PM2Monitor {
   constructor() {
     this.logsDir = "./logs";
     this.interval = 5000; // 5 seconds;
-<<<<<<< HEAD
-    this.isRunning = false,}
-const { exec } = require("$1");
-const fs = require("$1");
-const path = require("path")";class PM2Monitor {;
-  constructor() {;
-=======
-    this.isRunning = false,,
-}
-const { exec } = require("fs")
-const fs = require("fs")
-const path = require("path")";class PM2Monitor {
-  constructor() {
->>>>>>> origin/automation-fixes
-    this.logsDir = "./logs";    this.interval = 5000; // 5 seconds;    this.isRunning = false}
-
   // Get PM2 status;
-<<<<<<< HEAD
-  async getStatus() {;
-    return new Promise((resolve, reject) => {;
-      exec("pm2 status --no-daemon", (error, stdout, stderr) => {;
-        if (error) {;
-          reject(error);
-          return,}
-        resolve(stdout),}),}),}
-;
-  // Get PM2 logs for a specific process;
-  async getLogs(processName, lines = 10) {;
-    return new Promise((resolve, reject) => {;
-      exec(pm2 logs ${processName} --lines ${lines} --nostream",
-        (error, stdout, stderr) => {;
-          if (error) {;
-      exec(pm2 logs ${processName} --lines ${lines} --nostream", ";        (error, stdout, stderr) => {          if (error) {;
-            reject(error);
-=======
-  async getStatus() {
-    return new Promise((resolve, reject) => {
-      exec("pm2 status --no-daemon", (error, stdout, stderr) => {
-        if (error) {
-          reject(error)
-          return,,
-}
-        resolve(stdout),,
-}),,
-}),,
-}
-  // Get PM2 logs for a specific process;
-  async getLogs(processName, lines = 10) {
-    return new Promise((resolve, reject) => {
-      exec(pm2 logs ${processName} --lines ${lines} --nostream",
-        (error, stdout, stderr) => {
-          if (error) {
-      exec(pm2 logs ${processName} --lines ${lines} --nostream",";        (error, stdout, stderr) => {          if (error) {
-            reject(error)
->>>>>>> origin/automation-fixes
-            return}
-          resolve(stdout)}
-      )})}
-
   // Get system information;
   async getSystemInfo() {
     return new Promise((resolve, reject) => {
       exec("pm2 monit --no-daemon", (error, stdout, stderr) => {";        if (error) {          reject(error);
           return}
         resolve(stdout)})})}
-<<<<<<< HEAD
-;
-  // Create logs directory if it doesn"t exist";  ensureLogsDir() {    if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { ""recursive": true })}
-=======
-  // Create logs directory if it doesn"t exist";  ensureLogsDir() {    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { "recursive: true }),}
->>>>>>> origin/automation-fixes
-  }
-
   // Get system information;
 <<<<<<< HEAD
   async getSystemInfo() {;
@@ -116,65 +48,13 @@ const path = require("path")";class PM2Monitor {
     if (!fs.existsSync(this.logsDir)) {
       fs.mkdirSync(this.logsDir, { recursive: true })}
   }
-}
->>>>>>> origin/automation-fixes
-  // Parse PM2 status output;
+}  // Parse PM2 status output;
   parseStatus(statusOutput) {
     const lines = statusOutput.split("\n");
     const processes = [];
     for (const line of lines) {
       if (line.includes("│") && !line.includes("──") && !line.includes("id")) {
         const parts = line;
-<<<<<<< HEAD
-          .split("│");
-          .map(part => part.trim());
-          .filter(part => part);
-        if (parts.length >= 6) {;
-          processes.push({;
-            "id": parts[0],
-            "name": parts[1],
-            "mode": parts[2],
-            "restarts": parts[3],
-            "status": parts[4],
-            "cpu": parts[5],
-            "memory": parts[6] || "N/A",,}),}
-      }
-    }
-;
-    return processes,}
-    const lines = statusOutput.split("\n");    const processes = [];
-    for (const line of lines) {;
-      if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")";          .map(part => part.trim());          .filter(part => part);
-        if (parts.length >= 6) {;
-          processes.push({);            "id": parts[0],            name": parts[1],";            "mode": parts[2],"""restarts": parts[3],            "status": parts[4],            cpu": parts[5],";            "memory": parts[6] || "N/A", "}),"}
-=======
-          .split("│")
-          .map(part => part.trim())
-          .filter(part => part)
-        if (parts.length >= 6) {
-          processes.push({
-            id: parts[0],
-            name: parts[1],
-            mode: parts[2],
-            restarts: parts[3],
-            status: parts[4],
-            cpu: parts[5],
-            memory: parts[6] || "N/A",,,
-}),,
-}
-      }
-    }
-    return processes,,
-}
-    const lines = statusOutput.split("\n")    const processes = []
-    for (const line of lines) {
-      if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")";          .map(part => part.trim())          .filter(part => part)
-        if (parts.length >= 6) {
-          processes.push({)            "id": parts[0],            name": parts[1],";            mode: parts[2],""restarts: parts[3],            "status": parts[4],            cpu": parts[5],";            memory: parts[6] || "N/A","}),"}
->>>>>>> origin/automation-fixes
-      }
-    }
-
     return processes}
 
   // Generate summary statistics;
@@ -227,9 +107,7 @@ const path = require("path")";class PM2Monitor {
       summary.averageMemory = summary.totalMemory / memoryValues.length,,
 }
     return summary,,
-}
->>>>>>> origin/automation-fixes
-  // Parse memory string to bytes;
+}  // Parse memory string to bytes;
   parseMemory(memoryStr) {
     const match = memoryStr.match(/(\d+(?:\.\d+)?)\s*(mb|kb|b)/i);
     if (!match) return 0;
@@ -242,17 +120,6 @@ const path = require("path")";class PM2Monitor {
         return value * 1024;
       case "b":;
         return value;
-<<<<<<< HEAD
-      "default": ;
-        return 0,}
-=======
-      default:;
-        return 0,,
-}
->>>>>>> origin/automation-fixes
-      case "mb":";        return value * 1024 * 1024;      case "kb":";        return value * 1024;      case "b":";        return value;      "default":;        return 0}
-  }
-
   // Start monitoring;
 <<<<<<< HEAD
   start() {;
@@ -272,67 +139,9 @@ const path = require("path")";class PM2Monitor {
     console.log("🚀 Starting PM2 Monitoring Dashboard...")
     console.log("Press Ctrl+C to stop\n")
     this.monitor(),,
-}
->>>>>>> origin/automation-fixes
-  // Stop monitoring;
+}  // Stop monitoring;
   stop() {
     this.isRunning = false;
-<<<<<<< HEAD
-    process.exit(0),}
-        process.exit(0),"}
-;
-  // Main monitoring loop;
-  async monitor() {;
-    while (this.isRunning) {;
-      try {;
-        console.clear();
-        );
-        .toLocaleString()}\n`);
-        // Get and display status;
-        const status = await this.getStatus();
-        // Generate and display summary;
-        const summary = this.generateSummary(status);
-        ).toFixed(2)} MB");
-        ).toFixed(2)} MB");
-        // Check for issues;
-        if (summary.errored > 0) {;
-          ,}
-;
-        if (summary.totalRestarts > 50) {;
-          ,}
-;
-                ).toFixed(2)} MB");");");";        ");";          "   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"");
-        // Check for issues;
-        if (summary.errored > 0) {;
-          }";
-        if (summary.totalRestarts > 50) {;
-          }";
-=======
-    console.log("\n🛑 Monitoring stopped")
-    process.exit(0),,
-}
-    console.log("\n🛑 Monitoring stopped")    process.exit(0),"}
-  // Main monitoring loop;
-  async monitor() {
-    while (this.isRunning) {
-      try {
-        console.clear();
-        console.log("📊 PM2 Monitoring Dashboard - Zion Application");
-        console.log("=".repeat(60));
-        console.log(`⏰ Last Updated: ${new Date().toLocaleString()}\n`);
-        // Get and display status;
-        const status = await this.getStatus();
-        console.log(status);
-        // Generate and display summary;
-        const summary = this.generateSummary(status);
-        console.log("\n📈 Summary Statistics:");console.log(`   Total Processes: ${summary.total}`);console.log(`   Online: ${summary.online} ✅`);console.log(`   Errored: ${summary.errored} ❌`);console.log(`   Stopped: ${summary.stopped} ⏸️`);console.log(`   Launching: ${summary.launching} 🔄`);console.log(`   Total Restarts: ${summary.totalRestarts}");
-        console.log(   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");
-        console.log(;
-          `   Total Memory: ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB`);
-        // Check for issues;
-        if (summary.errored > 0) {
-          console.log("\n⚠️  WARNING: Some processes are in error state!")}
-
         if (summary.totalRestarts > 50) {
           console.log("\n⚠️  WARNING: High number of restarts detected!")}
 
@@ -341,25 +150,9 @@ const path = require("path")";class PM2Monitor {
         if (summary.errored > 0) {
           console.log("\n⚠️  "WARNING: Some processes are in error state!")}";
         if (summary.totalRestarts > 50) {
-          console.log("\n⚠️  WARNING": High number of restarts detected!")}";
->>>>>>> origin/automation-fixes
-        // Generate report;
+          console.log("\n⚠️  WARNING": High number of restarts detected!")}";        // Generate report;
         await this.generateReport();
         // Wait for next update;
-<<<<<<< HEAD
-        await this.sleep(this.interval),} catch (error) {;
-        console.error("Error in monitoring "loop": ", error);
-        await this.sleep(this.interval),}
-=======
-        await this.sleep(this.interval),,
-} catch (error) {
-        console.error("Error in monitoring loop: ", error)
-        await this.sleep(this.interval),,
-}
->>>>>>> origin/automation-fixes
-    }
-  }
-
   // Utility function to sleep;
 <<<<<<< HEAD
   sleep(ms) {;
@@ -387,9 +180,7 @@ Examples:;
   node scripts/monitor-pm2.js status;
   node scripts/monitor-pm2.js logs console-error-fixer;
   node scripts/monitor-pm2.js report),,
-}
->>>>>>> origin/automation-fixes
-}
+}}
 
 // Main execution;
 async function main() {
@@ -399,23 +190,6 @@ async function main() {
     return new Promise(resolve => setTimeout(resolve, ms))}
 
   // Display help information;
-<<<<<<< HEAD
-  showHelp() {;
-    ""Commands": ;  start     - Start monitoring dashboard;
-=======
-  showHelp() {
-    console.log("";PM2 Monitoring Dashboard - Usage)"Commands:;  start     - Start monitoring dashboard;
->>>>>>> origin/automation-fixes
-  status    - Show current PM2 status;
-  logs <name> - Show logs for specific process;
-  report    - Generate status report;
-  help      - Show this help message;
-"Examples":;";  node scripts/monitor-pm2.js start;
-  node scripts/monitor-pm2.js status;
-  node scripts/monitor-pm2.js logs console-error-fixer;
-  node scripts/monitor-pm2.js report)}
-}
-
 // Main execution;
 async function main() {
   const monitor = new PM2Monitor();
@@ -455,9 +229,7 @@ async function main() {
       break;
     case "report":;
       const report = await monitor.generateReport()
-      console.log(JSON.stringify(report, null, 2))
->>>>>>> origin/automation-fixes
-      break;
+      console.log(JSON.stringify(report, null, 2))      break;
     case "help":;
       monitor.showHelp();
       break;
@@ -571,4 +343,3 @@ if (require.main === module) {
   main().catch(console.error),,
 }
 module.exports = PM2Monitor
->>>>>>> origin/automation-fixes

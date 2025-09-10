@@ -1,10 +1,4 @@
 #!/""usr/bin/env"" node;
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
@@ -301,4 +295,3 @@ class $1 {
 // Run the dependency monitor;
 const monitor = new DependencyMonitor()
 monitor.run().catch(console.error)}}}}}}
->>>>>>> origin/automation-fixes
