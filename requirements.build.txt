@@ -1,0 +1,8 @@
+django>=4.2
+sendgrid>=6.8
+django-sendgrid-v5>=1.2
+python-json-logger>=2.0
+prometheus_client>=0.20
+celery>=5.3
+djangorestframework>=3.14.0
+drf-yasg>=1.21.0

@@ -4,10 +4,10 @@ node_modules/
 .pnp.js
 
 # Production builds
+dist/
+build/
 .next/
 out/
-build/
-dist/
 
 # Environment files
 .env
@@ -59,9 +59,6 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -71,6 +68,7 @@ jspm_packages/
 
 # Nuxt.js build / generate output
 .nuxt
+dist
 
 # Gatsby files
 .cache/
@@ -100,18 +98,17 @@ temp/
 ehthumbs.db
 Thumbs.db
 
-# Automation and scripts
-automation/
-scripts/
-*.sh
-*.cjs
-*.mjs
+# Package manager lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Reports and documentation
-*.md
-*.txt
-*.report
+# Generated files
+*.generated.*
+*.min.js
+*.min.css
 
-# YAML files (GitHub Actions workflows)
-*.yml
-*.yaml
+# Test files
+test-results/
+playwright-report/
+coverage/
