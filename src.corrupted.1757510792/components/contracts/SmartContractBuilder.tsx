@@ -20,7 +20,6 @@ interface SmartContractBuilderProps {
 }
 
 export function SmartContractBuilder({
->>>>>>> origin/automation/changelog
   isOpen,
   onClose,
   talent,
@@ -39,7 +38,7 @@ export function SmartContractBuilder({
   }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
-  
+
   const { deploySmartContract } = useSmartContracts(),
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
@@ -47,14 +46,14 @@ export function SmartContractBuilder({
   },
 
   // Convert ContractFormValues to contract content string
-  
+
   const handleDeployContract = async () => {
     if (!generatedContract) return,
-    
+
     try {
       setDeployStatus('deploying'),
       const contractInfo = await deploySmartContract(generatedContract, deployOptions),
-      
+
       if (contractInfo) {
         setDeploymentInfo(contractInfo),
         setDeployStatus('deployed'),
@@ -113,14 +112,14 @@ export function SmartContractBuilder({;
   };
 
   // Convert ContractFormValues to contract content string
-  
+
   const handleDeployContract = async () => {
     if (!generatedContract) return;
-    
+
     try {
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
-      
+
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
@@ -158,7 +157,7 @@ export function SmartContractBuilder({;
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
+
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -171,7 +170,7 @@ export function SmartContractBuilder({;
               </Button>
             </div>
           </div>
-          
+
           <TabsContent value="form" className="pt-4">
             <ContractForm 
     setGeneratedContract(contract);
@@ -210,7 +209,7 @@ export function SmartContractBuilder({;
               onContractGenerated={handleFormSubmit}
             />
           </TabsContent>
-          
+
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -220,7 +219,7 @@ export function SmartContractBuilder({;
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
                 />
-                
+
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
@@ -245,10 +244,7 @@ export function SmartContractBuilder({;
       </DialogContent>;
     </Dialog>;
   )}
-=======
 import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function SmartContractBuilder(props: any) {return ( <div className="min-h-screen bg-white"> <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">SmartContractBuilder</h1> <p className="text-gray-300 text-lg"> Professional SmartContractBuilder services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
->>>>>>> origin/automation-improvements
-=======
         />
       </DialogContent>
     </Dialog>

@@ -1,61 +1,10 @@
-<<<<<<< HEAD:src/components/governance/ProposalCard.tsx
-=======
-<<<<<<< HEAD
-=======
-import React from 'react';
-interface Proposal {;
-  "id": "string;
-  "title": string;
-  "description": string;
-  "status": 'active' | 'passed' | 'rejected' | 'expired';
-  "votesFor": number;
-  "votesAgainst": number;
-  "totalVotes": number;
-  "endDate": string;
-  "proposer": string;
-  "category": string;
-"}
-;
-interface ProposalCardProps {;
-  "proposal": "Proposa l;
-  onVote?: ("proposalId": string", "vote": 'for' | 'against') => void;
-  canVote?: "boolean;
-;
-"}
-;
-const "ProposalCard": "React.FC<ProposalCardProps> = ({;
-  proposal",;
-  onVote,;
-  canVote = false;
-}) => {;
-  const getStatusColor = ("props": "any) => {;
-    switch (status) {;
-<<<<<<< HEAD:backup-merge-conflicts/ProposalCard.tsx.backup
-      case 'active':;
-=======
-  "id": string;
-  title: string;';
-  description: string;';';
-  status: 'active' | 'passed' | 'rejected' | 'expired';
-  votesFor: number;
-  votesAgainst: number;
-  totalVotes: number;
-  endDate: string;
-  proposer: string;
-  category: string;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 interface ProposalCardProps {
 ';
   proposal: Proposa l;';';
 =======
 ;
 =======
-      case 'active':;;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/governance/ProposalCard.tsx
-interface ProposalCardProps {;
+      case 'active':;;interface ProposalCardProps {;
   proposal: Proposa l;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   onVote?: (proposalId: string, vote: 'for' | 'against') => void;
@@ -66,96 +15,11 @@ interface ProposalCardProps {
 >>>>>>> main
   canVote?: boolean;
 }
-<<<<<<< HEAD:backup-merge-conflicts/ProposalCard.tsx.backup
-<<<<<<< HEAD
-
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/governance/ProposalCard.tsx
-const ProposalCard: React.FC<ProposalCardProps> = ({ 
+=======const ProposalCard: React.FC<ProposalCardProps> = ({ 
   proposal, 
   onVote, 
   canVote = false 
 }) => {
-<<<<<<< HEAD
-  const getStatusColor = (props: any) => {';
-    switch (status) {';';
-      case 'active':';';
-        return 'bg-green-100 text-green-800';';';
-      case 'passed':';';
-        return 'bg-blue-100 text-blue-800';';';
-      case 'rejected':';';
-        return 'bg-red-100 text-red-800';';';
-      case 'expired':';';
-<<<<<<< HEAD:backup-merge-conflicts/ProposalCard.tsx.backup
-        return 'bg-gray-100 text-gray-800';';';
-=======
-;
-const ProposalCard: React.FC<ProposalCardProps> = ({;
-  proposal,;
-  onVote,;
-  canVote = false;
-}) => {;
-  const getStatusColor = (props: any) => {;
-    switch (status) {;
-      case 'active':;
-=======
-  const getStatusColor = (props: any) => {
-=======
-const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
-  proposal,
-  onVote,
-  canVote = false
-};) => {
-  const getStatusColor = (props) => {
->>>>>>> main
->>>>>>> main:src_backup_temp/components/governance/ProposalCard.tsx
-    switch (status) {
-      case 'active':';
->>>>>>> main
->>>>>>> main
-        return 'bg-green-100 text-green-800';
-      case 'passed':';
-        return 'bg-blue-100 text-blue-800';
-      case 'rejected':';
-        return 'bg-red-100 text-red-800';
-      case 'expired':';
-        return 'bg-gray-100 text-gray-800';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-      default: retur n 'bg-gray-100 text-gray-800';
-    }
-=======
-      "default": retur n 'bg-gray-100 text-gray-800';
-<<<<<<< HEAD
-    "}
->>>>>>> main
-  };
-;
-  const getVotePercentage = ("props": "any) => {;
-    if (proposal.totalVotes === 0) return 0;
-    return Math.round((votes / proposal.totalVotes) * 100);
-  "};
-;
-  const handleVote = ("props": "any) => {;
-=======
-    }
-=======
-        return 'bg-gray-100 text-gray-800';';';    }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/governance/ProposalCard.tsx
-  };
-  const getVotePercentage = (props) => {;
-    if (proposal.totalVotes === 0) return 0;
-    return Math.round((votes / proposal.totalVotes) * 100);
-  };
-  const handleVote = (props) => {;
->>>>>>> main
-    if (onVote && canVote) {;
-      onVote(proposal.id", vote);
-    }
-  };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
 ;
   return (;
@@ -165,9 +29,7 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
           <h3 className="text-lg font-semibold text-gray-900 mb-2">;
             {proposal.title"}
 <<<<<<< HEAD:backup-merge-conflicts/ProposalCard.tsx.backup
-=======
->>>>>>> main
-  return (
+=======  return (
     <div className="min-h-screen bg-white">
       <div className="flex justify-between items-start mb-4">
         <div className="flex-1">

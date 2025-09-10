@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
 class BuildErrorDetector {
   constructor() {
     this.workspacePath = process.cwd();
@@ -67,9 +61,7 @@ class $1 {
   if (error.stdout) {
   const errors = this.parseBuildErrors(error.stdout)this.log(❌ Build check failed with ${errors.length  } errors`)
         const errors = this.parseBuildErrors(error.stdout)this.log(❌ Build check failed with ${errors.length} errors`)
-        return { success: false, output: error.stdout, errors }
->>>>>>> origin/automation-fixes
-      }
+        return { success: false, output: error.stdout, errors }      }
     });
   }
 
@@ -99,27 +91,6 @@ class $1 {
       return { success: false, output: error.message, errors: [] }
     }
   }
-<<<<<<< HEAD
-
-  parseBuildErrors(output) {
-    const errors = [];
-    const lines = output.split("\n");
-    
-    for (const line of lines) {
-      if (line.includes("error") || 
-          line.includes("Error") || 
-          line.includes("ERROR")) {
-        errors.push({
-          line: line.trim(),
-          severity: "error",
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-    
-    return errors;
-  }
-
   async fixBuildErrors(errors) {
     this.log(`Attempting to fix ${errors.length} build errors.`);
     let fixedCount = 0;
@@ -538,4 +509,3 @@ if (require.main === module) {
   detector.run().catch(console.error),
 }
 module.exports = BuildErrorDetector}}}}}}}}}}}}))
->>>>>>> origin/automation-fixes

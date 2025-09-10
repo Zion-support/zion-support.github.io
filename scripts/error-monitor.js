@@ -18,13 +18,13 @@ class ErrorMonitor {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
-    
+
     // Ensure logs directory exists
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-    
+
     fs.appendFileSync(this.logFile, logMessage);
   }
 
@@ -35,12 +35,12 @@ class ErrorMonitor {
         cwd: this.projectRoot,
         timeout: 60000 
       });
-      
+
       if (stderr && stderr.includes('Error:')) {
         this.log(`Build error detected: ${stderr}`);
         return { hasErrors: true, error: stderr };
       }
-      
+
       this.log('Build check passed');
       return { hasErrors: false };
     } catch (error) {
@@ -56,12 +56,12 @@ class ErrorMonitor {
         cwd: this.projectRoot,
         timeout: 30000 
       });
-      
+
       if (stderr && stderr.includes('error')) {
         this.log(`Lint error detected: ${stderr}`);
         return { hasErrors: true, error: stderr };
       }
-      
+
       this.log('Lint check passed');
       return { hasErrors: false };
     } catch (error) {
@@ -73,15 +73,14 @@ class ErrorMonitor {
   async checkMergeConflicts() {
     try {
       this.log('Checking for merge conflicts...');
-      const { stdout } = await execAsync('grep -r "<<<<<<< HEAD\\|=======\\|>>>>>>> " pages/ components/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" || true', { 
-        cwd: this.projectRoot 
+      const { stdout } = await execAsync('grep -r "        cwd: this.projectRoot 
       });
-      
+
       if (stdout.trim()) {
         this.log(`Merge conflicts detected in: ${stdout}`);
         return { hasErrors: true, error: stdout };
       }
-      
+
       this.log('No merge conflicts found');
       return { hasErrors: false };
     } catch (error) {
@@ -97,12 +96,12 @@ class ErrorMonitor {
         cwd: this.projectRoot,
         timeout: 30000 
       });
-      
+
       if (stderr && stderr.includes('found')) {
         this.log(`Security vulnerabilities detected: ${stderr}`);
         return { hasErrors: true, error: stderr };
       }
-      
+
       this.log('Dependencies check passed');
       return { hasErrors: false };
     } catch (error) {
@@ -113,7 +112,7 @@ class ErrorMonitor {
 
   async runChecks() {
     this.log('Starting error monitoring cycle...');
-    
+
     const checks = [
       { name: 'Build', fn: () => this.checkBuildErrors() },
       { name: 'Lint', fn: () => this.checkLintErrors() },
@@ -122,7 +121,7 @@ class ErrorMonitor {
     ];
 
     const results = [];
-    
+
     for (const check of checks) {
       try {
         const result = await check.fn();
@@ -142,7 +141,7 @@ class ErrorMonitor {
 
     const errorCount = results.filter(r => r.hasErrors).length;
     this.log(`Error monitoring cycle completed. Found ${errorCount} issues.`);
-    
+
     // Save results to file
     const reportFile = path.join(this.projectRoot, 'error-monitor-report.json');
     fs.writeFileSync(reportFile, JSON.stringify({
@@ -160,10 +159,10 @@ class ErrorMonitor {
 
   async start() {
     this.log('Error Monitor started');
-    
+
     // Run initial check
     await this.runChecks();
-    
+
     // Set up interval for continuous monitoring
     setInterval(async () => {
       await this.runChecks();

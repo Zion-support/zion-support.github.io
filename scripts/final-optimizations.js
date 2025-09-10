@@ -28,7 +28,7 @@ class FinalOptimizer {
 
   async optimizeHTML() {
     console.log('📄 Optimizing HTML...');
-    
+
     const htmlFile = path.join(this.distPath, 'index.html');
     if (!fs.existsSync(htmlFile)) {
       console.log('❌ HTML file not found');
@@ -36,7 +36,7 @@ class FinalOptimizer {
     }
 
     let html = fs.readFileSync(htmlFile, 'utf8');
-    
+
     // Add performance hints
     const performanceHints = `
     <!-- Performance Hints -->
@@ -44,7 +44,7 @@ class FinalOptimizer {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//api.github.com">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-    
+
     <!-- Critical CSS inline -->
     <style>
       /* Critical above-the-fold styles */
@@ -57,7 +57,7 @@ class FinalOptimizer {
 
     // Insert performance hints before closing head tag
     html = html.replace('</head>', `${performanceHints}\n</head>`);
-    
+
     // Add resource hints for better loading
     const resourceHints = `
     <!-- Resource Hints -->
@@ -67,14 +67,14 @@ class FinalOptimizer {
     `;
 
     html = html.replace('</head>', `${resourceHints}\n</head>`);
-    
+
     fs.writeFileSync(htmlFile, html);
     console.log('✅ HTML optimized with performance hints');
   }
 
   async addPerformanceHints() {
     console.log('⚡ Adding performance hints...');
-    
+
     // Create a performance monitoring script
     const performanceScript = `
     // Performance monitoring
@@ -90,10 +90,10 @@ class FinalOptimizer {
           }
         });
       });
-      
+
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
     }
-    
+
     // Preload critical resources
     function preloadCriticalResources() {
       const criticalResources = [
@@ -101,7 +101,7 @@ class FinalOptimizer {
         '/assets/react-core-DCOKPPEG.js',
         '/assets/main-IjpdjAEM.js'
       ];
-      
+
       criticalResources.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -110,7 +110,7 @@ class FinalOptimizer {
         document.head.appendChild(link);
       });
     }
-    
+
     // Run optimizations when DOM is ready
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', preloadCriticalResources);
@@ -126,7 +126,7 @@ class FinalOptimizer {
 
   async createServiceWorker() {
     console.log('🔧 Creating service worker...');
-    
+
     const serviceWorker = `
     // Service Worker for caching and performance
     const CACHE_NAME = 'zion-app-v1.0.0';
@@ -163,13 +163,13 @@ class FinalOptimizer {
 
   printSummary() {
     console.log('\n🎉 Final Optimizations Complete!');
-    console.log('================================');
+    console.log('====');
     console.log('✅ HTML optimized with performance hints');
     console.log('✅ Resource preloading implemented');
     console.log('✅ Service worker created for caching');
     console.log('✅ Bundle splitting optimized');
     console.log('✅ Performance monitoring added');
-    
+
     console.log('\n📊 Performance Improvements:');
     console.log('-----------------------------');
     console.log('• Reduced bundle size by ~100KB');
@@ -177,7 +177,7 @@ class FinalOptimizer {
     console.log('• Added critical resource preloading');
     console.log('• Created service worker for caching');
     console.log('• Optimized chunk loading strategy');
-    
+
     console.log('\n🚀 Next Steps:');
     console.log('---------------');
     console.log('1. Test the application for performance');

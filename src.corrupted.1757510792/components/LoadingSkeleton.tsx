@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {;
   className?: string;

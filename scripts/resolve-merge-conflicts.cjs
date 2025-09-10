@@ -1,84 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  if () {
-    return false) {
-    ) {
-    return false}}
-console.log('🔧 Starting merge conflict resolution...');
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Remove conflict markers and keep the newer version (incoming changes)
-    // Check if file has merge conflicts
-<<<<<<< HEAD
-=======
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
-      return false;
-    }
-    console.log(`📝 Resolving conflicts in: ${filePath}`);
-    // Split by merge conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = '';
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (line.includes('')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      }
-      if (line.includes('')) {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        conflictType = 'incoming';
-        continue;
-      }
-      if (line.includes('>>>>>>>')) {
-        inConflict = false;
-        conflictType = '';
-        continue;
-      }
-      if (!inConflict) {
-        resolvedLines.push(line);
-      } else if (conflictType === 'head') {
-        // Keep HEAD version (first part)
-        resolvedLines.push(line);
-      }
-      // Skip incoming version (second part)
-    }
-    // Write resolved content
-    fs.writeFileSync(filePath, resolvedLines.join('\n'));
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
-=======
-#!/usr/bin/env node;
-const fs = require("fs")
-const path = require("fs")
-const { execSync } = require("child_process")
-class MergeConflictResolver {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = [];
-    this.conflictMarkers = [;
-      ",;
-      ",;
-      ",;
-      "      "      ""]}
-
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`)}
 
@@ -132,9 +51,7 @@ class MergeConflictResolver {
             if (this.hasConflictMarkers(content)) {
               filesWithConflicts.push(fullPath)}
           } catch (error) {
-            // Skip files that can"t be read,,
->>>>>>> origin/automation-fixes
-}
+            // Skip files that can"t be read,,}
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];

@@ -487,11 +487,6 @@ function walkDirectory(dir) {
   
   return fixedCount}
     let fixes = 0;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-
 
 
 
@@ -501,8 +496,6 @@ function walkDirectory(dir) {
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
-
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 if (totalFixes > 0) {
     
 } else {

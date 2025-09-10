@@ -3,22 +3,6 @@
 @tailwind utilities;
 
 :root {
-<<<<<<< HEAD
-  --bg: #0b0e1a;
-  --fg: #e6e8f0;
-  --primary: #8b5cf6;
-  --secondary: #3b82f6;
-  --accent: #06b6d4;
-=======
-  --bg: #000000;
-  --fg: #ffffff;
-  --accent: #3b82f6;
-  --accent-hover: #2563eb;
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -83,9 +67,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg);
   color: var(--fg);
-  line-height: 1.6;
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-}
+  line-height: 1.6;}
 
 @layer utilities {
   .scrollbar-hide {
@@ -146,11 +128,6 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-<<<<<<< HEAD
-  background: var(--bg);
-  border-radius: 5px;
-}
-
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   border-radius: 5px;
@@ -284,24 +261,10 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-}
+  font-size: clamp(1.5rem, 3vw, 2rem);}
 
 /* Gradient text utility */
 .gradient-text {
-<<<<<<< HEAD
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-=======
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background-size: 200% 200%;
-  animation: shimmer 3s ease-in-out infinite;
-}
-
 /* Enhanced button styles */
 .btn-primary {
   @apply px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black;
@@ -443,15 +406,7 @@ h3 {
   @apply bg-white/10;
 }
 
-/* Custom selection color */
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-::selection {
-  background: rgba(59, 130, 246, 0.3);
-  color: white;
-}
-
-<<<<<<< HEAD
-::-moz-selection {
+/* Custom selection color */::selection {
   background: rgba(59, 130, 246, 0.3);
   color: white;
 }
@@ -512,7 +467,5 @@ h3 {
   }
   
   .btn-secondary {
-    @apply border-2 border-white;
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-  }
+    @apply border-2 border-white;  }
 }
