@@ -138,7 +138,7 @@ try {
       try {
         return originalPush.call(this, chunk);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         // console.warn('Webpack chunk loading error prevented:', error);
         return 0;
       }
@@ -225,7 +225,7 @@ export const verifyPolyfills = () => {
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   };
   
-  // eslint-disable-next-line no-console
+   
   // console.log('Serverless polyfill verification:', checks);
   const result = Object.values(checks).every(Boolean);
   return result;
