@@ -1,44 +1,21 @@
-<<<<<<< HEAD
-import React { useState, useEffect } from "react";"});"})","});"})";"});"})";
-export default function Header() {,"});"})";
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);"});"})";
-  const [scrolled, setScrolled] = useState(false);"});"})";
-  const location = useLocation();"});"})";
-  useEffect(() => {,"});"})";
-    const handleScroll = () => {,"});"})";
-      setScrolled(window.scrollY > 50);"});"});";
-};"});"})";
-    window.addEventListener("scroll", handleScroll);"});"})";
-    return () => window.removeEventListener("scroll", handleScroll);"});"});";
-}, []);"});"})";
-  const navigation = [],"});"})";
-      name: "Solutions","});"})";
-      href: "/solutions","});"})";
-      current: location.pathname.startsWith("/solutions"),"});"})";
-        { name: "Enterprise Solutions", href: "/solutions/enterprise" },"});"})";
-        { name: "Startup Solutions", href: "/solutions/startup" },"});"})";
-        { name: "Space Technology", href: "/solutions/space-tech" },"});"})";
-        { name: "Supply Chain", href: "/solutions/supply-chain" }"});"})";
-      name: "About","});"})";
-      href: "/about","});"})";
-      current: location.pathname.startsWith("/about"),"});"})";
-        { name: "Our Story", href: "/about/story" },"});"})";
-        { name: "Team", href: "/about/team" },"});"})";
-        { name: "Careers", href: "/careers" },"});"})";
-        { name: "Partners", href: "/partners" }"});"})";
-      name: "Resources","});"})";
-      href: "/resources","});"})";
-      current: location.pathname.startsWith("/resources"),"});"})";
-        { name: "Blog", href: "/blog" },"});"})";
-        { name: "Case Studies", href: "/case-studies" },"});"})";
-        { name: "White Papers", href: "/white-papers" },"});"})";
-        { name: "Webinars", href: "/webinars" },"});"})";
-        { name: "Training", href: "/training" },"});"})";
-        { name: "Documentation", href: "/docs" }"});"})";
-      name: "Contact","});"})";
-      href: "/contact","});"})";
-      current: location.pathname === "/contact","});"});";
-}"});"});
+import React from "react";
+
+export default function Header(): React.ReactElement {
+  return (
+    <header className="w-full border-b border-gray-200 bg-white/90">
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-md bg-gradient-to-r from-blue-600 to-cyan-500 grid place-items-center text-white font-bold">Z</div>
+            <div className="hidden sm:block">
+              <div className="text-gray-900 font-semibold">Zion Tech Group</div>
+              <div className="text-xs text-gray-600">Innovation & Technology</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
   return (";"});"})";
     <header className="{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${,"});"})";
