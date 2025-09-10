@@ -10256,6 +10256,7 @@
       "route": "/docs/reports/unused-exports.md"
     }
   ],
+<<<<<<< HEAD
   "generatedAt": "2025-08-15T06:01:25.762Z",
   "items": [
     {
@@ -10263,17 +10264,47 @@
       "href": "/reports/cases/case-2025-08-15-060129",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T06:01:29.256Z",
+=======
+  "generatedAt": "2025-08-15T06:52:19.650Z",
+  "items": [
+    {
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-065720",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T06:57:20.072Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Playbook — Autonomous Delivery",
+      "href": "/reports/playbooks/playbook-2025-08-15-065720",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T06:57:20.041Z",
+      "source": "cloud-playbook-factory"
+    },
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-065720",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T06:57:20.004Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T06-57-34-700Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
       "href": "/reports/guides/guide-2025-08-15-060129",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T06:01:29.256Z",
+=======
+      "href": "/reports/guides/guide-2025-08-15-065720",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T06:57:20.004Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T06-57-34-700Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
       "href": "/reports/patterns/pattern-2025-08-15-060129",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T06:01:29.256Z",
@@ -10302,11 +10333,17 @@
     }
 >>>>>>> origin/automation/git-sync/2025-08-15T06-29-49-910Z
 =======
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T06-57-34-700Z
       "href": "/reports/patterns/pattern-2025-08-15-065720",
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T06:57:20.004Z",
       "source": "cloud-deep-research-factory"
     }
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T06-57-24-092Z
+=======
+>>>>>>> 3caeaa214e4 (chore(sync): advanced autonomous sync)
+>>>>>>> origin/automation/git-sync/2025-08-15T06-57-34-700Z
   ]
 }
