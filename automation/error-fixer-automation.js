@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
 
 
 
@@ -585,8 +582,6 @@ const {
   generateComponentContent(componentName) {
     return `import React from 'react';
 
-
->>>>>>>> main:corrupted_backup/error-fixer-automation.js
 
 
 

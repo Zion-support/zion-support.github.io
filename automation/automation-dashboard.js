@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 
@@ -283,9 +280,7 @@ const report = {
 =======
                         max: 100;
 })
-        function: runAllSystems() {        "runningSystems": Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        "totalAlerts": this.alerts.lengt,h
+        function: runAllSystems() {        "runningSystems": Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h        "totalAlerts": this.alerts.lengt,h
   "averageSuccessRate": this.calculateAverageSuccessRate();
 }
       "systems": {}

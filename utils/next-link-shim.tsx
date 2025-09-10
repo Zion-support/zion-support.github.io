@@ -1,24 +1,8 @@
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
-<<<<<<< HEAD
-type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-<<<<<<< HEAD
-  "href": Href;
-  children: React.ReactNode;
-};
-function resolveHref("href": Href): string {
-  if (typeof href === 'string') return href;
-  return href?.pathname || (href as { href?: string })?.href || '#';
-=======
-  href: Href;
-  children: React.ReactNode;
-};
-
 function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
-  return href?.pathname || (href as any)?.href || '#';
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-}
+  return href?.pathname || (href as any)?.href || '#';}
 export default function Link({ href, children, className, ...rest }: LinkProps) {
   const resolved = resolveHref(href);
 

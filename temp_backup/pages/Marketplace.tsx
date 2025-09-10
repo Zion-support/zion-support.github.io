@@ -1,30 +1,3 @@
-<<<<<<< HEAD:temp_backup/pages/Marketplace.tsx
-
-import React, { useState, useEffect, useMemo } from "react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { FilterSidebar } from "@/components/search/FilterSidebar";
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { ProductListing } from "@/types/listings";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import { SearchSuggestion } from "@/types/search";
-import styles from './Marketplace.module.css';
-import { useViewMode } from '@/context/ViewModeContext';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
-
 interface ProductContainerProps {
   listings: ProductListing[];
   onRequestQuote: (id: string) => void;
@@ -373,4 +346,3 @@ const Marketplace: React.FC = () => {
 };
 
 export default Marketplace;
->>>>>>> origin/chore/fix-links-and-build:src/pages/Marketplace.tsx

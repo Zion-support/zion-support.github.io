@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class BuildMonitor {
-  constructor() {
-<<<<<<< HEAD
-    this.isRunning = false;
-    this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
-    this.logLevel = process.env.LOG_LEVEL || 'info';
-    this.lastBuildTime = null;
-    this.buildHistory = [];
-    this.maxBuildHistory = 10;
-  }
-
   log(level, message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
@@ -167,9 +149,7 @@ class BuildMonitor {
         previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'));
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
-      }  async checkBuildStatus() {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-    try {
+      }  async checkBuildStatus() {    try {
       this.log('info', 'Checking build status...');
       // Check if .next directory exists and is recent
       const nextDir = path.join(process.cwd(), '.next');

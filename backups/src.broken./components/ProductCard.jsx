@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
->>>>>>> main
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from "@/components/ui/tooltip";
-<<<<<<< HEAD
-import { useAuth } from "@/context/auth/AuthContext";
-import { useWishlist } from "@/hooks/useWishlist";
-import { useDispatch } from "react-redux";
-import { addItem } from "@/store/cartSlice";
-import { useRouter } from "next/router";
-import { useEnqueueSnackbar } from "@/context/SnackbarContext";
-import { captureException } from "@sentry/nextjs";
-
 export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
@@ -195,4 +168,3 @@ export default function ProductCard(_{ product, _onBuy, _buyDisabled = false }) 
     </Card>
   );
 }
->>>>>>> main

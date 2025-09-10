@@ -21,14 +21,9 @@ const { withErrorLogging } = require(
     return}
   try {;
     const { email } = req.body || {}
-<<<<<<< HEAD
-    if (!email) {;
-
 >>>>>>>> main:corrupted_backup/subscribe.js
 
 
-
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 <:api/newsletter/subscribe.js

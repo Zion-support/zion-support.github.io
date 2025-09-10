@@ -21,14 +21,9 @@ const { withErrorLogging } = require(
     return}
   try {;
     const { name, email, phone, details, country, service } = req.body || {}
-<<<<<<< HEAD
-    if (!name || !email || !phone || !details) {;
-
 >>>>>>>> main:corrupted_backup/quotes.js
 
 
-
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 <:api/quotes.js

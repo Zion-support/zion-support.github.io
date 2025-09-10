@@ -133,9 +133,6 @@ function canMergePR(prNumber) {
 
 // Main execution;
 async function main() {
-<<<<<<< HEAD
-=======
-
   console.log(📋 Checking open PRs...\n);
   
   // Get list of open PRs
@@ -183,8 +180,6 @@ async function main() {
   console.log('\n✅ PR resolution and merge process completed!');
 }
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
         const merged = mergePR(pr.number, prInfo);
         if (merged) {`;

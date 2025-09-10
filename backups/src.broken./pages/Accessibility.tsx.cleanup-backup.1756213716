@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 export default function Accessibility() {
 	return (
 		<div className="min-h-screen bg-background text-foreground py-16">
@@ -16,9 +13,7 @@ export default function Accessibility() {
 	);
 }
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+=======import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
 
 const Accessibility: React.FC = () => {
   const accessibilityFeatures = [

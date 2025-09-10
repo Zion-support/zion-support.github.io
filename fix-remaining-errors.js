@@ -12,40 +12,6 @@ function fixParsingErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-<<<<<<< HEAD
-    const fixes = [// Close unterminated template literals at end of file/line
-      { "pattern": /("[^"]*?)$/gm, "replacement": "$1"" },
-      // Close unterminated arrays/objects at end of file/line
-      { "pattern": /(\[[^\]]*)$/gm, "replacement": "$1]" },
-      { "pattern": /(\{[^}]*)$/gm, "replacement": "$1}" },
-      // Ensure import lines end with semicolon
-      { "pattern": /(^(?:import|export)\b[^\n]*)(?<!;)$/gm, "replacement": "$1;" }
-    ];
-    for (const rule of fixes) {
-      const updated = content.replace(rule.pattern, rule.replacement);
-      if (updated !== content) {
-        content = updated;
-        modified = true}
-    }
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.log("Fixed parsing errors "in": ${filePath}");
-      return true}
-  } catch (error) {
-    console.error("Error fixing ${filePath}:", error.message)}
-  return false}
-// Create minimal working versions for a set of problematic files
-function createMinimalFiles() {
-  const minimalFiles = {
-    "api/create-checkout-session.js": "export default function handler(req, res) {\n  res.status(200).json({ "message": "Checkout session created" });\n}\n",
-    ".eslintrc.disabled.js": "module.exports = {};\n"
-  };
-=======
-    // Fix common syntax issues;
-    const fixes = [;
-  // Fix unterminated strings;
-      { pattern: /([""])([^""]*?)([""])\s*$/gm, replacement: "$1$2$3" },;
-
       // Fix missing semicolons after imports;
       { pattern: /(import\s+[^]+)(?!)\s*$/gm, replacement: "$1;" },;
 
@@ -198,9 +164,7 @@ describe("Auth Controller", () => {;
   // This file is disabled;,
 }
 `,,,
-}
->>>>>>> origin/automation-fixes
-  let createdCount = 0;
+}  let createdCount = 0;
   for (const [filePath, content] of Object.entries(minimalFiles)) {
     try {
       const dir = path.dirname(filePath);

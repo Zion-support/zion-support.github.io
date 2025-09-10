@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-/**
- * Error Monitor - PM2 Automation Script
- * Monitors the application for errors and automatically fixes common issues
- */
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-class ErrorMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.monitoringReport = {
-      timestamp: new Date().toISOString(),
-      duration: 0,
-      errorsDetected: [],
-      warnings: [],
-      healthStatus: 'healthy',
-      metrics: {
-        totalErrors: 0,
-        totalWarnings: 0,
-        buildSuccess: false,
-        typeCheckSuccess: false,
-        lintSuccess: false,
-      },
-    };
-    this.startTime = Date.now();
-    this.isRunning = false;
-    this.checkInterval = 60000; // 1 minute
-    this.alertThreshold = 10;
-  }
-  async start() {
-    console.log('🔍 Starting Error Monitor...');
-    this.isRunning = true;
-    // Create logs directory
-    const logsDir = path.join(this.projectRoot, 'automation', 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-
 
 
 
@@ -248,8 +208,6 @@ timestamp: new Date().toISOString()
           message: match[4].trim(),
 
 
->>>>>>>> main:corrupted_backup/error-monitor.js
-
           timestamp: new Date().toISOString()
         });
       }
@@ -326,24 +284,6 @@ timestamp: new Date().toISOString()
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-<<<<<<< HEAD
-    console.log(
-      `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
-    );
-    console.log(
-      `🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`
-    );
-    console.log(
-      `🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`
-    );
-  }
-  async triggerErrorFixer() {
-    console.log('🚀 Triggering error fixer...');
-    try {
-      const ErrorFixerAutomation = require('./error-fixer-automation.js');
-      const automation = new ErrorFixerAutomation();
-      await automation.run();
-
 
 >
 
@@ -365,9 +305,7 @@ console.log('✅ Error fixer completed');
 =======
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);      console.log('✅ Error fixer completed');
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-    } catch (error) {
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);      console.log('✅ Error fixer completed');    } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',

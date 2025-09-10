@@ -9,40 +9,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
   const [selectedTestimonial, setSelectedTestimonial] = useState<any>(0);
 ";
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
-    : "testimonials.filter(t => t.category === selectedCategory) ;
-;
-    setSelectedTestimonial((prev) => ;
-      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) "};
-;
-    setSelectedTestimonial((prev) => ;
-      prev === 0 ? filteredTestimonials.length-1 : "prev - 1;) ;
-  "};
-;
-=======
-    : testimonials.filter(t => t.category === selectedCategory) ;
-    setSelectedTestimonial((prev) => ;
-      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
-    setSelectedTestimonial((prev) => ;
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
-};
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
-      <div  className="max - w-7xl mx - auto px-6">;
-        <motion.div;
-          className="text-center mb-16"          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/InteractiveTestimonials.tsx
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
-=======
-
   { opacity: 0,
   y: 20;
 }}
@@ -52,9 +18,7 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
   y: 0;
 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/InteractiveTestimonials.tsx
-        >";
+          transition={{ duration: 0.6 }}        >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Client Success Stories;
           </h2>";

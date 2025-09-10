@@ -1,106 +1,6 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
-const "Blog": NextPag e = () => {
-  const blogPosts = [{
-      id: 1,
-      "title": "The Future of AI in Business: Trends and Predictions for 2024",
-      "excerpt": "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
-      "author": "Kleber Santos",
-      "date": "2024-01-15",
-      "readTime": "5 min read",
-      "category": "AI & Machine Learning",
-      "image": "/api/placeholder/600/400",
-      "slug": "future-of-ai-in-business-2024"
-    },
-    {
-      "id": 2,
-      "title": "Cloud Migration Best Practices: A Complete Guide",
-      "excerpt": "Learn the essential steps and strategies for successfully migrating your business to the cloud.",
-      "author": "Zion Tech Team",
-      "date": "2024-01-10",
-      "readTime": "8 min read",
-      "category": "Cloud Services",
-      "image": "/api/placeholder/600/400",
-      "slug": "cloud-migration-best-practices"
-    },
-    {
-      "id": 3,
-      "title": "Building Scalable Web Applications with Modern Technologies",
-      "excerpt": "Discover the latest technologies and frameworks for creating robust, scalable web applications.",
-      "author": "Development Team",
-      "date": "2024-01-05",
-      "readTime": "6 min read",
-      "category": "Web Development",
-      "image": "/api/placeholder/600/400",
-      "slug": "scalable-web-applications-modern-tech"
-    },
-    {
-      "id": 4,
-      "title": "Cybersecurity in 2024: Protecting Your Digital Assets",
-      "excerpt": "Essential cybersecurity strategies and tools to protect your business from evolving threats.",
-      "author": "Security Team",
-      "date": "2024-01-01",
-      "readTime": "7 min read",
-      "category": "Cybersecurity",
-      "image": "/api/placeholder/600/400",
-      "slug": "cybersecurity-2024-protecting-digital-assets"
-    },
-    {
-      "id": 5,
-      "title": "Mobile App Development: Native vs Cross-Platform",
-      "excerpt": "Compare native and cross-platform development approaches to choose the best solution for your mobile app.",
-      "author": "Mobile Team",
-      "date": "2023-12-28",
-      "readTime": "9 min read",
-      "category": "Mobile Development",
-      "image": "/api/placeholder/600/400",
-      "slug": "mobile-app-development-native-vs-cross-platform"
-    },
-    {
-      "id": 6,
-      "title": "Blockchain Technology: Beyond Cryptocurrency",
-      "excerpt": "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",
-      "author": "Blockchain Team",
-      "date": "2023-12-25",
-      "readTime": "6 min read",
-      "category": "Blockchain",
-      "image": "/api/placeholder/600/400",
-      "slug": "blockchain-technology-beyond-cryptocurrency"
-    }
-  ];
-  const categories = ["All Posts",
-    "AI & Machine Learning",
-    "Cloud Services",
-    "Web Development",
-    "Mobile Development",
-    "Blockchain",
-    "Cybersecurity",
-    "IoT",
-    "Industry Insights"
-  ]
-  return (
-    <Layout
-      title="Blog - Zion Tech Group"
-      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
-    >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl "md": tex t-6xl font-bold mb-6">
-            Tech
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>
-          </h1>
-          <p className="text-xl md: tex t-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Stay ahead of the curve with insights, trends, and best practices from our technology experts.
-          </p>
-        </div>
-      </section>
-=======
-import { Calendar, User, ArrowRight, Search, Filter, Tag } from 'lucide-react';
-
 
 const Blog: NextPage = () => {
   const blogPosts = [;
@@ -120,9 +20,7 @@ const "Blog": NextPag e = () => {
       "category": "AI & Machine Learning",
       "image": "/api/placeholder/600/400",
       "slug": "future-of-ai-in-business-2024"
-    },
->>>>>>> cursor/check-fix-push-and-merge-to-main-649b
-    {
+    },    {
       id: 1,;
       title: 'The Future of AI in Business: Trends for 2025',;
       excerpt: 'Explore the latest AI trends that are transforming businesses and how Zion Tech Group is leading the way in AI implementation.',;
@@ -163,28 +61,6 @@ const "Blog": NextPag e = () => {
       image: '/blog/cybersecurity-remote-work.jpg',;
       featured: false},;
     {
-<<<<<<< HEAD
-      id: 5,;
-      title: 'Digital Transformation: Success Stories from 2024',;
-      excerpt: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',;
-      author: 'David Kim',;
-      date: '2025-01-15',;
-      category: 'Digital Transformation',;
-      readTime: '9 min read',;
-      image: '/blog/digital-transformation-cases.jpg',;
-      featured: false},;
-    {
-      id: 6,;
-      title: 'The Rise of Edge Computing: What You Need to Know',;
-      excerpt: 'Understanding edge computing technology and its impact on modern applications and infrastructure.',;
-      author: 'Lisa Thompson',;
-      date: '2025-01-12',;
-      category: 'Technology Trends',;
-      readTime: '4 min read',;
-      image: '/blog/edge-computing-rise.jpg',;
-      featured: false}
-  ];
-
   const categories = [;
     'All Posts',;
     'AI & Machine Learning',;
@@ -352,9 +228,7 @@ export default function BlogPage() {
     <Layout
       title="Blog - Zion Tech Group"
       description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
-    >
->>>>>>> cursor/check-fix-push-and-merge-to-main-649b
-      {/* Hero Section */}
+    >      {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
         <div className="container mx-auto px-4 text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -422,16 +296,6 @@ export default function BlogPage() {
                           }`}
                         >
                           {category}
-<<<<<<< HEAD
-                        </a>
-                      </li>
-=======
-                        </button>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
       {/* Categories Filter */}
       <section className="py-8 bg-gray-50 border-b">;
         <div className="container mx-auto px-4">;
@@ -597,9 +461,7 @@ export default function BlogPage() {
                 </div>;
               </article>;
             ))}
-                      </li>;
->>>>>>> origin/automation-fixes
-                    ))}
+                      </li>;                    ))}
                   </ul>
                 </div>
                 {/* Newsletter Signup */}
@@ -624,59 +486,6 @@ export default function BlogPage() {
               </div>
             </div>
             {/* Blog Posts */}
-<<<<<<< HEAD
-            <div className=""lg": co l-span-3">
-              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
-                {blogPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden "hover": shado w-lg transition-shadow">
-                    <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                    <div className="p-6">
-                      <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                        <span className="flex items-center">
-                          <Tag className="w-4 h-4 mr-1"  />
-                          {post.category}
-                        </span>
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1"  />
-                          {post.readTime}
-                        </span>
-                      </div>
-                      <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
-                        {post.title}
-                      </h2>
-                      <p className="text-gray-600 mb-4 line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3 text-sm text-gray-500">
-                          <span className="flex items-center">
-                            <User className="w-4 h-4 mr-1"  />
-                            {post.author}
-                          </span>
-                          <span className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1"  />
-                            {new Date(post.date).toLocaleDateString()}
-                          </span>
-                        </div>
-                        <Link
-=======
-            <div className="lg:col-span-3">;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {blogPosts.map((post, index) => (;
-                  <motion.article;
-                    key={post.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300";
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >;
-                    <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">;
-                      <div className="text-white text-center">;
-                        <div className="text-4xl font-bold mb-2">{post.category.split(' ')[0]}</div>;
-                        <div className="text-sm opacity-80">Featured Image</div>;
-                      </div>;
-                    </div>;
-
                     <div className="p-6">;
                       <div className="flex items-center space-x-4 mb-3">;
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">;
@@ -710,9 +519,7 @@ export default function BlogPage() {
                           </div>;
                         </div>;
 
-                        <Link;
->>>>>>> origin/automation-fixes
-                          href={`/blog/${post.slug}`}
+                        <Link;                          href={`/blog/${post.slug}`}
                           className="text-blue-600 "hover": tex t-blue-700 font-medium flex items-center text-sm"
                         >
                           Read More

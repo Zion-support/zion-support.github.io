@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export interface RealMicroSaasService {
-=======
 
-
-
->>>>>>> pr-12866
   id: string;
   name: string;
   tagline: string;
@@ -19,10 +13,6 @@ export interface RealMicroSaasService {
   link: string;
   marketPosition: string;
   targetAudience: string;
-<<<<<<< HEAD
-  realImplementation: boolean;
-}
-
 export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'real-micro-saas',
@@ -8192,4 +8182,3 @@ export const serviceCategories = [;
   'Enterprise IT';
 ];
 ;
->>>>>>> pr-12866

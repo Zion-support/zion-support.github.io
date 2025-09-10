@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 function createValidComponent(filePath) {
@@ -28,22 +25,8 @@ export default function ${componentName}() {
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  )}
-`}
-;
 // List of most critical files to fix;
-const criticalFiles = ["src/pages/services/AI-Financial-Trading-Platform.tsx",
-=======
-  );,
-}
-`;,
-}
-
-// List of most critical files to fix;
-const criticalFiles = [ "src/pages/services/AI-Financial-Trading-Platform.tsx",
->>>>>>> origin/automation-fixes
-  "src/pages/services/AI5GNetwork.tsx",
+const criticalFiles = [ "src/pages/services/AI-Financial-Trading-Platform.tsx",  "src/pages/services/AI5GNetwork.tsx",
   "src/pages/services/AIAnsible.tsx",
   "src/pages/services/AIApplicationSecurity.tsx",
   "src/pages/services/AIAugmentedReality.tsx",
@@ -156,9 +139,7 @@ const criticalFiles = [ "src/pages/services/AI-Financial-Trading-Platform.tsx",
 <<<<<<< HEAD
   "src/pages/services/ZeroTrustNetworkAccess.tsx"];
 =======
-  "src/pages/services/ZeroTrustNetworkAccess.tsx" ];
->>>>>>> origin/automation-fixes
-let fixedCount = 0;
+  "src/pages/services/ZeroTrustNetworkAccess.tsx" ];let fixedCount = 0;
 for (const filePath of criticalFiles) {
   const fullPath = path.join(__dirname, filePath);
   if (fs.existsSync(fullPath)) {

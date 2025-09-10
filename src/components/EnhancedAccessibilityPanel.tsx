@@ -2,54 +2,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityPanel.tsx
-function EnhancedAccessibilityPanel("props": "any) {;
-  Accessibility",;
-  Eye,;
-  EyeOff,;
-  Volume2,;
-  VolumeX,;
-  Type,;
-  Contrast,;
-  ZoomIn,;
-  ZoomOut,  RotateCcw,;
-  CheckCircle,;
-  AlertTriangle,;
-  XCircle,;
-  Info,;
-  Keyboard,;
-  MousePointer,;
-  Monitor,;
-  Smartphone,;
-  Tablet,;
-  Settings,;
-  X,;
-  ChevronDown,;
-  ChevronUp,;
-  Play,;
-  Pause,;
-  SkipBack,;
-  SkipForward,;
-  Volume1} from 'lucide-react';
-;
-interface AccessibilitySettings {;
-  "highContrast": "boolean;
-  "largeText": boolean;
-  "reducedMotion": boolean;
-  "screenReader": boolean;
-  "focusIndicator": boolean;
-  "colorBlindness": 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  "fontSize": number;
-  "lineHeight": number;
-  "letterSpacing": number;
-  "wordSpacing": number"}
-interface AccessibilityIssue {;
-  "id": "string;
-  "type": 'error' | 'warning' | 'info';
-  "message": string;
-=======
-function EnhancedAccessibilityPanel () {;
-
   Accessibility,
   Eye,
   EyeOff,
@@ -92,9 +44,7 @@ interface AccessibilitySettings {
 interface AccessibilityIssue {
   id: string;
   type: 'error' | 'warning' | 'info';
-  message: string;
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx
-  element?: string;
+  message: string;  element?: string;
   "recommendation": string;
   "severity": 'low' | 'medium' | 'high';
 export function EnhancedAccessibilityPanel("props": any) {;
@@ -137,19 +87,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
-<<<<<<< HEAD:src_backup_temp/components/EnhancedAccessibilityPanel.tsx
-  const [keyboardMode, setKeyboardMode] = useState<any>(false);
-;
-=======
-  const [keyboardMode, setKeyboardMode] = useState(false);
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx
-  // Apply accessibility settings;
-      setSettings(updatedSettings);
-      // Apply high contrast;
-      if(updatedSettings.highContrast) {;
-        document.documentElement.classList.add('high-contrast')} else {;
-        document.documentElement.classList.remove('high-contrast')}
-
       // Apply large text;
       if(updatedSettings.largeText) {;
         document.documentElement.style.fontSize = '18px'} else {;
@@ -221,4 +158,3 @@ export function EnhancedAccessibilityPanel("props": any) {;
 };
 }, []); []);
 }}
->>>>>>> origin/automation-fixes:src/components/EnhancedAccessibilityPanel.tsx

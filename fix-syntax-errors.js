@@ -1,9 +1,5 @@
 #!/usr/bin/env node;,
 
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-
 // Function to recursively find all files;
 function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let files = [];,
@@ -336,4 +332,3 @@ filesToFix.forEach(filePath => {;
 }
 });
 console.log('Syntax error fixes completed!');
->>>>>>> origin/automation-fixes

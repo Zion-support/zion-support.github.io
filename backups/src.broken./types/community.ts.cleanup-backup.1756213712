@@ -39,10 +39,6 @@ export interface ForumCategoryInfo {
     date: string;
   };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   {
     id: 'general',
@@ -92,7 +88,5 @@ export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
       date: '2024-01-12T14:00:00Z',
     },
   },
-];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
+];=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

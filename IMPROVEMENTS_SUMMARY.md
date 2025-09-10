@@ -1,18 +1,5 @@
 # Zion Tech Group Website Improvements
 
-<<<<<<< HEAD
-## Summary
-- Fixed all critical syntax errors and merge conflicts
-- Created 6 new essential pages (sitemap, faq, team, careers, case-studies, services-overview)
-- Improved navigation with responsive header and footer
-- Enhanced content across all pages
-- Successfully building 19 pages
-- All links working and properly routed
-=======
-## Overview
-This document outlines the comprehensive improvements made to the Zion Tech Group website to enhance performance, user experience, accessibility, and code quality.
->>>>>>> origin/automation/changelog
-
 ## New Pages Created
 - /sitemap - Comprehensive site navigation
 - /faq - Interactive FAQ section
@@ -253,4 +240,3 @@ The Zion Tech Group website has been significantly enhanced with:
 These improvements provide a faster, more accessible, and more engaging user experience while maintaining the high-quality design and functionality that users expect from Zion Tech Group.
 
 The website now follows modern web development best practices and is positioned for future growth and enhancement.
->>>>>>> origin/automation/changelog

@@ -2,12 +2,6 @@
 
 ## Supported Versions
 
-<<<<<<< HEAD
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x.x   | :white_check_mark: |
-| < 1.0   | :x:                |
-
 ## Reporting a Vulnerability
 
 We take the security of Zion Tech Group seriously. If you believe you have found a security vulnerability, please report it to us as described below.
@@ -20,30 +14,12 @@ We take the security of Zion Tech Group seriously. If you believe you have found
 - [Data Protection](#data-protection)
 - [Vulnerability Management](#vulnerability-management)
  
->>>>>>> origin/automation/changelog
-
 **Please do not report security vulnerabilities through public GitHub issues.**
-
-<<<<<<< HEAD
-Instead, please report them via email to:
 
 **Email**: kleber@ziontechgroup.com
 =======
 Security is a top priority for Zion App. This document outlines our security practices and considerations.
->>>>>>> origin/automation/changelog
-
 You should receive a response within 48 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
-
-<<<<<<< HEAD
-Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
-=======
-We follow the principle of defense in depth:
-- **Input Validation**: All user inputs are validated and sanitized
-- **Authentication**: Secure user authentication and session management
-- **Authorization**: Role-based access control for all features
-- **Data Protection**: Encryption for sensitive data at rest and in transit
- 
->>>>>>> origin/automation/changelog
 
 ### Required Information
 
@@ -65,12 +41,7 @@ This information will help us triage your report more quickly.
 - npm or yarn package manager
 - Git for version control
 - Basic knowledge of React and TypeScript
->>>>>>> origin/automation/changelog
-
 We prefer to receive vulnerability reports in English, but we can also handle reports in Portuguese.
-
-<<<<<<< HEAD
-## Policy
 
 Zion Tech Group follows the principle of [Responsible Disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure).
 
@@ -99,23 +70,11 @@ When we receive a security bug report, we will:
  ```bash
  npm run dev
  ```
->>>>>>> origin/automation/changelog
-
 1. **Confirm the problem** and determine affected versions
 2. **Audit code** to find any similar problems
 3. **Prepare fixes** for all supported versions
 4. **Release a new version** with the fix
 5. **Publicly disclose** the vulnerability
-
-<<<<<<< HEAD
-## Security Updates
-=======
-1. Open your browser and navigate to `https://bolt.new.zion.app`
-2. Explore the application features
-3. Check the documentation for more details
-4. Start contributing to the project
- 
->>>>>>> origin/automation/changelog
 
 Security updates are released as patch versions (e.g., 1.0.1, 1.0.2) and are available immediately upon release.
 
@@ -125,8 +84,6 @@ Security updates are released as patch versions (e.g., 1.0.1, 1.0.2) and are ava
 ### For Developers
 =======
 ## Basic Example
->>>>>>> origin/automation/changelog
-
 - Always validate and sanitize user input
 - Use parameterized queries to prevent SQL injection
 - Implement proper authentication and authorization
@@ -147,23 +104,6 @@ Security updates are released as patch versions (e.g., 1.0.1, 1.0.2) and are ava
 
 We use the following security tools and practices:
 
-<<<<<<< HEAD
-- **Static Analysis**: ESLint with security plugins
-- **Dependency Scanning**: npm audit, Snyk
-- **Code Review**: All changes require security review
-- **Automated Testing**: Security-focused test suites
-- **Penetration Testing**: Regular security assessments
-=======
-```typescript
-// Advanced example code
-const advancedExample = {
- feature1: 'value1',
- feature2: 'value2',
- feature3: 'value3'
-};
-```
->>>>>>> origin/automation/changelog
-
 ## Security Contacts
 
 ### Primary Security Contact
@@ -180,20 +120,11 @@ app.configure(SECURITY);
 app.start();
 ```
  
->>>>>>> origin/automation/changelog
-
 ### Security Team
-
-<<<<<<< HEAD
-- **Lead**: Kleber (CTO)
-- **Backup**: Security Team
-- **Escalation**: Executive Team
 
 ## Bug Bounty Program
 =======
 ## Methods
->>>>>>> origin/automation/changelog
-
 We currently do not have a formal bug bounty program, but we do appreciate security researchers who responsibly disclose vulnerabilities. We may offer recognition or other forms of appreciation for significant security findings.
 
 ## Responsible Disclosure Timeline
@@ -217,16 +148,6 @@ We are committed to addressing security issues promptly:
 
 Zion Tech Group is committed to maintaining security best practices and may pursue various security certifications in the future.
 
-<<<<<<< HEAD
-## Updates to This Policy
-=======
-**Example:**
-```typescript
-console.log(instance.propertyName);
-```
- 
->>>>>>> origin/automation/changelog
-
 This security policy may be updated from time to time. We will notify users of any material changes via:
 
 <<<<<<< HEAD
@@ -237,12 +158,7 @@ This security policy may be updated from time to time. We will notify users of a
 ## Contact
 =======
 ## How to Contribute
->>>>>>> origin/automation/changelog
-
 If you have any questions about this security policy, please contact us at kleber@ziontechgroup.com.
-
-<<<<<<< HEAD
----
 
 **Last Updated**: August 26, 2025  
 **Version**: 1.0.0
@@ -291,4 +207,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  
->>>>>>> origin/automation/changelog

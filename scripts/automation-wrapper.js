@@ -493,39 +493,6 @@ async function checkAndUpdateDependencies() {
   log('Checking dependencies...');
   try {
     // Check for security vulnerabilities
-<<<<<<< HEAD
-    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
-    log('Dependencies updated for security')} catch (error) {
-    log('Dependency update completed with warnings', 'warn')}
-}
-async function removeUnusedImports() {
-  log('Removing unused imports...');
-  // Implementation for removing unused imports
-}
-async function optimizeImports() {
-  log('Optimizing imports...');
-  // Implementation for import optimization
-}
-async function checkPerformanceIssues() {
-  log('Checking performance issues...');
-  // Implementation for performance checks
-}
-async function fixBuildErrors() {
-  log('Fixing build errors...');
-  // Implementation for build error fixes
-}
-async function fixSecurityIssues() {
-  log('Fixing security issues...');
-  try {
-    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
-    log('Security issues fixed')} catch (error) {
-    log('Security fixes completed with warnings', 'warn')}
-}
->
-    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
-    log('Dependencies updated for security')} catch (error) {
-    log('Dependency update completed with warnings', 'warn')}
-
 async function removeUnusedImports() {
   log('Removing unused imports...');
   // Implementation for removing unused imports
@@ -544,9 +511,7 @@ async function fixBuildErrors() {
 
 async function fixSecurityIssues() {
   log('Fixing security issues...');
-  try {
->>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:scripts/automation-wrapper.js
-    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
+  try {    execSync('npm audit fix --force', { "stdio": 'pipe', "cwd": process.cwd() });
     log('Security issues fixed')} catch (error) {
     log('Security fixes completed with warnings', 'warn')}
 }

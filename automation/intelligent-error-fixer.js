@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
 
 >
 
 
 
-
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
