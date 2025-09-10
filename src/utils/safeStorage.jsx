@@ -122,7 +122,7 @@ export const safeSessionStorage = {
         try {
             return sessionStorage.getItem(key);
         }
-        catch (_e) {
+        catch {
             return sessionMemoryStore[key] || null;
         }
     },
@@ -132,7 +132,7 @@ export const safeSessionStorage = {
         try {
             sessionStorage.setItem(key, value);
         }
-        catch (_e) {
+        catch {
             sessionMemoryStore[key] = value;
         }
     },
@@ -142,7 +142,7 @@ export const safeSessionStorage = {
         try {
             sessionStorage.removeItem(key);
         }
-        catch (_e) {
+        catch {
             delete sessionMemoryStore[key];
         }
     },
