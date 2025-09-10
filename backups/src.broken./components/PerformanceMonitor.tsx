@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useCallback } from 'react';
 <<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
 =======
+import React, { useEffect, useState, useCallback } from 'react';
 import { 
   Activity, 
   Zap, 
   Clock, 
+=======
   AlertTriangle,
   CheckCircle,
   BarChart3,
@@ -32,7 +34,6 @@ interface PerformanceMetrics {
   HardDrive,
   Cpu
 } from 'lucide-react';
->>>>>>> origin/chore/fix-links-and-build
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -40,29 +41,35 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  loadTime: number | null;
+  bundleLoadTime: number | null;
+  memoryUsage: number | null;
+  networkSpeed: number | null;
 }
 
-interface PerformanceMonitorProps {
-  enabled?: boolean;
-  reportInterval?: number;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+interface PerformanceThresholds {
+  fcp: { good: number; needsImprovement: number };
+  lcp: { good: number; needsImprovement: number };
+  fid: { good: number; needsImprovement: number };
+  cls: { good: number; needsImprovement: number };
+  ttfb: { good: number; needsImprovement: number };
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = true,
-  reportInterval = 10000,
-  onMetricsUpdate
-}) => {
+const PERFORMANCE_THRESHOLDS: PerformanceThresholds = {
+  fcp: { good: 1800, needsImprovement: 3000 },
+  lcp: { good: 2500, needsImprovement: 4000 },
+  fid: { good: 100, needsImprovement: 300 },
+  cls: { good: 0.1, needsImprovement: 0.25 },
+  ttfb: { good: 800, needsImprovement: 1800 },
+};
+
+const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
-    loadTime: null
-=======
     bundleLoadTime: null,
     memoryUsage: null,
     networkSpeed: null,
@@ -150,6 +157,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   si: number; // Speed Index
   tti: number; // Time to Interactive
 }
+=======
   };
 
   const formatMetric = (metric: keyof PerformanceMetrics, value: number | null): string => {
@@ -176,6 +184,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
 interface PerformanceScore {
   overall: number;
+=======
   AlertTriangle, 
   CheckCircle, 
   TrendingUp,
@@ -250,24 +259,11 @@ const PerformanceMonitor: React.FC = () => {
     ttfb: null,
     score: 0,
     memory: null,
->>>>>>> origin/chore/fix-links-and-build
   });
 
-  const getPerformanceMetrics = useCallback((): PerformanceMetrics => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || null;
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || null;
-    const ttfb = navigation ? navigation.responseStart - navigation.requestStart : null;
-    const loadTime = navigation ? navigation.loadEventEnd - navigation.navigationStart : null;
+  const [isVisible, setIsVisible] = useState(false);
+  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
 
-<<<<<<< HEAD
-    // Get CLS (Cumulative Layout Shift)
-    let cls = null;
-    if ('PerformanceObserver' in window) {
-      try {
-=======
   const thresholds: PerformanceThresholds = {
     fcp: { good: 1800, needsImprovement: 3000 },
     lcp: { good: 2500, needsImprovement: 4000 },
@@ -293,6 +289,8 @@ const PerformanceMonitor: React.FC = () => {
     
     if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.needsImprovement) score -= 20;
     else if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.good) score -= 10;
+=======
+=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -721,6 +719,7 @@ const PerformanceMonitor: React.FC = () => {
                 />
               ))}
             </div>
+=======
         {/* Collapsed View */}
         {!isExpanded && (
           <div className="p-3">
@@ -739,6 +738,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
       </div>
+=======
   // Analyze performance and generate issues
   const analyzePerformance = useCallback((metrics: PerformanceMetrics): PerformanceIssue[] => {
     const newIssues: PerformanceIssue[] = [];
@@ -958,9 +958,15 @@ const PerformanceMonitor: React.FC = () => {
       >
         <Activity className="w-6 h-6" />
       </motion.button>
+=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { Zap, Clock, HardDrive, Wifi, AlertTriangle } from 'lucide-react';
+<<<<<<< HEAD
+=======
 import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -1054,6 +1060,10 @@ const PerformanceMonitor: React.FC = () => {
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Measure Time to First Byte (TTFB)
   const measureTTFB = () => {
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -1524,6 +1534,7 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </motion.div>
     </AnimatePresence>
+=======
     newScore.overall = Math.round(
       (newScore.fcp + newScore.lcp + newScore.fid + newScore.cls + newScore.ttfb) / 5
     );
@@ -1714,6 +1725,7 @@ const PerformanceMonitor: React.FC = () => {
                   <div className="text-xs text-gray-600 dark:text-gray-400">Network</div>
                   <div className="text-sm font-medium">{networkInfo.effectiveType}</div>
                   <div className="text-xs text-gray-500">{networkInfo.downlink} Mbps</div>
+=======
 interface PerformanceRecommendation {
   type: 'critical' | 'warning' | 'info';
   message: string;
@@ -2117,6 +2129,7 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
     <div className={`p-3 rounded-lg ${getStatusBg(status)}`}>
       <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">{label}</div>
       <div className={`font-mono font-semibold ${getStatusColor(status)}`}>{value}</div>
+=======
           </>
         ) : (
           <div className="text-center py-4">
@@ -2135,10 +2148,13 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
 };
 
 export default PerformanceMonitor;
+=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
+=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
+=======
 }
 
 export const PerformanceMonitor: React.FC = () => {
@@ -2184,135 +2200,177 @@ export const PerformanceMonitor: React.FC = () => {
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Measure Cumulative Layout Shift
->>>>>>> origin/chore/fix-links-and-build
         const clsObserver = new PerformanceObserver((list) => {
           let clsValue = 0;
           for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
+            if (!entry.hadRecentInput) {
               clsValue += (entry as any).value;
             }
           }
-          cls = clsValue;
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
-        // // console.warn('CLS measurement not supported');
-      }
-    }
 
-<<<<<<< HEAD
-    // Get FID (First Input Delay) - simplified version
-    let fid = null;
-    if ('PerformanceObserver' in window) {
-      try {
-        const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            fid = (entry as any).processingStart - entry.startTime;
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
-        // // console.warn('FID measurement not supported');
-      }
-    }
-
-    return { fcp, lcp, fid, cls, ttfb, loadTime };
-  }, []);
-
-  const reportMetrics = useCallback(() => {
-    if (!enabled) return;
-
-    const currentMetrics = getPerformanceMetrics();
-    setMetrics(currentMetrics);
-    
-    if (onMetricsUpdate) {
-      onMetricsUpdate(currentMetrics);
-    }
-
-    // Log performance metrics in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group('🚀 Performance Metrics');
-      // // console.log('First Contentful Paint (FCP):', currentMetrics.fcp ? `${currentMetrics.fcp.toFixed(2)}ms` : 'N/A');
-      // // console.log('Largest Contentful Paint (LCP):', currentMetrics.lcp ? `${currentMetrics.lcp.toFixed(2)}ms` : 'N/A');
-      // // console.log('First Input Delay (FID):', currentMetrics.fid ? `${currentMetrics.fid.toFixed(2)}ms` : 'N/A');
-      // // console.log('Cumulative Layout Shift (CLS):', currentMetrics.cls ? currentMetrics.cls.toFixed(4) : 'N/A');
-      // // console.log('Time to First Byte (TTFB):', currentMetrics.ttfb ? `${currentMetrics.ttfb.toFixed(2)}ms` : 'N/A');
-      // // console.log('Load Time:', currentMetrics.loadTime ? `${currentMetrics.loadTime.toFixed(2)}ms` : 'N/A');
-      console.groupEnd();
-    }
-
-    // Send metrics to analytics service in production
-    if (process.env.NODE_ENV === 'production' && window.gtag) {
-      window.gtag('event', 'performance_metrics', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        custom_map: {
-          fcp: currentMetrics.fcp,
-          lcp: currentMetrics.lcp,
-          fid: currentMetrics.fid,
-          cls: currentMetrics.cls,
-          ttfb: currentMetrics.ttfb,
-          load_time: currentMetrics.loadTime
-=======
         // Measure Time to First Byte
+=======
         // Time to First Byte (TTFB)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
           setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
->>>>>>> origin/chore/fix-links-and-build
         }
-      });
+
+        // DOM Content Loaded (using legacy timing API as fallback)
+        if ('timing' in performance) {
+          const timing = (performance as any).timing;
+          const domLoadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+          setMetrics(prev => ({ ...prev, domLoad: domLoadTime }));
+          
+          // Window Load
+          const windowLoadTime = timing.loadEventEnd - timing.navigationStart;
+          setMetrics(prev => ({ ...prev, windowLoad: windowLoadTime }));
+        }
+
+        // Cleanup observers
+        return () => {
+          fcpObserver.disconnect();
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      }
+    };
+
+    // Measure performance after a short delay to ensure page is loaded
+    const timer = setTimeout(measurePerformance, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const getPerformanceScore = (metric: keyof PerformanceMetrics): string => {
+    const value = metrics[metric];
+    if (value === null) return 'N/A';
+
+    switch (metric) {
+      case 'fcp':
+        if (value < 1800) return '🟢 Good';
+        if (value < 3000) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'lcp':
+        if (value < 2500) return '🟢 Good';
+        if (value < 4000) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'fid':
+        if (value < 100) return '🟢 Good';
+        if (value < 300) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'cls':
+        if (value < 0.1) return '🟢 Good';
+        if (value < 0.25) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'ttfb':
+        if (value < 800) return '🟢 Good';
+        if (value < 1800) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      default:
+        return 'N/A';
     }
-  }, [enabled, getPerformanceMetrics, onMetricsUpdate]);
+  };
 
-  useEffect(() => {
-    if (!enabled) return;
+  const getMetricValue = (metric: keyof PerformanceMetrics): string => {
+    const value = metrics[metric];
+    if (value === null) return 'N/A';
+    
+    switch (metric) {
+      case 'fcp':
+      case 'lcp':
+      case 'fid':
+      case 'ttfb':
+      case 'domLoad':
+      case 'windowLoad':
+        return `${Math.round(value)}ms`;
+      case 'cls':
+        return value.toFixed(3);
+      default:
+        return 'N/A';
+    }
+  };
 
-    // Initial metrics collection after page load
-    const initialTimeout = setTimeout(() => {
-      reportMetrics();
-    }, 1000);
+  if (!isVisible) return null;
 
-    // Periodic metrics collection
-    const interval = setInterval(reportMetrics, reportInterval);
-
-    // Cleanup
-    return () => {
-      clearTimeout(initialTimeout);
-      clearInterval(interval);
-    };
-  }, [enabled, reportInterval, reportMetrics]);
-
-  // Monitor for performance issues
-  useEffect(() => {
-    if (!enabled) return;
-
-    const checkPerformanceIssues = () => {
-      const { fcp, lcp, cls } = metrics;
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-md text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white text-xs"
+          aria-label="Close performance monitor"
+        >
+          ✕
+        </button>
+      </div>
       
-      // Alert for poor performance
-      if (fcp && fcp > 3000) {
-        // // console.warn('⚠️ Poor FCP detected:', fcp);
-      }
-      if (lcp && lcp > 4000) {
-        // // console.warn('⚠️ Poor LCP detected:', lcp);
-      }
-      if (cls && cls > 0.25) {
-        // // console.warn('⚠️ Poor CLS detected:', cls);
-      }
-    };
-
-    checkPerformanceIssues();
-  }, [metrics, enabled]);
-
-  // Don't render anything - this is a monitoring component
-  return null;
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className="font-mono">{getMetricValue('fcp')}</span>
+          <span>{getPerformanceScore('fcp')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className="font-mono">{getMetricValue('lcp')}</span>
+          <span>{getPerformanceScore('lcp')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className="font-mono">{getMetricValue('fid')}</span>
+          <span>{getPerformanceScore('fid')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className="font-mono">{getMetricValue('cls')}</span>
+          <span>{getPerformanceScore('cls')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className="font-mono">{getMetricValue('ttfb')}</span>
+          <span>{getPerformanceScore('ttfb')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>DOM Load:</span>
+          <span className="font-mono">{getMetricValue('domLoad')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Window Load:</span>
+          <span className="font-mono">{getMetricValue('windowLoad')}</span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-600">
+        <button
+          onClick={() => window.location.reload()}
+          className="w-full bg-zion-cyan text-black text-xs py-1 px-2 rounded hover:bg-zion-cyan/80 transition-colors"
+        >
+          Refresh Metrics
+        </button>
+      </div>
+    </div>
+  );
 };
 <<<<<<< HEAD
-
-export default PerformanceMonitor;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 export default PerformanceMonitor;
+=======
 
 export default PerformanceMonitor;
->>>>>>> origin/chore/fix-links-and-build
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

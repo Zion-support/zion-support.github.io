@@ -1,6 +1,7 @@
 <<<<<<< HEAD
-import React from 'react'; export interface NextGenInnovativeService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string  }; technicalSpecs: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string} ; export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface NextGenInnovativeService2025 {
   id: string;
   title: string;
@@ -385,6 +386,8 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
     launchDate: "Q2 2025",
     betaAccess: true
+<<<<<<< HEAD
+=======
 export interface ServiceContact {
   phone: string;
   email: string;
@@ -932,8 +935,10 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     estimatedDelivery: "18-24 weeks",
     supportLevel: "enterprise",
     innovationScore: 9.2
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
 
 export default nextGenInnovativeServices2025;
->>>>>>> origin/chore/fix-links-and-build
