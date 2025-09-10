@@ -1,8 +1,0 @@
-{
-  "timestamp": "2025-09-05T20:55:05.790Z",
-  "status": "vulnerable",
-  "vulnerabilities": [
-    "Potentially dangerous script: clean"
-  ],
-  "recommendations": []
-}

@@ -1,8 +1,10 @@
-import Link from "next/link";
-export const metadata = {title: "AI Business Intelligence - Zion Tech Group";
-  description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.";
-  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"}
-export default function AIBusinessIntelligencePage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Business Intelligence - Zion Tech Group",;
+  description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",;
+  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
+export default function AIBusinessIntelligencePage() {;
+  return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}

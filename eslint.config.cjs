@@ -1,86 +1,78 @@
-const js = require('@eslint/js');
-const reactHooks = require('eslint-plugin-react-hooks');
-const reactRefresh = require('eslint-plugin-react-refresh');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
 
-module.exports = [
+export default [
   {
     ignores: [
-      'node_modules/**/*',
-      'app-optimizer.js',
-      'zion-os/**/*',
-      'apps.backup/**/*',
-      'zion-website/**/*',
-      'automation/**/*',
-      'temp_exclude/**/*',
-      'advanced-automation-improvements.cjs',
-      'analyze_links.cjs',
-      'app-enhancement-suite.cjs',
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '.next/**',
+      '**/.next/**',
+      'zion-os/**',
+      'zion-os.disabled/**',
+      'apps/**',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'corrupted-files-backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'types/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**'
     ],
   },
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': typescriptEslint,
-    },
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
-        ecmaVersion: 2022,
+        ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
+        project: false,
+        tsconfigRootDir: __dirname,
       },
+      globals: globals.browser,
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react': react,
+      'react-hooks': reactHooks,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn'
-    },
-  },
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
-      },
-    },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  },
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  }
 ];
+

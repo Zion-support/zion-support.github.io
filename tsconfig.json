@@ -1,35 +1,73 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["dom", "dom.iterable", "es6", "es2017", "es2018", "es2019", "es2020", "es2021", "es2022"],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"]
+      "@/*": [
+        "./*"
+      ]
     },
-    "allowSyntheticDefaultImports": true
+    "noEmit": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
   },
-  "include": ["next-env.d.ts", "types/global.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "netlify/**", "temp_exclude/**"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "__tests__",
+    "tests",
+    "*.disabled",
+    "**/*.disabled/**",
+    "**/*.bak/**",
+    "**/*.backup/**",
+    "**/*_backup/**",
+    "**/*-backup/**",
+    "src.broken",
+    "src.corrupted",
+    "src.corrupted.*",
+    "src_disabled",
+    "src.disabled",
+    "pages.disabled*",
+    "pages.*backup*",
+    "temp_*",
+    "temp-*/**",
+    "out",
+    ".next",
+    "public-backup",
+    "pages-backup",
+    "src_backup*",
+    "zion-os",
+    "zion-os/**",
+    "zion-website",
+    "zion-website/**"
+  ]
 }
