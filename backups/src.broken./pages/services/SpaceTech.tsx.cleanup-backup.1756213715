@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-
 const SpaceTech: React.FC = () => {
   const services = [
     {
@@ -36,9 +25,6 @@ const SpaceTech: React.FC = () => {
       icon: "🏗️",
       features: ["Ground Stations", "Launch Facilities", "Mission Control Centers", "Testing Facilities"]
 =======
-<<<<<<< HEAD
-import { Rocket, Satellite, Globe, Cpu, Database, Shield, Zap, Target, TrendingUp, Users, Lightbulb, Orbit } from 'lucide-react';
-
 const SpaceTech: React.FC = () => {
   const spaceServices = [
     {
@@ -75,21 +61,10 @@ const SpaceTech: React.FC = () => {
       icon: Rocket,
       title: "Launch Support",
       description: "Technology solutions for launch vehicle operations and mission planning",
-      features: ["Launch planning", "Mission simulation", "Trajectory analysis", "Risk assessment"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    }
+      features: ["Launch planning", "Mission simulation", "Trajectory analysis", "Risk assessment"]    }
   ];
 
   const applications = [
-<<<<<<< HEAD
-    "Earth Observation & Monitoring",
-    "Satellite Communications",
-    "Navigation & GPS Systems",
-    "Space Exploration",
-    "Climate Research",
-    "Defense & Security"
-  ];
-
   const benefits = [
     "Access to space-based data and insights",
     "Enhanced communication capabilities",
@@ -601,9 +576,7 @@ export default SpaceTech;
             </a>
           </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { Link } from 'react-router-dom';
+=======import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $service: React.FC = () => {
@@ -629,22 +602,9 @@ const $service: React.FC = () => {
             Contact Us for More Information
           </Link>
 <<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        </div>
-      </section>
-    </div>
-  );
-};
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 export default SpaceTech;
 =======
-export default $service;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+export default $service;>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 export default $service;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

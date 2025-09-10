@@ -2,23 +2,10 @@ import { Link  } from 'react-router-dom';
 export default function Page("props": "any) {;
 </motion.div>"}
 import { motion, AnimatePresence  } from 'framer-motion';
-<<<<<<< HEAD:src_backup_temp/components/PerformanceOptimizedHero.tsx
-;
-export default function Page("props": "any) {;
-", { "icon": "Za p", "text": "Digital Transformation", "color": "from - yellow-500 to - orange - 500" };
-  ];
-}) => {;
-  const [currentFeature, setCurrentFeature] = useState<any>(0);
-  const [isVisible, setIsVisible] = useState<any>(false);
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
-=======
 export default function Page() {;
     { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
   ];
@@ -31,22 +18,9 @@ export default function Page() {;
   return () => {;
     // Cleanup function;
 };
-}, []); []);
->>>>>>> origin/automation-fixes:src/components/PerformanceOptimizedHero.tsx
-    setIsVisible(true) ;
+}, []); []);    setIsVisible(true) ;
     const interval = setInterval(() => {;
       setCurrentFeature((prev) => (prev + 1) % features.length) ;
-<<<<<<< HEAD:src_backup_temp/components/PerformanceOptimizedHero.tsx
-    }, 3000) ;
-return () => clearInterval(interval)}, [features.length]);
-;
-    // // // // // // // // ;
-  ;
-    // Analytics tracking could be added here;
-    // }, []);
-;
-  const containerVariants = {;
-
   "hidden": "{ "opacity": 0",;
   "y": "5 0;
 
@@ -76,7 +50,6 @@ return (";
       <SEO title="PerformanceOptimizedHero - Zion Tech Group"";
         description="Professional PerformanceOptimizedHero services by Zion Tech Group"",;
         keywords="performanceoptimizedhero, technology, services"   />";
-=======
 }, 3000) ;
     return () => clearInterval(interval)}, [features.length]);
     // // // // // // // // console.log('Hero CTA clicked');
@@ -106,9 +79,7 @@ useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO title="PerformanceOptimizedHero - Zion Tech Group;
         description="Professional PerformanceOptimizedHero services by Zion Tech Group",
-        keywords="performanceoptimizedhero, technology, services"  />";
->>>>>>> origin/automation-fixes:src/components/PerformanceOptimizedHero.tsx
-      <div className="container mx-auto px-4 py-20">";
+        keywords="performanceoptimizedhero, technology, services"  />";      <div className="container mx-auto px-4 py-20">";
         <div className="text-center">";
           <h1 className="text-4xl font-bold text-white mb-6">PerformanceOptimizedHero</h1>";
           <p className="text-xl text-gray-300 mb-8">;
@@ -116,28 +87,10 @@ useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % 
           </p>";
           <div className="flex justify-center">";
             <a href="/contact" ";
-<<<<<<< HEAD:src_backup_temp/components/PerformanceOptimizedHero.tsx
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg "hover": "shado w-lg transition-all duration-300";
-            >;
-              Get Started",;
-=======
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300">;
-              Get Started,
->>>>>>> origin/automation-fixes:src/components/PerformanceOptimizedHero.tsx
-            </a>;
-          </div>;
-    </div>;
-  )}
-<<<<<<< HEAD:src_backup_temp/components/PerformanceOptimizedHero.tsx
-;
-export default PerformanceOptimizedHero;"";
-
 </div>;
 </SEO>;
 </div>;
 </any>;
 </any>
-=======
 
 export default PerformanceOptimizedHero;
->>>>>>> origin/automation-fixes:src/components/PerformanceOptimizedHero.tsx

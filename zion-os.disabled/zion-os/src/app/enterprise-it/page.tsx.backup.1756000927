@@ -1,17 +1,6 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-  title: "Enterprise IT Services - Zion Tech Group",
-  description: "Comprehensive enterprise IT infrastructure solutions including cloud migration, DevOps automation, and scalable technology infrastructure.",
-  keywords: "enterprise IT, infrastructure, cloud migration, DevOps, IT consulting, Zion Tech Group",
-=======
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-};
-
 export default function EnterpriseITPage() {
   return (
 <<<<<<< HEAD
@@ -399,18 +388,11 @@ export default function EnterpriseITPage() {
                 24/7 managed IT services including monitoring, maintenance, 
                 and support for enterprise infrastructure.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-400">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-                <li>• 24/7 monitoring</li>
+              <ul className="space-y-2 mb-6 text-sm text-gray-400">                <li>• 24/7 monitoring</li>
                 <li>• Proactive maintenance</li>
                 <li>• Help desk support</li>
                 <li>• Performance optimization</li>
               </ul>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-
         {/* Technology Stack */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-12">Technology Stack</h2>
@@ -674,8 +656,6 @@ export default function EnterpriseITPage() {
             </div>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-    </div>
+      </section>    </div>
   );
 }

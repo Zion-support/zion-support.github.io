@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/QuoteRequestForm/ServiceTypeStep.jsx
 import React from 'react';
 import {useEffect, useState} from "react";
 import {Input} from "@/components/ui/input";

@@ -14,18 +14,11 @@ class User(db.Model):
 
     enrollments = db.relationship('Enrollment', back_populates='user', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='user', lazy=True, cascade="all, delete-orphan")
-<<<<<<< HEAD
-
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 =======
     update_reactions = db.relationship('UpdateReaction', backref='user', lazy=True, cascade="all, delete-orphan")
     update_comments = db.relationship('UpdateComment', backref='user', lazy=True, cascade="all, delete-orphan")
->>>>>>> origin/automation/changelog
-
     def __repr__(self):
         return f'<User {self.username}>'
 
@@ -132,9 +125,6 @@ class Certificate(db.Model):
 
     def __repr__(self):
         return f'<Certificate {self.id} for U{self.user_id} - C{self.course_id}>'
-<<<<<<< HEAD
-=======
-
 class Update(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
@@ -184,4 +174,3 @@ class UpdateComment(db.Model):
     
     def __repr__(self):
         return f'<UpdateComment {self.id} by User {self.user_id} on Update {self.update_id}>'
->>>>>>> origin/automation/changelog

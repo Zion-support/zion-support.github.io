@@ -37,7 +37,7 @@ class CSSPurger {
 
     // Scan all HTML, JS, and TSX files for class usage
     const files = this.getAllFiles(this.srcPath, ['.html', '.js', '.jsx', '.ts', '.tsx']);
-    
+
     for (const file of files) {
       const content = fs.readFileSync(file, 'utf8');
       this.extractClassesFromContent(content);
@@ -56,17 +56,17 @@ class CSSPurger {
   getAllFiles(dir, extensions) {
     let files = [];
     const items = fs.readdirSync(dir, { withFileTypes: true });
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item.name);
-      
+
       if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
         files = files.concat(this.getAllFiles(fullPath, extensions));
       } else if (item.isFile() && extensions.some(ext => item.name.endsWith(ext))) {
         files.push(fullPath);
       }
     }
-    
+
     return files;
   }
 
@@ -116,21 +116,21 @@ class CSSPurger {
   async purgeCSSFile(cssFile) {
     const originalContent = fs.readFileSync(cssFile, 'utf8');
     const originalSize = originalContent.length;
-    
+
     // Simple CSS purging - remove unused selectors
     const lines = originalContent.split('\n');
     const purgedLines = [];
-    
+
     for (const line of lines) {
       if (this.isCSSRuleUsed(line)) {
         purgedLines.push(line);
       }
     }
-    
+
     const purgedContent = purgedLines.join('\n');
     const purgedSize = purgedContent.length;
     const savings = ((originalSize - purgedSize) / originalSize * 100).toFixed(2);
-    
+
     if (savings > 0) {
       fs.writeFileSync(cssFile, purgedContent);
       console.log(`📦 ${path.basename(cssFile)}: ${originalSize} → ${purgedSize} bytes (${savings}% reduction)`);
@@ -144,20 +144,20 @@ class CSSPurger {
     if (line.trim().startsWith('/*') || line.trim().startsWith('*') || line.trim() === '') {
       return true;
     }
-    
+
     // Skip @ rules (imports, media queries, etc.)
     if (line.trim().startsWith('@')) {
       return true;
     }
-    
+
     // Extract class names from CSS selectors
     const classPattern = /\.([a-zA-Z0-9_-]+)/g;
     const matches = line.match(classPattern);
-    
+
     if (!matches) {
       return true; // Keep non-class selectors
     }
-    
+
     // Check if any of the classes in this rule are used
     return matches.some(match => {
       const className = match.substring(1); // Remove the dot
@@ -181,13 +181,13 @@ class CSSPurger {
       /^xl:/, // Extra large screens
       /^2xl:/, // 2xl screens
     ];
-    
+
     return utilityPatterns.some(pattern => pattern.test(className));
   }
 
   printReport() {
     console.log('\n📊 CSS Purging Report');
-    console.log('=====================');
+    console.log('');
     console.log(`✅ Scanned ${this.usedClasses.size} CSS classes`);
     console.log('🎯 Removed unused CSS selectors');
     console.log('💡 Consider using Tailwind CSS purging for better results');
