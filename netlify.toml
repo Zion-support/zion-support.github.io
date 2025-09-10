@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn --omit=optional && pnpm build"
+  command = "corepack enable && pnpm install --frozen-lockfile --prefer-offline --loglevel warn --omit=optional --ignore-scripts=false && pnpm run build"
   publish = "dist"
   command_timeout = "30m"
 
