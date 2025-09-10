@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader.tsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.js';
@@ -12,21 +12,19 @@ const ContactPage = lazy(() => import('./pages/Contact.jsx'));
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-zion-blue-dark">
-        <AppHeader />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </Suspense>
-        <Footer />
-        <ChatAssistant />
-      </div>
-    </Router>
+    <div className="min-h-screen bg-zion-blue-dark">
+      <AppHeader />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Suspense>
+      <Footer />
+      <ChatAssistant />
+    </div>
   );
 }
 
