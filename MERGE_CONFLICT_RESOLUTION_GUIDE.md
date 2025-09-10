@@ -49,7 +49,7 @@ git push origin main
 ```bash
 # Merge each PR using GitHub API
 curl -X PUT \
-  -H "Authorization: token ghs_1VMCBXZRrk3YhQKYmTVlXYqmL6Z3O220nXyz" \
+  -H "Authorization: token $GITHUB_TOKEN" \
   -H "Accept: application/vnd.github.v3+json" \
   "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/[PR_NUMBER]/merge" \
   -d '{"commit_title":"Merge PR #[PR_NUMBER]","commit_message":"Automated merge","merge_method":"merge"}'

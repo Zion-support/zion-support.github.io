@@ -30,7 +30,11 @@ check_status "Pull from origin/main"
 
 # 4. Check for open PRs
 echo "4. Checking for open PRs..."
-curl -s -H "Authorization: token ghs_IYHKQkildtdfPGMKfcXeTqv1YtJcv83jUUS9" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open > /tmp/open_prs.json
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "GITHUB_TOKEN not set; skipping PR fetch."
+else
+  curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open > /tmp/open_prs.json
+fi
 if [ -s /tmp/open_prs.json ]; then
     echo "Open PRs found:"
     cat /tmp/open_prs.json | jq '.[] | {number: .number, title: .title, head: .head.ref, base: .base.ref}'
