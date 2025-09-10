@@ -1,10 +1,10 @@
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
+  command = "corepack enable && corepack prepare pnpm@9.12.1 --activate && pnpm install --frozen-lockfile --prefer-offline && pnpm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
 NODE_OPTIONS = "--max-old-space-size=4096"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
 SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
