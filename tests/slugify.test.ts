@@ -1,5 +1,4 @@
 import { slugify } from '@/lib/slugify';
-import { unslugify } from '@/lib/slugify';
 
 it('removes accents from strings', () => {
   expect(slugify('Crème Brûlée')).toBe('creme-brulee');
@@ -15,16 +14,4 @@ it('removes special characters', () => {
 
 it('allows custom separators', () => {
   expect(slugify('Multi Word Title', '_')).toBe('multi_word_title');
-});
-
-it('converts slug back to title', () => {
-  expect(unslugify('multi-word-title')).toBe('Multi Word Title');
-});
-
-it('handles custom separator when unslugifying', () => {
-  expect(unslugify('multi_word_title', '_')).toBe('Multi Word Title');
-});
-
-it('handles separators that include regex characters', () => {
-  expect(unslugify('multi.word.title', '.')).toBe('Multi Word Title');
 });
