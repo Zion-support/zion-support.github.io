@@ -92,4 +92,4 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-## Removed invalid plugin block to satisfy Netlify CLI schema
+ 
