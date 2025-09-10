@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "pages": [
     {
 <<<<<<< HEAD
@@ -31,14 +32,19 @@
 =======
 =======
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
   "pages": [
     {
       "file": "pages/site-health.tsx",
       "route": "/site-health"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T08-48-06-994Z
 =======
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
     },
     {
       "file": "pages/search.tsx",
@@ -90,7 +96,14 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      "file": "pages/reports/updates/update-2025-08-15T09-00.tsx",
+      "route": "/reports/updates/update-2025-08-15T09-00"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/updates/update-2025-08-15T08-50.tsx",
       "route": "/reports/updates/update-2025-08-15T08-50"
     },
@@ -99,7 +112,10 @@
       "route": "/reports/updates/update-2025-08-15T08-46"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/updates/update-2025-08-15T08-36.tsx",
       "route": "/reports/updates/update-2025-08-15T08-36"
     },
@@ -621,12 +637,22 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      "file": "pages/reports/updates/update-2025-08-15-0859.tsx",
+      "route": "/reports/updates/update-2025-08-15-0859"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/updates/update-2025-08-15-0850.tsx",
       "route": "/reports/updates/update-2025-08-15-0850"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/updates/update-2025-08-15-0836.tsx",
       "route": "/reports/updates/update-2025-08-15-0836"
     },
@@ -2264,12 +2290,22 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      "file": "pages/reports/playbooks/playbook-2025-08-15-090000.tsx",
+      "route": "/reports/playbooks/playbook-2025-08-15-090000"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/playbooks/playbook-2025-08-15-085051.tsx",
       "route": "/reports/playbooks/playbook-2025-08-15-085051"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/playbooks/playbook-2025-08-15-083606.tsx",
       "route": "/reports/playbooks/playbook-2025-08-15-083606"
     },
@@ -4063,7 +4099,14 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      "file": "pages/reports/innovations/insight-2025-08-15T09-00.tsx",
+      "route": "/reports/innovations/insight-2025-08-15T09-00"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/innovations/insight-2025-08-15T08-50.tsx",
       "route": "/reports/innovations/insight-2025-08-15T08-50"
     },
@@ -4072,7 +4115,10 @@
       "route": "/reports/innovations/insight-2025-08-15T08-46"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/innovations/insight-2025-08-15T08-36.tsx",
       "route": "/reports/innovations/insight-2025-08-15T08-36"
     },
@@ -4594,12 +4640,22 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      "file": "pages/reports/innovations/insight-2025-08-15-0859.tsx",
+      "route": "/reports/innovations/insight-2025-08-15-0859"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/innovations/insight-2025-08-15-0850.tsx",
       "route": "/reports/innovations/insight-2025-08-15-0850"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/innovations/insight-2025-08-15-0836.tsx",
       "route": "/reports/innovations/insight-2025-08-15-0836"
     },
@@ -5113,12 +5169,22 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      "file": "pages/reports/patterns/pattern-2025-08-15-090000.tsx",
+      "route": "/reports/patterns/pattern-2025-08-15-090000"
+    },
+    {
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/patterns/pattern-2025-08-15-085051.tsx",
       "route": "/reports/patterns/pattern-2025-08-15-085051"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/patterns/pattern-2025-08-15-083606.tsx",
       "route": "/reports/patterns/pattern-2025-08-15-083606"
     },
@@ -7835,6 +7901,7 @@
       "route": "/reports/patterns/pattern-2025-08-15-021207"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "file": "pages/main/front/index.tsx",
       "route": "/main/front"
@@ -10566,6 +10633,14 @@
       "file": "pages/reports/guides/guide-2025-08-15-085051.tsx",
       "route": "/reports/guides/guide-2025-08-15-085051"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+      "file": "pages/reports/guides/guide-2025-08-15-090000.tsx",
+      "route": "/reports/guides/guide-2025-08-15-090000"
+    },
+    {
+      "file": "pages/reports/guides/guide-2025-08-15-085051.tsx",
+      "route": "/reports/guides/guide-2025-08-15-085051"
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
     },
     {
       "file": "pages/reports/guides/guide-2025-08-15-083606.tsx",
@@ -13293,16 +13368,24 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "file": "pages/main/front/index.tsx",
       "route": "/main/front"
+=======
+      "file": "pages/reports/blueprints/blueprint-2025-08-15-090000.tsx",
+      "route": "/reports/blueprints/blueprint-2025-08-15-090000"
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
     },
     {
       "file": "pages/reports/blueprints/blueprint-2025-08-15-085051.tsx",
       "route": "/reports/blueprints/blueprint-2025-08-15-085051"
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "file": "pages/reports/blueprints/blueprint-2025-08-15-083606.tsx",
       "route": "/reports/blueprints/blueprint-2025-08-15-083606"
     },
@@ -15098,7 +15181,14 @@
       "file": "pages/reports/blueprints/blueprint-2025-08-14-212855.tsx",
       "route": "/reports/blueprints/blueprint-2025-08-14-212855"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    },
+    {
+      "file": "pages/reports/cases/case-2025-08-15-090000.tsx",
+      "route": "/reports/cases/case-2025-08-15-090000"
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
     },
     {
       "file": "pages/reports/cases/case-2025-08-15-085051.tsx",
@@ -17827,7 +17917,14 @@
     {
       "file": "pages/reports/cases/case-2025-08-15-021207.tsx",
       "route": "/reports/cases/case-2025-08-15-021207"
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+    },
+    {
+      "file": "pages/main/front/index.tsx",
+      "route": "/main/front"
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
     }
   ],
   "docs": [
@@ -17864,6 +17961,7 @@
       "route": "/docs/reports/unused-exports.md"
     }
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   "generatedAt": "2025-08-15T08:48:01.234Z",
@@ -17951,10 +18049,20 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T09:00:58.151Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T09-01-03-548Z
+=======
+  "generatedAt": "2025-08-15T09:09:48.554Z",
+  "items": [
+    {
+      "title": "Case Study — Automation Autonomous",
+      "href": "/reports/cases/case-2025-08-15-090950",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:09:50.033Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Guide — Cloud Improving Implementation",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17976,10 +18084,16 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-15T09:00:58.151Z",
 >>>>>>> origin/automation/git-sync/2025-08-15T09-01-03-548Z
+=======
+      "href": "/reports/guides/guide-2025-08-15-090950",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:09:50.033Z",
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
       "source": "cloud-deep-research-factory"
     },
     {
       "title": "Pattern — Cloud Improving Continuously",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70357,6 +70471,12 @@
       "createdAt": "2025-08-15T09:00:10.891Z",
       "source": "cloud-deep-research-factory"
 >>>>>>> origin/automation/git-sync/2025-08-15T09-00-16-734Z
+=======
+      "href": "/reports/patterns/pattern-2025-08-15-090950",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T09:09:50.033Z",
+      "source": "cloud-deep-research-factory"
+>>>>>>> origin/automation/git-sync/2025-08-15T09-09-54-637Z
     }
   ]
 >>>>>>> origin/automation/git-sync/2025-08-15T07-42-19-758Z
