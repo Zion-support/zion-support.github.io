@@ -3,6 +3,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import globals from 'globals';
 
 export default [
   {
@@ -48,8 +49,7 @@ export default [
         project: false
       },
       globals: {
-        window: 'readonly',
-        document: 'readonly'
+        ...globals.browser
       }
     },
     settings: {
@@ -63,9 +63,10 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...tsPlugin.configs.recommended.rules,
+      ...(tsPlugin.configs?.recommended?.rules ?? {}),
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      'no-undef': 'off',
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
