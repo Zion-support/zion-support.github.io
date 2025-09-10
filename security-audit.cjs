@@ -6,7 +6,7 @@ const fs = require('fs');
 console.log('🔍 Security Audit Starting...\n');
 
 // Security audit checks
-const securityChecks = [
+const securityChecks = [;
   {
     name: 'Dependency vulnerabilities',
     command: 'npm audit --audit-level=moderate',
