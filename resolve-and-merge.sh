@@ -50,7 +50,7 @@ execute_git() {
 
 # Main execution
 main() {
-    echo "Starting comprehensive merge conflict resolution and PR merging process..."
+    echo "Starting merge conflict resolution and PR merging process..."
     
     # Step 1: Clean merge conflicts
     clean_conflicts
