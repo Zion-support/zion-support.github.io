@@ -8,7 +8,7 @@ const _industries = [];
 const _services = [];
 const _applications = [];
 const _solutions = [];
-export default function MicroSAASSolutions() {
+export default function MicroSaaSSolutions() {
     const _services = [
         {
             title: "Custom SAAS Development",
