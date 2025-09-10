@@ -60,14 +60,17 @@ describe('RegistrationForm', () => {
     fireEvent.click(screen.getByLabelText(/i agree/i));
     fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
 
-    expect(global.fetch).toHaveBeenCalledWith('/api/auth/register', expect.objectContaining({ method: 'POST' }));
-    expect(toastHook.toast.success).toHaveBeenCalledWith('Account created');
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('/auth/register'),
+      expect.objectContaining({ method: 'POST' })
+    );
+    expect(toastHook.toast.success).toHaveBeenCalledWith('Welcome to ZionAI 🎉');
     expect(navigateMock).toHaveBeenCalledWith('/dashboard');
   });
 
   it('shows error toast on server 400', async () => {
     (toastHook.toast.error as jest.Mock).mockImplementation(() => {});
-    mockFetch({ error: 'Bad' }, 400);
+    mockFetch({ message: 'Bad' }, 400);
 
     render(
       <MemoryRouter>
