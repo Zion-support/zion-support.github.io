@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import { GradientHeading } from "./GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -13,6 +14,9 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 
 
 
+=======
+import React from 'react';
+>>>>>>> origin/chore/fix-links-and-build
 
 export function FeaturesGuideSection() {
   const features = [

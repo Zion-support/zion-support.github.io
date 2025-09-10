@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type SupportedLanguage = 'en' | 'es' | 'fr';
@@ -7,6 +8,14 @@ interface LanguageContextType {
   setLanguage: (lang: SupportedLanguage) => void;
   supportedLanguages: SupportedLanguage[];
   translateText: (text: string, targetLanguage: string) => Promise<string>;
+=======
+import * as React from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+interface LanguageContextType {
+  language: string;
+  setLanguage: (lang: string) => void;
+>>>>>>> origin/chore/fix-links-and-build
   t: (key: string) => string;
   translateContent: (content: string) => Promise<string>;
   isTranslating: boolean;
@@ -63,4 +72,29 @@ export const useLanguage = () => {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
+<<<<<<< HEAD
 };
+=======
+}
+}
+
+const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = React.useState('en');
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = (): LanguageContextType => {
+  const context = React.useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
+>>>>>>> origin/chore/fix-links-and-build

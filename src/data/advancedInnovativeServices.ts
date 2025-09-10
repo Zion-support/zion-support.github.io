@@ -94,7 +94,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"
   },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
@@ -131,7 +134,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Logistics optimization",
       "Cryptography and security",
       "Material science research"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
     ],
     targetAudience: [
       "Research institutions",
@@ -144,7 +150,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $8,000/month",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -158,7 +167,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption",
     innovationLevel: "Pioneering quantum-classical hybrid approaches",
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
   },
 
   // Autonomous Drone Fleet Management
@@ -197,7 +209,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Search and rescue operations",
       "Security and surveillance",
       "Environmental monitoring"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
     ],
     targetAudience: [
       "Biotech researchers",
@@ -524,7 +539,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $3,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -863,7 +877,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
     price: 599,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -904,7 +921,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$599 - $2,200/month",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -985,4 +1005,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 ];
 
 export default ADVANCED_INNOVATIVE_SERVICES;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+>>>>>>> origin/chore/fix-links-and-build

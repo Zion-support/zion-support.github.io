@@ -21,6 +21,13 @@ export const useAuth = () => {
         user,
         loading,
         login,
+<<<<<<< HEAD
         logout
+=======
+        logout,
+        register,
+        isAuthenticated: !!user,
+        isAdmin: user?.role === 'admin'
+>>>>>>> origin/chore/fix-links-and-build
     };
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { jsx as _jsx } from "react/jsx-runtime";
 import { createContext, useContext } from 'react';
 const defaultWhitelabelContext = {
@@ -13,6 +14,21 @@ export const useWhitelabel = () => {
         throw new Error('useWhitelabel must be used within a WhitelabelProvider');
     }
     return context;
+=======
+import React, { createContext, useContext } from 'react';
+const defaultConfig = {
+    companyName: 'Zion Tech Group',
+    logo: '/logo.svg',
+    primaryColor: '#1e40af',
+    secondaryColor: '#7c3aed',
+    domain: 'https://ziontechgroup.com',
+    isWhitelabel: false,
+    contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+>>>>>>> origin/chore/fix-links-and-build
 };
 export const WhitelabelProvider = ({ children, value = {} }) => {
     const contextValue = Object.assign(Object.assign({}, defaultWhitelabelContext), value);

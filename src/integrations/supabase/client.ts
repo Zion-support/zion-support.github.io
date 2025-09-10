@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 // Mock Supabase client for build
 export const isSupabaseConfigured = () => {
   return !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 };
+=======
+import { createClient } from '@supabase/supabase-js';
+import { supabaseStorageAdapter } from './safeStorageAdapter';
+// Mock Supabase client for development
+// In production, this would be the actual Supabase client
+>>>>>>> origin/chore/fix-links-and-build
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL;

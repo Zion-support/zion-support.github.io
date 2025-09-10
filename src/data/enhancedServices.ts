@@ -375,6 +375,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [;
     availability: "4-6 Weeks",;
     aiScore: 94},;
 
+<<<<<<< HEAD
   // Advanced AI & Machine Learning Services;
   {;
     id: "ai-video-generation",;
@@ -1131,6 +1132,52 @@ export const ENHANCED_SERVICES: ProductListing[] = [;
     location: "Global",;
     availability: "3-4 Weeks",;
     aiScore: 91}
+=======
+  // Emerging Technology Services
+  {
+    id: "blockchain-enterprise",
+    title: "Enterprise Blockchain Solutions",
+    description: "Custom blockchain development for supply chain transparency, smart contracts, and decentralized applications. Includes private blockchain networks, smart contract development, and integration services.",
+    category: "Blockchain",
+    price: 19999,
+    currency: "$",
+    tags: ["Blockchain", "Smart Contracts", "Supply Chain", "DApps"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-30T12:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 23,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 95
+  },
+  {
+    id: "quantum-computing-readiness",
+    title: "Quantum Computing Readiness Assessment",
+    description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.",
+    category: "Quantum Computing",
+    price: 14999,
+    currency: "$",
+    tags: ["Quantum Computing", "Technology Assessment", "Strategic Planning", "Innovation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-04-01T09:45:00.000Z",
+    rating: 4.8,
+    reviewCount: 12,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 94
+  }
+>>>>>>> origin/chore/fix-links-and-build
 ];
 
 // Append additional diversified, real micro SaaS, IT, and AI services;
@@ -1237,6 +1284,7 @@ export const ENHANCED_SERVICE_CATEGORIES = [;
   { label: 'AI Automation', value: 'ai-automation' }
 ];
 
+<<<<<<< HEAD
 // Pricing tiers for different service levels;
 export const SERVICE_PRICING_TIERS = {};
 },;";
@@ -1256,3 +1304,12 @@ export default function enhancedServices() {};
   return null;
 }
   );"}";
+=======
+// Contact information
+export const CONTACT_INFO = {
+  mobile: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  website: "https://ziontechgroup.com"
+};
+>>>>>>> origin/chore/fix-links-and-build
