@@ -30,7 +30,7 @@ serve(async (req: Request) => {
     const { data, error } = await supabase.rpc("create_scheduled_reminders");
     
     if (error) {
-      console.error("Failed to create scheduled reminders:", error);
+      // console.error("Failed to create scheduled reminders:", error);
       return new Response(
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
         {
@@ -49,7 +49,7 @@ serve(async (req: Request) => {
       .lt("scheduled_for", new Date().toISOString());
     
     if (jobsError) {
-      console.error("Failed to fetch pending jobs:", jobsError);
+      // console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
         JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
         {
@@ -87,12 +87,12 @@ serve(async (req: Request) => {
             .eq("id", job.id);
           
           if (updateError) {
-            console.error("Failed to update job status:", updateError);
+            // console.error("Failed to update job status:", updateError);
           } else {
             processedJobs.push(job.id);
           }
         } else {
-          console.error("Failed to send reminder for job:", job.id);
+          // console.error("Failed to send reminder for job:", job.id);
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
@@ -116,7 +116,7 @@ serve(async (req: Request) => {
       }
     );
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     return new Response(
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
