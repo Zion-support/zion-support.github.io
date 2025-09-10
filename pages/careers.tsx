@@ -3,7 +3,7 @@ import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 import { 
   MapPin, 
   Clock, 
@@ -65,7 +65,7 @@ const culture = [
 
 export default function CareersPage() {
   return (
-    <MainLayout
+    <Layout
       title="Careers - Zion Tech Group"
       description="Join our team and help us build innovative solutions that make a difference"
       keywords="careers, jobs, employment, technology careers"
@@ -225,6 +225,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

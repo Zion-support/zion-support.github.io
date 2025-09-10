@@ -3,62 +3,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const About: NextPage = () => {;
-  return (;
-    <>;
-      <Head>;
-        <title>About Us - Zion Tech Group</title>;
-        <meta name="description" content="Learn about Zion Tech Group's mission to provide cutting-edge technology solutions and our team of expert professionals." />;
-      </Head>;
-      <Navigation />;
-      <main className="min-h-screen bg-gray-900 pt-16">;
-        <div className="container mx-auto px-4 py-16">;
-          <div className="max-w-4xl mx-auto text-center text-white">;
-            <h1 className="text-5xl font-bold mb-8">;
-              About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>;
-            </h1>;
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">;
-              We are a leading technology solutions provider dedicated to transforming businesses ;
-              through innovative AI, cloud architecture, and cutting-edge development services.;
-            </p>;
-            <div className="grid md:grid-cols-3 gap-8 mt-16">;
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">;
-                <h3 className="text-2xl font-bold mb-4 text-blue-400">Our Mission</h3>;
-                <p className="text-gray-300">;
-                  To empower businesses with cutting-edge technology solutions that drive growth,
-                  efficiency, and innovation in the digital age.;
-                </p>;
-              </div>;
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">;
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3>;
-                <p className="text-gray-300">;
-                  To be the global leader in AI-powered technology solutions,
-                  setting the standard for innovation and excellence.;
-                </p>;
-              </div>;
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">;
-                <h3 className="text-2xl font-bold mb-4 text-pink-400">Our Values</h3>;
-                <p className="text-gray-300">;
-                  Innovation, integrity, excellence, and client success are the ;
-                  core values that guide everything we do.;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </main>;
-      <Footer />;
-    </>;
-  );
-};
-export default About;
->>>>>>> origin/automation-fixes
-=======
-import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
 const AboutPage: React.FC = () => {
   const values = [
@@ -270,8 +215,62 @@ export default function AboutPage() {
             </div>
           </section>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our diverse team of experts brings together decades of experience in technology, AI, and business innovation.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-blue-600 font-semibold mb-2">
+                  {member.role}
+                </p>
+                <p className="text-gray-600 mb-2">
+                  {member.expertise}
+                </p>
+                <p className="text-sm text-gray-500">
+                  {member.experience}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+    </Layout>
   );
 };
 

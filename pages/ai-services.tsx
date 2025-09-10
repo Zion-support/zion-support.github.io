@@ -2097,8 +2097,8 @@ const additionalServices = [
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
       ]
-    }
-  ];
+      }
+];
 
 const categories = [
   { name: "All", count: aiServices.length },
