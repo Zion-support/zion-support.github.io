@@ -60,6 +60,7 @@
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^6.0.0",
     "react-hook-form": "^7.47.0",
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
