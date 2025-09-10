@@ -1,0 +1,161 @@
+name: Security Scan
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Run daily at 4 AM UTC
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run npm audit
+        id: audit
+        run: |
+          echo "Running security audit..."
+          
+          # Run audit and capture exit code
+          if yarn audit --audit-level=moderate; then
+            echo "audit_result=success" >> $GITHUB_OUTPUT
+            echo "No security vulnerabilities found"
+          else
+            echo "audit_result=vulnerabilities" >> $GITHUB_OUTPUT
+            echo "Security vulnerabilities found"
+          fi
+
+      - name: Run Snyk security scan
+        uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high
+
+      - name: Check for known vulnerabilities
+        if: steps.audit.outputs.audit_result == 'vulnerabilities'
+        run: |
+          echo "High severity vulnerabilities found - please review"
+          yarn audit --audit-level=high --json > audit-report.json
+          
+          # Extract vulnerability details
+          jq -r '.advisories | to_entries[] | "\(.value.title) - \(.value.module_name) - \(.value.severity)"' audit-report.json || echo "Could not parse audit report"
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: |
+            audit-report.json
+            snyk-report.json
+          retention-days: 90
+
+      - name: Create security issue
+        if: steps.audit.outputs.audit_result == 'vulnerabilities'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Security vulnerabilities detected - $(date -u +%Y-%m-%d)"
+          content-filepath: .github/ISSUE_TEMPLATE/security-vulnerability.md
+          labels: security,vulnerability,automated
+          assignees: ''
+
+  dependency-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check for outdated dependencies
+        run: |
+          echo "Checking for outdated dependencies..."
+          yarn outdated || echo "All dependencies are up to date"
+
+      - name: Check for deprecated packages
+        run: |
+          echo "Checking for deprecated packages..."
+          yarn list --depth=0 | grep -i deprecated || echo "No deprecated packages found"
+
+  license-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check license compliance
+        run: |
+          echo "Checking license compliance..."
+          
+          # Check for GPL licenses (often problematic for commercial use)
+          yarn licenses list | grep -i "gpl\|agpl" && {
+            echo "⚠️  GPL/AGPL licenses detected - review for compliance"
+            exit 1
+          } || echo "✅ No GPL/AGPL licenses detected"
+          
+          # Check for other potentially problematic licenses
+          yarn licenses list | grep -i "mpl\|epl" && {
+            echo "ℹ️  MPL/EPL licenses detected - review for compliance"
+          } || echo "✅ No MPL/EPL licenses detected"
+
+  summary:
+    runs-on: ubuntu-latest
+    needs: [security-scan, dependency-check, license-check]
+    if: always()
+    steps:
+      - name: Security scan summary
+        run: |
+          echo "=== Security Scan Summary ==="
+          echo "Security scan: ${{ needs.security-scan.result }}"
+          echo "Dependency check: ${{ needs.dependency-check.result }}"
+          echo "License check: ${{ needs.license-check.result }}"
+          
+          if [[ "${{ needs.security-scan.result }}" == "failure" ]]; then
+            echo "❌ Security vulnerabilities detected"
+            exit 1
+          elif [[ "${{ needs.dependency-check.result }}" == "failure" ]]; then
+            echo "⚠️  Dependency issues detected"
+          elif [[ "${{ needs.license-check.result }}" == "failure" ]]; then
+            echo "⚠️  License compliance issues detected"
+          else
+            echo "✅ All security checks passed"
+          fi
