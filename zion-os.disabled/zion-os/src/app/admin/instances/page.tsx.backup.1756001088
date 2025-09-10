@@ -18,19 +18,6 @@ export default async function InstancesPage() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Instances</h1>
-      
-      {error && (
-        <div className="p-4 bg-yellow-500/20 border border-yellow-500/50 rounded-lg">
-          <p className="text-yellow-400">{error}</p>
-          <p className="text-sm text-yellow-300 mt-1">
-            This is normal during development. Set up your database connection to see instances.
-          </p>
-        </div>
-      )}
-
       {instances.length === 0 && !error && (
         <div className="text-center py-8">
           <p className="opacity-70">No instances found. Create your first instance using the Launch Wizard.</p>
@@ -131,8 +118,6 @@ export default async function InstancesPage() {
             ))}
           </div>
         )}
-      </section>
->>>>>>> origin/cursor/enhance-accessibility-and-site-performance-5d26
-    </div>
+      </section>    </div>
   );
 }

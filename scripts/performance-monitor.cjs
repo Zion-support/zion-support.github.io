@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-/**
- * Performance Monitor
- * Basic performance monitoring for the Zion Tech Group website
- */
-
 const fs = require('fs');
 const path = require('path');
 
@@ -191,36 +184,11 @@ const result = execSync("du -sh .next", { encoding: "utf8" });
             pattern: "console.log in production code",
             line: content.split("\n").findIndex(line => line.includes("console.log")),,
 }),,
-}
->>>>>>> origin/automation-fixes
-      }
+}      }
     } catch (error) {
       this.log(`⚠️ Bundle size monitoring failed: ${error.message}`);
     }
   }
-<<<<<<< HEAD
-
-  // Add performance optimizations
-  async addPerformanceOptimizations() {
-    this.log('🚀 Adding performance optimizations...');
-    try {
-      const optimizationsScript = `// Performance optimization utilities
-export const lazyLoadImages = () => {
-  if (typeof window === 'undefined') return;
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.classList.remove('lazy');
-        observer.unobserve(img);
-      }
-    });
-  });
-  images.forEach(img => imageObserver.observe(img));
-};`;
-
       fs.writeFileSync(path.join(this.projectRoot, 'utils/performance-optimizations.js'), optimizationsScript);
       this.log('✅ Performance optimizations added');
       this.optimizations.push('Performance optimizations');
@@ -305,4 +273,3 @@ if (require.main === module) {
   monitor.run().catch(console.error),,
 }
 module.exports = PerformanceMonitor
->>>>>>> origin/automation-fixes

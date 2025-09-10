@@ -7,12 +7,11 @@ let fixedCount = 0;
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Fix common syntax errors
     content = content.replace(/,\s*;/g, ';');
     content = content.replace(/;\s*,/g, ';');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/    
     fs.writeFileSync(filePath, content);
     fixedCount++;
     console.log(`Fixed: ${filePath}`);

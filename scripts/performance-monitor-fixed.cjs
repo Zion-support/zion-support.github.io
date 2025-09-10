@@ -126,84 +126,6 @@ class PerformanceMonitor {
 }
       // Check source code size;
       const srcPath = path.join(this.projectRoot, "src")
-<<<<<<< HEAD
-=======
-  getDirectorySize(dirPath) {
-    let totalSize = 0;
-    if (!fs.existsSync(dirPath)) return 0;
-    const files = fs.readdirSync(dirPath)
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stats = fs.statSync(filePath);
-      if (stats.isDirectory()) {
-        // Skip directories we can"t access;
-        if (file === "node_modules" || file === ".git") continue;
-        totalSize += this.getDirectorySize(filePath),,
-} else {
-        totalSize += stats.size,,
-}
-    }
-    return totalSize,,
-}
-  countFiles(dirPath, extensions) {
-    if (!fs.existsSync(dirPath)) return 0;
-    let count = 0;
-    const files = fs.readdirSync(dirPath)
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stats = fs.statSync(filePath);
-      if (stats.isDirectory()) {
-        count += this.countFiles(filePath, extensions),,
-} else if (extensions.some(ext => file.endsWith(ext))) {
-        count++,,
-}
-    }
-    return count,,
-}
-  async saveMetrics() {
-    const reportPath = path.join(this.projectRoot, "performance-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2))
-    console.log(`📊 Metrics saved to ${reportPath}`),,
-}
-  displaySummary() {
-    console.log("\n📊 Performance Summary:")
-    console.log("=".repeat(50))
-    // System metrics;
-    console.log("💻 System Metrics:")
-    console.log(`   Memory: ${this.metrics.system.memory.heapUsed}MB / ${this.metrics.system.memory.heapTotal}MB`)
-    console.log(`   CPU: ${this.metrics.system.cpu.user}ms user, ${this.metrics.system.cpu.system}ms system`)
-    console.log(`   Process: PID ${this.metrics.system.process.pid}, Uptime: ${this.metrics.system.process.uptime}s`)
-    // Application metrics;
-    console.log("\n📱 Application Metrics:")
-    console.log(`   Build Size: ${this.metrics.application.buildSize}MB`)
-    console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`)
-    console.log(`   Source Code: ${this.metrics.application.sourceSize}KB`)
-    console.log(`   Files: ${this.metrics.application.fileCounts.source} source, ${this.metrics.application.fileCounts.components} components`)
-    // Build metrics;
-    console.log("\n🔨 Build Metrics:")
-    console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"}`)
-    console.log(`   Available Scripts: ${this.metrics.build.scripts?.length || 0}`)
-    console.log("=".repeat(50))
-    try {
-      const files = fs.readdirSync(dirPath);
-      for (const file of files) {
-        const filePath = path.join(dirPath, file);
-        const stats = fs.statSync(filePath);
-        if (stats.isDirectory()) {
-          totalSize += this.getDirectorySize(filePath)} else {
-          totalSize += stats.size}
-      }
-    } catch (error) {
-      // Ignore errors for inaccessible files}
-    return totalSize}
-  async runPerformanceTest() {
-    console.log("🚀 Starting performance monitoring...")";    await this.collectSystemMetrics()
-    await this.collectApplicationMetrics()
-    await this.collectWebMetrics()
-    this.displayResults()
-    this.saveReport()
-    return this.metrics}
-
   displayResults() {
     console.log("\n📊 Performance Metrics Report")";    console.log("─".repeat(50))"";    // System metrics;
     console.log("💻 System: ")"    console.log()      `   Memory: ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`")`;    console.log()      `   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system`")`;    console.log(`   "Uptime: ${this.metrics.system.process.uptime || "N/A"}s`)";`;    // Application metrics;";    console.log("\n📱 Application: ")"    if (this.metrics.application.buildSize) {";      console.log(`   Build size: ${this.metrics.application.buildSize}MB`)`}
@@ -234,9 +156,7 @@ class PerformanceMonitor {
       console.log(`\n📄 Report saved to: ${this.reportFile}`)`} catch (error) {
       console.error("Error saving report":", error.message)"}"}
   getRecommendations() {
-    const recommendations = []
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-      this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
+    const recommendations = []      this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
       console.log("� Collecting build metrics...")

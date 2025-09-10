@@ -20,11 +20,6 @@ import HelpCenterPage from "@/pages/HelpCenterPage";
 import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-<<<<<<< HEAD
-=======
-import Services from "@/pages/Services";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -35,9 +30,7 @@ const ContentRoutes = () => {
       <Route path="/contact" element={<Contact />} />
 <<<<<<< HEAD
 =======
-      <Route path="/services" element={<Services />} />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/services" element={<Services />} />      <Route path="/privacy" element={<Privacy />} />
       <Route path="/cookies" element={<Cookies />} />
       
       {/* Help Center Routes */}

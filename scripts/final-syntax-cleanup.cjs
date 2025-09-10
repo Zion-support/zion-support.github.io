@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-class FinalSyntaxCleanup {
-  constructor() {
-    this.fixedFiles = []
-    this.errors = []
-  }
-  async fixFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      let fixedContent = content;
-      let hasChanges = false;
-
       // Fix specific patterns that are still causing issues;
       const patterns = [;
         // Fix corrupted meta descriptions;
@@ -359,4 +341,3 @@ if (require.main === module) {
 }
 
 module.exports = FinalSyntaxCleanup;
->>>>>>> origin/automation-fixes

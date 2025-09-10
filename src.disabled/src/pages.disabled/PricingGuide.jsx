@@ -1,8 +1,6 @@
 import React,{ useState } from \'react\';\''\'; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from \'@/data/expandedServices\';\''\'; import { Button } from \'@/components/ui/button\';\''\'; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\';\''\'; import { Badge } from \'@/components/ui/badge\';\''\'; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from \'lucide-react\';\''\'; import SEO from \'@/components/SEO\'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";"""; import { Button } from "@/components/ui/button";"""; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from "@/components/ui/card";"""; import { Badge } from "@/components/ui/badge";"""; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from "lucide-react";"""; import SEO from "@/components/SEO"; export default function PricingGuide() { return; }; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}''"
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 import React,{ useState } from \'react\';\''\'; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from \'@/data/expandedServices\';\''\'; import { Button } from \'@/components/ui/button\';\''\'; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\';\''\'; import { Badge } from \'@/components/ui/badge\';\''\'; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from \'lucide-react\';\''\'; import SEO from \'@/components/SEO\'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";"""; import { Button } from "@/components/ui/button";"""; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from "@/components/ui/card";"""; import { Badge } from "@/components/ui/badge";"""; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from "lucide-react";"""; import SEO from "@/components/SEO"; export default function PricingGuide() { return; }; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}''"
@@ -15,20 +13,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -37,6 +35,3 @@ import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED
 import React,{ useState } from \'react\';\''\'; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from \'@/data/expandedServices\';\''\'; import { Button } from \'@/components/ui/button\';\''\'; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\';\''\'; import { Badge } from \'@/components/ui/badge\';\''\'; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from \'lucide-react\';\''\'; import SEO from \'@/components/SEO\'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
 const React,{ useState } from "react";"""; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";"""; import { Button } from "@/components/ui/button";"""; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from "@/components/ui/card";"""; import { Badge } from "@/components/ui/badge";"""; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from "lucide-react";"""; import SEO from "@/components/SEO"; export default function PricingGuide() { return; }; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}''"
 import _React,{ useState } from 'react';'''; import { EXPANDED_SERVICES,EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';'''; import { Button } from '@/components/ui/button';'''; import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card';'''; import { Badge } from '@/components/ui/badge';'''; import { Check,Star,TrendingUp,Shield,Zap,Database,Cloud,Brain,Lock,Globe,Phone,Mail,MapPin,Clock } from 'lucide-react';'''; import SEO from '@/components/SEO'; export default function PricingGuide() {}; return null} export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }; export { PricingGuide }}}}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
