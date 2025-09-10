@@ -1,7 +1,0 @@
-
-    <>;
-      <Header />;
-      <LoginContent />;
-      <Footer />;
-
-}

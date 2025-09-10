@@ -1,0 +1,123 @@
+      {/* Quiz Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        {currentStep <= questions.length ? (<motion.div key={currentStep} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">
+            {/* Progress Bar */}
+            <div className="mb-8">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-sm text-gray-400">Question {currentStep} of {questions.length}</span>
+                <span className="text-sm text-gray-400">{Math.round(progressPercentage)}%</span>
+              </div>
+              <div className="w-full bg-slate-700 rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full transition-all duration-300" style={{ width: `${progressPercentage}%` }}></div>
+              </div>
+            </div>
+
+            {/* Question */}
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                {questions[currentStep - 1].question}
+              </h2>
+              
+              <div className="space-y-3">
+                {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick={() => handleAnswer(questions[currentStep - 1].id, option)} className={`w-full text-left p-4 rounded-lg border transition-all duration-200 ${answers[questions[currentStep - 1].id] === option
+                    ? 'border-blue-500 bg-blue-500/20 text-blue-300'
+                    : 'border-slate-600 hover:border-slate-500 text-gray-300 hover:text-white hover:bg-slate-700/50'}`}>
+                    {option}
+                  </button>))}
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex justify-between">
+              <button onClick={handlePrevious} disabled={currentStep === 1} className={`px-6 py-2 rounded-lg border transition-all duration-200 ${currentStep === 1
+                ? 'border-slate-600 text-slate-500 cursor-not-allowed'
+                : 'border-slate-500 text-slate-300 hover:border-slate-400 hover:text-white'}`}>
+                Previous
+              </button>
+              
+              <button onClick={handleNext} disabled={!answers[questions[currentStep - 1].id]} className={`px-6 py-2 rounded-lg transition-all duration-200 ${!answers[questions[currentStep - 1].id]
+                ? 'bg-slate-600 text-slate-400 cursor-not-allowed'
+                : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'}`}>
+                {currentStep === questions.length ? 'Get Recommendations' : 'Next'}
+              </button>
+            </div>
+          </motion.div>) : (
+        /* Results Section */
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="space-y-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-4">
+                <CheckCircle className="w-8 h-8 text-white"/>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">Your AI Recommendations</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Based on your answers, here are the AI solutions that best match your business needs and goals.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {recommendations.map((solution, index) => (<motion.div key={solution.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+                      <solution.icon className="w-6 h-6 text-white"/>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{solution.name}</h3>
+                      <p className="text-sm text-blue-400">{solution.category}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-400 text-sm mb-4">{solution.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-medium text-gray-300 mb-2">Best For:</h4>
+                    <ul className="space-y-1">
+                      {solution.bestFor.map((item, idx) => (<li key={idx} className="flex items-center text-xs text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                          {item}
+                        </li>))}
+                    </ul>
+                  </div>
+                  
+                  <Link to={solution.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group">
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"/>
+                  </Link>
+                </motion.div>))}
+            </div>
+
+            <div className="text-center mt-12">
+              <button onClick={resetQuiz} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 mr-4">
+                Take Quiz Again
+              </button>
+              <Link to="/contact" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+                Get Expert Consultation
+              </Link>
+            </div>
+          </motion.div>)}
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need More Personalized Guidance?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our AI experts are ready to provide customized recommendations and implementation strategies 
+              tailored specifically to your business requirements.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+                Schedule Free Consultation
+              </Link>
+              <Link to="/services-showcase" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+                Explore All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>);
+};
+export default AIMatcher;
