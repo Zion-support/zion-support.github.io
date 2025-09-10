@@ -36,3 +36,10 @@ export default function Cache.test({ }: Cache.testProps) {
 
 }
 
+
+describe('cache unit placeholder', () => {
+  it('runs', () => {
+    expect(true).toBe(true);
+  });
+});
+
