@@ -1,0 +1,9 @@
+
+  choices?: OpenAIChoice[];
+   // Add: other fields if necessary, e.g., error object error?: { message: strin,g} } interface: KBChatSuccessResponse {
+  message: string;
+
+  error: string;
+   details?: strin,g} export: default async function handler( req: NextApiReques,t,
+
+
