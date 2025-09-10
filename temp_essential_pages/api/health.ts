@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import getConfig from 'next/config';
 import { withErrorLogging } from '@/utils/withErrorLogging';
 
 type HealthResponse = {
@@ -15,15 +16,15 @@ function handler(
 ) {
   if (req.method === 'GET') {
     try {
-      // Access environment variables directly rather than using next/config
+      const { publicRuntimeConfig } = getConfig();
       const envVariables: Record<string, string | undefined> = {};
-      for (const key in process.env) {
+      for (const key in publicRuntimeConfig) {
         if (key.startsWith('NEXT_PUBLIC_')) {
-          envVariables[key] = process.env[key];
+          envVariables[key] = publicRuntimeConfig[key];
         }
       }
 
-      const version = process.env.NEXT_PUBLIC_APP_VERSION || "unknown";
+      const version = publicRuntimeConfig.NEXT_PUBLIC_APP_VERSION || "unknown";
       if (version === "unknown") {
         console.warn("Application version not set (NEXT_PUBLIC_APP_VERSION). Defaulting to 'unknown'.");
       }

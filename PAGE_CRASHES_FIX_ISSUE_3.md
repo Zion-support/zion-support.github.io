@@ -39,10 +39,6 @@ Error boundaries catch error →
 # Supabase Configuration (old system)
 NEXT_PUBLIC_SUPABASE_URL=https://gnwtggeptzkqnduuthto.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
-
-# More Supabase configuration (conflicting)
-NEXT_PUBLIC_SUPABASE_URL="https://dev-projectid.supabase.co"
-
 # NO AUTH0 CONFIGURATION PRESENT
 ```
 
@@ -57,9 +53,9 @@ rm .env.local
 
 **Created new .env.local with proper Auth0 configuration:**
 ```bash
-# ==============================================
+# ====
 # AUTH0 AUTHENTICATION CONFIGURATION (Required)
-# ==============================================
+# ====
 AUTH0_SECRET=a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456
 AUTH0_BASE_URL=http://localhost:3000
 AUTH0_ISSUER_BASE_URL=https://dev-zion.us.auth0.com
@@ -124,8 +120,7 @@ NODE_ENV=development
 1. **Environment Verification**:
    ```bash
    grep AUTH0_ .env.local  # Should show 5 variables
-   grep -c "<<<<<<< HEAD" .env.local  # Should return 0 (no conflicts)
-   ```
+   grep -c "   ```
 
 2. **Application Startup**:
    ```bash

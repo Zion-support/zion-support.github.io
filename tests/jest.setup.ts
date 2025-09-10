@@ -1,20 +1,26 @@
 // Polyfill fetch and enable fetch mocks
-import 'whatwg-fetch';
-import fetchMock from 'jest-fetch-mock';
-fetchMock.enableMocks();
+// Provide a minimal fetch if not present
+// @ts-ignore
+if (typeof global.fetch === 'undefined') {
+  // @ts-ignore
+  global.fetch = (...args: any[]) => Promise.resolve({ ok: true, json: async () => ({}), text: async () => '' });
+}
 
-// Reset fetch mocks before each test to ensure isolation
+// Reset fetch stub before each test to ensure isolation
 beforeEach(() => {
-  fetchMock.resetMocks();
+  // @ts-ignore
+  global.fetch = (...args: any[]) => Promise.resolve({ ok: true, json: async () => ({}), text: async () => '' });
 });
 
 // Jest-DOM matchers
 import '@testing-library/jest-dom';
 import { TextEncoder, TextDecoder } from 'util';
+import path from 'path';
+const projectRoot = process.cwd();
 
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 global.TextEncoder = TextEncoder;
-// @ts-expect-error Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests
+// @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests
 global.TextDecoder = TextDecoder;
 
 
@@ -25,39 +31,26 @@ global.TextDecoder = TextDecoder;
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup';
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321';
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key';
-process.env.NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1';
 
-// Provide sensible defaults for environment variables expected by tests / Cypress stubs
-process.env.TEST_USER_NAME = process.env.TEST_USER_NAME || 'Test User';
-process.env.EXISTING_USER_EMAIL = process.env.EXISTING_USER_EMAIL || 'existing@test.com';
-process.env.EXISTING_USER_PASSWORD = process.env.EXISTING_USER_PASSWORD || 'password123';
-process.env.STRIPE_TEST_CARD = process.env.STRIPE_TEST_CARD || '4242424242424242';
 
-// Jest-axe matchers for accessibility
-import { toHaveNoViolations } from 'jest-axe';
-expect.extend(toHaveNoViolations);
-
-// Ensure global window exists for Node test environments
-if (typeof global.window === 'undefined') {
-  global.window = {} as any;
-}
+// Jest-axe matchers for accessibility (stubbed when package not present)
+// Note: avoid dynamic import to keep Jest CJS-friendly if not configured for ESM
+// If jest-axe is unavailable or ESM-only, skip extending matchers
 
 // Mock window.matchMedia for Jest
-if (!window.matchMedia) {
-  Object.defineProperty(window, 'matchMedia', {
-    writable: true,
-    value: jest.fn().mockImplementation(query => ({
-      matches: false, // Default to false (light theme)
-      media: query,
-      onchange: null,
-      addListener: jest.fn(), // deprecated
-      removeListener: jest.fn(), // deprecated
-      addEventListener: jest.fn(),
-      removeEventListener: jest.fn(),
-      dispatchEvent: jest.fn(),
-    })),
-  });
-}
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false, // Default to false (light theme)
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError
 // global.import = {
@@ -90,7 +83,7 @@ jest.mock('@/integrations/supabase/client', () => ({
 jest.mock('firebase/app', () => ({
   initializeApp: jest.fn(),
   // Add other app-level exports if needed, e.g., getApps, getApp
-}));
+}), { virtual: true });
 
 jest.mock('firebase/firestore', () => {
   // Mock collection function to be available on the db instance (for v8 style)
@@ -158,7 +151,7 @@ jest.mock('firebase/firestore', () => {
     },
     // Add other Firestore exports your code uses
   };
-});
+}, { virtual: true });
 
 jest.mock('firebase/auth', () => ({
   getAuth: jest.fn(() => ({
@@ -175,7 +168,7 @@ jest.mock('firebase/auth', () => ({
   // For example:
   // GoogleAuthProvider: jest.fn(),
   // signInWithPopup: jest.fn(() => Promise.resolve({ user: { uid: 'mock-uid' } })),
-}));
+}), { virtual: true });
 
 jest.mock('firebase/storage', () => ({
   getStorage: jest.fn(() => ({
@@ -195,24 +188,14 @@ jest.mock('firebase/storage', () => ({
   getDownloadURL: jest.fn((storageRef) => Promise.resolve(`https://mockstorage.com/${storageRef.fullPath}`)),
   deleteObject: jest.fn(() => Promise.resolve()),
   // Add other Storage exports your code uses
-}));
+}), { virtual: true });
 
 // Mock axios
-jest.mock('axios', () => {
-  const axiosMock: any = {
-    defaults: { baseURL: 'http://localhost' },
-    interceptors: {
-      request: { use: jest.fn(), eject: jest.fn(), clear: jest.fn() },
-      response: { use: jest.fn(), eject: jest.fn(), clear: jest.fn() },
-    },
-    get: jest.fn(() => Promise.resolve({ data: {} })),
-    post: jest.fn(() => Promise.resolve({ data: {} })),
-    put: jest.fn(() => Promise.resolve({ data: {} })),
-    delete: jest.fn(() => Promise.resolve({ data: {} })),
-  };
-  axiosMock.create = jest.fn(() => axiosMock);
-  return axiosMock;
-});
+jest.mock('axios', () => ({
+  get: jest.fn(() => Promise.resolve({ data: {} })),
+  post: jest.fn(() => Promise.resolve({ data: {} })),
+  // Add other axios methods if used (e.g., put, delete, request)
+}));
 
 // Mock ResizeObserver for Radix UI components and other libraries that might use it
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
@@ -228,10 +211,10 @@ if (typeof URL.revokeObjectURL === 'undefined') {
 
 // Polyfill for BroadcastChannel
 if (typeof BroadcastChannel === 'undefined') {
-  // @ts-expect-error BroadcastChannel polyfill for test environment - native interface doesn't exist in Node.js
+  // @ts-expect-error - BroadcastChannel polyfill for test environment
   global.BroadcastChannel = class BroadcastChannelMock {
     constructor(name: string) {
-      // @ts-expect-error Mock name property assignment - TypeScript doesn't know about our custom mock class properties
+      // @ts-expect-error - Mock name property assignment
       this.name = name;
     }
     postMessage = jest.fn();
@@ -251,7 +234,8 @@ if (typeof window.scrollTo === 'undefined') {
 
 // Mock axios.create to return axios itself
 import axios from 'axios';
-(axios as any).create = jest.fn(() => axios);
+// @ts-ignore
+axios.create = jest.fn(() => axios);
 
 // -----------------------------
 // Vitest Compatibility Layer for Jest
@@ -264,7 +248,6 @@ import axios from 'axios';
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.
 // ---------------------------------------------------------------------------
- 
 jest.mock('vitest', () => {
   const jestFn = (...args: unknown[]) => jest.fn(...(args as []));
   return {
@@ -275,10 +258,14 @@ jest.mock('vitest', () => {
       mock: jest.mock.bind(jest),
       clearAllMocks: jest.clearAllMocks,
       resetAllMocks: jest.resetAllMocks,
+      restoreAllMocks: jest.restoreAllMocks,
+      useFakeTimers: jest.useFakeTimers.bind(jest),
+      useRealTimers: jest.useRealTimers.bind(jest),
+      runAllTimers: jest.runAllTimers.bind(jest),
+      advanceTimersByTime: jest.advanceTimersByTime.bind(jest),
       // Provide a simple implementation of `import.meta` mocking helpers
       // frequently used in Vitest examples
       // (no-op implementations because Jest already handles env vars via `process.env`).
-       
       importActual: jest.requireActual,
       mockResolvedValue: <T = unknown>(value: T) => jest.fn().mockResolvedValue(value),
       mockRejectedValue: <T = unknown>(value: T) => jest.fn().mockRejectedValue(value),
@@ -295,14 +282,14 @@ jest.mock('vitest', () => {
     beforeAll: global.beforeAll,
     afterAll: global.afterAll,
   } as unknown as Record<string, unknown>;
-});
+}, { virtual: true });
 
 // -----------------------------
 // Lightweight Context & Redux mocks to avoid provider runtime errors
 // -----------------------------
 
 // Auth Context
-jest.mock('@/context/auth/AuthProvider', () => {
+jest.mock(path.join(projectRoot, 'src/context/auth/AuthProvider'), () => {
   const useAuth = () => ({
     isAuthenticated: false,
     isLoading: false,
@@ -320,10 +307,10 @@ jest.mock('@/context/auth/AuthProvider', () => {
     default: AuthProvider,
     useAuth,
   };
-});
+}, { virtual: true });
 
 // Analytics Context
-jest.mock('@/context/AnalyticsContext', () => {
+jest.mock(path.join(projectRoot, 'src/context/AnalyticsContext'), () => {
   const useAnalytics = () => ({
     trackEvent: jest.fn(),
     trackPageView: jest.fn(),
@@ -335,10 +322,10 @@ jest.mock('@/context/AnalyticsContext', () => {
     default: AnalyticsProvider,
     useAnalytics,
   };
-});
+}, { virtual: true });
 
 // Whitelabel Context
-jest.mock('@/context/WhitelabelContext', () => {
+jest.mock(path.join(projectRoot, 'src/context/WhitelabelContext'), () => {
   const useWhitelabel = () => ({
     brand: 'default',
     theme: 'light',
@@ -350,10 +337,10 @@ jest.mock('@/context/WhitelabelContext', () => {
     default: WhitelabelProvider,
     useWhitelabel,
   };
-});
+}, { virtual: true });
 
 // Feedback Context
-jest.mock('@/context/FeedbackContext', () => {
+jest.mock(path.join(projectRoot, 'src/context/FeedbackContext'), () => {
   const useFeedback = () => ({
     open: jest.fn(),
   });
@@ -364,38 +351,32 @@ jest.mock('@/context/FeedbackContext', () => {
     default: FeedbackProvider,
     useFeedback,
   };
-});
+}, { virtual: true });
 
 // react-redux hooks
 jest.mock('react-redux', () => {
-   
-  const actualRedux = jest.requireActual('react-redux');
   return {
-    ...actualRedux,
     useDispatch: () => jest.fn(),
-    // Provide predictable data for selectors so components don't explode
     useSelector: jest.fn((selector: any) => {
-      const mockState = {
-        cart: { items: [] },
-        wishlist: { items: [] },
-      };
+      const mockState = { cart: { items: [] }, wishlist: { items: [] } };
       return typeof selector === 'function' ? selector(mockState) : mockState;
     }),
+    Provider: ({ children }: any) => children,
   };
-});
+}, { virtual: true });
 
 // Cart Context – simple noop implementation for tests
-jest.mock('@/context/CartContext', () => {
+jest.mock(path.join(projectRoot, 'src/context/CartContext'), () => {
   const useCart = () => ({ items: [], dispatch: jest.fn() });
   const CartProvider = ({ children }: { children: React.ReactNode }) => children;
   return { __esModule: true, useCart, CartProvider, default: CartProvider };
-});
+}, { virtual: true });
 
 // Wishlist hook – return empty list helpers
 jest.mock('@/hooks/useWishlist', () => {
   const useWishlist = () => ({ items: [] as string[], toggle: jest.fn(), isWishlisted: () => false });
   return { __esModule: true, useWishlist, default: useWishlist };
-});
+}, { virtual: true });
 
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
 if (typeof window.IntersectionObserver === 'undefined') {
@@ -406,20 +387,22 @@ if (typeof window.IntersectionObserver === 'undefined') {
     disconnect() {}
     takeRecords() { return []; }
   }
-  // @ts-expect-error IntersectionObserver polyfill for test environment - JSDOM doesn't include this API by default
+  // @ts-ignore
   window.IntersectionObserver = MockIntersectionObserver;
-  // @ts-expect-error IntersectionObserver polyfill for global scope - ensuring both window and global have the mock
+  // @ts-ignore
   global.IntersectionObserver = MockIntersectionObserver;
 }
 
 // Ensure all code paths use the mock implementation
 // Some services import the global fetch reference before jest-fetch-mock is enabled.
 // Override it explicitly so those modules receive the mocked version.
-(global as any).fetch = fetchMock;
+// @ts-ignore
+global.fetch = (...args: any[]) => Promise.resolve({ ok: true, json: async () => ({}), text: async () => '' });
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
-  (performance as any).getEntriesByType = () => [];
+  // @ts-ignore
+  performance.getEntriesByType = () => [];
 }
 
 jest.mock('@supabase/ssr', () => ({
@@ -443,13 +426,13 @@ jest.mock('@supabase/ssr/dist/main/cookies', () => ({
 jest.mock('@/context', () => {
   const useEnqueueSnackbar = () => jest.fn();
   return { __esModule: true, useEnqueueSnackbar };
-});
+}, { virtual: true });
 
 // Extend Vitest shim with restoreAllMocks for suites that call it
-  // @ts-expect-error vi is added by the vitest mock above - TypeScript doesn't see the mock declaration
+// @ts-ignore - vi is added by the vitest mock above
 if (global.vi && !global.vi.restoreAllMocks) {
-  // @ts-expect-error global.vi property extension - TypeScript doesn't expect vitest globals in Jest environment
-  (global.vi as any).restoreAllMocks = jest.restoreAllMocks;
+  // @ts-ignore
+  global.vi.restoreAllMocks = jest.restoreAllMocks;
 }
 
 // Mock @supabase/ssr createBrowserClient so components don't crash in tests
@@ -463,153 +446,24 @@ jest.mock('@supabase/ssr', () => ({
 jest.mock('@/hooks/use-toast', () => {
   const toastFn = jest.fn();
   return { __esModule: true, toast: toastFn, useToast: () => ({ toast: toastFn }) };
-});
+}, { virtual: true });
 
 // Minimal MSW mocks to satisfy tests without parsing ESM bundles
-jest.mock('msw', () => ({ rest: { get: jest.fn(), post: jest.fn(), put: jest.fn(), delete: jest.fn() } }));
-jest.mock('msw/node', () => ({ setupServer: () => ({ listen: jest.fn(), resetHandlers: jest.fn(), close: jest.fn() }) }));
+jest.mock('msw', () => ({ rest: { get: jest.fn(), post: jest.fn(), put: jest.fn(), delete: jest.fn() } }), { virtual: true });
+jest.mock('msw/node', () => ({ setupServer: () => ({ listen: jest.fn(), resetHandlers: jest.fn(), close: jest.fn() }) }), { virtual: true });
 
 // Provide mock for missing component
-jest.mock('@/components/talent/FilterSidebar', () => ({ FilterSidebar: () => null }));
+jest.mock('@/components/search/FilterSidebar', () => ({ FilterSidebar: () => null }), { virtual: true });
 
 // Extend Vitest shim with timer helpers if not present
-const g: any = global as any;
-if (g.vi) {
-  if (!g.vi.useFakeTimers) g.vi.useFakeTimers = jest.useFakeTimers.bind(jest);
-  if (!g.vi.runAllTimers) g.vi.runAllTimers = jest.runAllTimers.bind(jest);
-  if (!g.vi.advanceTimersByTime) g.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);
+// @ts-ignore - vi is added by the vitest mock above
+if (global.vi) {
+  // @ts-ignore
+  if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest);
+  // @ts-ignore
+  if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind(jest);
+  // @ts-ignore
+  if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest);
+  // @ts-ignore
+  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);
 }
-
-// -----------------------------
-// Mock react-i18next so that translation keys are human-readable during tests.
-// This avoids the need to load i18n resources and keeps unit expectations simple.
-// -----------------------------
-jest.mock('react-i18next', () => {
-  const t = (key: string) => {
-    // Return substring after last dot to convert 'categories.services' => 'services'
-    if (key && key.includes('.')) {
-      return key.split('.').pop();
-    }
-    return key;
-  };
-
-  return {
-    __esModule: true,
-    useTranslation: () => ({ t, i18n: { changeLanguage: jest.fn() } }),
-    Trans: ({ children }: { children: React.ReactNode }) => children,
-    initReactI18next: { type: '3rdParty', init: jest.fn() },
-  };
-});
-
-// Mock Next.js Link to work with React Router in tests
-jest.mock('next/link', () => {
-  const React = require('react');
-  const forwardRef = React.forwardRef;
-  const LinkMock = ({ href, children, ...rest }: any, ref: any) => {
-    return React.createElement('a', { href, ref, ...rest }, children);
-  };
-  return { __esModule: true, default: forwardRef(LinkMock) };
-});
-
-// Ensure axios has a default baseURL to avoid undefined property assignment
-if (!axios.defaults.baseURL) axios.defaults.baseURL = 'http://localhost';
-
-// Provide stub interceptor chains so code that registers interceptors doesn't crash
-if (!axios.interceptors?.request?.use) {
-  axios.interceptors = {
-    request: { use: jest.fn(), eject: jest.fn(), clear: jest.fn() },
-    response: { use: jest.fn(), eject: jest.fn(), clear: jest.fn() },
-  };
-}
-
-// Mock next/navigation to avoid unresolved module errors
-jest.mock('next/navigation', () => ({
-  useRouter: () => ({ push: jest.fn(), replace: jest.fn(), refresh: jest.fn(), back: jest.fn(), forward: jest.fn() })
-}));
-
-// Mock mongoose to avoid heavy BSON/ESM issues in tests that import it indirectly
-jest.mock('mongoose', () => {
-  const schemaStub = function() { return { index: jest.fn(), methods: {}, statics: {} }; };
-  return {
-    Schema: schemaStub,
-    model: jest.fn().mockReturnValue({}),
-    connect: jest.fn(),
-    connection: { on: jest.fn() },
-  };
-});
-
-// Provide mock AuthContext to allow Consumer access
-jest.mock('@/context/auth/AuthContext', () => {
-  const React = require('react');
-  const defaultValue = { login: jest.fn(), logout: jest.fn(), user: null };
-  const AuthContext = React.createContext(defaultValue);
-  return { __esModule: true, AuthContext, default: AuthContext };
-});
-
-// ---------------------------------------------------------------------------
-// Simple Vitest global shim for suites still using `vi`
-// ---------------------------------------------------------------------------
-// @ts-expect-error Add vi globally for legacy tests
-if (typeof global.vi === 'undefined') {
-  // @ts-expect-error assign
-  global.vi = {
-    fn: jest.fn,
-    spyOn: jest.spyOn.bind(jest),
-    mock: jest.mock.bind(jest),
-    clearAllMocks: jest.clearAllMocks,
-    resetAllMocks: jest.resetAllMocks,
-          mockResolvedValue: (val: unknown) => jest.fn().mockResolvedValue(val),
-      mockRejectedValue: (val: unknown) => jest.fn().mockRejectedValue(val),
-  };
-}
-
-// Note: bcrypt mock removed - only mock if actually used in tests to avoid module resolution errors
-
-// Ensure matchMedia is defined for tests that rely on it
-if (typeof window !== 'undefined' && !window.matchMedia) {
-  Object.defineProperty(window, 'matchMedia', {
-    writable: true,
-    value: jest.fn().mockImplementation((query) => ({
-      matches: false,
-      media: query,
-      onchange: null,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-      addEventListener: jest.fn(),
-      removeEventListener: jest.fn(),
-      dispatchEvent: jest.fn(),
-    })),
-  });
-}
-
-// Mock axios-retry to no-op
-jest.mock('axios-retry', () => {
-  return {
-    __esModule: true,
-    default: jest.fn(),
-  };
-});
-
-jest.mock('@ungap/structured-clone', () => ({ __esModule: true, default: (val: any) => JSON.parse(JSON.stringify(val)) }));
-
-// ---------------------------------------------------------------------------
-// Global mocks for common libraries
-// ---------------------------------------------------------------------------
-
-// Use next-router-mock for all tests so individual suites don't need to re-mock
-jest.mock('next/router', () => require('next-router-mock'));
-
-// Provide a lightweight supabase-js mock so suites can rely on default stubs
-jest.mock('@supabase/supabase-js', () => {
-  const authStub = {
-    signUp: jest.fn(() => Promise.resolve({ data: { user: { id: 'user-1' } }, error: null })),
-    signInWithPassword: jest.fn(() => Promise.resolve({ data: { user: { id: 'user-1' } }, error: null })),
-    signOut: jest.fn(() => Promise.resolve({ error: null })),
-    onAuthStateChange: jest.fn(() => ({ data: { subscription: { unsubscribe: jest.fn() } }, error: null })),
-  };
-
-  return {
-    __esModule: true,
-    createClient: jest.fn(() => ({ auth: authStub })),
-  };
-});

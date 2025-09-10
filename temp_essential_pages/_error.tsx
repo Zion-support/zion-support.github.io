@@ -2,6 +2,7 @@ import React from 'react';
 import type { NextPageContext } from 'next/types';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import * as Sentry from '@sentry/nextjs';
 
 interface ErrorProps {
   statusCode: number;
@@ -143,31 +144,27 @@ ErrorPage.getInitialProps = async (context: NextPageContext) => {
     // Log the error to Sentry for non-static assets
     if (err && typeof window === 'undefined') {
       // Server-side error
-      await import('@sentry/nextjs').then(Sentry => {
-        Sentry.withScope((scope) => {
-          scope.setTag('errorType', 'server');
-          scope.setTag('statusCode', statusCode);
-          scope.setTag('path', context.asPath);
-          scope.setLevel(statusCode === 404 ? 'warning' : 'error');
-          scope.setContext('errorPage', {
-            statusCode,
-            path: context.asPath,
-            query: context.query,
-            userAgent: context.req?.headers['user-agent']
-          });
-          Sentry.captureException(err);
+      Sentry.withScope((scope) => {
+        scope.setTag('errorType', 'server');
+        scope.setTag('statusCode', statusCode);
+        scope.setTag('path', context.asPath);
+        scope.setLevel(statusCode === 404 ? 'warning' : 'error');
+        scope.setContext('errorPage', {
+          statusCode,
+          path: context.asPath,
+          query: context.query,
+          userAgent: context.req?.headers['user-agent']
         });
+        Sentry.captureException(err);
       });
     } else if (err) {
       // Client-side error
-      await import('@sentry/nextjs').then(Sentry => {
-        Sentry.withScope((scope) => {
-          scope.setTag('errorType', 'client');
-          scope.setTag('statusCode', statusCode);
-          scope.setTag('path', context.asPath);
-          scope.setLevel(statusCode === 404 ? 'warning' : 'error');
-          Sentry.captureException(err);
-        });
+      Sentry.withScope((scope) => {
+        scope.setTag('errorType', 'client');
+        scope.setTag('statusCode', statusCode);
+        scope.setTag('path', context.asPath);
+        scope.setLevel(statusCode === 404 ? 'warning' : 'error');
+        Sentry.captureException(err);
       });
     }
 
@@ -182,18 +179,16 @@ ErrorPage.getInitialProps = async (context: NextPageContext) => {
         timestamp: new Date().toISOString()
       });
       
-      await import('@sentry/nextjs').then(Sentry => {
-        Sentry.withScope((scope) => {
-          scope.setTag('rootPath404', true);
-          scope.setLevel('error');
-          scope.setContext('rootPathError', {
-            asPath: context.asPath,
-            pathname: context.pathname,
-            query: context.query,
-            userAgent: context.req?.headers['user-agent']
-          });
-          Sentry.captureMessage('Root path returned 404', 'error');
+      Sentry.withScope((scope) => {
+        scope.setTag('rootPath404', true);
+        scope.setLevel('error');
+        scope.setContext('rootPathError', {
+          asPath: context.asPath,
+          pathname: context.pathname,
+          query: context.query,
+          userAgent: context.req?.headers['user-agent']
         });
+        Sentry.captureMessage('Root path returned 404', 'error');
       });
     }
   }

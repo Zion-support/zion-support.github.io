@@ -1,21 +1,44 @@
 // Conditional Sentry import for React 19 + Next.js 15 compatibility
-let Sentry: unknown = null;
+let Sentry: any = null;
 
-// Always use the real Sentry SDK unless in CI or SKIP_SENTRY_BUILD is set
+// Attempt to load Sentry or its alias.
+// Webpack (via next.config.js) is responsible for aliasing @sentry/nextjs
+// to src/utils/sentry-mock.ts if mocking is intended for CI/SKIP_SENTRY_BUILD, etc.
 try {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  Sentry = require("@sentry/nextjs");
-  if (Sentry) {
+  Sentry = require('@sentry/nextjs');
+  // Check if the loaded Sentry is the comprehensive mock from src/utils/sentry-mock.ts
+  // The mock has a specific SDK_VERSION
+  if (Sentry && Sentry.SDK_VERSION === '7.0.0-mock') {
+    console.log(
+      'Comprehensive Sentry mock (src/utils/sentry-mock.ts) loaded via webpack alias.',
+    );
+  } else if (Sentry) {
     console.log('Real Sentry SDK loaded.');
   } else {
     throw new Error('@sentry/nextjs require returned null/undefined');
   }
 } catch (error) {
-  console.error('CRITICAL: Failed to require "@sentry/nextjs". Sentry will not be initialized.', error);
-  Sentry = null;
+  console.error(
+    'CRITICAL: Failed to require "@sentry/nextjs" (real SDK or webpack alias). Falling back to emergency inline mock.',
+    error,
+  );
+  // Emergency fallback to a very basic inline mock if require itself fails catastrophically.
+  // This should ideally not be reached if webpack aliasing is working correctly.
+  Sentry = {
+    init: () =>
+      console.warn(
+        'Sentry emergency inline mock: init called. Sentry is NOT operational.',
+      ),
+    captureException: (err: any) =>
+      console.warn('Sentry emergency inline mock: captureException', err),
+    setTag: (key: string, value: string) =>
+      console.warn('Sentry emergency inline mock: setTag', key, value),
+    SDK_VERSION: 'emergency-inline-mock', // Identifier for this mock
+  };
 }
 
-import { safeSessionStorage } from "@/utils/safeStorage";
+import { safeSessionStorage } from '@/utils/safeStorage';
 
 export function register() {
   // Use environment variables directly instead of runtime config
@@ -24,44 +47,55 @@ export function register() {
   const SENTRY_ENVIRONMENT = process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT;
 
   // Enhanced validation to prevent initialization with invalid DSNs
-  const isInvalidDsn = !SENTRY_DSN || 
-    SENTRY_DSN.startsWith("YOUR_") || 
-    SENTRY_DSN.startsWith("https_example") ||
-    SENTRY_DSN.startsWith("https_dummy") ||
-    SENTRY_DSN.includes("dummy") ||
-    SENTRY_DSN.includes("placeholder") ||
-    SENTRY_DSN.includes("local_build") ||
-    SENTRY_DSN === "test_sentry_dsn";
+  const isInvalidDsn =
+    !SENTRY_DSN ||
+    SENTRY_DSN.startsWith('YOUR_') ||
+    SENTRY_DSN.startsWith('https_example') ||
+    SENTRY_DSN.startsWith('https_dummy') ||
+    SENTRY_DSN.includes('dummy') ||
+    SENTRY_DSN.includes('placeholder') ||
+    SENTRY_DSN.includes('local_build') ||
+    SENTRY_DSN === 'test_sentry_dsn';
 
   if (isInvalidDsn) {
     // Preserve backward-compatibility with existing unit tests
-    console.warn('Warning: NEXT_PUBLIC_SENTRY_DSN is not set. Sentry will not be initialized.');
+    console.warn(
+      'Warning: NEXT_PUBLIC_SENTRY_DSN is not set. Sentry will not be initialized.',
+    );
     if (process.env.NODE_ENV === 'development') {
       console.log('Sentry disabled in development (no valid DSN configured)');
     } else {
-      console.warn('Sentry DSN not configured for production - error monitoring disabled');
+      console.warn(
+        'Sentry DSN not configured for production - error monitoring disabled',
+      );
     }
     return;
   }
 
   // Emit granular warnings when individual env vars are missing so that tests can assert on them
   if (!SENTRY_RELEASE) {
-    console.warn('Warning: NEXT_PUBLIC_SENTRY_RELEASE is not set. Sentry will proceed without release information.');
+    console.warn(
+      'Warning: NEXT_PUBLIC_SENTRY_RELEASE is not set. Sentry will proceed without release information.',
+    );
   }
   if (!SENTRY_ENVIRONMENT) {
-    console.warn('Warning: NEXT_PUBLIC_SENTRY_ENVIRONMENT is not set. Sentry will proceed without environment information.');
+    console.warn(
+      'Warning: NEXT_PUBLIC_SENTRY_ENVIRONMENT is not set. Sentry will proceed without environment information.',
+    );
   }
 
-  // Skip initialization if Sentry is not available
-  if (!Sentry) {
-    console.log('Sentry is not available, skipping initialization');
+  // Skip initialization if Sentry is mocked
+  if (!Sentry || Sentry.init.toString().includes('mock')) {
+    console.log('Sentry is mocked, skipping initialization');
     return;
   }
 
-  console.log(`Initializing client-side Sentry. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`);
+  console.log(
+    `Initializing client-side Sentry. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`,
+  );
 
   try {
-    const initOptions: Record<string, unknown> = {
+    const initOptions: any = {
       dsn: SENTRY_DSN,
       tracesSampleRate: process.env.NODE_ENV === 'development' ? 1.0 : 1.0, // Keep at 1.0 for tests
       // Remove deprecated Http integration - modern Sentry handles HTTP tracing automatically
@@ -75,18 +109,20 @@ export function register() {
       initOptions.environment = SENTRY_ENVIRONMENT;
     }
 
-    (Sentry as any).init(initOptions);
+    Sentry.init(initOptions);
 
     // Set additional context
     if (SENTRY_RELEASE) {
-      (Sentry as any).setTag("release", SENTRY_RELEASE);
+      Sentry.setTag('release', SENTRY_RELEASE);
     }
     if (SENTRY_ENVIRONMENT) {
-      (Sentry as any).setTag("environment", SENTRY_ENVIRONMENT);
+      Sentry.setTag('environment', SENTRY_ENVIRONMENT);
     }
-    (Sentry as any).setTag("runtime", "browser");
+    Sentry.setTag('runtime', 'browser');
 
-    console.log(`Sentry initialized successfully. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`);
+    console.log(
+      `Sentry initialized successfully. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`,
+    );
   } catch (error) {
     console.error('Failed to initialize Sentry:', error);
   }
@@ -96,7 +132,5 @@ export function register() {
 // export const onRouterTransitionStart = captureRouterTransitionStart; // Removing this
 
 export function onRequestError(error: unknown) {
-  if (typeof Sentry === 'object' && Sentry !== null && 'captureException' in Sentry && typeof Sentry.captureException === 'function') {
-    (Sentry as any).captureException(error);
-  }
+  Sentry.captureException(error); // Use the standard captureException method
 }

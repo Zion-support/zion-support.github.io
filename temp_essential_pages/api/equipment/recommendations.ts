@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { ProductListing } from '@/types/listings';
+import { ProductListing } from '@/types/listings';
 
 // Mock personalized equipment recommendations
 const mockRecommendations: ProductListing[] = [
@@ -62,15 +62,13 @@ export default async function handler(
   }
 
   try {
-    interface RecommendationsQuery { userId?: string | string[] }
-    const { userId } = req.query as RecommendationsQuery;
-    const id = Array.isArray(userId) ? userId[0] : userId;
-
-    if (!id) {
+    const userId = (req.query as any).userId as string;
+    
+    if (!userId) {
       return res.status(400).json({ error: 'User ID is required for recommendations' });
     }
 
-    console.log(`Fetching recommendations for user: ${id}`);
+    console.log(`Fetching recommendations for user: ${userId}`);
     
     // Simulate AI processing delay
     await new Promise(resolve => setTimeout(resolve, 1500));

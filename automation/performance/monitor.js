@@ -22,11 +22,11 @@ class PerformanceMonitor {
 
   async start() {
     if (this.isMonitoring) {
-      console.warn('Performance monitor already running');
+      console.log('Performance monitor already running');
       return;
     }
 
-    console.warn('🚀 Starting Performance Monitor...');
+    console.log('🚀 Starting Performance Monitor...');
     this.isMonitoring = true;
     
     // Initial performance check
@@ -41,7 +41,7 @@ class PerformanceMonitor {
       }
     }, this.checkInterval);
 
-    console.warn(`📊 Performance monitoring active (interval: ${this.checkInterval/1000}s)`);
+    console.log(`📊 Performance monitoring active (interval: ${this.checkInterval/1000}s)`);
   }
 
   async stop() {
@@ -49,11 +49,11 @@ class PerformanceMonitor {
       clearInterval(this.monitoringInterval);
     }
     this.isMonitoring = false;
-    console.warn('⏹️ Performance monitor stopped');
+    console.log('⏹️ Performance monitor stopped');
   }
 
   async performComprehensiveCheck() {
-    console.warn('🔍 Performing comprehensive performance check...');
+    console.log('🔍 Performing comprehensive performance check...');
     
     const startTime = performance.now();
     
@@ -72,7 +72,7 @@ class PerformanceMonitor {
       await this.updateDashboard(metrics);
       
       const duration = performance.now() - startTime;
-      console.warn(`✅ Performance check completed in ${duration.toFixed(2)}ms`);
+      console.log(`✅ Performance check completed in ${duration.toFixed(2)}ms`);
       
       return metrics;
     } catch (error) {

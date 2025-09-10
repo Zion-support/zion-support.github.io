@@ -28,7 +28,10 @@ const Feedback: Model<FeedbackDoc> = mongoose.models.Feedback || mongoose.model<
 
 async function connect() {
   if (mongoose.connection.readyState === 0) {
-    await mongoose.connect(mongoUri);
+    await mongoose.connect(mongoUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    } as any);
   }
 }
 
@@ -46,7 +49,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 
-  const parsed = FeedbackValidator.safeParse(req['body']);
+  const parsed = FeedbackValidator.safeParse(req.body);
   if (!parsed.success) {
     const errorMessage = parsed.error?.errors?.[0]?.message || 'Invalid input data';
     return res.status(400).json({ error: errorMessage });

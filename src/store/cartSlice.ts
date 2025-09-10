@@ -1,14 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
-import type { CartItem } from '@/types/cart';
-import { safeStorage } from '@/utils/safeStorage';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { CartItem } from '@/types/cart';
+import { safeLocalStorage } from '@/utils/safeStorage';
 
 export interface CartState {
   items: CartItem[];
 }
 
 const loadState = (): CartItem[] => {
-  const stored = safeStorage.getItem('zion_cart');
+  const storage = safeLocalStorage();
+  if (!storage) return [];
+  const stored = storage.getItem('zion_cart');
   if (!stored) return [];
   try {
     return JSON.parse(stored) as CartItem[];
@@ -65,4 +66,3 @@ const cartSlice = createSlice({
 export const { addItem, removeItem, updateQuantity, setItems, clear } =
   cartSlice.actions;
 export default cartSlice.reducer;
-

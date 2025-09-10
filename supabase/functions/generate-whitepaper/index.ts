@@ -95,12 +95,12 @@ serve(async (req) => {
     });
 
     if (gptError) {
-      console.error("Error invoking zion-gpt:", gptError);
+      // console.error("Error invoking zion-gpt:", gptError);
       throw new Error(`Failed to generate whitepaper draft: ${gptError.message}`);
     }
 
     if (!gptData || !gptData.completion) {
-      console.error("Invalid response from zion-gpt:", gptData);
+      // console.error("Invalid response from zion-gpt:", gptData);
       throw new Error("Failed to get completion from zion-gpt function.");
     }
 
@@ -112,7 +112,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in generate-whitepaper function:", error);
+    // console.error("Error in generate-whitepaper function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       {

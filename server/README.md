@@ -16,7 +16,7 @@ This directory contains a standalone Express.js server used for specific backend
 
 ## Key Features / Endpoints (Inferred)
 
-Based on `server/app.cjs`:
+Based on `server/app.js`:
 
 -   **Authentication:**
     -   Routes under `/auth` and `/api/auth` using Passport.js.
@@ -47,21 +47,19 @@ Based on `server/app.cjs`:
     *   If root `package.json`: Dependencies should already be installed via `npm install` in the root.
 
 3.  **Configure Environment Variables:**
-    *   This server requires several environment variables:
-        *   `MONGO_URI` - MongoDB connection string (see `server/config/index.js`).
-        *   `JWT_SECRET` - used to sign authentication tokens.
-        *   `SENDGRID_API_KEY` - enables email alerts.
-        *   `ALERT_EMAIL` - destination for alert emails.
+    *   This server likely requires environment variables for:
+        *   `MONGO_URI` (MongoDB connection string, see `server/config/index.js`)
+        *   Potentially API keys for services it integrates with.
         *   Passport.js strategy secrets (e.g., OAuth client IDs/secrets).
-    *   Check for a `.env.example` in this directory or the root. Create a `.env` file and populate it with these values.
+    *   Check for a `.env.example` in this directory or the root. Create a `.env` file and populate it.
 
 4.  **Running the Development Server:**
     *   There might be an npm script in the root `package.json` or this directory's `package.json` (if it exists) to start this server.
-    *   A common way to run it directly (if `server/index.cjs` or `server/app.cjs` is the entry point):
+    *   A common way to run it directly (if `server/index.js` or `server/app.js` is the entry point):
         ```bash
-        node server/index.cjs
+        node server/index.js
         ```
-    *   The server's port will be defined in its configuration (e.g., `server/index.cjs` or via an environment variable).
+    *   The server's port will be defined in its configuration (e.g., `server/index.js` or via an environment variable).
 
 ## Running Tests
 
@@ -104,7 +102,7 @@ The project plans to integrate `swagger-jsdoc` and `swagger-ui-express` so that 
 
 ## Deployment
 
-This service can be deployed as a standalone Docker container. The root repository contains a `Dockerfile` that installs dependencies and starts the Express server via `node server/index.cjs`. In production it can be built and run with:
+This service can be deployed as a standalone Docker container. The root repository contains a `Dockerfile` that installs dependencies and starts the Express server via `node server/index.js`. In production it can be built and run with:
 
 ```bash
 docker build -t zion-express ./server

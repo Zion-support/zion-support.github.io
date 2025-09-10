@@ -7,81 +7,58 @@ if (!jwtSecret) {
   throw new Error('JWT_SECRET not defined');
 }
 
-exports.loginUser = async function (req, res, next) {
+exports.loginUser = async function (req, res) {
   console.info('[LOGIN]', req.body.email);
+  console.info('[ENV] JWT_SECRET:', jwtSecret);
   try {
     const email = req.body.email.toLowerCase().trim();
-  const user = await User.findOne({ email }).select('+passwordHash');
-  if (!user) {
-    console.warn(`[LOGIN] Email not found: ${email}`);
-    const error = new Error('Email not registered');
-    error.status = 401;
-    error.code = 'EMAIL_NOT_FOUND';
-    return next(error);
-  }
-  if (user.active === false) {
-    console.warn(`[LOGIN] Inactive account: ${email}`);
-    const error = new Error('Account inactive');
-    error.status = 403;
-    error.code = 'ACCOUNT_INACTIVE';
-    return next(error);
-  }
-  const isMatch = await bcrypt.compare(req.body.password, user.passwordHash);
-  if (!isMatch) {
-    console.warn(`[LOGIN] Wrong password for ${email}`);
-    const error = new Error('Incorrect password');
-    error.status = 401;
-    error.code = 'WRONG_PASSWORD';
-    return next(error);
-  }
+    const user = await User.findOne({ email }).select('+passwordHash');
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+    const isMatch = bcrypt.compareSync(req.body.password, user.passwordHash);
+    if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
 
-  const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
-  console.info(`[LOGIN] Success for ${email}`);
-  res.json({
-    accessToken: token,
-    user: { id: user._id, email: user.email, name: user.name },
-  });
+    const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
+    res.json({
+      token,
+      user: { id: user._id, email: user.email, name: user.name },
+    });
   } catch (err) {
     console.error(err);
-    next(err);
+    res.status(500).json({ message: 'Server error' });
   }
 };
 
 // Maintain backwards compatibility if other modules still call `login`
 exports.login = exports.loginUser;
 
-exports.registerUser = async function (req, res, next) {
+exports.registerUser = async function (req, res) {
   try {
     const name = req.body.name;
     const email = req.body.email.toLowerCase().trim();
     const password = req.body.password;
     if (!name || !email || !password) {
-      const error = new Error('Missing required fields');
-      error.status = 400;
-      return next(error);
+      return res.status(400).json({ message: 'Missing required fields' });
     }
 
-    const newUser = new User({ name, email });
-    await newUser.setPassword(password);
+    const user = new User({ name, email });
+    await user.setPassword(password);
+    await user.save();
 
-    const saved = await User.create(newUser);
-    const exists = await User.findOne({ email: newUser.email });
-    console.log('User persisted?', !!exists);
-
-    const token = jwt.sign({ id: saved._id }, jwtSecret, { expiresIn: '7d' });
+    const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
     return res.status(201).json({
-      accessToken: token,
-      user: { id: saved._id, email: saved.email, name: saved.name },
+      token,
+      user: { id: user._id, email: user.email, name: user.name },
     });
   } catch (err) {
     if (err && err.code === 11000) {
-      err.status = 409;
-      err.code = 'EMAIL_EXISTS';
-      err.message = 'Email already registered';
-      return next(err);
+      return res
+        .status(409)
+        .json({ code: 'EMAIL_EXISTS', message: 'Email already registered' });
     }
     console.error(err);
-    next(err);
+    return res.status(500).json({ message: 'Server error' });
   }
 };
 

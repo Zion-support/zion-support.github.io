@@ -1,11 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { skipIfNoServer } from './helpers/server-check';
 
 // Full user journey covering signup, login, add to cart, checkout and blog navigation
 
-test('user can signup, login, checkout and read blog', async ({ page }, testInfo) => {
-  const url = await skipIfNoServer(testInfo);
-  if (!url) return;
+test('user can signup, login, checkout and read blog', async ({ page }) => {
   const email = `user_${Date.now()}@example.com`;
 
   await page.route('POST', '/auth/register', route => {
@@ -32,7 +29,7 @@ test('user can signup, login, checkout and read blog', async ({ page }, testInfo
     });
   });
 
-  await page.goto(`${url}/signup`);
+  await page.goto('/signup');
   await page.getByLabel('Display Name').fill('Test User');
   await page.getByLabel('Email').fill(email);
   await page.getByLabel('Password').fill('Password123');
@@ -40,15 +37,15 @@ test('user can signup, login, checkout and read blog', async ({ page }, testInfo
   await page.getByRole('checkbox').check();
   await page.getByRole('button', { name: /create account/i }).click();
 
-  await page.goto(`${url}/login`);
+  await page.goto('/login');
   await page.getByLabel('Email').fill(email);
   await page.getByLabel('Password').fill('Password123');
   await page.getByRole('button', { name: /login/i }).click();
 
-  await page.goto(`${url}/equipment/pro-camera-x1000`);
+  await page.goto('/equipment/pro-camera-x1000');
   await page.getByRole('button', { name: /add to cart/i }).click();
 
-  await page.goto(`${url}/cart`);
+  await page.goto('/cart');
   await page.getByRole('button', { name: /checkout/i }).click();
 
   await page.getByLabel('Name').fill('Test User');
@@ -67,7 +64,7 @@ test('user can signup, login, checkout and read blog', async ({ page }, testInfo
   await page.getByRole('button', { name: /pay/i }).click();
   await expect(page).toHaveURL(/order-confirmation\/pi_test123/);
 
-  await page.goto(`${url}/blog`);
+  await page.goto('/blog');
   await expect(page.getByRole('heading', { name: /latest articles/i })).toBeVisible();
   await page.getByRole('link', { name: /read more/i }).first().click();
   await expect(page.url()).toMatch(/\/blog\//);

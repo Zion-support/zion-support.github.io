@@ -1,4 +1,6 @@
 const { withSentry } = require('./withSentry.cjs');
+const fs = require('fs');
+const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -8,30 +10,34 @@ async function handler(req, res) {
     return;
   }
 
-  const { name, email, phone, company, location, details } = req.body || {};
+  const { name, email, phone: _phone, company: _company, location, details: _details } = req.body || {};
   if (!name || !email || !location) {
     res.statusCode = 400;
     res.json({ error: 'Missing required fields' });
     return;
   }
 
+  const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
+  let existing = [];
   try {
-    const response = await fetch('/functions/v1/onsite-service-request', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ name, email, phone, company, location, details })
-    });
-
-    const data = await response.json().catch(() => ({}));
-    res.statusCode = response.status;
-    res.json(data);
-  } catch (err) {
-    console.error('Onsite request API error:', err);
-    res.statusCode = 500;
-    res.json({ error: 'Failed to process request' });
+    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+    if (!Array.isArray(existing)) existing = [];
+  } catch {
+    // File doesn't exist or is invalid, use empty array
   }
+  existing.push({
+    name,
+    email,
+    phone: _phone,
+    company: _company,
+    location,
+    details: _details,
+    createdAt: new Date().toISOString(),
+  });
+  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+
+  res.statusCode = 200;
+  res.json({ success: true });
 }
 
 module.exports = withSentry(handler);
