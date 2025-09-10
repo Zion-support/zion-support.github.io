@@ -1,10 +1,8 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { _motion, AnimatePresence } from 'framer-motion';
-import { _Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-
-import { motion } from 'framer-motion';
-export const _ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
+import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
+export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('auto');
     const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -12,8 +10,8 @@ export const _ModernUIEnhancer = ({ enableAnimations = true, enableParticles = t
     const _scrollToTopRef = useRef(null);
     // Detect device type
     useEffect(() => {
-        const _updateDeviceType = () => {
-            const _width = window.innerWidth;
+        const updateDeviceType = () => {
+            const width = window.innerWidth;
             if (width < 768) {
                 setDeviceType('mobile');
             }

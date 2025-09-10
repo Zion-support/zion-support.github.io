@@ -1,25 +1,54 @@
 import React from 'react';
-import { _Helmet } from 'react-helmet-async';
 
-import SEO from '@/components/SEO';
-import { Helmet } from 'react-helmet-async';
-const services = [];
-const solutions = [];
-
-
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'profile';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
 }
 
-export const SEO: React.FC<SEOProps> = ({ title, description }) => {
-  const _resolvedTitle = title ?? 'Zion Tech Group';
-  const _resolvedDescription = description ?? 'AI-powered solutions and IT services by Zion Tech Group';
+export function SEO({
+  title = 'Zion Tech Group - AI, Cloud Computing & Digital Transformation',
+  description = 'Leading provider of AI, cloud computing, and digital transformation services. Expert consulting, implementation, and support for modern businesses.',
+  keywords = ['AI', 'cloud computing', 'digital transformation', 'technology consulting'],
+  image = '/images/og-image.jpg',
+  url = '',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  noindex = false
+}: SEOProps) {
+  const baseUrl = 'https://zion.app';
+  const finalCanonicalUrl = url ? `${baseUrl}${url}` : baseUrl;
 
   return (
-    <Helmet>
-      <title>{resolvedTitle}</title>
-      {resolvedDescription && (
-        <meta name="description" content={resolvedDescription} />
-      )}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <link rel="icon" href="/favicon.svg" />
-
+    <div>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+      <link rel="canonical" href={finalCanonicalUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={finalCanonicalUrl} />
+      <meta property="og:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+    </div>
+  );
+}
