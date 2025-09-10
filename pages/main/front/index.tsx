@@ -827,9 +827,12 @@ export default function MainFrontIndex() {
   <div className="mt-1 text-sm text-white/75">Summarized updates</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation/git-sync/2025-08-15T05-59-06-401Z
 =======
 >>>>>>> origin/automation/git-sync/2025-08-15T06-04-36-803Z
+=======
+>>>>>>> origin/automation/git-sync/2025-08-15T06-17-04-803Z
   </div>
 </section>
 /* AUTO:FRONT_INDEX_DIRECTORY_END */}
