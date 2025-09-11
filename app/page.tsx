@@ -202,6 +202,23 @@ export default function HomePage() {
             </div>
             <Link href='/blog' className='text-blue-600 font-semibold hover:underline'>View all</Link>
           </div>
+          {/* New Content Promo */}
+          <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <Link href='/blog/agentic-workflows-2025' className='group'>
+              <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
+                <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>Agentic Workflows in 2025: Practical Patterns for Production</h3>
+                <p className='text-blue-800 mt-2'>Guardrails, budgets, approvals, and observability to safely ship agentic systems.</p>
+              </div>
+            </Link>
+            <Link href='/blog/data-engineering-modern-stack' className='group'>
+              <div className='rounded-lg border border-emerald-200 bg-emerald-50 p-6 hover:bg-emerald-100 transition-colors'>
+                <div className='text-sm font-medium text-emerald-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-emerald-900 group-hover:underline'>Modern Data Engineering Stack: 2025 Reference</h3>
+                <p className='text-emerald-800 mt-2'>An opinionated blueprint from ingestion to governance with SLAs.</p>
+              </div>
+            </Link>
+          </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
               title='AI-Powered Business Automation: Complete Guide for 2025'
