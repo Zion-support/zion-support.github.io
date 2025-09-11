@@ -118,16 +118,22 @@ export default function HomePage() {
               icon='💰'
             />
             <Card
-              title='AI Governance Checklist 2025: Operationalize Policy With Evals'
-              href='/blog/ai-governance-checklist-2025'
-              description='A concise, actionable checklist to stand up pragmatic AI governance that accelerates delivery.'
-              icon='📋'
+              title='Agentic Workflows in the Enterprise: Reliable, Observable, Governed'
+              href='/blog/agentic-workflows-enterprise'
+              description='Blueprint for agentic systems with reliability, observability, and governance.'
+              icon='🧭'
             />
             <Card
-              title='Startup Fundraising in 2025: Efficient Rounds in a Tough Market'
-              href='/blog/startup-fundraising-in-2025'
-              description='Prove traction, run a tight process, and negotiate governance to raise efficiently.'
-              icon='🚀'
+              title='Zero-Trust AI Integrations: Safely Connecting to Your Systems'
+              href='/blog/zero-trust-ai-integrations'
+              description='Least privilege, short-lived creds, and policy approvals for safe integrations.'
+              icon='🔐'
+            />
+            <Card
+              title='AI Automation for Businesses: Complete Guide'
+              href='/blog/ai-automation-for-businesses'
+              description='Transform your business operations with AI automation. Learn strategies that achieve 40% efficiency gains.'
+              icon='🤖'
             />
           </div>
         </div>
