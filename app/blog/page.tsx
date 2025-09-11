@@ -1,54 +1,13 @@
-import React from 'react';
 import Link from 'next/link';
 
 const posts = [
   {
-    title: 'GenAI Security in 2025: Practical Controls That Actually Work',
+    title: 'AI Copilots for Engineering Teams',
     description:
-      'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
-    href: '/blog/genai-security-2025',
+      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
     date: '2025-09-11',
-    tags: ['AI', 'Security', 'Governance'],
-  },
-  {
-    title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
-    description:
-      'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
-    href: '/blog/edge-ai-in-manufacturing-2025',
-    date: '2025-09-11',
-    tags: ['Edge AI', 'Manufacturing', 'IoT'],
-  },
-  {
-    title: 'GenAI Evals in Production: What Actually Works',
-    description:
-      'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
-    href: '/blog/genai-evals-in-production',
-    date: '2025-09-11',
-    tags: ['GenAI', 'Evals', 'Quality'],
-  },
-  {
-    title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
-    description:
-      'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
-    href: '/blog/startup-micro-saas-playbook',
-    date: '2025-09-11',
-    tags: ['Startup', 'SaaS', 'Growth'],
-  },
-  {
-    title: 'AI Governance Operating Model: From Policy to Practice',
-    description:
-      'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
-    href: '/blog/ai-governance-operating-model',
-    date: '2025-09-11',
-    tags: ['AI', 'Governance', 'Risk'],
-  },
-  {
-    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
-    description:
-      'Run ML and GenAI on serverless with predictable cost and strong reliability.',
-    href: '/blog/serverless-for-ml-2025',
-    date: '2025-09-11',
-    tags: ['Serverless', 'ML', 'Cloud'],
+    tags: ['AI', 'DevEx', 'Productivity'],
   },
   {
     title: 'Practical AI Agents for Small Businesses',
@@ -59,28 +18,12 @@ const posts = [
     tags: ['AI', 'Automation', 'Agents'],
   },
   {
-    title: 'Production-Grade AI Agents: Observability and Safety',
-    description:
-      'How to harden agents for production with logging, evals, safety and cost controls.',
-    href: '/blog/production-grade-ai-agents',
-    date: '2025-09-11',
-    tags: ['AI', 'Agents', 'MLOps'],
-  },
-  {
     title: 'Cloud Cost Optimization in 2025: Proven Playbook',
     description:
       'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
     href: '/blog/cloud-cost-optimization-2025',
     date: '2025-09-11',
     tags: ['Cloud', 'FinOps', 'DevOps'],
-  },
-  {
-    title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
-    description:
-      'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
-    href: '/blog/cloud-finops-automation',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'Automation'],
   },
   {
     title: 'AI-Powered Customer Support Playbooks',
@@ -105,14 +48,6 @@ const posts = [
     href: '/blog/enterprise-rag-blueprint',
     date: '2025-09-11',
     tags: ['RAG', 'LLM', 'Architecture'],
-  },
-  {
-    title: 'The Modern Data Stack in 2025: Pragmatic Guide',
-    description:
-      'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
-    href: '/blog/modern-data-stack-2025',
-    date: '2025-09-11',
-    tags: ['Data', 'Analytics', 'Engineering'],
   },
 ];
 

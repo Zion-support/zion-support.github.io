@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -112,22 +111,28 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='GenAI Evals in Production: What Actually Works'
-              href='/blog/genai-evals-in-production'
-              description='Continuous eval loops that keep quality, safety, and costs in check.'
-              icon='🧪'
+              title='AI Copilots for Engineering Teams'
+              href='/blog/ai-copilots-for-engineering'
+              description='Deploy repo-aware copilots to accelerate reviews and reduce engineering toil.'
+              icon='🧭'
             />
             <Card
-              title='Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs'
-              href='/blog/edge-ai-in-manufacturing-2025'
-              description='Sub-100ms decisions, resilience, and bandwidth savings with on-device inference.'
-              icon='🏭'
+              title='AI-Powered Customer Support Playbooks'
+              href='/blog/ai-customer-support-playbooks'
+              description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
+              icon='🎧'
             />
             <Card
-              title='Startup Micro SaaS Playbook: From Idea to $10k MRR'
-              href='/blog/startup-micro-saas-playbook'
-              description='A pragmatic blueprint to launch and grow a Micro SaaS efficiently.'
-              icon='📈'
+              title='AI Infrastructure Cost Controls That Actually Work'
+              href='/blog/ai-infra-cost-controls'
+              description='Right-size tokens, cache, autoscale, and model tiering for 20–40% savings.'
+              icon='📉'
+            />
+            <Card
+              title='Enterprise RAG Blueprint: From Pilot to Production'
+              href='/blog/enterprise-rag-blueprint'
+              description='Architecture, hybrid retrieval, and rollout plan for regulated environments.'
+              icon='📘'
             />
           </div>
         </div>
