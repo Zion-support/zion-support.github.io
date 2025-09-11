@@ -50,7 +50,7 @@ export default function AppMinimal() {
           </header>
 
           <main className="app-main">
-            <Suspense fallback={<LoadingSpinner size="large" text="Loading page..." />}>
+            <Suspense fallback={<LoadingSpinner text="Loading page..." />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
