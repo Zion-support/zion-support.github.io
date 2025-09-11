@@ -3,6 +3,30 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'GenAI Security in 2025: Practical Controls That Actually Work',
+    description:
+      'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
+    href: '/blog/genai-security-2025',
+    date: '2025-09-11',
+    tags: ['AI', 'Security', 'Governance'],
+  },
+  {
+    title: 'AI Governance Operating Model: From Policy to Practice',
+    description:
+      'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
+    href: '/blog/ai-governance-operating-model',
+    date: '2025-09-11',
+    tags: ['AI', 'Governance', 'Risk'],
+  },
+  {
+    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
+    description:
+      'Run ML and GenAI on serverless with predictable cost and strong reliability.',
+    href: '/blog/serverless-for-ml-2025',
+    date: '2025-09-11',
+    tags: ['Serverless', 'ML', 'Cloud'],
+  },
+  {
     title: 'Practical AI Agents for Small Businesses',
     description:
       'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
