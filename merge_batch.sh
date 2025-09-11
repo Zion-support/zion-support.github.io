@@ -9,7 +9,7 @@ merge_pr() {
     echo "Merging PR #$pr_num..." >> /workspace/batch_log.txt
     
     curl -s -X PUT \
-        -H "Authorization: token ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL" \
+        -H "Authorization: token ${GITHUB_TOKEN}" \
         -H "Accept: application/vnd.github.v3+json" \
         "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num/merge" \
         -d "{\"commit_title\":\"Merge PR #$pr_num\",\"merge_method\":\"merge\"}" \

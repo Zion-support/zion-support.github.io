@@ -7,7 +7,7 @@ set -e
 
 LOG_FILE="/workspace/final_merge_log.txt"
 RESULTS_FILE="/workspace/final_merge_results.json"
-TOKEN="ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL"
+TOKEN="${GITHUB_TOKEN}"
 REPO="Zion-Holdings/zion.app"
 
 # Logging function

@@ -5,12 +5,13 @@ import json
 import time
 
 # Configuration
-TOKEN = "ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL"
+import os
+TOKEN = os.environ.get("GITHUB_TOKEN", "")
 REPO = "Zion-Holdings/zion.app"
 BASE_URL = "https://api.github.com"
 
 headers = {
-    "Authorization": f"token {TOKEN}",
+    "Authorization": f"token {TOKEN}" if TOKEN else "",
     "Accept": "application/vnd.github.v3+json"
 }
 
