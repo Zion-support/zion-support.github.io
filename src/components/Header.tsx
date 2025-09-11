@@ -1,31 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Heart, 
-  Rocket, 
-  Sparkles,
-  BarChart3,
-  Network,
-  Globe,
-  Users,
-  FileText,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
-export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,24 +42,47 @@ export function Header() {
     }
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
-        : 'bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-sm'
-    }`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
-              <Rocket className="w-6 h-6 text-white" />
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      {/* Top Bar */}
+      <div className="bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
             </div>
-            <span className="text-white text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -183,124 +185,42 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+            onClick={toggleMenu}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-white/10"
-            >
-              <div className="py-4 space-y-4">
-                {/* Services Section */}
-                <div>
-                  <button
-                    onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="flex items-center justify-between w-full text-left text-white hover:text-cyan-400 transition-colors duration-200 py-2"
-                  >
-                    <span>Services</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  
-                  <AnimatePresence>
-                    {isServicesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-4 mt-2 space-y-2"
-                      >
-                        {services.map((category, index) => (
-                          <div key={index}>
-                            <h4 className="text-sm font-semibold text-cyan-400 mb-1">
-                              {category.category}
-                            </h4>
-                            <div className="space-y-1">
-                              {category.items.map((service, serviceIndex) => (
-                                <Link
-                                  key={serviceIndex}
-                                  to={service.path}
-                                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-1"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {service.icon}
-                                  <span className="text-sm">{service.name}</span>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <Link 
-                  to="/solutions" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/solutions') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Solutions
-                </Link>
-                
-                <Link 
-                  to="/about" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/about') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-                
-                <Link 
-                  to="/blog" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/blog') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Blog
-                </Link>
-                
-                <Link 
-                  to="/contact" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/contact') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </Link>
-
-                {/* Mobile CTA */}
-                <Link 
-                  to="/contact" 
-                  className="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isMenuOpen && (
+          <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <Link
+                to="/contact"
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
-}
+};
 
+export default Header;

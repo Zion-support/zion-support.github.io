@@ -304,6 +304,7 @@ interface WebVitalMetric {name: string;
   value: number;
   id: string}
 
+<<<<<<< HEAD
 
 export const trackWebVitals = (metric: WebVitalMetric) => {;
   if (typeof window !== 'undefined' && window && window.gtag) {';
@@ -314,6 +315,15 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
       non_interaction: true;,
 
 })}
+=======
+// Declare global types
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
     gtag: (...args: unknown[]) => void, dataLayer: unknown[],
   }
@@ -325,9 +335,56 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 // Declare global types
+=======
+<<<<<<< HEAD
+        navigation.domContentLoadedEventStart,
+      first_paint:;
+        performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
+      firstContentfulPaint:;
+        performance.getEntriesByName ('first - contentful - paint')[0]?.start_time ||';
+        0;,
+}}
+  return null}
+;
+// Web Vitals tracking;
+interface WebVitalMetric {
+  name: string;
+  value: number;
+  id: string}
+export const trackWebVitals = (metric: WebVitalMetric) =>: any {
+  // Check condition
+if ( {') {
+  $2
+}
+    window.gtag ('event', metric.name, {';
+      value: Math.round (metric.value);
+      event_category: 'Web Vitals', ';
+      event_label: metric.id;
+      non_interaction: true;,
+})}
+}
+;
+// Declare global types;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+declare global {
+  interface Window {
 
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
   }
 }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

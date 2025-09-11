@@ -88,16 +88,13 @@ declare global {
   }
 }
 
-// Module declarations
-declare module "*.svg" {
-  const content: string;
-  export default content;
-}
+<<<<<<< HEAD
 
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+export {};
+=======
 
 declare module "*.jpg" {
   const content: string;
@@ -119,35 +116,30 @@ declare module "*.webp" {
   export default content;
 }
 
-declare module "*.css" {
-  const content: { [className: string]: string };
-  export default content;
-}
+=======
 
-declare module "*.scss" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.module.css" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.module.scss" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-// Node.js environment variables
-declare namespace NodeJS {
-  interface ProcessEnv {
-    NODE_ENV: "development" | "production" | "test";
-    NEXT_PUBLIC_SUPABASE_URL?: string;
-    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string;
-    NEXT_PUBLIC_GA_TRACKING_ID?: string;
-  }
-}
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+// Re-export DOM types that might not be available
+export {}
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+// Re-export DOM types that might not be available
+export {}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+// Re - export DOM types that might not be available;
+export {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+// Re-export DOM types that might not be available
 export {};
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

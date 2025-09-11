@@ -294,10 +294,141 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+
+                        <input
+                          type=\"text\"
+                          id=\"company\"
+                          name=\"company\"
+                          value={formData && formData.company}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                          placeholder=\"Your company name\"
+                        />;
+                      </div>;
+                      <div>;
+                        <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
+                          Phone Number;
+                        </label>;
+                        <input
+                          type=\"tel\"
+                          id=\"phone\"
+                          name=\"phone\"
+                          value={formData && formData.phone}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                          placeholder=\"+1 (555) 123-4567\"
+                        />;
+                      </div>;
+                    </div>;
+                    <div>;
+                      <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
+                        Service Interest;
+                      </label>;
+                      <select
+                        id=\"service\"
+                        name=\"service\"
+                        value={formData && formData.service}
+                        onChange={handleInputChange}
+                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\">;
+                        <option value=\"">Select a service</option>;
+                        {services && services.map((service) => (;
+                          <option key={service} value={service}>{service}</option>;
+                        ))}
+                      </select>;
+                    </div>;
+                    <div>;
+                      <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
+                        Message *;
+                      </label>;
+                      <textarea
+                        id=\"message\"
+                        name=\"message\"
+                        required
+                        rows={6}
+                        value={formData && formData.message}
+                        onChange={handleInputChange}
+                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                        placeholder=\"Tell us about your project or requirements...\"
+                      />;
+                    </div>;
+                    <button
+                      type=\"submit\"
+                      disabled={isSubmitting}
+                      className=\"w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300\">;
+                      {isSubmitting ? (;
+                        <>;
+                          <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2\"></div>;
+                          Sending...;
+                        </>;
+                      ) : (;
+                        <>;
+                          <Send className=\"w-5 h-5 mr-2\" />;
+                          Send Message;
+                        </>;
+                      )}
+                    </button>;
+                  </form>;
+                )}
+              </div>;
+              {/* Contact Information */}
+
+
+          {/* Services Overview */}
+          <section className="py-20">;
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
+              <motion&& motion.div
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0 && 0.6 }}
+                className="text-center mb-16">;
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
+                  Our Services;
+                </h2>;
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                  Comprehensive technology solutions to meet all your business needs;
+                </p>;
+              </motion && motion.div>;
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">;
+                {services && services.map((service, index) => (;
+                  <motion&& motion.div
+                    key={index}
+                    initial={{ "opacity": 0, "y": 20 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
+                    <h3 className="text-lg font-semibold text-gray-900">;
+                      {service}
+                    </h3>;
+                  </motion && motion.div>;
+                ))}
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </PageTransition>;
+    </>;
+  );
 }
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </div>
+        </section>
+      </div>
+    </>
+=======
+export default ContactPage;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/contact.tsx
+  );
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

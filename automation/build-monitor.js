@@ -1,15 +1,10 @@
 #!/usr/bin/env node
-    if (level === 'error') {
-      console.error(logMessage);
-    } else if (level === 'warn') {
-      console.warn(logMessage);
-    } else {
-      console.log(logMessage);
-    }
-  }
+<<<<<<< HEAD
+
+
 =======
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -354,8 +349,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de  const command = process.argv[2];
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+<<<<<<< HEAD
 
 =======
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
 =======
@@ -543,8 +542,10 @@ if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+
+
 =======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = BuildMonitor;

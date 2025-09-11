@@ -1,4 +1,8 @@
 export const metadata = { 
+  title: 'Data Analytics Solutions | Zion Tech Group',
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
+};
+
 export default function DataAnalyticsPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
@@ -61,32 +65,66 @@ export default function DataAnalyticsPage() {
             price="Starting at $20k"
             features={["ETL/ELT pipelines", "Data validation", "Error handling", "Monitoring"]
           />
-          <ServiceCard
-            title="Predictive Analytics"
-            description="Machine learning models for forecasting and prediction"
-            price="Starting at $25k"
-            features={["Model development", "Data preprocessing", "Model training", "Deployment"]
-          />
-          <ServiceCard
-            title="Customer Analytics"
-            description="Comprehensive customer behavior analysis and segmentation"
-            price="Starting at $18k"
-            features={["Customer segmentation", "Behavior analysis", "Churn prediction", "Lifetime value"]
-          />
-          <ServiceCard
-            title="Data Visualization"
-            description="Advanced data visualization and interactive reports"
-            price="Starting at $12k"
-            features={["Interactive charts", "Custom visualizations", "Storytelling", "Export options"]
-          />
-          <ServiceCard
-            title="Data Warehouse Setup"
-            description="Complete data warehouse design and implementation"
-            price="Starting at $30k"
-            features={["Architecture design", "Data modeling", "ETL processes", "Security setup"]
+          <Item 
+            title="Machine Learning & AI" 
+            details={[
+              "TensorFlow, PyTorch, and scikit-learn",
+              "MLOps and model deployment",
+              "Feature engineering and selection",
+              "Model monitoring and drift detection",
+              "AutoML and hyperparameter tuning",
+              "Deep learning and neural networks"
+            ]} 
           />
         </div>
-      </div>
+      </section>
+
+      <Pricing />
+      <ContactSection />
+    </div>
+  );
+}
+
+function DataServiceCard({ title, description, features, price, icon }: { 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  price: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 function Pricing() {
   return (
@@ -124,9 +162,77 @@ function Pricing() {
           price="$50k+" 
           duration="12+ weeks"
           features={[
-            "Full platform development",
-            "Advanced analytics",
-            "Machine learning models",
-            "Real-time processing",
-            "Scalable architecture",
-            "Ongoing support"
+            "Continuous data monitoring",
+            "Model maintenance and updates",
+            "Performance optimization",
+            "Regular reporting and insights",
+            "Data quality management",
+            "Scalability and growth support"
+          ]} 
+        />
+      </div>
+    </section>
+  );
+}
+
+function Plan({ name, price, duration, features }: { 
+  name: string; 
+  price: string; 
+  duration: string;
+  features: string[]; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="text-green-500 mr-3">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Unlock Your Data's Potential?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's transform your data into actionable insights that drive business growth. 
+          Our data analytics experts have delivered 100+ successful analytics projects.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,6 +1,14 @@
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -31,6 +39,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+
+
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -99,8 +109,8 @@ const services = [
       'Scenario planning'';
     ];
   }
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 ;];
 const benefits = [;
   {}
@@ -109,10 +119,16 @@ const benefits = [;
     icon: Activity;
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    icon: Activity,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/manufacturing.tsx
 ];
 const benefits = [
   {
@@ -135,8 +151,8 @@ const benefits = [
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3;
   }
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 ;];
 export default function ManufacturingPage() {
   return (;
@@ -181,9 +197,11 @@ export default function ManufacturingPage() {
             </motion.div>;
           </div>;
         </section>;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 export default function ManufacturingPage() {
   return (
@@ -194,16 +212,18 @@ export default function ManufacturingPage() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
+
               className="text-center mb-16"
               className="text-center max-w-4xl mx-auto""
             >;
@@ -247,6 +267,24 @@ export default function ManufacturingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+
+
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
+                >;
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
+                    <service.icon className="w-6 h-6 text-white" />";
+                  </div>;
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+                  <ul className="space-y-3">";
+                    {service.features.map((feature, featureIndex) => (,
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -264,6 +302,13 @@ export default function ManufacturingPage() {
                   </ul>,
                 </motion.div>;
               ))}
+
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
@@ -285,6 +330,26 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
+
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Why Choose Our Manufacturing Solutions?;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+                Our manufacturing technology solutions deliver measurable improvements in efficiency, 
+                quality, and cost reduction.,
+              </p>;
+            </motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+              {benefits.map((benefit, index) => (,
+                <motion.div}),
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -311,6 +376,13 @@ export default function ManufacturingPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
               className="text-center mb-16""
             >;
@@ -334,8 +406,8 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -359,10 +431,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>;
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?

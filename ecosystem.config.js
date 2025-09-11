@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 
 
 
+=======
 
-    {;
-
-module.exports = {apps:[;
-    {;
-      name:'error-fixer',;
-      script:'automation/lint-error-fixer && fixer.cjs',;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = {;
   apps:[;
     {;
@@ -158,9 +167,24 @@ origin/main
       time: true
     }
   ]
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 },
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/main
+export default {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
+
+=======
+
+
+
+=======
+=======
+
 }
 origin/main
 origin/automation-improvements-final
@@ -244,6 +268,7 @@ origin/automation-improvements-final
     {
 
       name: 'bolt-zion-app',
+=======
       name: 'bolt - zion - app',
 
       script: 'npm',
@@ -443,16 +468,19 @@ origin/automation-improvements-final
 
     }
   ],
+<<<<<<< HEAD
 module && module.exports = {
-  apps: [{
-
-      log_file: 'logs / pm2 / syntax - fixer.log',
-      error_file: 'logs / pm2 / syntax - fixer - error.log',
-      out_file: 'logs / pm2 / syntax - fixer - out.log',
-
-    }
-  ],
-module && module.exports = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/main
+module.exports = {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   apps: [{
 
     },
@@ -488,6 +516,7 @@ module && module.exports = {
       PORT: 3000;
     },
     max_memory_restart: "1G",
+<<<<<<< HEAD
     node_args: "--max - old - space - size = 1024",
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
@@ -496,10 +525,19 @@ module && module.exports = {
   }];
 }
 ;
-      error_file: './logs/performance-error.log',
-      out_file: './logs/performance-out.log',
-      log_file: './logs/performance-combined.log',
-      time: true
-    }
-  ]
-},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
+};
+<<<<<<< HEAD
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

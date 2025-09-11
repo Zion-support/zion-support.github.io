@@ -2,7 +2,8 @@ import React from 'react';
 interface EducationSolutionsProps {
   // Add props here as needed
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function EducationSolutions({ }: EducationSolutionsProps) {
   return (
     <div>
@@ -10,14 +11,6 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
-
-:src.pages.disabled/EducationSolutions.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
 
 
 

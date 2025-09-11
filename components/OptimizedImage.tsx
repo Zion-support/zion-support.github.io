@@ -25,8 +25,24 @@ import React from 'react';
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
+<<<<<<< HEAD
   src: string
   alt: string
+=======
+
+interface OptimizedImageProps {;
+  src: string,;
+  alt: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+  src: string;
+  alt: string;
+=======
+  src: string,
+  alt: string,
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   width?: number;
   height?: number;
   className?: string;
@@ -34,10 +50,24 @@ interface OptimizedImageProps {
   quality?: number;
 }
 
+<<<<<<< HEAD
+
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 =======
-const OptimizedImage: React.FC < OptimizedImageProps> = ({>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className = '',
+  priority = false,
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   src;
   alt;
 
@@ -45,11 +75,16 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({>>>>>>> cursor/expand-
   height = 600;
   className = '';
   priority = false;
-}) => {
-=======
+<<<<<<< HEAD
 
   quality = 75,;
 }) => {;
+
+=======
+>>>>>>> origin/main
+  quality = 75,
+}) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <Image
       src={src}

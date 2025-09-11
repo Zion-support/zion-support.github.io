@@ -1,10 +1,28 @@
-export function cn(...inputs: ClassValue[]) {;
-  return twMerge(clsx(inputs));}
+
+<<<<<<< HEAD
+=======
 
 
 export function cn(...inputs: ClassValue[]) {;
 
   return twMerge(clsx(inputs));}
+=======
+=======
+export function cn(...inputs: ClassValue[]) {
+<<<<<<< HEAD
+  return twMerge(clsx(inputs));
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+}
+=======
+  return twMerge(clsx(inputs));}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
   return twMerge(clsx(inputs));
@@ -37,8 +55,10 @@ export function formatDate(date: Date | string | number): string {
   return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency,
 
-export function formatDate(date: Date | string | number): string {
-},
+  }).format(amount);
+}
+}
+}
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -71,13 +91,16 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 
 };
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+},
 
-origin/main
 
-
-
-};
-
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

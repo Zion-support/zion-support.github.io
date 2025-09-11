@@ -1,5 +1,3 @@
-import _React from "react"; ); export default function Wishlistslice() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );}
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,4 +26,3 @@ const React from "react"; ); export default function Wishlistslice() {; return (
 
 import _React from "react"; ); export default function Wishlistslice() {; return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for wishlistslice.; ></div> ></div> );}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

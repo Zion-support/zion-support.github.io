@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+/**
+ * Security Enhancer
+ * Comprehensive security improvements for the Zion Tech Group website
+ */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -355,3 +362,4 @@ const path = require('path')
       issues.push('Use of localStorage - ensure sensitive data is not stored')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
       // Skip directories that can'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

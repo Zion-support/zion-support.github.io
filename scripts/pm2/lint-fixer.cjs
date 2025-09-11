@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 ;,"});,"})
 const fs = // // require(,;,"});,"})
@@ -214,3 +215,8 @@ class IntelligentLintFixer {;
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,,"}),"
+=======
+#!/usr/bin/env node,"}),"
+,"}),"
+const fs = require(,,"}),"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

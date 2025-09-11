@@ -1,9 +1,37 @@
 
+<<<<<<< HEAD
 
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+<<<<<<< HEAD
+const InteractiveNavigation = () => {
+  return (
+    <nav className="bg-white shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <div className="text-xl font-bold text-gray-800">Interactive Nav</div>
+          <div className="hidden md:flex space-x-8">
+            <Link href="/">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Home</span>
+            </Link>
+            <Link href="/services">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Services</span>
+            </Link>
+            <Link href="/about">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">About</span>
+            </Link>
+            <Link href="/contact">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Contact</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-
+export default InteractiveNavigation;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -153,12 +181,12 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
+<<<<<<< HEAD
 =======
 export default Component}
 ;
 
-export default Component}
-export default Component}
-;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

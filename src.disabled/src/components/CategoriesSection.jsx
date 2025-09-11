@@ -3,4 +3,3 @@ const { GradientHeading } from "./GradientHeading"; from "framer-motion"; from "
 
 </Briefcase>"
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

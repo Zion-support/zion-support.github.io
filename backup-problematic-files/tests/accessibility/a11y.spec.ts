@@ -50,8 +50,23 @@ export default function A11y.spec({ }: A11y.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/tests/accessibility/a11y.spec.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:tests/accessibility/a11y.spec.ts
+}
+}
+<<<<<<< HEAD:backup-problematic-files/tests/accessibility/a11y.spec.ts
 }
 }
 }
-}
-}
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20:tests/accessibility/a11y.spec.ts

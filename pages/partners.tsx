@@ -190,10 +190,156 @@ export default function Partners() {
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </motion.div>
-              ))}
+
+
+
+                  <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
+                  <p className="text-white/70 text-sm mb-4">{partner.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
+                    <ul className="space-y-1">
+                      {partner.benefits.map((benefit) => (
+                        <li key={benefit} className="text-xs text-white/80 flex items-center">
+                          <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2" />
+                          {benefit}
+                        </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      ))}
+
+
+                    </ul>;
+                  </div>;
+
+                  <div className='flex items-center justify-between'>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                  <div className="flex items-center justify-between">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <a
+                      href={partner && partner.website}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1'>;
+                      Visit Website;
+                      <ExternalLink className='w-3 h-3' />;
+                    </a>;
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More;
+                    </button>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+
+=======
+                  
+                  <div className="flex items-center justify-between">
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+<<<<<<< HEAD
+                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105">
+                      Learn More
+=======
+<<<<<<< HEAD
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>
+=======
+                  
+                  <div className="flex items-center justify-between">
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105">
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                      Learn More
+=======
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+
+            ))}
+
+=======
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Become a Partner CTA */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+      {/* Become a Partner CTA */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          >
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Partner with Us?
+            </h2>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                Partnership Inquiry
+              </button>
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Download Partnership Guide
+
+              </button>
             </div>
           </div>
         </section>
@@ -263,100 +409,143 @@ export default function Partners() {
           </div>
         </section>
 
-        {/* Partnership Levels */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Partnership Tiers</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer different levels of partnership to accommodate various 
-                collaboration needs and business objectives.
-              </p>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {partnershipLevels.map((level, index) => (
-                <motion.div
-                  key={level.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div className={`bg-gradient-to-br ${level.color} text-white p-8 rounded-2xl h-full`}>
-                    <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">{level.name}</h3>
-                      <p className="text-white/90">{level.description}</p>
-                    </div>
-                    
-                    <ul className="space-y-3 mb-8">
-                      {level.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-sm font-bold">✓</span>
-                          </div>
-                          <span className="text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Become a Partner */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark text-white">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold mb-6"
-            >
-              Become a Partner
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-xl text-zion-slate-light mb-8"
-            >
-              Join our ecosystem of technology leaders and help us deliver 
-              innovative solutions to businesses worldwide.
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <a 
-                href="/contact" 
-                className="px-8 py-3 bg-white text-zion-blue-dark rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Contact Us
-              </a>
-              <a 
-                href="mailto:partnerships@ziontechgroup.com" 
-                className="px-8 py-3 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold"
-              >
-                partnerships@ziontechgroup.com
-              </a>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </>
+
+),
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
+}</ul> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
+}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) ) 
+
+
+}</div> </div> </section> <motion.div initial= {
+=======
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Partner with Us?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Join our ecosystem of technology leaders and create innovative;
+              solutions that drive business transformation and growth.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
+                Partnership Inquiry;
+              </button>;
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Download Partnership Guide;
+              </button>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <EnhancedFooter />;
+    </div>;
+  ),;
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion && motion.div> </li>) ) ;
+}</ul> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion && motion.div> </span> </div> </div> </li>) ) ;
+}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+
+  duration: 0 && 0.8 
+
+}viewport= {
+  {
+  once: true 
+
+<<<<<<< HEAD
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+=======
+                  </p>;
+                  <div className='mb - 4'>;
+                    <h4 className='text - sm font - semibold text - white / 60 mb - 2 uppercase tracking - wider'>;
+                      Benefits;
+                    </h4>;
+                    <ul className='space - y-1'>;
+                      {partner.benefits.map (benefit => (
+                        <li;
+                          key={benefit}
+                          className='text - xs text - white / 80 flex items - center';
+                        >;
+                          <div className='w - 1 h - 1 bg - cyan - 400 rounded - full mr - 2' />                          {benefit}
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  <div className='flex items - center justify - between'>;
+                    <a;
+                      href={partner.website}
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 flex items - center gap - 1';
+                    >;
+                      Visit Website;
+                      <ExternalLink className='w - 3 h - 3' />;
+                    </a>;
+                    <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - lg font - semibold text - white text - sm transition - all duration - 300 transform hover:scale - 105'>                      Learn More;
+                    </button>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Become a Partner CTA */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className='text - 4xl font - bold text - white mb - 6'>;
+              Ready to Partner with Us?;
+            </h2>;
+            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+              Join our ecosystem of technology leaders and create innovative;
+              solutions that drive business transformation and growth.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <button className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105'>;
+                Partnership Inquiry;
+              </button>;
+              <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Download Partnership Guide;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
+=======
   )
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

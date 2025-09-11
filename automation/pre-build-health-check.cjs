@@ -7,6 +7,20 @@ try {
 	console.error('[pre-build-health-check] Failed:', e);
 	process.exit(0);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/chore/fix-build-nav-links
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
@@ -17,3 +31,21 @@ try {
 	console.warn('[pre-build] Non-fatal issue:', err?.message || err);
 	process.exit(0);
 }
+>>>>>>> origin/chore/resolve-conflicts-1756215853
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

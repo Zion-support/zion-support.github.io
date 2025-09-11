@@ -1,11 +1,8 @@
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/main
-origin/automation-improvements-final
+<<<<<<< HEAD
 
 
+>>>>>>> origin/automation-improvements-final
+=======
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -14,7 +11,25 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45// Security middleware
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
+// Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 
@@ -45,6 +60,7 @@ export function securityMiddleware(request) {;
       'max-age=31536000; includeSubDomains; preload'
     );
   }
+<<<<<<< HEAD
 
 =======
 =======>>>>>>> cursor/add-new-services-and-deploy-updates-0462=======
@@ -64,6 +80,24 @@ export function securityHeaders(req, res, next) {
 
 
 
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  
+<<<<<<< HEAD
+  return response;
+=======
+// Security headers middleware
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
+  return response;// Security headers middleware
+>>>>>>> origin/main
+export function securityHeaders(req, res, next) {
+  Object.entries({
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
@@ -77,19 +111,23 @@ export function securityHeaders(req, res, next) {
     res && res.setHeader(key, value);
   });
   next();
+<<<<<<< HEAD
 
-=======>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+
 =======
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 }
@@ -140,38 +178,8 @@ function security_headers() {
 ;
   next ();
 }
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
-
-  // Add security headers
-
-// Security middleware;
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
-
-  // Add security headers;
-pr-12325
-  const headers = getSecurityHeaders();
-  headers.forEach(({ key, value }) => {
-    response.headers.set(key, value);
-  });
-
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
-  // Add HSTS header for HTTPS;
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload)
-pr-12325
-    );
-  }
-
-  return response;
-}
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

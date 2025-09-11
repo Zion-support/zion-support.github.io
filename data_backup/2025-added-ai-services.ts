@@ -1,4 +1,5 @@
 
+
 import type { InnovativeAIService } from "./innovative-ai-services"
 const contact = {
   "mobile": '+1 302 464 0950',

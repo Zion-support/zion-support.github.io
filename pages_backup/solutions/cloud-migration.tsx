@@ -1,4 +1,5 @@
 
+
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,13 +23,44 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/cloud-migration.tsx
+=======
 
 
-const phases = [;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';const phases = [;
+import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { Cloud, 
+  Shield, 
+  Zap, 
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Users,
+  Settings,
+  Database,
+  Globe,
+  Lock,
+  Smartphone,;
+  Brain;
+} from 'lucide-react';
+import Layout from "../../components/Layout";";
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+const phases = [;
   {}
     title: 'Assessment & Planning,',
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',
@@ -340,8 +372,10 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Move to the Cloud?,;
+
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
@@ -360,10 +394,13 @@ export default function CloudMigrationPage() {
     </Layout>;
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

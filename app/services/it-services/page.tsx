@@ -1,52 +1,7 @@
-export default function ITServicesPage() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">IT Services</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Cloud, DevOps, SRE and security services engineered for uptime and efficiency. 
-          We ensure your infrastructure is robust, scalable, and secure.
-        </p>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Cloud & Infrastructure" 
-          features={[
-            "AWS, GCP, Azure cloud migration",
-            "Kubernetes orchestration & management",
-            "Serverless architecture design",
-            "Infrastructure as Code (Terraform)",
-            "Multi-cloud & hybrid solutions",
-            "Cost optimization & monitoring"
-          ]}
-          icon="☁️"
-        />
-        <FeatureCard 
-          title="DevOps & SRE" 
-          features={[
-            "CI/CD pipeline automation",
-            "Observability & monitoring setup",
-            "Auto-scaling & load balancing",
-            "Chaos engineering & testing",
-            "Incident response & management",
-            "Performance optimization"
-          ]}
-          icon="⚙️"
-        />
-        <FeatureCard 
-          title="Security & Compliance" 
-          features={[
-            "Security hardening & assessment",
-            "Zero Trust architecture implementation",
-            "Vulnerability management",
-            "Compliance (SOC 2, GDPR, HIPAA)",
-            "Penetration testing",
-            "Security monitoring & alerting"
-          ]}
-          icon="🛡️"
-        />
-      </div>
+export const metadata = { 
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
+};
 
 export default function ITServicesPage() {
   return (
@@ -390,62 +345,35 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
   );
 }
 
-export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[] 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
-      <div className="text-sm text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="text-gray-600 flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
 function ContactSection() {
   return (
-    <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Optimize Your IT Infrastructure?</h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your IT needs and create a robust, scalable infrastructure that supports your business growth.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Optimize Your IT Infrastructure?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can improve your infrastructure's reliability, security, and performance. 
+          Our IT experts have managed 200+ enterprise systems.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
       </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>    </div>
+    </section>
   );
 }

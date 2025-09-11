@@ -46,7 +46,17 @@ module && module.exports = {
           openAnalyzer: false,
           reportFilename: 'bundle-analysis && analysis.html'
 
+        })
+      );
+    }
+    return config;
+  }
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
@@ -83,22 +93,23 @@ if ( {) {
 
 
 
-}
-}
-;
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-module.exports = {,;
-  "webpack": (config { isServer }) => {,;
-    if ( {,;
-      config.plugins.push() {,;
-     {,;
-      config.plugins.push(},;
-        new BundleAnalyzerPlugin({,;
-          "analyzerMode": 'static',;
-          openAnalyze: r: false,;
-          reportFilenam: e: 'bundle-analysis.htm,l'}),;
-      )},;
-    return config}
-},;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
+=======
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
+=======
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,7 +1,41 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Sitemaps
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /test/
+Disallow: /temp/
+
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /industries/
+Allow: /about
+Allow: /contact
+Allow: /blog/
+Allow: /careers/
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
@@ -17,8 +51,15 @@ Allow: /solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
-Allow: /news/
-Allow: /case-studies/
-
-# Crawl delay (optional)
-Crawl-delay: 1
+Allow: /careers/
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/main

@@ -1,28 +1,134 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 const fs = require("fs");
 const path = require("path");
 
-console.log("🔍 Starting SEO Optimization Analysis...");
+=======
+/**
+ * SEO Optimizer
+ * Automatically optimizes SEO for the application
+ */
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
 
-const seoReport = {
-  timestamp: new Date().toISOString(),
-  checks: [],
-  recommendations: [],
-  status: "completed"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+const { execSync } = require('child_process');
+>>>>>>> origin/main
+const fs = require('fs');
+const path = require('path');
+
+<<<<<<< HEAD
+console.log('🔍 Starting SEO Optimizer...');
+
+class SEOOptimizer {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async optimizeSEO() {
+    const seoOptimizations = [
+      { name: 'Sitemap Generation', command: 'npm run sitemap:generate', description: 'Generating sitemap for search engines' },
+      { name: 'Search Index', command: 'npm run search:index', description: 'Generating search index' },
+      { name: 'Meta Tags Check', command: 'npm run test:accessibility', description: 'Checking meta tags and accessibility' },
+      { name: 'Robots.txt Check', command: 'ls -la public/robots.txt', description: 'Checking robots.txt file' }
+    ];
+
+    const results = [];
+    let successfulOptimizations = 0;
+
+    for (const optimization of seoOptimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
+        
+        execSync(optimization.command, { stdio: 'pipe' });
+        
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+      }
+    }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalOptimizations: seoOptimizations.length,
+      successfulOptimizations,
+      failedOptimizations: seoOptimizations.length - successfulOptimizations,
+      results,
+      seoScore: Math.round((successfulOptimizations / seoOptimizations.length) * 100)
+    };
+
+    const reportPath = path.join(this.reportsDir, 'seo-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 SEO optimization completed! Report saved to: ${reportPath}`);
+    this.log(`🔍 SEO Score: ${report.seoScore}% (${successfulOptimizations}/${seoOptimizations.length} optimizations successful)`);
+    
+    return report;
+  }
+}
+<<<<<<< HEAD
+// Generate SEO report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": seoChecks.map(check => ({
+    name: check.name,
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
 };
 
-// Check for meta tags in HTML files
-function checkMetaTags(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    const checks = [];
-    
-    // Check for title tag
-    if (content.includes("<title>")) {
-      checks.push({ type: "title", status: "ok", message: "Title tag found" });
-    } else {
-      checks.push({ type: "title", status: "warning", message: "Title tag missing" });
+<<<<<<< HEAD
+class SEOOptimizer {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
+    this.ensureLogDir();
+  }
+
+  ensureLogDir() {
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
     }
     
     // Check for meta description
@@ -64,141 +170,33 @@ function checkSitemap() {
   }
 }
 
-// Check for robots.txt
-function checkRobotsTxt() {
-  if (fs.existsSync("robots.txt")) {
-    return { type: "robots_txt", status: "ok", message: "robots.txt found" };
-  } else {
-    return { type: "robots_txt", status: "warning", message: "robots.txt missing" };
-  }
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new SEOOptimizer();
+  optimizer.start().catch(console.error);
 }
 
-// Check for alt attributes in images
-function checkImageAltTags(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    const imgTags = content.match(/<img[^>]*>/g) || [];
-    const imgWithoutAlt = imgTags.filter(img => !img.includes('alt='));
-    
-    if (imgWithoutAlt.length === 0) {
-      return { type: "image_alt", status: "ok", message: "All images have alt attributes" };
-    } else {
-      return { 
-        type: "image_alt", 
-        status: "warning", 
-        message: `${imgWithoutAlt.length} images missing alt attributes` 
-      };
-    }
-  } catch (error) {
-    return { type: "image_alt", status: "error", message: `Failed to check images: ${error.message}` };
-  }
-}
+module.exports = SEOOptimizer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 
-// Check for heading structure
-function checkHeadingStructure(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    const h1Tags = (content.match(/<h1[^>]*>/g) || []).length;
-    const h2Tags = (content.match(/<h2[^>]*>/g) || []).length;
-    
-    if (h1Tags === 0) {
-      return { type: "heading_structure", status: "warning", message: "No H1 tag found" };
-    } else if (h1Tags > 1) {
-      return { type: "heading_structure", status: "warning", message: "Multiple H1 tags found" };
-    } else {
-      return { 
-        type: "heading_structure", 
-        status: "ok", 
-        message: `Good heading structure: 1 H1, ${h2Tags} H2 tags` 
-      };
-    }
-  } catch (error) {
-    return { type: "heading_structure", status: "error", message: `Failed to check headings: ${error.message}` };
-  }
-}
-
-// Run SEO checks
-console.log("📄 Checking HTML files for SEO elements...");
-
-// Check main HTML files
-const htmlFiles = ["index.html", "src/index.html", "public/index.html"];
-let foundHtmlFile = null;
-
-for (const htmlFile of htmlFiles) {
-  if (fs.existsSync(htmlFile)) {
-    foundHtmlFile = htmlFile;
-    break;
-  }
-}
-
-if (foundHtmlFile) {
-  console.log(`Found HTML file: ${foundHtmlFile}`);
-  const metaChecks = checkMetaTags(foundHtmlFile);
-  const imageChecks = checkImageAltTags(foundHtmlFile);
-  const headingChecks = checkHeadingStructure(foundHtmlFile);
-  
-  seoReport.checks.push(...metaChecks, imageChecks, headingChecks);
-} else {
-  seoReport.checks.push({ 
-    type: "html_file", 
-    status: "warning", 
-    message: "No main HTML file found to check" 
-  });
-}
-
-// Check for sitemap
-console.log("🗺️ Checking for sitemap...");
-seoReport.checks.push(checkSitemap());
-
-// Check for robots.txt
-console.log("🤖 Checking for robots.txt...");
-seoReport.checks.push(checkRobotsTxt());
-
-// Generate recommendations
-const warnings = seoReport.checks.filter(check => check.status === "warning");
-const errors = seoReport.checks.filter(check => check.status === "error");
-
-if (warnings.length > 0) {
-  seoReport.recommendations.push("Consider implementing missing SEO elements");
-}
-
-if (errors.length > 0) {
-  seoReport.recommendations.push("Fix SEO-related errors");
-}
-
-// Save report
-const reportPath = `seo-optimization-report-${Date.now()}.json`;
-fs.writeFileSync(reportPath, JSON.stringify(seoReport, null, 2));
-
-console.log("✅ SEO optimization analysis completed");
-console.log(`📄 Report saved to: ${reportPath}`);
-
-// Print summary
-const okChecks = seoReport.checks.filter(check => check.status === "ok").length;
-const totalChecks = seoReport.checks.length;
-
-console.log("\n📊 SEO Optimization Summary:");
-console.log(`   - Total checks: ${totalChecks}`);
-console.log(`   - OK: ${okChecks}`);
-console.log(`   - Warnings: ${warnings.length}`);
-console.log(`   - Errors: ${errors.length}`);
-
-if (warnings.length > 0) {
-  console.log("\n⚠️  SEO improvements recommended:");
-  warnings.forEach(warning => {
-    console.log(`   - ${warning.message}`);
-  });
-}
-
-if (errors.length > 0) {
-  console.log("\n❌ SEO errors found:");
-  errors.forEach(error => {
-    console.log(`   - ${error.message}`);
-  });
-}
-
-if (warnings.length === 0 && errors.length === 0) {
-  console.log("🎉 All SEO checks passed!");
-}
-
-process.exit(errors.length > 0 ? 1 : 0);
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+// Run SEO optimization
+const optimizer = new SEOOptimizer();
+optimizer.optimizeSEO().catch(console.error);
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -6,28 +6,18 @@ describe('Login', () => {
 });
 const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
+<<<<<<< HEAD
 
+=======
 import { describe, it, expect } from 'vitest'
 describe('Login'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
-import { describe, it, expect } from 'vitest'
-describe('Login'
-  it('should work'
-const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
-import { describe, it, expect } from 'vitest';
-describe('Login', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
-import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 });''
+=======
 });''
-ursor/add-new-services-and-deploy-updates-0462
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { describe, it, expect } from 'vitest'
-describe('Login'
-  it('should work'
-const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +20,34 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+import React from "react";
+import Head from "next/head";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+=======
+import Head from "next/head";
+import { useRouter } from "next/router";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import React from "react";
+import Head from "next/head";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 
+=======
+
+import React from "react";
+import Head from "next/head";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+=======
 import React from './react';
 import Head from './next / head';
 ;
@@ -60,6 +89,16 @@ import { useRouter } from "next/router";
 interface SEOProps {
   title?: string;
   description?: string;
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   keywords?: string;
   canonical?: string;
   ogTitle?: string;
@@ -70,6 +109,7 @@ interface SEOProps {
 }
 
 }) => {
+=======
 
 const SEO: React.FC<SEOProps> = ({;
   title = "Zion Tech Group - Technology Solutions",;
@@ -84,35 +124,7 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
     </Head>;
   );
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-  keywords?: string;
-}
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
-  canonical,
-  ogTitle,
-  ogDescription,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  noIndex = false,
-  structuredData
-}) => {
-  const router = useRouter();
-  const currentUrl = `https://ziontechgroup.com${router.asPath}`;
-  const finalCanonical = canonical || currentUrl;
-  const finalOgTitle = ogTitle || title;
-  const finalOgDescription = ogDescription || description;
-
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-export default SEO;
-}
-  );
+<<<<<<< HEAD
 
 
 };
@@ -120,6 +132,10 @@ export default SEO;
 export default SEO;
 
 
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
   image?: string;
   url?: string;
@@ -136,15 +152,38 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
   return (
+<<<<<<< HEAD
+=======
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={canonicalUrl} />
+    </Head>
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
 
 }
 export default SEO;
+<<<<<<< HEAD
 
 
 }
 export default SEO;
-}
-export default SEO;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -155,4 +194,7 @@ export default SEO;
 ;
 export default SEO;
 ;
-export default SEO;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

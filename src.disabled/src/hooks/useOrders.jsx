@@ -1,5 +1,3 @@
-import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey["orders",userId],"queryFn": async () => { if (!userId) return [] const res = await fetch("/api/orders?user_id="me")" if (!res.ok) { throw new Error("Failed to fetch orders")} return (await res.json())},enabled !!userI,d,initialData[]})}";';"; "; ); export default Component;
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,4 +26,3 @@ const React from "react"; import { useQuery } from "@tanstack/react-query" expor
 
 import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey["orders",userId],"queryFn": async () => { if (!userId) return [] const res = await fetch("/api/orders?user_id="me")" if (!res && res.ok) { throw new Error("Failed to fetch orders")} return (await res ;';"; "; ); export default Component;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

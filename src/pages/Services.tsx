@@ -214,109 +214,86 @@ export default function Services() {
         </div>
       </section>
 
-      {/* AI Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                AI-Powered Solutions
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage the power of artificial intelligence to automate processes, gain insights, and drive innovation across your organization
-            </p>
-          </motion.div>
-          
-          <div className="mt-8 text-center space-y-4">
-            <Link to="/comprehensive-services-showcase-2025" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 font-semibold">
-              <Sparkles className="w-5 h-5 mr-2" />
-              Explore Our Comprehensive Services Showcase 2025
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <div>
-              <Link to="/innovative-ai-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold">
-                <TrendingUp className="w-5 h-5 ml-2" />
-                Discover Our Innovative AI Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredCategories.map((c) => (
-              <Link key={c.title} to={c.href} className="block bg-slate-900/60 border border-cyan-400/15 hover:border-cyan-400/40 rounded-2xl p-6 text-left">
-                <div className="text-xs uppercase tracking-wide text-cyan-300/70">Featured</div>
-                <div className="mt-2 text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-slate-300">{c.desc}</div>
-              </Link>
-            ))}
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Digital Transformation"
+            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            icon="🚀"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            icon="📊"
+          />
+          <ServiceCard
+            title="IoT Solutions"
+            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
+            icon="🌐"
+          />
+        </div>
+
+        {/* Additional Services */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">Specialized Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="p-6 bg-slate-800/50 border-slate-700">
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Custom Development</h3>
+              <p className="text-gray-300 mb-4">
+                Tailored software solutions built specifically for your business needs and requirements.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Web Applications</li>
+                <li>• Mobile Apps</li>
+                <li>• API Development</li>
+                <li>• System Integration</li>
+              </ul>
+            </Card>
+            
+            <Card className="p-6 bg-slate-800/50 border-slate-700">
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Consulting Services</h3>
+              <p className="text-gray-300 mb-4">
+                Expert guidance to help you make informed technology decisions and strategic planning.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Technology Assessment</li>
+                <li>• Architecture Design</li>
+                <li>• Process Optimization</li>
+                <li>• Training & Support</li>
+              </ul>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Services Categories */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12">
-            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-cyan-400/20"
-              >
-                <div className="flex items-center mb-8">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mr-6`}>
-                    <category.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{category.title}</h2>
-                    <p className="text-gray-400 text-lg">{category.description}</p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
-                      key={service.name}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: serviceIndex * 0.05 }}
-                      viewport={{ once: true }}
-                    >
-                      <Link
-                        to={service.href}
-                        className="block group bg-zion-slate/50 rounded-xl p-6 border border-cyan-400/10 hover:border-cyan-400/30 transition-all duration-300 hover:bg-zion-slate/70"
-                      >
-                        <div className="flex items-start mb-4">
-                          <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                            <service.icon className="w-6 h-6 text-cyan-400" />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                              {service.name}
-                            </h3>
-                            <p className="text-gray-400 text-sm mt-1">{service.description}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </div>
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+        {/* CTA Section */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our services can help transform your business and drive growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              Get a Quote
+            </button>
+            <button className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              Learn More
+            </button>
           </div>
         </div>
       </section>

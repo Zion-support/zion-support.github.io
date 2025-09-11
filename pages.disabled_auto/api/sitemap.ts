@@ -29,31 +29,33 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-}
-
-}
+<<<<<<< HEAD
 
 
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-}
-}
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-=======
+
 =======
 }
 
-}
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

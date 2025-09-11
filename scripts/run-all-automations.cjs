@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -35,6 +36,8 @@ class RunAllAutomations {
         "success": false,
         "error": error.message
       }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -179,4 +182,8 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
+<<<<<<< HEAD
         "impact"
+=======
+        "impact"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

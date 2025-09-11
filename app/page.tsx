@@ -3,12 +3,14 @@ import Link from 'next/link';
 export default function HomePage() {
   return (
       <section className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card
-            title="Micro SaaS"
-            href="/services/micro-saas"
-            description="End-to-end product engineering with billing, auth, analytics and growth."
-            icon="🚀"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+          <Card 
+            title="Micro SaaS" 
+            href="/services/micro-saas" 
+            description="End-to-end product engineering with billing, auth, analytics and growth." 
+            icon="🚀" 
           />
           <Card 
             title="AI Services" 
@@ -22,17 +24,19 @@ export default function HomePage() {
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
           />
-          <Card
-            title="Business Automation"
-            href="/services/automation-tools"
-            description="Intelligent automation tools that streamline operations and boost productivity by 300%."
-            icon="⚡"
-          />
-          <Card
-            title="AI Copilots"
-            href="/services/ai-copilots"
-            description="Intelligent assistants that enhance productivity and automate complex tasks."
-            icon="🧠"
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We combine technical expertise with business acumen to deliver solutions that drive real results.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
           <FeatureCard 
             title="Fast Delivery" 
             description="Rapid prototyping and deployment with modern tools and practices." 

@@ -1,69 +1,3 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Settings, 
-  FileText, 
-  HelpCircle, 
-  MessageSquare, 
-  BarChart3, 
-  ShoppingCart, 
-  Wrench, 
-  Globe, 
-  Building, 
-  Code, 
-  Shield, 
-  Zap, 
-  ChevronRight, 
-  ChevronDown,
-  Star,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Brain,
-  Leaf,
-  Smartphone,
-  DollarSign,
-  BookOpen,
-  Video,
-  FileSearch,
-  Lightbulb,
-  Target,
-  Users2,
-  Handshake,
-  Award,
-  TrendingUp,
-  Palette,
-  Monitor,
-  Server,
-  Cloud,
-  Key,
-  Eye,
-  ShieldCheck,
-  Bug,
-  Activity,
-  PieChart,
-  BarChart,
-  LineChart,
-  Map,
-  Calendar,
-  Clock,
-  Mail,
-  Phone,
-  MapPin,
-  Globe2,
-  Heart,
-  ThumbsUp,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ExternalLink,
-  X
-} from 'lucide-react';
 
 interface SidebarItem {
   name: string;
@@ -74,9 +8,8 @@ interface SidebarItem {
   external?: boolean;
 }
 
-export function Sidebar() {
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
-  const location = useLocation();
+module.exports = {};
+=======
 
   const sidebarItems: SidebarItem[] = [
     {

@@ -22,19 +22,74 @@ import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
 
 import {
+<<<<<<< HEAD
+
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  ChevronRight,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+  ArrowRight,;
+  Building,;
+  Users,;
+  ShoppingCart,;
+  Shield,;
+  Zap,;
+  Globe,;
+  BarChart3,;
+  Search,;
+
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+=======
+=======
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+<<<<<<< HEAD
+<<<<<<< HEAD
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
-} from "lucide-react";
-import SearchModal from "./SearchModal";
+=======
   BarChart3
 } from 'lucide-react;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+  BarChart3,
+  Search,
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
+  BarChart3
 } from 'lucide-react;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
@@ -61,6 +116,187 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function Navigation() {
+=======
+export default function Navigation() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+} from './lucide-react';
+import SearchModal from "./SearchModal";
+;
+export default /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState (false);
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState (false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState (false);
+  const [isSearchOpen, setIsSearchOpen] = useState (false);
+;
+  const services = [;
+    {
+      name: "AI Services",
+      href: "/ai - services",
+      description: "Machine Learning, NLP, Computer Vision",
+      icon: BarChart3,
+    },
+    {
+      name: "IT Services",
+      href: "/it - services",
+      description: "Cloud, DevOps, Cybersecurity",
+      icon: Shield,
+    },
+    {
+      name: "Micro SaaS",
+      href: "/micro - saas",
+      description: "Custom SaaS Solutions",
+      icon: Zap,
+    },
+
+    {
+      name: "Blockchain"
+      href: "/blockchain"
+      description: "Smart Contracts, DeFi, NFTs"
+      icon: Building
+    }
+    {
+      name: "IoT Solutions"
+      href: "/iot"
+      description: "Connected Devices, Edge Computing"
+      icon: Globe
+    }
+    {
+      name: "Cybersecurity"
+      href: "/cybersecurity"
+      description: "Security Audits, Compliance"
+      icon: Shield
+    }
+  ];
+
+;
+  const solutions = [;
+    {
+      name: "Enterprise Solutions",
+      href: "/enterprise",
+      description: "Large - scale business solutions",
+      icon: Building,
+    },
+
+    {
+      name: "Startup Solutions"
+      href: "/startup"
+      description: "Scalable startup platforms"
+      icon: Zap
+    }
+    {
+
+      name: "E - commerce",
+      href: "/ecommerce",
+      description: "Online store solutions",
+      icon: ShoppingCart,
+    },
+    {
+      name: "Healthcare",
+      href: "/industries / healthcare",
+      description: "Medical technology solutions",
+      icon: Users,
+    },
+    {
+      name: "Finance",
+      href: "/industries / finance",
+      description: "Fintech and banking solutions",
+      icon: BarChart3,
+    },
+    {
+      name: "Education",
+      href: "/industries / education",
+      description: "EdTech platforms",
+      icon: Users,
+    },
+  ];
+;
+  const industries = [;
+    {
+      name: "Healthcare",
+      href: "/industries / healthcare",
+      description: "Medical technology solutions",
+    },
+    {
+      name: "Finance",
+      href: "/industries / finance",
+      description: "Fintech and banking solutions",
+    },
+    {
+      name: "Education",
+      href: "/industries / education",
+      description: "EdTech platforms",
+    },
+    {
+      name: "Government",
+      href: "/industries / government",
+      description: "Public sector solutions",
+    },
+    {
+      name: "Manufacturing",
+      href: "/industries / manufacturing",
+      description: "Industrial automation",
+    },
+    {
+      name: "Retail",
+      href: "/industries / retail",
+      description: "E - commerce and retail tech",
+    },
+    {
+      name: "Real Estate",
+      href: "/industries / real - estate",
+      description: "Property technology",
+    },
+  ];
+;
+  const resources = [;
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" },
+    {
+      name: "Case Studies",
+      href: "/case - studies",
+      description: "Success stories and projects",
+    },
+    {
+      name: "White Papers",
+      href: "/white - papers",
+      description: "In - depth research and analysis",
+    },
+    {
+      name: "Tutorials",
+      href: "/tutorials",
+      description: "Step - by - step guides",
+    },
+
+    {
+      name: "Training"
+      href: "/training"
+      description: "Professional development"
+    }
+    {
+      name: "Events"
+      href: "/events"
+      description: "Webinars and conferences"
+    }
+    { name: "News", href: "/news", description: "Industry news and updates" }
+  ];
+
 
   const services = [;
     {;
@@ -344,10 +580,201 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 
 
+              {/* Solutions Dropdown */}
+              <div className="relative group">;
+                <button
+                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onMouseEnter={() => setIsSolutionsOpen(true)}
+                  onMouseLeave={() => setIsSolutionsOpen(false)}
+                >;
+                  Solutions;
+                  <ChevronDown className="w-4 h-4 ml-1" />;
+                </button>;
+                <AnimatePresence>;
+                  {isSolutionsOpen && (;
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      onMouseEnter={() => setIsSolutionsOpen(true)}
+                      onMouseLeave={() => setIsSolutionsOpen(false)}
+                    >;
+                      <div className="grid grid-cols-2 gap-4 px-6">;
+                        {solutions && solutions.map((solution, index) => {;
+                          const IconComponent = solution && solution.icon;
+=======
+                              href={service.href}
+                              className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
+                            >;
+                              <div className="flex items - center mb - 2">;
+                                <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />;
+                                <div className="font - medium text - gray - 900 group - hover:text - blue - 600">;
+                                  {service.name}
+                                </div>;
+                              </div>;
+                              <div className="text - sm text - gray - 500">;
+                                {service.description}
+                              </div>;
+                            </Link>);
+                        })}
+                      </div>;
+                      <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
+                        <Link;
+                          href="/services";
+                          className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
+                        >;
+                          View All Services;
+                          <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                        </Link>;
+                      </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
+              </div>;
+              {/* Solutions Dropdown */}
+              <div className="relative group">;
+                <button;
+                  className="flex items - center text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                  onMouseEnter={() => setIsSolutionsOpen (true)}
+                  onMouseLeave={() => setIsSolutionsOpen (false)}
+                >;
+                  Solutions;
+                  <ChevronDown className="w - 4 h - 4 ml - 1" />;
+                </button>;
+                <AnimatePresence>;
+                  {isSolutionsOpen && (
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: 10 }}
+                      className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
+                      onMouseEnter={() => setIsSolutionsOpen (true)}
+                      onMouseLeave={() => setIsSolutionsOpen (false)}
+                    >;
+                      <div className="grid grid - cols - 2 gap - 4 px - 6">;
+                        {solutions.map ((solution, index) => {
+                          const IconComponent = solution.icon;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                          return (
+                            <Link;
+                              key={index}
+
+                </AnimatePresence>;
+              </div>;
+
+
+              {/* Industries Dropdown */}
+              <div className="relative group">;
+                <button
+                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onMouseEnter={() => setIsIndustriesOpen(true)}
+                  onMouseLeave={() => setIsIndustriesOpen(false)}
+                >;
+                  Industries;
+                  <ChevronDown className="w-4 h-4 ml-1" />;
+                </button>;
+                <AnimatePresence>;
+                  {isIndustriesOpen && (;
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      onMouseEnter={() => setIsIndustriesOpen(true)}
+                      onMouseLeave={() => setIsIndustriesOpen(false)}
+                    >;
+                      <div className="px-6">;
+                        {industries && industries.map((industry, index) => (;
+                          <Link
+                            key={index}
+                            href={industry && industry.href}
+                            className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600">;
+                              {industry && industry.name}
+                            </div>;
+                            <div className="text-sm text-gray-500">;
+                              {industry && industry.description}
+                            </div>;
+                          </Link>;
+                        ))}
+                      </div>;
+                    </motion && motion.div>;
+                  )}
+
+                </AnimatePresence>;
+              </div>;
+
+
+              {/* Resources Dropdown */}
+              <div className="relative group">;
+                <button
+                  className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onMouseEnter={() => setIsResourcesOpen(true)}
+                  onMouseLeave={() => setIsResourcesOpen(false)}
+                >;
+                  Resources;
+                  <ChevronDown className="w-4 h-4 ml-1" />;
+                </button>;
+                <AnimatePresence>;
+                  {isResourcesOpen && (;
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                      onMouseEnter={() => setIsResourcesOpen(true)}
+                      onMouseLeave={() => setIsResourcesOpen(false)}
+                    >;
+                      <div className="px-6">;
+                        {resources && resources.map((resource, index) => (;
+                          <Link
+                            key={index}
+                            href={resource && resource.href}
+                            className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600">;
+                              {resource && resource.name}
+                            </div>;
+                            <div className="text-sm text-gray-500">;
+                              {resource && resource.description}
+                            </div>;
+                          </Link>;
+                        ))}
+                      </div>;
+                    </motion && motion.div>;
+                  )}
+
+
+=======
+                </AnimatePresence>;
+              </div>;
+
+              <Link
+                href="/pricing"
+<<<<<<< HEAD
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Pricing;
+              </Link>;
+            </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
+<<<<<<< HEAD
                 className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
                 aria-label="Search";
               >;
@@ -356,16 +783,39 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <Link
                 href="/contact"
 
+=======
+                className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+<<<<<<< HEAD
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link
+                href=/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+<<<<<<< HEAD
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+=======
 
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               >
                 Get Started
               </Link>

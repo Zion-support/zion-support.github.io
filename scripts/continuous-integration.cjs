@@ -1,3 +1,4 @@
+const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
     this.logDir = 'automation-reports'
@@ -26,4 +27,5 @@ const path = require('path')
         "description"
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
+      console.error('Fatal "error")
       console.error('Fatal "error")

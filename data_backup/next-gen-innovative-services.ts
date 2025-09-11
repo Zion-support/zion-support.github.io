@@ -29,4 +29,3 @@ export interface NextGenInnovativeService { "id": string name: string tagline: s
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,8 +1,111 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+<<<<<<< HEAD
 
-const EnhancedNavigation: React.FC = () => {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  User,;
+  Settings,;
+  LogOut,;
+  Bell,;
+  Globe,;
+  Zap,;
+  Brain,;
+  Rocket,;
+  Dna,;
+  DollarSign,;
+  Lock,;
+  Wifi,;
+  Truck,;
+  Gamepad2,;
+  Bot,;
+  Factory,;
+  Car,;
+
+=======
+
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, User, 
+  Settings, LogOut, Bell, Globe, Zap
+} from 'lucide-react';
+import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from "lucide-react";
+import Link from "next/link";
+<<<<<<< HEAD
+interface EnhancedNavigationProps {;
+=======
+>>>>>>> origin/main
+interface EnhancedNavigationProps {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+  className?: string;
+}
+
+
+
+
+
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);

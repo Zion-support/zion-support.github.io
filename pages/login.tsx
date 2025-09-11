@@ -1,20 +1,657 @@
-import Head from 'next/head'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+<<<<<<< HEAD
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+import React, { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+<<<<<<< HEAD
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+
+=======
+import React, { useState } from './react';
+import Head from './next / head';
+import Link from './next / link';
+import { motion  } from './framer-motion';
+import Layout from "./components / Layout";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {
+
+import {;
+  Mail,;
+  Lock,;
+  Eye,;
+  EyeOff,;
+  ArrowRight,;
+  CheckCircle,;
+  AlertCircle,;
+  User,;
+  Shield,;
+  Globe,;
+  Smartphone,;
+  Monitor,;
+  Server,;
+  Database,;
+  Cloud,;
+  Brain,;
+  Code,;
+  Settings,;
+  Wrench,;
+  Cog,;
+  Activity,;
+  PieChart,;
+  BarChart,;
+  TrendingUp,;
+  DollarSign,;
+  ShoppingCart,;
+  Home,;
+  Trash2,;
+  Camera,;
+  Heart,;
+  ClipboardList,;
+  TreePine,;
+  Droplets,;
+  Building,;
+  Rocket,;
+  Lightbulb,;
+  Target,;
+  MessageSquare,;
+  HelpCircle,;
+  Info,;
+  XCircle,;
+  Plus,;
+  Minus,;
+  ChevronUp,;
+  ChevronRight,;
+  ChevronLeft,;
+  ChevronDown,;
+  ArrowUp,;
+  ArrowDown,;
+  ArrowLeft,;
+  Pause,;
+  Stop,;
+  SkipForward,;
+  SkipBack,;
+  Volume2,;
+  VolumeX,;
+  Maximize,;
+  Minimize,;
+  RotateCcw,;
+  RotateCw,;
+  RefreshCw,;
+  Upload,;
+  Share,;
+  Copy,;
+  Edit,;
+  Trash,;
+  Save,;
+  Unlock,;
+  Bell,;
+  BellOff,;
+  Star as StarIcon,;
+  Heart as HeartIcon,;
+  ThumbsUp,;
+  ThumbsDown,;
+  MessageCircle,;
+  Send,;
+  Paperclip,;
+  Smile,;
+  Frown,;
+  Meh,;
+  Laugh,;
+  Angry,;
+  Sad,;
+  Surprised,;
+  Wink,;
+  Kiss,;
+  Tongue,;
+  Wink2,;
+  KissWinkHeart,;
+  KissClosedEyes,;
+  StuckOutTongue,;
+  StuckOutTongueWinkingEye,;
+  StuckOutTongueClosedEyes,;
+  Disappointed,;
+  Worried,;
+  Angry2,;
+  Rage,;
+  Cry,;
+  Scream,;
+  Confounded,;
+  Hugging,;
+  Smirk,;
+  NoMouth,;
+  NeutralFace,;
+  Expressionless,;
+  Unamused,;
+  RollingEyes,;
+  Thinking,;
+  LyingFace,;
+  HandOverMouth,;
+  ShushingFace,;
+  ExplodingHead,;
+  CowboyHatFace,;
+  DisguisedFace,;
+  Sunglasses,;
+  NerdFace,;
+  MonocleFace,;
+  Confused,;
+  WorriedFace,;
+  SlightlyFrowningFace,;
+  OpenMouth,;
+  Hushed,;
+  Astonished,;
+  Flushed,;
+  PleadingFace,;
+  FrowningFace,;
+  AnguishedFace,;
+  FearfulFace,;
+  ColdSweat,;
+  DisappointedRelieved,;
+  CryFace,;
+  LoudlyCryingFace,;
+  ScreamFace,;
+  StuckOutTongueFace,;
+  DroolingFace,;
+  UnamusedFace,;
+  SweatSmile,;
+  Sweat,;
+  WearyFace,;
+  TiredFace,;
+  SleepyFace,;
+  YawningFace,;
+  DizzyFace,;
+  ExplodingHeadFace,;
+  CowboyHatFace2,;
+  DisguisedFace2,;
+  SunglassesFace,;
+  NerdFace2,;
+  MonocleFace2,;
+  ConfusedFace,;
+  WorriedFace2,;
+  SlightlyFrowningFace2,;
+  OpenMouthFace,;
+  HushedFace,;
+  AstonishedFace,;
+  FlushedFace,;
+  PleadingFace2,;
+  FrowningFace2,;
+  AnguishedFace2,;
+  FearfulFace2,;
+  ColdSweatFace,;
+  DisappointedRelievedFace,;
+  CryFace2,;
+  LoudlyCryingFace2,;
+  ScreamFace2,;
+  StuckOutTongueFace2,;
+  DroolingFace2,;
+  UnamusedFace2,;
+  SweatSmileFace,;
+  SweatFace,;
+  WearyFace2,;
+  TiredFace2,;
+  SleepyFace2,;
+  YawningFace2,;
+  DizzyFace2,;
+
+} from "lucide-react";
+=======
+  DizzyFace2
+} from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+  Mail
+  Lock
+  Eye
+  EyeOff
+  ArrowRight
+  CheckCircle
+  AlertCircle
+  User
+  Shield
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Database
+  Cloud
+  Brain
+  Code
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Building
+  Rocket
+  Lightbulb
+  Target
+  MessageSquare
+  HelpCircle
+  Info
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Unlock
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
+  DizzyFace2
+} from "lucide-react";
+=======
+>>>>>>> origin/main
 import {
   Mail,
   Lock,
   Eye,
   EyeOff,
+  ArrowRight,
+  CheckCircle,
   AlertCircle,
+  User,
   Shield,
-  Brain,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Database,
   Cloud,
-  Zap,
-  ArrowRight
-} from 'lucide-react'
+  Brain,
+  Code,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Unlock,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+<<<<<<< HEAD
+  DizzyFace2
+} from 'lucide-react';
+=======
+  DizzyFace2,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
-export default function Login() {
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+
+} from './lucide-react';
+;
+export default /**
+ * LoginPage - Function description
+ */
+function LoginPage() {
+  const [form_data, setFormData] = useState ({
+    email: "",
+    password: "",
+  });
+  const [show_password, setShowPassword] = useState (false);
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState ("");
+;
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    const { name, value } = e.target;
+    setFormData ((prev) => ({
+
+      ...prev,
+      [name]: value,
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+  const [error, setError] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+      ...prev
+      [name]: value
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -24,13 +661,25 @@ export default function Login() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+  const [error, setError] = useState("");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }))
-    }
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+    }));
   }
 
   const validateForm = () => {
@@ -46,9 +695,38 @@ export default function Login() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (!validateForm()) return
+    e.preventDefault();
+<<<<<<< HEAD
+=======
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData((prev) => ({;
+      ...prev,;
+      [name]: value,;
+    }));
+
+
+    try {;
+      // Simulate API call;
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // For demo purposes, accept any email/password;
+      if (formData && formData.email && formData && formData.password) {;
+        // Redirect to dashboard or home page;
+        window && window.location.href = "/";
+      } else {;
+
+        setError("Please fill in all fields");
+      }
+    } catch (err) {;
+      setError("Login failed. Please try again.");
+
+=======
+    setIsLoading(true);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+    setError('');
 
     setIsSubmitting(true)
     
@@ -56,11 +734,38 @@ export default function Login() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
       
-      // Success - redirect or show success message
-      console.log('Login successful:', formData)
-      
-    } catch (error) {
-      console.error('Login error:', error)
+      // For demo purposes, accept any email/password
+      if (formData.email && formData.password) {
+        // Redirect to dashboard or home page
+        window.location.href = '/';
+      } else {
+        setError('Please fill in all fields');
+      }
+    } catch (err) {
+      setError('Login failed. Please try again.');
+<<<<<<< HEAD
+=======
+=======
+    setError("");
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      // For demo purposes, accept any email/password
+      if (formData.email && formData.password) {
+        // Redirect to dashboard or home page
+        window.location.href = "/";
+      } else {
+        setError("Please fill in all fields");
+      }
+    } catch (err) {
+      setError("Login failed. Please try again.");
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     } finally {
       setIsSubmitting(false)
     }
@@ -70,201 +775,278 @@ export default function Login() {
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
   return (
-    <>
+<<<<<<< HEAD
+=======
+    <Layout>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/login" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://ziontechgroup.com/login" />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <title>Login - Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+=======
+        <meta
+          name="description"
+          content="Sign in to your Zion Tech Group account to access your dashboard and services."
+        />
+>>>>>>> origin/main
       </Head>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
-      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
-          </div>
-          
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-                Welcome Back
-              </h1>
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Access your Zion Tech Group dashboard and continue building the future with 
-                our cutting-edge technology solutions.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-6 mb-12">
-                <div className="flex items-center gap-3 text-zion-cyan">
-                  <Shield className="w-6 h-6" />
-                  <span className="text-lg">Secure Access</span>
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      </Head>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+              <Shield className="h-6 w-6 text-white" />
+            </div>
+            <h2 className="mt-6 text-3xl font-bold text-gray-900">
+              Sign in to your account
+            </h2>
+            <p className="mt-2 text-sm text-gray-600">
+<<<<<<< HEAD
+
+    <Layout>;
+      <Head>;
+        <title>Login - Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Sign in to your Zion Tech Group account to access your dashboard and services."
+        />;
+      </Head>;
+
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-md w-full space-y-8">;
+          <motion&& motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}>;
+            <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">;
+              <Shield className="h-6 w-6 text-white" />;
+            </div>;
+            <h2 className="mt-6 text-3xl font-bold text-gray-900">;
+              Sign in to your account;
+            </h2>;
+            <p className="mt-2 text-sm text-gray-600">;
+
+              Or{" "}
+=======
+              Or{' '}
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+              Or{' '}
+=======
+              Or{" "}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+              <Link
+                href="/contact"
+
+                className="font-medium text-blue-600 hover:text-blue-500">;
+                contact us for access;
+              </Link>;
+            </p>;
+          </motion && motion.div>;
+
+          <motion&& motion.div
+
+            className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+            <form className="space-y-6" onSubmit={handleSubmit}>;
+              {error && (;
+                <motion&& motion.div
+                  className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-center"
+                  initial={{ opacity: 0, scale: 0 && 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0 && 0.3 }}>;
+                  <AlertCircle className="h-5 w-5 mr-2" />;
+                  {error}
+                </motion && motion.div>;
+              )}
+
+<<<<<<< HEAD
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+=======
+
+=======
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <div>
+<<<<<<< HEAD
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                  Email address
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Mail className="h-5 w-5 text-gray-400" />
+                  </div>
+=======
+
+              <div>;
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2">;
+                  Email address;
+                </label>;
+                <div className="relative">;
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
+                    <Mail className="h-5 w-5 text-gray-400" />;
+                  </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={formData && formData.email}
+                    onChange={handleInputChange}
+                    className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    placeholder="Enter your email"
+
+<<<<<<< HEAD
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <div>
+<<<<<<< HEAD
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                  Password
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Lock className="h-5 w-5 text-gray-400" />
+                  </div>
+=======
+                  />;
+                </div>;
+              </div>;
+
+              <div>;
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700 mb-2">;
+                  Password;
+                </label>;
+                <div className="relative">;
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
+                    <Lock className="h-5 w-5 text-gray-400" />;
+                  </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  <input
+                    id="password"
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="current-password"
+                    required
+                    value={formData && formData.password}
+                    onChange={handleInputChange}
+                    className="appearance-none relative block w-full pl-10 pr-10 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    placeholder="Enter your password"
+                  />;
+                  <button
+                    type="button"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >;
+                    {showPassword ? (;
+                      <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
+                    ) : (;
+                      <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
+                    )}
+                  </div>
+
+                  </button>;
+                </div>;
+              </div>;
+
+              <div className="flex items-center justify-between">;
+                <div className="flex items-center">;
+
+                  <input
+                    id="remember-me"
+                    name="remember-me"
+                    type="checkbox"
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+<<<<<<< HEAD
+
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                  />
+<<<<<<< HEAD
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+=======
+                  <label
+                    htmlFor="remember-me"
+                    className="ml-2 block text-sm text-gray-900"
+                  >
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                    Remember me
+                  </label>
                 </div>
-                <div className="flex items-center gap-3 text-zion-purple-light">
-                  <Brain className="w-6 h-6" />
-                  <span className="text-lg">AI Platform</span>
-                </div>
-                <div className="flex items-center gap-3 text-zion-cyan-light">
-                  <Cloud className="w-6 h-6" />
-                  <span className="text-lg">Cloud Services</span>
+                <div className="text-sm">
+                  <Link
+                    href="/forgot-password"
+                    className="font-medium text-blue-600 hover:text-blue-500"
+                  >
+                    Forgot your password?
+                  </Link>
                 </div>
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Login Form Section */}
-        <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-md mx-auto"
-            >
-              <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
-                <h2 className="text-3xl font-bold text-center mb-8 text-white">
-                  Sign In
-                </h2>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Email */}
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
-                      Email Address
-                    </label>
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.email ? 'border-red-500' : 'border-zion-blue-light'
-                        }`}
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
-                        {errors.email}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Password */}
-                  <div>
-                    <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
-                      Password
-                    </label>
-                    <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                      <input
-                        type={showPassword ? 'text' : 'password'}
-                        id="password"
-                        name="password"
-                        value={formData.password}
-                        onChange={handleInputChange}
-                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.password ? 'border-red-500' : 'border-zion-blue-light'
-                        }`}
-                        placeholder="Enter your password"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
-                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                      </button>
-                    </div>
-                    {errors.password && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
-                        {errors.password}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Remember Me & Forgot Password */}
-                  <div className="flex items-center justify-between">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-blue-light rounded focus:ring-zion-cyan focus:ring-2"
-                      />
-                      <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
-                    </label>
-                    <a
-                      href="/forgot-password"
-                      className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                    >
-                      Forgot password?
-                    </a>
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center gap-3">
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        Signing In...
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center gap-3">
-                        <Zap className="w-5 h-5" />
-                        Sign In
-                        <ArrowRight className="w-5 h-5" />
-                      </div>
-                    )}
-                  </button>
-                </form>
-
-                {/* Additional Info */}
-                <div className="mt-8 text-center">
-                  <p className="text-zion-slate-light text-sm">
-                    Don't have an account?{' '}
-                    <a href="/signup" className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">
-                      Sign up here
-                    </a>
-                  </p>
-                </div>
-
-                {/* Social Login Options */}
-                <div className="mt-8">
-                  <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                      <div className="w-full border-t border-zion-blue-light"></div>
-                    </div>
-                    <div className="relative flex justify-center text-sm">
-                      <span className="px-2 bg-zion-blue-dark/50 text-zion-slate-light">Or continue with</span>
-                    </div>
-                  </div>
+              <div>
+=======
+                  />;
+                  <label
+                    htmlFor="remember-me"
+                    className="ml-2 block text-sm text-gray-900">;
+                    Remember me;
+                  </label>;
+                </div>;
 
                   <div className="mt-6 grid grid-cols-2 gap-3">
                     <button className="w-full inline-flex justify-center py-3 px-4 border border-zion-blue-light rounded-lg shadow-sm bg-zion-blue-light/20 text-sm font-medium text-zion-slate-light hover:bg-zion-blue-light/30 transition-colors">
@@ -277,13 +1059,28 @@ export default function Login() {
                       <span className="ml-2">Google</span>
                     </button>
 
-                    <button className="w-full inline-flex justify-center py-3 px-4 border border-zion-blue-light rounded-lg shadow-sm bg-zion-blue-light/20 text-sm font-medium text-zion-slate-light hover:bg-zion-blue-light/30 transition-colors">
-                      <svg className="w-5 h-5" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                      <span className="ml-2">LinkedIn</span>
-                    </button>
-                  </div>
+<<<<<<< HEAD
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <div className="mt-6">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+<<<<<<< HEAD
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+=======
+                  <span className="px-2 bg-white text-gray-500">
+                    Or continue with
+                  </span>
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 </div>
               </div>
             </motion.div>
@@ -353,9 +1150,139 @@ export default function Login() {
                 </p>
               </motion.div>
             </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )
+          </motion.div>
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <p className="text-sm text-gray-600">
+<<<<<<< HEAD
+
+                </button>;
+              </div>;
+            </form>;
+
+            <div className="mt-6">;
+              <div className="relative">;
+                <div className="absolute inset-0 flex items-center">;
+                  <div className="w-full border-t border-gray-300" />;
+                </div>;
+                <div className="relative flex justify-center text-sm">;
+                  <span className="px-2 bg-white text-gray-500">;
+                    Or continue with;
+                  </span>;
+                </div>;
+              </div>;
+
+              <div className="mt-6 grid grid-cols-2 gap-3">;
+                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
+                  <Globe className="h-5 w-5" />;
+                  <span className="ml-2">Google</span>;
+                </button>;
+
+                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
+                  <User className="h-5 w-5" />;
+                  <span className="ml-2">Microsoft</span>;
+                </button>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+
+          <motion&& motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+            <p className="text-sm text-gray-600">;
+
+              Don't have an account?{" "}
+=======
+              Don't have an account?{' '}
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+              Don't have an account?{' '}
+=======
+              Don't have an account?{" "}
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+              <Link
+                href="/contact"
+                className="font-medium text-blue-600 hover:text-blue-500">;
+                Contact us to get started;
+              </Link>;
+            </p>;
+          </motion && motion.div>;
+        </div>;
+      </div>;
+    </Layout>;
+  );
+=======
+              <div>;
+                <button;
+                  type="submit";
+                  disabled={is_loading}
+                  className="group relative w - full flex justify - center py - 3 px - 4 border border - transparent text - sm font - medium rounded - lg text - white bg - blue - 600 hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 disabled:opacity - 50 disabled:cursor - not - allowed transition - colors";
+                >;
+                  {is_loading ? (
+                    <div className="flex items - center">;
+                      <div className="animate - spin rounded - full h - 4 w - 4 border - b-2 border - white mr - 2"></div>;
+                      Signing in...;
+                    </div>) : (
+                    <div className="flex items - center">;
+                      Sign in;
+                      <ArrowRight className="ml - 2 h - 4 w - 4 group - hover:translate - x-1 transition - transform" />;
+                    </div>)}
+                </button>;
+              </div>;
+            </form>;
+            <div className="mt - 6">;
+              <div className="relative">;
+                <div className="absolute inset - 0 flex items - center">;
+                  <div className="w - full border - t border - gray - 300" />;
+                </div>;
+                <div className="relative flex justify - center text - sm">;
+                  <span className="px - 2 bg - white text - gray - 500">;
+                    Or continue with;
+                  </span>;
+                </div>;
+              </div>;
+              <div className="mt - 6 grid grid - cols - 2 gap - 3">;
+                <button className="w - full inline - flex justify - center py - 2 px - 4 border border - gray - 300 rounded - lg shadow - sm bg - white text - sm font - medium text - gray - 500 hover:bg - gray - 50 transition - colors">;
+                  <Globe className="h - 5 w - 5" />;
+                  <span className="ml - 2">Google</span>;
+                </button>;
+                <button className="w - full inline - flex justify - center py - 2 px - 4 border border - gray - 300 rounded - lg shadow - sm bg - white text - sm font - medium text - gray - 500 hover:bg - gray - 50 transition - colors">;
+                  <User className="h - 5 w - 5" />;
+                  <span className="ml - 2">Microsoft</span>;
+                </button>;
+              </div>;
+            </div>;
+          </motion.div>;
+          <motion.div;
+            className="text - center";
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >;
+            <p className="text - sm text - gray - 600">;
+              Don't have an account?{" "}
+              <Link;
+                href="/contact";
+                className="font - medium text - blue - 600 hover:text - blue - 500";
+              >;
+                Contact us to get started;
+              </Link>;
+            </p>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </Layout>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -14,5 +14,21 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <EnhancedFooter />
     </div>
   );
+<<<<<<< HEAD
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+=======
+<<<<<<< HEAD
+=======
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
