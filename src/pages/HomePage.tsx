@@ -132,7 +132,7 @@ const HomePage: React.FC = () => {
             <div className="container">
               <h2 className="section-title">From the Blog</h2>
               <div className="blog-grid">
-                {BLOG_POSTS.slice(0, 2).map(post => (
+                {BLOG_POSTS.slice(0, 3).map(post => (
                   <article key={post.id} className="blog-card">
                     <div className="blog-card-image" style={{ backgroundImage: `url(${post.featuredImage})` }} />
                     <div className="blog-card-content">

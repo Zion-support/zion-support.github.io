@@ -54,4 +54,49 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedAt: '2025-09-10',
     readTime: 6,
   },
+  {
+    id: '4',
+    title: 'LLM Guardrails: Production Patterns That Actually Work',
+    slug: 'llm-guardrails-production-patterns',
+    excerpt:
+      'From prompt injection to hallucinations—see pragmatic guardrail patterns that keep LLM apps safe.',
+    content:
+      'Shipping LLM features safely means embracing layered defenses. In this post, we break down pragmatic guardrails: input validation and sanitization, retrieval augmentation with deterministic boundaries, constrained decoding, output format contracts, policy-based moderation, and continuous red-teaming. We cover engineering tradeoffs, real-world failure modes, and how to measure quality beyond simple accuracy.',
+    featuredImage: '/images/blog/llm-guardrails.jpg',
+    category: 'AI',
+    tags: ['LLM', 'Safety', 'Production'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 8,
+  },
+  {
+    id: '5',
+    title: 'Cloud Cost Autopilot: 30% Savings Without Slowing Down',
+    slug: 'cloud-cost-autopilot',
+    excerpt:
+      'Automate rightsizing, spot coverage, and waste cleanup with safe-ops guardrails for teams.',
+    content:
+      'Cost control should be continuous, not quarterly. We outline a reference implementation for Cloud Cost Autopilot that tags ownership, enforces budgets, and auto-remediates idle resources. With change windows, rollback policies, and SLO-aware policies, teams consistently cut 25–40% spend while improving reliability.',
+    featuredImage: '/images/blog/cloud-cost-autopilot.jpg',
+    category: 'Cloud',
+    tags: ['FinOps', 'Automation', 'DevOps'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 6,
+  },
+  {
+    id: '6',
+    title: 'Proactive Security: Attack Paths, Not Just Vulnerabilities',
+    slug: 'proactive-security-attack-paths',
+    excerpt:
+      'Move beyond CVE whack-a-mole with graph-based attack path analysis and auto-fixes.',
+    content:
+      'Point-in-time scans miss how real breaches happen—via chains. We demonstrate mapping identities, network edges, secrets, and CI permissions into a unified attack graph. Then we prioritize fixes that actually break paths to crown jewels, integrate with PR checks, and validate with continuous attack simulations.',
+    featuredImage: '/images/blog/proactive-security.jpg',
+    category: 'Security',
+    tags: ['Security', 'Attack Graphs', 'Defense'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 7,
+  },
 ];
