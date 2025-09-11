@@ -283,7 +283,6 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     competitors: ['Sustainalytics, MSCI, ISS ESG, Bloomberg, Refinitiv'],
     marketSize: '$18B ESG reporting market',
     growthRate: '35% annual growth',
-<<<<<<<< HEAD:data.disabled/2025-advanced-energy-sustainability-solutions.ts
     variant: 'ai-energy',
     variant: 'energy-sustainability',
     contactInfo: {
