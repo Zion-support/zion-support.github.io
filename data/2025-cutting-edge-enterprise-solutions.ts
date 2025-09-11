@@ -67,6 +67,235 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     target_audience: [;
       'Fortune 500 companies',
       'Financial institutions',
+<<<<<<< HEAD
+      'Manufacturing companies'
+    ],
+    marketPosition: 'Premium digital transformation service with proven methodologies and deep industry expertise. More focused and results-driven than general consulting firms.',
+    competitors: ['McKinsey', 'BCG', 'Bain', 'Deloitte', 'Accenture', 'IBM Consulting'],
+    techStack: ['Cloud platforms', 'AI/ML', 'IoT', 'Blockchain', 'RPA', 'Data analytics'],
+    realImplementation: true,
+    implementationDetails: 'Comprehensive transformation service with proven methodologies, certified consultants, and ongoing support. Includes change management and performance measurement.',
+    roi: 'Clients typically see 600% ROI through improved efficiency and competitive advantages.',
+    useCases: [
+      'Legacy system modernization',
+      'Cloud adoption strategy',
+      'Data analytics implementation',
+      'Customer experience transformation',
+      'Supply chain digitization',
+      'Workforce transformation'
+    ],
+    integrations: ['ERP systems', 'CRM platforms', 'Cloud services', 'Legacy systems', 'Third-party APIs'],
+    support: '24/7 transformation support, dedicated transformation managers, and ongoing optimization.',
+    compliance: ['Industry-specific compliance', 'Data governance', 'Security standards', 'Regulatory requirements'],
+    link: 'https://ziontechgroup.com/digital-transformation-accelerator',
+    icon: '🚀',
+    color: 'from-purple-500 to-indigo-600',
+    popular: true,
+    launchDate: '2025-01-15',
+    customers: 28,
+    rating: 4.9,
+    reviews: 25,
+    marketSize: '$521B digital transformation market',
+    growthRate: '23% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
+  },
+  {
+    id: 'ai-enterprise-platform',
+    name: 'AI Enterprise Platform',
+    tagline: 'Enterprise-grade AI platform that scales with your business',
+    description: 'Comprehensive AI platform designed for enterprise use, featuring advanced machine learning, natural language processing, computer vision, and predictive analytics capabilities.',
+    category: 'Enterprise Solutions',
+    price: {
+      monthly: 999,
+      yearly: 9990,
+      currency: 'USD',
+      trialDays: 30,
+      setupTime: '2-4 weeks',
+      enterprise: 'Custom enterprise pricing'
+    },
+    features: [
+      'Advanced ML model management',
+      'Real-time AI processing',
+      'Custom model development',
+      'Data pipeline automation',
+      'Model monitoring and governance',
+      'Enterprise security features',
+      'Scalable infrastructure',
+      'API management',
+      'Custom integrations',
+      'Advanced analytics dashboard'
+    ],
+    benefits: [
+      'Reduce AI development time by 70%',
+      'Improve model accuracy by 25%',
+      'Scale AI operations efficiently',
+      'Ensure enterprise security',
+      'Accelerate AI adoption'
+    ],
+    targetAudience: [
+      'Data science teams',
+      'AI engineers',
+      'Business analysts',
+      'IT departments',
+      'Research teams',
+      'Product development teams'
+    ],
+    marketPosition: 'Competitive with DataRobot ($2000+) and H2O.ai ($1000+). Our advantage: Better enterprise features, faster deployment, and more flexible pricing.',
+    competitors: ['DataRobot', 'H2O.ai', 'Google Cloud AI', 'AWS SageMaker', 'Azure ML', 'IBM Watson'],
+    techStack: ['TensorFlow', 'PyTorch', 'Kubernetes', 'Docker', 'Python', 'React', 'Node.js', 'AWS'],
+    realImplementation: true,
+    implementationDetails: 'Production-ready enterprise AI platform with advanced ML capabilities, enterprise security, and scalable infrastructure. Includes custom development and integration services.',
+    roi: 'Average enterprise customer sees 500% ROI within 18 months through improved AI capabilities and operational efficiency.',
+    useCases: [
+      'Predictive analytics',
+      'Natural language processing',
+      'Computer vision applications',
+      'Recommendation systems',
+      'Fraud detection',
+      'Process optimization'
+    ],
+    integrations: ['Databricks', 'Snowflake', 'Tableau', 'Power BI', 'Custom systems', 'Cloud platforms'],
+    support: '24/7 enterprise support, dedicated AI engineers, and ongoing optimization services.',
+    compliance: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'CCPA', 'HIPAA', 'PCI DSS'],
+    link: 'https://ziontechgroup.com/ai-enterprise-platform',
+    icon: '🧠',
+    color: 'from-blue-500 to-cyan-600',
+    popular: true,
+    launchDate: '2025-01-20',
+    customers: 85,
+    rating: 4.8,
+    reviews: 72,
+    marketSize: '$42.8B enterprise AI market',
+    growthRate: '34% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
+  },
+
+  // DIGITAL TRANSFORMATION
+  {
+    id: 'smart-city-solutions',
+    name: 'Smart City Solutions',
+    tagline: 'Transform your city with intelligent infrastructure and data-driven insights',
+    description: 'Comprehensive smart city implementation service that helps municipalities leverage IoT, AI, and data analytics to improve urban services, reduce costs, and enhance citizen experience.',
+    category: 'Digital Transformation',
+    price: {
+      monthly: 0,
+      yearly: 0,
+      currency: 'USD',
+      trialDays: 0,
+      setupTime: '12-24 weeks',
+      enterprise: 'Project-based pricing: $100,000 - $2,000,000'
+    },
+    features: [
+      'Smart infrastructure planning',
+      'IoT sensor deployment',
+      'Data analytics platform',
+      'Citizen engagement portal',
+      'Smart traffic management',
+      'Energy optimization',
+      'Waste management optimization',
+      'Public safety enhancement',
+      'Environmental monitoring',
+      'Performance dashboard'
+    ],
+    benefits: [
+      'Reduce operational costs by 25%',
+      'Improve citizen satisfaction by 40%',
+      'Enhance public safety',
+      'Optimize resource utilization',
+      'Create sustainable cities'
+    ],
+    targetAudience: [
+      'City governments',
+      'Municipalities',
+      'Urban planners',
+      'Transportation departments',
+      'Public utilities',
+      'Emergency services'
+    ],
+    marketPosition: 'Specialized smart city service with proven implementation methodology and deep urban planning expertise. More focused and cost-effective than general consulting firms.',
+    competitors: ['Cisco', 'IBM', 'Siemens', 'Schneider Electric', 'Accenture', 'Deloitte'],
+    techStack: ['IoT platforms', 'AI/ML', 'Big data analytics', 'Cloud computing', '5G networks', 'Edge computing'],
+    realImplementation: true,
+    implementationDetails: 'Comprehensive smart city implementation with IoT deployment, data analytics, and citizen engagement platforms. Includes ongoing maintenance and optimization.',
+    roi: 'Cities typically see 400% ROI through reduced operational costs and improved services.',
+    useCases: [
+      'Traffic management',
+      'Energy optimization',
+      'Waste management',
+      'Public safety',
+      'Environmental monitoring',
+      'Citizen services'
+    ],
+    integrations: ['Existing city systems', 'IoT devices', 'Data platforms', 'Citizen apps', 'Emergency services'],
+    support: '24/7 city operations support, dedicated city managers, and ongoing optimization.',
+    compliance: ['Government regulations', 'Data privacy', 'Security standards', 'Environmental compliance'],
+    link: 'https://ziontechgroup.com/smart-city-solutions',
+    icon: '🏙️',
+    color: 'from-green-500 to-teal-600',
+    popular: true,
+    launchDate: '2025-01-25',
+    customers: 12,
+    rating: 4.9,
+    reviews: 10,
+    marketSize: '$225B smart city market',
+    growthRate: '18% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
+  },
+
+  // INNOVATION SERVICES
+  {
+    id: 'innovation-lab-as-a-service',
+    name: 'Innovation Lab as a Service',
+    tagline: 'Accelerate innovation with our turnkey innovation lab solution',
+    description: 'Complete innovation lab setup and management service that helps organizations foster creativity, develop new products, and stay ahead of market trends through structured innovation processes.',
+    category: 'Innovation Services',
+    price: {
+      monthly: 0,
+      yearly: 0,
+      currency: 'USD',
+      trialDays: 0,
+      setupTime: '4-8 weeks',
+      enterprise: 'Project-based pricing: $75,000 - $300,000'
+    },
+    features: [
+      'Innovation lab design and setup',
+      'Innovation methodology training',
+      'Ideation and brainstorming tools',
+      'Prototyping and testing facilities',
+      'Innovation project management',
+      'Market research and analysis',
+      'Intellectual property guidance',
+      'Innovation metrics and KPIs',
+      'Ongoing innovation support',
+      'Innovation culture development'
+    ],
+    benefits: [
+      'Accelerate innovation by 60%',
+      'Increase R&D efficiency by 40%',
+      'Foster creative culture',
+      'Generate new revenue streams',
+      'Stay ahead of competition'
+    ],
+    targetAudience: [
+      'Technology companies',
+      'Manufacturing firms',
+=======
+>>>>>>> main
       'Healthcare organizations',
       'Government agencies',
     ],
