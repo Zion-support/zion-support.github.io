@@ -128,7 +128,7 @@ export default Header;
             </nav>
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
 };
