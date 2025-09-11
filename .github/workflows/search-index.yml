@@ -1,21 +1,33 @@
-name: Search Index (DISABLED - Migrated to PM2)
+name: Search Index Refresh
 
 on:
-  # This workflow is disabled and migrated to PM2 automation
-  # The original workflow was handling search index generation
-  # Now handled by PM2 processes: performance-monitor, quality-checks
-  workflow_dispatch: # Only manual triggers allowed
-  # All automatic triggers removed
+  schedule:
+    - cron: '*/6 * * * *'
+  workflow_dispatch:
 
 jobs:
-  disabled:
+  index:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Workflow Disabled
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Build search index
+        run: node scripts/build-search-index.mjs
+      - name: Commit and push
         run: |
-          echo "This workflow has been disabled and migrated to PM2 automation."
-          echo "Search index functionality is now handled by:"
-          echo "- performance-monitor PM2 process (every 2 hours)"
-          echo "- quality-checks PM2 process (every 3 hours)"
-          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
-          exit 0
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add public/search-index.json || true
+            git add .
+            git commit -m "chore(index): refresh search index"
+            git push
+          else
+            echo "No changes to commit"
+          fi
