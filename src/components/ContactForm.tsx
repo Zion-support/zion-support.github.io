@@ -1,224 +1,300 @@
 import React, { useState } from 'react';
-import { useNotifications } from '../contexts/NotificationContext';
-import { useAsync } from '../hooks/useAsync';
-import Button from './Button';
-import Input from './Input';
-import './ContactForm.css';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { toast } from 'sonner';
 
-interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  message: string;
-}
+const contactSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Please enter a valid email address'),
+  company: z.string().optional(),
+  phone: z.string().optional(),
+  service: z.string().min(1, 'Please select a service'),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+  budget: z.string().optional(),
+  timeline: z.string().optional(),
+  agreeToTerms: z.boolean().refine(val => val === true, 'You must agree to the terms and conditions')
+});
 
-interface ContactFormProps {
-  onSubmit?: (data: FormData) => Promise<void>;
-  className?: string;
-}
+type ContactFormData = z.infer<typeof contactSchema>;
 
-const ContactForm: React.FC<ContactFormProps> = ({
-  onSubmit,
-  className = '',
-}) => {
-  const { showNotification } = useNotifications();
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
+const services = [
+  'AI Development & Integration',
+  'SAAS Development',
+  'IT Consulting',
+  'Cloud Migration',
+  'Cybersecurity',
+  'Digital Transformation',
+  'Custom Software Development',
+  'Data Analytics & BI',
+  'Other'
+];
+
+const budgetRanges = [
+  'Under $10,000',
+  '$10,000 - $25,000',
+  '$25,000 - $50,000',
+  '$50,000 - $100,000',
+  'Over $100,000',
+  'Not sure yet'
+];
+
+const timelines = [
+  'ASAP',
+  'Within 1 month',
+  '1-3 months',
+  '3-6 months',
+  '6+ months',
+  'Just exploring'
+];
+
+export const ContactForm: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    watch
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema)
   });
 
-  const [errors, setErrors] = useState<Partial<FormData>>({});
-
-  // Simulate API call
-  const submitForm = async (data: FormData): Promise<void> => {
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    // Simulate success
-    if (data.email === 'error@example.com') {
-      throw new Error('Simulated error for testing');
-    }
-
-    return Promise.resolve();
-  };
-
-  const [submitState, executeSubmit] = useAsync(submitForm);
-
-  const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleInputChange =
-    (field: keyof FormData) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData(prev => ({
-        ...prev,
-        [field]: e.target.value,
-      }));
-
-      // Clear error when user starts typing
-      if (errors[field]) {
-        setErrors(prev => ({
-          ...prev,
-          [field]: undefined,
-        }));
-      }
-    };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      showNotification({
-        type: 'error',
-        title: 'Validation Error',
-        message: 'Please fix the errors below and try again.',
-      });
-      return;
-    }
-
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
     try {
-      await executeSubmit(formData);
-
-      if (onSubmit) {
-        await onSubmit(formData);
-      }
-
-      showNotification({
-        type: 'success',
-        title: 'Message Sent!',
-        message: "Thank you for your message. We'll get back to you soon.",
-      });
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        message: '',
-      });
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Here you would typically send the data to your backend
+      console.log('Form submitted:', data);
+      
+      toast.success('Thank you! We\'ll get back to you within 24 hours.');
+      reset();
     } catch (error) {
-      showNotification({
-        type: 'error',
-        title: 'Error',
-        message: 'Failed to send message. Please try again.',
-      });
+      toast.error('Something went wrong. Please try again.');
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <form className={`contact-form ${className}`} onSubmit={handleSubmit}>
-      <div className='contact-form__header'>
-        <h3 className='contact-form__title'>Get in Touch</h3>
-        <p className='contact-form__subtitle'>
-          Ready to transform your business? Let's discuss your project.
-        </p>
-      </div>
-
-      <div className='contact-form__fields'>
-        <div className='contact-form__row'>
-          <Input
-            label='Full Name'
-            type='text'
-            value={formData.name}
-            onChange={handleInputChange('name')}
-            error={errors.name}
-            placeholder='Enter your full name'
-            required
-            fullWidth
-          />
+    <div className="max-w-2xl mx-auto">
+      <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">
+            Get Started Today
+          </h2>
+          <p className="text-gray-600">
+            Ready to transform your business? Let's discuss your project.
+          </p>
         </div>
 
-        <div className='contact-form__row'>
-          <Input
-            label='Email Address'
-            type='email'
-            value={formData.email}
-            onChange={handleInputChange('email')}
-            error={errors.email}
-            placeholder='Enter your email address'
-            required
-            fullWidth
-          />
-        </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Name and Email */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Full Name *
+              </label>
+              <input
+                {...register('name')}
+                type="text"
+                id="name"
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  errors.name ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="Your full name"
+              />
+              {errors.name && (
+                <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+              )}
+            </div>
 
-        <div className='contact-form__row'>
-          <Input
-            label='Company (Optional)'
-            type='text'
-            value={formData.company}
-            onChange={handleInputChange('company')}
-            placeholder='Enter your company name'
-            fullWidth
-          />
-        </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email Address *
+              </label>
+              <input
+                {...register('email')}
+                type="email"
+                id="email"
+                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  errors.email ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="your@email.com"
+              />
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+              )}
+            </div>
+          </div>
 
-        <div className='contact-form__row'>
-          <div className='input-container input-container--full-width'>
-            <label htmlFor='message' className='input-label'>
-              Message
-              <span className='input-required'>*</span>
+          {/* Company and Phone */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                Company
+              </label>
+              <input
+                {...register('company')}
+                type="text"
+                id="company"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your company name"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+              </label>
+              <input
+                {...register('phone')}
+                type="tel"
+                id="phone"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="+1 (555) 123-4567"
+              />
+            </div>
+          </div>
+
+          {/* Service Selection */}
+          <div>
+            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              Service Needed *
             </label>
-            <textarea
-              id='message'
-              className={`input input--textarea ${errors.message ? 'input--error' : ''}`}
-              value={formData.message}
-              onChange={handleInputChange('message')}
-              placeholder='Tell us about your project...'
-              rows={5}
-              required
-            />
-            {errors.message && (
-              <div className='input-message'>
-                <span className='input-error' role='alert'>
-                  {errors.message}
-                </span>
-              </div>
+            <select
+              {...register('service')}
+              id="service"
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                errors.service ? 'border-red-500' : 'border-gray-300'
+              }`}
+            >
+              <option value="">Select a service</option>
+              {services.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
+            {errors.service && (
+              <p className="mt-1 text-sm text-red-600">{errors.service.message}</p>
             )}
           </div>
+
+          {/* Budget and Timeline */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                Budget Range
+              </label>
+              <select
+                {...register('budget')}
+                id="budget"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">Select budget range</option>
+                {budgetRanges.map((range) => (
+                  <option key={range} value={range}>
+                    {range}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
+                Project Timeline
+              </label>
+              <select
+                {...register('timeline')}
+                id="timeline"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">Select timeline</option>
+                {timelines.map((timeline) => (
+                  <option key={timeline} value={timeline}>
+                    {timeline}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Message */}
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              Project Details *
+            </label>
+            <textarea
+              {...register('message')}
+              id="message"
+              rows={5}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                errors.message ? 'border-red-500' : 'border-gray-300'
+              }`}
+              placeholder="Tell us about your project, goals, and any specific requirements..."
+            />
+            {errors.message && (
+              <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+            )}
+          </div>
+
+          {/* Terms Agreement */}
+          <div className="flex items-start">
+            <input
+              {...register('agreeToTerms')}
+              type="checkbox"
+              id="agreeToTerms"
+              className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <label htmlFor="agreeToTerms" className="ml-2 text-sm text-gray-700">
+              I agree to the{' '}
+              <a href="/terms" className="text-blue-600 hover:underline">
+                Terms and Conditions
+              </a>{' '}
+              and{' '}
+              <a href="/privacy" className="text-blue-600 hover:underline">
+                Privacy Policy
+              </a>
+              *
+            </label>
+          </div>
+          {errors.agreeToTerms && (
+            <p className="text-sm text-red-600">{errors.agreeToTerms.message}</p>
+          )}
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isSubmitting ? (
+              <div className="flex items-center justify-center">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                Sending...
+              </div>
+            ) : (
+              'Send Message'
+            )}
+          </button>
+        </form>
+
+        <div className="mt-6 text-center text-sm text-gray-600">
+          <p>
+            Or call us directly at{' '}
+            <a href="tel:+13024640950" className="text-blue-600 hover:underline font-medium">
+              +1 (302) 464-0950
+            </a>
+          </p>
         </div>
       </div>
-
-      <div className='contact-form__actions'>
-        <Button
-          type='submit'
-          variant='primary'
-          size='large'
-          loading={submitState.loading}
-          fullWidth
-          leftIcon='📧'
-        >
-          {submitState.loading ? 'Sending...' : 'Send Message'}
-        </Button>
-      </div>
-
-      {submitState.error && (
-        <div className='contact-form__error'>
-          <p>Error: {submitState.error.message}</p>
-        </div>
-      )}
-    </form>
+    </div>
   );
 };
 
