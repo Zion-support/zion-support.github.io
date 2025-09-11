@@ -8,6 +8,9 @@ import LoadingSpinner from './components/LoadingSpinner';
 // import { Button } from './components/ui/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { ErrorMonitorProvider } from './components/ErrorMonitor';
 
 // Lazy load pages with better error handling
 const Home = React.lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
@@ -34,40 +37,45 @@ const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustom
 
 const App = () => {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-          <Header />
-          <Sidebar />
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/contact" element={<Contact />} />
-              
-              {/* Service routes */}
-              <Route path="/cybersecurity" element={<Cybersecurity />} />
-              <Route path="/cloud-migration" element={<CloudMigration />} />
-              <Route path="/devops" element={<DevOps />} />
-              <Route path="/mobile-development" element={<MobileDevelopment />} />
-              
-              {/* Additional service routes */}
-              <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />
-              <Route path="/services/mobile-survey-tool" element={<MobileSurveyTool />} />
-              <Route path="/services/ai-talent-matching" element={<AITalentMatching />} />
-              <Route path="/services/ecommerce-return-management" element={<EcommerceReturnManagement />} />
-              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-              <Route path="/services/cloud-devops-services" element={<CloudDevOpsServices />} />
-              <Route path="/services/cybersecurity-services" element={<CybersecurityServices />} />
-              <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <ErrorMonitorProvider>
+      <ErrorBoundary>
+        <AccessibilityEnhancer>
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+              <PerformanceMonitor />
+              <Header />
+              <Sidebar />
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/contact" element={<Contact />} />
+                  
+                  {/* Service routes */}
+                  <Route path="/cybersecurity" element={<Cybersecurity />} />
+                  <Route path="/cloud-migration" element={<CloudMigration />} />
+                  <Route path="/devops" element={<DevOps />} />
+                  <Route path="/mobile-development" element={<MobileDevelopment />} />
+                  
+                  {/* Additional service routes */}
+                  <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />
+                  <Route path="/services/mobile-survey-tool" element={<MobileSurveyTool />} />
+                  <Route path="/services/ai-talent-matching" element={<AITalentMatching />} />
+                  <Route path="/services/ecommerce-return-management" element={<EcommerceReturnManagement />} />
+                  <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                  <Route path="/services/cloud-devops-services" element={<CloudDevOpsServices />} />
+                  <Route path="/services/cybersecurity-services" element={<CybersecurityServices />} />
+                  <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
+                </Routes>
+              </Suspense>
+              <Footer />
+            </div>
+          </Router>
+        </AccessibilityEnhancer>
+      </ErrorBoundary>
+    </ErrorMonitorProvider>
   );
 };
 

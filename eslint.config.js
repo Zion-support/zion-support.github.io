@@ -149,8 +149,6 @@ export default [
       'build/**',
       'out/**',
       'coverage/**',
-
-      // Large/legacy sources and disabled dirs
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
@@ -175,14 +173,10 @@ export default [
       'pages_backup/**',
       'supabase/**',
       'types.disabled/**',
-
-      // Tests and mocks
       '__tests__/**',
       'tests/**',
       'tests.disabled/**',
       '*.test.*',
-
-      // Temp and backups
       'backup/**',
       'backup-pages/**',
       'pages-backup/**',
@@ -199,8 +193,6 @@ export default [
       'temp_broken_components/**',
       'temp_working/**',
       'temp_*/**',
-
-      // Scripts/configs and CJS files not intended for lint
       'scripts/**',
       'automation/**',
       'netlify/**',
@@ -208,25 +200,18 @@ export default [
       '*.config.cjs',
       '*.config.mjs',
       '**/*.cjs',
-
-      // Public assets/scripts
       'public/**',
       '.venv/**',
-
-      // Root-level noisy files
       'api/**',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
-
-      // Misc root configs that were being linted
       '.eslintrc.js',
       '.eslintrc.cjs',
       '.eslintrc.disabled.js',
       '.prettierrc.js',
-
-      // Page backups
       'pages.__backup/**',
       'pages-disabled/**',
-      'pages.disabled_auto/**'],
+      'pages.disabled_auto/**'
+    ],
   }];
