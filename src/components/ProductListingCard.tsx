@@ -1,37 +1,22 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { _useNavigate } from "react-router-dom";
-import { _Badge } from "@/components/ui/badge";
-import { _Button } from "@/components/ui/button";
+import { _Badge } from "../components/ui/badge";
+import { _Button } from "../components/ui/button";
 import { _DollarSign } from "lucide-react";
-import { _RatingStars } from "@/components/RatingStars";
-import { _FavoriteButton } from "@/components/FavoriteButton";
+import { _RatingStars } from "../components/RatingStars";
+import { _FavoriteButton } from "../components/FavoriteButton";
 import Image from 'next/image'; // Import next/image
 
 import { DollarSign } from 'lucide-react';
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
     const _isGrid = view === 'grid';
     const _navigate = useNavigate();
-=======
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-// Using regular img tag instead of Next.js Image
-export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
-    const isGrid = view === 'grid';
-    const navigate = useNavigate();
->>>>>>> origin/clean-error-fixing-automation
     const [loading, setLoading] = useState(false);
     const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0
         ? listing.images[0]
         : '/placeholder.svg');
     const [imageError, setImageError] = useState(false);
-<<<<<<< HEAD
     const _formatPrice = () => {
         if (listing.price === null)
             return "Custom pricing";
@@ -62,30 +47,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
                 e.preventDefault();
                 handleViewListing();
             }
-=======
-    const formatPrice = () => {
-        if (listing.price === null)
-            return "Custom pricing";
-        return `${listing.currency}${listing.price.toLocaleString()}`};
-    const handleImageError = () => {
-        if (!imageError) { // Prevent infinite loops if placeholder also fails
-            setImageSrc('/placeholder.svg');
-            setImageError(true)}
-    };
-    const handleRequestQuote = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (onRequestQuote) {
-            onRequestQuote(listing.id)}
-        else {
-            router(`/request-quote?listing=${listing.id}`)}
-    };
-    const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-    return (<div data-testid="equipment-link" className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`} onClick={handleViewListing} tabIndex={0} role="button" onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                handleViewListing()}
->>>>>>> origin/clean-error-fixing-automation
         }}>
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing} // Keep existing onClick for navigation
@@ -93,7 +54,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
      onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-<<<<<<< HEAD
                 handleViewListing();
             }
         }}>
@@ -101,12 +61,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
           <Image src={imageSrc} alt={listing.title} layout="fill" objectFit="cover" onError={handleImageError} priority={false} // Assuming these are not LCP images
      sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
     />
-=======
-                handleViewListing()}
-        }}>
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <img src={imageSrc} alt={listing.title} className="w-full h-full object-cover" onError={handleImageError} />
->>>>>>> origin/clean-error-fixing-automation
           {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>)}
@@ -157,12 +111,8 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
           <div className="flex gap-2">
             <Button size="sm" className="bg-primary hover:bg-primary/80 text-primary-foreground" onClick={(e) => {
             e.stopPropagation();
-<<<<<<< HEAD
             navigate(`${detailBasePath}/${listing.id}`);
         }} disabled={loading}>
-=======
-            router(`${detailBasePath}/${listing.id}`)}} disabled={loading}>
->>>>>>> origin/clean-error-fixing-automation
               {loading ? (<>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -177,13 +127,9 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>);
 }
 ;
 export const _ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

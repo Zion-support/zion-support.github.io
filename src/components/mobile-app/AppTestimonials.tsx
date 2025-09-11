@@ -1,6 +1,6 @@
 import React from "react";
 import { _Star } from "lucide-react";
-import { _Card, CardContent, CardFooter } from "@/components/ui/card";
+import { _Card, CardContent, CardFooter } from "../../components/ui/card";
 
 const testimonials = [];
 const _testimonials = [

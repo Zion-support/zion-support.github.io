@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { _Button } from "../ui/button";
 import { _Badge } from "../ui/badge";
@@ -183,48 +182,6 @@ const _useCases = [
         icon: <Shield className="h-6 w-6"/>
     },
     {
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
-const blockchainBenefits = [
-    {
-        title: "Transparency",
-        description: "Immutable, transparent records that build trust and enable verifiable transactions",
-        icon: <Globe className="h-6 w-6"/>
-    },
-    {
-        title: "Security",
-        description: "Cryptographic security and decentralized architecture protect against fraud and attacks",
-        icon: <Lock className="h-6 w-6"/>
-    },
-    {
-        title: "Efficiency",
-        description: "Automated smart contracts reduce intermediaries and streamline complex processes",
-        icon: <Zap className="h-6 w-6"/>
-    },
-    {
-        title: "Innovation",
-        description: "Enable new business models and revenue streams through tokenization and DeFi",
-        icon: <TrendingUp className="h-6 w-6"/>
-    }
-];
-const useCases = [
-    {
-        title: "Supply Chain Management",
-        description: "Track products from origin to consumer with immutable records and real-time visibility",
-        icon: <LinkIcon className="h-6 w-6"/>
-    },
-    {
-        title: "Digital Identity",
-        description: "Self-sovereign identity solutions for secure, privacy-preserving authentication",
-        icon: <Shield className="h-6 w-6"/>
-    },
-    {
->>>>>>> origin/clean-error-fixing-automation
         title: "Asset Tokenization",
         description: "Convert real-world assets into digital tokens for fractional ownership and trading",
         icon: <Coins className="h-6 w-6"/>
@@ -405,9 +362,5 @@ export default function BlockchainServicesPage() {
       </section>
 
       <TrustedBySection />
-<<<<<<< HEAD
     </div>);
 }
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

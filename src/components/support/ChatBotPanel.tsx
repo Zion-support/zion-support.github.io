@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import { _Button } from "@/components/ui/button";
-import { _Input } from "@/components/ui/input";
-import { _ScrollArea } from "@/components/ui/scroll-area";
-import { _toast } from "@/components/ui/use-toast";
-import { _apiClient } from "@/utils/apiClient";
-import { _cn } from "@/lib/utils";
+import { _Button } from "../../components/ui/button";
+import { _Input } from "../../components/ui/input";
+import { _ScrollArea } from "../../components/ui/scroll-area";
+import { _toast } from "../../components/ui/use-toast";
+import { _apiClient } from "../../utils/apiClient";
+import { _cn } from "../../lib/utils";
 import { _ChatMessage } from "./ChatMessage";
 import { _QuickReplyButton } from "./QuickReplyButton";
 import { _Send, Loader2 } from "lucide-react";
-import { _useTheme } from "@/hooks/useTheme";
+import { _useTheme } from "../../hooks/useTheme";
 
 import { Check } from 'lucide-react';
 const implementation = [];

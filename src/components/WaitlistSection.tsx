@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { _Button } from '@/components/ui/button';
+import { _Button } from '../components/ui/button';
 export function WaitlistSection() {
     const [email, setEmail] = useState('');
     const _handleSubmit = (e) => {

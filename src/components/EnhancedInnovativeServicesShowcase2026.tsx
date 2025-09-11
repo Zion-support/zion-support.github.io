@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
 import { _Link } from 'react-router-dom';
 import { _Brain, Shield, Atom, Cpu, Network, Heart, Scale, DollarSign, Factory, Satellite, Code, Users, Globe, Server, Zap, Star, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon, ExternalLink, Rocket, Award, MessageCircle } from 'lucide-react';
-import { _EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '@/data/expandedInnovativeServices2026';
+import { _EXPANDED_INNOVATIVE_SERVICES_2026, SPECIALIZED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, ZION_TECH_GROUP_CONTACT, SERVICE_BENEFITS_SUMMARY } from '../data/expandedInnovativeServices2026';
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';

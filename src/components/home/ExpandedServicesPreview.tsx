@@ -1,10 +1,10 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
+import { _Button } from '../../components/ui/button';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
+import { _Badge } from '../../components/ui/badge';
 import { _ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
-import { _SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { _SERVICE_CATEGORIES } from '../../data/expandedServices';
 
 import { Link } from 'react-router-dom';
 import { Cloud } from 'lucide-react';

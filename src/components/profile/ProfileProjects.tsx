@@ -1,6 +1,6 @@
-import { _Card, CardContent } from "@/components/ui/card";
-import { _Badge } from "@/components/ui/badge";
-import { _AspectRatio } from "@/components/ui/aspect-ratio";
+import { _Card, CardContent } from "../../components/ui/card";
+import { _Badge } from "../../components/ui/badge";
+import { _AspectRatio } from "../../components/ui/aspect-ratio";
 import { _FileText } from "lucide-react";
 export function ProfileProjects({ projects }) {
     return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

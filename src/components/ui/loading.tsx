@@ -1,6 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { _cn } from '@/lib/utils';
+import { _cn } from '../../lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     const _sizeClasses = {
         sm: 'w-4 h-4',
@@ -17,24 +16,6 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     const _renderPulse = () => (<div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])}/>);
     const _renderSkeleton = () => (<div className={cn('bg-current rounded animate-pulse', sizeClasses[size])}/>);
     const _renderContent = () => {
-=======
-import { cn } from '@/lib/utils';
-export function Loading({ size = 'md', variant = 'spinner', className, text }) {
-    const sizeClasses = {
-  sm: 'w-4 h-4',
-        md: 'w-6 h-6',
-        lg: 'w-8 h-8',
-  xl: 'w-12 h-12'
-    
-
-};
-    const renderSkeleton = () => (<div className = {
-  cn('bg-current rounded animate-pulse',
-  sizeClasses[size])
-
-}/>);
-    const renderContent = () => {
->>>>>>> origin/clean-error-fixing-automation
         switch (variant) {
             case 'dots':
                 return renderDots();
@@ -43,7 +24,6 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
             case 'skeleton':
                 return renderSkeleton();
             default:
-<<<<<<< HEAD
                 return renderSpinner();
         }
     };
@@ -56,25 +36,6 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 export function Skeleton({ className, ...props }) {
     return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
 }
-=======
-                return renderSpinner()}
-    };
-    return (<div className = {
-  cn('flex flex-col items-center justify-center gap-3',
-  className)
-
-}>
-      {renderContent()}
-      {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
-    </div>)}
-// Skeleton loading for content
-export function Skeleton({ className, ...props }) {
-    return (<div className = {
-  cn('animate-pulse rounded-md bg-zion-slate-light/20',
-  className)
-
-} {...props}/>)}
->>>>>>> origin/clean-error-fixing-automation
 // Page loading component
 export function PageLoading() {
     return (<div className="min-h-screen flex items-center justify-center bg-background">
@@ -83,7 +44,6 @@ export function PageLoading() {
         <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>
-<<<<<<< HEAD
     </div>);
 }
 // Content skeleton loading
@@ -98,10 +58,6 @@ export function ContentSkeleton() {
     </div>);
 }
 // Card skeleton loading
-=======
-    </div>)}
-// Content skeleton loading
->>>>>>> origin/clean-error-fixing-automation
 export function CardSkeleton() {
     return (<div className="bg-card border border-border rounded-lg p-6 space-y-4 animate-pulse">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
@@ -110,9 +66,5 @@ export function CardSkeleton() {
         <div className="h-4 bg-zion-slate-light/20 rounded w-3/4"></div>
       </div>
       <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
-<<<<<<< HEAD
     </div>);
 }
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

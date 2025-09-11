@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { _cn } from '@/lib/utils';
+import { _cn } from '../../lib/utils';
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */

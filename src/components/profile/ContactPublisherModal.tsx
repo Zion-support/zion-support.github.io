@@ -1,13 +1,13 @@
 import React from 'react';
-import { _Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
-import { _Button } from '@/components/ui/button';
-import { _Input } from '@/components/ui/input';
-import { _Textarea } from '@/components/ui/textarea';
-import { _Form, FormField, FormItem, FormLabel, FormControl, FormMessage, } from '@/components/ui/form';
+import { _Dialog, DialogContent, DialogHeader, DialogTitle, } from '../../components/ui/dialog';
+import { _Button } from '../../components/ui/button';
+import { _Input } from '../../components/ui/input';
+import { _Textarea } from '../../components/ui/textarea';
+import { _Form, FormField, FormItem, FormLabel, FormControl, FormMessage, } from '../../components/ui/form';
 import { _useForm } from 'react-hook-form';
 import { _Mail, PaperPlane } from 'lucide-react';
-import api from '@/services/apiClient';
-import { _toast } from '@/hooks/use-toast';
+import api from '../../services/apiClient';
+import { _toast } from '../../hooks/use-toast';
 
 const services = [];
 const _schema = z.object({

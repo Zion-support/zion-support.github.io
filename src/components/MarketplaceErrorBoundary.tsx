@@ -2,8 +2,8 @@ import React from 'react';
 import { _ErrorBoundary } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { _mutate } from 'swr';
-import { _Button } from '@/components/ui/button';
-import { _Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { _Button } from '../components/ui/button';
+import { _Alert, AlertDescription, AlertTitle } from '../components/ui/alert';
 import { _RefreshCcw, AlertCircle } from 'lucide-react';
 function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
     const _handleRetry = async () => {

@@ -1,9 +1,9 @@
 
-import { _Button } from "@/components/ui/button";
-import { _Input } from "@/components/ui/input";
+import { _Button } from "../components/ui/button";
+import { _Input } from "../components/ui/input";
 import { _useState, useRef } from "react";
 import { _Mail } from "lucide-react";
-import { _useToast } from "@/hooks/use-toast";
+import { _useToast } from "../hooks/use-toast";
 
 import { Code } from 'lucide-react';
 export function EnhancedNewsletterForm() {

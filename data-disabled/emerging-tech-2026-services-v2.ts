@@ -12,7 +12,6 @@ export interface EmergingTech2026ServiceV2 {
     mobile: string;
     email: string;
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
-<<<<<<< HEAD:data-disabled/emerging-tech-2026-services-v2.ts
   {
     id: "2026-emerging-tech-v2",;
     name: "2026 Emerging Tech Platform V2",;

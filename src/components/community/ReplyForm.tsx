@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { _Button } from '@/components/ui/button';
+import { _Button } from '../../components/ui/button';
 export default function ReplyForm({ onSubmit, placeholder = "Write your reply..." }) {
     const [content, setContent] = useState('');
     const _handleSubmit = (e) => {

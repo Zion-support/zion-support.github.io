@@ -12,7 +12,7 @@ import {
   TrendingUp,
   Link
 } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 const AffiliateTracking: React.FC = () => {
   const features = [

@@ -1,37 +1,34 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useAISearch } from "@/hooks/useAISearch";
-export default function SearchPage() {
-    const [params] = useSearchParams();
-    const navigate = useNavigate();
-    const initial = params.get("q") || "";
-    const [query, setQuery] = useState(initial);
-    const { results, loading, search } = useAISearch();
-    const suggestions = generateSearchSuggestions();
-    useEffect(() => {
-        if (initial) {
-            search(initial)}
-    }, [initial]);
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        router(`/search?q=${encodeURIComponent(query)}`);
-        search(query)};
-    return (<main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-          <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>
-        </form>
+import React from 'react';
+import { SEO } from '../components/SEO';
 
-        {loading && <p className="text-zion-slate-light">Searching...</p>}
-        {!loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)}
-        {!loading && results.length > 0 && (<div className="space-y-4">
-            {results.map((r) => (<div key={`${r.type}-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>))}
-          </div>)}
-      </main>)}
+export default function SearchPage() {
+  return (
+    <>
+      <SEO 
+        title="SearchPage - Zion Tech Group" 
+        description="SearchPage page for Zion Tech Group" 
+        keywords="SearchPage, zion tech group"
+      />
+      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              SearchPage
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Welcome to our SearchPage page
+            </p>
+            <div className="bg-white rounded-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+                SearchPage Content
+              </h2>
+              <p className="text-zion-slate-light">
+                This is the SearchPage page content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

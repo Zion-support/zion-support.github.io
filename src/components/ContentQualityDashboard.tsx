@@ -3,7 +3,7 @@ import { _BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, 
 import ContentQualityAnalyzer from '../utils/contentQualityAnalyzer';
 
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Zap } from 'lucide-react';
 const services = [];
 const solutions = [];

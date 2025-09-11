@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 const $page = () => {
@@ -24,9 +23,9 @@ const $page = () => {
       </section>
     </div>)};
 export default $page;
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText } from "lucide-react";
 export default function Pricing() {
     const pricingTiers = [
@@ -390,5 +389,3 @@ export default function Pricing() {
         </div>
       </div>
     </div>)}
-=======
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

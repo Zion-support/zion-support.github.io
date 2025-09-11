@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { _ChevronLeft, ChevronRight } from "lucide-react";
-import { _Button } from "@/components/ui/button";
+import { _Button } from "../../components/ui/button";
 // These would be replaced with actual screenshots
 const _mockScreenshots = [
     { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },

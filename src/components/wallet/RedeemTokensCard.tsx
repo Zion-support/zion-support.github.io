@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { _useWallet } from "@/hooks/useWallet";
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Button } from "@/components/ui/button";
+import { _useWallet } from "../../hooks/useWallet";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
+import { _Button } from "../../components/ui/button";
 import { _Gift, ArrowRight, ExternalLink } from "lucide-react";
-import { _Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
+import { _Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "../../components/ui/dialog";
 
 import { Link } from 'react-router-dom';
 const features = [];

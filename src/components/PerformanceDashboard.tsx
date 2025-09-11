@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { _motion, AnimatePresence } from 'framer-motion';
-import { _usePerformance } from '@/hooks/usePerformance';
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
+import { _usePerformance } from '../hooks/usePerformance';
+import { _Button } from '../components/ui/button';
+import { _Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { _Badge } from '../components/ui/badge';
 import Activity from 'lucide-react/dist/esm/icons/activity';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import MousePointer from 'lucide-react/dist/esm/icons/mouse-pointer';
@@ -13,7 +13,7 @@ import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';
 import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 import X from 'lucide-react/dist/esm/icons/x';
 import Info from 'lucide-react/dist/esm/icons/info';
-import { _cn } from '@/lib/utils';
+import { _cn } from '../lib/utils';
 
 import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
