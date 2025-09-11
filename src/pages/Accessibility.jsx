@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
 
-export default function Accessibility() {
+export default function AccessibilityPage() {
   const accessibilityFeatures = [
     {
       icon: <Eye className="w-8 h-8" />,
