@@ -1,91 +1,69 @@
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
-  title: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
-export function SEO({
-  title,
-  description = 'Zion Tech Group - Leading provider of AI services, IT solutions, and micro SAAS platforms. Transform your business with cutting-edge technology.',
-  keywords = 'AI services, IT solutions, micro SAAS, cloud migration, cybersecurity, machine learning, business technology',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-}: SEOProps) {
-  const fullTitle = `${title} | Zion Tech Group`;
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
+  image = '/og-image.svg',
+  url = 'https://ziontechgroup.com',
 
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullCanonical} />
-
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="language" content="English" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={url} />
 
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
+
+      {/* Additional SEO */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": siteUrl,
-          "logo": `${siteUrl}/logo.png`,
-          "description": "Leading provider of AI services, IT solutions, and micro SAAS platforms",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-          },
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.svg",
+          "description": description,
+          "sameAs": ["https://linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ziontechgroup"
+          ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-          },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup",
-            "https://facebook.com/ziontechgroup"
-          ]
+            "telephone": "+1-555-ZION-TECH",
+            "contactType": "customer service"
+          }
         })}
-      </script>
-    </Helmet>
-  );
-}
+
+import Head from "next/head"
+import React from "react"
+import { Helmet  } from "react - helmet-async", SEOProps {title?: string;description?: string
+export const SEO: React.FC < SEOProps> = ({,
+"
+export default function Page() {
+export default function Page() {;
+
+interface SEOProps {
+

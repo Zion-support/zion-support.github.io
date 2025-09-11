@@ -1,77 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(false);
-  const handleGoogle = null;
-import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react";
-import { openAuthPopup } from "@/api/authSocial";
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false);
-  const handleGoogle = null;
-  const [isLoading, setIsLoading] = useState(false)
-  const handleGoogle = () => {
-    setIsLoading(true)
-    window.location.href = '/auth/google'
-  }
 
-import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react",
-import { openAuthPopup } from "@/api/authSocial",
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false),
-
-  const handleGoogle = () => {
-    setIsLoading(true),
-    window.location.href = '/auth/google'
-  },
-
-  return (
-    <div className="mt-6">
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-zion-blue-light" />
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <div className='mt-6'>
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
-        </div>
-      </div>
-      <div className='mt-6 grid grid-cols-4 gap-3'>
-        <Button
-          type='button'
-          variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
-          onClick={handleGoogle}
-          disabled={isLoading}        >
-          <span className='sr-only'>Sign in with Google</span>
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='relative flex justify-center text-sm'>
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
             Or continue with
           </span>
         </div>
       </div>
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -121,8 +60,6 @@ function SocialLogin() {
         </div>;
       </div>;
 
-
-
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"
@@ -132,16 +69,7 @@ function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -154,35 +82,7 @@ function SocialLogin() {
           )}
         </Button>;
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-          )}
-        </Button>
-        <Button
-          type='button'
-          variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
-          onClick={() => openAuthPopup('facebook')}
-          disabled={isLoading}        >
-          <span className='sr-only'>Sign in with Facebook</span>
-          <Facebook className='h-5 w-5' />
-        </Button>
-        <Button
-          type='button'
-          variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
-          onClick={() => openAuthPopup('twitter')}
-          disabled={isLoading}        >
-          <span className='sr-only'>Sign in with Twitter</span>
-          <Twitter className='h-5 w-5' />
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Button>
         <Web3Login />
       </div>
@@ -208,43 +108,17 @@ function SocialLogin() {
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Button>
         <Web3Login />
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           disabled={isLoading}        >;
           <span className='sr-only'>Sign in with Twitter</span>;
           <Twitter className='h-5 w-5' />;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -305,32 +179,12 @@ export function SocialLogin() {;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-
-
-}
-;
-=======
-
-}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
@@ -388,12 +242,4 @@ export function SocialLogin() {;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

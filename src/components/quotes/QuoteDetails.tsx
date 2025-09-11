@@ -1,102 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-import React from "react"
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-  DialogDescription
 
-import React from "react",
-import { 
-  Dialog,
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { QuoteStatusBadge } from "./QuoteStatusBadge"
-import type { QuoteRequest } from "@/types/quotes"
-import {format} from "date-fns"
-} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { QuoteStatusBadge } from "./QuoteStatusBadge",
-import type { QuoteRequest } from "@/types/quotes",
-import { format } from "date-fns",
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
   onClose: () => void
-<<<<<<< HEAD
-<<<<<<< HEAD
-  quote: QuoteRequest | null
-  isOpen: boolean
-  onClose: () => void
-}
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
-  if (!quote) return null
-  const formatDate = (dateString?: string) => {
-}
-
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';    try {
-      return format(new Date(dateString), 'PPP')
-    } catch (e) {
-      return dateString
-    }
-  }
-import React from "react",
-import { 
-  Dialog,
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { QuoteStatusBadge } from "./QuoteStatusBadge",
-import type { QuoteRequest } from "@/types/quotes",
-import { format } from "date-fns",
-interface QuoteDetailsProps {
-  quote: QuoteRequest | null,
-  isOpen: boolean,
-  onClose: () => void
-import React from "react",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription;
-} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-import { QuoteStatusBadge } from "./QuoteStatusBadge",;
-import type { QuoteRequest } from "@/types/quotes",;
-import { format } from "date-fns",;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 };
 import React from "react";
@@ -113,10 +19,7 @@ import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import {format} from "date-fns";
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -133,61 +36,18 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       return dateString;
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-  }
-
   return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl flex items-center justify-between">
-            <span>{quote.project_name}</span>
-            <QuoteStatusBadge status={quote.status} />
-          </DialogTitle>
-          <DialogDescription>
-            Quote request submitted on {formatDate(quote.created_at)}
-          </DialogDescription>
-        </DialogHeader>
-        <Separator className="my-4" />
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-
 
         <Separator className="my-4" />
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
         <Separator className="my-4" />
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-=======
 
-
-  return (
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        
         <Separator className="my-4" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
-=======
 
-
-          <Card>
-            <CardContent className="pt-6">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -201,24 +61,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-          
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          
-
 
           <Card>
-<<<<<<< HEAD
-=======
-            <CardContent className="pt-6">
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -233,66 +77,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <CardContent className="pt-6">
-            <h3 className="text-lg font-medium mb-3">Project Details</h3>
-            <p className="mb-4">{quote.project_summary}</p>
-ursor/fix-website-loading-errors-and-merge-6662
-        
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        
-
 
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-            
-
-
-<<<<<<< HEAD
-            
-            
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {quote.project_description && (
-=======
-            
-
 
             {quote.project_description && (
-              <>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
                 <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-            
-=======
 
-
-            
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-            
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -305,33 +102,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-        
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-        
-
 
         <div className="mt-6 flex justify-end">
-<<<<<<< HEAD
-=======
-          <Button onClick={onClose}>Close</Button>
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </DialogContent>
     </Dialog>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
@@ -434,11 +210,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 import React from './react';
 import {
   Dialog;
@@ -477,12 +248,4 @@ interface QuoteDetailsProps {
 }` : 'Not specified')
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-'";
-=======
-'";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-'";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+

@@ -1,44 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast } from "@/components/ui/use-toast"
-import { HELP_CATEGORIES } from "./help-content"
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-interface HelpArticleViewProps {
-import { HELP_CATEGORIES } from "./help-content";
-  articleId: string
-}
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-import { HELP_CATEGORIES } from "./help-content";
-import { HELP_CATEGORIES } from "./help-content",
 interface HelpArticleViewProps {
   articleId: string
 }
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface HelpArticleViewProps {
-  articleId: string
-}
-
 
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -55,20 +20,9 @@ interface HelpArticleViewProps {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    year: "numeric"
-    month: "long"
-    day: "numeric", })
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
 
     year: "numeric",;
     month: "long",;
@@ -76,59 +30,11 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
 };
 }
 
-<<<<<<< HEAD
-=======
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
-  
-  // Find the article in all categories
-  let article,
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId),
-    if (found) {
-      article = found,
-      break
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleViewProps {;
-  articleId: string;
-}
-;
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
-
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
-      article = found;
-      break;
-    }
-  }
-
-  if (!article) {;
-    return <div>Article not found</div>;
-  }
-
-  const handleFeedback = (type: "helpful" | "not-helpful") => {;
-    setFeedbackGiven(type);
-
-  return new Date(date).toLocaleDateString("en-US", {;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     year: "numeric",;
     month: "long",;
     day: "numeric", });
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -144,16 +50,7 @@ function HelpArticleView() {
   const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
   // Find the article in all categories;
   let article;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
-  
-  // Find the article in all categories
-  let article,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
@@ -331,16 +228,4 @@ function formatDate(date: string): string {;
     day: "numeric";
   });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-;
-;
-=======
 
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

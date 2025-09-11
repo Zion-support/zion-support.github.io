@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
 
-
-    let filteredTalents = allTalents
-    }
-}
-;
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 let filteredTalents = allTalents
     }
 }
@@ -29,10 +9,6 @@ import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-<<<<<<< HEAD
-=======
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile  } from '@/types/talent';
@@ -43,17 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <Card className;
-  <Card className;
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  <Card className;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -468,14 +434,6 @@ export default function TalentsPage() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Loading state
   if (loading && talents.length === 0) {
     return (
@@ -497,23 +455,8 @@ export default function TalentsPage() {;
     )
   }
 
-
-
     }
 }
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    let filteredTalents = allTalents
-
-
-;
-    let filtered_talents = all_talents;
-    }
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
       {/* Filter Controls */}
@@ -621,10 +564,7 @@ export default function TalentsPage() {;
       </AnimatePresence>;
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 }
 
   // Error state
@@ -774,12 +714,4 @@ export default function TalentsPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
