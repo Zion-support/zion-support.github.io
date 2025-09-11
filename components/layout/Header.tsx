@@ -28,90 +28,108 @@ export default function Header() {
     { name: 'Pricing', href: '/pricing' },
     { name: 'Compare', href: '/pricing-comparison' },
   ];
-=======
 
-    { name: 'Contact', href: '/contact', icon: Phone }
+  const productDropdown = [
+    { name: 'AI Code Assistant', href: '/ai-assistant', description: 'Intelligent code completion and suggestions' },
+    { name: 'Cloud Platform', href: '/cloud-platform', description: 'Scalable cloud infrastructure' },
+    { name: 'Automation Hub', href: '/automation', description: 'AI-powered workflow automation' },
+    { name: 'Analytics', href: '/analytics', description: 'Real-time insights and reporting' },
+    { name: 'Micro SaaS Services', href: '/micro-saas-services', description: 'Professional business solutions' },
   ];
 
+  const isActive = (href: string) => router.pathname === href;
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'bg-black/90 backdrop-blur-2xl border-b border-white/20 shadow-2xl shadow-black/50'
+          : 'bg-transparent'
+      }`}
+    >
+      {/* Futuristic Background Glow */}
+      {isScrolled && (
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5" />
+      )}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Enhanced Logo */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/25">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10" />
+              {/* Animated border */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+                Zion Tech
+              </span>
+              <span className="text-xs text-gray-400 group-hover:text-blue-400 transition-colors duration-300">
+                Group
+              </span>
 =======
-          <div className="flex-shrink-0">;
-            <Link href="/" className="text-2xl font-bold text-blue-600">;
-              Zion Tech Group;
-            </Link>;
-          </div>;
-=======
+import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">;
-            <div className="ml-10 flex items-baseline space-x-4">;
-              {navigation && navigation.map((item) => (;
-                <Link
-                  key={item && item.name}
-                  href={item && item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">;
-                  {item && item.name}
-                </Link>;
-              ))}
-            </div>;
-          </div>;
->>>>>>> main
+  const services = [
+    { name: 'AI Development', href: '/services/ai-development', description: 'Custom AI solutions and ML models' },
+    { name: 'Cloud Architecture', href: '/services/cloud-services', description: 'Scalable cloud infrastructure' },
+    { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence & insights' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain', description: 'Decentralized applications' },
+    { name: 'IoT Platforms', href: '/services/iot-platforms', description: 'Connected device solutions' },
+    { name: 'Web Development', href: '/services/web-development', description: 'Modern web applications' },
+  ];
 
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
 
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
-            <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2";
-            >;
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>;
-          </div>;
-        </div>;
+  // Handle escape key
+  useEffect(() => {
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsServicesOpen(false);
+        setIsMenuOpen(false);
+      }
+    };
 
+    document.addEventListener('keydown', handleEscapeKey);
+    return () => document.removeEventListener('keydown', handleEscapeKey);
+  }, []);
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>;
-          {isMenuOpen && (;
-            <motion&& motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden">;
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">;
-                {navigation && navigation.map((item) => (;
-                  <Link
-                    key={item && item.name}
-                    href={item && item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >;
-                    {item && item.name}
-                  </Link>;
-                ))}
-              </div>;
-            </motion && motion.div>;
-          )}
-        </AnimatePresence>;
-      </nav>;
-    </header>;
-  );
-}
-export default Header;
-import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 hover:text-white"> {item && item.name} </Link> ))} </nav> </div> </header> )} export default Header;
-export default Header;
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10" role="banner">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" aria-label="Zion Tech Group - Homepage">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+>>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
+            </div>
+          </Link>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-          <div className="flex - shrink - 0">;
-            <Link href="/" className="text - 2xl font - bold text - blue - 600">;
-              Zion Tech Group;
-            </Link>;
-          </div>;
           {/* Desktop Navigation */}
 <<<<<<< HEAD
           <nav className="hidden lg:flex items-center space-x-1">
@@ -278,334 +296,250 @@ export default Header;
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               )}
-=======
-          <div className="hidden md:block">;
-            <div className="ml - 10 flex items - baseline space - x-4">;
-              {navigation.map ((item) => (
-                <Link;
-                  key={item.name}
-                  href={item.href}
-                  className="text - gray - 700 hover:text - blue - 600 px - 3 py - 2 rounded - md text - sm font - medium transition - colors";
-                >;
-                  {item.name}
-                </Link>))}
-            </div>;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
-            <button              on_click={() => setIsMenuOpen (!isMenuOpen)}
-              className="text - gray - 700 hover:text - blue - 600 p - 2";
-            >;
-              {isMenuOpen ? <X className="h - 6 w - 6" /> : <Menu className="h - 6 w - 6" />}
-            </button>;
-          </div>;
-        </div>;
-        {/* Mobile Navigation */}
-        <AnimatePresence>;
-          {isMenuOpen && (
-            <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden";
-            >;
-              <div className="px - 2 pt - 2 pb - 3 space - y-1 sm:px - 3 bg - white border - t">;
-                {navigation.map ((item) => (
-                  <Link;
-                    key={item.name}
-                    href={item.href}
-                    className="text - gray - 700 hover:text - blue - 600 block px - 3 py - 2 rounded - md text - base font - medium";
-                    on_click={() => setIsMenuOpen (false)}
-                  >;
-                    {item.name}
-                  </Link>))}
-              </div>;
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-    </header>);
-}
-;
-=======
-<<<<<<< HEAD
-export default Header;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-export default Header;
-import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
-export default Header;
-<<<<<<< HEAD
-;
-          {/* Desktop Navigation */}
-          <nav className=&quot;hidden md:flex items-center space-x-8&quot;>
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className=&quot;text-white/80 hover:text-white transition-colors duration-200&quot;
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className=&quot;hidden md:block&quot;>
-            <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot;>
-              Get Started
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot;>
-            <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-              <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
->>>>>>> main
             </svg>
           </button>
         </div>
       </div>
-    </header>
-  )
-},
 
-export default Header
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import React from 'react',
-import Link from 'next/link';
-import Button from '../ui/Button';
-const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-import { Menu, X } from 'lucide-react';
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const navigation = [
-    { name: 'Home', href: '/' }
-    { name: 'Services', href: '/services' }
-    { name: 'About', href: '/about' }
-{ name: 'Contact', href: '/contact' }
-  ];
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-    }`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-import {Menu
-  X
-  Home
-  Users
-  Briefcase
-  Phone
-  Mail
-  ChevronDown
-  Brain
-  Shield
-  Cloud
-  Database
-  Network
-  Zap
-  Target
-  DollarSign
-  BookOpen
-  Calendar
-  FileText
-  Award
-  Globe
-  Search
-  ArrowRight;
-} from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
-const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
-  useEffect(() => {
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 20);
-}
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-
-}, []);
-  const navigation = [;
-    { name: 'Home', href: '/' }
-    { name: 'Services', href: '/services' }
-    { name: 'Solutions', href: '/solutions' }
-    { name: 'About', href: '/about' }
-    { name: 'Resources', href: '/blog' }
-    { name: 'Careers', href: '/careers' }
-    { name: 'Contact', href: '/contact' }
-    { name: 'Home', href: '/', icon: Home }
-    {name: 'Services'
-      href: '/services'
-      icon: Briefcase
-      dropdown: [;
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' }
-        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Information Technology services' }
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Micro Software as a Service' }
-        { name: 'Cybersecurity', href: '/services/ai-autonomous-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions' }
-        { name: 'Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'AI-driven customer experience' }
-        { name: 'Healthcare AI', href: '/services/ai-healthcare-diagnostics', icon: Brain, description: 'Medical AI diagnostics' }
-      ];
-}
-    { name: 'About', href: '/about', icon: Users }
-    {name: 'Resources'
-      href: '#'
-      icon: BookOpen
-      dropdown: [;
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and trends' }
-        { name: 'Case Studies', href: '/case-studies', icon: Target, description: 'Success stories' }
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research and insights' }
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Expert-led sessions' }
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'Comprehensive pricing info' }
-      ];
-}
-    { name: 'Team', href: '/team', icon: Award }
-    { name: 'Contact', href: '/contact', icon: Phone }
-
-  ];
-  const serviceCategories = [;
-    {name: 'Micro SaaS'
-      href: '/services/micro-saas'
-      description: 'Innovative focused software solutions'
-      popular: ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];
-}
-    {name: 'IT Services'
-      href: '/services/it-services'
-      description: 'Enterprise infrastructure & security'
-      popular: ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];
-}
-    {name: 'AI Services'
-      href: '/services/ai-services'
-      description: 'Cutting-edge AI & machine learning'
-      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
-}
-  ];
-  const serviceCategories = [;
-    { name: 'AI Solutions', href: '/services/ai-solutions' }
-    { name: 'Cloud & DevOps', href: '/services/cloud' }
-    { name: 'Cybersecurity', href: '/services/cybersecurity' }
-    { name: 'Data & Analytics', href: '/services/data' }
-    { name: 'Micro SaaS', href: '/services/micro-saas' }
-    { name: 'Digital Transformation', href: '/services/transformation' }
-  ];
-  const solutionCategories = [;
-    { name: 'Enterprise', href: '/solutions/enterprise' }
-    { name: 'SMB', href: '/solutions/smb' }
-    { name: 'Startup', href: '/solutions/startup' }
-  ];
-  const resourceCategories = [;
-
-    { name: 'Documentation', href: '/docs' }
-    { name: 'Blog', href: '/blog' }
-    { name: 'Partners', href: '/partners' }
-    { name: 'Team', href: '/team' }
-    { name: 'Careers', href: '/careers' }
-  ];
-  const isActive = (path: string) => location.pathname === path;
-  const resourceCategories = [;
-    { name: 'Blog', href: '/blog' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'Webinars', href: '/webinars' }
-    { name: 'Documentation', href: '/documentation' }
-    { name: 'API Reference', href: '/api' }
-    { name: 'Help Center', href: '/help' }
-    { name: 'FAQ', href: '/faq' }
-  ];
-  return (;
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ;
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' ;
-        : 'bg-transparent';
-}`}>;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex items-center justify-between h-16">;
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-          </div>
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-        </div>
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden"
-            >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                {navigation.map((item) => (
+        {isMobileMenuOpen && (
+          <div className="lg:hidden">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-black/90 backdrop-blur-xl rounded-xl mt-2 border border-white/10 shadow-2xl">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.hasDropdown ? (
+                    <div className="space-y-2">
+                      <div className="px-4 py-3 text-base font-medium text-white">
+                        {item.name}
+                      </div>
+                      <div className="pl-4 space-y-2">
+                        {item.name === 'Product' && productDropdown.map((product) => (
+                          <Link
+                            key={product.name}
+                            href={product.href}
+                            className="block px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            <div className="font-medium">{product.name}</div>
+                            <div className="text-xs text-gray-500">{product.description}</div>
+                          </Link>
+                        ))}
+                        {item.name === 'Solutions' && solutionsDropdown.map((solution) => (
+                          <Link
+                            key={solution.name}
+                            href={solution.href}
+                            className="block px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            <div className="font-medium">{solution.name}</div>
+                            <div className="text-xs text-gray-500">{solution.description}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
                   <Link
-                    key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-4 py-2 text-base font-medium rounded-lg transition-colors duration-200 ${
+                      isActive(item.href)
+                        ? 'text-blue-400 bg-blue-500/10'
+                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
-                ))}
+                )}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+            ))}
+            
+            {/* Mobile CTA */}
+            <div className="pt-4 border-t border-white/20">
+              <Link
+                href="/contact"
+                className="block px-4 py-3 text-center text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 mb-3"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+              <Link
+                href="/micro-saas"
+                className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-300 hover:scale-105"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
-<<<<<<< HEAD
 =======
-export default Header;
-import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
-export default Header;
+          <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
+            <Link 
+              href="/" 
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
+              aria-label="Home page"
+            >
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group" ref={servicesRef}>
+              <button 
+                className="flex items-center text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsServicesOpen(!isServicesOpen);
+                  }
+                }}
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                aria-label="Services menu"
+              >
+                <span>Services</span>
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </button>
+              
+              {isServicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-xl py-2 animate-in fade-in-0 zoom-in-95 duration-200"
+                  role="menu"
+                  aria-label="Services submenu"
+                >
+                  {services.map((service, index) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-3 text-white hover:bg-gray-800 transition-colors focus:outline-none focus:bg-gray-800"
+                      role="menuitem"
+                      tabIndex={isServicesOpen ? 0 : -1}
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      <div className="font-medium">{service.name}</div>
+                      <div className="text-sm text-gray-400 mt-1">{service.description}</div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
-}
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+            <Link 
+              href="/about" 
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
+              aria-label="About us page"
+            >
+              About
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
+              aria-label="Contact us page"
+            >
+              Contact
+            </Link>
+            
+            {/* CTA Button */}
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+              aria-label="Get started with your project"
+            >
+              Get Started
+            </Link>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <nav 
+            id="mobile-menu"
+            className="md:hidden bg-gray-900 border-t border-gray-700 py-4 animate-in slide-in-from-top-5 duration-200"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
+            <div className="flex flex-col space-y-2">
+              <Link 
+                href="/" 
+                className="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Home page"
+              >
+                Home
+              </Link>
+              
+              {/* Mobile Services */}
+              <div className="px-4 py-2">
+                <div className="text-white font-medium mb-2">Services</div>
+                <div className="pl-4 space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block text-gray-300 hover:text-white hover:bg-gray-800 px-2 py-1 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              <Link 
+                href="/about" 
+                className="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="About us page"
+              >
+                About
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Contact us page"
+              >
+                Contact
+              </Link>
+              
+              {/* Mobile CTA */}
+              <div className="px-4 pt-2">
+                <Link 
+                  href="/contact" 
+                  className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Get started with your project"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </nav>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+>>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322

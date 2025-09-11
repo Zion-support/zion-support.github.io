@@ -1,171 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-    // Save report;
-
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async checkAccessibility() {
-    this.log('♿ Starting accessibility check...');
-
-    const checks = [
-      {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
-    }
-
-    this.log('✅ Accessibility check completed');
-    return { success: true, results };
-  }
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      accessibility: await this.checkAccessibility(),
-      summary: {
-        checksRun: 2,
-        successfulChecks: 0,
-        failedChecks: 0,
-      },
-    };
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
-}
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
-  }
-
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
-      },
-    };
-
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
-}
-
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -174,10 +6,6 @@ const { execSync } = require('child_process');
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
-  }
-
-  ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
       fs.mkdirSync(this.logsDir, { recursive: true });
     }
@@ -185,252 +13,54 @@ class AccessibilityChecker {
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    const line = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(line);
+    fs.appendFileSync(
+      path.join(this.logsDir, 'accessibility-checker.log'),
+      line + '\n'
+    );
   }
 
-  async runCommand(command, description) {
+  run(command, description) {
     try {
       this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      execSync(command, { stdio: 'pipe', encoding: 'utf8' });
+      this.log(`Done: ${description}`);
+      return { success: true };
+    } catch (e) {
+      this.log(`Failed: ${description} -> ${e.message}`, 'error');
+      return { success: false, error: e.message };
     }
   }
 
-  async checkAccessibility() {
-    this.log('♿ Starting accessibility check...');
-
-    const checks = [
-      {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
-    ];
-
+  async runAll() {
     const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
-    }
-
-    this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
+    // Best-effort checks; tolerate missing scripts
+    results.push(
+      this.run('npm run -s test:accessibility', 'Accessibility tests')
+    );
+    results.push(this.run('npm run -s lint', 'ESLint (includes a11y rules)'));
+    return results;
   }
 
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
-      },
+  writeReport(results) {
+    const summary = {
+      checksRun: results.length,
+      successfulChecks: results.filter(r => r.success).length,
+      failedChecks: results.filter(r => !r.success).length,
     };
-
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
+    const report = { timestamp: new Date().toISOString(), results, summary };
+    const out = path.join(
+      this.logsDir,
       `accessibility-report-${Date.now()}.json`
     );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
+    fs.writeFileSync(out, JSON.stringify(report, null, 2));
+    this.log(`Report saved: ${out}`);
   }
 }
 
-// CLI interface
-if (require.main === module) {
+(async () => {
   const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
-class AccessibilityChecker {
-  constructor() {
-    this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
-  }
-
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async checkAccessibility() {
-    this.log('♿ Starting accessibility check...');
-
-    const checks = [
-      {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
-    }
-
-    this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
-  }
-
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
-      },
-    };
-
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
-}
-
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-console.log('♿ Accessibility Checker Starting...\n')
-    "name"
-    "name"
-    "name"
-    "name"
-    "name"
-    "status"
-    "status"
-    "status"
-=======
-module.exports = AccessibilityChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-    "status"
-module.exports = AccessibilityChecker;
-    "status"
-module.exports = AccessibilityChecker;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-console.log('♿ Running accessibility check...');
-console.log('✅ Accessibility check completed');
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+  const results = await checker.runAll();
+  checker.writeReport(results);
+})();

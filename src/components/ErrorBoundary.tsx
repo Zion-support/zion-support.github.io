@@ -1,231 +1,229 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-}
+// Simple error display component
+export function ErrorDisplay({ 
+  error, 
+  onRetry, 
+  className 
+}: { 
+  error: string | Error;
+  onRetry?: () => void;
+  className?: string;
+}) {
+  const errorMessage = typeof error === 'string' ? error : error.message;
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  showStack: boolean;
-  errorId: string;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false,
-      errorId: ''
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      errorInfo
-    });
-
-    // Log error to console
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Log to external service (you can replace this with your error logging service)
-    this.logErrorToService(error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
-      return (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4"
+  return (
+    <motion.div
+      className={`bg-red-500/10 border border-red-500/20 rounded-lg p-4 text-center ${className || ''}`}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="flex items-center justify-center gap-2 mb-3">
+        <AlertTriangle className="w-5 h-5 text-red-400" />
+        <span className="text-red-400 font-medium">Error</span>
+      </div>
+      <p className="text-red-300 mb-3">{errorMessage}</p>
+      {onRetry && (
+        <Button
+          onClick={onRetry}
+          size="sm"
+          variant="outline"
+          className="border-red-500/30 text-red-400 hover:bg-red-500/20"
         >
-          <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl border border-red-200 overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 text-white">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <AlertTriangle className="w-6 h-6" />
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold">Oops! Something went wrong</h1>
-                  <p className="text-red-100 mt-1">
-                    We've encountered an unexpected error and our team has been notified.
-                  </p>
-                </div>
+          <RefreshCw className="w-4 h-4 mr-2" />
+          Try Again
+        </Button>
+      )}
+    </motion.div>
+  );
+}
+
+// Hook for functional components to handle errors
+export function useErrorHandler() {
+  const [error, setError] = useState<Error | null>(null);
+
+  const handleError = useCallback((error: Error) => {
+    console.error('Error caught by hook:', error);
+    setError(error);
+  }, []);
+
+  const clearError = useCallback(() => {
+    setError(null);
+  }, []);
+
+  return { error, handleError, clearError };
+}
+
+// Error fallback component for full page errors
+export function ErrorFallback({ 
+  error, 
+  onRetry 
+}: { 
+  error?: Error;
+  onRetry: () => void;
+}) {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark flex items-center justify-center p-4">
+      <motion.div
+        className="max-w-md w-full text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Error Icon */}
+        <motion.div
+          className="w-20 h-20 mx-auto mb-6 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+        >
+          <AlertTriangle className="w-10 h-10 text-red-400" />
+        </motion.div>
+
+        {/* Error Message */}
+        <motion.h1
+          className="text-2xl font-bold text-white mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          Oops! Something went wrong
+        </motion.h1>
+
+        <motion.p
+          className="text-zion-slate-light mb-6 leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          We encountered an unexpected error. Don't worry, our team has been notified and is working to fix it.
+        </motion.p>
+
+        {/* Error Details (Development only) */}
+        {process.env.NODE_ENV === 'development' && error && (
+          <motion.div
+            className="mb-6 p-4 bg-zion-blue-dark/50 border border-zion-blue-light/30 rounded-lg text-left"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            transition={{ delay: 0.5 }}
+          >
+            <details className="text-sm">
+              <summary className="cursor-pointer text-zion-cyan font-medium mb-2">
+                Error Details (Development)
+              </summary>
+              <div className="text-zion-slate-light space-y-2">
+                <p><strong>Message:</strong> {error.message}</p>
+                <p><strong>Stack:</strong></p>
+                <pre className="text-xs overflow-auto bg-zion-slate-dark p-2 rounded">
+                  {error.stack}
+                </pre>
               </div>
-            </div>
+            </details>
+          </motion.div>
+        )}
 
-            {/* Error Details */}
-            <div className="p-6">
-              <div className="space-y-4">
-                {/* Error Message */}
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <div className="flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-red-800 mb-1">Error Message</h3>
-                      <p className="text-red-700 text-sm font-mono break-words">
-                        {this.state.error?.message || 'Unknown error occurred'}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        {/* Action Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-3 justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
+          <Button
+            onClick={onRetry}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25"
+          >
+            <RefreshCw className="w-4 h-4 mr-2" />
+            Try Again
+          </Button>
 
-                {/* Error ID */}
-                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Bug className="w-4 h-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">Error ID:</span>
-                    </div>
-                    <code className="text-xs bg-gray-100 px-2 py-1 rounded font-mono text-gray-700">
-                      {this.state.errorId}
-                    </code>
-                  </div>
-                </div>
+          <Button
+            variant="outline"
+            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            asChild
+          >
+            <Link to="/">
+              <Home className="w-4 h-4 mr-2" />
+              Go Home
+            </Link>
+          </Button>
+        </motion.div>
 
-                {/* Stack Trace Toggle */}
-                {this.state.errorInfo && (
-                  <div className="border border-gray-200 rounded-lg overflow-hidden">
-                    <button
-                      onClick={this.toggleStack}
-                      className="w-full p-4 bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between text-left"
-                    >
-                      <div className="flex items-center gap-2">
-                        <FileText className="w-4 h-4 text-gray-500" />
-                        <span className="font-medium text-gray-700">
-                          {this.state.showStack ? 'Hide' : 'Show'} Technical Details
-                        </span>
-                      </div>
-                      <motion.div
-                        animate={{ rotate: this.state.showStack ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <X className="w-4 h-4 text-gray-500" />
-                      </motion.div>
-                    </button>
-                    
-                    {this.state.showStack && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="border-t border-gray-200 p-4 bg-gray-900 text-green-400 font-mono text-xs overflow-x-auto"
-                      >
-                        <div className="space-y-2">
-                          <div>
-                            <span className="text-yellow-400">Component Stack:</span>
-                            <pre className="mt-1 whitespace-pre-wrap">
-                              {this.state.errorInfo.componentStack}
-                            </pre>
-                          </div>
-                          {this.state.error?.stack && (
-                            <div>
-                              <span className="text-yellow-400">Error Stack:</span>
-                              <pre className="mt-1 whitespace-pre-wrap">
-                                {this.state.error.stack}
-                              </pre>
-                            </div>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </div>
-                )}
-
-                {/* Helpful Information */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <div className="flex items-start gap-3">
-                    <Info className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-blue-800 mb-2">What you can do:</h3>
-                      <ul className="text-blue-700 text-sm space-y-1">
-                        <li>• Try refreshing the page</li>
-                        <li>• Check your internet connection</li>
-                        <li>• Clear your browser cache</li>
-                        <li>• Contact support if the problem persists</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 mt-6">
-                <button
-                  onClick={this.handleRetry}
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={this.handleGoHome}
-                  className="flex-1 bg-gradient-to-r from-gray-500 to-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:from-gray-600 hover:to-gray-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                >
-                  <Home className="w-4 h-4" />
-                  Go Home
-                </button>
-              </div>
-
-              {/* Additional Actions */}
-              <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-gray-200">
-                <button
-                  onClick={this.handleCopyError}
-                  data-copy-button
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  <Copy className="w-4 h-4" />
-                  Copy Error Details
-                </button>
-                
-                <button
-                  onClick={() => window.location.reload()}
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  <Zap className="w-4 h-4" />
-                  Hard Refresh
-                </button>
-              </div>
-            </div>
-
-            {/* Footer */}
-            <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
-              <p className="text-center text-sm text-gray-500">
-                If this problem continues, please contact our support team with the Error ID above.
-              </p>
-            </div>
+        {/* Additional Help */}
+        <motion.div
+          className="mt-8 p-4 bg-zion-blue/20 border border-zion-blue-light/20 rounded-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+        >
+          <p className="text-sm text-zion-slate-light mb-2">
+            Still having issues?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">
+            <Link
+              to="/contact"
+              className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+            >
+              Contact Support
+            </Link>
+            <span className="text-zion-slate-light hidden sm:inline">•</span>
+            <Link
+              to="/help"
+              className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+            >
+              Help Center
+            </Link>
           </div>
         </motion.div>
-      );
-    }
-
-    return this.props.children;
-  }
+      </motion.div>
+    </div>
+  );
 }
 
-export default ErrorBoundary;
+// Simple error boundary wrapper
+export function ErrorBoundary({ children }: { children: React.ReactNode }) {
+  const [hasError, setHasError] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      console.error('Error caught by boundary:', event.error);
+      setError(event.error);
+      setHasError(true);
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      console.error('Unhandled promise rejection:', event.reason);
+      setError(new Error(event.reason));
+      setHasError(true);
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, []);
+
+  if (hasError) {
+    return (
+      <ErrorFallback 
+        error={error || undefined} 
+        onRetry={() => {
+          setHasError(false);
+          setError(null);
+          window.location.reload();
+        }} 
+      />
+    );
+  }
+
+  return <>{children}</>;
+}

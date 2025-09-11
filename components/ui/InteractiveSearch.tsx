@@ -1,76 +1,82 @@
+import React from 'react';
 
-export default function InteractiveSearch(): any ({;
-  placeholder = 'Search talent, skills, or jobs...',;
-}: {;
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+export type CategoryOption = { label: string; value: string };
 
-export default function InteractiveSearch({
-  placeholder = 'Search talent, skills, or jobs...',
-}: {;
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+export type FilterState = {
+  keyword: string;
+  category: string;
+  minPrice?: number;
+  maxPrice?: number;
+  minRating?: number;
+};
 
-  placeholder?: string;
-}) {;
-export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
-  const [value, setValue] = useState('');
+export type InteractiveSearchProps = {
+  categories: CategoryOption[];
+  value: FilterState;
+  onChange: (next: FilterState) => void;
+  priceEnabled?: boolean;
+  ratingEnabled?: boolean;
+};
 
-  placeholder?: string;
-}) {;
-export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
-  const [value, setValue] = useState('');
-
-    >;
-
+export default function InteractiveSearch({ categories, value, onChange, priceEnabled = true, ratingEnabled = true }: InteractiveSearchProps) {
   return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
-      <input
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={placeholder}
-=======        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      {value && (
-        <button
-          onClick={() => setValue('')}
-          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-        >
-          ✕
-        </button>
-      )}
-    </motion.div>
-    </motion && motion.div>;
-  );
+    <div className="w-full mb-4 p-3 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+        <input
+          type="text"
+          value={value.keyword}
+          onChange={(e) => onChange({ ...value, keyword: e.target.value })}
+          placeholder="Search by keyword..."
+          className="col-span-2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+        />
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"  />;
-          </svg>;
-        </button>;
-      </div>;
-    </form>;
+        <select
+          value={value.category}
+          onChange={(e) => onChange({ ...value, category: e.target.value })}
+          className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+        >
+          <option value="">All Categories</option>
+          {categories.map((c) => (
+            <option key={c.value} value={c.value}>{c.label}</option>
+          ))}
+        </select>
+
+        {priceEnabled && (
+          <div className="flex items-center gap-2">
+            <input
+              type="number"
+              inputMode="numeric"
+              min={0}
+              value={value.minPrice ?? ''}
+              onChange={(e) => onChange({ ...value, minPrice: e.target.value ? Number(e.target.value) : undefined })}
+              placeholder="Min $"
+              className="w-1/2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+            />
+            <input
+              type="number"
+              inputMode="numeric"
+              min={0}
+              value={value.maxPrice ?? ''}
+              onChange={(e) => onChange({ ...value, maxPrice: e.target.value ? Number(e.target.value) : undefined })}
+              placeholder="Max $"
+              className="w-1/2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+            />
+          </div>
+        )}
+
+        {ratingEnabled && (
+          <select
+            value={String(value.minRating ?? '')}
+            onChange={(e) => onChange({ ...value, minRating: e.target.value ? Number(e.target.value) : undefined })}
+            className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+          >
+            <option value="">Any Rating</option>
+            <option value="4">4+ stars</option>
+            <option value="4.5">4.5+ stars</option>
+            <option value="5">5 stars</option>
+          </select>
+        )}
+      </div>
+    </div>
   );
-}}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}

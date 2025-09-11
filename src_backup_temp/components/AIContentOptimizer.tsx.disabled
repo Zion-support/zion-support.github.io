@@ -1,4 +1,0 @@
-import { import { motion,AnimatePresence } from 'framer-motion';
-:src/components/AIContentOptimizer.tsx.disabled
-import {  import { motion, AnimatePresence  } from 'framer-motion';';';
-import { import { motion,AnimatePresence } from 'framer-motion'; ;';';

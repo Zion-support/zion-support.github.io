@@ -292,7 +292,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         }}
       />
       
-      {/* Overlay gradients */}
+      {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
       

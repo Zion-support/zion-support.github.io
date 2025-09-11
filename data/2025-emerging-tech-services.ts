@@ -1,10 +1,12 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+
 export const emergingTechServices2025: MicroSaasService[] = [
   // Quantum Computing Services
   {
@@ -53,6 +55,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.9,
     reviews: 6
   },
+
   // Blockchain & Web3 Services
   {
     id: 'enterprise-blockchain-platform',
@@ -100,6 +103,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.8,
     reviews: 12
   },
+
   // Space Technology Services
   {
     id: 'space-data-analytics-platform',
@@ -147,6 +151,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.9,
     reviews: 9
   },
+
   // Internet of Things (IoT) Services
   {
     id: 'enterprise-iot-platform',
@@ -194,6 +199,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.7,
     reviews: 22
   },
+
   // Augmented Reality & Virtual Reality Services
   {
     id: 'enterprise-ar-vr-platform',
@@ -241,6 +247,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.8,
     reviews: 15
   },
+
   // Autonomous Systems & Robotics Services
   {
     id: 'autonomous-systems-platform',
@@ -288,6 +295,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.9,
     reviews: 8
   },
+
   // Biotechnology & Synthetic Biology Services
   {
     id: 'synthetic-biology-platform',
@@ -335,6 +343,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.9,
     reviews: 5
   },
+
   // Energy & Sustainability Services
   {
     id: 'smart-energy-management-platform',
@@ -382,6 +391,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.8,
     reviews: 13
   },
+
   // Transportation & Mobility Services
   {
     id: 'intelligent-transportation-platform',
@@ -429,6 +439,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     rating: 4.8,
     reviews: 11
   },
+
   // Cybersecurity & Privacy Services
   {
     id: 'quantum-cybersecurity-platform',
@@ -477,12 +488,15 @@ export const emergingTechServices2025: MicroSaasService[] = [
     reviews: 7
   }
 ];
+
 export const getPopularEmergingTechServices = () => {
   return emergingTechServices2025.filter(service => service.popular);
 };
+
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(service => service.category === category);
 };
+
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
