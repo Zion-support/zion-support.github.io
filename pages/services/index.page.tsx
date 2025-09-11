@@ -27,20 +27,14 @@ export default function ServicesIndexPage() {
                   <h2 className="text-xl font-semibold text-gray-900">{c.title}</h2>
                   <p className="text-sm text-gray-600 mt-1">{c.price}</p>
                 </div>
-                <span className="text-blue-600 font-medium">Learn more →</span>
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </div>
             </Link>
           ))}
-        </div>
-        <div className="mt-10">
-          <Link href="/additional-services" className="text-blue-700 hover:underline">See expanded catalog</Link>
-        </div>
-        <div className="mt-8 text-sm text-gray-600">
-          <a href="tel:+13024640950" className="mr-4 hover:underline">+1 302 464 0950</a>
-          <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a>
         </div>
       </section>
     </div>
   )
 }
-
