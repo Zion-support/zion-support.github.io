@@ -118,8 +118,8 @@ const HomePage: React.FC = () => {
             <div className="container">
               <div className="promo-card">
                 <div className="promo-content">
-                  <h2 className="section-title">New in September 2025</h2>
-                  <p className="promo-text">Explore fresh offerings like AI RFP Response Copilot, SEO Change Monitor, and more—priced and packaged for fast ROI.</p>
+                  <h2 className="section-title">What’s New</h2>
+                  <p className="promo-text">Fresh insights on RAG systems, actionable observability, trustworthy AI UX, and serverless at scale.</p>
                 </div>
                 <a href="/services-advertising" className="btn btn-primary">See What's New →</a>
               </div>
@@ -132,7 +132,10 @@ const HomePage: React.FC = () => {
             <div className="container">
               <h2 className="section-title">From the Blog</h2>
               <div className="blog-grid">
-                {BLOG_POSTS.slice(0, 3).map(post => (
+                {[...BLOG_POSTS]
+                  .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+                  .slice(0, 4)
+                  .map(post => (
                   <article key={post.id} className="blog-card">
                     <div className="blog-card-image" style={{ backgroundImage: `url(${post.featuredImage})` }} />
                     <div className="blog-card-content">
