@@ -80,31 +80,31 @@ export default function ContentPromoBanner({
 // Predefined banner configurations
 export const contentPromoBanners = {
   newGuide: {
-    title: "🎉 NEW: AI Implementation Master Guide 2026",
-    description: "200+ pages of proven strategies, templates, and case studies - completely free!",
-    ctaText: "Download Now",
-    ctaHref: "/resources/ai-implementation-master-guide-2026",
+    title: "🎉 BREAKTHROUGH: AI Healthcare Diagnosis 95% Accuracy",
+    description: "See how AI saved 2,500+ lives and delivered $50M+ in savings - complete case study inside!",
+    ctaText: "Read Case Study",
+    ctaHref: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
     variant: "success" as const
   },
-  productivity: {
-    title: "🚀 10x Your Team's Productivity",
-    description: "Learn the proven AI strategies that deliver 300% productivity gains in our latest guide",
+  enterprise: {
+    title: "🏢 AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
     ctaText: "Read Guide",
-    ctaHref: "/blog/ai-2025-productivity-revolution",
+    ctaHref: "/blog/ai-2026-enterprise-transformation",
     variant: "info" as const
   },
-  funding: {
-    title: "💰 Master AI Startup Funding",
-    description: "Get insider strategies, pitch templates, and real-world case studies from successful AI companies",
-    ctaText: "Learn More",
-    ctaHref: "/blog/ai-startup-funding-2025",
+  predictions: {
+    title: "🔮 AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    ctaText: "Explore Predictions",
+    ctaHref: "/blog/ai-2026-breakthrough-predictions",
     variant: "warning" as const
   },
   caseStudy: {
-    title: "📊 300% Revenue Growth Case Study",
-    description: "See how a major retail chain achieved massive growth with AI transformation",
+    title: "📊 95% Diagnostic Accuracy Case Study",
+    description: "How AI transformed healthcare with 95% accuracy, 80% time reduction, and $50M+ savings",
     ctaText: "View Case Study",
-    ctaHref: "/case-studies/ai-retail-transformation-2025",
+    ctaHref: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
     variant: "default" as const
   }
 };
