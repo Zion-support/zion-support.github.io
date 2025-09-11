@@ -1,42 +1,88 @@
-import React from 'react';
-import { cn } from '../lib/utils';
+import React, { forwardRef } from 'react';
+import './Button.css';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
   size?: 'small' | 'medium' | 'large';
+  loading?: boolean;
+  fullWidth?: boolean;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
   children: React.ReactNode;
-  className?: string;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { variant = 'primary', size = 'medium', className, children, ...props },
+    {
+      variant = 'primary',
+      size = 'medium',
+      loading = false,
+      fullWidth = false,
+      leftIcon,
+      rightIcon,
+      children,
+      className = '',
+      disabled,
+      ...props
+    },
     ref
   ) => {
-    const baseStyles =
-      'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
-
-    const variants = {
-      primary: 'bg-blue-600 text-white hover:bg-blue-700',
-      secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300',
-      outline: 'border border-gray-300 bg-transparent hover:bg-gray-50',
-      ghost: 'hover:bg-gray-100',
-      destructive: 'bg-red-600 text-white hover:bg-red-700',
-    };
-
-    const sizes = {
-      small: 'h-8 px-3 text-sm',
-      medium: 'h-10 px-4 py-2',
-      large: 'h-12 px-8 text-lg',
-    };
+    const isDisabled = disabled || loading;
 
     return (
       <button
-        className={cn(baseStyles, variants[variant], sizes[size], className)}
         ref={ref}
+        className={`btn btn--${variant} btn--${size} ${
+          fullWidth ? 'btn--full-width' : ''
+        } ${loading ? 'btn--loading' : ''} ${className}`}
+        disabled={isDisabled}
         {...props}
       >
-        {children}
+        {loading && (
+          <span className="btn__spinner" aria-hidden="true">
+            <svg
+              className="btn__spinner-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeDasharray="32"
+                strokeDashoffset="32"
+              >
+                <animate
+                  attributeName="stroke-dasharray"
+                  dur="2s"
+                  values="0 32;16 16;0 32;0 32"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="stroke-dashoffset"
+                  dur="2s"
+                  values="0;-16;-32;-32"
+                  repeatCount="indefinite"
+                />
+              </circle>
+            </svg>
+          </span>
+        )}
+        {leftIcon && !loading && (
+          <span className="btn__icon btn__icon--left" aria-hidden="true">
+            {leftIcon}
+          </span>
+        )}
+        <span className="btn__content">{children}</span>
+        {rightIcon && !loading && (
+          <span className="btn__icon btn__icon--right" aria-hidden="true">
+            {rightIcon}
+          </span>
+        )}
       </button>
     );
   }
