@@ -405,7 +405,7 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Just published: AI Enterprise Integration 2025, Advanced Cost Optimization, and Healthcare AI Success Stories.
+              Just published: AI Enterprise Integration 2025, GenAI Evaluation Playbook, Founder-Led Sales for AI Startups, and Edge AI Privacy by Design.
               Get practical guidance to implement AI faster, reduce costs by 60%, and achieve measurable results.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
@@ -426,6 +426,7 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+<<<<<<< HEAD
             <Link href='/blog/ai-enterprise-integration-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
@@ -478,11 +479,11 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/blog/ai-customer-support-automation-2025' className='group'>
+            <Link href='/blog/genai-evaluation-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎧</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Support Automation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Resolve faster, cut costs</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧪</div>
+                <h3 className='text-lg font-semibold mb-2'>GenAI Evaluation Playbook 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Ship quality with confidence</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>9 min read</span>
                   <span className='mx-2'>•</span>
@@ -490,14 +491,14 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-
-            <Link href='/blog/llm-guardrails-in-production-2025' className='group'>
+            
+            <Link href='/blog/founder-led-sales-ai-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
-                <h3 className='text-lg font-semibold mb-2'>LLM Guardrails in Production</h3>
-                <p className='text-sm opacity-90 mb-3'>Safety without blocking delivery</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤝</div>
+                <h3 className='text-lg font-semibold mb-2'>Founder-Led Sales (AI Startups)</h3>
+                <p className='text-sm opacity-90 mb-3'>Close your first 50 customers</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>8 min read</span>
+                  <span>10 min read</span>
                   <span className='mx-2'>•</span>
                   <span>Trending</span>
                 </div>

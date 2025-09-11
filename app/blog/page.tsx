@@ -4,6 +4,28 @@ import Link from 'next/link';
 export default function BlogPage() {
 	const blogPosts = [
 	  {
+	    id: 'genai-evaluation-playbook-2025',
+	    title: 'GenAI Evaluation Playbook 2025: Ship Quality with Confidence',
+	    excerpt:
+	      'Practical evals for quality, safety, and cost. Judge models, CI gates, and dashboards that teams actually use.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Evaluation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'founder-led-sales-ai-2025',
+	    title: 'Founder-Led Sales for AI Startups (2025): A Field Guide',
+	    excerpt:
+	      'Talk tracks, discovery questions, and repeatable motions to close your first 50 customers.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Growth',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
 	    id: 'product-analytics-2025',
 	    title: 'Product Analytics 2025: From Dashboards to Decisions',
 	    excerpt:
