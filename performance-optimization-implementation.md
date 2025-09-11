@@ -104,13 +104,13 @@ const DynamicChart = dynamic(() => import('./Chart'), {
 import Image from 'next/image';
 
 <Image
-  src='/image.jpg'
-  alt='Description'
+  src="/image.jpg"
+  alt="Description"
   width={600}
   height={400}
   priority={isAboveTheFold}
-  placeholder='blur'
-  blurDataURL='data:image/jpeg;base64,...'
+  placeholder="blur"
+  blurDataURL="data:image/jpeg;base64,..."
 />;
 ```
 
@@ -157,17 +157,17 @@ const urlsToCache = [
   '/fonts/inter-var.woff2',
 ];
 
-self.addEventListener('install', event => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache)),
   );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches
       .match(event.request)
-      .then(response => response || fetch(event.request))
+      .then((response) => response || fetch(event.request)),
   );
 });
 ```
@@ -194,7 +194,7 @@ self.addEventListener('fetch', event => {
 // Product cards, user profiles, and data tables
 export const ProductCard = React.memo(({ product, onUpdate }) => {
   const memoizedStats = useMemo(() => calculateStats(product), [product.id]);
-  const handleUpdate = useCallback(id => onUpdate(id), [onUpdate]);
+  const handleUpdate = useCallback((id) => onUpdate(id), [onUpdate]);
 
   return <Card>...</Card>;
 });

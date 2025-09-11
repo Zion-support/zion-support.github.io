@@ -1,4 +1,0 @@
-# Ignore local SQLite databases and instance files
-instance/*.db
-instance/*.sqlite
-instance/*.sqlite3

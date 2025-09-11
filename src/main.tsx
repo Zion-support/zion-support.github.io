@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './AppMinimal';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import './index.css';
 
+<<<<<<< HEAD
 // Register service worker for PWA functionality
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -28,5 +28,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <App />
       </HelmetProvider>
     </Router>
+=======
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+>>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
   </React.StrictMode>
 );

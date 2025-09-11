@@ -1,237 +1,229 @@
-export interface MicroSaasService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory?: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  integration: string[];
-  support: string[];
-  link: string;
-  badge?: string;
-  icon: string;
-  marketPrice: string;
-  contactEmail: string;
-  tags: string[];
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
-  featured: boolean;
-  location: string;
-  availability: string;
-  author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-    verified: boolean;
-  };
-  images: string[];
-  createdAt: string;
-}
+import { ProductListing } from "@/types/listings";
 
-export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  // AI & Machine Learning Services
+export const MICRO_SAAS_SERVICES: ProductListing[] = [
   {
-    id: 'ai-chatbot-builder',
-    title: 'AI Chatbot Builder Pro',
-    description:
-      'No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.',
-    category: 'AI Services',
-    subcategory: 'Chatbots & Conversational AI',
-    price: 99,
-    currency: '$',
-    pricingModel: 'monthly',
-    features: [
-      'Drag & drop chatbot builder',
-      'Advanced NLP processing',
-      'Multi-language support (50+ languages)',
-      'CRM integrations (Salesforce, HubSpot)',
-      'Analytics dashboard',
-      'Custom branding',
-      'API access',
-      '24/7 support',
-    ],
-    benefits: [
-      'Reduce customer service costs by 60%',
-      '24/7 customer support availability',
-      'Instant response times',
-      'Scalable customer interactions',
-      'Data-driven insights',
-    ],
-    useCases: [
-      'Customer service automation',
-      'Sales lead qualification',
-      'Support ticket routing',
-      'FAQ automation',
-      'Appointment scheduling',
-    ],
-    targetAudience: [
-      'E-commerce',
-      'SaaS companies',
-      'Customer service teams',
-      'Marketing agencies',
-    ],
-    integration: ['Salesforce', 'HubSpot', 'Zendesk', 'Slack', 'WhatsApp'],
-    support: [
-      '24/7 technical support',
-      'Implementation assistance',
-      'Training sessions',
-      'API documentation',
-    ],
-    link: 'https://ziontechgroup.com/ai-chatbot-builder',
-    badge: 'Popular',
-    icon: '🤖',
-    marketPrice: '$99-299/month',
-    contactEmail: 'kleber@ziontechgroup.com',
-    tags: ['AI Chatbot', 'NLP', 'Customer Service', 'Automation'],
-    aiScore: 95,
+    id: "ai-crm-001",
+    title: "AI-Powered CRM System",
+    description: "Intelligent customer relationship management with predictive analytics, automated lead scoring, and personalized customer insights. Features include smart email campaigns, sales forecasting, and customer behavior analysis.",
+    price: "$299",
+    category: "AI Business Solutions",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"],
     rating: 4.8,
-    reviewCount: 156,
-    featured: true,
-    location: 'Global',
-    availability: 'Immediate',
-    author: {
-      name: 'Zion Tech Group',
-      id: 'zion-tech-group',
-      avatarUrl:
-        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
-      verified: true,
-    },
-    images: [
-      'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500',
-    ],
-    createdAt: '2024-01-15T10:00:00.000Z',
+    reviewCount: 127,
+    aiScore: 95,
+    link: "https://ziontechgroup.com"
   },
   {
-    id: 'ai-content-generator',
-    title: 'AI Content Generator Suite',
-    description:
-      'Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.',
-    category: 'AI Services',
-    subcategory: 'Content Creation',
-    price: 79,
-    currency: '$',
-    pricingModel: 'monthly',
-    features: [
-      'AI-powered content generation',
-      'SEO optimization tools',
-      'Brand voice customization',
-      'Multi-format support',
-      'Plagiarism detection',
-      'Content calendar',
-      'Team collaboration',
-      'Analytics dashboard',
-    ],
-    benefits: [
-      'Save 15+ hours per week on content creation',
-      'Improve SEO rankings by 45%',
-      'Increase engagement rates by 55%',
-      'Maintain consistent brand voice',
-      'Scale content production 10x',
-    ],
-    targetAudience: [
-      'Content creators',
-      'Marketing teams',
-      'Small businesses',
-      'Digital agencies',
-    ],
-    marketPrice: '$79-199/month',
-    contactEmail: 'kleber@ziontechgroup.com',
-    tags: ['AI Content', 'SEO', 'Marketing', 'Automation'],
-    aiScore: 92,
-    rating: 4.7,
-    reviewCount: 203,
-    featured: true,
-    location: 'Global',
-    availability: 'Immediate',
-    author: {
-      name: 'Zion Tech Group',
-      id: 'zion-tech-group',
-      avatarUrl:
-        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
-      verified: true,
-    },
-    images: [
-      'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500',
-    ],
-    createdAt: '2024-01-15T10:00:00.000Z',
-  },
-  {
-    id: 'ai-customer-service',
-    title: 'AI Customer Service Platform',
-    description:
-      'Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support.',
-    category: 'AI Services',
-    subcategory: 'Customer Service',
-    price: 149,
-    currency: '$',
-    pricingModel: 'monthly',
-    features: [
-      'AI ticket routing',
-      'Automated responses',
-      'Sentiment analysis',
-      'Customer satisfaction tracking',
-      'Multi-channel support',
-      'Knowledge base',
-    ],
-    benefits: [
-      'Reduce response time by 70%',
-      'Improve customer satisfaction by 40%',
-      'Handle 10x more support requests',
-      '24/7 automated support',
-    ],
-    useCases: [
-      'Customer service automation',
-      'Ticket management',
-      'Customer feedback analysis',
-      'Support team optimization',
-    ],
-    targetAudience: [
-      'Customer support teams',
-      'E-commerce businesses',
-      'SaaS companies',
-      'Service providers',
-    ],
-    integration: [
-      'Zendesk',
-      'Intercom',
-      'Slack',
-      'Email systems',
-      'CRM platforms',
-    ],
-    support: [
-      '24/7 technical support',
-      'Implementation assistance',
-      'Training sessions',
-      'API documentation',
-    ],
-    link: 'https://ziontechgroup.com/ai-customer-service',
-    icon: '🎧',
-    marketPrice: '$149-399/month',
-    contactEmail: 'kleber@ziontechgroup.com',
-    tags: ['AI Support', 'Customer Service', 'Automation', 'Analytics'],
-    aiScore: 93,
+    id: "supply-chain-002",
+    title: "Smart Supply Chain Optimizer",
+    description: "End-to-end supply chain management with AI-driven demand forecasting, inventory optimization, and real-time tracking. Includes supplier management, cost analysis, and risk assessment tools.",
+    price: "$199",
+    category: "AI Business Solutions",
+    images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800"],
     rating: 4.6,
     reviewCount: 89,
-    featured: true,
-    location: 'Global',
-    availability: 'Immediate',
-    author: {
-      name: 'Zion Tech Group',
-      id: 'zion-tech-group',
-      avatarUrl:
-        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
-      verified: true,
-    },
-    images: [
-      'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500',
-    ],
-    createdAt: '2024-01-25T09:15:00.000Z',
+    aiScore: 92,
+    link: "https://ziontechgroup.com"
   },
+  {
+    id: "ai-marketing-003",
+    title: "AI Marketing Automation Suite",
+    description: "Comprehensive marketing automation platform with intelligent audience segmentation, personalized content generation, and performance optimization. Features A/B testing, ROI tracking, and multi-channel campaign management.",
+    price: "$399",
+    category: "AI Business Solutions",
+    images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"],
+    rating: 4.9,
+    reviewCount: 156,
+    aiScore: 94,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "cloud-infra-004",
+    title: "Cloud Infrastructure Manager",
+    description: "Enterprise-grade cloud infrastructure management with automated scaling, cost optimization, and security monitoring. Includes multi-cloud support, backup solutions, and disaster recovery planning.",
+    price: "$149",
+    category: "IT Infrastructure",
+    images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800"],
+    rating: 4.7,
+    reviewCount: 203,
+    aiScore: 88,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "data-analytics-005",
+    title: "Advanced Data Analytics Platform",
+    description: "Powerful data analytics and business intelligence platform with real-time dashboards, predictive modeling, and automated reporting. Features data visualization, statistical analysis, and machine learning capabilities.",
+    price: "$249",
+    category: "Data Analytics",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"],
+    rating: 4.8,
+    reviewCount: 178,
+    aiScore: 91,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "ai-dev-006",
+    title: "AI Development Framework",
+    description: "Complete AI development toolkit with pre-trained models, custom algorithm development, and deployment automation. Includes model training, testing frameworks, and production deployment tools.",
+    price: "$599",
+    category: "AI Development",
+    images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800"],
+    rating: 4.9,
+    reviewCount: 234,
+    aiScore: 96,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "fintech-007",
+    title: "FinTech Payment Gateway",
+    description: "Secure and scalable payment processing solution with fraud detection, multi-currency support, and compliance management. Features real-time transaction monitoring, automated reconciliation, and API integration.",
+    price: "$349",
+    category: "FinTech",
+    images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800"],
+    rating: 4.7,
+    reviewCount: 145,
+    aiScore: 89,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "healthtech-008",
+    title: "Healthcare Analytics Platform",
+    description: "Comprehensive healthcare data analytics platform with patient monitoring, predictive diagnostics, and treatment optimization. Includes HIPAA compliance, clinical decision support, and population health management.",
+    price: "$279",
+    category: "HealthTech",
+    images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800"],
+    rating: 4.8,
+    reviewCount: 167,
+    aiScore: 93,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "ecommerce-009",
+    title: "E-commerce Optimization Suite",
+    description: "AI-powered e-commerce optimization with personalized recommendations, dynamic pricing, and inventory management. Features customer behavior analysis, conversion optimization, and multi-platform integration.",
+    price: "$799",
+    category: "E-commerce",
+    images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800"],
+    rating: 4.9,
+    reviewCount: 198,
+    aiScore: 94,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "edtech-010",
+    title: "Educational Technology Platform",
+    description: "Comprehensive learning management system with adaptive learning paths, progress tracking, and content creation tools. Includes virtual classrooms, assessment engines, and student analytics.",
+    price: "$199",
+    category: "EdTech",
+    images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"],
+    rating: 4.6,
+    reviewCount: 134,
+    aiScore: 87,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "cybersecurity-011",
+    title: "AI Cybersecurity Suite",
+    description: "Advanced cybersecurity platform with threat detection, vulnerability assessment, and automated incident response. Features behavioral analysis, real-time monitoring, and compliance reporting.",
+    price: "$179",
+    category: "Cybersecurity",
+    images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800"],
+    rating: 4.8,
+    reviewCount: 189,
+    aiScore: 92,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "iot-platform-012",
+    title: "IoT Management Platform",
+    description: "Comprehensive IoT device management with real-time monitoring, data collection, and automated control systems. Includes device provisioning, security management, and analytics dashboards.",
+    price: "$449",
+    category: "IoT Solutions",
+    images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800"],
+    rating: 4.7,
+    reviewCount: 156,
+    aiScore: 90,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "blockchain-013",
+    title: "Blockchain Development Kit",
+    description: "Complete blockchain development toolkit with smart contract templates, deployment tools, and monitoring solutions. Features multi-chain support, security auditing, and performance optimization.",
+    price: "$899",
+    category: "Blockchain",
+    images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800"],
+    rating: 4.9,
+    reviewCount: 267,
+    aiScore: 95,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "api-gateway-014",
+    title: "API Gateway & Management",
+    description: "Enterprise API gateway with rate limiting, authentication, and monitoring capabilities. Includes API documentation, testing tools, and performance analytics for seamless integration.",
+    price: "$329",
+    category: "API Management",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"],
+    rating: 4.6,
+    reviewCount: 123,
+    aiScore: 88,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "workflow-automation-015",
+    title: "Workflow Automation Engine",
+    description: "Intelligent workflow automation with process optimization, task scheduling, and performance analytics. Features visual workflow designer, integration connectors, and real-time monitoring.",
+    price: "$249",
+    category: "Business Process",
+    images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"],
+    rating: 4.7,
+    reviewCount: 178,
+    aiScore: 91,
+    link: "https://ziontechgroup.com"
+  }
 ];
+
+export const MICRO_SAAS_CATEGORIES = [
+  { label: 'AI Business Solutions', value: 'ai-business-solutions' },
+  { label: 'IT Infrastructure', value: 'it-infrastructure' },
+  { label: 'Data Analytics', value: 'data-analytics' },
+  { label: 'AI Development', value: 'ai-development' },
+  { label: 'FinTech', value: 'fintech' },
+  { label: 'HealthTech', value: 'healthtech' },
+  { label: 'E-commerce', value: 'e-commerce' },
+  { label: 'EdTech', value: 'edtech' },
+  { label: 'Cybersecurity', value: 'cybersecurity' },
+  { label: 'IoT Solutions', value: 'iot-solutions' },
+  { label: 'Blockchain', value: 'blockchain' },
+  { label: 'API Management', value: 'api-management' },
+  { label: 'Business Process', value: 'business-process' }
+];
+
+export const MICRO_SAAS_SUBCATEGORIES = {
+  'ai-business-solutions': ['CRM & Sales', 'Supply Chain', 'Marketing'],
+  'it-infrastructure': ['Cloud Management', 'Server Administration', 'Network Security'],
+  'data-analytics': ['Business Intelligence', 'Predictive Analytics', 'Data Visualization'],
+  'ai-development': ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
+  'fintech': ['Payment Processing', 'Risk Management', 'Financial Analytics'],
+  'healthtech': ['Patient Management', 'Clinical Analytics', 'Telemedicine'],
+  'e-commerce': ['Platform Optimization', 'Customer Analytics', 'Inventory Management'],
+  'edtech': ['Learning Management', 'Student Analytics', 'Content Creation'],
+  'cybersecurity': ['Threat Detection', 'Vulnerability Assessment', 'Incident Response'],
+  'iot-solutions': ['Device Management', 'Data Collection', 'Control Systems'],
+  'blockchain': ['Smart Contracts', 'DeFi Solutions', 'Supply Chain Tracking'],
+  'api-management': ['Gateway Services', 'Documentation', 'Monitoring'],
+  'business-process': ['Workflow Automation', 'Process Optimization', 'Performance Analytics']
+};
+
+export const PRICING_TIERS = {
+  basic: { name: 'Basic', multiplier: 1 },
+  professional: { name: 'Professional', multiplier: 1.5 },
+  enterprise: { name: 'Enterprise', multiplier: 2.5 }
+};
+
+export const CONTACT_INFO = {
+  mobile: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  website: "https://ziontechgroup.com"
+};
