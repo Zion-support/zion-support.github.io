@@ -13,11 +13,15 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
   { path: '/contact', element: <Contact /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
 ];
 
 function EnhancedSuspenseFallback() {
