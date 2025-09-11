@@ -119,7 +119,17 @@ export function AccessibilityEnhancer({ className }: AccessibilityEnhancerProps)
 
   return (
     <>
-      {/* Toggle Button */}
+      {/* Skip Links */}
+      <div className="sr-only focus:absolute focus:top-4 focus:left-4 z-50">
+        <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
+          Skip to main content
+        </a>
+        <a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">
+          Skip to navigation
+        </a>
+      </div>
+
+      {/* Accessibility Toggle Button */}
       <Button
         onClick={() => setIsVisible(!isVisible)}
         className={`fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-zion-purple hover:bg-zion-purple-dark text-white shadow-lg ${className || ''}`}
