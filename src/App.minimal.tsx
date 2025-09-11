@@ -1,12 +1,12 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks/useScrollToTop";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 
