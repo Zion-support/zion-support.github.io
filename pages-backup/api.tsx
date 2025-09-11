@@ -1,0 +1,37 @@
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+
+export default function APIDocumentation() {
+  return (;
+    <>;
+      <Head>;
+        <title>API Documentation - Zion Tech Group</title>;
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;
+          <div className="container mx-auto px-4 text-center">;
+            <h1 className="text-4xl font-bold mb-4">API Documentation</h1>;
+            <p className="text-xl">Comprehensive API documentation for Zion Tech Group services</p>;
+          </div>;
+        <div className="container mx-auto px-4 py-16">;
+          <div className="max-w-4xl mx-auto">;
+            <h2 className="text-3xl font-bold mb-8">Available APIs</h2>;
+            <div className="grid md:grid-cols-2 gap-8">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h3 className="text-xl font-semibold mb-4">Services API</h3>;
+                <p className="text-gray-600 mb-4">Access our comprehensive services catalog</p>;
+                <Link href="/services" className="text-blue-600 hover:text-blue-800">;
+                  View Services →;
+                </Link>;
+              </div>;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h3 className="text-xl font-semibold mb-4">Contact API</h3>;
+                <p className="text-gray-600 mb-4">Submit inquiries and get support</p>;
+                <Link href="/contact" className="text-blue-600 hover:text-blue-800">;
+                  Contact Us →;
+                </Link>;
+              </div>;
+    </>;

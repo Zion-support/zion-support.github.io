@@ -1,0 +1,36 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/AppMinimal.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist",
+    "out",
+    "coverage",
+    "temp_components",
+    "temp_backup",
+    "temp-backup",
+    "src_backup",
+    "src.broken",
+    "src.corrupted",
+    "src/utils/**",
+    "src/pages/**",
+    "src/routes/**",
+    "src/services/**",
+    "src/store/**",
+    "src/test/**",
+    "src/tests/**",
+    "src/types/**",
+    "utils",
+    "supabase",
+    "scripts",
+    "types/**",
+    "pages/**",
+    "services/**",
+    "store/**",
+    "utils/**"
+  ]
+}
+
