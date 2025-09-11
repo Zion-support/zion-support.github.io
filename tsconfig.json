@@ -46,6 +46,7 @@
     "strictNullChecks": true
   },
   "include": [
+    "src",
     "app",
     "components",
     "lib",

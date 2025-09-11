@@ -1,4 +1,4 @@
-import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
@@ -9,7 +9,6 @@ export default defineConfig({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
     }),
-    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
@@ -106,19 +105,13 @@ export default defineConfig({
     exclude: ['@radix-ui/react-icons']
   },
   server: {
-<<<<<<< HEAD
-    port: 3000,
+    port: Number(process.env.PORT) || 3000,
     host: true,
-    open: true,
+    open: false,
     cors: true,
     hmr: {
       overlay: false,
     }
-=======
-    port: Number(process.env.PORT) || 3000,
-    host: true,
-    open: false,
->>>>>>> origin/chore/seo-vite-tweaks
   },
   preview: {
     port: 4173,
