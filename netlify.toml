@@ -27,30 +27,11 @@
   # Enable build caching
   NETLIFY_CACHE_DIR = ".netlify/cache"
 
-[functions]
-  # Ensure Netlify bundles TS/JS functions with esbuild
-  node_bundler = "esbuild"
-  directory = "netlify/functions"
-
 # SPA routing redirects for Vite build
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-  command = "npm ci && npm run build"
-  publish = "out"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
 # Security and caching headers for static assets
 [[headers]]
@@ -67,37 +48,11 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-<<<<<<< HEAD
 # Static redirects for exported site
-=======
-# Static redirects to mirror Next.js redirects (since output: export)
-<<<<<<< HEAD
-=======
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-# Static redirects for exported site
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
   status = 301
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
 
 [[redirects]]
   from = "/ai-financial-planning-platform"
@@ -128,15 +83,3 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/seo-redirects-netlify-fix
-=======
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/chore/seo-redirects-netlify-fix
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
