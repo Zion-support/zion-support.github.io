@@ -149,6 +149,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Social Proof & Trust Indicators */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              Trusted by Industry Leaders
+            </h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Join thousands of professionals who rely on our expertise and resources
+            </p>
+          </div>
+          
+          {/* Stats Grid */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-12'>
+            <div className='text-center'>
+              <div className='text-4xl font-bold text-blue-600 mb-2'>500+</div>
+              <div className='text-gray-600'>Projects Delivered</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl font-bold text-blue-600 mb-2'>25K+</div>
+              <div className='text-gray-600'>Resource Downloads</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl font-bold text-blue-600 mb-2'>98%</div>
+              <div className='text-gray-600'>Client Satisfaction</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl font-bold text-blue-600 mb-2'>15+</div>
+              <div className='text-gray-600'>Years Experience</div>
+            </div>
+          </div>
+
+          {/* Client Logos */}
+          <div className='text-center mb-12'>
+            <p className='text-gray-600 mb-8'>Trusted by leading companies worldwide</p>
+            <div className='flex flex-wrap justify-center items-center gap-8 opacity-60'>
+              <div className='text-2xl font-bold text-gray-400'>Microsoft</div>
+              <div className='text-2xl font-bold text-gray-400'>Google</div>
+              <div className='text-2xl font-bold text-gray-400'>Amazon</div>
+              <div className='text-2xl font-bold text-gray-400'>IBM</div>
+              <div className='text-2xl font-bold text-gray-400'>Salesforce</div>
+              <div className='text-2xl font-bold text-gray-400'>Oracle</div>
+            </div>
+          </div>
+
+          {/* Recent Success Stories */}
+          <div className='bg-gray-50 rounded-xl p-8'>
+            <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Recent Success Stories</h3>
+            <div className='grid md:grid-cols-2 gap-6'>
+              <div className='bg-white p-6 rounded-lg shadow-sm'>
+                <div className='flex items-center mb-4'>
+                  <div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4'>
+                    <span className='text-blue-600 font-bold'>AI</span>
+                  </div>
+                  <div>
+                    <h4 className='font-semibold text-gray-900'>Fortune 500 Manufacturing</h4>
+                    <p className='text-sm text-gray-600'>AI Implementation</p>
+                  </div>
+                </div>
+                <p className='text-gray-700 mb-4'>
+                  "Zion Tech Group helped us implement AI automation across our supply chain, 
+                  resulting in 40% cost reduction and 60% faster processing times."
+                </p>
+                <div className='text-sm text-blue-600 font-medium'>- CTO, Global Manufacturing Co.</div>
+              </div>
+              <div className='bg-white p-6 rounded-lg shadow-sm'>
+                <div className='flex items-center mb-4'>
+                  <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4'>
+                    <span className='text-green-600 font-bold'>SaaS</span>
+                  </div>
+                  <div>
+                    <h4 className='font-semibold text-gray-900'>Growing SaaS Startup</h4>
+                    <p className='text-sm text-gray-600'>Micro SaaS Development</p>
+                  </div>
+                </div>
+                <p className='text-gray-700 mb-4'>
+                  "From concept to $1M ARR in 18 months. Their expertise in micro SaaS 
+                  development and growth strategies was invaluable."
+                </p>
+                <div className='text-sm text-green-600 font-medium'>- Founder, Tech Startup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Services Banner */}
       <section className='py-16 bg-blue-600 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -192,6 +278,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Content Promotion Banner */}
+      <section className='py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+              🚀 New Content & Resources Available!
+            </h2>
+            <p className='text-xl opacity-90 mb-8 max-w-3xl mx-auto'>
+              Discover our latest AI guides, implementation checklists, and expert insights. 
+              Everything you need to stay ahead in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/resources'
+                className='bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg'
+              >
+                Browse Free Resources
+              </Link>
+              <Link
+                href='/blog'
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg'
+              >
+                Read Latest Articles
+              </Link>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
+              <div className='text-3xl mb-2'>✅</div>
+              <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist</h3>
+              <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
+            </div>
+            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
+              <div className='text-3xl mb-2'>🤖</div>
+              <h3 className='text-lg font-semibold mb-2'>Enterprise AI Automation</h3>
+              <p className='text-sm opacity-90'>Comprehensive 2025 implementation guide with real case studies</p>
+            </div>
+            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
+              <div className='text-3xl mb-2'>💰</div>
+              <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
+              <p className='text-sm opacity-90'>Complete guide to securing funding for AI startups</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Latest Articles */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -204,18 +336,18 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <Link href='/blog/agentic-workflows-2025' className='group'>
+            <Link href='/blog/ai-automation-enterprise-2025' className='group'>
               <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
                 <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>Agentic Workflows in 2025: Practical Patterns for Production</h3>
-                <p className='text-blue-800 mt-2'>Guardrails, budgets, approvals, and observability to safely ship agentic systems.</p>
+                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Automation in Enterprise: Complete 2025 Guide</h3>
+                <p className='text-blue-800 mt-2'>Everything you need to know about implementing AI automation in your enterprise.</p>
               </div>
             </Link>
-            <Link href='/blog/data-engineering-modern-stack' className='group'>
-              <div className='rounded-lg border border-emerald-200 bg-emerald-50 p-6 hover:bg-emerald-100 transition-colors'>
-                <div className='text-sm font-medium text-emerald-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-emerald-900 group-hover:underline'>Modern Data Engineering Stack: 2025 Reference</h3>
-                <p className='text-emerald-800 mt-2'>An opinionated blueprint from ingestion to governance with SLAs.</p>
+            <Link href='/blog/startup-funding-ai-era' className='group'>
+              <div className='rounded-lg border border-green-200 bg-green-50 p-6 hover:bg-green-100 transition-colors'>
+                <div className='text-sm font-medium text-green-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Startup Funding in the AI Era: Complete Guide</h3>
+                <p className='text-green-800 mt-2'>Navigate the new funding landscape and position your AI startup for success.</p>
               </div>
             </Link>
           </div>

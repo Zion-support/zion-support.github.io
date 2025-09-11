@@ -1,325 +1,328 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function AIImplementationChecklistPage() {
+export default function AIImplementationChecklist() {
   return (
-    <div className='min-h-screen bg-white'>
-      {/* Hero Section */}
-      <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center'>
-            <div className='inline-flex items-center gap-2 bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mb-4'>
-              <span>📋</span>
-              Free Resource
-            </div>
-            <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
-              AI Implementation Checklist: Complete Guide for 2025
-            </h1>
-            <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              Download our comprehensive checklist to ensure successful AI implementation in your organization. 
-              Covering strategy, technology, security, and change management.
-            </p>
-            <div className='flex items-center justify-center gap-6 text-sm text-gray-500'>
-              <span>📄 47-Page PDF</span>
-              <span>⏱️ 2 min download</span>
-              <span>👥 25,000+ downloads</span>
-            </div>
+    <div className="min-h-screen bg-white">
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <header className="mb-12">
+          <div className="flex items-center gap-2 mb-4">
+            <Link href="/resources" className="text-blue-600 hover:underline">Resources</Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-600">AI Implementation</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Implementation Checklist: Your Complete Guide to Success
+          </h1>
+          <div className="flex items-center gap-4 text-gray-600">
+            <span>Free Download</span>
+            <span>•</span>
+            <span>15 min read</span>
+            <span>•</span>
+            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+              Implementation Guide
+            </span>
+          </div>
+        </header>
+
+        {/* Hero Image */}
+        <div className="mb-12">
+          <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center">
+            <div className="text-8xl">✅</div>
           </div>
         </div>
-      </section>
 
-      {/* Download Section */}
-      <section className='py-16'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl text-center'>
-            <h2 className='text-3xl font-bold mb-4'>Get Your Free AI Implementation Checklist</h2>
-            <p className='text-lg mb-6 opacity-90'>
-              Join 25,000+ professionals who have successfully implemented AI using our proven framework.
+        {/* Content */}
+        <div className="prose prose-lg max-w-none">
+          <p className="text-xl text-gray-600 mb-8">
+            Implementing AI in your organization can be complex and overwhelming. This comprehensive checklist 
+            will guide you through every step of the AI implementation process, from initial planning to 
+            successful deployment and optimization. Use this as your roadmap to avoid common pitfalls and 
+            ensure your AI projects deliver real business value.
+          </p>
+
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 mb-12">
+            <h2 className="text-2xl font-bold text-blue-900 mb-4">📥 Download the Complete Checklist</h2>
+            <p className="text-blue-800 mb-6">
+              Get the full interactive checklist with detailed explanations, timelines, and expert tips. 
+              Perfect for project managers, technical leads, and executives.
             </p>
-            <div className='max-w-md mx-auto flex gap-4 mb-6'>
-              <input
-                type='email'
-                placeholder='Enter your email'
-                className='flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none'
-              />
-              <button className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
-                Download Free
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Download PDF Checklist
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                Get Excel Template
               </button>
             </div>
-            <p className='text-sm opacity-75'>
-              No spam. Unsubscribe anytime. We respect your privacy.
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Phase 1: Pre-Implementation Planning</h2>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Business Case Development</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Business Case Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Define clear business objectives and success metrics</li>
+              <li>□ Identify specific problems AI will solve</li>
+              <li>□ Calculate expected ROI and cost savings</li>
+              <li>□ Assess competitive advantages</li>
+              <li>□ Document current process inefficiencies</li>
+              <li>□ Establish baseline performance metrics</li>
+              <li>□ Define success criteria and KPIs</li>
+              <li>□ Get stakeholder buy-in and approval</li>
+            </ul>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Technical Assessment</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Technical Readiness Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Evaluate current IT infrastructure</li>
+              <li>□ Assess data quality and availability</li>
+              <li>□ Review security and compliance requirements</li>
+              <li>□ Identify integration points with existing systems</li>
+              <li>□ Evaluate cloud vs. on-premises options</li>
+              <li>□ Assess scalability requirements</li>
+              <li>□ Review data governance policies</li>
+              <li>□ Plan for data backup and recovery</li>
+            </ul>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Team and Resource Planning</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Team Planning Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Identify required skills and expertise</li>
+              <li>□ Assess current team capabilities</li>
+              <li>□ Plan for training and development</li>
+              <li>□ Consider external consultants or vendors</li>
+              <li>□ Define roles and responsibilities</li>
+              <li>□ Establish project governance structure</li>
+              <li>□ Plan for change management</li>
+              <li>□ Set up communication protocols</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Phase 2: Data Preparation</h2>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Data Collection and Quality</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Data Preparation Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Identify all relevant data sources</li>
+              <li>□ Assess data quality and completeness</li>
+              <li>□ Clean and preprocess data</li>
+              <li>□ Handle missing values and outliers</li>
+              <li>□ Ensure data privacy and security</li>
+              <li>□ Create data validation rules</li>
+              <li>□ Establish data lineage tracking</li>
+              <li>□ Set up data monitoring systems</li>
+            </ul>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Data Governance and Compliance</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Governance Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Review data privacy regulations (GDPR, CCPA, etc.)</li>
+              <li>□ Implement data access controls</li>
+              <li>□ Establish data retention policies</li>
+              <li>□ Create audit trails</li>
+              <li>□ Ensure data anonymization where required</li>
+              <li>□ Document data processing activities</li>
+              <li>□ Train team on data governance</li>
+              <li>□ Set up compliance monitoring</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Phase 3: Model Development</h2>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Model Selection and Training</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Model Development Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Choose appropriate algorithms</li>
+              <li>□ Split data into training/validation/test sets</li>
+              <li>□ Implement cross-validation</li>
+              <li>□ Tune hyperparameters</li>
+              <li>□ Monitor training progress</li>
+              <li>□ Evaluate model performance</li>
+              <li>□ Test for bias and fairness</li>
+              <li>□ Document model decisions and assumptions</li>
+            </ul>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Model Validation and Testing</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Validation Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Perform statistical significance testing</li>
+              <li>□ Test on unseen data</li>
+              <li>□ Validate against business requirements</li>
+              <li>□ Check for overfitting</li>
+              <li>□ Test edge cases and error conditions</li>
+              <li>□ Perform A/B testing if applicable</li>
+              <li>□ Document model limitations</li>
+              <li>□ Get stakeholder approval</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Phase 4: Deployment and Integration</h2>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Infrastructure Setup</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Deployment Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Set up production environment</li>
+              <li>□ Configure monitoring and logging</li>
+              <li>□ Implement CI/CD pipelines</li>
+              <li>□ Set up model versioning</li>
+              <li>□ Configure auto-scaling</li>
+              <li>□ Implement backup and recovery</li>
+              <li>□ Set up security measures</li>
+              <li>□ Test deployment process</li>
+            </ul>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Integration and Testing</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Integration Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Integrate with existing systems</li>
+              <li>□ Test API endpoints</li>
+              <li>□ Validate data flow</li>
+              <li>□ Test error handling</li>
+              <li>□ Perform load testing</li>
+              <li>□ Test user interfaces</li>
+              <li>□ Validate security measures</li>
+              <li>□ Conduct user acceptance testing</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Phase 5: Monitoring and Optimization</h2>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Performance Monitoring</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Monitoring Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Set up performance dashboards</li>
+              <li>□ Monitor model accuracy and drift</li>
+              <li>□ Track business KPIs</li>
+              <li>□ Monitor system performance</li>
+              <li>□ Set up alerting systems</li>
+              <li>□ Regular performance reviews</li>
+              <li>□ Document issues and resolutions</li>
+              <li>□ Plan for model retraining</li>
+            </ul>
+          </div>
+
+          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Continuous Improvement</h3>
+          <div className="bg-gray-50 p-6 rounded-lg my-6">
+            <h4 className="font-semibold mb-4">✅ Optimization Checklist:</h4>
+            <ul className="space-y-2">
+              <li>□ Collect user feedback</li>
+              <li>□ Analyze performance metrics</li>
+              <li>□ Identify improvement opportunities</li>
+              <li>□ Plan model updates</li>
+              <li>□ Test new features</li>
+              <li>□ Optimize resource usage</li>
+              <li>□ Update documentation</li>
+              <li>□ Share lessons learned</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Common Pitfalls to Avoid</h2>
+
+          <div className="bg-red-50 border-l-4 border-red-400 p-6 my-8">
+            <h3 className="text-lg font-semibold text-red-900 mb-4">⚠️ Critical Mistakes to Avoid:</h3>
+            <ul className="text-red-800 space-y-2">
+              <li>• Starting without clear business objectives</li>
+              <li>• Ignoring data quality issues</li>
+              <li>• Skipping proper testing and validation</li>
+              <li>• Underestimating change management needs</li>
+              <li>• Not planning for model maintenance</li>
+              <li>• Overlooking security and compliance</li>
+              <li>• Failing to monitor model performance</li>
+              <li>• Not involving end users in the process</li>
+            </ul>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Success Metrics and KPIs</h2>
+
+          <div className="grid md:grid-cols-2 gap-6 my-8">
+            <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+              <h4 className="font-semibold text-green-900 mb-2">Technical Metrics</h4>
+              <ul className="text-green-800 text-sm space-y-1">
+                <li>• Model accuracy and precision</li>
+                <li>• System uptime and availability</li>
+                <li>• Response time and latency</li>
+                <li>• Error rates and exceptions</li>
+              </ul>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Business Metrics</h4>
+              <ul className="text-blue-800 text-sm space-y-1">
+                <li>• ROI and cost savings</li>
+                <li>• Process efficiency improvements</li>
+                <li>• Customer satisfaction scores</li>
+                <li>• Revenue impact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mt-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Expert Guidance for Your AI Implementation?</h3>
+            <p className="text-gray-600 mb-6">
+              Our AI implementation experts can help you navigate every step of your AI journey. 
+              From strategy development to deployment and optimization, we provide comprehensive 
+              support to ensure your AI projects succeed.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Included */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>What's Included in This Checklist</h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              A comprehensive 47-page guide covering every aspect of AI implementation
-            </p>
-          </div>
-          
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            <div className='bg-white p-6 rounded-lg shadow-md'>
-              <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4'>
-                <span className='text-blue-600 text-2xl'>🎯</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-800 mb-3'>Strategy & Planning</h3>
-              <ul className='space-y-2 text-gray-600'>
-                <li>• Business case development</li>
-                <li>• ROI calculation framework</li>
-                <li>• Stakeholder alignment</li>
-                <li>• Success metrics definition</li>
-                <li>• Risk assessment matrix</li>
-              </ul>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md'>
-              <div className='w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4'>
-                <span className='text-green-600 text-2xl'>🔧</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-800 mb-3'>Technology Selection</h3>
-              <ul className='space-y-2 text-gray-600'>
-                <li>• Platform evaluation criteria</li>
-                <li>• Integration requirements</li>
-                <li>• Scalability considerations</li>
-                <li>• Vendor comparison matrix</li>
-                <li>• Proof of concept guidelines</li>
-              </ul>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md'>
-              <div className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>
-                <span className='text-purple-600 text-2xl'>🛡️</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-800 mb-3'>Security & Compliance</h3>
-              <ul className='space-y-2 text-gray-600'>
-                <li>• Data privacy requirements</li>
-                <li>• Security audit checklist</li>
-                <li>• Compliance frameworks</li>
-                <li>• Access control policies</li>
-                <li>• Incident response plan</li>
-              </ul>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md'>
-              <div className='w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4'>
-                <span className='text-orange-600 text-2xl'>👥</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-800 mb-3'>Change Management</h3>
-              <ul className='space-y-2 text-gray-600'>
-                <li>• Training program design</li>
-                <li>• Communication strategy</li>
-                <li>• Resistance management</li>
-                <li>• Adoption metrics</li>
-                <li>• Feedback collection</li>
-              </ul>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md'>
-              <div className='w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4'>
-                <span className='text-red-600 text-2xl'>📊</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-800 mb-3'>Implementation & Monitoring</h3>
-              <ul className='space-y-2 text-gray-600'>
-                <li>• Phased rollout plan</li>
-                <li>• Performance monitoring</li>
-                <li>• Quality assurance</li>
-                <li>• Optimization strategies</li>
-                <li>• Continuous improvement</li>
-              </ul>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md'>
-              <div className='w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4'>
-                <span className='text-indigo-600 text-2xl'>📈</span>
-              </div>
-              <h3 className='text-xl font-semibold text-gray-800 mb-3'>Scaling & Optimization</h3>
-              <ul className='space-y-2 text-gray-600'>
-                <li>• Expansion criteria</li>
-                <li>• Performance benchmarks</li>
-                <li>• Cost optimization</li>
-                <li>• Advanced features</li>
-                <li>• Future roadmap planning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className='py-16'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Success Stories</h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              See how organizations have used this checklist to achieve successful AI implementations
-            </p>
-          </div>
-          
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <div className='bg-white p-6 rounded-lg shadow-md border border-gray-200'>
-              <div className='flex items-center gap-3 mb-4'>
-                <div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center'>
-                  <span className='text-blue-600 font-semibold'>TC</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-800'>TechCorp Inc.</h4>
-                  <p className='text-sm text-gray-600'>Fortune 500 Technology</p>
-                </div>
-              </div>
-              <p className='text-gray-700 mb-4'>
-                "This checklist helped us implement AI automation across 15 departments in just 6 months. 
-                The structured approach saved us months of planning time."
-              </p>
-              <div className='text-sm text-blue-600 font-semibold'>
-                Result: 40% cost reduction, 6-month implementation
-              </div>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md border border-gray-200'>
-              <div className='flex items-center gap-3 mb-4'>
-                <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
-                  <span className='text-green-600 font-semibold'>RM</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-800'>RetailMax</h4>
-                  <p className='text-sm text-gray-600'>E-commerce Platform</p>
-                </div>
-              </div>
-              <p className='text-gray-700 mb-4'>
-                "The security and compliance section was invaluable. We avoided potential GDPR violations 
-                and implemented robust data protection from day one."
-              </p>
-              <div className='text-sm text-green-600 font-semibold'>
-                Result: Zero compliance issues, 90% faster deployment
-              </div>
-            </div>
-
-            <div className='bg-white p-6 rounded-lg shadow-md border border-gray-200'>
-              <div className='flex items-center gap-3 mb-4'>
-                <div className='w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center'>
-                  <span className='text-purple-600 font-semibold'>FS</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-800'>Finance Solutions</h4>
-                  <p className='text-sm text-gray-600'>Financial Services</p>
-                </div>
-              </div>
-              <p className='text-gray-700 mb-4'>
-                "The change management framework helped us achieve 95% user adoption within 3 months. 
-                Our team was fully prepared for the transition."
-              </p>
-              <div className='text-sm text-purple-600 font-semibold'>
-                Result: 95% adoption rate, 3-month rollout
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Additional Resources</h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Complement your AI implementation with these additional tools and guides
-            </p>
-          </div>
-          
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/resources/ai-roi-calculator' className='group'>
-              <div className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200'>
-                <div className='w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4'>
-                  <span className='text-blue-600 text-xl'>🧮</span>
-                </div>
-                <h3 className='text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors'>
-                  AI ROI Calculator
-                </h3>
-                <p className='text-gray-600 text-sm'>
-                  Calculate potential returns on your AI investment with our interactive tool.
-                </p>
-              </div>
-            </Link>
-
-            <Link href='/resources/ai-vendor-comparison' className='group'>
-              <div className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200'>
-                <div className='w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4'>
-                  <span className='text-green-600 text-xl'>⚖️</span>
-                </div>
-                <h3 className='text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors'>
-                  Vendor Comparison Matrix
-                </h3>
-                <p className='text-gray-600 text-sm'>
-                  Compare leading AI platforms across key criteria and features.
-                </p>
-              </div>
-            </Link>
-
-            <Link href='/resources/ai-security-checklist' className='group'>
-              <div className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200'>
-                <div className='w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mb-4'>
-                  <span className='text-red-600 text-xl'>🔒</span>
-                </div>
-                <h3 className='text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors'>
-                  Security Checklist
-                </h3>
-                <p className='text-gray-600 text-sm'>
-                  Comprehensive security audit checklist for AI implementations.
-                </p>
-              </div>
-            </Link>
-
-            <Link href='/resources/change-management-template' className='group'>
-              <div className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200'>
-                <div className='w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>
-                  <span className='text-purple-600 text-xl'>📋</span>
-                </div>
-                <h3 className='text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors'>
-                  Change Management Template
-                </h3>
-                <p className='text-gray-600 text-sm'>
-                  Ready-to-use templates for managing organizational change.
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className='py-16'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              Need Help with Your AI Implementation?
-            </h2>
-            <p className='text-gray-600 mb-6 max-w-2xl mx-auto'>
-              Our team of AI experts can help you implement this checklist and ensure successful 
-              deployment of AI solutions in your organization.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href='/contact'
-                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
-                Schedule Consultation
+                Get Implementation Support
               </Link>
               <Link
-                href='/services/ai-services'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors'
+                href="/services/ai-services"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
               >
-                View AI Services
+                Explore AI Services
               </Link>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Related Resources */}
+        <section className="mt-16 pt-8 border-t border-gray-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-automation-enterprise-2025" className="group">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
+                <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  AI Automation in Enterprise: Complete 2025 Guide
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Comprehensive guide to implementing AI automation in enterprise environments.
+                </p>
+              </div>
+            </Link>
+            <Link href="/blog/ai-ethics-responsible-innovation" className="group">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
+                <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  AI Ethics and Responsible Innovation
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Build trust in AI through ethical development and responsible innovation practices.
+                </p>
+              </div>
+            </Link>
+          </div>
+        </section>
+      </article>
     </div>
   );
 }

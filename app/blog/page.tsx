@@ -134,6 +134,28 @@ export default function BlogPage() {
 			category: 'Data Engineering',
 			featured: false,
 			image: '/api/placeholder/600/400',
+		},
+		{
+			id: 'ai-automation-enterprise-2025',
+			title: 'AI Automation in Enterprise: The Complete 2025 Implementation Guide',
+			excerpt:
+				'Everything you need to know about implementing AI automation in your enterprise, from planning to optimization.',
+			date: '2025-01-27',
+			readTime: '15 min read',
+			category: 'AI & Technology',
+			featured: true,
+			image: '/api/placeholder/600/400',
+		},
+		{
+			id: 'startup-funding-ai-era',
+			title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
+			excerpt:
+				'Navigate the new funding landscape and position your AI startup for success with this comprehensive guide.',
+			date: '2025-01-27',
+			readTime: '12 min read',
+			category: 'Startup Strategy',
+			featured: true,
+			image: '/api/placeholder/600/400',
 		}
 	];
 
