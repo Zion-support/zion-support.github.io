@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
 import { 
   Search, 
   Filter, 
@@ -223,60 +220,57 @@ export function EnhancedComprehensiveServicesShowcase() {
                 whileHover={{ y: -5 }}
                 className="group"
               >
-                <Card className="bg-white/10 backdrop-blur-lg border border-white/20 hover:border-blue-400/50 transition-all duration-300 h-full">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                        <service.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <Badge variant="secondary" className="bg-blue-500/20 text-blue-300">
-                        {service.category}
-                      </Badge>
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 hover:border-blue-400/50 transition-all duration-300 h-full rounded-lg p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                      <service.icon className="h-6 w-6 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-white group-hover:text-blue-400 transition-colors">
-                      {service.name}
-                    </CardTitle>
-                    <CardDescription className="text-gray-300">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                        <div className="flex items-center text-yellow-400">
-                          <Star className="h-4 w-4 fill-current" />
-                          <span className="ml-1 text-sm">4.9</span>
-                        </div>
+                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                      {service.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl text-white group-hover:text-blue-400 transition-colors mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {service.description}
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
+                      <div className="flex items-center text-yellow-400">
+                        <Star className="h-4 w-4 fill-current" />
+                        <span className="ml-1 text-sm">4.9</span>
                       </div>
-                      
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-semibold text-gray-300">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {service.features.slice(0, 3).map((feature, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-gray-400">
-                              <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-gray-300">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-400">
+                            <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                      <div className="flex gap-2">
-                        <Button 
-                          onClick={() => handleServiceClick(service)}
-                          className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
-                        >
-                          Learn More
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                        <Button variant="outline" size="icon" className="border-white/20 text-white hover:bg-white/10">
-                          <ExternalLink className="h-4 w-4" />
-                        </Button>
-                      </div>
+                    <div className="flex gap-2">
+                      <button 
+                        onClick={() => handleServiceClick(service)}
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </button>
+                      <button className="border border-white/20 text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300">
+                        <ExternalLink className="h-4 w-4" />
+                      </button>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -308,14 +302,14 @@ export function EnhancedComprehensiveServicesShowcase() {
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-white">{selectedService.name}</h2>
-                    <Badge variant="secondary" className="bg-blue-500/20 text-blue-300">
+                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
                       {selectedService.category}
-                    </Badge>
+                    </span>
                   </div>
                 </div>
-                <Button variant="ghost" size="icon" onClick={closeModal} className="text-gray-400 hover:text-white">
+                <button onClick={closeModal} className="text-gray-400 hover:text-white text-2xl">
                   ×
-                </Button>
+                </button>
               </div>
 
               <div className="space-y-6">
@@ -342,13 +336,13 @@ export function EnhancedComprehensiveServicesShowcase() {
                 </div>
 
                 <div className="flex gap-4">
-                  <Button className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700">
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center">
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                  </button>
+                  <button className="border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg transition-all duration-300">
                     Contact Sales
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>
