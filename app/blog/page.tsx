@@ -357,6 +357,40 @@ export default function BlogPage() {
 	    category: 'Startup Strategy',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
+	  },
+	  // New content added
+	  {
+	    id: 'ai-productivity-automation-2025',
+	    title: 'AI Productivity Automation 2025: The Complete Guide',
+	    excerpt:
+	      'Transform your workflow with cutting-edge AI automation tools and strategies. Boost productivity by 300% while reducing manual work by 80%.',
+	    date: '2025-01-28',
+	    readTime: '12 min read',
+	    category: 'AI & Productivity',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'cloud-native-architecture-2025',
+	    title: 'Cloud-Native Architecture 2025: The Complete Blueprint',
+	    excerpt:
+	      'Build scalable, resilient, and cost-effective applications with modern cloud-native patterns and practices.',
+	    date: '2025-01-28',
+	    readTime: '15 min read',
+	    category: 'Cloud Architecture',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-funding-ai-era-2025',
+	    title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
+	    excerpt:
+	      'Navigate the new funding landscape and position your AI startup for success. Learn from successful AI companies and discover the strategies that work in 2025.',
+	    date: '2025-01-28',
+	    readTime: '14 min read',
+	    category: 'Startup Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
 	  }
 	];
 
