@@ -330,8 +330,8 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our latest AI productivity guides, cloud-native architecture strategies, 
-              and growth hacking frameworks. Everything you need to stay ahead in 2025.
+              New this week: Startup SEO Playbook 2025, LLM Evals in Production, and
+              the Startup SEO Content Engine. Practical guides to grow faster in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -345,6 +345,29 @@ export default function HomePage() {
                 className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
               >
                 📋 Download Free Resources
+              </Link>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
+              <Link href='/resources/startup-seo-playbook-2025' className='group'>
+                <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                  <div className='text-3xl mb-3'>📈</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Startup SEO Playbook 2025</h3>
+                  <p className='text-white/80 text-sm mt-2'>Ship weekly. Compound traffic and pipeline.</p>
+                </div>
+              </Link>
+              <Link href='/blog/llm-evals-in-production-2025' className='group'>
+                <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                  <div className='text-3xl mb-3'>🧪</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>LLM Evals in Production</h3>
+                  <p className='text-white/80 text-sm mt-2'>CI evals, judge models, budgets tied to outcomes.</p>
+                </div>
+              </Link>
+              <Link href='/blog/startup-seo-content-engine-2025' className='group'>
+                <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
+                  <div className='text-3xl mb-3'>🧱</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Startup SEO Content Engine</h3>
+                  <p className='text-white/80 text-sm mt-2'>A lean system to publish weekly, consistently.</p>
+                </div>
               </Link>
             </div>
           </div>
