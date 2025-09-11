@@ -1,4 +1,7 @@
-import { ProductListing } from "@/types/listings";
+import { _ProductListing } from "../types/listings";
+
+const services = [];
+const solutions = [];
 export default function Page() {
 
   "Quantum Computing": {

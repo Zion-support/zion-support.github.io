@@ -1,12 +1,26 @@
 import React, { useState } from 'react';';
-export default ComprehensiveNewServicesShowcase2025;';';
 import React, { useState } from 'react';
 import { ;
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { Icon } from 'lucide-react';
+export default ComprehensiveNewServicesShowcase2025;';';
   NEW_MICRO_SAAS_SERVICES_2025,;
   NEW_IT_SERVICES_2025,;
   NEW_INNOVATIVE_SERVICES_2025;
 } from '../data/servicesData';
-import { ;
+
+const features = [];
+const benefits = [];
+const services = [];
+const solutions = [];
   Zap, ;
   Brain, ;
   Server, ;
@@ -35,13 +49,13 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
   const [activeTab", setActiveTab] = useState<'micro-saas' | 'it-services' | 'ai-services'>('micro-saas');
   const [selectedService, setSelectedService] = useState<any>(null);
 ;
-  const tabs = [;
+  const _tabs = [;
     { "id": 'micro-saas', "name": 'Micro SAAS', "icon": "Zap", "count": "NEW_MICRO_SAAS_SERVICES_2025.length "},;
     { "id": 'it-services', "name": 'IT Services', "icon": "Server", "count": "NEW_IT_SERVICES_2025.length "},;
     { "id": 'ai-services', "name": 'AI Services', "icon": "Brain", "count": "NEW_INNOVATIVE_SERVICES_2025.length "}
   ];
 ;
-  const getCurrentServices = () => {;
+  const _getCurrentServices = () => {;
     switch (activeTab) {;
       case 'micro-saas': ";
         return NEW_MICRO_SAAS_SERVICES_2025;
@@ -54,7 +68,7 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
     "}
   };
 ;
-  const formatPrice = ("price": "number", "model": "string) => {;
+  const _formatPrice = ("price": "number", "model": "string) => {;
     if (model === 'monthly') {;
       return `$${price.toLocaleString()"}/month`;
     } else if (model === 'hourly') {;
@@ -65,8 +79,8 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
     return `$${price.toLocaleString()}`;
   };
 ;
-  const getInnovationBadge = ("level": "string) => {;
-    const colors = {;
+  const _getInnovationBadge = ("level": "string) => {;
+    const _colors = {;
       'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200'",;
       'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',;
       'Professional': 'bg-green-100 text-green-800 border-green-200';
@@ -118,7 +132,7 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
         {/* Tabs */}
         <div className="flex flex-wrap justify-center mb-8">;
           {tabs.map((tab) => {;
-            const Icon = tab.icon;
+            const _Icon = tab.icon;
             return (;
               <button;
                 key={tab.id}
@@ -326,5 +340,5 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
 }
 ;
 export default ComprehensiveNewServicesShowcase2025;
-export default ComprehensiveNewServicesShowcase2025;import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
+export default ComprehensiveNewServicesShowcase2025;import { _comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {

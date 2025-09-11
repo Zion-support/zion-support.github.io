@@ -1,264 +1,88 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';import {;
-  Home,;
-  Zap,;
-  Brain,;
-  Shield,;
-  Users,;
-  HardDrive,;
-  TrendingUp,;
-  Building2,;
-  FileText,;
-  HelpCircle,;
-  BarChart3,;
-  Settings,;
-  ChevronRight,;
-  ChevronDown,;
-  Cloud,;
-  Target,;
-  Heart,;
-  DollarSign,;
-  Briefcase,;
-  Newspaper,;
-  Mail,;
-  Phone,;
-  Search,;
-  Star,;
-  Layers,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Lock,;
-  Smartphone,;
-  Monitor,;
-  Lightbulb,;
-  Rocket;
-} from 'lucide-react';
-;
-interface SidebarProps {;
-  isOpen?: "boolean;
-  onClose?: () => void;
-"}
-;
-export function Sidebar({ isOpen = true, onClose }: "SidebarProps) {;
-  const [expandedSections", setExpandedSections] = useState<string[]>(['Services', 'Solutions']);
+import { Link, useLocation } from 'react-router-dom';
+
+// Simple icon components
+const Home = ({ className }: { className: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+  </svg>
+);
+
+const Zap = ({ className }: { className: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>
+);
+
+const Brain = ({ className }: { className: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  </svg>
+);
+
+const Shield = ({ className }: { className: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>
+);
+
+const Cloud = ({ className }: { className: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+  </svg>
+);
+
+const Settings = ({ className }: { className: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+);
+
+const Sidebar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-;
-  const toggleSection = ("sectionName": "string) => {;
-    setExpandedSections(prev => ;
-      prev.includes(sectionName) ;
-        ? prev.filter(name => name !== sectionName);
-        : [...prev", sectionName];
-    );
-  };
-;
-  const isActive = ("path": "string) => location.pathname === path;
-;
-  const sidebarSections = [;
-    {;
-      "name": 'Main'",;
-      "items": "[;
-        { "name": 'Home'", "href": '/', "icon": "Home "},;
-        { "name": 'Dashboard', "href": '/dashboard', "icon": "BarChart3 "},;
-        { "name": 'Search', "href": '/search', "icon": "Search "}
-      ];
-    },;
-    {;
-      "name": 'Services',;
-      "expandable": "true",;
-      "items": "[;
-        { "name": 'All Services'", "href": '/services', "icon": "Layers "},;
-        { "name": 'New Services 2025', "href": '/new-services-2025', "icon": "Star", "featured": "true "},;
-        { "name": 'AI Services', "href": '/ai-services', "icon": "Brain "},;
-        { "name": 'IT Infrastructure', "href": '/it-services', "icon": "HardDrive "},;
-        { "name": 'Micro SaaS', "href": '/micro-saas', "icon": "Zap "},;
-        { "name": 'Cloud Solutions', "href": '/services/cloud-devops', "icon": "Cloud "},;
-        { "name": 'Cybersecurity', "href": '/services/cybersecurity', "icon": "Shield "},;
-        { "name": 'Data Analytics', "href": '/services/data-analytics', "icon": "Database "},;
-        { "name": 'Quantum Computing', "href": '/services/quantum-computing', "icon": "Cpu "},;
-        { "name": 'Mobile Development', "href": '/services/mobile-development', "icon": "Smartphone "}
-      ];
-    },;
-    {;
-      "name": 'Solutions',;
-      "expandable": "true",;
-      "items": "[;
-        { "name": 'Enterprise'", "href": '/solutions/enterprise', "icon": "Building2 "},;
-        { "name": 'Healthcare', "href": '/solutions/healthcare', "icon": "Heart "},;
-        { "name": 'Financial', "href": '/solutions/financial', "icon": "DollarSign "},;
-        { "name": 'Education', "href": '/solutions/education', "icon": "Lightbulb "},;
-        { "name": 'Startups', "href": '/solutions/startups', "icon": "Rocket "}
-      ];
-    },;
-    {;
-      "name": 'Resources',;
-      "expandable": "true",;
-      "items": "[;
-        { "name": 'Pricing'", "href": '/pricing', "icon": "DollarSign "},;
-        { "name": 'Pricing Guide 2025', "href": '/comprehensive-pricing-guide-2025', "icon": "TrendingUp", "featured": "true "},;
-        { "name": 'White Papers', "href": '/white-papers', "icon": "FileText "},;
-        { "name": 'Case Studies', "href": '/case-studies', "icon": "Target "},;
-        { "name": 'Documentation', "href": '/docs', "icon": "FileText "},;
-        { "name": 'FAQ', "href": '/faq', "icon": "HelpCircle "}
-      ];
-    },;
-    {;
-      "name": 'Company',;
-      "expandable": "true",;
-      "items": "[;
-        { "name": 'About Us'", "href": '/about', "icon": "Users "},;
-        { "name": 'Careers', "href": '/careers', "icon": "Briefcase "},;
-        { "name": 'News & Updates', "href": '/news', "icon": "Newspaper "},;
-        { "name": 'Contact', "href": '/contact', "icon": "Mail "},;
-        { "name": 'Support', "href": '/help', "icon": "HelpCircle "}
-      ];
-    }
+
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'AI Services', href: '/services/ai', icon: Brain },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+    { name: 'Cloud Solutions', href: '/services/cloud', icon: Cloud },
+    { name: 'Settings', href: '/settings', icon: Settings },
   ];
-;
-  return (;
-    <>;
-      {/* Backdrop for mobile */}
-      {isOpen && (;
-        <div ;
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 "lg": "hidden";
-          onClick={onClose"}
-        />;
-      )}
-      ;
-      {/* Sidebar */}
-      <div className={`;
-        fixed top-0 left-0 h-full bg-gray-900 border-r border-gray-800 z-50 transform transition-transform duration-300 ease-in-out;
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        "lg": "translate-x-0 "lg":static "lg":z-auto;
-        w-80 overflow-y-auto;
-      `"}>;
-        ;
-        {/* Header */}
-        <div className="p-6 border-b border-gray-800">;
-          <Link to="/" className="flex items-center space-x-3 group">;
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-"hover": "scale-110 transition-transform duration-300">;
-              <Zap className="w-6 h-6 text-white" />;
-            </div>;
-            <div>;
-              <h2 className="text-xl font-bold text-white group-"hover":text-blue-400 transition-colors">;
-                Zion Tech Group;
-              </h2>;
-              <p className="text-xs text-gray-400">Technology Solutions</p>;
-            </div>;
-          </Link>;
-        </div>;
-        {/* Quick Stats */"}
-        <div className="p-4 border-b border-gray-800">;
-          <div className="grid grid-cols-3 gap-3 text-center">;
-            <div className="bg-gray-800/50 rounded-lg p-3">;
-              <div className="text-cyan-400 font-bold text-lg">50+</div>;
-              <div className="text-gray-400 text-xs">Services</div>;
-            </div>;
-            <div className="bg-gray-800/50 rounded-lg p-3">;
-              <div className="text-green-400 font-bold text-lg">24/7</div>;
-              <div className="text-gray-400 text-xs">Support</div>;
-            </div>;
-            <div className="bg-gray-800/50 rounded-lg p-3">;
-              <div className="text-purple-400 font-bold text-lg">99%</div>;
-              <div className="text-gray-400 text-xs">Uptime</div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Navigation */}
-        <nav className="p-4 space-y-2">;
-          {sidebarSections.map((section) => (;
-            <div key={section.name} className="space-y-1">;
-              ;
-              {/* Section Header */}
-              {section.expandable ? (;
-                <button;
-                  onClick={() => toggleSection(section.name)}
-                  className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-400 "hover": "text-white "hover":bg-gray-800 rounded-lg transition-colors duration-200";
-                >;
-                  <span>{section.name"}</span>;
-                  {expandedSections.includes(section.name) ? (;
-                    <ChevronDown className="w-4 h-4" />;
-                  ) : "(;
-                    <ChevronRight className="w-4 h-4" />;
-                  )"}
-                </button>;
-              ) : "(;
-                <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase tracking-wider">;
-                  {section.name"}
-                </div>;
-              )}
-;
-              {/* Section Items */}
-              {(!section.expandable || expandedSections.includes(section.name)) && (;
-                <div className="space-y-1 pl-2">;
-                  {section.items.map((item) => (;
-                    <Link;
-                      key={item.name}
-                      to={item.href}
-                      onClick={onClose}
-                      className={`;
-                        flex items-center space-x-3 px-3 py-2 text-sm rounded-lg transition-colors duration-200 group;
-                        ${isActive(item.href);
-                          ? 'bg-blue-600 text-white';
-                          : 'text-gray-300 "hover": "text-white "hover":bg-gray-800';
-                        "}
-                        ${item.featured ? 'border border-cyan-500/30 bg-cyan-500/5' : ''}
-                      `}
-                    >;
-                      <item.icon className={`;
-                        w-4 h-4 flex-shrink-0;
-                        ${isActive(item.href) ? 'text-white' : 'text-gray-400 group-"hover": "text-cyan-400'"}
-                        ${item.featured ? 'text-cyan-400' : ''}
-                      `} />;
-                      <span className="flex-1 truncate">{item.name}</span>;
-                      {item.featured && (;
-                        <Star className="w-3 h-3 text-cyan-400 fill-current" />;
-                      )}
-                    </Link>;
-                  ))}
-                </div>;
-              )}
-            </div>;
-          ))}
-        </nav>;
-        {/* Contact Info */}
-        <div className="p-4 border-t border-gray-800 mt-auto">;
-          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg p-4 border border-blue-500/20">;
-            <h3 className="text-sm font-semibold text-white mb-3">Get In Touch</h3>;
-            <div className="space-y-2 text-xs">;
-              <div className="flex items-center space-x-2 text-gray-300">;
-                <Phone className="w-3 h-3 text-cyan-400" />;
-                <a href=""tel": "+13024640950" className=""hover":text-cyan-400 transition-colors">;
-                  +1 302 464 0950;
-                </a>;
-              </div>;
-              <div className="flex items-center space-x-2 text-gray-300">;
-                <Mail className="w-3 h-3 text-cyan-400" />;
-                <a href=""mailto":kleber@ziontechgroup.com" className=""hover":text-cyan-400 transition-colors truncate">;
-                  kleber@ziontechgroup.com;
-                </a>;
-              </div>;
-              <div className="flex items-start space-x-2 text-gray-300">;
-                <Globe className="w-3 h-3 text-cyan-400 mt-0.5" />;
-                <span className="text-xs">Delaware", USA</span>;
-              </div>;
-            </div>;
-            ;
-            <Link;
-              to="/contact";
-              className="inline-flex items-center justify-center w-full mt-3 px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-medium rounded-md "hover": "from-blue-700 "hover":to-purple-700 transition-colors duration-200";
-              onClick={onClose"}
-            >;
-              Contact Us;
-            </Link>;
-          </div>;
-        </div>;
-        {/* Footer */}
-        <div className="p-4 border-t border-gray-800">;
-          <div className="text-center text-xs text-gray-500">;
-            <p>© 2025 Zion Tech Group</p>;
-            <p className="mt-1">Innovation • Excellence • Growth</p>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
+
+  return (
+    <div className="bg-gray-900 text-white min-h-screen w-64 fixed left-0 top-0 z-40">
+      <div className="p-6">
+        <div className="flex items-center space-x-2 mb-8">
+          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-lg">Z</span>
+          </div>
+          <h2 className="text-xl font-bold">Zion Tech</h2>
+        </div>
+
+        <nav className="space-y-2">
+          {navigation.map((item) => {
+            const isActive = location.pathname === item.href;
+            return (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                  isActive
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                }`}
+              >
+                <item.icon className="w-5 h-5" />
+                <span>{item.name}</span>
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

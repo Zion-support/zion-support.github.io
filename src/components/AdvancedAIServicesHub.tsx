@@ -1,7 +1,12 @@
-import { Link  } from 'react-router-dom';
+import { _Link  } from 'react-router-dom';
 export default function Page("props": "any) {;
 "}}}
-import { motion, AnimatePresence  } from 'framer-motion';
+import { _motion, AnimatePresence  } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+const features = [];
+const services = [];
 ;
 export default function Page("props": "any) {;
 ",;

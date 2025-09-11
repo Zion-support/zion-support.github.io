@@ -1,5 +1,4 @@
-import React from "react";
-import Head from "next/head";
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -8,7 +7,8 @@ interface SEOHeadProps {
   url?: string;
   type?: "website" | "article" | "service";
   structuredData?: object;
-<<<<<<< HEAD
+}
+
 export default function SEOHead({
   title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions",
   description = "Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.",
@@ -18,3 +18,31 @@ export default function SEOHead({
   type = "website",
   structuredData
 }: SEOHeadProps) {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+    </Head>
+  );
+};
+
+export default SEOHead;

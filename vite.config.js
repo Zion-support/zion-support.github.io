@@ -1,33 +1,32 @@
-
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    // Performance optimizations
-    target: 'es2015',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          router: ['react-router-dom'],
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
   },
   server: {
-    hmr: true,
+    port: 3000,
+    open: true,
   },
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
+  preview: {
+    port: 3000,
+    open: true,
   },
-})
+});

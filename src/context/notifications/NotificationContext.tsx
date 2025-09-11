@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import { _supabase } from "../../integrations/supabase/client";
+
+const integrations = [];
 export default function Page() {
 ,
   fetchNotifications: async () => {},
 };
-const NotificationContext = createContext(defaultContext as NotificationContextType
+const _NotificationContext = createContext(defaultContext as NotificationContextType

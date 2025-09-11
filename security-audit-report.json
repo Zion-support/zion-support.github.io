@@ -277,7 +277,7 @@
   ],
   "recommendations": [
     {
-
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",
@@ -323,3 +323,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+<<<<<<< HEAD
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

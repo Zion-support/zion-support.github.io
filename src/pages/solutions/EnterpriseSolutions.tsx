@@ -1,1 +1,215 @@
-import React from "react"; import { SEO } from "../../components/SEO"; import { motion  } from "framer-motion"; import { ; Building, Users, Target, CheckCircle, TrendingUp, MessageCircle,; Phone, Mail, MapPin, Shield, Zap, Globe, Database, Network,; Cloud, Cpu, Layers, FileText, Settings, Activity, Star;  } from "lucide-react"; ; const EnterpriseSolutions: React.FC = () => {; const features = [; {; icon: Building,; title: "Enterprise Architecture",; description: "Scalable enterprise-grade architecture design",; color: "from-blue-500 to-cyan-500"; },; {; icon: Users,; title: "Team Collaboration",; description: "Advanced collaboration and communication tools",; color: "from-purple-500 to-pink-500"; },; {; icon: Target,; title: "Strategic Planning",; description: "Comprehensive strategic planning and execution",; color: "from-yellow-500 to-orange-500"; },; {; icon: Shield,; title: "Security & Compliance",; description: "Enterprise-grade security and compliance solutions",; color: "from-green-500 to-emerald-500"; },; {; icon: Cloud,; title: "Cloud Integration",; description: "Seamless cloud integration and management",; color: "from-indigo-500 to-blue-500"; },; {; icon: Database,; title: "Data Management",; description: "Advanced data management and analytics",; color: "from-red-500 to-pink-500"; }; ]; ; const solutions = [; {; title: "Digital Transformation",; description: "End-to-end digital transformation solutions",; icon: Zap,; benefits: ["Process automation", "Technology modernization", "Change management", "ROI optimization"],; color: "from-blue-500 to-cyan-500"; },; {; title: "Enterprise Integration",; description: "Seamless system integration and connectivity",; icon: Network,; benefits: ["API management", "Data synchronization", "Workflow automation", "Real-time connectivity"],; color: "from-purple-500 to-pink-500"; },; {; title: "Business Intelligence",; description: "Advanced analytics and business intelligence",; icon: TrendingUp,; benefits: ["Data visualization", "Predictive analytics", "Performance monitoring", "Strategic insights"],; color: "from-green-500 to-emerald-500"; },; {; title: "Enterprise Security",; description: "Comprehensive security and risk management",; icon: Shield,; benefits: ["Threat protection", "Compliance management", "Risk assessment", "Incident response"],; color: "from-red-500 to-orange-500"; }; ]; ; const industries = [; "Financial Services",; "Healthcare",; "Manufacturing",; "Retail",; "Technology",; "Energy",; "Transportation",; "Government",; "Education",; "Telecommunications"; ]; ; const benefits = [; "Increased efficiency",; "Cost reduction",; "Improved scalability",; "Enhanced security",; "Better compliance",; "Faster time-to-market",; "Competitive advantage",; "Future-ready solutions"; ]; ; const technologies = [; "Microsoft Azure",; "AWS",; "Google Cloud",; "Salesforce",; "Oracle",; "SAP",; "IBM",; "VMware"; ]; ; return(; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"";" <SEO ";"";" title="Enterprise Solutions - Zion Tech Group";"";" description="Comprehensive enterprise solutions for large organizations.Digital transformation, system integration, business intelligence, and enterprise security.";"";" keywords="enterprise solutions, digital transformation, business intelligence, enterprise security, Zion Tech Group";"";" ogType="website";";"   />;"";" {}";"";" <section className="relative overflow-hidden py-20 lg:py-32">";"";" <div className="container-responsive">";"";" <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;" <motion.div;";" initial={{ opacity: 0, x: -50 }};";" animate={{ opacity: 1, x: 0 }};"";" transition={{ duration: 0.8   }}";"";" className="space-y-8";"";" >";"";" <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">";"";" <Building className="w-4 h-4"   />;";" Enterprise Excellence;";" </div>;";"";" <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">;"";" Enterprise";"";" <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">;" Solutions;";" </span>;";" </h1>;";"";" <p className="text-xl text-gray-300 leading-relaxed">;";" Transform your enterprise with our comprehensive solutions designed for large organizations.Drive innovation, efficiency, and growth at scale.;";" </p>;";"";" <div className="flex flex-col sm:flex-row gap-4">";"";" <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">";"";" <Building className="w-5 h-5"   />;";" Enterprise Assessment;"";" </button>";"";" <button className="btn-futuristic-outline">";"";" <FileText className="w-5 h-5"   />; Download Enterprise Guide; </button>; </div>; </motion.div>;" <motion.div;";" initial={{ opacity: 0, x: 50 }};";" animate={{ opacity: 1, x: 0 }};"";" transition={{ duration: 0.8, delay: 0.2 }}";"";" className="relative";"";" >";"";" <div className="relative z-10">";"";" <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">";"";" <div className="text-center">";"";" <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">";"";" <Building className="w-12 h-12 text-white"   />;"";" </div>";"";" <h3 className="text-2xl font-bold text-white mb-2">Enterprise Solutions</h3>";"";" <p className="text-gray-300">Scale for Success</p>;" </div>;";" </div>;";" </div>;";"";" <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>; </motion.div>;" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 bg-slate-800/50">";"";" <div className="container-responsive">; <motion.div;" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">;";" Enterprise-Grade Features;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" Our enterprise solutions provide the capabilities and scalability needed for large organizations to thrive in the digital age.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">; {features.map((feature, index) => (; <motion.div; key={feature.title};" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50";";" >;"";" <div className={"w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"}>";"";" <feature.icon className="w-8 h-8 text-white" />;"";" </div>";"";" <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>";"";" <p className="text-gray-400 leading-relaxed">{feature.description}</p>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20">";"";" <div className="container-responsive">; <motion.div;" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">;";" Enterprise Solutions;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" From digital transformation to enterprise security, our solutions address the complex challenges faced by large organizations.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">; {solutions.map((solution, index) => (; <motion.div; key={solution.title};" initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};";" whileInView={{ opacity: 1, x: 0 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300";"";" >";"";" <div className="flex items-start gap-4 mb-6">;"";" <div className={"w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center flex-shrink-0"}>";"";" <solution.icon className="w-8 h-8 text-white" />;";" </div>;"";" <div>";"";" <h3 className="text-2xl font-semibold text-white mb-2">{solution.title}</h3>";"";" <p className="text-gray-400 leading-relaxed">{solution.description}</p>;";" </div>;";" </div>;";"";" <div className="space-y-3">";"";" <h4 className="text-lg font-semibold text-white">Key Benefits:</h4>";"";" <ul className="space-y-2">;"";" {solution.benefits.map((benefit, idx) => (";"";" <li key={idx} className="flex items-center gap-3 text-gray-300">";"";" <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0"   />; {benefit}; </li>; ))}; </ul>; </div>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 bg-slate-800/50">";"";" <div className="container-responsive">; <motion.div;" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">;";" Why Choose Enterprise Solutions?;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" Experience the advantages of enterprise-grade solutions designed for scale, security, and performance.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-2 md:grid-cols-4 gap-6">; {benefits.map((benefit, index) => (; <motion.div; key={benefit};" initial={{ opacity: 0, scale: 0.8 }};";" whileInView={{ opacity: 1, scale: 1 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50";"";" >";"";" <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">";"";" <TrendingUp className="w-6 h-6 text-white"   />;"";" </div>";"";" <p className="text-white font-medium text-sm leading-relaxed">{benefit}</p>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20">";"";" <div className="container-responsive">; <motion.div;" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">;";" Enterprise Technologies;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" Our solutions leverage industry-leading enterprise technologies to deliver superior performance and reliability.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-2 md:grid-cols-4 gap-6">; {technologies.map((tech, index) => (; <motion.div; key={tech};" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50 group";"";" >";"";" <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">";"";" <Zap className="w-6 h-6 text-white"   />;"";" </div>";"";" <p className="text-white font-medium text-sm leading-relaxed">{tech}</p>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 bg-slate-800/50">";"";" <div className="container-responsive">; <motion.div;" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">;";" Industries We Serve;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" Our enterprise solutions are designed to meet the unique needs of various industries and business types.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-2 md:grid-cols-5 gap-6">; {industries.map((industry, index) => (; <motion.div; key={industry};" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50 group";"";" >";"";" <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">";"";" <Users className="w-6 h-6 text-white"   />;"";" </div>";"";" <p className="text-white font-medium text-sm leading-relaxed">{industry}</p>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">";"";" <div className="container-responsive text-center">; <motion.div;" initial={{ opacity: 0, y: 30 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="max-w-4xl mx-auto";"";" >";"";" <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">;";" Ready to Transform Your Enterprise?;"";" </h2>";"";" <p className="text-xl text-gray-300 mb-8">;";" Scale your organization with our comprehensive enterprise solutions.Drive innovation and growth at enterprise scale.;";" </p>;";"";" <div className="flex flex-col sm:flex-row gap-4 justify-center">";"";" <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">";"";" <MessageCircle className="w-5 h-5"   />;";" Schedule Enterprise Review;"";" </button>";"";" <button className="btn-futuristic-outline">";"";" <Phone className="w-5 h-5"   />; Contact Enterprise Team; </button>; </div>;" </motion.div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20">";"";" <div className="container-responsive">";"";" <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">; <motion.div; initial={{ opacity: 0, x: -30 }};" whileInView={{ opacity: 1, x: 0 }};";" transition={{ duration: 0.8   }};";" viewport={{ once: true   }};"";" >";"";" <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;";" Get in Touch;"";" </h2>";"";" <p className="text-gray-300 mb-8 leading-relaxed">;";" Ready to transform your enterprise? Our team of enterprise experts is here to help you scale and succeed.;";" </p>;";"";" <div className="space-y-6">";"";" <div className="flex items-center gap-4">";"";" <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">";"";" <Phone className="w-6 h-6 text-white"   />;";" </div>;"";" <div>";"";" <p className="text-white font-semibold">Phone</p>";"";" <p className="text-gray-300">+1 302 464 0950</p>;";" </div>;";" </div>;";"";" <div className="flex items-center gap-4">";"";" <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">";"";" <Mail className="w-6 h-6 text-white"   />;";" </div>;"";" <div>";"";" <p className="text-white font-semibold">Email</p>";"";" <p className="text-gray-300">kleber@ziontechgroup.com</p>;";" </div>;";" </div>;";"";" <div className="flex items-center gap-4">";"";" <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">";"";" <MapPin className="w-6 h-6 text-white"   />;";" </div>;"";" <div>";"";" <p className="text-white font-semibold">Address</p>";"";" <p className="text-gray-300">364 E Main St STE 1008<br / / / / /    />Middletown DE 19709</p>; </div>; </div>; </div>; </motion.div>; <motion.div;" initial={{ opacity: 0, x: 30 }};";" whileInView={{ opacity: 1, x: 0 }};";" transition={{ duration: 0.8, delay: 0.2 }};"";" viewport={{ once: true   }}";"";" className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50";"";" >";"";" <h3 className="text-2xl font-semibold text-white mb-6">Request Enterprise Consultation</h3>";"";" <form className="space-y-6">";"";" <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"";" <input";"";" type="text";"";" placeholder="First Name";"";" className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";";" / / / / / />;"";" <input";"";" type="text";"";" placeholder="Last Name";"";" className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";";" / / / / / />;";" </div>;"";" <input";"";" type="email";"";" placeholder="Email Address";"";" className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";";" / / / / / />;"";" <input";"";" type="text";"";" placeholder="Organization";"";" className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";";" / / / / / />;"";" <textarea";"";" placeholder="Tell us about your enterprise needs...";"";" rows={4}";"";" className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none";";" ></textarea>;"";" <button";"";" type="submit";"";" className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700";"";" >";"";" <MessageCircle className="w-5 h-5"   />; Send Message; </button>; </form>; </motion.div>; </div>; </div>; </section>; </div>;" );";" };";" ;"";" export default EnterpriseSolutions;";"";"
+import React from 'react';
+import Link from 'next/link';
+import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+export default function EnterpriseSolutions() {
+    const solutions = [
+        {
+            icon: Building2,
+            title: "Enterprise Architecture",
+            description: "Scalable, secure, and future-ready enterprise infrastructure design",
+            features: ["Microservices Architecture", "Cloud-Native Design", "API-First Approach", "Scalability Planning"]
+        },
+        {
+            icon: Users,
+            title: "Digital Transformation",
+            description: "End-to-end digital transformation strategies for enterprise growth",
+            features: ["Process Automation", "Legacy System Modernization", "Change Management", "ROI Optimization"]
+        },
+        {
+            icon: Shield,
+            title: "Enterprise Security",
+            description: "Comprehensive security solutions for enterprise environments",
+            features: ["Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"]
+        },
+        {
+            icon: BarChart3,
+            title: "Business Intelligence",
+            description: "Advanced analytics and insights for data-driven decision making",
+            features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "KPI Tracking"]
+        },
+        {
+            icon: Cloud,
+            title: "Cloud Strategy",
+            description: "Multi-cloud and hybrid cloud solutions for enterprise needs",
+            features: ["Cloud Migration", "Cost Optimization", "Performance Monitoring", "Disaster Recovery"]
+        },
+        {
+            icon: Zap,
+            title: "AI Integration",
+            description: "Seamless AI integration into existing enterprise workflows",
+            features: ["Custom AI Models", "Workflow Automation", "Intelligent Analytics", "Process Optimization"]
+        }
+    ];
+    const benefits = [
+        "Increased operational efficiency by 40-60%",
+        "Reduced IT costs through automation and optimization",
+        "Enhanced security and compliance posture",
+        "Improved customer experience and satisfaction",
+        "Faster time-to-market for new products/services",
+        "Better data insights and decision-making capabilities"
+    ];
+    const caseStudies = [
+        {
+            comp: "Fortune 500 Manufacturing",
+            industry: "Manufacturing",
+            challenge: "Legacy system modernization and digital transformation",
+            solution: "Implemented cloud-native architecture with AI-powered analytics",
+            results: "35% cost reduction, 50% faster time-to-market"
+        },
+        {
+            comp: "Global Financial Services",
+            industry: "Financial Services",
+            challenge: "Compliance automation and risk management",
+            solution: "AI-driven compliance monitoring and automated reporting",
+            results: "90% reduction in compliance violations, 60% faster reporting"
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+              Enterprise Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your enterprise with cutting-edge technology solutions designed for scale, security, and innovation
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+                Get Enterprise Quote
+              </Link>
+              <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
+                Explore AI Solutions
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
+        </div>
+      </section>
+
+      {/* Solutions Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Enterprise Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From infrastructure to innovation, we provide end-to-end solutions that drive enterprise success
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => {
+            const Icon = solution.icon;
+            return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-white"/>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>
+                  <p className="text-gray-300 mb-6">{solution.description}</p>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
+                        {feature}
+                      </li>))}
+                  </ul>
+                </div>);
+        })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Proven results and measurable impact for enterprise organizations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (<div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white"/>
+                </div>
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real results from real enterprise clients
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">
+                <div className="flex items-center mb-4">
+                  <Star className="w-5 h-5 text-yellow-400 mr-2"/>
+                  <span className="text-sm text-gray-400">{study.industry}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{study.comp}</h3>
+                <div className="space-y-3 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-cyan-400 mb-1">Challenge:</h4>
+                    <p className="text-gray-300">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-cyan-400 mb-1">Solution:</h4>
+                    <p className="text-gray-300">{study.solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-cyan-400 mb-1">Results:</h4>
+                    <p className="text-gray-300">{study.results}</p>
+                  </div>
+                </div>
+                <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                  Read Full Case Study
+                  <ArrowRight className="w-4 h-4 ml-2"/>
+                </Link>
+              </div>))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth for your organization
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+              Schedule Consultation
+            </Link>
+            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>);
+}

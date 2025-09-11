@@ -1,5 +1,8 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
+import { _SEO } from "../components/SEO"
+
+import SEO from '../components/SEO';
+const services = [];
 export default function services() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="services - Zion Tech Group" description="Professional services services by Zion Tech Group"   />"

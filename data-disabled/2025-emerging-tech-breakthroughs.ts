@@ -38,7 +38,6 @@ export interface EmergingTechBreakthrough2025 {
   rating: number;
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
   // Brain-Computer Interface Platform;
-<<<<<<< HEAD:data-disabled/2025-emerging-tech-breakthroughs.ts
   {
     id: "brain-computer-interface-platform",;
     name: "Brain-Computer Interface Platform",;

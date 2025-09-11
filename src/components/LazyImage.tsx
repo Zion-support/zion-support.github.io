@@ -23,12 +23,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isInView, setIsInView] = useState(priority)
 
 
-  const imgRef = useRef<HTMLDivElement>(null)
+  const _imgRef = useRef<HTMLDivElement>(null)
 
 
   useEffect(() => {
     if (priority) return;
-    const observer = new IntersectionObserver(
+    const _observer = new IntersectionObserver(
       ([entry]) => {
         if() {
 

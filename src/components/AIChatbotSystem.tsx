@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Settings } from 'lucide-react';
+
 export default function Page() {
 
 > {

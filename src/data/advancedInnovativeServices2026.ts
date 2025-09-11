@@ -1,3 +1,7 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+
 export interface AdvancedInnovativeService2026 {
   id: string;
   title: string;

@@ -1,16 +1,18 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback;
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { EmptyMatchesCard } from './EmptyMatchesCard';
-import { JobMatchCard } from './JobMatchCard';
+import { _useEffect, useState, useCallback } from 'react'; // Added useCallback;
+import { _supabase } from '../../integrations/supabase/client';
+import { _toast } from '../../hooks/use-toast';
+import { _Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
+import { _EmptyMatchesCard } from './EmptyMatchesCard';
+import { _JobMatchCard } from './JobMatchCard';
+
+const integrations = [];
 ;
 export function SuggestedTalents("props": "any) {;
   const [talents", setTalents] = useState<any[]>([]); // Added type for talents;
   const [isLoading, setIsLoading] = useState<any>(true);
   const [isProcessing, setIsProcessing] = useState<any>(false);
 ;
-  const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
+  const _fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
     setIsLoading(true);
     try {;
       const { data, error } = await supabase;

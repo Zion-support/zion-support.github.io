@@ -1,8 +1,12 @@
-import { ProductListing } from "@/types/listings";
-import { REGIONS } from "@/data/filterConstants";
+import { _ProductListing } from "../types/listings";
+import { _REGIONS } from "../data/filterConstants";
+
+import { Cloud } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { Code } from 'lucide-react';
 
 // Category definitions with average price ranges
-const categories = [
+const _categories = [
   { name: "AI Models & APIs", priceRange: [1000, 3000] },
   { name: "Services", priceRange: [3000, 8000] },
   { name: "Content Creation", priceRange: [200, 800] },
@@ -18,7 +22,7 @@ const categories = [
   { name: "Servers", priceRange: [15000, 30000] }
 ];
 
-const titlePhrases = [
+const _titlePhrases = [
   "Professional Suite",
   "Enterprise Package",
   "Starter Kit",
@@ -31,7 +35,7 @@ const titlePhrases = [
   "Cloud Edition"
 ];
 
-const providers = [
+const _providers = [
   "AI Solutions Inc.",
   "DataMinds",
   "TechGear Pro",

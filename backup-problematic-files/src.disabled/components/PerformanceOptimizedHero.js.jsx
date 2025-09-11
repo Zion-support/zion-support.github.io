@@ -1,0 +1,16 @@
+import React from 'react';
+
+const PerformanceOptimizedHero.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PerformanceOptimizedHero.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default PerformanceOptimizedHero.js;
+=======
+export default PerformanceOptimizedHero.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

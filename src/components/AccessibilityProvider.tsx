@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Accessibility, Sun, Moon } from 'lucide-react';
+import { _motion, AnimatePresence } from 'framer-motion';
+import { _SkipForward, Volume2, VolumeX, Accessibility, Sun, Moon } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 ;
 interface AccessibilityContextType {;
   "highContrast": "boolean;
@@ -17,9 +20,9 @@ interface AccessibilityContextType {;
   "toggleVoiceNavigation": () => void;
 "}
 ;
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
+const _AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 ;
-export const useAccessibility = ("props": "any) => {;interface AccessibilityContextType {
+export const _useAccessibility = ("props": "any) => {;interface AccessibilityContextType {
   highContrast: boolean;
   toggleHighContrast: () => void;
   reducedMotion: boolean;
@@ -33,11 +36,11 @@ export const useAccessibility = ("props": "any) => {;interface AccessibilityCont
   voiceNavigation: boolean;
   toggleVoiceNavigation: () => void;
 }
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
-export const useAccessibility = (props: any) => {
-  const context = useContext(AccessibilityContext);';
-  if (!context) {';';export const useAccessibility = (props: any) => {
-  const context = useContext(AccessibilityContext);
+const _AccessibilityContext = createContext<AccessibilityContextType | null>(null);
+export const _useAccessibility = (props: any) => {
+  const _context = useContext(AccessibilityContext);';
+  if (!context) {';';export const _useAccessibility = (props: any) => {
+  const _context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   "}
@@ -60,14 +63,14 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const [voiceNavigation, setVoiceNavigation] = useState<any>(false);
   // Load accessibility preferences from localStorage';
   useEffect(() => {';';
-    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';';';
-    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';';';
-    const savedFontSize = localStorage.getItem('zion-font-size');';';  // Load accessibility preferences from localStorage
+    const _savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';';';
+    const _savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';';';
+    const _savedFontSize = localStorage.getItem('zion-font-size');';';  // Load accessibility preferences from localStorage
   useEffect(() => {
-    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
-    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
-    const savedFontSize = localStorage.getItem('zion-font-size');
-    const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
+    const _savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
+    const _savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
+    const _savedFontSize = localStorage.getItem('zion-font-size');
+    const _savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : "16);

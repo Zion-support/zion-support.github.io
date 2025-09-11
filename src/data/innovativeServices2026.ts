@@ -1,3 +1,13 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const technologies = [];
+const services = [];
+const solutions = [];
+const implementation = [];
+
 export type InnovativeService = {;
   id: string;
   title: string;
@@ -601,7 +611,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
 ];
-export const serviceCategories = [
+export const _serviceCategories = [
   {
     name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',

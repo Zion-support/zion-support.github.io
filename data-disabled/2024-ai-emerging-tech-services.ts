@@ -39,7 +39,6 @@ export interface AIEmergingTechService {
   rating: number;
 export const aiEmergingTechServices: AIEmergingTechService[] = [;
   // AI-Powered Video Generation Platform;
-<<<<<<< HEAD:data-disabled/2024-ai-emerging-tech-services.ts
   {
     id: "ai-video-generation-platform",;
     name: "AI Video Generation Platform",;

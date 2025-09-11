@@ -1,5 +1,8 @@
 import React from 'react';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
+import { _ import { motion, AnimatePresence  } from 'framer-motion';
+
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
         document.documentElement.classList.add('reduced-motion')} else {;

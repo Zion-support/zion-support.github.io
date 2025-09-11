@@ -1,31 +1,14 @@
-const Component = () => {
-import React from "react"
+import React from 'react';
 
-      <link rel="canonical" href="{canonical}" /" >import { Helmet } from &apos;react-helmet-async";&apos;&apos
-  title = &apos;Zion Tech Group&apos,
-  description = &apos;Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.&apos,
-  canonical = &apos;https: // comment
-  keywords = &apos;AI, cybersecurity, cloud, devops, consulting, Zion Tech Group&apos}) {
-  return (&apos}
-
-    <Helmet>
-      <title>{title}</title>"
-      <meta name="&apos;description&apos;" content="{description}"  />&apos;"
-      <meta name="&apos;keywords&apos;" content="{keywords}"  />&apos;"
-      <link rel="&apos;canonical&apos;" href="{canonical}"   />&apos
-    </Helmet>
-  )
-
-
-);
-export default SEO
-  keywords = "AI, cybersecurity, cloud, devops, consulting, Zion Tech Group"}) {
+export const SEO = ({ title, description, keywords, children }) => {
   return (
-    <Helmet>
-      <title>{title}</title>"
-      <meta name="description" content="{description}" /  >"
-      <meta name="keywords" content="{keywords}" /  >"
-      <link rel="canonical" href="{canonical}" /  >"
-    </Helmet>  )}'
-export default SEO""
-"""
+    <>
+      <title>{title || 'Zion Tech Group - AI, IT, and Technology Solutions'}</title>
+      <meta name="description" content={description || 'Leading provider of AI-powered solutions, IT services, and cutting-edge technology for modern businesses.'} />
+      <meta name="keywords" content={keywords || 'AI, artificial intelligence, IT services, technology solutions, cybersecurity, cloud computing, quantum computing'} />
+      {children}
+    </>
+  );
+};
+
+export default SEO;

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-06T09:32:59.165Z",
+  "filesFixed": 5,
+  "errors": 0,
+  "fixedFiles": [
+    "pages/api/generate-service-description.ts",
+    "pages/api/integrations/webhooks/job-posted.ts",
+    "pages/api/integrations/webhooks/resume-viewed.ts",
+    "pages/api/integrations/webhooks/talent-hired.ts",
+    "pages/api/integrations/webhooks/talent-matched.ts"
+  ]
+}

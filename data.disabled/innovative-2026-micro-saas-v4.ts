@@ -1,5 +1,3 @@
-import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026MicroSaasServiceV4 {
   id: string;
   name: string;
@@ -370,3 +368,5 @@ export const innovative2026MicroSaasV4Services: Innovative2026MicroSaasV4Service
     reviews: 78
   }
 ];
+=======
+export const innovative2026MicroSaasV4Services: any[] = [];

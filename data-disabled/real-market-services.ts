@@ -27,7 +27,6 @@ export const realMarketServices: RealMarketService[] = [
   website: 'https://ziontechgroup.com', }
 ;
 export const realMarketServices: RealMarketService[] = [;
-<<<<<<< HEAD:data-disabled/real-market-services.ts
   {
     id: "market-analysis-platform",;
     name: "Market Analysis Platform",;

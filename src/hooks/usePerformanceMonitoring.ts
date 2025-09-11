@@ -1,9 +1,9 @@
-import { useEffect } from 'react';';';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { _useEffect } from 'react';';';
+import { _getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 ;
 export function usePerformanceMonitoring() {;
   useEffect(() => {;
-    const sendToAnalytics = (metric) => {;
+    const _sendToAnalytics = (metric) => {;
       // Send to your analytics service;
 ;
       ;';

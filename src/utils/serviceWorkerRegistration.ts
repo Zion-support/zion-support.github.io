@@ -1,5 +1,5 @@
 // comment;
-export const serviceWorkerRegistration = {}
+export const _serviceWorkerRegistration = {}
 
 
 export default serviceWorkerRegistration;

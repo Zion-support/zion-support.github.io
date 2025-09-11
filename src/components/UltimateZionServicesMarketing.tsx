@@ -1,7 +1,11 @@
+const technologies = [];
+const services = [];
+const solutions = [];
+
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 ';
-  const categories = [{';';
+  const _categories = [{';';
       id: 'quantum - computing',';';
       name: 'Quantum Computing & AI',';';
       icon: '⚛️',';';
@@ -67,7 +71,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 const "UltimateZionServicesMarketing": "React.FC = () : JSX.Element => {;
   const [selectedCategory", setSelectedCategory] = useState<any>('all');
 ;
-  const categories = [{;
+  const _categories = [{;
       "id": 'quantum - computing',;
       "name": 'Quantum Computing & AI',;
       "icon": '⚛️',;

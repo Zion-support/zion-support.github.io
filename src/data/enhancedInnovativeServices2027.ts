@@ -1,3 +1,9 @@
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+
 export interface EnhancedService2027 {
   id: string;
   title: string;

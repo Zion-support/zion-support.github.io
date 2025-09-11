@@ -1,3 +1,11 @@
+import { Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const applications = [];
+
 export interface EmergingTechService2027 {
   id: string;
   title: string;

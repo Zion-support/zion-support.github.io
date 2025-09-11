@@ -1,15 +1,17 @@
 import React, { useState } from "react"
+
+const services = [];
 export function ModernHeader() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const [isServicesOpen, setIsServicesOpen] = useState(false)
 
 
-  const toggleMobileMenu = () => {
+  const _toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 
 
-  const closeMobileMenu = () => {
+  const _closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
 
 
@@ -18,7 +20,7 @@ export function ModernHeader() {;
 
   }'
 
-  const services = []
+  const _services = []
 
   return (
     <>

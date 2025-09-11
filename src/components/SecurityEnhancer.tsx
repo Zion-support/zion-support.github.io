@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { _motion, AnimatePresence } from 'framer-motion';
 import { 
+
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Check } from 'lucide-react';
   Shield, 
   Lock, 
   Eye, 
@@ -55,7 +61,7 @@ export default function SecurityEnhancer({ className = '' }: SecurityEnhancerPro
   });
 
   // Log security events
-  const logSecurityEvent = useCallback((level: string, message: string, category: string, severity: string) => {
+  const _logSecurityEvent = useCallback((level: string, message: string, category: string, severity: string) => {
     const event: SecurityEvent = {
       id: Date.now().toString(),
       timestamp: new Date().toISOString(),
@@ -69,11 +75,11 @@ export default function SecurityEnhancer({ className = '' }: SecurityEnhancerPro
 
   useEffect(() => {
     // Initialize security monitoring
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     
     // Monitor fetch requests
     window.fetch = function(input: RequestInfo | URL, init?: RequestInit) {
-      const url = typeof input === 'string' ? input : input.toString();
+      const _url = typeof input === 'string' ? input : input.toString();
       if (url.includes('javascript:') || url.includes('data:text/html')) {
         logSecurityEvent(
           'error',

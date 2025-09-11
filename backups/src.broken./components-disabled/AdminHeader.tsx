@@ -1,15 +1,13 @@
 import React from "react";
-import Image from "next/image"; // Import Image
+
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from "lucide-react";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-
 export function AdminHeader() {
-  // const { user } = useAuth(); // Unused but available
-  const { company } = useCompanyWorkspace();
+    // const { user } = useAuth(); // Unused but available
+    const { company } = useCompanyWorkspace();
+    return (<div className="space-y-4">
 
-  return (
-    <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
@@ -19,11 +17,13 @@ export function AdminHeader() {
         </div>
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm" className="gap-2">
-            <Settings className="h-4 w-4" />
+
+            <Settings className="h-4 w-4"/>
             Settings
           </Button>
           <Button variant="outline" size="sm" className="gap-2">
-            <Download className="h-4 w-4" />
+            <Download className="h-4 w-4"/>
+
             Export Data
           </Button>
         </div>
@@ -46,14 +46,10 @@ export function AdminHeader() {
       
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center p-1"> {/* Added padding for contain */}
-            <Image
-              src={company?.logoUrl || "/placeholder.svg"}
-              alt={company?.name || "Company"}
-              width={40} // Corresponds to max-h-10/max-w-10
-              height={40}
-              style={{ objectFit: "contain" }}
-            />
+
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
+            <img loading="lazy" src={company?.logoUrl || "/placeholder.svg"} alt={company?.name || "Company"} className="max-h-10 max-w-10"/>
+
           </div>
           <div>
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
@@ -64,6 +60,7 @@ export function AdminHeader() {
         </div>
         <Button>Customize Workspace</Button>
       </div>
-    </div>
-  );
+
+    </div>);
+
 }

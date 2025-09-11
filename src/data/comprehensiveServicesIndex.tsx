@@ -1,3 +1,5 @@
+const services = [];
+
 // Comprehensive Services Index;
 // This file exports all our innovative technology services;
 // Core Innovative Services;

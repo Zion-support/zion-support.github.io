@@ -1,1 +1,1 @@
-import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
+import { _ import { innovativeServices2027 } from '../data/innovativeServices2027';

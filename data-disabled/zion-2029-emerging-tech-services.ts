@@ -40,7 +40,6 @@ export interface ZionEmergingTechService2029 {
   reviews: number}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
   // Space Technology Solutions;
-<<<<<<< HEAD:data-disabled/zion-2029-emerging-tech-services.ts
   {
     id: "space-tech-satellite-platform",;
     name: "Space Tech Satellite Platform",;

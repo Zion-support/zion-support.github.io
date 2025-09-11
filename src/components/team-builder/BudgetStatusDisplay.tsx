@@ -19,7 +19,7 @@ export ;
   ;
   ;
 ';
-  let "status": 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = "";
-  let progressValue = 0; // Percentage for the progress bar;
+  let "status": 'good' | 'warning' | 'danger' | 'info' = 'info';"  let _message = "";
+  let _progressValue = 0; // Percentage for the progress bar;
 
   if (userBudget.max !== null && userBudget.max !== Infinity) {;

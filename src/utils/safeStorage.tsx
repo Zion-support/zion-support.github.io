@@ -10,6 +10,6 @@ export type SafeStorage = {
 function isLocalStorageAvailable(): boolean {
   try {
     if (typeof window === 'undefined') return false;
-    const testKey = '__localStorage_test__';
+    const _testKey = '__localStorage_test__';
     window.localStorage.setItem(testKey, 'test');
     window.localStorage.removeItem(testKey);

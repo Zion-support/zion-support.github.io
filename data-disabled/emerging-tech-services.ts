@@ -39,7 +39,6 @@ export interface EmergingTechService {
   rating: number;
 export const emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet Security Platform;
-<<<<<<< HEAD:data-disabled/emerging-tech-services.ts
   {
     id: "quantum-internet-security-platform",;
     name: "Quantum Internet Security Platform",;

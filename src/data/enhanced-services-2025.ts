@@ -1,3 +1,13 @@
+import SEO from '../components/SEO';
+import { Cloud } from 'lucide-react';
+import { Code } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+const services = [];
+const solutions = [];
+
 export interface EnhancedService {
   id: string;
   name: string;

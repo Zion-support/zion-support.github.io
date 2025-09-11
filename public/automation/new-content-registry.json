@@ -1,0 +1,58 @@
+{
+<<<<<<< HEAD
+  "generatedAt": "2025-08-17T00:40:50.750Z",
+  "items": [
+    {
+      "title": "Innovation Insight — 2025-08-17 00-40",
+      "href": "/reports/innovations/insight-2025-08-17T00-40",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:40:50.677Z",
+      "source": "cloud-content-factory"
+    },
+    {
+      "title": "Autonomous Update — 2025-08-17 00-40",
+      "href": "/reports/updates/update-2025-08-17T00-40",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:40:50.677Z",
+      "source": "cloud-content-factory"
+    },
+    {
+      "title": "Innovation Insight — 2025-08-17 00-40",
+      "href": "/reports/innovations/insight-2025-08-17T00-40",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:40:50.677Z",
+      "source": "cloud-content-factory"
+    },
+    {
+      "title": "Autonomous Update — 2025-08-17 00-40",
+      "href": "/reports/updates/update-2025-08-17T00-40",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:40:50.677Z",
+      "source": "cloud-content-factory"
+=======
+  "generatedAt": "2025-08-17T00:46:21.856Z",
+  "items": [
+    {
+      "title": "Case Study — Cloud Improving",
+      "href": "/reports/cases/case-2025-08-17-004621",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:46:21.804Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — Cloud Improving Implementation",
+      "href": "/reports/guides/guide-2025-08-17-004621",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:46:21.804Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Pattern — Automation Trends 2025",
+      "href": "/reports/patterns/pattern-2025-08-17-004621",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T00:46:21.804Z",
+      "source": "cloud-deep-research-factory"
+>>>>>>> da7fb807fcb (chore(sync): advanced autonomous sync)
+    }
+  ]
+}

@@ -12,7 +12,6 @@ export interface RealOperationalService {
     mobile: string;
     email: string;
 export const realOperationalServices: RealOperationalService[] = [;
-<<<<<<< HEAD:data-disabled/real-operational-services.ts
   {
     id: "operational-intelligence",;
     name: "Operational Intelligence Platform",;

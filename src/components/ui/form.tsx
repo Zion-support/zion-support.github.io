@@ -30,7 +30,28 @@ export function FormField(props: any) {;
 interface FormMessageProps {;
   children?: "React.ReactNode;
   className?: string;
-;
-"}
-;
-export function FormMessage("props": "any) {;
+
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return (
+    <label className={className}>
+      {children}
+    </label>
+  );
+}
+
+interface FormMessageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  return (
+    <p className={className}>
+      {children}
+    </p>
+  );
+}
+

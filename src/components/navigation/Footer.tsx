@@ -1,15 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight } from "lucide-react";
+import { _Link } from "react-router-dom";
+import { _Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight } from "lucide-react";
+
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { Cloud } from 'lucide-react';
+import { Code } from 'lucide-react';
+const services = [];
+const solutions = [];
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  const contactInfo = {
+  const _currentYear = new Date().getFullYear();
+  const _contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com"
   };
-  const footerSections = [
+  const _footerSections = [
     {
       title: "Services",
       links: [

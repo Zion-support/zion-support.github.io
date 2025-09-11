@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
 import Web3Modal from 'web3modal';
-import { ethers } from 'ethers';
+import { _ethers } from 'ethers';
 ;
 export default function Page("props": "any) {;
 > = ({ children "}) => {;
@@ -11,8 +11,8 @@ export default function Page("props": "any) {;
   // "TODO": "Add dependencies if needed;
 "}, []);
     if(typeof window !== 'undefined') {;
-        const providerOptions = {};
-        const modal = new Web3Modal({;
+        const _providerOptions = {};
+        const _modal = new Web3Modal({;
             "network": 'mainnet', ;
             "cacheProvider": "tru e", ;
             providerOptions,;

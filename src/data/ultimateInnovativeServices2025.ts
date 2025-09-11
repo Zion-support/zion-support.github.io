@@ -1,3 +1,7 @@
+const features = [];
+const benefits = [];
+const useCases = [];
+
 export interface UltimateInnovativeService {
   id: string;
   title: string;

@@ -1,31 +1,38 @@
 import React, { Suspense, lazy } from;
-  'reactimport { Routes, Route } from;'
-  react-router-domimport { HelmetProvider } from;
+  'reactimport { _Routes, Route } from;'
+  react-router-domimport { _HelmetProvider } from;
   react-helmet-asyncexport default function Page(props: any) {
 export default function Page(props: any) {
 // Core Components;
-import { PerformanceOptimizer } from ./components/PerformanceOptimizerexport default function Page(props: any) {
+import { _PerformanceOptimizer } from ./components/PerformanceOptimizerexport default function Page(props: any) {
 export default function Page(props: any) {
-  import { SEO } from ./components/SEOexport default function Page(props: any) {
+  import { _SEO } from ./components/SEOexport default function Page(props: any) {
 export default function Page(props: any) {
-  import { ErrorBoundary } from ./components/ErrorBoundaryexport default function Page(props: any) {
+  import { _ErrorBoundary } from ./components/ErrorBoundaryexport default function Page(props: any) {
 export default function Page(props: any) {
-  import { LoadingSpinner  } from ./components/ui/loading-spinnerexport default function Page(props: any) {
+  import { _LoadingSpinner  } from ./components/ui/loading-spinnerexport default function Page(props: any) {
 export default function Page(props: any) {
 // Layout Components;
-import { EnhancedHeader } from ./components/EnhancedHeaderexport default function Page(props: any) {
+import { _EnhancedHeader } from ./components/EnhancedHeaderexport default function Page(props: any) {
 export default function Page(props: any) {
-  import { EnhancedFooter } from ./components/EnhancedFooterexport default function Page(props: any) {
+  import { _EnhancedFooter } from ./components/EnhancedFooterexport default function Page(props: any) {
+
+import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
+const securityServices = [];
+const services = [];
+const solutions = [];
 export default function Page(props: any) {
 // Optimized lazy loading with preloading hints;
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
+const _createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {  const _LazyComponent = lazy(importFn)
   return (props: an y) => (
 <Suspense fallback={fallback || <LoadingSpinner  />}><LazyComponent {...props}  />
     </Suspense>  )};
 // Core pages with optimized imports;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
 // Error Fallback Component';
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (';';
+const _ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (';';
   <div className=min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'';';
     <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>';';
       <div className='text-red-400 text-6xl mb-4'>⚠️</div>';';

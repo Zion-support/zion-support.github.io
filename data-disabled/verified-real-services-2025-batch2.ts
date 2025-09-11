@@ -12,7 +12,6 @@ export interface VerifiedRealService2025Batch2 {
     mobile: string;
     email: string;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-<<<<<<< HEAD:data-disabled/verified-real-services-2025-batch2.ts
   {
     id: "ai-quality-assurance",;
     name: "AI Quality Assurance Platform",;

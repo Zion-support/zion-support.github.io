@@ -3,12 +3,16 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page(props: any) {
 > {
 ';
-  maxNotifications?: number;';';;
+  maxNotifications?: number;';';
+;
+export default function Page(props: any) {;
+> {;
+  maxNotifications?: number;
+;
 export default function Page("props": "any) {;
 > {;
 export default function Page(props: any) {
 > {
-
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   enableSound?: boolean;
@@ -27,17 +31,75 @@ interface NotificationSettings {;
 export const "NotificationSystem": "React.FC<NotificationSystemProps> = ({;
   maxNotifications = 5",;
   position = 'top-right',;
-"enableSound": "tru e",;export const NotificationSystem: React.FC<NotificationSystemProps> = ({
+"enableSound": "tru e",;
+  defaultDuration?: number}
+interface NotificationSettings {
+  sound: boolean;
+  vibration: boolean;
+  autoDismiss: boolean;
+  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  maxNotifications: number;
+  defaultDuration: number}
+export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5,
   position = 'top-right',
 ;
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({;
   maxNotifications = 5,;
   position = 'top-right',;
+enableSound: tru e,;
+  enableVibration = true,;
+  autoDismiss = true,;
+  defaultDuration = 5000}) => {;
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [settings, setSettings] = useState<NotificationSettings>({;
+    "sound": "enableSoun d",;
+    "vibration": "enableVibratio n",;
+    "autoDismiss": "autoDismis s",;
+    position,;
+    maxNotifications,;
+    defaultDuration;
+  }) ;
+  const [showSettings, setShowSettings] = useState<any>(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [unreadCount, setUnreadCount] = useState<any>(0);
+  ';
+// Initialize audio for notification sounds';';
+default:'';';
+// Initialize audio for notification sounds      default:'';';
 ;
 // Initialize audio for notification sounds;
 default:';
 // Initialize audio for notification sounds      default:';
+;
+// Initialize audio for notification sounds;
+"default":';
+// Initialize audio for notification sounds      "default":';
+  const [settings, setSettings] = useState<NotificationSettings>({
+    sound: enableSoun d,
+    vibration: enableVibratio n,
+    autoDismiss: autoDismis s,
+    position,
+    maxNotifications,
+    defaultDuration
+  }
+    );
+  const [showSettings, setShowSettings] = useState<any>(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [unreadCount, setUnreadCount] = useState<any>(0);
+// Initialize audio for notification sounds
+default:'
+// Initialize audio for notification sounds      default:'
+return 'top-4 right-4'}
+  };
+  // Update settings
+    setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
+  // Expose addNotification method globally for external use;
+  useEffect(() => {;
+  // "TODO": "Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+  "};
   // Expose addNotification method globally for external use
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -64,7 +126,8 @@ default:';
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"';
 ';';
               animate={{ scale: 1 }}";
-              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";              initial={{ "scale": "0 "}}
+              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
+              initial={{ "scale": "0 "}}
               animate={{ "scale": "1 "}}";
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
               {unreadCount > 99 ? '99+' : "unreadCount"}
@@ -79,7 +142,6 @@ default:';
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}"
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
-
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>) }
         </button>
@@ -135,7 +197,8 @@ default:';
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>
                 <button';
                   onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}`';';
-                  className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`";
+                  className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
+";
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings;
 ";
             <div className="space-y-4">";
@@ -226,7 +289,20 @@ default:';
                   </motion.div>
                 ) : (
                   notifications.map((notification) => (
-                    <motion.div                      key={notification.id"}
+                    <motion.div
+                    animate={{ opacity: 1 }}";
+                    initial={{ "opacity": "0 "}}
+                    animate={{ "opacity": "1 "}}";
+                    className="text-center py-8 text-zion-slate/60";
+";
+                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"   />;
+                    <p>No notifications yet</p>'"                    <p className="text-sm">We'll notify you when something important happens</p>;
+                  </motion.div>;
+                ) : "(;
+                  notifications.map((notification) => (;
+                    <motion.div;
+                      key={notification.id}
+                      key={notification.id"}
                       initial = {;
   { "opacity": "0",;
   "x": "5 0;
@@ -377,7 +453,8 @@ default:';
 ';';
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
   notification.priority);
-} ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;  notification.priority)
+} ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;
+  notification.priority)
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
                       }`}
 "
@@ -400,7 +477,35 @@ default:';
                           </div>;
 `;
                           <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`;
-                          "}`}>;                            {notification.message}
+                          "}`}>;
+                            </h4>
+                            <button
+                              onClick={() => dismissNotification(notification.id)}"
+                              className="p-1 hover: b g-zion-slate/10 rounded transition-colors"
+"
+                              <X className="w-3 h-3 text-zion-slate/60"   />                            </button>
+                          </div>
+`
+                          <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`
+                          }`}>
+                        </div>;
+";
+                        <div className="flex-1 min-w-0">";
+                          <div className="flex items-center justify-between">`;
+                            <h4 className={`text-sm font-medium ${notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dark'`;
+                            }`}>;
+                              {notification.title}
+                            </h4>;
+                            <button;
+                              onClick={() => dismissNotification(notification.id)}";
+                              className="p-1 hover: b g-zion-slate/10 rounded transition-colors";
+";
+                              <X className="w-3 h-3 text-zion-slate/60"   />                            </button>;
+                          </div>;
+`;
+                          <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`;
+                          }`}>;
+                            {notification.message}
                           </p>
 "
                           <div className="flex items-center justify-between mt-3">"
@@ -427,7 +532,95 @@ default:';
                             </div>;
                           </div>;
                         </div>;
-                      </div>;;
+                      </div>;
+                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded transition-colors"
+                                >
+                                  {notification.action.label}
+                                </button>) }
+                              {!notification.read && (
+                                <button
+                                  onClick={() => markAsRead(notification.id)}"
+                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover: b g-zion-slate/20 text-zion-slate rounded transition-colors"
+                                  Mark read
+                                </button>) }
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>) ) ) }
+              </AnimatePresence>
+            </div>;
+          </motion.div>;) };
+      </AnimatePresence>;
+    </>
+  )};
+// Hook for using notifications in components
+export 
+    if((window as any).addNotification) {;
+      (window as any).addNotification(notification)}
+  }, []) ;
+  return { addNotification }};
+// Utility functions for common notification types';
+export ';';
+        priority: 'medium',';';
+})};'        priority: 'medium',
+  ...options;
+      }) }  },
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    if((window as ).addNotification) {
+      (window as ).addNotification({';
+';';
+        type: 'warning',
+        title,';
+        message,';';
+        priority: 'medium',
+        ...options
+      }) }
+  },
+  error: (title: string, message: string, options?: Partial<Notification>) => {
+    if((window as ).addNotification) {
+      (window as ).addNotification({';
+';';
+        type: 'error',
+        title,';
+        message,';';
+        priority: 'high',
+        ...options
+      }) }
+  },
+  info: (title: string, message: string, options?: Partial<Notification>) => {
+    if((window as ).addNotification) {
+      (window as ).addNotification({';
+';';
+        type: 'info',
+        title,';
+        message,';';
+        priority: 'low',
+        ...options
+      }) }
+  },
+  achievement: (title: string, message: string, options?: Partial<Notification>) => {
+    if((window as ).addNotification) {
+      (window as ).addNotification({';
+';';
+        type: 'achievement',
+        title,';
+        message,';';
+        priority: 'high',
+        ...options
+      }) }
+  }';
+};';';
+'"`
+;,"});,})";
+</Notification>
+</motion>
+</motion>
+</any>
+</NotificationSettings>
+</Notification>';
+</NotificationSystemProps>;';;';
+;
 // Utility functions for common notification types;
 export;
         "priority": 'medium',;

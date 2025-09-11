@@ -7,7 +7,6 @@ import { Input "} from './ui/input';
 export default function Page("props": "any) {;
 ",;
         {;
-
             "id": 'nanotechnology',;
             "title": 'Advanced Nanotechnology Platform',;
             "category": 'biotech-ai',;
@@ -23,7 +22,6 @@ export default function Page("props": "any) {;
             "technologyMaturity": 'Growing';
         },;
         {;
-
             "id": 'brain-computer-interface',;
             "title": 'Advanced Brain-Computer Interface',;
             "category": 'biotech-ai',;
@@ -37,15 +35,12 @@ export default function Page("props": "any) {;
             "complexity": 'Enterprise',;
             "marketDemand": 'Exploding',;
             "technologyMaturity": 'Leading';
-
     ];
     const filteredPortfolio = useMemo(() => {;
         return portfolioData.filter(service => {;
-
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesStatus && matchesComplexity && matchesSearch})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
     const portfolioMetrics = useMemo(() => {;
-
         const activeServices = portfolioData.filter(s => s.status === 'Active');
         const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
         const avgPerformance = activeServices.length > 0;
@@ -55,7 +50,6 @@ export default function Page("props": "any) {;
             ? portfolioData.reduce((sum", s) => sum + s.growth, 0) / portfolioData.length;
             : "0;
         return {;
-
             "totalServices": portfolioData.length",;
             totalRevenue,;
             "activeClients": "totalClients",;
@@ -64,9 +58,7 @@ export default function Page("props": "any) {;
             "marketCoverage": "Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;
         "}}, [portfolioData]) ;
     const getStatusColor = ("props": "any) => {;
-
         switch(status) {;
-
             case 'Active': return 'bg-green-100 text-green-800';
             case 'Development': return 'bg-blue-100 text-blue-800';
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
@@ -74,9 +66,7 @@ export default function Page("props": "any) {;
             "default": return 'bg-gray-100 text-gray-800'"}
     };
     const getComplexityColor = ("props": "any) => {;
-
         switch(complexity) {;
-
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
@@ -84,9 +74,7 @@ export default function Page("props": "any) {;
             "default": return 'bg-gray-100 text-gray-800'"}
     };
     const getMarketDemandColor = ("props": "any) => {;
-
         switch(demand) {;
-
             case 'Low': return 'bg-gray-100 text-gray-800';
             case 'Medium': return 'bg-blue-100 text-blue-800';
             case 'High': return 'bg-orange-100 text-orange-800';
@@ -94,15 +82,22 @@ export default function Page("props": "any) {;
             "default": return 'bg-gray-100 text-gray-800'"}
     };
     const getTechnologyMaturityColor = ("props": "any) => {;
-
         switch(maturity) {;
-
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
             "default": return 'bg-gray-100 text-gray-800'"}
     };
+    const categories = [';
+        {"id": 'all', "name": 'All Categories', "count": "portfolioData.length"},;
+        {"id": 'ai', "name": 'AI & Machine Learning', "count": "portfolioData.filter(s => s.category === 'ai').length"},;
+        {"id": 'quantum', "name": 'Quantum Computing', "count": "portfolioData.filter(s => s.category === 'quantum').length"},;
+        {"id": 'space-tech', "name": 'Space Technology', "count": "portfolioData.filter(s => s.category === 'space-tech').length"},;
+        {"id": 'biotech-ai', "name": 'Biotech AI', "count": "portfolioData.filter(s => s.category === 'biotech-ai').length"},;
+        {"id": 'green-tech', "name": 'Green Technology', "count": "portfolioData.filter(s => s.category === 'green-tech').length"}
+    ];";
+    return (<div className="max-w-7xl mx-auto p-6">;
     const categories = ['
         {id: 'all', name: 'All Categories', count: portfolioData.length},
         {id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length},
@@ -115,15 +110,11 @@ export default function Page("props": "any) {;
         <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} className="mb-8">";
         <div className="flex flex-col "lg": "flex-row "lg":items-center "lg":justify-between gap-4">;
@@ -146,18 +137,13 @@ export default function Page("props": "any) {;
           </div>;
         </div>;
       </motion.div>;
-
       {/* Portfolio Metrics */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} transition={{ "delay": "0.1 "}} className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-6 mb-8">";
         <Card className=""hover":shadow-lg transition-shadow">";
@@ -177,6 +163,85 @@ export default function Page("props": "any) {;
           <CardContent>";
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               {portfolioMetrics.totalServices}
+            </h3>";
+            <p className="text-sm text-zion-slate-light">;
+              Total Services;
+            </p>;
+          </CardContent>;
+        </Card>;
+";
+        <Card className=""hover": "shadow-lg transition-shadow">";
+          <CardHeader className="pb-3">";
+            <div className="flex items-center justify-between">";
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">";
+                <DollarSign className="w-6 h-6" />;
+              </div>";
+              <div className="flex items-center gap-1">";
+                <ArrowUpRight className="w-4 h-4 text-green-500" />";
+                <span className="text-sm font-medium text-green-600">;
+                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
+                </span>;
+              </div>;
+            </div>;
+          </CardHeader>;
+          <CardContent>";
+            <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+              ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M;
+            </h3>";
+            <p className="text-sm text-zion-slate-light">;
+              Total Revenue;
+            </p>;
+          </CardContent>;
+        </Card>;
+";
+        <Card className=""hover": "shadow-lg transition-shadow">";
+          <CardHeader className="pb-3">";
+            <div className="flex items-center justify-between">";
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">";
+                <Users className="w-6 h-6" />;
+              </div>";
+              <div className="flex items-center gap-1">";
+                <ArrowUpRight className="w-4 h-4 text-green-500" />";
+                <span className="text-sm font-medium text-green-600">;
+                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
+                </span>;
+              </div>;
+            </div>;
+          </CardHeader>;
+          <CardContent>";
+            <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+              {portfolioMetrics.activeClients}
+            </h3>";
+            <p className="text-sm text-zion-slate-light">;
+              Active Clients;
+            </p>;
+          </CardContent>;
+        </Card>;
+";
+        <Card className=""hover": "shadow-lg transition-shadow">";
+          <CardHeader className="pb-3">";
+            <div className="flex items-center justify-between">";
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">";
+                <Target className="w-6 h-6" />;
+              </div>";
+              <div className="flex items-center gap-1">";
+                <ArrowUpRight className="w-4 h-4 text-green-500" />";
+                <span className="text-sm font-medium text-green-600">;
+                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
+                </span>;
+              </div>;
+            </div>;
+          </CardHeader>;
+          <CardContent>";
+            <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+              {portfolioMetrics.averagePerformance}%;
+            </h3>";
+            <p className="text-sm text-zion-slate-light">;
+              Avg Performance;
+            </p>;
+          </CardContent>;
+        </Card>;
+      </motion.div>;
             "
             <p className="text-sm text-zion-slate-light">
               Total Services
@@ -256,18 +321,13 @@ export default function Page("props": "any) {;
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Filters and Controls */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} transition={{ "delay": "0.2 "}} className="bg-white rounded-lg shadow-lg p-6 mb-8">";
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-5 gap-4">;
@@ -279,7 +339,6 @@ export default function Page("props": "any) {;
                 </option>))}
             </select>;
           </div>;
-
           <div>";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>";
             <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">";
@@ -290,7 +349,6 @@ export default function Page("props": "any) {;
               <option value="Discontinued">Discontinued</option>;
             </select>;
           </div>;
-
           <div>";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>";
             <select value={selectedComplexity} onChange={(e) => setSelectedComplexity(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">";
@@ -301,7 +359,6 @@ export default function Page("props": "any) {;
               <option value="Enterprise">Enterprise</option>;
             </select>;
           </div>;
-
           <div>";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>";
             <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>;
@@ -309,7 +366,6 @@ export default function Page("props": "any) {;
 ";
           <div className="flex items-end">";
             <Button variant="outline" className="w-full" onClick={() => {;
-
             setSelectedCategory('all');
             setSelectedStatus('all');
             setSelectedComplexity('all');
@@ -320,18 +376,13 @@ export default function Page("props": "any) {;
           </div>;
         </div>;
       </motion.div>;
-
       {/* Portfolio Table */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} transition={{ "delay": "0.3 "}} className="mb-8">;
         <Card>;
@@ -364,15 +415,11 @@ export default function Page("props": "any) {;
                 </thead>;
                 <tbody>;
                   {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {;
-
   { "opacity": "0",;
   "x": "-20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "x": "0;
-
 ";
 "}} transition={{ "delay": "0.1 * index "}} className="border-b border-zion-slate-light/10 "hover": "bg-zion-blue-light/5">";
                       <td className="py-3 px-4">";
@@ -423,18 +470,13 @@ export default function Page("props": "any) {;
           </CardContent>;
         </Card>;
       </motion.div>;
-
       {/* Portfolio Insights */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} transition={{ "delay": "0.4 "}} className="grid grid-cols-1 "lg": "grid-cols-2 gap-6 mb-8">;
         {/* Category Distribution */"}
@@ -448,15 +490,11 @@ export default function Page("props": "any) {;
           <CardContent>";
             <div className="space-y-3">;
               {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {;
-
   { "opacity": "0",;
   "x": "-20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "x": "0;
-
 ";
 "}} transition={{ "delay": "0.1 * index "}} className="flex items-center justify-between">";
                   <div className="flex items-center gap-3">'`;
@@ -481,7 +519,6 @@ export default function Page("props": "any) {;
             </div>;
           </CardContent>;
         </Card>;
-
         {/* Portfolio Insights */}
         <Card>;
           <CardHeader>";
@@ -525,18 +562,31 @@ export default function Page("props": "any) {;
           </CardContent>;
         </Card>;
       </motion.div>;
-
       {/* CTA Section */}
       <motion.div initial = {;
-
   { "opacity": "0",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
+";
+"}} transition={{ "delay": "0.5 "}} className="text-center">";
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";
+          <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>";
+          <p className="text-xl mb-6 max-w-2xl mx-auto">;
+            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>";
+          <div className="flex flex-col "sm": "flex-row gap-4 justify-center">";
+            <Button className="bg-white text-zion-purple "hover":bg-zion-slate-light" onClick={() => window.open('"mailto":kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation'",_blank')}>";
+              <Users className="w-5 h-5 mr-2" />;
+              Get Portfolio Consultation;
+            </Button>";
+            <Button variant="outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick={() => window.open('"tel":+13024640950'",_blank')}>";
+              <Zap className="w-5 h-5 mr-2" />;
+              Call Now;
+            </Button>;
+          </div>;
+        </div>;
+      </motion.div>;
 "
 }} transition={{ delay: 0.5 }} className="text-center">"
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"

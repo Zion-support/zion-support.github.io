@@ -1,19 +1,25 @@
 import React from 'react';';';
-import { Link, useLocation  } from 'react-router-dom';';';
+import { _Link, useLocation  } from 'react-router-dom';';';
  from 'react';';
 export const EnhancedMobileNavigation: Reac t.FC = () => {';';
-import { motion, AnimatePresence  } from 'framer-motion';';
+import { _motion, AnimatePresence  } from 'framer-motion';';
 ';';
  from 'lucide-react';';
 ';';
 import React from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import { _Link, useLocation  } from 'react-router-dom';
  from 'react';
 export const "EnhancedMobileNavigation": "React.FC = () => {;
-import { motion", AnimatePresence  } from 'framer-motion';
+import { _motion", AnimatePresence  } from 'framer-motion';
 ;
 export const EnhancedMobileNavigation: React.FC = () => {
-import { motion, AnimatePresence  } from 'framer-motion';
+import { _motion, AnimatePresence  } from 'framer-motion';
+
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
  from 'lucide-react';
 ;
 >} from 'lucide-react';

@@ -1,59 +1,63 @@
-import React from "react";
-const ServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: "AI & Machine Learning",
-      description: "Advanced AI solutions including natural language processing, computer vision, and predictive analytics.",
-      icon: "🤖"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions including threat detection, vulnerability assessment, and incident response.",
-      icon: "🔒"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions including migration, optimization, and management services.",
-      icon: "☁️"
-    },
-    {
-      title: "Web Development",
-      description: "Modern web applications using React, Node.js, and other cutting-edge technologies.",
-      icon: "🌐"
-    },
-    {
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
-      icon: "📱"
-    },
-    {
-      title: "DevOps & Automation",
-      description: "CI/CD pipelines, infrastructure as code, and automated deployment solutions.",
-      icon: "⚙️"
-    }
-  ];
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const ServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology solutions tailored to your business needs
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-              <p className="text-gray-300">{service.description}</p>
+    <>
+      <Helmet>
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive services including AI automation, micro SaaS development, enterprise IT solutions, and digital transformation." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide comprehensive technology solutions to help your business grow, innovate, and stay competitive.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4 text-blue-600">AI-Powered Automation</h2>
+              <p className="text-gray-600 mb-4">Leverage artificial intelligence to automate tasks and improve efficiency.</p>
+              <ul className="space-y-2">
+                <li>• Machine Learning Models</li>
+                <li>• Process Automation</li>
+                <li>• Predictive Analytics</li>
+              </ul>
             </div>
-          ))}
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4 text-blue-600">Micro SaaS Development</h2>
+              <p className="text-gray-600 mb-4">Build focused, scalable software solutions for specific business problems.</p>
+              <ul className="space-y-2">
+                <li>• Custom SaaS Applications</li>
+                <li>• API Development</li>
+                <li>• Cloud Integration</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4 text-blue-600">Enterprise IT Solutions</h2>
+              <p className="text-gray-600 mb-4">Comprehensive IT services for your business infrastructure needs.</p>
+              <ul className="space-y-2">
+                <li>• Cloud Migration</li>
+                <li>• Security Implementation</li>
+                <li>• System Integration</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-4 text-blue-600">Digital Transformation</h2>
+              <p className="text-gray-600 mb-4">Transform your business with modern technology solutions.</p>
+              <ul className="space-y-2">
+                <li>• Process Optimization</li>
+                <li>• Technology Strategy</li>
+                <li>• Change Management</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

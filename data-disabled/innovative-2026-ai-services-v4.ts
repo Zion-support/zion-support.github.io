@@ -38,7 +38,6 @@ export interface Innovative2026AIServiceV4 {
   rating: number;
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
   // AI Consciousness Simulation Platform;
-<<<<<<< HEAD:data-disabled/innovative-2026-ai-services-v4.ts
   {
     id: "ai-consciousness-simulation-platform",;
     name: "AI Consciousness Simulation Platform",;

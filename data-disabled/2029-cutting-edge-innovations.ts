@@ -41,7 +41,6 @@ export interface CuttingEdge2029Service {
 ;
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   // AI Consciousness & Neural Interface Services;
-<<<<<<< HEAD:data-disabled/2029-cutting-edge-innovations.ts
   {
     id: "ai-consciousness-simulation-platform",;
     name: "AI Consciousness Simulation Platform",;

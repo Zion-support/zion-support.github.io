@@ -1,1 +1,34 @@
-import React from "react"; import { SEO } from "../../components/SEO"; export default function AIMarketingAutomation() { return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center"> <SEO title="AI Marketing Automation - Zion Tech Group" description="AI-powered marketing automation platform."   /> <div className="text-center text-white"> <h1 className="text-4xl font-bold mb-4">AI Marketing Automation</h1> <p className="text-xl text-gray-300">Coming Soon</p> </div> </div> ); }
+import React from 'react';
+import { SEO } from '../../components/SEO';
+
+export default function AIMarketingAutomation() {
+  return (
+    <>
+      <SEO 
+        title="AIMarketingAutomation - Zion Tech Group" 
+        description="AIMarketingAutomation service from Zion Tech Group" 
+        keywords="AIMarketingAutomation, zion tech group, services"
+      />
+      <div className="min-h-screen bg-zion-blue pt-20 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              AIMarketingAutomation
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Professional AIMarketingAutomation services
+            </p>
+            <div className="bg-white rounded-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+                AIMarketingAutomation Service
+              </h2>
+              <p className="text-zion-slate-light">
+                We provide comprehensive AIMarketingAutomation solutions to help businesses achieve their goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

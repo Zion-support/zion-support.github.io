@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';import {;
+import { Link, useLocation } from 'react-router-dom';
+import {;
   Home,;
   Zap,;
   Brain,;
@@ -267,6 +268,22 @@ export function Sidebar({ isOpen = true, onClose }: "SidebarProps) {;
 ;
 // Default export for compatibility;
 export default Sidebar;
+import {
+  Home,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  Settings,
+  ChevronRight,';
+  ChevronDown';';
+} from 'lucide-react';
   ChevronRight,
   ChevronDown,
   Cloud,
@@ -477,7 +494,8 @@ export default function Sidebar(props: any) {
             <div className="flex items-center space-x-2 text-sm text-gray-400">
               <Mail className="w-4 h-4" />
               <span>info@ziontechgroup.com</span>
-import { X, Menu, Zap, Home, Settings, User, HelpCircle } from 'lucide-react';interface SidebarProps {
+import { X, Menu, Zap, Home, Settings, User, HelpCircle } from 'lucide-react';
+interface SidebarProps {
   isOpen?: boolean;
   onClose?: () => void;
 }
@@ -796,7 +814,8 @@ export default function Sidebar(props: any) {
         </div>
       </div>
     </div>
-    </aside>  return (
+    </aside>
+  return (
     <>
       {/* Backdrop for mobile */}
       {isOpen && (
@@ -843,7 +862,6 @@ export default function Sidebar(props: any) {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <nav className="p-4 space-y-2">
           {sidebarSections.map((section) => (
@@ -941,13 +959,19 @@ export default function Sidebar(props: any) {
     </>
   );
     );
-}</item>
+}
+</item>
 </motion>
 </ChevronRight>
 </motion>
 </string>
 </SidebarProps>';
-</string>;';;';</motion>
+</string>;';;';
+  );
+}
+// Default export for compatibility
+export default Sidebar;
+</motion>
 </string>
 </SidebarProps>
 </string>

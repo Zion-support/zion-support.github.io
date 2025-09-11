@@ -1,18 +1,14 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
+import React from 'react';
 
+interface Props {
+  className?: string;
+}
 
-export default function DigitalTransformation() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="DigitalTransformation - Zion Tech Group" description="Professional DigitalTransformation services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">DigitalTransformation</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional DigitalTransformation services to help your business grow.
-        </p>
-      </div>
-  )
-
-
-}""
+export const Component: React.FC<Props> = ({ className = '' }) => {
+  return (
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-2xl font-bold mb-4">Component</h2>
+      <p>This is a placeholder component.</p>
+    </div>
+  );
+};

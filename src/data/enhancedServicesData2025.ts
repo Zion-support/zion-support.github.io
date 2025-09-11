@@ -1,3 +1,10 @@
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
+
 export interface InnovativeMicroSaasService {
   id: string;
   title: string;

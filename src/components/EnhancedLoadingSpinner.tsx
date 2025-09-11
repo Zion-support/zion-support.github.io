@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {;
   size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
@@ -13,7 +15,7 @@ setTimeout(() => {;
 ;
   if(!enabled || !isVisible) return null;
 ;
-  const renderSpinner = ("props": "any) => {;
+  const _renderSpinner = ("props": "any) => {;
     switch(variant) {;
       case 'futuristic':;
         return (<div className="relative">;
@@ -22,5 +24,5 @@ setTimeout(() => {;
               className="absolute inset - 0 border-4 border-zion - cyan / 20 rounded-full";
               animate={{ "rotate": "36 0 "}}
               transition={{ "duration": "2", "repeat": "Infinit y", "ease": "linear" }}
-            />;  const renderSpinner = (props: any) => {
+            />;  const _renderSpinner = (props: any) => {
     switch(variant) {

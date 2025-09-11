@@ -1,1 +1,19 @@
-:src.disabled/pages/terms.tsx React from "react";"const Terms: React.FC = () => { return ( <> <SEO title="Terms - Zion Tech Group /> <div className="min-h-screen" bg-white py-20> <div className="max-w-4xl" mx-auto px-4">" <h1 className="text-4xl" font-bold text-gray-900 mb-8>Terms</h1> <p className="text-lg" text-gray-600>Content coming soon...</p> </div>" </div> </>)};"const Terms React.FC = () => {"; export default Terms; return ( <>; <SEO title="Terms - Zion Tech Group /> <div className="min" - h-screen bg - white py - 20> <div className="max" - w-4xl mx - auto px - 4">" <h1 className="text" - 4xl font - bold text - gray - 900 mb - 8>Terms</h1> <p className="text" - lg text - gray - 600>Content coming soon...</p> </div>" </div>, </>) }; : src.disabled/pages/terms.tsx; React from; "react";"; "../components/SEO"";const Terms: React.FC = () => {"; return: ( <> <SEO title="Terms - Zion Tech Group" />" <div className="min-h-screen bg-white py-20">" <div className="max-w-4xl mx-auto px-4">" <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>" <p className="text-lg text-gray-600">Content coming soon...</p>" </div>" </div>", </>)} ;const Terms: React.FC = () => {";", export default Terms return ( <> <SEO title="Terms - Zion Tech Group" />" <div className="min - h-screen bg - white py - 20">" <div className="max - w-4xl mx - auto px - 4">" <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">Terms</h1>" <p className="text - lg text - gray - 600">Content coming soon...</p>" </div>" </div>" </>)} ";const Terms: React.FC = () => {"const Terms: React.FC = () => {", export default Terms return ( <>" <SEO title="Terms - Zion Tech Group" /> <div className="min - h-screen bg - white py - 20> <div className="max - w-4xl mx - auto px - 4> <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">Terms</h1>" <p className="text - lg text - gray - 600">Content coming soon...</p>" </div>" </div> </>) } "}
+
+
+import React from 'react';
+
+interface TermsProps {
+  // Add props here as needed
+}
+
+export default function Terms({ }: TermsProps) {
+  return (
+    <div>
+      <h1>Terms</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}
+
+

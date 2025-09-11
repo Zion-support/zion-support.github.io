@@ -1,5 +1,7 @@
 import React from 'react';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
+import { _ import { motion, AnimatePresence  } from 'framer-motion';
+
+import { motion } from 'framer-motion';
  from 'lucide-react';
 ;
 interface SecurityThreat {;

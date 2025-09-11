@@ -1,3 +1,12 @@
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+"use client",
+import { useState, useEffect  } from './react';,
+import { use_auth  } from '@/contexts / AuthContext';,
+interface WalkthroughStep {
+  id: string,
+  title: string,
+  description: string,
+  target?: string,
 "use client",;
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -8,83 +17,98 @@ interface WalkthroughStep {;
   target?: string,;
   position: "top" | "bottom" | "left" | "right";
 }
-;
-const walkthroughSteps: WalkthroughStep[] = [;
-  {;
-    id: "welcome",;
-    title: "Welcome to Zion OS! 🚀",;
-    description: "Let's take a quick tour to help you get started with launching your digital economy.",;
+const walkthrough_steps: WalkthroughStep[] = [;
+  {
+    id: "welcome",
+    title: "Welcome to Zion OS! 🚀",
+    description: "Let's take a quick tour to help you get started with launching your digital economy.",
     position: "bottom";
-  },;
-  {;
-    id: "launch-wizard",;
-    title: "Launch Wizard",;
-    description: "Start here to create a new instance with marketplace, governance, and identity tools.",;
-    target: "launch-wizard-card",;
+  },
+  {
+    id: "launch - wizard",
+    title: "Launch Wizard",
+    description: "Start here to create a new instance with marketplace, governance, and identity tools.",
+    target: "launch - wizard - card",
     position: "right";
-  },;
-  {;
-    id: "admin-panel",;
-    title: "Admin Panel",;
-    description: "Manage your deployed instances, API keys, and governance settings from here.",;
-    target: "admin-instances-card",;
+  },
+  {
+    id: "admin - panel",
+    title: "Admin Panel",
+    description: "Manage your deployed instances, API keys, and governance settings from here.",
+    target: "admin - instances - card",
     position: "left";
-  },;
-  {;
-    id: "navigation",;
-    title: "Navigation",;
-    description: "Use the top navigation to quickly access different sections of the platform.",;
-    target: "nav-menu",;
+  },
+  {
+    id: "navigation",
+    title: "Navigation",
+    description: "Use the top navigation to quickly access different sections of the platform.",
+    target: "nav - menu",
     position: "bottom";
-  },;
-  {;
-    id: "complete",;
-    title: "You're All Set! 🎉",;
-    description: "You now know the basics. Start building your digital economy or explore more features.",;
+  },
+  {
+    id: "complete",
+    title: "You're All Set! 🎉",
+    description: "You now know the basics. Start building your digital economy or explore more features.",
     position: "top";
   }
-],;
-export function OnboardingWalkthrough() {;
-  const [currentStep, setCurrentStep] = useState(0),;
-  const [isVisible, setIsVisible] = useState(false),;
-  const [isCompleted, setIsCompleted] = useState(false),;
-  const { user, completeOnboarding } = useAuth(),;
-  useEffect(() => {;
+],
+export /**
+ * OnboardingWalkthrough - Function description
+ */
+function OnboardingWalkthrough() {
+  const [current_step, setCurrentStep] = useState (0),
+  const [is_visible, setIsVisible] = useState (false),
+  const [is_completed, setIsCompleted] = useState (false),
+  const { user, complete_onboarding } = use_auth (),
+  useEffect (() => {
     // Show walkthrough for new users who haven't completed onboarding;
-    if (user && !user.onboardingCompleted) {;
-      setIsVisible(true);
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsVisible (true);
     }
-  }, [user]),;
-  const handleNext = () => {;
-    if (currentStep < walkthroughSteps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      handleComplete();
+  }, [user]),
+  const handle_next = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentStep (current_step + 1);
+    } else {
+      handle_complete ();
     }
-  },;
-  const handlePrevious = () => {;
-    if (currentStep > 0) {;
-      setCurrentStep(currentStep - 1);
+  },
+  const handle_previous = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentStep (current_step - 1);
     }
-  },;
-  const handleSkip = () => {;
-    setIsVisible(false),;
-    setIsCompleted(true);
-  },;
-  const handleComplete = async () => {;
-    try {;
-      await completeOnboarding(),;
-      setIsVisible(false),;
-      setIsCompleted(true);
-    } catch (error) {;
-      console.error("Failed to complete onboarding:", error);
+  },
+  const handle_skip = () =>: any {
+    setIsVisible (false),
+    setIsCompleted (true);
+  },
+  const handle_complete = async () => {
+    try {
+      await complete_onboarding (),
+      setIsVisible (false),
+      setIsCompleted (true);
+    } catch (error) {
+      console.error ("Failed to complete onboarding:", error);
     }
-  },;
-  const currentStepData = walkthroughSteps[currentStep],;
-  if (!isVisible || isCompleted) {;
+  },
+  const currentStepData = walkthrough_steps[current_step],
+  // Check condition
+if ( {) {
+  $2
+}
     return null;
   }
 ;
+
   return (;
     <>;
       {/* Overlay */}
@@ -147,22 +171,43 @@ export function OnboardingWalkthrough() {;
             top: 0,;
             left: 0,;
             right: 0,;
+
+
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+
+=======
             style={{;
               top: "50%",;
               left: "50%",;
-              transform: "translate(-50%, -50%)",;
-              width: "300px";
-              height: "200px"}}
+              transform: "translate(-50%, -50%)",;              height: "200px"}}
           />;
         </div>;
       )}
     </>;
   );
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+;
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {;
+  return {;
+
+
+    "data-walkthrough-target": id;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * useWalkthroughTarget - Function description
+ */
+function useWalkthroughTarget() {
+  return {
+    "data - walkthrough - target": id;
+=======export function useWalkthroughTarget(id: string) {return {;
 ;
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;

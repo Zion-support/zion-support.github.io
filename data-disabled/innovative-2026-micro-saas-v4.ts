@@ -40,7 +40,6 @@ export interface Innovative2026MicroSaasServiceV4 {
       "API for developers"
       "Multi-currency support"
       "Fraud prevention";
-<<<<<<< HEAD:data-disabled/innovative-2026-micro-saas-v4.ts
     ],;
     popular: false,;
     icon: "🔗",;

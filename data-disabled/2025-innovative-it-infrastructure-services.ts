@@ -39,7 +39,6 @@ export interface InnovativeITInfrastructureService {
   rating: number;
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
-<<<<<<< HEAD:data-disabled/2025-innovative-it-infrastructure-services.ts
   {
     id: "quantum-secure-cloud-infrastructure",;
     name: "Quantum-Secure Cloud Infrastructure Platform",;

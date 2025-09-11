@@ -39,7 +39,6 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   rating: number;
 export const cuttingEdgeITInfrastructureInnovations2025 = [;
   // Quantum-Safe Cloud Infrastructure Platform;
-<<<<<<< HEAD:data-disabled/2025-cutting-edge-it-infrastructure-innovations.ts
   {
     id: "quantum-safe-cloud-infrastructure-platform",;
     name: "Quantum-Safe Cloud Infrastructure Platform",;

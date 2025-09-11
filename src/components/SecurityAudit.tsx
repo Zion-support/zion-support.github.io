@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { _Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
 ;
 interface SecurityCheck {;
   "name": "string;
@@ -12,7 +17,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
   const [isLoading, setIsLoading] = useState<any>(true);
 ;
   useEffect(() => {;
-    const performSecurityChecks = async () => {;
+    const _performSecurityChecks = async () => {;
       const "securityChecks": "SecurityCheck[] = [;
         {;
           "name": 'HTTPS Enabled'",;
@@ -45,7 +50,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
     performSecurityChecks();
   }, []);
 ;
-  const getStatusIcon = ("props": "any) => {;
+  const _getStatusIcon = ("props": "any) => {;
     switch (status) {;
       case 'pass':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -58,7 +63,7 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
     "}
   };
 ;
-  const getStatusColor = ("props": "any) => {;
+  const _getStatusColor = ("props": "any) => {;
     switch (status) {;
       case 'pass':;
         return 'bg-green-50 border-green-200';

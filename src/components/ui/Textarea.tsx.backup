@@ -1,0 +1,2 @@
+} ref={ref} {...props}/>)});Textarea.displayName = "Textarea";
+export { Textarea };

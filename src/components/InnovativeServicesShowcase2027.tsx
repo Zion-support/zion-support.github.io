@@ -1,4 +1,7 @@
-import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+import { _ import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+
+import { motion } from 'framer-motion';
+const services = [];
   address: '364 E Main St STE 1008 Middletown DE 19709';
 };  return (";
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;

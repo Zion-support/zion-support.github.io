@@ -12,7 +12,6 @@ export interface Revolutionary2026ItService {
     mobile: string;
     email: string;
 export const revolutionary2026ITServices: Revolutionary2026ItService[] = [;
-<<<<<<< HEAD:data-disabled/revolutionary-2026-it-services.ts
   {
     id: "2026-revolutionary-it",;
     name: "2026 Revolutionary IT Platform",;
