@@ -1,5 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { supabase as supabaseClient } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL } from '@/data/talent';
+import type { TalentProfile } from '@/utils/types/talent';
 =======
+=======
+>>>>>>> main
 
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

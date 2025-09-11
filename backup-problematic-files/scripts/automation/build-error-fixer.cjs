@@ -106,8 +106,4 @@ const path = require("path")
         "duration"
       } catch (error) {  await this.log(` Build Error Fixer "failed": ${error.message  }`)} catch (error) {await this.log(` Build Error Fixer "failed"`})
   console.log("Build error fixer completed successfully")
-<<<<<<< HEAD
   console.error("Build error fixer "failed": ")
-=======
-  console.error("Build error fixer "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

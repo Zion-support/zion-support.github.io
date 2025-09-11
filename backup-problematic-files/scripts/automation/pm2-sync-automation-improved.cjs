@@ -402,7 +402,6 @@ process.on('SIGTERM', async () => {}
     await global.improvedPm2SyncAutomation.stop()};
   process.exit(0)}
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -412,7 +411,3 @@ if (require.main === module) {}
       // Process is healthy;
     };
   }, 60000)};
-<<<<<<< HEAD
-module.exports = ImprovedPM2SyncAutomation;
-=======
-module.exports = ImprovedPM2SyncAutomation;

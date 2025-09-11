@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -15,13 +14,6 @@
   async attemptAutoFix() {}
     try {}
       console.log('Attempting to auto-fix linting issues...');
-<<<<<<< HEAD
-=======
-            const child = spawn('npm', ['run', '"lint": fix'], {})
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -56,7 +48,3 @@ if ( {})
     process.exit(0)}
 });
   watcher.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = LinterWatcher;
-=======
-module.exports = LinterWatcher;

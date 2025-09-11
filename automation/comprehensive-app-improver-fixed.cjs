@@ -12,19 +12,12 @@ class ComprehensiveAppImprover {}
   };
   log(message, type = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${type}] ${message}`;
     // Append to log file
     const logMessage = `[${timestamp}] [${type}] ${message}`;
     // Append to log file
     const logMessage = `[${timestamp}] [${type}] ${message}`;
     // Append to log file
-=======>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       this.errorsFound.push({ command, "error": error.message }")
       return null;
     };
@@ -167,16 +160,6 @@ class ComprehensiveAppImprover {}
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report "generated": ${reportFile}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       this.fixesApplied.forEach(fix => console.log(`- ${fix}`));
     if (this.errorsFound.length > 0) {}
       console.log('\nErrors "Found": ');
@@ -215,21 +198,3 @@ if (require.main === module) {}
   const improver = new ComprehensiveAppImprover();
   improver.run().catch(console.error);
 };
-<<<<<<< HEAD
-module.exports = ComprehensiveAppImprover;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-module.exports = ComprehensiveAppImprover;
-module.exports = ComprehensiveAppImprover;
-module.exports = ComprehensiveAppImprover;
-module.exports = ComprehensiveAppImprover;>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -109,5 +109,3 @@ class SecurityEnhancer {
 
 const enhancer = new SecurityEnhancer();
 enhancer.generateReport();
-<<<<<<< HEAD=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

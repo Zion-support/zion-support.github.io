@@ -36,12 +36,3 @@ export interface RealMicroSaasService2024 {
   implementationDetails?: string;
   launchDate?: string;
   reviews?: number}
-<<<<<<< HEAD:data-disabled/2024-real-micro-saas-services.ts
-
-export const realMicroSaasServices2024: RealMicroSaasService2024[] = [;
-  {
-    id: "ai-business-intelligence-pro",;
-    name: "AI Business Intelligence Pro",;
-    tagline: "Transform data into actionable insights with AI",;
-    price: "$299",;
-    period: "/month",;

@@ -38,11 +38,3 @@ export interface Revolutionary2026Service {
   rating: number;
 export const revolutionary2026Services: Revolutionary2026Service[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD:data-disabled/revolutionary-2026-services.ts
-  {
-    id: "ai-business-intelligence-suite-2026",;
-    name: "AI Business Intelligence Suite 2026",;
-    tagline: "Next-generation AI-powered business analytics and decision intelligence",;
-    price: "$299",;
-    period: "/month",;
-    description: "Revolutionary AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated decision-making capabilities. Features advanced machine learning algorithms, natural language querying, and real-time dashboard customization.",;

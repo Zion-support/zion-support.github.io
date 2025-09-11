@@ -1,43 +1,41 @@
 #!/bin/bash
 
-echo "=== Simple PR Merge Script ==="
+# Simple script to merge branches in batches
+set -e
 
-# Get current branch
-CURRENT_BRANCH=$(git branch --show-current)
-echo "Current branch: $CURRENT_BRANCH"
+echo "Starting simple branch merge process..."
 
-# Check if we're on main
-if [ "$CURRENT_BRANCH" != "main" ]; then
-    echo "Switching to main branch..."
+# Get first 10 branches
+branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -10)
+
+echo "Processing first 10 branches:"
+echo "$branches"
+
+# Function to merge a single branch
+merge_single_branch() {
+    local branch=$1
+    echo "Processing branch: $branch"
+    
+    # Switch to main and pull latest
     git checkout main
-fi
-
-# Pull latest changes
-echo "Pulling latest changes from origin..."
-git pull origin main
-
-# Check for any local branches that might be PRs
-echo "Checking for local branches..."
-git branch | grep -v main | while read branch; do
-    branch=$(echo $branch | sed 's/^[ *]*//')
-    echo "Found branch: $branch"
+    git pull origin main
     
     # Try to merge the branch
-    echo "Attempting to merge $branch into main..."
-    if git merge "$branch" --no-ff --no-edit; then
+    if git merge origin/$branch -m "Merge $branch into main" 2>/dev/null; then
         echo "✅ Successfully merged $branch"
         git push origin main
+        echo "✅ Pushed to origin"
     else
-        echo "❌ Failed to merge $branch, trying with -X theirs..."
+        echo "❌ Conflict in $branch, skipping for now"
         git merge --abort
-        if git merge "$branch" --no-ff --no-edit -X theirs; then
-            echo "✅ Successfully merged $branch with theirs strategy"
-            git push origin main
-        else
-            echo "❌ Failed to merge $branch even with theirs strategy"
-            git merge --abort
-        fi
     fi
+    
+    echo "---"
+}
+
+# Process each branch
+for branch in $branches; do
+    merge_single_branch "$branch"
 done
 
-echo "=== Merge process completed ==="
+echo "First batch completed!"

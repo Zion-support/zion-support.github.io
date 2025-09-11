@@ -461,7 +461,3 @@ if ( {})
      {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = AdvancedAppOptimizer;
-=======
-module.exports = AdvancedAppOptimizer;

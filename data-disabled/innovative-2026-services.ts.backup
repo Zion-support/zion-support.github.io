@@ -350,11 +350,3 @@ export interface Innovative2026Service {;
 ;
 export const innovative2026Services: Innovative2026Service[] = [;
   // AI-Powered Business Intelligence;
-<<<<<<< HEAD:data-disabled/innovative-2026-services.ts
-  {
-    id: "ai-business-predictor-pro",;
-    name: "AI Business Predictor Pro",;
-    tagline: "Predict market trends with 95% accuracy using quantum AI",;
-    price: "$299",;
-    period: "/month",;
-    description: "Advanced AI-powered business intelligence platform that predicts market trends, customer behavior, and business opportunities with unprecedented accuracy using quantum computing algorithms.",;

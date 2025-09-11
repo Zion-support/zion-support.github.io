@@ -190,10 +190,4 @@ export const ITServiceRequestHero = () => {
           />
         </motion.div>
       </motion.div>
-<<<<<<< HEAD
     </section>)}
-=======
-    </section>
-  );
-};
->>>>>>> f3efe67bd5a40cdc9a4ceb0ddb44619b451a40c5

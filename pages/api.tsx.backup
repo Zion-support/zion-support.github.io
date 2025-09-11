@@ -1,9 +1,4 @@
-=======
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ];
 ;
   const response_examples = {
@@ -12,13 +7,11 @@ import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, Ar
       data: {
         message: "Request successful"
         data: {
-=======    error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
-=======class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -129,14 +122,12 @@ export default function APIPage() {;
       },;
     },;
   };
-=======  return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
       description="Comprehensive API documentation for Zion Tech Group services. Access our AI, cloud, and enterprise APIs with detailed examples and guides."
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-=======              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
                   <Link
                     href="/api-docs"
@@ -151,8 +142,6 @@ export default function APIPage() {;
           </div>
         </div>
       </section>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Documentation;
                 </span>;
@@ -164,21 +153,15 @@ export default function APIPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-=======        {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
-=======              </div>;
             </div>;
           </div>;
         </section>;
-=======
-=======
-<<<<<<< HEAD                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
                   View Documentation;
                 </a>;
               </div>;
@@ -187,33 +170,11 @@ export default function APIPage() {;
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-=======
-=======
-<<<<<<< HEAD
     </Layout>>>>>>>> main
-=======
-    </MainLayout>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
->>>>>>> main
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;

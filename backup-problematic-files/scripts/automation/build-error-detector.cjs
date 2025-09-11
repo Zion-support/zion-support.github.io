@@ -108,8 +108,4 @@ this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
-<<<<<<< HEAD
       this.log("� Build Error Detector completed!")
-=======
-      this.log("� Build Error Detector completed!")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
