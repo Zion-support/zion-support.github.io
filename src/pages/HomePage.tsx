@@ -81,6 +81,20 @@ const HomePage: React.FC = () => {
               <div className="blog-grid">
                 <div className="blog-card">
                   <h3>
+                    <a href="/blog/practical-rag-architecture-guide-2025">Practical RAG Architecture Guide (2025)</a>
+                  </h3>
+                  <p>Production-ready patterns for reliable, fast, and cost-aware RAG systems.</p>
+                  <a className="service-link" href="/blog/practical-rag-architecture-guide-2025">Read more →</a>
+                </div>
+                <div className="blog-card">
+                  <h3>
+                    <a href="/blog/ai-vendor-risk-management-2025">AI Vendor Risk Management 2025</a>
+                  </h3>
+                  <p>A practical framework for evaluating and monitoring AI vendors.</p>
+                  <a className="service-link" href="/blog/ai-vendor-risk-management-2025">Read more →</a>
+                </div>
+                <div className="blog-card">
+                  <h3>
                     <a href="/blog/ai-enterprise-roadmap-2025">AI Enterprise Roadmap 2025</a>
                   </h3>
                   <p>Quarter-by-quarter plan to deliver AI value safely and efficiently.</p>

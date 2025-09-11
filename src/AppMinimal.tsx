@@ -23,6 +23,8 @@ const BlogEdgePersonalization = lazy(() => import('./pages/blog/EdgePersonalizat
 const BlogLLMCostOptimization = lazy(() => import('./pages/blog/LLMCostOptimizationPlaybook'));
 const BlogAIGovernanceChecklist = lazy(() => import('./pages/blog/AIGovernanceChecklist2025'));
 const BlogAIInfrastructureBlueprint = lazy(() => import('./pages/blog/AIInfrastructureBlueprint2025'));
+const BlogPracticalRAG = lazy(() => import('./pages/blog/PracticalRAGArchitectureGuide2025'));
+const BlogAIVendorRisk = lazy(() => import('./pages/blog/AIVendorRiskManagement2025'));
 
 export default function AppMinimal() {
   return (
@@ -71,6 +73,8 @@ export default function AppMinimal() {
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/blog" element={<BlogIndex />} />
+                <Route path="/blog/practical-rag-architecture-guide-2025" element={<BlogPracticalRAG />} />
+                <Route path="/blog/ai-vendor-risk-management-2025" element={<BlogAIVendorRisk />} />
                 <Route path="/blog/generative-ai-security-best-practices" element={<BlogGenerativeAISecurity />} />
                 <Route path="/blog/edge-personalization-patterns-2025" element={<BlogEdgePersonalization />} />
                 <Route path="/blog/llm-cost-optimization-playbook" element={<BlogLLMCostOptimization />} />
