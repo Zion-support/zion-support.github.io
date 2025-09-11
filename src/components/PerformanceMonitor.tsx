@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { performanceMonitor } from '../utils/performance';
+import { bundleAnalyzer } from '../utils/bundleAnalyzer';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -6,6 +8,9 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
+  performanceScore: number;
+  bundleScore: number;
+  recommendations: string[];
 }
 
 export const PerformanceMonitor: React.FC = () => {
@@ -15,6 +20,9 @@ export const PerformanceMonitor: React.FC = () => {
     fid: null,
     cls: null,
     ttfb: null,
+    performanceScore: 0,
+    bundleScore: 0,
+    recommendations: [],
   });
 
   useEffect(() => {
@@ -60,11 +68,35 @@ export const PerformanceMonitor: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Update performance scores and recommendations
+  useEffect(() => {
+    const updateScores = () => {
+      const performanceScore = performanceMonitor.getPerformanceScore();
+      const bundleScore = bundleAnalyzer.getPerformanceScore();
+      const recommendations = bundleAnalyzer.getRecommendations();
+
+      setMetrics(prev => ({
+        ...prev,
+        performanceScore,
+        bundleScore,
+        recommendations,
+      }));
+    };
+
+    // Update scores after a delay to allow for initial load
+    const timeoutId = setTimeout(updateScores, 2000);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   // Send metrics to analytics (placeholder)
   useEffect(() => {
     if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
       // In a real app, you would send this to your analytics service
       console.log('Performance Metrics:', metrics);
+      console.log('Performance Score:', metrics.performanceScore);
+      console.log('Bundle Score:', metrics.bundleScore);
+      console.log('Recommendations:', metrics.recommendations);
     }
   }, [metrics]);
 

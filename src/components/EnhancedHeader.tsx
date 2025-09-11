@@ -17,7 +17,7 @@ import {
   Zap,
   Rocket
 } from 'lucide-react';
-import { OptimizedButton } from './PerformanceOptimizer';
+// import { OptimizedButton } from './PerformanceOptimizer';
 
 const Header = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/EnhancedHeader';
@@ -11,6 +11,8 @@ import ServiceCard from './components/ServiceCard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ErrorMonitorProvider } from './components/ErrorMonitor';
+import { performanceMonitor } from './utils/performance';
+import usePerformance from './hooks/usePerformance';
 
 // Lazy load pages with better error handling
 const Home = React.lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
@@ -35,13 +37,31 @@ const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOpsServi
 const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices').catch(() => ({ default: () => <div>Error loading Cybersecurity Services</div> })));
 const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation').catch(() => ({ default: () => <div>Error loading AI Customer Service Automation</div> })));
 
-const App = () => {
+const App = memo(() => {
+  const { metrics, trackInteraction } = usePerformance('App', {
+    measureRender: true,
+    measureInteraction: true,
+    logMetrics: process.env.NODE_ENV === 'development',
+  });
+
+  // Initialize performance monitoring
+  React.useEffect(() => {
+    const cleanup = () => {
+      performanceMonitor.cleanup();
+    };
+    
+    return cleanup;
+  }, []);
+
   return (
     <ErrorMonitorProvider>
       <ErrorBoundary>
         <AccessibilityEnhancer>
           <Router>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+            <div 
+              className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"
+              onClick={() => trackInteraction('app-click')}
+            >
               <PerformanceMonitor />
               <Header />
               <Sidebar />
@@ -77,6 +97,6 @@ const App = () => {
       </ErrorBoundary>
     </ErrorMonitorProvider>
   );
-};
+});
 
 export default App;
