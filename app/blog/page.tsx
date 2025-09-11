@@ -3,6 +3,14 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'AI Copilots for Engineering Teams',
+    description:
+      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
+    date: '2025-09-11',
+    tags: ['AI', 'DevEx', 'Productivity'],
+  },
+  {
     title: 'GenAI Security in 2025: Practical Controls That Actually Work',
     description:
       'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
@@ -65,6 +73,14 @@ const posts = [
     href: '/blog/serverless-for-ml-2025',
     date: '2025-09-11',
     tags: ['Serverless', 'ML', 'Cloud'],
+=======
+    title: 'AI Copilots for Engineering Teams',
+    description:
+      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
+    date: '2025-09-11',
+    tags: ['AI', 'DevEx', 'Productivity'],
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0ec
   },
   {
     title: 'Practical AI Agents for Small Businesses',

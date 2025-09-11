@@ -112,16 +112,16 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
+              title='AI Copilots for Engineering Teams'
+              href='/blog/ai-copilots-for-engineering'
+              description='Deploy repo-aware copilots to accelerate reviews and reduce engineering toil.'
+              icon='🧭'
+            />
+            <Card
               title='Secure RAG Architecture in 2025: Safety, Scale, and Speed'
               href='/blog/secure-rag-architecture-2025'
               description='Multi-tenant RAG with strong isolation, evals, and predictable latency.'
               icon='🛡️'
-            />
-            <Card
-              title='AI Product Roadmaps That Actually Ship'
-              href='/blog/ai-product-roadmaps-that-ship'
-              description='Milestones and guardrails that keep AI features shipping with quality.'
-              icon='🗺️'
             />
             <Card
               title='AI-Powered Customer Support Playbooks'
