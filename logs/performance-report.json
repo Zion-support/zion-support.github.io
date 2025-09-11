@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-11T11:34:03.754Z",
+  "timestamp": "2025-09-11T12:59:20.370Z",
   "bundleSize": {
     "totalBytes": 6094543,
     "totalSize": "5.81 MB",
@@ -24,9 +24,9 @@
     ]
   },
   "dependencies": {
-    "totalDependencies": 112,
+    "totalDependencies": 119,
     "productionDependencies": 93,
-    "devDependencies": 19,
+    "devDependencies": 26,
     "potentialUnused": []
   },
   "recommendations": [
