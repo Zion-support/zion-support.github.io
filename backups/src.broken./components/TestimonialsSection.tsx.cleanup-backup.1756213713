@@ -69,7 +69,6 @@ export function TestimonialsSection() {
               <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
               <span className="text-zion-cyan text-sm font-medium">Recent Feedback</span>
             </div>
-=======export const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       id: 1,
@@ -185,21 +184,9 @@ export function TestimonialsSection() {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300">
             <Quote className="w-5 h-5 mr-2" />
             Read More Success Stories
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </div>
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-}
-=======
-};
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

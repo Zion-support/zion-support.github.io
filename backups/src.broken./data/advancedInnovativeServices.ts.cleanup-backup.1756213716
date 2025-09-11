@@ -21,8 +21,6 @@ export interface AdvancedInnovativeService {
     website: string;
   };
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -211,8 +209,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/ai-drug-discovery"
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
     compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -458,7 +454,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$22,000 - $70,000/month",
-=======
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -475,7 +470,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     category: "Healthcare AI",
     subcategory: "Medical Diagnostics",
     price: 8500,
-==============    technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
     integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
     compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
     roi: "400% within 12 months",
@@ -873,8 +867,3 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 ];
 
 export default ADVANCED_INNOVATIVE_SERVICES;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

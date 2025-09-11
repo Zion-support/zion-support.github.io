@@ -133,6 +133,3 @@ class TestSyntaxFixer {
 if (require.main === module) {
   const fixer = new TestSyntaxFixer();
   fixer.run().catch(console.error);
-}
-
-module.exports = TestSyntaxFixer;

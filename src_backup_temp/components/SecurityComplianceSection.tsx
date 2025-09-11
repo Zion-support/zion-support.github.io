@@ -1,17 +1,24 @@
 import {  import { motion  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-  { opacity: 0,
-  y: 20;
-}}
+function SecurityComplianceSection("props": "any) {];
+;
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
+      <div className="max - w-7xl mx - auto px-6">;
+        <motion.div;
+          className="text-center mb-16"          initial = {;
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}        >";
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
+          transition={{ "duration": "0.6 "}}
+        >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Security & Compliance;
           </h2>";
@@ -19,21 +26,21 @@ import {  import { motion  } from 'framer-motion';
             Enterprise-grade security with industry-leading compliance certifications.Your data and systems are protected by the highest security standards.</p>;
         </motion.div>;
           initial = {;
-  { opacity: 0,
-  y: 20;
-}}
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
+  { "opacity": "1",;
+  "y": "0;
+"}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 0.1;
-}}";
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">;
-          {securityMetrics.map ( (metric, index) => {;            return (";
+  { "duration": "0.6",;
+  "delay": "0.1;
+"}}";
+          className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
+        > {securityMetrics.map ( (metric", index) => {;
+            ;
+            return (";
               <div key = {metric.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
                   <div className="p-3 bg-blue-600 rounded-full">";
@@ -44,20 +51,19 @@ import {  import { motion  } from 'framer-motion';
               key={feature.title}";
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 "hover": "borde r-blue-500/50 transition-all duration-300";
               initial = {;
-  { opacity: 0,
-  y: 30;
-}}
+  { "opacity": 0",;
+  "y": "3 0;
+"}}
               whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-              viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+              viewport={{ "once": "tru e "}}
               transition = {;
-
-  { duration: 0.6,
-  delay: index * 0.1;
-}}            >";
+  { "duration": "0.6",;
+  "delay": "inde x * 0.1;
+"}}
+            >";
               <div className="flex items-start gap-4">;
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>";
                   <span className="text-xl">{feature.icon}</span>;
@@ -68,27 +74,58 @@ import {  import { motion  } from 'framer-motion';
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`;
                     <div className={`w-2 h-2 rounded-full ${feature.status === 'Certified' ? 'bg-green-400' :';
                       feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`;
-  { opacity: 0,
-  y: 30;
+                    }`}></div>";
+                    <span className="text-gray-300 text-sm font-medium">{feature.status}</span>;
+                  </div>;
+                </div>;
+              </div>;
 }}
-          whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition = {;
-
+              viewport={{ once: tru e }}
+              transition = {
   { duration: 0.6,
-  delay: 0.4;
-}}        >";
+  delay: inde x * 0.1
+}}
+            >"
+              <div className="flex items-start gap-4">
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>"
+                  <span className="text-xl">{feature.icon}</span>
+                </div>"
+                <div className="flex-1">"
+                  <h3 className="text-lg font-bold text-white mb-2">{feature.title}"
+                  <p className="text-gray-400 text-sm mb-3">{feature.description}</p>"
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`
+                    <div className={`w-2 h-2 rounded-full ${feature.status === 'Certified' ? 'bg-green-400' :'
+                      feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`
+                    }`}></div>"
+                    <span className="text-gray-300 text-sm font-medium">{feature.status}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>) ) }
+        </div>;
+        {/* Compliance Features */}
+        <motion.div;
+          className="mb-16"          initial = {;
+  { "opacity": "0",;
+  "y": "3 0;
+"}}
+          whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
+          transition = {;
+  { "duration": "0.6",;
+  "delay": "0.4;
+"}}
+        >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
             Comprehensive Security Features;
-          </h3>;}}
+          </h3>;
+}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
-
           <div className="grid grid - cols - 1 "md": "gri d - cols - 3 gap-8">;
             {complianceFeatures.map((category", index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">;
                 <h4 className="text-xl font - bold text-white mb-4 text-center">                  {category.category}
@@ -107,37 +144,69 @@ import {  import { motion  } from 'framer-motion';
         {/* Security Metrics */}
         <motion.div;
           className="mb-16"          initial = {;
-  { opacity: 0,
-  y: 30;
-}}
+  { "opacity": "0",;
+  "y": "3 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 0.6;
-}}        >";
+  { "duration": "0.6",;
+  "delay": "0.6;
+"}}
+        >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-8">;
               Security Performance Metrics;
-  { opacity: 0,
-  y: 20;
+            </h3>;
+            ;";
+            <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-6">;";
+              <div className="text-center">;";
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;";
 }}
+        >"
+          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
+            <h3 className="text-2xl font-bold text-white text-center mb-8">
+              Security Performance Metrics
+            ;"
+            <div className="grid grid-cols-1 md: gri d-cols-4 gap-6">;"
+              <div className="text-center">;"
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;"
+                <div className="text-gray-400 text-sm">Uptime SLA</div>;
+              </div>;";
+              <div className="text-center">;";
+                <div className="text-4xl font-bold text-green-400 mb-2">&lt;1s</div>";
+                <div className="text-gray-400 text-sm">Response Time</div>;
+              </div>";
+              <div className="text-center">";
+                <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>";
+                <div className="text-gray-400 text-sm">Monitoring</div>;
+              </div>";
+              <div className="text-center">";
+                <div className="text-4xl font-bold text-orange-400 mb-2">0</div>";
+                <div className="text-gray-400 text-sm">Security Breaches</div>;
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
+        {/* Call to Action */"}
+        <motion.div;
+          className="text-center"          initial = {;
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 0.8;
-}}        >";
+  { "duration": "0.6",;
+  "delay": "0.8;
+"}}
+        >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold mb-4">;
               Secure Your Business Today;
@@ -154,7 +223,8 @@ import {  import { motion  } from 'framer-motion';
                 <FileText className="ml-2 h-5 w-5"   />              </button>;
             </div>;
           </div>;
-        </motion.div>;}}
+        </motion.div>;
+}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold mb-4">
@@ -176,7 +246,6 @@ import {  import { motion  } from 'framer-motion';
       </div>;
     </section>;) "};
 ;
-    </section>;) };
 export default SecurityComplianceSection;";
             <span className="text-2xl">→</span>;
           </div>;

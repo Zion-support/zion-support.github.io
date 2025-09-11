@@ -1,7 +1,6 @@
-/* Minimal baseline styles to unblock build */
-html, body, #root {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
+/* Import accessibility styles */
+@import './styles/accessibility.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -29,10 +29,4 @@ const ResearchDevelopment: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default SpaceTech;
-=======
-export default ResearchDevelopment;=======
-export default SpaceTech;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

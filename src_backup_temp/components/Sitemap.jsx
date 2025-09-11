@@ -1,5 +1,6 @@
 import React from 'react';
-
+export default Sitemap;
+;
 import {Link} from 'react-router-dom';
 export default function Page("props": "any) {;
 ",;
@@ -40,6 +41,71 @@ export default function Page("props": "any) {;
             {"path": '/terms', "label": 'Terms of Service', "description": 'Terms and conditions of service'}
         ];
     };
+    return (<div className="bg-slate-50 py-16">";
+      <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">";
+        <div className="text-center mb-12">";
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Site Map</h2>";
+<p className="text-lg text-slate-600 max-w-2xl mx-auto">;
+            Navigate through all our pages and services to find exactly what you need";
+          </p>"";
+        </div>""""";
+""""";
+        <div className="grid grid-cols-1 "lg":grid-cols-2 "xl":grid-cols-3 gap-8">"""""",;
+          {/* comment */}"""";
+          <div className="bg-white rounded-lg shadow-sm p-6">"""";
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Main Pages</h3>"""";
+            <ul className="space-y-3">"""";
+              {sitemapData.main.map((item) => (<li key={item.path}" >""""";
+                  <Link to="{item.path}" className="block p-3 rounded-lg "hover": "bg-slate-50 transition-colors duration-200">""""",;
+                    <div className="font-medium text-slate-900">{item.label}</div>"""";
+                    <div className="text-sm text-slate-600">{item.description}</div>;
+                  </Link>;
+                </li>) ) }
+;
+            </ul>";
+          </div>"";
+          {/* comment */}""""";
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Core Services</h3>"""";
+              {sitemapData.services.map((item) => (<li key={item.path}" >"""";
+          {/* comment */}""""";
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">AI Autonomous Services</h3>"""";
+              {sitemapData.aiAutonomous.map((item) => (<li key={item.path}" >"""";
+          {/* comment */}""""";
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Pricing & Showcase</h3>"""";
+              {sitemapData.pricing.map((item) => (<li key={item.path}" >""""";
+                  </Link>"";
+                </li>))}""""";
+              {sitemapData.showcase.map((item) => (<li key={item.path}" >"""";
+          {/* comment */}""""";
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Legal & Resources</h3>"""";
+              {sitemapData.legal.map((item) => (<li key={item.path}" >"""";
+              <li>""""";
+                <Link to="/ai-consumer-willingness-to-try" className="block p-3 rounded-lg "hover": "bg-slate-50 transition-colors duration-200">"""";
+                  <div className="font-medium text-slate-900">AI Consumer Research</div>"""";
+                  <div className="text-sm text-slate-600">Research on AI consumer adoption</div>";
+              </li>"""";
+                <Link to="/ai-consumer-willingness-to-use" className="block p-3 rounded-lg "hover":bg-slate-50 transition-colors duration-200">"""";
+                  <div className="font-medium text-slate-900">AI Consumer Insights</div>"""";
+                  <div className="text-sm text-slate-600">Consumer insights for AI products</div>;
+              </li>"",;
+          {/* comment */}"""";
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">"""";
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links</h3>"""";
+            <div className="space-y-3">"""";
+              <Link to="/contact" className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300">"";
+                Get Started""""";
+              </Link>""""";
+              <Link to="/comprehensive-pricing-2025" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold "hover":bg-slate-50 transition-all duration-300 border border-slate-200">"";
+                View Pricing""""";
+              <Link to="/services" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold "hover":bg-slate-50 transition-all duration-300 border border-slate-200">;
+                Explore Services",;
+            </div>",;
+        {/* comment */}"""";
+        <div className="mt-12">"""";
+          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services</h3>"""";
+<div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-4">';
+            {['';
+            'AI Autonomous Audit'", AI Autonomous Compliance',AI Autonomous Creativity', AI Autonomous Customer Service',AI Autonomous Database Security', AI Autonomous Decision Engine',AI Autonomous Design', AI Autonomous DevOps',AI Autonomous Edge Security', AI Autonomous Education',AI Autonomous Finance', AI Autonomous Forensics',AI Autonomous Governance', AI Autonomous Healthcare',AI Autonomous Hybrid Security', AI Autonomous Identity Security',AI Autonomous Incident Response', AI Autonomous Infrastructure Security',AI Autonomous Invention', AI Autonomous IoT Security',AI Autonomous Learning', AI Autonomous Legal Counsel',AI Autonomous Logistics', AI Autonomous Malware Analysis',AI Autonomous Management', AI Autonomous Manufacturing',AI Autonomous Marketing', AI Autonomous Microservice Security',AI Autonomous Mobile Security', AI Autonomous Monitoring',AI Autonomous Network Security', AI Autonomous Optimization',AI Autonomous Orchestration', AI Autonomous Penetration Testing',AI Autonomous Planning', AI Autonomous Prediction',AI Autonomous Quality Assurance', AI Autonomous Reasoning',AI Autonomous Recommendation', AI Autonomous Risk Management',AI Autonomous Robotics', AI Autonomous Scientific Research',AI Autonomous Serverless Security', AI Autonomous Software Engineering',AI Autonomous Speech', AI Autonomous Synthesis',AI Autonomous Systems Platform', AI Autonomous Testing',AI Autonomous Threat Detection', AI Autonomous Threat Intelligence',AI Autonomous Trading', AI Autonomous Translation',AI Autonomous Virtual Assistant', AI Autonomous Vision',AI Autonomous Vulnerability Assessment', AI Autonomous Web Security',AI Autonomous Workflow', AI Autonomous Writing',AI Autonomous Zero Trust Security';
     return (
         <div className="bg-slate-50 py-16">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -61,7 +127,6 @@ export default function Page("props": "any) {;
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
                 </li>) ) }
-
             </ul>"
           </div>""
           {/* comment */}"""""
@@ -127,7 +192,12 @@ export {Sitemap};
 export {Sitemap};
 ;
 export {Page, Sitemap};
-
+;
+</li>;
+</li>;
+</li>;
+</div>;
+</div>
 </li>
 </li>
 </li>
@@ -136,7 +206,6 @@ export {Page, Sitemap};
 interface Sitemap.jsProps {
   // Add props here as needed
 }
-
 export default function Sitemap.js({ }: Sitemap.jsProps) {
   return (
     <div>

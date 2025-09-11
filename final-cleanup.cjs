@@ -75,12 +75,7 @@ function cleanMergeConflicts(content) {
       findConflictedFiles(filePath, conflictedFiles);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-  content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
-  content = content.replace(/>>>>>>> cursor\/[^\n]+\n?/g, '');
   
-=======
       if (content.includes('') || content.includes('') || content.includes('        conflictedFiles.push(filePath);
       }
     }

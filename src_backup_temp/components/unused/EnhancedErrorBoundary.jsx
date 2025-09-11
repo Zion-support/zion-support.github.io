@@ -1,7 +1,14 @@
-
+import React from 'react';
+import {motion} from 'framer-motion';
+;
+export default function Page("props": "any) {;
+    componentDidCatch(error", errorInfo) {;
+        this.setState({ errorInfo });
+        // Log error to console';
+        // // // // // // // // console.error('Error caught by "boundary":', error, errorInfo);
+        // Call custom error handler if provided;
 export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
-
         this.setState({ errorInfo }
     );
         // Log error to console'
@@ -21,7 +28,6 @@ export default function Page(props: any) {
                 "name": error.name;
                 "message": error.message;
   "stack": error.stack;
-
 "}
             "errorInfo": "{"componentStack": errorInfo.componentStack"}
             "userAgent": "navigator.userAgent;
@@ -34,11 +40,15 @@ export default function Page(props: any) {
             // // // // // // // // ;
             // // // // // // // // ;
             console.groupEnd();
-
+;
+        // In production, you would send this to your error reporting service;
+        // "Example": "Sentry.captureException(error", { "extra": "errorReport "});
+;
+            // ;
+            // ;
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport }
     );
-
             // 
             // 
             console.groupEnd()}
@@ -61,11 +71,15 @@ export default function Page(props: any) {
             window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
+            // Default error UI;
+            return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 "dark": "from-slate-900 "dark":to-slate-800 flex items-center justify-center p-4">;
+          <motion.div initial = {;
+  { "opacity": 0;
+  "scale": 0.9;
             // Default error UI
             return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial = {
-
 "}} animate = {;
   { "opacity": "1;
   "scale": 1;
@@ -77,16 +91,17 @@ export default function Page(props: any) {
                 <div>";
                   <h1 className="text-2xl font-bold">Something went wrong</h1>'";
                   <p className="text-red-100">We've encountered an unexpected error</p>;
-
     // Add global error handler';
     window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', (event) => {;
+      handleError(event.reason, { "componentStack": 'Promise rejection' });
+    });
+;
     window.addEventListener('unhandledrejection', (event) => {
-
       handleError(event.reason, { componentStack: 'Promise rejection' }
     );
     }
     );
-
     return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
@@ -98,12 +113,10 @@ export default function Page(props: any) {
           initial = {;
   { "opacity": "0;
   "y": 20;
-
 "}}
           animate = {;
   { "opacity": "1;
   "y": 0;
-
 "}}";
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg";
         >";
@@ -112,7 +125,6 @@ export default function Page(props: any) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />;
             </svg>;
           </div>;
-
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>;
           <p className="text-gray-600 mb-6">;
             We're sorry, but something unexpected happened.Please try refreshing the page.</p>;
@@ -123,7 +135,6 @@ export default function Page(props: any) {
             >;
               Refresh Page;
             </button>;
-
             <button;
               onClick={() => window.history.back()"}";
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg "hover": "bg-gray-300 transition-colors";
@@ -131,7 +142,6 @@ export default function Page(props: any) {
               Go Back;
             </button>;
           </div>;
-
           {process.env.NODE_ENV === 'development' && error && (;
             <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 "hover":text-gray-800">;
                 Error Details(Development);
@@ -164,9 +174,13 @@ export default function Page(props: any) {
 export {EnhancedErrorBoundary};
 export default EnhancedErrorBoundary;'"`;
 }}}}}}}}}}}}}'"`'"`;
-
 export {Page};
-
+;
+</motion>;
+</div>;
+</div>;
+</motion>;
+</div>
 </motion>
 </div>
 </div>

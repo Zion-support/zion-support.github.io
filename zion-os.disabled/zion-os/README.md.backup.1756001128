@@ -27,7 +27,6 @@ Launch sovereign AI-powered digital economies with one click. Unified deployment
 - **Deployment**: Vercel-ready with optimized build process
 
 ## 🚀 Quick Start
-=======
 # Zion OS - AI-Powered Digital Economy Platform
 
 ## Overview
@@ -95,12 +94,6 @@ Zion OS is a comprehensive platform that enables businesses to launch sovereign 
    # Edit .env.local with your configuration
    ```
 
-<<<<<<< HEAD
-4. **Set up the database**
-   ```bash
-   npm run prisma:generate
-   npm run prisma:migrate
-=======
 4. **Run database migrations**
    ```bash
    npm run prisma:migrate
@@ -227,7 +220,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 **Built with ❤️ by Zion Tech Group**
-=======
 6. **Build for production**
    ```bash
    npm run build

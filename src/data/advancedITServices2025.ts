@@ -32,6 +32,11 @@ export interface AdvancedITService {
 
 export const &quot;ADVANCED_IT_SERVICES_2025&quot;: AdvancedITService[] = [];
 import React from 'react
+
+const features = [];
+const benefits = [];
+const useCases = [];
+const integrations = [];
 export interface AdvancedITService {
   "id": string;
   title: string;

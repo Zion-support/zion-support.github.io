@@ -1,16 +1,18 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback;
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { EmptyMatchesCard } from './EmptyMatchesCard';
-import { JobMatchCard } from './JobMatchCard';
+import { _useEffect, useState, useCallback } from 'react'; // Added useCallback;
+import { _supabase } from '../../integrations/supabase/client';
+import { _toast } from '../../hooks/use-toast';
+import { _Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
+import { _EmptyMatchesCard } from './EmptyMatchesCard';
+import { _JobMatchCard } from './JobMatchCard';
+
+const integrations = [];
 ;
 export function SuggestedTalents("props": "any) {;
   const [talents", setTalents] = useState<any[]>([]); // Added type for talents;
   const [isLoading, setIsLoading] = useState<any>(true);
   const [isProcessing, setIsProcessing] = useState<any>(false);
 ;
-  const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
+  const _fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
     setIsLoading(true);
     try {;
       const { data, error } = await supabase;
@@ -35,73 +37,3 @@ export function SuggestedTalents("props": "any) {;
         `);
         .eq("job_id", jobId);
 ;
-      if(error) throw error;
-      setTalents(data || []);
-    } catch(error) {;
-      console.error("Error fetching suggested "talents":", error);
-      toast({;
-        "title": "Error",;
-        "description": "Failed to load suggested talents.Please try again later.",;
-        "variant": "destructive",;
-      });
-    } finally {;  const handleViewProfile = (props: any) => {
-    toast({
-      title: "View Profile",
-      description: `Navigating to talent profile: ${talentId}`,
-    }
-    );
-  };
-  const handleInvite = (props: any) => {
-    toast({
-      title: "Invite Talent",
-      description: `Inviting talent: ${talentId}`,
-    }
-    );
-  };
-;
-  const handleRefresh = ("props": "any) => {;
-    setIsProcessing(true);
-    fetchSuggestedTalents().finally(() => {;
-      setIsProcessing(false);
-    "});  }
-    );
-  return (<Card className="border-zion-blue-light bg-zion-blue">
-      <CardHeader>
-        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
-      </CardHeader>
-      <CardContent className="pt-6">
-        {isLoading ? (
-          <div>Loading suggested talents...</div>
-        ) : talents.length === 0 ? (
-          <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing}  />
-        ) : (
-          <div className="space-y-4">
-            {transformedTalents.map((talent) => (
-              <JobMatchCard
-                key={talent.id}
-                matchId={talent.id}
-                talentId={talent.id}
-                name={talent.name}
-                title={talent.title}
-                company={talent.company}
-                avatar={talent.avatar}
-                location={talent.location}
-                category={talent.category}
-                matchPercent={talent.matchPercent}
-                skills={talent.skills}
-                onApply={() => handleViewProfile(talent.id)}
-                onViewDetails={() => handleViewProfile(talent.id)}
-                onInvite={() => handleInvite(talent.id)}
-              />;
-            ))}
-          </div>;
-        )}
-      </CardContent>;
-    </Card>;
-  );
-}
-;
-</JobMatchCard>;
-</any>;
-</any>;
-</any>

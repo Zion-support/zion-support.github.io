@@ -17,15 +17,6 @@ resolve_conflicts() {
     echo "Resolving conflicts in $file..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Found conflicts in $file, resolving..."
-        
-        # For now, let's keep the main branch version and add the new changes
-        # This is a simplified approach - in practice you'd want to manually review each conflict
-        
-        # Remove conflict markers and keep both versions where possible
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
         
         echo "Resolved conflicts in $file"
     fi

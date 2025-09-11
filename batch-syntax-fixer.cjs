@@ -56,5 +56,3 @@ fixer.run().catch(console.error);
         line.includes()
         !line.endsWith()
         return line + 
-<<<<<<< HEAD
-=======
