@@ -1,4 +1,244 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
+  Brain, Rocket, Shield, Atom, BookOpen,
+  DollarSign, BarChart3, Star, Sparkles, 
+  Grid, Globe,
+  HelpCircle, FileText, Video, 
+  Building, MessageCircle
+} from 'lucide-react';
+
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon?: React.ReactNode;
+  description?: string;
+  children?: NavigationItem[];
+  badge?: string;
+  title?: string;
+  featured?: boolean;
+}
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+function normalizeHref(href: string): string {
+  if (!href) return href;
+  if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+    return href;
+  }
+  if (!href.startsWith('/')) return href;
+  const hasQueryOrHash = href.includes('?') || href.includes('#');
+  if (hasQueryOrHash) return href;
+  return href.endsWith('/') ? href : href + '/';
+}
+
+
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'Services',
+    href: '/services',
+    icon: <Grid className="w-5 h-5" />,
+    description: 'Browse by category',
+    badge: 'New',
+    children: [
+      { name: 'AI & Data', href: '/services#ai', description: 'AI, data, ML services' },
+      { name: 'Cloud & FinOps', href: '/services#cloud', description: 'Cloud, cost, platform' },
+      { name: 'Observability', href: '/services#observability', description: 'Monitoring & telemetry' },
+      { name: 'Developer Tools', href: '/services#developer-tools', description: 'Developer productivity' },
+      { name: 'Training & Education', href: '/training', description: 'Learning and R&D' },
+      { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
+      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
+      { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' },
+      { name: 'Micro SAAS', href: '/micro-saas', description: 'Business tools and automation' },
+      { name: 'DORA Metrics Dashboard', href: '/dora-metrics-dashboard', description: 'DevOps performance analytics' },
+      { name: 'Kubernetes Cost Guardrails', href: '/kubernetes-cost-guardrails', description: 'Policy-driven cost controls' },
+      { name: 'OpenTelemetry Quickstart', href: '/opentelemetry-quickstart', description: 'Traces, metrics, logs in days' },
+      { name: 'API Usage Billing Meter', href: '/api-usage-billing-meter', description: 'Metered billing for APIs' },
+      { name: 'Data Quality Monitor', href: '/data-quality-monitor', description: 'Freshness and anomaly checks' },
+      { name: 'Consent & Cookie Manager', href: '/consent-cookie-manager', description: 'GDPR/CCPA consent' },
+      { name: 'Edge Redirect Manager', href: '/edge-redirect-manager', description: 'Safe redirects at edge' }
+    ]
+  },
+  {
+    name: 'All Services',
+    href: '/comprehensive-services-showcase-2025',
+    icon: <Globe className="w-5 h-5" />,
+    description: 'Complete portfolio of all technology services',
+    badge: 'Showcase',
+    featured: true,
+    children: [
+      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
+      { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
+      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-2025', description: 'Find specific services' },
+      { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references' },
+      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
+      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
+      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
+      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
+      { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase', description: 'Enterprise-grade solutions' },
+      { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'Business transformation services' }
+    ]
+  },
+  {
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className="w-5 h-5" />,
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    featured: true,
+    children: [
+      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', description: 'Predict and prevent churn with AI', featured: true },
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Supercharge sales with AI automation', featured: true },
+      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', description: 'Intelligent financial forecasting' },
+      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' },
+      { name: 'AI Content Automation', href: '/intelligent-content-automation-platform', description: 'Automate content creation' },
+      { name: 'AI HR Analytics', href: '/ai-hr-analytics-platform', description: 'Transform HR with AI insights' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },
+      { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations', description: 'Fully autonomous business management' },
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', description: 'Equipment failure prediction' },
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', description: 'Personalized content delivery' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager', description: 'Self-managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },
+      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
+    ]
+  },
+  {
+    name: 'Micro SAAS Solutions',
+    href: '/micro-saas',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Hot',
+    featured: true,
+    children: [
+      { name: 'Customer Success Platform', href: '/ai-customer-success-platform', description: 'AI-powered customer retention', featured: true },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', description: 'AI-powered supply chain management' },
+      { name: 'Financial Planning Platform', href: '/ai-financial-planning-platform', description: 'Intelligent financial planning' },
+      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform', description: 'AI-powered HR insights' },
+      { name: 'Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'AI-powered sales automation' },
+      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite', description: 'Transform your CRM with AI' },
+      { name: 'Content Automation Platform', href: '/intelligent-content-automation-platform', description: 'AI-powered content management' },
+      { name: 'Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' }
+    ]
+  },
+  {
+    name: 'Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className="w-5 h-5" />,
+    description: 'Quantum computing and breakthrough technologies',
+    badge: 'Hot',
+    featured: true,
+    children: [
+      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure', description: 'Unbreakable quantum encryption' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading', description: 'Ultra-fast quantum trading' },
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Future-proof internet security' },
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Unbreakable encryption' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Neural interface technology' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', description: 'Quantum-biological hybrid processing' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen security' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' },
+      { name: 'Quantum Metaverse', href: '/quantum-metaverse', description: 'Quantum-enhanced virtual worlds' },
+      { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' },
+      { name: 'AI-Powered Space Technology', href: '/space-technology-ai-platform', description: 'Revolutionary space AI' }
+    ]
+  },
+  {
+    name: 'Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className="w-5 h-5" />,
+    description: 'Advanced enterprise infrastructure and security',
+    badge: 'Enterprise',
+    featured: true,
+    children: [
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform', description: 'Next-generation security architecture' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform', description: 'Distributed edge computing' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', description: 'Intelligent development operations' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen quantum security' },
+      { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity', description: 'Intelligent threat detection' }
+    ]
+  },
+  {
+    name: 'Industry Solutions',
+    href: '/solutions',
+    icon: <Building className="w-5 h-5" />,
+    description: 'Industry-specific technology solutions',
+    badge: 'Industry',
+    children: [
+      { name: 'Healthcare & Biotech', href: '/biotech-ai', description: 'AI-powered healthcare' },
+      { name: 'Financial Technology', href: '/billing-analytics', description: 'Next-gen fintech analytics' },
+      { name: 'Manufacturing AI', href: '/autonomous-manufacturing', description: 'Smart manufacturing' },
+      { name: 'Retail Technology', href: '/retail-technology-solutions', description: 'Digital retail transformation' },
+      { name: 'Education Technology', href: '/training', description: 'AI-powered learning' },
+      { name: 'Government Solutions', href: '/enterprise-solutions-showcase', description: 'Public sector innovation' },
+      { name: 'Energy & Utilities', href: '/quantum-energy', description: 'Sustainable energy tech' },
+      { name: 'Transportation & Logistics', href: '/quantum-logistics', description: 'Route optimization' },
+      { name: 'Space Technology', href: '/space-technology', description: 'Advanced space tech' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: 'Guides, reports and tools',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
+      { name: 'Resources Hub', href: '/resources', description: 'Docs, SDKs, guides' },
+      { name: 'Events', href: '/events', description: 'Conferences and workshops' },
+      { name: 'Webinars', href: '/webinars', description: 'On-demand and live sessions' },
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
+      { name: 'Serverless Lakehouse Starter', href: '/services/serverless-lakehouse-starter', description: 'ELT + dbt + dashboards' },
+      { name: 'Data Contracts Hub', href: '/services/data-contracts-hub', description: 'Schema diffs & CI gates' }
+    ]
+  },
+  {
+    name: 'Company',
+    href: '/about',
+    icon: <Building className="w-5 h-5" />,
+    description: 'About Zion Tech Group',
+    children: [
+      { name: 'About Us', href: '/about', description: 'Our mission and vision' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch' },
+      { name: 'Get Started', href: '/get-started', description: 'Begin your journey' },
+      { name: 'Quote Request', href: '/quote', description: 'Get a custom quote' }
+    ]
+  }
+];
+
+const quickActions = [
+  { name: 'Call +1 302 464 0950', href: 'tel:+13024640950', icon: <Phone className="w-4 h-4" />, primary: true },
+  { name: 'Email kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', icon: <Mail className="w-4 h-4" /> },
+  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Book Demo', href: '/demo', icon: <Video className="w-4 h-4" /> },
+  { name: 'Contact Us', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
+  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Market Pricing', href: '/market-pricing', icon: <BarChart3 className="w-4 h-4" /> },
+  { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className="w-4 h-4" /> },
+  { name: 'Resources', href: '/resources', icon: <BookOpen className="w-4 h-4" /> },
+  { name: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
+];
 
 const UltraFuturisticNavigation2035: React.FC = () => {
   // Temporarily simplified to avoid build issues

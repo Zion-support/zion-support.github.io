@@ -422,6 +422,12 @@ const Homepage2040: React.FC = () => {
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-sm">{feature}</span>
                       </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
 
                       {/* Service Price */}
                       <div className="mb-6">
@@ -463,67 +469,87 @@ const Homepage2040: React.FC = () => {
           </div>
         </section>
 
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <motion.h2 
-                variants={itemVariants}
-                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
-                Ready to Transform Your Business?
-              </motion.h2>
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl text-gray-300 max-w-2xl mx-auto"
-              >
-                Join thousands of companies already leveraging our revolutionary technology solutions
-              </motion.p>
-              
-              <motion.div 
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-6 justify-center"
-              >
-                <Link href="/contact" aria-label="Contact us">
-                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
-                    Contact Us Today
-                  </button>
-                </Link>
-                <Link href="/demo" aria-label="Request a demo">
-                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Request Demo
-                  </button>
-                </Link>
-              </motion.div>
-              
-              <motion.div
-                variants={itemVariants}
-                className="flex items-center justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-green-400" />
-                  <span>Enterprise Security</span>
+            {/* Why Choose Us Section */}
+            <section id="why-choose-us" className="py-20 px-4 bg-gray-900">
+              <div className="max-w-7xl mx-auto">
+                <motion.div
+                  variants={fadeInUp}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  className="text-center mb-16"
+                >
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Why Choose <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We combine cutting-edge technology with proven expertise to deliver solutions that drive real business transformation
+                  </p>
+                </motion.div>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300">
+              Join the revolution with Zion Tech Group's cutting-edge technology solutions
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link href="/contact">
+                <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                  <span className="flex items-center gap-3 text-lg">
+                    Contact Us
+                    <ArrowRight className="w-6 h-6" />
+                  </span>
+                </button>
+              </Link>
+              <Link href="/get-started">
+                <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+              </Link>
+            </div>
+
+            <div className="pt-8 border-t border-cyan-500/20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div className="text-center md:text-left">
+                  <div className="w-12 h-12 mx-auto md:mx-0 mb-4 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                  <p className="text-cyan-400">+1 302 464 0950</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-yellow-400" />
-                  <span>24/7 Support</span>
+                
+                <div className="text-center md:text-left">
+                  <div className="w-12 h-12 mx-auto md:mx-0 mb-4 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                  <p className="text-cyan-400">kleber@ziontechgroup.com</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-blue-400" />
-                  <span>Proven Results</span>
+                
+                <div className="text-center md:text-left">
+                  <div className="w-12 h-12 mx-auto md:mx-0 mb-4 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                  <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 

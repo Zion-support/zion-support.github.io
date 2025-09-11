@@ -1,7 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2036: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -44,95 +46,57 @@ const UltraFuturisticBackground2036: React.FC = () => {
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-        this.opacity += (Math.random() - 0.5) * 0.02;
-        this.opacity = Math.max(0.1, Math.min(0.8, this.opacity));
-      }
+      // Update and draw particles
+      particles.forEach((particle) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
 
-      draw() {
-        ctx!.save();
-        ctx!.globalAlpha = this.opacity;
-        ctx!.fillStyle = this.color;
-        ctx!.beginPath();
-        ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx!.fill();
-        ctx!.restore();
-      }
-    }
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
 
-    class Connection {
-      particle1: Particle;
-      particle2: Particle;
-      opacity: number;
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
+        ctx.fill();
 
-      constructor(p1: Particle, p2: Particle) {
-        this.particle1 = p1;
-        this.particle2 = p2;
-        this.opacity = Math.random() * 0.3 + 0.1;
-      }
+        // Draw connections
+        particles.forEach((otherParticle) => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
-      draw() {
-        const distance = Math.sqrt(
-          Math.pow(this.particle1.x - this.particle2.x, 2) +
-          Math.pow(this.particle1.y - this.particle2.y, 2)
-        );
-
-        if (distance < 150) {
-          ctx!.save();
-          ctx!.globalAlpha = this.opacity * (1 - distance / 150);
-          ctx!.strokeStyle = 'rgba(0, 255, 255, 0.3)';
-          ctx!.lineWidth = 1;
-          ctx!.beginPath();
-          ctx!.moveTo(this.particle1.x, this.particle1.y);
-          ctx!.lineTo(this.particle2.x, this.particle2.y);
-          ctx!.stroke();
-          ctx!.restore();
-        }
-      }
-    }
-
-    // Initialize particles and connections
-    for (let i = 0; i < 100; i++) {
-      particles.push(new Particle());
-    }
-
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        if (Math.random() < 0.1) {
-          connections.push(new Connection(particles[i], particles[j]));
-        }
-      }
-    }
-
-    const animate = () => {
-      ctx!.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx!.fillRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `${particle.color}${Math.floor((particle.opacity * 0.3 * (1 - distance / 100)) * 255).toString(16).padStart(2, '0')}`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
       });
 
-      connections.forEach(connection => {
-        connection.draw();
-      });
-
-      animationFrameId = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
     };
 
     animate();
 
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    window.addEventListener('resize', handleResize);
-
     return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
+  }, [isClient]);
+
+  if (!isClient) {
+    return (
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -231,67 +195,14 @@ const UltraFuturisticBackground2036: React.FC = () => {
         ))}
       </div>
 
-      {/* Scanning Line Effect */}
-      <motion.div
-        className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent pointer-events-none"
-        style={{ zIndex: -1 }}
-        animate={{
-          y: [0, 1000]
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
+      {/* Vignette Effect */}
+      <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/50" />
 
-      {/* Corner Accents */}
-      <div className="fixed top-0 left-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute top-0 left-0 w-16 h-1 bg-gradient-to-r from-cyan-400 to-transparent" />
-        <div className="absolute top-0 left-0 w-1 h-16 bg-gradient-to-b from-cyan-400 to-transparent" />
+      {/* Scan Lines Effect */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(6,182,212,0.03)_2px,rgba(6,182,212,0.03)_4px)]" />
       </div>
-      
-      <div className="fixed top-0 right-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute top-0 right-0 w-16 h-1 bg-gradient-to-l from-blue-400 to-transparent" />
-        <div className="absolute top-0 right-0 w-1 h-16 bg-gradient-to-b from-blue-400 to-transparent" />
-      </div>
-      
-      <div className="fixed bottom-0 left-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute bottom-0 left-0 w-16 h-1 bg-gradient-to-r from-purple-400 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1 h-16 bg-gradient-to-t from-purple-400 to-transparent" />
-      </div>
-      
-      <div className="fixed bottom-0 right-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>
-        <div className="absolute bottom-0 right-0 w-16 h-1 bg-gradient-to-l from-pink-400 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-1 h-16 bg-gradient-to-t from-pink-400 to-transparent" />
-      </div>
-
-      {/* Floating Data Streams */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-cyan-400/30 font-mono text-xs"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
-            animate={{
-              y: [0, -50],
-              opacity: [0, 1, 0]
-            }}
-            transition={{
-              duration: Math.random() * 4 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-              ease: "easeInOut"
-            }}
-          >
-            {Math.random().toString(16).substring(2, 8).toUpperCase()}
-          </motion.div>
-        ))}
-      </div>
-    </>
+    </div>
   );
 };
 
