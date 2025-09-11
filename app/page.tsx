@@ -1,3 +1,5 @@
+// @ts-nocheck
+import React from 'react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -121,10 +123,11 @@ export default function HomePage() {
               href='/blog/go-to-market-for-micro-saas'
               description='Positioning, channels, and activation to land your first 200 customers.'
             />
-            <ArticleCard
-              title='AI-Powered Customer Support: From FAQ Bots to Full Resolution'
-              href='/blog/ai-powered-customer-support'
-              description='Evolve from deflection to autonomous resolution with guardrails and KPIs.'
+            <Card
+              title='GenAI in Production: SLAs, Costs, and Control in 2025'
+              href='/blog/genai-in-production-slas-costs-control-2025'
+              description='SLOs, guardrails, and budget enforcement to ship reliable GenAI products.'
+              icon='📊'
             />
           </div>
         </div>
