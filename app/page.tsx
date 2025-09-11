@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -12,6 +12,11 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
+import Card from '../components/ui/Card';
+import FeatureCard from '../components/FeatureCard';
+import TestimonialCard from '../components/TestimonialCard';
+import PerformanceMetrics from '../components/PerformanceMetrics';
+import TechnologyStack from '../components/TechnologyStack';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -1269,16 +1274,31 @@ export default function HomePage() {
         </div>
       </section>
       {/* Enhanced Content Showcase */}
-      <EnhancedContentShowcase variant="featured" maxItems={4} />
+      <EnhancedContentShowcase 
+        title="Featured Content"
+        subtitle="Discover our most popular articles and resources"
+        items={featuredContent}
+        variant="featured"
+      />
       
       {/* New Content Banner */}
       <NewContentBanner variant="gradient" maxItems={4} />
 
       {/* Trending Content Section */}
-      <EnhancedContentShowcase variant="trending" maxItems={4} />
+      <EnhancedContentShowcase 
+        title="Trending Now"
+        subtitle="What's hot in AI and technology"
+        items={trendingContent}
+        variant="trending"
+      />
       
       {/* Latest Content Section */}
-      <EnhancedContentShowcase variant="latest" maxItems={4} />
+      <EnhancedContentShowcase 
+        title="Latest Updates"
+        subtitle="Fresh content and insights"
+        items={latestContent}
+        variant="latest"
+      />
 
 
       {/* Performance Metrics Section */}
