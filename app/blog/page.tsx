@@ -11,6 +11,22 @@ const posts = [
     tags: ['AI', 'Security', 'Governance'],
   },
   {
+    title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
+    description:
+      'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',
+    href: '/blog/secure-rag-architecture-2025',
+    date: '2025-09-11',
+    tags: ['RAG', 'Security', 'Architecture'],
+  },
+  {
+    title: 'AI Product Roadmaps That Actually Ship',
+    description:
+      'Milestones, guardrails, and evals that keep AI features shipping on time with quality.',
+    href: '/blog/ai-product-roadmaps-that-ship',
+    date: '2025-09-11',
+    tags: ['Product', 'AI', 'Strategy'],
+  },
+  {
     title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
     description:
       'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
