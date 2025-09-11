@@ -12,9 +12,9 @@ interface UseIntersectionObserverOptions {
  * @param options - Intersection observer options
  * @returns [ref, isIntersecting, entry] tuple
  */
-export function useIntersectionObserver(
+export function useIntersectionObserver<T extends Element = HTMLDivElement>(
   options: UseIntersectionObserverOptions = {}
-): [React.RefObject<Element>, boolean, IntersectionObserverEntry | undefined] {
+): [React.RefObject<T>, boolean, IntersectionObserverEntry | undefined] {
   const {
     threshold = 0,
     root = null,
@@ -23,7 +23,7 @@ export function useIntersectionObserver(
   } = options;
 
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
-  const [node, setNode] = useState<Element | null>(null);
+  const [node, setNode] = useState<T | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
 
   const frozen = entry?.isIntersecting && freezeOnceVisible;
@@ -48,7 +48,7 @@ export function useIntersectionObserver(
     };
   }, [node, threshold, root, rootMargin, frozen]);
 
-  const ref = useRef<Element>(null);
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     if (ref.current) {
