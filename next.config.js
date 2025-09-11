@@ -1,12 +1,14 @@
-<<<<<<< HEAD
 const path = require('path');
 const os = require('os');
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
+  reactStrictMode: false,
+  swcMinify: true,
+  compress: true,
   poweredByHeader: false,
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
   trailingSlash: false,
-  reactStrictMode: true,
   bundlePagesRouterDependencies: true,
   
   // Disable TypeScript checking during build
@@ -17,11 +19,6 @@ const nextConfig = {
   // Disable ESLint during build to focus on core functionality
   eslint: {
     ignoreDuringBuilds: true,
-  },
-
-  // Disable TypeScript checking during build to focus on core functionality
-  typescript: {
-    ignoreBuildErrors: true,
   },
 
   // Optimized for fast builds
@@ -61,37 +58,27 @@ const nextConfig = {
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
     // Disable profiling for faster builds
     swcTraceProfiling: false,
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true
->>>>>>> main
   },
+
   images: {
-<<<<<<< HEAD
-    domains: ['ziontechgroup.com'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    domains: ['ziontechgroup.com', "localhost", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
 
   transpilePackages: [
     'react-markdown',
     'date-fns',
     'react-day-picker',
+    // Ensure ESM-only UI/toast library is bundled instead of treated as external
+    'react-hot-toast',
+    'sonner',
+    'stripe',
+    'swr',
+    'trough',
     'bail',
     'is-plain-obj',
     'mdast-util-from-markdown',
@@ -119,7 +106,29 @@ const nextConfig = {
   ],
 
   webpack: (config, { dev, isServer, webpack }) => {
-    // SIMPLIFIED DefinePlugin 
+    // Minimal, safe config for Netlify builds to avoid runtime bundling issues
+    if (process.env.NETLIFY === 'true') {
+      // Replace optional browser logging SDKs with no-op stubs
+      config.resolve = config.resolve || {};
+      config.resolve.alias = {
+        ...(config.resolve.alias || {}),
+        'logrocket': path.resolve(__dirname, 'src/utils/logging-stub.ts'),
+        '@datadog/browser-logs': path.resolve(__dirname, 'src/utils/logging-stub.ts'),
+        '@sentry/nextjs': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
+        '@sentry/node': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
+        '@sentry/react': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
+        'stripe': path.resolve(__dirname, 'src/utils/stripe-mock.ts'),
+        'react-router-dom': path.resolve(__dirname, 'src/stubs/react-router-dom.ts'),
+      };
+      // Ensure memory cache to avoid FS cache quirks
+      config.cache = { type: 'memory' };
+      return config;
+    }
+
+    // Fix EventEmitter memory leak by increasing max listeners
+    // events.EventEmitter.defaultMaxListeners = 20; // Will be set by build script
+    
+    // CRITICAL: Add comprehensive polyfills as the very first entry point
     if (!isServer) {
       config.plugins.push(
         new webpack.DefinePlugin({
@@ -185,28 +194,14 @@ const nextConfig = {
       },
     });
 
-    // Add specific rules for CommonJS packages that need ESM resolution
-    config.module.rules.push({
-      test: /node_modules\/(formik|react-day-picker).*\.js$/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['@babel/preset-env', {
-              modules: false,
-              targets: {
-                esmodules: true
-              }
-            }]
-          ],
-          plugins: [
-            ['@babel/plugin-transform-runtime', {
-              useESModules: true
-            }]
-          ]
-        }
-      }
-    });
+    // Replace optional browser logging SDKs with no-op stubs in CI/Netlify
+    if (process.env.CI === 'true' || process.env.NETLIFY === 'true') {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'logrocket': path.resolve(__dirname, 'src/utils/logging-stub.ts'),
+        '@datadog/browser-logs': path.resolve(__dirname, 'src/utils/logging-stub.ts'),
+      };
+    }
 
     // Server-side configuration
     if (isServer) {
@@ -499,15 +494,7 @@ const nextConfig = {
 
     return config;
   },
-}
 
-module.exports = nextConfig;
-=======
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
   async headers() {
     return [
       {
@@ -528,4 +515,3 @@ module.exports = nextConfig;
 };
 
 module.exports = nextConfig;
->>>>>>> main
