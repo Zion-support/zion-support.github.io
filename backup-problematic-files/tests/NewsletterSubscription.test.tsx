@@ -1,16 +1,11 @@
 import React from 'react';
-
 interface NewsletterSubscription.testProps {
-  className?: string;
+  // Add props here as needed
 }
-
-const NewsletterSubscription.test: React.FC<NewsletterSubscription.testProps> = ({ className }) => {
+export default function NewsletterSubscription.test({ }: NewsletterSubscription.testProps) {
   return (
-    <div className={className || ''}>
+    <div>
       <h1>NewsletterSubscription.test</h1>
-      <p>This component is under development.</p>
+      <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}

@@ -1,43 +1,89 @@
-#!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Automation Test Runner
  * Tests all automation scripts and reports results
  */
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-=======
-<<<<<<< HEAD
 
-=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+class AutomationTestRunner {
+  constructor() {
+    this.results = {
+      timestamp: new Date().toISOString(),
+      tests: []
+    };
+  }
 
-          "status
+  async runTest(scriptPath, description) {
+    console.log(`🧪 Testing: ${description}`);
+    try {
+      const result = execSync(`node ${scriptPath}`, {
+        encoding: 'utf8',
+        timeout: 10000,
+        stdio: 'pipe'
+      });
+      this.results.tests.push({
+        script: scriptPath,
+        description,
+        status: 'passed',
+        output: result.substring(0, 500) // Limit output length
+      });
+      console.log(`✅ ${description}: PASSED`);
+      return true;
+    } catch (error) {
+      this.results.tests.push({
+        script: scriptPath,
+        description,
+        status: 'failed',
+        error: error.message
+      });
+      console.log(`❌ ${description}: FAILED - ${error.message}`);
+      return false;
+    }
+  }
 
-          status"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+  async runAllTests() {
+    console.log('🚀 Starting automation test runner...\n');
+    
+    const testScripts = [
+      { path: 'scripts/health-check.cjs', desc: 'Health Check Script' },
+      { path: 'scripts/simple-performance-monitor.cjs', desc: 'Performance Monitor' },
+      { path: 'scripts/simple-code-quality.cjs', desc: 'Code Quality Checker' }
+    ];
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-        "encoding"
-        "stdio"
-        "status"
-        "status"
-    const testScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
-      { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
-      { "path": 'scripts/simple-code-quality.cjs', "desc"}
-          "status"
+    let passed = 0;
+    let total = testScripts.length;
+
+    for (const test of testScripts) {
+      if (fs.existsSync(test.path)) {
+        const success = await this.runTest(test.path, test.desc);
+        if (success) passed++;
+      } else {
+        console.log(`⚠️ ${test.desc}: Script not found`);
+        this.results.tests.push({
+          script: test.path,
+          description: test.desc,
+          status: 'not_found'
+        });
+      }
+    }
+
+    // Save results
+    fs.writeFileSync('automation-test-results.json', JSON.stringify(this.results, null, 2));
+    
+    console.log(`\n📊 Test Results: ${passed}/${total} tests passed`);
+    console.log('📄 Detailed results saved to automation-test-results.json');
+    
+    return this.results;
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const runner = new AutomationTestRunner();
+  runner.runAllTests().catch(console.error);
+}
+
+module.exports = AutomationTestRunner;

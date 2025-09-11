@@ -193,3 +193,5 @@ export default function AIBusinessIntelligence() {
       <Footer />
     </div>
   )}
+  );
+};

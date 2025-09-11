@@ -1,135 +1,157 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class IntelligentGitWorkflow {
   constructor() {
+    this.workflowResults = {
+      timestamp: new Date().toISOString(),
+      gitStatus: {},
+      branchInfo: {},
+      commitHistory: {},
+      recommendations: []
+    };
     this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
-    this.ensureLogDir();
+    this.ensureLogDirectory();
   }
 
-  ensureLogDir() {
+  ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  log(message) {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
   }
 
-  runCommand(command) {
-    try {
-      const result = execSync(command, { 
-        encoding: 'utf8',
-        cwd: process.cwd(),
-        stdio: 'pipe'
-      });
-      return { success: true, output: result };
-    } catch (error) {
-      return { success: false, error: error.message };
-    }
-  }
+  async runGitWorkflow() {
+    this.log('🔄 Starting Intelligent Git Workflow...');
 
-  async executeWorkflow() {
-    this.log('🚀 Starting Intelligent Git Workflow...');
-    
     try {
       // Check git status
-      this.log('📊 Checking git status...');
-      const statusResult = this.runCommand('git status --porcelain');
+      await this.checkGitStatus();
       
-      if (!statusResult.success) {
-        this.log('❌ Failed to check git status');
-        return { success: false, error: 'Git status check failed' };
-      }
+      // Analyze branch information
+      await this.analyzeBranches();
       
-      const hasChanges = statusResult.output.trim().length > 0;
+      // Analyze commit history
+      await this.analyzeCommitHistory();
       
-      if (!hasChanges) {
-        this.log('✅ No changes to commit');
-        return { success: true, message: 'No changes to commit' };
-      }
+      // Generate recommendations
+      this.generateRecommendations();
       
-      // Add all changes
-      this.log('📝 Adding all changes...');
-      const addResult = this.runCommand('git add .');
+      // Save results
+      await this.saveResults();
       
-      if (!addResult.success) {
-        this.log('❌ Failed to add changes');
-        return { success: false, error: 'Git add failed' };
-      }
-      
-      // Generate commit message
-      const commitMessage = this.generateCommitMessage();
-      this.log(`💬 Generated commit message: ${commitMessage}`);
-      
-      // Commit changes
-      this.log('💾 Committing changes...');
-      const commitResult = this.runCommand(`git commit -m "${commitMessage}"`);
-      
-      if (!commitResult.success) {
-        this.log('❌ Failed to commit changes');
-        return { success: false, error: 'Git commit failed' };
-      }
-      
-      // Push changes
-      this.log('🚀 Pushing changes...');
-      const pushResult = this.runCommand('git push');
-      
-      if (!pushResult.success) {
-        this.log('❌ Failed to push changes');
-        return { success: false, error: 'Git push failed' };
-      }
-      
-      this.log('✅ Git workflow completed successfully');
-      
-      const report = {
-        timestamp: new Date().toISOString(),
-        status: 'success',
-        actions: [
-          'Checked git status',
-          'Added all changes',
-          'Generated commit message',
-          'Committed changes',
-          'Pushed to remote'
-        ],
-        commitMessage
-      };
-      
-      const reportFile = path.join(__dirname, 'logs', 'git-workflow-report.json');
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      
-      this.log(`📄 Workflow report saved to: ${reportFile}`);
-      
-      return { success: true, report };
-      
+      this.log('Git Workflow completed successfully');
+      return this.workflowResults;
     } catch (error) {
-      this.log(`❌ Error during git workflow: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`Git Workflow failed: ${error.message}`, 'ERROR');
+      return null;
     }
   }
 
-  generateCommitMessage() {
-    const timestamp = new Date().toISOString().split('T')[0];
-    const time = new Date().toLocaleTimeString();
+  async checkGitStatus() {
+    this.log('Checking git status...');
     
-    // Try to get the current branch
-    const branchResult = this.runCommand('git branch --show-current');
-    const branch = branchResult.success ? branchResult.output.trim() : 'main';
+    try {
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const branch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
+      const remote = execSync('git remote -v', { encoding: 'utf8' });
+      
+      this.workflowResults.gitStatus = {
+        hasChanges: status.trim().length > 0,
+        changes: status.trim().split('\n').filter(line => line.trim()),
+        currentBranch: branch,
+        remotes: remote.trim().split('\n').filter(line => line.trim())
+      };
+      
+    } catch (error) {
+      this.log(`Git status check failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async analyzeBranches() {
+    this.log('Analyzing branches...');
     
-    return `feat: Automated commit - ${timestamp} ${time} [${branch}]`;
+    try {
+      const localBranches = execSync('git branch', { encoding: 'utf8' });
+      const remoteBranches = execSync('git branch -r', { encoding: 'utf8' });
+      const mergedBranches = execSync('git branch --merged', { encoding: 'utf8' });
+      
+      this.workflowResults.branchInfo = {
+        local: localBranches.trim().split('\n').map(b => b.trim().replace('* ', '')),
+        remote: remoteBranches.trim().split('\n').filter(b => b.trim()),
+        merged: mergedBranches.trim().split('\n').map(b => b.trim().replace('* ', ''))
+      };
+      
+    } catch (error) {
+      this.log(`Branch analysis failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async analyzeCommitHistory() {
+    this.log('Analyzing commit history...');
+    
+    try {
+      const recentCommits = execSync('git log --oneline -10', { encoding: 'utf8' });
+      const commitStats = execSync('git log --stat --oneline -5', { encoding: 'utf8' });
+      
+      this.workflowResults.commitHistory = {
+        recent: recentCommits.trim().split('\n'),
+        stats: commitStats.trim().split('\n')
+      };
+      
+    } catch (error) {
+      this.log(`Commit history analysis failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    // Check for uncommitted changes
+    if (this.workflowResults.gitStatus.hasChanges) {
+      recommendations.push('You have uncommitted changes. Consider committing them.');
+    }
+    
+    // Check for merged branches that can be deleted
+    const mergedBranches = this.workflowResults.branchInfo.merged.filter(b => b !== 'main' && b !== 'master');
+    if (mergedBranches.length > 0) {
+      recommendations.push(`Consider deleting merged branches: ${mergedBranches.join(', ')}`);
+    }
+    
+    // Check for large number of local branches
+    if (this.workflowResults.branchInfo.local.length > 10) {
+      recommendations.push('You have many local branches. Consider cleaning up unused ones.');
+    }
+    
+    this.workflowResults.recommendations = recommendations;
+  }
+
+  async saveResults() {
+    const resultsFile = path.join(
+      __dirname,
+      'reports',
+      'git-workflow-results.json'
+    );
+    fs.mkdirSync(path.dirname(resultsFile), { recursive: true });
+    fs.writeFileSync(resultsFile, JSON.stringify(this.workflowResults, null, 2));
+    this.log(`Git workflow results saved to: ${resultsFile}`);
   }
 }
 
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.executeWorkflow().then(result => {
-  if (!result.success) {
-    process.exit(1);
-  }
-});
+// Run if called directly
+if (require.main === module) {
+  const workflow = new IntelligentGitWorkflow();
+  workflow.runGitWorkflow().catch(console.error);
+}
+
+module.exports = IntelligentGitWorkflow;

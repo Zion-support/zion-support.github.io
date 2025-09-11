@@ -7,3 +7,5 @@ export function OpenAppRedirect() {
     </div>
   )
 }
+  );
+};

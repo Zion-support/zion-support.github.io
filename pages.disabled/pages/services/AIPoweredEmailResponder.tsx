@@ -1,6 +1,6 @@
 
-            compliant, and secure AI assistant that drafts and automates;
-            replies, prioritizes important threads, and escalates to humans when;
+            compliant, and secure AI assistant that drafts and automates 
+            replies, prioritizes important threads, and escalates to humans when 
             needed.
           </p>
 
@@ -8,11 +8,11 @@
                 <li>Starter: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
 
                 <li>
-                  Growth: $799–$1,499/mo — 10 inboxes, 50k emails/mo, basic HITL;
+                  Growth: $799–$1,499/mo — 10 inboxes, 50k emails/mo, basic HITL 
                 </li>
                 <li>
                   Scale: $2,500–$5,000/mo — unlimited inboxes, advanced HITL,
-                  SSO, SOC2;
+                  SSO, SOC2 
                 </li>
                 <li>
 
@@ -25,34 +25,34 @@
               <h2 className='text-2xl font-semibold mb-3'>Resources</h2>'''
               <ul className='list-disc ml-6 space-y-2 text-cyan-300'>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx'
-                <li>'<a''                    className='hover: underline'';
-                    href='https://workspace.google.com/marketplace'';
-                    target='_blank'';
+                <li>'<a''                    className='hover: underline'' 
+                    href='https://workspace.google.com/marketplace'' 
+                    target='_blank'' 
 
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
-                    rel='noreferrer'>                    Google: Workspace Marketplace';
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx 
+                    rel='noreferrer'>                    Google: Workspace Marketplace' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
-                    rel='noreferrer'>                    Microsoft: Exchange/Outlook documentation';
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx 
+                    rel='noreferrer'>                    Microsoft: Exchange/Outlook documentation' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
-                    rel='noreferrer'>                    OpenAI: Platform docs';
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx 
+                    rel='noreferrer'>                    OpenAI: Platform docs' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
-                    rel='noreferrer'>                    Gmail: API';
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx 
+                    rel='noreferrer'>                    Gmail: API' 
 
                   </a>
                 </li>
               </ul>
             </div>
 
-                href='/contact'';
+                href='/contact'' 
                 className='mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hove,
     r:from-cyan-500 hove,
     r:to-blue-600'>

@@ -1,67 +1,66 @@
-            OpenAI, Google Vertex, custom PyTorch/TensorFlow, and serve via
-            scalable APIs.
-          </p>"
-          <div className="mt-6 flex flex-wrap gap-3 text-sm">
-            <Link"
-              href="/case-studies""
-              className="text-blue-600 hover: text-blue-700 underline"
-            >
-              Case Studies
-            </Link>
-            <Link"
-              href="/pricing""
-              className="text-blue-600 hover:text-blue-700 underline"
-            >
-              Pricing
-            </Link>
-            <Link"
-              href="/contact""
-              className="text-blue-600 hover:text-blue-700 underline"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </section>"
-      <section className="bg-gray-50 border-t border-b border-gray-100">"
-        <div className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-6 max-w-6xl">
-          {[
-            {"
-              titl,
-    e: 'AI Strategy Sprint',
-              desc: '2-week discovery to identify high-ROI AI use cases, data readiness, and risk.',
-              price: '$6,000–$12,000' }, {'
-              title: 'Custom LLM Apps',
-              desc: 'Retrieval-Augmented Generation, chatbots, agents, tools, and workflows.',
-              price: '$15,000–$60,000+' }, {'
-              title: 'Vision & Speech',
-              desc: 'OCR, document AI, speech-to-text, image/video analysis.',
-              price: '$12,000–$50,000+' }, {'
-              title: 'Model Fine-tuning',
-              desc: 'Domain fine-tuning, evaluation, red-teaming, guardrails.',
-              price: '$8,000–$35,000+' }, {'
-              title: 'MLOps & Observability',
-              desc: 'CI/CD for models, monitoring, drift detection, governance.',
-              price: '$10,000–$45,000+' }, {'
-              title: 'Data Pipelines',
-              desc: 'ETL/ELT, vector databases, feature stores, data quality.',
-              price: '$8,000–$40,000+' } ].map(item => (
-            <div
-              key={item.title}
-              className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
-            >"
-              <h3 className="text-xl font-semibold text-gray-900">
-                {item.title}
-              </h3>"
-              <p className="mt-2 text-gray-600">{item.desc}</p>"
-              <p className="mt-4 text-gray-900 font-medium">
-                Typical budget: {item.price}
-              </p>
+const AIDevelopment: NextPage = () => {
+  return (;
+    <Layout;
+      title="AI Development Services - Zion Tech Group";
+      description="Custom AI solutions and machine learning models tailored to your business needs. From chatbots to predictive analytics, we build intelligent systems.">;
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
+        <div className="container mx-auto px-4 text-center">;
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
+            AI;
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Development</span>;
+          </h1>;
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;
+            Transform your business with custom AI solutions and machine learning models. ;
+            We build intelligent systems that drive results and enhance your competitive advantage.;
+          </p>;
 
-            </div>
-          ));
-        </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">;
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+              Start Your AI Project;
+            </Link>;
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+              View All Services;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+
+      {/* AI Services Overview */}
+      <section className="py-20 bg-white">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-16">;
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Services</h2>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              We specialize in creating custom AI solutions that solve real business problems ;
+              and drive measurable results across various industries.;
+            </p>;
+          </div>;
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
+                <Brain className="w-8 h-8 text-blue-600" />;
+              </div>;
+              <h3 className="text-xl font-semibold mb-4">Machine Learning Models</h3>;
+              <p className="text-gray-600 mb-4">;
+                Custom ML models for predictive analytics, classification, regression, and pattern recognition.;
+              </p>;
+              <ul className="space-y-2">;
+                <li className="flex items-center text-sm text-gray-600">;
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
+                  Predictive Analytics;
+                </li>;
+                <li className="flex items-center text-sm text-gray-600">;
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
+                  Classification Systems;
+                </li>;
+                <li className="flex items-center text-sm text-gray-600">;
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
+                  Recommendation Engines;
+                </li>;
+              </ul>;
+            </div>;
 
             'OpenAI',
             'Gemini',
@@ -80,30 +79,3 @@
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
             >
               {t}
-            </div>
-          ));
-        </div>
-      </section>"
-      <section className="bg-gray-50">"
-        <div className="container mx-auto px-4 py-12 max-w-5xl">"
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Getting Started
-          </h2>"
-          <ol className="mt-4 list-decimal list-inside text-gray-700 space-y-2">
-            <li>Book a 30-minute discovery call.</li>
-            <li>We propose an architecture, scope, and timeline.</li>
-            <li>Rapid prototype within 1–2 weeks iterate to production.</li>
-          </ol>"
-          <div className="mt-6">
-            <Link"
-              href="/contact""
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
-            >
-              Talk to an AI architect
-            </Link>
-
-          </div>
-        </div>
-      </section>
-    </div>
-

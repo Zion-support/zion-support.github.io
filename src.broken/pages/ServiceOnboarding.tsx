@@ -7,3 +7,5 @@ export function ServiceOnboarding() {
     </div>
   )
 }
+  );
+};

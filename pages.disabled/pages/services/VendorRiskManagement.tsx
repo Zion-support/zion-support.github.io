@@ -1,4 +1,4 @@
-;
+ 
 
         <ul className='list-disc ml-5 text-slate-300 space-y-1'>
 
@@ -16,9 +16,9 @@
     </section>
   </div>
 
-);
+) 
 export: { VendorRiskManagement }
-export default VendorRiskManagement;
+export default VendorRiskManagement 
 
 
 

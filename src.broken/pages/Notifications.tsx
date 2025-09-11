@@ -7,3 +7,5 @@ export function Notifications() {
     </div>
   )
 }
+  );
+};

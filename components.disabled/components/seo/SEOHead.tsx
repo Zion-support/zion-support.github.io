@@ -120,3 +120,5 @@ interface SEOHeadProps {
 
 export default SEOHead;
 :components.disabled/components/seo/SEOHead.tsx
+  );
+};

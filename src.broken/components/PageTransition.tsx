@@ -7,3 +7,5 @@ export function PageTransition() {
     </div>
   )
 }
+  );
+};

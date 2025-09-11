@@ -7,3 +7,5 @@ export function AIPoweredContent() {
     </div>
   )
 }
+  );
+};

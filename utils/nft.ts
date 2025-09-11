@@ -115,7 +115,7 @@ export interface SvgOptions {
 export function generateOriginSvg(options: SvgOptions = {}): string {
   const width = options.width ?? 1200;
   const height = options.height ?? 1200;
-  const quote = (options.quote ?? 'Sovereign AI Protocol').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const quote = (options.quote ?? 'Sovereign AI Protocol').replace(/</g, '<').replace(/>/g, '>');
   const animated = options.animated ?? true;
 
   const animationDefs = animated

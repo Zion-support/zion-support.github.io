@@ -7,3 +7,5 @@ export function TalentCardAvatar() {
     </div>
   )
 }
+  );
+};

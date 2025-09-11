@@ -24,4 +24,5 @@ export default function EnterpriseRoutes() {return (<Routes />"";}"
       <Route path="/enterprise/workspace" element={<CompWorkspace /"  />} />";"
       <Route path="/enterprise/billing" element={<EnterpriseBilling /"  />} />";"
       <Route path="/enterprise/demo" element={<EnterpriseDemo /"  />} />";
-
+  );
+};

@@ -1,15 +1,15 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
 export: default function CustomerExperience(...args[]):  {
 export: default function CustomerExperience(...args[]):  {}
     }, {
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+  y: 20 
 
               <span className='text-gradient'> Customers</span>
             </h1>'
@@ -33,12 +33,12 @@ export: default function CustomerExperience(...args[]):  {}
     g:grid-cols-4 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+  y: 20 
 
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -48,13 +48,13 @@ export: default function CustomerExperience(...args[]):  {}
                 <p className='text-zion-slate-light'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {capabilities.map(capabilit,
-    y: unknown, index: unknown();
+    y: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -63,11 +63,11 @@ export: default function CustomerExperience(...args[]):  {}
             {capabilities.map(capabilit,
     y: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={capability.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
 
                     <capability.icon className='w-8 h-8 text-white' />
                   </div>'
@@ -78,15 +78,15 @@ export: default function CustomerExperience(...args[]):  {}
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
-  y: 20;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx 
+  y: 20 
 
                 Ready to Transform Customer Experience?'
               </h2>'''

@@ -7,3 +7,5 @@ export function FraudDetectionMiddleware() {
     </div>
   )
 }
+  );
+};

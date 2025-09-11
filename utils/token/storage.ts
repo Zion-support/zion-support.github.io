@@ -1,55 +1,78 @@
-import { TokenConfig } from './service';
 
-interface TokenTransaction {
-  id: string;
-  userId: string;
-  amount: number;
-  type: 'mint' | 'burn' | 'transfer';
-  reason: string;
-  timestamp: number;
-  from?: string;
-  to?: string;
+
+
+
+
+export interface TokenConfig {
+  token_name: string;
+  token_symbol: string;
+  decimals: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
+  minIssueAmount: number;
+  maxIssueAmount: number;
 }
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
+
+
+=======
+class TokenStore {
+  private config: TokenConfig = {
+    token_name: 'ZION$',
+    token_symbol: 'ZION',
+    decimals: 18,
+    total_supply: 1000000000,
+    issue_rate: 1.0,
+    redeem_rate: 1.0,
+    minIssueAmount: 1,
+    maxIssueAmount: 10000;
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export interface TokenStoreData {
+  wallets: Record < string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+
 
 class TokenStore {
   private config: TokenConfig = {
-    name: 'Zion Token',
-    symbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000000,
-    maxSupply: 10000000000,
-    mintingEnabled: true,
-    burningEnabled: true,
-    transferEnabled: true
+    tokenName: 'ZION$'
+    tokenSymbol: 'ZION'
+    decimals: 18
+    totalSupply: 1000000000
+    issueRate: 1.0
+    redeemRate: 1.0
+    minIssueAmount: 1
+    maxIssueAmount: 10000
   };
 
-  private transactions: TokenTransaction[] = [];
+export interface TokenStoreData {;
+=======
 
-  getConfig(): TokenConfig {
-    return { ...this.config };
   }
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+function readFromDisk(): TokenStoreData | null {
+  try {
+    ensureDataDir();
 
-  setConfig(config: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...config };
-  }
-
-  getAllTransactions(): TokenTransaction[] {
-    return [...this.transactions];
-  }
-
-  addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-    const newTransaction: TokenTransaction = {
-      ...transaction,
-      id: Date.now().toString(),
-      timestamp: Date.now()
-    };
-    this.transactions.push(newTransaction);
-    return newTransaction;
-  }
-
-  getTransactionsByUser(userId: string): TokenTransaction[] {
-    return this.transactions.filter(t => t.userId === userId);
+=======
+  set_config (new_config: Partial < TokenConfig>): void {
+    this.config = { ...this.config, ...new_config }
   }
 }
+export const token_store = new TokenStore ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
-export const tokenStore = new TokenStore();
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import Navigation from '../../src/components/Navigation' 
+import Footer from '../../src/components/Footer' 
 import {
   Cloud,
   Server,
@@ -19,7 +19,7 @@ import {
   BarChart3,
   Users,
   Clock,
-  Award } from 'lucide-react';
+  Award } from 'lucide-react' 
 
 export default function CloudDevOps() {
   const features = [
@@ -45,7 +45,7 @@ export default function CloudDevOps() {
       icon: Zap,
       title: 'Performance Optimization',
       description:
-        'Infrastructure optimization for maximum efficiency and cost savings' } ];
+        'Infrastructure optimization for maximum efficiency and cost savings' } ] 
 
   const services = [
     {
@@ -78,13 +78,13 @@ export default function CloudDevOps() {
         '24/7 Monitoring',
         'Incident Response',
         'Performance Tuning',
-        'Security Updates' ] } ];
+        'Security Updates' ] } ] 
 
   const technologies = [
-    { name: 'AWS', category: 'Cloud Platforms' }, { name: 'Azure', category: 'Cloud Platforms' }, { name: 'Google Cloud', category: 'Cloud Platforms' }, { name: 'Docker', category: 'Containerization' }, { name: 'Kubernetes', category: 'Orchestration' }, { name: 'Terraform', category: 'Infrastructure as Code' }, { name: 'Jenkins', category: 'CI/CD' }, { name: 'GitLab CI', category: 'CI/CD' }, { name: 'GitHub Actions', category: 'CI/CD' }, { name: 'Prometheus', category: 'Monitoring' }, { name: 'Grafana', category: 'Monitoring' }, { name: 'ELK Stack', category: 'Logging' } ];
+    { name: 'AWS', category: 'Cloud Platforms' }, { name: 'Azure', category: 'Cloud Platforms' }, { name: 'Google Cloud', category: 'Cloud Platforms' }, { name: 'Docker', category: 'Containerization' }, { name: 'Kubernetes', category: 'Orchestration' }, { name: 'Terraform', category: 'Infrastructure as Code' }, { name: 'Jenkins', category: 'CI/CD' }, { name: 'GitLab CI', category: 'CI/CD' }, { name: 'GitHub Actions', category: 'CI/CD' }, { name: 'Prometheus', category: 'Monitoring' }, { name: 'Grafana', category: 'Monitoring' }, { name: 'ELK Stack', category: 'Logging' } ] 
 
   const stats = [
-    { number: '99.9%', label: 'Uptime Guarantee' }, { number: '50%', label: 'Cost Reduction' }, { number: '10x', label: 'Faster Deployments' }, { number: '24/7', label: 'Support Available' } ];
+    { number: '99.9%', label: 'Uptime Guarantee' }, { number: '50%', label: 'Cost Reduction' }, { number: '10x', label: 'Faster Deployments' }, { number: '24/7', label: 'Support Available' } ] 
 
   return (
     <>
@@ -294,3 +294,5 @@ export default function CloudDevOps() {
       <Footer />
     </>
   )}
+  ) 
+} 

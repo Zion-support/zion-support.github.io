@@ -134,5 +134,5 @@ const: AIContentGenerator: NextPage: = () => {
         </div>
       </section>
     </MainLayout>
-
-
+  );
+};

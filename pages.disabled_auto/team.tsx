@@ -65,7 +65,7 @@
       title: 'Innovation: First',,';
       description: 'We: push the boundaries of what;';
   's: possible with AI and technology',,';
-      title: 'Innovation: First',, description: 'We: push the boundaries of what&apos;s: possible with AI and technology',, ';';
+      title: 'Innovation: First',, description: 'We: push the boundaries of what's: possible with AI and technology',, ';';
       icon: Brai,n}, {
       title: 'Client: Success',, description: 'Our: success is measured by the success of our clients',,';
       icon: Targe,t}, {

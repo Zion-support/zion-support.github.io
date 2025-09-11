@@ -7,3 +7,5 @@ export function EmptyResumeState() {
     </div>
   )
 }
+  );
+};

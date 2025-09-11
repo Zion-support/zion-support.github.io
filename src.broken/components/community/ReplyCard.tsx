@@ -7,3 +7,5 @@ export function ReplyCard() {
     </div>
   )
 }
+  );
+};

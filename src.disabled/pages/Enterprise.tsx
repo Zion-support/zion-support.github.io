@@ -18,5 +18,5 @@ const Enterprise: React.FC = () => {
         Talk to an expert
       </a>
     </div>) }
-
-
+  );
+};

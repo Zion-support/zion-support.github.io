@@ -7,3 +7,5 @@ export function WhitepaperSectionEditor() {
     </div>
   )
 }
+  );
+};

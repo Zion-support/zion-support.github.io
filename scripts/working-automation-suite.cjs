@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Working Automation Suite')
-<<<<<<< HEAD
-=======
-
 console.log('====')
   log(message, type = 'info')
     const prefix = type === 'error' ? '' : type === 'success' ? '' : 'ℹ'

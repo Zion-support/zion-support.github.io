@@ -7,3 +7,5 @@ export function Tutorials() {
     </div>
   )
 }
+  );
+};

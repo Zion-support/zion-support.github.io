@@ -1,4 +1,6 @@
 export {};
+module.exports = {};
+module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
@@ -6,12 +8,6 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-    // Validate the CSP report
-    if (!report['csp-report']) {
-      return res.status(400).json({ error: 'Invalid CSP report format' })}
-    // Return a 204 No Content response as per CSP reporting spec
-    res.status(204).end()} catch (error) {
-    console.error('Error processing CSP report:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
+

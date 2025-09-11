@@ -7,3 +7,5 @@ export function TokenManager() {
     </div>
   )
 }
+  );
+};

@@ -1,17 +1,14 @@
-
-import React from 'react';
+import * as React from 'react';
 
 interface PricingProps {
-  className?: string;
+  // Add props here as needed
 }
 
-const Pricing: React.FC<PricingProps> = ({ className }) => {
+export default function Pricing({ }: PricingProps) {
   return (
-    <div className={className || ''}>
+    <div>
       <h1>Pricing</h1>
-      <p>This component is under development.</p>
+      <p>This component is currently under development.</p>
     </div>
   );
-}
-}
 }

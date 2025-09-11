@@ -12,3 +12,5 @@ export type EmptyStateProps = {
       <p className=\"mt-1 text-sm text-gray-600 dark:text-gray-300\"    />{message}</p>;
       {action && <div className=\"mt-3\"    />{action}</div>}
 }
+  );
+};

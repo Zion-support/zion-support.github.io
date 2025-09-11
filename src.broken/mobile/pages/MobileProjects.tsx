@@ -7,3 +7,5 @@ export function MobileProjects() {
     </div>
   )
 }
+  );
+};

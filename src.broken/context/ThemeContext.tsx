@@ -7,3 +7,5 @@ export function ThemeContext() {
     </div>
   )
 }
+  );
+};

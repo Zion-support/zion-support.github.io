@@ -28,9 +28,5 @@ return (;
   return (<div>;
       <Head>;
         <title>QualityAssuranceChat - Zion Tech Solutions</title>;
-
-
-
-
-
-
+  );
+};

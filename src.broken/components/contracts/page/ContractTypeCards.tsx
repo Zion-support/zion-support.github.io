@@ -7,3 +7,5 @@ export function ContractTypeCards() {
     </div>
   )
 }
+  );
+};

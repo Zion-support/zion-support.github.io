@@ -7,3 +7,5 @@ export function markdown() {
     </div>
   )
 }
+  );
+};

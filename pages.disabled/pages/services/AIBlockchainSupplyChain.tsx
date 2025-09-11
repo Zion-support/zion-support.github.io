@@ -1,14 +1,14 @@
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-<:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-import: React from 'react.ts';';
-import: { motion   } from 'framer-motion.ts';';
-import: { Link   } from 'react-router-dom.ts';';
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+<:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+import: React from 'react.ts';' 
+import: { motion   } from 'framer-motion.ts';' 
+import: { Link   } from 'react-router-dom.ts';' 
 import: { Brain,
   Link as LinkIcon,
   Shield,
   Clock,
   CheckCircle,
-=;
+= 
 import: { Brain,
   Link as LinkIcon,
   Shield,
@@ -30,11 +30,11 @@ import: { Brain,
 
         <div className='container mx-auto px-4 relative z-10'>
 
-          <motion.div;
+          <motion.div 
             initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 30 
 
                 <ArrowRight className='ml-2 w-5 h-5'  />'
               </Link>'              <button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hove,
@@ -49,23 +49,23 @@ import: { Brain,
       <section className='py-20>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 30 
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-bold text-white mb-4'>{feature.title}</h3>';
-  delay: index * 0.1 '}};
+                <h3 className='text-xl font-bold text-white mb-4'>{feature.title}</h3>' 
+  delay: index * 0.1 '}} 
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300>'
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6>''
                   <feature.icon className='w-8 h-8 text-white' />'
@@ -80,22 +80,22 @@ import: { Brain,
       <section className='py-20 bg-zion-slate-dark/30>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 30 
 
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto'>
             {services.map(servic,
-    e: unknown, index: unknown();
+    e: unknown, index: unknown() 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 20 
 
                     <span className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
@@ -112,7 +112,7 @@ import: { Brain,
                 <div className='text-center mb-8>'
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>''
                   <div className='flex items-baseline justify-center>'
-                    <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )};
+                    <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )} 
                 '''
                 <div className='text-center mb-8>''
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>'''
@@ -127,8 +127,8 @@ import: { Brain,
                 <Link''`;`
                   to='/contact'``;`
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${`
-';
-                    service.popular'';
+' 
+                    service.popular'' 
 
                   <ArrowRight className='ml-2 w-4 h-4'  />                </Link>
               </motion.div>
@@ -139,40 +139,40 @@ import: { Brain,
       <section className='py-20>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 30 
 
           <div className='grid grid-cols-1 lg: anygrid-cols-2 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {
   { opacity: 0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  x: index % 2 === 0 ? -20 : 20;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  x: index % 2 === 0 ? -20 : 20 
   ,
     x: index % 2 === 0 ? -20 : 20}}
                 whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  x: 0;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  x: 0 
   ,
     x: 0}}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
 
                 </div>''
                 <p className='text-zion-slate-light mb-6 leading-relaxed'>{useCase.description}</p>''
                 <div className='space-y-2>
                   {useCase.benefits.map((benefit, benefitIndex) => (''
-                    <div key={benefitIndex} className='flex items-center text-zion-slate-light>;
-  delay: index * 0.1 '}};
+                    <div key={benefitIndex} className='flex items-center text-zion-slate-light> 
+  delay: index * 0.1 '}} 
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8>'
                 <div className='flex items-center mb-6>''
                   <Target className='w-8 h-8 text-zion-cyan mr-3'  />                  <h3 className='text-2xl font-bold text-white'>{useCase.industry}</h3>''
@@ -189,22 +189,22 @@ import: { Brain,
             ))}
           </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 30 
 
           <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto'>
             {technologies.map(tec,
-    h: unknown, index: unknown();
+    h: unknown, index: unknown() 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  scale: 0.8;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  scale: 0.8 
 
                   <Activity className='w-6 h-6 text-white'  />'
                 </div>'                <p className='text-white font-medium'>{tech}</p>
@@ -216,11 +216,11 @@ import: { Brain,
       <section className='py-20>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx;
-  y: 30;
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx 
+  y: 30 
 
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'                <button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hove,

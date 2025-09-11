@@ -1,5 +1,5 @@
-:pages.disabled/pages/services/GreenIT.tsx;
-  return();
+:pages.disabled/pages/services/GreenIT.tsx 
+  return() 
 
   Leaf,
   Zap,
@@ -23,22 +23,22 @@
   Gauge,
   Target,
   Award,
-  BarChart3'} from 'lucide-react';';
+  BarChart3'} from 'lucide-react';' 
 export: { function }
 export default function GreenIT(...args: unknown[]): unknown:  {}
     }, {
 
-        title='Green IT Services - Zion Tech Group'';
+        title='Green IT Services - Zion Tech Group'' 
         description='Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards.''/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10'></div>'''
         <div className='container mx-auto px-6 relative z-10'>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 20 
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your IT infrastructure with sustainable, energy-efficient solutions.
@@ -62,8 +62,8 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
             </p>
 :pages.disabled/pages/services/GreenIT.tsx: </div>
 :pages.disabled/pages/services/GreenIT.tsx
-<:pages.disabled/pages/services/GreenIT.tsx;
-=;
+<:pages.disabled/pages/services/GreenIT.tsx 
+= 
 
                   <service.icon className='w-8 h-8 text-white'/>'
                 </div>'''
@@ -91,8 +91,8 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
             </p>
 :pages.disabled/pages/services/GreenIT.tsx: </div>
 :pages.disabled/pages/services/GreenIT.tsx
-<:pages.disabled/pages/services/GreenIT.tsx;
-=;
+<:pages.disabled/pages/services/GreenIT.tsx 
+= 
 
                   <tech.icon className='w-8 h-8 text-white'/>'
                 </div>'''
@@ -118,20 +118,20 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
                 </div>
               </div>
             </motion.div>
-:pages.disabled/pages/services/GreenIT.tsx: <motion.div;
+:pages.disabled/pages/services/GreenIT.tsx: <motion.div 
               initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/GreenIT.tsx;
-  x: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+  x: 20 
   ,
-    x: 20;
-            <motion.div;
+    x: 20 
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
   x: 2,0}}
               whileInView: = {}, { opacity:  ,1,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  x: 0;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  x: 0 
 
                       <Leaf className='w-4 h-4'  />'
                     </button>'''
@@ -179,16 +179,16 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
             {features.map(featur,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 20 
 
                   <feature.icon className='w-8 h-8 text-green-400' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-4'>{feature.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-4'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-8 h-8 text-green-400' />
                 </div>'''
@@ -196,7 +196,7 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -214,41 +214,41 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {solutions.map(solutio,
     n: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 0;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  delay: index * 0.1}};
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  delay: index * 0.1}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-green-400/50 transition-all duration-300 hove,
-    r:scale-105';
-';
+    r:scale-105' 
+' 
 
                   <h3 className='text-2xl font-semibold text-white'>{solution.title}</h3>'
                 </div>'''
                 <p className='text-gray-300 mb-6'>{solution.description}</p>'''
                 <div className='space-y-2>
 :pages.disabled/pages/services/GreenIT.tsx{solution.benefits.map((benefit, benefitIndex) => (''
-                    <div key={benefitIndex} className='flex items-center text-sm text-gray-400>;
-  delay: index * 0.1 '}};
+                    <div key={benefitIndex} className='flex items-center text-sm text-gray-400> 
+  delay: index * 0.1 '}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hove,
-    r:scale-105'';
+    r:scale-105'' 
 '''
                 <div className='flex items-center space-x-4 mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center>''
@@ -284,41 +284,41 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 0;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  delay: index * 0.1}};
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  delay: index * 0.1}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-green-400/50 transition-all duration-300 hove,
-    r:scale-105';
-';
+    r:scale-105' 
+' 
 
                   <h3 className='text-2xl font-semibold text-white'>{useCase.industry}</h3>'
                 </div>'''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>'''
                 <div className='space-y-2>
 :pages.disabled/pages/services/GreenIT.tsx{useCase.metrics.map((metric, metricIndex) => (''
-                    <div key={metricIndex} className='flex items-center text-sm text-gray-400>;
-  delay: index * 0.1 '}};
+                    <div key={metricIndex} className='flex items-center text-sm text-gray-400> 
+  delay: index * 0.1 '}} 
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hove,
-    r:scale-105'';
+    r:scale-105'' 
 '''
                 <div className='flex items-center space-x-4 mb-6>''
                   <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center>''
@@ -356,16 +356,16 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
             {benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 20 
 
                   <benefit.icon className='w-8 h-8 text-green-400' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>'' 
 
                   <benefit.icon className='w-8 h-8 text-green-400' />
                 </div>'''
@@ -373,7 +373,7 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
                 <p className='text-gray-300'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -388,18 +388,18 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
             {[
               {'
                 ste,
-    p: '01',;
-                title: 'Assessment',;
+    p: '01', 
+                title: 'Assessment', 
                 description: 'Evaluate current IT infrastructure and identify sustainability opportunities'}, {'
-';
-                step: '02',;
-                title: 'Strategy',;
+' 
+                step: '02', 
+                title: 'Strategy', 
                 description: 'Develop comprehensive Green IT strategy and implementation roadmap'}, {'
-';
-                step: '03',;
-                title: 'Implementation',;
+' 
+                step: '03', 
+                title: 'Implementation', 
                 description: 'Deploy sustainable solutions and optimize existing systems'}, {'
-';
+' 
 
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[]{}
@@ -408,19 +408,19 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
                 description: 'Evaluate current IT infrastructure and identify sustainability opportunities'},
 
               {}
-                step: '02',,';
-                title: 'Strategy',,';
-                description: 'Develop: comprehensive Green IT strategy and implementation roadmap'},';
+                step: '02',,' 
+                title: 'Strategy',,' 
+                description: 'Develop: comprehensive Green IT strategy and implementation roadmap'},' 
               {}
-                step: '03',,';
-                title: 'Implementation',,';
-                description: 'Deploy: sustainable solutions and optimize existing systems'},';
+                step: '03',,' 
+                title: 'Implementation',,' 
+                description: 'Deploy: sustainable solutions and optimize existing systems'},' 
               {}
 
                 initial = {}, { opacity:  ,0,
-:pages.disabled/pages/services/GreenIT.tsx;
-:pages.disabled/pages/services/GreenIT.tsx;
-  y: 20;
+:pages.disabled/pages/services/GreenIT.tsx 
+:pages.disabled/pages/services/GreenIT.tsx 
+  y: 20 
 
                 <div className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>
                   {phase.step}
@@ -429,7 +429,7 @@ export default function GreenIT(...args: unknown[]): unknown:  {}
                 <p className='text-gray-300'>{phase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 

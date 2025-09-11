@@ -467,3 +467,5 @@ const AIContentStudio: React.FC = () => {
   )};
 
 export default AIContentStudio;
+  );
+};

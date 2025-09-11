@@ -1,41 +1,25 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('site-404-map-runner function triggered');
-    
-    // Site 404 mapping simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Site 404 map runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'site-404-map-runner',
-        source: event.source || 'unknown',
-        mapping: {
-          status: 'active',
-          pagesMapped: 0,
-          lastMap: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in site-404-map-runner:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'site-404-map-runner'
-      })
-    };
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.handler = async () => {
+  const logs = [];
+  function step(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
   }
+
+  step('site:404-map', () => runNode('automation/site-404-map.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, body: logs.join('\n') };
 };

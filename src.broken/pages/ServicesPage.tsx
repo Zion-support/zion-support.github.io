@@ -7,4 +7,5 @@ export function ServicesPage() {
     </div>
   )
 }
-
+  );
+};

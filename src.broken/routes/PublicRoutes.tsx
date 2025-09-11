@@ -7,3 +7,5 @@ export function PublicRoutes() {
     </div>
   )
 }
+  );
+};

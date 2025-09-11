@@ -7,3 +7,5 @@ export function JobPostingForm() {
     </div>
   )
 }
+  );
+};

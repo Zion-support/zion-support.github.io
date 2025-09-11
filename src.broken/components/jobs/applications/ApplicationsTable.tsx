@@ -7,3 +7,5 @@ export function ApplicationsTable() {
     </div>
   )
 }
+  );
+};

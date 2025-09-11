@@ -7,3 +7,5 @@ export function MobileFilterBar() {
     </div>
   )
 }
+  );
+};

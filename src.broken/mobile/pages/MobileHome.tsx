@@ -7,3 +7,5 @@ export function MobileHome() {
     </div>
   )
 }
+  );
+};

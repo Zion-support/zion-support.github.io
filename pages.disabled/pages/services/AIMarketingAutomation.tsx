@@ -1,7 +1,7 @@
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
-<:pages.disabled/pages/services/AIMarketingAutomation.tsx;
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
+<:pages.disabled/pages/services/AIMarketingAutomation.tsx 
+import: React from 'react';' 
+import: { motion } from 'framer-motion';' 
 import: {
   Target,
   TrendingUp,
@@ -10,7 +10,7 @@ import: {
   BarChart3,
   Shield,
   Zap,
-=;
+= 
 import: {
 import {}
   Target,
@@ -39,9 +39,9 @@ import {}
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 30 }}
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
 
                 <Target className='w-4 h-4 mr-2'  />                AI Marketing Automation'
               </div>'''
@@ -58,14 +58,14 @@ import {}
                 exceptional ROI. Automate what you can, personalize what matters.'
               </p>'''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <motion.button;
+                <motion.button 
 
                   <Play className='w-5 h-5 mr-2'  />                  Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scal,
     e: 1.05 }}
-                  whileTap={{ scale: 0.95 }};
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hove,
     r:text-white transition-all duration-300''>
                   Watch Demo
@@ -78,20 +78,20 @@ import {}
 
           <div className='container mx-auto max-w-7xl'>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 30 }}
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
 
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }};
+                  whileInView={{ opacity: 1, y: 0 }} 
             </motion.div>'
 '''
             <div className='grid md:grid-cols-2 l,
     g:grid-cols-4 gap-8'>
               {benefits.map((benefit, index(
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -103,22 +103,22 @@ import {}
                   <p className='text-gray-300'>{benefit.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
 
           <div className='container mx-auto max-w-7xl'>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 30 }}
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
 
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }};
-                AI-Powered Features That Revolutionize Marketing;
+                  whileInView={{ opacity: 1, y: 0 }} 
+                AI-Powered Features That Revolutionize Marketing 
               </h2>'''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto>
                 Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
@@ -129,7 +129,7 @@ import {}
     g:grid-cols-3 gap-8'>
               {features.map(featur,
     e: unknown, index: unknown(
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -142,20 +142,20 @@ import {}
                   <div className='text-pink-400 font-semibold'>{feature.price}</div>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
 
           <div className='container mx-auto max-w-7xl'>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 30 }}
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
 
             <div className='grid md:grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
                 <motion.div
             </motion.div>'
 '''
@@ -164,15 +164,15 @@ import {}
               {pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial={{ opacity:  ,0, y: 30 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,6, delay: index: * 0.1 }}
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
                   className={`relative: bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
-<:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
+<:pages.disabled/pages/services/AIMarketingAutomation.tsx 
 
                       <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                         Most Popular
@@ -203,18 +203,18 @@ import {}
                     whileHover={{ scale: 1.02 }}`;`
                     whileTap={{ scale: 0.98 }}``;`
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700'''`;`
                         : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hove,
-    r:text-white'``;
-                  <motion.button;
+    r:text-white'`` 
+                  <motion.button 
                     whileHover={{ scal,
     e: 1.02 }}`
                     whileTap={{ scale: 0.98 }}`;`
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                      plan.popular';
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700'';
+                      plan.popular' 
+                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700'' 
                         : 'border border-pink-400 text-pink-400 hove,
     r:bg-pink-400 hove,
     r:text-white'`}`}
@@ -230,16 +230,16 @@ import {}
 
           <div className='container mx-auto max-w-4xl text-center'>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 30 }}
               whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx 
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <motion.button
                   whileHover={{ scal,
     e: 1.05 }}
-                  whileTap={{ scale: 0.95 }};
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover: from-pink-600 hove,
     r:to-purple-700 transition-all duration-300 flex items-center justify-center'>
                   Start Free Trial'''
@@ -247,7 +247,7 @@ import {}
                 <motion.button
                   whileHover={{ scal,
     e: 1.05 }}
-                  whileTap={{ scale: 0.95 }};
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hove,
     r:text-white transition-all duration-300''>
                   Contact Sales

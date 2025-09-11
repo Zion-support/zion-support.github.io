@@ -7,3 +7,5 @@ export function ErrorState() {
     </div>
   )
 }
+  );
+};

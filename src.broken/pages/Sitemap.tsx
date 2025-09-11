@@ -7,3 +7,5 @@ export function Sitemap() {
     </div>
   )
 }
+  );
+};

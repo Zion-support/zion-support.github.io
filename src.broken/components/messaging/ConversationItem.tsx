@@ -7,3 +7,5 @@ export function ConversationItem() {
     </div>
   )
 }
+  );
+};

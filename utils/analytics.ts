@@ -1,25 +1,4 @@
-export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
 
-export interface TrackEventPayload {
-  event: string;
-  properties?: Record<string, any>;
-  userId?: string;
-  userType?: UserType;
-}
-
-export async function trackEvent(payload: TrackEventPayload) {
-  try {
-    await fetch('/api/analytics/events/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
-  } catch (error) {
-    console.error('Failed to track event:', error);
-  }
-}
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
   name: string;
@@ -28,6 +7,31 @@ export type TrackEventPayload = {
   properties?: Record<string, any>;
   at?: string;
 },
+export async /**
+ * track_event - Function description
+ */
+function track_event() {
+  try {
+    await fetch ('/api / analytics / events / track', {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify (payload);
+      keepalive: true as any});
+  } catch (e) {
+    // swallow;
 
   }
 }
+=======
+
+
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(payload);
+      keepalive: true as any});
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

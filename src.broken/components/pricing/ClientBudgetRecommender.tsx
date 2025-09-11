@@ -7,3 +7,5 @@ export function ClientBudgetRecommender() {
     </div>
   )
 }
+  );
+};

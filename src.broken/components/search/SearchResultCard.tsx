@@ -7,3 +7,5 @@ export function SearchResultCard() {
     </div>
   )
 }
+  );
+};

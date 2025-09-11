@@ -7,3 +7,5 @@ export function GradientHeading() {
     </div>
   )
 }
+  );
+};

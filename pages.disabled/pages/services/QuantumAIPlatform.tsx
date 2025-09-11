@@ -1,15 +1,15 @@
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-<:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-import: React from 'react.ts';';
-import: { Link  } from 'react-router-dom.ts';';
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+import: React from 'react.ts';' 
+import: { Link  } from 'react-router-dom.ts';' 
 import: { Atom,
   Brain,
   Zap,
   Target,
   BarChart3,
   Cpu,
-=;
+= 
 import: { Atom,
   Brain,
   Zap,
@@ -33,31 +33,31 @@ import: { Atom,
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-<:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+      <SEO 
+= 
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 20 
 
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-<:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-              <a;
-=;
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+              <a 
+= 
 
-                href='tel:+13024640950'';
+                href='tel:+13024640950'' 
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hove,
     r:scale-105>
                 📞 Call +1 (302) 464-0950
 
               </a>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-<:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-              <a;
-=;
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+              <a 
+= 
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Access the future of computing with our revolutionary quantum AI platform. Solve previously intractable problems,
@@ -65,15 +65,15 @@ import: { Atom,
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <a '''
-                href='tel:+13024640950'';
+                href='tel:+13024640950'' 
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105'>
                 📞 Call +1 (302) 464-0950'
               </a>''
               <a '''
-                href='/request-quote'';
-                className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all';
-              <a '';
-                href='/request-quote'';
+                href='/request-quote'' 
+                className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all' 
+              <a '' 
+                href='/request-quote'' 
                 className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all''>
@@ -97,26 +97,26 @@ import: { Atom,
     g:px-8'>
           <motion.div
             initial = {}, { opacity: 0,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
             whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
   y: 0}}
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16';
-';
-  y: 0}};
-            transition={{ duration: 0.8 }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            className='text-center mb-16' 
+' 
+  y: 0}} 
+            transition={{ duration: 0.8 }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-4xl font-bold text-white mb-4>
-              Quantum Computing Advantages';
+              Quantum Computing Advantages' 
   y: 0}}
 
             <h2 className='text-4xl font-bold text-white mb-4'>
@@ -135,12 +135,12 @@ import: { Atom,
             {quantumAdvantages.map(advantag,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 20 
 
                   <advantage.icon className='w-8 h-8 text-white' />
                 </div>'
@@ -150,7 +150,7 @@ import: { Atom,
                 <p className='text-gray-300 text-sm'>{advantage.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -168,30 +168,30 @@ import: { Atom,
           <div className='grid md:grid-cols-2 gap-8'>
             {features.map(featur,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 0;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.8,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  delay: index * 0.1}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300';
-';
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  delay: index * 0.1}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300' 
+' 
 
                   <h3 className='text-2xl font-semibold text-white'>{feature.title}</h3>'
                 </div>'''
@@ -199,9 +199,9 @@ import: { Atom,
                 <p className='text-gray-300 mb-6'>{feature.description}</p>'''
                 <ul className='space-y-3>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx{feature.benefits.map((benefit, idx) => (''
-                    <li key={idx} className='text-gray-300 flex items-center>;
-  delay: index * 0.1 '}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                    <li key={idx} className='text-gray-300 flex items-center> 
+  delay: index * 0.1 '}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300'' 
 '''
                 <div className='flex items-center mb-4>''
                   <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4>''
@@ -234,7 +234,7 @@ import: { Atom,
 
           <div className='grid md:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -243,19 +243,19 @@ import: { Atom,
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 20 
 
                     </li>
                   ))}
 :pages.disabled/pages/services/QuantumAIPlatform.tsx: </ul>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-<:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-                <a;
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+                <a 
 
                 >
                   Get: Started
@@ -280,35 +280,35 @@ import: { Atom,
     g:grid-cols-4 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  y: 0;
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.8,
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-:pages.disabled/pages/services/QuantumAIPlatform.tsx;
-  delay: index * 0.1}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300';
-';
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+:pages.disabled/pages/services/QuantumAIPlatform.tsx 
+  delay: index * 0.1}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300' 
+' 
 
                   {useCase.applications.map((application, appIndex) => (''
-                    <li key={appIndex} className='text-gray-300 text-sm flex items-center>;
-  delay: index * 0.1 '}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                    <li key={appIndex} className='text-gray-300 text-sm flex items-center> 
+  delay: index * 0.1 '}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'' 
 '''
                 <h3 className='text-xl font-semibold text-white mb-4'>{useCase.industry}</h3>'''
                 <ul className='space-y-2>{useCase.applications.map((application, appIndex) => ('''
@@ -317,9 +317,9 @@ import: { Atom,
                     </li>'
                   ))}
                 </div>'''
-                <p className='text-gray-300 mb-4>{testimonial.content}</p>';
-  delay: index * 0.1}};
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                <p className='text-gray-300 mb-4>{testimonial.content}</p>' 
+  delay: index * 0.1}} 
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'' 
 '''
                 <h3 className='text-xl font-semibold text-white mb-4'>{useCase.industry}</h3>'''
                 <ul className='space-y-2>
@@ -347,21 +347,21 @@ import: { Atom,
               Ready for the Quantum Revolution?'
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Join the quantum computing revolution and unlock computational capabilities;
+              Join the quantum computing revolution and unlock computational capabilities 
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button'
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300';
-                Start Free Trial;
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
+                className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300' 
+                Start Free Trial 
               </motion.button>
               <motion.button'
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300';
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
+                className='px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300' 
             </p>'
 '''
             <div className='flex flex-col s,
@@ -369,14 +369,14 @@ import: { Atom,
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
-                className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300'';
-                Start Free Trial;
+                whileTap={{ scale: 0.95 }} 
+                className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300'' 
+                Start Free Trial 
               </motion.button>
               <motion.button
                 whileHover={{ scal,
     e: 1.05 }}
-                whileTap={{ scale: 0.95 }};
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hove,
     r:text-blue-600 transition-all duration-300''>
                 Contact Quantum Experts

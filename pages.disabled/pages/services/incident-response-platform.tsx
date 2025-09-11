@@ -20,32 +20,32 @@ import {}
 
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30'></div>'''        <div className='container-responsive relative z-10'>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx 
 
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6'>
               Incident Response Platform'
             </h1>'''            <p className='text-xl m,
     d:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto'>
 
-              Advanced cybersecurity incident response platform with AI-powered;
-              detection, automated response workflows, and expert incident;
+              Advanced cybersecurity incident response platform with AI-powered 
+              detection, automated response workflows, and expert incident 
 
             <div className='flex flex-wrap justify-center gap-4'>
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+              <motion.button 
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hove,
     r:to-orange-700 transition-all duration-300'>                Get Started
               </motion.button>
 :pages.disabled/pages/services/incident-response-platform.tsx
 
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300'>                Schedule Demo
 
               </motion.button>
@@ -54,13 +54,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx 
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
 
                   <feature.icon className='w-8 h-8 text-red-400' />'
@@ -83,18 +83,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx 
 
-              Comprehensive incident response capabilities that cover the entire;
-              incident lifecycle, from initial detection through recovery and;
+              Comprehensive incident response capabilities that cover the entire 
+              incident lifecycle, from initial detection through recovery and 
               lessons learned.
             </p>
 
             {capabilities.map((capability, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={capability.category}
 
                       <div className='w-2 h-2 bg-red-400 rounded-full mr-3'></div>
@@ -110,13 +110,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx 
 
             {technologies.map((tech, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={tech.name}
 
                     <tech.icon className='w-6 h-6 text-red-400' />'
@@ -132,13 +132,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx 
 
             {responseMetrics.map((metric, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={metric.metric}
 
 
@@ -150,9 +150,9 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx 
 
 :pages.disabled/pages/services/incident-response-platform.tsx
                 Ready to Enhance Your Incident Response?"
@@ -161,24 +161,24 @@ import {}
                 Protect your organization with our advanced incident response
                 platform and ensure rapid, effective response to security
 
-                Protect your organization with our advanced incident response;
-                platform and ensure rapid, effective response to security;
+                Protect your organization with our advanced incident response 
+                platform and ensure rapid, effective response to security 
                 incidents.''
               </p>'''
 
               <div className='flex flex-wrap justify-center gap-4'>
-                <motion.button;
-                  whileHover={{ scale: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+                <motion.button 
+                  whileHover={{ scale: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hove,
     r:to-orange-700 transition-all duration-300'>                  Get Started
                 </motion.button>
 :pages.disabled/pages/services/incident-response-platform.tsx
 
-                <motion.button;
+                <motion.button 
                   whileHover={{ scal,
-    e: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300'>                  Schedule Demo
 
                 </motion.button>

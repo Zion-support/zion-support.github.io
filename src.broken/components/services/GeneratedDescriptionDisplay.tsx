@@ -7,3 +7,5 @@ export function GeneratedDescriptionDisplay() {
     </div>
   )
 }
+  );
+};

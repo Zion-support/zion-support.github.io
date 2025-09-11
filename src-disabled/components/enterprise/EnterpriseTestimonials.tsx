@@ -144,3 +144,5 @@ import {;
         </Carousel>
       </div>
     </section>
+  );
+};

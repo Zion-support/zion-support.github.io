@@ -15,7 +15,7 @@ import {
   Table;
 
 import { Check, X  } from 'lucide-react';
-TableBody,TableCell,TableHead,TableHeader,import React from "react",import { Button } from "@/components/ui/button",import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/components/ui/table",import { Badge } from "@/components/ui/badge",Table;
+TableBody,TableCell,TableHead,TableHeader,import React from "react";import { Button } from "@/components/ui/button",import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from "@/components/ui/table",import { Badge } from "@/components/ui/badge",Table;
 
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
   TableRow} from "@/components/ui/table",

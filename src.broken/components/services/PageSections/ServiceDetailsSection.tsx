@@ -7,3 +7,5 @@ export function ServiceDetailsSection() {
     </div>
   )
 }
+  );
+};

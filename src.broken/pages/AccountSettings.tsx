@@ -7,3 +7,5 @@ export function AccountSettings() {
     </div>
   )
 }
+  );
+};

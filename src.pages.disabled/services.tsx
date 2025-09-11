@@ -240,7 +240,5 @@ const Services: React.FC = () => {
         </section>
       </div>
     </div>
-
-
-
-
+  );
+};

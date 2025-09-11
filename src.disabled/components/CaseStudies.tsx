@@ -101,6 +101,5 @@ className='mt - 6 text - lg leading - 8 text - gray - 600''            initial={
               </div>
             </motion.div>) ) }
         </div>
-
-
-
+  );
+};

@@ -7,3 +7,5 @@ export function AdminLayout() {
     </div>
   )
 }
+  );
+};

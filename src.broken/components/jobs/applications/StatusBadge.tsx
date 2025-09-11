@@ -7,3 +7,5 @@ export function StatusBadge() {
     </div>
   )
 }
+  );
+};

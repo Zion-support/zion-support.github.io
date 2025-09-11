@@ -7,3 +7,5 @@ export function dynamicImports() {
     </div>
   )
 }
+  );
+};

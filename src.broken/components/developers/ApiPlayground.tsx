@@ -7,3 +7,5 @@ export function ApiPlayground() {
     </div>
   )
 }
+  );
+};

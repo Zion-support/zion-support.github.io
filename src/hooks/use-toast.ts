@@ -1,27 +1,41 @@
-import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
+import { useState, useCallback } from 'react';
 
-export type ToastOptions = HotToastOptions & {
+export interface Toast {
+  id: string;
   title?: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-};
-
-export const useToast = () => ({ toast });
-
-function toast(options: ToastOptions) {
-  const message = options.description || options.title || '';
-  if (options.variant === 'destructive') {
-    hotToast.error(message, options);
-  } else if (options.variant === 'success') {
-    hotToast.success(message, options);
-  } else {
-    hotToast(message, options);
-  }
+  action?: React.ReactNode;
+  variant?: 'default' | 'destructive';
 }
 
-toast.title = (title: string) => hotToast(title);
-toast.description = (description: string) => hotToast(description);
-toast.error = (error: string) => hotToast.error(error);
-toast.success = (message: string) => hotToast.success(message);
+export function useToast() {
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
-export { toast };
+  const toast = useCallback(({ title, description, action, variant = 'default' }: Omit<Toast, 'id'>) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const newToast: Toast = { id, title, description, action, variant };
+    
+    setToasts(prev => [...prev, newToast]);
+    
+    // Auto-remove toast after 5 seconds
+    setTimeout(() => {
+      setToasts(prev => prev.filter(toast => toast.id !== id));
+    }, 5000);
+    
+    return id;
+  }, []);
+
+  const dismiss = useCallback((toastId?: string) => {
+    if (toastId) {
+      setToasts(prev => prev.filter(toast => toast.id !== toastId));
+    } else {
+      setToasts([]);
+    }
+  }, []);
+
+  return {
+    toast,
+    dismiss,
+    toasts,
+  };
+}

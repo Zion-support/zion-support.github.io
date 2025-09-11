@@ -37,29 +37,20 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Enhanced conflict resolution strategy
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            log_message "📦 Critical file detected, keeping main version and merging dependencies..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+    if grep -q "/d' "$file"
+            sed -i '/
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == *".tsx" || "$file" == *".ts" ]]; then
             log_message "📱 TypeScript file detected, keeping incoming version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         else
             log_message "📝 Regular file, attempting to merge both versions..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         fi
         
         log_message "✅ Resolved conflicts in $file"
@@ -474,9 +465,9 @@ log_message "🔄 Processing important feature branches..."
 # Process each important branch
 for branch in "${IMPORTANT_BRANCHES[@]}"; do
     echo ""
-    echo "=========================================="
+    echo ""
     echo "🔄 Processing branch: $branch"
-    echo "=========================================="
+    echo ""
     
     if merge_branch "$branch"; then
         log_message "✅ Branch $branch processed successfully"
@@ -484,7 +475,7 @@ for branch in "${IMPORTANT_BRANCHES[@]}"; do
         log_message "❌ Branch $branch processing failed"
     fi
     
-    echo "=========================================="
+    echo ""
     echo ""
     
     # Push changes every 2 successful merges to avoid losing work

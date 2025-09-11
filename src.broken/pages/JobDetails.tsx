@@ -7,3 +7,5 @@ export function JobDetails() {
     </div>
   )
 }
+  );
+};

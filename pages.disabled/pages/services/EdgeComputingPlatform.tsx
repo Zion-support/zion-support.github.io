@@ -1,9 +1,9 @@
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
+import: { SEO  } from '@/components/SEO';' 
 import: { Cpu,
   Zap,
   Globe,
@@ -11,7 +11,7 @@ import: { Cpu,
   Network,
   Cloud,
   Shield,
-=;
+= 
 import: { Cpu,
   Zap,
   Globe,
@@ -77,15 +77,15 @@ import: { Cpu,
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+      <SEO 
+= 
 
-            <motion.div;
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  y: 20 
 
               transition={{ duration: 0.8 }}
 '''
@@ -126,19 +126,19 @@ import: { Cpu,
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-=;
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  y: 20 
 
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>'''
@@ -147,7 +147,7 @@ import: { Cpu,
 
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -157,25 +157,25 @@ import: { Cpu,
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-=;
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  scale: 0.9;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  scale: 0.9 
 
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <div className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>'''
-                <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'' 
 
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>'''
@@ -184,7 +184,7 @@ import: { Cpu,
                 <p className='text-gray-300'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -194,19 +194,19 @@ import: { Cpu,
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-=;
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-1 m,
     d: grid-cols-2 gap-8'>{useCases.map(useCas,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
 
 `'`
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>''`
@@ -222,7 +222,7 @@ import: { Cpu,
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -232,34 +232,34 @@ import: { Cpu,
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-=;
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+= 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  y: 0;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.5,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  delay: index * 0.1}};
-                className='group';
-  delay: index * 0.1}};
-                className='group'';
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  delay: index * 0.1}} 
+                className='group' 
+  delay: index * 0.1}} 
+                className='group'' 
 `;`
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>``
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>'''
@@ -267,7 +267,7 @@ import: { Cpu,
                   </div>'''
                   <h3 className='text-xl font-semibold text-white mb-3'>{location.region}</h3>'''
                   <div className='space-y-2>
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx{location.cities.map((city, cityIndex) => (';
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx{location.cities.map((city, cityIndex) => (' 
 
                     <location.icon className='w-6 h-6 text-white' />'
                   </div>'''
@@ -291,20 +291,20 @@ import: { Cpu,
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-<:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-=;
+<:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+= 
 
-          '';
+          '' 
           <div className='grid grid-cols-1 l,
     g: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx 
+  y: 20 
 
                     </span>
 
@@ -318,18 +318,18 @@ import: { Cpu,
                     </li>
                   ))}
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover: from-blue-600 hove,
     r:to-green-600'''`;`
                     : 'bg-slate-700 text-white hove,
-    r:bg-slate-600'``;
+    r:bg-slate-600'`` 
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                   plan.popular''
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover: from-blue-600 hove,
-    r:to-green-600'';
+    r:to-green-600'' 
                     : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}>{plan.cta}
 

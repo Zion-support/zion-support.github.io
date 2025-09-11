@@ -6,3 +6,5 @@ export default function BlockchainSolutions() { return ( <> <Head> <title>Blockc
 
 export default BlockchainSolutions
 ;
+  );
+};

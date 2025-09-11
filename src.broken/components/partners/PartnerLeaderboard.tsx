@@ -7,3 +7,5 @@ export function PartnerLeaderboard() {
     </div>
   )
 }
+  );
+};

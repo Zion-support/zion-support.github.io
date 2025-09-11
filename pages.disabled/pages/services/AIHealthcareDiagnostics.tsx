@@ -26,15 +26,15 @@ import {}
   Syringe,
   Thermometer,
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='bg-gradient-to-r: from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-green-500/25: transition-all duration-300'>                Schedule Demo';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='bg-gradient-to-r: from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-green-500/25: transition-all duration-300'>                Schedule Demo' 
               </motion.button>
-:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx: <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='border: border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10: transition-all duration-300'>                Learn More';
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx: <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='border: border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10: transition-all duration-300'>                Learn More' 
 
               </motion.button>
             </div>
@@ -44,7 +44,7 @@ import {}
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-8 h-8 text-white' />'
@@ -61,7 +61,7 @@ import {}
 
             {diagnosticCapabilities.map((capability, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -77,7 +77,7 @@ import {}
 
             {benefits.map((benefit, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -89,7 +89,7 @@ import {}
 
             {complianceFeatures.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -105,13 +105,13 @@ import {}
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
 
-  ';
+  ' 
               Choose the plan that fits your healthcare facility's needs. All
               plans include our core AI diagnostic capabilities.
 
             {pricing.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                     </span>
@@ -124,10 +124,10 @@ import {}
                   whileHover={{ scale: 1.05 }}`;`
                   whileTap={{ scale: 0.95 }}``;`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
-  index === 1';
-  ';
+  index === 1' 
+  ' 
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover: shadow-lg hove,
-    r:shadow-green-500/25'';
+    r:shadow-green-500/25'' 
   '`;`
                       : 'border border-green-400 text-green-400 hove,
     r:bg-green-400/10``}`}                >
@@ -141,15 +141,15 @@ import {}
         </div>
       </section>
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='bg-gradient-to-r: from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-green-500/25: transition-all duration-300'>                Schedule Consultation';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='bg-gradient-to-r: from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-green-500/25: transition-all duration-300'>                Schedule Consultation' 
               </motion.button>
-:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx: <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='border: border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10: transition-all duration-300'>                Contact Sales';
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx: <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='border: border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10: transition-all duration-300'>                Contact Sales' 
 
               </motion.button>
             </div>

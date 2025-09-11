@@ -7,3 +7,5 @@ export function AutoFillModal() {
     </div>
   )
 }
+  );
+};

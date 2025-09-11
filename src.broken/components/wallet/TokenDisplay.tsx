@@ -7,3 +7,5 @@ export function TokenDisplay() {
     </div>
   )
 }
+  );
+};

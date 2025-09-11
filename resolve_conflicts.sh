@@ -1,22 +1,44 @@
 #!/bin/bash
 
+# Script to resolve merge conflicts by accepting HEAD version
+echo "Resolving merge conflicts by accepting HEAD version..."
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+# Find all files with merge conflicts
+files_with_conflicts=$(find src/ -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
+if [ -z "$files_with_conflicts" ]; then
+    echo "No files with merge conflicts found."
+    exit 0
+fi
+
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Use git checkout to accept HEAD version
     git checkout --ours "$file"
-    git add "$file"
+    
+    # If that doesn't work, manually remove conflict markers
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Manually resolving conflicts in $file"
+        
+        # Remove conflict markers and keep only HEAD content
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> origin/d' "$file"
+        
+        # Clean up any remaining conflict markers
+        sed -i '/^<<<<<<< HEAD/d' "$file"
+        sed -i '/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    fi
+    
+    echo "Resolved: $file"
 done
 
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
-
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11928: Fix Netlify build and merge to main - Resolved conflicts by choosing main branch version"
+echo "Merge conflict resolution completed."

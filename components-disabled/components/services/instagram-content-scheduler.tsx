@@ -59,10 +59,10 @@ const ServicePage: NextPage < Props> = () => {
 const ServicePage: NextPage<Props> = () => {_return (
 
         <title>Instagram Content Scheduler | Services</title>
-        <meta name=&quot;description&quot; content=&quot;Auto-generate posts from blog feeds and schedule with analytics.&quot; />
+        <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." />
 
         <p>Service details coming soon...</p>
-        <a href=&quot;/services&quot;>Back to Services</a>
+        <a href="/services">Back to Services</a>
     </div>)"
 const ServicePage: NextPage<Props /> = () => {
   return (<> <Head /> <title />Instagram Content Scheduler | Services</title> <meta name=\"description\" content=\"Auto-generate posts from blog feeds and schedule with analytics.\" /> </Head> <main /> <h1 />InstagramContentScheduler</h1> <p />Service details coming soon...</p> <a href=\"/services\"  />Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -149,12 +149,12 @@ export default ServicePage;
 const ServicePage: NextPage<Props /> = () => {_return (<>;
       <Head />;
         <title />Instagram Content Scheduler | Services</title>;
-        <meta name=&quot;description&quot; content=&quot;Auto-generate posts from blog feeds and schedule with analytics.&quot; />;
+        <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." />;
       </Head>;
       <main />;
         <h1 />InstagramContentScheduler</h1>;
         <p />Service details coming soon...</p>;
-        <a href=&quot;/services&quot; />Back to Services</a>;
+        <a href="/services" />Back to Services</a>;
       </main>;}
     </div>;}
   )},export default ServicePage;
@@ -181,13 +181,13 @@ const ServicePage: NextPage<Props /> = () => {_return (
     <>
       <Head />
         <title />Instagram Content Scheduler | Services</title>
-        <meta name=&quot;description&quot; content=&quot;Auto-generate posts from blog feeds and schedule with analytics.&quot; />
+        <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." />
       </Head>
       
       <main />
         <h1 />InstagramContentScheduler</h1>
         <p />Service details coming soon...</p>
-        <a href=&quot;/services&quot; />Back to Services</a>
+        <a href="/services" />Back to Services</a>
       </main>
     </div>}
   )}

@@ -1,30 +1,27 @@
-// import '@testing-library/jest-dom'; // KEEP THIS COMMENTED OUT
-import { cleanup } from '@testing-library/react';
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  observe() { /* do nothing */ }
-  unobserve() { /* do nothing */ }
-  disconnect() { /* do nothing */ }
-};
-
-// Mock window.scrollTo
-// Assuming 'vi' is globally available due to 'globals: true' in vitest.config.ts
-if (typeof vi !== 'undefined') {
-  global.window.scrollTo = vi.fn();
-} else {
-  // Fallback if vi is not available for some reason in this context
-  global.window.scrollTo = () => { /* do nothing */ };
-  console.warn('vi not available in tests/setup.ts for scrollTo mock');
+  fn: vi.fn.bind(vi);
+  mock: vi.mock.bind(vi);
+  spyOn: vi.spyOn.bind(vi);
+  // Timing helpers;
+  useFakeTimers: vi.useFakeTimers.bind(vi);
+  useRealTimers: vi.useRealTimers.bind(vi);
+  advanceTimersByTime: vi.advanceTimersByTime.bind(vi);
+  runAllTimers: vi.runAllTimers.bind(vi);
+  // Reset / clear mocks;
+  resetAllMocks: vi.resetAllMocks.bind(vi);
+  restoreAllMocks: vi.restoreAllMocks.bind(vi);
+  clearAllMocks: vi.clearAllMocks.bind(vi);
+  // Snapshot placeholder (no-op) – Vitest has its own snapshot system.;
+  // We expose it so imports compile even if we don't use it.;
+  SnapshotSerializer: () => {}};
+import React from 'react';
+interface SetupProps {
+  // Add props here as needed
 }
-
-afterEach(() => {
-  cleanup();
-  if (typeof vi !== 'undefined') {
-    vi.restoreAllMocks();
-  } else {
-    console.warn('vi not available in tests/setup.ts for afterEach mock restoration');
-  }
-});
-
-console.log('tests/setup.ts: Executed without jest-dom, with other mocks and cleanup.');
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

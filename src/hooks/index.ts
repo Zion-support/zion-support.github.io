@@ -1,13 +1,10 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-// Export all hooks from messaging directory
-export * from './messaging';
-export * from './use-toast';
-export * from './useAuth';
-export * from './useOnboardingStatus';
-export * from './usePageViewTracking';
-export * from './useReactId';
-export * from './useScrollToTop';
-export * from './usePostsByCategory';
-export * from './useAutocomplete';
+export function useScrollToTop() {
+  const { pathname } = useLocation();
 
-export * from "./useLocalStorage";
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+}

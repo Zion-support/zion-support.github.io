@@ -7,3 +7,5 @@ export function SignupForm() {
     </div>
   )
 }
+  );
+};

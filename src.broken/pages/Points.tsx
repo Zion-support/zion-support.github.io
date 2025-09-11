@@ -7,3 +7,5 @@ export function Points() {
     </div>
   )
 }
+  );
+};

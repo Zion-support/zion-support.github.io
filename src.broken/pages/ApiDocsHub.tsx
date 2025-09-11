@@ -7,3 +7,5 @@ export function ApiDocsHub() {
     </div>
   )
 }
+  );
+};

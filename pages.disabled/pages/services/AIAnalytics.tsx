@@ -1,19 +1,19 @@
-:pages.disabled/pages/services/AIAnalytics.tsx;
+:pages.disabled/pages/services/AIAnalytics.tsx 
 export: default function AIAnalytics(...args[]):  {
 export: default function AIAnalytics(...args[]):  {}
     }, {
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIAnalytics.tsx;
-:pages.disabled/pages/services/AIAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIAnalytics.tsx 
+:pages.disabled/pages/services/AIAnalytics.tsx 
+  y: 20 
 
               <span className='text-gradient'> Innovation</span>
             </h1>'
 '''
             <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
-              Transform your business with cutting-edge AI and analytics solutions.;
+              Transform your business with cutting-edge AI and analytics solutions. 
 
                 <ArrowRight className='w-5 h-5 ml-2'  />
               </button>'              <button className='btn-outline px-8 py-4 text-lg'>
@@ -31,12 +31,12 @@ export: default function AIAnalytics(...args[]):  {}
     g:grid-cols-4 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIAnalytics.tsx;
-:pages.disabled/pages/services/AIAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIAnalytics.tsx 
+:pages.disabled/pages/services/AIAnalytics.tsx 
+  y: 20 
 
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -46,13 +46,13 @@ export: default function AIAnalytics(...args[]):  {}
                 <p className='text-zion-slate-light'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {services.map(servic,
-    e: unknown, index: unknown();
+    e: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -61,11 +61,11 @@ export: default function AIAnalytics(...args[]):  {}
             {services.map(servic,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={service.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIAnalytics.tsx;
-:pages.disabled/pages/services/AIAnalytics.tsx;
+:pages.disabled/pages/services/AIAnalytics.tsx 
+:pages.disabled/pages/services/AIAnalytics.tsx 
 
                     <service.icon className='w-8 h-8 text-white' />
                   </div>'
@@ -76,15 +76,15 @@ export: default function AIAnalytics(...args[]):  {}
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIAnalytics.tsx;
-:pages.disabled/pages/services/AIAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIAnalytics.tsx 
+:pages.disabled/pages/services/AIAnalytics.tsx 
+  y: 20 
 
                 Ready to Get Intelligent?'
               </h2>'''

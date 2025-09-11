@@ -7,3 +7,5 @@ export function DynamicComponentLoader() {
     </div>
   )
 }
+  );
+};

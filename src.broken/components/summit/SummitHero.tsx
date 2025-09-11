@@ -7,3 +7,5 @@ export function SummitHero() {
     </div>
   )
 }
+  );
+};

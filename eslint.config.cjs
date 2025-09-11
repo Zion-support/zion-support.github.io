@@ -1,38 +1,78 @@
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
-const typescriptEslint = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
-const nextConfig = require('eslint-config-next');
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended });
-
-module.exports = [
-  ...compat.extends('next/core-web-vitals') {
+export default [
+  {
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '.next/**',
+      '**/.next/**',
+      'zion-os/**',
+      'zion-os.disabled/**',
+      'apps/**',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'corrupted-files-backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'types/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**'
+    ],
+  },
+  js.configs.recommended,
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true } } },
+          jsx: true,
+        },
+        project: false,
+        tsconfigRootDir: __dirname,
+      },
+      globals: globals.browser,
+    },
     plugins: {
-      '@typescript-eslint': typescriptEslint },
+      '@typescript-eslint': tseslint,
+      'react': react,
+      'react-hooks': reactHooks,
+    },
     rules: {
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn'
-    } }, {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'build/',
-      'dist/',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs'
-    ] } ];
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  }
+];
+

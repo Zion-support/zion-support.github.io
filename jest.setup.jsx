@@ -1,5 +1,13 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-// Mock: Next.js router;
-jest.mock(
-  'next/router', () => ({';
-  useRouter() {
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}}}
+=======
+}}}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

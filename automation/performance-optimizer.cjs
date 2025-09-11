@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-
-<<<<<<< HEAD
 /**
  * Performance Optimization Script for Zion Tech Group
  * Analyzes and optimizes application performance
@@ -12,153 +10,172 @@ const { execSync } = require('child_process');
 
 class PerformanceOptimizer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.optimizations = []}
+    this.report = {
+      timestamp: new Date().toISOString(),
+      optimizations: [],
+      recommendations: [],
+      metrics: {}
+    };
+  }
+
+  log(message, type = 'INFO') {
+    const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+    console.log(`${icons[type]} ${message}`);
+  }
+
+  async optimize() {
+    this.log('Starting Performance Optimizer...', 'INFO');
+    
+    try {
+      await this.analyzeBundleSize();
+      await this.analyzeDependencies();
+      await this.optimizeImages();
+      await this.checkLighthouse();
+      this.generateReport();
+      
+      this.log('Performance optimization complete!', 'SUCCESS');
+      return true;
+    } catch (error) {
+      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
+
+  async analyzeBundleSize() {
+    this.log('Analyzing bundle size...', 'INFO');
+    
+    try {
+      if (fs.existsSync('dist')) {
+        const stats = execSync('du -sh dist', { encoding: 'utf8' });
+        const size = stats.trim().split('\t')[0];
+        this.report.metrics.bundleSize = size;
+        this.log(`Bundle size: ${size}`, 'SUCCESS');
+        
+        if (size.includes('M') && parseInt(size) > 50) {
+          this.report.recommendations.push({
+            type: 'bundle_size',
+            message: 'Bundle size is large, consider code splitting',
+            priority: 'high'
+          });
+        }
+      } else {
+        this.log('No build found, run npm run build first', 'WARNING');
+      }
+    } catch (error) {
+      this.log(`Error analyzing bundle: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async analyzeDependencies() {
+    this.log('Analyzing dependencies...', 'INFO');
+    
+    try {
+      if (fs.existsSync('package.json')) {
+        const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+        const dependencies = Object.keys(packageJson.dependencies || {});
+        const devDependencies = Object.keys(packageJson.devDependencies || {});
+        
+        this.report.metrics.dependencies = {
+          production: dependencies.length,
+          development: devDependencies.length,
+          total: dependencies.length + devDependencies.length
+        };
+        
+        this.log(`Dependencies: ${dependencies.length} production, ${devDependencies.length} development`, 'SUCCESS');
+        
+        // Check for heavy dependencies
+        const heavyDeps = ['lodash', 'moment', 'jquery', 'bootstrap'];
+        const foundHeavy = dependencies.filter(dep => heavyDeps.includes(dep));
+        
+        if (foundHeavy.length > 0) {
+          this.report.recommendations.push({
+            type: 'heavy_dependencies',
+            message: `Consider replacing heavy dependencies: ${foundHeavy.join(', ')}`,
+            priority: 'medium'
+          });
+        }
+      }
+    } catch (error) {
+      this.log(`Error analyzing dependencies: ${error.message}`, 'ERROR');
+    }
+  }
 
   async optimizeImages() {
-    console.log('🖼️  Optimizing images...');
+    this.log('Optimizing images...', 'INFO');
     
-    const publicDir = path.join(this.projectRoot, 'public');
-    if (fs.existsSync(publicDir)) {
-      // This would integrate with image optimization tools
-      this.optimizations.push('Image optimization completed')}
-  }
+    const publicDir = 'public';
+    if (!fs.existsSync(publicDir)) {
+      this.log('Public directory not found', 'WARNING');
+      return;
+    }
 
-  async optimizeBundle() {
     try {
-      // Run bundle analyzer if available
-      execSync('npm run build' { stdio: 'pipe' });
-      this.optimizations.push('Bundle analysis completed')} catch (error) {
-      console.log('Bundle analysis failed, but continuing...')}
+      const imageFiles = this.findImageFiles(publicDir);
+      let optimizedCount = 0;
+      
+      for (const imagePath of imageFiles) {
+        const stats = fs.statSync(imagePath);
+        const sizeKB = Math.round(stats.size / 1024);
+        
+        if (sizeKB > 100) { // Optimize images larger than 100KB
+          try {
+            const outputPath = imagePath.replace(/(\.[^.]+)$/, '_optimized$1');
+            execSync(`npx sharp -i "${imagePath}" -o "${outputPath}" --quality 80`, { stdio: 'pipe' });
+            
+            const newStats = fs.statSync(outputPath);
+            const newSizeKB = Math.round(newStats.size / 1024);
+            const savings = Math.round(((sizeKB - newSizeKB) / sizeKB) * 100);
+            
+            this.report.optimizations.push({
+              file: imagePath,
+              originalSize: sizeKB,
+              optimizedSize: newSizeKB,
+              savings: `${savings}%`
+            });
+            
+            optimizedCount++;
+            this.log(`Optimized ${path.basename(imagePath)}: ${sizeKB}KB → ${newSizeKB}KB (${savings}% savings)`, 'SUCCESS');
+          } catch (error) {
+            this.log(`Failed to optimize ${imagePath}: ${error.message}`, 'ERROR');
+          }
+        }
+      }
+      
+      if (optimizedCount === 0) {
+        this.log('No large images found to optimize', 'INFO');
+      }
+    } catch (error) {
+      this.log('Sharp not available, skipping image optimization', 'WARNING');
+    }
   }
 
-  async optimizeCode() {
-    console.log('💻 Optimizing code...');
+  findImageFiles(dir) {
+    const imageFiles = [];
+    const files = fs.readdirSync(dir, { withFileTypes: true });
     
-    // Remove unused imports
-    const srcFiles = this.findSourceFiles();
-    
-    for (const file of srcFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let modified = false;
-        
-        // Remove empty lines at the end
-        const trimmed = content.trimEnd();
-        if (trimmed !== content) {
-          content = trimmed + '\n';
-          modified = true}
-        
-        if (modified) {
-          fs.writeFileSync(file, content)}
-      } catch (error) {
-        // Skip files that can't be processed
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      if (file.isDirectory()) {
+        imageFiles.push(...this.findImageFiles(fullPath));
+      } else if (file.isFile() && /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)) {
+        imageFiles.push(fullPath);
       }
     }
     
-    this.optimizations.push('Code optimization completed')}
+    return imageFiles;
+  }
 
-  findSourceFiles() {
-    const files = [];
-    const srcDir = path.join(this.projectRoot, 'src');
-    const componentsDir = path.join(this.projectRoot, 'components');
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    
-    [srcDir, componentsDir, pagesDir].forEach(dir => {
-      if (fs.existsSync(dir)) {
-        this.findFilesRecursively(dir, files)}
-    });
-    
-    return files.filter(file => 
-      file.endsWith('.js') || 
-      file.endsWith('.jsx') || 
-      file.endsWith('.ts') || 
-      file.endsWith('.tsx')
-    )}
-
-  findFilesRecursively(dir, files) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, files)} else {
-        files.push(fullPath)}
+  async checkLighthouse() {
+    try {
+      execSync('npx lighthouse --version', { stdio: 'pipe' });
+      this.log('Lighthouse available, consider running: npx lighthouse http://localhost:3000', 'INFO');
+    } catch (error) {
+      this.log('Lighthouse not available, install with: npm install -g lighthouse', 'WARNING');
     }
   }
 
-  async runOptimizations() {
-    console.log('🚀 Starting performance optimizations...\n');
-    
-    await this.optimizeImages();
-    await this.optimizeBundle();
-    await this.optimizeCode();
-    
-    console.log('\n✅ Performance optimizations completed:');
-    this.optimizations.forEach((opt, index) => {
-      console.log(`${index + 1}. ${opt}`)})}
-}
-
-<<<<<<< HEAD
-function generateOptimizationRecommendations() {
-    console.log('\n💡 Generating optimization recommendations...');
-    
-    // Image optimization
-    performanceReport.recommendations.push({
-        type: 'image_optimization',
-        message: 'Implement image optimization with next/image',
-        priority: 'high'
-    });
-    
-    // Code splitting
-    performanceReport.recommendations.push({
-        type: 'code_splitting',
-        message: 'Implement dynamic imports for code splitting',
-        priority: 'medium'
-    });
-    
-    // Caching
-    performanceReport.recommendations.push({
-        type: 'caching',
-        message: 'Implement proper caching strategies',
-        priority: 'medium'
-    });
-    
-    console.log(`✅ Generated ${performanceReport.recommendations.length} recommendations`);
-}
-
-// Run analysis
-analyzeBundleSize();
-analyzeDependencies();
-generateOptimizationRecommendations();
-
-// Save report
-const reportPath = 'performance-optimization-report.json';
-fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
-
-console.log('\n📊 Performance Optimization Summary');
-console.log('====================================');
-console.log(`Recommendations: ${performanceReport.recommendations.length}`);
-console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.priority === 'high').length}`);
-console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium').length}`);
-
-console.log(`\n📄 Report saved to: ${reportPath}`);
-
-process.exit(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
-=======
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
->>>>>>> main
-=======
-=======
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+  generateReport() {
+    const reportPath = 'performance-optimization-report.json';
+    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
+    this.log(`Performance report saved to ${reportPath}`, 'SUCCESS');
+  }

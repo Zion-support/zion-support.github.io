@@ -7,3 +7,5 @@ export function Interviews() {
     </div>
   )
 }
+  );
+};

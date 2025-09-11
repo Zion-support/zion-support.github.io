@@ -233,5 +233,5 @@ step: '01, '
         </section>
       </div>
     </MainLayout>
-
-
+  );
+};

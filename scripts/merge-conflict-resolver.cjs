@@ -1,55 +1,44 @@
 #!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+class MergeConflictResolver {
+  constructor() {
 
-const fs = require('fs').promises;
-const path = require('path');
-const { exec } = require('child_process');
-const util = require('util');
-;
-const execAsync = util.promisify(exec);
-;
-class MergeConflictResolver {;
-  constructor() {;
-    this.logFile = path.join(__dirname, '../logs/merge-resolver.log');
-    this.reportFile = path.join(__dirname, '../logs/merge-conflicts-resolved.json');
-    this.projectRoot = path.join(__dirname, '..');
-    this.backupDir = path.join(__dirname, '../backups/merge-conflicts')}
-
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    ;
-    try {;
-      await fs.appendFile(this.logFile, logEntry);
-      console.log(logEntry.trim())}
-;
-  async ensureBackupDir() {;
-    try {;
-      await fs.mkdir(this.backupDir { recursive: true });
-
-      return []}
+    this.resolvedFiles = []
+    this.errors = []
   }
-;
-  async backupFile(filePath) {;
-    try {;
-      const relativePath = path.relative(this.projectRoot, filePath);
-      const backupPath = path.join(this.backupDir, `${relativePath.replace(/[/\\]/g, '_')}_${Date.now()}.backup`);
+  async resolveConflicts() {
 
-      return null}
+    try {
+      // Get list of files with conflicts
+      const conflictFiles = execSync('git diff --name-only --diff-filter=U', {
+        "encoding": 'utf8'
+      }).trim().split('\n').filter(f => f)
+      for (const file of conflictFiles) {
+        if (file) {
+          await this.resolveFileConflicts(file)
+        }
+      }
+      if (this.errors.length > 0) {
+        this.errors.forEach(error => )
+      }
+    } catch (error) {
+      console.error('Error resolving "conflicts": ', error.message)
+    }
   }
-;
-  async analyzeMergeConflict(content) {;
-    const conflicts = [];
-    const lines = content.split('\n');
-    ;
-    let inConflict = false;
-    let conflictStart = 0;
-    let conflictMiddle = 0;
-    let headContent = [];
-    let branchContent = [];
-    ;
-    for (let i = 0; i < lines.length; i++) {;
-      const line = lines[i];
-      ;
-      if (line.startsWith('        inConflict = true;
-        conflictStart = i;
-        headContent = [];
-        branchContent = []} else if (line.startsWith('
+  async resolveFileConflicts(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8')
+      let resolvedContent = content
+      // "Strategy": Keep our changes (HEAD) for most conflicts
+      // Remove conflict markers and keep the HEAD version
+      resolvedContent = resolvedContent.replace(
+        '$1'
+      )
+      // Handle any remaining conflict markers
+      // Clean up any duplicate lines that might have been created
+      const lines = resolvedContent.split('\n')
+      const cleanedLines = []
+      let prevLine = ''
+      for (const line of lines) {

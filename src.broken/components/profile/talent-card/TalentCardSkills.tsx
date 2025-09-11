@@ -7,3 +7,5 @@ export function TalentCardSkills() {
     </div>
   )
 }
+  );
+};

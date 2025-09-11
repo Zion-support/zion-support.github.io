@@ -7,3 +7,5 @@ export function TalentProfileSkeleton() {
     </div>
   )
 }
+  );
+};

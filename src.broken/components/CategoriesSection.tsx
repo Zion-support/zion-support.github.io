@@ -7,3 +7,5 @@ export function CategoriesSection() {
     </div>
   )
 }
+  );
+};

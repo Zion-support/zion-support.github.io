@@ -1,86 +1,15 @@
-
-import { useEffect, useState, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import Skeleton from "@/components/ui/skeleton";
-
-interface LazyLoadProps {
-  height?: string | number;
-  width?: string | number;
-  children: ReactNode;
-  loadingComponent?: ReactNode;
-  className?: string;
-}
-
-export function LazyLoad({
-  height = "200px",
-  width = "100%",
-  children,
-  loadingComponent,
-  className,
-}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-        threshold: 0.1,
-      }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isVisible) {
-      // Simulate loading delay (remove in production)
-      const timer = setTimeout(() => {
-        setIsLoaded(true);
-      }, 500);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isVisible]);
-
-  const defaultLoadingComponent = (
-    <Skeleton
-      style={{ height, width }}
-      className="rounded-md bg-zion-blue-light/20"
-    />
-  );
-
-  return (
-    <div
-      ref={containerRef}
-      className={cn("transition-opacity duration-500", 
-        isLoaded ? "opacity-100" : "opacity-0",
-        className
-      )}
-    >
-      {isVisible ? (
-        <>
-          {!isLoaded && (loadingComponent || defaultLoadingComponent)}
-          {isLoaded && children}
-        </>
-      ) : (
-        loadingComponent || defaultLoadingComponent
-      )}
-    </div>
-  );
-}
+import { _useEffect, useState, useRef, ReactNode } from "react";"; interface LazyLoadProps {;
+import { _useEffect, useState, useRef, ReactNode } from "react";"; interface LazyLoadProps {
+}; height?: "string | number; width?: string | number; "children": ReactNod e", loadingComponent? ReactNode, className? string";
+  };" export function LazyLoad("props": "any) {): any {) any {"}; const [isVisible, setIsVisible] = useState<any>(false); const [isLoaded, setIsLoaded] = useState<any>(false); const "containerRef": "an y = useRef<HTMLDivElement>(null)", useEffect(() => {}; const "currentRef": "an y = containerRef.current", ";
+</HTMLDivElement>;
+</any>;
+</any>
+</any>
+</any>
+import { _useEffect,useState,useRef,ReactNode } from &quot;react&quot;;&quot;; interface LazyLoadProps { }; height?: string | number; width?: string | number; children: ReactNod e,loadingComponent? ReactNode,className? string&quot; };&quot; export function LazyLoad($1) {): any {) any {}; const [isVisible,setIsVisible] = useState<any>(false); const [isLoaded,setIsLoaded] = useState<any>(false); const containerRef: an y = useRef<HTMLDivElement>(null),useEffect(() => {};; const currentRef: an y = containerRef.current,&quot; </HTMLDivElement> </any> </any>;
+const { useEffect,useState,useRef,ReactNode } from "react";"; interface LazyLoadProps {}; height?: string | number; width?: string | number; children: ReactNod e,loadingComponent? ReactNode,className? string" };" export function LazyLoad($1) {): any {) any {}; const [isVisible,setIsVisible] = useState<any>(false); const [isLoaded,setIsLoaded] = useState<any>(false); const containerRef: an y = useRef<HTMLDivElement>(null),useEffect(() => {}; const currentRef: an y = containerRef.current," </HTMLDivElement> </any> </any>;""
+import { _useEffect } from 'react';,
+import { _useState } from 'react';,
+import _React from 'react';';
+import { _useEffect,useState,useRef,ReactNode } from "react";"; interface LazyLoadProps { }; height?: string | number; width?: string | number; children: ReactNod e,loadingComponent? ReactNode,className? string" };" export function LazyLoad(_) {): any {) any {}; const [isVisible,setIsVisible] = useState<any>(false); const [isLoaded,setIsLoaded] = useState<any>(false); const containerRef: an y = useRef<HTMLDivElement>(null),useEffect(() => {};; const currentRef: an y = containerRef.current," </HTMLDivElement> </any> </any>;

@@ -127,3 +127,4 @@ const Integrity = ({className}: {className ?  : string}) => (
 export default About;
     </></></></></></>);
 }
+});

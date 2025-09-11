@@ -1,47 +1,129 @@
-module.exports = {
+export default {
   apps: [
     {
-      name: 'zion-error-monitor',
-  script: './continuous-error-monitor.js',
-      args: '--daemon',
-  cwd: __dirname,
+      name: 'zion-integrated-monitor',
+      script: './automation/integrated-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
-  env: {
-        NODE_ENV: 'production',}
-  ZION_INTEGRATION: 'true'}
+      max_memory_restart: '1.5G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_HOME: './automation/.pm2'
       },
       env_production: {
-        NODE_ENV: 'production',}
-  ZION_INTEGRATION: 'true'}
+        NODE_ENV: 'production',
+        PM2_HOME: './automation/.pm2'
       },
-      error_file: '../reports/pm2-error.log',
-  out_file: '../reports/pm2-out.log',
-      log_file: '../reports/pm2-combined.log',
-  time: true,
-      pid_file: '../reports/pm2.pid',
-  min_uptime: '10s',
+      error_file: './reports/integrated-monitor-error.log',
+      out_file: './reports/integrated-monitor-out.log',
+      log_file: './reports/integrated-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
       max_restarts: 10,
+      min_uptime: '10s',
       restart_delay: 4000,
       kill_timeout: 5000,
       wait_ready: true,
       listen_timeout: 8000,
-      source_map_support: false,
-      node_args: '--max-old-space-size=1024'
+      // Health check configuration
+      health_check_grace_period: 30000,
+      health_check_fatal_exceptions: true,
+      // Cron restart for daily refresh
+      cron_restart: '0 2 * * *',
+      // Environment variables
+      env_file: './automation/.env',
+      // Process management
+      pid_file: './reports/integrated-monitor.pid',
+      // Monitoring
+      pmx: true,
+      // Logging
+      log_type: 'json',
+      // Error handling
+      max_unstable_restarts: 5,
+      unstable_restart_delay: 10000
+    },
+    {
+      name: 'zion-browser-error-monitor',
+      script: './automation/browser-error-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_HOME: './automation/.pm2'
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        PM2_HOME: './automation/.pm2'
+      },
+      error_file: './reports/browser-monitor-error.log',
+      out_file: './reports/browser-monitor-out.log',
+      log_file: './reports/browser-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 4000,
+      kill_timeout: 5000,
+      wait_ready: true,
+      listen_timeout: 8000,
+      // Health check configuration
+      health_check_grace_period: 30000,
+      health_check_fatal_exceptions: true,
+      // Cron restart for daily refresh
+      cron_restart: '0 2 * * *',
+      // Environment variables
+      env_file: './automation/.env',
+      // Process management
+      pid_file: './reports/browser-monitor.pid',
+      // Monitoring
+      pmx: true,
+      // Logging
+      log_type: 'json',
+      // Error handling
+      max_unstable_restarts: 5,
+      unstable_restart_delay: 10000
+    },
+    {
+      name: 'zion-health-check',
+      script: './automation/health-check.sh',
+      interpreter: 'bash',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '100M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './reports/health-check-error.log',
+      out_file: './reports/health-check-out.log',
+      log_file: './reports/health-check-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      // Run health check every 15 minutes
+      cron_restart: '*/15 * * * *'
 
   ],
 
   deploy: {
     production: {
-      user: 'www-data',
-  host: 'localhost',
+      user: 'node',
+      host: 'localhost',
       ref: 'origin/main',
-  repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/var/www/zion.app',
-      "pre-deploy-local": "",
-      "post-deploy": "npm install && pm2 reload ecosystem.config.js --env production",}
-      "pre-setup": ""}
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': ''
 
-}
+
+};
+}}}

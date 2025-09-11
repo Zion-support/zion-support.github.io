@@ -7,3 +7,5 @@ export function ProjectRoom() {
     </div>
   )
 }
+  );
+};

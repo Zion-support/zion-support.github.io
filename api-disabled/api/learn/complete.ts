@@ -14,8 +14,8 @@ function writeJson(p: string, data: any) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-res.setHeader('AllowPOST')
-    return res.status(405).end('Method Not Allowed')
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
@@ -25,13 +25,12 @@ res.setHeader('AllowPOST')
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
-    if (!course) return res.status(404).json({ error: 'Course not found' });
-
+    if (!course) return res.status($1).json({$2});
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-// Mark progress complete
+    // Mark progress complete
     user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
     users[userId] = user;
     writeJson(usersPath, users);

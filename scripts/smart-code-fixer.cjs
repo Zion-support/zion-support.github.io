@@ -8,54 +8,16 @@ console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
 // Function to fix unescaped entities only in JSX content
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-#!/usr/bin/env node,
-  const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-// Function to fix unescaped entities only in JSX content;
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
 function fixUnescapedEntities(content) {
-  // Only replace single quotes that are not in import statements or string literals;
-  // This regex looks for single quotes that are not preceded by import, from, or within quotes;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+  // Only replace single quotes that are not in import statements or string literals
+  // This regex looks for single quotes that are not preceded by import, from, or within quotes
+  return content.replace(/(?<!import\s+.*?from\s+['"])(?<!['"])(?<![a-zA-Z_$])'([^'"]*?)'(?!['"])(?![a-zA-Z_$])/g, (match, content) => {
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
-<<<<<<< HEAD
     if (content.includes('&') || content.includes('<') || content.includes('>')) {
       return `&apos;${content}&apos;`;
     }
     return match;
   });
-
-// Function to fix specific linting issues;
-function fixSpecificIssues(content, filePath) {
-  let modified = false;
-
-  // Fix unused imports;
-  if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
-
-
-  return { content, modified };
-
-// Function to process a single file;
 }
 
 // Function to fix specific linting issues
@@ -109,8 +71,8 @@ function fixSpecificIssues(content, filePath) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-  // TODO: Implement,
-  let modifiedContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    let modifiedContent = content;
     let hasChanges = false;
 
     // Apply fixes
@@ -123,28 +85,19 @@ function processFile(filePath) {
     modifiedContent = fixUnescapedEntities(modifiedContent);
     if (modifiedContent !== originalContent) {
       hasChanges = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 
     // Write back if modified
-    }
-
-    // Write back if modified
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-
-    // Write back if modified;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
     if (hasChanges) {
+      fs.writeFileSync(filePath, modifiedContent, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    } else {
+      console.log(`ℹ️  No changes needed: ${filePath}`);
       return false;
-  } catch (error) {`;
+    }
+  } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-<<<<<<< HEAD
     return false;
   }
 }
@@ -154,49 +107,29 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   const files = [];
   
   function traverse(currentDir) {
-  // TODO: Implement
+    try {
       const items = fs.readdirSync(currentDir);
       
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
-  // TODO: Implement
+        try {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-      return false
-  } catch (error) {`
-    console.error(`❌ Error processing ${filePath}:`, error.message)
-// Function to find all relevant files,
-  const files = [];
-  function traverse(currentDir) {
-  // TODO: Implement,
-  const items = fs.readdirSync(currentDir)
-  for($2) {
-        const fullPath = path.join(currentDir, item)
-  // TODO: Implement,
-  if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-          if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> merged-prs-20250907-203621
             traverse(fullPath);
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
             files.push(fullPath);
           }
         } catch (error) {
-          // Skip broken symlinks or inaccessible files,
-  if (error.code !== 'ENOENT' && error.code !== 'EACCES') {
+          // Skip broken symlinks or inaccessible files
+          if (error.code !== 'ENOENT' && error.code !== 'EACCES') {
             console.warn(`⚠️  Skipping ${fullPath}: ${error.message}`);
           }
+        }
+      }
     } catch (error) {
-      // Skip inaccessible directories,
-  if (error.code !== 'EACCES') {
+      // Skip inaccessible directories
+      if (error.code !== 'EACCES') {
         console.warn(`⚠️  Skipping directory ${currentDir}: ${error.message}`);
       }
     }

@@ -7,3 +7,5 @@ export function MilestoneCreator() {
     </div>
   )
 }
+  );
+};

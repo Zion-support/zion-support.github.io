@@ -17,3 +17,5 @@ export default function FeatureFlagsAdminPage() {
     </AdminLayout>
   )
 }
+  );
+};

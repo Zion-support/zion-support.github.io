@@ -7,3 +7,5 @@ export function ApiDocumentation() {
     </div>
   )
 }
+  );
+};

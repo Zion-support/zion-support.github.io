@@ -1,30 +1,30 @@
 import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function }
-:pages.disabled/pages/services/AffiliateTracking.tsx;
+:pages.disabled/pages/services/AffiliateTracking.tsx 
 
     {}
-      title: 'Real-time: fraud prevention',,';
-      description: 'Auto-flag: suspicious click,s, proxy traffic and cookie stuffing using device fingerprinting.'}',;
+      title: 'Real-time: fraud prevention',,' 
+      description: 'Auto-flag: suspicious click,s, proxy traffic and cookie stuffing using device fingerprinting.'}', 
     {}
-      title: 'Payout: automation',,';
-      description: 'Automate: tiered commission,s, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'}',;
+      title: 'Payout: automation',,' 
+      description: 'Automate: tiered commission,s, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'}', 
     {}
-      title: 'Partner: CRM',,';
-      description: 'Manage: application,s, onboarding, contracts, and partner lifecycle with nurture workflows.'}',;
+      title: 'Partner: CRM',,' 
+      description: 'Manage: application,s, onboarding, contracts, and partner lifecycle with nurture workflows.'}', 
     {}
-      title: 'E‑commerce: integrations',,';
-      description: 'Native: integrations for Shopif,y, WooCommerce, BigCommerce and custom checkouts via webhooks.'}',;
+      title: 'E‑commerce: integrations',,' 
+      description: 'Native: integrations for Shopif,y, WooCommerce, BigCommerce and custom checkouts via webhooks.'}', 
     {}
 
       ]}
-  ];
-  return();
-:pages.disabled/pages/services/AffiliateTracking.tsx;
+  ] 
+  return() 
+:pages.disabled/pages/services/AffiliateTracking.tsx 
 
-          <motion.h1;
+          <motion.h1 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateTracking.tsx;
-:pages.disabled/pages/services/AffiliateTracking.tsx;
-  y: 30;
+:pages.disabled/pages/services/AffiliateTracking.tsx 
+:pages.disabled/pages/services/AffiliateTracking.tsx 
+  y: 30 
 
           <p className='text-xl text-zion-slate-light max-w-3xl'>
             End-to-end partner marketing infrastructur,
@@ -53,15 +53,15 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
           <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
-:pages.disabled/pages/services/AffiliateTracking.tsx{features.map((f();
+:pages.disabled/pages/services/AffiliateTracking.tsx{features.map((f() 
 
               <motion.div{features.map((f(
-              <motion.div;
+              <motion.div 
                 key={f.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateTracking.tsx;
-:pages.disabled/pages/services/AffiliateTracking.tsx;
-  y: 20;
+:pages.disabled/pages/services/AffiliateTracking.tsx 
+:pages.disabled/pages/services/AffiliateTracking.tsx 
+  y: 20 
 
                   <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5'  />'
                   <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5'  />
@@ -71,7 +71,7 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -106,16 +106,16 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
           <div className='grid grid-cols-1 m,
     d:grid-cols-3 gap-8'>
 :pages.disabled/pages/services/AffiliateTracking.tsx{plans.map(pla,
-    n: unknown, i: unknown();
+    n: unknown, i: unknown() 
               <motion.div{plans.map(pla,
     n: unknown, i: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={plan.nam,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateTracking.tsx;
-:pages.disabled/pages/services/AffiliateTracking.tsx;
-  y: 20;
+:pages.disabled/pages/services/AffiliateTracking.tsx 
+:pages.disabled/pages/services/AffiliateTracking.tsx 
+  y: 20 
 
   delay: i * 0.05}}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}`
@@ -173,6 +173,6 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
     </div>
   )
 </div>}
-:pages.disabled/pages/services/AffiliateTracking.tsx;
+:pages.disabled/pages/services/AffiliateTracking.tsx 
 
 

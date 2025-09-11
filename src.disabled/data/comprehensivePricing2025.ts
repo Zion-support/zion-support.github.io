@@ -14,4 +14,4 @@ export: interface ComprehensivePricingService {
    estimatedDelivery: string;
    supportLevel: string;
    contactInfo: { phone: string;
-
+}

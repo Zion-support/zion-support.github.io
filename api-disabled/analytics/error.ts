@@ -1,4 +1,6 @@
 export {};
+module.exports = {};
+module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
 ursor/add-new-services-and-deploy-updates-0462
@@ -6,27 +8,6 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-    // Validate the error data
-    if (!data.error || !data.error.message || !data.url) {
-      return res.status(400).json({ error: 'Invalid error data format' })}
 
-    // Log the error (in production, you might want to send to a monitoring service)
-    console.error('Client Error:' {
-      message: data.error.message,
-      name: data.error.name,
-      url: data.url,
-      timestamp: new Date(data.timestamp).toISOString(),
-      userAgent: data.userAgent,
-      stack: data.error.stack,
-      componentStack: data.errorInfo.componentStack
-    });
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
-      message: 'Error logged successfully',
-      timestamp: Date.now()
-    })} catch (error) {
-    console.error('Error processing error data:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}

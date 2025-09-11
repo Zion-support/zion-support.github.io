@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
 import {
   Award,
   Best,
@@ -13,7 +13,7 @@ import {
   Today,
   User,
   Users,
-  Zap } from 'lucide-react';
+  Zap } from 'lucide-react' 
 
 export default function WebDevelopment() {
   return (
@@ -289,3 +289,5 @@ export default function WebDevelopment() {
       </main>
     </>
   )}
+  ) 
+} 

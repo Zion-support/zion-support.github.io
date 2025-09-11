@@ -7,3 +7,5 @@ export function LanguageSwitcher() {
     </div>
   )
 }
+  );
+};

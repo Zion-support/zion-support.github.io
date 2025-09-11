@@ -475,7 +475,5 @@ const PricingGuide: React.FC = () = /> {const pricingFactors = [;
       </section>;
     </div>;
   )}export default PricingGuide;
-
-
-
-
+  );
+};

@@ -50,7 +50,7 @@ import Image from 'next/image';interface ListingCardProps {
   author?: { name: string, id?: string, avatarUrl?: string, email?: string }
   className?: string
   profileType?: 'service' | 'talent'
-import React from "react",
+import React from "react";
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
@@ -93,7 +93,7 @@ export function ListingCard({
     id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
 
-import React from "react",
+import React from "react";
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
@@ -111,7 +111,7 @@ interface ListingCardProps {
   const profileId = null;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
-import React from "react",;
+import React from "react";;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import Link from "next/link",;
@@ -271,7 +271,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         )}
 ;
-import React from "react",;
+import React from "react";;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import Link from "next/link",;

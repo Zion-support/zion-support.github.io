@@ -7,3 +7,5 @@ export function JsonLd() {
     </div>
   )
 }
+  );
+};

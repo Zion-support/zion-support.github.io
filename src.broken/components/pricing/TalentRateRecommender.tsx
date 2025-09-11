@@ -7,3 +7,5 @@ export function TalentRateRecommender() {
     </div>
   )
 }
+  );
+};

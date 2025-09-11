@@ -230,5 +230,5 @@ case, operational': return'
         </section>
       </div>
     </MainLayout>
-
-
+  );
+};

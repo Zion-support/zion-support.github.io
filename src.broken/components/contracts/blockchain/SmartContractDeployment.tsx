@@ -7,3 +7,5 @@ export function SmartContractDeployment() {
     </div>
   )
 }
+  );
+};

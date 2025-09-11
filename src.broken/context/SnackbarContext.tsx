@@ -7,3 +7,5 @@ export function SnackbarContext() {
     </div>
   )
 }
+  );
+};

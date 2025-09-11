@@ -333,3 +333,5 @@ export function ComparisonSection() {return (<section className='py-20 bg-zion-b
 :src_backup/components/ComparisonSection.tsx
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
 :src_backup/components/ComparisonSection.tsx
+  );
+};

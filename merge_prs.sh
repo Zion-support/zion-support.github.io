@@ -1,45 +1,53 @@
 #!/bin/bash
 
-# Script to merge multiple PRs efficiently
-# Usage: ./merge_prs.sh [number_of_prs_to_merge]
+# Script to merge all open PRs
+set -e
 
-NUM_PR=${1:-10}  # Default to 10 PRs if no argument provided
-echo "Merging $NUM_PR PRs..."
+echo "Starting PR merge process..."
 
-# Get list of unmerged PRs
-PRS=$(git branch -r --no-merged main | grep "cursor/" | head -$NUM_PR)
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "Error: GITHUB_TOKEN is not set. Export GITHUB_TOKEN before running." >&2
+  exit 1
+fi
+
+# Get list of open PRs
+PRS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=20" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+
+echo "Found PRs: $PRS"
 
 for pr in $PRS; do
-    echo "Merging $pr..."
+    echo "Processing PR #$pr..."
     
-    # Try to merge with conflict resolution
-    if git merge "$pr" --no-ff --allow-unrelated-histories -X theirs -m "Merge PR: $pr" 2>/dev/null; then
-        echo "✓ Successfully merged $pr"
-    else
-        echo "⚠ Conflict in $pr, attempting to resolve..."
+    # Get PR details
+    PR_DETAILS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
+    
+    # Extract head branch
+    HEAD_BRANCH=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
+    
+    if [ -n "$HEAD_BRANCH" ]; then
+        echo "Merging branch: $HEAD_BRANCH"
         
-        # Check for common conflict patterns and resolve them
-        if git status --porcelain | grep -q "deleted by us"; then
-            # Handle modify/delete conflicts by adding the files
-            git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs -I {} git add {}
-        fi
+        # Fetch the branch
+        git fetch origin "$HEAD_BRANCH"
         
-        if git status --porcelain | grep -q "deleted by them"; then
-            # Handle files deleted by them
-            git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs -I {} git rm {}
-        fi
-        
-        # Add all remaining conflicts
-        git add .
-        
-        # Commit the merge
-        if git commit -m "Merge PR: $pr - Resolved conflicts"; then
-            echo "✓ Successfully merged $pr with conflict resolution"
+        # Try to merge
+        if git merge "origin/$HEAD_BRANCH" --no-ff -m "Merge PR #$pr: $HEAD_BRANCH"; then
+            echo "Successfully merged PR #$pr"
+            git push origin main
         else
-            echo "✗ Failed to merge $pr, aborting..."
-            git merge --abort
+            echo "Failed to merge PR #$pr, resolving conflicts..."
+            # Try to resolve conflicts automatically
+            git checkout --theirs .
+            git add .
+            git commit -m "Resolve merge conflicts for PR #$pr"
+            git push origin main
         fi
+    else
+        echo "Could not find head branch for PR #$pr"
     fi
+    
+    echo "Completed PR #$pr"
+    echo "---"
 done
 
-echo "Completed merging $NUM_PR PRs"
+echo "All PRs processed!"

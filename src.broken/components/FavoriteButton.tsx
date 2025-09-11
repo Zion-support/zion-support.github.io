@@ -7,3 +7,5 @@ export function FavoriteButton() {
     </div>
   )
 }
+  );
+};

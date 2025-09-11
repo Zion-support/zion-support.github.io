@@ -7,3 +7,5 @@ export function HelpArticleList() {
     </div>
   )
 }
+  );
+};

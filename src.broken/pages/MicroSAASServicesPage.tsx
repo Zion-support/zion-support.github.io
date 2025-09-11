@@ -8,7 +8,7 @@ import React from 'react';
 import { 
 
   Database
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function MicroSAASServicesPage() {
   const microSAASServices = $2;
@@ -307,7 +307,7 @@ import {;
   Globe,;
   Smartphone,;
   Database;'
-} from 'lucide-react',;
+} from 'lucide-react';;
 export default function MicroSAASServicesPage() {;
   const microSAASServices = [;
     {;
@@ -1089,7 +1089,7 @@ import {;
   Globe,;
   Smartphone,;
   Database;'
-} from 'lucide-react',;
+} from 'lucide-react';;
 
       useCases: ["Small teams", "Startups", "Freelancers", "Agencies", "Remote teams"],;
       benefits: [;"
@@ -1348,4 +1348,5 @@ import {;
               </div>;
             </div>;
 }'"`
-
+  );
+};

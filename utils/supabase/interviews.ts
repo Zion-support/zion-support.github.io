@@ -8,7 +8,7 @@ const table = 'interviews';
 
 // Simple in-memory fallback for local dev without Supabase
 const useMock = !supabaseUrl || !supabaseKey;
-let mockStore: Interview[] = [];
+const mockStore: Interview[] = [];
 
 function nowIso(): string {
   return new Date().toISOString();

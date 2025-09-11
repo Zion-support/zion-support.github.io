@@ -19,20 +19,20 @@ import {}
   Sparkles,
   Lightbulb,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIContentCreation.tsx;
+:pages.disabled/pages/services/AIContentCreation.tsx 
 
                 Services
               </span>
 :pages.disabled/pages/services/AIContentCreation.tsx'
             </h1>'''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
 
-              Transform your content strategy with AI-powered creation tools;
+              Transform your content strategy with AI-powered creation tools 
               that generate high-quality written content, visual assets, videos,
 
-              <Link'';
-                to='/services'';
+              <Link'' 
+                to='/services'' 
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400/10 transition-all duration-200'>                Schedule Demo
 
@@ -43,18 +43,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIContentCreation.tsx;
+:pages.disabled/pages/services/AIContentCreation.tsx 
 
-              Our AI content creation platform combines cutting-edge technology;
-              with creative intelligence to deliver engaging, high-quality;
+              Our AI content creation platform combines cutting-edge technology 
+              with creative intelligence to deliver engaging, high-quality 
               content across all media types.
             </p>
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
 
                   <feature.icon className='w-6 h-6 text-purple-400' />'
@@ -69,13 +69,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIContentCreation.tsx;
+:pages.disabled/pages/services/AIContentCreation.tsx 
 
             {services.map((service, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={service.title}
 
                   <service.icon className='w-8 h-8 text-purple-400' />'
@@ -101,13 +101,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIContentCreation.tsx;
+:pages.disabled/pages/services/AIContentCreation.tsx 
 
             {technologies.map((tech, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={tech}
 
 
@@ -117,15 +117,15 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
             whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/AIContentCreation.tsx;
+:pages.disabled/pages/services/AIContentCreation.tsx 
 
-              Join the AI content revolution and create engaging, high-quality;
+              Join the AI content revolution and create engaging, high-quality 
 
-              <Link'';
-                to='/services'';
+              <Link'' 
+                to='/services'' 
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400/10 transition-all duration-200'>                Contact Our Team
 

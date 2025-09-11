@@ -1,245 +1,139 @@
 #!/usr/bin/env node
-
-const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
-class EnhancedAutomationOrchestrator {
+const { execSync } = require('child_process');
+class AutomationOrchestrator {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'enhanced-automation.log');
-    this.ensureDirectories()}
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir { recursive: true })}
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n')}
-
-  async runCommand(command, description, options = {}) {
-    this.log(`🚀 Starting: ${description}`);
-    try {
-      const result = execSync(command {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: options.timeout || 300000, // 5 minutes default
-        ...options
-      });
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result }} catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message }}
-  }
-
-  async runDependencyCheck() {
-    this.log('🔍 Running dependency check...');
-    
-    const checks = [
-      {
-        command: 'npm list --depth=0',
-        description: 'Check installed dependencies'
-      }, {
-        command: 'npm audit --audit-level=moderate',
-        description: 'Security audit'
-      }, {
-        command: 'npm outdated',
-        description: 'Check for outdated packages'
-      }
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, ...result })}
-
-    return results}
-
-  async runCodeQualityChecks() {
-    this.log('🔍 Running code quality checks...');
-    
-    const checks = [
-      {
-        command: 'npm run lint',
-        description: 'ESLint check'
-      }, {
-        command: 'npm run type-check',
-        description: 'TypeScript type check'
-      }, {
-        command: 'npm run format:check',
-        description: 'Prettier format check'
-      }
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, ...result })}
-
-    return results}
-
-  async runTests() {
-    this.log('🧪 Running tests...');
-    
-    const testCommands = [
-      {
-        command: 'npm test -- --passWithNoTests --maxWorkers=1',
-        description: 'Unit tests'
-      }
-    ];
-
-    const results = [];
-    for (const test of testCommands) {
-      const result = await this.runCommand(test.command, test.description { timeout: 600000 });
-      results.push({ ...test, ...result })}
-
-    return results}
-
-  async runBuildProcess() {
-    this.log('🏗️ Running build process...');
-    
-    const buildSteps = [
-      {
-        command: 'npm run build',
-        description: 'Production build'
-      }, {
-        command: 'npm run analyze',
-        description: 'Bundle analysis'
-      }
-    ];
-
-    const results = [];
-    for (const step of buildSteps) {
-      const result = await this.runCommand(step.command, step.description { timeout: 900000 });
-      results.push({ ...step, ...result })}
-
-    return results}
-
-  async runPerformanceChecks() {
-    this.log('⚡ Running performance checks...');
-    
-    const performanceScripts = [
-      'scripts/performance-monitor.js',
-      'scripts/performance-optimizer.js',
-      'scripts/performance-monitor-improved.js'
-    ];
-
-    const results = [];
-    for (const script of performanceScripts) {
-      if (fs.existsSync(script)) {
-        const result = await this.runCommand(`node ${script}`, `Performance check: ${script}`);
-        results.push({ script, ...result })}
-    }
-
-    return results}
-
-  async runSecurityChecks() {
-    this.log('🔒 Running security checks...');
-    
-    const securityScripts = [
-      'scripts/security-auditor.js',
-      'scripts/enhanced-security-auditor.cjs'
-    ];
-
-    const results = [];
-    for (const script of securityScripts) {
-      if (fs.existsSync(script)) {
-        const result = await this.runCommand(`node ${script}`, `Security check: ${script}`);
-        results.push({ script, ...result })}
-    }
-
-    return results}
-
-  async runSEOOptimization() {
-    this.log('🔍 Running SEO optimization...');
-    
-    const seoScripts = [
-      'scripts/seo-optimizer.js',
-      'scripts/enhanced-seo-optimizer.cjs'
-    ];
-
-    const results = [];
-    for (const script of seoScripts) {
-      if (fs.existsSync(script)) {
-        const result = await this.runCommand(`node ${script}`, `SEO optimization: ${script}`);
-        results.push({ script, ...result })}
-    }
-
-    return results}
-
-  async runCustomAutomations() {
-    this.log('🔧 Running custom automations...');
-    
-    const customScripts = [
-      'scripts/comprehensive-app-improver.js',
-      'scripts/enhanced-app-improver.cjs',
-      'scripts/automation-orchestrator-improved.js'
-    ];
-
-    const results = [];
-    for (const script of customScripts) {
-      if (fs.existsSync(script)) {
-        const result = await this.runCommand(`node ${script}`, `Custom automation: ${script}`);
-        results.push({ script, ...result })}
-    }
-
-    return results}
-
-  async generateReport(results) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        total: results.length,
-        successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length
-      },
-      results: results
+    this.results = {
+      "timestamp": new Date().toISOString(),
+      "health": {},
+      "security": {},
+      "performance": {},
+      "linting": {},
+      "testing": {},
+      "build": {},
+      "deployment": {}
     };
-
-    const reportFile = path.join(this.reportsDir, 'enhanced-automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Report generated: ${reportFile}`);
-    return report}
-
-  async run() {
-    this.log('🎯 Starting Enhanced Automation Orchestrator');
-    
-    const allResults = [];
-    
-    // Run all automation phases
-    const phases = [
-      { name: 'Dependency Check', fn: () => this.runDependencyCheck() }, { name: 'Code Quality', fn: () => this.runCodeQualityChecks() }, { name: 'Tests', fn: () => this.runTests() }, { name: 'Build Process', fn: () => this.runBuildProcess() }, { name: 'Performance', fn: () => this.runPerformanceChecks() }, { name: 'Security', fn: () => this.runSecurityChecks() }, { name: 'SEO Optimization', fn: () => this.runSEOOptimization() }, { name: 'Custom Automations', fn: () => this.runCustomAutomations() }
-    ];
-
-    for (const phase of phases) {
-      this.log(`🔄 Starting phase: ${phase.name}`);
-      try {
-        const results = await phase.fn();
-        allResults.push(...results);
-        this.log(`✅ Completed phase: ${phase.name}`)} catch (error) {
-        this.log(`❌ Failed phase: ${phase.name} - ${error.message}`);
-        allResults.push({
-          phase: phase.name,
-          success: false,
-          error: error.message
-        })}
+  }
+  async runHealthChecks() {
+    try {
+      execSync('npm run "automation": health', { "stdio": 'pipe' });
+      this.results.health.status = 'passed';
+      this.results.health.message = 'All health checks passed';
+    } catch (error) {
+      this.results.health.status = 'failed';
+      this.results.health.error = error.message;
     }
-
-    // Generate comprehensive report
-    const report = await this.generateReport(allResults);
-    
-    this.log('🎉 Enhanced Automation Orchestrator Completed');
-    this.log(`📊 Summary: ${report.summary.successful}/${report.summary.total} successful`);
-    
-    return report}
+  }
+  async runSecurityScan() {
+    try {
+      execSync('npm run "automation": security', { "stdio": 'pipe' });
+      this.results.security.status = 'passed';
+      this.results.security.message = 'Security scan completed';
+    } catch (error) {
+      this.results.security.status = 'failed';
+      this.results.security.error = error.message;
+    }
+  }
+  async runPerformanceOptimization() {
+    try {
+      execSync('npm run "automation": performance', { "stdio": 'pipe' });
+      this.results.performance.status = 'passed';
+      this.results.performance.message = 'Performance optimization completed';
+    } catch (error) {
+      this.results.performance.status = 'failed';
+      this.results.performance.error = error.message;
+    }
+  }
+  async runLinting() {
+    try {
+      execSync('npm run "lint": fix', { "stdio": 'pipe' });
+      this.results.linting.status = 'passed';
+      this.results.linting.message = 'Linting completed';
+    } catch (error) {
+      this.results.linting.status = 'failed';
+      this.results.linting.error = error.message;
+    }
+  }
+  async runTypeChecking() {
+    try {
+      execSync('npm run type-check', { "stdio": 'pipe' });
+      this.results.typeChecking = { "status": 'passed', "message": 'Type checking completed' };
+    } catch (error) {
+      this.results.typeChecking = { "status": 'failed', "error": error.message };
+    }
+  }
+  async runBuild() {
+    try {
+      execSync('npm run build', { "stdio": 'pipe' });
+      this.results.build.status = 'passed';
+      this.results.build.message = 'Build completed successfully';
+    } catch (error) {
+      this.results.build.status = 'failed';
+      this.results.build.error = error.message;
+    }
+  }
+  async runTests() {
+    try {
+      execSync('npm run "test": smoke', { "stdio": 'pipe' });
+      this.results.testing.status = 'passed';
+      this.results.testing.message = 'Tests passed';
+    } catch (error) {
+      this.results.testing.status = 'failed';
+      this.results.testing.error = error.message;
+    }
+  }
+  async optimizeDependencies() {
+    try {
+      // Remove unused dependencies
+      execSync('npm prune', { "stdio": 'pipe' });
+      // Update dependencies
+      execSync('npm update', { "stdio": 'pipe' });
+      this.results.dependencies = { "status": 'optimized', "message": 'Dependencies optimized' };
+    } catch (error) {
+      this.results.dependencies = { "status": 'failed', "error": error.message };
+    }
+  }
+  async generateReports() {
+    const report = {
+      "timestamp": this.results.timestamp,
+      "summary": {
+        totalChecks: Object.keys(this.results).length - 1, // Exclude timestamp
+        "passed": Object.values(this.results).filter(r => r.status === 'passed').length,
+        "failed": Object.values(this.results).filter(r => r.status === 'failed').length
+      },
+      "details": this.results
+    };
+    const reportPath = `automation-report-${Date.now()}.json`;
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    return report;
+  }
+  async runAll() {
+    await this.runHealthChecks();
+    await this.runSecurityScan();
+    await this.runPerformanceOptimization();
+    await this.runLinting();
+    await this.runTypeChecking();
+    await this.optimizeDependencies();
+    await this.runBuild();
+    await this.runTests();
+    const report = await this.generateReports();
+    return report;
+  }
 }
-
 // Run the orchestrator
-const orchestrator = new EnhancedAutomationOrchestrator();
-orchestrator.run().catch(console.error);
+const orchestrator = new AutomationOrchestrator();
+orchestrator.runAll().catch(console.error);
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting Enhanced Automation Orchestrator.");class AutomationOrchestrator { constructor() { this.results = { timestamp: new Date().toISOString()," health: {}," security: {}," performance: {}," linting: {}," testing: {}," build: {}," deployment: {} }; } async runHealthChecks() {" console.log(" Running Health Checks."); try {"" execSync("npm run automation: health", { stdio: "pipe" });" this.results.health.status = "passed";" this.results.health.message = "All health checks passed"; } catch (error) {" this.results.health.status = "failed"; this.results.health.error = error.message; } } async runSecurityScan() {" console.log(" Running Security Scan."); try {"" execSync("npm run automation: security", { stdio: "pipe" });" this.results.security.status = "passed";" this.results.security.message = "Security scan completed"; } catch (error) {" this.results.security.status = "failed"; this.results.security.error = error.message; } } async runPerformanceOptimization() {" console.log(" Running Performance Optimization."); try {"" execSync("npm run automation: performance", { stdio: "pipe" });" this.results.performance.status = "passed";" this.results.performance.message = "Performance optimization completed"; } catch (error) {" this.results.performance.status = "failed"; this.results.performance.error = error.message; } } async runLinting() {" console.log(" Running Linting."); try {"" execSync("npm run lint: fix", { stdio: "pipe" });" this.results.linting.status = "passed";" this.results.linting.message = "Linting completed"; } catch (error) {" this.results.linting.status = "failed"; this.results.linting.error = error.message; } } async runTypeChecking() {" console.log(" Running Type Checking."); try {"" execSync("npm run type-check", { stdio: "pipe" });"" this.results.typeChecking = { status: "passed", message: "Type checking completed" }; } catch (error) {"" this.results.typeChecking = { status: "failed", error: error.message }; } } async runBuild() {" console.log(" Running Build."); try {"" execSync("npm run build", { stdio: "pipe" });" this.results.build.status = "passed";" this.results.build.message = "Build completed successfully"; } catch (error) {" this.results.build.status = "failed"; this.results.build.error = error.message; } } async runTests() {" console.log(" Running Tests."); try {"" execSync("npm run test: smoke", { stdio: "pipe" });" this.results.testing.status = "passed";" this.results.testing.message = "Tests passed"; } catch (error) {" this.results.testing.status = "failed"; this.results.testing.error = error.message; } } async optimizeDependencies() {" console.log(" Optimizing Dependencies."); try { / Remove unused dependencies"" execSync("npm prune", { stdio: "pipe" }); / Update dependencies"" execSync("npm update", { stdio: "pipe" }); "" this.results.dependencies = { status: "optimized", message: "Dependencies optimized" }; } catch (error) {"" this.results.dependencies = { status: "failed", error: error.message }; } } async generateReports() {" console.log(" Generating Reports."); const report = {" timestamp: this.results.timestamp," summary: { totalChecks: Object.keys(this.results).length - 1, / Exclude timestamp"" passed: Object.values(this.results).filter(r => r.status === "passed").length,"" failed: Object.values(this.results).filter(r => r.status === "failed").length }," details: this.results }; const reportPath = `automation-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); "` console.log(` Report saved to: ${reportPath}`); return report; } async runAll() {" console.log(" Starting Comprehensive Automation Suite.\n"); await this.runHealthChecks(); await this.runSecurityScan(); await this.runPerformanceOptimization(); await this.runLinting(); await this.runTypeChecking(); await this.optimizeDependencies(); await this.runBuild(); await this.runTests(); const report = await this.generateReports(); " console.log("\n Automation Suite Completed!");"` console.log(` Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`); return report; }}/ Run the orchestratorconst orchestrator = new AutomationOrchestrator();orchestrator.runAll().catch(console.error);""`"`
+#!/usr/bin/env node;
+  ensureDirectories() {;
+  const dirs = [ "automation-reports",
+      "automation/logs",
+      "scripts/automation/reports",
+      "reports",
+      "test-reports",
+      "security-reports" ];
+    dirs.forEach(dir => {;
+  const dirPath = path.join(this.projectRoot, dir);
+      if (!fs.existsSync(dirPath)) {;
+  fs.mkdirSync(dirPath, { recursive: true });,

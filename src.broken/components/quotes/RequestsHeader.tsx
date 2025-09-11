@@ -7,3 +7,5 @@ export function RequestsHeader() {
     </div>
   )
 }
+  );
+};

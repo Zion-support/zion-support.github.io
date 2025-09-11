@@ -7,3 +7,5 @@ export function AdminHeader() {
     </div>
   )
 }
+  );
+};

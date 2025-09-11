@@ -1,7 +1,7 @@
 
-      &quot;flex h-10 items-center space-x-1 rounded-md border bg-background p-1&quot;
+      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1"
 ursor/fix-website-loading-errors-and-merge-6662
-      &quot;flex h-10 items-center space-x-1 rounded-md border bg-background p-1&quot;
+      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1"
       "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
 
     )}
@@ -14,8 +14,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   <MenubarPrimitive.SubTrigger;
     ref={ref}
 className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
-      inset && &quot;pl-8&quot;
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
+      inset && "pl-8"
 ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {inset?: boolean;
@@ -27,30 +27,30 @@ ursor/fix-website-loading-errors-and-merge-6662
   <MenubarPrimitive.SubTrigger;
     ref={ref}
 className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
-      inset && &quot;pl-8&quot;
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
+      inset && "pl-8"
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
-<ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
+<ChevronRight className="ml-auto h-4 w-4" />
 ursor/fix-website-loading-errors-and-merge-6662
-<ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
+<ChevronRight className="ml-auto h-4 w-4" />
 
-      &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
 ursor/fix-website-loading-errors-and-merge-6662
-      &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
-    { className, align = &quot;start&quot;, alignOffset = -4, sideOffset = 8, ...props }
-    { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
+      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props }
+    { className, align = "start" alignOffset = -4, sideOffset = 8, ...props },
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
-    { className, align = &quot;start&quot;, alignOffset = -4, sideOffset = 8, ...props }
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props }
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
-    { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
+    { className, align = "start" alignOffset = -4, sideOffset = 8, ...props },
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
 className={cn(
-          &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+          "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
 ursor/fix-website-loading-errors-and-merge-6662
 className={cn(
-          &quot;z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+          "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {inset?: boolean;
   React.ElementRef<typeof MenubarPrimitive.Item>,;
     inset?: boolean;
@@ -58,8 +58,8 @@ className={cn(
   <MenubarPrimitive.Item;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-      inset && &quot;pl-8&quot;
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      inset && "pl-8"
 ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof MenubarPrimitive.Item>;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {inset?: boolean;
@@ -71,8 +71,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   <MenubarPrimitive.Item;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
-      inset && &quot;pl-8&quot;
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      inset && "pl-8"
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
@@ -85,9 +85,9 @@ className={cn(
   <MenubarPrimitive.RadioItem;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
@@ -111,8 +111,8 @@ const MenubarLabel = React.forwardRef<;
   <MenubarPrimitive.Label;
     ref={ref}
 className={cn(
-      &quot;px-2 py-1.5 text-sm font-semibold&quot;
-      inset && &quot;pl-8&quot;
+      "px-2 py-1.5 text-sm font-semibold"
+      inset && "pl-8"
 ursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
@@ -125,8 +125,8 @@ const MenubarLabel = React.forwardRef<;
 
 
 className={cn(
-      &quot;px-2 py-1.5 text-sm font-semibold&quot;
-      inset && &quot;pl-8&quot;
+      "px-2 py-1.5 text-sm font-semibold"
+      inset && "pl-8"
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
@@ -134,14 +134,14 @@ className={cn(
 ursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 
-    className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot; className)}
+    className={cn("-mx-1 my-1 h-px bg-muted" className)}
   React.ElementRef<typeof MenubarPrimitive.Separator>;
   React.ElementRef<typeof MenubarPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Separator;
     ref={ref}
-    className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot; className)}
+    className={cn("-mx-1 my-1 h-px bg-muted" className)}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
     {...props}
 />
@@ -156,12 +156,12 @@ const MenubarShortcut = ({
     <span
       className={cn(
 
-        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
-        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
+        "ml-auto text-xs tracking-widest text-muted-foreground"
+        "ml-auto text-xs tracking-widest text-muted-foreground"
         "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}
-MenubarShortcut.displayname = &quot;MenubarShortcut&quot;
+MenubarShortcut.displayname = "MenubarShortcut"
 export {
   Menubar
   MenubarMenu

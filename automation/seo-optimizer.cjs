@@ -1,147 +1,254 @@
-        
-      }
-    }},
-  {
-    "name": 'Sitemap Check',
-    "action": () => {
-      
-      const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
-      if (fs.existsSync(sitemapPath)) {
-        
-      } else {
-        
-      }
-    }},
-  {
-    "name": 'Robots.txt Check',
-    "action": () => {
-      
-      const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
-      if (fs.existsSync(robotsPath)) {
-        
-      } else {
-        
-      }
-    }},
-  {
-    "name": 'Structured Data Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let structuredDataCount = 0;
+#!/usr/bin/env node
+/**
+ * SEO Optimization Script for Zion Tech Group
+ * Analyzes and optimizes SEO aspects of the application
+ */
 
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          if (
-            content.includes('application/ld+json') ||
-            content.includes('schema.org')
-          ) {
-            structuredDataCount++;
-          }
+const fs = require('fs');
+const path = require('path');
+
+class SEOOptimizer {
+  constructor() {
+    this.report = {
+      timestamp: new Date().toISOString(),
+      optimizations: [],
+      recommendations: [],
+      metrics: {}
+    };
+  }
+
+  log(message, type = 'INFO') {
+    const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+    console.log(`${icons[type]} ${message}`);
+  }
+
+  async optimize() {
+    this.log('Starting SEO Optimizer...', 'INFO');
+    
+    try {
+      await this.analyzeMetaTags();
+      await this.analyzeHeadings();
+      await this.analyzeImages();
+      await this.analyzeLinks();
+      await this.analyzeSitemap();
+      this.generateReport();
+      
+      this.log('SEO optimization complete!', 'SUCCESS');
+      return true;
+    } catch (error) {
+      this.log(`SEO optimization failed: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
+
+  async analyzeMetaTags() {
+    this.log('Analyzing meta tags...', 'INFO');
+    
+    const htmlFiles = this.findHtmlFiles('dist');
+    let metaIssues = 0;
+    
+    for (const file of htmlFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      
+      // Check for title tag
+      if (!content.includes('<title>')) {
+        this.report.recommendations.push({
+          type: 'meta_tags',
+          message: `Missing title tag in ${file}`,
+          priority: 'high'
         });
-
-        
+        metaIssues++;
       }
-    }},
-  {
-    "name": 'Alt Text Check',
-    "action": () => {
       
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let imagesWithAlt = 0;
-        let totalImages = 0;
+      // Check for meta description
+      if (!content.includes('name="description"')) {
+        this.report.recommendations.push({
+          type: 'meta_tags',
+          message: `Missing meta description in ${file}`,
+          priority: 'high'
+        });
+        metaIssues++;
+      }
+      
+      // Check for viewport meta tag
+      if (!content.includes('name="viewport"')) {
+        this.report.recommendations.push({
+          type: 'meta_tags',
+          message: `Missing viewport meta tag in ${file}`,
+          priority: 'medium'
+        });
+        metaIssues++;
+      }
+    }
+    
+    if (metaIssues === 0) {
+      this.log('Meta tags look good!', 'SUCCESS');
+    } else {
+      this.log(`Found ${metaIssues} meta tag issues`, 'WARNING');
+    }
+  }
 
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          const imgTags = content.match(/<img[^>]*>/g) || [];
-          totalImages += imgTags.length;
+  async analyzeHeadings() {
+    this.log('Analyzing heading structure...', 'INFO');
+    
+    const htmlFiles = this.findHtmlFiles('dist');
+    let headingIssues = 0;
+    
+    for (const file of htmlFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      
+      // Check for h1 tag
+      const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
+      if (h1Count === 0) {
+        this.report.recommendations.push({
+          type: 'headings',
+          message: `Missing h1 tag in ${file}`,
+          priority: 'high'
+        });
+        headingIssues++;
+      } else if (h1Count > 1) {
+        this.report.recommendations.push({
+          type: 'headings',
+          message: `Multiple h1 tags (${h1Count}) in ${file}`,
+          priority: 'medium'
+        });
+        headingIssues++;
+      }
+    }
+    
+    if (headingIssues === 0) {
+      this.log('Heading structure looks good!', 'SUCCESS');
+    } else {
+      this.log(`Found ${headingIssues} heading issues`, 'WARNING');
+    }
+  }
 
-          imgTags.forEach(img => {
-            if (img.includes('alt=')) {
-              imagesWithAlt++;
-            }
+  async analyzeImages() {
+    this.log('Analyzing images...', 'INFO');
+    
+    const htmlFiles = this.findHtmlFiles('dist');
+    let imageIssues = 0;
+    
+    for (const file of htmlFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      const imgTags = content.match(/<img[^>]*>/gi) || [];
+      
+      for (const imgTag of imgTags) {
+        // Check for alt attribute
+        if (!imgTag.includes('alt=')) {
+          this.report.recommendations.push({
+            type: 'images',
+            message: `Image missing alt attribute in ${file}`,
+            priority: 'high'
           });
-        });
-
-        
+          imageIssues++;
+        }
       }
-    }},
-  {
-    "name": 'Heading Structure Check',
-    "action": () => {
+    }
+    
+    if (imageIssues === 0) {
+      this.log('Images look good!', 'SUCCESS');
+    } else {
+      this.log(`Found ${imageIssues} image issues`, 'WARNING');
+    }
+  }
+
+  async analyzeLinks() {
+    this.log('Analyzing links...', 'INFO');
+    
+    const htmlFiles = this.findHtmlFiles('dist');
+    let linkIssues = 0;
+    
+    for (const file of htmlFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      const links = content.match(/<a[^>]*>/gi) || [];
       
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let h1Count = 0;
-        let h2Count = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          h1Count += (content.match(/<h1[^>]*>/g) || []).length;
-          h2Count += (content.match(/<h2[^>]*>/g) || []).length;
-        });
-
-        
+      for (const link of links) {
+        // Check for external links without rel="noopener"
+        if (link.includes('href="http') && !link.includes('rel=')) {
+          this.report.recommendations.push({
+            type: 'links',
+            message: `External link missing rel="noopener" in ${file}`,
+            priority: 'medium'
+          });
+          linkIssues++;
+        }
       }
-    }},
-];
+    }
+    
+    if (linkIssues === 0) {
+      this.log('Links look good!', 'SUCCESS');
+    } else {
+      this.log(`Found ${linkIssues} link issues`, 'WARNING');
+    }
+  }
 
-// Run SEO checks
-let successCount = 0;
-let totalCount = seoChecks.length;
+  async analyzeSitemap() {
+    this.log('Analyzing sitemap...', 'INFO');
+    
+    if (fs.existsSync('dist/sitemap.xml')) {
+      this.log('Sitemap found!', 'SUCCESS');
+      this.report.optimizations.push({
+        type: 'sitemap',
+        message: 'Sitemap.xml is present'
+      });
+    } else {
+      this.report.recommendations.push({
+        type: 'sitemap',
+        message: 'Consider adding a sitemap.xml',
+        priority: 'medium'
+      });
+    }
+    
+    if (fs.existsSync('dist/robots.txt')) {
+      this.log('Robots.txt found!', 'SUCCESS');
+      this.report.optimizations.push({
+        type: 'robots',
+        message: 'robots.txt is present'
+      });
+    } else {
+      this.report.recommendations.push({
+        type: 'robots',
+        message: 'Consider adding a robots.txt',
+        priority: 'low'
+      });
+    }
+  }
 
-for (const check of seoChecks) {
-  try {
+  findHtmlFiles(dir) {
+    const htmlFiles = [];
     
-    check.action();
+    if (!fs.existsSync(dir)) {
+      return htmlFiles;
+    }
     
-    successCount++;
-  } catch (error) {
+    const files = fs.readdirSync(dir, { withFileTypes: true });
     
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      if (file.isDirectory()) {
+        htmlFiles.push(...this.findHtmlFiles(fullPath));
+      } else if (file.isFile() && file.name.endsWith('.html')) {
+        htmlFiles.push(fullPath);
+      }
+    }
+    
+    return htmlFiles;
+  }
+
+  generateReport() {
+    const reportPath = 'seo-optimization-report.json';
+    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
+    this.log(`SEO report saved to ${reportPath}`, 'SUCCESS');
   }
 }
 
-
-
-
-// Generate SEO report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "checks": seoChecks.map(check => ({
-    name: check.name,
-    "status": 'completed'})),
-  "summary": {
-    total: totalCount,
-    "successful": successCount,
-    "failed": totalCount - successCount}};
-
-const reportsDir = path.join(process.cwd(), 'automation-reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new SEOOptimizer();
+  optimizer.optimize().then(success => {
+    process.exit(success ? 0 : 1);
+  });
 }
 
-const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
-fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-console.log(' SEO Optimizer Starting...\n')
-    "name"
-    "name"
-    "name"
-    "name"
-    "name"
-    "name"
-    "status"
+module.exports = SEOOptimizer;

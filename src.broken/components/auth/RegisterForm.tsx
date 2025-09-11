@@ -7,3 +7,5 @@ export function RegisterForm() {
     </div>
   )
 }
+  );
+};

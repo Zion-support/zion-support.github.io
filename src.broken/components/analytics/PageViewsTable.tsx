@@ -7,3 +7,5 @@ export function PageViewsTable() {
     </div>
   )
 }
+  );
+};

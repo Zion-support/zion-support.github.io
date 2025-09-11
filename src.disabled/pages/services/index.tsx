@@ -19,5 +19,5 @@ export default ServicesIndex;
 ";
 
     { to: '/it-services', label: 'IT Services' }, { to: '/micro-saas', label: 'Micro SaaS' }, { to: '/services/ai-email-responder', label: 'AI Email Responder' }, { to: '/services/automated-follow-ups', label: 'Automated Follow-Ups' }, { to: '/services/ai-seo-optimizer', label: 'AI SEO Optimizer' },
-
-
+  );
+};

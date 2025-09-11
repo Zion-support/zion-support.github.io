@@ -1,8 +1,44 @@
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedCybersecurityService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
 import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedCybersecurityService {
 
+=======
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
   customers: number;
   rating: number;
   reviews: number;
@@ -42,6 +78,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       ]
       useCases: [
 
+=======
       color: 'from - red - 600 to - pink - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -342,6 +379,18 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 28,
     },
 
+=======
+    // IoT Security Platform;
+    {
+      id: 'iot - security - platform',
+      name: 'IoT Security Platform',
+      tagline: 'Secure your IoT ecosystem with comprehensive protection',
+      price: '$199',
+      period: '/month',
+      description:;
+        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
+      features: [;
+
         'IoT device authentication and management',
         'Network traffic monitoring and analysis',
         'Threat detection and response',
@@ -356,6 +405,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '📱',
 
+=======
       color: 'from - purple - 600 to - violet - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / iot - security - platform',
@@ -368,6 +418,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
 
+=======
       real_service: true,
       technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
       integrations: [;
@@ -392,123 +443,21 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       },
       real_implementation: true,
       implementation_details:;
+=======
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,
       rating: 4 && 4.7,
-      reviews: 21,
-    },
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
-  // Zero Trust Security Platform
-  {
-    id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
-    tagline: 'Never trust, always verify - Advanced zero trust security',
-    price: '$599', period: '/month',
-    description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',
-    features: [
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management';
-      'Compliance reporting and auditingSecurity analytics and insights'
-      id: 'iot-security-platform'
-      name: 'IoT Security Platform'
-      tagline: 'Secure your IoT ecosystem with comprehensive protection'
-      price: '$199'
-      period: '/month'
-      description:
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.'
-      features: [
-        'IoT device authentication and management'
-        'Network traffic monitoring and analysis'
-        'Threat detection and response'
-        'Device vulnerability assessment'
-        'Secure firmware updates'
-        'Data encryption and protection'
-        'Compliance monitoring and reporting'
-        'Real-time security alerts'
-        'Integration with IoT platforms'
-        'Mobile security management'
-      ]
-      popular: true
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
-      launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
-      reviews: 21
-    }
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launchDate: '2024-09-25',
-      customers: 43,
-      rating: 4.7,
       reviews: 21,
 
     },;
-      id: 'iot - security - platform',
-      name: 'IoT Security Platform',
-      tagline: 'Secure your IoT ecosystem with comprehensive protection',
-      price: '$199',
-      period: '/month',
-      description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [;
 
-        'IoT device authentication and management',
-        'Network traffic monitoring and analysis',
-        'Threat detection and response',
-        'Device vulnerability assessment',
-        'Secure firmware updates',
-        'Data encryption and protection',
-        'Compliance monitoring and reporting',
-        'Real - time security alerts',
-        'Integration with IoT platforms',
-        'Mobile security management',
-      ],
-      popular: true,
-      icon: '📱',
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trial_days: 14,
-      setup_time: '1 - 2 weeks',
-      category: 'IoT Security & Protection',
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
-      ],
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
-      competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launch_date: '2024 - 09 - 25',
-      customers: 43,
-      rating: 4 && 4.7,
-      reviews: 21,
+
   ];    features: [
 
+=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -561,7 +510,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$31.2B zero trust security market', growthRate: '28% annual growth',
     variant: 'zero-trust-enterprise',
     contactInfo: {
-      
   ];    features: [;
       'IoT device authentication and management_network traffic monitoring and analysis_threat detection and response_device vulnerability assessment_secure firmware updates_data encryption and protection_compliance monitoring and reporting_real - time security alerts';
       'Integration with IoT platforms_mobile security management';
@@ -604,11 +552,9 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     marketSize: '$14 && 14.2B IoT security market', growthRate: '30% annual growth',
     variant: 'iot-security-enterprise',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
-    
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
@@ -660,6 +606,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -672,23 +623,20 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 
 
-
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-  }
-];
-  }
-];
-;
+=======
+=======
+=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,,
+  period: string,;
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -731,8 +679,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     name: 'Zero Trust Security Platform',;
     tagline: 'Never trust, always verify - Advanced zero trust security',;
     price: '$599',;
-    period: '/month',,
-  description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',;
+    period: '/month',;
+    description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',;
     features: [;
       'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management',;
       'Compliance reporting and auditingSecurity analytics and insights';
@@ -761,49 +709,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
-    launch_date: '2024 - 09 - 25';
-    customers: 43;
-    rating: 4.7;
-    reviews: 21;
-  }
-];
-;
-import { ServiceVariant } from '../types/service-variants',;
-export interface AdvancedCybersecurityService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,,
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Enterprise-grade zero trust security platform with continuous verification, micro-segmentation, and adaptive access controls.',;
+    launchDate: '2024-09-15',;
+    customers: 34,;
+    rating: 4.9,;
+    reviews: 19;
   },;
   // AI-Powered Threat Intelligence;
   {;
@@ -811,8 +723,8 @@ export interface AdvancedCybersecurityService {;
     name: 'AI-Powered Threat Intelligence Platform',;
     tagline: 'Predict and prevent cyber threats with AI intelligence',;
     price: '$399',;
-    period: '/month',,
-  description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',;
+    period: '/month',;
+    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',;
     features: [;
       'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools',;
       'Custom threat feeds and alerts24/7 security monitoring';
@@ -855,8 +767,8 @@ export interface AdvancedCybersecurityService {;
     name: 'Cloud Security Posture Management Platform',;
     tagline: 'Secure your cloud infrastructure with comprehensive posture management',;
     price: '$299',;
-    period: '/month',,
-  description: 'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',;
+    period: '/month',;
+    description: 'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',;
     features: [;
       'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',;
       'Incident detection and responseSecurity metrics and dashboards';
@@ -899,8 +811,8 @@ export interface AdvancedCybersecurityService {;
     name: 'DevSecOps Security Platform',;
     tagline: 'Integrate security into your DevOps pipeline seamlessly',;
     price: '$249',;
-    period: '/month',,
-  description: 'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',;
+    period: '/month',;
+    description: 'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',;
     features: [;
       'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting',;
       'Security metrics and dashboardsIntegration with DevOps tools';
@@ -943,8 +855,8 @@ export interface AdvancedCybersecurityService {;
     name: 'IoT Security Platform',;
     tagline: 'Secure your IoT ecosystem with comprehensive protection',;
     price: '$199',;
-    period: '/month',,
-  description: 'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',;
+    period: '/month',;
+    description: 'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',;
     features: [;
       'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts',;
       'Integration with IoT platformsMobile security management';

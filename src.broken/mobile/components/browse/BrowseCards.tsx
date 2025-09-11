@@ -7,3 +7,5 @@ export function BrowseCards() {
     </div>
   )
 }
+  );
+};

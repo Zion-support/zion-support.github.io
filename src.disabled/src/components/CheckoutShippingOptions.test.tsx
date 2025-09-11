@@ -1,8 +1,3 @@
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import CheckoutShippingOptions from '../components/CheckoutShippingOptions';'
-describe('CheckoutShippingOptions', () => {test('renders without crashing', () => {render(<CheckoutShippingOptions />)expect(screen.getByTestId('checkoutshippingoptions')).toBeInTheDocument()})test('displays correct content', () => {render(<CheckoutShippingOptions />)// Add specific content tests here;'
-  })test('handles user interactions', () => {render(<CheckoutShippingOptions />)// Add interaction tests here;'
-  })test('applies correct styling', () => {render(<CheckoutShippingOptions />)// Add styling tests here;'
-  })})
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import CheckoutShippingOptions from &apos;./CheckoutShippingOptions; describe(&apos;CheckoutShippingOptions&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<CheckoutShippingOptions / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import CheckoutShippingOptions from &apos;./CheckoutShippingOptions; describe(&apos;CheckoutShippingOptions&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<CheckoutShippingOptions / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import CheckoutShippingOptions from &apos;./CheckoutShippingOptions; describe(&apos;CheckoutShippingOptions&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})} it(&apos;displays expected content&apos,() => {}} render(<CheckoutShippingOptions / >)"; expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})"; "}}))

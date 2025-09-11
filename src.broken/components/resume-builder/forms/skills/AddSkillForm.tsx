@@ -7,3 +7,5 @@ export function AddSkillForm() {
     </div>
   )
 }
+  );
+};

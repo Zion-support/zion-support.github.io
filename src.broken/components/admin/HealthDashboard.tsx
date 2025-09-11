@@ -7,3 +7,5 @@ export function HealthDashboard() {
     </div>
   )
 }
+  );
+};

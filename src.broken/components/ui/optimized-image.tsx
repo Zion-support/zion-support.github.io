@@ -8,3 +8,5 @@ export export export default function optimized-image()   {,
     </div>
   )
 }
+  );
+};

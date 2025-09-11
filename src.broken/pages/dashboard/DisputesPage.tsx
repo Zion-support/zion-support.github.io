@@ -7,3 +7,5 @@ export function DisputesPage() {
     </div>
   )
 }
+  );
+};

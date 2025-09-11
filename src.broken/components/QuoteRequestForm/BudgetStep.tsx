@@ -7,3 +7,5 @@ export function BudgetStep() {
     </div>
   )
 }
+  );
+};

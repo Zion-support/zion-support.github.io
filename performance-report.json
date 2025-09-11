@@ -1,24 +1,13 @@
 {
-  "timestamp": "2025-09-07T00:16:26.648Z",
+  "timestamp": "2025-09-09T23:37:37.077Z",
   "metrics": {
-    "testTime": 2327,
-    "bundleSize": 1020755,
-    "memoryUsage": {
-      "rss": 53,
-      "heapTotal": 5,
-      "heapUsed": 5,
-      "external": 1
-    }
+    "bundleSize": 73298
   },
   "recommendations": [
-    "Enable gzip compression for production",
+    "Enable gzip compression",
     "Use CDN for static assets",
-    "Implement lazy loading for components"
-  ],
-  "summary": {
-    "buildTime": "N/A",
-    "bundleSize": "0.97MB",
-    "testTime": "2327ms",
-    "memoryUsage": "5MB"
-  }
+    "Implement lazy loading for images",
+    "Minify CSS and JavaScript",
+    "Use modern image formats (WebP, AVIF)"
+  ]
 }

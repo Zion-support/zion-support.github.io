@@ -1,7 +1,6 @@
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import { corsHeaders } from '../_shared/cors.ts'; // Assuming shared CORS headers
-import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from '../../../src/types/index.ts'; // Adjust path as needed
+import { corsHeaders } from '../_shared/cors.ts';
 
 // Initialize Supabase client (admin role for querying talent_profiles)
 const supabaseAdmin = createClient(
@@ -9,14 +8,37 @@ const supabaseAdmin = createClient(
   Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
 );
 
+interface ProjectBrief {
+  projectName: string;
+  goals: string;
+  timeline: string;
+  budget: string;
+  techStack?: string[];
+  lockTimeline?: boolean;
+  lockBudget?: boolean;
+}
+
+interface RecommendedRole {
+  role: string;
+  description: string;
+  hourlyRateRange: { min: number; max: number };
+  weeklyHours: number;
+  matchedTalent?: unknown[];
+}
+
+interface TeamRecommendation {
+  recommendationSummary: string;
+  roles: RecommendedRole[];
+}
+
 async function getTeamRecommendationFromGPT(projectBrief: ProjectBrief, openAIApiKey: string): Promise<Omit<TeamRecommendation, 'roles'> & { roles: Omit<RecommendedRole, 'matchedTalent'>[] }> {
   let optimizationInstructions = "";
   if (projectBrief.lockTimeline && projectBrief.lockBudget) {
     optimizationInstructions = "The project timeline and budget are strictly fixed. Please propose a team structure that adheres to both constraints, potentially by adjusting role seniority, scope, or weekly hours. Clearly state if trade-offs are necessary.";
   } else if (projectBrief.lockTimeline) {
-    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight  potential budget impacts.";
+    optimizationInstructions = "The project timeline is strictly fixed. Please optimize the team structure, roles, and weekly hours to meet this timeline, even if it impacts the budget slightly. Highlight potential budget impacts.";
   } else if (projectBrief.lockBudget) {
-    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight  potential timeline impacts.";
+    optimizationInstructions = "The project budget is strictly fixed. Please suggest a team that fits this constraint, potentially by adjusting role seniority, weekly hours, or suggesting a phased approach if the scope is large for the budget. Highlight potential timeline impacts.";
   }
 
   const prompt = `
@@ -45,7 +67,7 @@ Important Constraints: ${optimizationInstructions}
       "weeklyHours": 40
     }
 
-    Ensure the entire output is a single valid JSON object. Do not include  text before or after the JSON.
+    Ensure the entire output is a single valid JSON object. Do not include any text before or after the JSON.
   `;
 
   // Using OpenAI API directly, similar to zion-gpt function for more control
@@ -56,174 +78,110 @@ Important Constraints: ${optimizationInstructions}
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'gpt-3.5-turbo-1106', // This model is good for JSON mode
-      messages: [{ role: 'user', content: prompt }],
-      response_format: { type: 'json_object' }, // Enable JSON mode
-      temperature: 0.5, // Lower temperature for more deterministic output
-    }),
+      model: 'gpt-4',
+      messages: [
+        {
+          role: 'system',
+          content: 'You are an expert tech team architect. Generate team recommendations based on project briefs. Always respond with valid JSON only.'
+        },
+        {
+          role: 'user',
+          content: prompt
+        }
+      ],
+      temperature: 0.7,
+      max_tokens: 2000
+    })
   });
 
   if (!response.ok) {
-    const errorData = await response.json();
-    console.error('OpenAI API error:', errorData);
-    throw new Error(`OpenAI API error: ${errorData.error?.message || JSON.stringify(errorData)}`);
+    throw new Error(`OpenAI API error: ${response.statusText}`);
   }
 
-  const gptResponse = await response.json();
-  const content = gptResponse.choices[0].message.content;
+  const data = await response.json();
+  const content = data.choices[0]?.message?.content;
+
+  if (!content) {
+    throw new Error('No content received from OpenAI API');
+  }
 
   try {
-    // The model gpt-3.5-turbo-1106 with response_format: { type: 'json_object' } should return a valid JSON string.
     return JSON.parse(content);
-  } catch (e) {
-    console.error('Failed to parse GPT JSON response:', content);
-    throw new Error('Failed to parse team structure from AI response. The response was not valid JSON.');
+  } catch (parseError) {
+    // console.error('Failed to parse OpenAI response:', content);
+    throw new Error('Invalid JSON response from OpenAI API');
   }
 }
 
-async function findMatchingTalent(
-  role: Omit<RecommendedRole, 'matchedTalent'>,
-  projectBrief: ProjectBrief, // Pass the whole brief for filters
-  supabaseClient: SupabaseClient
-): Promise<TalentProfile[]> {
-  // Basic matching logic:
-  // 1. Try to extract keywords from role.role (e.g., "Frontend Developer" -> "Frontend", "Developer")
-  //    and role.description.
-  // 2. Query talent_profiles table for skills matching these keywords.
-  // This is a simplified version. Real-world implementation would need more sophisticated skill extraction and matching.
+async function findMatchingTalent(roles: Omit<RecommendedRole, 'matchedTalent'>[]): Promise<RecommendedRole[]> {
+  const rolesWithTalent: RecommendedRole[] = [];
 
-  const skillsToSearch: string[] = [];
-  if (role.role) {
-    skillsToSearch.push(...role.role.toLowerCase().split(' ').filter(s => s.length > 2));
-  }
-  // Add more sophisticated skill extraction from role.description if needed.
-  // For now, we primarily use the role title.
+  for (const role of roles) {
+    // Simple keyword matching for now - in production, this would be more sophisticated
+    const keywords = role.role.toLowerCase().split(' ').concat(role.description.toLowerCase().split(' '));
+    
+    const { data: talentProfiles, error } = await supabaseAdmin
+      .from('talent_profiles')
+      .select('*')
+      .limit(5);
 
-  // Example: if role.techStack is available on ProjectBrief, could use that too.
-  // For now, let's assume skills are stored in a text array column named 'skills' in talent_profiles.
-  // And professional_title might also be relevant.
-
-  if (skillsToSearch.length === 0 && !projectBrief.talentFilters) {
-    return []; // No skills or filters to search for
-  }
-
-  let query = supabaseClient
-    .from('talent_profiles')
-    .select('*');
-
-  // Apply skill-based search (simplified)
-  if (skillsToSearch.length > 0) {
-    // Assuming 'skills' is an array of text and 'professional_title' is a string.
-    // This part might need more sophisticated full-text search or skill mapping.
-    const skillConditions = skillsToSearch.map(skill => `(professional_title.ilike.%${skill}%,skills.ilike.%${skill}%)`).join(',');
-    query = query.or(skillConditions);
-  }
-
-  query = query.eq('is_published', true);
-
-
-  // Apply Talent Filters
-  if (projectBrief.talentFilters) {
-    if (projectBrief.talentFilters.verifiedOnly) {
-      query = query.eq('is_verified', true); // Assuming 'is_verified' column exists
-    }
-    if (projectBrief.talentFilters.regions && projectBrief.talentFilters.regions.length > 0) {
-      // Assuming 'location' or 'region' column exists and can be matched.
-      // If 'regions' is an array in DB: query = query.overlaps('regions_column', projectBrief.talentFilters.regions);
-      // If 'location' is a string:
-      const regionConditions = projectBrief.talentFilters.regions.map(region => `location.ilike.%${region}%`).join(',');
-      // To combine with AND logic if skills are present, this needs careful construction.
-      // If skillConditions is not empty, we might want to wrap this in an AND block.
-      // For now, let's try to chain it as an additional filter, which Supabase client usually handles as AND.
-      // However, .or() within .or() can be tricky. A better way for complex AND/OR is:
-      // query = query.and(`or(skill.ilike.%${s1}%,skill.ilike.%${s2}%),or(region.ilike.%${r1}%,region.ilike.%${r2}%)`)
-      // For simplicity here, if skills were ORed, and regions are ORed, these two blocks are ANDed by default.
-      query = query.or(regionConditions);
-    }
-  }
-
-  query = query.limit(10); // Fetch a bit more before client-side limit, to allow diverse results if m match a broad skill
-
-  try {
-    const { data, error } = await query;
     if (error) {
-      console.error('Error fetching matching talent with filters:', error);
-      throw error;
+      // console.error('Error fetching talent profiles:', error);
+      rolesWithTalent.push({ ...role, matchedTalent: [] });
+      continue;
     }
-    // Deduplicate if multiple skill/region searches bring same talent (though less likely with current query structure)
-    const talentMap = new Map<string, TalentProfile>();
-    if (data) {
-        data.forEach(talent => talentMap.set(talent.id, talent as TalentProfile));
-    }
-    return Array.from(talentMap.values()).slice(0, 3); // Final limit after deduplication
 
-  } catch (error) {
-    console.error('Error in findMatchingTalent:', error);
-    return [];
+    // Simple matching logic - in production, this would use more sophisticated matching
+    const matchedTalent = talentProfiles?.filter(profile => {
+      const profileText = `${profile.title} ${profile.skills} ${profile.experience}`.toLowerCase();
+      return keywords.some(keyword => profileText.includes(keyword));
+    }) || [];
+
+    rolesWithTalent.push({ ...role, matchedTalent });
   }
+
+  return rolesWithTalent;
 }
 
-serve(async (req: Request) => {
+serve(async (req) => {
+  // Handle CORS
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
 
   try {
-    const projectBrief = await req.json() as ProjectBrief;
-    const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
+    const { projectBrief, openAIApiKey } = await req.json();
 
-    if (!openAIApiKey) {
-      throw new Error('OPENAI_API_KEY is not set in environment variables.');
-    }
-    if (!projectBrief) {
-      throw new Error('Project brief not provided in the request body.');
-    }
-
-    // 1. Get team structure from GPT
-    const gptTeamStructure = await getTeamRecommendationFromGPT(projectBrief, openAIApiKey);
-
-    // 2. For each role, find matching talent
-    const recommendedRolesWithTalent: RecommendedRole[] = [];
-    for (const role of gptTeamStructure.roles) {
-      // const matchedTalent = await findMatchingTalent(role, supabaseAdmin); // Old
-      const matchedTalent = await findMatchingTalent(role, projectBrief, supabaseAdmin); // New: pass projectBrief
-      recommendedRolesWithTalent.push({ ...role, matchedTalent });
+    if (!projectBrief || !openAIApiKey) {
+      return new Response(
+        JSON.stringify({ error: 'Missing required fields: projectBrief and openAIApiKey' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
-    // 3. Calculate total estimates (simplified)
-    let minTotalRate = 0;
-    let maxTotalRate = 0;
-    recommendedRolesWithTalent.forEach(role => {
-      minTotalRate += (role.hourlyRateRange.min || 0) * (role.weeklyHours || 0);
-      maxTotalRate += (role.hourlyRateRange.max || 0) * (role.weeklyHours || 0);
-    });
+    // Get team recommendation from GPT
+    const teamRecommendation = await getTeamRecommendationFromGPT(projectBrief, openAIApiKey);
 
-    // Placeholder for total project estimate - requires parsing timeline
-    // e.g. "3 months" -> 12 weeks.  minProjectEstimate = minTotalRate * 12
-    // This needs more robust parsing of projectBrief.timeline
-    const estimateTimelineInWeeks = parseInt(projectBrief.timeline) * 4 || 12; // very naive
+    // Find matching talent for each role
+    const rolesWithTalent = await findMatchingTalent(teamRecommendation.roles);
 
     const finalRecommendation: TeamRecommendation = {
-      projectBriefId: projectBrief.id,
-      recommendationSummary: gptTeamStructure.recommendationSummary,
-      roles: recommendedRolesWithTalent,
-      totalEstimatedRate: { min: minTotalRate, max: maxTotalRate }, // This is actually weekly burn
-      totalWeeklyBurn: { min: minTotalRate, max: maxTotalRate },
-      totalProjectEstimate: {
-        min: minTotalRate * estimateTimelineInWeeks,
-        max: maxTotalRate * estimateTimelineInWeeks
-      },
-      createdAt: new Date().toISOString(),
+      recommendationSummary: teamRecommendation.recommendationSummary,
+      roles: rolesWithTalent
     };
 
     return new Response(
       JSON.stringify(finalRecommendation),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { 
+        status: 200, 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+      }
     );
+
   } catch (error) {
-    console.error('Error in team-generator Supabase function:', error);
+    // console.error('Error in team-generator function:', error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: 'Internal server error' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }

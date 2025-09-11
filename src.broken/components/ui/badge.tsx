@@ -7,3 +7,5 @@ export function badge() {
     </div>
   )
 }
+  );
+};

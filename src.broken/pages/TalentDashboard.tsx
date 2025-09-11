@@ -7,3 +7,5 @@ export function TalentDashboard() {
     </div>
   )
 }
+  );
+};

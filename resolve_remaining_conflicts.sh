@@ -31,18 +31,18 @@ resolve_file_conflicts() {
     # Strategy: Keep the version that has more content (usually the newer one)
     
     # Count lines in each section
-    local head_lines=$(sed -n '/^<<<<<<< HEAD/,/^=======/p' "$file" | wc -l)
-    local theirs_lines=$(sed -n '/^=======/,/^>>>>>>> /p' "$file" | wc -l)
+    local head_lines=$(sed -n '/^/p' "$file" | wc -l)
+    local theirs_lines=$(sed -n '/^/,/^
     
     if [ "$head_lines" -gt "$theirs_lines" ]; then
         echo "📝 Keeping HEAD version (more content)"
         # Keep HEAD version
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
+        sed -i '/^
+        sed -i '/^
     else
         echo "📝 Keeping remote version (more content)"
         # Keep remote version
-        sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file"
+        sed -i '/^
     fi
     
     echo "✅ Resolved conflicts in: $file"

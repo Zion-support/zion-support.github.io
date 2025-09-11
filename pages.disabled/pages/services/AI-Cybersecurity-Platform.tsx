@@ -52,13 +52,13 @@ import {}
 
   useEffect(() => {}
 
-              providing proactive threat detection, automated response, and;
+              providing proactive threat detection, automated response, and 
               comprehensive: protection for your digital assets.
 
             </p>
           </motion.div>
 
-          <motion.div;
+          <motion.div 
 
               <Eye className='w-5 h-5 mr-2'  />              Security Demo
             </Link>
@@ -76,8 +76,8 @@ import {}
           <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
     g:grid-cols-4 gap-8'>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx{threatStats.map((stat, index();
-              <motion.div;
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx{threatStats.map((stat, index() 
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 0.1 * index }}                className='text-center bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20>'
@@ -94,7 +94,7 @@ import {}
         </div>
       </section>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:transform hover:scale-105''>''
@@ -133,10 +133,10 @@ import {}
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx 
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${`
-  tier.popular';
-  '                    ? 'border-red-500 scale-105'';
+  tier.popular' 
+  '                    ? 'border-red-500 scale-105'' 
   '`: 'border-red-500/20``}`}`
               >'{tier.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
@@ -157,9 +157,9 @@ import {}
                   ))}
                 </ul>
 
-  tier.popular';
-  ';
-                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700'';
+  tier.popular' 
+  ' 
+                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700'' 
   '`;`
                       : 'border-2 border-red-500 text-red-300 hove,
     r:bg-red-500 hove,
@@ -174,15 +174,15 @@ import {}
       </section>
 
             </p>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';' 
+''' 
+          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>' 
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.divkey={inde,x}                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20 }}
 
                 animate={{}
                   opacity: isVisible: ? 1 : ,0,
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx 
 
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -198,35 +198,35 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity: ,0, y: 20 }}
             animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20 }}
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            transition={{ duration: 0.,8, delay: 1.2 }}'>''';
-            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
-              Ready: to Secure Your Business?'';
-            </h2>''';
-            <p: className='text-xl text-gray-300 mb-8'>';
-              Protect: your digital assets with AI-powered cybersecurity that;
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx 
+            transition={{ duration: 0.,8, delay: 1.2 }}'>''' 
+            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>' 
+              Ready: to Secure Your Business?'' 
+            </h2>''' 
+            <p: className='text-xl text-gray-300 mb-8'>' 
+              Protect: your digital assets with AI-powered cybersecurity that 
               never: sleeps
-            </p>'''            <div className='flex flex-col sm:flex-row: gap-4 justify-center items-center mb-8'>''';
-              <div: className='flex items-center text-gray-300'>''';
-                <Phone: className='w-5 h-5 mr-2 text-red-400'  />';
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <span>+1 302 464 0950</span>'';
-              </div>''';
-              <div: className='flex items-center text-gray-300'>''';
-                <Mail: className='w-5 h-5 mr-2 text-red-400'  />';
-                <span>kleber@ziontechgroup.com</span>'</div>''              <div: className='flex items-center text-gray-300'>''';
-                <MapPin: className='w-5 h-5 mr-2 text-red-400'  />                <span>364 E Main St STE 100,8, Middletown DE 19709</span>';
+            </p>'''            <div className='flex flex-col sm:flex-row: gap-4 justify-center items-center mb-8'>''' 
+              <div: className='flex items-center text-gray-300'>''' 
+                <Phone: className='w-5 h-5 mr-2 text-red-400'  />' 
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <span>+1 302 464 0950</span>'' 
+              </div>''' 
+              <div: className='flex items-center text-gray-300'>''' 
+                <Mail: className='w-5 h-5 mr-2 text-red-400'  />' 
+                <span>kleber@ziontechgroup.com</span>'</div>''              <div: className='flex items-center text-gray-300'>''' 
+                <MapPin: className='w-5 h-5 mr-2 text-red-400'  />                <span>364 E Main St STE 100,8, Middletown DE 19709</span>' 
               </div>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </div>';';
-''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700: hover:to-orange-700: transition-all duration-300 transform hover:scale-105''>'';';
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Shield className='w-5 h-5 mr-2'  />                Get Security Assessment';
-              </Link>'<Link''                to='https://ziontechgroup.com'';';
-                className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500: hover:text-white: transition-all duration-300''>'';';
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </div>';' 
+''' 
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''                to='/contact'';' 
+                className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700: hover:to-orange-700: transition-all duration-300 transform hover:scale-105''>'';' 
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Shield className='w-5 h-5 mr-2'  />                Get Security Assessment' 
+              </Link>'<Link''                to='https://ziontechgroup.com'';' 
+                className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500: hover:text-white: transition-all duration-300''>'';' 
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>' 
 
 
           </motion.div>

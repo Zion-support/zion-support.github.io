@@ -7,3 +7,5 @@ export function GlobalMap() {
     </div>
   )
 }
+  );
+};

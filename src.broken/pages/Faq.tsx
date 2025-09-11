@@ -7,3 +7,5 @@ export function Faq() {
     </div>
   )
 }
+  );
+};

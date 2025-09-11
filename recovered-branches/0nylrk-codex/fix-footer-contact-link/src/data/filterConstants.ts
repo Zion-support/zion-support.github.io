@@ -1,15 +1,5 @@
-export const COMMON_SKILLS = [
-  'Machine Learning',
-  'Python',
-  'JavaScript',
-  'React',
-  'Data Science',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'DevOps',
-  'Cloud Architecture',;
-  'TensorFlow',];
+
+
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -23,7 +13,30 @@ export const COMMON_SKILLS = [
   'DevOps'
   'Cloud Architecture'
   'TensorFlow',];
-// Regionsexport const REGIONS = [  "Machine Learning";
+// Regions
+=======
+// Common skills for filtering;
+export const COMMON_SKILLS = [;
+=======
+// Common skills for filtering
+
+export const COMMON_SKILLS = [
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  'Machine Learning',
+  'Python',
+  'JavaScript',
+  'React',
+  'Data Science',
+  'AWS',
+  'Docker',
+  'Kubernetes',
+  'DevOps',
+
+  'TensorFlow', ];
+;
+// Regions;
+
+export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
   "React";
@@ -32,7 +45,10 @@ export const COMMON_SKILLS = [
   "Docker";
   "Kubernetes";
   "DevOps";
-  "Cloud Architecture";  "Europe";
+  "Cloud Architecture";
+
+
+  "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
@@ -50,55 +66,5 @@ export const COMMON_SKILLS = [
   "DevOps",
   "Cloud Architecture",
   "TensorFlow"
-],
 
-// Regions
-export const REGIONS = [
-  "North America",
-  "Europe",
-  "Asia Pacific",
-  "South America",
-  "Middle East",
-  "Africa"
-],
-// Common skills for filtering;
-export const COMMON_SKILLS = [;
-  "Machine Learning",;
-  "Python",;
-  "JavaScript",;
-  "React",;
-  "Data Science",;
-  "AWS",;
-  "Docker",;
-  "Kubernetes",;
-  "DevOps",;
-  "Cloud Architecture",;
-  "TensorFlow";
-],;
-// Regions;
-export const REGIONS = [;
-  "North America",;
-  "Europe",;
-  "Asia Pacific",;
-  "South America",;
-  "Middle East",;
-  "Africa";
-];
-  'Cloud Architecture',;
-  'TensorFlow',];
-
-// Common skills for filtering
-export const COMMON_SKILLS = [
-  "Machine Learning",
-  "Python",
-  "JavaScript",
-  "React",
-  "Data Science",
-  "AWS",
-  "Docker",
-  "Kubernetes",
-  "DevOps",
-  "Cloud Architecture",
-
-  "TensorFlow"
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

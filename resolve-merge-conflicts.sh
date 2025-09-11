@@ -1,101 +1,71 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-echo "🔧 Starting merge conflict resolution and PR merging process..."
+# Script to resolve merge conflicts and merge all open PRs
+set -e
 
-# Set the repository URL
-REPO_URL="https://github.com/Zion-Holdings/zion.app.git"
+echo "Starting merge conflict resolution for all open PRs..."
 
-# Check current status
-echo "📋 Checking current git status..."
-git status
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
 
-# Add all changes
-echo "📦 Adding all changes..."
-git add .
+# Create a temporary branch for merging
+git checkout -b temp-merge-branch
 
-# Commit the resolved conflicts
-echo "💾 Committing resolved merge conflicts..."
-git commit -m "Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues
-
-- Fixed merge conflict markers in api-disabled files
-- Fixed JavaScript syntax errors in .js files  
-- Converted CommonJS to ES modules where needed
-- Cleaned up duplicate function declarations
-- Fixed template literal syntax errors"
-
-# Push to current branch
-echo "🚀 Pushing changes to current branch..."
-git push origin cursor/fix-syntax-push-and-merge-to-main-c855
-
-# Switch to main branch
-echo "🔄 Switching to main branch..."
-git checkout main
-
-# Pull latest changes
-echo "⬇️ Pulling latest changes from main..."
-git pull origin main
-
-# Merge the feature branch
-echo "🔀 Merging feature branch into main..."
-git merge cursor/fix-syntax-push-and-merge-to-main-c855
-
-# Push merged changes
-echo "🚀 Pushing merged changes to main..."
-git push origin main
-
-# Check for any remaining conflicts
-echo "🔍 Checking for remaining conflicts..."
-git status
-
-echo "✅ Merge conflict resolution and PR merging completed!"
-=======
-echo "Starting merge conflict resolution..."
-
-# Find all files with merge conflicts
-conflict_files=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> ")
-
-total_files=$(echo "$conflict_files" | wc -l)
-echo "Found $total_files files with merge conflicts"
-
-# Counter for progress
-count=0
-
-# Process each file
-echo "$conflict_files" | while read -r file; do
-    if [ -f "$file" ]; then
-        count=$((count + 1))
-        echo "Processing file $count/$total_files: $file"
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in $file..."
+    
+    # Check if file has merge conflicts
         
-        # Create a backup
-        cp "$file" "$file.backup"
+        echo "Resolved conflicts in $file"
+    fi
+}
+
+# Try to merge each branch
+for branch in $BRANCHES; do
+    echo "Attempting to merge $branch..."
+    
+    # Skip if branch doesn't exist
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        echo "Branch $branch doesn't exist, skipping..."
+        continue
+    fi
+    
+    # Try to merge
+    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+        echo "Successfully merged $branch"
+        git commit -m "Merge $branch into main"
+    else
+        echo "Merge conflicts detected in $branch, resolving..."
         
-        # Use sed to resolve conflicts by keeping HEAD version
-        # Remove conflict markers and keep content between <<<<<<< HEAD and =======
-        sed -i '/<<<<<<< HEAD/,/=======/!d; /=======/d; />>>>>>> /d' "$file"
+        # Get list of conflicted files
+        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
         
-        # Remove any remaining conflict markers
-        sed -i '/<<<<<<< HEAD/d; /=======/d; />>>>>>> /d' "$file"
+        # Resolve conflicts in each file
+        for file in $CONFLICTED_FILES; do
+            if [ -f "$file" ]; then
+                resolve_conflicts "$file"
+            fi
+        done
         
-        # Check if file is now empty or has issues
-        if [ ! -s "$file" ]; then
-            echo "Warning: File $file is now empty, restoring from backup"
-            mv "$file.backup" "$file"
-        fi
+        # Add resolved files
+        git add .
+        
+        # Commit the merge
+        git commit -m "Resolve merge conflicts for $branch"
+        
+        echo "Successfully resolved conflicts and merged $branch"
     fi
 done
 
+echo "All branches merged successfully!"
+
+# Switch back to main and merge the temp branch
+git checkout main
+git merge temp-merge-branch
+
+# Clean up
+git branch -D temp-merge-branch
+
 echo "Merge conflict resolution completed!"
-echo "Checking for remaining conflicts..."
-
-# Check for any remaining conflicts
-remaining_conflicts=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " | wc -l)
-
-echo "Remaining conflicts: $remaining_conflicts"
-
-if [ "$remaining_conflicts" -eq 0 ]; then
-    echo "All merge conflicts resolved successfully!"
-else
-    echo "Some conflicts remain, manual review may be needed"
-fi
->>>>>>> main

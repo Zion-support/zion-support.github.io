@@ -1,70 +1,91 @@
 
-import { NextSeo } from 'next-seo';
-
-interface SEOProps {
-  title: string;
-  description: string;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title?: string;
+  title: string;
   description?: string;
   keywords?: string;
-  ogImage?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business' | 'website';
-  author?: string;
   canonical?: string;
   ogImage?: string;
-  ogType?: 'website' | 'article' | 'product';
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  structuredData?: object;
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Business Intelligence",
-            "description": "Advanced analytics and insights powered by artificial intelligence"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cybersecurity Platform",
-            "description": "Comprehensive threat detection and response system"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cloud Cost Optimization",
-            "description": "AI-driven cloud cost management solutions"
-          }
-        }
-      ]
-    }
-  };
+  ogType?: string;
+  twitterCard?: string;
+}
 
-  // Get metadata for current route
-  const routeMetadata = defaultMetadata[location.pathname] || defaultMetadata['/'];
-  
-  // Merge provided props with route defaults
-  const finalMetadata = useMemo(() => ({
-    title: title || routeMetadata.title,
-    description: description || routeMetadata.description,
-    keywords: [...new Set([...keywords, ...routeMetadata.keywords])],
-    image: currentImage,
-    type,
-    section: section || routeMetadata.section,
-  }), [title, description, keywords, currentImage, type, section, routeMetadata]);
+export function SEO({
+  title,
+  description = 'Zion Tech Group - Leading provider of AI services, IT solutions, and micro SAAS platforms. Transform your business with cutting-edge technology.',
+  keywords = 'AI services, IT solutions, micro SAAS, cloud migration, cybersecurity, machine learning, business technology',
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+}: SEOProps) {
+  const fullTitle = `${title} | Zion Tech Group`;
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
-  // Structured data for website
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={fullCanonical} />
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="language" content="English" />
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": siteUrl,
+          "logo": `${siteUrl}/logo.png`,
+          "description": "Leading provider of AI services, IT solutions, and micro SAAS platforms",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup",
+            "https://facebook.com/ziontechgroup"
+          ]
+        })}
+      </script>
+    </Helmet>
+  );
+}

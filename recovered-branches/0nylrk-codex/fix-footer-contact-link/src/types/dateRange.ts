@@ -1,19 +1,11 @@
-export interface DateRange {
-  from?: Date;
+
   to?: Date;
+
 }
-export interface DateRange {;
-  from?: Date;
-  to?: Date;
-}
-  to?: Date;
-}
-;
-export interface DateRange {
-  from?: Date;
-}export interface DateRange {
-  from?: Date;
-}
+=======
+
+=======
+
 export interface DateRange {;
   from?: Date;
   to?: Date
@@ -21,3 +13,5 @@ export interface DateRange {;
   to?: Date;
 }
 ;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

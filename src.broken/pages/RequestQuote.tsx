@@ -7,3 +7,5 @@ export function RequestQuote() {
     </div>
   )
 }
+  );
+};

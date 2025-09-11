@@ -1,39 +1,39 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+const publicRoutes = [
+  "/",
+  "/about",
+  "/contact",
+  "/services",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/pricing",
+  "/careers",
+  "/case-studies",
+  "/webinars",
+  "/white-papers",
+  "/guides",
+  "/industries",
+  "/api",
+  "/api-docs"
+];
 
 export function middleware(request: NextRequest) {
-  const response = NextResponse.next();
-
-  // Security headers
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-
-  // Content Security Policy
-  const csp = [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https:",
-    "font-src 'self' data:",
-    "connect-src 'self'",
-    "frame-ancestors 'none'"
-  ].join('; ');
-
-  response.headers.set('Content-Security-Policy', csp);
-
-  return response;
+  const { pathname } = request.nextUrl;
+  
+  // Allow public routes
+  if (publicRoutes.includes(pathname)) {
+    return NextResponse.next();
+  }
+  
+  // Add any additional middleware logic here
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!_next/static|_next/image|favicon.ico).*)',
   ],
 };

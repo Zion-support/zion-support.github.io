@@ -27,3 +27,5 @@ export function PortfolioList({ projects }: PortfolioListProps) {
     </Card>
   )
 }
+  );
+};

@@ -7,3 +7,5 @@ export function AIListingGenerator() {
     </div>
   )
 }
+  );
+};

@@ -1,18 +1,14 @@
     this.projectRoot = process.cwd();
-
+    this.reportsDir = path.join(this.projectRoot, 'security-reports');
     this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-
-  async runNpmAudit() {"
-
-        "timeout": 120000;")
     }
 
   async runNpmAudit() {
@@ -31,16 +27,6 @@
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       
       return {
-<<<<<<< HEAD
-  // TODO: Implement
-        vulnerabilities,"
-
-      return { "error": error.message }}"
-
-  async checkEnvironmentVariables() {"
-
-=======
->>>>>>> merged-prs-20250907-203621
         vulnerabilities,
         "count": vulnerabilityCount,
         "status": vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
@@ -60,24 +46,15 @@
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
-<<<<<<< HEAD
-
-          // Check for sensitive variables;
           const content = fs.readFileSync(envPath, 'utf8');
           
           // Check for sensitive variables
           const sensitivePatterns = [/API_KEY/i,
-=======
-          const content = fs.readFileSync(envPath, 'utf8');
-          
-          // Check for sensitive variables
-const sensitivePatterns = [/API_KEY/i,;
->>>>>>> merged-prs-20250907-203621
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
             /PRIVATE/i,
-            /CREDENTIAL/i;]
+            /CREDENTIAL/i
           ];
 
           const lines = content.split('\n');
@@ -86,24 +63,10 @@ const sensitivePatterns = [/API_KEY/i,;
               const [key] = line.split('=');
               if (key && sensitivePatterns.some(pattern => pattern.test(key))) {
                 sensitiveVars.push({
-
-                  "line": index + 1,")"
-                  "variable": key.trim()"
+                  "file": envFile,
+                  "line": index + 1,
+                  "variable": key.trim()
                 })}
-<<<<<<< HEAD
-`;
-      this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`;
-      this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
-
-  // TODO: Implement
-}"
-        "envFiles": foundEnvFiles,"
-        sensitiveVars,"
-
-
-      const foundVulnerable = Object.keys(dependencies).filter(dep => )
-=======
->>>>>>> merged-prs-20250907-203621
             }
           })}
       }
@@ -184,21 +147,6 @@ const sensitivePatterns = [/API_KEY/i,;
       const files = this.findSourceFiles();
       
       for (const file of files) {
-  // TODO: Implement
-
-          patterns.forEach(pattern => {)
-            const matches = content.match(pattern.pattern);
-            if (matches) {
-              securityIssues.push({)
-
-                "count": matches.length;"
-          })} catch (error) {"
-          // Skip files that can't be read;
-
-      this.log(`🔍 Found ${securityIssues.length} potential security issues`);
-
-  // TODO: Implement
-
         try {
           const content = fs.readFileSync(file, 'utf8');
           
@@ -231,24 +179,13 @@ const sensitivePatterns = [/API_KEY/i,;
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     
     const scanDirectory = (dir) => {
-  // TODO: Implement
-
+      try {
+        execSync('npm audit fix', { stdio: 'inherit' });
         this.fixes.push('Applied automatic security fixes');
         console.log('✅ Security fixes applied');
       } catch (error) {
         console.log('❌ Could not apply automatic fixes');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      "analysis": {"
-        npmAudit: await this.runNpmAudit(),"
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
-    } catch (error) {
-      console.error('Error auditing dependencies:', error);
     }
   }
 
@@ -259,7 +196,8 @@ const sensitivePatterns = [/API_KEY/i,;
         npmAudit: await this.runNpmAudit(),
         "environmentVariables": await this.checkEnvironmentVariables(),
         "dependencies": await this.checkDependencies(),
-        "codeSecurity": await this.checkCodeSecurity()"
+        "codeSecurity": await this.checkCodeSecurity()
+      }
     };
 
     // Generate recommendations
@@ -276,8 +214,6 @@ const sensitivePatterns = [/API_KEY/i,;
     const recommendations = [];
 
     if (analysis.npmAudit && analysis.npmAudit.count > 0) {
-      recommendations.push({"
-
       recommendations.push({
         "type": 'npm_audit',
         "priority": 'high',
@@ -312,11 +248,6 @@ const sensitivePatterns = [/API_KEY/i,;
     return recommendations}
 
   async run() {
-
-  // TODO: Implement
-      const report = await this.generateSecurityReport();
-
-      throw error}
     this.log('🔒 Starting Security Auditor...');
     
     try {
@@ -349,51 +280,40 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 #!/usr/bin/env node;
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
     this.reportsDir = path.join(this.projectRoot, 'security-reports')
     this.log(' Running npm audit...')
-const result = execSync('npm audit --audit-level=moderate --json');
+      const result = execSync('npm audit --audit-level=moderate --json')
         "encoding"
         "status"
+        "status"
+        "status"
           "name"
-=======
-
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "pattern": /console\.log\s*\(\s*['"")]
+          "severity"
         "status"
-        status
-        "status"
-          name
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-          "severity"
-          name
-          "severity"
-          name
-          "severity"
-          name
-          "pattern": /console\.log\s*\(\s*[')]
-          "severity"
-        status
         "type"
-        priority
+        "priority"
         "message"
-<<<<<<< HEAD
         "impact"
-=======
-        impact
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "type"
-        priority
+        "priority"
         "message"
-        impact
+        "impact"
         "type"
-        priority
+        "priority"
         "message"
-        impact
+        "impact"
         "type"
-        priority
+        "priority"
         "message"
-<<<<<<< HEAD
         "impact"
       console.error('\n� Security Auditor "failed")

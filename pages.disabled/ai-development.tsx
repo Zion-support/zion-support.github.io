@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
 import {
   Award,
   Brain,
@@ -10,7 +10,7 @@ import {
   Target,
   Today,
   Users,
-  Zap } from 'lucide-react';
+  Zap } from 'lucide-react' 
 
 export default function AIDevelopment() {
   return (
@@ -278,3 +278,5 @@ export default function AIDevelopment() {
       </main>
     </>
   )}
+  ) 
+} 

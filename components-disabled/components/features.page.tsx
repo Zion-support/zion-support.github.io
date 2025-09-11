@@ -126,3 +126,5 @@ export default function FeaturesPage() {
       </div>
 
     </EnhancedLayout>
+  );
+};

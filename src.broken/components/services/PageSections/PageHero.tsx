@@ -7,3 +7,5 @@ export function PageHero() {
     </div>
   )
 }
+  );
+};

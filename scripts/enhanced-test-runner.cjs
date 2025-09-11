@@ -16,21 +16,12 @@ const testReport = {}
     "failed": 0,
     "skipped": 0,
     "duration": 0,
-    "coverage": 0;"
-  },"
-  "recommendations": [];"
-<<<<<<< HEAD
+    "coverage": 0;
+  },
+  "recommendations": [];
 };
 
 function log(level, message) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
@@ -38,11 +29,7 @@ async function runJestTests() {}
   
   try {}
     const startTime = Date.now();
-<<<<<<< HEAD
-const output = execSync('npm test -- --coverage --json', { });
-=======
     const output = execSync('npm test -- --coverage --json', { })
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -52,8 +39,6 @@ const output = execSync('npm test -- --coverage --json', { });
     const result = JSON.parse(output);
     
     testReport.tests.push({})
-
-      "result": result;"
       "framework": 'jest',
       "duration": endTime - startTime,
       "result": result;
@@ -67,59 +52,6 @@ const output = execSync('npm test -- --coverage --json', { });
     testReport.summary.duration += endTime - startTime;
     
     if (result.coverageMap) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const timestamp = new Date().toISOString()
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
-async function runJestTests() {}"
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-    
-
-<<<<<<< HEAD
-      "result": result;"    testReport.summary.total += result.numTotalTests
-    testReport.summary.passed += result.numPassedTests
-    testReport.summary.failed += result.numFailedTests
-    testReport.summary.skipped += result.numPendingTests
-    testReport.summary.duration += endTime - startTime
-  if($2) {}
-
-    testReport.summary.total += result.total
-    testReport.summary.passed += result.passed
-    testReport.summary.failed += result.failed
-      "result": { passed: true, output };"
-    testReport.summary.passed++
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
-
-    testReport.summary.total += result.total;
-    testReport.summary.passed += result.passed;
-    testReport.summary.failed += result.failed;
-
-
-      "result": { passed: true, output };"
-    testReport.summary.passed++;
-    "
-      "result": { passed: false, "error": error.message };"
-    testReport.summary.failed++;"
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-    "
-      "result": { passed: false, "error": error.message };"
-    testReport.summary.failed++;"
->>>>>>> merged-prs-20250907-203621
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -129,11 +61,7 @@ async function runPlaywrightTests() {}
   
   try {}
     const startTime = Date.now();
-<<<<<<< HEAD
-const output = execSync('npx playwright test --reporter=json', { });
-=======
     const output = execSync('npx playwright test --reporter=json', { })
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -162,11 +90,7 @@ async function runCypressTests() {}
   
   try {}
     const startTime = Date.now();
-<<<<<<< HEAD
-const output = execSync('npx cypress run --reporter json', { });
-=======
     const output = execSync('npx cypress run --reporter json', { })
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -195,11 +119,7 @@ async function runLintTests() {}
   
   try {}
     const startTime = Date.now();
-<<<<<<< HEAD
-const output = execSync('npm run lint', { });
-=======
     const output = execSync('npm run lint', { })
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -232,11 +152,7 @@ async function runTypeTests() {}
   
   try {}
     const startTime = Date.now();
-<<<<<<< HEAD
-const output = execSync('npx tsc --noEmit', { });
-=======
     const output = execSync('npx tsc --noEmit', { })
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -264,45 +180,12 @@ const output = execSync('npx tsc --noEmit', { });
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    log('warn, TypeScript type tests failed', error.message)}
-}
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
 function generateRecommendations() {}
   const recommendations = [];
   const { total, passed, failed, coverage } = testReport.summary;
   
   if (total === 0) {}
     recommendations.push({})
-
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-function generateRecommendations() {}
-  const recommendations = []
-  const { total, passed, failed, coverage } = testReport.summary,
-  if($2) {}
-    recommendations.push({})
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
@@ -347,10 +230,6 @@ async function main() {}
     testReport.recommendations = generateRecommendations();
     
     // Display summary;
-
-    process.exit(1)};
-main();
-`;
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
     log('info', `Total "tests": ${testReport.summary.total}`);

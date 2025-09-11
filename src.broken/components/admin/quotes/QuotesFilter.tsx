@@ -7,3 +7,5 @@ export function QuotesFilter() {
     </div>
   )
 }
+  );
+};

@@ -7,3 +7,5 @@ export function ComparisonSection() {
     </div>
   )
 }
+  );
+};

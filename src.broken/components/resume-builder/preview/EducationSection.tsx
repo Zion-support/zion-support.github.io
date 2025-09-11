@@ -7,3 +7,5 @@ export function EducationSection() {
     </div>
   )
 }
+  );
+};

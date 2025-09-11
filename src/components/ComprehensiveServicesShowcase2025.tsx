@@ -1,0 +1,10 @@
+import React from 'react';
+import { _ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+';
+  'Advanced': 1", 'Cutting-edge': "2",;  ;
+  ;
+  ;
+  ;
+  'Revolutionary': "3 ;
+;
+"};

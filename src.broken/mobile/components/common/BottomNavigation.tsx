@@ -7,3 +7,5 @@ export function BottomNavigation() {
     </div>
   )
 }
+  );
+};

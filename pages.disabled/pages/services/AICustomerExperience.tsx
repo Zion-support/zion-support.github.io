@@ -14,27 +14,27 @@ import: {}
   Star,
   Target,
   BarChart3,
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx 
 
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700'>
               Start Free Trial'
             </Button>''
             <Button'''
-              size='lg'';
-              variant='outline'';
-              className='border-white text-white hover:bg-white hover:text-slate-900';
+              size='lg'' 
+              variant='outline'' 
+              className='border-white text-white hover:bg-white hover:text-slate-900' 
           </div>'
 '''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center>
             <Button'''
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700''>
               Start Free Trial
             </Button>'
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hove,
     r:bg-white hove,
     r:text-slate-900''>
@@ -343,9 +343,9 @@ import: {}
                 Healthcare''
               </h3>'''
               <p className='text-gray-300'>
-                Patient experience optimization, appointment scheduling, and;
+                Patient experience optimization, appointment scheduling, and 
                 health monitoring'
-              </p>            </Card>';
+              </p>            </Card>' 
 '''
             <Card className='bg-slate-800/50 border-slate-700 p-6>''
               <div className='w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4>''
@@ -500,7 +500,7 @@ import: {}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>''
         <div className='max-w-4xl mx-auto text-center>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-8'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx 
 
           </p>'
           </p>'
@@ -524,37 +524,37 @@ import: {}
               <Globe className='w-5 h-5 text-pink-400'  />              <span>ziontechgroup.com</span>
             </div>
 
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700'>
               Start Free Trial'
             </Button>''
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hover:bg-white hover:text-slate-900'>
               Schedule Demo'
             </Button>''
             <Button'''
-              size='lg'';
-              variant='outline'';
-              className='border-white text-white hover:bg-white hover:text-slate-900';
+              size='lg'' 
+              variant='outline'' 
+              className='border-white text-white hover:bg-white hover:text-slate-900' 
           </div>'
 '''
           <div className='flex flex-col sm:flex-row gap-4 justify-center>
             <Button'''
-              size='lg'';
+              size='lg'' 
               className='bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700''>
               Start Free Trial
             </Button>'
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hover:bg-white hover:text-slate-900''>
               Schedule Demo
             </Button>'
             <Button'''
-              size='lg'';
-              variant='outline'';
+              size='lg'' 
+              variant='outline'' 
               className='border-white text-white hove,
     r:bg-white hove,
     r:text-slate-900''>
@@ -566,6 +566,6 @@ import: {}
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx 
 
 

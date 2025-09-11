@@ -24,8 +24,7 @@ interface SmartNotificationSystemProps {;
 ;
 "};
 ;
-const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ enabled = true "}) => {;
-  id: string;
+const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ enabled = true "}) => {;  id: string;
   title: string;
   message: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'system';
@@ -41,13 +40,12 @@ const "SmartNotificationSystem": "React.FC<SmartNotificationSystemProps> = ({ en
   action: () => void;';';
 ;
   label: string;
-  action: () => void;
-  label: string;
+  action: () => void;  label: string;
   action: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
 interface SmartNotificationSystemProps {
-  // Add your props here: any
+  // Add your props here: any;
 };
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
   if(!enabled) return null;
@@ -59,8 +57,3 @@ export default SmartNotificationSystem;
 ;
 </SmartNotificationSystemProps>;
 ;,"});})";
-;
-</SmartNotificationSystemProps>;
-;,"}
-    );,})";
-</SmartNotificationSystemProps>

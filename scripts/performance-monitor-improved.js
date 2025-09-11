@@ -1,22 +1,3 @@
-#!/usr/bin/env: node;
-/**;
-
-      console.log('🔍 Collecting performance metrics...');
-      // Collect system metrics;
-      await this.collectSystemMetrics();
-
-      // Collect application metrics;
-      await this.collectApplicationMetrics();
-      // Collect build metrics;
-      await this.collectBuildMetrics();
-      // Save metrics;
-      await this.saveMetrics();
-      // Display summary;
-      this.displaySummary();
-
-      console.error('❌ Error during performance monitoring:', error.message);
-      this.metrics.errors.push({;
-        timestamp: new Date().toISOString(),;
-        error: error.message,;
-        stack: error.stack})}
-  }
+#!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.metrics: = { timestamp: new Date().toISOString(),system: "",{},application: "",{},build: "",{},errors: "[",]} this.logFile: = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.");";'"'"
+#!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";

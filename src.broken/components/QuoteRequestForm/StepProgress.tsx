@@ -7,3 +7,5 @@ export function StepProgress() {
     </div>
   )
 }
+  );
+};

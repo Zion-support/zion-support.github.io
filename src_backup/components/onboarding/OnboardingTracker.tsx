@@ -1,1 +1,0 @@
-          style={ width: `${progress}%` }

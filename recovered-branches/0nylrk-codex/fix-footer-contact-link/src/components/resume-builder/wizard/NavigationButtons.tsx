@@ -1,117 +1,84 @@
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
-import {NavigationButtonsProps} from "./types";export const NavigationButtons = ({;
+import {NavigationButtonsProps} from "./types";
+export const NavigationButtons = ({;
   onBack;
   onNext;
-  isNextDisabled = false;"
-  backLabel = "Back";"
+  isNextDisabled = false;
+  backLabel = "Back";
   nextLabel = "Next";
+
+
+=======
+import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { NavigationButtonsProps } from "./types",
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { NavigationButtonsProps } from "./types",
+
+export const NavigationButtons = ({
   onBack,
   onNext,
-  isNextDisabled = false,"
-  backLabel = "Back","
+  isNextDisabled = false,
+  backLabel = "Back",
   nextLabel = "Next",
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
-        <Button variant="outline" onClick={onBack}>  isLoading = false}: NavigationButtonsProps) => {;
-  return (
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant="outline" onClick={onBack}>;
-
-          {backLabel}
-        </Button>;
-      )}
-
-      {onNext && (;
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+        <Button variant="outline" onClick={onBack}>
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { NavigationButtonsProps } from "./types",;
+export const NavigationButtons = ({;
+  onBack,;
+  onNext,;
+  isNextDisabled = false,;
+  backLabel = "Back",;
+  nextLabel = "Next";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isLoading = false}: NavigationButtonsProps) => {;
-  return (;
+  return (
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
 
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {backLabel}
-        </Button>
-      )}
-      {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>
-      )}
-      {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>"
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>
-      )}
-    </div>
-  )
-}
-
-
-    </div>;
-  );
-
-      {onNext && (
-
-
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>
+        </Button>;
       )}
 
       {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+
+=======
       {onNext && (
 
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
 
+
+
     </div>;
   );
+
+=======
+=======
     </div>;
-  )
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
-import { Button } from '@/components / ui / button';
-import { Loader2 } from './lucide-react';
-import { NavigationButtonsProps } from './types';
-export const NavigationButtons = ({
-  on_back;
-  on_next;
-  isNextDisabled = false;
-  back_label = "Back";
-  next_label = "Next";
-  is_loading = false}: NavigationButtonsProps) =>: any {
-  return (
-    <div className="flex justify-between">;
-      {on_back && (
-        <Button variant="outline" on_click={on_back}>;
-          {back_label}
-        </Button>)}
-      {on_next && (
-        <Button on_click={on_next} disabled={isNextDisabled || is_loading}>;
-          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
-          {next_label}
-        </Button>)}
-    </div>);
-}
-;

@@ -1,9 +1,9 @@
 
-:pages.disabled/pages/services/ITHelpdesk.tsx;
+:pages.disabled/pages/services/ITHelpdesk.tsx 
 
-  $199/mo;
-  ', details: ['3: agent,s,Email support',;
-  ,KB;
+  $199/mo 
+  ', details: ['3: agent,s,Email support', 
+  ,KB 
 
               </li>
             ))}
@@ -16,7 +16,7 @@
                 <div className='text-lg font-semibold mb-1'>{p.name}</div>'''
                 <div className='text-2xl font-bold text-zion-cyan mb-2'>{p.price}</div>'''
                 <ul className='text-sm text-zion-slate-dark space-y-1'>
-                  {p.details.map((d: unknown (<li key={d}>{d}</li>));
+                  {p.details.map((d: unknown (<li key={d}>{d}</li>)) 
                 </ul>
               </div>'
 :pages.disabled/pages/services/ITHelpdesk.tsx))}</div>''          <div className='mt-6 flex gap-3>''

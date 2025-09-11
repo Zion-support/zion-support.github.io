@@ -49,7 +49,7 @@ export default ProductManagementChat;
         <h1>ProductManagementChat</h1>
         <p>Blog content coming soon...</p>
 
-        <a href=&quot;/blog&quot;>Back to Blog</a>
+        <a href="/blog">Back to Blog</a>
   return (import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 
@@ -125,7 +125,7 @@ export default ProductManagementChat;ursor/fix-website-loading-errors-and-merge-
 export default ProductManagementChat;<main />;
         <h1 />ProductManagementChat</h1>;
         <p />Blog content coming soon...</p>;
-        <a href=&quot;/blog&quot; />Back to Blog</a>;
+        <a href="/blog" />Back to Blog</a>;
       </main>;
     </div>;
   )},export default ProductManagementChat;
@@ -150,7 +150,7 @@ export default ProductManagementChat;
       <main />
         <h1 />ProductManagementChat</h1>
         <p />Blog content coming soon...</p>
-        <a href=&quot;/blog&quot; />Back to Blog</a>
+        <a href="/blog" />Back to Blog</a>
       </main>
     </div>
   )

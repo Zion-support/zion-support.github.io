@@ -28,9 +28,5 @@ return (;
   return (<div>;
       <Head>;
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
-
-
-
-
-
-
+  );
+};

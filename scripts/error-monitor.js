@@ -1,147 +1,182 @@
-    this.ensureDirectories()}
-    
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const util = require('util');
+
+const execAsync = util.promisify(exec);
+
+class ErrorMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs', 'error-monitor.log');
+    this.lastCheck = Date.now();
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(logMessage.trim());
+
+    // Ensure logs directory exists
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+
     fs.appendFileSync(this.logFile, logMessage);
   }
-  async checkESLintErrors() {;
-    try {;
-      this.log(;
-  'info',;
-  'Checking ESLint errors...');
-      const result = execSync(;
-  'npm run lint' {;
-        cwd: path.join(__dirname,;
-,;
-  ..'),;
-        encoding: 'utf8,;
-        timeout: 60000});
-      this.log(;
-  'info',;
-  'ESLint check passed')      return { success: true, errors: [] }
-    } catch (error) {;
-      const errorOutput = error.stdout || error.message;
-      const errors = this.parseESLintErrors(errorOutput);
-      this.log(;
-  'error', `ESLint check failed with ${errors.length} errors`)      return { success: false, errors }
+
+  async checkBuildErrors() {
+    try {
+      this.log('Checking for build errors...');
+      const { stdout, stderr } = await execAsync('npm run build', { 
+        cwd: this.projectRoot,
+        timeout: 60000 
+      });
+
+      if (stderr && stderr.includes('Error:')) {
+        this.log(`Build error detected: ${stderr}`);
+        return { hasErrors: true, error: stderr };
+      }
+
+      this.log('Build check passed');
+      return { hasErrors: false };
+    } catch (error) {
+      this.log(`Build check failed: ${error.message}`);
+      return { hasErrors: true, error: error.message };
     }
   }
-  async checkBuildErrors() {;
-    try {;
-      this.log(;
-  'info',;
-  'Checking build errors...');
-      const result = execSync(;
-  'npm run build' {;
-        cwd: path.join(__dirname,;
-,;
-  ..'),;
-        encoding: 'utf8,;
-        timeout: 300000 // 5 minutes});
-      this.log(;
-  'info',;
-  'Build check passed')      return { success: true, errors: [] }
-    } catch (error) {;
-      const errorOutput = error.stdout || error.message;
-      const errors = this.parseBuildErrors(errorOutput);
-      this.log(;
-  'error', `Build check failed with ${errors.length} errors`)      return { success: false, errors }
+
+  async checkLintErrors() {
+    try {
+      this.log('Checking for lint errors...');
+      const { stdout, stderr } = await execAsync('npm run lint', { 
+        cwd: this.projectRoot,
+        timeout: 30000 
+      });
+
+      if (stderr && stderr.includes('error')) {
+        this.log(`Lint error detected: ${stderr}`);
+        return { hasErrors: true, error: stderr };
+      }
+
+      this.log('Lint check passed');
+      return { hasErrors: false };
+    } catch (error) {
+      this.log(`Lint check failed: ${error.message}`);
+      return { hasErrors: true, error: error.message };
     }
   }
-  parseTypeScriptErrors(output) {;
-    const errors = [];
-    const lines = output.split(,;
-  \n');
-        for (const line of lines) {;
-      if (line.includes(;
-  ': error TS)) {;
-        const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
-        if (match) {;
-          errors.push({;
-            type:;
-  'typescript',;
-            file: match[1],;
-            line: parseInt(match[2]),;
-            column: parseInt(match[3]),;
-            code: match[4],;
-            message: match[5],;
-            raw: line})}
+
+  async checkMergeConflicts() {
+    try {
+      this.log('Checking for merge conflicts...');
+      const { stdout } = await execAsync('grep -r "        cwd: this.projectRoot 
+      });
+
+      if (stdout.trim()) {
+        this.log(`Merge conflicts detected in: ${stdout}`);
+        return { hasErrors: true, error: stdout };
+      }
+
+      this.log('No merge conflicts found');
+      return { hasErrors: false };
+    } catch (error) {
+      this.log(`Merge conflict check failed: ${error.message}`);
+      return { hasErrors: true, error: error.message };
+    }
+  }
+
+  async checkDependencies() {
+    try {
+      this.log('Checking dependencies...');
+      const { stdout, stderr } = await execAsync('npm audit --audit-level=high', { 
+        cwd: this.projectRoot,
+        timeout: 30000 
+      });
+
+      if (stderr && stderr.includes('found')) {
+        this.log(`Security vulnerabilities detected: ${stderr}`);
+        return { hasErrors: true, error: stderr };
+      }
+
+      this.log('Dependencies check passed');
+      return { hasErrors: false };
+    } catch (error) {
+      this.log(`Dependencies check failed: ${error.message}`);
+      return { hasErrors: true, error: error.message };
+    }
+  }
+
+  async runChecks() {
+    this.log('Starting error monitoring cycle...');
+
+    const checks = [
+      { name: 'Build', fn: () => this.checkBuildErrors() },
+      { name: 'Lint', fn: () => this.checkLintErrors() },
+      { name: 'Merge Conflicts', fn: () => this.checkMergeConflicts() },
+      { name: 'Dependencies', fn: () => this.checkDependencies() }
+    ];
+
+    const results = [];
+
+    for (const check of checks) {
+      try {
+        const result = await check.fn();
+        results.push({
+          name: check.name,
+          ...result
+        });
+      } catch (error) {
+        this.log(`Error in ${check.name} check: ${error.message}`);
+        results.push({
+          name: check.name,
+          hasErrors: true,
+          error: error.message
+        });
       }
     }
-    return errors}
-  parseESLintErrors(output) {;
-    const errors = [];
-    const lines = output.split(,;
-  \n');
-        for (const line of lines) {;
-      if (line.includes(;
-  'error') || line.includes(;
-  'warning')) {;
-        errors.push({;
-          type: 'eslint,;
-          message: line.trim(),;
-          raw: line})}
-    }
-    return errors}
-  parseBuildErrors(output) {;
-    const errors = [];
-    const lines = output.split(,;
-  \n');
-        for (const line of lines) {;
-      if (line.includes(;
-  'Error: ') || line.includes(;
-  'ERROR')) {;
-        errors.push({;
-          type:;
-  'build,;
-          message: line.trim(),;
-          raw: line})}
-    )}
-          typ,
-    e:;
-  'build,
 
-          message: line.trim(),
-          severity: 'error'
-        })}
-    }
+    const errorCount = results.filter(r => r.hasErrors).length;
+    this.log(`Error monitoring cycle completed. Found ${errorCount} issues.`);
 
-      this.log(
-  'error'',;
-  'Failed: to trigger auto-fixer', error)}'}
-  async: generateReport() {
-    const timestamp = new Date().toISOString();
-    const: reportFile = path.join(
-      this.errorReportDir,
-      `error-monitor-report-${Date.now()}.json`);
-    const: report = {
-      timestamp,
+    // Save results to file
+    const reportFile = path.join(this.projectRoot, 'error-monitor-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify({
+      timestamp: new Date().toISOString(),
+      results,
       summary: {
+        totalChecks: results.length,
+        errorCount,
+        status: errorCount > 0 ? 'issues_found' : 'healthy'
+      }
+    }, null, 2));
 
+    return results;
   }
 
-  async generateErrorReport() {
-    if (this.errors.length === 0) {
-      this.log('info,No errors to report');
-      return}
+  async start() {
+    this.log('Error Monitor started');
 
-    const report = {
+    // Run initial check
+    await this.runChecks();
 
-  'error',
-  'Error monitoring cycle failed', error)}
-
+    // Set up interval for continuous monitoring
+    setInterval(async () => {
+      await this.runChecks();
+    }, 5 * 60 * 1000); // Every 5 minutes
   }
 }
-// Run: if called directly;
-const: isMainModule = import.meta.url === `file: //${process.argv[1]}`;
-if: (isMainModule) {
+
+// Start the monitor if this script is run directly
+if (require.main === module) {
   const monitor = new ErrorMonitor();
-  // Run: once immediately;
-  monitor.run().then(() => {
-    // Set: up periodic monitoring (every 10 minutes);
-    setInterval(() => {
-
+  monitor.start().catch(error => {
+    console.error('Error Monitor failed to start:', error);
+    process.exit(1);
+  });
 }
 
-export default ErrorMonitor;
-
-
-
+module.exports = ErrorMonitor;

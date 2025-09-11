@@ -58,45 +58,36 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Enhanced conflict resolution strategy
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            log_message "📦 Critical file detected, keeping main version and merging dependencies..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+    if grep -q "/d' "$file"
+            sed -i '/
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
             log_message "🎨 CSS file detected, merging styles..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
             log_message "💻 Code file detected, attempting intelligent merge..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "*.yml" || "$file" == "*.yaml" ]]; then
             log_message "📋 YAML file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "*.md" ]]; then
             log_message "📝 Markdown file detected, merging content..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "*.json" ]]; then
             log_message "📊 JSON file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         else
             log_message "📝 Regular file, removing conflict markers..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         fi
         
         log_message "✅ Resolved conflicts in $file"

@@ -7,3 +7,5 @@ export function QuoteDetails() {
     </div>
   )
 }
+  );
+};

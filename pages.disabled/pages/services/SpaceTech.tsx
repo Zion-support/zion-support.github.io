@@ -92,10 +92,10 @@ import {}
 '{/* Features Section */}      <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/SpaceTech.tsx;
+:pages.disabled/pages/services/SpaceTech.tsx 
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/SpaceTech.tsx'
@@ -118,8 +118,8 @@ import {}
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map(servic,
-    e: unknown, index: unknown();
-              <motion.div;
+    e: unknown, index: unknown() 
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200>'
@@ -142,8 +142,8 @@ import {}
       </section>
 
             <div className='space-y-6'>
-              {benefits.slice(0, 3).map(benefit: unknown, index: unknown();
-                <motion.div;
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown() 
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                  className='flex items-start space-x-3>'
@@ -152,9 +152,9 @@ import {}
 :pages.disabled/pages/services/SpaceTech.tsx))}
             </div>'''
             <div className='space-y-6'>
-              {benefits.slice(3).map(benefit: unknown, index: unknown();
+              {benefits.slice(3).map(benefit: unknown, index: unknown() 
 
-                <motion.div;
+                <motion.div 
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                  className='flex items-start space-x-3>'
@@ -167,7 +167,7 @@ import {}
         </div>
       </section>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200''>''
@@ -208,12 +208,12 @@ import {}
         </div>
       </section>
 
-              Join organizations worldwide that use our space technology;
+              Join organizations worldwide that use our space technology 
               solutions to explore new frontiers and solve global challenges.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hove,
-    r:to-pink-600 transition-all duration-200 flex items-center justify-center>;
+    r:to-pink-600 transition-all duration-200 flex items-center justify-center> 
                 Get Started Today'''
                 <ArrowRight className='w-5 h-5 ml-2'  /></button>'              <button className='px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-500/10 transition-all duration-200'>                Contact Sales

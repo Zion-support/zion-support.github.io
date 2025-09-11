@@ -8,3 +8,5 @@ export export export default function performance-monitor()   {,
     </div>
   )
 }
+  );
+};

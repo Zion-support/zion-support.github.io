@@ -26,3 +26,5 @@ interface: ButtonProps extends React.PropsWithChildren<{
 export type { ButtonProps }
 
 }}}
+  );
+};

@@ -174,7 +174,3 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
-
-
-
-

@@ -7,3 +7,5 @@ export function RaiseDisputeButton() {
     </div>
   )
 }
+  );
+};

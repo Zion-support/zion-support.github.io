@@ -14,30 +14,23 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" || "$file" == "yarn.lock" ]]; then
-            echo "📦 Critical file detected, keeping main version..."
-            # For package files, keep main version
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+    if grep -q "/d' "$file"
+            sed -i '/
         elif [[ "$file" == "tsconfig.json" || "$file" == "vite.config.ts" || "$file" == "tailwind.config.ts" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
             # For config files, keep main version
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         elif [[ "$file" == "src/App.tsx" ]]; then
             echo "🚀 App.tsx detected, using our clean resolved version..."
             # We already resolved this file, so we'll keep our version
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         else
             echo "📝 Regular file, attempting to merge both versions..."
             # For regular files, try to merge both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
+            sed -i '/
+            sed -i '/
         fi
         
         echo "✅ Resolved conflicts in $file"

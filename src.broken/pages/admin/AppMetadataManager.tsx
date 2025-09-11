@@ -7,3 +7,5 @@ export function AppMetadataManager() {
     </div>
   )
 }
+  );
+};

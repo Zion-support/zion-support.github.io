@@ -41,7 +41,7 @@ className?: string;
 import { Card, CardContent  } from '@/components/ui/card';
 import { Check  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
-import React from "react",interface FeatureHighlightsProps  {className?: string;
+import React from "react";interface FeatureHighlightsProps  {className?: string;
   style?: React.CSSProperties;
 }export function FeatureHighlights() {const highlightsData  = null;return (import { Card, CardContent  } from '@/components / ui / card';
 import { cn  } from '@/lib / utils';

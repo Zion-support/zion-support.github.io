@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-08-26T15:51:36.073Z",
+<<<<<<< HEAD
+  "generatedAt": "2025-08-26T13:16:08.161Z",  "functions": [],
+  "generatedAt": "2025-08-26T23:12:06.682Z"
+=======
+  "generatedAt": "2025-08-26T12:39:05.863Z",
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
+>>>>>>> origin/chore/site-link-fixes
 }
