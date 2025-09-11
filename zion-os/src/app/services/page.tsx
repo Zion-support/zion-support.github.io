@@ -1,4 +1,3 @@
-
 import Link from 'next / link';
 export default /**
  * ServicesPage - Function description
@@ -7,8 +6,6 @@ function ServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
 import Link from 'next/link';
-<<<<<<< HEAD
-
 export default function ServicesPage() {
   const services = [
     {
@@ -128,7 +125,6 @@ export default function ServicesPage() {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen py-20">
       {/* Header */}
@@ -143,7 +139,6 @@ export default function ServicesPage() {
           </p>
         </div>
       </div>
-
       {/* Services by Category */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         {services.map((category, categoryIndex) => (
@@ -180,7 +175,6 @@ export default function ServicesPage() {
           </div>
         ))}
       </div>
-
       {/* Additional Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -201,7 +195,6 @@ export default function ServicesPage() {
               Learn More →
             </Link>
           </div>
-
           <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-white/10 rounded-xl p-6 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,7 +209,6 @@ export default function ServicesPage() {
               Learn More →
             </Link>
           </div>
-
           <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-white/10 rounded-xl p-6 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -233,7 +225,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -255,7 +246,6 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-=======
 export default function ServicesPage() {return (;
 export default function ServicesPage() {;
   return (;
@@ -836,5 +826,4 @@ export default function ServicesPage() {;
         </div>;
       </section>;
     </div>);
->>>>>>> main
 }

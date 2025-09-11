@@ -1,13 +1,10 @@
-
-    return res.status(200).json(profile);
-
+return res.status(200).json(profile);
   try {
     const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
   } catch (e: any) {
     const { address } = req && req.query as { address?: string };
-
     const { address } = req && req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
@@ -32,7 +29,6 @@ function handler() {
     return res.status (200).json (profile);
   try {;
     const { address } = req.query as { address?: string };
-
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
     const { address } = req.query as { address?: string }
@@ -42,10 +38,8 @@ function handler() {
     return res.status(200).json(profile);
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
-
   }
-
 }
     return res.status(500).json({ error: e.message })
   };
-}<<<<<<< HEAD
+}

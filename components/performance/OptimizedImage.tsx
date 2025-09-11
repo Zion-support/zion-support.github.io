@@ -17,18 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
 interface OptimizedImageProps {;
   src: string, alt: string,;
-
-=======
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   src: string;
   alt: string;
   width?: number;
@@ -37,12 +30,8 @@ interface OptimizedImageProps {
   className?: string;
   sizes?: string;
 }
-
-const OptimizedImage: React.FC < OptimizedImageProps> = ({=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src: string, alt: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   width?: number;
   height?: number;
   class_name?: string;
@@ -52,8 +41,6 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({=======
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
-
-<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -67,21 +54,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   style;
 }) => {;
   if (fill) {;
-
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   src,
   alt,
   width,
   height,
-<<<<<<< HEAD
   class_name = '',
-=======
-<<<<<<< HEAD
   priority = false,
   className,
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
@@ -99,11 +78,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     />
   );
 };
-
 export default OptimizedImage;
-=======
   className = '',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -124,30 +100,14 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
-
     <Image;
-
-
       style={style}
-
-
-
-
   );
 };
-
       style={style}
-
   );
 };
-
 export default OptimizedImage;
-<<<<<<< HEAD
-=======
 ;
 export default OptimizedImage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

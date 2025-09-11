@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
   const features = [
     {
->>>>>>> main
-
-
     }
   ]
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="hero-gradient absolute inset-0 -z-10"></div>
-          
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Launch Sovereign</span>
@@ -38,8 +32,6 @@ import FeatureCard from './components/FeatureCard'
 export default function HomePage() {
   const features = [
     {
-<<<<<<< HEAD
-=======
       icon: &quot;🚀&quot;
       title: &quot;One-Click Deployment&quot;
       description: &quot;Launch your complete digital economy in minutes with our unified deployment protocol.&quot;
@@ -50,7 +42,6 @@ export default function HomePage() {
         &quot;Blog + Roadmap Setup&quot;
       ]
       gradient: &quot;bg-gradient-to-r from-indigo-600 to-blue-600&quot;
->>>>>>> main
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
@@ -122,9 +113,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-<<<<<<< HEAD
   ];
-
   return (
     <div className="space-y-12">
       {/* Hero Section */}
@@ -140,7 +129,6 @@ export default function HomePage() {
             </span>
           </p>
         </div>
-        
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
             href="/multiverse/launch" 
@@ -156,7 +144,6 @@ export default function HomePage() {
           </a>
         </div>
       </div>
-
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="card card-hover">
@@ -177,7 +164,6 @@ export default function HomePage() {
             Get Started →
           </a>
         </div>
-
         <div className="card card-hover">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-green-700 rounded-lg flex items-center justify-center">
@@ -196,7 +182,6 @@ export default function HomePage() {
             Manage →
           </a>
         </div>
-
         <div className="card card-hover">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg flex items-center justify-center">
@@ -216,7 +201,6 @@ export default function HomePage() {
           </a>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="card text-center">
@@ -236,7 +220,6 @@ export default function HomePage() {
           <div className="text-white/60 text-sm">Support</div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="text-center py-12">
         <div className="card max-w-2xl mx-auto">
@@ -253,23 +236,16 @@ export default function HomePage() {
           </a>
         </div>
       </div>
-=======
   ],
   return (
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
-
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
-
-
               Built for the future of decentralized business.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
-
-
-
             <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
               for launching sovereign digital economies.
@@ -282,7 +258,6 @@ export default function HomePage() {
             </p>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-
             {features.map((feature, index) => (
               <FeatureCard
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
@@ -329,7 +304,6 @@ export default function HomePage() {
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="hero-gradient absolute inset-0 -z-10"></div>
-          
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Launch Sovereign</span>
@@ -341,12 +315,10 @@ export default function HomePage() {
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
-            
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
               Built for the future of decentralized business.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
@@ -369,7 +341,6 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
-
             {/* Quantum Computing */}
             <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -385,7 +356,6 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
-
             {/* Enterprise AI */}
             <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -401,7 +371,6 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
-
             {/* AI Consulting */}
             <div className="bg-gradient-to-br from-orange-900/20 to-red-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -417,7 +386,6 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
-
             {/* Autonomous Business Operations */}
             <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -433,7 +401,6 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
-
             {/* AI Research & Development */}
             <div className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -452,7 +419,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -472,7 +438,6 @@ export default function HomePage() {
             </p>
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}
@@ -486,7 +451,6 @@ export default function HomePage() {
         </div>;
       </section>;
       {/* CTA Section */}
-
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
@@ -494,8 +458,6 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
             <h2 className="text-4xl font-bold mb-6">
-
-
               Ready to Build the Future?
             </h2>
             <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
@@ -603,7 +565,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> main
     </div>
   )
 }

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 export default function AboutPage() {
   const values = [
     {
@@ -24,7 +22,6 @@ export default function AboutPage() {
       icon: "🌱"
     }
   ];
-
   const achievements = [
     {
       number: "50+",
@@ -47,7 +44,6 @@ export default function AboutPage() {
       description: "Round-the-clock technical support and maintenance services"
     }
   ];
-
   const team = [
     {
       name: "Dr. Kleber",
@@ -68,7 +64,6 @@ export default function AboutPage() {
       expertise: ["Software Architecture", "AI Platforms", "Enterprise Systems"]
     }
   ];
-
   return (
     <div className="min-h-screen py-20">
       {/* Header */}
@@ -83,7 +78,6 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-
       {/* Mission & Vision */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -101,7 +95,6 @@ export default function AboutPage() {
               intelligent business ecosystem of tomorrow.
             </p>
           </div>
-
           <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-white/10 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
             <p className="text-gray-300 mb-6">
@@ -117,7 +110,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       {/* Company Values */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -126,7 +118,6 @@ export default function AboutPage() {
             The principles that guide everything we do and every solution we create.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <div key={index} className="text-center">
@@ -137,7 +128,6 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
-
       {/* Achievements */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -146,7 +136,6 @@ export default function AboutPage() {
             Milestones that demonstrate our commitment to excellence and innovation.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {achievements.map((achievement, index) => (
             <div key={index} className="text-center bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
@@ -157,7 +146,6 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
-
       {/* Team */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -166,7 +154,6 @@ export default function AboutPage() {
             World-class experts in AI, autonomous systems, and enterprise technology.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
@@ -187,7 +174,6 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
-
       {/* Company History */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -196,7 +182,6 @@ export default function AboutPage() {
             From startup to industry leader in AI-powered enterprise solutions.
           </p>
         </div>
-
         <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
           <div className="space-y-8">
             <div className="flex items-start space-x-4">
@@ -211,7 +196,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-sm">2</span>
@@ -224,7 +208,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-sm">3</span>
@@ -237,7 +220,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-sm">4</span>
@@ -253,7 +235,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -275,10 +256,8 @@ export default function AboutPage() {
       </div>
     </div>
   );
-=======
 export default function AboutPage() {;
   return (;
-
     <div className="min-h-screen bg-white">;
 export default /**
  * AboutPage - Function description
@@ -494,5 +473,4 @@ export default function AboutPage() {;
         </div>;
       </section>;
     </div>);
->>>>>>> main
 }

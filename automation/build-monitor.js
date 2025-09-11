@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -14,12 +8,8 @@ class BuildMonitor {
   constructor() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -91,7 +81,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
   async run() {
     this.log('Starting build health check...');
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de  async checkBuildStatus() {
     try {
@@ -114,12 +103,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de  async checkBuildStatus() {
       }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -319,9 +304,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de  const command = process.argv[2];
   switch (command) {
@@ -349,15 +331,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de  const command = process.argv[2];
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-<<<<<<< HEAD
-
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
-
-=======
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -541,11 +514,4 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = BuildMonitor;

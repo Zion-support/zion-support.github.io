@@ -2,32 +2,25 @@ export default function UltraFuturisticBackground({ children }: { children: Reac
 	return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900">{children}</div>
 }
 import React from 'react';
-
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
-<<<<<<< HEAD
   className?: string;
 }
-
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ 
   children, 
   className = '' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     let animationFrameId: number;
     let particles: Particle[] = [];
     let holographicGrid: GridPoint[] = [];
     let time = 0;
-
     // Particle class for floating elements
     class Particle {
       x: number;
@@ -38,7 +31,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       color: string;
       alpha: number;
       type: 'energy' | 'data' | 'quantum';
-
       constructor(x: number, y: number, type: 'energy' | 'data' | 'quantum') {
         this.x = x;
         this.y = y;
@@ -47,7 +39,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         this.size = Math.random() * 3 + 1;
         this.type = type;
         this.alpha = Math.random() * 0.8 + 0.2;
-        
         switch (type) {
           case 'energy':
             this.color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
@@ -60,21 +51,17 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
             break;
         }
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
         this.alpha = 0.2 + 0.8 * Math.sin(time * 0.01 + this.x * 0.01);
-        
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = this.alpha;
         ctx.fillStyle = this.color;
-        
         switch (this.type) {
           case 'energy':
             ctx.beginPath();
@@ -99,7 +86,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         }
         ctx.restore();
       }
-=======
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
   const getIntensityClasses = () => {
@@ -112,10 +98,8 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         return 'opacity-90';
       default:
         return 'opacity-60';
->>>>>>> main
     }
   };
-
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       {/* Animated background elements */}
@@ -126,5 +110,4 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
           <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
         </div>
       </div>
-      
       {/* Content */}

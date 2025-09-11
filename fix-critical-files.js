@@ -5,19 +5,12 @@ try {_; fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig()
 // Run the fixes;
 try {_; fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig(); fixVitestConfig();} catch (error) {_;  process.exit(1)};  ];
   return (;
-
-
-
     <div className="min-h-screen bg-gray-50 py-12">;
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">;
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold text-gray-900 mb-4">;
           {links && links.map((link, index) => (;
             <Link
-
-
-
-
           {links && links.map((link, index) => (;
             <Link
     { "to":"/services/ai-seo-optimizer", "label":"AI SEO Optimizer" }
@@ -35,7 +28,6 @@ try {_; fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig()
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {links.map((link, index) => (;
             <Link;
-
     { "to":"/services/ai-seo-optimizer", "label":"AI SEO Optimizer" };
 ;
   ],;
@@ -57,14 +49,9 @@ try {_; fixServicesIndex (); fix_solutions (); fixTailwindConfig (); fixViteConf
             Comprehensive technology solutions for your business;
           </p>;
         </div>;
-
           {links && links.map((link, index) => (;
             <Link
-
-
-
     { "to":"/services/ai-seo-optimizer", "label":"AI SEO Optimizer" }
-
   ],
   return (,
     <div className="min-h-screen bg-gray-50 py-12">,;
@@ -100,25 +87,13 @@ try {,;
   fixTailwindConfig(),;
   fixViteConfig(),;
   fixVitestConfig(),;
-<<<<<<< HEAD
-
   console && console.log("All critical files have been fixed!")} catch (error) {,;
   console && console.error("Error fixing "files":", error),;
-
   process && process.exit(1)};
-
 ;    { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" };
-
-=======
-=======
-
-
-=======
   console.log("All critical files have been fixed!")} catch (error) {,;
   console.error("Error fixing "files":", error),;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 // Run the fixes;
 console.log("Starting critical file fixes...");
 try {;
@@ -129,21 +104,9 @@ try {;
   fixVitestConfig();
   console.log("All critical files have been fixed!")} catch (error) {;
   console.error("Error fixing "files": ", error);
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
     { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
   process.exit(1)};
 ;    { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" };
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   ],
   return (,
     <div className="min-h-screen bg-gray-50 py-12">,
@@ -155,7 +118,6 @@ try {;
   return (,
   ],
   return (,
-
 #!/usr/bin/env node, import fs from "fs";
 import path from "path", const criticalFiles = [ "src/pages/services/index && index.tsx","src/pages/solutions && solutions.tsx","tailwind && tailwind.config.ts","vite && vite.config.ts","vitest ;
 import { Link } from "react-router-dom", const:ServicesIndex:React.FC  = () = > { const links = [ { t:o:"/ai-services",labe:l:"AI Services" },{ t:o:"/it-services",labe:l:"IT Services" },{ t:o:"/micro-saas",labe:l:"Micro SaaS" },{ t:o:"/services/ai-email-responder",labe:l:"AI Email Responder" },{ t:o:"/services/automated-follow-ups",labe:l:"Automated Follow-Ups" },{ t:o:"/services/ai-seo-optimizer",labe:l:"AI SEO Optimizer" } ], return (, <div className = "min-h-screen bg-gray-50 py-12"> <div className = "max-w-7xl mx-auto px-4:sm:px-6:lg:px-8"> <div className = "text-center mb-12"> <h1 className = "text-4xl font-bold text-gray-900 mb-4"> Our Services, </h1> <p className = "text-xl text-gray-600"> Comprehensive technology solutions for your business, </p> </div> , <div className = "grid grid-cols-1:md:grid-cols-2:lg:grid-cols-3 gap-6"> {links ; key = {index} to = {link && link.to} className = "block p-6 bg-white rounded-lg shadow-md:hover:shadow-lg transition-shadow" > <h3 className = "text-lg font-semibold text-gray-900"> {link && link.label} </h3> </Link>))} </div> </div> </div> )} export default ServicesIndex; `, fs && fs.writeFileSync("src/pages/services/index && index.tsx",content), console && console.log("Fixed src/pages/services/index && index.tsx")} , function fixSolutions() { const content = `import React from "react";
@@ -213,14 +175,10 @@ import react from "@vitejs/plugin-react", export default defineConfig({ plugins:
 import path from "path", const criticalFiles = [ "src/pages/services/index && index.tsx","src/pages/solutions && solutions.tsx","tailwind && tailwind.config.ts","vite && vite.config.ts","vitest ;
 import { Link } from "react-router-dom", const ServicesIndex: React.FC = () => { const links = [ { to: "/ai-services",label: "AI Services" },{ to: "/it-services",label: "IT Services" },{ to: "/micro-saas",label: "Micro SaaS" },{ to: "/services/ai-email-responder",label: "AI Email Responder" },{ to: "/services/automated-follow-ups",label: "Automated Follow-Ups" },{ to: "/services/ai-seo-optimizer",label: "AI SEO Optimizer" } ], return (, <div className="min-h-screen bg-gray-50 py-12">, <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">, <div className="text-center mb-12">, <h1 className="text-4xl font-bold text-gray-900 mb-4">, Our Services, </h1>, <p className="text-xl text-gray-600">, Comprehensive technology solutions for your business, </p>, </div>, , <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">, {links && links.map((link,index) => (, <Link, key={index} to={link && link.to} className="block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow", >, <h3 className="text-lg font-semibold text-gray-900">, {link && link.label} </h3>, </Link>))} </div>, </div>, </div>, )} export default ServicesIndex, `, fs && fs.writeFileSync("src/pages/services/index && index.tsx",content), console && console.log("Fixed src/pages/services/index ;
 import Head from "next/head";
-
-=======
     <div className=&quot;min-h-screen bg-gray-50 py-12&quot;>,
       <div className=&quot;max-w-7xl mx-auto px-4 &quot;sm&quot;: px-6 lg: px-8&quot;>,
         <div className=&quot;text-center mb-12&quot;>,
           <h1 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>,
-<<<<<<< HEAD
-=======
             Our Services,
           </h1>,
           <p className=&quot;text-xl text-gray-600&quot;>,
@@ -229,7 +187,6 @@ import Head from "next/head";
         </div>,
         <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3 gap-6">,          {links.map((link, index) => (,
             <Link,try {,
->>>>>>> origin/main
   fixServicesIndex(),
   fixSolutions(),
   fixTailwindConfig(),
@@ -237,15 +194,8 @@ import Head from "next/head";
   fixVitestConfig(),
   console.log("All critical files have been fixed!")} catch (error) {,
   console.error("Error fixing "files": ", error),
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
   process.exit(1)};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 #!/usr/bin/env node, import fs from "fs";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],test: { environment: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files:",error), process.exit(1)};
   "darkMode": "class",
   "theme": {
@@ -364,14 +314,7 @@ import react from "@vitejs/plugin-react", export default defineConfig({ plugins:
     server: { port: 3000}}), `, fs.writeFileSync("vite.config.ts",content), console.log("Fixed vite.config.ts")} , function fixVitestConfig() { const content = `import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],
     test: { environment: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files: ",error), process.exit(1)};
-<<<<<<< HEAD
-
     { "to":"/services/ai-seo-optimizer", "label":"AI SEO Optimizer" }
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
@@ -392,7 +335,6 @@ const ServicesIndex: React.FC = () => {;
     { to: "/services/ai-email-responder", label: "AI Email Responder" },
     { to: "/services/automated-follow-ups", label: "Automated Follow-Ups" },
     { to: "/services/ai-seo-optimizer", label: "AI SEO Optimizer" }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   ];
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
@@ -427,11 +369,6 @@ try {fixServicesIndex();
   fixTailwindConfig();
   fixViteConfig();
   fixVitestConfig();
-<<<<<<< HEAD
-
-
->>>>>>> origin/automation-improvements-final
-=======
   console.log("All critical files have been fixed!")} catch (error) {console.error("Error fixing "files":", error);
   process.exit(1)};    { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" }
   ]
@@ -529,19 +466,10 @@ import Head from "next/head";
 import Link from "next/link", export default function Solutions() { return (, <>, <Head>, <title>Solutions - Zion Tech Group</title>, <meta name="description" content="Technology solutions for your business" />, </Head>, <main className="min-h-screen bg-white">, <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">, <div className="text-center mb-16">, <h1 className="text-4xl font-bold text-gray-900 mb-6">, Our Solutions, </h1>, <p className="text-xl text-gray-600 max-w-3xl mx-auto">, Tailored technology solutions to meet your specific needs., </p>, </div>, , <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">, <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Enterprise Solutions, </h3>, <p className="text-gray-600 mb-4">, Scalable solutions for large organizations., </p>, <p className="text-blue-600 font-semibold">Custom pricing</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, SMB Solutions, </h3>, <p className="text-gray-600 mb-4">, Cost-effective solutions for small businesses., </p>, <p className="text-blue-600 font-semibold">Starting from $1,000/month</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Startup Solutions, </h3>, <p className="text-gray-600 mb-4">, Innovative solutions for growing startups., </p>, <p className="text-blue-600 font-semibold">Starting from $800/month</p>, </div>, </div>, , <div className="text-center mt-12">, <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">, Learn More, </Link>, </div>, </div>, </main>, </>)} `, fs.writeFileSync("src/pages/solutions.tsx",content), console.log("Fixed src/pages/solutions.tsx")} , function fixTailwindConfig() { const content = `import type { Config } from "tailwindcss", export default { content: [ "./src/pages*.{js,ts,jsx,tsx,mdx}","./src/components*.{js,ts,jsx,tsx,mdx}","./src/app*.{js,ts,jsx,tsx,mdx}"],darkMode: "class",theme: { extend: { colors: { zion: { 50: "#f0f9ff",100: "#e0f2fe",200: "#bae6fd",300: "#7dd3fc",400: "#38bdf8",500: "#0ea5e9",600: "#0284c7",700: "#0369a1",800: "#075985",900: "#0c4a6e",950: "#082f49"},gray: { 950: "#0a0a0a",960: "#050505",970: "#030303",980: "#020202",990: "#010101"},accent: { cyan: "#06b6d4",blue: "#3b82f6",purple: "#8b5cf6",pink: "#ec4899",emerald: "#10b981",amber: "#f59e0b",rose: "#f43f5e"}},animation: { "gradient": "gradient 6s ease infinite","pulse-slow": "pulse 4s cubic-bezier(0.4,0,0.6,1) infinite","bounce-slow": "bounce 3s infinite","spin-slow": "spin 8s linear infinite"},keyframes: { gradient: { "0%,100%": { "background-size": "200% 200%","background-position": "left center"},"50%": { "background-size": "200% 200%","background-position": "right center"}}},fontFamily: { sans: ["Inter","system-ui","sans-serif"]}}},plugins: [ require("@tailwindcss/forms"),require("@tailwindcss/typography"),require("@tailwindcss/aspect-ratio")]} satisfies Config, `, fs.writeFileSync("tailwind.config.ts",content), console.log("Fixed tailwind.config.ts")} , function fixViteConfig() { const content = `import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],server: { port: 3000}}), `, fs.writeFileSync("vite.config.ts",content), console.log("Fixed vite.config.ts")} , function fixVitestConfig() { const content = `import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],test: { environment: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files:",error), process.exit(1)}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Link from "next/link", export default function Solutions() { return (, <>, <Head>, <title>Solutions - Zion Tech Group</title>, <meta name="description" content="Technology solutions for your business" />, </Head>, <main className="min-h-screen bg-white">, <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">, <div className="text-center mb-16">, <h1 className="text-4xl font-bold text-gray-900 mb-6">, Our Solutions, </h1>, <p className="text-xl text-gray-600 max-w-3xl mx-auto">, Tailored technology solutions to meet your specific needs., </p>, </div>, , <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">, <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Enterprise Solutions, </h3>, <p className="text-gray-600 mb-4">, Scalable solutions for large organizations., </p>, <p className="text-blue-600 font-semibold">Custom pricing</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, SMB Solutions, </h3>, <p className="text-gray-600 mb-4">, Cost-effective solutions for small businesses., </p>, <p className="text-blue-600 font-semibold">Starting from $1,000/month</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Startup Solutions, </h3>, <p className="text-gray-600 mb-4">, Innovative solutions for growing startups., </p>, <p className="text-blue-600 font-semibold">Starting from $800/month</p>, </div>, </div>, , <div className="text-center mt-12">, <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">, Learn More, </Link>, </div>, </div>, </main>, </>)} `, fs && fs.writeFileSync("src/pages/solutions && solutions.tsx",content), console && console.log("Fixed src/pages/solutions && solutions.tsx")} , function fixTailwindConfig() { const content = `import type { Config } from "tailwindcss", export default { content: [ "./src/pages*.{js,ts,jsx,tsx,mdx}","./src/components*.{js,ts,jsx,tsx,mdx}","./src/app*.{js,ts,jsx,tsx,mdx}"],darkMode: "class",theme: { extend: { colors: { zion: { 50: "#f0f9ff",100: "#e0f2fe",200: "#bae6fd",300: "#7dd3fc",400: "#38bdf8",500: "#0ea5e9",600: "#0284c7",700: "#0369a1",800: "#075985",900: "#0c4a6e",950: "#082f49"},gray: { 950: "#0a0a0a",960: "#050505",970: "#030303",980: "#020202",990: "#010101"},accent: { cyan: "#06b6d4",blue: "#3b82f6",purple: "#8b5cf6",pink: "#ec4899",emerald: "#10b981",amber: "#f59e0b",rose: "#f43f5e"}},animation: { "gradient": "gradient 6s ease infinite","pulse-slow": "pulse 4s cubic-bezier(0 && 0.4,0,0 && 0.6,1) infinite","bounce-slow": "bounce 3s infinite","spin-slow": "spin 8s linear infinite"},keyframes: { gradient: { "0%,100%": { "background-size": "200% 200%","background-position": "left center"},"50%": { "background-size": "200% 200%","background-position": "right center"}}},fontFamily: { sans: ["Inter","system-ui","sans-serif"]}}},plugins: [ require("@tailwindcss/forms"),require("@tailwindcss/typography"),require("@tailwindcss/aspect-ratio")]} satisfies Config, `, fs && fs.writeFileSync("tailwind && tailwind.config.ts",content), console && console.log("Fixed tailwind ;
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],server: { port: 3000}}), `, fs && fs.writeFileSync("vite && vite.config.ts",content), console && console.log("Fixed vite ;
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],test: { environment: "jsdom"}}), `, fs && fs.writeFileSync("vitest && vitest.config.ts",content), console && console.log("Fixed vitest && vitest.config.ts")} , console && console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console && console.log("All critical files have been fixed!")} catch (error) { console && console.error("Error fixing files:",error), process ;
-import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],test: { environment: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files:",error), process.exit(1)}=======
-
-
+import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],test: { environment: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files:",error), process.exit(1)}
 import Link from "next/link", export default function Solutions() { return (, <>, <Head>, <title>Solutions - Zion Tech Group</title>, <meta name="description" content="Technology solutions for your business" />, </Head>, <main className="min-h-screen bg-white">, <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">, <div className="text-center mb-16">, <h1 className="text-4xl font-bold text-gray-900 mb-6">, Our Solutions, </h1>, <p className="text-xl text-gray-600 max-w-3xl mx-auto">, Tailored technology solutions to meet your specific needs., </p>, </div>, , <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">, <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Enterprise Solutions, </h3>, <p className="text-gray-600 mb-4">, Scalable solutions for large organizations., </p>, <p className="text-blue-600 font-semibold">Custom pricing</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, SMB Solutions, </h3>, <p className="text-gray-600 mb-4">, Cost-effective solutions for small businesses., </p>, <p className="text-blue-600 font-semibold">Starting from $1,000/month</p>, </div>, , <div className="p-6 border border-gray-200 rounded-lg">, <h3 className="text-xl font-semibold text-gray-900 mb-4">, Startup Solutions, </h3>, <p className="text-gray-600 mb-4">, Innovative solutions for growing startups., </p>, <p className="text-blue-600 font-semibold">Starting from $800/month</p>, </div>, </div>, , <div className="text-center mt-12">, <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">, Learn More, </Link>, </div>, </div>, </main>, </>)} `, fs && fs.writeFileSync("src/pages/solutions && solutions.tsx",content), console && console.log("Fixed src/pages/solutions && solutions.tsx")} , function fixTailwindConfig() { const content = `import type { Config } from "tailwindcss", export default { content: [ "./src/pages*.{js,ts,jsx,tsx,mdx}","./src/components*.{js,ts,jsx,tsx,mdx}","./src/app*.{js,ts,jsx,tsx,mdx}"],darkMode: "class",theme: { extend: { colors: { zion: { 50: "#f0f9ff",100: "#e0f2fe",200: "#bae6fd",300: "#7dd3fc",400: "#38bdf8",500: "#0ea5e9",600: "#0284c7",700: "#0369a1",800: "#075985",900: "#0c4a6e",950: "#082f49"},gray: { 950: "#0a0a0a",960: "#050505",970: "#030303",980: "#020202",990: "#010101"},accent: { cyan: "#06b6d4",blue: "#3b82f6",purple: "#8b5cf6",pink: "#ec4899",emerald: "#10b981",amber: "#f59e0b",rose: "#f43f5e"}},animation: { "gradient": "gradient 6s ease infinite","pulse-slow": "pulse 4s cubic-bezier(0 && 0.4,0,0 && 0.6,1) infinite","bounce-slow": "bounce 3s infinite","spin-slow": "spin 8s linear infinite"},keyframes: { gradient: { "0%,100%": { "background-size": "200% 200%","background-position": "left center"},"50%": { "background-size": "200% 200%","background-position": "right center"}}},fontFamily: { sans: ["Inter","system-ui","sans-serif"]}}},plugins: [ require("@tailwindcss/forms"),require("@tailwindcss/typography"),require("@tailwindcss/aspect-ratio")]} satisfies Config, `, fs && fs.writeFileSync("tailwind && tailwind.config.ts",content), console && console.log("Fixed tailwind ;
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],server: { port: 3000}}), `, fs && fs.writeFileSync("vite && vite.config.ts",content), console && console.log("Fixed vite ;
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()],test: { environment: "jsdom"}}), `, fs && fs.writeFileSync("vitest && vitest.config.ts",content), console && console.log("Fixed vitest && vitest.config.ts")} , console && console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console && console.log("All critical files have been fixed!")} catch (error) { console && console.error("Error fixing files:",error), process ;
@@ -553,7 +481,6 @@ import react from "@vitejs/plugin-react", export default defineConfig({ plugins:
 ;
   ],
   return (,
-
     <div className="min-h-screen bg-gray-50 py-12">,
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">,
         <div className="text-center mb-12">,
@@ -583,7 +510,6 @@ export default ServicesIndex,
 // Run the fixes,
 console.log ("Starting critical file fixes..."),
 try {,
-
   process.exit(1)};
   process.exit(1)};
   console.log("All critical files have been fixed!")} catch (error) {console.error("Error fixing "files":", error);
@@ -650,19 +576,11 @@ import Head from "next/head";
 import Link from "next/link", export default function Solutions() { return (; <> <Head> <title>Solutions - Zion Tech Group</title> <meta name = "description" content = "Technology solutions for your business" /> </Head> <main className = "min-h-screen bg-white"> <div className = "max-w-7xl mx-auto px-4:sm:px-6:lg:px-8 py-20"> <div className = "text-center mb-16"> <h1 className = "text-4xl font-bold text-gray-900 mb-6"> Our Solutions, </h1> <p className = "text-xl text-gray-600 max-w-3xl mx-auto"> Tailored technology solutions to meet your specific needs., </p> </div> , <div className = "grid:md:grid-cols-2:lg:grid-cols-3 gap-8"> <div className = "p-6 border border-gray-200 rounded-lg"> <h3 className = "text-xl font-semibold text-gray-900 mb-4"> Enterprise Solutions, </h3> <p className = "text-gray-600 mb-4"> Scalable solutions for large organizations., </p> <p className = "text-blue-600 font-semibold">Custom pricing</p> </div> , <div className = "p-6 border border-gray-200 rounded-lg"> <h3 className = "text-xl font-semibold text-gray-900 mb-4"> SMB Solutions, </h3> <p className = "text-gray-600 mb-4"> Cost-effective solutions for small businesses., </p> <p className = "text-blue-600 font-semibold">Starting from $1,000/month</p> </div> , <div className = "p-6 border border-gray-200 rounded-lg"> <h3 className = "text-xl font-semibold text-gray-900 mb-4"> Startup Solutions, </h3> <p className = "text-gray-600 mb-4"> Innovative solutions for growing startups., </p> <p className = "text-blue-600 font-semibold">Starting from $800/month</p> </div> </div> , <div className = "text-center mt-12"> <Link href = "/contact" className = "bg-blue-600 text-white px-8 py-3 rounded-lg:hover:bg-blue-700 transition-colors"> Learn More, </Link> </div> </div> </main> </>)} `, fs.writeFileSync("src/pages/solutions.tsx",content), console.log("Fixed src/pages/solutions.tsx")} , function fixTailwindConfig() { const content = `import type { Config } from "tailwindcss", export default { conten:t:[ "./src/pages*.{js;ts,jsx,tsx,mdx}","./src/components*.{js,ts,jsx,tsx,mdx}","./src/app*.{js,ts,jsx,tsx,mdx}"],darkMod:e:"class",them:e:{ exten:d:{ color:s:{ zio:n:{ 5:0:"#f0f9ff",10:0:"#e0f2fe",20:0:"#bae6fd",30:0:"#7dd3fc",40:0:"#38bdf8",50:0:"#0ea5e9",60:0:"#0284c7",70:0:"#0369a1",80:0:"#075985",90:0:"#0c4a6e",95:0:"#082f49"},gra:y:{ 95:0:"#0a0a0a",96:0:"#050505",97:0:"#030303",98:0:"#020202",99:0:"#010101"},accen:t:{ cya:n:"#06b6d4",blu:e:"#3b82f6",purpl:e:"#8b5cf6",pin:k:"#ec4899",emeral:d:"#10b981",ambe:r:"#f59e0b",ros:e:"#f43f5e"}},animatio:n:{ "gradient":"gradient 6s ease infinite","pulse-slow":"pulse 4s cubic-bezier(0.4,0,0.6,1) infinite","bounce-slow":"bounce 3s infinite","spin-slow":"spin 8s linear infinite"},keyframe:s:{ gradien:t:{ "0%,100%":{ "background-size":"200% 200%","background-position":"left center"},"50%":{ "background-size":"200% 200%","background-position":"right center"}}},fontFamil:y:{ san:s:["Inter","system-ui","sans-serif"]}}},plugin:s:[ require("@tailwindcss/forms"),require("@tailwindcss/typography"),require("@tailwindcss/aspect-ratio")]} satisfies Config, `, fs.writeFileSync("tailwind.config.ts",content), console.log("Fixed tailwind.config.ts")} , function fixViteConfig() { const content = `import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugin:s:[react()];serve:r:{ por:t:3000}}), `, fs.writeFileSync("vite.config.ts",content), console.log("Fixed vite.config.ts")} , function fixVitestConfig() { const content = `import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugin:s:[react()];tes:t:{ environmen:t:"jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing:files:",error), process.exit(1)};  console.error("Error fixing "files": ", error);
-
 import Link from "next/link", export default function Solutions() { return (, <> <Head> <title>Solutions - Zion Tech Group</title> <meta name = "description" content = "Technology solutions for your business" /> </Head> <main className = "min-h-screen bg-white"> <div className = "max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-20"> <div className = "text-center mb-16"> <h1 className = "text-4xl font-bold text-gray-900 mb-6"> Our Solutions, </h1> <p className = "text-xl text-gray-600 max-w-3xl mx-auto"> Tailored technology solutions to meet your specific needs., </p> </div> , <div className = "grid: md:grid-cols-2: lg:grid-cols-3 gap-8"> <div className = "p-6 border border-gray-200 rounded-lg"> <h3 className = "text-xl font-semibold text-gray-900 mb-4"> Enterprise Solutions, </h3> <p className = "text-gray-600 mb-4"> Scalable solutions for large organizations., </p> <p className = "text-blue-600 font-semibold">Custom pricing</p> </div> , <div className = "p-6 border border-gray-200 rounded-lg"> <h3 className = "text-xl font-semibold text-gray-900 mb-4"> SMB Solutions, </h3> <p className = "text-gray-600 mb-4"> Cost-effective solutions for small businesses., </p> <p className = "text-blue-600 font-semibold">Starting from $1,000/month</p> </div> , <div className = "p-6 border border-gray-200 rounded-lg"> <h3 className = "text-xl font-semibold text-gray-900 mb-4"> Startup Solutions, </h3> <p className = "text-gray-600 mb-4"> Innovative solutions for growing startups., </p> <p className = "text-blue-600 font-semibold">Starting from $800/month</p> </div> </div> , <div className = "text-center mt-12"> <Link href = "/contact" className = "bg-blue-600 text-white px-8 py-3 rounded-lg: hover:bg-blue-700 transition-colors"> Learn More, </Link> </div> </div> </main> </>)} `, fs.writeFileSync("src/pages/solutions.tsx",content), console.log("Fixed src/pages/solutions.tsx")} , function fixTailwindConfig() { const content = `import type { Config } from "tailwindcss", export default { conten: t: [ "./src/pages*.{js,ts,jsx,tsx,mdx}","./src/components*.{js,ts,jsx,tsx,mdx}","./src/app*.{js,ts,jsx,tsx,mdx}"],darkMod: e: "class",them: e: { exten: d: { color: s: { zio: n: { 5: 0: "#f0f9ff",10: 0: "#e0f2fe",20: 0: "#bae6fd",30: 0: "#7dd3fc",40: 0: "#38bdf8",50: 0: "#0ea5e9",60: 0: "#0284c7",70: 0: "#0369a1",80: 0: "#075985",90: 0: "#0c4a6e",95: 0: "#082f49"},gra: y: { 95: 0: "#0a0a0a",96: 0: "#050505",97: 0: "#030303",98: 0: "#020202",99: 0: "#010101"},accen: t: { cya: n: "#06b6d4",blu: e: "#3b82f6",purpl: e: "#8b5cf6",pin: k: "#ec4899",emeral: d: "#10b981",ambe: r: "#f59e0b",ros: e: "#f43f5e"}},animatio: n: { "gradient": "gradient 6s ease infinite","pulse-slow": "pulse 4s cubic-bezier(0.4,0,0.6,1) infinite","bounce-slow": "bounce 3s infinite","spin-slow": "spin 8s linear infinite"},keyframe: s: { gradien: t: { "0%,100%": { "background-size": "200% 200%","background-position": "left center"},"50%": { "background-size": "200% 200%","background-position": "right center"}}},fontFamil: y: { san: s: ["Inter","system-ui","sans-serif"]}}},plugin: s: [ require("@tailwindcss/forms"),require("@tailwindcss/typography"),require("@tailwindcss/aspect-ratio")]} satisfies Config, `, fs.writeFileSync("tailwind.config.ts",content), console.log("Fixed tailwind.config.ts")} , function fixViteConfig() { const content = `import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugin: s: [react()],serve: r: { por: t: 3000}}), `, fs.writeFileSync("vite.config.ts",content), console.log("Fixed vite.config.ts")} , function fixVitestConfig() { const content = `import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react", export default defineConfig({ plugin: s: [react()],tes: t: { environmen: t: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing: files: ",error), process.exit(1)};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   console.log("All critical files have been fixed!");,
 } catch (error) {;
   console.error("Error fixing files:", error);
   process.exit(1);,
 }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

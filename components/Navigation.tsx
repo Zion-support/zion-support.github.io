@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -16,14 +14,10 @@ import {
   Linkedin, import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
-
 import {
-<<<<<<< HEAD
-
 import {;
   Menu,;
   X,;
@@ -46,11 +40,8 @@ import {;
   Globe,;
   BarChart3,;
   Search,;
-
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-=======
-=======
   Menu,
   X,
   ChevronDown,
@@ -70,29 +61,18 @@ import SearchModal from "./SearchModal";
   Shield,
   Zap,
   Globe,
-<<<<<<< HEAD
-<<<<<<< HEAD
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
-=======
   BarChart3
 } from 'lucide-react;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
   BarChart3,
   Search,
 } from "lucide-react";
 import SearchModal from "./SearchModal";
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
   BarChart3
 } from 'lucide-react;
-
-
-
   Menu
   X
   ChevronDown
@@ -116,22 +96,14 @@ import SearchModal from "./SearchModal";
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Navigation() {
-=======
 export default function Navigation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -165,7 +137,6 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
-
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -185,7 +156,6 @@ function Navigation() {
       icon: Shield
     }
   ];
-
 ;
   const solutions = [;
     {
@@ -194,7 +164,6 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
-
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -202,7 +171,6 @@ function Navigation() {
       icon: Zap
     }
     {
-
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -283,7 +251,6 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
-
     {
       name: "Training"
       href: "/training"
@@ -296,8 +263,6 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-
-
   const services = [;
     {;
       name: "AI Services",;
@@ -448,14 +413,9 @@ function Navigation() {
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
   ];
-
-
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
   ];
-
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <>;
@@ -576,10 +536,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
-
-
-
-
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -603,7 +559,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {solutions && solutions.map((solution, index) => {;
                           const IconComponent = solution && solution.icon;
-=======
                               href={service.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -654,15 +609,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
-
                 </AnimatePresence>;
               </div>;
-
-
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -700,11 +651,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
-
                 </AnimatePresence>;
               </div>;
-
-
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -742,39 +690,23 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
-
-
-=======
                 </AnimatePresence>;
               </div>;
-
               <Link
                 href="/pricing"
-<<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Pricing;
               </Link>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Pricing
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
-<<<<<<< HEAD
                 className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
                 aria-label="Search";
               >;
@@ -782,40 +714,22 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </button>;
               <Link
                 href="/contact"
-
-=======
                 className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
                 aria-label="Search"
               >
                 <Search className="w-5 h-5" />
               </button>
-<<<<<<< HEAD
               <Link 
                 href="/contact" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
-<<<<<<< HEAD
-
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               >
                 Get Started
               </Link>
@@ -847,9 +761,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               )}
             </button>;
           </div>;
-
-
-
                   >;
                     Pricing;
                   </Link>;
@@ -1119,8 +1030,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
           </AnimatePresence>;
         </div>;
       </nav>;
-
-
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
@@ -130,13 +128,9 @@ export default function CaseStudiesPage() {
       image: "/api/placeholder/600/400"
     }
   ];
-
   const industries = ["All Industries", "Financial Services", "Healthcare", "Manufacturing", "Government", "Logistics", "Environmental Science"];
-=======
 export default function CaseStudiesPage() {;
   return (;
->>>>>>> main
-
     <div className="min-h-screen py-20">;
 export default /**
  * CaseStudiesPage - Function description
@@ -149,7 +143,6 @@ export default function CaseStudiesPage() {;
   return (;
     <div className="min-h-screen py-20">;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
@@ -161,7 +154,6 @@ export default function CaseStudiesPage() {;
           </p>
         </div>
       </section>
-
       {/* Industry Filter */}
       <section className="py-12 px-4 border-b border-white/10">
         <div className="max-w-7xl mx-auto">
@@ -181,8 +173,6 @@ export default function CaseStudiesPage() {;
           </div>
         </div>
       </section>
-
-=======
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center">;
@@ -260,7 +250,6 @@ export default function CaseStudiesPage() {;
           </div>;
         </div>;
       </section>;
->>>>>>> main
       {/* Case Studies Grid */}
       <section className="mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -494,7 +483,6 @@ export default function CaseStudiesPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Write Your Success Story?</h2>
@@ -519,7 +507,6 @@ export default function CaseStudiesPage() {;
       </section>
     </div>
   );
-=======
       <section>;
         <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl font - bold text - white mb - 6">Ready to Create Your Success Story?</h2>;
@@ -543,5 +530,4 @@ export default function CaseStudiesPage() {;
         </div>;
       </section>;
     </div>);
->>>>>>> main
 }

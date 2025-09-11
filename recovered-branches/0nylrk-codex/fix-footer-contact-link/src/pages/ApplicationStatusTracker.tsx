@@ -1,17 +1,10 @@
-
-
-
-
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
-  
   const isMobile = useIsMobile();
-
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
-  
     <>
       <SEO
         title="Application Status Tracker | Zion AI Marketplace"
@@ -39,7 +32,6 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-
 }
 export default function ApplicationStatusTracker() {
   return (
@@ -56,18 +48,14 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
-
-
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
-
   return (
     <>;
       <SEO
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />;
-
 }
 export default function ApplicationStatusTracker() {;
   return (
@@ -117,12 +105,10 @@ export default /**
  * ApplicationStatusTracker - Function description
  */
 function ApplicationStatusTracker() {
-  return (=======
-    <ProtectedRoute>;
+  return (    <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-
 }
     </ProtectedRoute>;
   ),;
@@ -143,7 +129,4 @@ Application Status Tracker | Zion AI Marketplace"description=" Track the status 
 }
 ;
 }
-
-
-
-}<<<<<<< HEAD
+}
