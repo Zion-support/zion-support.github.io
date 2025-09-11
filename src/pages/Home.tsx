@@ -8,10 +8,11 @@ import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { ServicesShowcase } from "@/components/ServicesShowcase";
-import { EnhancedServicesOverview } from "@/components/home/EnhancedServicesOverview";
+// import { ServicesShowcase } from "@/components/ServicesShowcase";
+// import { EnhancedServicesOverview } from "@/components/home/EnhancedServicesOverview";
 import { EnhancedComprehensiveServicesShowcase } from "@/components/EnhancedComprehensiveServicesShowcase";
 import { ContactSection } from "@/components/ContactSection";
+import { PromoBanner } from "@/components/home/PromoBanner";
 
 export default function Home() {
   return (
@@ -28,12 +29,12 @@ export default function Home() {
       <HeroSection />
       <FeatureHighlights />
       
-      <ServicesShowcase />
+      {/* <ServicesShowcase /> */}
       
       {/* Enhanced Comprehensive Services Showcase */}
       <EnhancedComprehensiveServicesShowcase />
       
-      <EnhancedServicesOverview />
+      {/* <EnhancedServicesOverview /> */}
       
       <CategoriesSection />
       <BenefitsSection />
