@@ -1,17 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
-
-import { Cloud } from 'lucide-react';
-const technologies = [];
-const services = [];
-const solutions = [];
-const implementation = [];
-const _InnovativeServicesShowcase2025 = () => {
-=======
 import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase";
 const InnovativeServicesShowcase2025 = () => {
->>>>>>> origin/clean-error-fixing-automation
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -289,10 +278,5 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-=======
     </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default InnovativeServicesShowcase2025;

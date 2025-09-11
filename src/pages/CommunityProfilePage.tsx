@@ -1,20 +1,20 @@
 import { _useState, useEffect } from "react";
 import { _useParams, Link } from "react-router-dom";
-import { _SEO } from "@/components/SEO";
-import { _Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { _Button } from "@/components/ui/button";
-import { _Badge } from "@/components/ui/badge";
-import { _Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { _SEO } from "../components/SEO";
+import { _Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { _Button } from "../components/ui/button";
+import { _Badge } from "../components/ui/badge";
+import { _Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { _Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { _formatDistanceToNow } from "date-fns";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
+import PostCard from "../components/community/PostCard";
+import UserBadges from "../components/community/UserBadges";
+import ReputationDisplay from "../components/community/ReputationDisplay";
 
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { useParams } from 'react-router-dom';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 // Mock user data
 const _mockUser = {
     id: "user1",

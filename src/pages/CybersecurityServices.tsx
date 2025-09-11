@@ -1,13 +1,13 @@
 import React from 'react';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { _Button } from "@/components/ui/button";
-import { _Badge } from "@/components/ui/badge";
-import { _SEO } from "@/components/SEO";
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { _Button } from "../components/ui/button";
+import { _Badge } from "../components/ui/badge";
+import { _SEO } from "../components/SEO";
 import { _Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { _Link } from "react-router-dom";
 
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { CheckCircle } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Cloud } from 'lucide-react';

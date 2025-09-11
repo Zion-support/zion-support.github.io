@@ -29,7 +29,6 @@ export interface Innovative2026MicroSaasServiceV2 {
   rating: number;
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD:data-disabled/innovative-2026-micro-saas-v2.ts
   {
     id: "ai-business-intelligence-elite-2026",;
     name: "AI Business Intelligence Elite 2026",;

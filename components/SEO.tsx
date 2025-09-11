@@ -1,59 +1,171 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+
+
+import React from './react';
+import Head from './next / head';
+;
 import React from "react";
 import Head from "next/head";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import React from './react';
+import Head from './next / head';
+;
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React from "react";
+import Head from "next/head";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Head from "next/head";
+import { useRouter } from "next/router";
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React from "react";
+import Head from "next/head";
+origin/main
+origin/automation-improvements-final
+
+=======
+
+import React from "react";
+import Head from "next/head";
+
+
+
+=======
+import React from './react';
+import Head from './next / head';
+;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+
+>>>>>>> 6d72fcb6e43ee824c52724609027e0555356221c
 interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: any;
+}
+
+}) => {
+
+const SEO: React.FC<SEOProps> = ({;
+  title = "Zion Tech Group - Technology Solutions",;
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
+}) => {;
+  return (
+    <Head>;
+      <title>{title}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords} />;
+      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
+    </Head>;
+  );
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  keywords?: string;
+}
+=======const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  noIndex = false,
+  structuredData
+}) => {
+  const router = useRouter();
+  const currentUrl = `https://ziontechgroup.com${router.asPath}`;
+  const finalCanonical = canonical || currentUrl;
+  const finalOgTitle = ogTitle || title;
+  const finalOgDescription = ogDescription || description;
+
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+export default SEO;
+}
+=======
+  );
+
+
+};
+
+export default SEO;
+
+
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
   image?: string;
   url?: string;
   type?: string;
+}
+
 const SEO: React.FC<SEOProps> = ({
-  title;
-  description;
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group"
-  image = "https://ziontechgroup.com/og-image.png"
-  url = "https://ziontechgroup.com"
+  title,
+  description,
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",
+  image = "https://ziontechgroup.com/og-image.png",
+  url = "https://ziontechgroup.com",
   type = "website"
 }) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
   return (
-    <Head>
-      {/* comment */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description}    />
-      <meta name="keywords" content={keywords}    />
-      <meta name="author" content="Zion Tech Group"  />
-      <meta name="robots" content="index, follow"  />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
-      
-      {/* comment */}
-      <meta property="og:type" content={type}    />
-      <meta property="og:url" content={url}    />
-      <meta property="og:title" content={fullTitle}    />
-      <meta property="og:description" content={description}    />
-      <meta property="og:image" content={image}    />
-      <meta property="og:site_name" content="Zion Tech Group"  />
-      
-      {/* comment */}
-      <meta property="twitter:card" content="summary_large_image"  />
-      <meta property="twitter:url" content={url}    />
-      <meta property="twitter:title" content={fullTitle}    />
-      <meta property="twitter:description" content={description}    />
-      <meta property="twitter:image" content={image}    />
-      
-      {/* comment */}
-      <meta name="theme-color" content="#3B82F6"  />
-      <meta name="msapplication-TileColor" content="#3B82F6"  />
-      
-      {/* comment */}
-      <link rel="canonical" href={url}    />
-      
-      {/* comment */}
-      <link rel="icon" href="/favicon.ico"   />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />
-      <link rel="manifest" href="/site.webmanifest"   />
-      
-      {/* comment */}
-      <script type="application/ld+json"
+
+}
+export default SEO;
+
+
+<<<<<<< HEAD
+}
+export default SEO;
+}
+export default SEO;
+==============
+}
+export default SEO;=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <Head>;
+      <title>{title}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords} />;
+      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
+    </Head>);
+}
+;
+export default SEO;
+;
+export default SEO;

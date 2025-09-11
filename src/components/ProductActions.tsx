@@ -2,7 +2,7 @@
 import { _useState } from 'react';
 import { _Loader2 } from 'lucide-react';
 import { _toast } from 'react-toastify';
-import { _Button } from '@/components/ui/button';
+import { _Button } from '../components/ui/button';
 export function ProductActions({ onAddToCart }) {
     const [loading, setLoading] = useState(false);
     const [label, setLabel] = useState('Add to Cart');

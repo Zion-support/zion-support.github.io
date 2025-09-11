@@ -14,9 +14,6 @@ export function LoadingSpinner() {;
 import { _motion } from 'framer-motion';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-=======
 import { cn } from '@/lib/utils';
 export function LoadingSpinner({ size = 'md', variant = 'default', className = '', text }) {
     const sizeClasses = {
@@ -75,4 +72,3 @@ export function InlineLoader({ size = 'sm', variant = 'default' }) {
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

@@ -443,10 +443,8 @@ service, matchScore,;
 ;
 {"opacity": "0",;
   "y": "20"}} animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 ";
 "}} transition={{ "delay": "0.1 "}} className="bg-white rounded-lg shadow-lg p-6 mb-8">";
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">";
@@ -458,7 +456,6 @@ service, matchScore,;
           <div>";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>;
             <select value={clientProfile.industry"} onChange={;
-
         <div className="grid grid - cols - 1 "md": "grid - cols - 2 gap-6">;
           <div>;
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>;
@@ -673,7 +670,25 @@ Get AI Recommendations;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-
+;
+          </div> {/* comment */}";
+""}} transition="{{" "delay": "0.4 "}} className="mt-12 text-center">"";";
+            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";";
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"";";
+              <p className="text-xl mb-6 max-w-2xl mx-auto">;
+                Our expert team is ready to help you implement the perfect solution,;
+                for your business needs. Contact us today for a personalized consultation."";";
+              <div className = "flex flex-col "sm": "flex-row gap-4 justify-center">""",";
+                <Button className="bg-white text-zion-purple "hover": "bg-zion-slate-light" onClick = {"}">;
+" () => window.open();
+}
+""}>"";";
+                  <Users className = "w - 5 h-5 mr-2"   />,;
+                  Get Expert Consultation"",;
+                </Button>"";";
+                <Button variant = "outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick = {"}>;
+" () => window.open(""tel": "+13024640950"",_blank");";
+                  <Zap className="w-5 h-5 mr-2`        />;
           </div> {/* comment */}"
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";"
@@ -728,7 +743,6 @@ for your business needs. Contact us today for a personalized consultation.""""
   () => window.open("tel: +13024640950", _blank")"
                   <Zap className="w-5 h-5 mr-2"   />""
                   Call Now,        </motion.div>)}
-
 """
 }>""""
                   <Zap className="w-5 h-5 mr-2" />

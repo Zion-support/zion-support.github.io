@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 export default function AutomationHub() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -47,32 +45,6 @@ export default function AutomationHub() {
             <a className="text-cyan-300 underline" href="/.netlify/functions/marketing-and-features-promo" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-<<<<<<< HEAD
-            <h2 className="text-xl font-bold">Fast Orchestrator</h2>
-            <p className="text-white/70">Runs every minute to refresh front and homepage content; commits and pushes to main.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Continuous Orchestrator</h2>
-            <p className="text-white/70">Runs every 5 minutes, including sitemap and UI futurizer steps.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/continuous-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Features/Capabilities/Benefits Advertiser</h2>
-            <p className="text-white/70">Continuously advertises new features with deep links on the front pages.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/features-capabilities-benefits-advertiser" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Hyper Front Index Accelerator</h2>
-            <p className="text-white/70">Ultra-fast front index futurizer and directory builder.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-front-index-accelerator" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Innovation Lab</h2>
-            <p className="text-white/70">Invents, curates, and promotes fresh ideas across the site.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/innovation-lab" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Auto Scheduler</h2>
             <p className="text-white/70">Smart time-based runner that chooses and executes the best tasks.</p>
@@ -129,11 +101,56 @@ export default function AutomationHub() {
 =======
             <h2 className="text-xl font-bold">Hyper-Fast Orchestrator</h2>
             <p className="text-white/70">Runs every 3 minutes to refresh homepage/front content and sync to main.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
->>>>>>> origin/chore/new-automations-futuristic-front
-          </li>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>          </li>
         </ul>
       </main>
     </div>
   );
 }
+=======
+
+==============
+
+},
+export default Index,
+
+=======},
+
+export default Index,
+
+=======const Index: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index page" />
+      </Head>
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  )
+},
+export default Index,
+},
+
+export default Index,;
+export default Index,
+=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+},
+export default Index,
+
+=======
+},
+export default Index,
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

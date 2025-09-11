@@ -1,9 +1,9 @@
 import React from 'react';
 import { _Link } from 'react-router-dom';
 import { _Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users } from 'lucide-react';
-import { _getFeaturedMicroSaasServices } from '@/data/microSaasServices';
-import { _Button } from '@/components/ui/button';
-import { _Badge } from '@/components/ui/badge';
+import { _getFeaturedMicroSaasServices } from '../../data/microSaasServices';
+import { _Button } from '../../components/ui/button';
+import { _Badge } from '../../components/ui/badge';
 
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';

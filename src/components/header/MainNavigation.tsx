@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { _Link } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
-            onMouseEnter={() => setIsServicesOpen(true)"} ;
-
-=======
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp } from "lucide-react";
@@ -146,4 +141,3 @@ export function MainNavigation({ className }) {
         Get Started
       </NavLink>
     </nav>)}
->>>>>>> origin/clean-error-fixing-automation

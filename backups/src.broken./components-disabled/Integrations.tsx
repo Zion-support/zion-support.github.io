@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
-<<<<<<< HEAD:backups/src.broken./components-disabled/Integrations.tsx
 
-=======
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/Integrations.tsx
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -26,10 +23,7 @@ export default function IntegrationsFeature() {
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
-<<<<<<< HEAD:backups/src.broken./components-disabled/Integrations.tsx
 
-=======
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/Integrations.tsx
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -37,13 +31,9 @@ export default function IntegrationsFeature() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Automate your workflows by connecting Zion with the tools you already use.
           </p>
-<<<<<<< HEAD:backups/src.broken./components-disabled/Integrations.tsx
 
           <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot showing integrations" className="rounded-lg shadow-xl mx-auto mb-12"/>
 
-=======
-          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot showing integrations" className="rounded-lg shadow-xl mx-auto mb-12"/>
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/Integrations.tsx
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Trigger Slack notifications for new orders or messages.</li>
@@ -68,13 +58,8 @@ export default function IntegrationsFeature() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD:backups/src.broken./components-disabled/Integrations.tsx
 
       <Footer />
     </>);
 
-=======
-      <Footer />
-    </>);
->>>>>>> origin/clean-error-fixing-automation:src/pages/features/Integrations.tsx
 }

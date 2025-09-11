@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { RequestsHeader, QuoteRequestsList } from "@/components/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useTalentQuotes } from "../../hooks/useTalentQuotes";
+import { useAuth } from "../../hooks/useAuth";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
+import { QuoteDetails } from "../../components/quotes/QuoteDetails";
+import { RequestsHeader, QuoteRequestsList } from "../../components/quotes";
+import { ProtectedRoute } from "../../components/ProtectedRoute";
 export default function RequestsPanel() {
     const { user } = useAuth();
     const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';

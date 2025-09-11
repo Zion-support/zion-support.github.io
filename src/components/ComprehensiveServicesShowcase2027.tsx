@@ -1,8 +1,8 @@
 import { _Link  } from 'react-router-dom';';';
  from 'react';';';
-import { _Badge } from '@/components / ui / badge';';';
-import { _Button } from '@/components / ui / button';';';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';';';
+import { _Badge } from '../components / ui / badge';';';
+import { _Button } from '../components / ui / button';';';
+import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components / ui / card';';';
  from '../../data / 2027 - cutting - edge - comprehensive -services';';';
 import { _specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative -services';
 

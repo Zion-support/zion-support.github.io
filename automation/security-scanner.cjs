@@ -1,6 +1,40 @@
-#!/usr/bin/env node
+console.log('🔒 Starting Security Scanner...');
 
-const fs = require('fs');
+class SecurityScanner {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async runSecurityScan() {
+    const securityChecks = [
+      { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
+      { name: 'Security Fix', command: 'npm audit fix --force', description: 'Fixing security vulnerabilities' },
+      { name: 'Dependency Check', command: 'npm outdated', description: 'Checking for outdated dependencies' },
+      { name: 'License Check', command: 'npm audit --audit-level moderate', description: 'Checking license compliance' }
+    ];
+
+    const results = [];
+    let passedChecks = 0;
+
+    for (const check of securityChecks) {
+      try {
+        this.log(`🔍 Running ${check.name}...`);
+        this.log(`📝 ${check.description}`);
+        
+        execSync(check.command, { stdio: 'pipe' });
+=======const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
@@ -21,85 +55,35 @@ class SecurityScanner {
     };
   }
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
+/**
+ * Security Scanner
+ * Comprehensive security scanning and enhancement automation
+ */
+class SecurityScanner {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.results = {
+      dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
+      codeSecurity: { success: false, issues: [], fixes: [] },
+      headersSecurity: { success: false, headers: [], recommendations: [] },
+      contentSecurityPolicy: { success: false, policy: '', recommendations: [] },
+      authenticationSecurity: { success: false, checks: [], recommendations: [] }
+    };
   }
 
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
-    try {
-      const result = execSync(command, { 
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        ...options 
-      });
-      this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true, output: result.toString() };
-    } catch (error) {
-      this.log(`${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async auditDependencies() {
-    this.log('\n🔍 AUDITING DEPENDENCIES');
-    
-    try {
-      if (!fs.existsSync('package.json')) {
-        this.log('package.json not found', 'ERROR');
-        return;
-      }
-
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
-      // Check for known vulnerable packages
-      const vulnerablePackages = [
-        'lodash', // Known for prototype pollution
-        'moment', // Deprecated, use date-fns or dayjs
-        'request' // Deprecated
-      ];
-      
-      const foundVulnerable = Object.keys(dependencies).filter(dep =>
-        vulnerablePackages.includes(dep)
-      );
-      
-      if (foundVulnerable.length > 0) {
-        this.log(`Found potentially vulnerable packages: ${foundVulnerable.join(', ')}`, 'WARNING');
-        this.results.dependencyAudit.vulnerabilities = foundVulnerable.length;
-      }
-
-      // Run npm audit
-      const auditResult = await this.runCommand('npm audit --json', 'NPM Security Audit');
-      
-      if (auditResult.success) {
-        try {
-          const audit = JSON.parse(auditResult.output);
-          const vulnerabilities = audit.vulnerabilities || {};
-          const vulnCount = Object.keys(vulnerabilities).length;
-          
-          this.results.dependencyAudit = {
-            success: true,
-            vulnerabilities: vulnCount,
-            fixes: vulnCount > 0 ? ['Run npm audit fix to resolve vulnerabilities'] : []
-          };
-          
-          if (vulnCount > 0) {
-            this.log(`Found ${vulnCount} vulnerabilities`, 'WARNING');
-          } else {
-            this.log('No vulnerabilities found', 'SUCCESS');
-          }
-        } catch (parseError) {
-          this.log('Failed to parse audit results', 'ERROR');
         }
-      }
-    } catch (error) {
-      this.log(`Dependency audit failed: ${error.message}`, 'ERROR');
-    }
-  }
-
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    try {
+        if (!fs.existsSync('package.json')) {
+            return {
+                status: 'fail',
+                message: 'package.json not found'
+            };
+        }
   async scanCodeSecurity() {
     this.log('\n🔍 SCANNING CODE SECURITY');
     
@@ -128,94 +112,6 @@ class SecurityScanner {
           pattern: /localStorage\.setItem\s*\([^,]+,\s*[^)]*\+/g,
           issue: 'Potential XSS in localStorage',
           fix: 'Sanitize data before storing in localStorage'
-        }
-      ];
-
-      // Scan common file types
-      const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
-      const scanDirs = ['components', 'pages', 'lib', 'utils', 'hooks'];
-
-      for (const dir of scanDirs) {
-        const dirPath = path.join(this.projectRoot, dir);
-        if (fs.existsSync(dirPath)) {
-          this.scanDirectoryForSecurity(dirPath, securityChecks, issues, fixes);
-        }
-      }
-
-      this.results.codeSecurity = {
-        success: true,
-        issues,
-        fixes
-      };
-    } catch (error) {
-      this.results.codeSecurity = {
-        success: false,
-        issues: ['Failed to scan code security'],
-        fixes: []
-      };
-    }
-  }
-
-  scanDirectoryForSecurity(dir, securityChecks, issues, fixes) {
-    try {
-      const items = fs.readdirSync(dir);
-      
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          this.scanDirectoryForSecurity(fullPath, securityChecks, issues, fixes);
-        } else if (securityChecks.some(check => 
-          check.pattern.source && fullPath.match(new RegExp(check.pattern.source.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$'))
-        )) {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          
-          securityChecks.forEach(check => {
-            if (check.pattern.test(content)) {
-              issues.push(`${check.issue} in ${fullPath}`);
-              fixes.push(check.fix);
-            }
-          });
-        }
-      });
-    } catch (error) {
-      this.log(`Failed to scan directory ${dir}: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async setupSecurityHeaders() {
-    this.log('\n🛡️ SETTING UP SECURITY HEADERS');
-    
-    try {
-      const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',
-        'Referrer-Policy': 'strict-origin-when-cross-origin',
-        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
-      };
-
-      // Create security headers middleware
-      const middlewareContent = `
-// Security headers middleware
-export function securityHeaders(req, res, next) {
-  Object.entries({
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
-  }).forEach(([key, value]) => {
-    res.setHeader(key, value);
-  });
-  
-  next();
-}
-`;
-
       const middlewarePath = path.join(this.projectRoot, 'middleware', 'security.js');
       fs.mkdirSync(path.dirname(middlewarePath), { recursive: true });
       fs.writeFileSync(middlewarePath, middlewareContent);
@@ -355,47 +251,6 @@ export function securityHeaders(req, res, next) {
     });
 
     // Save detailed report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalDuration,
-      results: this.results,
-      summary: {
-        dependenciesAudited: this.results.dependencyAudit.success,
-        codeScanned: this.results.codeSecurity.success,
-        headersConfigured: this.results.headersSecurity.success,
-        cspConfigured: this.results.contentSecurityPolicy.success,
-        authChecked: this.results.authenticationSecurity.success
-      }
-    };
-
-    const reportPath = path.join(this.projectRoot, 'security-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
-    
-    return report;
-  }
-
-  async runSecurityScan() {
-    try {
-      await this.auditDependencies();
-      await this.scanCodeSecurity();
-      await this.setupSecurityHeaders();
-      await this.setupContentSecurityPolicy();
-      await this.checkAuthenticationSecurity();
-
-      return this.generateReport();
-    } catch (error) {
-      this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1);
-    }
-  }
-}
-
-// Run if called directly
-if (require.main === module) {
-  const scanner = new SecurityScanner();
-  scanner.runSecurityScan().catch(console.error);
-}
-
-module.exports = SecurityScanner;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

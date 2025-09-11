@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-import { Check } from 'lucide-react';
-
-
-          </div>
-        </div>
-      </div>';
-    </section>';';
-  );};';';';
-export default TrustIndicators;"`"";
-</CheckCircle>;
-</CheckCircle>;
-</CheckCircle>;
-</CheckCircle>;
-</indicator>;export default TrustIndicators;"`""';';';';
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</indicator>
-
-=======
 import React from 'react';
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap } from 'lucide-react';
 export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
@@ -156,4 +133,3 @@ export function TrustIndicatorsCompact({ className }) {
         <span>99.9% Uptime</span>
       </div>
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

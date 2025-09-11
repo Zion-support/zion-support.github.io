@@ -7,7 +7,7 @@ import { Brain } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Check } from 'lucide-react';
 import { Code } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 const _mockCodeSnippets = [
     {
         id: '1',

@@ -37,7 +37,6 @@ export interface EnterpriseITService2029V2 {
     email: string;
     website: string;
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
-<<<<<<< HEAD:data-disabled/2029-enterprise-it-services-v2.ts
   {
     id: "autonomous-devops-platform",;
     name: "Autonomous DevOps Platform",;

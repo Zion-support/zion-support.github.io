@@ -1,12 +1,12 @@
 import React from "react"
 
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 
 "";,"});,})"
 ;,});,"})
 
 
-// import { _useAuth } from "@/hooks/useAuth"; // Assuming an auth hook exists
+// import { _useAuth } from "../hooks/useAuth"; // Assuming an auth hook exists
 // For now, let"s mock a basic useAuth hook if not available to allow component structure
 // In a real scenario, this would come from your actual auth context/hooks
 const _useAuth = () => {

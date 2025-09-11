@@ -1,41 +1,28 @@
-import fs from "fs";
+
+
+
+=======import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-import { IntegrationsState  } from './types';
-;"
-const DATA_DIR = path.resolve (process.cwd (), "data", "integrations");"
-const STATE_FILE = path.join (DATA_DIR, "state.json");
-function ensureDataDir (): void {}
-  if () {) {}
-  $2;
-}
-    fs.mkdir_sync (DATA_DIR, { recursive: true });
-  }
-  if () {) {}
-  $2;
-}
-    const initial: IntegrationsState = {
       connections: [],
       logs: [],
       overrides: [],
-      events: []
-    };
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-      events: []
-    };
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-    }
-    fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
+
   }
 }
-
+export function readState(): IntegrationsState {
+  ensureDataDir();
+  try {
+    const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
+    return JSON && JSON.parse(raw) as IntegrationsState;
+=======
 
 
 export function readState(): IntegrationsState {;
@@ -46,6 +33,7 @@ export function readState(): IntegrationsState {;
   (mutator(current),
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
   return current;
+=======
 export function read_state (): IntegrationsState {
   ensureDataDir ();
   try {
@@ -53,20 +41,20 @@ export function read_state (): IntegrationsState {
     const raw = fs.readFileSync (STATE_FILE, "utf8");
     return JSON.parse (raw) as IntegrationsState;
 
-  }
-}
-    const raw = fs.readFileSync (STATE_FILE, "utf8");
-    return JSON.parse (raw) as IntegrationsState;
-  } catch (error) {
+export function readState(): IntegrationsState {;
+  ensureDataDir();
+  try {
+    const raw = fs.readFileSync(STATE_FILE, "utf8");
+    return JSON.parse(raw) as IntegrationsState;
+==============  } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
-
 export function writeState(
-
 
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
+
 
   ensureDataDir();
   const current = readState();
@@ -74,13 +62,12 @@ export function writeState(
   (mutator(current),
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
 
-export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
-  ensureDataDir();
-  const current = readState();
-  mutator(current);
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current
+  return current;
+}
 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function write_state (
   mutator: (state: IntegrationsState) => void,
@@ -91,8 +78,6 @@ export function write_state (
     fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
   return current;
 }
-
-
 export function writeState(
   mutator: (state: IntegrationsState) => void
 ): IntegrationsState {
@@ -104,3 +89,11 @@ export function writeState(
     fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
   return current;
 }
+
+=======
+=======>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -7,7 +7,7 @@ import React, { useEffect } from 'react',;',';';';';
 import React, {useEffect } from 'react';"',';';
 import Head from 'next/head;
   import React", { "useEffect": "any;
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Code } from 'lucide-react';
     ';';';';';
     ';';';';';

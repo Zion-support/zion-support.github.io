@@ -1,4 +1,3 @@
-
 const CaseStudies: NextPage = () => {
   const caseStudies = [;
     {
@@ -104,7 +103,3 @@ const CaseStudies: NextPage = () => {
       teamSize: '14 developers',;
       image: '/case-studies/edtech-platform.jpg'}
   ];
-
-  const getIndustryIcon = (industry: string) => {
-    switch (industry) {
-      case 'Healthcare':;

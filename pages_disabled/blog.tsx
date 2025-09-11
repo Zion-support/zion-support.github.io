@@ -336,7 +336,6 @@ const Blog: NextPage = () => {
                 </div>
               </div>
             </div>
-=======
         <title>Blog - Zion Tech Group | Technology Insights & Industry Trends</title>
         <meta name="description" content="Stay updated with the latest technology insights, industry trends, and expert analysis from Zion Tech Group. Discover cutting-edge strategies for AI, cloud computing, cybersecurity, and more." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing trends, cybersecurity analysis, business intelligence, digital transformation" />
@@ -414,7 +413,6 @@ const Blog: NextPage = () => {
           </div>
         </section>
 
-=======
         <title>Blog - Zion Tech Group | Technology Insights & Industry Trends</title>
         <meta name="description" content="Stay updated with the latest technology insights, industry trends, and expert analysis from Zion Tech Group. Discover cutting-edge strategies for AI, cloud computing, cybersecurity, and more." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing trends, cybersecurity analysis, business intelligence, digital transformation" />

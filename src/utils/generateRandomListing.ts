@@ -1,5 +1,5 @@
-import { _ProductListing } from "@/types/listings";
-import { _REGIONS } from "@/data/filterConstants";
+import { _ProductListing } from "../types/listings";
+import { _REGIONS } from "../data/filterConstants";
 
 import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';

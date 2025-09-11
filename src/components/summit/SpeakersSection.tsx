@@ -1,33 +1,206 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+interface Speaker {
+  name: string
+  title: string
+  avatar: string
+  twitter?: string
+  linkedin?: string
+  linkedin?: string
+}
+interface Speaker {
 
-const _speakers = [
-=======
-const speakers = [
->>>>>>> origin/clean-error-fixing-automation
-    {
-        name: 'Alex Zion',
-        title: 'Founder & CEO',
-        avatar: 'https://placehold.co/100x100',
-        twitter: '#',
-        linkedin: '#',
-    },
+interface Speaker {
+
+  name: string
+  title: string
+  avatar: string
+  twitter?: string
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
+
+import Image from "next/image",
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string,
+  linkedin?: string
+}
+
+import Image from "next/image",
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string,
+}
+
+  title: string
+  avatar: string
+  twitter?: string
+
+  linkedin?: string
+}
+const speakers: Speaker[] = [
+
+import Image from 'next/image';
+import { Twitter, Linkedin } from 'lucide-react';
+interface Speaker {;
+  name: string;
+  title: string;
+  avatar: string;
+  twitter?: string;
+  linkedin?: string;
+  linkedin?: string;
+}
+
+interface Speaker {;
+  name: string,;
+  title: string,;
+  avatar: string,;
+  twitter?: string;
+  linkedin?: string;
+}
+
+const speakers: Speaker[] = [;
+  {;
+    name: 'Alex Zion',;
+    title: 'Founder & CEO',;
+    avatar: 'https://placehold && placehold.co/100x100',;
+    twitter: '#',;
+    linkedin: '#',;
+  },;
 ];
+
+export function SpeakersSection() {;
+  return (
+    <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>;
+      <div className='container mx-auto px-4'>;
+        <h2 className='text-3xl font-bold mb-8 text-center'>Speakers</h2>;
+        <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>;
+          {speakers && speakers.map(sp => (;
+            <div key={sp && sp.name} className='text-center space-y-2'>              <Image    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">;
+      <div className="container mx-auto px-4">;
+        <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>;
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">;
+          {speakers && speakers.map((sp,) => (;
+            <div key={sp && sp.name} className="text-center space-y-2">;
+                src={sp && sp.avatar}
+                alt={sp && sp.name}
+                width={96}
+                height={96}
+                className='rounded-full mx-auto';
+                loading='lazy';
+              <p className='font-semibold'>{sp && sp.name}</p>;
+              <p className='text-sm opacity-80'>{sp && sp.title}</p>;
+              <div className='flex justify-center gap-3 text-zion-cyan'>;
+                {sp && sp.twitter && (;
+                  <a
+                    href={sp && sp.twitter}
+                    aria-label='Twitter'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex items-center'
+                    href = {sp && sp.twitter,}
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center">;
+                    <Twitter className='h-4 w-4' aria-hidden='true' />;
+                    <span className='sr-only'>Twitter</span>                  </a>                    <Twitter className="h-4 w-4" aria-hidden="true" />;
+                    <span className="sr-only">Twitter</span>;
+                  </a>;
+
+import Image from "next/image";
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string;
+
+    name: 'Alex Zion',
+    title: 'Founder & CEO',
+
 export function SpeakersSection() {
-    return (<section className="py-12 bg-zion-blue-dark text-white" id="speakers">
+  return (
+    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {speakers.map((sp) => (<div key={sp.name} className="text-center space-y-2">
-              <img loading="lazy" src={sp.avatar} alt={sp.name} className="w-24 h-24 rounded-full mx-auto"/>
+          {speakers.map((sp) => (
+            <div key={sp.name} className="text-center space-y-2">
+
+              <Image
+import Image from "next/image",;
+import { Twitter, Linkedin } from 'lucide-react';
+interface Speaker {;
+  name: string,;
+  title: string,;
+  avatar: string,;
+  twitter?: string,;
+  linkedin?: string;
+}
+;
+const speakers: Speaker[] = [;
+  {;
+    name: 'Alex Zion',;
+    title: 'Founder & CEO',;
+    avatar: 'https://placehold.co/100x100',;
+    twitter: '#',;
+    linkedin: '#'}];
+export function SpeakersSection() {;
+  return (;
+    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">;
+      <div className="container mx-auto px-4">;
+        <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>;
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">;
+          {speakers.map((sp) => (;
+            <div key={sp.name} className="text-center space-y-2">;
+              <Image;
+
+                src={sp.avatar}
+                alt={sp.name}
+                width={96}
+                height={96}
+
+                className="rounded-full mx-auto"
+                loading="lazy"
+              />
               <p className="font-semibold">{sp.name}</p>
               <p className="text-sm opacity-80">{sp.title}</p>
               <div className="flex justify-center gap-3 text-zion-cyan">
-                {sp.twitter && (<a href={sp.twitter} aria-label="Twitter" target="_blank" rel="noopener noreferrer">T</a>)}
-                {sp.linkedin && (<a href={sp.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>)}
-              </div>
-            </div>))}
-        </div>
-      </div>
-    </section>);
-}
+                className='rounded - full mx - auto';
+                loading='lazy';
+              <p className='font - semibold'>{sp.name}</p>;
+              <p className='text - sm opacity - 80'>{sp.title}</p>;
+              <div className='flex justify - center gap - 3 text - zion - cyan'>;
+                {sp.twitter && (
+                    href={sp.linkedin}
+                    aria-label="LinkedIn"
+
+                    <Twitter className="h-4 w-4" aria-hidden="true" />
+                    <span className="sr-only">Twitter</span>
+                  </Link>
+                )}
+                {sp.linkedin && (;
+                  <a;
+                    href={sp.linkedin}
+                    aria-label="LinkedIn"
+
+                    target="_blank"
+                    className="flex items-center"
+                  >
+                    <Linkedin className="h-4 w-4" aria-hidden="true" />
+                    <span className="sr-only">LinkedIn</span>
+
+                  </Link>
+
+                )}
+

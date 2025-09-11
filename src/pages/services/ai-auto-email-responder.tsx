@@ -12,7 +12,7 @@ import {
   Shield,
   Settings
 } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 const AIAutoEmailResponder: React.FC = () => {
   const features = [

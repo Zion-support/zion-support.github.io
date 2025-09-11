@@ -38,7 +38,6 @@ export interface SpaceColonization2029Service {
   rating: number;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   // Space Colonization & Mining Services;
-<<<<<<< HEAD:data-disabled/2029-space-colonization-services.ts
   {
     id: "mars-colonization-automation-platform",;
     name: "Mars Colonization Automation Platform",;

@@ -1,91 +1,52 @@
-import { _useState, useEffect, useCallback } from 'react';
-import { _supabase } from '@/integrations/supabase/client';
+import { useState, useCallback } from 'react';
 
-const integrations = [];
-
-interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-  averagePriceGap: number;
-  suggestionsByCategory: {
-    category: string;
-    count: number;
-    acceptanceRate: number;
-  }[];
-  recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
-    type: 'client' | 'talent';
-  }[];
-  isLoading: boolean;
-  error: string | null;
+export interface PricingSuggestion {
+  id: string;
+  service: string;
+  suggestedPrice: number;
+  marketRange: string;
+  confidence: number;
+  timestamp: Date;
 }
 
-export function usePricingSuggestionAnalytics(days = 30) {
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-    totalSuggestions: 0,
-    acceptanceRate: 0,
-    averagePriceGap: 0,
-    suggestionsByCategory: [],
-    recentSuggestions: [],
-    isLoading: true,
-    error: null
-  });
+export function usePricingSuggestionAnalytics() {
+  const [suggestions, setSuggestions] = useState<PricingSuggestion[]>([]);
 
-  const _fetchAnalytics = useCallback(async () => {
-    setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
+  const addSuggestion = useCallback((suggestion: Omit<PricingSuggestion, 'id' | 'timestamp'>) => {
+    const newSuggestion: PricingSuggestion = {
+      ...suggestion,
+      id: Math.random().toString(36).substr(2, 9),
+      timestamp: new Date(),
+    };
     
-    try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Mock data for now - replace with actual Supabase query
-      const _mockData = {
-        totalSuggestions: 256,
-        acceptanceRate: 0.72,
-        averagePriceGap: 12.5,
-        suggestionsByCategory: [
-          { category: 'development', count: 120, acceptanceRate: 0.75 },
-          { category: 'design', count: 65, acceptanceRate: 0.82 },
-          { category: 'marketing', count: 42, acceptanceRate: 0.64 },
-          { category: 'content', count: 18, acceptanceRate: 0.56 },
-          { category: 'data', count: 11, acceptanceRate: 0.78 }
-        ],
-        recentSuggestions: Array(10).fill(null).map((_, i) => ({
-          id: `suggestion-${i}`,
-          userId: `user-${Math.floor(Math.random() * 100)}`,
-          suggestedMin: 30 + Math.floor(Math.random() * 30),
-          suggestedMax: 60 + Math.floor(Math.random() * 40),
-          actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
-          accepted: Math.random() > 0.25,
-          createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
-          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'
-        }))
-      };
-      
-      setAnalytics({
-        ...mockData,
-        isLoading: false,
-        error: null
-      });
-    } catch (error) {
-      // console.error('Error fetching pricing suggestion analytics:', error);
-      setAnalytics(prev => ({
-        ...prev,
-        isLoading: false,
-        error: 'Failed to load pricing analytics data.'
-      }));
-    }
-  }, [days]);
+    setSuggestions(prev => [...prev, newSuggestion]);
+  }, []);
 
-  useEffect(() => {
-    fetchAnalytics();
-  }, [fetchAnalytics]);
+  const getSuggestionsByService = useCallback((service: string) => {
+    return suggestions.filter(s => s.service === service);
+  }, [suggestions]);
 
-  return analytics;
+  const getAveragePrice = useCallback((service: string) => {
+    const serviceSuggestions = getSuggestionsByService(service);
+    if (serviceSuggestions.length === 0) return 0;
+    
+    const total = serviceSuggestions.reduce((sum, s) => sum + s.suggestedPrice, 0);
+    return total / serviceSuggestions.length;
+  }, [getSuggestionsByService]);
+
+  const getConfidenceScore = useCallback((service: string) => {
+    const serviceSuggestions = getSuggestionsByService(service);
+    if (serviceSuggestions.length === 0) return 0;
+    
+    const totalConfidence = serviceSuggestions.reduce((sum, s) => sum + s.confidence, 0);
+    return totalConfidence / serviceSuggestions.length;
+  }, [getSuggestionsByService]);
+
+  return {
+    suggestions,
+    addSuggestion,
+    getSuggestionsByService,
+    getAveragePrice,
+    getConfidenceScore,
+  };
 }

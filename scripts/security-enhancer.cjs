@@ -1,20 +1,20 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class SecurityEnhancer {
   constructor() {
+    this.securityImprovements = [];
+    this.errors = [];
     this.projectRoot = process.cwd();
-    this.vulnerabilities = [];
-    this.recommendations = [];
   }
 
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-  async runSecurityAudit() {
-    this.log('🔍 Running security audit...');
+  // Add security headers
+  async addSecurityHeaders() {
+    this.log('🔒 Adding security headers...');
     try {
       const securityHeadersScript = `
 // Security headers configuration
@@ -229,3 +229,129 @@ export function securityMiddleware(request) {
   }
   
   return response;
+}
+`;
+
+      fs.writeFileSync(path.join(this.projectRoot, 'middleware/security.js'), middlewareScript);
+      this.log('✅ Security middleware added');
+      this.securityImprovements.push('Security middleware');
+    } catch (error) {
+      this.errors.push(`Security middleware failed: ${error.message}`);
+    }
+  }
+
+  // Add environment security
+  async addEnvironmentSecurity() {
+    this.log('🔧 Adding environment security...');
+    try {
+      const envSecurityScript = `
+// Environment security configuration
+export const securityConfig = {
+  // Ensure sensitive environment variables are not exposed
+  validateEnvVars: () => {
+    const requiredVars = ['NEXT_PUBLIC_API_URL'];
+    const missingVars = requiredVars.filter(varName => !process.env[varName]);
+    
+    if (missingVars.length > 0) {
+      console.warn('Missing required environment variables:', missingVars);
+    }
+    
+    return missingVars.length === 0;
+  },
+  
+  // Sanitize environment variables for client-side use
+  getClientEnvVars: () => {
+    const clientVars = {};
+    const allowedClientVars = ['NEXT_PUBLIC_API_URL', 'NEXT_PUBLIC_APP_NAME'];
+    
+    allowedClientVars.forEach(varName => {
+      if (process.env[varName]) {
+        clientVars[varName] = process.env[varName];
+      }
+    });
+    
+    return clientVars;
+  }
+};
+`;
+
+      fs.writeFileSync(path.join(this.projectRoot, 'utils/env-security.js'), envSecurityScript);
+      this.log('✅ Environment security added');
+      this.securityImprovements.push('Environment security');
+    } catch (error) {
+      this.errors.push(`Environment security failed: ${error.message}`);
+    }
+  }
+
+  // Run all security enhancements
+  async runAllSecurityEnhancements() {
+    this.log('🚀 Starting Security Enhancement...\n');
+    
+    try {
+      await this.addSecurityHeaders();
+      await this.addInputValidation();
+      await this.addRateLimiting();
+      await this.addCSRFProtection();
+      await this.addSecurityMiddleware();
+      await this.addEnvironmentSecurity();
+
+      // Generate report
+      const report = {
+        timestamp: new Date().toISOString(),
+        securityImprovements: this.securityImprovements,
+        errors: this.errors,
+        success: this.errors.length === 0
+      };
+
+      fs.writeFileSync(
+        path.join(this.projectRoot, 'security-enhancement-report.json'),
+        JSON.stringify(report, null, 2)
+      );
+
+      this.log('\n📊 Security Enhancement Summary:');
+      this.log(`- Security improvements applied: ${this.securityImprovements.length}`);
+      this.log(`- Errors: ${this.errors.length}`);
+      
+      if (this.securityImprovements.length > 0) {
+        this.log('\n✅ Applied security improvements:');
+        this.securityImprovements.forEach(improvement => this.log(`  - ${improvement}`));
+      }
+
+      if (this.errors.length > 0) {
+        this.log('\n❌ Errors encountered:');
+        this.errors.forEach(error => this.log(`  - ${error}`));
+      }
+
+      return report;
+    } catch (error) {
+      this.log(`❌ Security enhancement failed: ${error.message}`);
+      throw error;
+    }
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const enhancer = new SecurityEnhancer();
+  enhancer.runAllSecurityEnhancements().catch(console.error);
+}
+
+module.exports = SecurityEnhancer;
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json')
+    console.log('� Enhancing security...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    if (content.includes('eval(')
+      issues.push('Use of eval() - potential security risk'
+    if (content.includes('innerHTML')
+      issues.push('Use of innerHTML - consider using textContent for security')
+    if (content.includes('document.write')
+      issues.push('Use of document.write - potential XSS risk')
+    if (content.includes('localStorage.setItem')
+      issues.push('Use of localStorage - ensure sensitive data is not stored')
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+      // Skip directories that can'

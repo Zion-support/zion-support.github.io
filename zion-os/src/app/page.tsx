@@ -1,62 +1,243 @@
-import Link from 'next/link';
+  const features = [
+    {
 
+
+    }
+  ]
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+=======
+  ]
+=======
+import FeatureCard from './components / FeatureCard',
+export default /**
+ * HomePage - Function description
+ */
+function HomePage() {
+  const features = [;
+    {
+      icon: &quot;🤖&quot;,
+      title: &quot;AI - Powered Intelligence & quot;,
+      description: &quot;ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting - edge intelligence.&quot;,
+      features: [;
+        &quot;ZionGPT Core Integration & quot;,
+        &quot;Resume Builder + Proposal AI & quot;,
+        &quot;Autonomous Decision Engine & quot;,
+        &quot;AI Moderation System & quot;
+      ],
+      gradient: &quot;bg - gradient - to - r from - blue - 600 to - purple - 600 & quot;
+    },
+=======
+import FeatureCard from './components/FeatureCard'
 export default function HomePage() {
+  const features = [
+    {
+      icon: &quot;🚀&quot;
+      title: &quot;One-Click Deployment&quot;
+      description: &quot;Launch your complete digital economy in minutes with our unified deployment protocol.&quot;
+      features: [
+        &quot;Automated Orchestration&quot;
+        &quot;CMS Instance Generation&quot;
+        &quot;Landing + Auth Flows&quot;
+        &quot;Blog + Roadmap Setup&quot;
+      ]
+      gradient: &quot;bg-gradient-to-r from-indigo-600 to-blue-600&quot;
+=======
+      icon: "🤖",
+      title: "AI-Powered Intelligence",
+      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
+      features: [
+        "ZionGPT Core Integration",
+        "Resume Builder + Proposal AI", 
+        "Autonomous Decision Engine",
+        "AI Moderation System"
+      ],
+      gradient: "bg-gradient-to-r from-blue-600 to-purple-600"
+    },
+    {
+      icon: "🏪",
+      title: "Complete Marketplace",
+      description: "Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.",
+      features: [
+        "Job & Talent Marketplace",
+        "Token System + Rewards",
+        "On-chain Contract Builder",
+        "Multi-currency Support"
+      ],
+      gradient: "bg-gradient-to-r from-green-600 to-emerald-600"
+    },
+    {
+      icon: "🗳️",
+      title: "Governance & DAO",
+      description: "Flexible governance from admin control to full DAO systems with dual governance options.",
+      features: [
+        "DAO Proposal Voting",
+        "Dual Governance (Local + Global)",
+        "Sovereign Treasury",
+        "KYC/AML + ID Verification"
+      ],
+      gradient: "bg-gradient-to-r from-purple-600 to-pink-600"
+    },
+    {
+      icon: "⚡",
+      title: "Enterprise Infrastructure",
+      description: "Built for scale with regional dashboards, partner APIs, and white-label solutions.",
+      features: [
+        "Regional Dashboards",
+        "Partner API Access",
+        "White-label Vendor Plugin",
+        "Web3 Login + DID"
+      ],
+      gradient: "bg-gradient-to-r from-orange-600 to-red-600"
+    },
+    {
+      icon: "🎓",
+      title: "Education & Growth",
+      description: "Zion Academy, incubator programs, and grants foster innovation and community growth.",
+      features: [
+        "Zion Academy",
+        "Incubator + Grants",
+        "Regional Job Categories",
+        "Wage Baselines"
+      ],
+      gradient: "bg-gradient-to-r from-teal-600 to-cyan-600"
+    },
+    {
+      icon: "🚀",
+      title: "One-Click Deployment",
+      description: "Launch your complete digital economy in minutes with our unified deployment protocol.",
+      features: [
+        "Automated Orchestration",
+        "CMS Instance Generation",
+        "Landing + Auth Flows",
+        "Blog + Roadmap Setup"
+      ],
+      gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
+    }
+  ],
   return (
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+
+
+              Built for the future of decentralized business.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
+              <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
+
+
+
+=======
+            <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
+              for launching sovereign digital economies.
+            </p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              for launching sovereign digital economies.
+            </p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+
+            {features.map((feature, index) => (
+              <FeatureCard
+=======
+      <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
+        <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
+          <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
+          <div className=&quot;animate - fade - in & quot;>;
+            <h1 className=&quot;text - 5xl md:text - 7xl font - bold mb - 6&quot;>;
+              <span className=&quot;gradient - text & quot;>Launch Sovereign</span>;
+              <br />;
+              <span className=&quot;text - white & quot;>AI - Powered Digital Economies</span>;
+            </h1>;
+            <p className=&quot;text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto mb - 8 leading - relaxed & quot;>;
+              Deploy complete AI - powered marketplaces, governance systems, and digital economies with one click.;
+              Built for the future of decentralized business.;
+            </p>;
+            <div className=&quot;flex flex - col sm:flex - row gap - 4 justify - center items - center & quot;>;
+              <a href=&quot;/multiverse / launch & quot; className=&quot;btn - primary hover - lift & quot;>;
+                🚀 Launch Your Economy;
+              </Link>;
+              <a href=&quot;/admin / instances & quot; className=&quot;btn - secondary hover - lift & quot;>;
+                📊 View Instances;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Features Section */}
+      <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
+        <div className=&quot;max - w-7xl mx - auto & quot;>;
+          <div className=&quot;text - center mb - 16 animate - slide - up & quot;>;
+            <h2 className=&quot;text - 4xl md:text - 5xl font - bold mb - 6&quot;>;
+              Everything You Need to Build the Future;
+            </h2>;
+            <p className=&quot;text - xl text - white / 70 max - w-2xl mx - auto & quot;>;
+              From AI - powered marketplaces to decentralized governance, Zion OS provides the complete toolkit;
+              for launching sovereign digital economies.;
+            </p>;
+          </div>;
+          <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
+            {features.map ((feature, index) => (
+              <FeatureCard;
+=======
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              AI-Powered
-            </span>
-            <br />
-            <span className="text-white">Enterprise Solutions</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. From autonomous systems to quantum computing, 
-            we deliver next-generation solutions that drive innovation and growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Get Started Today
-            </Link>
-            <Link href="/solutions" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              Explore Solutions
-            </Link>
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+              <br />
+              <span className="text-white">AI-Powered Digital Economies</span>
+            </h1>
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
+              <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
+=======
+            
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+                🚀 Launch Your Economy
+              </Link>
+              <a href="/admin/instances" className="btn-secondary hover-lift">
+                📊 View Instances
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
-      <section className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to revolutionize your business operations and drive sustainable growth.
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything You Need to Build the Future
+            </h2>            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              for launching sovereign digital economies.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Autonomous Systems */}
-            <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">AI Autonomous Systems</h3>
-              <p className="text-gray-300 mb-4">
-                Self-managing AI systems that operate independently, making decisions and executing tasks without human intervention.
-              </p>
-              <Link href="/services/ai-autonomous-systems" className="text-blue-400 hover:text-blue-300 font-medium">
-                Learn More →
-              </Link>
-            </div>
 
             {/* Quantum Computing */}
             <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
@@ -148,74 +329,168 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with deep industry expertise to deliver transformative solutions.
+            <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
+              for launching sovereign digital economies.
             </p>
           </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              for launching sovereign digital economies.
+            </p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
-              <p className="text-gray-300">Pioneering the future of AI technology with breakthrough innovations.</p>
-            </div>
+=======          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
-              <p className="text-gray-300">Bank-grade security and compliance for enterprise environments.</p>
-            </div>
+=======
+<section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+          <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
+            <h2 className=&quot;text-4xl font-bold mb-6&quot;>      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect rounded-2xl p-12 animate-slide-up">
+            <h2 className="text-4xl font-bold mb-6">
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
-              <p className="text-gray-300">World-class AI researchers and industry experts.</p>
-            </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
-              <p className="text-gray-300">Track record of successful AI implementations and ROI.</p>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+              Ready to Build the Future?
+            </h2>
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
+              Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift text-lg px-8 py-4&quot;>
+                🚀 Start Building Now
+              </Link>
+              <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift text-lg px-8 py-4&quot;>
+                📊 Explore Examples
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the AI revolution and discover how our solutions can drive innovation, efficiency, and growth for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Schedule a Consultation
-            </Link>
-            <Link href="/solutions" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              View Case Studies
-            </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+<section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
+        <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
+          <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
+            <h2 className=&quot;text - 4xl font - bold mb - 6&quot;>;
+              Ready to Build the Future?;
+            </h2>;
+            <p className=&quot;text - xl text - white / 70 mb - 8 max - w-2xl mx - auto & quot;>;
+              Join the revolution in decentralized business. Launch your sovereign AI - powered digital economy today.;
+            </p>;
+            <div className=&quot;flex flex - col sm:flex - row gap - 4 justify - center & quot;>;
+              <a href=&quot;/multiverse / launch & quot; className=&quot;btn - primary hover - lift text - lg px - 8 py - 4&quot;>;
+                🚀 Start Building Now;
+              </Link>;
+              <a href=&quot;/admin / instances & quot; className=&quot;btn - secondary hover - lift text - lg px - 8 py - 4&quot;>;
+                📊 Explore Examples;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Stats Section */}
+      <section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
+        <div className=&quot;max - w-7xl mx - auto & quot;>;
+          <div className=&quot;grid grid - cols - 1 md:grid - cols - 4 gap - 8 text - center & quot;>;
+            <div className=&quot;animate - fade - in & quot;>;
+              <div className=&quot;text - 3xl font - bold text - blue - 400 mb - 2&quot;>100+</div>;
+              <div className=&quot;text - white / 70 & quot;>Features Available</div>;
+            </div>;
+            <div className=&quot;animate - fade - in & quot; style={{animation_delay: '0.1s'}}>;
+              <div className=&quot;text - 3xl font - bold text - purple - 400 mb - 2&quot;>50+</div>;
+              <div className=&quot;text - white / 70 & quot;>Deployment Options</div>;
+            </div>;
+            <div className=&quot;animate - fade - in & quot; style={{animation_delay: '0.2s'}}>;
+              <div className=&quot;text - 3xl font - bold text - green - 400 mb - 2&quot;>24 / 7</div>;
+              <div className=&quot;text - white / 70 & quot;>AI Orchestration</div>;
+            </div>;
+            <div className=&quot;animate - fade - in & quot; style={{animation_delay: '0.3s'}}>;
+              <div className=&quot;text - 3xl font - bold text - orange - 400 mb - 2&quot;>∞</div>;
+              <div className=&quot;text - white / 70 & quot;>Scalability</div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>);
+<<<<<<< HEAD
+<section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+          <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
+            <h2 className=&quot;text-4xl font-bold mb-6&quot;>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect rounded-2xl p-12 animate-slide-up">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Build the Future?
+            </h2>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
+                🚀 Start Building Now
+              </Link>
+              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📊 Explore Examples
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="animate-fade-in">
+              <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
+              <div className="text-white/70">Features Available</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-white/70">Deployment Options</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-white/70">AI Orchestration</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
+              <div className="text-white/70">Scalability</div>
+            </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }

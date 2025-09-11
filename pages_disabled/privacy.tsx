@@ -135,7 +135,6 @@ export default function Privacy() {
     </div>
   );
 }
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 

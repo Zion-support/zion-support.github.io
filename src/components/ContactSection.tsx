@@ -1,236 +1,414 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-
-                <contact.icon className="h-8 w-8 text-white"  />
-              </a>;"
-              <h3 className="text-xl font-semibold text-white mb-2">{contact.title}"
-              <p className="text-zion-slate-light">{contact.value}</p>
-            </motion.div>
-          ))}
-        </div>;
-        <motion.div;
-          initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          transition={{ "duration": "0.8 "}}
-          viewport={{ "once": "tru e "}}";
-          className="text-center";
-          <Link";
-            to="/contact";
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover": "fro m-blue-700 "hover": t o-purple-700 transition-all duration-300 transform "hover": scal e-105";
-            Contact Us Today";
-            <ArrowRight className="ml-2 h-5 w-5"   />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;) "}
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-'";
-</motion>;
-</motion>;
-</motion>
-
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users } from 'lucide-react';
-export function ContactSection() {
-    const contactMethods = [
-        {
-            icon: <Mail className="w-6 h-6"/>,
-            title: "Email Us",
-            description: "Get in touch via email for general inquiries",
-            contact: "hello@ziontechgroup.com",
-            link: "mailto:hello@ziontechgroup.com",
-            color: "from-zion-cyan to-zion-blue"
-        },
-        {
-            icon: <Phone className="w-6 h-6"/>,
-            title: "Call Us",
-            description: "Speak directly with our team",
-            contact: "+1 (302) 464-0950",
-            link: "tel:+13024640950",
-            color: "from-zion-purple to-zion-cyan"
-        },
-        {
-            icon: <MessageSquare className="w-6 h-6"/>,
-            title: "Live Chat",
-            description: "Chat with our support team in real-time",
-            contact: "Available 24/7",
-            link: "/chat",
-            color: "from-zion-blue to-zion-purple"
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+      .then(async (res) => {
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
         }
-    ];
-    const officeLocations = [
-        {
-            city: "Wilmington, DE",
-            country: "United States",
-            address: "1000 N Market St, Wilmington, DE 19801",
-            icon: <MapPin className="w-5 h-5"/>
-        },
-        {
-            city: "New York, NY",
-            country: "United States",
-            address: "350 5th Ave, New York, NY 10118",
-            icon: <MapPin className="w-5 h-5"/>
-        },
-        {
-            city: "London, UK",
-            country: "United Kingdom",
-            address: "1 Canary Wharf, London E14 5AB",
-            icon: <MapPin className="w-5 h-5"/>
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
         }
-    ];
-    const supportFeatures = [
-        {
-            icon: <Clock className="w-6 h-6"/>,
-            title: "24/7 Support",
-            description: "Round-the-clock technical support and monitoring"
-        },
-        {
-            icon: <Shield className="w-6 h-6"/>,
-            title: "Enterprise Security",
-            description: "Bank-level security for all communications"
-        },
-        {
-            icon: <Users className="w-6 h-6"/>,
-            title: "Expert Team",
-            description: "Certified professionals ready to help"
-        },
-        {
-            icon: <Globe className="w-6 h-6"/>,
-            title: "Global Reach",
-            description: "Support available in multiple time zones"
-        }
-    ];
-    return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
-            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business with cutting-edge technology? 
-            Let's discuss how Zion Tech Group can help you achieve your goals.
-          </p>
-        </div>
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* Contact Methods */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {contactMethods.map((method, index) => (<div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <div className="text-white">
-                      {method.icon}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">{method.title}</h4>
-                  <p className="text-zion-slate-light text-sm mb-3">{method.description}</p>
-                  <a href={method.link} className="text-zion-cyan hover:text-white transition-colors duration-300 font-medium">
-                    {method.contact}
-                  </a>
-                </div>))}
-            </div>
-          </div>
+        setSubmitted(true),
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false),
+        toast({
 
-          {/* Office Hours */}
-          <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>
-            <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-zion-slate-light">Monday - Friday</span>
-                  <span className="text-white font-medium">9:00 AM - 6:00 PM EST</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-zion-slate-light">Saturday</span>
-                  <span className="text-white font-medium">10:00 AM - 4:00 PM EST</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-zion-slate-light">Sunday</span>
-                  <span className="text-white font-medium">Closed</span>
-                </div>
-                <div className="pt-4 border-t border-white/10">
-                  <div className="text-center">
-                    <div className="text-zion-cyan font-semibold">24/7 Emergency Support</div>
-                    <div className="text-zion-slate-light text-sm">Available for critical issues</div>
-                  </div>
-                </div>
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"})
+      })
+
+  return (
+    <section className="py-20 bg-zion-blue" id="contact">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <GradientHeading>Get In Touch</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl mb-8">
+              We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
+            </p>
+            <div className="flex items-center mb-6">
+              <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">
+                <Mail className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-white font-semibold">Email Us</p>
+                <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
+                  commercial@ziontechgroup.com
+                </Link>
               </div>
             </div>
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+              Request Commercial Proposal
+            </Button>
           </div>
-        </div>
-
-        {/* Office Locations */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {officeLocations.map((office, index) => (<div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">
-                    <div className="text-white">
-                      {office.icon}
-                    </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
+            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      required
+                    />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                    )}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white">{office.city}</h4>
-                    <p className="text-zion-slate-light text-sm">{office.country}</p>
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      required
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                    )}
                   </div>
                 </div>
-                <p className="text-zion-slate-light text-sm leading-relaxed">{office.address}</p>
-              </div>))}
-          </div>
-        </div>
-
-        {/* Support Features */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-white">
-                    {feature.icon}
-                  </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    Subject
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    required
+                  />
+                  {errors.subject && (
+                    <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
+                  )}
                 </div>
-                <h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
-                <p className="text-zion-slate-light text-sm leading-relaxed">{feature.description}</p>
-              </div>))}
-          </div>
-        </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+import { useState } from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/components/ui/use-toast",;
+import z from "zod",;
+import { Mail } from 'lucide-react';
+export function ContactSection() {;
+  const [formData, setFormData] = useState({;
+    name: "",;
+    email: "",;
+    subject: "",;
+    message: ""}),;
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your technology needs and discover how 
-            Zion Tech Group can help transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform">
-              Contact Us Now
-              <ArrowRight className="w-5 h-5"/>
-            </Link>
-            <Link to="/request-quote" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
-              Request Quote
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>)}
->>>>>>> origin/clean-error-fixing-automation
+  const handle_change = (
+    e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {
+    const { name, value } = e.target;
+    setFormData ((prev) => ({ ...prev, [name]: value }));
+    set_errors ((prev) => ({ ...prev, [name]: undefined }));
+  }
+  const handle_submit = (e: React.FormEvent) =>: any {
+    e.prevent_default ();  const contact_info = [{
+      icon: Phone,
+      title: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950";
+},
+    {
+      icon: Mail,
+      title: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com";
+},    {
+      icon: MapPin, ";
+      title: "Address", ";
+      value: "364 E Main St STE 1008 Middletown DE 19709", ";
+      link: "https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709"}  ];
+  return (";
+    <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">";
+      <div className="max - w-7xl mx - auto">;
+        <motion.div;
+
+  { opacity: 0,
+  coordinate_y: 20;
+}}
+          whileInView = {
+
+  { opacity: 1,
+  coordinate_y: 0;
+}}
+
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}";
+          className="text - center mb - 16";
+";
+          <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 4">;
+            Get In Touch;
+          </h2>";
+          <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">;
+            Ready to transform your business? Contact us today to discuss your technology needs;
+          </p>;
+        </motion.div>";
+        <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 8 mb - 12">;
+          {contact_info.map ((contact, index)  => (
+            <motion.div;
+
+              key={index}
+              initial = {
+
+  { opacity: 0,
+  coordinate_y: 20;
+}}
+              whileInView = {
+
+  { opacity: 1,
+  coordinate_y: 0;
+}}
+              transition = {
+
+  { duration: 0.6,
+  delay: index * 0.1;
+}}
+              viewport={{ once: true }}";
+              className="text - center";
+    const schema = z.object ({
+      name: z.string ().min (2, "Name is required");
+      email: z.string ().email ("Enter a valid email"),
+      subject: z.string ().min (2, "Subject is required");
+      message: z.string ().min (10, "Message must be at least 10 characters")});
+    const result = schema.safe_parse (form_data);
+    // Check condition
+if ( {) {
+  $2
+}
+      const field_errors: Record < string, string> = {}
+      for (const err of result.error.errors) {
+        // Check condition
+if ( {) {
+  $2
+}
+          field_errors[err.path[0] as string] = err.message;
+        }
+      }
+      set_errors (field_errors);
+      toast ({
+        title: "Form Validation Error",
+        description: result.error.errors[0]?.message || "Please check your form and try again",
+        variant: "destructive"}),
+      return;
+    }
+    set_errors ({});
+    setIsSubmitting (true);
+    fetch ("/api / contact", {
+      method: "POST",
+      headers: { "Content - Type": "application / json" },
+      body: JSON.stringify (form_data)});
+      .then (async (res) => {
+        setIsSubmitting (false);
+        // Check condition
+if ( {) {
+  $2
+}
+          const data = await res.json ().catch (() => ({}));          throw new Error (data.error || "Failed to send message");
+        }
+        toast ({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+        set_submitted (true);
+        set_timeout (() => set_submitted (false), 2000);
+        setFormData ({ name: "", email: "", subject: "", message: "" });
+      });
+      .catch ((err) => {
+        setIsSubmitting (false);        toast ({
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"});
+      });
+  }
+  return (
+    <section className="py - 20 bg - zion - blue" id="contact">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center">;
+          <div>;
+            <GradientHeading > Get In Touch</GradientHeading>;
+            <p className="mt - 4 text - zion - slate - light text - xl mb - 8">;
+              We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.;
+            </p>;
+            <div className="flex items - center mb - 6">;
+              <div className="mr - 4 p - 2 bg - zion - purple / 20 rounded - full text - zion - cyan">;
+                <Mail className="h - 6 w - 6" />;
+              </div>;
+              <div>;
+                <p className="text - white font - semibold">Email Us</p>;
+                <a href="mailto:commercial@ziontechgroup.com" className="text - zion - cyan hover:text - zion - purple transition - colors">;
+
+                  commercial@ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+
+              Request Commercial Proposal;
+            </Button>;
+          </div>;
+          <div className="relative">;
+
+            <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
+            <div className="relative bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 8">;
+              <h3 className="text - xl font - bold mb - 6 text - white">Send Us a Message</h3>;
+              <form on_submit={handle_submit} className="space - y-6">;
+                <div className="grid grid - cols - 1 gap - 6 sm:grid - cols - 2">;
+                  <div>;
+                    <label html_for="name" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
+                      Name;
+                    ">;
+
+                      Name;
+                    </label>;
+                    <Input;
+                      id="name";
+                      name="name";
+                      value = {form_data.name, }
+                      on_change = {handle_change, }
+                      className={`w - full rounded - md bg - zion - blue - dark border - zion - blue - light text - white ${errors.name ? 'border - red - 500 focus - visible:ring - red - 500' : ''}`}
+                      required;
+                    />;
+                    {errors.name && (
+                      <p className="mt - 1 text - sm text - red - 500">{errors.name}</p>)}
+                  </div>;
+                  <div>;
+                    <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
+                      Email;
+                    ">;
+
+                      Email;
+                    </label>;
+                    <Input;
+                      id="email";
+                      name="email";
+                      type="email";
+                      value = {form_data.email, }
+                      on_change = {handle_change, }
+                      className={`w - full rounded - md bg - zion - blue - dark border - zion - blue - light text - white ${errors.email ? 'border - red - 500 focus - visible:ring - red - 500' : ''}`}
+                      required;
+                    />;
+                    {errors.email && (
+                      <p className="mt - 1 text - sm text - red - 500">{errors.email}</p>)}
+                  </div>;
+                </div>;
+                <div>;
+                  <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
+                    Subject;
+                  ">;
+
+                    Subject;
+                  </label>;
+                  <Input;
+                    id="subject";
+                    name="subject";
+                    value = {form_data.subject, }
+                    on_change = {handle_change, }
+                    className={`w - full rounded - md bg - zion - blue - dark border - zion - blue - light text - white ${errors.subject ? 'border - red - 500 focus - visible:ring - red - 500' : ''}`}
+                    required;
+                  />;
+                  {errors.subject && (
+                    <p className="mt - 1 text - sm text - red - 500">{errors.subject}</p>)}
+                </div>;
+                <div>;
+                  <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
+                    Message;
+                  ">;
+
+                    Message;
+                  </label>;
+                  <Textarea;
+                    id="message";
+                    name="message";
+
+                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    required
+                  />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                  )}
+                </div>
+                <div>
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    disabled = {isSubmitting,}
+                  >
+                    disabled={isSubmitting}
+                  >;
+
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {submitted && (
+                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                  )}
+
+                </div>;
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+}set_errors (field_errors);
+toast ({
+  return;
+}set_errors ({
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {
+  setIsSubmitting (false);
+toast ({
+  title: "Submission Error";
+description: err.message;
+});
+}";
+}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
+}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
+}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
+}</div> <div> <Button > {';
+  is_submitting ? 'Sending...' : 'Send Message';
+}</Button>);
+}</div> </form> </div> </div> </div> </div> </section>);
+}'"}
+}
+

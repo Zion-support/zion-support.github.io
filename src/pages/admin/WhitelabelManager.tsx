@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useAuth } from "@/hooks/useAuth";
+import { SEO } from "../components/SEO";
+import { WhitelabelRequestForm } from "../../components/admin/whitelabel/WhitelabelRequestForm";
+import { TenantsList } from "../../components/admin/whitelabel/TenantsList";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
+import { useAuth } from "../../hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
     const { user } = useAuth();

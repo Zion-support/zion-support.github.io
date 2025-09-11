@@ -11,7 +11,7 @@ import { Zap } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Check } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Icon } from 'lucide-react';
 export const _MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({

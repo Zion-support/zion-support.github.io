@@ -1,67 +1,33 @@
 import React from 'react';
-<<<<<<< HEAD
-import { _Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
-
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Check } from 'lucide-react';
-const features = [];
-const technologies = [];
-const complianceStandards = [];
-const services = [];
-const _Accessibility = () => {
-    const _accessibilityFeatures = [
-=======
 import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
 const Accessibility = () => {
     const accessibilityFeatures = [
->>>>>>> origin/clean-error-fixing-automation
         {
             icon: Eye,
             title: "Visual Accessibility",
             description: "Support for users with visual impairments",
-<<<<<<< HEAD
-            features: ["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
-=======
             features["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
->>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Ear,
             title: "Auditory Accessibility",
             description: "Support for users with hearing impairments",
-<<<<<<< HEAD
-            features: ["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
-=======
             features["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
->>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Hand,
             title: "Motor Accessibility",
             description: "Support for users with motor impairments",
-<<<<<<< HEAD
-            features: ["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
-=======
             features["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
->>>>>>> origin/clean-error-fixing-automation
         },
         {
             icon: Brain,
             title: "Cognitive Accessibility",
             description: "Support for users with cognitive impairments",
-<<<<<<< HEAD
-            features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
-        }
-    ];
-    const _complianceStandards = [
-=======
             features["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
         }
     ];
     const complianceStandards = [
->>>>>>> origin/clean-error-fixing-automation
         {
             standard: "WCAG 2.1",
             level: "AA",
@@ -87,11 +53,7 @@ const Accessibility = () => {
             status: "Compliant"
         }
     ];
-<<<<<<< HEAD
-    const _toolsAndTechnologies = [
-=======
     const toolsAndTechnologies = [
->>>>>>> origin/clean-error-fixing-automation
         {
             name: "Screen Readers",
             description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack",
@@ -123,11 +85,7 @@ const Accessibility = () => {
             icon: Eye
         }
     ];
-<<<<<<< HEAD
-    const _ongoingImprovements = [
-=======
     const ongoingImprovements = [
->>>>>>> origin/clean-error-fixing-automation
         "Regular accessibility audits and testing",
         "User feedback integration",
         "Continuous monitoring and updates",
@@ -293,11 +251,7 @@ const Accessibility = () => {
             Need Help with Accessibility?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-            If you encounter any accessibility issues or have suggestions for 
-=======
             If you encounter  accessibility issues or have suggestions for 
->>>>>>> origin/clean-error-fixing-automation
             improvement, we want to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -310,10 +264,5 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-=======
     </div>)};
->>>>>>> origin/clean-error-fixing-automation
 export default Accessibility;

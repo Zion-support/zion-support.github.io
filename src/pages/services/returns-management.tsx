@@ -12,7 +12,7 @@ import {
   Smartphone,
   Settings
 } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 const ReturnsManagement: React.FC = () => {
   const features = [

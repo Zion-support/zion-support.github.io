@@ -1,21 +1,8 @@
+
+=======
 ' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-' ' ' ' ' ' ''''";";""
-' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-:src.disabled/components/support/ChatBotPanel.jsx
-' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-:temp_exclude/src.disabled/components/support/ChatBotPanel.jsx
-' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-' ' ' ' ' ' ''''";";""
-' \' \' \' \' \' \''\';\";\";
-" " " " " " """;";";"""
-' ' ' ' ' ' ''''";";""
+" " " " " " """;";";"""<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ' ' ' ' ' ' ''''";";""

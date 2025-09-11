@@ -1,1 +1,42 @@
- const contactMethods = [ { icon: Phon,e, title: "Phone,", value: "+1 302 464 0950,", description: "Call us during business hours,", action: "tel+13024640950,", color: "from - blue - 500 to - cyan - 500,"}, { icon: Mai,l, title: "Email,", value: "kleber@ziontechgroup.com,", description: "Send us a message time,", action: "mailtokleber@ziontechgroup.com,", color: "from - purple - 500 to - pink - 500,"}, { icon: MapPi,n, title: "Address,", value: "364 E Main St STE 1008,", description: "Middletow,n, DE: 19709", action: "https""","}
+import React from 'react';
+interface ContactProps {
+  // Add props here as needed
+=======}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Contact({ }: ContactProps) {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+
+
+
+:src.pages.disabled/Contact.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.pages.disabled/Contact.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Contact.jsx
+=======
+=======}
+
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,6 @@
 import React from "react"
 import { createContext, useContext, useEffect, useState } from "react";
-import { toggleFavorite as toggleFavoriteRequest } from "@/api/favorites";
+import { toggleFavorite as toggleFavoriteRequest } from "../api/favorites";
 ) {
   const [favorites, setFavorites] = useState([]);
   useEffect(() => {

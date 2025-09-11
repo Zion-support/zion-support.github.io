@@ -1,13 +1,13 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CompDashboard } from "@/components/enterprise/workspace/CompDashboard";
-import { useAuth } from "@/hooks/useAuth";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { CompDashboard } from "../components/enterprise/workspace/CompDashboard";
+import { useAuth } from "../hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useCompWorkspace } from "@/hooks/useCompWorkspace";
-import { useWhitelabel } from "@/context/WhitelabelContext";
+import { SEO } from "../components/SEO";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import { useCompWorkspace } from "../hooks/useCompWorkspace";
+import { useWhitelabel } from "../context/WhitelabelContext";
 export default function CompWorkspace() {
     const { compSlug } = useParams();
     const { user } = useAuth();

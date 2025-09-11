@@ -38,7 +38,6 @@ export interface EmergingTechService2027 {
     address: string}}
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
   // Quantum Internet Infrastructure;
-<<<<<<< HEAD:data-disabled/emergingTechServices2027.ts
   {
     id: "quantum-internet-infrastructure",;
     title: "Quantum Internet Infrastructure",;

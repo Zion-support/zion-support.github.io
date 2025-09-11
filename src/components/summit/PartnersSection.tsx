@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const _partners = [
-=======
 const partners = [
->>>>>>> origin/clean-error-fixing-automation
     { name: 'Partner A', logo: 'https://placehold.co/150x80' },
     { name: 'Partner B', logo: 'https://placehold.co/150x80' },
 ];

@@ -3,7 +3,7 @@ import { _Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor,
 
 import { CheckCircle } from 'lucide-react';
 import { Check } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Icon } from 'lucide-react';
 const _mockParticipants = [
     {

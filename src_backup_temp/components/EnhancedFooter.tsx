@@ -66,7 +66,147 @@ import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Git
     ';';';';';
   https: ''',';';';';
     ';';';';';
-import React from 'react';';';import React from 'react',;',';';
+import React from 'react';';';
+import React from 'react',;',';';
+    ;
+import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
+    ;
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const "EnhancedFooter": "React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [{ "title": 'Services'", "links": "[ { "name": 'AI Solutions'", "href": '/services/ai-services' } { "name": 'IT & Security', "href": '/services/it-services' } { "name": 'Blockchain & Web3', "href": '/services/blockchain-services' } { "name": 'Sustainability', "href": '/services/sustainability' } { "name": 'Healthcare Tech', "href": '/services/healthcare-tech' } { "name": 'Edge Computing', "href": '/services/edge-computing' } ] } { "title": 'Solutions', "links": "[{ "name": 'Enterprise'", "href": '/solutions/enterprise' } { "name": 'Startups', "href": '/solutions/startups' } { "name": 'Healthcare', "href": '/solutions/healthcare' } { "name": 'Financial Services', "href": '/solutions/financial' } { "name": 'Manufacturing', "href": '/solutions/manufacturing' } { "name": 'Education', "href": '/solutions/education' } ] } { "title": 'Company', "links": "[{ "name": 'About Us'", "href": '/about' } { "name": 'Our Team', "href": '/about/team' } { "name": 'Careers', "href": '/careers' } { "name": 'Partners', "href": '/partners' } { "name": 'Press', "href": '/press' } { "name": 'Case Studies', "href": '/case-studies' } ] } { "title": 'Resources', "links": "[{ "name": 'Blog'", "href": '/blog' } { "name": 'Documentation', "href": '/docs' } { "name": 'API Reference', "href": '/api' } { "name": 'Developer Tools', "href": '/developer' } { "name": 'Training', "href": '/training' } { "name": 'Support', "href": '/support' } ] } ]; const socialLinks = [ { "name": 'LinkedIn', "href": '"https":';';';
+import React from,',;';';
+    ';';';
+  react;
+import { Link } from;',',';';
+    'react-router-dom'; import { motion } from';',';';
+    'framer-motion;
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from;',',';';
+    'lucide-react'; const "EnhancedFooter": "React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [ { "title":';'",';';
+    'Services, "links": "[ { "name":",;
+  AI Solutions', "href": '/services/ai-services } { "name": ",'",';';
+    ';';';
+  IT & Security', "href": '/services/it-services } { "name": ",'",';';
+    ';';';
+  Blockchain & Web3', "href": '/services/blockchain-services } { "name": ",'",';';
+    ';';';
+  Sustainability', "href": '/services/sustainability } { "name": ",'",';';
+    ';';';
+  Healthcare Tech', "href": '/services/healthcare-tech } { "name": ",'",';';
+    ';';';
+  Edge Computing', "href": '/services/edge-computing } ] } { "title": ",'",';';
+    ';';';
+  Solutions', "links": "[ { "name":'",',';';
+    'Enterprise, "href": ",;
+  /solutions/enterprise' "} { "name": 'Startups, "href": ",'",';';
+    ';';';
+  /solutions/startups' } { "name": 'Healthcare, "href": ",'",';';
+    ';';';
+  /solutions/healthcare' } { "name": 'Financial Services, "href": ",'",';';
+    ';';';
+  /solutions/financial' } { "name": 'Manufacturing, "href": ",'",';';
+    ';';';
+  /solutions/manufacturing' } { "name": 'Education, "href": ",'",';';
+    ';';';
+  /solutions/education' } ] } { "title": 'Company, "links": "[ { "name":",',';';
+    ';';';
+  About Us', "href": '/about } { "name": ",'",';';
+    ';';';
+  Our Team', "href": '/about/team } { "name": ",'",';';
+    ';';';
+  Careers', "href": '/careers } { "name": ",'",';';
+    ';';';
+  Partners', "href": '/partners } { "name": ",'",';';
+    ';';';
+  Press', "href": '/press } { "name": ",'",';';
+    ';';';
+  Case Studies', "href": '/case-studies } ] } { "title": ",'",';';
+    ';';';
+  Resources', "links": "[ { "name":'",',';';
+    'Blog, "href": ",;
+  /blog' "} { "name": 'Documentation, "href": ",'",';';
+    ';';';
+  /docs' } { "name": 'API Reference, "href": ",'",';';
+    ';';';
+  /api' } { "name": 'Developer Tools, "href": ",'",';';
+    ';';';
+  /developer' } { "name": 'Training, "href": ",'",';';
+    ';';';
+  /training' } { "name": 'Support, "href": ",'",';';
+    ';';';
+  /support' } ] } ]; const socialLinks = [ { "name": 'LinkedIn, "href": ",'",';';
+    ';';';
+  "https": ''',';';
+    ';';';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Mail, 
+  Smartphone, 
+  Building, 
+  MapPin, 
+  Globe, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Youtube, 
+  ArrowRight, 
+  CheckCircle, 
+  Shield, 
+  Award, 
+  Users, 
+  Clock, 
+  Heart, 
+  Brain, 
+  Cloud, 
+  ShoppingCart, 
+  Factory, 
+  CreditCard, 
+  GraduationCap, 
+  ShoppingBag, 
+  Building2, 
+  Zap, 
+  Target, 
+  TrendingUp, 
+  Star, 
+  Lock, 
+  Eye, 
+  Code, 
+  Database, 
+  Network, 
+  Cpu, 
+  Atom, 
+  Rocket, 
+  BarChart3, 
+  MessageSquare, 
+  FileText, 
+  Settings, 
+  Gauge, 
+  Workflow, 
+  Calendar, 
+  Package, 
+  Headphones, 
+  Search, 
+  Lightbulb, 
+  Award as AwardIcon, 
+  ShieldCheck, 
+  Globe2, 
+  Leaf, 
+  Satellite, 
+  Microscope, 
+  Beaker, 
+  TestTube, 
+  Truck, 
+  Factory as FactoryIcon, 
+  Leaf as LeafIcon, 
+  Satellite as SatelliteIcon, 
+  Building as BuildingIcon, 
+  Gauge as GaugeIcon, 
+  MessageCircle, 
+  Calendar as CalendarIcon, 
+  Package as PackageIcon, 
+  CreditCard as CreditCardIcon, 
+  Globe2 as Globe2Icon, ';
+  ShieldCheck as ShieldCheckIcon ';';
+import React from 'react',;',';';
     ';';';';
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
     ';';';';
@@ -285,7 +425,8 @@ export const "EnhancedFooter": "React.FC = () => {;
                   className="text-gray-400 "hover": "text-cyan-400 transition-colors text-sm";
                 >;
                   {link.name"}
-                </Link>;export const EnhancedFooter: React.FC = () => {
+                </Link>;
+export const EnhancedFooter: React.FC = () => {
   return (<footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
         <div className="grid md: gri d-cols-4 gap-8">
@@ -396,7 +537,8 @@ export const "EnhancedFooter": "React.FC = () => {;
 ';
 export default EnhancedFooter;;';;';
 ;
-export default EnhancedFooter;"};
+export default EnhancedFooter;
+"};
 ;
       <div className="border-t border-gray-800 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

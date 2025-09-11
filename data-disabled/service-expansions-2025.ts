@@ -12,7 +12,6 @@ export interface ServiceExpansion2025 {
     mobile: string;
     email: string;
 export const serviceExpansions2025: ServiceExpansion2025[] = [;
-<<<<<<< HEAD:data-disabled/service-expansions-2025.ts
   {
     id: "ai-workflow-automation",;
     name: "AI Workflow Automation",;

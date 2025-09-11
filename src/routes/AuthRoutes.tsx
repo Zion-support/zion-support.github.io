@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-</Route>;
-export default AuthRoutes;
-</Route>
-</Route>
-</Route>
-
-=======
 import React from 'react';
 // Next.js routing - no need for react-router-dom
 import Login from '@/pages/Login';
@@ -32,4 +23,3 @@ const AuthRoutes = () => {
     </Routes>);
 };
 export default AuthRoutes;
->>>>>>> origin/clean-error-fixing-automation

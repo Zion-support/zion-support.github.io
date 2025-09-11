@@ -1,7 +1,4 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Play, Star, ArrowRight } from 'lucide-react';
+
 
 const webinars = [
   {
@@ -245,4 +242,41 @@ const WebinarsPage: React.FC = () => {
   );
 };
 
-export default WebinarsPage;
+ <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </> 
+import SEO from '../components/SEO';
+export default function WebinarsPage() {
+import SEO from '../components/SEO';
+export default function WebinarsPage() {
+origin/main
+origin/automation-improvements-final
+=======
+import React from 'react';
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+	return (
+		<>
+			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
+			<div className="container mx-auto px-4 py-16">
+				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
+				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
+=======			</div>
+		</>
+	)
+
+}
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/automation-improvements-final
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

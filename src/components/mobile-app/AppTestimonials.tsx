@@ -1,62 +1,89 @@
-import React from "react";
-import { _Star } from "lucide-react";
-import { _Card, CardContent, CardFooter } from "@/components/ui/card";
+import React from 'react';
 
-const testimonials = [];
-const _testimonials = [
-    {
-        name: "Alex Johnson",
-        role: "AI Developer",
-        text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-        rating: 5,
-        avatar: "/placeholder.svg"
-    },
-    {
-        name: "Sarah Williams",
-        role: "Tech Recruiter",
-        text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-        rating: 5,
-        avatar: "/placeholder.svg"
-    },
-    {
-        name: "Michael Chen",
-        role: "Full Stack Developer",
-        text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-        rating: 4,
-        avatar: "/placeholder.svg"
-    }
+interface Testimonial {
+  name: string;
+  role: string;
+  text: string;
+  rating: number;
+  avatar: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: 'Sarah Williams',
+    role: 'Tech Recruiter',
+    text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.',
+    rating: 5,
+    avatar: '/placeholder.svg'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Full Stack Developer',
+    text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',
+    rating: 4,
+    avatar: '/placeholder.svg'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Product Manager',
+    text: 'The AI matching is incredibly accurate. I found my dream job within a week of using the app. Highly recommended!',
+    rating: 5,
+    avatar: '/placeholder.svg'
+  }
 ];
-export const _AppTestimonials = () => {
-    return (<section className="py-16 bg-zion-blue">
+
+const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
+  return (
+    <div className="flex space-x-1">
+      {[...Array(5)].map((_, i) => (
+        <svg
+          key={i}
+          className={`w-4 h-4 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+};
+
+const AppTestimonials: React.FC = () => {
+  return (
+    <div className="py-16 bg-zion-darker">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
+          <h2 className="text-4xl font-bold text-white mb-4">What Our Users Say</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what real users are saying about our mobile app.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (<Star key={i} className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}/>))}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  {testimonial.name.charAt(0)}
                 </div>
-                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
-              </CardContent>
-              <CardFooter className="border-t border-zion-purple/20 pt-4">
-                <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img loading="lazy" src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover"/>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
-              </CardFooter>
-            </Card>))}
+              </div>
+              
+              <div className="mb-4">
+                <StarRating rating={testimonial.rating} />
+              </div>
+              
+              <p className="text-gray-300 italic">"{testimonial.text}"</p>
+            </div>
+          ))}
         </div>
       </div>
-    </section>);
+    </div>
+  );
 };
+
+export default AppTestimonials;

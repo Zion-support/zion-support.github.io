@@ -1,105 +1,85 @@
 {
-<<<<<<< HEAD
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["DOM", "DOM.Iterable", "ES6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/types/*": ["./src/types/*"]
-    }
+    "incremental": false,
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-=======
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "noEmit": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "src",
-    "pages",
-    "components",
-    "types",
->>>>>>> origin/chore/stabilize-build-minimal-index
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "zion-os.disabled",
-    "temp-disabled",
-    "pages._archive_corrupted",
+    ".next",
+    "out",
+    "dist",
+    "data_backup/**",
+    "src.corrupted/**",
+    "src/data/**",
+    "utils/next-link-shim.tsx",
+    "playwright.config.ts",
+    "api-backup",
+    "api-disabled",
+    "api.disabled.temp",
     "pages.disabled",
-    "pages.disabled_full",
-    "pages.disabled.full",
-    "src.pages.disabled",
-    "zion-os",
-    "zion-website/src",
-    "tests",
-    "backup-merge-conflicts"
+    "backup-pages",
+    "automation/**",
+    "scripts/**",
+    "deployments/**",
+    "deployment/**",
+    "backup/**",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "data",
+    "data/**",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.backup",
+    "**/*.disabled",
+    "cypress_backup",
+    "contracts_backup",
+    "fix_utils_files.ts",
+    "hooks/useResponsive.ts",
+    "lib_backup",
+    "pages-backup",
+    "pages.__backup",
+    "server",
+    "services",
+    "src.broken",
+    "temp_backup",
+    "temp_backup/**",
+    "temp_broken_components",
+    "temp_broken_components/**",
+    "src/components/SEOOptimizer.tsx",
+    "src/App*.tsx",
+    "src/main*.tsx",
+    "src/components/AIChatbotSystem.tsx"
   ]
-=======
-	"compilerOptions": {
-		"target": "ES2020",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"incremental": true,
-		"plugins": [{ "name": "next" }],
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"]
-		}
-	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		".next/types/**/*.ts"
-	],
-	"exclude": ["node_modules"]
->>>>>>> origin/chore/standardize-pages-router
 }

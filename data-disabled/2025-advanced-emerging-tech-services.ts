@@ -1,5 +1,4 @@
 export const advancedEmergingTechServices2025 = [;
-<<<<<<< HEAD:data-disabled/2025-advanced-emerging-tech-services.ts
   {
     id: "space-mining-operations-platform",;
     name: "SpaceMining Operations",;

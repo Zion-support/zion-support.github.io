@@ -1,10 +1,10 @@
 import React from 'react';
 import { _useEffect } from 'react';
-import { _supabase } from '@/integrations/supabase/client';
-import { _useAuth } from '@/hooks/useAuth';
+import { _supabase } from '../../integrations/supabase/client';
+import { _useAuth } from '../../hooks/useAuth';
 
 import { Code } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 const integrations = [];
 ;
 export function ReferralMiddleware("props": "any) {;

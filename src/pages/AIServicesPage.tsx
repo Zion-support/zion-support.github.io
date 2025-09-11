@@ -1,32 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Button } from '@/components/ui/button';
-import { _Badge } from '@/components/ui/badge';
-import { _Link } from 'react-router-dom';
-import { _Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
-
-import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { Code } from 'lucide-react';
-const features = [];
-const technologies = [];
-const services = [];
-const solutions = [];
-const implementation = [];
-const _AIServices = [
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
 const AIServices = [
->>>>>>> origin/clean-error-fixing-automation
     {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
@@ -139,11 +117,7 @@ const AIServices = [
         link: "/request-quote?service=ai-content"
     }
 ];
-<<<<<<< HEAD
-const _categories = [
-=======
 const categories = [
->>>>>>> origin/clean-error-fixing-automation
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
@@ -160,11 +134,7 @@ const categories = [
 ];
 export default function AIServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
-<<<<<<< HEAD
-    const _filteredServices = selectedCategory === "all"
-=======
     const filteredServices = selectedCategory === "all"
->>>>>>> origin/clean-error-fixing-automation
         ? AIServices
         : AIServices.filter(service => service.category.toLowerCase() === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
@@ -264,9 +234,4 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

@@ -1,3 +1,57 @@
+import React, { useState } from 'react';
+import { Button } from '../ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
+import { Input } from '../ui/Input';
+import { Textarea } from '../ui/Textarea';
+import { DollarSign, MessageSquare } from 'lucide-react';
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        projectDescription: '',
+        budget: '',
+        startDate: '',
+        message: ''
+        e.preventDefault();
+        if (onHire) {
+            onHire(formData);
+        }
+        // Reset form and close
+        setFormData({
+            projectDescription: '',
+            budget: '',
+            startDate: '',
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    };
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center gap-2">
+          <MessageSquare className="h-5 w-5 text-zion-cyan"/>
+          Hire {talentName}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {!isFormOpen ? (<div className="space-y-4">
+            {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">
+                <DollarSign className="h-4 w-4"/>
+                <span>Starting at ${hourlyRate}/hour</span>
+              </div>)}
+            <p className="text-zion-slate-light text-sm">
+              Ready to start your project? Send a message to discuss details and get started.
+            </p>
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+              Start Project Discussion
+            </Button>
+          </div>) : (<form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
+                Project Description
+              </label>
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
+            </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
@@ -32,12 +86,3 @@
           </form>)}
       </CardContent>
     </Card>);
-}
-:src/components/profile/HireNowCTA.jsx
-            message: ''}
-    );
-        setIsFormOpen(false)};
-            message: ''
-        });
-        setIsFormOpen(false);
-    };

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { safeStorage } from '@/utils/safeStorage';
-import { getCartKey } from '@/utils/cartUtils';
-import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import { safeStorage } from '../utils/safeStorage';
+import { getCartKey } from '../utils/cartUtils';
+import { getStripe } from '../utils/getStripe';
+import { apiClient } from '../utils/apiClient';
 export default function CheckoutPage() {
     const navigate = useNavigate();
     const { t } = useTranslation();

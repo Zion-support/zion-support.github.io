@@ -1,6 +1,5 @@
 export const innovative2025AIAutonomousEcosystem = [;
   // AI-Powered Autonomous Content Creation Platform;
-<<<<<<< HEAD:data-disabled/2025-innovative-ai-autonomous-ecosystem.ts
   {
     id: "ai-autonomous-content-creation-2025",;
     name: "AI Autonomous Content Creation Platform 2025",;

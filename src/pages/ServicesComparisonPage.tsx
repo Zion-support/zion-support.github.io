@@ -1,133 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
-import { _Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { _CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
-import { _SEO } from '@/components/SEO';
-import { _PRICING_TIERS } from '@/data/advancedServices';
-
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-const features = [];
-const integrations = [];
-const services = [];
-const solutions = [];
-const implementation = [];
-// Service comparison data
-const SERVICE_COMPARISONS = [
-    {
-        category: "AI & Automation",
-        services: [
-            {
-                name: "AI Business Process Automation",
-                starter: { price: "$2,999", features: ["Basic workflow automation", "Email automation", "Document processing", "Standard support"] },
-                professional: { price: "$4,999", features: ["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"] },
-                enterprise: { price: "$7,999+", features: ["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"] }
-            },
-            {
-                name: "AI Customer Intelligence",
-                starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
-                enterprise: { price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
-            }
-        ]
-    },
-    {
-        category: "Cybersecurity & Compliance",
-        services: [
-            {
-                name: "AI Threat Detection System",
-                starter: { price: "$5,999", features: ["Basic threat detection", "Email alerts", "Standard support"] },
-                professional: { price: "$7,999", features: ["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"] },
-                enterprise: { price: "$12,999+", features: ["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"] }
-            },
-            {
-                name: "Compliance Management Platform",
-                starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"] },
-                professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
-                enterprise: { price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
-            }
-        ]
-    },
-    {
-        category: "Cloud & DevOps",
-        services: [
-            {
-                name: "Cloud Cost Optimization",
-                starter: { price: "$1,999", features: ["Basic cost analysis", "Resource optimization", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"] }
-            },
-            {
-                name: "DevOps Automation Platform",
-                starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"] },
-                professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
-                enterprise: { price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
-            }
-        ]
-    },
-    {
-        category: "Data & Analytics",
-        services: [
-            {
-                name: "Data Quality Platform",
-                starter: { price: "$3,999", features: ["Basic data validation", "Data cleaning", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$8,999+", features: ["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"] }
-            },
-            {
-                name: "Real-Time Analytics Dashboard",
-                starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
-            }
-        ]
-    }
-];
-export default function ServicesComparisonPage() {
-    const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
-
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Services Comparison & Pricing
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Compare our comprehensive AI and IT services to find the perfect solution for your business. 
-            Transparent pricing with flexible plans designed for every organization size.
-          </p>
-          
-          {/* Contact Information */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <Phone className="w-5 h-5"/>
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <Mail className="w-5 h-5"/>
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <MapPin className="w-5 h-5"/>
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-=======
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -240,7 +111,6 @@ export default function ServicesComparisonPage() {
         </div>
       </section>
 
->>>>>>> origin/clean-error-fixing-automation
       {/* Pricing Tiers Overview */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -433,9 +303,4 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
->>>>>>> origin/clean-error-fixing-automation
