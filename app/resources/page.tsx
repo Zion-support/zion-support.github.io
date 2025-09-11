@@ -3,6 +3,18 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   const resources = [
     {
+      id: 'ai-implementation-checklist',
+      title: 'AI Implementation Checklist: Complete Success Guide',
+      description:
+        'Comprehensive step-by-step checklist covering every phase of AI implementation, from planning to optimization. Includes templates and expert tips.',
+      type: 'Checklist',
+      downloadCount: '3,247',
+      size: '1.8 MB',
+      category: 'AI & Technology',
+      featured: true,
+      icon: '✅',
+    },
+    {
       id: 'ai-implementation-guide',
       title: 'Complete AI Implementation Guide 2025',
       description:
