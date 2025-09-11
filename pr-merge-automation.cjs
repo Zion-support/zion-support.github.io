@@ -123,7 +123,7 @@ class PRMergeAutomation {
     this.log(`🔒 Closing PR #${pr.number}...`);
     try {
       // Use GitHub API to close the PR
-      const closeCommand = `curl -X PATCH -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${process.env.GITHUB_TOKEN || 'ghs_00GmWtonZmQSwhAA9dGWJjz4af9hJ41DlS1l'}" https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number} -d '{"state":"closed"}'`;
+      const closeCommand = `curl -X PATCH -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${process.env.GITHUB_TOKEN}" https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number} -d '{"state":"closed"}'`;
       await this.runCommand(closeCommand, `Close PR #${pr.number}`);
       this.log(`✅ Successfully closed PR #${pr.number}`);
     } catch (error) {

@@ -8,13 +8,13 @@ import requests
 import time
 
 # Configuration
-GITHUB_TOKEN = "ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL"
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 REPO_OWNER = "Zion-Holdings"
 REPO_NAME = "zion.app"
 BASE_URL = "https://api.github.com"
 
 headers = {
-    "Authorization": f"token {GITHUB_TOKEN}",
+    "Authorization": f"token {GITHUB_TOKEN}" if GITHUB_TOKEN else "",
     "Accept": "application/vnd.github.v3+json"
 }
 
