@@ -330,8 +330,8 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: Startup SEO Playbook 2025, LLM Evals in Production, and
-              the Startup SEO Content Engine. Practical guides to grow faster in 2025.
+              New this week: AI Automation ROI Calculator, Enterprise AI Security Best Practices, 
+              and Fortune 500 Transformation Case Study. Practical tools to accelerate your AI journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -348,26 +348,96 @@ export default function HomePage() {
               </Link>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
-              <Link href='/resources/startup-seo-playbook-2025' className='group'>
+              <Link href='/resources/ai-automation-roi-calculator' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
-                  <div className='text-3xl mb-3'>📈</div>
-                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Startup SEO Playbook 2025</h3>
-                  <p className='text-white/80 text-sm mt-2'>Ship weekly. Compound traffic and pipeline.</p>
+                  <div className='text-3xl mb-3'>🧮</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>AI Automation ROI Calculator</h3>
+                  <p className='text-white/80 text-sm mt-2'>Calculate your AI investment return with our free tool.</p>
                 </div>
               </Link>
-              <Link href='/blog/llm-evals-in-production-2025' className='group'>
+              <Link href='/blog/enterprise-ai-security-best-practices-2025' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
-                  <div className='text-3xl mb-3'>🧪</div>
-                  <h3 className='text-xl font-semibold text-white group-hover:underline'>LLM Evals in Production</h3>
-                  <p className='text-white/80 text-sm mt-2'>CI evals, judge models, budgets tied to outcomes.</p>
+                  <div className='text-3xl mb-3'>🔒</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Enterprise AI Security</h3>
+                  <p className='text-white/80 text-sm mt-2'>Complete security framework for AI systems.</p>
                 </div>
               </Link>
-              <Link href='/blog/startup-seo-content-engine-2025' className='group'>
+              <Link href='/case-studies/fortune-500-ai-transformation-success' className='group'>
                 <div className='bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors'>
-                  <div className='text-3xl mb-3'>🧱</div>
-                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Startup SEO Content Engine</h3>
-                  <p className='text-white/80 text-sm mt-2'>A lean system to publish weekly, consistently.</p>
+                  <div className='text-3xl mb-3'>🏆</div>
+                  <h3 className='text-xl font-semibold text-white group-hover:underline'>Fortune 500 Success Story</h3>
+                  <p className='text-white/80 text-sm mt-2'>40% cost reduction through AI transformation.</p>
                 </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Tools Section */}
+      <section className='py-16 bg-gradient-to-r from-green-50 to-blue-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              🛠️ Free Business Tools
+            </h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Calculate your AI automation ROI and get instant insights with our free business tools
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
+            <div className='bg-white rounded-xl p-8 shadow-lg border border-gray-200'>
+              <div className='text-center mb-6'>
+                <div className='text-4xl mb-4'>🧮</div>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2'>AI Automation ROI Calculator</h3>
+                <p className='text-gray-600'>Calculate the return on investment for your AI automation projects with industry benchmarks</p>
+              </div>
+              <div className='space-y-3 mb-6'>
+                <div className='flex justify-between text-sm'>
+                  <span className='text-gray-600'>Average ROI:</span>
+                  <span className='font-semibold text-green-600'>180-300%</span>
+                </div>
+                <div className='flex justify-between text-sm'>
+                  <span className='text-gray-600'>Payback Period:</span>
+                  <span className='font-semibold text-blue-600'>3-12 months</span>
+                </div>
+                <div className='flex justify-between text-sm'>
+                  <span className='text-gray-600'>Cost Savings:</span>
+                  <span className='font-semibold text-purple-600'>25-50%</span>
+                </div>
+              </div>
+              <Link
+                href='/resources/ai-automation-roi-calculator'
+                className='w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block'
+              >
+                Calculate Your ROI
+              </Link>
+            </div>
+            <div className='bg-white rounded-xl p-8 shadow-lg border border-gray-200'>
+              <div className='text-center mb-6'>
+                <div className='text-4xl mb-4'>📋</div>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2'>AI Implementation Checklist</h3>
+                <p className='text-gray-600'>Step-by-step guide to successful AI deployment with security and compliance considerations</p>
+              </div>
+              <div className='space-y-3 mb-6'>
+                <div className='flex justify-between text-sm'>
+                  <span className='text-gray-600'>Implementation Steps:</span>
+                  <span className='font-semibold text-green-600'>25+</span>
+                </div>
+                <div className='flex justify-between text-sm'>
+                  <span className='text-gray-600'>Security Checks:</span>
+                  <span className='font-semibold text-blue-600'>15+</span>
+                </div>
+                <div className='flex justify-between text-sm'>
+                  <span className='text-gray-600'>Compliance Items:</span>
+                  <span className='font-semibold text-purple-600'>10+</span>
+                </div>
+              </div>
+              <Link
+                href='/resources/ai-implementation-checklist-2025'
+                className='w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block'
+              >
+                Download Checklist
               </Link>
             </div>
           </div>
@@ -383,17 +453,17 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[{
-              id: 'ai-productivity-playbook-2025',
-              title: 'AI Productivity Playbook 2025',
-              excerpt: 'Boost throughput with AI while keeping quality and costs in check.'
+              id: 'ai-automation-roi-calculator-2025',
+              title: 'AI Automation ROI Calculator 2025',
+              excerpt: 'Measure the true business impact of AI automation with our comprehensive ROI framework.'
             }, {
-              id: 'cloud-cost-optimization-2025',
-              title: 'Cloud Cost Optimization 2025',
-              excerpt: 'Cut 30–50% without downtime: quick wins and architecture moves.'
+              id: 'enterprise-ai-security-best-practices-2025',
+              title: 'Enterprise AI Security Best Practices 2025',
+              excerpt: 'Protect your AI systems with enterprise-grade security and compliance framework.'
             }, {
-              id: 'edge-ai-retail-2025',
-              title: 'Edge AI in Retail 2025',
-              excerpt: 'Real-time CX with privacy by design and on-device intelligence.'
+              id: 'fortune-500-ai-transformation-success',
+              title: 'Fortune 500 AI Transformation Success',
+              excerpt: 'How a leading manufacturer achieved 40% cost reduction through AI automation.'
             }].map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`} className='group'>
                 <article className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>
