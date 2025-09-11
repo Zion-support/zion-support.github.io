@@ -17,18 +17,22 @@ export interface AdvancedInnovativeService2026 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+  contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string;
+  };
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[]};
+    security: string[];
+  };
   competitors?: string[];
-  caseStudies?: string[]}
+  caseStudies?: string[];
+}
+
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
   {
     id: 'quantum-ai-neural-networks-2026',
@@ -80,14 +84,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Quantum Computing', 'AI/ML', 'Neural Networks', 'Quantum Encryption'],
+      technology: ['Quantum Computing', 'AI/ML', 'Neural Networks', 'Quantum Encryption'],
       integrations: ['AWS', 'Azure', 'Google Cloud', 'Custom APIs'],
       apiEndpoints: 50,
       uptime: '99.99%',
-      security['Quantum Encryption', 'Zero Trust', 'Multi-factor Authentication']
+      security: ['Quantum Encryption', 'Zero Trust', 'Multi-factor Authentication']
     },
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],
-    caseStudies['Financial Institution achieved 95% prediction accuracy', 'Research lab reduced drug discovery time by 80%']
+    caseStudies: ['Financial Institution achieved 95% prediction accuracy', 'Research lab reduced drug discovery time by 80%']
   },
   {
     id: 'brain-computer-interface-platform-2026',
@@ -139,14 +143,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Neural Monitoring', 'Signal Processing', 'Machine Learning', 'Biometrics'],
+      technology: ['Neural Monitoring', 'Signal Processing', 'Machine Learning', 'Biometrics'],
       integrations: ['Medical Systems', 'Gaming Platforms', 'Research Tools', 'Custom APIs'],
       apiEndpoints: 25,
       uptime: '99.95%',
-      security['HIPAA Compliance', 'Data Encryption', 'Access Control']
+      security: ['HIPAA Compliance', 'Data Encryption', 'Access Control']
     },
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs'],
-    caseStudies['Hospital achieved 90% success rate in rehabilitation', 'Gaming comp increased user engagement by 300%']
+    caseStudies: ['Hospital achieved 90% success rate in rehabilitation', 'Gaming company increased user engagement by 300%']
   },
   {
     id: 'space-mining-autonomous-system-2026',
@@ -198,14 +202,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['AI/ML', 'Robotics', 'Space Systems', 'Resource Processing'],
+      technology: ['AI/ML', 'Robotics', 'Space Systems', 'Resource Processing'],
       integrations: ['NASA Systems', 'SpaceX APIs', 'Satellite Networks', 'Ground Control'],
       apiEndpoints: 100,
       uptime: '99.99%',
-      security['Space-grade Security', 'Encrypted Communications', 'Redundant Systems']
+      security: ['Space-grade Security', 'Encrypted Communications', 'Redundant Systems']
     },
     competitors: ['Planetary Resources', 'Deep Space Industries', 'Asteroid Mining Corporation'],
-    caseStudies['Successfully mapped 50+ asteroids', 'Extracted 100kg of rare minerals from lunar surface']
+    caseStudies: ['Successfully mapped 50+ asteroids', 'Extracted 100kg of rare minerals from lunar surface']
   },
   {
     id: 'synthetic-biology-platform-2026',
@@ -257,14 +261,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['CRISPR', 'DNA Synthesis', 'Bioinformatics', 'Automation'],
+      technology: ['CRISPR', 'DNA Synthesis', 'Bioinformatics', 'Automation'],
       integrations: ['Lab Equipment', 'Research Databases', 'Regulatory Systems', 'Collaboration Tools'],
       apiEndpoints: 75,
       uptime: '99.9%',
-      security['Biosafety Protocols', 'Data Encryption', 'Access Control', 'Audit Trails']
+      security: ['Biosafety Protocols', 'Data Encryption', 'Access Control', 'Audit Trails']
     },
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics'],
-    caseStudies['Developed novel cancer treatment', 'Created biofuel-producing bacteria', 'Designed environmental cleanup organisms']
+    caseStudies: ['Developed novel cancer treatment', 'Created biofuel-producing bacteria', 'Designed environmental cleanup organisms']
   },
   {
     id: 'fusion-energy-reactor-2026',
@@ -316,14 +320,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Fusion Physics', 'Plasma Control', 'Magnetic Confinement', 'Energy Conversion'],
+      technology: ['Fusion Physics', 'Plasma Control', 'Magnetic Confinement', 'Energy Conversion'],
       integrations: ['Power Grids', 'Industrial Systems', 'Monitoring Networks', 'Control Systems'],
       apiEndpoints: 200,
       uptime: '99.99%',
-      security['Nuclear Safety', 'Radiation Protection', 'Emergency Systems', 'Access Control']
+      security: ['Nuclear Safety', 'Radiation Protection', 'Emergency Systems', 'Access Control']
     },
     competitors: ['ITER', 'Commonwealth Fusion', 'General Fusion'],
-    caseStudies['Successfully achieved sustained fusion reaction', 'Generated 50MW of clean power', 'Reduced energy costs by 80%']
+    caseStudies: ['Successfully achieved sustained fusion reaction', 'Generated 50MW of clean power', 'Reduced energy costs by 80%']
   },
   {
     id: 'holographic-reality-platform-2026',
@@ -375,14 +379,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Holographic Display', 'Computer Vision', '3D Rendering', 'Gesture Recognition'],
+      technology: ['Holographic Display', 'Computer Vision', '3D Rendering', 'Gesture Recognition'],
       integrations: ['VR/AR Platforms', 'Content Management', 'Collaboration Tools', 'Mobile Apps'],
       apiEndpoints: 30,
       uptime: '99.5%',
-      security['Content Protection', 'User Authentication', 'Data Privacy']
+      security: ['Content Protection', 'User Authentication', 'Data Privacy']
     },
     competitors: ['Looking Glass', 'RealView Imaging', 'Leia Inc'],
-    caseStudies['Increased student engagement by 200%', 'Reduced travel costs by 60%', 'Enhanced product presentations']
+    caseStudies: ['Increased student engagement by 200%', 'Reduced travel costs by 60%', 'Enhanced product presentations']
   },
   {
     id: 'time-crystal-computing-2026',
@@ -434,14 +438,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Time Crystals', 'Quantum Computing', 'Cryogenics', 'Quantum Memory'],
+      technology: ['Time Crystals', 'Quantum Computing', 'Cryogenics', 'Quantum Memory'],
       integrations: ['Research Tools', 'Quantum Networks', 'Classical Systems', 'Cloud Platforms'],
       apiEndpoints: 60,
       uptime: '99.9%',
-      security['Quantum Encryption', 'Physical Security', 'Access Control']
+      security: ['Quantum Encryption', 'Physical Security', 'Access Control']
     },
     competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum'],
-    caseStudies['Achieved quantum supremacy', 'Solved complex mathematical problems', 'Advanced cryptography research']
+    caseStudies: ['Achieved quantum supremacy', 'Solved complex mathematical problems', 'Advanced cryptography research']
   },
   {
     id: 'dark-matter-detection-2026',
@@ -493,14 +497,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Particle Detection', 'Cryogenics', 'Data Analysis', 'Machine Learning'],
+      technology: ['Particle Detection', 'Cryogenics', 'Data Analysis', 'Machine Learning'],
       integrations: ['Research Networks', 'Data Repositories', 'Collaboration Tools', 'Publication Systems'],
       apiEndpoints: 40,
       uptime: '99.8%',
-      security['Data Integrity', 'Access Control', 'Collaboration Security']
+      security: ['Data Integrity', 'Access Control', 'Collaboration Security']
     },
     competitors: ['CERN', 'Fermilab', 'SLAC'],
-    caseStudies['Detected new particle signatures', 'Advanced dark matter theories', 'International collaboration success']
+    caseStudies: ['Detected new particle signatures', 'Advanced dark matter theories', 'International collaboration success']
   },
   {
     id: 'consciousness-transfer-system-2026',
@@ -552,14 +556,14 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Brain Mapping', 'AI/ML', 'Quantum Computing', 'Ethical AI'],
+      technology: ['Brain Mapping', 'AI/ML', 'Quantum Computing', 'Ethical AI'],
       integrations: ['Research Platforms', 'Ethics Frameworks', 'Collaboration Tools', 'Security Systems'],
       apiEndpoints: 100,
       uptime: '99.99%',
-      security['Ethical AI', 'Data Privacy', 'Access Control', 'Audit Trails']
+      security: ['Ethical AI', 'Data Privacy', 'Access Control', 'Audit Trails']
     },
     competitors: ['OpenAI', 'Anthropic', 'Research Institutions'],
-    caseStudies['Advanced consciousness research', 'Ethical framework development', 'International collaboration']
+    caseStudies: ['Advanced consciousness research', 'Ethical framework development', 'International collaboration']
   },
   {
     id: 'multiverse-communication-2026',
@@ -611,13 +615,13 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
-      technology['Theoretical Physics', 'Quantum Mechanics', 'Simulation', 'AI/ML'],
+      technology: ['Theoretical Physics', 'Quantum Mechanics', 'Simulation', 'AI/ML'],
       integrations: ['Research Networks', 'Simulation Platforms', 'Collaboration Tools', 'Publication Systems'],
       apiEndpoints: 50,
       uptime: '99.9%',
-      security['Research Security', 'Data Integrity', 'Access Control']
+      security: ['Research Security', 'Data Integrity', 'Access Control']
     },
     competitors: ['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
-    caseStudies['Advanced theoretical research', 'International collaboration', 'Educational innovation']
+    caseStudies: ['Advanced theoretical research', 'International collaboration', 'Educational innovation']
   }
 ];

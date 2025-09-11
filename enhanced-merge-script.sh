@@ -22,25 +22,35 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "/d' "$file"
-            sed -i '/
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "⚠️  Found conflicts in $file, resolving..."
+        
+        # Create a backup of the conflicted file
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Enhanced conflict resolution strategy
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            echo "📦 Critical file detected, keeping main version and merging dependencies..."
+            # For package files, keep main version but merge dependencies
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" || "$file" == "tailwind.config.ts" || "$file" == "vite.config.ts" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
             echo "📚 Documentation file, keeping both versions where possible..."
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == *".tsx" || "$file" == *".ts" || "$file" == *".js" || "$file" == *".jsx" ]]; then
             echo "📱 Code file detected, keeping incoming version..."
             # For code files, prefer the incoming version (feature branch)
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         else
             echo "📝 Regular file, attempting to merge both versions..."
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         fi
         
         echo "✅ Resolved conflicts in $file"
@@ -110,9 +120,9 @@ echo "🔄 Processing open PRs..."
 grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" | while read -r branch_name; do
     if [ -n "$branch_name" ]; then
         echo ""
-        echo ""
+        echo "=========================================="
         echo "🔄 Processing branch: $branch_name"
-        echo ""
+        echo "=========================================="
         
         if merge_branch "$branch_name"; then
             echo "✅ Branch $branch_name processed successfully"
@@ -120,7 +130,7 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
             echo "❌ Branch $branch_name processing failed"
         fi
         
-        echo ""
+        echo "=========================================="
         echo ""
         
         # Push changes every 3 successful merges to avoid losing work

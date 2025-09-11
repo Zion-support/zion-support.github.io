@@ -1,21 +1,26 @@
-
-
-main
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
-
-
-
-
-
-main
-
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -23,123 +28,133 @@ const fixes = [
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     replacement: 'import { $1 } from \'$2\';'
   },
+<<<<<<< HEAD
+=======
   
-const fixes = [
-  // Fix missing semicolons in import statements;
-  {]
-
-  },
-  
-
-  // Fix malformed import statements;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix malformed import statements
   {
-
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
+    replacement: 'import { $1 } from \'$2\';\n\nexport default function'
+  },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix missing semicolons after import statements
   {
     pattern: /import\s+([^]+)\s*$/gm,
     replacement: import $1;
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons after export statements
-
-  // Fix missing semicolons after export statements
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix unterminated string literals
-main
-
+=======
+  // Fix missing semicolons after export statements
+>>>>>>> origin/main
   {
     pattern: /export\s+([^]+)\s*$/gm,
     replacement: export $1;
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons in variable declarations
-
-  // Fix missing semicolons in variable declarations
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix malformed function declarations
-main
-
+=======
+  // Fix missing semicolons in variable declarations
+>>>>>>> origin/main
   {
     pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
     replacement: const $1 = $2;
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons in function declarations
-
-  // Fix missing semicolons in function declarations
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix missing closing brackets and parentheses
-main
-
+=======
+  // Fix missing semicolons in function declarations
+>>>>>>> origin/main
   {
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: function $1() {\n
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons in arrow functions
-
-  // Fix missing semicolons in arrow functions
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix malformed JSX attributes
-main
-
+=======
+  // Fix missing semicolons in arrow functions
+>>>>>>> origin/main
   {
     pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
     replacement: const $1 = () => $2;
   },
+<<<<<<< HEAD
+=======
   
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix missing semicolons in object properties
   {
     pattern: /(\w+):\s*([^}]+)\s*$/gm,
     replacement: $1: $2,
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons in array elements
-
-  // Fix missing semicolons in array elements
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix malformed return statements
-main
-
+=======
+  // Fix missing semicolons in array elements
+>>>>>>> origin/main
   {
     pattern: /(\w+)\s*$/gm,
     replacement: $1,
   },
+<<<<<<< HEAD
+=======
   
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix duplicated content (remove duplicate lines)
+=======
   // Fix missing semicolons in return statements
-
-  // Fix missing semicolons in return statements
-
-  // Fix duplicated content (remove duplicate lines)
-main
-
-  // Fix duplicated content (remove duplicate lines)
-
-  // Fix duplicated content (remove duplicate lines)
-
+>>>>>>> origin/main
   {
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons in if statements
-
-  // Fix missing semicolons in if statements
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix missing closing brackets in arrays
-main
-
+=======
+  // Fix missing semicolons in if statements
+>>>>>>> origin/main
   {
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
   },
+<<<<<<< HEAD
+=======
   
-  // Fix missing semicolons in for loops
-
-  // Fix missing semicolons in for loops
-
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   // Fix malformed JSX closing tags
-main
-
+=======
+  // Fix missing semicolons in for loops
+>>>>>>> origin/main
   {
     pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'for (let i = 0; i < length; i++) {\n'
@@ -240,10 +255,19 @@ main
     pattern: /import\s+([^;]+)\s*$/gm,
     replacement: 'import $1;'
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
-
-
-
+>>>>>>> origin/main
 console.log('🔧 Fixing final syntax errors...');
 
 
@@ -265,27 +289,45 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
-
-
-
-
-main
-
-
-
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> origin/main
 ];
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        console.log(`File not found: ${filePath}`);
+        return 0;
+=======
+<<<<<<< HEAD
+        console.log(`File not found: ${filePath}`);
+        return 0;
+=======
         return;
 
         
         return;
-
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     }
 '
     let content = fs.readFileSync(filePath,utf8);
 
+    let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+    let fixes = 0;
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    let fixes = 0;
+
+=======
     let modified = false;
 
 
@@ -333,11 +375,25 @@ function walkDirectory(dir) {
   
   return fixedCount}
     let fixes = 0;
-
+<<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
         console.log(`File not found: ${filePath}`);
         return 0;        return;
         console.log(`File not found: ${filePath}`);
         return 0;
+    }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixes = 0;
+    let fixes = 0;
+
+>>>>>>> origin/main
+    // Fix textarea.tsx
+    if (filePath.includes('textarea.tsx')) {
+        // Fix malformed className
+        content = content.replace(/className=\{`flex min-h-\[80px\] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: tex t-muted-foreground focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 \$\{className\}`\}/g, 'className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}');
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
@@ -383,18 +439,39 @@ let totalFixes = 0;
 filesToFix.forEach(file => {)
     totalFixes += fixFile(file);
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
 
 
 
 
 
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
 
-
+>>>>>>> origin/main
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
 if (totalFixes > 0) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.log('\n✅ Final syntax error fixing completed!');
+} else {
+    console.log('\n✨ No syntax errors found to fix.');
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
@@ -491,8 +568,6 @@ function walkDirectory(dir) {
 
 
 
-<<<<<<< HEAD
-=======
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -501,16 +576,14 @@ if (totalFixes > 0) {
 } else {
     
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
+=======
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
     console.log('\n✨ No syntax errors found to fix.');
 }#!/usr/bin/env node;
 }
+>>>>>>> origin/main
 const fs = require('fs')
 const path = require('path')
     "pattern"
@@ -524,6 +597,8 @@ const path = require('path')
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
     "replacement"
     "replacement"
+<<<<<<< HEAD
+<<<<<<< HEAD
     "replacement"
 
     console.log('\n✅ Final syntax error fixing completed!');
@@ -536,14 +611,8 @@ const path = require('path')
 
     "replacement"
     "replacement"
-main
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
     "replacement"
-    "replacement"
-
-
-    "replacement"
-
-
-
-main
-
+>>>>>>> origin/main

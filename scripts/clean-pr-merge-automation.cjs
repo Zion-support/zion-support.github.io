@@ -5,7 +5,6 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Clean PR Merge Automation System');
-console.log('===================================');
 
 class CleanPRMergeAutomation {
   constructor() {
@@ -195,75 +194,6 @@ class CleanPRMergeAutomation {
       // Strategy: Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]*/g,
-        '$1'
-      );
-
-      // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-      resolvedContent = resolvedContent.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-
-      // Write the resolved content
-      fs.writeFileSync(filePath, resolvedContent);
-      this.log(`✅ Resolved conflicts in: ${filePath}`);
-    } catch (error) {
-      this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`, 'error');
-    }
-  }
-
-  async runAutomation() {
-    try {
-      this.log('Starting clean PR merge automation...');
-
-      // Get priority branches
-      const branches = await this.getPriorityBranches();
-
-      if (branches.length === 0) {
-        this.log('No priority branches to process', 'info');
-        return;
-      }
-
-      // Process branches one by one
-      for (const branch of branches) {
-        await this.processBranch(branch);
-        // Small delay between branches
-        await new Promise(resolve => setTimeout(resolve, 3000));
-      }
-
-      // Generate final report
-      this.generateReport();
-    } catch (error) {
-      this.log(`Automation failed: ${error.message}`, 'error');
-    }
-  }
-
-  generateReport() {
-    const endTime = Date.now();
-    const duration = Math.round((endTime - this.startTime) / 1000);
-
-    const report = {
-      summary: {
-        totalBranches: this.processedBranches.length,
-        successfullyMerged: this.mergedBranches.length,
-        failedBranches: this.failedBranches.length,
-        skippedBranches: this.skippedBranches.length,
-        conflictsResolved: this.conflictsResolved,
-        duration: `${duration} seconds`
-      },
-      processedBranches: this.processedBranches,
-      mergedBranches: this.mergedBranches,
-      failedBranches: this.failedBranches,
-      skippedBranches: this.skippedBranches,
-      timestamp: new Date().toISOString()
-    };
-
-    // Save report to file
-    fs.writeFileSync('clean-pr-merge-report.json', JSON.stringify(report, null, 2));
-
-    // Display summary
-    console.log('\n🎉 Clean PR Merge Automation Complete!');
-    console.log('=====================================');
     console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);

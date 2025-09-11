@@ -1,11 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+import { _Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
 ;
 export function Footer("props": "any) {;
-  const currentYear = new Date().getFullYear();
+  const _currentYear = new Date().getFullYear();
 ;
-  const footerSections = [;
+  const _footerSections = [;
     {;
       "title": 'Services';
       "links": [;
@@ -52,7 +57,7 @@ export function Footer("props": "any) {;
     }
   ];
 ;
-  const socialLinks = [;
+  const _socialLinks = [;
     { "name": 'Facebook', "href": '"https": "//facebook.com/ziontechgroup'", "icon": "Facebook "}
     { "name": 'Twitter', "href": '"https": "//twitter.com/ziontechgroup'", "icon": "Twitter "}
     { "name": 'LinkedIn', "href": '"https": "//linkedin.com/company/ziontechgroup'", "icon": "Linkedin "}

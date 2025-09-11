@@ -1,4 +1,5 @@
-// Hook for useOnClickOutside,
-export const useUseOnClickOutside: unknown = $2;
+// Hook for useOnClickOutside,;
+export const useUseOnClickOutside: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain,

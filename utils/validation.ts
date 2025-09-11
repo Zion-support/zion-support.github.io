@@ -1,88 +1,38 @@
-export const validators = {
-  email: (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  },
-  phone: (phone: string): boolean => {
-    const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ''));
-  },
-  url: (url: string): boolean => {
-    try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
-  },
-  required: (value: any): boolean => {
-    return value !== null && value !== undefined && value !== '';
-  },
-  minLength: (value: string, min: number): boolean => {
-    return value.length >= min;
-  },
-  maxLength: (value: string, max: number): boolean => {
-    return value.length <= max;
-  },
-  pattern: (value: string, regex: RegExp): boolean => {
-    return regex.test(value);
-  }
-};
+<<<<<<< HEAD
 
-export const formatValidationError = (field: string, rule: string, value?: any): string => {
-  const messages: Record<string, string> = {
-    email: 'Please enter a valid email address',
-    phone: 'Please enter a valid phone number',
-    url: 'Please enter a valid URL',
-    required: 'This field is required',
-    minLength: `This field must be at least ${value} characters long`,
-    maxLength: `This field must be no more than ${value} characters long`,
-    pattern: 'This field format is invalid'
-  };
-  return messages[rule] || `${field} is invalid`;
-};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 
-export default {
-  validators,
-  formatValidationError
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+
+
+
+
+
+// Validation utilities
+export const validation = {
+  // Add validation utilities here
+}
+
+}
+// Validation utilities
+// Validation utilities;
+export const validation = {
+  // Add validation utilities here;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+// Validation utilities
+export const validation = {
+  // Add validation utilities here
 };
-export const validators = {
-  "email": (email: string): boolean => {
-    const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
-    return emailRegex.test(email)},
-  "phone": (phone: string): boolean => {
-    const phoneRegex = /^[+]?[1-9][d]{0,15}$/;
-    return phoneRegex.test(phone.replace(/s/g, ''))},
-  "url": (url: string): boolean => {
-    try {
-      new URL(url);
-      return true} catch {
-      return false}
-  },
-  "required": (value: unknown): boolean => {
-    return value !== null && value !== undefined && value !== '';
-  },
-  "minLength": (value: string, "min": number): boolean => {
-    return value.length >= min;
-  },
-  "maxLength": (value: string, "max": number): boolean => {
-    return value.length <= max;
-  },
-  "pattern": (value: string, "regex": RegExp): boolean => {
-    return regex.test(value);
-  }
-};
-export const formatValidationError = ("field": string, "rule": string, value?: unknown): string => {
-  const "messages": Record<string, string> = {
-    "email": 'Please enter a valid email address',
-    "phone": 'Please enter a valid phone number',
-    "url": 'Please enter a valid URL',
-    "required": 'This field is required',
-    "minLength": `This field must be at least ${value} characters long`,
-    "maxLength": `This field must be no more than ${value} characters long`,
-    "pattern": 'This field format is invalid'
-  };
-  return messages[rule] || `${field} is invalid`};
-export default { validators, formatValidationError };
-export const validators = { email: (email: string): boolean => { const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/; return emailRegex.test(email)},phone: (phone: string): boolean => { const phoneRegex = /^[+]?[1-9][d]{0,15}$/; return phoneRegex.test(phone.replace(/s/g,''))},url: (url: string): boolean => { try { new URL(url); return true} catch { return false} },required: (value: any): boolean => { return value !== null && value !== undefined && value !== ''},minLength: (value: string,min: number): boolean => { return value.length >= min},maxLength: (value: string,max: number): boolean => { return value.length <= max},pattern: (value: string,regex: RegExp): boolean => { return regex.test(value)} }; export const formatValidationError = (field: 'string',rule: 'string',value?: any): string => { const messages: 'Record<string',string> = { email: 'Please enter a valid email address',phone: 'Please enter a valid phone number',url: 'Please enter a valid URL',required: 'This field is required',minLength: `This field must be at least ${value} characters long`,maxLength: `This field must be no more than ${value} characters long`,pattern: 'This field format is invalid' }; return messages[rule] || `${field} is invalid`}; export default { validators,formatValidationError };
-export const validators = { email: (email: string): boolean => { const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/; return emailRegex.test(email)},phone: (phone: string): boolean => { const phoneRegex = /^[+]?[1-9][d]{0,15}$/; return phoneRegex.test(phone.replace(/s/g,''))},url: (url: string): boolean => { try { new URL(url); return true} catch { return false} },required: (value: unknown): boolean => { return value !== null && value !== undefined && value !== ''},minLength: (value: string,min: number): boolean => { return value.length >= min},maxLength: (value: string,max: number): boolean => { return value.length <= max},pattern: (value: string,regex: RegExp): boolean => { return regex.test(value)} }; export const formatValidationError = (field: string,rule: string,value?: unknown): string => { const messages: Record<string,string> = { email: 'Please enter a valid email address',phone: 'Please enter a valid phone number',url: 'Please enter a valid URL',required: 'This field is required',minLength: `This field must be at least ${value} characters long`,maxLength: `This field must be no more than ${value} characters long`,pattern: 'This field format is invalid' }; return messages[rule] || `${field} is invalid`}; export default { validators,formatValidationError };
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

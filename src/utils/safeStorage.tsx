@@ -19,69 +19,56 @@ function isLocalStorageAvailable(): boolean {
   }
 }
 
-const memoryStore = new Map<string, string>();
-
 export const safeStorage: SafeStorage = {
-  getItem: (key) => {
+  getItem: (key: string) => {
+    if (!isLocalStorageAvailable()) return null;
     try {
-      if (isLocalStorageAvailable()) return window.localStorage.getItem(key);
-      return memoryStore.get(key) ?? null;
+      return window.localStorage.getItem(key);
     } catch {
       return null;
     }
   },
-  setItem: (key, value) => {
+  setItem: (key: string, value: string) => {
+    if (!isLocalStorageAvailable()) return false;
     try {
-      if (isLocalStorageAvailable()) {
-        window.localStorage.setItem(key, value);
-      } else {
-        memoryStore.set(key, value);
-      }
+      window.localStorage.setItem(key, value);
       return true;
     } catch {
       return false;
     }
   },
-  removeItem: (key) => {
+  removeItem: (key: string) => {
+    if (!isLocalStorageAvailable()) return false;
     try {
-      if (isLocalStorageAvailable()) {
-        window.localStorage.removeItem(key);
-      } else {
-        memoryStore.delete(key);
-      }
+      window.localStorage.removeItem(key);
       return true;
     } catch {
       return false;
     }
   },
   clear: () => {
+    if (!isLocalStorageAvailable()) return false;
     try {
-      if (isLocalStorageAvailable()) {
-        window.localStorage.clear();
-      } else {
-        memoryStore.clear();
-      }
+      window.localStorage.clear();
       return true;
     } catch {
       return false;
     }
   },
-  key: (index) => {
+  key: (index: number) => {
+    if (!isLocalStorageAvailable()) return null;
     try {
-      if (isLocalStorageAvailable()) return window.localStorage.key(index);
-      return Array.from(memoryStore.keys())[index] ?? null;
+      return window.localStorage.key(index);
     } catch {
       return null;
     }
   },
   get length() {
+    if (!isLocalStorageAvailable()) return 0;
     try {
-      if (isLocalStorageAvailable()) return window.localStorage.length;
-      return memoryStore.size;
+      return window.localStorage.length;
     } catch {
       return 0;
     }
-  },
+  }
 };
-
-export default safeStorage;

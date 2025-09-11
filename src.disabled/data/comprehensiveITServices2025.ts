@@ -19,4 +19,3 @@
    innovationLevel: string;
    contactInfo: { phone: string;
 
-

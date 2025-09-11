@@ -70,15 +70,18 @@ const systems = [
       fs.mkdirSync(logDir, { "recursive": true });",
     }
   }
+
   log(message, level = 'INFO') {'}
     const timestamp = new Date().toISOString();,
     }
   }
+
   async runSystem(systemName, options = {}) {}
     if (!this.automationSystems.has(systemName)) {}
       this.log(`System "${systemName}" not found`, 'ERROR');',
       return false;,
     }
+
     const system = this.automationSystems.get(systemName);
 ;
 #!/usr/bin/env node
@@ -272,8 +275,6 @@ const state = {
       hasMissingTests: fals,e
       lastBuildTime: nul,l
   codeComplexity: 0;
-;
-;
 const startTime = Date.now();
     try {
       this.log(`Starting "system": ${systemName}`);
@@ -369,8 +370,6 @@ const status = {
       systemsCount: this.automationSystems.siz,e
       learningDataSize: this.learningData.siz,e
   report: this.generateIntelligenceReport();
-;
-;
       "timestamp": new Date().toISOString(),
       "totalSystems": this.automationSystems.size,
       "availableSystems": Array.from(this.automationSystems.values()).filter(s => s.status === 'available').length,

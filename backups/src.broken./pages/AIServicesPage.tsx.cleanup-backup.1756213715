@@ -398,8 +398,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -874,7 +872,6 @@ export default function AIServicesPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
-              Contact Sales=======            </Button>
           </div>
         </div>
       </div>
@@ -906,7 +903,6 @@ export default function AIServicesPage() {
                     {service.icon}
                   </div>
                   {service.badge && (
-                    <Badge className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white border-0">=======                      {service.badge}
                     </Badge>
                   )}
                 </div>
@@ -936,22 +932,15 @@ export default function AIServicesPage() {
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">=======              <MessageSquare className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               <Code className="h-5 w-5 mr-2" />
               View Case Studies
             </Button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
             </Button>
@@ -962,10 +951,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </div>
   );
 }

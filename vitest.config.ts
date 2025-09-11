@@ -1,18 +1,18 @@
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
-export { defineConfig };export default defineConfig({;
-  resolve: {;
-    alias: {;
+export default defineConfig({
+  resolve: {
+    alias: {
       '@': path.resolve(__dirname, './src'),
-      '@/pages': path.resolve(__dirname, './src/pages'),,
-},,
-},
-  test: {;
+      '@/pages': path.resolve(__dirname, './src/pages'),
+    },
+  },
+  test: {
     environment: 'jsdom',
     setupFiles: './tests/setup.ts',
     globals: true,
-    coverage: {;
-      provider: 'v8',,
-},,
-},,
+    coverage: {
+      provider: 'v8',
+    },
+  },
 });

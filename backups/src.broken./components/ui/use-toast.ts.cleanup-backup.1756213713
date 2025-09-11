@@ -17,8 +17,6 @@ export interface Toast {
 export interface ToastOptions {
   title: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success';=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   duration?: number;
 }
 
@@ -56,7 +54,6 @@ export function useToast() {
 
   const dismissAll = useCallback(() => {
     setToasts([]);
-  }, []);=======
   return {
     toasts,
     toast,
@@ -65,18 +62,8 @@ export function useToast() {
   };
 }
 
-<<<<<<< HEAD
-// Export a standalone toast function for convenience
-export const toast = (options: Omit<Toast, 'id'>) => {
-  // This is a simplified version that just logs to console
-  // In a real app, you'd want to integrate with a toast library
-<<<<<<< HEAD
-=======
 // Export a default toast function for backward compatibility
 export const toast = (options: ToastOptions) => {
   // This is a simplified version - in a real app, you'd want to use a toast context
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   console.log('Toast:', options);
 };

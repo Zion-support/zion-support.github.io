@@ -1,2 +1,4 @@
-// Utility functions for template
-export const template = $2;
+// Utility functions for template;
+export const template = {;
+  // TODO: Implement utility functions;
+};

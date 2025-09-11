@@ -1,15 +1,4 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
-
 interface ErrorData {
   error: {
     message: string;
@@ -25,12 +14,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })}
 
+=======module.exports = {};
+module.exports = {};
+
+=======
+
+module.exports = {};
+
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = {};
 module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
 module.exports = {};
 module.exports = {};
-module.exports = {};
-module.exports = {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+

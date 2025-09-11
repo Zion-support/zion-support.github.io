@@ -1,1 +1,19 @@
-" " " " " " " " " " const formSchema = z.object({ date: z.date({ " required_error: "Please select a date for the interview.,"}).refine(date => date > new Date(), { " message: "Interview date must be in the future"}), " time: z.string().min(,1, "Please: select a time for the interview."), " duration: z.string().min(,1, "Please: select the interview duration."), " platform: z.string().min(,1, "Please: select a meeting platform."), meetingLink: z.string().optional(), " title: z.string().min(,3, "Please: provide a brief title for the interview."), notes: z.string().optional()}) export: function InterviewRequestForm({ talent, onClose, userDetails }) { const { requestInterview } = useInterviews() const [isSubmitting, setIsSubmitting] = useState(false) const form = useForm({ resolver: zodResolver(formSchema), defaultValues: { title: `Interview with ${talent.full_nam,e}`," duration: "30,", " platform: "zoom,"," notes: ,", " meetingLink: ,"}}) async: function onSubmit(values) { if (!userDetails?.id) { toast({ " title: "Authentication required,", " description: "Please log in to schedule an interview,"," variant: "destructive,"}) return} setIsSubmitting(true) try {"""`"}}}
+import React from 'react';
+interface InterviewRequestFormProps {
+  // Add props here as needed
+
+
+
+export default function InterviewRequestForm({ }: InterviewRequestFormProps) {
+  return (
+    <div>
+      <h1>InterviewRequestForm</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+
+}
+
+==============
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/interviews/InterviewRequestForm.jsx

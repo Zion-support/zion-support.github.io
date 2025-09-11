@@ -1,33 +1,35 @@
-interface Address {
-  name: string;
-  address: string;
-  city: string;
-  country: string}
-
-interface ShippingRate {
-  id: string;
-  carrier: string;
-  service: string;
-  rate: string;
-  currency: string;
+interface Address {;
+  "name": "string;
+  "address": string;
+  "city": string;
+  "country": string"}
+;
+interface ShippingRate {;
+  "id": "string;
+  "carrier": string;
+  "service": string;
+  "rate": string;
+  "currency": string;
   delivery_days?: number | null;
-  tax?: string}
-
-interface Props {
-  toAddress: Address | null;
-  onSelect?: (rate: ShippingRate) => void}
-
-export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
-  const [rates, setRates] = useState<ShippingRate[]>([]);
-  const [loading, setLoading] = useState(false);
+  tax?: string"}
+;
+interface Props {;
+  "toAddress": "Addres s | null;
+  onSelect?: ("rate": ShippingRat e) => void"}
+;
+export function CheckoutShippingOptions("props": "any) {;
+  const [rates", setRates] = useState<ShippingRate[]>([]);
+  const [loading, setLoading] = useState<any>(false);
   const [selected, setSelected] = useState<string>('');
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-
+;
+  useEffect(() => {;
+  // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
-};
-}, []); []);    if(!toAddress) return;
+  "};
+}, []);, []);
+    if(!toAddress) return;
+    ;
       try {;
         if(res.ok) {;
           setRates(data.rates || [])} else {;
@@ -37,11 +39,14 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
         setLoading(false)}
     };
     fetchRates()}, [toAddress]);
+;
     if(rate && onSelect) onSelect(rate)};
+;
   if(!toAddress) return null;
 ;
   return (<div className="my-4">;
-      <h2 className="font-semibold mb-2">Shipping Options</h2>;  return (
+      <h2 className="font-semibold mb-2">Shipping Options</h2>;
+  return (
         <div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>
       {loading && <p>Loading...</p>}
@@ -58,7 +63,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
       )}
     </div>;
   )}
-
+;
 export type { ShippingRate };
 ;
 </string>;

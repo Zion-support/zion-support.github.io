@@ -1,283 +1,37 @@
-const IoTPlatforms: NextPage = () => {
-  return (;
-    <Layout;
-      title="IoT Platforms - Zion Tech Group";
-      description="Connected device solutions and IoT infrastructure for smart business operations. IoT device development, data analytics, and edge computing.">;
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
-        <div className="container mx-auto px-4 text-center">;
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
-            IoT;
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platforms</span>;
-          </h1>;
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;
-            Connected device solutions and IoT infrastructure for smart business operations. ;
-            We help you harness the power of the Internet of Things to optimize your processes.;
-          </p>;
+<<<<<<< HEAD
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">;
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-              Start Your IoT Project;
-            </Link>;
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-              View All Services;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from \'react\'; import Link from \'next/link\'; \"export\": default function IoTPlatforms() { return( <div className=\'bg-white\'>\'; <section: className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h1: className=\'text-3xl md: text-5xl: font-extrabold text-gray-900\'>IoT Platforms</h1>\'; <p: className=\'mt-4 text-lg text-gray-600\'>\'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className=\'bg-gray-50 border-t border-b border-gray-100\'>\'; <\"div\": className=\'container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl\'>\'; {[{ title: \'Device: Onboarding,\',\"desc\": \'Provisionin,g,\"secure\": \'comms\',OTA updates.\',\"price\": \'$1,0,000–$40,000\' },\'; { \"title\": \'Telemetry: Pipelines,\',\"desc\": \'Ingestio,n,time-\"series\": \'storage\',analytics.\',\"price\": \'$1,2,000–$50,000+\' },\'; { \"title\": \'Edge: AI,\',\"desc\": \'On-device: ML for vision and anomaly detection.,\',\"price\": \'$1,5,000–$70,000\' },\'; { \"title\": \'Digital: Twins,\',\"desc\": \'Model: assets and processes for simulation.,\',\"price\": \'$1,8,000–$80,000\' },\'; { \"title\": \'Fleet: Management,\',\"desc\": \'Monitorin,g,health,command/control.\',\"price\": \'$,8,000–$35,000\' },\'; { \"title\": \'IoT: Security,\',\"desc\": \'PK,I,attestation,\"secure\": \'boot\',posture.\',\"price\": \'$,8,000–$30,000\' }].map((item) => (\'; <\"div\": key={item.title} className=\'p-6 bg-white rounded-xl shadow-sm border border-gray-100\'>\'; <\"h3\": className=\'text-xl font-semibold text-gray-900\'>{item.title}</h3>\'; <\"p\": className=\'mt-2 text-gray-600\'>{item.desc}</p>\'; <\"p\": className=\'mt-4 text-gray-900 font-medium\'>Typical budget: {item.pric,e}</p>\'; </div> )); </div> </section> <\"section\": className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h2: className=\'text-2xl md: text-3xl: font-bold text-gray-900\'>Reference Stack</h2>\'; <div: className=\'mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm\'>\'; {[\'MQTT,\',\'LoRaWAN\',\'"Azure\": IoT\',\'AWS IoT\',\'GCP IoT\',\'InfluxDB\',\'Timescale\',\'Grafana\',\'Kafka\',\'NATS\'].map((t) => (\'; <\"div\": key={t} className=\'px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\'>{t}</div>\'; ))} </div> <\"div\": className=\'mt-6\'>\'; <Link: href=\'/contact\' className=\'inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold\'>Start your pilot</Link>\'; </div> </section> </div> )} \'MQTT\',\'LoRaWAN\' \'Azure IoT\',\'AWS IoT\' \'GCP IoT\',\'InfluxDB\' \'Timescale\',\'Grafana\' \'Kafka\',\'NATS\' ].map(t => ( <div key={t} className=\"px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\" > {t} </div> )); </div>\" <div className=\"mt-6\"> <Link\" href=\"/contact className=\"inline-block bg-blue-600 \"hover\": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold\" > Start your pilot </Link> </div> </section> </div> ) } \"
+import _React from 'react'; import Link from 'next/link'; "export": default function IoTPlatforms() { return( <div className='bg-white'>'; <section: className='container mx-auto px-4 py-12 max-w-6xl'>'; <h1: className='text-3xl md: text-5xl: font-extrabold text-gray-900'>IoT Platforms</h1>'; <p: className='mt-4 text-lg text-gray-600'>'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className='bg-gray-50 border-t border-b border-gray-100'>'; <"div": className='container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl'>'; {[{ title: 'Device: Onboarding,',"desc": 'Provisionin,g,"secure": 'comms',OTA updates.',"price": '$1,0,000–$40,000' },'; { "title": 'Telemetry: Pipelines,',"desc": 'Ingestio,n,time-"series": 'storage',analytics.',"price": '$1,2,000–$50,000+' },'; { "title": 'Edge: AI,',"desc": 'On-device: ML for vision and anomaly detection.,',"price": '$1,5,000–$70,000' },'; { "title": 'Digital: Twins,',"desc": 'Model: assets and processes for simulation.,',"price": '$1,8,000–$80,000' },'; { "title": 'Fleet: Management,',"desc": 'Monitorin,g,health,command/control.',"price": '$,8,000–$35,000' },'; { "title": 'IoT: Security,',"desc": 'PK,I,attestation,"secure": 'boot',posture.',"price": '$,8,000–$30,000' }].map((item) => ('; <"div": key={item.title} className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>'; <"h3": className='text-xl font-semibold text-gray-900'>{item.title}</h3>'; <"p": className='mt-2 text-gray-600'>{item.desc}</p>'; <"p": className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>'; </div> )); </div> </section> <"section": className='container mx-auto px-4 py-12 max-w-6xl'>'; <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Reference Stack</h2>'; <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>'; {['MQTT,','LoRaWAN','"Azure": IoT','AWS IoT','GCP IoT','InfluxDB','Timescale','Grafana','Kafka','NATS'].map((t) => ('; <"div": key={t} className='px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center'>{t}</div>'; ))} </div> <"div": className='mt-6'>'; <Link: href='/contact' className='inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold'>Start your pilot</Link>'; </div> </section> </div> )} 'MQTT','LoRaWAN' 'Azure IoT','AWS IoT' 'GCP IoT','InfluxDB' 'Timescale','Grafana' 'Kafka','NATS' ].map(t => ( <div key={t} className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center" > {t} </div> )); </div>" <div className="mt-6"> <Link" href="/contact className="inline-block bg-blue-600 "hover": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold" > Start your pilot </Link> </div> </section> </div> ) } "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+=======
 
-      {/* IoT Services */}
-      <section className="py-20 bg-white">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our IoT Solutions</h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              We develop comprehensive IoT solutions that connect devices, collect data, ;
-              and provide actionable insights to optimize your business operations.;
-            </p>;
-          </div>;
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
-                <Cpu className="w-8 h-8 text-blue-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold mb-4">IoT Device Development</h3>;
-              <p className="text-gray-600 mb-4">;
-                Custom IoT devices and sensors designed for your specific business requirements and use cases.;
-              </p>;
-              <ul className="space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Sensor Integration;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Hardware Design;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Firmware Development;
-                </li>;
-              </ul>;
-            </div>;
 
-            </div>
-          ));
-        </div>
 
-            'MQTT',
-            'LoRaWAN',
-            'Azure IoT',
-            'AWS IoT',
-            'GCP IoT',
-            'InfluxDB',
-            'Timescale',
-            'Grafana',
-            'Kafka',
-            'NATS' ].map(t => (
-            <div
-              key={t}
-              className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
-            >
-              {t}
-            </div>
-          ));
-        </div>"
-        <div className="mt-6">
-          <Link"
-            href="/contact""
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
-          >
-            Start your pilot
-          </Link>
-        </div>
-      </section>
-    </div>
-  )
-}
-"
+=======
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">;
-                <Shield className="w-8 h-8 text-orange-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold mb-4">IoT Security</h3>;
-              <p className="text-gray-600 mb-4">;
-                Comprehensive security solutions to protect your IoT devices and data from cyber threats.;
-              </p>;
-              <ul className="space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Device Authentication;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Data Encryption;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Network Security;
-                </li>;
-              </ul>;
-            </div>;
+=======
+import React from \'react\'; import Link from \'next/link\'; \"export\": default function IoTPlatforms() { return( <div className=\'bg-white\'>\'; <section: className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h1: className=\'text-3xl md: text-5xl: font-extrabold text-gray-900\'>IoT Platforms</h1>\'; <p: className=\'mt-4 text-lg text-gray-600\'>\'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className=\'bg-gray-50 border-t border-b border-gray-100\'>\'; <\"div\": className=\'container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl\'>\'; {[{ title: \'Device: Onboarding,\',\"desc\": \'Provisionin,g,\"secure\": \'comms\',OTA updates.\',\"price\": \'$1,0,000–$40,000\' },\'; { \"title\": \'Telemetry: Pipelines,\',\"desc\": \'Ingestio,n,time-\"series\": \'storage\',analytics.\',\"price\": \'$1,2,000–$50,000+\' },\'; { \"title\": \'Edge: AI,\',\"desc\": \'On-device: ML for vision and anomaly detection.,\',\"price\": \'$1,5,000–$70,000\' },\'; { \"title\": \'Digital: Twins,\',\"desc\": \'Model: assets and processes for simulation.,\',\"price\": \'$1,8,000–$80,000\' },\'; { \"title\": \'Fleet: Management,\',\"desc\": \'Monitorin,g,health,command/control.\',\"price\": \'$,8,000–$35,000\' },\'; { \"title\": \'IoT: Security,\',\"desc\": \'PK,I,attestation,\"secure\": \'boot\',posture.\',\"price\": \'$,8,000–$30,000\' }].map((item) => (\'; <\"div\": key={item.title} className=\'p-6 bg-white rounded-xl shadow-sm border border-gray-100\'>\'; <\"h3\": className=\'text-xl font-semibold text-gray-900\'>{item.title}</h3>\'; <\"p\": className=\'mt-2 text-gray-600\'>{item.desc}</p>\'; <\"p\": className=\'mt-4 text-gray-900 font-medium\'>Typical budget: {item.pric,e}</p>\'; </div> )); </div> </section> <\"section\": className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h2: className=\'text-2xl md: text-3xl: font-bold text-gray-900\'>Reference Stack</h2>\'; <div: className=\'mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm\'>\'; {[\'MQTT,\',\'LoRaWAN\',\'"Azure\": IoT\',\'AWS IoT\',\'GCP IoT\',\'InfluxDB\',\'Timescale\',\'Grafana\',\'Kafka\',\'NATS\'].map((t) => (\'; <\"div\": key={t} className=\'px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\'>{t}</div>\'; ))} </div> <\"div\": className=\'mt-6\'>\'; <Link: href=\'/contact\' className=\'inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold\'>Start your pilot</Link>\'; </div> </section> </div> )} \'MQTT\',\'LoRaWAN\' \'Azure IoT\',\'AWS IoT\' \'GCP IoT\',\'InfluxDB\' \'Timescale\',\'Grafana\' \'Kafka\',\'NATS\' ].map(t => ( <div key={t} className=\"px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\" > {t} </div> )); </div>\" <div className=\"mt-6\"> <Link\" href=\"/contact className=\"inline-block bg-blue-600 \"hover\": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold\" > Start your pilot </Link> </div> </section> </div> ) } \"
+import _React from 'react'; import Link from 'next/link'; "export": default function IoTPlatforms() { return( <div className='bg-white'>'; <section: className='container mx-auto px-4 py-12 max-w-6xl'>'; <h1: className='text-3xl md: text-5xl: font-extrabold text-gray-900'>IoT Platforms</h1>'; <p: className='mt-4 text-lg text-gray-600'>'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className='bg-gray-50 border-t border-b border-gray-100'>'; <"div": className='container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl'>'; {[{ title: 'Device: Onboarding,',"desc": 'Provisionin,g,"secure": 'comms',OTA updates.',"price": '$1,0,000–$40,000' },'; { "title": 'Telemetry: Pipelines,',"desc": 'Ingestio,n,time-"series": 'storage',analytics.',"price": '$1,2,000–$50,000+' },'; { "title": 'Edge: AI,',"desc": 'On-device: ML for vision and anomaly detection.,',"price": '$1,5,000–$70,000' },'; { "title": 'Digital: Twins,',"desc": 'Model: assets and processes for simulation.,',"price": '$1,8,000–$80,000' },'; { "title": 'Fleet: Management,',"desc": 'Monitorin,g,health,command/control.',"price": '$,8,000–$35,000' },'; { "title": 'IoT: Security,',"desc": 'PK,I,attestation,"secure": 'boot',posture.',"price": '$,8,000–$30,000' }].map((item) => ('; <"div": key={item.title} className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>'; <"h3": className='text-xl font-semibold text-gray-900'>{item.title}</h3>'; <"p": className='mt-2 text-gray-600'>{item.desc}</p>'; <"p": className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>'; </div> )); </div> </section> <"section": className='container mx-auto px-4 py-12 max-w-6xl'>'; <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Reference Stack</h2>'; <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>'; {['MQTT,','LoRaWAN','"Azure": IoT','AWS IoT','GCP IoT','InfluxDB','Timescale','Grafana','Kafka','NATS'].map((t) => ('; <"div": key={t} className='px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center'>{t}</div>'; ))} </div> <"div": className='mt-6'>'; <Link: href='/contact' className='inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold'>Start your pilot</Link>'; </div> </section> </div> )} 'MQTT','LoRaWAN' 'Azure IoT','AWS IoT' 'GCP IoT','InfluxDB' 'Timescale','Grafana' 'Kafka','NATS' ].map(t => ( <div key={t} className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center" > {t} </div> )); </div>" <div className="mt-6"> <Link" href="/contact className="inline-block bg-blue-600 "hover": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold" > Start your pilot </Link> </div> </section> </div> ) } "
+<<<<<<< HEAD
+import React from \'react\'; import Link from \'next/link\'; \"export\": default function IoTPlatforms() { return( <div className=\'bg-white\'>\'; <section: className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h1: className=\'text-3xl md: text-5xl: font-extrabold text-gray-900\'>IoT Platforms</h1>\'; <p: className=\'mt-4 text-lg text-gray-600\'>\'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className=\'bg-gray-50 border-t border-b border-gray-100\'>\'; <\"div\": className=\'container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl\'>\'; {[{ title: \'Device: Onboarding,\',\"desc\": \'Provisionin,g,\"secure\": \'comms\',OTA updates.\',\"price\": \'$1,0,000–$40,000\' },\'; { \"title\": \'Telemetry: Pipelines,\',\"desc\": \'Ingestio,n,time-\"series\": \'storage\',analytics.\',\"price\": \'$1,2,000–$50,000+\' },\'; { \"title\": \'Edge: AI,\',\"desc\": \'On-device: ML for vision and anomaly detection.,\',\"price\": \'$1,5,000–$70,000\' },\'; { \"title\": \'Digital: Twins,\',\"desc\": \'Model: assets and processes for simulation.,\',\"price\": \'$1,8,000–$80,000\' },\'; { \"title\": \'Fleet: Management,\',\"desc\": \'Monitorin,g,health,command/control.\',\"price\": \'$,8,000–$35,000\' },\'; { \"title\": \'IoT: Security,\',\"desc\": \'PK,I,attestation,\"secure\": \'boot\',posture.\',\"price\": \'$,8,000–$30,000\' }].map((item) => (\'; <\"div\": key={item.title} className=\'p-6 bg-white rounded-xl shadow-sm border border-gray-100\'>\'; <\"h3\": className=\'text-xl font-semibold text-gray-900\'>{item.title}</h3>\'; <\"p\": className=\'mt-2 text-gray-600\'>{item.desc}</p>\'; <\"p\": className=\'mt-4 text-gray-900 font-medium\'>Typical budget: {item.pric,e}</p>\'; </div> )); </div> </section> <\"section\": className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h2: className=\'text-2xl md: text-3xl: font-bold text-gray-900\'>Reference Stack</h2>\'; <div: className=\'mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm\'>\'; {[\'MQTT,\',\'LoRaWAN\',\'"Azure\": IoT\',\'AWS IoT\',\'GCP IoT\',\'InfluxDB\',\'Timescale\',\'Grafana\',\'Kafka\',\'NATS\'].map((t) => (\'; <\"div\": key={t} className=\'px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\'>{t}</div>\'; ))} </div> <\"div\": className=\'mt-6\'>\'; <Link: href=\'/contact\' className=\'inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold\'>Start your pilot</Link>\'; </div> </section> </div> )} \'MQTT\',\'LoRaWAN\' \'Azure IoT\',\'AWS IoT\' \'GCP IoT\',\'InfluxDB\' \'Timescale\',\'Grafana\' \'Kafka\',\'NATS\' ].map(t => ( <div key={t} className=\"px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\" > {t} </div> )); </div>\" <div className=\"mt-6\"> <Link\" href=\"/contact className=\"inline-block bg-blue-600 \"hover\": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold\" > Start your pilot </Link> </div> </section> </div> ) } \"
+import _React from 'react'; import Link from 'next/link'; "export": default function IoTPlatforms() { return( <div className='bg-white'>'; <section: className='container mx-auto px-4 py-12 max-w-6xl'>'; <h1: className='text-3xl md: text-5xl: font-extrabold text-gray-900'>IoT Platforms</h1>'; <p: className='mt-4 text-lg text-gray-600'>'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className='bg-gray-50 border-t border-b border-gray-100'>'; <"div": className='container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl'>'; {[{ title: 'Device: Onboarding,',"desc": 'Provisionin,g,"secure": 'comms',OTA updates.',"price": '$1,0,000–$40,000' },'; { "title": 'Telemetry: Pipelines,',"desc": 'Ingestio,n,time-"series": 'storage',analytics.',"price": '$1,2,000–$50,000+' },'; { "title": 'Edge: AI,',"desc": 'On-device: ML for vision and anomaly detection.,',"price": '$1,5,000–$70,000' },'; { "title": 'Digital: Twins,',"desc": 'Model: assets and processes for simulation.,',"price": '$1,8,000–$80,000' },'; { "title": 'Fleet: Management,',"desc": 'Monitorin,g,health,command/control.',"price": '$,8,000–$35,000' },'; { "title": 'IoT: Security,',"desc": 'PK,I,attestation,"secure": 'boot',posture.',"price": '$,8,000–$30,000' }].map((item) => ('; <"div": key={item.title} className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>'; <"h3": className='text-xl font-semibold text-gray-900'>{item.title}</h3>'; <"p": className='mt-2 text-gray-600'>{item.desc}</p>'; <"p": className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>'; </div> )); </div> </section> <"section": className='container mx-auto px-4 py-12 max-w-6xl'>'; <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Reference Stack</h2>'; <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>'; {['MQTT,','LoRaWAN','"Azure": IoT','AWS IoT','GCP IoT','InfluxDB','Timescale','Grafana','Kafka','NATS'].map((t) => ('; <"div": key={t} className='px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center'>{t}</div>'; ))} </div> <"div": className='mt-6'>'; <Link: href='/contact' className='inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold'>Start your pilot</Link>'; </div> </section> </div> )} 'MQTT','LoRaWAN' 'Azure IoT','AWS IoT' 'GCP IoT','InfluxDB' 'Timescale','Grafana' 'Kafka','NATS' ].map(t => ( <div key={t} className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center" > {t} </div> )); </div>" <div className="mt-6"> <Link" href="/contact className="inline-block bg-blue-600 "hover": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold" > Start your pilot </Link> </div> </section> </div> ) } "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
-              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">;
-                <Users className="w-8 h-8 text-red-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold mb-4">Smart Infrastructure</h3>;
-              <p className="text-gray-600 mb-4">;
-                Smart city and infrastructure solutions for connected buildings, transportation, and utilities.;
-              </p>;
-              <ul className="space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Smart Buildings;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Connected Transportation;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Smart Utilities;
-                </li>;
-              </ul>;
-            </div>;
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
-              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">;
-                <Award className="w-8 h-8 text-indigo-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold mb-4">IoT Consulting</h3>;
-              <p className="text-gray-600 mb-4">;
-                Strategic consulting to help you plan and implement IoT solutions that align with your business goals.;
-              </p>;
-              <ul className="space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  IoT Strategy;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Technology Selection;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Implementation Planning;
-                </li>;
-              </ul>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* IoT Applications */}
-      <section className="py-20 bg-gray-50">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">IoT Applications We Build</h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              We develop IoT solutions for various industries and use cases to help businesses ;
-              optimize operations and improve efficiency.;
-            </p>;
-          </div>;
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <div className="bg-white rounded-lg p-8 shadow-lg text-center">;
-              <div className="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">;
-                <Cpu className="w-10 h-10 text-blue-600" />;
-              </div>;
-              <h3 className="text-2xl font-semibold mb-4">Industrial IoT</h3>;
-              <p className="text-gray-600 mb-6">;
-                Smart manufacturing and industrial automation solutions for improved efficiency and predictive maintenance.;
-              </p>;
-              <ul className="text-left space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Predictive Maintenance;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Asset Tracking;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Quality Control;
-                </li>;
-              </ul>;
-            </div>;
-
-            <div className="bg-white rounded-lg p-8 shadow-lg text-center">;
-              <div className="w-20 h-20 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6">;
-                <BarChart className="w-10 h-10 text-green-600" />;
-              </div>;
-              <h3 className="text-2xl font-semibold mb-4">Smart Agriculture</h3>;
-              <p className="text-gray-600 mb-6">;
-                Precision agriculture solutions for monitoring crops, soil conditions, and environmental factors.;
-              </p>;
-              <ul className="text-left space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Soil Monitoring;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Crop Management;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Weather Monitoring;
-                </li>;
-              </ul>;
-            </div>;
-
-            <div className="bg-white rounded-lg p-8 shadow-lg text-center">;
-              <div className="w-20 h-20 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6">;
-                <Users className="w-10 h-10 text-purple-600" />;
-              </div>;
-              <h3 className="text-2xl font-semibold mb-4">Smart Healthcare</h3>;
-              <p className="text-gray-600 mb-6">;
-                Connected healthcare solutions for patient monitoring, medical device management, and telemedicine.;
-              </p>;
-              <ul className="text-left space-y-2">;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Patient Monitoring;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Medical Device Integration;
-                </li>;
-                <li className="flex items-center text-sm text-gray-600">;
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                  Remote Diagnostics;
-                </li>;
-              </ul>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">;
-        <div className="container mx-auto px-4 text-center">;
-          <h2 className="text-4xl font-bold mb-6">Ready to Connect Your World?</h2>;
-          <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">;
-            Let's discuss how IoT solutions can transform your business operations and provide new insights for growth.;
-          </p>;
-          <div className="flex flex-col sm:flex-row justify-center gap-4">;
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-              Start Your IoT Project;
-            </Link>;
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-              View All Services;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );
-};
-export default IoTPlatforms;
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from \'react\'; import Link from \'next/link\'; \"export\": default function IoTPlatforms() { return( <div className=\'bg-white\'>\'; <section: className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h1: className=\'text-3xl md: text-5xl: font-extrabold text-gray-900\'>IoT Platforms</h1>\'; <p: className=\'mt-4 text-lg text-gray-600\'>\'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className=\'bg-gray-50 border-t border-b border-gray-100\'>\'; <\"div\": className=\'container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl\'>\'; {[{ title: \'Device: Onboarding,\',\"desc\": \'Provisionin,g,\"secure\": \'comms\',OTA updates.\',\"price\": \'$1,0,000–$40,000\' },\'; { \"title\": \'Telemetry: Pipelines,\',\"desc\": \'Ingestio,n,time-\"series\": \'storage\',analytics.\',\"price\": \'$1,2,000–$50,000+\' },\'; { \"title\": \'Edge: AI,\',\"desc\": \'On-device: ML for vision and anomaly detection.,\',\"price\": \'$1,5,000–$70,000\' },\'; { \"title\": \'Digital: Twins,\',\"desc\": \'Model: assets and processes for simulation.,\',\"price\": \'$1,8,000–$80,000\' },\'; { \"title\": \'Fleet: Management,\',\"desc\": \'Monitorin,g,health,command/control.\',\"price\": \'$,8,000–$35,000\' },\'; { \"title\": \'IoT: Security,\',\"desc\": \'PK,I,attestation,\"secure\": \'boot\',posture.\',\"price\": \'$,8,000–$30,000\' }].map((item) => (\'; <\"div\": key={item.title} className=\'p-6 bg-white rounded-xl shadow-sm border border-gray-100\'>\'; <\"h3\": className=\'text-xl font-semibold text-gray-900\'>{item.title}</h3>\'; <\"p\": className=\'mt-2 text-gray-600\'>{item.desc}</p>\'; <\"p\": className=\'mt-4 text-gray-900 font-medium\'>Typical budget: {item.pric,e}</p>\'; </div> )); </div> </section> <\"section\": className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h2: className=\'text-2xl md: text-3xl: font-bold text-gray-900\'>Reference Stack</h2>\'; <div: className=\'mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm\'>\'; {[\'MQTT,\',\'LoRaWAN\',\'"Azure\": IoT\',\'AWS IoT\',\'GCP IoT\',\'InfluxDB\',\'Timescale\',\'Grafana\',\'Kafka\',\'NATS\'].map((t) => (\'; <\"div\": key={t} className=\'px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\'>{t}</div>\'; ))} </div> <\"div\": className=\'mt-6\'>\'; <Link: href=\'/contact\' className=\'inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold\'>Start your pilot</Link>\'; </div> </section> </div> )} \'MQTT\',\'LoRaWAN\' \'Azure IoT\',\'AWS IoT\' \'GCP IoT\',\'InfluxDB\' \'Timescale\',\'Grafana\' \'Kafka\',\'NATS\' ].map(t => ( <div key={t} className=\"px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\" > {t} </div> )); </div>\" <div className=\"mt-6\"> <Link\" href=\"/contact className=\"inline-block bg-blue-600 \"hover\": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold\" > Start your pilot </Link> </div> </section> </div> ) } \"
+import _React from 'react'; import Link from 'next/link'; "export": default function IoTPlatforms() { return( <div className='bg-white'>'; <section: className='container mx-auto px-4 py-12 max-w-6xl'>'; <h1: className='text-3xl md: text-5xl: font-extrabold text-gray-900'>IoT Platforms</h1>'; <p: className='mt-4 text-lg text-gray-600'>'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className='bg-gray-50 border-t border-b border-gray-100'>'; <"div": className='container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl'>'; {[{ title: 'Device: Onboarding,',"desc": 'Provisionin,g,"secure": 'comms',OTA updates.',"price": '$1,0,000–$40,000' },'; { "title": 'Telemetry: Pipelines,',"desc": 'Ingestio,n,time-"series": 'storage',analytics.',"price": '$1,2,000–$50,000+' },'; { "title": 'Edge: AI,',"desc": 'On-device: ML for vision and anomaly detection.,',"price": '$1,5,000–$70,000' },'; { "title": 'Digital: Twins,',"desc": 'Model: assets and processes for simulation.,',"price": '$1,8,000–$80,000' },'; { "title": 'Fleet: Management,',"desc": 'Monitorin,g,health,command/control.',"price": '$,8,000–$35,000' },'; { "title": 'IoT: Security,',"desc": 'PK,I,attestation,"secure": 'boot',posture.',"price": '$,8,000–$30,000' }].map((item) => ('; <"div": key={item.title} className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>'; <"h3": className='text-xl font-semibold text-gray-900'>{item.title}</h3>'; <"p": className='mt-2 text-gray-600'>{item.desc}</p>'; <"p": className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>'; </div> )); </div> </section> <"section": className='container mx-auto px-4 py-12 max-w-6xl'>'; <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Reference Stack</h2>'; <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>'; {['MQTT,','LoRaWAN','"Azure": IoT','AWS IoT','GCP IoT','InfluxDB','Timescale','Grafana','Kafka','NATS'].map((t) => ('; <"div": key={t} className='px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center'>{t}</div>'; ))} </div> <"div": className='mt-6'>'; <Link: href='/contact' className='inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold'>Start your pilot</Link>'; </div> </section> </div> )} 'MQTT','LoRaWAN' 'Azure IoT','AWS IoT' 'GCP IoT','InfluxDB' 'Timescale','Grafana' 'Kafka','NATS' ].map(t => ( <div key={t} className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center" > {t} </div> )); </div>" <div className="mt-6"> <Link" href="/contact className="inline-block bg-blue-600 "hover": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold" > Start your pilot </Link> </div> </section> </div> ) } "
+import React from \'react\'; import Link from \'next/link\'; \"export\": default function IoTPlatforms() { return( <div className=\'bg-white\'>\'; <section: className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h1: className=\'text-3xl md: text-5xl: font-extrabold text-gray-900\'>IoT Platforms</h1>\'; <p: className=\'mt-4 text-lg text-gray-600\'>\'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className=\'bg-gray-50 border-t border-b border-gray-100\'>\'; <\"div\": className=\'container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl\'>\'; {[{ title: \'Device: Onboarding,\',\"desc\": \'Provisionin,g,\"secure\": \'comms\',OTA updates.\',\"price\": \'$1,0,000–$40,000\' },\'; { \"title\": \'Telemetry: Pipelines,\',\"desc\": \'Ingestio,n,time-\"series\": \'storage\',analytics.\',\"price\": \'$1,2,000–$50,000+\' },\'; { \"title\": \'Edge: AI,\',\"desc\": \'On-device: ML for vision and anomaly detection.,\',\"price\": \'$1,5,000–$70,000\' },\'; { \"title\": \'Digital: Twins,\',\"desc\": \'Model: assets and processes for simulation.,\',\"price\": \'$1,8,000–$80,000\' },\'; { \"title\": \'Fleet: Management,\',\"desc\": \'Monitorin,g,health,command/control.\',\"price\": \'$,8,000–$35,000\' },\'; { \"title\": \'IoT: Security,\',\"desc\": \'PK,I,attestation,\"secure\": \'boot\',posture.\',\"price\": \'$,8,000–$30,000\' }].map((item) => (\'; <\"div\": key={item.title} className=\'p-6 bg-white rounded-xl shadow-sm border border-gray-100\'>\'; <\"h3\": className=\'text-xl font-semibold text-gray-900\'>{item.title}</h3>\'; <\"p\": className=\'mt-2 text-gray-600\'>{item.desc}</p>\'; <\"p\": className=\'mt-4 text-gray-900 font-medium\'>Typical budget: {item.pric,e}</p>\'; </div> )); </div> </section> <\"section\": className=\'container mx-auto px-4 py-12 max-w-6xl\'>\'; <h2: className=\'text-2xl md: text-3xl: font-bold text-gray-900\'>Reference Stack</h2>\'; <div: className=\'mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm\'>\'; {[\'MQTT,\',\'LoRaWAN\',\'"Azure\": IoT\',\'AWS IoT\',\'GCP IoT\',\'InfluxDB\',\'Timescale\',\'Grafana\',\'Kafka\',\'NATS\'].map((t) => (\'; <\"div\": key={t} className=\'px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\'>{t}</div>\'; ))} </div> <\"div\": className=\'mt-6\'>\'; <Link: href=\'/contact\' className=\'inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold\'>Start your pilot</Link>\'; </div> </section> </div> )} \'MQTT\',\'LoRaWAN\' \'Azure IoT\',\'AWS IoT\' \'GCP IoT\',\'InfluxDB\' \'Timescale\',\'Grafana\' \'Kafka\',\'NATS\' ].map(t => ( <div key={t} className=\"px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center\" > {t} </div> )); </div>\" <div className=\"mt-6\"> <Link\" href=\"/contact className=\"inline-block bg-blue-600 \"hover\": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold\" > Start your pilot </Link> </div> </section> </div> ) } \"
+import _React from 'react'; import Link from 'next/link'; "export": default function IoTPlatforms() { return( <div className='bg-white'>'; <section: className='container mx-auto px-4 py-12 max-w-6xl'>'; <h1: className='text-3xl md: text-5xl: font-extrabold text-gray-900'>IoT Platforms</h1>'; <p: className='mt-4 text-lg text-gray-600'>'; Connect: device,s,stream telemetry,act on real-time insights,and scale securely from pilot to production. </p> </section> <section className='bg-gray-50 border-t border-b border-gray-100'>'; <"div": className='container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl'>'; {[{ title: 'Device: Onboarding,',"desc": 'Provisionin,g,"secure": 'comms',OTA updates.',"price": '$1,0,000–$40,000' },'; { "title": 'Telemetry: Pipelines,',"desc": 'Ingestio,n,time-"series": 'storage',analytics.',"price": '$1,2,000–$50,000+' },'; { "title": 'Edge: AI,',"desc": 'On-device: ML for vision and anomaly detection.,',"price": '$1,5,000–$70,000' },'; { "title": 'Digital: Twins,',"desc": 'Model: assets and processes for simulation.,',"price": '$1,8,000–$80,000' },'; { "title": 'Fleet: Management,',"desc": 'Monitorin,g,health,command/control.',"price": '$,8,000–$35,000' },'; { "title": 'IoT: Security,',"desc": 'PK,I,attestation,"secure": 'boot',posture.',"price": '$,8,000–$30,000' }].map((item) => ('; <"div": key={item.title} className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>'; <"h3": className='text-xl font-semibold text-gray-900'>{item.title}</h3>'; <"p": className='mt-2 text-gray-600'>{item.desc}</p>'; <"p": className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>'; </div> )); </div> </section> <"section": className='container mx-auto px-4 py-12 max-w-6xl'>'; <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Reference Stack</h2>'; <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>'; {['MQTT,','LoRaWAN','"Azure": IoT','AWS IoT','GCP IoT','InfluxDB','Timescale','Grafana','Kafka','NATS'].map((t) => ('; <"div": key={t} className='px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center'>{t}</div>'; ))} </div> <"div": className='mt-6'>'; <Link: href='/contact' className='inline-block bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold'>Start your pilot</Link>'; </div> </section> </div> )} 'MQTT','LoRaWAN' 'Azure IoT','AWS IoT' 'GCP IoT','InfluxDB' 'Timescale','Grafana' 'Kafka','NATS' ].map(t => ( <div key={t} className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center" > {t} </div> )); </div>" <div className="mt-6"> <Link" href="/contact className="inline-block bg-blue-600 "hover": bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold" > Start your pilot </Link> </div> </section> </div> ) } "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

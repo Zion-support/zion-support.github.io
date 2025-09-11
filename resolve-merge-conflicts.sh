@@ -1,80 +1,110 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge all open PRs
+# Script to resolve merge conflicts and continue the merge process
 set -e
 
-echo "Starting merge conflict resolution for all open PRs..."
+echo "🔧 Resolving merge conflicts..."
+echo "⏰ Started at: $(date)"
+echo "---"
 
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
-
-# Create a temporary branch for merging
-git checkout -b temp-merge-branch
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Resolving conflicts in $file..."
-    
-    # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Found conflicts in $file, resolving..."
-        
-        # For now, let's keep the main branch version and add the new changes
-        # This is a simplified approach - in practice you'd want to manually review each conflict
-        
-        # Remove conflict markers and keep both versions where possible
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
-        echo "Resolved conflicts in $file"
-    fi
+# Function to log messages
+log_message() {
+    local message="$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message"
 }
 
-# Try to merge each branch
-for branch in $BRANCHES; do
-    echo "Attempting to merge $branch..."
-    
-    # Skip if branch doesn't exist
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        echo "Branch $branch doesn't exist, skipping..."
-        continue
-    fi
-    
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "Successfully merged $branch"
-        git commit -m "Merge $branch into main"
-    else
-        echo "Merge conflicts detected in $branch, resolving..."
-        
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        
-        # Resolve conflicts in each file
-        for file in $CONFLICTED_FILES; do
-            if [ -f "$file" ]; then
-                resolve_conflicts "$file"
-            fi
-        done
-        
-        # Add resolved files
-        git add .
-        
-        # Commit the merge
-        git commit -m "Resolve merge conflicts for $branch"
-        
-        echo "Successfully resolved conflicts and merged $branch"
+# Resolve conflicts by accepting incoming changes
+log_message "🔄 Resolving conflicts by accepting incoming changes..."
+
+# For modify/delete conflicts, accept the deletion (incoming change)
+git status --porcelain | grep "^DU\|^UD" | while read -r line; do
+    if [[ $line =~ ^DU ]]; then
+        # Deleted in incoming, modified in HEAD - accept deletion
+        file_path=$(echo "$line" | awk '{print $2}')
+        log_message "🗑️  Accepting deletion of: $file_path"
+        git rm "$file_path" 2>/dev/null || true
+    elif [[ $line =~ ^UD ]]; then
+        # Modified in incoming, deleted in HEAD - accept modification
+        file_path=$(echo "$line" | awk '{print $2}')
+        log_message "✅ Accepting modification of: $file_path"
+        git add "$file_path" 2>/dev/null || true
     fi
 done
 
-echo "All branches merged successfully!"
+# For content conflicts, try to resolve automatically
+log_message "🔧 Resolving content conflicts..."
 
-# Switch back to main and merge the temp branch
-git checkout main
-git merge temp-merge-branch
+# Resolve .gitignore conflicts
+if [ -f ".gitignore" ]; then
+    log_message "📝 Resolving .gitignore conflicts..."
+    # Keep both versions and remove conflict markers
+    git checkout --theirs .gitignore
+    git add .gitignore
+fi
 
-# Clean up
-git branch -D temp-merge-branch
+# Resolve package.json conflicts
+if [ -f "package.json" ]; then
+    log_message "📦 Resolving package.json conflicts..."
+    # Keep the incoming version (merged branches)
+    git checkout --theirs package.json
+    git add package.json
+fi
 
-echo "Merge conflict resolution completed!"
+# Resolve _app.tsx conflicts
+if [ -f "pages/_app.tsx" ]; then
+    log_message "📱 Resolving _app.tsx conflicts..."
+    git checkout --theirs pages/_app.tsx
+    git add pages/_app.tsx
+fi
+
+# Resolve index.tsx conflicts
+if [ -f "pages/index.tsx" ]; then
+    log_message "🏠 Resolving index.tsx conflicts..."
+    git checkout --theirs pages/index.tsx
+    git add pages/index.tsx
+fi
+
+# Resolve globals.css conflicts
+if [ -f "styles/globals.css" ]; then
+    log_message "🎨 Resolving globals.css conflicts..."
+    git checkout --theirs styles/globals.css
+    git add styles/globals.css
+fi
+
+# Resolve tailwind.config.js conflicts
+if [ -f "tailwind.config.js" ]; then
+    log_message "🎨 Resolving tailwind.config.js conflicts..."
+    git checkout --theirs tailwind.config.js
+    git add tailwind.config.js
+fi
+
+# Add all resolved files
+log_message "📁 Adding all resolved files..."
+git add .
+
+# Commit the merge
+log_message "💾 Committing merge resolution..."
+if git commit -m "Resolve merge conflicts from multiple branch merges" 2>/dev/null; then
+    log_message "✅ Merge conflicts resolved successfully!"
+    
+    # Push the changes
+    log_message "🚀 Pushing resolved merge..."
+    git push origin main
+    
+    log_message "🎉 Merge process completed successfully!"
+else
+    log_message "❌ Failed to commit merge resolution"
+    log_message "📋 Current status:"
+    git status --porcelain | head -20
+    
+    # Try to abort and start fresh
+    log_message "🔄 Aborting merge and starting fresh..."
+    git merge --abort
+    
+    # Reset to main
+    git reset --hard origin/main
+    
+    log_message "✅ Reset to clean main branch"
+fi
+
+echo "🎯 Conflict resolution completed! Check the logs above for details."

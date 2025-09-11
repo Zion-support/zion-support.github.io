@@ -10,7 +10,6 @@ export default function Page("props": "any) {;
     generateReport(sampleLinks);
   }, []);
   const generateReport = links => {;
-
     const totalLinks = links.length;
     const healthyLinks = links.filter(l => l.status === 'healthy').length;
     const brokenLinks = links.filter(l => l.status === 'broken').length;
@@ -18,7 +17,12 @@ export default function Page("props": "any) {;
     const avgResponseTime =;
       links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
     setReport({;
-
+      totalLinks,;
+      healthyLinks,;
+      brokenLinks,;
+      externalLinks,;
+      "averageResponseTime": "avgResponseTime",;
+      "lastUpdated": "new Date()"});
       totalLinks,
       healthyLinks,
       brokenLinks,
@@ -32,9 +36,7 @@ export default function Page("props": "any) {;
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsMonitoring(false);};
   const getStatusIcon = status => {;
-
     switch(status) {;
-
       case 'healthy': ";
         return <CheckCircle className="w-4 h-4 text-green-400"  />;
       case 'broken':";
@@ -46,9 +48,7 @@ export default function Page("props": "any) {;
     "}
   };
   const getStatusColor = status => {;
-
     switch(status) {;
-
       case 'healthy':';
         return 'text-green-400';
       case 'broken':';
@@ -60,6 +60,9 @@ export default function Page("props": "any) {;
     }
   };
   const filteredLinks = linkStatuses.filter(link => {if (selectedFilter === 'all') return true;
+    return link.status === selectedFilter;});
+  return ();
+    <>;
     return link.status === selectedFilter;}
     );
   return ()
@@ -73,7 +76,6 @@ export default function Page("props": "any) {;
       >";
         <Link className="w-6 h-6"   />;
       </motion.button>;
-
       {/* Modal */}
       {isOpen && (;
         <motion.div;
@@ -108,7 +110,6 @@ export default function Page("props": "any) {;
                 Monitor and maintain the health of all website links;
               </p>;
             </div>;
-
             {/* Content */"}";
             <div className="p-6 space-y-6">;
               {/* Summary Cards */}
@@ -181,7 +182,6 @@ export default function Page("props": "any) {;
                     Healthy;
                   </button>;
                 </div>;
-
                 <button;
                   onClick={startMonitoring}
                   disabled={isMonitoring}";
@@ -197,7 +197,6 @@ export default function Page("props": "any) {;
                   </span>;
                 </button>;
               </div>;
-
               {/* Links Table */}";
               <div className="bg-gray-800 rounded-lg overflow-hidden">";
                 <div className="overflow-x-auto">";
@@ -273,7 +272,21 @@ export default function Page("props": "any) {;
                   </table>;
                 </div>;
               </div>;
-
+              {/* Recommendations */}";
+              <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">";
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">";
+                  <AlertTriangle className="w-5 h-5 mr-2"  />;
+                  Recommendations;
+                </h3>";
+                <ul className="text-yellow-200 text-sm space-y-1">;
+                  <li>• Fix broken LinkedIn and social media links</li>;
+                  <li>• Implement proper redirects for moved pages</li>;
+                  <li>• Set up automated link monitoring</li>;
+                  <li>• Review external link validity regularly</li>;
+                </ul>;
+              </div>;
+            </div>;
+          </motion.div>;
               {/* Recommendations */}"
               <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">"

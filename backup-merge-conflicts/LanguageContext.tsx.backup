@@ -5,7 +5,6 @@ const defaultLanguageContext: LanguageContextTyp e = {
   changeLanguage: asyn c () => {},
   isRTL: fals e,
   supportedLanguages
-=======
 export default function Page(props: any) {';
 ,';';
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },';';};const LanguageContext = createContext(defaultLanguageContext);
@@ -26,7 +25,6 @@ export const "LanguageProvider": "React.FC<LanguageProviderProps> = ({;
   authState = { "isAuthenticated": "fals e", "user": "nul l "} ;
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
-=======
 }) => {;export const useLanguage = (): LanguageContextType => useContext(LanguageContext);interface LanguageProviderProps {
 
   children: ReactNod e;
@@ -41,14 +39,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children, 
   authState = { isAuthenticated: fals e, user: nul l } 
 }) => {
->>>>>>> main
   const { i18n, t } = useTranslation();
   return () => {
     // Cleanup function
   };';
-<<<<<<< HEAD:backup-merge-conflicts/LanguageContext.tsx.backup
-}, []);, []);';';
-=======
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
@@ -59,26 +53,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   // TODO: Add dependencies if needed;
   return () => {;
     // Cleanup function;
-=======  };
->>>>>>> main
-=======
 }, []);, []);';';  };
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/context/LanguageContext.tsx
 }, []);, []);
   return () => {
     // Cleanup function
-<<<<<<< HEAD
-  };';
-}, []);, []);';';
-    setIsRTL(i18n.dir() === 'rtl');
-    document.documentElement.dir = i18n.dir();
-    document.documentElement.lang = currentLanguage;';
-    ';';
-    if(i18n.dir() === 'rtl') {';';
-      document.documentElement.classList.add('rtl');';
-    } else {';';
-=======
-=======  }, [i18n]); // i18n is a dependency here;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
   return () => {;
@@ -99,7 +77,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             console.error('Error updating language preference:', error);
           }
         } catch(err) {          console.error('Error syncing language with profile:', err);
->>>>>>> main
         }
       }
     };
@@ -110,9 +87,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 </any>
 </SupportedLanguage>';
 </LanguageProviderProps>;';;';
-=======
 ;
-=======
       // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {;;</LanguageContext>;
 </any>;
 </SupportedLanguage>;
@@ -120,9 +95,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 </LanguageContext>
 </any>
 </SupportedLanguage>
-</LanguageProviderProps>=======
 </LanguageContext>
 </any>
 </SupportedLanguage>
 </LanguageProviderProps>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/context/LanguageContext.tsx

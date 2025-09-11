@@ -146,8 +146,6 @@ export function MicroSaasServicesSection() {
                 </Button>
               </div>
             </Card>
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users } from 'lucide-react';
 import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';
@@ -279,7 +277,6 @@ export function MicroSaasServicesSection() {
               >
                 <Link to="/request-quote">
                   Get Free Quote
-==============        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-8 h-8 text-white" />
@@ -339,13 +336,6 @@ export function MicroSaasServicesSection() {
               >
                 <Link to="/contact">
                   Get Consultation
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </Link>
               </Button>
             </div>

@@ -3,6 +3,9 @@ import {motion} from 'framer-motion';';
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
 ;
 ;
+export const CollaborativeTextEditor = ("props": "any) => {;
+    const { trackEvent "} = useAnalytics({"enableTracking": "true",;
+        "enableUserBehaviorTracking": "true;"});
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -473,12 +476,13 @@ changes[...prev.changes, change];
 """;
 """";&apos;&apos;";
             exportContent = "# Document";
-
 ${editorState.content}"}
         if(onExport) {}
 ;
             onExport(exportContent, format)}
-
+;
+// Default export behavior';
+            const blob = new Blob([exportContent], {"type": 'text/plain'});
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
@@ -495,7 +499,6 @@ ${editorState.content}"}
     // Handle collaboration text changes;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -602,13 +605,28 @@ window.removeEventListener('collaborationTextChange', handleCollaborationTextCha
     // Auto-save functionality;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
 generateAISuggestions()}
-
+;
+        }, 3000)";
+        return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])";
+    return (";
+    <div className="{"bg-white" "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden ${className"}"}>""{/* comment */}"";";
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"";";
+        <div className="flex items-center justify-between">"";";
+          <h3 className="text-lg font-semibold flex items-center gap-2">"";";
+            <MessageSquare className="w-5 h-5"   />"";";
+            Collaborative Text Editor""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"";";
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
+                Live;
+              </div>)}";
+          </h3>"";
+          "";";
+          <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""",";
+                <Users className="w-4 h-4"   />,;
         }, 3000)"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])"
     return ("
@@ -706,7 +724,35 @@ generateAISuggestions()}
                 <div className="&apos;w-2" h-2 bg-green-400 rounded-full&apos;>&apos,</div>;
                 Live,;
               </div>)}
-
+;
+          </h3>&apos;&apos,;
+          &apos;&apos,&apos;&apos,";
+          <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos",>"&apos,&apos,&apos;&apos,",;
+                <Users className = "&apos,w-4" h-4&apos,        />;
+                {collaboration.onlineUsers.length}&apos;
+              </button>) }";
+            &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableAI && (&apos}&apos;<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="&apos;px-3" py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable","d": "opacity-50&apos",>"&apos,&apos,"{isProcessing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;        />) : "(&apos;<Sparkles className="&apos;w-4" h-4&apos;        />)"}
+;
+                AI&apos;
+              </button>) }";
+            &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+            <button onClick="{handleSave}" className="&apos;px-3" py-1 bg-green-500 "hover": "bg-green-600 rounded text-sm transition-colors flex items-center gap-2&apos",>"&apos,&apos,&apos;&apos,",;
+              <Save className="&apos;w-4" h-4&apos,        />;
+              Save&apos,;
+    return (";
+    <div className = "{"bg-white" "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden ${className"}"}>"""{/* comment */}""""";
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"""";
+        <div className="flex items-center justify-between">"""";
+          <h3 className="text-lg font-semibold flex items-center gap-2">"""";
+            <MessageSquare className="w-5 h-5"   />"""";
+            Collaborative Text Editor""""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"""";
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
+                Live,;
+              </div>)}";
+          </h3>""""";
+          """";
+          <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""""";
+                <Users className="w-4 h-4"   />",;
           &apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
@@ -714,7 +760,6 @@ generateAISuggestions()}
                 {collaboration.onlineUsers.length}&apos
               </button>) }"
             &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableAI && (&apos}&apos;<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="&apos;px-3" py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isProcessing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;        />) : (&apos;<Sparkles className="&apos;w-4" h-4&apos;        />)}
-
                 AI&apos
               </button>) }"
             &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
@@ -1051,7 +1096,6 @@ generateAISuggestions()}
 """"'";
 `;
 }"";
-
 </motion>;
 </motion>;
 </button>;

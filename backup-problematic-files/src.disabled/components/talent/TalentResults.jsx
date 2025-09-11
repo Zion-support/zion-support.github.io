@@ -3,4 +3,3 @@ export function TalentResults({" talents,totalCount,isLoading,viewProfile,handle
 export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" 
 "export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {...activeFiltersProps} /> {} ";""
 </div>"
-</div>"

@@ -15,4 +15,5 @@ export default function Page() {;
     "refetch": loadJobDetails // Added refetch alias for consistency if preferred}}
 export default useJobDetails;
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; finally {; setIsLoading(false);,} },[jobId]); useEffect(() => {},[]); loadJobDetails();,},[loadJobDetails]); return {; job,; isLoading,; error,; loadJobDetails,refetch: 'loadJobDetails };,} export default useJobDetails;
-import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; finally {; setIsLoading(false),} },[jobId]); useEffect(() => {},[]); loadJobDetails(),},[loadJobDetails]); return {; job,isLoading,error,loadJobDetails,refetch: loadJobDetails },} export default useJobDetails;
+
+

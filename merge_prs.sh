@@ -1,53 +1,68 @@
 #!/bin/bash
 
-# Script to merge all open PRs
-set -e
+# Script to merge all open PRs from GitHub
+REPO="Zion-Holdings/zion.app"
+API_BASE="https://api.github.com/repos/$REPO"
 
-echo "Starting PR merge process..."
+echo "Starting PR merge process for $REPO..."
 
-if [ -z "$GITHUB_TOKEN" ]; then
-  echo "Error: GITHUB_TOKEN is not set. Export GITHUB_TOKEN before running." >&2
-  exit 1
-fi
+# Get all open PRs
+echo "Fetching open PRs..."
+PRS_JSON=$(curl -s "$API_BASE/pulls?state=open")
 
-# Get list of open PRs
-PRS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=20" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+# Extract PR numbers using a more reliable method
+PRS=$(echo "$PRS_JSON" | grep -o '"number":[0-9]*' | sed 's/"number"://')
 
 echo "Found PRs: $PRS"
+
+if [ -z "$PRS" ]; then
+    echo "No PRs found or failed to extract PR numbers"
+    exit 1
+fi
 
 for pr in $PRS; do
     echo "Processing PR #$pr..."
     
     # Get PR details
-    PR_DETAILS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
+    PR_INFO=$(curl -s "$API_BASE/pulls/$pr")
+    PR_TITLE=$(echo "$PR_INFO" | grep -o '"title":"[^"]*"' | head -1 | cut -d'"' -f4)
+    PR_BRANCH=$(echo "$PR_INFO" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
     
-    # Extract head branch
-    HEAD_BRANCH=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
+    echo "  Title: $PR_TITLE"
+    echo "  Branch: $PR_BRANCH"
     
-    if [ -n "$HEAD_BRANCH" ]; then
-        echo "Merging branch: $HEAD_BRANCH"
+    # Get files changed in this PR
+    echo "  Fetching changed files..."
+    FILES_JSON=$(curl -s "$API_BASE/pulls/$pr/files")
+    FILES=$(echo "$FILES_JSON" | grep -o '"filename":"[^"]*"' | cut -d'"' -f4)
+    
+    echo "  Files to process: $FILES"
+    
+    for file in $FILES; do
+        echo "    Processing file: $file"
         
-        # Fetch the branch
-        git fetch origin "$HEAD_BRANCH"
+        # Get the content of the file from the PR branch
+        CONTENT_URL="$API_BASE/contents/$file?ref=$PR_BRANCH"
+        FILE_CONTENT_JSON=$(curl -s "$CONTENT_URL")
+        FILE_CONTENT=$(echo "$FILE_CONTENT_JSON" | grep -o '"content":"[^"]*"' | cut -d'"' -f4)
         
-        # Try to merge
-        if git merge "origin/$HEAD_BRANCH" --no-ff -m "Merge PR #$pr: $HEAD_BRANCH"; then
-            echo "Successfully merged PR #$pr"
-            git push origin main
+        if [ ! -z "$FILE_CONTENT" ]; then
+            # Create directory if it doesn't exist
+            DIR=$(dirname "$file")
+            if [ ! -d "$DIR" ]; then
+                mkdir -p "$DIR"
+            fi
+            
+            # Write the file content (base64 decode if needed)
+            echo "$FILE_CONTENT" | base64 -d > "$file" 2>/dev/null || echo "$FILE_CONTENT" > "$file"
+            echo "      Updated $file"
         else
-            echo "Failed to merge PR #$pr, resolving conflicts..."
-            # Try to resolve conflicts automatically
-            git checkout --theirs .
-            git add .
-            git commit -m "Resolve merge conflicts for PR #$pr"
-            git push origin main
+            echo "      No content found for $file"
         fi
-    else
-        echo "Could not find head branch for PR #$pr"
-    fi
+    done
     
-    echo "Completed PR #$pr"
-    echo "---"
+    echo "  Completed PR #$pr"
+    echo ""
 done
 
-echo "All PRs processed!"
+echo "PR merge process completed!"
