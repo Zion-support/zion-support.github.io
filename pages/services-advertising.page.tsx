@@ -22,12 +22,10 @@ export default function ServicesAdvertisingPage() {
     'Flexible deployment: SaaS or self-hosted options'
   ];
   const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' },
-    { title: 'AI Talent Sourcing Copilot', price: 'From $299/mo', refs: ['https://www.linkedin.com/talent-solutions/pricing/'], href: '/services/ai-talent-sourcing-copilot' },
-    { title: 'Vendor Risk Automation', price: 'From $199/mo', refs: ['https://securityscorecard.com/pricing'], href: '/services/vendor-risk-automation' }
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
   ];
   const anchors = [
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
@@ -36,11 +34,6 @@ export default function ServicesAdvertisingPage() {
     { title: 'Compliance', href: '#k8s-soc2-control-pack' },
     { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },
     { title: 'Commerce', href: '#checkout-performance-optimizer' }
-  ];
-  const siteLinks = [
-    { label: 'Website', href: 'https://ziontechgroup.com' },
-    { label: 'Services', href: 'https://ziontechgroup.com/services' },
-    { label: 'Contact', href: 'https://ziontechgroup.com/contact' }
   ];
   const pricingRefs = [
     {
@@ -280,32 +273,6 @@ export default function ServicesAdvertisingPage() {
                 </a>
               ))}
             </div>
-          </section>
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Fresh 2025 Offerings</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { name: 'PDF Render API', price: '$29/mo', href: 'https://ziontechgroup.com/services/pdf-render-api' },
-                { name: 'Invoice OCR & Extraction API', price: '$69/mo', href: 'https://ziontechgroup.com/services/invoice-ocr-extraction-api' },
-                { name: 'Email Deliverability Monitor', price: '$39/mo', href: 'https://ziontechgroup.com/email-deliverability-monitor' },
-                { name: 'Webhook Relay & Replay', price: '$29/mo', href: 'https://ziontechgroup.com/webhook-relay-replay' },
-                { name: 'API Observability Starter', price: '$59/mo', href: 'https://ziontechgroup.com/api-observability-starter' },
-                { name: 'Status Pages & SLO', price: '$39/mo', href: 'https://ziontechgroup.com/status-pages-slo' },
-                { name: 'Feature Flags at the Edge', price: '$69/mo', href: 'https://ziontechgroup.com/feature-flags-edge' },
-                { name: 'SSO in a Box (SAML/OIDC/SCIM)', price: '$79/mo', href: 'https://ziontechgroup.com/sso-in-a-box' },
-                { name: 'Kubernetes Cost Analyzer', price: '$99/mo', href: 'https://ziontechgroup.com/services/kubernetes-cost-analyzer' },
-                { name: 'Compliance Policy as Code', price: '$129/mo', href: 'https://ziontechgroup.com/services/compliance-policy-as-code' },
-                { name: 'Data Quality Monitor', price: '$69/mo', href: 'https://ziontechgroup.com/services/data-quality-monitor' },
-                { name: 'Vector Search Starter', price: '$59/mo', href: 'https://ziontechgroup.com/vector-search-starter' }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
-                </a>
-              ))}
-            </div>
-            <p className="text-slate-400 text-sm mt-3 text-center">All pricing is indicative; final quotes depend on usage, scale, and integration complexity.</p>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Market References for New Offers</h2>

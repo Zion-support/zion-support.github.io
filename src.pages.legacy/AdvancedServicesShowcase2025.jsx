@@ -1,0 +1,33 @@
+import React, { useState } from 'react';''';
+import { motion } from 'framer-motion';''';
+import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+
+
+import SEOHead from "../components/SEOHead.jsx";
+const AdvancedServicesShowcase2025 = () => {};
+};
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
+    // Combine all services;
+    const allServices = [...advancedRealServices2025, ...specializedITServices2025];';
+    const categories = ['';
+        'all',AI & Machine Learning',Cybersecurity',Healthcare Technology',Blockchain & Supply Chain',Financial Technology',Edge Computing & IoT',Marketing Technology',Quantum Computing',Human Resources Technology',Energy & Sustainability',Legal Technology',Neuromorphic Computing',Privacy AI',AI Governance',DevOps & Automation',Data Quality & Analytics',API Management',Network Security';
+    ];
+    const filteredServices = allServices;';
+        .filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+        .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+        .sort((a, b) => {};
+                return a.name.localeCompare(b.name)}
+    });
+    const getCategoryIcon = (category) => {};
+export { AdvancedServicesShowcase2025 };
+;
+export { AdvancedServicesShowcase2025 };
+;
+export { AdvancedServicesShowcase2025 };
+;
+export { AdvancedServicesShowcase2025 };
+;
+export { AdvancedServicesShowcase2025 };}}}
