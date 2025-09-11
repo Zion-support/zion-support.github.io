@@ -11,6 +11,30 @@ const posts = [
     tags: ['AI', 'Security', 'Governance'],
   },
   {
+    title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
+    description:
+      'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
+    href: '/blog/edge-ai-in-manufacturing-2025',
+    date: '2025-09-11',
+    tags: ['Edge AI', 'Manufacturing', 'IoT'],
+  },
+  {
+    title: 'GenAI Evals in Production: What Actually Works',
+    description:
+      'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
+    href: '/blog/genai-evals-in-production',
+    date: '2025-09-11',
+    tags: ['GenAI', 'Evals', 'Quality'],
+  },
+  {
+    title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
+    description:
+      'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
+    href: '/blog/startup-micro-saas-playbook',
+    date: '2025-09-11',
+    tags: ['Startup', 'SaaS', 'Growth'],
+  },
+  {
     title: 'AI Governance Operating Model: From Policy to Practice',
     description:
       'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',

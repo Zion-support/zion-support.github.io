@@ -112,22 +112,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='GenAI Security in 2025: Practical Controls That Actually Work'
-              href='/blog/genai-security-2025'
-              description='Blueprint for securing GenAI systems with gateways, guardrails, and evals.'
-              icon='🔐'
+              title='GenAI Evals in Production: What Actually Works'
+              href='/blog/genai-evals-in-production'
+              description='Continuous eval loops that keep quality, safety, and costs in check.'
+              icon='🧪'
             />
             <Card
-              title='AI Governance Operating Model: From Policy to Practice'
-              href='/blog/ai-governance-operating-model'
-              description='Make governance an accelerator with clear roles, lifecycle controls, and cadence.'
-              icon='🏛️'
+              title='Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs'
+              href='/blog/edge-ai-in-manufacturing-2025'
+              description='Sub-100ms decisions, resilience, and bandwidth savings with on-device inference.'
+              icon='🏭'
             />
             <Card
-              title='Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready'
-              href='/blog/serverless-for-ml-2025'
-              description='Run ML and GenAI on serverless with strong reliability and lower costs.'
-              icon='⚡'
+              title='Startup Micro SaaS Playbook: From Idea to $10k MRR'
+              href='/blog/startup-micro-saas-playbook'
+              description='A pragmatic blueprint to launch and grow a Micro SaaS efficiently.'
+              icon='📈'
             />
           </div>
         </div>
