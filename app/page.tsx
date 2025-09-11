@@ -1,6 +1,18 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import SEO from '../components/SEO';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
+import NewContentShowcase from '../components/NewContentShowcase';
+import EnhancedNewsletter from '../components/EnhancedNewsletter';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
