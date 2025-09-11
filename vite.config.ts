@@ -1,26 +1,28 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import { resolve } from 'path';
+import { analyzer } from 'vite-bundle-analyzer';
 
-// https://vite.dev/config/
-export default defineConfig({
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => ({
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
       jsxRuntime: 'automatic',
     }),
+    ...(mode === 'analyze' ? [analyzer()] : [])
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@components': path.resolve(__dirname, './src/components'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-      '@utils': path.resolve(__dirname, './src/utils'),
-      '@hooks': path.resolve(__dirname, './src/hooks'),
-      '@types': path.resolve(__dirname, './src/types'),
-      '@styles': path.resolve(__dirname, './src/styles'),
-      '@assets': path.resolve(__dirname, './src/assets'),
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@pages': resolve(__dirname, './src/pages'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+      '@styles': resolve(__dirname, './src/styles'),
+      '@assets': resolve(__dirname, './src/assets'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
@@ -41,6 +43,7 @@ export default defineConfig({
             '@radix-ui/react-avatar',
             '@radix-ui/react-checkbox',
             '@radix-ui/react-collapsible',
+            '@radix-ui/react-context-menu',
             '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
             '@radix-ui/react-hover-card',
@@ -64,7 +67,7 @@ export default defineConfig({
           'animation-vendor': ['framer-motion'],
           'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
           'icons-vendor': ['lucide-react'],
-          'state-vendor': ['@reduxjs/toolkit'],
+          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
           'router-vendor': ['react-router-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
@@ -112,9 +115,11 @@ export default defineConfig({
       'lucide-react',
       '@radix-ui/react-accordion',
       '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-aspect-ratio',
       '@radix-ui/react-avatar',
       '@radix-ui/react-checkbox',
       '@radix-ui/react-collapsible',
+      '@radix-ui/react-context-menu',
       '@radix-ui/react-dialog',
       '@radix-ui/react-dropdown-menu',
       '@radix-ui/react-hover-card',
@@ -178,4 +183,4 @@ export default defineConfig({
       }
     },
   },
-});
+}));

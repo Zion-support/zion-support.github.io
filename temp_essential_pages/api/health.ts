@@ -37,12 +37,10 @@ function handler(
         .json({ status: 'ok', version, commit, timestamp, envVariables });
     } catch (error) {
       console.error('Failed to retrieve health information:', error);
-      res
-        .status(500)
-        .json({
-          error: 'Failed to retrieve health information.',
-          status: 'error',
-        });
+      res.status(500).json({
+        error: 'Failed to retrieve health information.',
+        status: 'error',
+      });
     }
   } else {
     res.setHeader('Allow', ['GET']);

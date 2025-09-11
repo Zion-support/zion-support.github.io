@@ -1,54 +1,54 @@
-import React from 'react',
 import React from 'react';
-import React from 'react';
-import React from 'react',
-import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles, DollarSign, Users, Clock, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
+
 interface Service {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next / link';
-import {motion} from 'framer-motion';
-import {ArrowRight, Star, Zap, Shield, Brain} from 'lucide-react';
   id: string;
   name: string;
-  tagline: string;
-  price: string;
   description: string;
+  category: string[];
+  price: string;
   features: string[];
-  link: string;
+  benefits: string[];
+  marketSize: string;
+  roi: string;
+  contact: {
+    mobile: string;
+    email: string;
+    website: string;
+    address: string;
+  };
+}
+
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
-  title?: string;
-  subtitle?: string;
-interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[],
-  services: Service[],  title?: string;
-  subtitle?: string;
-export default function UltraFuturisticServiceShowcase2029(): any ({;
-  services,;
-  title = '2029 Cutting-Edge Services',;
-  subtitle = 'Experience the future of technology with our revolutionary solutions',;
-}: UltraFuturisticServiceShowcase2029Props) {;
+}
+
+export default function UltraFuturisticServiceShowcase2029({ services }: UltraFuturisticServiceShowcase2029Props) {
+  const categories = [
+    { name: 'AI & Consciousness', icon: Brain, color: 'from-violet-500 to-purple-600', services: services.filter(s => s.category.includes('AI')) },
+    { name: 'Quantum Computing', icon: Atom, color: 'from-blue-500 to-cyan-600', services: services.filter(s => s.category.includes('Quantum')) },
+    { name: 'Space Technology', icon: Rocket, color: 'from-emerald-500 to-teal-600', services: services.filter(s => s.category.includes('Space')) },
+    { name: 'Enterprise IT', icon: Cpu, color: 'from-cyan-500 to-teal-600', services: services.filter(s => s.category.includes('IT')) },
+    { name: 'Micro SAAS', icon: Target, color: 'from-orange-500 to-red-600', services: services.filter(s => s.category.includes('Micro')) },
+    { name: 'Emerging Tech', icon: Globe, color: 'from-green-500 to-emerald-600', services: services.filter(s => s.category.includes('Emerging')) }
+  ];
+
+  return (
+    <section className="relative py-20 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
+            backgroundSize: '100px 100px'
+          }} />
+        </div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -66,162 +66,152 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the future of technology with our cutting-edge 2029 services. 
-            From AI consciousness to quantum space mining, we're building tomorrow's solutions today.
-  services: Service[],;
-  title?: string;
-            {title}
-          </h2>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            {subtitle}
+            From AI consciousness to quantum space mining, we&apos;re building tomorrow&apos;s solutions today.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 6).map((service, index) => (
-          {services.slice(0, 6).map((service, index) => (
+
+        {/* Service Categories */}
+        <div className="space-y-16">
+          {categories.map((category, categoryIndex) => (
             <motion.div
-              key={service.id}
-          </p>;
-        </motion && motion.div>;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {services && services.slice(0, 6).map((service, index) => (;
-            <motion&& motion.div
-              key={service && service.id}
-              initial={{ opacity: 0, y: 20 }}
+              key={category.name}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
+              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+              viewport={{ once: true }}
+              className="space-y-8"
             >
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" />
-                  <span className="text-sm text-cyan-400 font-medium">NEW</span>
+              {/* Category Header */}
+              <div className="flex items-center space-x-4">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                  <category.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="flex items-center space-x-1">
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <span className="text-sm text-gray-300">5.0</span>
+                <div>
+                  <h3 className="text-3xl font-bold text-white">{category.name}</h3>
+                  <p className="text-gray-400">Cutting-edge {category.name.toLowerCase()} solutions</p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                {service.name}
-              </h3>
-              <p className="text-gray-400 text-sm mb-3">{service.tagline}</p>
-              <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-              <div className="flex items-center justify-between mb-4">
-          {services.slice(0, 6).map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
-            >
-              <div className='flex items-center justify-between mb-4'>
-                <div className='flex items-center space-x-2'>
-                  <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
-                  <span className='text-sm text-cyan-400 font-medium'>NEW</span>
-                </div>
-                <div className='flex items-center space-x-1'>
-                  <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                  <span className='text-sm text-gray-300'>5.0</span>
-                </div>
+
+              {/* Services Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.services.slice(0, 6).map((service, serviceIndex) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative p-6 rounded-2xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50 hover:transform hover:scale-105"
+                  >
+                    {/* Service Header */}
+                    <div className="mb-4">
+                      <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {service.name}
+                      </h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    {/* Price and ROI */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-2">
+                        <DollarSign className="w-4 h-4 text-green-400" />
+                        <span className="text-lg font-bold text-white">{service.price}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <TrendingUp className="w-4 h-4 text-cyan-400" />
+                        <span className="text-sm text-cyan-400">{service.roi}</span>
+                      </div>
+                    </div>
+
+                    {/* Market Size */}
+                    <div className="mb-4 p-3 rounded-lg bg-gray-700/30">
+                      <div className="flex items-center space-x-2">
+                        <Globe className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-gray-300">Market Size: {service.marketSize}</span>
+                      </div>
+                    </div>
+
+                    {/* Features Preview */}
+                    <div className="mb-4">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <Sparkles className="w-4 h-4 text-yellow-400" />
+                        <span className="text-sm font-medium text-white">Key Features</span>
+                      </div>
+                      <div className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center space-x-2">
+                            <CheckCircle className="w-3 h-3 text-green-400" />
+                            <span className="text-xs text-gray-400">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <Link
+                      href={`/services/${service.id}`}
+                      className="group/btn w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+
+                    {/* Hover Effect Overlay */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </motion.div>
+                ))}
               </div>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
-                {service.name}
-              </h3>
-              <p className='text-gray-400 text-sm mb-3'>{service.tagline}</p>
-              <p className='text-gray-300 mb-4 line-clamp-3'>
-                {service.description}
-              </p>
-              <div className='flex items-center justify-between mb-4'>
-                <span className='text-2xl font-bold text-cyan-400'>
-                  {service.price}
-                </span>
-                <div className='flex items-center space-x-2'>
-                  <Zap className='w-4 h-4 text-yellow-400' />
-                  <Shield className='w-4 h-4 text-green-400' />
-                  <Brain className='w-4 h-4 text-purple-400' />                </div>              <div className="flex items-center justify-between mb-4">
-                <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                <div className="flex items-center space-x-2">
-                  <Zap className="w-4 h-4 text-yellow-400" />
-                  <Shield className="w-4 h-4 text-green-400" />
-                  <Brain className="w-4 h-4 text-purple-400" />
-              <div className='flex items-center justify-between mb-4'>;
-                <div className='flex items-center space-x-2'>;
-                  <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />;
-                  <span className='text-sm text-cyan-400 font-medium'>NEW</span>;
-                </div>;
-                <div className='flex items-center space-x-1'>;
-                  <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                  <span className='text-sm text-gray-300'>5 && 5.0</span>;
-                </div>;
-              </div>;
+
+              {/* View All Button for Category */}
+              {category.services.length > 6 && (
+                <div className="text-center">
+                  <Link
+                    href={`/services/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-flex items-center space-x-2 px-6 py-3 border border-cyan-500/50 text-cyan-400 rounded-lg hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+                  >
+                    <span>View All {category.name} Services</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-              </div>
-              <Link
-                href={service.link}
-                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              )}
             </motion.div>
           ))}
         </div>
+
+        {/* Global CTA */}
         <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mt-20"
         >
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className='text-center mt-12'
-        >          <Link
-            href='/services'
-            className='inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'>;
-            View All Services;
-            <ArrowRight className='w-4 h-4 ml-2' />          </Link>        >;
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">;
-            View All Services;
-            <ArrowRight className="w-4 h-4 ml-2" />;
-          </Link>;
-        </motion && motion.div>;
-      </div>;
-    </section>;
+          <div className="max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8">
+              Join hundreds of forward-thinking companies already using our revolutionary 2029 technology services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/pricing"
+                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
-              <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors&quot;>
-                {service.name}
-              </h3>
-              <p className=&quot;text-gray-400 text-sm mb-3&quot;>{service.tagline}</p>
-              <p className=&quot;text-gray-300 mb-4 line-clamp-3&quot;>{service.description}</p>
-              <div className=&quot;flex items-center justify-between mb-4&quot;>
-                <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</span>
-                <div className=&quot;flex items-center space-x-2&quot;>
-                  <Zap className=&quot;w-4 h-4 text-yellow-400&quot; />
-                  <Shield className=&quot;w-4 h-4 text-green-400&quot; />
-                  <Brain className=&quot;w-4 h-4 text-purple-400&quot; />
-                </div>
-              </div>
-              <Link
-                href={service.link}
-                className=&quot;inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25&quot;
-              >
-                Get Started
-                <ArrowRight className=&quot;w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform&quot; />
-              </a>
-            </motion.div>
-          ))}
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Link
-            href='/services'
-            className='inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'
-          >
-            View All Services
-            <ArrowRight className='w-4 h-4 ml-2' />          </Link>        >
-          <Link

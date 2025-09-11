@@ -31,9 +31,9 @@ async function gh(path, init = {}) {
     headers: {
       Authorization: `token ${token}`,
       Accept: 'application/vnd.github.v3+json',
-      'User-Agent': 'force-merge-script'
+      'User-Agent': 'force-merge-script',
     },
-    body: init.body
+    body: init.body,
   });
   const text = await res.text();
   let data;
@@ -61,7 +61,9 @@ function autoResolveConflicts() {
     .split('\n')
     .filter(Boolean);
   if (staged.length) {
-    sh('git commit -m "chore: auto-resolve merge conflicts while force-merging PR heads into main"');
+    sh(
+      'git commit -m "chore: auto-resolve merge conflicts while force-merging PR heads into main"'
+    );
   }
 }
 
@@ -90,12 +92,19 @@ async function main() {
       mergedCount++;
     } catch (e) {
       console.log(`Skip PR #${pr.number} (${head}): ${e.message}`);
-      try { sh('git merge --abort'); } catch {}
+      try {
+        sh('git merge --abort');
+      } catch {}
     }
   }
   console.log(`Pushing main with ${mergedCount}/${attempted} merged heads...`);
   sh('git push origin main');
-  try { sh(`git checkout ${startBranch}`); } catch {}
+  try {
+    sh(`git checkout ${startBranch}`);
+  } catch {}
 }
 
-main().catch(err => { console.error('Error:', err.message); process.exit(1); });
+main().catch(err => {
+  console.error('Error:', err.message);
+  process.exit(1);
+});

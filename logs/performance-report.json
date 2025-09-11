@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-11T12:59:20.370Z",
+  "timestamp": "2025-09-11T19:52:59.734Z",
   "bundleSize": {
-    "totalBytes": 6094543,
-    "totalSize": "5.81 MB",
-    "gzippedEstimate": 1828362,
-    "gzippedSize": "1.74 MB",
-    "fileCount": 190,
+    "totalBytes": 61896850,
+    "totalSize": "59.03 MB",
+    "gzippedEstimate": 18569055,
+    "gzippedSize": "17.71 MB",
+    "fileCount": 2900,
     "recommendations": [
       "Consider code splitting to reduce initial bundle size",
       "Consider consolidating small files",
@@ -14,19 +14,19 @@
     ]
   },
   "imageOptimization": {
-    "totalImages": 43,
+    "totalImages": 48,
     "optimizedImages": 0,
-    "totalSize": "17.30 KB",
+    "totalSize": "63.04 KB",
     "recommendations": [
-      "Convert 43 images to WebP/AVIF",
+      "Convert 48 images to WebP/AVIF",
       "Use responsive images with srcset",
       "Implement lazy loading for images"
     ]
   },
   "dependencies": {
-    "totalDependencies": 119,
-    "productionDependencies": 93,
-    "devDependencies": 26,
+    "totalDependencies": 79,
+    "productionDependencies": 50,
+    "devDependencies": 29,
     "potentialUnused": []
   },
   "recommendations": [

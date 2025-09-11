@@ -7,7 +7,11 @@ console.log('🚀 Starting Comprehensive App Improvements...');
 
 class ComprehensiveAppImprover {
   constructor() {
-    this.reportFile = path.join(__dirname, '..', 'comprehensive-improvements-report.json');
+    this.reportFile = path.join(
+      __dirname,
+      '..',
+      'comprehensive-improvements-report.json'
+    );
     this.results = {
       timestamp: new Date().toISOString(),
       build: null,
@@ -16,7 +20,7 @@ class ComprehensiveAppImprover {
       performance: null,
       codeQuality: null,
       automation: null,
-      overall: { status: 'unknown', score: 0 }
+      overall: { status: 'unknown', score: 0 },
     };
   }
 
@@ -26,7 +30,7 @@ class ComprehensiveAppImprover {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
+        cwd: path.join(__dirname, '..'),
       });
       console.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -42,18 +46,26 @@ class ComprehensiveAppImprover {
   }
 
   runTests() {
-    const result = this.runCommand('npx vitest run --reporter=dot --passWithNoTests', 'Unit Tests');
+    const result = this.runCommand(
+      'npx vitest run --reporter=dot --passWithNoTests',
+      'Unit Tests'
+    );
     this.results.tests = result;
   }
 
   runSecurity() {
-    const result = this.runCommand('node scripts/security-audit.cjs', 'Security Audit');
+    const result = this.runCommand(
+      'node scripts/security-audit.cjs',
+      'Security Audit'
+    );
     this.results.security = result;
   }
 
   runPerformance() {
     // Fallback to optimize-performance.js if the .cjs variant isn't present
-    const perfCmd = fs.existsSync(path.join(__dirname, 'optimize-performance.cjs'))
+    const perfCmd = fs.existsSync(
+      path.join(__dirname, 'optimize-performance.cjs')
+    )
       ? 'node scripts/optimize-performance.cjs'
       : 'node scripts/optimize-performance.js';
     const result = this.runCommand(perfCmd, 'Performance Optimization');
@@ -67,12 +79,21 @@ class ComprehensiveAppImprover {
 
   runAutomation() {
     // Prefer scripts/master-automation-orchestrator.cjs if exists; otherwise noop
-    const orchestrator = path.join(__dirname, 'master-automation-orchestrator.cjs');
+    const orchestrator = path.join(
+      __dirname,
+      'master-automation-orchestrator.cjs'
+    );
     if (fs.existsSync(orchestrator)) {
-      const result = this.runCommand('node scripts/master-automation-orchestrator.cjs', 'Automation Orchestrator');
+      const result = this.runCommand(
+        'node scripts/master-automation-orchestrator.cjs',
+        'Automation Orchestrator'
+      );
       this.results.automation = result;
     } else {
-      this.results.automation = { success: true, result: 'No orchestrator found, skipped.' };
+      this.results.automation = {
+        success: true,
+        result: 'No orchestrator found, skipped.',
+      };
     }
   }
 
@@ -100,15 +121,26 @@ class ComprehensiveAppImprover {
 
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;
-    this.results.overall.status = finalScore >= 80 ? 'excellent' : finalScore >= 60 ? 'good' : finalScore >= 40 ? 'fair' : 'poor';
+    this.results.overall.status =
+      finalScore >= 80
+        ? 'excellent'
+        : finalScore >= 60
+          ? 'good'
+          : finalScore >= 40
+            ? 'fair'
+            : 'poor';
     return finalScore;
   }
 
   generateReport() {
     const score = this.calculateOverallScore();
     fs.writeFileSync(this.reportFile, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Comprehensive improvements report saved to: ${this.reportFile}`);
-    console.log(`🎯 Overall App Score: ${score}/100 (${this.results.overall.status})`);
+    console.log(
+      `📊 Comprehensive improvements report saved to: ${this.reportFile}`
+    );
+    console.log(
+      `🎯 Overall App Score: ${score}/100 (${this.results.overall.status})`
+    );
   }
 
   run() {
@@ -130,4 +162,3 @@ class ComprehensiveAppImprover {
 }
 
 new ComprehensiveAppImprover().run();
-

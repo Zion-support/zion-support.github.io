@@ -19,7 +19,12 @@ class SEOOptimizer {
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+      if (
+        stat.isDirectory() &&
+        !item.startsWith('.') &&
+        item !== 'node_modules' &&
+        item !== 'dist'
+      ) {
         files.push(...this.getAllFiles(fullPath, extensions));
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
@@ -33,16 +38,21 @@ class SEOOptimizer {
     const analysis = {
       file: relativePath,
       hasTitle: /<title[^>]*>[^<]*<\/title>/i.test(content),
-      hasMetaDescription: /<meta[^>]*name=["']description["'][^>]*content=["'][^"']*["']/i.test(content),
+      hasMetaDescription:
+        /<meta[^>]*name=["']description["'][^>]*content=["'][^"']*["']/i.test(
+          content
+        ),
       hasH1: /<h1[^>]*>.*<\/h1>/is.test(content),
       hasImages: /<img[^>]*>/i.test(content),
       titleLength: 0,
       metaLength: 0,
-      issues: []
+      issues: [],
     };
     const titleMatch = content.match(/<title[^>]*>([^<]*)<\/title>/i);
     if (titleMatch) analysis.titleLength = titleMatch[1].length;
-    const metaMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i);
+    const metaMatch = content.match(
+      /<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i
+    );
     if (metaMatch) analysis.metaLength = metaMatch[1].length;
     return analysis;
   }
@@ -61,24 +71,48 @@ class SEOOptimizer {
   }
 
   checkIssues(seoReport, analysis) {
-    if (!analysis.hasTitle) seoReport.issues.push(`${analysis.file}: Missing <title>`);
-    if (!analysis.hasMetaDescription) seoReport.issues.push(`${analysis.file}: Missing meta description`);
-    if (!analysis.hasH1) seoReport.issues.push(`${analysis.file}: Missing <h1>`);
-    if (analysis.titleLength && (analysis.titleLength < 30 || analysis.titleLength > 60)) {
-      seoReport.issues.push(`${analysis.file}: Title length ${analysis.titleLength} outside 30-60 range`);
+    if (!analysis.hasTitle)
+      seoReport.issues.push(`${analysis.file}: Missing <title>`);
+    if (!analysis.hasMetaDescription)
+      seoReport.issues.push(`${analysis.file}: Missing meta description`);
+    if (!analysis.hasH1)
+      seoReport.issues.push(`${analysis.file}: Missing <h1>`);
+    if (
+      analysis.titleLength &&
+      (analysis.titleLength < 30 || analysis.titleLength > 60)
+    ) {
+      seoReport.issues.push(
+        `${analysis.file}: Title length ${analysis.titleLength} outside 30-60 range`
+      );
     }
-    if (analysis.metaLength && (analysis.metaLength < 120 || analysis.metaLength > 160)) {
-      seoReport.issues.push(`${analysis.file}: Meta description length ${analysis.metaLength} outside 120-160 range`);
+    if (
+      analysis.metaLength &&
+      (analysis.metaLength < 120 || analysis.metaLength > 160)
+    ) {
+      seoReport.issues.push(
+        `${analysis.file}: Meta description length ${analysis.metaLength} outside 120-160 range`
+      );
     }
   }
 
   generateRecommendations(seoReport) {
     const m = seoReport.metrics;
-    if (m.pagesWithTitle < Math.ceil(m.totalPages * 0.8)) seoReport.recommendations.push('Add title tags to at least 80% of pages');
-    if (m.pagesWithMetaDescription < Math.ceil(m.totalPages * 0.8)) seoReport.recommendations.push('Add meta descriptions to at least 80% of pages');
-    if (m.pagesWithH1 < Math.ceil(m.totalPages * 0.9)) seoReport.recommendations.push('Ensure pages include a single H1');
-    if (m.pagesWithTitle > 0) m.averageTitleLength = Math.round(m.averageTitleLength / m.pagesWithTitle);
-    if (m.pagesWithMetaDescription > 0) m.averageMetaLength = Math.round(m.averageMetaLength / m.pagesWithMetaDescription);
+    if (m.pagesWithTitle < Math.ceil(m.totalPages * 0.8))
+      seoReport.recommendations.push('Add title tags to at least 80% of pages');
+    if (m.pagesWithMetaDescription < Math.ceil(m.totalPages * 0.8))
+      seoReport.recommendations.push(
+        'Add meta descriptions to at least 80% of pages'
+      );
+    if (m.pagesWithH1 < Math.ceil(m.totalPages * 0.9))
+      seoReport.recommendations.push('Ensure pages include a single H1');
+    if (m.pagesWithTitle > 0)
+      m.averageTitleLength = Math.round(
+        m.averageTitleLength / m.pagesWithTitle
+      );
+    if (m.pagesWithMetaDescription > 0)
+      m.averageMetaLength = Math.round(
+        m.averageMetaLength / m.pagesWithMetaDescription
+      );
   }
 
   saveReport(seoReport) {
@@ -100,10 +134,10 @@ class SEOOptimizer {
         pagesWithH1: 0,
         pagesWithImages: 0,
         averageTitleLength: 0,
-        averageMetaLength: 0
+        averageMetaLength: 0,
       },
       issues: [],
-      recommendations: []
+      recommendations: [],
     };
     for (const file of files) {
       try {
@@ -129,7 +163,10 @@ class SEOOptimizer {
 
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
-  optimizer.run().catch(err => { console.error(err); process.exit(1); });
+  optimizer.run().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 }
 
 module.exports = SEOOptimizer;

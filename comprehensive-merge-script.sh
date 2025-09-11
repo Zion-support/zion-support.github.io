@@ -1,183 +1,259 @@
 #!/bin/bash
 
-# Comprehensive PR merge and conflict resolution script
+# Comprehensive script to resolve merge conflicts and merge all PRs
+# This script handles the complete process of merging all open PRs into main
+
 set -e
 
-echo "🚀 Starting comprehensive PR merge and conflict resolution..."
+echo "🚀 Starting comprehensive PR merge process..."
+echo "================================================"
 
-# Function to get open PRs from GitHub API
-get_open_prs() {
-    echo "📋 Fetching open PRs from GitHub..."
-    
-    # Get open PRs using GitHub API
-    curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | \
-    grep -E '"number"|"title"|"head".*"ref"|"base".*"ref"' | \
-    sed 's/.*"number": \([0-9]*\).*/\1/' | \
-    sed 's/.*"title": "\([^"]*\)".*/\1/' | \
-    sed 's/.*"ref": "\([^"]*\)".*/\1/' | \
-    head -50
+# Function to log with timestamp
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
 }
 
-# Function to resolve conflicts automatically
-resolve_conflicts() {
-    local file=$1
-    echo "  🔧 Resolving conflicts in: $file"
-    
-    # For package.json conflicts, prefer main version
-    if [[ "$file" == "package.json" ]]; then
-        git checkout --ours "$file" 2>/dev/null || true
-        return 0
-    fi
-    
-    # For package-lock.json, regenerate
-    if [[ "$file" == "package-lock.json" ]]; then
-        git checkout --ours "$file" 2>/dev/null || true
-        npm install --package-lock-only 2>/dev/null || true
-        return 0
-    fi
-    
-    # For yarn.lock, regenerate
-    if [[ "$file" == "yarn.lock" ]]; then
-        git checkout --ours "$file" 2>/dev/null || true
-        yarn install --frozen-lockfile 2>/dev/null || true
-        return 0
-    fi
-    
-    # For TypeScript config files, prefer main
-    if [[ "$file" == "tsconfig.json" ]] || [[ "$file" == "tsconfig.typecheck.json" ]]; then
-        git checkout --ours "$file" 2>/dev/null || true
-        return 0
-    fi
-    
-    # For deleted files conflicts, remove them
-    if git status --porcelain | grep -q "^DU.*$file"; then
-        git rm "$file" 2>/dev/null || true
-        return 0
-    fi
-    
-    # For other conflicts, try to resolve automatically
-    if git status --porcelain | grep -q "^UU.*$file\|^AA.*$file\|^DD.*$file"; then
-        # Try to take the version from the branch being merged
-        git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-    fi
-}
-
-# Function to merge a specific PR
-merge_pr() {
-    local pr_number=$1
-    local pr_title=$2
-    local branch_name=$3
-    
-    echo "🔄 Processing PR #$pr_number: $pr_title"
-    echo "   Branch: $branch_name"
-    
-    # Fetch the branch
-    git fetch origin "$branch_name" 2>/dev/null || {
-        echo "❌ Branch $branch_name not found"
-        return 1
-    }
-    
-    # Check if already merged
-    if git branch --merged main | grep -q "$branch_name"; then
-        echo "✅ PR #$pr_number already merged"
-        return 0
-    fi
-    
-    # Create a temporary branch for merging
-    local temp_branch="temp-merge-pr-$pr_number-$(date +%s)"
-    git checkout -b "$temp_branch" main
-    
-    echo "🔄 Attempting to merge $branch_name into $temp_branch..."
-    
-    # Try to merge with conflict resolution
-    if git merge "origin/$branch_name" --no-ff -m "Merge PR #$pr_number: $pr_title" 2>/dev/null; then
-        echo "✅ Successfully merged PR #$pr_number"
-        
-        # Update main
-        git checkout main
-        git merge "$temp_branch" --ff-only
-        git push origin main
-        
-        # Clean up
-        git branch -D "$temp_branch"
+# Function to run git commands safely
+run_git() {
+    local cmd="$1"
+    log "Running: $cmd"
+    if git $cmd; then
+        log "✅ Success: $cmd"
         return 0
     else
-        echo "⚠️  Merge conflicts detected in PR #$pr_number, attempting resolution..."
-        
-        # List conflicted files
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-            echo "  Conflict in: $file"
-        done
-        
-        # Resolve conflicts automatically
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-            resolve_conflicts "$file"
-        done
-        
-        # Add resolved files
-        git add . 2>/dev/null || true
-        
-        # Check if all conflicts are resolved
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "❌ Could not automatically resolve all conflicts in PR #$pr_number"
-            git merge --abort
-            git checkout main
-            git branch -D "$temp_branch"
-            return 1
-        else
-            echo "✅ Conflicts resolved, completing merge for PR #$pr_number..."
-            git commit --no-edit
-            
-            # Update main
-            git checkout main
-            git merge "$temp_branch" --ff-only
-            git push origin main
-            
-            # Clean up
-            git branch -D "$temp_branch"
-            echo "✅ Successfully resolved conflicts and merged PR #$pr_number"
+        log "❌ Failed: $cmd"
+        return 1
+    fi
+}
+
+# Function to check if we're in a git repo
+check_git_repo() {
+    if [ -d ".git" ]; then
+        log "✅ Git repository found"
+        return 0
+    else
+        log "❌ Not in a git repository"
+        return 1
+    fi
+}
+
+# Function to get current branch
+get_current_branch() {
+    git branch --show-current 2>/dev/null || echo "unknown"
+}
+
+# Function to resolve merge conflicts
+resolve_conflicts() {
+    log "🔧 Checking for merge conflicts..."
+    
+    # Check git status
+    local status=$(git status --porcelain 2>/dev/null || echo "")
+    
+    if [ -z "$status" ]; then
+        log "✅ No conflicts found"
+        return 0
+    fi
+    
+    # Check for conflict markers
+    local conflict_files=$(echo "$status" | grep -E '^UU|^AA|^DD' | wc -l)
+    
+    if [ "$conflict_files" -eq 0 ]; then
+        log "✅ No merge conflicts found"
+        return 0
+    fi
+    
+    log "🔍 Found $conflict_files files with conflicts"
+    
+    # List conflict files
+    echo "$status" | grep -E '^UU|^AA|^DD' | while read -r line; do
+        local file=$(echo "$line" | cut -c4-)
+        log "  - $file"
+    done
+    
+    # Try to resolve conflicts automatically
+    log "🤖 Attempting automatic conflict resolution..."
+    
+    # Add all files
+    if run_git "add ."; then
+        # Try to commit
+        if run_git "commit -m 'Resolve merge conflicts automatically'"; then
+            log "✅ Conflicts resolved successfully"
             return 0
+        else
+            log "❌ Could not commit resolved conflicts"
+            return 1
+        fi
+    else
+        log "❌ Could not add files"
+        return 1
+    fi
+}
+
+# Function to merge a specific branch
+merge_branch() {
+    local branch="$1"
+    log "🔄 Processing branch: $branch"
+    
+    # Check if branch exists locally
+    if git show-ref --verify --quiet "refs/heads/$branch"; then
+        log "✅ Branch $branch exists locally"
+    else
+        log "📥 Fetching branch $branch from origin..."
+        if ! run_git "fetch origin $branch:$branch"; then
+            log "❌ Failed to fetch branch $branch"
+            return 1
+        fi
+    fi
+    
+    # Switch to the branch
+    if ! run_git "checkout $branch"; then
+        log "❌ Failed to checkout branch $branch"
+        return 1
+    fi
+    
+    # Pull latest changes
+    if ! run_git "pull origin $branch"; then
+        log "❌ Failed to pull latest changes for $branch"
+        return 1
+    fi
+    
+    # Switch back to main
+    if ! run_git "checkout main"; then
+        log "❌ Failed to checkout main"
+        return 1
+    fi
+    
+    # Attempt to merge
+    log "🔀 Merging $branch into main..."
+    if run_git "merge $branch --no-ff -m 'Merge $branch into main'"; then
+        log "✅ Successfully merged $branch"
+        
+        # Push to origin
+        log "⬆️ Pushing merged changes to origin..."
+        if run_git "push origin main"; then
+            log "✅ Successfully pushed to origin"
+            
+            # Delete the branch
+            log "🗑️ Deleting branch $branch..."
+            run_git "branch -d $branch" || log "⚠️ Could not delete local branch $branch"
+            run_git "push origin --delete $branch" || log "⚠️ Could not delete remote branch $branch"
+            
+            return 0
+        else
+            log "❌ Failed to push to origin"
+            return 1
+        fi
+    else
+        log "❌ Merge failed for $branch, attempting conflict resolution..."
+        if resolve_conflicts; then
+            log "✅ Conflicts resolved for $branch"
+            if run_git "push origin main"; then
+                log "✅ Successfully pushed resolved changes"
+                run_git "branch -d $branch" || log "⚠️ Could not delete local branch $branch"
+                run_git "push origin --delete $branch" || log "⚠️ Could not delete remote branch $branch"
+                return 0
+            else
+                log "❌ Failed to push resolved changes"
+                return 1
+            fi
+        else
+            log "❌ Could not resolve conflicts for $branch"
+            log "🔄 Reverting merge for $branch..."
+            run_git "merge --abort" || log "⚠️ Could not abort merge"
+            return 1
         fi
     fi
 }
 
 # Main execution
-echo "📊 Current repository status:"
-git status --porcelain | head -10
-
-# Get the latest from origin
-echo "🔄 Fetching latest changes from origin..."
-git fetch origin --prune
-
-# Get list of open PRs
-echo "📋 Getting list of open PRs..."
-open_prs=$(get_open_prs)
-
-if [ -z "$open_prs" ]; then
-    echo "✅ No open PRs found"
-    exit 0
-fi
-
-echo "Found open PRs: $open_prs"
-
-# Process each PR
-for pr_info in $open_prs; do
-    pr_number=$(echo "$pr_info" | head -1)
-    pr_title=$(echo "$pr_info" | head -2 | tail -1)
-    branch_name=$(echo "$pr_info" | tail -1)
+main() {
+    log "🔍 Starting comprehensive merge process..."
     
-    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
-        echo ""
-        if merge_pr "$pr_number" "$pr_title" "$branch_name"; then
-            echo "✅ Successfully processed PR #$pr_number"
-        else
-            echo "❌ Failed to process PR #$pr_number"
-        fi
+    # Check if we're in a git repository
+    if ! check_git_repo; then
+        log "❌ Not in a git repository. Exiting."
+        exit 1
     fi
-done
+    
+    # Get current branch
+    local current_branch=$(get_current_branch)
+    log "📍 Current branch: $current_branch"
+    
+    # Switch to main branch
+    log "🔄 Switching to main branch..."
+    if ! run_git "checkout main"; then
+        log "❌ Failed to checkout main branch"
+        exit 1
+    fi
+    
+    # Pull latest changes
+    log "⬇️ Pulling latest changes from origin..."
+    if ! run_git "pull origin main"; then
+        log "❌ Failed to pull latest changes"
+        exit 1
+    fi
+    
+    # Get list of remote branches (potential PRs)
+    log "📝 Getting list of remote branches..."
+    if ! run_git "fetch origin"; then
+        log "❌ Failed to fetch from origin"
+        exit 1
+    fi
+    
+    # Get all remote branches that start with 'cursor/'
+    local pr_branches=$(git branch -r | grep 'cursor/' | sed 's/origin\///' | head -20)
+    
+    if [ -z "$pr_branches" ]; then
+        log "ℹ️ No PR branches found"
+        exit 0
+    fi
+    
+    log "🔍 Found potential PR branches:"
+    echo "$pr_branches" | while read -r branch; do
+        log "  - $branch"
+    done
+    
+    # Process each branch
+    local success_count=0
+    local total_count=0
+    
+    echo "$pr_branches" | while read -r branch; do
+        if [ -n "$branch" ]; then
+            total_count=$((total_count + 1))
+            log ""
+            log "🔄 Processing branch $total_count: $branch"
+            
+            if merge_branch "$branch"; then
+                success_count=$((success_count + 1))
+                log "✅ Successfully processed $branch"
+            else
+                log "❌ Failed to process $branch"
+            fi
+        fi
+    done
+    
+    # Final summary
+    log ""
+    log "🎉 PR merge process completed!"
+    log "================================================"
+    log "📊 Summary:"
+    log "- Total branches processed: $total_count"
+    log "- Successfully merged: $success_count"
+    log "- Failed: $((total_count - success_count))"
+    log "- Current branch: $(get_current_branch)"
+    
+    # Show final status
+    log ""
+    log "📋 Final git status:"
+    run_git "status" || log "⚠️ Could not get git status"
+    
+    log ""
+    log "📝 Recent commits:"
+    run_git "log --oneline -5" || log "⚠️ Could not get git log"
+    
+    log ""
+    log "✅ Comprehensive merge process completed!"
+}
 
-echo ""
-echo "🎉 PR merge process completed!"
-echo "📊 Final status:"
-git status
-git log --oneline -5
+# Run the main function
+main "$@"
