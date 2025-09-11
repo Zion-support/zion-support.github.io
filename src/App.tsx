@@ -2,21 +2,13 @@ import React, { Suspense, lazy, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
-import ErrorBoundary from './components/ErrorBoundary';
-import Header from './components/EnhancedHeader';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { ErrorMonitorProvider } from './components/ErrorMonitor';
-import { performanceMonitor } from './utils/performance';
-import usePerformance from './hooks/usePerformance';
-
-// Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
+import LoadingSpinner from './components/LoadingSpinner';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { ErrorBoundary as CustomErrorBoundary } from './components/ErrorMonitor';
 
 // Loading component
 const LoadingSpinnerComponent = () => (
@@ -62,7 +54,7 @@ const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
 const Cookies = createLazyComponent(() => import('./pages/Cookies'));
-const DataProtection = createLazyComponent(() => import('./pages/DataProtection'));
+const DataProtection = createLazyComponent(() => import('./pages/PrivacyPolicy'));
 const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
 const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
 const Search = createLazyComponent(() => import('./pages/Search'));
@@ -75,10 +67,8 @@ const DevOps = React.lazy(() => import('./pages/CloudDevOpsServices').catch(() =
 const MobileDevelopment = React.lazy(() => import('./pages/MobileAppPage').catch(() => ({ default: () => <div>Error loading Mobile Development page</div> })));
 
 // Additional service pages with error handling
-const AIEmailResponder = lazy(() => import('./pages/services/ai-email-responder').catch(() => ({ default: () => <div>Error loading AI Email Responder</div> })));
-const MobileSurveyTool = lazy(() => import('./pages/services/mobile-survey-tool').catch(() => ({ default: () => <div>Error loading Mobile Survey Tool</div> })));
+const AIEmailResponder = lazy(() => import('./pages/services/ai-auto-email-responder').catch(() => ({ default: () => <div>Error loading AI Email Responder</div> })));
 const AITalentMatching = lazy(() => import('./pages/services/ai-talent-matching').catch(() => ({ default: () => <div>Error loading AI Talent Matching</div> })));
-const EcommerceReturnManagement = lazy(() => import('./pages/services/ecommerce-return-management').catch(() => ({ default: () => <div>Error loading Ecommerce Return Management</div> })));
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation').catch(() => ({ default: () => <div>Error loading AI Content Creation</div> })));
 const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading Cloud DevOps Services</div> })));
 const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices').catch(() => ({ default: () => <div>Error loading Cybersecurity Services</div> })));
@@ -181,9 +171,7 @@ const App = memo(() => {
                         
                         {/* Additional service routes */}
                         <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />
-                        <Route path="/services/mobile-survey-tool" element={<MobileSurveyTool />} />
                         <Route path="/services/ai-talent-matching" element={<AITalentMatching />} />
-                        <Route path="/services/ecommerce-return-management" element={<EcommerceReturnManagement />} />
                         <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                         <Route path="/services/cloud-devops-services" element={<CloudDevOpsServices />} />
                         <Route path="/services/cybersecurity-services" element={<CybersecurityServices />} />

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, DollarSign, Users, Clock, CheckCircle } from 'lucide-react';
+import { Search, Filter, DollarSign, Users, Clock, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 // Mock data for cloud DevOps services
 const cloudDevOpsServices = [
@@ -12,7 +12,14 @@ const cloudDevOpsServices = [
     features: ['Automated testing', 'Blue-green deployment', 'Monitoring'],
     targetAudience: ['Large enterprises', 'DevOps teams'],
     duration: '2-4 weeks',
-    price: '$15,000+'
+    price: 15000,
+    userLimit: 'Unlimited users',
+    deliveryTime: '2-4 weeks',
+    contactInfo: {
+      website: 'https://zion.app/contact',
+      email: 'devops@zion.app',
+      phone: '+1-555-0123'
+    }
   }
   // Add more services as needed
 ];
@@ -21,6 +28,17 @@ const CloudDevOpsServices = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPricing, setSelectedPricing] = useState('All');
+
+  // Extract unique categories and pricing options
+  const categories = useMemo(() => {
+    const cats = ['All', ...Array.from(new Set(cloudDevOpsServices.map(service => service.category)))];
+    return cats;
+  }, []);
+
+  const pricingOptions = useMemo(() => {
+    const pricing = ['All', ...Array.from(new Set(cloudDevOpsServices.map(service => service.pricing)))];
+    return pricing;
+  }, []);
 
   const filteredServices = cloudDevOpsServices.filter((service: any) => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
