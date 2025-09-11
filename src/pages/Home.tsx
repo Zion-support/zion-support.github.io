@@ -10,6 +10,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { LatestArticles } from "@/components/home/LatestArticles";
+import { PromoBanner } from "@/components/home/PromoBanner";
 import { ContentShowcase } from "@/components/ContentShowcase";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
@@ -24,6 +25,7 @@ export default function Home() {
         canonical="https://ziontechgroup.com/"
       />
 
+      <PromoBanner />
       <ITServiceRequestHero />
       <HeroSection />
       <FeatureHighlights />
