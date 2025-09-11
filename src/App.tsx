@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import Button from './components/Button';
+import { Button } from './components/ui/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
 

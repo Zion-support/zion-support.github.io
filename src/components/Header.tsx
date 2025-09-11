@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './ui/Button';
+import { Button } from './ui/Button';
 
 // Simple icon components
 const Phone = ({ className }: { className: string }) => (
