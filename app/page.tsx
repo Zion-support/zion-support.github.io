@@ -100,6 +100,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest Articles */}
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between mb-8'>
+            <div>
+              <h2 className='text-3xl font-bold text-gray-900 mb-2'>Latest Articles</h2>
+              <p className='text-gray-600'>Fresh insights on AI, micro SaaS, and cloud.</p>
+            </div>
+            <Link href='/blog' className='text-blue-600 font-semibold hover:underline'>View all</Link>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <ArticleCard
+              title='AI-Powered Customer Support: From FAQ Bots to Full Resolution'
+              href='/blog/ai-powered-customer-support'
+              description='Evolve from deflection to autonomous resolution with guardrails and KPIs.'
+            />
+            <ArticleCard
+              title='Micro SaaS in 60 Days: A Lean Delivery Blueprint'
+              href='/blog/micro-saas-in-60-days'
+              description='Scope, build, launch and monetize a niche product quickly and safely.'
+            />
+            <ArticleCard
+              title='Cloud Cost Optimization That Doesn’t Hurt Velocity'
+              href='/blog/cloud-cost-optimization-without-slowdowns'
+              description='Cut 25–45% of cloud spend while keeping teams shipping fast.'
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -172,5 +202,27 @@ function FeatureCard({
       <h3 className='text-lg font-semibold text-gray-900 mb-2'>{title}</h3>
       <p className='text-gray-600'>{description}</p>
     </div>
+  );
+}
+
+function ArticleCard({
+  title,
+  href,
+  description,
+}: {
+  title: string;
+  href: string;
+  description: string;
+}) {
+  return (
+    <Link href={href} className='group'>
+      <article className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 h-full'>
+        <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+          {title}
+        </h3>
+        <p className='text-gray-600'>{description}</p>
+        <span className='inline-block mt-4 text-blue-600 font-medium'>Read more →</span>
+      </article>
+    </Link>
   );
 }
