@@ -1,134 +1,178 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-// Import Home directly to avoid dynamic import issues that can lead to a blank screen
-import Home from '../src/pages/Home';
-import type { GetStaticProps } from 'next';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Atom, Shield,
+  ArrowRight,
+  Building, Cpu, Phone, Mail, MapPin
+} from 'lucide-react';
 
-const HomePage: React.FC = () => {
-  return (
-    <ErrorBoundary>
-      <SEOOptimizer />
-      <AnalyticsTracker />
-      <PerformanceOptimizer showMetrics={true} autoOptimize={true} />
-      <AccessibilityEnhancer showPanel={true} autoOptimize={true} />
-      <MobileOptimizer showDebugInfo={false}>
-        <Homepage2045 />
-        <PerformanceMonitor showUI={true} />
-      </MobileOptimizer>
-    </ErrorBoundary>
-  );
+// Import our new innovative services
+import { innovativeAIAutonomousServicesExpansion2025 } from '../data/2025-innovative-ai-autonomous-services-expansion';
+import { innovativeITInfrastructureExpansion2025 } from '../data/2025-innovative-it-infrastructure-expansion';
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+
+// Import existing service data
+import { realMicroSaasServices } from '../data/real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { newRealServices } from '../data/new-real-services';
+import { realOperationalServices } from '../data/real-operational-services';
+import { marketReadyServices } from '../data/market-ready-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { industryRealServices } from '../data/industry-real-services';
+
+// Import our new futuristic components
+import UltraFuturisticNeonBackground from '../components/ui/UltraFuturisticNeonBackground';
+import UltraFuturisticNavigation2026 from '../components/layout/UltraFuturisticNavigation2026';
+import UltraFuturisticFooter2026 from '../components/layout/UltraFuturisticFooter2026';
+
+// Helper function to get service website safely
+const getServiceWebsite = (service: { website?: string; link?: string; id?: string; name: string }) => {
+  if (service.website) return service.website;
+  if (service.link) return service.link;
+  return `/services/${service.id || service.name.toLowerCase().replace(/\s+/g, '-')}`;
 };
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-40 right-40 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-40"></div>
-        <div className="absolute bottom-40 left-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce opacity-50"></div>
+const HomePage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Revolutionary
-              </span>
-              <br />
-              <span className="text-white">2045 Technology</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
-            </p>
+  // Combine all services for showcase
+  const allServices = [
+    ...innovativeAIAutonomousServicesExpansion2025,
+    ...innovativeITInfrastructureExpansion2025,
+    ...innovativeMicroSaasExpansionV32025,
+    ...realMicroSaasServices,
+    ...innovativeAIServices,
+    ...enterpriseITServices,
+    ...emergingTechServices,
+    ...newRealServices,
+    ...realOperationalServices,
+    ...marketReadyServices,
+    ...marketValidatedServices,
+    ...industryRealServices
+  ];
 
+  // Get featured services
+  const featuredServices = allServices.slice(0, 6);
 
-const ErrorTestButton = () => {
-  const handleClick = () => {
-    try {
-      throw new Error("This is a test error from the homepage button!");
-    } catch (error) {
-      if (isSentryActive) {
-        if (typeof window === 'undefined') {
-          import('@sentry/nextjs').then(mod => {
-            const Sentry = mod.default;
-            Sentry.captureException(error);
-          });
-        }
-      }
-      logErrorToProduction('Button error test:', { error });
-    }
-  };
-
-      {/* Service Categories Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Technology Solutions</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive portfolio of cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center text-white mb-4`}>
-                  {category.icon}
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
-                <p className="text-gray-400 mb-4">{category.description}</p>
-                
-                <div className="space-y-3 mb-6">
-                  {category.services.map((service) => (
-                    <div key={service.name} className="flex items-center gap-3 text-sm">
-                      <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                      <span className="text-gray-300">{service.name}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <Link href={category.link} className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-                  Explore {category.name}
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { id: 'ai', name: 'AI & Autonomous', icon: Brain, color: 'from-cyan-500 to-blue-500' },
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500' },
+    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, color: 'from-green-500 to-teal-500' },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: Building, color: 'from-orange-500 to-red-500' }
+  ];
 
   return (
-    <main>
-      {props.hasError && (
-        <div className="container mx-auto px-4 py-4">
-          <ErrorBanner msg={props.errorMessage || "Failed to load home page."} />
+    <UltraFuturisticNeonBackground>
+      <SEO 
+        title="Zion Tech Group - Innovative AI, IT & Micro SAAS Solutions"
+        description="Transform your business with our cutting-edge AI autonomous systems, quantum computing infrastructure, and revolutionary micro SAAS solutions. Leading innovation since 2025."
+        keywords={[
+          'AI autonomous systems',
+          'quantum computing',
+          'IT infrastructure',
+          'micro SAAS',
+          'innovative technology',
+          'Zion Tech Group'
+        ]}
+      />
+
+      {/* Futuristic Navigation */}
+      <UltraFuturisticNavigation2026 />
+
+      {/* Hero Section */}
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.0 }}
+        className="relative min-h-screen flex items-center justify-center pt-32 pb-20"
+      >
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, delay: 0.2 }}
+            className="max-w-6xl mx-auto"
+          >
+            {/* Main Heading */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.4 }}
+              className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
+            >
+              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.6 }}
+              className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+            >
+              Pioneering the Future of Technology with Revolutionary AI Autonomous Systems, 
+              Quantum Computing Infrastructure, and Innovative Micro SAAS Solutions
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            >
+              <a
+                href="/services"
+                className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl text-white font-bold text-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25"
+              >
+                <span className="relative z-10">Explore Our Services</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+              
+              <a
+                href="/2025-innovative-services-showcase-v2"
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl text-white font-bold text-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-500/25"
+              >
+                <span className="relative z-10">2025 Innovation Showcase</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+
+              <a
+                href="tel:+13024640950"
+                className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl text-white font-bold text-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/25"
+              >
+                <span className="relative z-10">Call Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+            </motion.div>
+
+            {/* Contact Info */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 1.0 }}
+              className="flex flex-wrap justify-center gap-8 text-gray-300"
+            >
+              <div className="flex items-center gap-3">
+                <Phone className="w-6 h-6 text-purple-400" />
+                <span className="text-lg">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-6 h-6 text-blue-400" />
+                <span className="text-lg">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-6 h-6 text-cyan-400" />
+                <span className="text-lg">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       )}
       <Home />
@@ -392,38 +436,29 @@ const ErrorTestButton = () => {
  
         {/* AUTO-GENERATED: HOME_UPDATER_START */
 
-<section className="mx-auto max-w-7xl px-6 pb-16">
-  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
-  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="text-gray-400 text-lg">
+              <p className="mb-2">364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">ziontechgroup.com</a></p>
+            </div>
+          </div>
 
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation — Live agents & reports</span></a></Link>
+          <div className="mt-16 p-6 rounded-lg bg-white/5 backdrop-blur animated-border">
+            <h3 className="text-xl font-bold">New: Q4 2029 Additions</h3>
+            <p className="mt-2 text-gray-300">Explore our latest offerings including Kubernetes Cost Anomaly Guard, AI Sales Sequence Personalizer, and Postgres Performance Tuner.</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link href="/services/kubernetes-cost-anomaly-guard" className="px-4 py-2 rounded-md bg-white text-black text-sm font-semibold hover:bg-gray-200">K8s Cost Guard</Link>
+              <Link href="/services/ai-sales-sequence-personalizer" className="px-4 py-2 rounded-md bg-white text-black text-sm font-semibold hover:bg-gray-200">Sales Personalizer</Link>
+              <Link href="/services/postgres-performance-tuner" className="px-4 py-2 rounded-md bg-white text-black text-sm font-semibold hover:bg-gray-200">Postgres Tuner</Link>
+              <Link href="/services-advertising" className="px-4 py-2 rounded-md border border-white/30 text-white text-sm font-semibold hover:bg-white/10">See All New</Link>
+            </div>
+          </div>
+        </div>
+      </motion.section>
 
-            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — Latest autonomous updates</span></a></Link>
-
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — Audits & insights</span></a></Link>
-
-            <Link href="/front"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front — Explore more</span></a></Link>
-
-            <a href="/.netlify/functions/cloud_orchestrator" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Cloud Orchestrator — Coordinates agents (4h)</span></a>
-
-            <a href="/.netlify/functions/continuous-orchestrator" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Continuous Orchestrator — Multi-step curator (5m)</span></a>
-
-            <a href="/.netlify/functions/fast-front-promoter" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Fast Front Promoter — Quick promos (15m)</span></a>
-
-            <a href="/.netlify/functions/feature-advertiser" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Feature Advertiser — Scheduled function</span></a>
-
-            <a href="/.netlify/functions/front-enhancer" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front Enhancer — Futuristic front updates (10m)</span></a>
-
-            <a href="/.netlify/functions/front-index-futurizer" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front Index Futurizer — Scheduled function</span></a>
-
-            <a href="/.netlify/functions/front-index-orchestrator" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front Index Orchestrator — Scheduled function</span></a>
-
-            <a href="/.netlify/functions/front-index-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front Index Scheduler — Scheduled function</span></a>
-
-  </div>
-</section>
-/* AUTO-GENERATED: HOME_UPDATER_END */}
- </main>
-    </div>
+      {/* Futuristic Footer */}
+      <UltraFuturisticFooter2026 />
+    </UltraFuturisticNeonBackground>
   );
-}
+};
+
+export default HomePage;

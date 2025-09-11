@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  Rocket, Brain, Atom, Shield, Zap, Target, Users, Star, 
-  TrendingUp, Award, Clock, Heart, Lightbulb, Globe, Cpu,
-  Database, Lock, Cloud, Settings, Eye, BookOpen, CheckCircle
+  Sparkles, ArrowRight, CheckCircle, Star, Users, 
+  Zap, Shield, Brain, Atom, Rocket, Globe, Building,
+  Target, TrendingUp, Award, Cpu, Database, Lock, Satellite
 } from 'lucide-react';
 
 // Import all service data
@@ -40,19 +40,69 @@ interface Service {
 }
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
-  const serviceCategories = [
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [viewMode, setViewMode] = useState('grid');
+  const [selectedService, setSelectedService] = useState<any>(null);
+
+  // Combine all services
+  const allServices = [
+    ...innovativeRealMicroSaasServices2025,
+    ...advancedFuturisticMicroSaasServices2025,
+    ...cuttingEdgeAIInnovations2025,
+    ...innovativeServices,
+    ...innovativeAIServicesEnhanced2025,
+    ...innovativeITServicesEnhanced2025,
+    ...emergingTechServicesEnhanced2025,
+    ...advancedAIAutomationServices,
+    ...advancedITInfrastructureServices2025,
+    ...innovativeBusinessSolutions2025
+  ];
+
+  // Enhanced categories with icons and descriptions
+  const categories = [
+    { 
+      id: 'all', 
+      name: 'All Services', 
+      icon: <Globe className="w-6 h-6" />, 
+      count: allServices.length,
+      description: 'Complete portfolio of all technology services',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      id: 'ai', 
+      name: 'AI & Machine Learning', 
+      icon: <Brain className="w-6 h-6" />, 
+      count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length,
+      description: 'Revolutionary AI and machine learning solutions',
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      id: 'quantum', 
+      name: 'Quantum & Emerging Tech', 
+      icon: <Atom className="w-6 h-6" />, 
+      count: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length,
+      description: 'Next-generation quantum and emerging technologies',
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      title: "AI & Consciousness",
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-      color: "from-purple-500/20 to-purple-600/20",
-      borderColor: "border-purple-400/30",
+      category: "Cybersecurity & Defense",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-600",
       services: [
-        { name: "AI Consciousness Evolution", href: "/ai-consciousness-evolution-2029", featured: true },
-        { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-training", featured: true },
-        { name: "AI Autonomous Research", href: "/ai-autonomous-research-assistant" },
-        { name: "AI Predictive Maintenance", href: "/ai-predictive-maintenance-platform" },
-        { name: "AI Content Personalization", href: "/ai-content-personalization-engine" },
-        { name: "AI Autonomous Ecosystem", href: "/ai-autonomous-ecosystem-manager" }
+        {
+          name: "Advanced Threat Detection",
+          description: "AI-powered cybersecurity threat detection and prevention",
+          path: "/security",
+          features: ["Real-time Monitoring", "AI Analysis", "Automated Response"]
+        },
+        {
+          name: "Quantum Encryption",
+          description: "Unbreakable quantum encryption for data protection",
+          path: "/security",
+          features: ["Quantum Key Distribution", "Post-Quantum Security", "Zero Trust"]
+        }
       ]
     },
     {
@@ -125,12 +175,45 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   ];
 
-  const ServiceCard: React.FC<{ service: Service }> = ({ service }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-xl border border-gray-700/50 hover:border-cyan-500/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 group"
+  const featuredTechnologies = [
+    {
+      name: "Quantum Computing",
+      description: "Next-generation quantum processors for complex problem solving",
+      icon: <Atom className="w-12 h-12" />,
+      color: "from-blue-500 to-cyan-600"
+    },
+    {
+      name: "AI Consciousness",
+      description: "Developing truly conscious artificial intelligence systems",
+      icon: <Brain className="w-12 h-12" />,
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      name: "Cybersecurity",
+      description: "Advanced threat detection and prevention systems",
+      icon: <Shield className="w-12 h-12" />,
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      name: "Space Technology",
+      description: "Revolutionary space exploration and infrastructure",
+      icon: <Rocket className="w-12 h-12" />,
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const successMetrics = [
+    { metric: "99.9%", label: "Uptime Guarantee", icon: <CheckCircle className="w-6 h-6" /> },
+    { metric: "500+", label: "Global Clients", icon: <Users className="w-6 h-6" /> },
+    { metric: "24/7", label: "Support Available", icon: <Zap className="w-6 h-6" /> },
+    { metric: "50+", label: "Patents Filed", icon: <Award className="w-6 h-6" /> }
+  ];
+
+  return (
+    <Layout
+      title="Comprehensive Services Showcase 2025 - Zion Tech Group"
+      description="Explore Zion Tech Group's complete portfolio of revolutionary AI consciousness, quantum computing, cybersecurity, and space technology services."
+      keywords="AI consciousness, quantum computing, cybersecurity, space technology, services showcase, Zion Tech Group 2025"
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
@@ -318,11 +401,39 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* Success Metrics */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {successMetrics.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    {item.icon}
+                  </div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                    {item.metric}
+                  </div>
+                  <div className="text-gray-400 font-medium">
+                    {item.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Technologies */}
+        <section className="py-20 bg-black/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -404,6 +515,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </motion.div>
           </div>
         </section>
+      </div>
 
         {/* CTA Section */}
         <section className="px-4 py-16">

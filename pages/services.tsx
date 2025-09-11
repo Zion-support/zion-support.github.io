@@ -128,9 +128,10 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Search, Filter, Grid, List, Star, 
-  TrendingUp, Zap, Brain, Shield, Globe,
-  ArrowRight, ExternalLink, Check, Cpu
+  Search, Grid, List,
+  Brain, Atom, Shield, Target, Rocket,
+  ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
+  Building
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -142,10 +143,34 @@ import { advancedAIServices } from '../data/advanced-ai-services';
 import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
 
 // Import our new service data
-import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
-import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
-import { real2026Q2Services } from '../data/real-2026-q2-services';
+import { enterpriseITSolutions } from '../data/2025-enterprise-it-solutions';
+import { innovativeMicroSaasSolutions } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices } from '../data/2025-cutting-edge-ai-services';
+import { advancedAIAutomationServices } from '../data/2025-advanced-ai-automation-services';
+import { innovativeITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
+import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+import { enterpriseITSolutions2034Additions } from '../data/augment-2034-enterprise-it-additions';
+import { innovativeMicroSaasSolutions2034Additions } from '../data/augment-2034-micro-saas-additions';
+import { cuttingEdgeAIServices2034Additions } from '../data/augment-2034-ai-services-additions';
+import { aiAutonomousEcosystemServices2029Additions, emergingTechBreakthroughServices2029Additions, practicalBusinessSolutionServices2029Additions } from '../data/augment-2029-ecosystem-additions';
+
+// Import our latest innovative services
+import { advancedAIServices } from '../data/advanced-ai-services-2025';
+import { innovativeITInfrastructureServices } from '../data/innovative-it-infrastructure-2025';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-2025';
+import { quantumSpaceTechServices } from '../data/quantum-space-tech-services-2025';
+
+// Import our new 2027 services
+import { innovativeAIServices2027 } from '../data/innovative-2027-ai-services';
+import { innovativeITServices2027 } from '../data/innovative-2027-it-services';
+import { innovativeMicroSaasServices2027 } from '../data/innovative-2027-micro-saas-services';
+
+// Import 2025 advanced services
+import { real2025AdvancedMicroSaas } from '../data/real-2025-advanced-micro-saas';
+import { real2025AdvancedITServices } from '../data/real-2025-advanced-it-services';
+import { real2025AdvancedAIServices } from '../data/real-2025-advanced-ai-services';
+import { real2025EmergingTechServices } from '../data/real-2025-emerging-tech-services';
 
 // Import existing service data
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
@@ -199,12 +224,40 @@ const allServices = [
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
-  ...realMicroSaasServices2025,
-  ...innovativeAIServices2025,
-  ...innovativeITServices2025,
-  ...emergingTechServices2025,
-  ...newRealServices2026,
-  ...additionalRealMicroSaas2026
+  ...advancedAIAutomationServices,
+  ...innovativeITInfrastructureServices,
+  ...realMicroSaasServices,
+  ...innovativeAIServices,
+  ...enterpriseITServices,
+  ...cuttingEdgeFuturisticServices,
+  ...advancedAIAutomationServices,
+  ...emergingTechServices,
+  ...cuttingEdgeMicroSaasServices,
+  ...innovativeITInfrastructureServices,
+  ...innovativeAIServices,
+  ...newRealServices,
+  ...realOperationalServices,
+  ...marketReadyServices,
+  ...marketValidatedServices,
+  // Our new 2025 Q4 innovative services
+  ...innovative2025Q4NewServices,
+  ...advancedITInfrastructureServices2025,
+  ...industryRealServices,
+  ...real2025Q4AugmentedBatch,
+  ...real2029Q3Additions,
+  ...validatedServices2025Q4,
+  ...real2035Q2Additions,
+  ...real2036ServiceExpansions,
+  ...innovative2036MicroSaasServices,
+  ...innovative2036ITServices,
+  ...innovative2037MicroSaasServices,
+  ...innovative2037ITServices,
+  ...innovative2037AIServices,
+  // 2025 Advanced Services
+  ...real2025AdvancedMicroSaas,
+  ...real2025AdvancedITServices,
+  ...real2025AdvancedAIServices,
+  ...real2025EmergingTechServices
 ];
 
 const categories = [
@@ -275,8 +328,57 @@ const categories = [
     id: 'education',
     name: 'Education & Training',
     icon: <GraduationCap className="w-6 h-6" />,
-    color: 'from-yellow-500 to-amber-500',
-    description: 'Education platforms and training'
+    color: 'from-yellow-500 to-orange-500',
+    description: 'Learning and research platforms'
+  },
+  {
+    id: 'healthcare-biotech',
+    name: 'Healthcare & Biotech',
+    icon: <Heart className="w-6 h-6" />,
+    color: 'from-red-500 to-pink-500',
+    description: 'Advanced healthcare and biotechnology solutions'
+  },
+  {
+    id: 'fintech-banking',
+    name: 'FinTech & Banking',
+    icon: <Building className="w-6 h-6" />,
+    color: 'from-green-500 to-blue-500',
+    description: 'Financial technology and digital banking solutions'
+  },
+  {
+    id: 'manufacturing-industry',
+    name: 'Manufacturing & Industry 4.0',
+    icon: <Cpu className="w-6 h-6" />,
+    color: 'from-gray-500 to-blue-500',
+    description: 'Smart manufacturing and industrial automation'
+  },
+  {
+    id: 'retail-ecommerce',
+    name: 'Retail & E-commerce',
+    icon: <ShoppingCart className="w-6 h-6" />,
+    color: 'from-pink-500 to-purple-500',
+    description: 'Omnichannel retail and e-commerce solutions'
+  },
+  {
+    id: 'legal-compliance',
+    name: 'Legal & Compliance',
+    icon: <Shield className="w-6 h-6" />,
+    color: 'from-gray-500 to-blue-500',
+    description: 'Legal technology and compliance automation'
+  },
+  {
+    id: 'marketing-advertising',
+    name: 'Marketing & Advertising',
+    icon: <Target className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'AI-powered marketing and advertising solutions'
+  },
+  {
+    id: 'hr-talent',
+    name: 'HR & Talent Management',
+    icon: <Users className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Human resources and talent management solutions'
   }
 ];
 
@@ -456,83 +558,101 @@ export default function Services() {
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-              Revolutionary Micro SaaS Services
-            </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Discover our comprehensive portfolio of 500+ cutting-edge micro SaaS services powered by quantum AI, 
-              blockchain technology, and revolutionary innovations.
-            </p>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
-          >
-            <div className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-cyan-400 mb-1">{allServices.length}+</div>
-              <div className="text-sm text-gray-400">Total Services</div>
-            </div>
-            <div className="bg-black/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-purple-400 mb-1">{categories.length - 1}</div>
-              <div className="text-sm text-gray-400">Categories</div>
-            </div>
-            <div className="bg-black/20 backdrop-blur-sm border border-pink-500/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-pink-400 mb-1">30+</div>
-              <div className="text-sm text-gray-400">Day Trials</div>
-            </div>
-            <div className="bg-black/20 backdrop-blur-sm border border-green-500/20 rounded-lg p-4">
-              <div className="text-2xl font-bold text-green-400 mb-1">1200%+</div>
-              <div className="text-sm text-gray-400">Average ROI</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Filters and Search */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-end">
-              {/* Search */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search by name, description, or category..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
-                  />
-                </div>
+      <UltraFuturisticNavigation2046 />
+      <div className="min-h-screen bg-black text-white pt-24">
+        {/* Loading State */}
+        <AnimatePresence>
+          {isLoading && (
+            <motion.div
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-cyan-400 text-lg font-medium">Loading Services...</p>
               </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 lg:py-32">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  Our Services
+                </h1>
+              </div>
+              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Revolutionary technology solutions that redefine what's possible
+              </p>
+              <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                From AI consciousness evolution to quantum computing breakthroughs, 
+                our services empower organizations to achieve the impossible and shape the future.
+              </p>
+              
+              {/* Innovative 2025 Services CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-8"
+              >
+                <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/20 max-w-2xl mx-auto">
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">🚀 New for 2025!</h3>
+                  <p className="text-gray-300 mb-4">
+                    Discover our latest innovative services including quantum computing, AI autonomy, and space technology solutions.
+                  </p>
+                  <a
+                    href="/innovative-2025-services-showcase"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <span>View 2025 Services</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
 
-              {/* Category Filter */}
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+        {/* Main Services */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Core Technology Services
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Our flagship services that represent the cutting edge of technological innovation
+              </p>
+            </motion.div>
+            
+            <div className="space-y-12">
+              {mainServices.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-8 rounded-3xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300"
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
