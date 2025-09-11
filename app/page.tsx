@@ -350,18 +350,11 @@ export default function HomePage() {
                 <p className='text-green-800 mt-2'>Navigate the new funding landscape and position your AI startup for success.</p>
               </div>
             </Link>
-            <Link href='/blog/ai-cost-optimization-2025' className='group'>
+            <Link href='/blog/zero-trust-ai-security-2025' className='group'>
               <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
                 <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>AI Cost Optimization in 2025: Ship Faster, Spend Less</h3>
-                <p className='text-purple-800 mt-2'>Practical techniques to cut LLM costs without hurting outcomes.</p>
-              </div>
-            </Link>
-            <Link href='/blog/startup-sales-playbook-2025' className='group'>
-              <div className='rounded-lg border border-amber-200 bg-amber-50 p-6 hover:bg-amber-100 transition-colors'>
-                <div className='text-sm font-medium text-amber-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-amber-900 group-hover:underline'>Startup Sales Playbook 2025: From Meetings to Revenue</h3>
-                <p className='text-amber-800 mt-2'>Cadences, scripts, and tooling to land your first 100 customers.</p>
+                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>Zero-Trust for AI Systems: Security Guide 2025</h3>
+                <p className='text-purple-800 mt-2'>Practical controls for prompts, tools, retrieval, and outputs in production.</p>
               </div>
             </Link>
           </div>
@@ -389,6 +382,12 @@ export default function HomePage() {
               href='/blog/genai-observability-checklist-2025'
               description='Telemetry that matters across prompts, tools, retrieval, and costs.'
               icon='🔍'
+            />
+            <Card
+              title='Zero-Trust AI Security: A Practical 2025 Guide'
+              href='/blog/zero-trust-ai-security-2025'
+              description='Layered defenses to keep AI systems safe in production.'
+              icon='🛡️'
             />
           </div>
         </div>
