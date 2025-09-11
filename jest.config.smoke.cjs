@@ -25,6 +25,8 @@ module.exports = {
     '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
     '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^next/router$': '<rootDir>/__mocks__/nextRouterMock.js',
+    '^next/navigation$': '<rootDir>/__mocks__/nextNavigationMock.js',
   },
   testEnvironment: 'jsdom',
   collectCoverageFrom: [
