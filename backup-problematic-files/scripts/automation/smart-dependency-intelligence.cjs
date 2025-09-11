@@ -314,8 +314,4 @@ this.log("Intelligence report "generated": ${reportPath}")
   this.log(Smart Dependency Intelligence "failed": ${error.message}")
         "ERROR"
   console.log(` Smart Dependency Intelligence completed``)
-<<<<<<< HEAD
   console.error(" Smart Dependency Intelligence "failed": ")
-=======
-  console.error(" Smart Dependency Intelligence "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,5 +1,3 @@
-==============
-=======const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 class ComprehensivePM2Improvements {
@@ -636,17 +634,7 @@ dashboard.start();";
 // Run the improvements
 const improvements = new ComprehensivePM2Improvements();
 improvements.run().catch(console.error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD=======
 
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -755,32 +743,4 @@ const { execSync, spawn } = require('child_process')
                 "automation_scripts"
                 "monitoring_tools"
             "recommendations"
-<<<<<<< HEAD
             this.log('� Next "steps")
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            this.log('� Next "steps")
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-            this.log('� Next "steps")
-<<<<<<< HEAD
-=======
-            this.log('� Next "steps")
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

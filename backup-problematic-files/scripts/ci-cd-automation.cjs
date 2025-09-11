@@ -52,7 +52,3 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = CICDAutomation;
-=======
-module.exports = CICDAutomation;

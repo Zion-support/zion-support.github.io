@@ -10,7 +10,6 @@ const customJestConfig = {
   testMatch: [
     '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '**/*.smoke.(js|jsx|ts|tsx)'
-=======
 module.exports = {
   testEnvironment: 'jsdom',
   testMatch: [
@@ -22,7 +21,6 @@ module.exports = {
     '/out/',
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
-=======
     '/dist/'
   ],
   collectCoverageFrom: [
@@ -38,7 +36,5 @@ module.exports = createJestConfig(customJestConfig)
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
 
-<<<<<<< HEAD
 };=======
 };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

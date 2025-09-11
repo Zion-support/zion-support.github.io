@@ -1,262 +1,188 @@
-import React, { memo, useCallback, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useCallback } from 'react';
 
-// Performance monitoring hook
-export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0
-  });
+interface PerformanceMetrics {
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
+  ttfb: number; // Time to First Byte
+}
 
-  useEffect(() => {
-    const startTime = performance.now();
-    
-    const measurePerformance = () => {
-      const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now() - startTime),
-        memoryUsage: Math.round(memoryUsage / 1024 / 1024) // Convert to MB
-      });
-    };
+const PerformanceOptimizer: React.FC = () => {
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    // Measure after component mount
-    const timer = setTimeout(measurePerformance, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
+    const metrics: Partial<PerformanceMetrics> = {};
 
-  return metrics;
-};
-
-// Optimized image component with lazy loading
-export const OptimizedImage = memo(({ 
-  src, 
-  alt, 
-  className = '', 
-  priority = false,
-  ...props 
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-  priority?: boolean;
-  [key: string]: any;
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setIsInView(true);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1,
-      rootMargin: '50px'
-    });
-
-    const imgElement = document.querySelector(`[data-src="${src}"]`);
-    if (imgElement) {
-      observer.observe(imgElement);
+    // Measure First Contentful Paint
+    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+    if (fcpEntry) {
+      metrics.fcp = fcpEntry.startTime;
     }
 
-    return () => observer.disconnect();
-  }, [src, priority, handleIntersection]);
+    // Measure Largest Contentful Paint
+    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+    if (lcpEntries.length > 0) {
+      metrics.lcp = lcpEntries[lcpEntries.length - 1].startTime;
+    }
 
-  return (
-    <div className={`relative overflow-hidden ${className}`} {...props}>
-      {isInView && (
-        <motion.img
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ 
-            opacity: isLoaded ? 1 : 0,
-            scale: isLoaded ? 1 : 1.1
-          }}
-          transition={{ duration: 0.3 }}
-          className="w-full h-full object-cover"
-          loading={priority ? 'eager' : 'lazy'}
-        />
-      )}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-200 to-slate-300 animate-pulse" />
-      )}
-    </div>
-  );
-});
+    // Measure First Input Delay
+    const fidEntries = performance.getEntriesByType('first-input');
+    if (fidEntries.length > 0) {
+      metrics.fid = fidEntries[0].processingStart - fidEntries[0].startTime;
+    }
 
-OptimizedImage.displayName = 'OptimizedImage';
-
-// Optimized button component with reduced re-renders
-export const OptimizedButton = memo(({ 
-  children, 
-  onClick, 
-  className = '',
-  variant = 'primary',
-  size = 'md',
-  disabled = false,
-  ...props 
-}: {
-  children: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean;
-  [key: string]: any;
-}) => {
-  const baseClasses = 'font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 focus:ring-cyan-500',
-    secondary: 'bg-slate-700 text-white hover:bg-slate-600 focus:ring-slate-500',
-    outline: 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white focus:ring-cyan-500'
-  };
-  
-  const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
-  };
-
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    if (disabled) return;
-    onClick?.(e);
-  }, [onClick, disabled]);
-
-  return (
-    <motion.button
-      whileHover={{ scale: disabled ? 1 : 1.05 }}
-      whileTap={{ scale: disabled ? 1 : 0.95 }}
-      onClick={handleClick}
-      disabled={disabled}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
-      {...props}
-    >
-      {children}
-    </motion.button>
-  );
-});
-
-OptimizedButton.displayName = 'OptimizedButton';
-
-// Virtual scrolling component for large lists
-export const VirtualList = memo(({ 
-  items, 
-  itemHeight, 
-  containerHeight, 
-  renderItem 
-}: {
-  items: any[];
-  itemHeight: number;
-  containerHeight: number;
-  renderItem: (item: any, index: number) => React.ReactNode;
-}) => {
-  const [scrollTop, setScrollTop] = useState(0);
-  
-  const visibleStart = Math.floor(scrollTop / itemHeight);
-  const visibleEnd = Math.min(
-    visibleStart + Math.ceil(containerHeight / itemHeight) + 1,
-    items.length
-  );
-  
-  const visibleItems = items.slice(visibleStart, visibleEnd);
-  const offsetY = visibleStart * itemHeight;
-  
-  return (
-    <div
-      className="overflow-auto"
-      style={{ height: containerHeight }}
-      onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
-    >
-      <div style={{ height: items.length * itemHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {visibleItems.map((item, index) => 
-            renderItem(item, visibleStart + index)
-          )}
-        </div>
-      </div>
-    </div>
-  );
-});
-
-VirtualList.displayName = 'VirtualList';
-
-// Debounced search hook
-export const useDebounce = (value: string, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-};
-
-// Intersection observer hook for animations
-export const useIntersectionObserver = (options = {}) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [ref, setRef] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!ref) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1,
-        ...options
+    // Measure Cumulative Layout Shift
+    let clsValue = 0;
+    const clsEntries = performance.getEntriesByType('layout-shift');
+    clsEntries.forEach((entry: any) => {
+      if (!entry.hadRecentInput) {
+        clsValue += entry.value;
       }
-    );
+    });
+    metrics.cls = clsValue;
 
-    observer.observe(ref);
+    // Measure Time to First Byte
+    const ttfbEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (ttfbEntry) {
+      metrics.ttfb = ttfbEntry.responseStart - ttfbEntry.requestStart;
+    }
+
+    // Log performance metrics
+    console.log('Performance Metrics:', metrics);
+
+    // Send metrics to analytics (if available)
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'performance_metrics', {
+        event_category: 'Performance',
+        event_label: 'Core Web Vitals',
+        value: Math.round(metrics.fcp || 0),
+        custom_map: {
+          fcp: metrics.fcp,
+          lcp: metrics.lcp,
+          fid: metrics.fid,
+          cls: metrics.cls,
+          ttfb: metrics.ttfb,
+        },
+      });
+    }
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" if not already present
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+
+      // Optimize image sizes
+      if (img.width > 800) {
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+      }
+    });
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS
+    const criticalCSS = document.querySelector('link[rel="stylesheet"]');
+    if (criticalCSS && !criticalCSS.hasAttribute('rel', 'preload')) {
+      criticalCSS.setAttribute('rel', 'preload');
+      criticalCSS.setAttribute('as', 'style');
+      criticalCSS.setAttribute('onload', "this.onload=null;this.rel='stylesheet'");
+    }
+
+    // Preload critical fonts
+    const fontLinks = document.querySelectorAll('link[href*="font"]');
+    fontLinks.forEach((link) => {
+      if (!link.hasAttribute('rel', 'preload')) {
+        link.setAttribute('rel', 'preload');
+        link.setAttribute('as', 'font');
+        link.setAttribute('type', 'font/woff2');
+        link.setAttribute('crossorigin', 'anonymous');
+      }
+    });
+  }, []);
+
+  const optimizeThirdPartyScripts = useCallback(() => {
+    // Defer non-critical scripts
+    const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach((script) => {
+      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+        // Check if script is critical
+        const src = script.getAttribute('src') || '';
+        const isCritical = src.includes('analytics') || src.includes('gtag') || src.includes('google');
+        
+        if (!isCritical) {
+          script.setAttribute('defer', 'true');
+        }
+      }
+    });
+  }, []);
+
+  const enableServiceWorker = useCallback(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  }, []);
+
+  const optimizeMemoryUsage = useCallback(() => {
+    // Clean up unused event listeners
+    const cleanup = () => {
+      // Remove event listeners that are no longer needed
+      window.removeEventListener('beforeunload', cleanup);
+    };
+
+    window.addEventListener('beforeunload', cleanup);
+
+    // Optimize memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
+        console.warn('High memory usage detected:', memory);
+        // Trigger garbage collection if available
+        if ('gc' in window) {
+          (window as any).gc();
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    // Run optimizations after component mount
+    const timer = setTimeout(() => {
+      optimizeImages();
+      preloadCriticalResources();
+      optimizeThirdPartyScripts();
+      enableServiceWorker();
+      optimizeMemoryUsage();
+    }, 100);
+
+    // Measure performance after a delay
+    const performanceTimer = setTimeout(() => {
+      measurePerformance();
+    }, 2000);
 
     return () => {
-      observer.unobserve(ref);
+      clearTimeout(timer);
+      clearTimeout(performanceTimer);
     };
-  }, [ref, options]);
+  }, [measurePerformance, optimizeImages, preloadCriticalResources, optimizeThirdPartyScripts, enableServiceWorker, optimizeMemoryUsage]);
 
-  return [setRef, isIntersecting] as const;
+  // This component doesn't render anything visible
+  return null;
 };
 
-// Performance metrics component
-export const PerformanceMetrics = memo(() => {
-  const metrics = usePerformanceMonitor();
-
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-3 rounded-lg text-xs font-mono z-50">
-      <div>Load: {metrics.loadTime}ms</div>
-      <div>Memory: {metrics.memoryUsage}MB</div>
-    </div>
-  );
-});
-
-PerformanceMetrics.displayName = 'PerformanceMetrics';
+export default PerformanceOptimizer;

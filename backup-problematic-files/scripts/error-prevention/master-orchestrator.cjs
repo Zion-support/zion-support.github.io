@@ -130,7 +130,3 @@ switch (command) {}
     orchestrator.logs();
     break;
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
-<<<<<<< HEAD
-    process.exit(1)};
-=======
-    process.exit(1)};

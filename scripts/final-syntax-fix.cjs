@@ -50,30 +50,10 @@ const filesToFix = [
   'components/layout/MainLayout.tsx'
 ];
 let totalFixed = 0;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
-<<<<<<< HEAD
-=======
-    let content = fs.readFileSync(file, 'utf8');
-    const originalContent = content;
-    content = fixSpecificErrors(content);
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content);
-      console.log(`✅ Fixed ${file}`);
-      totalFixed++;
-    }
-  } catch (error) {
-    console.log(`❌ Error fixing ${file}: ${error.message}`);
-  }
-}
-console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
-=======
-console.log('🎉 Final syntax fix completed!');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

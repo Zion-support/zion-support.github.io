@@ -27,7 +27,7 @@ import {
   List
 } from 'lucide-react';
 import { SEO, useSEO } from '@/components/SEO';
-import { OptimizedButton, useIntersectionObserver } from '@/components/PerformanceOptimizer';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const ServiceCard = memo(({ service, index }: { service: any; index: number }) => {
   const [ref, isIntersecting] = useIntersectionObserver();

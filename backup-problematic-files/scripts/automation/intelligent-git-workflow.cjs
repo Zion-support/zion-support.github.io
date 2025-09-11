@@ -1,4 +1,3 @@
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
       const config = await fs.readFile(this.configFile, 'utf8');
       this.config = { ...this.config, ...JSON.parse(config) };
@@ -314,9 +313,6 @@ class IntelligentGitWorkflow {
       } catch (error) {
         // Skip branches that can't be checked
       }
-=======
-==============>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   async resolveConflictsIntelligently(conflicts, workflow) {
@@ -672,13 +668,8 @@ class IntelligentGitWorkflow {
       } catch (error) {
         // Skip branches that can't be checked
       }
-=======
-==============
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return mergeable;
   }
   async performIntelligentMerge(branch) {
@@ -736,7 +727,6 @@ class IntelligentGitWorkflow {
         stdio: 'inherit',
       });
       console.log(`✅ AI resolved conflicts for ${branch}`);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async resolveFileConflict(filePath) {
     console.log(`🔧 Resolving conflict in ${filePath}...`);
     try {
@@ -788,15 +778,9 @@ class IntelligentGitWorkflow {
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);>>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
