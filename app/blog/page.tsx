@@ -3,6 +3,17 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
+	  {
+	    id: 'enterprise-rag-architecture-2025',
+	    title: 'Enterprise RAG Architecture 2025: Reliable, Governed, and Cost-Aware',
+	    excerpt:
+	      'Reference patterns for hybrid retrieval, governance, evals, and measurable ROI in production.',
+	    date: '2025-09-11',
+	    readTime: '10 min read',
+	    category: 'Retrieval-Augmented Generation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
 	  // New posts (2025-09)
 	  {
 	    id: 'ai-content-strategy-2025',
