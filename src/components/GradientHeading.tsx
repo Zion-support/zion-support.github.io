@@ -1,9 +1,11 @@
-import React from 'react';
+import { cn } from "@/lib/utils";
+import React from "react";
+export function GradientHeading({ children, className, level = "h2", id }) {
+    const Tag = level;
+    return (<Tag id={id} className = {
+  cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+  className)
 
-export function GradientHeading({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return (
-    <h1 className={`text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${className}`}>
+}>
       {children}
-    </h1>
-  );
-}
+    </Tag>)}

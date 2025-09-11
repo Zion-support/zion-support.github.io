@@ -1,6 +1,6 @@
 import React from 'react';
 export function TrustedBySection() {
-    const _companies = [
+    const companies = [
         'Microsoft', 'Google', 'Amazon', 'Meta', 'Apple', 'Netflix'
     ];
     return (<section className="py-16 bg-white/5">

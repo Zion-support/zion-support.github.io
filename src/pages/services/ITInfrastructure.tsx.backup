@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Server, Network, Shield, Settings } from 'lucide-react';
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac
 import SEO from '../../components/SEO';
 
 const ITInfrastructure = () => {
@@ -81,7 +77,6 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </div>
-=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
@@ -278,14 +273,9 @@ const ITInfrastructure = () => {
             </Link>
           </div>
         </section>
->>>>>>> origin/clean-error-fixing-automation
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ITInfrastructure;
-=======
-export default ITInfrastructure;
->>>>>>> origin/clean-error-fixing-automation

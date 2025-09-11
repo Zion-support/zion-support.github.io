@@ -1,52 +1,41 @@
-
 import React, { useState } from 'react';
-import { _useNavigate } from "react-router-dom";
-import { _Badge } from "../components/ui/badge";
-import { _Button } from "../components/ui/button";
-import { _DollarSign } from "lucide-react";
-import { _RatingStars } from "../components/RatingStars";
-import { _FavoriteButton } from "../components/FavoriteButton";
-import Image from 'next/image'; // Import next/image
-
-import { DollarSign } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { DollarSign } from "lucide-react";
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+// Using regular img tag instead of Next.js Image
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
-    const _isGrid = view === 'grid';
-    const _navigate = useNavigate();
+    const isGrid = view === 'grid';
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0
         ? listing.images[0]
         : '/placeholder.svg');
     const [imageError, setImageError] = useState(false);
-    const _formatPrice = () => {
+    const formatPrice = () => {
         if (listing.price === null)
             return "Custom pricing";
-        return `${listing.currency}${listing.price.toLocaleString()}`;
-    };
-    const _handleImageError = () => {
+        return `${listing.currency}${listing.price.toLocaleString()}`};
+    const handleImageError = () => {
         if (!imageError) { // Prevent infinite loops if placeholder also fails
             setImageSrc('/placeholder.svg');
-            setImageError(true);
-        }
+            setImageError(true)}
     };
-    const _handleViewListing = () => {
-        navigate(`${detailBasePath}/${listing.id}`);
-    };
-    const _handleRequestQuote = (e) => {
+    const handleRequestQuote = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onRequestQuote) {
-            onRequestQuote(listing.id);
-        }
+            onRequestQuote(listing.id)}
         else {
-            navigate(`/request-quote?listing=${listing.id}`);
-        }
+            router(`/request-quote?listing=${listing.id}`)}
     };
-    const _imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+    const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
     return (<div data-testid="equipment-link" className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`} onClick={handleViewListing} tabIndex={0} role="button" onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                handleViewListing();
-            }
+                handleViewListing()}
         }}>
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing} // Keep existing onClick for navigation
@@ -54,13 +43,10 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
      onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                handleViewListing();
-            }
+                handleViewListing()}
         }}>
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image src={imageSrc} alt={listing.title} layout="fill" objectFit="cover" onError={handleImageError} priority={false} // Assuming these are not LCP images
-     sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
-    />
+          <img src={imageSrc} alt={listing.title} className="w-full h-full object-cover" onError={handleImageError} />
           {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>)}
@@ -111,8 +97,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
           <div className="flex gap-2">
             <Button size="sm" className="bg-primary hover:bg-primary/80 text-primary-foreground" onClick={(e) => {
             e.stopPropagation();
-            navigate(`${detailBasePath}/${listing.id}`);
-        }} disabled={loading}>
+            router(`${detailBasePath}/${listing.id}`)}} disabled={loading}>
               {loading ? (<>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -127,9 +112,4 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
           </div>
         </div>
       </div>
-    </div>);
-}
-;
-export const _ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
-
+    </div>)}

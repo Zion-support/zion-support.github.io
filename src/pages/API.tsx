@@ -1,9 +1,6 @@
 import React from 'react';
-import { _Helmet } from 'react-helmet-async';
-
 import { Helmet } from 'react-helmet-async';
-const services = [];
-const _API = () => {
+const API = () => {
     return (<>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
@@ -26,6 +23,5 @@ const _API = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default API;

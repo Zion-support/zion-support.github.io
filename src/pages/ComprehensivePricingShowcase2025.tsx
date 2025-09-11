@@ -1,22 +1,15 @@
 import React, { useState } from 'react';
-import { _Link } from 'react-router-dom';
-import { _advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
-
 import { Link } from 'react-router-dom';
-import { Icon } from 'lucide-react';
-const features = [];
-const benefits = [];
-const services = [];
-const solutions = [];
-const _ComprehensivePricingShowcase2025 = () => {
+import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
+const ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
-    const _allServices = [
+    const allServices = [
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
         ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
-    const _categories = [
+    const categories = [
         'all',
         'Legal Tech & Compliance',
         'Quantum Computing & Security',
@@ -33,35 +26,31 @@ const _ComprehensivePricingShowcase2025 = () => {
         'AI & Analytics',
         'AI & Customer Experience'
     ];
-    const _priceRanges = [
+    const priceRanges = [
         { value: 'all', label: 'All Prices' },
         { value: 'low', label: 'Under $500/month', max: 500 },
         { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
         { value: 'high', label: 'Over $2,000/month', min: 2000 }
     ];
-    const _filteredServices = allServices
+    const filteredServices = allServices
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => {
         if (priceRange === 'all')
             return true;
-        const _range = priceRanges.find(r => r.value === priceRange);
+        const range = priceRanges.find(r => r.value === priceRange);
         if (!range)
             return true;
         if (service.price) {
-            const _price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+            const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
             if (range.min && range.max) {
-                return price >= range.min && price <= range.max;
-            }
+                return price >= range.min && price <= range.max}
             else if (range.max) {
-                return price <= range.max;
-            }
+                return price <= range.max}
             else if (range.min) {
-                return price >= range.min;
-            }
+                return price >= range.min}
         }
-        return true;
-    });
-    const _getServiceTypeColor = (type) => {
+        return true});
+    const getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
                 return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -70,12 +59,11 @@ const _ComprehensivePricingShowcase2025 = () => {
             case 'AI Service':
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
-                return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+                return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
-    const _getCategoryIcon = (category) => {
-        const _icons = {
-            'Legal Tech & Compliance': '⚖️',
+    const getCategoryIcon = (category) => {
+        const icons = {
+  'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',
             'Healthcare & Biotech': '🏥',
             'Energy & Sustainability': '🌱',
@@ -88,30 +76,27 @@ const _ComprehensivePricingShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
-            'AI & Customer Experience': '💬'
-        };
-        return icons[category] || '🚀';
-    };
-    const _getPriceDisplay = (service) => {
+  'AI & Customer Experience': '💬'
+        
+
+};
+        return icons[category] || '🚀'};
+    const getPriceDisplay = (service) => {
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">
           {service.price}
           {service.period && (<span className="text-sm text-gray-400 font-normal"> {service.period}</span>)}
-        </div>);
-        }
+        </div>)}
         else if (service.hourlyRate) {
             return (<div className="text-3xl font-bold text-green-400">
           ${service.hourlyRate}
           <span className="text-sm text-gray-400 font-normal">/hour</span>
-        </div>);
-        }
+        </div>)}
         else if (service.pricing) {
             return (<div className="text-3xl font-bold text-purple-400">
           {service.pricing}
-        </div>);
-        }
-        return null;
-    };
+        </div>)}
+        return null};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -359,6 +344,5 @@ const _ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>)};
 export default ComprehensivePricingShowcase2025;

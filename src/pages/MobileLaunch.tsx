@@ -1,10 +1,6 @@
 import React from 'react';
-import { _Helmet } from 'react-helmet-async';
-
 import { Helmet } from 'react-helmet-async';
-const services = [];
-const applications = [];
-const _MobileLaunch = () => {
+const MobileLaunch = () => {
     return (<>
       <Helmet>
         <title>Mobile Launch - Zion Tech Group</title>
@@ -27,6 +23,5 @@ const _MobileLaunch = () => {
           </div>
         </div>
       </div>
-    </>);
-};
+    </>)};
 export default MobileLaunch;

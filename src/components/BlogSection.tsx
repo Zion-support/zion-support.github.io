@@ -1,10 +1,7 @@
-
 import React from 'react';
-import { _Link } from 'react-router-dom';
-
 import { Link } from 'react-router-dom';
 export function BlogSection() {
-    const _blogPosts = [
+    const blogPosts = [
         {
             id: '1',
             title: 'The Future of AI in Technology',
@@ -43,6 +40,4 @@ export function BlogSection() {
             </article>))}
         </div>
       </div>
-    </section>);
-}
-
+    </section>)}

@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
-
-const _speakers = [
+const speakers = [
     {
         name: 'Alex Zion',
         title: 'Founder & CEO',
