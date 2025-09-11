@@ -1,79 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
-import { formatDistanceToNow } from 'date-fns'
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
-import { TableRow, TableCell } from '@/components/ui/table'
-import { JobApplication, ApplicationStatus } from '@/types/jobs'
-import { StatusBadge } from './StatusBadge'
-import { ScoreBadge } from './ScoreBadge';
-import { ApplicationActions } from './ApplicationActions';
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-import { formatDistanceToNow } from "date-fns",
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
-import { ScoreBadge } from "./ScoreBadge",
-import { ApplicationActions } from "./ApplicationActions",
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import useState
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
   onViewApplication: (application_id: string) => Promise < void>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-
-interface ApplicationRowProps {
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (
-    applicationId: string
-    newStatus: ApplicationStatus
-  ) => Promise<void>
-  onViewScore: (application: JobApplication) => void
-interface ApplicationRowProps {
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string,) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
-  onViewScore: (application: JobApplication,) => void
-
-}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onStatusChange: (
 
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ApplicationRow({
 
   application
@@ -83,14 +14,6 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
@@ -103,8 +26,6 @@ import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
-
-
 
 interface ApplicationRowProps {;
   application: JobApplication;
@@ -133,22 +54,6 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-  const talentName = application.talent_profile?.full_name |'Unknown'
-
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-=======
-
-=======
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-  return (
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <TableRow key={application.id}>
       <TableCell>
         <div className="flex items-center gap-3">
@@ -162,15 +67,6 @@ export function ApplicationRow(): any ({;
                 className='rounded-full object-cover' // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
                 priority={false}              />
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-  const talentName = application.talent_profile?.full_name |'Unknown'
-  const talentName = application.talent_profile?.full_name |'Unknown'
-
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -178,20 +74,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
-<<<<<<< HEAD
-                src={application.talent_profile.profile_picture_url}
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className="rounded-full object-cover" // Ensure rounded and object-cover
-                onError={() => setAvatarError(true)}
-                priority={false}              />
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 src={application.talent_profile.profile_picture_url} 
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
@@ -200,12 +83,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
@@ -214,72 +91,22 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='font-medium'>{talentName}</div>
             <div className='text-xs text-muted-foreground'>
               {application.talent_profile?.professional_title |'Talent'}
-<<<<<<< HEAD
-            <div className='font-medium'>{talentName}</div>
-            <div className='text-xs text-muted-foreground'>
-              {application.talent_profile?.professional_title |'Talent'}
-=======
 
-
-            ) : (
-              <User className="h-5 w-5 text-gray-400" />
-            )}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="font-medium">
               {talentName}
             </div>
             <div className="text-xs text-muted-foreground">
               {application.talent_profile?.professional_title || "Talent"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='flex items-center gap-1'>
-          <Calendar className='h-4 w-4 text-muted-foreground' />
-          <span>
-            {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true
-            })}
-          </span>
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-<<<<<<< HEAD
-
-        </div>
-      </TableCell>
-      <TableCell>
-        <StatusBadge status={application.status} />
-      </TableCell>
-      <TableCell>
-<<<<<<< HEAD
-        <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </TableCell>
       <TableCell>
@@ -292,12 +119,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick={() => onViewScore(application)}
           className='flex items-center gap-1'        >
           <BarChart className='h-4 w-4 mr-1' />
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button 
           variant="ghost" 
           size="sm" 
@@ -305,25 +127,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
       <TableCell>
         {application.resume ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant='ghost' size='sm' asChild>
             <a
               href={application.resume.file_url |'#'}
@@ -332,23 +141,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
               <FileText className='h-4 w-4 mr-1' /> View
             </a>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="ghost" size="sm" asChild>
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4 mr-1" /> View
             </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Button>
         ) : (
           <span className="text-muted-foreground text-sm">No resume</span>
@@ -356,25 +154,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-          </AvatarPrimitive>;
-          <div>;
-            <div className='font-medium'>{talentName}</div>;
-            <div className='text-xs text-muted-foreground'>;
-              {application && application.talent_profile?.professional_title || 'Talent'}
-    application_id: string,
-    new_status: ApplicationStatus) => Promise < void>;
-  onViewScore: (application: JobApplication) => void;
-interface ApplicationRowProps {
-  application: JobApplication,
-  processing_id: string | null,
-  onViewApplication: (application_id: string, ) => Promise < void>,
-  onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
-  onViewScore: (application: JobApplication, ) => void;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           application = {application,}
           processingId = {processingId,}
           onViewApplication = {onViewApplication,}
@@ -385,12 +164,7 @@ interface ApplicationRowProps {
   );
 };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { formatDistanceToNow } from "date-fns",;
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -452,18 +226,6 @@ interface ApplicationRowProps {
   onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export /**
- * ApplicationRow - Function description
- */
-function ApplicationRow() {
-  const [avatar_error, setAvatarError] = useState (false);
-  const talent_name = application.talent_profile?.full_name || 'Unknown';
-  return (
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { formatDistanceToNow } from "date-fns",;
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -493,8 +255,6 @@ export function ApplicationRow({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application.talent_profile?.full_name || "Unknown";
   return (;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <TableRow key={application.id}>;
       <TableCell>;
         <div className='flex items - center gap - 3'>;
@@ -511,25 +271,7 @@ export function ApplicationRow({;
                 on_error={() => setAvatarError (true)}
                 priority={false}              />) : (
               <User className='h - 5 w - 5 text - gray - 400' />)}
-=======
-    <TableRow key={application.id}>;
-      <TableCell>;
-        <div className="flex items-center gap-3">;
-          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
-            {application.talent_profile?.profile_picture_url && !avatarError ? (;
-              <Image;
-                src={application.talent_profile.profile_picture_url} ;
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px);
-                height={36} // Corresponds to h-9 w-9;
-                className="rounded-full object-cover" // Ensure rounded and object-cover;
-                onError={() => setAvatarError(true)}
-                priority={false}
-              />;
-            ) : (;
-              <User className="h-5 w-5 text-gray-400" />;
-            )}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
           </AvatarPrimitive>;
           <div>;
             <div className='font - medium'>{talent_name}</div>;
@@ -540,17 +282,6 @@ export function ApplicationRow({;
         </div>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="flex items-center gap-1">;
-          <Calendar className="h-4 w-4 text-muted-foreground" />;
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>;
-        </div>;
-      </TableCell>;
-      <TableCell>;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
@@ -564,75 +295,33 @@ export function ApplicationRow({;
       </TableCell>;
       <TableCell>;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <StatusBadge status={application.status} />;
       </TableCell>;
       <TableCell>;
         <Button;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          variant="ghost";
-          size="sm";
-          onClick={() => onViewScore(application)}
-          className="flex items-center gap-1";
-        >;
-          <BarChart className="h-4 w-4 mr-1" />;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant='ghost';
           size='sm';
           on_click={() => onViewScore (application)}
           className='flex items - center gap - 1'        >;
           <BarChart className='h - 4 w - 4 mr - 1' />;
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {application.resume ? (;
-          <Button variant="ghost" size="sm" asChild>;
-            <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
-              <FileText className="h-4 w-4 mr-1" /> View;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               href={application && application.resume.file_url || '#'}
 
               target='_blank'
               rel='noopener noreferrer'>;
               <FileText className='h-4 w-4 mr-1' /> View;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
             </a>;
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <TableCell className="text-right">;
-        <ApplicationActions;
-          application={application}
-          processingId={processingId}
-          onViewApplication={onViewApplication}
-          onStatusChange={onStatusChange}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <TableCell className='text-right'>;
         <ApplicationActions
           application = {application,}
@@ -640,21 +329,10 @@ export function ApplicationRow({;
           onViewApplication = {onViewApplication,}
           onStatusChange = {onStatusChange,}
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
       </TableCell>;
     </TableRow>;
   );
-<<<<<<< HEAD
-};
-}
-<<<<<<< HEAD
-;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
@@ -678,11 +356,4 @@ export function ApplicationRow({;
       </TableCell>;
     </TableRow>);
 }
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+

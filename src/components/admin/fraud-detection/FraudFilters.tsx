@@ -1,65 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-import React from "react",
-import { Input } from "@/components/ui/input",
-}
-
-import React from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from 'lucide-react'
-
-interface FraudFiltersProps {
-
-  searchQuery: string
-  setSearchQuery: (value: string,) => void
-  statusFilter: string | null
-  setStatusFilter: (value: string | null,) => void
-  severityFilter: string | null
-  setSeverityFilter: (value: string | null,) => void
-  contentTypeFilter: string | null
-  setContentTypeFilter: (value: string | null,) => void
-
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Search, Filter } from 'lucide-react'
-
-interface FraudFiltersProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: string | null,
-  setStatusFilter: (value: string | null) => void,
-  severityFilter: string | null,
-  setSeverityFilter: (value: string | null) => void,
-  contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-
-  resetFilters: () => void
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   searchQuery
   setSearchQuery
   statusFilter
@@ -70,10 +13,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setContentTypeFilter
 import React from 'react';
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface FraudFiltersProps {;
   searchQuery: string,;
   setSearchQuery: (value: string,) => void,;
@@ -85,10 +24,6 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null,) => void,;
   resetFilters: () => void;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery;
   setSearchQuery;
@@ -101,14 +36,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   resetFilters}) => {  return (
 
     <div className="flex flex-col md: flex-row gap-4 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-  resetFilters}) => {  return (
-    <div className="flex flex-col md: flex-row gap-4 mb-6">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -120,51 +48,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   resetFilters}) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-=======
 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
-<<<<<<< HEAD
-<<<<<<< HEAD
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="pl-10"
-        />
-      </div>
-      <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-      
-        <SelectTrigger className="w-[180px]">
-      <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-      
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-        <Input
-          placeholder="Search by user or content..."
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
           value = {searchQuery,}
 
-
-
-      
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
@@ -177,26 +68,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
-      
-        <SelectTrigger className="w-[180px]">
-      <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
-      
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-
-
-      
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
@@ -208,26 +80,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
-      
-        <SelectTrigger className="w-[180px]">
-      <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
-      
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-
-
-      
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
@@ -241,41 +94,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-      <Button variant="outline" onClick={resetFilters} className="md: w-auto">
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-      
-
 
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-'"}
-}
-
-}
-'"}
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           onChange = {(e,) => setSearchQuery(e && e.target.value),}
-
 
 },
 import React from "react",;
@@ -293,19 +119,6 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-'"},
-;
-};
-ursor/fix-website-loading-errors-and-merge-6662
-          value = {searchQuery,}
-          onChange = {(e,) => setSearchQuery(e && e.target.value),}
-          className="pl-10";
-        />;
-      </div>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -329,17 +142,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 }
 '"},
 ;
-<<<<<<< HEAD
-};
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
-'"},
-;
-};
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
   setSearchQuery,;
@@ -361,14 +164,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           className="pl-10";
         />;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -381,15 +177,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
@@ -401,15 +189,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
@@ -423,34 +203,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ;
-      <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
         <Filter className="h-4 w-4 mr-2" /> Reset Filters;
       </Button>;
     </div>;
   );
-<<<<<<< HEAD
-'"},;
-};
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-};
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   search_query: string,
   setSearchQuery: (value: string, ) => void,
@@ -524,43 +282,4 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
     </div>);
 }
 '"},
-<<<<<<< HEAD
-<<<<<<< HEAD
-},; import {;
-  {;
-  {;
-  Search, Filter ;
-}from 'lucide-react' interface FraudFiltersProps {;
-  searchQuery: string;
-setSearchQuery: (value: string) => void;
-statusFilter: string | null;
-setStatusFilter: (value: string | null) => void;
-severityFilter: string | null;
-setSeverityFilter: (value: string | null) => void;
-contentTypeFilter: string | null;
-setContentTypeFilter: (value: string | null) => void;
-resetFilters: () => void ;
-}export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-  searchQuery;
-setSearchQuery;
-statusFilter;
-setStatusFilter;
-severityFilter;
-setSeverityFilter;
-contentTypeFilter;
-setContentTypeFilter;
-resetFilters ;
-}) => {;
-  return (<div className="flex flex-col md:flex-row gap-4 mb-6" > <div className="relative flex-1" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" /> Search by user or content..."value= {;
-  searchQuery ";
-}</SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" pending">Pending</SelectItem> <SelectItem value=" reviewed">Reviewed</SelectItem> <SelectItem value=" ignored">Ignored</SelectItem> <SelectItem value=" actioned">Actioned</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Severities</SelectItem> <SelectItem value=" safe">Safe</SelectItem> <SelectItem value=" suspicious">Suspicious</SelectItem> <SelectItem value=" dangerous">Dangerous</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Types</SelectItem> <SelectItem value=" signup">Signups</SelectItem> <SelectItem value=" job">Jobs</SelectItem> <SelectItem value=" message">Messages</SelectItem> <SelectItem value=" quote">Quotes</SelectItem> <SelectItem value=" review">Reviews</SelectItem> </SelectContent> </Select> <Filter className="h-4 w-4 mr-2" /> Reset Filters ;
-};
-'"
-};
-}
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+

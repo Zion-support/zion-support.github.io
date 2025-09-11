@@ -1,76 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!scope |!startDate |!projectType) {
-      return
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Accordion
-  AccordionContent
-  AccordionItem
-  AccordionTrigger
-} from '@/components/ui/accordion'
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
-import { format, parseISO } from 'date-fns'
-  MilestoneInput
-  GeneratedMilestone
-  useMilestoneGenerator
-} from '@/hooks/useMilestoneGenerator'
-import { Badge } from '@/components/ui/badge'
 
-interface AIMilestoneGeneratorProps {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  onAddMilestone: (milestone: GeneratedMilestone) => void
-export function AIMilestoneGenerator({
-
-  scope
-  startDate
-  endDate
-  projectType
-  onAddMilestones
-  onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const {
-    generateMilestones
-    generatedMilestones
-    isGenerating
-    clearGeneratedMilestones
-  } = useMilestoneGenerator()
-  const [selectedMilestones, setSelectedMilestones] = useState<
-    Record<string, boolean>
-  >({})
-  const handleGenerateMilestones = async () => {
-    if (!scope |!startDate |!projectType) {
-      return
-    if (!scope || !startDate || !projectType) {
-      return;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-
 
     if (!scope || !startDate || !projectType) {
       return;
 
-
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const input: MilestoneInput = {
       scope
@@ -142,16 +80,6 @@ if ( {) {
     clearGeneratedMilestones()
     setSelectedMilestones({})
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const toggleMilestoneSelection = (index: number,) => {
-    setSelectedMilestones(prev => ({
-      ...prev
-      [index]: !prev[index]
-    }))
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const toggleMilestoneSelection = (index: number, ) =>: any {
     setSelectedMilestones (prev => ({
@@ -159,10 +87,6 @@ if ( {) {
       [index]: !prev[index],
     }));
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone)
@@ -171,26 +95,11 @@ if ( {) {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return dateString
     }
   }
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -209,14 +118,7 @@ interface AIMilestoneGeneratorProps {;
   endDate: string | null,;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
 ;
@@ -272,22 +174,6 @@ export function AIMilestoneGenerator({;
     } catch (error) {;
       return dateString;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-medium flex items-center">
-          <Sparkles className="w-5 h-5 mr-2 text-primary" />
-          AI Milestone Generator
-        </h3>
-        <Button
-=======
-
-  },
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
 
   return (
     <div className='space-y-4'>;
@@ -298,7 +184,6 @@ export function AIMilestoneGenerator({;
         </h3>;
         <Button
 
-
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
           variant="outline"
@@ -306,19 +191,6 @@ export function AIMilestoneGenerator({;
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
 
-<<<<<<< HEAD
-          disabled={isGenerating |!scope |!startDate |!projectType}        >
-ursor/fix-website-loading-errors-and-merge-6662
-  },
-
-=======
-
-  },
-
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -327,31 +199,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           AI Milestone Generator
         </h3>
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scope |!startDate |!projectType}        >
-          disabled={isGenerating || !scope || !startDate || !projectType}        >
-=======
-
-
-          disabled={isGenerating || !scope || !startDate || !projectType}        >
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -372,36 +224,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-          disabled={isGenerating || !scope || !startDate || !projectType}>;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-              Generating...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className='mr-2 h-4 w-4' />;
-              Generate Milestones;
-            </>;
-          )}
-        </Button>;
-      </div>;
-
-      {generatedMilestones && generatedMilestones.length > 0 && (;
-        <Card>;
-          <CardContent className='pt-6'>;
-            <div className='flex justify-between items-center mb-4'>;
-              <p className='text-sm text-muted-foreground'>;
-                {generatedMilestones && generatedMilestones.length} milestones generated based on your;
-                project scope;
-              </p>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
@@ -412,20 +235,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Accordion type='multiple' className='w-full'>;
               {generatedMilestones && generatedMilestones.map((milestone, index) => (;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Button
-                onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}              >
-                Add Selected to Project
-              </Button>
-            </div>
-            <Accordion type='multiple' className='w-full'>
-              {generatedMilestones.map((milestone, index) => (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
@@ -512,7 +321,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </AccordionTrigger>;
                     </div>;
 
-
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -538,45 +346,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
-                      }}
-                      className="mr-2"
-                      variant='ghost'
-                      size='sm'
-                      onClick={e => {
-                        e.stopPropagation()
-                        handleAddSingleMilestone(milestone) }}
-                      className='mr-2'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       <Plus className="h-4 w-4" />
 
-<<<<<<< HEAD
-=======
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -584,26 +363,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
-                      }}
-                      className="mr-2"
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <Plus className='h-4 w-4' />
-=======
 
-
-                    >
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Plus className="h-4 w-4" />
                     </Button>
                   </div>
@@ -620,20 +382,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ))}
-            </Accordion>
-          </CardContent>
-        </Card>
-      )};
-    </div>;
-  );
-};
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       onClick={e => {;
                         e && e.stopPropagation();
@@ -660,27 +408,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               ))}
               ))}
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  )
-}
-    </div>;
-  );
-}
-;
-}
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
@@ -714,9 +445,4 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>;
         </Card>)}
     </div>);
-<<<<<<< HEAD
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
