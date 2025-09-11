@@ -114,22 +114,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='AI Sales Playbooks 2025: Sequencing, Scoring, and Agentic SDRs'
-              href='/blog/ai-sales-playbooks-2025'
-              description='Outbound frameworks with AI research, multi-channel cadences, and evals.'
-              icon='📈'
+              title='Practical AI Agents for Small Businesses'
+              href='/blog/ai-agents-for-smbs'
+              description='Deploy lightweight automations for support, sales, and back-office—safely.'
+              icon='🧩'
             />
             <Card
-              title='Data Governance for AI 2025: Practical, Lightweight Controls'
-              href='/blog/data-governance-for-ai-2025'
-              description='Trustable data flows, lineage, and access control for GenAI without ceremony.'
-              icon='🧭'
+              title='Production-Grade AI Agents: Observability and Safety'
+              href='/blog/production-grade-ai-agents'
+              description='Harden agents with logging, evals, guardrails, and predictable budgets.'
+              icon='🛡️'
             />
             <Card
-              title='LLM Cost Optimization Playbook: Cut Spend Without Losing Quality'
-              href='/blog/llm-cost-optimization-playbook'
-              description='Reduce inference spend 20–50% with routing, retrieval, batching, and observability.'
-              icon='💰'
+              title='AI Copilots for Engineering Teams'
+              href='/blog/ai-copilots-for-engineering'
+              description='Secure, repo-aware copilots that improve reviews and reduce toil.'
+              icon='🧠'
             />
           </div>
         </div>

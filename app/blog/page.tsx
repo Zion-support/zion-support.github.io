@@ -195,7 +195,7 @@ export default function BlogIndexPage() {
 			<section className='py-12'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8'>
 					{posts.map((post) => (
-						<Link key={post.slug} href={`/blog/${post.slug}`} className='group'>
+						<Link key={post.href} href={post.href} className='group'>
 							<article className='bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col'>
 								<time className='text-sm text-gray-500'>{new Date(post.date).toLocaleDateString()}</time>
 								<h2 className='mt-2 text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors'>
