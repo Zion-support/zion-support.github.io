@@ -163,8 +163,8 @@ export default function HomePage() {
               🚀 Fresh AI & Tech Insights
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Fresh content just published: AI Productivity Automation, Startup Funding in AI Era, 
-              Edge AI Privacy by Design, and GenAI Evaluation Playbook. Expert insights to accelerate your digital transformation.
+              Fresh content just published: AI Multimodal Revolution, Enterprise Architecture, Startup Funding Playbook, 
+              Cybersecurity Threats, and Productivity Automation. Expert insights to accelerate your digital transformation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -184,7 +184,7 @@ export default function HomePage() {
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-productivity-automation-2025' className='group'>
+            <Link href='/blog/ai-multimodal-revolution-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Productivity Automation</h3>
@@ -212,6 +212,9 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
                 <h3 className='text-lg font-semibold mb-2'>AI 2026 Predictions</h3>
                 <p className='text-sm opacity-90 mb-3'>The next frontier of AI technology</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎯</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Multimodal Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>Beyond text to vision, audio, and code</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>22 min read</span>
                   <span className='mx-2'>•</span>
@@ -219,8 +222,8 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-
-            <Link href='/blog/edge-ai-privacy-by-design-2025' className='group'>
+            
+            <Link href='/blog/ai-enterprise-architecture-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔐</div>
                 <h3 className='text-lg font-semibold mb-2'>Edge AI: Privacy by Design</h3>
@@ -243,23 +246,39 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Transformation Playbook</h3>
                 <p className='text-sm opacity-90 mb-3'>Complete 2026 implementation guide</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Architecture</h3>
+                <p className='text-sm opacity-90 mb-3'>Scalable, secure, cost-effective systems</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>8 min read</span>
+                  <span>18 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/blog/genai-evaluation-playbook-2025' className='group'>
+            <Link href='/blog/ai-startup-funding-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧪</div>
-                <h3 className='text-lg font-semibold mb-2'>GenAI Evaluation Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>Ship quality GenAI with confidence</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Startup Funding Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete guide to raising capital in AI era</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>9 min read</span>
+                  <span>20 min read</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>Trending</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-cybersecurity-threats-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats</h3>
+                <p className='text-sm opacity-90 mb-3'>Protect from advanced AI attacks</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>16 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Critical</span>
                 </div>
               </div>
             </Link>
@@ -557,6 +576,52 @@ export default function HomePage() {
                 </p>
                 <div className='text-sm text-green-600 font-medium'>- Founder, Tech Startup</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Resources Banner */}
+      <section className='py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>📚 FREE RESOURCES</span>
+            </div>
+            <h2 className='text-3xl font-bold mb-4'>
+              🎁 Download Our Latest AI Resources
+            </h2>
+            <p className='text-xl opacity-90 mb-8 max-w-3xl mx-auto'>
+              Get instant access to our comprehensive AI implementation guide, case studies, 
+              and practical tools. Everything you need to succeed with AI in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/resources/ai-implementation-master-guide-2025'
+                className='bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg'
+              >
+                📥 Download Master Guide (150 pages)
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg'
+              >
+                View All Resources
+              </Link>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
+            <div className='bg-white bg-opacity-10 p-6 rounded-lg'>
+              <div className='text-3xl font-bold mb-2'>150</div>
+              <div className='text-sm opacity-90'>Pages of Expert Content</div>
+            </div>
+            <div className='bg-white bg-opacity-10 p-6 rounded-lg'>
+              <div className='text-3xl font-bold mb-2'>50+</div>
+              <div className='text-sm opacity-90'>Ready-to-Use Templates</div>
+            </div>
+            <div className='bg-white bg-opacity-10 p-6 rounded-lg'>
+              <div className='text-3xl font-bold mb-2'>10K+</div>
+              <div className='text-sm opacity-90'>Downloads Worldwide</div>
             </div>
           </div>
         </div>
