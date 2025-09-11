@@ -31,11 +31,11 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   const showTooltip = () => {
     if (disabled || !isIntersecting) return;
-    
+
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-    
+
     timeoutRef.current = setTimeout(() => {
       setIsVisible(true);
     }, delay);
@@ -89,12 +89,10 @@ const Tooltip: React.FC<TooltipProps> = ({
         <div
           ref={tooltipRef}
           className={`tooltip tooltip--${position}`}
-          role="tooltip"
-          aria-hidden="false"
+          role='tooltip'
+          aria-hidden='false'
         >
-          <div className="tooltip__content">
-            {content}
-          </div>
+          <div className='tooltip__content'>{content}</div>
           <div className={`tooltip__arrow tooltip__arrow--${position}`} />
         </div>
       )}

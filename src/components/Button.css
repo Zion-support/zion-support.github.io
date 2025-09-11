@@ -175,13 +175,13 @@
     font-size: 0.8125rem;
     min-height: 1.875rem;
   }
-  
+
   .btn--medium {
     padding: 0.625rem 0.875rem;
     font-size: 0.9375rem;
     min-height: 2.25rem;
   }
-  
+
   .btn--large {
     padding: 0.875rem 1.25rem;
     font-size: 1rem;
@@ -199,15 +199,15 @@
   .btn {
     transition: none;
   }
-  
+
   .btn:hover:not(:disabled) {
     transform: none;
   }
-  
+
   .btn:active:not(:disabled) {
     transform: none;
   }
-  
+
   .btn__spinner-icon {
     animation: none;
   }

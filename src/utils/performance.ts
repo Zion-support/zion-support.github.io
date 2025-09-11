@@ -30,8 +30,8 @@ export function throttle<T extends (...args: any[]) => any>(
 // Lazy loading utility for images
 export function lazyLoadImage(img: HTMLImageElement, src: string) {
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           img.src = src;
           observer.unobserve(img);
@@ -74,11 +74,14 @@ export function preloadResource(href: string, as: string) {
 }
 
 // Optimize images based on device pixel ratio
-export function getOptimizedImageSrc(baseSrc: string, sizes: number[] = [1, 2, 3]) {
+export function getOptimizedImageSrc(
+  baseSrc: string,
+  sizes: number[] = [1, 2, 3]
+) {
   const pixelRatio = window.devicePixelRatio || 1;
-  const closestSize = sizes.reduce((prev, curr) => 
+  const closestSize = sizes.reduce((prev, curr) =>
     Math.abs(curr - pixelRatio) < Math.abs(prev - pixelRatio) ? curr : prev
   );
-  
+
   return baseSrc.replace(/\.(jpg|jpeg|png|webp)/, `@${closestSize}x.$1`);
 }

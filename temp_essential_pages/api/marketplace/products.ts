@@ -49,11 +49,9 @@ async function handler(
   // This check ensures the service is not attempting to run without proper configuration.
   if (!process.env.DATABASE_URL) {
     console.error('DATABASE_URL is not set or empty.');
-    return res
-      .status(503)
-      .json({
-        error: 'Service Unavailable: Database configuration is missing.',
-      });
+    return res.status(503).json({
+      error: 'Service Unavailable: Database configuration is missing.',
+    });
   }
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
@@ -200,12 +198,10 @@ async function handler(
     Sentry.captureException(e);
     const errorMessage =
       e instanceof Error ? e.message : 'An unexpected error occurred.';
-    return res
-      .status(500)
-      .json({
-        error: 'Internal server error while fetching products.',
-        details: errorMessage,
-      });
+    return res.status(500).json({
+      error: 'Internal server error while fetching products.',
+      details: errorMessage,
+    });
   } finally {
     // Ensures Prisma client is disconnected after the request is handled,
     // whether it succeeded or failed, to prevent resource leaks.

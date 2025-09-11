@@ -85,20 +85,20 @@
     margin: 1rem;
     padding: 1rem;
   }
-  
+
   .error-boundary__icon {
     font-size: 3rem;
   }
-  
+
   .error-boundary__title {
     font-size: 1.25rem;
   }
-  
+
   .error-boundary__actions {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .error-boundary__actions .btn {
     width: 100%;
     max-width: 200px;

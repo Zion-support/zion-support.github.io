@@ -61,7 +61,7 @@
   .progress-bar__fill {
     transition: none;
   }
-  
+
   .progress-bar__fill::after {
     animation: none;
   }

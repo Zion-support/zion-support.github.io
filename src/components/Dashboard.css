@@ -83,11 +83,11 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.75rem;
   }
-  
+
   .stat-card {
     padding: 0.75rem;
   }
-  
+
   .stat-card__value {
     font-size: 1.25rem;
   }
@@ -97,25 +97,25 @@
   .dashboard__header {
     padding: 0.75rem 0;
   }
-  
+
   .dashboard__stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     padding: 0 0.75rem;
   }
-  
+
   .stat-card {
     padding: 0.625rem;
   }
-  
+
   .stat-card__value {
     font-size: 1.125rem;
   }
-  
+
   .stat-card__label {
     font-size: 0.75rem;
   }
-  
+
   .dashboard__content {
     padding: 1.5rem 0;
   }
@@ -127,11 +127,11 @@
     gap: 0.5rem;
     padding: 0 0.5rem;
   }
-  
+
   .stat-card {
     padding: 0.5rem;
   }
-  
+
   .stat-card__value {
     font-size: 1rem;
   }
@@ -189,7 +189,7 @@
   .stat-card {
     animation: none;
   }
-  
+
   .stat-card:hover {
     transform: none;
   }

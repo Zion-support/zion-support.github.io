@@ -1908,20 +1908,18 @@ const Ln = () => {
                               }),
                               n.jsx('div', {
                                 className: 'ml-8 mt-2 space-y-1',
-                                children: p.dropdown
-                                  .slice(0, 3)
-                                  .map(w =>
-                                    n.jsx(
-                                      k,
-                                      {
-                                        to: w.href,
-                                        className:
-                                          'block p-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/5 rounded transition-all duration-300',
-                                        children: w.name,
-                                      },
-                                      w.name
-                                    )
-                                  ),
+                                children: p.dropdown.slice(0, 3).map(w =>
+                                  n.jsx(
+                                    k,
+                                    {
+                                      to: w.href,
+                                      className:
+                                        'block p-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/5 rounded transition-all duration-300',
+                                      children: w.name,
+                                    },
+                                    w.name
+                                  )
+                                ),
                               }),
                             ],
                           },

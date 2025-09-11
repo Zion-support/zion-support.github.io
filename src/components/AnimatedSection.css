@@ -3,8 +3,9 @@
 .animated-section {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity var(--animation-duration, 600ms) ease-out,
-              transform var(--animation-duration, 600ms) ease-out;
+  transition:
+    opacity var(--animation-duration, 600ms) ease-out,
+    transform var(--animation-duration, 600ms) ease-out;
   transition-delay: var(--animation-delay, 0ms);
 }
 
@@ -61,7 +62,7 @@
     transform: none;
     transition: none;
   }
-  
+
   .animated-section--visible {
     opacity: 1;
     transform: none;

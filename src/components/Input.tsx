@@ -1,7 +1,8 @@
 import React, { forwardRef, useState } from 'react';
 import './Input.css';
 
-interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+interface InputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
   error?: string;
   helperText?: string;
@@ -43,11 +44,13 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     };
 
     return (
-      <div className={`input-container ${fullWidth ? 'input-container--full-width' : ''}`}>
+      <div
+        className={`input-container ${fullWidth ? 'input-container--full-width' : ''}`}
+      >
         {label && (
-          <label htmlFor={inputId} className="input-label">
+          <label htmlFor={inputId} className='input-label'>
             {label}
-            {props.required && <span className="input-required">*</span>}
+            {props.required && <span className='input-required'>*</span>}
           </label>
         )}
         <div
@@ -56,35 +59,33 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           } ${error ? 'input-wrapper--error' : ''} ${className}`}
         >
           {leftIcon && (
-            <span className="input-icon input-icon--left" aria-hidden="true">
+            <span className='input-icon input-icon--left' aria-hidden='true'>
               {leftIcon}
             </span>
           )}
           <input
             ref={ref}
             id={inputId}
-            className="input"
+            className='input'
             onFocus={handleFocus}
             onBlur={handleBlur}
             {...props}
           />
           {rightIcon && (
-            <span className="input-icon input-icon--right" aria-hidden="true">
+            <span className='input-icon input-icon--right' aria-hidden='true'>
               {rightIcon}
             </span>
           )}
         </div>
         {(error || helperText) && (
-          <div className="input-message">
+          <div className='input-message'>
             {error && (
-              <span className="input-error" role="alert">
+              <span className='input-error' role='alert'>
                 {error}
               </span>
             )}
             {helperText && !error && (
-              <span className="input-helper">
-                {helperText}
-              </span>
+              <span className='input-helper'>{helperText}</span>
             )}
           </div>
         )}

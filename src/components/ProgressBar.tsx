@@ -21,7 +21,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   useEffect(() => {
     const updateProgress = () => {
       const scrollTop = scrollPosition.y;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
       setProgress(Math.min(100, Math.max(0, scrollPercent)));
     };
@@ -32,14 +33,16 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <div
       className={`progress-bar ${className}`}
-      style={{
-        '--progress-height': `${height}px`,
-        '--progress-color': color,
-        '--progress-bg': backgroundColor,
-      } as React.CSSProperties}
+      style={
+        {
+          '--progress-height': `${height}px`,
+          '--progress-color': color,
+          '--progress-bg': backgroundColor,
+        } as React.CSSProperties
+      }
     >
       <div
-        className="progress-bar__fill"
+        className='progress-bar__fill'
         style={{
           width: `${progress}%`,
         }}
