@@ -112,19 +112,19 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <ArticleCard
+              title='AI Infrastructure Blueprint for 2025'
+              href='/blog/ai-infrastructure-blueprint'
+              description='Design a scalable, cost-efficient AI stack with the right guardrails.'
+            />
+            <ArticleCard
+              title='Go-To-Market Playbook for Micro SaaS'
+              href='/blog/go-to-market-for-micro-saas'
+              description='Positioning, channels, and activation to land your first 200 customers.'
+            />
+            <ArticleCard
               title='AI-Powered Customer Support: From FAQ Bots to Full Resolution'
               href='/blog/ai-powered-customer-support'
               description='Evolve from deflection to autonomous resolution with guardrails and KPIs.'
-            />
-            <ArticleCard
-              title='Micro SaaS in 60 Days: A Lean Delivery Blueprint'
-              href='/blog/micro-saas-in-60-days'
-              description='Scope, build, launch and monetize a niche product quickly and safely.'
-            />
-            <ArticleCard
-              title='Cloud Cost Optimization That Doesn’t Hurt Velocity'
-              href='/blog/cloud-cost-optimization-without-slowdowns'
-              description='Cut 25–45% of cloud spend while keeping teams shipping fast.'
             />
           </div>
         </div>

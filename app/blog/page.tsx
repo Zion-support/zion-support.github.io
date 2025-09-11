@@ -29,6 +29,20 @@ const posts: BlogPostMeta[] = [
 			'Concrete steps to cut 25–45% of cloud spend while keeping teams shipping fast.',
 		date: '2025-09-11',
 	},
+	{
+		title: 'AI Infrastructure Blueprint for 2025',
+		slug: 'ai-infrastructure-blueprint',
+		description:
+			'Build a scalable, cost-efficient AI stack across data, training, and inference.',
+		date: '2025-09-11',
+	},
+	{
+		title: 'Go-To-Market Playbook for Micro SaaS',
+		slug: 'go-to-market-for-micro-saas',
+		description:
+			'Positioning, channels, pricing, and activation to reach first 200 customers.',
+		date: '2025-09-11',
+	},
 ];
 
 export default function BlogIndexPage() {
