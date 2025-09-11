@@ -32,61 +32,65 @@ export function PerformanceMonitor({
 		fmp: null,
 	});
 
-	// Measure First Contentful Paint (FCP)
-	const measureFCP = () => {
-		const paintEntries = performance.getEntriesByType('paint');
-		const fcpEntry = paintEntries.find(entry => (entry as PerformanceEntry).name === 'first-contentful-paint');
-		if (fcpEntry) {
-			metricsRef.current.fcp = (fcpEntry as PerformanceEntry).startTime;
-			if (logToConsole) {
-				console.log('FCP:', (fcpEntry as PerformanceEntry).startTime, 'ms');
-			}
-		}
-	};
+  // Measure First Contentful Paint (FCP)
+  const measureFCP = () => {
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
 
-	// Measure Largest Contentful Paint (LCP)
-	const measureLCP = () => {
-		if ('PerformanceObserver' in window) {
-			try {
-				observerRef.current = new PerformanceObserver((list) => {
-					const entries = list.getEntries();
-					const lastEntry = entries[entries.length - 1];
-					if (lastEntry) {
-						metricsRef.current.lcp = lastEntry.startTime;
-						if (logToConsole) {
-							console.log('LCP:', lastEntry.startTime, 'ms');
-						}
-					}
-				});
-				observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
-			} catch (error) {
-				console.warn('LCP measurement failed:', error);
-			}
-		}
-	};
+    if (fcpEntry) {
+      metricsRef.current.fcp = fcpEntry.startTime;
+      if (logToConsole) {
+        console.log('FCP:', fcpEntry.startTime, 'ms');
+      }
+    }
+  };
 
-	// Measure First Input Delay (FID)
-	const measureFID = () => {
-		if ('PerformanceObserver' in window) {
-			try {
-				const observer = new PerformanceObserver((list) => {
-					const entries = list.getEntries();
-					entries.forEach((entry: any) => {
-						if (entry.entryType === 'first-input') {
-							const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
-							metricsRef.current.fid = fid;
-							if (logToConsole) {
-								console.log('FID:', fid, 'ms');
-							}
-						}
-					});
-				});
-				observer.observe({ entryTypes: ['first-input'] });
-			} catch (error) {
-				console.warn('FID measurement failed:', error);
-			}
-		}
-	};
+  // Measure Largest Contentful Paint (LCP)
+  const measureLCP = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        observerRef.current = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            metricsRef.current.lcp = lastEntry.startTime;
+            if (logToConsole) {
+              console.log('LCP:', lastEntry.startTime, 'ms');
+            }
+          }
+        });
+        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      } catch (error) {
+        console.warn('LCP measurement failed:', error);
+      }
+    }
+  };
+
+  // Measure First Input Delay (FID)
+  const measureFID = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.entryType === 'first-input') {
+              // Use a safer way to measure FID
+              const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
+
+              metricsRef.current.fid = fid;
+              if (logToConsole) {
+                console.log('FID:', fid, 'ms');
+              }
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID measurement failed:', error);
+      }
+    }
+  };
 
 	// Measure Cumulative Layout Shift (CLS)
 	const measureCLS = () => {
@@ -112,16 +116,18 @@ export function PerformanceMonitor({
 		}
 	};
 
-	// Measure Time to First Byte (TTFB)
-	const measureTTFB = () => {
-		const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-		if (navigationEntry) {
-			metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-			if (logToConsole) {
-				console.log('TTFB:', metricsRef.current.ttfb, 'ms');
-			}
-		}
-	};
+  // Measure Time to First Byte (TTFB)
+  const measureTTFB = () => {
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+    if (navigationEntry) {
+      metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+
+      if (logToConsole) {
+        console.log('TTFB:', metricsRef.current.ttfb, 'ms');
+      }
+    }
+  };
 
 	// Measure First Meaningful Paint (FMP) approximation
 	const measureFMP = () => {

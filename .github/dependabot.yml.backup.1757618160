@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+<<<<<<< HEAD
+      interval: "weekly"
+=======
+      interval: "weekly"
+>>>>>>> origin/backup-critical-fixes-20250824-224408

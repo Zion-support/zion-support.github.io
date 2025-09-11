@@ -77,12 +77,6 @@ export type ServiceVariant =
   | 'monitoring-futuristic'
   | 'backup-futuristic'
   | 'analytics-futuristic'
-<<<<<<< HEAD
-  | 'emerging-tech'
-  | 'space-tech'
-  | 'autonomous-systems'
-  | 'quantum-futuristic';
-=======
   | 'it-futuristic'
   | 'saas-futuristic'
   | 'micro-saas-futuristic'
@@ -123,4 +117,3 @@ export type ServiceVariant =
   | 'quantum-edge'
   | 'service-desk-ai'
   | 'logistics-futuristic';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6

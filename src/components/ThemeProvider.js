@@ -1,7 +1,14 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext(undefined);
-export function ThemeProvider({ children, defaultTheme = 'system' }) {
+export const useTheme = () => {
+    const context = useContext(ThemeContext);
+    if (context === undefined) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
+};
+export const ThemeProvider = ({ children, defaultTheme = 'dark' }) => {
     const [theme, setTheme] = useState(defaultTheme);
     useEffect(() => {
         const root = window.document.documentElement;
@@ -14,12 +21,9 @@ export function ThemeProvider({ children, defaultTheme = 'system' }) {
             root.classList.add(theme);
         }
     }, [theme]);
-    return (_jsx(ThemeContext.Provider, { value: { theme, setTheme }, children: children }));
-}
-export function useTheme() {
-    const context = useContext(ThemeContext);
-    if (context === undefined) {
-        throw new Error('useTheme must be used within a ThemeProvider');
-    }
-    return context;
-}
+    const value = {
+        theme,
+        setTheme,
+    };
+    return (_jsx(ThemeContext.Provider, { value: value, children: children }));
+};

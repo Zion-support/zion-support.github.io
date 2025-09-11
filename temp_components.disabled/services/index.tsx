@@ -22,8 +22,7 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
 
 // Define a common service interface
 interface Service {
@@ -127,8 +126,7 @@ export default function ServicesIndexPage() {
       real2025Q2Additions as unknown[],
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
-      realServicesQ32025 as unknown[],
-      realServicesQ42025 as unknown[]
+      real2025Q3Additions as unknown[]
     );
     return acc;
   }, {} as Record<string, Service[]>);

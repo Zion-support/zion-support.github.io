@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:components/AIChatbot.tsx
-import React, { useState, useRef, useEffect } from 'react';
-========
+=======
 import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
->>>>>>>> origin/backup-20250824-222848:src.broken/components/AIChatbot.tsx
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
 
@@ -293,8 +289,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   );
 };
 
-export default AIChatbot;
-=======
 import React from 'react';
 
 const AIChatbot: React.FC = () => {
@@ -303,4 +297,5 @@ const AIChatbot: React.FC = () => {
 };
 
 export default AIChatbot;
->>>>>>> origin/backup-20250824-222848
+=======
+export default AIChatbot;

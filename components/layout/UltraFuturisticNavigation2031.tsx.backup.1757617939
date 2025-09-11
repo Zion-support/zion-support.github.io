@@ -25,7 +25,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 const serviceCategories = [
   {
     title: '🚀 2031 Revolutionary AI Services',
@@ -375,7 +374,6 @@ export default function UltraFuturisticNavigation2031() {
       <div className="h-32 lg:h-40"></div>
     </>
   );
-}
-=======
 export default UltraFuturisticNavigation2031;
->>>>>>> origin/backup-20250824-222848
+=======
+}

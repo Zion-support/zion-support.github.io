@@ -12,13 +12,6 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
   ],
   safelist: ['border-border'],
-  darkMode: 'class',
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
 =======
   theme: {
     container: {
@@ -60,29 +53,6 @@ const config: Config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
-        'zion-blue': {
-          DEFAULT: '#2e73ea',
-          light: '#8ab1f3',
-          dark: '#172d67',
-        },
-        'zion-purple': {
-          DEFAULT: '#a855f7',
-          light: '#c084fc',
-          dark: '#6b21a8',
-        },
-        'zion-cyan': {
-          DEFAULT: '#0d9488',
-          light: '#7aeae4',
-          dark: '#0f766e',
-        },
-        'zion-slate': {
-          DEFAULT: '#17072b',
-          light: '#451582',
-          dark: '#000000',
-        }
 =======
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

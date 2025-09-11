@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-<<<<<<< HEAD
-import { useMemo, useState } from 'react';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-import EnhancedMarketplaceCard from '@/components/ui/EnhancedMarketplaceCard';
-import InteractiveSearch, { CategoryOption, FilterState } from '@/components/ui/InteractiveSearch';
-import services from '@/data/services/services.json';
-
-const categoryOptions: CategoryOption[] = Array.from(
-  new Set((services as any[]).map((s) => s.category))
-)
-  .sort()
-  .map((c) => ({ label: c.replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase()), value: c }));
-
-const ServicesIndex: NextPage = () => {
-  const [filters, setFilters] = useState<FilterState>({ keyword: '', category: '', minPrice: undefined, maxPrice: undefined, minRating: undefined });
-
-  const filtered = useMemo(() => {
-    return (services as any[]).filter((s) => {
-      const text = `${s.name} ${s.description} ${s.category}`.toLowerCase();
-      if (filters.keyword && !text.includes(filters.keyword.toLowerCase())) return false;
-      if (filters.category && s.category !== filters.category) return false;
-      const [min, max] = s.priceRangeUSD as [number, number];
-      if (typeof filters.minPrice === 'number' && max < filters.minPrice) return false;
-      if (typeof filters.maxPrice === 'number' && min > filters.maxPrice) return false;
-      if (typeof filters.minRating === 'number') {
-        const rating = s.rating ?? 4.6; // default if missing
-        if (rating < filters.minRating) return false;
-      }
-      return true;
-    });
-  }, [filters]);
-=======
 import React from 'react';
 import EnhancedMarketplaceCard, { ServiceItem } from '../../components/ui/EnhancedMarketplaceCard';
 import QuoteRequestModal, { QuoteFormValues } from '../../components/ui/QuoteRequestModal';
@@ -141,22 +106,10 @@ const ServicesPage: NextPage = () => {
       throw new Error(err?.message || 'Failed to submit');
     }
   };
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
   return (
     <EnhancedLayout>
       <Head>
-<<<<<<< HEAD
-        <title>Services - Zion Tech Solutions</title>
-        <meta name="description" content="Browse our services" />
-      </Head>
-      
-      <main>
-        <h1>Index</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-=======
         <title>Zion AI Marketplace - Services</title>
         <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
       </Head>
@@ -184,16 +137,11 @@ const ServicesPage: NextPage = () => {
         service={selected}
         onSubmit={handleSubmit}
       />
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default ServicesIndex;
-=======
 export default ServicesPage;
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -244,11 +192,7 @@ import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { professionalServices } from '../../data/professional-services';
 import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
-<<<<<<< HEAD
-import { real2026Q2VerifiedAdditions } from '../../data/real-2026-q2-verified-additions';
-=======
 import { real2025Q5Additions } from '../../data/real-2025-q5-additions';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ca73
 
 // Define a common service interface
 interface Service {
@@ -381,11 +325,7 @@ export default function ServicesIndexPage() {
       real2027Q3Additions as unknown[],
       professionalServices as unknown[],
       real2032ServiceExpansions as unknown[],
-<<<<<<< HEAD
-      real2026Q2VerifiedAdditions as unknown[]
-=======
       real2025Q5Additions as unknown[]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ca73
     );
     return acc;
   }, {} as Record<string, Service[]>);
@@ -797,4 +737,3 @@ export default function ServicesIndexPage() {
     </Layout>
   );
 }
->>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd

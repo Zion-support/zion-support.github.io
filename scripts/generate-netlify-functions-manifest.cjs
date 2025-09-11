@@ -1,40 +1,21 @@
 #!/usr/bin/env node
 
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
-const functionsDir = path.join(__dirname, '..', 'netlify', 'functions');
-const manifestPath = path.join(functionsDir, 'functions-manifest.json');
-
-function listFunctions() {
-  if (!fs.existsSync(functionsDir)) {
-    console.log('Functions directory not found, creating empty manifest');
-    return [];
-  }
-  
-  const files = fs.readdirSync(functionsDir).filter(f => f.endsWith('.js') || f.endsWith('.ts'));
-  const names = files
-    .map(f => f.replace(/\.(js|ts)$/,'').trim())
-    .filter(name => !name.startsWith('_'))
-    .sort();
-  return names;
+function listFunctions(dir) {
+  const entries = fs.readdirSync(dir).filter(f => f.endsWith('.js'));
+  return entries.map(f => f.replace(/\.js$/, ''));
 }
 
-function main() {
-  const names = listFunctions();
-  const manifest = { 
-    generatedAt: new Date().toISOString(), 
-    functions: names 
-  };
-  
-  // Ensure the directory exists
-  const manifestDir = path.dirname(manifestPath);
-  if (!fs.existsSync(manifestDir)) {
-    fs.mkdirSync(manifestDir, { recursive: true });
-  }
-  
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log(`Updated functions manifest with ${names.length} entries.`);
-}
-
-main();
+(function main() {
+  const root = process.cwd();
+  const fnDir = path.join(root, 'netlify', 'functions');
+  const out = path.join(fnDir, 'functions-manifest.json');
+  const names = listFunctions(fnDir).filter(n => n !== 'functions-manifest');
+  const json = { generatedAt: new Date().toISOString(), functions: names.sort() };
+  fs.writeFileSync(out, JSON.stringify(json, null, 2), 'utf8');
+  console.log(`Wrote manifest with ${names.length} functions.`);
+})();

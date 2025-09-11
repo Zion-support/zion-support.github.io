@@ -132,8 +132,13 @@
   background-color: #333 !important;
 }
 
-.large-text {
-  font-size: 1.2em;
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6);
+  }
 }
 
 @keyframes shimmer {
@@ -267,7 +272,93 @@
   }
 }
 
-/* Print styles */
+/* Loading States */
+@layer utilities {
+  .loading {
+    @apply animate-pulse bg-zion-blue-light/20;
+  }
+
+  .loading-text {
+    @apply animate-pulse bg-zion-blue-light/20 rounded;
+  }
+}
+
+/* Custom Button Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus-ring;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark font-semibold py-3 px-6 rounded-xl transition-all duration-300 focus-ring-cyan;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-zion-slate-light hover:text-white hover:bg-zion-purple/10 font-medium py-2 px-4 rounded-lg transition-all duration-300;
+  }
+}
+
+/* Card Styles */
+@layer components {
+  .card {
+    @apply bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-2 hover:shadow-2xl hover:shadow-zion-purple/25;
+  }
+}
+
+/* Form Styles */
+@layer components {
+  .input-field {
+    @apply bg-zion-blue-light/20 border border-zion-purple/30 focus:border-zion-purple focus:ring-zion-purple/20 text-white placeholder-zion-slate-light rounded-xl px-4 py-3 transition-all duration-300 focus-ring;
+  }
+
+  .input-field:focus {
+    @apply bg-zion-blue-light/30;
+  }
+}
+
+/* Animation Delays */
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Performance Optimizations */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .will-change-scroll {
+    will-change: scroll-position;
+  }
+}
+
+/* Print Styles */
 @media print {
   .no-print {
     display: none !important;

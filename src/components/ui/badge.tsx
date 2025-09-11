@@ -1,7 +1,5 @@
 import React from 'react';
 
-type BadgeVariant = 'default' | 'outline' | 'secondary' | 'destructive';
-
 interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
   children: React.ReactNode;

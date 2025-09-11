@@ -39,7 +39,7 @@ export const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   );
 };
 
-export function useWhitelabel() {
+export const useWhitelabel = (): WhitelabelContextType => {
   const context = useContext(WhitelabelContext);
   if (context === undefined) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');

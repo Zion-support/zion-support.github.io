@@ -3,33 +3,25 @@ name: Autonomous Intelligence
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/25 * * * *'
 
 permissions:
   contents: write
-  actions: read
 
 jobs:
-  main:
-    name: Main Job
+  intelligence:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
+      - uses: actions/checkout@v4
+        with: { persist-credentials: true }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci
+      - name: Fetch Intelligence Digest
+        run: node scripts/fetch-intelligence.mjs
+      - name: Commit and push
+        run: |
+          git config user.name "zion-autonomy-bot"
+          git config user.email "autonomy-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "No changes"; else git commit -m "chore(autonomy): intelligence digest" && git push; fi

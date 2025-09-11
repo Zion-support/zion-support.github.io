@@ -86,29 +86,6 @@ export function PerformanceOptimizer() {
 
   if (!isVisible || !metrics) return null;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold,
-      rootMargin,
-    });
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [handleIntersection, threshold, rootMargin]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
-
-  const handleError = () => {
-    // Fallback to placeholder on error
-    setImageSrc(placeholder);
-    setIsLoaded(true);
-  };
-
   return (
     <Card className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20">
       <CardHeader className="pb-2">

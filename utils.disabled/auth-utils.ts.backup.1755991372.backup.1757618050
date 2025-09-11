@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import { supabase } from './supabase/client';
-
-export type UserRole = 'admin' | 'client' | 'talent' | 'guest';
-
-export async function getCurrentUser() {
-  const { data } = await supabase.auth.getUser();
-  return data?.user || null;
-}
-
-export async function getCurrentUserRole(): Promise<UserRole> {
-  const user = await getCurrentUser();
-  if (!user) return 'guest';
-  // Placeholder: adjust to your profiles table/claims
-  const role = (user.user_metadata?.role as UserRole) || 'guest';
-  return role;
-}
-
-export async function requireRole(allowed: UserRole[]): Promise<boolean> {
-  const role = await getCurrentUserRole();
-  return allowed.includes(role);
-=======
 import { NextApiRequest, NextApiResponse, NextPageContext } from 'next';
 
 const SUPERADMIN_EMAILS = (process.env.SUPERADMIN_EMAILS || '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -84,5 +62,4 @@ export function requireSuperadminSSR(ctx: NextPageContext) {
     return { props: {} } as any;
   }
   return { props: { user } } as any;
->>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
 }

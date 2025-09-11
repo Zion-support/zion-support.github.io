@@ -34,6 +34,7 @@ function discoverInternalPages() {
     { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, links' },
     { href: '/reports/seo', label: 'SEO Audit', tagline: 'Continuous improvements' },
     { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Intelligence signals' },
+    { href: '/reports/freshness', label: 'Freshness Report', tagline: 'Stale pages & docs insights' },
     { href: '/newsroom', label: 'Newsroom', tagline: 'Latest autonomous updates' },
   ];
   for (const p of priority) {
@@ -98,7 +99,7 @@ function generateSection(items) {
   return [
     '<section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">',
     '  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑Promoted Features</h2>',
-    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, and docs.</p>',
+    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, docs, and new intelligence tools.</p>',
     '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">',
     items.map(buildCard).join('\n'),
     '  </div>',

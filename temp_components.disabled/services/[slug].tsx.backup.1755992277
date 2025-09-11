@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -12,7 +14,8 @@ import { marketValidatedServices } from '../../data/market-validated-services';
 import { moreRealServices2025 } from '../../data/more-real-services-2025';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-<<<<<<< HEAD
+import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+=======
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
@@ -21,9 +24,13 @@ import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-=======
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3308
+=======
+import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
+import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+import { realMarketServicesExtended } from '../../data/real-market-services-extended';
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+import { additional2026RealServices } from '../../data/additional-2026-real-services';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -54,7 +61,10 @@ function getAllServices(): Service[] {
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
-<<<<<<< HEAD
+		.concat(realServicesQ32025 as unknown as Service[]);
+=======
+		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
+=======
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
 		.concat(realMarketAugmentations2025 as unknown as Service[])
@@ -62,16 +72,16 @@ function getAllServices(): Service[] {
 		.concat(real2025Q2Additions as unknown as Service[])
 		.concat(augmentedServicesBatch3 as unknown as Service[])
 		.concat(realServicesQ22025 as unknown as Service[])
-		.concat(professionalServices as unknown as Service[])
-		.concat(real2032ServiceExpansions as unknown as Service[])
-		.concat(real2035Q1Additions as unknown as Service[])
-		.concat(real2035Q2Additions as unknown as Service[])
-		.concat(newRealServices2026 as unknown as Service[]);
-=======
 		.concat(realServicesQ32025 as unknown as Service[]);
 =======
 		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3308
+=======
+		.concat(realServicesQ32025 as unknown as Service[])
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		.concat(realMarketServicesExtended as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		.concat(additional2026RealServices as unknown as Service[]);
 }
 
 function toSlug(value: string): string {
@@ -153,7 +163,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
-		<Layout>
+		    <UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
@@ -272,15 +282,10 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						</div>
 					</div>
 				</div>
-			</div>
-		</Layout>
-	);
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-import services from '@/data/services/services.json';
+			      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+}
 
 const ServiceDetail: NextPage = () => {
   const router = useRouter();

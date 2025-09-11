@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
@@ -115,12 +114,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </motion.div>
     </div>
   );
-=======
 
 const LoadingSpinner: React.FC = () => {
   // Temporarily simplified to avoid build issues
   return <div className="sr-only">LoadingSpinner temporarily disabled</div>;
->>>>>>> origin/backup-20250824-222848
+=======
 };
 
 export default LoadingSpinner;

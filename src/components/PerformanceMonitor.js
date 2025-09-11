@@ -50,6 +50,7 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
                     const entries = list.getEntries();
                     entries.forEach((entry) => {
                         if (entry.entryType === 'first-input') {
+                            // Use a safer way to measure FID
                             const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
                             metricsRef.current.fid = fid;
                             if (logToConsole) {
@@ -101,6 +102,8 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
     };
     // Measure First Meaningful Paint (FMP) approximation
     const measureFMP = () => {
+        // FMP is not directly measurable, but we can approximate it
+        // by looking at the first paint after a significant delay
         setTimeout(() => {
             const paintEntries = performance.getEntriesByType('paint');
             const lastPaintEntry = paintEntries[paintEntries.length - 1];
@@ -138,21 +141,53 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
     const getPerformanceGrade = (metrics) => {
         let score = 0;
         let totalMetrics = 0;
+        // FCP scoring (0-100)
         if (metrics.fcp !== null) {
             totalMetrics++;
-            score += metrics.fcp < 1800 ? 100 : metrics.fcp < 3000 ? 75 : metrics.fcp < 4000 ? 50 : 25;
+            if (metrics.fcp < 1800)
+                score += 100;
+            else if (metrics.fcp < 3000)
+                score += 75;
+            else if (metrics.fcp < 4000)
+                score += 50;
+            else
+                score += 25;
         }
+        // LCP scoring (0-100)
         if (metrics.lcp !== null) {
             totalMetrics++;
-            score += metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 75 : metrics.lcp < 6000 ? 50 : 25;
+            if (metrics.lcp < 2500)
+                score += 100;
+            else if (metrics.lcp < 4000)
+                score += 75;
+            else if (metrics.lcp < 6000)
+                score += 50;
+            else
+                score += 25;
         }
+        // FID scoring (0-100)
         if (metrics.fid !== null) {
             totalMetrics++;
-            score += metrics.fid < 100 ? 100 : metrics.fid < 300 ? 75 : metrics.fid < 500 ? 50 : 25;
+            if (metrics.fid < 100)
+                score += 100;
+            else if (metrics.fid < 300)
+                score += 75;
+            else if (metrics.fid < 500)
+                score += 50;
+            else
+                score += 25;
         }
+        // CLS scoring (0-100)
         if (metrics.cls !== null) {
             totalMetrics++;
-            score += metrics.cls < 0.1 ? 100 : metrics.cls < 0.25 ? 75 : metrics.cls < 0.4 ? 50 : 25;
+            if (metrics.cls < 0.1)
+                score += 100;
+            else if (metrics.cls < 0.25)
+                score += 75;
+            else if (metrics.cls < 0.4)
+                score += 50;
+            else
+                score += 25;
         }
         const averageScore = totalMetrics > 0 ? score / totalMetrics : 0;
         if (averageScore >= 90)
@@ -166,6 +201,7 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
         return 'F';
     };
     useEffect(() => {
+        // Wait for page to load before measuring
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
                 measureFCP();
@@ -176,10 +212,13 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
             measureFCP();
             measureFMP();
         }
+        // Start measuring LCP, FID, and CLS
         measureLCP();
         measureFID();
         measureCLS();
+        // Measure TTFB after a short delay to ensure navigation timing is available
         setTimeout(measureTTFB, 100);
+        // Send metrics after a delay to ensure all measurements are complete
         const sendMetricsTimer = setTimeout(() => {
             const metrics = metricsRef.current;
             const grade = getPerformanceGrade(metrics);
@@ -187,9 +226,11 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
                 console.log('Performance Grade:', grade);
                 console.log('All Metrics:', metrics);
             }
+            // Call callback with metrics
             if (onMetrics) {
                 onMetrics(metrics);
             }
+            // Send to analytics
             sendMetricsToAnalytics(metrics);
         }, 5000);
         return () => {
@@ -205,7 +246,7 @@ export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnal
 // Hook for using performance monitoring
 export function usePerformanceMonitoring(options) {
     const [metrics, setMetrics] = useState(null);
-    const [grade] = useState('');
+    const [grade, setGrade] = useState('');
     const handleMetrics = (newMetrics) => {
         setMetrics(newMetrics);
     };
@@ -222,9 +263,9 @@ export function getCurrentPerformanceMetrics() {
     const navigationEntry = performance.getEntriesByType('navigation')[0];
     return {
         fcp: ((_a = paintEntries.find(entry => entry.name === 'first-contentful-paint')) === null || _a === void 0 ? void 0 : _a.startTime) || null,
-        lcp: null,
-        fid: null,
-        cls: null,
+        lcp: null, // LCP requires observer, can't get current value
+        fid: null, // FID requires observer, can't get current value
+        cls: null, // CLS requires observer, can't get current value
         ttfb: navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null,
         fmp: ((_b = paintEntries[paintEntries.length - 1]) === null || _b === void 0 ? void 0 : _b.startTime) || null,
     };

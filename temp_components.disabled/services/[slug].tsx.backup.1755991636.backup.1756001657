@@ -131,6 +131,8 @@ function getAllServices(): Service[] {
 		.concat((innovative2026MicroSaasServicesV2 as unknown) as Service[])
 		.concat((ultimateRealMicroSaasServices2025 as unknown) as Service[])
 		.concat((innovativeRealMicroSaasServices2025 as unknown) as Service[]);
+		.concat(newSaasItAiServices2025 as unknown as Service[]);
+=======
 =======
 		.concat(newSaasItAiServices2025 as unknown as Service[]);
 }
