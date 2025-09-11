@@ -10,6 +10,8 @@ import ContentShowcase, { featuredContent, trendingContent, latestContent } from
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
+import TrendingContentShowcase from '../components/TrendingContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -204,11 +206,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
+      {/* Enhanced Content Banner - Top */}
+      <EnhancedContentBanner 
+        variant="gradient" 
+        maxItems={4}
+        title="🚀 Fresh AI & Tech Insights"
+        subtitle="Expert insights to accelerate your digital transformation"
+      />
 
-      {/* New Content Showcase */}
-      <NewContentShowcase variant="featured" maxItems={4} />
+      {/* Trending Content Showcase */}
+      <TrendingContentShowcase maxItems={6} showStats={true} />
 
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -1126,12 +1133,14 @@ export default function HomePage() {
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase variant="featured" maxItems={4} />
       
-      {/* New Content Banner */}
-      <NewContentBanner variant="gradient" maxItems={4} />
+      {/* Additional Content Banner */}
+      <EnhancedContentBanner 
+        variant="default" 
+        maxItems={4}
+        title="📚 Latest Expert Resources"
+        subtitle="Comprehensive guides, case studies, and tools to accelerate your AI journey"
+      />
 
-      {/* Trending Content Section */}
-      <EnhancedContentShowcase variant="trending" maxItems={4} />
-      
       {/* Latest Content Section */}
       <EnhancedContentShowcase variant="latest" maxItems={4} />
 
