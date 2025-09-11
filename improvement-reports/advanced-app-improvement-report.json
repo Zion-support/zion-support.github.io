@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-06T20:33:39.234Z",
+  "totalImprovements": 8,
+  "successfulImprovements": 5,
+  "failedImprovements": 3,
+  "results": {
+    "Test Configuration": {
+      "success": true
+    },
+    "Build Optimization": {
+      "success": false
+    },
+    "Code Quality": {
+      "success": false
+    },
+    "Performance Optimization": {
+      "success": false,
+      "error": "Command failed: node performance-monitor.cjs\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Specified \"redirects\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⚠ Specified \"headers\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⨯ Conflicting app and page files were found, please remove the conflicting files to continue:\n ⨯   \"pages/about.tsx\" - \"app/about/page.tsx\"\n ⨯   \"pages/contact.tsx\" - \"app/contact/page.tsx\"\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n ⨯   \"pages/services.tsx\" - \"app/services/page.tsx\"\n❌ Performance analysis failed: Command failed: npm run build\n"
+    },
+    "Security Enhancement": {
+      "success": true
+    },
+    "Accessibility Improvement": {
+      "success": true,
+      "output": "♿ Running accessibility checks...\n🔍 Checking accessibility compliance...\n✅ Accessibility checks completed\n"
+    },
+    "SEO Optimization": {
+      "success": true,
+      "output": "🔍 Running SEO optimization...\n📄 Generating sitemap...\n✅ Sitemap generated\n✅ SEO optimization completed\n"
+    },
+    "Monitoring Setup": {
+      "success": true,
+      "output": "📊 Setting up application monitoring...\n🏥 Running health check...\n✅ Application is healthy\n📈 Collecting performance metrics...\n✅ Performance metrics collected\n"
+    }
+  }
+}

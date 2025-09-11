@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-08-29T17:56:46.111Z",
+  "duration": "19523ms",
+  "summary": {
+    "total": 6,
+    "passed": 2,
+    "failed": 3,
+    "skipped": 1
+  },
+  "results": {
+    "dependencies": {
+      "status": "success",
+      "result": {
+        "duration": "9074ms",
+        "output": "Dependencies installed successfully"
+      }
+    },
+    "linting": {
+      "status": "failure",
+      "result": {
+        "error": "Command failed: npm run lint\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n",
+        "output": "\n> bolt.new.zion.app@0.1.0 lint\n> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0\n\n",
+        "issues": {
+          "total": 1,
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    "typeCheck": {
+      "status": "failure",
+      "result": {
+        "error": "Command failed: npm run type-check",
+        "output": "\n> bolt.new.zion.app@0.1.0 type-check\n> tsc --noEmit\n\nsrc/components/FuturisticServicesShowcase.tsx(236,75): error TS1003: Identifier expected.\nsrc/components/FuturisticServicesShowcase.tsx(236,129): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/components/FuturisticServicesShowcase.tsx(236,130): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/components/FuturisticServicesShowcase.tsx(282,75): error TS1003: Identifier expected.\nsrc/components/FuturisticServicesShowcase.tsx(282,134): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/components/FuturisticServicesShowcase.tsx(282,135): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/layout/PrimaryNav.tsx(62,10): error TS17008: JSX element 'div' has no corresponding closing tag.\nsrc/pages/ComprehensiveServicesOverview.tsx(32,3): error TS1128: Declaration or statement expected.\nsrc/pages/ComprehensiveServicesOverview2027.tsx(482,2): error TS1005: '}' expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(354,85): error TS1005: '}' expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(355,19): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/EnhancedComprehensiveServices2026.tsx(355,21): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/EnhancedComprehensiveServices2026.tsx(356,17): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/EnhancedComprehensiveServices2026.tsx(358,19): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(365,7): error TS1005: ')' expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(714,5): error TS1128: Declaration or statement expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(715,3): error TS1109: Expression expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(716,1): error TS1128: Declaration or statement expected.\nsrc/pages/ForgotPassword.tsx(472,84): error TS1003: Identifier expected.\nsrc/pages/ForgotPassword.tsx(472,316): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ForgotPassword.tsx(552,5): error TS1005: ')' expected.\nsrc/pages/ForgotPassword.tsx(553,3): error TS1109: Expression expected.\nsrc/pages/ForgotPassword.tsx(554,1): error TS1128: Declaration or statement expected.\nsrc/pages/ResearchDevelopment.tsx(4,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(330,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(396,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(402,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(404,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(406,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(418,12): error TS1005: '</' expected.\nsrc/pages/ResearchDevelopment.tsx(419,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(420,13): error TS2657: JSX expressions must have one parent element.\nsrc/pages/ResearchDevelopment.tsx(473,1): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(473,2): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(473,3): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(473,4): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(473,5): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(473,6): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(473,7): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(475,13): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/ResearchDevelopment.tsx(476,9): error TS1128: Declaration or statement expected.\nsrc/pages/ResearchDevelopment.tsx(477,7): error TS1109: Expression expected.\nsrc/pages/ResearchDevelopment.tsx(479,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(481,16): error TS1005: ';' expected.\nsrc/pages/ResearchDevelopment.tsx(519,7): error TS1128: Declaration or statement expected.\nsrc/pages/ResearchDevelopment.tsx(685,8): error TS17008: JSX element 'section' has no corresponding closing tag.\nsrc/pages/ResearchDevelopment.tsx(687,1): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(687,2): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(687,3): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(687,4): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(687,5): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(687,6): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(687,7): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(692,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(791,11): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(799,13): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/ResearchDevelopment.tsx(909,1): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(909,2): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(909,3): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(909,4): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(909,5): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(909,6): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(909,7): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(920,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(926,14): error TS17008: JSX element 'p' has no corresponding closing tag.\nsrc/pages/ResearchDevelopment.tsx(930,11): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,1): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,2): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,3): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,4): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,5): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,6): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(937,7): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(942,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/ResearchDevelopment.tsx(955,15): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,1): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,2): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,3): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,4): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,5): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,6): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(963,7): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ResearchDevelopment.tsx(969,5): error TS1128: Declaration or statement expected.\nsrc/pages/ResearchDevelopment.tsx(970,3): error TS1109: Expression expected.\nsrc/pages/ResearchDevelopment.tsx(971,1): error TS1128: Declaration or statement expected.\nsrc/pages/ServicesPage.tsx(303,81): error TS1003: Identifier expected.\nsrc/pages/ServicesPage.tsx(303,132): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ServicesPage.tsx(303,133): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/admin/SupportRequests.tsx(143,7): error TS2657: JSX expressions must have one parent element.\nsrc/pages/services/Cybersecurity.tsx(154,13): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/solutions.tsx(651,5): error TS1128: Declaration or statement expected.\nsrc/pages/solutions.tsx(652,3): error TS1109: Expression expected.\nsrc/pages/solutions.tsx(653,1): error TS1128: Declaration or statement expected.\n",
+        "issues": {
+          "total": 93,
+          "errors": 93,
+          "warnings": 0
+        }
+      }
+    },
+    "build": {
+      "status": "success",
+      "result": {
+        "duration": "7469ms",
+        "output": "Build completed successfully",
+        "buildSize": "4.96 MB"
+      }
+    },
+    "testing": {
+      "status": "skipped",
+      "result": {
+        "reason": "No test scripts configured",
+        "output": "Tests skipped"
+      }
+    },
+    "quality": {
+      "status": "failure",
+      "result": {
+        "score": "40.00",
+        "passed": 2,
+        "total": 5,
+        "details": {
+          "buildSuccess": true,
+          "lintingPassed": false,
+          "typeCheckPassed": false,
+          "testsPassed": false,
+          "dependenciesInstalled": true
+        }
+      }
+    }
+  },
+  "quality": {
+    "score": "40.00",
+    "passed": 2,
+    "total": 5,
+    "details": {
+      "buildSuccess": true,
+      "lintingPassed": false,
+      "typeCheckPassed": false,
+      "testsPassed": false,
+      "dependenciesInstalled": true
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> origin/main
+  "timestamp": "2025-09-04T21:58:25.812Z",
+  "issues": [],
+  "fixes": [],
+  "summary": {
+    "totalIssues": 0,
+    "fixesApplied": 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> origin/main
+  "timestamp": "2025-09-05T02:59:20.583Z",
+  "overallStatus": "secure",
+  "checks": {
+    "npmAudit": {
+      "status": "passed",
+      "vulnerabilities": 0
+    },
+    "dependencies": {
+      "status": "passed",
+      "outdated": 0
+    },
+    "securityHeaders": {
+      "status": "passed",
+      "configured": true
+    }
+  },
+  "summary": {
+    "totalIssues": 0,
+    "fixesApplied": 0
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+  "timestamp": "2025-09-06T04:56:16.606Z",
+  "vulnerabilities": [
+    {
+      "file": "/workspace/package.json",
+      "type": "potential_hardcoded_secret",
+      "severity": "high"
+    }
+  "totalVulnerabilities": 1,
+  "highSeverity": 1,
+  "mediumSeverity": 0,
+  "lowSeverity": 0
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+}
