@@ -1,18 +1,20 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Enterprise AI Security Best Practices 2025 - Complete Security Framework',
+  description: 'Comprehensive guide to securing AI systems in enterprise environments. Covers data protection, model security, access controls, and compliance requirements.',
+  keywords: 'AI security, enterprise AI security, AI governance, AI compliance, data protection, model security, AI risk management',
+  openGraph: {
+    title: 'Enterprise AI Security Best Practices 2025 - Complete Security Framework',
+    description: 'Comprehensive guide to securing AI systems in enterprise environments.',
+    type: 'article',
+  },
+};
 
 export default function EnterpriseAISecurityBestPractices2025() {
   return (
-    <ErrorBoundary>
-      <SEO
-        title="Enterprise AI Security Best Practices 2025 - Complete Security Framework"
-        description="Comprehensive guide to securing AI systems in enterprise environments. Covers data protection, model security, access controls, and compliance requirements."
-        keywords="AI security, enterprise AI security, AI governance, AI compliance, data protection, model security, AI risk management"
-        url="/blog/enterprise-ai-security-best-practices-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="mb-8">
             <div className="inline-flex items-center bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
@@ -279,6 +281,5 @@ export default function EnterpriseAISecurityBestPractices2025() {
           </div>
         </div>
       </div>
-    </ErrorBoundary>
   );
 }

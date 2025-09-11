@@ -1,35 +1,17 @@
-import { Metadata } from 'next';
+import React from 'react';
+import SEO from '../../../components/SEO';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Zap, Target, Users, TrendingUp, Shield, Clock, BarChart3, Brain, Database, Cloud } from 'lucide-react';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
-
-export const metadata: Metadata = {
-  title: 'AI Automation in Enterprise: Complete 2025 Implementation Guide | Zion Tech Group',
-  description: 'Everything you need to know about implementing AI automation in your enterprise. From planning to optimization, get the complete guide for 2025.',
-  keywords: 'AI automation, enterprise AI, business automation, AI implementation, enterprise automation, AI strategy',
-  openGraph: {
-    title: 'AI Automation in Enterprise: Complete 2025 Implementation Guide',
-    description: 'Complete guide to implementing AI automation in enterprise environments with real-world case studies and best practices.',
-    type: 'article',
-  },
-};
 
 export default function AIAutomationEnterprise2025() {
   return (
-    <ErrorBoundary>
+    <div className="min-h-screen bg-white">
       <SEO
-        title="AI Automation in Enterprise: Complete 2025 Implementation Guide"
+        title="AI Automation in Enterprise: Complete 2025 Implementation Guide | Zion Tech Group"
         description="Everything you need to know about implementing AI automation in your enterprise. From planning to optimization, get the complete guide for 2025."
         keywords="AI automation, enterprise AI, business automation, AI implementation, enterprise automation, AI strategy"
         url="/blog/ai-automation-enterprise-2025"
-        type="article"
-        author="Zion Tech Group"
-        publishedTime="2025-01-27T00:00:00Z"
-        section="AI & Technology"
-        tags={["AI", "Automation", "Enterprise", "Technology", "Implementation"]}
       />
-      <div className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">
@@ -402,6 +384,5 @@ export default function AIAutomationEnterprise2025() {
         </div>
       </section>
       </div>
-    </ErrorBoundary>
   );
 }
