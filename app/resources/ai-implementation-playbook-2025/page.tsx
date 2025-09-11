@@ -1,16 +1,16 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'AI Implementation Playbook 2025 - Complete Guide',
+  description: 'Step-by-step playbook for successful AI implementation. Download our comprehensive guide with proven strategies.',
+  keywords: 'AI implementation, playbook, AI strategy, digital transformation',
+};
 
 export default function AIImplementationPlaybook2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Implementation Playbook 2025: Complete Guide to Successful AI Deployment"
-        description="Download our comprehensive 150-page AI implementation playbook. Step-by-step guide to successful AI deployment with proven frameworks, templates, and real-world case studies."
-        keywords="AI implementation, AI deployment, AI playbook, AI guide, AI strategy, 2025"
-        url="/resources/ai-implementation-playbook-2025"
-      />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">

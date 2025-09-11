@@ -1,17 +1,16 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'AI Transformation Checklist 2025 - Complete Implementation Guide',
+  description: 'Step-by-step checklist for successful AI transformation. Download our comprehensive guide with 100+ actionable items.',
+  keywords: 'AI transformation, implementation checklist, AI strategy, digital transformation',
+};
 
 export default function AITransformationChecklist2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Transformation Checklist 2025: 150+ Actionable Items for Success"
-        description="Download our comprehensive AI transformation checklist with 150+ actionable items for successful AI implementation. Free resource for business leaders."
-        keywords="AI transformation checklist, AI implementation guide, AI strategy, business AI, AI roadmap"
-        url="/resources/ai-transformation-checklist-2025"
-      />
-      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
