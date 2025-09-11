@@ -9,6 +9,8 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
+import TrendingContentShowcase from '../components/TrendingContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 
@@ -202,8 +204,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
+      {/* Enhanced Content Banner - Top */}
+      <EnhancedContentBanner 
+        variant="gradient" 
+        maxItems={4}
+        title="🚀 Fresh AI & Tech Insights"
+        subtitle="Just published: AI Breakthrough Innovations, Productivity Automation, Financial Services Transformation, and Implementation Master Guide. Expert insights to accelerate your digital transformation."
+      />
 
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -345,6 +352,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Trending Content Showcase */}
+      <TrendingContentShowcase 
+        maxItems={6}
+        showRanking={true}
+        title="🔥 Most Popular Content This Week"
+        subtitle="Discover the most read and shared articles from our AI experts. Fresh insights, practical guides, and real-world case studies."
+      />
 
       {/* Features Section */}
       <section className='py-16 bg-gray-50'>
@@ -783,6 +798,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Content Promotion Banner */}
+      <EnhancedContentBanner 
+        variant="minimal" 
+        maxItems={4}
+        title="📚 Latest Expert Resources"
+        subtitle="Download our comprehensive guides, checklists, and playbooks. Everything you need to succeed with AI implementation and business transformation."
+        showViewAll={true}
+      />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
