@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,spawn } = require('child_process'); const chokidar = require('chokidar'); class AutomationFactory { constructor() { this.scripts = new Map(); this.runningScripts = new Map(); this.logFile = path.join(__dirname,'logs','automation-factory.log'); this.statusFile = path.join(__dirname,'logs','automation-status.json'); this.ensureLogDirectory(); this.loadExistingScripts(); this.loadStatus()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } loadStatus() { try { if (fs.existsSync(this.statusFile)) { const status = JSON.parse(fs.readFileSync(this.statusFile,'utf8')); this.runningScripts = new Map( Object.entries(status.runningScripts || {}) )} } catch (error) { this.log(`Error loading status: ${error.message}`)} } saveStatus() { try { const status = { timestamp: new Date().toISOString(),runningScripts: Object.fromEntries(this.runningScripts),totalScripts: this.scripts.size,}; fs.writeFileSync(this.statusFile,JSON.stringify(status,null,2))} catch (error) { this.log(`Error saving status: ${error.message}`)} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;  fs.appendFileSync(this.logFile,logMessage)} loadExistingScripts() { const scriptTypes = { 'lint-monitor': { file: 'lint-monitor.js',description: 'Continuous lint monitoring',},'lint-fixer': { file: 'lint-error-fixer.js',description: 'Automated lint error fixing',},'lint-manager': { file: 'lint-automation-manager.js',description: 'Lint automation management',},}; for (const [name,config] of Object.entries(scriptTypes)) { const scriptPath = path.join(__dirname,config.file); if (fs.existsSync(scriptPath)) { this.scripts.set(name,{ ...config,path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,})} } } generateCodeQualityScript() { const script = `usr/bin/env: node;/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.metrics = { complexity: 0,maintainability: 0,testCoverage: 0,performance: 0,lastUpdated: new Date().toISOString() }; this.logFile = path.join(__dirname,'logs','code-quality.log')} log(message) { const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`;  fs.appendFileSync(this.logFile,logMessage)} async analyzeCodeQuality() { try { this.log('Starting code quality analysis...'); const result = execSync('npx tsc --noEmit',{ encoding: 'utf8' }); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log('Code quality analysis completed successfully'); return this.metrics} catch (error) { this.log(\`Code quality analysis failed: \${error.message}\`,'ERROR'); return null} } calculateComplexity() { try { const files = this.getTypeScriptFiles(); let totalComplexity = 0; files.forEach(file => { const content = fs.readFileSync(file,'utf8'); const lines = content.split('\\n'); totalComplexity += lines.length * 0.1}); return Math.min(Math.floor(totalComplexity),100)} catch (error) { return Math.floor(Math.random() * 10) + 1} } calculateMaintainability() { try { const files = this.getTypeScriptFiles(); const totalFiles = files.length; const avgFileSize = files.reduce((acc,file) => { const stats = fs.statSync(file); return acc + stats.size},0) / totalFiles; return Math.max(50,100 - Math.floor(avgFileSize / 1000))} catch (error) { return Math.floor(Math.random() * 100) + 50} } calculateTestCoverage() { return Math.floor(Math.random() * 100)} calculatePerformance() { return Math.floor(Math.random() * 100) + 70} getTypeScriptFiles() { const projectRoot = path.resolve(__dirname,'..'); const files = []; const walkDir = (dir) => { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { files.push(fullPath)} })}; walkDir(projectRoot); return files} saveMetrics() { const metricsFile = path.join(__dirname,'logs','code-quality-metrics.json'); fs.writeFileSync(metricsFile,JSON.stringify(this.metrics,null,2))} } const monitor = new CodeQualityMonitor(); monitor.analyzeCodeQuality().then(metrics => { if (metrics) { } });`; const scriptPath = path.join(__dirname,'code-quality-monitor.js'); fs.writeFileSync(scriptPath,script); this.scripts.set('code-quality',{ file: 'code-quality-monitor.js',description: 'Enhanced code quality monitoring with detailed metrics',path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,}); this.log('Generated enhanced code quality monitor script')} generatePerformanceOptimizer() { const script = `usr/bin/env: node;/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer { constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log')} log(message) { const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`;  fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(\`Performance optimization failed: \${error.message}\`,'ERROR'); return null} } analyzeBundleSize() { try { return { totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} } optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() { return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().then(report => { if (report) { } });`; const scriptPath = path.join(__dirname,'performance-optimizer.js'); fs.writeFileSync(scriptPath,script); this.scripts.set('performance-optimizer',{ file: 'performance-optimizer.js',description: 'Performance optimization with bundle analysis and recommendations',path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,}); this.log('Generated performance optimizer script')} async runScript(scriptName,options = {}) { if (!this.scripts.has(scriptName)) { this.log(`Script "${scriptName}" not found`,'ERROR'); return false} const script = this.scripts.get(scriptName); const startTime = Date.now(); try { this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName,{ startTime,pid: null }); this.saveStatus(); const child = spawn('node',[script.path],{ stdio: 'pipe',cwd: __dirname,}); this.runningScripts.set(scriptName,{ startTime,pid: child.pid }); this.saveStatus(); return new Promise(resolve => { child.on('close',code => { const duration = Date.now() - startTime; this.runningScripts.delete(scriptName); if (code === 0) { script.successCount++; this.log( `Script "${scriptName}" completed successfully in ${duration}ms` )} else { script.errorCount++; this.log( `Script "${scriptName}" failed with code ${code}`,'ERROR' )} script.lastRun = new Date().toISOString(); this.saveStatus(); resolve(code === 0)}); child.on('error',error => { script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`,'ERROR'); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) { script.errorCount++; this.log( `Failed to start script "${scriptName}": ${error.message}`,'ERROR' ); this.runningScripts.delete(scriptName); this.saveStatus(); return false} } async runAllScripts() { this.log('Running all available scripts...'); const results = []; for (const [name,script] of this.scripts) { if (script.status === 'available') { const success = await this.runScript(name); results.push({ name,success })} } this.log(`Completed running ${results.length} scripts`); return results} generateAllScripts() { this.generateCodeQualityScript(); this.generatePerformanceOptimizer(); this.log('Generated all automation scripts')} listScripts() {  for (const [name,script] of this.scripts) { const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase(); const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never';      }  for (const [name,info] of this.runningScripts) { const duration = Date.now() - info.startTime; }s`)} } startContinuousMode() { this.log('Starting continuous monitoring mode...'); const watcher = chokidar.watch( [ path.resolve(__dirname,'..*.ts'),path.resolve(__dirname,'..*.tsx'),path.resolve(__dirname,'..*.js'),],{ ignored: /node_modules|\.git|\.next/,} ); watcher.on('change',filePath => { this.log(`File changed: ${filePath}`); this.runScript('code-quality').catch(error => { this.log(`Error running code quality check: ${error.message}`,'ERROR')})}); this.runAllScripts(); this.log('Continuous mode active. Press Ctrl+C to stop.')} } const factory = new AutomationFactory(); const command = process.argv[2]; const scriptName = process.argv[3]; switch (command) { case 'list': factory.listScripts(); break; case 'run': if (scriptName) { factory.runScript(scriptName)} else { factory.runAllScripts()} break; case 'generate': factory.generateAllScripts(); break; case 'continuous': factory.startContinuousMode(); break; default:      break} module.exports = AutomationFactory;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -56,23 +44,9 @@ class AutomationFactory {
     }
   }
   log(message, level = 'INFO') {
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }};
 ; loadStatus() {; try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts || {}))}} catch (error) {; this.log(`Error loading status: ${error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 };
 };
 ;
@@ -91,25 +65,13 @@ class AutomationFactory {
 ;
   generateCodeQualityScript() {;
     const script = `#!/usr/bin/env node;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 const fs = require("fs");
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }};
 ; loadStatus() {; try {; if (fs && fs.existsSync(this && this.statusFile)) {; const status = JSON && JSON.parse(fs && fs.readFileSync(this && this.statusFile, "utf8")); this && this.runningScripts = new Map(Object && Object.entries(status && status.runningScripts || {}))}} catch (error) {; this && this.log(`Error loading status: ${error && error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
-=======
-
 ;const fs = require("fs");
->>>>>>> origin/main
 const path = require("path");
 const { execSync } = require("child_process");
-=====================
-
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -129,29 +91,19 @@ class CodeQualityMonitor {; constructor() {; this && this.metrics = {; complexit
 ; walkDir(projectRoot); return files};
 ; saveMetrics() {; const metricsFile = path && path.join(__dirname, "logs", "code-quality-metrics && metrics.json"); fs && fs.writeFileSync(metricsFile, JSON && JSON.stringify(this && this.metrics, null, 2))}};
 const monitor = new CodeQualityMonitor();
-<<<<<<< HEAD
 monitor && monitor.analyzeCodeQuality().then(metrics = > {; if (metrics) {; console && console.log("Metrics: ", metrics)}}),`;
 ; const scriptPath = path && path.join(__dirname, "code-quality-monitor && monitor.js"); fs && fs.writeFileSync(scriptPath, script);
 ; this && this.scripts.set("code-quality", {; file: "code-quality-monitor && monitor.js", description: "Enhanced code quality monitoring with detailed metrics", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0});
 ; this && this.log("Generated enhanced code quality monitor script")};
-
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 ;const fs = require("fs");
-
-=======
-=======
 monitor.analyzeCodeQuality().then(metrics = > {; if (metrics) {; console.log("Metrics: ", metrics)}}),`;
 ; const scriptPath = path.join(__dirname, "code-quality-monitor.js"); fs.writeFileSync(scriptPath, script);
 ; this.scripts.set("code-quality", {; file: "code-quality-monitor.js", description: "Enhanced code quality monitoring with detailed metrics", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0});
 ; this.log("Generated enhanced code quality monitor script")};
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;
-=======
-=======
-
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -162,20 +114,12 @@ class CodeQualityMonitor {;
 };
 ;
   log(message) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
 }}; loadStatus() {try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts |{}))}} catch (error) {this.log(`Error loading status: ${error.message}`)}}}}; generateCodeQualityScript() {const script = `#!/usr/bin/env node;const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");const fs = require("fs");
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const path = require("path");
 const { execSync } = require("child_process");
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
     console.log(message);
@@ -271,9 +215,6 @@ const { execSync } = require("child_process");
 };
 ;
 const monitor = new CodeQualityMonitor();
-
-
-
 monitor.analyzeCodeQuality().then(metrics => {;
   if (metrics) {;
     console.log("Metrics:", metrics);
@@ -295,23 +236,13 @@ monitor.analyzeCodeQuality().then(metrics => {;
 ;
   generatePerformanceOptimizer() {;
     const script = `#!/usr/bin/env node;
-
-
-
 const fs = require("fs");
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
 const path = require("path");
 const { execSync } = require("child_process");
-
-
-=======
-=======
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 ;const fs = require("fs");
->>>>>>> origin/main
 const path = require("path");
 const { execSync } = require("child_process");
 ;
@@ -344,7 +275,6 @@ optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("P
 ; const script = this.scripts.get(scriptName); const startTime = Date.now();
 ; try {; this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName, { startTime, pid: null }); this.saveStatus();
 ; const child = spawn("node", [script.path], {; stdio: "pipe",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     cwd: __dirname});
 ; this && this.runningScripts.set(scriptName, { startTime, pid: child && child.pid }); this && this.saveStatus();
 ; return new Promise((resolve) = > {; child && child.on("close", (code) = > {; const duration = Date && Date.now() - startTime; this && this.runningScripts.delete(scriptName);
@@ -354,8 +284,6 @@ optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("P
 ; async runAllScripts() {; this && this.log("Running all available scripts..."); const results = [];
 ; for (const [name, script] of this && this.scripts) {; if (script && script.status = = = "available") {; const success = await this && this.runScript(name); results && results.push({ name, success })};
 ;      };
-
-=======
 ;
 class PerformanceOptimizer {;
   constructor() {;
@@ -405,14 +333,7 @@ class PerformanceOptimizer {;
         totalSize: "2.1MB", gzippedSize: "650KB",
         recommendations: ["Consider code splitting", "Remove unused dependencies"];
       };
-=======
-
       };
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     } catch (error) {;
       return { error: error.message ,
 };
@@ -545,8 +466,7 @@ optimizer.optimizePerformance().then(report => {;
       if (script.status === 'available') {
         const success = await this.runScript(name);
         results.push({ name, success });
-=======
-=======    cwd: __dirname});
+    cwd: __dirname});
 ; this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus();
 ; return new Promise((resolve) = > {; child.on("close", (code) = > {; const duration = Date.now() - startTime; this.runningScripts.delete(scriptName);
 ; if (code = = = 0) {; script.successCount++; this.log(`Script "${scriptName}" completed successfully in ${duration}ms`)} else {; script.errorCount++; this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR")};
@@ -556,19 +476,12 @@ optimizer.optimizePerformance().then(report => {;
 ; for (const [name, script] of this.scripts) {; if (script.status = = = "available") {; const success = await this.runScript(name); results.push({ name, success })};
 ;      };
       };
-
-
     };
-
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,spawn } = require('child_process'); const chokidar = require('chokidar'); class AutomationFactory { constructor() { this.scripts = new Map(); this.runningScripts = new Map(); this.logFile = path.join(__dirname,'logs','automation-factory.log'); this.statusFile = path.join(__dirname,'logs','automation-status.json'); this.ensureLogDirectory(); this.loadExistingScripts(); this.loadStatus()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } loadStatus() { try { if (fs.existsSync(this.statusFile)) { const status = JSON.parse(fs.readFileSync(this.statusFile,'utf8')); this.runningScripts = new Map( Object.entries(status.runningScripts || {}) )} } catch (error) { this.log(`Error loading status: ${error.message}`)} } saveStatus() { try { const status = { timestamp: new Date().toISOString(),runningScripts: Object.fromEntries(this.runningScripts),totalScripts: this.scripts.size,}; fs.writeFileSync(this.statusFile,JSON.stringify(status,null,2))} catch (error) { this.log(`Error saving status: ${error.message}`)} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} loadExistingScripts() { const scriptTypes = { 'lint-monitor': { file: 'lint-monitor.js',description: 'Continuous lint monitoring',},'lint-fixer': { file: 'lint-error-fixer.js',description: 'Automated lint error fixing',},'lint-manager': { file: 'lint-automation-manager.js',description: 'Lint automation management',},}; for (const [name,config] of Object.entries(scriptTypes)) { const scriptPath = path.join(__dirname,config.file); if (fs.existsSync(scriptPath)) { this.scripts.set(name,{ ...config,path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,})} } } generateCodeQualityScript() { const script = `usr/bin/env: node;/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.metrics = { complexity: 0,maintainability: 0,testCoverage: 0,performance: 0,lastUpdated: new Date().toISOString() }; this.logFile = path.join(__dirname,'logs','code-quality.log')} log(message) { const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async analyzeCodeQuality() { try { this.log('Starting code quality analysis...'); const result = execSync('npx tsc --noEmit',{ encoding: 'utf8' }); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log('Code quality analysis completed successfully'); return this.metrics} catch (error) { this.log(\`Code quality analysis failed: \${error.message}\`,'ERROR'); return null} } calculateComplexity() { try { const files = this.getTypeScriptFiles(); let totalComplexity = 0; files.forEach(file => { const content = fs.readFileSync(file,'utf8'); const lines = content.split('\\n'); totalComplexity += lines.length * 0.1}); return Math.min(Math.floor(totalComplexity),100)} catch (error) { return Math.floor(Math.random() * 10) + 1} } calculateMaintainability() { try { const files = this.getTypeScriptFiles(); const totalFiles = files.length; const avgFileSize = files.reduce((acc,file) => { const stats = fs.statSync(file); return acc + stats.size},0) / totalFiles; return Math.max(50,100 - Math.floor(avgFileSize / 1000))} catch (error) { return Math.floor(Math.random() * 100) + 50} } calculateTestCoverage() { return Math.floor(Math.random() * 100)} calculatePerformance() { return Math.floor(Math.random() * 100) + 70} getTypeScriptFiles() { const projectRoot = path.resolve(__dirname,'..'); const files = []; const walkDir = (dir) => { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { files.push(fullPath)} })}; walkDir(projectRoot); return files} saveMetrics() { const metricsFile = path.join(__dirname,'logs','code-quality-metrics.json'); fs.writeFileSync(metricsFile,JSON.stringify(this.metrics,null,2))} } const monitor = new CodeQualityMonitor(); monitor.analyzeCodeQuality().then(metrics => { if (metrics) { console.log('Metrics:',metrics)} });`; const scriptPath = path.join(__dirname,'code-quality-monitor.js'); fs.writeFileSync(scriptPath,script); this.scripts.set('code-quality',{ file: 'code-quality-monitor.js',description: 'Enhanced code quality monitoring with detailed metrics',path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,}); this.log('Generated enhanced code quality monitor script')} generatePerformanceOptimizer() { const script = `usr/bin/env: node;/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer { constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log')} log(message) { const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(\`Performance optimization failed: \${error.message}\`,'ERROR'); return null} } analyzeBundleSize() { try { return { totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} } optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() { return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().then(report => { if (report) { console.log('Performance report:',report)} });`; const scriptPath = path.join(__dirname,'performance-optimizer.js'); fs.writeFileSync(scriptPath,script); this.scripts.set('performance-optimizer',{ file: 'performance-optimizer.js',description: 'Performance optimization with bundle analysis and recommendations',path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,}); this.log('Generated performance optimizer script')} async runScript(scriptName,options = {}) { if (!this.scripts.has(scriptName)) { this.log(`Script "${scriptName}" not found`,'ERROR'); return false} const script = this.scripts.get(scriptName); const startTime = Date.now(); try { this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName,{ startTime,pid: null }); this.saveStatus(); const child = spawn('node',[script.path],{ stdio: 'pipe',cwd: __dirname,}); this.runningScripts.set(scriptName,{ startTime,pid: child.pid }); this.saveStatus(); return new Promise(resolve => { child.on('close',code => { const duration = Date.now() - startTime; this.runningScripts.delete(scriptName); if (code === 0) { script.successCount++; this.log( `Script "${scriptName}" completed successfully in ${duration}ms` )} else { script.errorCount++; this.log( `Script "${scriptName}" failed with code ${code}`,'ERROR' )} script.lastRun = new Date().toISOString(); this.saveStatus(); resolve(code === 0)}); child.on('error',error => { script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`,'ERROR'); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) { script.errorCount++; this.log( `Failed to start script "${scriptName}": ${error.message}`,'ERROR' ); this.runningScripts.delete(scriptName); this.saveStatus(); return false} } async runAllScripts() { this.log('Running all available scripts...'); const results = []; for (const [name,script] of this.scripts) { if (script.status === 'available') { const success = await this.runScript(name); results.push({ name,success })} } this.log(`Completed running ${results.length} scripts`); return results} generateAllScripts() { this.generateCodeQualityScript(); this.generatePerformanceOptimizer(); this.log('Generated all automation scripts')} listScripts() { console.log('\nAvailable Automation Scripts:'); for (const [name,script] of this.scripts) { const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase(); const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never'; console.log(`\n${name}:`); console.log(` Description: ${script.description}`); console.log(` Status: ${status}`); console.log(` Last Run: ${lastRun}`); console.log(` Success Count: ${script.successCount}`); console.log(` Error Count: ${script.errorCount}`)} console.log('\nRunning Scripts:'); for (const [name,info] of this.runningScripts) { const duration = Date.now() - info.startTime; console.log(`${name} - Running for ${Math.floor(duration / 1000)}s`)} } startContinuousMode() { this.log('Starting continuous monitoring mode...'); const watcher = chokidar.watch( [ path.resolve(__dirname,'..*.ts'),path.resolve(__dirname,'..*.tsx'),path.resolve(__dirname,'..*.js'),],{ ignored: /node_modules|\.git|\.next/,} ); watcher.on('change',filePath => { this.log(`File changed: ${filePath}`); this.runScript('code-quality').catch(error => { this.log(`Error running code quality check: ${error.message}`,'ERROR')})}); this.runAllScripts(); this.log('Continuous mode active. Press Ctrl+C to stop.')} } const factory = new AutomationFactory(); const command = process.argv[2]; const scriptName = process.argv[3]; switch (command) { case 'list': factory.listScripts(); break; case 'run': if (scriptName) { factory.runScript(scriptName)} else { factory.runAllScripts()} break; case 'generate': factory.generateAllScripts(); break; case 'continuous': factory.startContinuousMode(); break; default: console.log('Usage:'); console.log(' node automation-factory.js list'); console.log(' node automation-factory.js run [script-name]'); console.log(' node automation-factory.js generate'); console.log(' node automation-factory.js continuous'); break} module.exports = AutomationFactory;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,spawn } = require('child_process'); const chokidar = require('chokidar'); class AutomationFactory { constructor() { this.scripts = new Map(); this.runningScripts = new Map(); this.logFile = path.join(__dirname,'logs','automation-factory.log'); this.statusFile = path.join(__dirname,'logs','automation-status.json'); this.ensureLogDirectory(); this.loadExistingScripts(); this.loadStatus()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } loadStatus() { try { if (fs.existsSync(this.statusFile)) { const status = JSON.parse(fs.readFileSync(this.statusFile,'utf8')); this.runningScripts = new Map( Object.entries(status.runningScripts || {}) )} } catch (error) { this.log(`Error loading status: ${error.message}`)} } saveStatus() { try { const status = { timestamp: new Date().toISOString(),runningScripts: Object.fromEntries(this.runningScripts),totalScripts: this.scripts.size,}; fs.writeFileSync(this.statusFile,JSON.stringify(status,null,2))} catch (error) { this.log(`Error saving status: ${error.message}`)} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} loadExistingScripts() { const scriptTypes = { 'lint-monitor': { file: 'lint-monitor.js',description: 'Continuous lint monitoring',},'lint-fixer': { file: 'lint-error-fixer.js',description: 'Automated lint error fixing',},'lint-manager': { file: 'lint-automation-manager.js',description: 'Lint automation management',},}; for (const [name,config] of Object.entries(scriptTypes)) { const scriptPath = path.join(__dirname,config.file); if (fs.existsSync(scriptPath)) { this.scripts.set(name,{ ...config,path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,})} } } generateCodeQualityScript() { const script = `usr/bin/env: node;/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.metrics = { complexity: 0,maintainability: 0,testCoverage: 0,performance: 0,lastUpdated: new Date().toISOString() }; this.logFile = path.join(__dirname,'logs','code-quality.log')} log(message) { const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async analyzeCodeQuality() { try { this.log('Starting code quality analysis...'); const result = execSync('npx tsc --noEmit',{ encoding: 'utf8' }); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log('Code quality analysis completed successfully'); return this.metrics} catch (error) { this.log(\`Code quality analysis failed: \${error.message}\`,'ERROR'); return null} } calculateComplexity() { try { const files = this.getTypeScriptFiles(); let totalComplexity = 0; files.forEach(file => { const content = fs.readFileSync(file,'utf8'); const lines = content.split('\\n'); totalComplexity += lines.length * 0.1}); return Math.min(Math.floor(totalComplexity),100)} catch (error) { return Math.floor(Math.random() * 10) + 1} } calculateMaintainability() { try { const files = this.getTypeScriptFiles(); const totalFiles = files.length; const avgFileSize = files.reduce((acc,file) => { const stats = fs.statSync(file); return acc + stats.size},0) / totalFiles; return Math.max(50,100 - Math.floor(avgFileSize / 1000))} catch (error) { return Math.floor(Math.random() * 100) + 50} } calculateTestCoverage() { return Math.floor(Math.random() * 100)} calculatePerformance() { return Math.floor(Math.random() * 100) + 70} getTypeScriptFiles() { const projectRoot = path.resolve(__dirname,'..'); const files = []; const walkDir = (dir) => { const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { files.push(fullPath)} })}; walkDir(projectRoot); return files} saveMetrics() { const metricsFile = path.join(__dirname,'logs','code-quality-metrics.json'); fs.writeFileSync(metricsFile,JSON.stringify(this.metrics,null,2))} } const monitor = new CodeQualityMonitor(); monitor.analyzeCodeQuality().then(metrics => { if (metrics) { console.log('Metrics:',metrics)} });`; const scriptPath = path.join(__dirname,'code-quality-monitor.js'); fs.writeFileSync(scriptPath,script); this.scripts.set('code-quality',{ file: 'code-quality-monitor.js',description: 'Enhanced code quality monitoring with detailed metrics',path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,}); this.log('Generated enhanced code quality monitor script')} generatePerformanceOptimizer() { const script = `usr/bin/env: node;/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer { constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log')} log(message) { const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(\`Performance optimization failed: \${error.message}\`,'ERROR'); return null} } analyzeBundleSize() { try { return { totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} } optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {}); return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() { return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().then(report => { if (report) { console.log('Performance report:',report)} });`; const scriptPath = path.join(__dirname,'performance-optimizer.js'); fs.writeFileSync(scriptPath,script); this.scripts.set('performance-optimizer',{ file: 'performance-optimizer.js',description: 'Performance optimization with bundle analysis and recommendations',path: scriptPath,status: 'available',lastRun: null,successCount: 0,errorCount: 0,}); this.log('Generated performance optimizer script')} async runScript(scriptName,options = {}) { if (!this.scripts.has(scriptName)) { this.log(`Script "${scriptName}" not found`,'ERROR'); return false} const script = this.scripts.get(scriptName); const startTime = Date.now(); try { this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName,{ startTime,pid: null }); this.saveStatus(); const child = spawn('node',[script.path],{ stdio: 'pipe',cwd: __dirname,}); this.runningScripts.set(scriptName,{ startTime,pid: child.pid }); this.saveStatus(); return new Promise(resolve => { child.on('close',code => { const duration = Date.now() - startTime; this.runningScripts.delete(scriptName); if (code === 0) { script.successCount++; this.log( `Script "${scriptName}" completed successfully in ${duration}ms` )} else { script.errorCount++; this.log( `Script "${scriptName}" failed with code ${code}`,'ERROR' )} script.lastRun = new Date().toISOString(); this.saveStatus(); resolve(code === 0)}); child.on('error',error => { script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`,'ERROR'); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) { script.errorCount++; this.log( `Failed to start script "${scriptName}": ${error.message}`,'ERROR' ); this.runningScripts.delete(scriptName); this.saveStatus(); return false} } async runAllScripts() { this.log('Running all available scripts...'); const results = []; for (const [name,script] of this.scripts) { if (script.status === 'available') { const success = await this.runScript(name); results.push({ name,success })} } this.log(`Completed running ${results.length} scripts`); return results} generateAllScripts() { this.generateCodeQualityScript(); this.generatePerformanceOptimizer(); this.log('Generated all automation scripts')} listScripts() { console.log('\nAvailable Automation Scripts:'); for (const [name,script] of this.scripts) { const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase(); const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never'; console.log(`\n${name}:`); console.log(` Description: ${script.description}`); console.log(` Status: ${status}`); console.log(` Last Run: ${lastRun}`); console.log(` Success Count: ${script.successCount}`); console.log(` Error Count: ${script.errorCount}`)} console.log('\nRunning Scripts:'); for (const [name,info] of this.runningScripts) { const duration = Date.now() - info.startTime; console.log(`${name} - Running for ${Math.floor(duration / 1000)}s`)} } startContinuousMode() { this.log('Starting continuous monitoring mode...'); const watcher = chokidar.watch( [ path.resolve(__dirname,'..*.ts'),path.resolve(__dirname,'..*.tsx'),path.resolve(__dirname,'..*.js'),],{ ignored: /node_modules|\.git|\.next/,} ); watcher.on('change',filePath => { this.log(`File changed: ${filePath}`); this.runScript('code-quality').catch(error => { this.log(`Error running code quality check: ${error.message}`,'ERROR')})}); this.runAllScripts(); this.log('Continuous mode active. Press Ctrl+C to stop.')} } const factory = new AutomationFactory(); const command = process.argv[2]; const scriptName = process.argv[3]; switch (command) { case 'list': factory.listScripts(); break; case 'run': if (scriptName) { factory.runScript(scriptName)} else { factory.runAllScripts()} break; case 'generate': factory.generateAllScripts(); break; case 'continuous': factory.startContinuousMode(); break; default: console.log('Usage:'); console.log(' node automation-factory.js list'); console.log(' node automation-factory.js run [script-name]'); console.log(' node automation-factory.js generate'); console.log(' node automation-factory.js continuous'); break} module.exports = AutomationFactory;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
     };
-=======
-=======
-
-=======
   optimizeImages() {,
     try {,
       // Placeholder for image optimization,
@@ -576,13 +489,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {,
       return { error: error.message };
     };
-
   analyzeDependencies() {,
     try {,
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../package.json"), "utf8")),
       const dependencies = Object.keys(packageJson.dependencies || {}),
       const devDependencies = Object.keys(packageJson.devDependencies || {}),
-
       return {,
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
@@ -590,35 +501,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {,
       return { error: error.message };
     };
-
-
-
       };
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       };
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Performance report: ", report)}}),`; const scriptPath = path.join(__dirname, "performance-optimizer.js"); fs.writeFileSync(scriptPath, script); this.scripts.set("performance-optimizer", {file: "performance-optimizer.js", description: "Performance optimization with bundle analysis and recommendations", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0}); this.log("Generated performance optimizer script")}; async runScript(scriptName, options = {}) {if (!this.scripts.has(scriptName)) {; this.log(`Script "${scriptName}" not found`, "ERROR"); return false}; const script = this.scripts.get(scriptName); const startTime = Date.now(); try {this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName, { startTime, pid: null }); this.saveStatus(); const child = spawn("node", [script.path], {stdio: "pipe"
     cwd: __dirname}); this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus(); return new Promise((resolve) = > {child.on("close", (code) = > {; const duration = Date.now() - startTime; this.runningScripts.delete(scriptName); if (code = = = 0) {; script.successCount++; this.log(`Script "${scriptName}" completed successfully in ${duration}ms`)} else {script.errorCount++; this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR")}; script.lastRun = new Date().toISOString(); this.saveStatus(); resolve(code = = = 0)}); child.on("error", (error) = > {script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); return false}}; async runAllScripts() {this.log("Running all available scripts..."); const results = []; for (const [name, script] of this.scripts) {; if (script.status = = = "available") {; const success = await this.runScript(name); results.push({ name, success })};      }
       }
       }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }}
 ; load_status () { try { if () {) {
   $2
@@ -717,12 +605,4 @@ if ( {) {
       }
       }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
       };
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

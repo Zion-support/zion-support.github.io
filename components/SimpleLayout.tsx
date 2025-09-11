@@ -1,44 +1,30 @@
-<<<<<<< HEAD
-
-
-
-
 import React from 'react;';
 import * as React from 'react';
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-
 interface SimpleLayoutProps {
   title: string;
   description?: string;
   children: React.ReactNode;
 }
-
 export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
   return (
     <>
@@ -50,19 +36,13 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
     </>
   );
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react;';
 import * as React from 'react';
 import Head from next/head';
-
 interface SimpleLayoutProps {,;
   title: string,;
   description?: string,;
   children: React && React.ReactNode;
-=======
-
-
 };
 export default function SimpleLayout(): any ({ title, description, children }: SimpleLayoutProps) {,;
   return (,;
@@ -83,9 +63,3 @@ interface SimpleLayoutProps {,
       {children};
     </>)
 };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

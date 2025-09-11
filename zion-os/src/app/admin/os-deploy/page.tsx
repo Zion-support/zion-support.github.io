@@ -1,25 +1,19 @@
-<<<<<<< HEAD
 "use client";
-
 import { useState } from "react";
 import { FeatureKeys } from "@/lib/zod";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
-
 export default function AdminDeployPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('info');
-
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
     setMessage(null);
-    
     try {
       const formData = new FormData(event.currentTarget);
       const features: Record<string, boolean> = {};
       FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on"));
-
       const payload = {
         instanceName: String(formData.get("instanceName") || ""),
         domain: String(formData.get("domain") || "" ) || undefined,
@@ -39,16 +33,13 @@ export default function AdminDeployPage() {
           affiliatePanel: formData.get("affiliatePanel") === "on",
         },
       };
-
       const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) });
       const data = await res.json();
-      
       if (!res.ok) {
         setMessageType('error');
         setMessage(data.error || "Deployment failed");
         return;
       }
-      
       setMessageType('success');
       setMessage(`✅ Deployment queued successfully! Deployment ID: ${data.deploymentId}`);
       (event.target as HTMLFormElement).reset();
@@ -59,7 +50,6 @@ export default function AdminDeployPage() {
       setLoading(false);
     }
   }
-
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -69,7 +59,6 @@ export default function AdminDeployPage() {
           Launch your sovereign AI-powered digital economy with advanced configuration options
         </p>
       </div>
-
       {/* Form */}
       <div className="card max-w-6xl mx-auto">
         <form onSubmit={onSubmit} className="space-y-8">
@@ -78,7 +67,6 @@ export default function AdminDeployPage() {
             <h2 className="text-2xl font-semibold text-white border-b border-white/10 pb-2">
               🚀 Basic Configuration
             </h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-white font-medium">
@@ -91,7 +79,6 @@ export default function AdminDeployPage() {
                   />
                 </label>
               </div>
-              
               <div className="space-y-2">
                 <label className="block text-white font-medium">
                   Vertical
@@ -105,7 +92,6 @@ export default function AdminDeployPage() {
                 </label>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-white font-medium">
@@ -117,7 +103,6 @@ export default function AdminDeployPage() {
                   />
                 </label>
               </div>
-              
               <div className="space-y-2">
                 <label className="block text-white font-medium">
                   Subdomain
@@ -129,7 +114,6 @@ export default function AdminDeployPage() {
                 </label>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <label className="block text-white font-medium">
@@ -141,7 +125,6 @@ export default function AdminDeployPage() {
                   />
                 </label>
               </div>
-              
               <div className="space-y-2">
                 <label className="block text-white font-medium">
                   Token System
@@ -151,7 +134,6 @@ export default function AdminDeployPage() {
                   </select>
                 </label>
               </div>
-              
               <div className="space-y-2">
                 <label className="block text-white font-medium">
                   Governance Type
@@ -163,7 +145,6 @@ export default function AdminDeployPage() {
                 </label>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-white font-medium">
@@ -175,7 +156,6 @@ export default function AdminDeployPage() {
                   />
                 </label>
               </div>
-              
               <div className="space-y-2">
                 <label className="block text-white font-medium">
                   Country
@@ -188,13 +168,11 @@ export default function AdminDeployPage() {
               </div>
             </div>
           </div>
-
           {/* Feature Toggles */}
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-white border-b border-white/10 pb-2">
               ⚡ Core Features
             </h2>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {FeatureKeys.map((k) => (
                 <label key={k} className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
@@ -204,35 +182,29 @@ export default function AdminDeployPage() {
               ))}
             </div>
           </div>
-
           {/* Optional Add-ons */}
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-white border-b border-white/10 pb-2">
               🎯 Optional Add-ons
             </h2>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <label className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
                 <input type="checkbox" name="sovereignTreasury" className="checkbox-field" />
                 <span className="text-white/90 text-sm">Sovereign DAO treasury</span>
               </label>
-              
               <label className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
                 <input type="checkbox" name="dualGovernance" className="checkbox-field" />
                 <span className="text-white/90 text-sm">Dual governance (local + global)</span>
               </label>
-              
               <label className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
                 <input type="checkbox" name="aiModeration" className="checkbox-field" />
                 <span className="text-white/90 text-sm">AI moderation system</span>
               </label>
-              
               <label className="flex items-center space-x-3 p-3 rounded-lg bg-white/5 hover:bg-white/8 transition-colors cursor-pointer">
                 <input type="checkbox" name="affiliatePanel" className="checkbox-field" />
                 <span className="text-white/90 text-sm">Gov/institution affiliate panel</span>
               </label>
             </div>
-
             <div className="space-y-2">
               <label className="block text-white font-medium">
                 Payment Gateway
@@ -244,7 +216,6 @@ export default function AdminDeployPage() {
               </label>
             </div>
           </div>
-
           {/* Submit Section */}
           <div className="border-t border-white/10 pt-6">
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -261,7 +232,6 @@ export default function AdminDeployPage() {
                   "🚀 Deploy Instance"
                 )}
               </button>
-              
               {message && (
                 <div className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${
                   messageType === 'success' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
@@ -273,7 +243,6 @@ export default function AdminDeployPage() {
               )}
             </div>
           </div>
-=======
 export default function OSDeployPage() {;
 const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
@@ -282,7 +251,6 @@ const [loading, setLoading] = useState(false);
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
-
     }, 3000);
   }
 ;
@@ -293,12 +261,6 @@ const [loading, setLoading] = useState(false);
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
 ;
   const label_for = (key: string) =>: any {
-=======
-
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -340,9 +302,7 @@ export default function OSDeployPage() {;
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
-
         {/* Header */}
-
                 />;
               </div>;
             </div>;
@@ -356,23 +316,14 @@ export default function OSDeployPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO-lite</option>;
@@ -385,14 +336,10 @@ export default function OSDeployPage() {;
                 >;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO - lite</option>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                 />;
               </div>;
               <div className="space-y-2">;
@@ -400,22 +347,16 @@ export default function OSDeployPage() {;
                 <select
                   id="paymentGateway"
                   name="paymentGateway"
-
               </div>;
             )}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {message}
               </div>;
             )}          </div>
->>>>>>> main
         </form>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-
 function labelFor(key: string) {
   switch (key) {
     case "marketplace": return "Marketplace";
@@ -435,7 +376,6 @@ function labelFor(key: string) {
     default: return key;
   }
 }
-
 function getFeatureDescription(key: string) {
   switch (key) {
     case "marketplace": return "Jobs, talent, and project marketplace";
@@ -450,7 +390,6 @@ function getFeatureDescription(key: string) {
     case "partner_api": return "API access for partners";
     case "regional_dashboards": return "Regional and institutional views";
     case "vendor_plugin": return "White-label vendor solutions";
-=======
           </div>;
         </form>;
       </div>;
@@ -459,11 +398,8 @@ function getFeatureDescription(key: string) {
       </div>;
     </div>);
 }
-=======
     </div>);
 }
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 function labelFor(key: string) {;
   switch (key) {;
@@ -499,20 +435,10 @@ function getFeatureDescription(key: string) {;
     case "partner_api": return "API access for partners",;
     case "regional_dashboards": return "Regional and institutional views",;
     case "vendor_plugin": return "White-label vendor solutions",;
->>>>>>> main
     case "web3_login": return "Web3 authentication and DID";
     case "multi_currency": return "Multi-currency support";
     default: return "Core platform feature";
   }
-<<<<<<< HEAD
-}
-=======
 }
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> main
+}

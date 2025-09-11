@@ -1,40 +1,26 @@
-
-
-
-
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
   status: "incomplete" | "current" | "complete"
   label: string
-
   description?: string;
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
   status: "incomplete" | "current" | "complete",;
   label: string,;
-
   description?: string;
   className?: string;
 }
-
-
 export function Step(): any ({;
-
   status;
   label;
   description;
   className}: StepProps) {;
-
   className}: StepProps) {
-
   className}: StepProps) {
           "opacity-60": status === "incomplete"},
-
-
   return (
     <li
-
       className={cn(
         "relative flex items-center"
         {
@@ -51,7 +37,6 @@ export function Step(): any ({;
               status === "current"
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
-
       className={cn(
         "relative flex items-center",
         {
@@ -115,7 +100,6 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-
             {/* Step number would go here */}
           </span>;
         )}
@@ -127,26 +111,17 @@ export function Step({;
             "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
-
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
-
-
             {/* Step number would go here */}
           </span>;
         )}
-
-
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
-
-
         >
-
-
         >
       </div>;
       <div className="ml-4 min-w-0">;
@@ -215,17 +190,10 @@ export function Step({;
 interface StepsProps {;
   currentStep: number,;
 }
-
-
-
-
-
 interface StepsProps {
   currentStep: number
-
 interface StepsProps {;
   currentStep: number,;
-
   const childrenArray = React.Children.toArray(children);
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children);
@@ -235,10 +203,8 @@ interface StepsProps {;
   className?: string,;
   children: React.ReactNode;
 }
-
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
-  
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
     return (
@@ -246,11 +212,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
           if (!React.isValidElement(child)) return null,
-          
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
-          
             status})
         })}
       </ol>
@@ -259,8 +223,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-
-
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -270,33 +232,23 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 }
 export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React && React.Children.toArray(children);
-
   return (
-
-
     <div className={cn("w-full", className)}>;
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React && React.Children.map(childrenArray, (child, index) => {;
           if (!React && React.isValidElement(child)) return null;
-
           let status: "incomplete" | "current" | "complete" = "incomplete",;
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
-
           return React && React.cloneElement(child as React && React.ReactElement<StepProps>, {;
             status});
         })}
       </ol>;
-
       <div className="hidden md:flex md:mt-4">;
-
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
               width:`${(currentStep / (childrenArray.length - 1)) * 100}%`}}
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-
-
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}<<<<<<< HEAD
-          />;
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}          />;
         </div>;
       </div>;
     </div>;

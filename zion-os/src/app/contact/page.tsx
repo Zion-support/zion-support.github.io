@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 export default function ContactPage() {
   return (
     <div className="min-h-screen py-20">
@@ -15,7 +13,6 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
@@ -38,7 +35,6 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,7 +48,6 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +60,6 @@ export default function ContactPage() {
                     <p className="text-gray-300">Delaware, United States</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +74,6 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-
             {/* Social Media */}
             <div>
               <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
@@ -102,7 +95,6 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
-
             {/* Company Info */}
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-4">About Zion Tech Group</h3>
@@ -116,7 +108,6 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
@@ -147,7 +138,6 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address
@@ -160,7 +150,6 @@ export default function ContactPage() {
                   placeholder="Enter your email address"
                 />
               </div>
-
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                   Company
@@ -173,7 +162,6 @@ export default function ContactPage() {
                   placeholder="Enter your company name"
                 />
               </div>
-
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                   Service of Interest
@@ -193,7 +181,6 @@ export default function ContactPage() {
                   <option value="other">Other</option>
                 </select>
               </div>
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message
@@ -206,7 +193,6 @@ export default function ContactPage() {
                   placeholder="Tell us about your project or inquiry..."
                 ></textarea>
               </div>
-
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
@@ -217,7 +203,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -239,7 +224,6 @@ export default function ContactPage() {
       </div>
     </div>
   );
-=======
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -250,10 +234,8 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -261,17 +243,13 @@ export default function ContactPage() {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
     // Reset form after success
     setTimeout(() => {
       setSubmitSuccess(false);
@@ -286,7 +264,6 @@ export default function ContactPage() {
       });
     }, 5000);
   };
-
   const contactMethods = [
     {
       title: "General Inquiries",
@@ -313,7 +290,6 @@ export default function ContactPage() {
       phone: "+1 (302) 464-0953"
     }
   ];
-
   const officeLocations = [
     {
       city: "Delaware, USA",
@@ -333,10 +309,7 @@ export default function ContactPage() {
   ];
   return (
     <div className="min-h-screen bg-white">
-
-
       {/* Hero Section */}
-
 import Link from 'next/link';
 export default function ContactPage() {
   return (;
@@ -354,9 +327,6 @@ export default function ContactPage() {
           </p>;
         </div>;
       </section>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
             <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
               <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
               <form className=&quot;space - y-6 & quot;>;
@@ -450,14 +420,10 @@ export default function ContactPage() {
                   <textarea;
                     id=&quot;message & quot;
                     name=&quot;message";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
                   ></textarea>;
                 </div>;
                 <button;
@@ -525,8 +491,6 @@ export default function ContactPage() {
                   </div>;
                 </div>;
               </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
@@ -567,7 +531,7 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
-=======          </div>
+          </div>
         </div>
       </section>
       {/* FAQ Section */}
@@ -637,5 +601,4 @@ export default function ContactPage() {
         </div>;
       </section>;
     </div>);
->>>>>>> main
 }

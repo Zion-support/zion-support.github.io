@@ -1,47 +1,25 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-=======
-
-=======
-
-
 import React from 'react';
 import { NextPage } from 'next';
-<<<<<<< HEAD
-
-
-=======
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
-
-
 const products = [;
   {;
     id: 'ai-analytics-suite',;
@@ -110,7 +88,6 @@ const products = [;
     popular: false;
   }
 ];
-
 const categories = [;
   'All',;
   'AI & Analytics',;
@@ -120,51 +97,30 @@ const categories = [;
   'Collaboration',;
   'Data Management';
 ];
-
 const ProductsIndex: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
   const [searchTerm, setSearchTerm] = React && React.useState('');
-
   const filteredProducts = products && products.filter(product => {;
     const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
     const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          product && product.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          product && product.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-
     return matchesCategory && matchesSearch;
   });
-
-=======
-
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 const Index: NextPage = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
       keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -180,8 +136,6 @@ const Index: NextPage = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
-
         {/* Search and Filter Section */}
         <section className="py-12 bg-white">;
           <div className="container mx-auto px-4">;
@@ -193,15 +147,12 @@ const Index: NextPage = () => {
                     type="text"
                     placeholder="Search products..."
                     value={searchTerm}
-
                     onChange={(e) => setSearchTerm(e && e.target.value)}
                     className="w-full px-6 py-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                   />;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
                 </div>;
               </div>;
-
-
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">;
                 {categories && categories.map((category) => (;
@@ -217,19 +168,14 @@ const Index: NextPage = () => {
                     {category}
                   </button>;
                 ))}
-
               </div>;
-
               <div className="text-center">;
-
                 <button
                   onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('All');
                   }}
-
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -316,7 +262,6 @@ const categories = [;
 ];
 ;
 const ProductsIndex: NextPage = () => {
-<<<<<<< HEAD
   const [selected_category, setSelectedCategory] = React.useState ('All');
   const [search_term, setSearchTerm] = React.useState ('');
 ;
@@ -335,11 +280,8 @@ const ProductsIndex: NextPage = () => {
       keywords="products, technology solutions, AI, cloud, security, automation, collaboration";
     >;
       <div className="min - h-screen bg - gray - 50">;
-=======
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
-<<<<<<< HEAD
-
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -347,17 +289,8 @@ const ProductsIndex: NextPage = () => {
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const Index: NextPage = () => {
   return (
-<<<<<<< HEAD
-=======
-
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -365,16 +298,13 @@ const Index: NextPage = () => {
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   return (
->>>>>>> origin/main
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
       keywords="products, technology solutions, AI, cloud, security, automation, collaboration"
     >
       <div className="min-h-screen bg-gray-50">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Hero Section */}
         <section className="relative bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900 text - white py - 20 overflow - hidden">;
           <div className="absolute inset - 0">;
@@ -437,7 +367,6 @@ const Index: NextPage = () => {
                     setSelectedCategory ('All');
                   }}
                   className="px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - semibold";
-
                 >;
                   Clear Filters;
                 </button>;
@@ -445,18 +374,14 @@ const Index: NextPage = () => {
             </div>;
           </div>;
         </section>;
-
                       </div>;
                     </div>;
-
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
                       {product && product.name}
                     </h3>;
-
                     <p className="text-gray-600 mb-4 leading-relaxed">;
                       {product && product.description}
                     </p>;
-
                     <div className="space-y-2 mb-4">;
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>;
                       <ul className="space-y-1">;
@@ -468,7 +393,6 @@ const Index: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
-
                     <div className="space-y-2 mb-6">;
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>;
                       <ul className="space-y-1">;
@@ -480,14 +404,12 @@ const Index: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
-
                     <div className="space-y-2 mb-6">;
                       <div className="flex justify-between items-center">;
                         <span className="text-sm font-medium text-gray-900">Pricing:</span>;
                         <span className="text-lg font-bold text-blue-600">{product && product.pricing}</span>;
                       </div>;
                     </div>;
-
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
                       Learn More;
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -496,7 +418,6 @@ const Index: NextPage = () => {
                 </motion && motion.div>;
               ))}
             </div>;
-
             {filteredProducts && filteredProducts.length === 0 && (;
               <div className="text-center py-12">;
                 <div className="text-gray-400 mb-4">;
@@ -508,8 +429,6 @@ const Index: NextPage = () => {
             )}
           </div>;
         </section>;
-
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -530,13 +449,6 @@ const Index: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-
-
-
-
-=======
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   Contact Sales
@@ -547,13 +459,9 @@ const Index: NextPage = () => {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Contact Sales;
                 </Link>;
@@ -565,67 +473,31 @@ const Index: NextPage = () => {
     </Layout>;
   );
 };
-
-
-
-=======
-=======
-
         <meta name="description" content="Index page" />
       </Head>
-      
-=======
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
-
-
-
   );
 }
 export default ProductsIndex;
-
   );
 };
-
-
 export default Index;
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 };
-
 export default Index;
-=======
-=======
   );
 };
-
-<<<<<<< HEAD
 export default ProductsIndex;
->>>>>>> origin/main
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
-
 export default Index;
-<<<<<<< HEAD
-
-
-
-=======
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -734,21 +606,7 @@ export default Index;
       </div>;
     </Layout>);
 }
-
 export default ProductsIndex;
-
   )
-
-
-=======
 },
 export default Index,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

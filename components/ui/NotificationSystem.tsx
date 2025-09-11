@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from "react";
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const getNotificationStyles = (type: Notification["type"]): string => {;
   const baseStyles = "border-l-4";
   const typeStyles = {;
@@ -24,10 +11,7 @@ interface NotificationSystemProps {
 interface NotificationSystemProps {;
   notifications: Notification[];
   onDismiss?: (id: string) => void;}
-
           key;
-
-
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
@@ -71,22 +55,14 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
-  }, [])=======    success: "bg-green-50 border-green-400 text-green-800",
+  }, [])    success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
     info: "bg-blue-50 border-blue-400 text-blue-800",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   };
   return `${baseStyles} ${typeStyles[type]}`;
 };
-
-==============
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
-
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
@@ -106,29 +82,18 @@ import React, { createContext, useContext, useState, useCallback, ReactNode } fr
 import { AnimatePresence, motion } from 'framer-motion',;
 ;
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
-
 type NotificationContextValue = {
   notify: (message: string, tone?: 'default' | 'success' | 'error') => void
 },
-
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
-
 export function useToast() {
   return useContext(NotificationContext)
-==============
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
-
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]),
-
-=======
 export default function NotificationSystem({
   notifications,
   onDismiss,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   className,
 }: NotificationSystemProps) {
   const getNotificationStyles = (type: Notification['type']) => {
@@ -145,19 +110,9 @@ export default function NotificationSystem({
         return 'bg-gray-50 border-gray-200 text-gray-800';
     }
   };
-=======
 key={notification.id},
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-
   if (notifications.length === 0) return null;
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
@@ -185,8 +140,6 @@ key={notification.id},
       ))}
     </div>
   );
-<<<<<<< HEAD
-
 const getNotificationStyles = (type: Notification["type"]): string => {
   const base_styles = "border - l-4";
   const type_styles = {
@@ -243,19 +196,6 @@ function NotificationProvider() {
   if (notifications.length === 0) return null;
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
-=======
-
 }
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

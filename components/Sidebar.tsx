@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -51,7 +43,6 @@ import {
   MapPin,
   Building2,
 } from 'lucide-react';
-
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -100,21 +91,17 @@ const navigation = {
     { name: 'Privacy Policy', href: '/privacy' },
   ],
 };
-
 const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -125,17 +112,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { 
   X, 
   Building2, 
@@ -153,8 +135,6 @@ import {
   Phone,
   Mail,
   ExternalLink;
-
-
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -164,8 +144,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
-=======
-
   const navigation = {;
     'Services': [;
       { name: 'Web Development', href: '/services/web-development', icon: Code },;
@@ -196,14 +174,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     { name: 'Careers', href: '/careers' },;
     { name: 'Contact', href: '/contact' },;
   ];
-=======
-
-<<<<<<< HEAD
-
   ];
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <AnimatePresence>;
       {isOpen && (;
@@ -215,10 +186,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
-<<<<<<< HEAD
-=======
           />
-<<<<<<< HEAD
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
@@ -227,26 +195,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
           />;
           <motion&& motion.div
-
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
-
-<<<<<<< HEAD
-
             <div className="p-6">;
-
-=======
->>>>>>> origin/main
             <div className="p-6">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2">;
@@ -257,38 +214,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                 </div>;
                 <button
                   onClick={onClose}
-<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-=======
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
-
-
->>>>>>> origin/main
               {/* Navigation */}
               <nav className="space-y-4">;
                 {Object && Object.entries(navigation).map(([title, links]) => (;
                   <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
-
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors";
-
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>;
                 <div className="space-y-2">;
                   {quickLinks && quickLinks.map((link) => (;
-
-=======
-<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
                     >
                       <span>{title}</span>
@@ -319,15 +264,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                 ))}
               </nav>
               {/* Quick Links */}
-=======
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
-
->>>>>>> origin/main
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -336,15 +277,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                       {link && link.name}
                     </Link>;
                   ))}
-<<<<<<< HEAD
-
                 </div>;
               </div>;
-
-=======
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -366,9 +302,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
@@ -386,7 +319,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-<<<<<<< HEAD
                     onClick={onClose}>;
                     <span>Get Started</span>;
                     <ExternalLink className="w-4 h-4" />;
@@ -395,23 +327,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
             </div>;
           </motion && motion.div>;
         </>;
-=======
                     onClick={onClose}
                   >
                     <span>Get Started</span>
                     <ExternalLink className="w-4 h-4" />
                   </Link>
->>>>>>> origin/main
               </div>
             </div>
           </motion.div>
         </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       )}
     </AnimatePresence>;
   );
-<<<<<<< HEAD
-
 import {
   X,
   Building2,
@@ -561,20 +488,8 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
 export default Sidebar;
 ;
-
-=======
-
 };
-
 export default Sidebar;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
 }
-=======
 };
-
 export default Sidebar;
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

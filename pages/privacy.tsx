@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 export default function Privacy() {
 	return (
 		<>
@@ -17,7 +14,6 @@ export default function Privacy() {
 					</div>
 				</div>
 			</section>
-
 			{/* Content */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -49,7 +45,6 @@ export default function Privacy() {
 								This information may include your name, email address, company name, phone number, and any other information you choose to provide.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
 							<p className="text-gray-600 mb-4">
@@ -74,7 +69,6 @@ export default function Privacy() {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Information Sharing</h2>
 							<p className="text-gray-600 mb-4">
@@ -99,7 +93,6 @@ export default function Privacy() {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Data Security</h2>
 							<p className="text-gray-600 mb-4">
@@ -124,7 +117,6 @@ export default function Privacy() {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights</h2>
 							<p className="text-gray-600 mb-4">
@@ -153,7 +145,6 @@ export default function Privacy() {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Cookies and Tracking</h2>
 							<p className="text-gray-600 mb-4">
@@ -181,7 +172,6 @@ export default function Privacy() {
 								You can control cookie settings through your browser preferences.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
 							<p className="text-gray-600 mb-4">
@@ -199,21 +189,18 @@ export default function Privacy() {
 								</p>
 							</div>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Updates to This Policy</h2>
 							<p className="text-gray-600">
 								We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.
 							</p>
 						</div>
-
 						<div className="text-center text-sm text-gray-500">
 							<p>Last Updated: January 15, 2025</p>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			{/* CTA */}
 			<section className="py-16 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
@@ -235,23 +222,10 @@ export default function Privacy() {
 		</>
 	)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 import {;
   Shield,;
   Lock,;
@@ -261,17 +235,12 @@ import {;
   Phone,;
   MapPin,;
   Users,;
-
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-
-
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-=======
 import {
-
   Shield,
   Lock,
   Eye,
@@ -280,33 +249,19 @@ import {
   Phone,
   MapPin,
   Users,;
-
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
-<<<<<<< HEAD
-=======
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-
 export default function PrivacyPage() {
   return (
     <MainLayout
@@ -335,7 +290,6 @@ export default function PrivacyPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -354,7 +308,6 @@ export default function PrivacyPage() {
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
@@ -365,7 +318,6 @@ export default function PrivacyPage() {
                   <li>Company information</li>
                   <li>Payment information</li>
                 </ul>
-
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
@@ -376,7 +328,6 @@ export default function PrivacyPage() {
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -384,7 +335,6 @@ export default function PrivacyPage() {
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
-
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -393,7 +343,6 @@ export default function PrivacyPage() {
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -402,27 +351,23 @@ export default function PrivacyPage() {
                   information to third parties without your consent, except as
                   described in this policy.
                 </p>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
                   We implement appropriate security measures to protect your
                   personal information against unauthorized access, alteration,
                   disclosure, or destruction.
                 </p>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
                   You have the right to access, update, or delete your personal
                   information. You may also opt out of certain communications
                   from us.
                 </p>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
-
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -441,7 +386,6 @@ export default function PrivacyPage() {
                     </div>
                   </div>
                 </div>
-
 <p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
@@ -453,21 +397,10 @@ export default function PrivacyPage() {
     </MainLayout>
   );
 }
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
-
-
-
-
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
@@ -498,18 +431,11 @@ import {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
-
-
-
   ];
-
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
-
-
-
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -537,14 +463,7 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
-<<<<<<< HEAD
-
-
   ];
-
-
-
-
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -560,33 +479,11 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function PrivacyPage() {
-=======
 export default function PrivacyPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -599,8 +496,6 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -611,8 +506,6 @@ export default function PrivacyPage() {;
             </motion.div>
           </div>
         </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -625,25 +518,12 @@ export default function PrivacyPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
-
-=======
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -1178,47 +1058,26 @@ const PrivacyPage: React.FC = () => {
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </h2>
-=======
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
             >
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-<<<<<<< HEAD
-
-=======
-
-
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-                
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
-
-
-
-=======
-
-
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-=======
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
->>>>>>> origin/automation-improvements-final
-=======
-                
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
@@ -1227,9 +1086,7 @@ const PrivacyPage: React.FC = () => {
                   <li>Company information</li>
                   <li>Payment information</li>
                 </ul>
-
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1237,39 +1094,17 @@ const PrivacyPage: React.FC = () => {
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
-
-<<<<<<< HEAD
-
-=======
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
-=======
-                <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-                <p className="mb-6">
-                  We use the information we collect to provide, maintain, and improve our services.
-                </p>
-<<<<<<< HEAD
-
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
-                
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-                
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
+                <p className="mb-6">
+                  We use the information we collect to provide, maintain, and improve our services.
+                </p>
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1278,15 +1113,6 @@ const PrivacyPage: React.FC = () => {
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
-
-<<<<<<< HEAD
-
-=======
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1294,64 +1120,38 @@ const PrivacyPage: React.FC = () => {
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
-=======
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
                 </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-=======
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
-
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-=======
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
                 </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
-
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-=======
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
                 </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
-
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
-<<<<<<< HEAD
-
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
-                
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
-                
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1370,20 +1170,9 @@ const PrivacyPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-<<<<<<< HEAD
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <p className="text-sm text-gray-600 mt-8">
-=======
                 <p className="text-sm text-gray-600 mt-8">
->>>>>>> origin/automation-improvements-final
-=======
                 <p className="text-sm text-gray-600 mt-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   Last updated: January 2024
                 </p>
               </div>
@@ -1391,7 +1180,6 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
       </div>
-
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1399,7 +1187,6 @@ const PrivacyPage: React.FC = () => {
                   Information We Collect;
                 </h2>;
                 <p className="mb-6">;
-=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -1461,12 +1248,10 @@ function PrivacyPage() {
                   Information We Collect;
                 </h2>;
                 <p className="mb - 6">;
-
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
-
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
                 </h3>;
@@ -1506,12 +1291,10 @@ function PrivacyPage() {
                   Information Sharing;
                 </h2>;
                 <p className="mb - 6">;
-
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
-
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
                   We implement appropriate security measures to protect your;
@@ -1520,13 +1303,10 @@ function PrivacyPage() {
                 </p>;
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
-
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
-
-
                 </div>
               </motion.div>
             </div>
@@ -1534,37 +1314,27 @@ function PrivacyPage() {
         </main>
       </Layout>
     </ErrorBoundary>
-
   );
-<<<<<<< HEAD
 };
 export default PrivacyPage;
-
-
-=======
 }
-=======
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
-<<<<<<< HEAD
         <main className='relative z-10 pt-8'>
           {/* Hero Section */}
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto text-center'>
-=======
         <main className="relative z-10 pt-8">
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<<<<<<< HEAD
                 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                   Privacy Policy
                 </h1>
@@ -1574,7 +1344,6 @@ export default PrivacyPage;
                 </p>
                 <div className='flex items-center justify-center gap-4 text-gray-400'>
                   <Shield className='w-6 h-6' />
-=======
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Privacy Policy
                 </h1>
@@ -1583,29 +1352,23 @@ export default PrivacyPage;
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   <span>Last updated: {lastUpdated}</span>
                 </div>
               </motion.div>
             </div>
           </section>
-
           {/* Overview */}
-<<<<<<< HEAD
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-6xl mx-auto'>
               <div className='grid lg:grid-cols-2 gap-12 items-center'>
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-<<<<<<< HEAD
                   <h2 className='text-4xl font-bold mb-6 text-white'>
                     Our Commitment to Privacy
                   </h2>
@@ -1628,8 +1391,6 @@ export default PrivacyPage;
                     </span>
                   </div>
                 </motion.div>
-
-=======
                   <h2 className="text-4xl font-bold mb-6 text-white">
                     Our Commitment to Privacy
                   </h2>
@@ -1647,13 +1408,10 @@ export default PrivacyPage;
                     <span className="font-medium">Your data is safe with us</span>
                   </div>
                 </motion.div>
-                
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
                   className='relative'
                 >
                   <div className='bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30'>
@@ -1667,7 +1425,6 @@ export default PrivacyPage;
                       <p className='text-gray-300'>
                         Enterprise-grade security for your information
                       </p>
-
                       <div className='grid grid-cols-2 gap-4 text-sm'>
                         <div className='text-center'>
                           <div className='text-2xl font-bold text-cyan-400'>
@@ -1680,7 +1437,6 @@ export default PrivacyPage;
                             99.9%
                           </div>
                           <div className='text-gray-400'>Uptime</div>
-=======
                   className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -1690,7 +1446,6 @@ export default PrivacyPage;
                       </div>
                       <h3 className="text-2xl font-bold text-white">Data Protection</h3>
                       <p className="text-gray-300">Enterprise-grade security for your information</p>
-                      
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">256-bit</div>
@@ -1699,7 +1454,6 @@ export default PrivacyPage;
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">99.9%</div>
                           <div className="text-gray-400">Uptime</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                         </div>
                       </div>
                     </div>
@@ -1708,20 +1462,15 @@ export default PrivacyPage;
               </div>
             </div>
           </section>
-
           {/* Privacy Principles */}
-<<<<<<< HEAD
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto'>
-=======
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
                 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
@@ -1731,24 +1480,19 @@ export default PrivacyPage;
                   The foundation of how we handle your data
                 </p>
               </motion.div>
-
               <div className='grid md:grid-cols-2 gap-8'>
-=======
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
                 <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
               </motion.div>
-              
               <div className="grid md:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
                   >
                     <div
@@ -1764,7 +1508,6 @@ export default PrivacyPage;
                         <li key={itemIndex} className='flex items-start gap-3'>
                           <div className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></div>
                           <span className='text-gray-300'>{item}</span>
-=======
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -1778,7 +1521,6 @@ export default PrivacyPage;
                         <li key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-300">{item}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                         </li>
                       ))}
                     </ul>
@@ -1787,20 +1529,15 @@ export default PrivacyPage;
               </div>
             </div>
           </section>
-
           {/* Your Rights */}
-<<<<<<< HEAD
           <section className='py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50'>
             <div className='max-w-6xl mx-auto'>
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
                 className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
@@ -1810,24 +1547,19 @@ export default PrivacyPage;
                   You have control over your personal information
                 </p>
               </motion.div>
-
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
                 <p className="text-xl text-gray-300">You have control over your personal information</p>
               </motion.div>
-              
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
                   >
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4'>
@@ -1837,7 +1569,6 @@ export default PrivacyPage;
                       {right.title}
                     </h3>
                     <p className='text-gray-300 text-sm'>{right.description}</p>
-=======
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -1847,33 +1578,26 @@ export default PrivacyPage;
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
                     <p className="text-gray-300 text-sm">{right.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
-
           {/* Detailed Policy */}
-<<<<<<< HEAD
           <section className='py-20 px-4'>
             <div className='max-w-4xl mx-auto'>
-=======
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
                 className='space-y-12'
               >
                 <div>
                   <h2 className='text-3xl font-bold text-white mb-6'>
                     Detailed Privacy Information
                   </h2>
-
                   <div className='space-y-8'>
                     <div>
                       <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1891,12 +1615,10 @@ export default PrivacyPage;
                         operating system, referring URLs, access times, and
                         pages viewed. We use this information to improve our
                         services and provide a better user experience.
-=======
                 className="space-y-12"
               >
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
-                  
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">Information Collection</h3>
@@ -1909,12 +1631,9 @@ export default PrivacyPage;
                         This may include your IP address, browser type, operating system, referring URLs;
                         access times, and pages viewed. We use this information to improve our services 
                         and provide a better user experience.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Usage and Purpose
                       </h3>
@@ -1929,7 +1648,6 @@ export default PrivacyPage;
                         send you marketing communications about our services,
                         special offers, and updates. You can opt out of these
                         communications at any time.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use your information to provide, maintain, and improve our services, process 
@@ -1940,12 +1658,9 @@ export default PrivacyPage;
                         With your consent, we may also use your information to send you marketing communications 
                         about our services, special offers, and updates. You can opt out of these communications 
                         at any time.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Sharing and Disclosure
                       </h3>
@@ -1960,7 +1675,6 @@ export default PrivacyPage;
                         These service providers are contractually obligated to
                         keep your information confidential and use it only for
                         the purposes for which we disclose it to them.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Sharing and Disclosure</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We do not sell, trade, or otherwise transfer your personal information to third parties 
@@ -1970,12 +1684,9 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         These service providers are contractually obligated to keep your information confidential 
                         and use it only for the purposes for which we disclose it to them.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Security Measures
                       </h3>
@@ -1989,7 +1700,6 @@ export default PrivacyPage;
                         These measures include encryption, access controls,
                         regular security assessments, and employee training on
                         data protection best practices.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Security Measures</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We implement appropriate technical and organizational security measures to protect 
@@ -1998,12 +1708,9 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         These measures include encryption, access controls, regular security assessments;
                         and employee training on data protection best practices.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Retention
                       </h3>
@@ -2017,7 +1724,6 @@ export default PrivacyPage;
                         When we no longer need your information, we will
                         securely delete or anonymize it in accordance with our
                         data retention policies.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We retain your personal information for as long as necessary to provide our services;
@@ -2026,12 +1732,9 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         When we no longer need your information, we will securely delete or anonymize it 
                         in accordance with our data retention policies.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         International Data Transfers
                       </h3>
@@ -2045,7 +1748,6 @@ export default PrivacyPage;
                         For transfers to countries outside the European Economic
                         Area, we rely on adequacy decisions, standard
                         contractual clauses, or other appropriate safeguards.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">International Data Transfers</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Your information may be transferred to and processed in countries other than your own. 
@@ -2055,12 +1757,9 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         For transfers to countries outside the European Economic Area, we rely on adequacy 
                         decisions, standard contractual clauses, or other appropriate safeguards.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Cookies and Tracking Technologies
                       </h3>
@@ -2073,7 +1772,6 @@ export default PrivacyPage;
                         You can control cookie settings through your browser
                         preferences. However, disabling certain cookies may
                         affect the functionality of our services.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Cookies and Tracking Technologies</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use cookies and similar tracking technologies to enhance your experience on our 
@@ -2082,12 +1780,9 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         You can control cookie settings through your browser preferences. However, disabling 
                         certain cookies may affect the functionality of our services.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Children's Privacy
                       </h3>
@@ -2100,7 +1795,6 @@ export default PrivacyPage;
                         If you believe we have collected information from a
                         child under 13, please contact us immediately, and we
                         will take steps to remove such information.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Children's Privacy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Our services are not intended for children under the age of 13. We do not knowingly 
@@ -2109,12 +1803,9 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         If you believe we have collected information from a child under 13, please contact 
                         us immediately, and we will take steps to remove such information.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
-
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Changes to This Policy
                       </h3>
@@ -2128,7 +1819,6 @@ export default PrivacyPage;
                         Your continued use of our services after such changes
                         constitutes acceptance of the updated policy. We
                         encourage you to review this policy periodically.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We may update this Privacy Policy from time to time to reflect changes in our 
@@ -2138,7 +1828,6 @@ export default PrivacyPage;
                       <p className="text-gray-300 leading-relaxed">
                         Your continued use of our services after such changes constitutes acceptance of 
                         the updated policy. We encourage you to review this policy periodically.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       </p>
                     </div>
                   </div>
@@ -2146,21 +1835,16 @@ export default PrivacyPage;
               </motion.div>
             </div>
           </section>
-
           {/* Contact Information */}
-<<<<<<< HEAD
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-4xl mx-auto text-center'>
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<<<<<<< HEAD
                 <h2 className='text-4xl font-bold mb-6 text-white'>
                   Questions About Privacy?
                 </h2>
@@ -2181,7 +1865,6 @@ export default PrivacyPage;
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
                     <User className='w-5 h-5' />
-=======
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
                 </h2>
@@ -2202,7 +1885,6 @@ export default PrivacyPage;
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
                   >
                     <User className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     Contact Form
                   </a>
                 </div>
@@ -2212,44 +1894,12 @@ export default PrivacyPage;
         </main>
       </Layout>
     </ErrorBoundary>
-<<<<<<< HEAD
   );
 };
 export default PrivacyPage;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   )
 };
-
 export default PrivacyPage;
-
- 
-<<<<<<< HEAD
-
-
-
-
- 
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
@@ -2283,13 +1933,3 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
- 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -7,7 +6,6 @@ import {
   Settings, X, Accessibility, Sun, Moon,
   Highlighter, TextCursor, AlignJustify
 } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -17,11 +15,9 @@ interface AccessibilitySettings {
   lineSpacing: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -37,14 +33,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
-  
   const focusRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
-
   // Apply accessibility settings to the document
   useEffect(() => {
     const root = document.documentElement;
-    
     // High contrast
     if (settings.highContrast) {
       root.style.setProperty('--text-color', '#ffffff');
@@ -55,27 +48,22 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.style.removeProperty('--bg-color');
       root.style.removeProperty('--accent-color');
     }
-
     // Large text
     if (settings.largeText) {
       root.style.fontSize = '18px';
     } else {
       root.style.fontSize = '16px';
     }
-
     // Reduced motion
     if (settings.reducedMotion) {
       root.style.setProperty('--reduced-motion', 'reduce');
     } else {
       root.style.removeProperty('--reduced-motion');
     }
-
     // Font size
     root.style.setProperty('--font-size', `${settings.fontSize}px`);
-    
     // Line spacing
     root.style.setProperty('--line-spacing', settings.lineSpacing.toString());
-
     // Color blind modes
     if (settings.colorBlindMode !== 'none') {
       const filters = {
@@ -88,7 +76,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.style.filter = 'none';
     }
   }, [settings]);
-
   // Handle click outside to close settings
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -96,34 +83,28 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         setIsOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
   // Text-to-speech functionality
   const speakText = (text: string) => {
     if ('speechSynthesis' in window) {
       // Stop any current speech
       window.speechSynthesis.cancel();
-      
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = speechRate;
       utterance.onstart = () => setIsReading(true);
       utterance.onend = () => setIsReading(false);
       utterance.onerror = () => setIsReading(false);
-      
       window.speechSynthesis.speak(utterance);
     }
   };
-
   const stopSpeaking = () => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
       setIsReading(false);
     }
   };
-
   // Screen reader mode
   const toggleScreenReader = () => {
     if (isReading) {
@@ -134,10 +115,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (mainContent) {
         const text = mainContent.textContent || '';
         speakText(text.substring(0, 500) + '...'); // Limit text length
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -150,25 +127,19 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
->>>>>>> main
       }
     }
   }, []);
-<<<<<<< HEAD
-
   // Keyboard navigation enhancements
   const handleKeyDown = useCallback((_e: any) => {
     // Tab navigation detected
   }, []);
-
   // Announce to screen reader
   const announceToScreenReader = useCallback((message: string) => {
     // setAnnouncements(prev => [...prev, message]); // This line was removed
-    
     // Create live region for screen readers
     if (!announcementRef.current) {
       const liveRegion = document.createElement('div');
@@ -178,34 +149,27 @@ const AccessibilityEnhancer: React.FC = () => {;
       document.body.appendChild(liveRegion);
       announcementRef.current = liveRegion;
     }
-    
     if (announcementRef.current) {
       announcementRef.current.textContent = message;
     }
-    
     // Remove announcement after a delay
     setTimeout(() => {
       // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
     }, 5000);
   }, []);
-
   // Auto-optimize accessibility
   useEffect(() => {
     applySettings(settings);
   }, [settings, applySettings]);
-
   // Keyboard navigation enhancement
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
-      
       // Skip if target is an input, textarea, or select
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') {
         return;
       }
-
       switch (e.key) {
         case 'Tab':
           // Enhanced tab navigation
@@ -218,7 +182,6 @@ const AccessibilityEnhancer: React.FC = () => {;
             e.preventDefault();
           }
           break;
-          
         case 'Enter':
         case ' ':
           // Enter/Space: activate buttons and links
@@ -227,7 +190,6 @@ const AccessibilityEnhancer: React.FC = () => {;
             e.preventDefault();
           }
           break;
-          
         case 'Escape': {
           // Escape: close modals and dropdowns
           const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
@@ -243,16 +205,13 @@ const AccessibilityEnhancer: React.FC = () => {;
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation]);
-
   // Focus management
   useEffect(() => {
     const handleFocusIn = (e: Event) => {
       const target = e.target as HTMLElement;
-      
       // Announce focus changes for screen readers
       if (settings.screenReader) {
         const label = target.getAttribute('aria-label') || 
@@ -262,14 +221,12 @@ const AccessibilityEnhancer: React.FC = () => {;
           announceToScreenReader(label);
         }
       }
-      
       // Enhanced focus indicators
       if (settings.focusIndicators) {
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px';
       }
     };
-
     const handleFocusOut = (e: Event) => {
       const target = e.target as HTMLElement;
       if (settings.focusIndicators) {
@@ -277,16 +234,13 @@ const AccessibilityEnhancer: React.FC = () => {;
         target.style.outlineOffset = '';
       }
     };
-
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-    
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.screenReader, settings.focusIndicators]);
-
   // Get all focusable elements
   const getFocusableElements = (): HTMLElement[] => {
     const focusableSelectors = [
@@ -300,33 +254,26 @@ const AccessibilityEnhancer: React.FC = () => {;
       '[role="tab"]',
       '[role="menuitem"]'
     ];
-    
     return Array.from(document.querySelectorAll(focusableSelectors.join(','))) as HTMLElement[];
   };
-
   // Highlighter mode
   const toggleHighlighter = () => {
     setSettings(prev => ({ ...prev, highlighter: !prev.highlighter }));
   };
-
   // Font size controls
   const increaseFontSize = () => {
     setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }));
   };
-
   const decreaseFontSize = () => {
     setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) }));
   };
-
   // Line spacing controls
   const increaseLineSpacing = () => {
     setSettings(prev => ({ ...prev, lineSpacing: Math.min(prev.lineSpacing + 0.1, 2.5) }));
   };
-
   const decreaseLineSpacing = () => {
     setSettings(prev => ({ ...prev, lineSpacing: Math.max(prev.lineSpacing - 0.1, 1.0) }));
   };
-
   // Reset all settings
   const resetSettings = () => {
     setSettings({
@@ -339,7 +286,6 @@ const AccessibilityEnhancer: React.FC = () => {;
       colorBlindMode: 'none'
     });
   };
-
   return (
     <>
       {/* Accessibility Floating Button */}
@@ -353,7 +299,6 @@ const AccessibilityEnhancer: React.FC = () => {;
       >
         <Accessibility className="w-6 h-6" />
       </motion.button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (
@@ -387,11 +332,9 @@ const AccessibilityEnhancer: React.FC = () => {;
                 </button>
               </div>
             </div>
-
             {/* Quick Actions */}
             <div className="p-4 space-y-3">
               {/* Screen Reader */}
-=======
   return null;
   };
   const changeFontSize = (newSize: string) => {;
@@ -416,14 +359,12 @@ const AccessibilityEnhancer: React.FC = () => {;
           <div className="text-xs text-gray-600 dark:text-gray-300">Font Size:</div>;
           <div className="flex gap-1">;
             {['small', 'normal', 'large', 'extra-large'].map((size) => (;
->>>>>>> main
               <button
                 key={size}
                 onClick={() => changeFontSize(size)}
                 className={`px-2 py-1 text-xs rounded ${;
                   fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
                 }`}
-<<<<<<< HEAD
                 aria-label={isReading ? 'Stop reading' : 'Start reading'}
               >
                 <span className="flex items-center space-x-2">
@@ -431,7 +372,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                   <span>{isReading ? 'Stop Reading' : 'Screen Reader'}</span>
                 </span>
               </button>
-
               {/* High Contrast Toggle */}
               <button
                 onClick={() => setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
@@ -450,7 +390,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                   settings.highContrast ? 'bg-yellow-400 border-yellow-400' : 'border-gray-500'
                 }`} />
               </button>
-
               {/* Large Text Toggle */}
               <button
                 onClick={() => setSettings(prev => ({ ...prev, largeText: !prev.largeText }))}
@@ -469,7 +408,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                   settings.largeText ? 'bg-blue-400 border-blue-400' : 'border-gray-500'
                 }`} />
               </button>
-
               {/* Reduced Motion Toggle */}
               <button
                 onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
@@ -489,7 +427,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                 }`} />
               </button>
             </div>
-
             {/* Settings Panel */}
             <AnimatePresence>
               {isOpen && (
@@ -522,7 +459,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                         </button>
                       </div>
                     </div>
-
                     {/* Line Spacing Controls */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-white">Line Spacing</h4>
@@ -544,7 +480,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                         </button>
                       </div>
                     </div>
-
                     {/* Color Blind Mode */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-white">Color Blind Mode</h4>
@@ -559,7 +494,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                         <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                       </select>
                     </div>
-
                     {/* Speech Rate */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-white">Speech Rate</h4>
@@ -577,7 +511,6 @@ const AccessibilityEnhancer: React.FC = () => {;
                         {speechRate.toFixed(1)}x
                       </div>
                     </div>
-
                     {/* Reset Button */}
                     <button
                       onClick={resetSettings}
@@ -593,13 +526,11 @@ const AccessibilityEnhancer: React.FC = () => {;
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Render children with accessibility enhancements */}
       {children}
     </>
   );
 };
-
 // Skip Link Component
 export const SkipLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
   <a
@@ -609,15 +540,12 @@ export const SkipLink: React.FC<{ href: string; children: React.ReactNode }> = (
     {children}
   </a>
 );
-
 // Screen Reader Only Text
 export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <span className="sr-only">{children}</span>
 );
-
 // Export the main provider component as default
 export default AccessibilityProvider;
-=======
                 aria-label={`Set font size to ${size}`}
               >;
                 {size && size.charAt(0).toUpperCase()}
@@ -626,6 +554,3 @@ export default AccessibilityProvider;
           </div>;
         </div>;
       </div>;
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> main

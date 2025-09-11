@@ -1,21 +1,11 @@
-
 import React from 'react',
 import React from 'react';
-=======
-
 import React from 'react';
-
-=======
 import React from 'react',
 import React from 'react';
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
   ArrowRight,
   Zap,
   Brain,
@@ -35,10 +25,6 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 const contactInfo = {
@@ -93,7 +79,6 @@ export default function UltraFuturisticHero2030() {
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star };
 ];
 export default function UltraFuturisticHero2030() {
-
   };
   {;
     icon: Rocket,;
@@ -116,15 +101,9 @@ export default function UltraFuturisticHero2030() {
     description: 'Unbreakable encryption with quantum key distribution',;
   },];    description: 'Unbreakable encryption with quantum key distribution';
   }
-=======];
-
-
-
-
+];
         <motion.div
-
           >
-<<<<<<< HEAD
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">
@@ -132,7 +111,6 @@ export default function UltraFuturisticHero2030() {
               </span>
             </div>
           </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,7 +129,6 @@ export default function UltraFuturisticHero2030() {
               is Here
             </span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -160,13 +137,9 @@ export default function UltraFuturisticHero2030() {
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
             and quantum computing to space mining and DNA computing, we're building the future today.
-=======
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
->>>>>>> main
           </motion.p>
         </motion.div>
-
-
             <span className="text-emerald-400 font-semibold">Space Technology</span>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -180,24 +153,9 @@ export default function UltraFuturisticHero2030() {
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.;
           </motion && motion.p>;
         </motion && motion.div>;
-
-
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
-
-
         >
-=======
-
-
-        >>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <Link
+        >          <Link
             href='/contact'
-
             className='group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25'>;
             <span className='relative z-10 flex items-center'>;
               Get Started Today;
@@ -205,8 +163,6 @@ export default function UltraFuturisticHero2030() {
             </span>;
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
           </Link>;
-
-
         >
           <Link
             href='/contact'
@@ -218,18 +174,11 @@ export default function UltraFuturisticHero2030() {
             </span>
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
           </Link>
-==============
           transition={{ duration: 0.8, delay: 1.0 }}
           className='flex flex-col sm:flex-row items-center justify-center gap-6 mb-16'
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
             href='/contact'
-
             className='group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25'>;
             <span className='relative z-10 flex items-center'>;
               Get Started Today;
@@ -237,37 +186,24 @@ export default function UltraFuturisticHero2030() {
             </span>;
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
           </Link>;
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Link
             href='/services'
             className='group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
             <span className='flex items-center'>;
               Explore Services;
               <Play className='ml-2 w-5 h-5 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />            </span>        >;
-==============
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{ duration: 0.8, delay: 1.0 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
         >
-
           transition={{ duration: 0.8, delay: 1.0 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
         >
           <Link
             href="/contact"
-=======          <Link
-            href="/contact"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
           <Link
             href="/contact"
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          <Link
+            href="/contact"
             className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25">;
             <span className="relative z-10 flex items-center">;
               Get Started Today;
@@ -283,9 +219,6 @@ export default function UltraFuturisticHero2030() {
             </span>;
           </Link>;
         </motion && motion.div>;
-
-
-=======
           <Link
             href="/services"
             className="group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -296,12 +229,6 @@ export default function UltraFuturisticHero2030() {
             </span>
           </Link>
         </motion.div>
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-=======
-
-
-
         >
           {features.map((feature, index) => (
             <motion.div
@@ -522,39 +449,23 @@ function UltraFuturisticHero2030() {
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 16'        >          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 16";
         >;
           {features.map ((feature, index) => (
-            <motion.div;=======
-              key={index}
+            <motion.div;              key={index}
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
-=======
-
-=======              className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10'
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10'
         </motion && motion.div>;
-
-
-=======
           ))}
         </motion.div>
-
           ))}
         </motion.div>
-
-
-
           ))}
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-=======          transition={{ duration: 0.8, delay: 1.6 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >
         >
@@ -588,8 +499,7 @@ function UltraFuturisticHero2030() {
               key={index}
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-==============              transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
-
+              transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-purple-400" />
@@ -597,16 +507,10 @@ function UltraFuturisticHero2030() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
-
-=======
           ))}
         </motion.div>
-
           ))}
         </motion.div>
-
-
-
                 href={contactInfo.website}
                 className='text-white font-semibold hover:text-emerald-400 transition-colors'
               >                {contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">
@@ -648,5 +552,3 @@ function UltraFuturisticHero2030() {
       </div>
             scale: [1, 2, 1],
             opacity: [0 && 0.5, 1, 0 && 0.5],
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

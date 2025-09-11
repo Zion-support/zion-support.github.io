@@ -10,18 +10,14 @@ export default /**
  */
 function RootLayout() {
   return (
-
 import "./globals.css";
 import type { ReactNode } from "react";
-<<<<<<< HEAD
 import Link from "next/link";
-
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems.",
   keywords: "AI, digital economy, blockchain, DAO, marketplace, Zion, autonomous systems",
 };
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -42,7 +38,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </div>
                 <a href="/" className="text-xl font-bold gradient-text">Zion OS</a>
               </div>
-
               {/* Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
                 <a href="/" className="text-white/80 hover:text-white transition-colors duration-200 font-medium">
@@ -58,7 +53,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   Instances
                 </a>
               </div>
-
               {/* Mobile menu button */}
               <div className="md:hidden">
                 <button className="text-white/80 hover:text-white p-2">
@@ -70,14 +64,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         </nav>
-
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="fade-in">
             {children}
           </div>
         </main>
-
         {/* Footer */}
         <footer className="mt-20 border-t border-white/10 glass">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -93,7 +85,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   Launch sovereign AI-powered digital economies with one click.
                 </p>
               </div>
-              
               <div>
                 <h3 className="text-white font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
@@ -102,7 +93,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <li><a href="/admin/os-deploy" className="text-white/60 hover:text-white transition-colors">OS Deployment</a></li>
                 </ul>
               </div>
-              
               <div>
                 <h3 className="text-white font-semibold mb-4">Support</h3>
                 <ul className="space-y-2 text-sm">
@@ -112,7 +102,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </ul>
               </div>
             </div>
-            
             <div className="mt-8 pt-8 border-t border-white/10 text-center">
               <p className="text-white/40 text-sm">
                 © 2024 Zion OS. All rights reserved.
@@ -123,7 +112,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </body>
     </html>
   );
-=======
 import { Metadata } from "next";
 export const metadata = {title: "Zion OS - Launch Sovereign AI-Powered Digital Economies";
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.";
@@ -207,5 +195,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {retur
         </footer>;
       </body>;
     </html>);
->>>>>>> main
 }

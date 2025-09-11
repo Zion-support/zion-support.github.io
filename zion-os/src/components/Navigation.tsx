@@ -1,25 +1,17 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
-
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -37,7 +29,6 @@ export function Navigation() {
               <span className="text-xl font-bold gradient-text">Zion OS</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a 
@@ -72,7 +63,6 @@ export function Navigation() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button 
@@ -116,7 +106,6 @@ export function Navigation() {
             </button>
           </div>
         </div>
-
         {/* Search Bar */}
         {isSearchOpen && (
           <div className="py-4 animate-fade-in">
@@ -133,7 +122,6 @@ export function Navigation() {
             </div>
           </div>
         )}
-
         {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -177,21 +165,14 @@ export function Navigation() {
       </div>
     </nav>
   );
-=======
 "use client",;
 import { useState, useEffect, useRef } from "react",;
 import Link from "next/link",;
 export function Navigation() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
   const [isSearchOpen, setIsSearchOpen] = useState(false),;
-
-
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
-
 ;
-
-=======
->>>>>>> main
 }
