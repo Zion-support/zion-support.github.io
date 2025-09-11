@@ -122,7 +122,7 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
 };
