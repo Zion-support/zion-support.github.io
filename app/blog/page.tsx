@@ -3,12 +3,44 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'LLM Cost Optimization Playbook: Cut Spend Without Losing Quality',
+    description:
+      'Reduce inference spend 20–50% with routing, retrieval, batching, and tight observability.',
+    href: '/blog/llm-cost-optimization-playbook',
+    date: '2025-09-11',
+    tags: ['LLM', 'Cost', 'Ops'],
+  },
+  {
+    title: 'AI Governance Checklist 2025: Operationalize Policy With Evals',
+    description:
+      'A concise, actionable checklist to stand up pragmatic AI governance that accelerates delivery.',
+    href: '/blog/ai-governance-checklist-2025',
+    date: '2025-09-11',
+    tags: ['AI', 'Governance', 'Risk'],
+  },
+  {
     title: 'AI Copilots for Engineering Teams',
     description:
       'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
     href: '/blog/ai-copilots-for-engineering',
     date: '2025-09-11',
     tags: ['AI', 'DevEx', 'Productivity'],
+  },
+  {
+    title: 'AI Governance Checklist 2025: Operationalize Policy With Evals',
+    description:
+      'A concise, actionable checklist to stand up pragmatic AI governance that accelerates delivery.',
+    href: '/blog/ai-governance-checklist-2025',
+    date: '2025-09-11',
+    tags: ['AI', 'Governance', 'Risk'],
+  },
+  {
+    title: 'Startup Fundraising in 2025: Efficient Rounds in a Tough Market',
+    description:
+      'Prove traction, run a tight process, and negotiate governance to raise efficiently.',
+    href: '/blog/startup-fundraising-in-2025',
+    date: '2025-09-11',
+    tags: ['Startup', 'Fundraising', 'Strategy'],
   },
   {
     title: 'GenAI Security in 2025: Practical Controls That Actually Work',
