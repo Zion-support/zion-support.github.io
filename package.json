@@ -99,11 +99,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
-    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
-    "@modelcontextprotocol/sdk": "^1.17.1",
-    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
-    "@modelcontextprotocol/server-memory": "^2025.8.4",
-    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@octokit/rest": "^22.0.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
