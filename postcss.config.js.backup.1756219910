@@ -1,7 +1,0 @@
-=======
-export default {
-	plugins: {
-		"tailwindcss": {},
-		autoprefixer: {},
-	},
-};>>>>>>> origin/backup-improvements-20250827-015311

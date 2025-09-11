@@ -1,17 +1,17 @@
 {
-  "timestamp": "2025-08-29T15:49:19.225Z",
+  "timestamp": "2025-08-29T17:56:45.918Z",
   "summary": {
     "totalVulnerabilities": 0,
     "criticalVulnerabilities": 0,
     "highVulnerabilities": 0,
     "outdatedPackages": 0,
-    "securityIssues": 8,
-    "potentialSecrets": 6
+    "securityIssues": 0,
+    "potentialSecrets": 5
   },
   "results": {
     "audit": {
-      "status": "success",
-      "vulnerabilities": {},
+      "status": "failure",
+      "vulnerabilities": [],
       "summary": {
         "total": 0,
         "low": 0,
@@ -27,72 +27,7 @@
     },
     "codeAnalysis": {
       "status": "success",
-      "issues": [
-        {
-          "type": "pattern",
-          "severity": 1,
-          "message": "innerHTML assignment detected",
-          "rule": "no-inner-html",
-          "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-          "line": 185
-        },
-        {
-          "type": "pattern",
-          "severity": 1,
-          "message": "innerHTML assignment detected",
-          "rule": "no-inner-html",
-          "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
-          "line": 260
-        },
-        {
-          "type": "pattern",
-          "severity": 2,
-          "message": "eval() usage detected",
-          "rule": "no-eval",
-          "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
-          "line": 459
-        },
-        {
-          "type": "pattern",
-          "severity": 1,
-          "message": "document.write() usage detected",
-          "rule": "no-document-write",
-          "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
-          "line": 398
-        },
-        {
-          "type": "pattern",
-          "severity": 2,
-          "message": "eval() usage detected",
-          "rule": "no-eval",
-          "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-          "line": 459
-        },
-        {
-          "type": "pattern",
-          "severity": 1,
-          "message": "document.write() usage detected",
-          "rule": "no-document-write",
-          "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-          "line": 398
-        },
-        {
-          "type": "pattern",
-          "severity": 1,
-          "message": "innerHTML assignment detected",
-          "rule": "no-inner-html",
-          "file": "/workspace/src/main.js.jsx",
-          "line": 48
-        },
-        {
-          "type": "pattern",
-          "severity": 1,
-          "message": "innerHTML assignment detected",
-          "rule": "no-inner-html",
-          "file": "/workspace/src/main.jsx",
-          "line": 70
-        }
-      ],
+      "issues": [],
       "summary": {
         "total": 0,
         "high": 0,
@@ -103,12 +38,6 @@
     "secrets": {
       "status": "success",
       "findings": [
-        {
-          "type": "Password",
-          "file": "/workspace/src/components/AdvancedCollaborationPlatform.jsx",
-          "line": 99,
-          "match": "password: 'Q4Review2024'..."
-        },
         {
           "type": "API Key",
           "file": "/workspace/src/pages/Documentation.tsx",
@@ -144,6 +73,18 @@
     "compliance": {
       "status": "success",
       "checks": [
+        {
+          "file": "index.html",
+          "csp": false,
+          "xFrame": false,
+          "xContent": false
+        },
+        {
+          "file": "offline.html",
+          "csp": false,
+          "xFrame": false,
+          "xContent": false
+        },
         {
           "type": "package-scripts",
           "hasSecurityScript": false,
