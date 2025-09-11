@@ -59,9 +59,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ pageName, customEve
 
     // Core Web Vitals tracking
     const trackCoreWebVitals = () => {
-      if (typeof window !== 'undefined' && 'web-vital' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => {
+      if (typeof window !== 'undefined') {
+        import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+          onCLS((metric) => {
             if (window.gtag) {
               window.gtag('event', 'web_vital', {
                 name: 'CLS',
@@ -71,17 +71,17 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ pageName, customEve
             }
           });
 
-          getFID((metric) => {
+          onINP((metric) => {
             if (window.gtag) {
               window.gtag('event', 'web_vital', {
-                name: 'FID',
+                name: 'INP',
                 value: Math.round(metric.value),
                 page_name: pageName
               });
             }
           });
 
-          getFCP((metric) => {
+          onFCP((metric) => {
             if (window.gtag) {
               window.gtag('event', 'web_vital', {
                 name: 'FCP',
@@ -91,7 +91,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ pageName, customEve
             }
           });
 
-          getLCP((metric) => {
+          onLCP((metric) => {
             if (window.gtag) {
               window.gtag('event', 'web_vital', {
                 name: 'LCP',
@@ -101,7 +101,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ pageName, customEve
             }
           });
 
-          getTTFB((metric) => {
+          onTTFB((metric) => {
             if (window.gtag) {
               window.gtag('event', 'web_vital', {
                 name: 'TTFB',
@@ -110,6 +110,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ pageName, customEve
               });
             }
           });
+        }).catch(() => {
+          // Silently fail if web-vitals is not available
         });
       }
     };
