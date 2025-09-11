@@ -1,11 +1,8 @@
 "use client";
-<<<<<<< HEAD
-
 interface LoadingSpinnerProps {
   size?: "sm" | "md" | "lg";
   color?: "primary" | "white" | "blue" | "purple";
   text?: string;
-=======
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
 }
@@ -25,7 +22,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     medium: "w-8 h-8",;
     large: "w-12 h-12";
   };
-
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
   return (;
@@ -37,7 +33,6 @@ interface LoadingSpinnerProps {
 "use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
->>>>>>> main
 }
 export /**
  * LoadingSpinner - Function description
@@ -60,15 +55,12 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     medium: "w-8 h-8",;
     large: "w-12 h-12";
   };
-<<<<<<< HEAD
-
   const colorClasses = {
     primary: "text-blue-500",
     white: "text-white",
     blue: "text-blue-500",
     purple: "text-purple-500"
   };
-
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
@@ -94,7 +86,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     </div>
   );
 }
-
 export function LoadingDots({ text }: { text?: string }) {
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
@@ -109,7 +100,6 @@ export function LoadingDots({ text }: { text?: string }) {
     </div>
   );
 }
-
 export function LoadingBar({ progress = 0, text }: { progress?: number; text?: string }) {
   return (
     <div className="w-full max-w-md space-y-4">
@@ -127,7 +117,6 @@ export function LoadingBar({ progress = 0, text }: { progress?: number; text?: s
       </div>
     </div>
   );
-=======
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
       <svg;
@@ -153,5 +142,4 @@ export function LoadingBar({ progress = 0, text }: { progress?: number; text?: s
       </svg>;
       <span className="sr - only">Loading...</span>;
     </div>);
->>>>>>> main
 }

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 export default function InstancesPage() {
   return (
     <div className="space-y-8">
@@ -11,7 +9,6 @@ export default function InstancesPage() {
           Monitor and manage your deployed digital economy instances
         </p>
       </div>
-
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="card text-center">
@@ -37,7 +34,6 @@ export default function InstancesPage() {
           <div className="text-white/60 text-sm">Total Deployments</div>
         </div>
       </div>
-
       {/* Instances Grid */}
       {instances.length === 0 ? (
         <div className="card text-center py-12">
@@ -79,32 +75,27 @@ export default function InstancesPage() {
                   <span className="text-white font-bold text-xs">Z</span>
                 </div>
               </div>
-
               {/* Instance Details */}
               <div className="space-y-3 mb-4">
                 <div className="flex items-center space-x-2 text-sm text-white/70">
                   <span>🌐</span>
                   <span>{inst.domain || inst.subdomain || inst.slug}</span>
                 </div>
-                
                 <div className="flex items-center space-x-2 text-sm text-white/70">
                   <span>🏛️</span>
                   <span>Governance: {inst.governanceType}</span>
                 </div>
-                
                 {inst.region && (
                   <div className="flex items-center space-x-2 text-sm text-white/70">
                     <span>📍</span>
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>
                   </div>
                 )}
-                
                 <div className="flex items-center space-x-2 text-sm text-white/70">
                   <span>💎</span>
                   <span>Token: {inst.tokenSystem}</span>
                 </div>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div className="text-center p-3 rounded-lg bg-white/5">
@@ -116,7 +107,6 @@ export default function InstancesPage() {
                   <div className="text-xs text-white/60">Features</div>
                 </div>
               </div>
-
               {/* Actions */}
               <div className="flex space-x-2">
                 <a 
@@ -132,7 +122,6 @@ export default function InstancesPage() {
                   Deployments
                 </a>
               </div>
-
               {/* Created Date */}
               <div className="text-xs text-white/40 mt-3 pt-3 border-t border-white/10">
                 Created: {new Date(inst.createdAt).toLocaleDateString()}
@@ -141,7 +130,6 @@ export default function InstancesPage() {
           ))}
         </div>
       )}
-
       {/* Quick Actions */}
       <div className="card text-center py-8">
         <h2 className="text-2xl font-semibold mb-4">Quick Actions</h2>
@@ -157,7 +145,6 @@ export default function InstancesPage() {
     </div>
   );
 }
-
 function getGovernanceLabel(type: string) {
   switch (type) {
     case "ADMIN": return "Admin Control";
@@ -166,12 +153,8 @@ function getGovernanceLabel(type: string) {
     default: return type;
   }
 }
-
 function getTokenSystemLabel(type: string) {
   switch (type) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
 // import { prisma } from "@/lib/prisma",;
 interface InstanceWithCounts {;
   id: string,;
@@ -198,14 +181,10 @@ interface InstanceWithCounts {;
 export default function InstancesPage() {;
   const instances: any[] = [], // Temporary empty array;
   const error: string | null = null,;
-
-
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-
 ;
-
                     </span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
@@ -217,24 +196,15 @@ export default function InstancesPage() {;
                       <span className="w - 4 h - 4">📍</span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
 ;
-
-
                   <div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🔧</span>;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                       href={`/admin/instances/${inst.id}`} ;
-
-
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
-
                   href={`/admin/instances/${inst.id}/deployments`} ;
-
-
                   className="flex-1 btn-secondary text-center text-sm py-2";
-
 ;
-
-=======;
+;
 function getGovernanceLabel(type: string) {;
   switch (type) {;
     case "ADMIN": return "Admin Control",;
@@ -246,15 +216,9 @@ function getGovernanceLabel(type: string) {;
 ;
 function getTokenSystemLabel(type: string) {;
   switch (type) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> main
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;
   }
-<<<<<<< HEAD
-=======
 }
->>>>>>> main
 }

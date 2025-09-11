@@ -36,7 +36,6 @@ class ErrorBoundary extends Component<Props, State> {;
         return this && this.props.fallback;
       }
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +53,6 @@ class ErrorBoundary extends Component<Props, State> {;
                 </div>
               </div>
             </div>
-
             {/* Content */}
             <div className="p-6 space-y-6">
               {/* Error Details */}
@@ -73,7 +71,6 @@ class ErrorBoundary extends Component<Props, State> {;
                   </div>
                 </div>
               </div>
-
               {/* Actions */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <button
@@ -83,7 +80,6 @@ class ErrorBoundary extends Component<Props, State> {;
                   <RefreshCw className="w-4 h-4" />
                   Try Again
                 </button>
-                
                 <button
                   onClick={this.handleGoBack}
                   className="flex items-center justify-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
@@ -91,7 +87,6 @@ class ErrorBoundary extends Component<Props, State> {;
                   <ArrowLeft className="w-4 h-4" />
                   Go Back
                 </button>
-                
                 <button
                   onClick={this.handleGoHome}
                   className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
@@ -99,7 +94,6 @@ class ErrorBoundary extends Component<Props, State> {;
                   <Home className="w-4 h-4" />
                   Go Home
                 </button>
-                
                 <button
                   onClick={this.handleReportError}
                   className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
@@ -108,7 +102,6 @@ class ErrorBoundary extends Component<Props, State> {;
                   Report Error
                 </button>
               </div>
-
               {/* Contact Support */}
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
                 <div className="flex items-start gap-3">
@@ -139,7 +132,6 @@ class ErrorBoundary extends Component<Props, State> {;
                   </div>
                 </div>
               </div>
-
               {/* Technical Details (Collapsible) */}
               {process.env.NODE_ENV === 'development' && (
                 <details className="bg-gray-50 dark:bg-gray-700 rounded-lg">
@@ -167,13 +159,10 @@ class ErrorBoundary extends Component<Props, State> {;
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;
-=======
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">;
             <div className="flex justify-center mb-4">;
@@ -201,4 +190,3 @@ export default ErrorBoundary;
                 </pre>;
               </details>;
             )}
->>>>>>> main

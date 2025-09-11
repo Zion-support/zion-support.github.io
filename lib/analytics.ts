@@ -1,4 +1,4 @@
-  if (typeof window !== 'undefined' && window && window.gtag) {
+if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('config', 'GA_MEASUREMENT_ID', {
 // Analytics utilities;
 export const track_event = (event: string, data?: any) =>: any {
@@ -11,11 +11,9 @@ if ( {) {
 }
     });
   }
-
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('config', GA_TRACKING_ID, {
       page_path: url,
-
     });
   }
       page_path: url,
@@ -38,19 +36,14 @@ export const trackPageView = (url: string) => {
     });
   }
 }
-      page_path: url,=======
-      page_path: url,;
-
+      page_path: url,      page_path: url,;
       page_path: url,
-
       page_path: url,;
       page_path: url,
     });
   }
 }
-
       page_path: url,;
-
       page_path: url,
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {;
@@ -70,7 +63,6 @@ export const trackEvent = (
   eventName: string,
   properties?: Record<string, string | number | boolean>
 ) => {
-
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
 }
@@ -119,8 +111,6 @@ interface WebVitalMetric {
   value: number;
   id: string;
 }
-
-
 }
 ;
 // Track events;
@@ -134,7 +124,6 @@ export const event = ({
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,;
-
     });
   }
 }
@@ -178,7 +167,6 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
       non_interaction: true;,
 })}
 }
-
     gtag: (...args: unknown[]) => void, dataLayer: unknown[],
   }
 }
@@ -208,56 +196,45 @@ if ( {) {
     }
   }
   return null;
-
 }
 ;
-
 interface WebVitalMetric {
   name: string;
   value: number;
   id: string;
 }
-
-
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,
     });
   }
-
 }
 ;
 // Track events;
-
 export const event = ({
   action
   category
   label
   value
 }: {
-
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,;
-
     });
   }
 }
 // Track events
 export const event = ({
-
   action,
   category,
   label,
   value,
 }: {;
-
   action: string;
   category: string;
   label?: string;
   value?: number;
-
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', action, {
 }) =>: any {
@@ -266,13 +243,11 @@ if ( {) {
   $2
 }
     window.gtag ('event', action, {
-
       event_category: category,
       event_label: label,
       value: value,
     });
   }
-
 }
 ;
 export const measure_performance = () =>: any {
@@ -285,9 +260,7 @@ if ( {') {
 ;
     return {
       load_time: navigation.loadEventEnd - navigation.loadEventStart;
-
       domContentLoaded:;
-
         navigation && navigation.domContentLoadedEventEnd -;
         navigation && navigation.domContentLoadedEventStart,;
       firstPaint:;
@@ -297,15 +270,10 @@ if ( {') {
         0;,
 }}
   return null};
-
-
 // Web Vitals tracking;
 interface WebVitalMetric {name: string;
   value: number;
   id: string}
-
-<<<<<<< HEAD
-
 export const trackWebVitals = (metric: WebVitalMetric) => {;
   if (typeof window !== 'undefined' && window && window.gtag) {';
     window && window.gtag('event', metric && metric.name, {';
@@ -313,17 +281,13 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
       event_category: 'Web Vitals',';
       event_label: metric && metric.id;
       non_interaction: true;,
-
 })}
-=======
 // Declare global types
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
     dataLayer: any[];
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
     gtag: (...args: unknown[]) => void, dataLayer: unknown[],
   }
@@ -335,8 +299,6 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 // Declare global types
-=======
-<<<<<<< HEAD
         navigation.domContentLoadedEventStart,
       first_paint:;
         performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
@@ -365,26 +327,11 @@ if ( {') {
 }
 ;
 // Declare global types;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface Window {
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
   }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 }
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-
-
 import React from "react";
 import Layout from "../components/Layout";
-=======
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../components/Layout';
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
   Brain,
   Shield,
   Users,
@@ -34,21 +26,11 @@ import {
   Lock,
   TrendingUp;
 } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-=======
 import React from 'react';
-
-=======
-
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -56,9 +38,6 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
-
-
-
     },
     {
       icon: Shield,
@@ -68,7 +47,6 @@ const AboutPage: React.FC = () => {
     },
     {
       icon: Users,
-
       title: "Human-Centric",
       description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.",
       color: "from-blue-500 to-cyan-500"
@@ -84,15 +62,12 @@ const AboutPage: React.FC = () => {
       title: "Excellence",
       description: "Maintaining the highest standards of quality and performance in everything we deliver.",
       color: "from-indigo-500 to-purple-500"
-
     },
     {
       icon: Heart,
       title: "Integrity",
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
-
-
     };
     {
       icon: Shield,
@@ -130,94 +105,59 @@ const AboutPage: React.FC = () => {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
-
-
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-
-
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],
-
-
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
-
-
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
       color: 'from-purple-500 to-pink-500'
     },
-
-
     {
       icon: Shield,
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
-
-
     },
-
-
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
-
-
       color: 'from-indigo-500 to-purple-500'
     },
-
-
     {
       icon: Users,
       title: 'Client Success',
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
-
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],
-
-
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
     { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-
-=======
-
-
-=======
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -240,7 +180,6 @@ export default function AboutPage() {
       color: 'from-purple-500 to-pink-500'
     },
     {
-<<<<<<< HEAD
       name: 'Quantum Team',
       role: 'Quantum Computing',
       description: 'Specialists in quantum algorithms and quantum-resistant cryptography',
@@ -345,25 +284,16 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-=======
       name: "Mike Chen",
       role: "Lead Developer",
       image: "/team/mike.jpg",
       bio: "Full-stack developer passionate about innovation"
     }
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> origin/main
-
 export default function About() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
     <Layout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
@@ -382,27 +312,17 @@ export default function About() {
           <div className="text-center">
             <p className="text-gray-600">About page is under construction.</p>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         </div>
       </div>
     </>
   )
 },
 export default AboutPage,
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
-=======
 export default function About() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
 			{/* Mission & Vision */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -446,11 +366,8 @@ export default function About() {;
 					</div>
 				</div>
 			</section>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="About Us - Zion Tech Group"
-
 			{/* Team */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -491,7 +408,6 @@ export default function About() {;
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-blue-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -520,22 +436,12 @@ export default function About() {;
 		</>
 	)
 }
-<<<<<<< HEAD
-
-=======
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts delivering cutting-edge technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
@@ -559,7 +465,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -575,7 +480,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -607,7 +511,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-blue-900">
           <div className="container mx-auto px-4">
@@ -636,7 +539,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -673,7 +575,6 @@ export default function About() {;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
           <div className="container mx-auto px-4">
@@ -698,9 +599,6 @@ export default function About() {;
       </div>
     </>
   );
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -729,7 +627,6 @@ export default function About() {;
       color: 'from-red-500 to-orange-500'
     }
   ];
-
   const milestones = [
     {
       year: '2020',
@@ -762,7 +659,6 @@ export default function About() {;
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
     }
   ];
-
 import React from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
@@ -774,14 +670,12 @@ export default function AboutPage() {
         <meta name="description" content="About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators." />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">About Zion Tech Group</h1>
             <p className="text-gray-300 text-lg">We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>
           </header>
-
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <div className="text-sm text-gray-400 mb-2">What we do</div>
@@ -796,7 +690,6 @@ export default function AboutPage() {
               <div className="text-gray-200">Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>
             </div>
           </section>
-
           <section className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <h2 className="text-2xl font-semibold mb-3">Contact</h2>
@@ -820,25 +713,8 @@ export default function AboutPage() {
       </div>
     </>
   )
-
-
-
 };
-
 export default AboutPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -869,9 +745,3 @@ function About() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

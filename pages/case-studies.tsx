@@ -1,5 +1,3 @@
-
-
 export default function CaseStudies() {
 	const caseStudies = [
 		{
@@ -71,32 +69,11 @@ export default function CaseStudies() {
 			rating: 5
 		}
 	]
-
 import React from 'react';
-<<<<<<< HEAD
-
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import MainLayout from '../src/components/layout/MainLayout';
-=======
 import MainLayout from '../src / components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
-
-
   ArrowRight,
   Phone,
   Mail,
@@ -111,8 +88,6 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
-
-
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -174,7 +149,6 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-=======
 import {;
   ArrowRight,;
   Phone,;
@@ -191,7 +165,6 @@ import {;
   Cloud,;
   Shield;
 } from 'lucide-react';
-
 const caseStudies = [;
   {;
     id: 1,;
@@ -248,32 +221,25 @@ const caseStudies = [;
     image: "/images/case-studies/healthcare-security && security.jpg";
   }
 ];
-
 const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "50+", label: "Happy Clients" },;
   { number: "99 && 99.9%", label: "Success Rate" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { number: "24/7", label: "Support Available" }
 ];
-
-
         <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
-
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Success{' '}
-
                 <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">;
                   Stories;
                 </span>;
@@ -285,8 +251,6 @@ const stats = [;
             </motion && motion.div>;
           </div>;
         </section>;
-
-
         {/* Stats Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -305,12 +269,9 @@ const stats = [;
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-
             </div>;
           </div>;
         </section>;
-
-
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -318,7 +279,6 @@ const stats = [;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
   ArrowRight,
   Phone,
   Mail,
@@ -478,7 +438,6 @@ function CaseStudiesPage() {
               <div className="space - y-16">;
                 {case_studies.map ((study, index) => (
                   <motion.div;
-
                     key={study.id}
                     className="bg - white rounded - lg shadow - lg overflow - hidden";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -491,7 +450,6 @@ function CaseStudiesPage() {
                         <div className="flex items - center mb - 4">;
                           <span className="bg - green - 100 text - green - 800 px - 3 py - 1 rounded - full text - sm font - semibold mr - 4">;
                             {study.industry}
-
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -502,7 +460,6 @@ function CaseStudiesPage() {
                 different industries achieve their technology goals.;
               </p>;
             </motion && motion.div>;
-
             <div className="max-w-6xl mx-auto">;
               <div className="space-y-16">;
                 {caseStudies && caseStudies.map((study, index) => (;
@@ -521,14 +478,12 @@ function CaseStudiesPage() {
                           </span>;
                           <span className="text-gray-500 text-sm">{study && study.duration}</span>;
                         </div>;
-
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                           {study && study.title}
                         </h3>;
                         <p className="text-gray-600 mb-6">;
                           <strong>Client:</strong> {study && study.client}
                         </p>;
-
                         <div className="space-y-4 mb-6">;
                           <div>;
                             <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>;
@@ -539,31 +494,24 @@ function CaseStudiesPage() {
                             <p className="text-gray-600">{study && study.solution}</p>;
                           </div>;
                         </div>;
-
                         <div className="mb-6">;
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>;
                           <ul className="space-y-2">;
                             {study && study.results.map((result, idx) => (;
                               <li key={idx} className="flex items-center text-gray-600">;
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-
                                 {result}
                               </li>;
                             ))}
-
                           </ul>;
                         </div>;
-
                         <div className="flex flex-wrap gap-2 mb-6">;
                           {study && study.technologies.map((tech, idx) => (;
                             <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">;
-
                               {tech}
                             </span>;
                           ))}
-
                         </div>;
-
                         <div className="flex items-center justify-between">;
                           <div className="flex items-center text-sm text-gray-600">;
                             <Users className="w-4 h-4 mr-2" />;
@@ -577,13 +525,11 @@ function CaseStudiesPage() {
                           </a>;
                         </div>;
                       </div>;
-
                       <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">;
                         <div className="text-center text-white">;
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
                           <h4 className="text-xl font-semibold mb-2">Project Overview</h4>;
                           <p className="text-green-100">;
-=======
                           </span>;
                           <span className="text - gray - 500 text - sm">{study.duration}</span>;
                         </div>;
@@ -638,20 +584,16 @@ function CaseStudiesPage() {
                           <Building className="w - 16 h - 16 mx - auto mb - 4 opacity - 80" />;
                           <h4 className="text - xl font - semibold mb - 2">Project Overview</h4>;
                           <p className="text - green - 100">;
-
                             A comprehensive solution that transformed our client's business operations;
                           </p>;
                         </div>;
                       </div>;
                     </div>;
-
                   </motion.div>))}
-
               </div>;
             </div>;
           </div>;
         </section>;
-
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -662,7 +604,6 @@ function CaseStudiesPage() {
                 Contact us today to discuss your project.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
@@ -670,8 +611,6 @@ function CaseStudiesPage() {
                 </a>;
                 <a
                   href="/services"
-<<<<<<< HEAD
-
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
                   Explore Our Services;
                 </a>;
@@ -681,13 +620,9 @@ function CaseStudiesPage() {
         </section>;
       </div>;
     </MainLayout>;
-
   );
 }
-=======
-=======
 import Head from 'next/head';
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
                 >
                   Explore Our Services
@@ -698,21 +633,12 @@ import Head from 'next/head';
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
-=======
   );
->>>>>>> origin/main
-<<<<<<< HEAD
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-
 export default function CaseStudiesPage() {;
-
   return (
     <Layout>;
       <Head>;
@@ -721,8 +647,6 @@ export default function CaseStudiesPage() {;
         <meta
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
-<<<<<<< HEAD
-=======
         />
       </Head>
       <section className='container mx-auto px-4 py-24'>
@@ -734,34 +658,13 @@ export default function CaseStudiesPage() {;
         </p>
       </section>
     </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-
->>>>>>> origin/automation-improvements-final
-=======
-
-=======
 import Head from 'next/head';
-
-
-=======
-=======
-=======
 import Head from 'next/head';
-
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
  </Head> </section> </Layout>
-=======
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	return (
 		<>
 			{/* Hero Section */}
@@ -777,7 +680,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* Industry Filter */}
 			<section className="py-12 border-b border-gray-200">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -793,7 +695,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* Featured Case Study */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -844,7 +745,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* Case Studies Grid */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -891,7 +791,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* Success Metrics */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -921,7 +820,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* Process */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -971,7 +869,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-blue-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -999,7 +896,6 @@ export default function CaseStudiesPage() {
 			</section>
 		</>
 	)
-
         />;
       </Head>;
       <section className='container mx-auto px-4 py-24'>;
@@ -1012,7 +908,6 @@ export default function CaseStudiesPage() {
       </section>;
     </Layout>;
   );
-
  </Head> </section> </Layout> ;
 	return (
 		<Layout>;
@@ -1028,11 +923,6 @@ export default function CaseStudiesPage() {
 		</Layout>;
 	);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -1111,15 +1001,3 @@ return (
   </section>;
   </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,60 +1,42 @@
-<<<<<<< HEAD
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-
-=======
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
-
 import {;
   Mail,;
   Lock,;
@@ -231,18 +213,9 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
-
 } from "lucide-react";
-=======
   DizzyFace2
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
   Mail
   Lock
   Eye
@@ -419,8 +392,6 @@ import {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-=======
->>>>>>> origin/main
 import {
   Mail,
   Lock,
@@ -596,20 +567,13 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-<<<<<<< HEAD
   DizzyFace2
 } from 'lucide-react';
-=======
   DizzyFace2,
 } from "lucide-react";
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-
 } from './lucide-react';
 ;
 export default /**
@@ -627,113 +591,69 @@ function LoginPage() {
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const { name, value } = e.target;
     setFormData ((prev) => ({
-
       ...prev,
       [name]: value,
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const [error, setError] = useState('');
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
       ...prev
       [name]: value
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   })
-
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
-
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
   const [error, setError] = useState("");
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     }));
   }
-
   const validateForm = () => {
     const newErrors: Record<string, string> = {}
-
     if (!formData.email.trim()) newErrors.email = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    
     if (!formData.password) newErrors.password = 'Password is required'
-
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-=======
-
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: value,;
     }));
-
-
     try {;
       // Simulate API call;
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
       // For demo purposes, accept any email/password;
       if (formData && formData.email && formData && formData.password) {;
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
-
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-
-=======
     setIsLoading(true);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     setError('');
-
     setIsSubmitting(true)
-    
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
@@ -743,18 +663,7 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-<<<<<<< HEAD
-=======
-=======
     setError("");
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
-=======
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
@@ -764,39 +673,23 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError("Login failed. Please try again.");
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
     } finally {
       setIsSubmitting(false)
     }
   }
-
   const title = 'Sign In — Zion Tech Group'
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
-
   return (
-<<<<<<< HEAD
-=======
     <Layout>
       <Head>
         <title>Login - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
-=======
         <meta
           name="description"
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
->>>>>>> origin/main
       </Head>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -813,8 +706,6 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-<<<<<<< HEAD
-
     <Layout>;
       <Head>;
         <title>Login - Zion Tech Group</title>;
@@ -823,7 +714,6 @@ export default function LoginPage() {
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-md w-full space-y-8">;
           <motion&& motion.div
@@ -838,33 +728,18 @@ export default function LoginPage() {
               Sign in to your account;
             </h2>;
             <p className="mt-2 text-sm text-gray-600">;
-
               Or{" "}
-=======
               Or{' '}
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
               Or{' '}
-=======
               Or{" "}
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/contact"
-
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
-
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -880,36 +755,20 @@ export default function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
-
-<<<<<<< HEAD
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
-=======
-
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               <div>
-<<<<<<< HEAD
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-=======
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
-=======
-
               <div>;
                 <label
                   htmlFor="email"
@@ -920,7 +779,6 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="email"
                     name="email"
@@ -931,36 +789,22 @@ export default function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-
-<<<<<<< HEAD
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               <div>
-<<<<<<< HEAD
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-=======
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   Password
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-=======
                   />;
                 </div>;
               </div>;
-
               <div>;
                 <label
                   htmlFor="password"
@@ -971,7 +815,6 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Lock className="h-5 w-5 text-gray-400" />;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="password"
                     name="password"
@@ -994,38 +837,23 @@ export default function LoginPage() {
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
                   </div>
-
                   </button>;
                 </div>;
               </div>;
-
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
-
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-<<<<<<< HEAD
-
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   />
-<<<<<<< HEAD
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-=======
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900"
                   >
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                     Remember me
                   </label>
                 </div>
@@ -1039,7 +867,6 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-=======
                   />;
                   <label
                     htmlFor="remember-me"
@@ -1047,7 +874,6 @@ export default function LoginPage() {
                     Remember me;
                   </label>;
                 </div>;
-
                   <div className="mt-6 grid grid-cols-2 gap-3">
                     <button className="w-full inline-flex justify-center py-3 px-4 border border-zion-blue-light rounded-lg shadow-sm bg-zion-blue-light/20 text-sm font-medium text-zion-slate-light hover:bg-zion-blue-light/30 transition-colors">
                       <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -1058,35 +884,22 @@ export default function LoginPage() {
                       </svg>
                       <span className="ml-2">Google</span>
                     </button>
-
-<<<<<<< HEAD
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             <div className="mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-<<<<<<< HEAD
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
-=======
                   <span className="px-2 bg-white text-gray-500">
                     Or continue with
                   </span>
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1103,7 +916,6 @@ export default function LoginPage() {
                 Manage your AI autonomous systems, monitor cloud infrastructure, and control cybersecurity platforms
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1119,7 +931,6 @@ export default function LoginPage() {
                   Monitor threat detection, access controls, and security compliance in real-time
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1134,7 +945,6 @@ export default function LoginPage() {
                   Control autonomous AI systems, monitor performance, and optimize machine learning models
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1158,12 +968,9 @@ export default function LoginPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-<<<<<<< HEAD
-
                 </button>;
               </div>;
             </form>;
-
             <div className="mt-6">;
               <div className="relative">;
                 <div className="absolute inset-0 flex items-center">;
@@ -1175,13 +982,11 @@ export default function LoginPage() {
                   </span>;
                 </div>;
               </div>;
-
               <div className="mt-6 grid grid-cols-2 gap-3">;
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
                   <Globe className="h-5 w-5" />;
                   <span className="ml-2">Google</span>;
                 </button>;
-
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
                   <User className="h-5 w-5" />;
                   <span className="ml-2">Microsoft</span>;
@@ -1189,29 +994,16 @@ export default function LoginPage() {
               </div>;
             </div>;
           </motion && motion.div>;
-
           <motion&& motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <p className="text-sm text-gray-600">;
-
               Don't have an account?{" "}
-=======
               Don't have an account?{' '}
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
               Don't have an account?{' '}
-=======
               Don't have an account?{" "}
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -1223,7 +1015,6 @@ export default function LoginPage() {
       </div>;
     </Layout>;
   );
-=======
               <div>;
                 <button;
                   type="submit";
@@ -1284,5 +1075,4 @@ export default function LoginPage() {
         </div>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

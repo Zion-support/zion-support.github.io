@@ -1,28 +1,14 @@
-
 import React from 'react';
-<<<<<<< HEAD
 import Card from '../ui/Card';
-=======
-
-
 import React from 'react',
 import React from 'react';import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
-
-
-
   title: string;
   description: string;
   color: string;
   gradient: string;
-
   delay?: number;
-
   columns?: 2 | 3 | 4;
-
-
-
-
 const Features: React.FC<FeaturesProps> = ({;
   title,;
   subtitle,;
@@ -34,7 +20,6 @@ const Features: React.FC<FeaturesProps> = ({;
     3: 'md:grid-cols-2 lg:grid-cols-3',;
     4: 'md:grid-cols-2 lg:grid-cols-4',;
   };
-
   return (
     <section className='py-24 bg-black relative overflow-hidden'>;
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
@@ -49,8 +34,6 @@ const Features: React.FC<FeaturesProps> = ({;
             {title}
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
->>>>>>> main
-
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -59,7 +42,6 @@ interface Feature {
   gradient: string,
   delay?: number
 }
-
 interface FeaturesProps {
   title: string,
   subtitle: string,
@@ -91,26 +73,17 @@ const Features: React.FC<FeaturesProps> = ({
             {subtitle}
           </p>;
         </div>;
-
-
-
-
-
-
   icon: React.ReactNode;
   title: string;
   description: string;
   color: string;
   gradient: string;
-
   delay?: number;
-
 interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
   columns?: 2 | 3 | 4;
-
   columns?: 2 | 3 | 4;
 const Features: React.FC<FeaturesProps> = ({
   title
@@ -140,10 +113,6 @@ const Features: React.FC<FeaturesProps> = ({
             {subtitle}
           </p>
         </div>
-
-
-
-
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
@@ -170,15 +139,12 @@ const Features: React.FC<FeaturesProps> = ({
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
               </div>
-<<<<<<< HEAD
-=======
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
->>>>>>> main
             </Card>
           ))}
         </div>
@@ -189,6 +155,3 @@ const Features: React.FC<FeaturesProps> = ({
 export default Features;  )
 }
 export default Features;
-
-
-
