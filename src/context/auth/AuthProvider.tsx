@@ -6,7 +6,7 @@ import { useAuthState } from "./useAuthState";
 import { useAuthEventHandlers } from "./useAuthEventHandlers";
 import { mapProfileToUser } from "./profileMapper";
 import { loginUser, registerUser } from "@/services/authService";
-import { safeLocalStorage } from "@/utils/safeStorage";
+import { safeStorage } from "@/utils/safeStorage";
 import { toast } from "@/hooks/use-toast";
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
@@ -72,7 +72,7 @@ export const AuthProvider = ({ children }) => {
             if (!res.ok || !data?.token || !data?.user) {
                 return { error: data?.message || 'Registration failed' };
             }
-            const storage = safeLocalStorage();
+            const storage = safeStorage;
             if (storage) {
                 storage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             }
@@ -177,4 +177,12 @@ export const AuthProvider = ({ children }) => {
             {children}
         </AuthContext.Provider>
     );
+};
+
+export const useAuth = () => {
+    const context = React.useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth must be used within an AuthProvider');
+    }
+    return context;
 };

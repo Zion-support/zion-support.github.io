@@ -61,18 +61,16 @@ const Search = createLazyComponent(() => import('./pages/Search'));
 const Categories = createLazyComponent(() => import('./pages/Categories'));
 
 // Service pages with error handling
-const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity').catch(() => ({ default: () => <div>Error loading Cybersecurity page</div> })));
-const CloudMigration = React.lazy(() => import('./pages/CloudMigrationServices').catch(() => ({ default: () => <div>Error loading Cloud Migration page</div> })));
-const DevOps = React.lazy(() => import('./pages/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading DevOps page</div> })));
-const MobileDevelopment = React.lazy(() => import('./pages/MobileAppPage').catch(() => ({ default: () => <div>Error loading Mobile Development page</div> })));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity').catch(() => ({ default: () => <div>Error loading Cybersecurity page</div> })));
+const DevOps = React.lazy(() => import('./pages/services/CloudDevOps').catch(() => ({ default: () => <div>Error loading DevOps page</div> })));
 
 // Additional service pages with error handling
 const AIEmailResponder = lazy(() => import('./pages/services/ai-auto-email-responder').catch(() => ({ default: () => <div>Error loading AI Email Responder</div> })));
 const AITalentMatching = lazy(() => import('./pages/services/ai-talent-matching').catch(() => ({ default: () => <div>Error loading AI Talent Matching</div> })));
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation').catch(() => ({ default: () => <div>Error loading AI Content Creation</div> })));
-const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading Cloud DevOps Services</div> })));
-const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices').catch(() => ({ default: () => <div>Error loading Cybersecurity Services</div> })));
-const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation').catch(() => ({ default: () => <div>Error loading AI Customer Service Automation</div> })));
+const CloudDevOpsServices = lazy(() => import('./pages/services/CloudDevOps').catch(() => ({ default: () => <div>Error loading Cloud DevOps Services</div> })));
+const CybersecurityServices = lazy(() => import('./pages/services/AICybersecuritySuite').catch(() => ({ default: () => <div>Error loading Cybersecurity Services</div> })));
+const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerSupportAutomation').catch(() => ({ default: () => <div>Error loading AI Customer Service Automation</div> })));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -165,9 +163,7 @@ const App = memo(() => {
                         
                         {/* Service routes */}
                         <Route path="/cybersecurity" element={<Cybersecurity />} />
-                        <Route path="/cloud-migration" element={<CloudMigration />} />
                         <Route path="/devops" element={<DevOps />} />
-                        <Route path="/mobile-development" element={<MobileDevelopment />} />
                         
                         {/* Additional service routes */}
                         <Route path="/services/ai-email-responder" element={<AIEmailResponder />} />

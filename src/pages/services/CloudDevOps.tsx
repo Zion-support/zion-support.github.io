@@ -31,8 +31,8 @@ import {
   Database,
   Smartphone,
   GitBranch,
-  Docker,
-  Kubernetes,
+  Container,
+  Layers,
   Terminal,
   Workflow,
   Rocket,
@@ -54,9 +54,9 @@ const CloudDevOps = () => {
       description: 'Automated build, test, and deployment pipelines for rapid delivery'
     },
     {
-      icon: Docker,
+      icon: Container,
       title: 'Containerization',
-      description: 'Docker and Kubernetes implementation for scalable application deployment'
+      description: 'Container and orchestration implementation for scalable application deployment'
     },
     {
       icon: GitBranch,
@@ -96,9 +96,9 @@ const CloudDevOps = () => {
       description: 'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'
     },
     {
-      icon: Kubernetes,
+      icon: Layers,
       title: 'Container Orchestration',
-      description: 'Kubernetes clusters with Helm charts and automated scaling'
+      description: 'Orchestration clusters with Helm charts and automated scaling'
     },
     {
       icon: Database,

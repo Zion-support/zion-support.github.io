@@ -60,32 +60,6 @@ interface Achievement {
   icon: any;
 }
 
-const values = [
-  {
-    icon: Brain,
-    title: 'Innovation First',
-    description: 'We push the boundaries of what\'s possible with cutting-edge AI and technology solutions.',
-    color: 'from-blue-500 to-cyan-500'
-  },
-  {
-    icon: Shield,
-    title: 'Trust & Security',
-    description: 'Your data security and privacy are our top priorities. We build with security by design.',
-    color: 'from-green-500 to-emerald-500'
-  },
-  {
-    icon: Users,
-    title: 'Customer Success',
-    description: 'We measure our success by your success. Your goals become our mission.',
-    color: 'from-purple-500 to-pink-500'
-  },
-  {
-    icon: Leaf,
-    title: 'Sustainability',
-    description: 'We\'re committed to building technology that\'s good for business and the planet.',
-    color: 'from-orange-500 to-red-500'
-  }
-];
 
 interface Value {
   title: string;
