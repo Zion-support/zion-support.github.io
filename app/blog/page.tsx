@@ -15,6 +15,50 @@ export default function BlogPage() {
       image: '/api/placeholder/600/400',
     },
     {
+      id: 'quantum-computing-business-applications',
+      title: 'Quantum Computing: The Next Frontier in Business Innovation',
+      excerpt:
+        'Explore how quantum computing is revolutionizing industries from finance to healthcare, and discover practical applications that are already delivering real business value.',
+      date: '2025-01-20',
+      readTime: '12 min read',
+      category: 'Quantum Computing',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'edge-computing-iot-revolution',
+      title: 'Edge Computing and IoT: Revolutionizing Real-Time Business Operations',
+      excerpt:
+        'Discover how edge computing and IoT are transforming industries by enabling real-time data processing, reducing latency, and creating new business opportunities.',
+      date: '2025-01-18',
+      readTime: '10 min read',
+      category: 'Edge Computing & IoT',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'sustainable-tech-green-it',
+      title: 'Sustainable Technology: Building a Greener Future Through Green IT',
+      excerpt:
+        'Explore how businesses are leveraging sustainable technology practices to reduce environmental impact while improving operational efficiency and creating long-term value.',
+      date: '2025-01-22',
+      readTime: '9 min read',
+      category: 'Green IT & Sustainability',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'ai-ethics-responsible-innovation',
+      title: 'AI Ethics and Responsible Innovation: Building Trust in Artificial Intelligence',
+      excerpt:
+        'Explore the critical importance of ethical AI development and how businesses can implement responsible innovation practices to build trustworthy AI systems.',
+      date: '2025-01-25',
+      readTime: '11 min read',
+      category: 'AI Ethics & Responsible Innovation',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
       id: 'micro-saas-success-stories',
       title: 'Micro SaaS Success Stories: From Idea to $1M ARR',
       excerpt:
@@ -22,7 +66,7 @@ export default function BlogPage() {
       date: '2025-01-12',
       readTime: '12 min read',
       category: 'Business Strategy',
-      featured: true,
+      featured: false,
       image: '/api/placeholder/600/400',
     },
     {

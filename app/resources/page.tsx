@@ -98,6 +98,54 @@ export default function ResourcesPage() {
       featured: false,
       icon: '📱',
     },
+    {
+      id: 'quantum-computing-implementation-guide',
+      title: 'Quantum Computing Implementation Guide 2025',
+      description:
+        'Comprehensive 60-page guide covering quantum computing fundamentals, business applications, and step-by-step implementation strategies for enterprises.',
+      type: 'Implementation Guide',
+      downloadCount: '3,247',
+      size: '3.2 MB',
+      category: 'Quantum Computing',
+      featured: true,
+      icon: '⚛️',
+    },
+    {
+      id: 'edge-computing-iot-playbook',
+      title: 'Edge Computing & IoT Implementation Playbook',
+      description:
+        'Detailed playbook for implementing edge computing and IoT solutions, including architecture design, security considerations, and deployment strategies.',
+      type: 'Playbook',
+      downloadCount: '2,891',
+      size: '2.1 MB',
+      category: 'Edge Computing & IoT',
+      featured: true,
+      icon: '🌐',
+    },
+    {
+      id: 'ai-ethics-framework',
+      title: 'AI Ethics Framework & Governance Toolkit',
+      description:
+        'Complete framework for implementing ethical AI practices, including governance structures, bias testing protocols, and compliance checklists.',
+      type: 'Framework',
+      downloadCount: '2,156',
+      size: '1.8 MB',
+      category: 'AI Ethics & Responsible Innovation',
+      featured: true,
+      icon: '⚖️',
+    },
+    {
+      id: 'sustainable-tech-assessment',
+      title: 'Sustainable Technology Assessment Tool',
+      description:
+        'Interactive assessment tool to evaluate your organization\'s current sustainability practices and identify opportunities for Green IT implementation.',
+      type: 'Assessment Tool',
+      downloadCount: '1,934',
+      size: '950 KB',
+      category: 'Green IT & Sustainability',
+      featured: true,
+      icon: '🌱',
+    },
   ];
 
   const featuredResources = resources.filter(resource => resource.featured);

@@ -38,6 +38,27 @@ export function NewsletterSection() {
     "Free resources and guides"
   ];
 
+  const featuredContent = [
+    {
+      title: "Quantum Computing Implementation Guide",
+      type: "Resource",
+      icon: "⚛️",
+      description: "60-page comprehensive guide"
+    },
+    {
+      title: "AI Ethics Framework",
+      type: "Framework",
+      icon: "⚖️",
+      description: "Complete governance toolkit"
+    },
+    {
+      title: "Edge Computing Case Studies",
+      type: "Case Study",
+      icon: "🌐",
+      description: "Real-world success stories"
+    }
+  ];
+
   if (isSubscribed) {
     return (
       <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -108,6 +129,28 @@ export function NewsletterSection() {
               Join 50,000+ tech professionals who stay ahead of the curve with our weekly insights, 
               exclusive content, and early access to cutting-edge solutions.
             </p>
+
+            {/* Featured Content Preview */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/10">
+              <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-zion-purple" />
+                This Week's Featured Content
+              </h4>
+              <div className="space-y-3">
+                {featuredContent.map((content, index) => (
+                  <div key={index} className="flex items-center gap-3 text-sm">
+                    <span className="text-lg">{content.icon}</span>
+                    <div className="flex-1">
+                      <div className="text-white font-medium">{content.title}</div>
+                      <div className="text-zion-slate-light text-xs">{content.description}</div>
+                    </div>
+                    <span className="bg-zion-purple/20 text-zion-purple text-xs px-2 py-1 rounded-full">
+                      {content.type}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Benefits */}
             <div className="space-y-3 mb-8">

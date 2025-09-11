@@ -140,6 +140,87 @@ export default function CaseStudiesPage() {
       image: '/api/placeholder/600/400',
       featured: false,
     },
+    {
+      id: 'quantum-financial-optimization',
+      title: 'Quantum-Powered Financial Portfolio Optimization',
+      client: 'Global Investment Bank',
+      industry: 'Financial Services',
+      challenge:
+        'Complex portfolio optimization requiring processing of millions of variables in real-time for maximum returns',
+      solution:
+        'Quantum computing platform with hybrid classical-quantum algorithms for portfolio optimization and risk management',
+      results: [
+        '35% improvement in portfolio performance',
+        '60% faster optimization calculations',
+        '$2.8B additional returns generated',
+        '99.7% accuracy in risk prediction',
+      ],
+      technologies: [
+        'Quantum Computing',
+        'Python',
+        'Qiskit',
+        'TensorFlow',
+        'AWS Quantum',
+      ],
+      duration: '8 months',
+      team: '12 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
+    {
+      id: 'smart-city-iot-platform',
+      title: 'Smart City IoT Infrastructure Platform',
+      client: 'Metropolitan City Government',
+      industry: 'Smart Cities',
+      challenge:
+        'Need for comprehensive city-wide IoT monitoring and management system for traffic, utilities, and public safety',
+      solution:
+        'Integrated IoT platform with edge computing, real-time analytics, and citizen engagement features',
+      results: [
+        '40% reduction in traffic congestion',
+        '25% improvement in emergency response times',
+        '30% decrease in energy consumption',
+        '85% citizen satisfaction with city services',
+      ],
+      technologies: [
+        'IoT Sensors',
+        'Edge Computing',
+        'React',
+        'Node.js',
+        'Kubernetes',
+      ],
+      duration: '12 months',
+      team: '15 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
+    {
+      id: 'ai-drug-discovery-platform',
+      title: 'AI-Powered Drug Discovery Platform',
+      client: 'Pharmaceutical Research Company',
+      industry: 'Healthcare & Pharmaceuticals',
+      challenge:
+        'Accelerating drug discovery process while reducing costs and improving success rates for new treatments',
+      solution:
+        'Machine learning platform with molecular simulation, predictive modeling, and automated compound screening',
+      results: [
+        '70% reduction in drug discovery time',
+        '45% improvement in success rates',
+        '$1.2B saved in R&D costs',
+        '12 new drug candidates identified',
+      ],
+      technologies: [
+        'Machine Learning',
+        'Python',
+        'TensorFlow',
+        'Molecular Simulation',
+        'AWS',
+      ],
+      duration: '10 months',
+      team: '11 developers',
+      image: '/api/placeholder/600/400',
+      featured: false,
+    },
   ];
 
   const featuredStudies = caseStudies.filter(study => study.featured);
