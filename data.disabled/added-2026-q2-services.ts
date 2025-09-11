@@ -12,6 +12,10 @@ export const added2026Q2Services: Added2026Q2Service[] = [
     name: 'Q2 2026 Service 1',
     tagline: 'Second quarter 2026 service',
     price: '$799',
-    features: ['2026 Q2 features', 'Advanced capabilities', 'Enhanced performance']
-  }
+    features: [
+      '2026 Q2 features',
+      'Advanced capabilities',
+      'Enhanced performance',
+    ],
+  },
 ];

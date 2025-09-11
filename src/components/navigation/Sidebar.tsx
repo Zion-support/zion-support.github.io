@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { _Link, useLocation } from "react-router-dom";
-import { 
+import React, { useState } from 'react';
+import { _Link, useLocation } from 'react-router-dom';
+import {
   X,
   ChevronRight,
   Home,
@@ -38,9 +38,9 @@ import {
   Car,
   Eye,
   Leaf,
-  Handshake
-} from "lucide-react";
-import { _motion, AnimatePresence } from "framer-motion";
+  Handshake,
+} from 'lucide-react';
+import { _motion, AnimatePresence } from 'framer-motion';
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';

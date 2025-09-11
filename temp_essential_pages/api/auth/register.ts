@@ -22,9 +22,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const result = schema.safeParse(req.body);
   if (!result.success) {
     const errorMessage = result.error.errors[0].message;
-    return res.status(400).json({ 
+    return res.status(400).json({
       error: errorMessage,
-      message: errorMessage // Include both for compatibility
+      message: errorMessage, // Include both for compatibility
     });
   }
 
@@ -39,7 +39,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (error) {
       let errorMessage = error.message;
       let statusCode = error.status || 500;
-      
+
       if (error.message.includes('already registered')) {
         errorMessage = 'Email already registered';
         statusCode = 409;
@@ -47,15 +47,16 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         errorMessage = 'Password is too weak';
         statusCode = 400;
       }
-      
-      return res.status(statusCode).json({ 
+
+      return res.status(statusCode).json({
         error: errorMessage,
-        message: errorMessage // Include both for compatibility
+        message: errorMessage, // Include both for compatibility
       });
     }
 
     if (data?.user && !data?.session) {
-      const successMessage = 'Registration successful. Please check your email to verify your account.';
+      const successMessage =
+        'Registration successful. Please check your email to verify your account.';
       return res.status(201).json({
         message: successMessage,
         emailVerificationRequired: true,
@@ -72,24 +73,24 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         'Set-Cookie',
         `authToken=${data.session.access_token}; HttpOnly; Path=/; Secure; SameSite=Strict`
       );
-      return res.status(201).json({ 
+      return res.status(201).json({
         message: 'Registration successful',
-        user: data.user, 
-        session: data.session 
+        user: data.user,
+        session: data.session,
       });
     }
 
     const errorMessage = 'Unexpected response from auth provider';
-    return res.status(500).json({ 
+    return res.status(500).json({
       error: errorMessage,
-      message: errorMessage // Include both for compatibility
+      message: errorMessage, // Include both for compatibility
     });
   } catch (err) {
     console.error(err);
     const errorMessage = 'Network error. Please try again.';
-    return res.status(503).json({ 
+    return res.status(503).json({
       error: errorMessage,
-      message: errorMessage // Include both for compatibility
+      message: errorMessage, // Include both for compatibility
     });
   }
 }

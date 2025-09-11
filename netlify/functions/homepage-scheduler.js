@@ -3,8 +3,15 @@ const { spawnSync } = require('child_process');
 
 function runNode(relativePath, args = []) {
   const absolutePath = path.resolve(__dirname, '..', '..', relativePath);
-  const result = spawnSync('node', [absolutePath, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: result.status || 0, stdout: result.stdout || '', stderr: result.stderr || '' };
+  const result = spawnSync('node', [absolutePath, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: result.status || 0,
+    stdout: result.stdout || '',
+    stderr: result.stderr || '',
+  };
 }
 
 exports.config = {
@@ -24,14 +31,21 @@ exports.handler = async () => {
   };
 
   // Ensure canonical URL available to scripts
-  process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'https://ziontechgroup.com';
+  process.env.CANONICAL_URL =
+    process.env.CANONICAL_URL || 'https://ziontechgroup.com';
 
   // Homepage improvement automations
-  logStep('homepage-updater:once', () => runNode('automation/homepage-updater.cjs', ['once']));
-  logStep('homepage-auto-advertiser:once', () => runNode('automation/homepage-auto-advertiser.cjs', ['once']));
+  logStep('homepage-updater:once', () =>
+    runNode('automation/homepage-updater.cjs', ['once'])
+  );
+  logStep('homepage-auto-advertiser:once', () =>
+    runNode('automation/homepage-auto-advertiser.cjs', ['once'])
+  );
 
   // Index docs/pages for improved internal linking
-  logStep('docs-pages-indexer:once', () => runNode('automation/docs-pages-indexer.cjs', ['once']));
+  logStep('docs-pages-indexer:once', () =>
+    runNode('automation/docs-pages-indexer.cjs', ['once'])
+  );
 
   return { statusCode: 200, body: logs.join('\n') };
 };

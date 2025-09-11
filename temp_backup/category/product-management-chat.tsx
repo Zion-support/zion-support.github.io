@@ -7,13 +7,13 @@ const ProductManagementChat: NextPage = () => {
     <div>
       <Head>
         <title>ProductManagementChat - Zion Tech Solutions</title>
-        <meta name="description" content="ProductManagementChat blog post" />
+        <meta name='description' content='ProductManagementChat blog post' />
       </Head>
-      
+
       <main>
         <h1>ProductManagementChat</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog">Back to Blog</Link>
+        <Link href='/blog'>Back to Blog</Link>
       </main>
     </div>
   );

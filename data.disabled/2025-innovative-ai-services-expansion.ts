@@ -48,7 +48,8 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     tagline: 'Create engaging content with AI-driven creativity',
     price: '$99',
     period: '/month',
-    description: 'Advanced AI content generation platform that creates high-quality, engaging content for blogs, social media, marketing materials, and business communications.',
+    description:
+      'Advanced AI content generation platform that creates high-quality, engaging content for blogs, social media, marketing materials, and business communications.',
     features: [
       'Multi-format content generation',
       'SEO optimization',
@@ -59,22 +60,30 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Content analytics',
       'Team collaboration',
       'API access',
-      'White-label options'
+      'White-label options',
     ],
     popular: true,
     icon: '✍️',
     color: 'from-blue-600 via-indigo-600 to-purple-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-content-generation-suite',
-    marketPosition: 'Leading AI content generation platform with advanced creativity tools',
-    targetAudience: 'Content creators, Marketing teams, Digital agencies, Small businesses, Bloggers, Social media managers',
+    marketPosition:
+      'Leading AI content generation platform with advanced creativity tools',
+    targetAudience:
+      'Content creators, Marketing teams, Digital agencies, Small businesses, Bloggers, Social media managers',
     trialDays: 14,
     setupTime: '1-2 days',
     category: 'AI Services',
     realService: true,
-    technology: ['AI/ML, Natural Language Processing, GPT Models, Content Optimization, SEO Tools'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, CMS systems, REST APIs'],
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions, Email campaigns'],
+    technology: [
+      'AI/ML, Natural Language Processing, GPT Models, Content Optimization, SEO Tools',
+    ],
+    integrations: [
+      'WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, CMS systems, REST APIs',
+    ],
+    useCases: [
+      'Blog writing, Social media content, Marketing copy, Product descriptions, Email campaigns',
+    ],
     roi: 'Increase content production by 300%. Improve SEO rankings by 40%. Save 20 hours per week on content creation.',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot, Rytr'],
     marketSize: '$15B AI content generation market',
@@ -82,19 +91,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered sales analytics engine with predictive lead scoring.',
+    implementationDetails:
+      'ML-powered sales analytics engine with predictive lead scoring.',
     launchDate: '2025-01-20',
     customers: 89,
     rating: 4.7,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'ai-powered-marketing-automation-platform',
     name: 'AI Marketing Automation Platform',
-    tagline: 'Intelligent marketing automation with predictive analytics and personalization',
+    tagline:
+      'Intelligent marketing automation with predictive analytics and personalization',
     price: '$199',
     period: '/month',
-    description: 'AI-driven marketing automation platform that provides predictive analytics, personalized content, automated campaign optimization, and intelligent audience segmentation.',
+    description:
+      'AI-driven marketing automation platform that provides predictive analytics, personalized content, automated campaign optimization, and intelligent audience segmentation.',
     features: [
       'AI-powered audience segmentation',
       'Predictive content optimization',
@@ -103,20 +115,23 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'ROI tracking and analytics',
       'Multi-channel orchestration',
       'A/B testing automation',
-      'Customer journey mapping'
+      'Customer journey mapping',
     ],
     popular: true,
     icon: '🎨',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-marketing-automation-platform',
-    marketPosition: 'AI marketing automation; competes with HubSpot, Marketo, Pardot.',
+    marketPosition:
+      'AI marketing automation; competes with HubSpot, Marketo, Pardot.',
     targetAudience: 'Marketing teams, Growth marketers, Digital marketers',
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Marketing',
     realService: true,
-    technology: ['Machine Learning, Predictive Analytics, Marketing Automation'],
+    technology: [
+      'Machine Learning, Predictive Analytics, Marketing Automation',
+    ],
     integrations: ['HubSpot, Salesforce, Google Analytics, Facebook Ads'],
     useCases: ['Lead generation, Customer engagement, Campaign optimization'],
     roi: 'Increase marketing ROI by 40-60% and improve conversion rates by 25-40%.',
@@ -126,19 +141,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered marketing automation with predictive analytics engine.',
+    implementationDetails:
+      'ML-powered marketing automation with predictive analytics engine.',
     launchDate: '2025-01-25',
     customers: 156,
     rating: 4.7,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'ai-powered-product-analytics-platform',
     name: 'AI Product Analytics Platform',
-    tagline: 'Intelligent product analytics with user behavior insights and optimization',
+    tagline:
+      'Intelligent product analytics with user behavior insights and optimization',
     price: '$179',
     period: '/month',
-    description: 'AI-powered product analytics platform that provides deep insights into user behavior, feature usage, and product performance with predictive analytics.',
+    description:
+      'AI-powered product analytics platform that provides deep insights into user behavior, feature usage, and product performance with predictive analytics.',
     features: [
       'User behavior analytics',
       'Feature usage tracking',
@@ -147,14 +165,15 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Funnel analysis and optimization',
       'Cohort analysis',
       'Product performance metrics',
-      'Actionable recommendations'
+      'Actionable recommendations',
     ],
     popular: false,
     icon: '📊',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-product-analytics-platform',
-    marketPosition: 'AI product analytics; competes with Mixpanel, Amplitude, Heap.',
+    marketPosition:
+      'AI product analytics; competes with Mixpanel, Amplitude, Heap.',
     targetAudience: 'Product managers, UX designers, Growth teams',
     trialDays: 14,
     setupTime: '2 days',
@@ -162,7 +181,9 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     realService: true,
     technology: ['Machine Learning, User Analytics, Predictive Analytics'],
     integrations: ['Google Analytics, Segment, Intercom, Slack'],
-    useCases: ['Product optimization, User experience improvement, Growth optimization'],
+    useCases: [
+      'Product optimization, User experience improvement, Growth optimization',
+    ],
     roi: 'Improve product engagement by 30-50% and reduce user churn by 20-30%.',
     competitors: ['Mixpanel, Amplitude, Heap, PostHog'],
     marketSize: '$4B+ product analytics market',
@@ -170,19 +191,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered product analytics with behavioral prediction engine.',
+    implementationDetails:
+      'ML-powered product analytics with behavioral prediction engine.',
     launchDate: '2025-02-01',
     customers: 67,
     rating: 4.6,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'ai-powered-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
-    tagline: 'Intelligent financial analysis with predictive modeling and risk assessment',
+    tagline:
+      'Intelligent financial analysis with predictive modeling and risk assessment',
     price: '$399',
     period: '/month',
-    description: 'AI-powered financial analytics platform that provides predictive modeling, risk assessment, financial forecasting, and automated financial reporting.',
+    description:
+      'AI-powered financial analytics platform that provides predictive modeling, risk assessment, financial forecasting, and automated financial reporting.',
     features: [
       'Predictive financial modeling',
       'Risk assessment and scoring',
@@ -191,14 +215,15 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Anomaly detection',
       'Compliance monitoring',
       'Portfolio optimization',
-      'Real-time analytics'
+      'Real-time analytics',
     ],
     popular: false,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-financial-analytics-platform',
-    marketPosition: 'AI financial analytics; competes with Bloomberg, FactSet, Refinitiv.',
+    marketPosition:
+      'AI financial analytics; competes with Bloomberg, FactSet, Refinitiv.',
     targetAudience: 'Financial analysts, Investment firms, Corporate finance',
     trialDays: 21,
     setupTime: '2 weeks',
@@ -214,19 +239,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered financial analytics with risk assessment engine.',
+    implementationDetails:
+      'ML-powered financial analytics with risk assessment engine.',
     launchDate: '2025-02-10',
     customers: 34,
     rating: 4.8,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'ai-powered-hr-analytics-platform',
     name: 'AI HR Analytics Platform',
-    tagline: 'Intelligent HR analytics with predictive insights and talent optimization',
+    tagline:
+      'Intelligent HR analytics with predictive insights and talent optimization',
     price: '$229',
     period: '/month',
-    description: 'AI-powered HR analytics platform that provides predictive insights into employee performance, retention, recruitment, and organizational effectiveness.',
+    description:
+      'AI-powered HR analytics platform that provides predictive insights into employee performance, retention, recruitment, and organizational effectiveness.',
     features: [
       'Employee performance analytics',
       'Predictive retention modeling',
@@ -235,7 +263,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Diversity and inclusion analytics',
       'Employee engagement tracking',
       'Talent pipeline management',
-      'Predictive workforce planning'
+      'Predictive workforce planning',
     ],
     popular: false,
     icon: '👥',
@@ -250,7 +278,9 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     realService: true,
     technology: ['Machine Learning, HR Analytics, Predictive Modeling'],
     integrations: ['Workday, BambooHR, Greenhouse, Slack'],
-    useCases: ['Talent optimization, Retention improvement, Recruitment efficiency'],
+    useCases: [
+      'Talent optimization, Retention improvement, Recruitment efficiency',
+    ],
     roi: 'Improve employee retention by 20-30% and reduce recruitment costs by 25-40%.',
     competitors: ['Visier, Tableau, Power BI, ChartHop'],
     marketSize: '$3B+ HR analytics market',
@@ -258,19 +288,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered HR analytics with predictive talent insights.',
+    implementationDetails:
+      'ML-powered HR analytics with predictive talent insights.',
     launchDate: '2025-02-15',
     customers: 45,
     rating: 4.6,
-    reviews: 26
+    reviews: 26,
   },
   {
     id: 'ai-powered-supply-chain-optimization',
     name: 'AI Supply Chain Optimization Platform',
-    tagline: 'Intelligent supply chain optimization with predictive analytics and automation',
+    tagline:
+      'Intelligent supply chain optimization with predictive analytics and automation',
     price: '$349',
     period: '/month',
-    description: 'AI-powered supply chain optimization platform that provides predictive analytics, demand forecasting, inventory optimization, and automated supply chain management.',
+    description:
+      'AI-powered supply chain optimization platform that provides predictive analytics, demand forecasting, inventory optimization, and automated supply chain management.',
     features: [
       'Demand forecasting',
       'Inventory optimization',
@@ -279,20 +312,23 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Supplier performance analytics',
       'Cost optimization',
       'Real-time monitoring',
-      'Automated decision making'
+      'Automated decision making',
     ],
     popular: true,
     icon: '🚚',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-supply-chain-optimization',
-    marketPosition: 'AI supply chain optimization; competes with SAP, Oracle, Blue Yonder.',
+    marketPosition:
+      'AI supply chain optimization; competes with SAP, Oracle, Blue Yonder.',
     targetAudience: 'Supply chain managers, Logistics companies, Manufacturing',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'AI & Supply Chain',
     realService: true,
-    technology: ['Machine Learning, Optimization Algorithms, Supply Chain Analytics'],
+    technology: [
+      'Machine Learning, Optimization Algorithms, Supply Chain Analytics',
+    ],
     integrations: ['SAP, Oracle, NetSuite, Shopify'],
     useCases: ['Inventory optimization, Cost reduction, Risk mitigation'],
     roi: 'Reduce supply chain costs by 15-25% and improve efficiency by 20-35%.',
@@ -302,19 +338,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered supply chain optimization with predictive analytics engine.',
+    implementationDetails:
+      'ML-powered supply chain optimization with predictive analytics engine.',
     launchDate: '2025-01-30',
     customers: 78,
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-cybersecurity-threat-detection',
     name: 'AI Cybersecurity Threat Detection',
-    tagline: 'Intelligent threat detection with automated response and predictive security',
+    tagline:
+      'Intelligent threat detection with automated response and predictive security',
     price: '$299',
     period: '/month',
-    description: 'AI-powered cybersecurity platform that provides intelligent threat detection, automated response, predictive security analytics, and continuous monitoring.',
+    description:
+      'AI-powered cybersecurity platform that provides intelligent threat detection, automated response, predictive security analytics, and continuous monitoring.',
     features: [
       'AI threat detection',
       'Automated incident response',
@@ -323,14 +362,15 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Threat intelligence',
       'Vulnerability assessment',
       'Compliance monitoring',
-      'Security automation'
+      'Security automation',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity-threat-detection',
-    marketPosition: 'AI cybersecurity; competes with CrowdStrike, SentinelOne, Darktrace.',
+    marketPosition:
+      'AI cybersecurity; competes with CrowdStrike, SentinelOne, Darktrace.',
     targetAudience: 'Security teams, IT operations, Enterprise security',
     trialDays: 14,
     setupTime: '1 week',
@@ -346,19 +386,22 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered threat detection with automated response engine.',
+    implementationDetails:
+      'ML-powered threat detection with automated response engine.',
     launchDate: '2025-02-05',
     customers: 134,
     rating: 4.8,
-    reviews: 78
+    reviews: 78,
   },
   {
     id: 'ai-powered-business-intelligence-platform',
     name: 'AI Business Intelligence Platform',
-    tagline: 'Intelligent business intelligence with natural language queries and automated insights',
+    tagline:
+      'Intelligent business intelligence with natural language queries and automated insights',
     price: '$199',
     period: '/month',
-    description: 'AI-powered business intelligence platform that provides natural language queries, automated insights, predictive analytics, and intelligent data visualization.',
+    description:
+      'AI-powered business intelligence platform that provides natural language queries, automated insights, predictive analytics, and intelligent data visualization.',
     features: [
       'Natural language queries',
       'Automated insights generation',
@@ -367,20 +410,23 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Data storytelling',
       'Automated reporting',
       'Real-time dashboards',
-      'Collaborative analytics'
+      'Collaborative analytics',
     ],
     popular: true,
     icon: '📊',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence-platform',
-    marketPosition: 'AI business intelligence; competes with Tableau, Power BI, Looker.',
+    marketPosition:
+      'AI business intelligence; competes with Tableau, Power BI, Looker.',
     targetAudience: 'Business analysts, Data scientists, Executives',
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Analytics',
     realService: true,
-    technology: ['Machine Learning, NLP, Business Intelligence, Data Visualization'],
+    technology: [
+      'Machine Learning, NLP, Business Intelligence, Data Visualization',
+    ],
     integrations: ['Salesforce, HubSpot, Google Analytics, Excel'],
     useCases: ['Business analytics, Data insights, Decision making'],
     roi: 'Improve decision making by 30-50% and reduce analysis time by 60-80%.',
@@ -390,11 +436,12 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered BI platform with natural language query engine.',
+    implementationDetails:
+      'ML-powered BI platform with natural language query engine.',
     launchDate: '2025-01-25',
     customers: 189,
     rating: 4.7,
-    reviews: 167
+    reviews: 167,
   },
   {
     id: 'intelligent-customer-service-automation',
@@ -402,7 +449,8 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     tagline: 'AI-powered customer support with human-like interactions',
     price: '$129',
     period: '/month',
-    description: 'Advanced AI customer service platform that provides 24/7 support, handles complex queries, and seamlessly escalates to human agents when needed.',
+    description:
+      'Advanced AI customer service platform that provides 24/7 support, handles complex queries, and seamlessly escalates to human agents when needed.',
     features: [
       'Natural language processing',
       'Multi-channel support',
@@ -413,22 +461,30 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Performance analytics',
       'Custom training',
       'Multi-language support',
-      'API integrations'
+      'API integrations',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-green-600 via-emerald-600 to-teal-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/intelligent-customer-service-automation',
-    marketPosition: 'AI-powered customer service automation with intelligent human handoff',
-    targetAudience: 'Customer service teams, E-commerce businesses, SaaS companies, Support centers, Call centers',
+    marketPosition:
+      'AI-powered customer service automation with intelligent human handoff',
+    targetAudience:
+      'Customer service teams, E-commerce businesses, SaaS companies, Support centers, Call centers',
     trialDays: 14,
     setupTime: '2-3 days',
     category: 'AI Services',
     realService: true,
-    technology: ['AI/ML, Natural Language Processing, Chatbot Technology, Sentiment Analysis, Machine Learning'],
-    integrations: ['Zendesk, Intercom, Freshdesk, Salesforce, Shopify, WhatsApp, Facebook Messenger, REST APIs'],
-    useCases: ['24/7 customer support, Query resolution, Ticket routing, Customer satisfaction, Support automation'],
+    technology: [
+      'AI/ML, Natural Language Processing, Chatbot Technology, Sentiment Analysis, Machine Learning',
+    ],
+    integrations: [
+      'Zendesk, Intercom, Freshdesk, Salesforce, Shopify, WhatsApp, Facebook Messenger, REST APIs',
+    ],
+    useCases: [
+      '24/7 customer support, Query resolution, Ticket routing, Customer satisfaction, Support automation',
+    ],
     roi: 'Reduce support costs by 40%. Improve response time by 80%. Increase customer satisfaction by 35%.',
     competitors: ['Intercom, Zendesk, Freshdesk, Drift, Intercom'],
     marketSize: '$18B customer service automation market',
@@ -436,10 +492,11 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered support automation with intelligent routing engine.',
+    implementationDetails:
+      'ML-powered support automation with intelligent routing engine.',
     launchDate: '2025-02-20',
     customers: 95,
     rating: 4.6,
-    reviews: 58
-  }
+    reviews: 58,
+  },
 ];

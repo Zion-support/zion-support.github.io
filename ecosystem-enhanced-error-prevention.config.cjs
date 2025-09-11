@@ -12,14 +12,14 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144'
+        NODE_OPTIONS: '--max-old-space-size=6144',
       },
       env_production: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144'
-      }
+        NODE_OPTIONS: '--max-old-space-size=6144',
+      },
     },
-    
+
     // Backend server
     {
       name: 'zion-backend',
@@ -31,8 +31,8 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
-      }
+        NODE_ENV: 'production',
+      },
     },
 
     // Enhanced Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
@@ -45,8 +45,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
+      },
     },
 
     // Comprehensive TypeScript Fixer - runs every 10 minutes
@@ -59,8 +59,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
+        AUTOMATION_INTERVAL: '600000', // 10 minutes
+      },
     },
 
     // Build Error Fixer - runs every 15 minutes
@@ -73,8 +73,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
+        AUTOMATION_INTERVAL: '900000', // 15 minutes
+      },
     },
 
     // Comprehensive Error Fixer - runs every 20 minutes
@@ -87,8 +87,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1200000' // 20 minutes
-      }
+        AUTOMATION_INTERVAL: '1200000', // 20 minutes
+      },
     },
 
     // TypeScript Error Fixer - runs every 25 minutes
@@ -101,8 +101,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1500000' // 25 minutes
-      }
+        AUTOMATION_INTERVAL: '1500000', // 25 minutes
+      },
     },
 
     // General Error Fixer - runs every 30 minutes
@@ -115,8 +115,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
+        AUTOMATION_INTERVAL: '1800000', // 30 minutes
+      },
     },
 
     // Continuous console error fixer - runs every 20 minutes
@@ -129,8 +129,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1200000' // 20 minutes
-      }
+        AUTOMATION_INTERVAL: '1200000', // 20 minutes
+      },
     },
 
     // Continuous link checker - runs every 45 minutes
@@ -143,8 +143,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '2700000' // 45 minutes
-      }
+        AUTOMATION_INTERVAL: '2700000', // 45 minutes
+      },
     },
 
     // Continuous improvement - runs every 2 hours
@@ -157,8 +157,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
+        AUTOMATION_INTERVAL: '7200000', // 2 hours
+      },
     },
 
     // Continuous build and test - runs every hour
@@ -171,8 +171,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
+        AUTOMATION_INTERVAL: '3600000', // 1 hour
+      },
     },
 
     // Continuous security audit - runs every 4 hours
@@ -185,8 +185,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
+        AUTOMATION_INTERVAL: '14400000', // 4 hours
+      },
     },
 
     // Continuous dependency updates - runs every 6 hours
@@ -199,8 +199,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
+        AUTOMATION_INTERVAL: '21600000', // 6 hours
+      },
     },
 
     // Continuous performance monitoring - runs every 2 hours
@@ -213,8 +213,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
+        AUTOMATION_INTERVAL: '7200000', // 2 hours
+      },
     },
 
     // Continuous quality checks - runs every 3 hours
@@ -227,8 +227,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '10800000' // 3 hours
-      }
+        AUTOMATION_INTERVAL: '10800000', // 3 hours
+      },
     },
 
     // Continuous link integrity checker - runs every 2 hours
@@ -241,8 +241,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
+        AUTOMATION_INTERVAL: '7200000', // 2 hours
+      },
     },
 
     // Continuous front maximizer - runs every 4 hours
@@ -255,8 +255,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
+        AUTOMATION_INTERVAL: '14400000', // 4 hours
+      },
     },
 
     // Continuous sitemap runner - runs every 6 hours
@@ -269,8 +269,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
+        AUTOMATION_INTERVAL: '21600000', // 6 hours
+      },
     },
 
     // PM2 Monitor - runs every 10 minutes
@@ -283,8 +283,8 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
+        AUTOMATION_INTERVAL: '600000', // 10 minutes
+      },
     },
 
     // Enhanced Automation Runner - runs every 15 minutes
@@ -297,8 +297,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
+        AUTOMATION_INTERVAL: '900000', // 15 minutes
+      },
     },
 
     // Error Prevention Monitor - runs every 5 minutes
@@ -311,8 +311,8 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
+      },
     },
 
     // Project Health Monitor - runs every 10 minutes
@@ -325,8 +325,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
+        AUTOMATION_INTERVAL: '600000', // 10 minutes
+      },
     },
 
     // Predictive Maintenance Monitor - runs every 15 minutes
@@ -339,8 +339,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    }
-  ]
+        AUTOMATION_INTERVAL: '900000', // 15 minutes
+      },
+    },
+  ],
 };

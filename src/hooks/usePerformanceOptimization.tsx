@@ -15,20 +15,22 @@ interface UsePerformanceOptimizationOptions {
   threshold?: number;
 }
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (
+  options: UsePerformanceOptimizationOptions = {}
+) => {
   const {
     enableLazyLoading = true,
     enableIntersectionObserver = true,
     enableMemoryManagement = true,
     enableFPSMonitoring = true,
-    threshold = 0.1
+    threshold = 0.1,
   } = options;
 
   const metricsRef = useRef<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
+    fps: 0,
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -39,9 +41,12 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
     // Measure load time
     const measureLoadTime = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       if (navigation) {
-        metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        metricsRef.current.loadTime =
+          navigation.loadEventEnd - navigation.loadEventStart;
       }
     };
 
@@ -60,14 +65,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     const measureFPS = () => {
       frameCount++;
       const currentTime = performance.now();
-      
+
       if (currentTime - lastTime >= 1000) {
         setFps(Math.round((frameCount * 1000) / (currentTime - lastTime)));
         metricsRef.current.fps = fps;
         frameCount = 0;
         lastTime = currentTime;
       }
-      
+
       if (enableFPSMonitoring) {
         requestAnimationFrame(measureFPS);
       }
@@ -75,8 +80,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
     // Intersection Observer for lazy loading
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             setIsVisible(true);
             if (enableLazyLoading) {
@@ -119,13 +124,20 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       observer.disconnect();
       cleanup();
     };
-  }, [enableLazyLoading, enableIntersectionObserver, enableMemoryManagement, enableFPSMonitoring, threshold, fps]);
+  }, [
+    enableLazyLoading,
+    enableIntersectionObserver,
+    enableMemoryManagement,
+    enableFPSMonitoring,
+    threshold,
+    fps,
+  ]);
 
   return {
     metrics: metricsRef.current,
     isVisible,
     fps,
     isGoodPerformance: fps > 30 && metricsRef.current.loadTime < 2000,
-    isSlowPerformance: fps < 15 || metricsRef.current.loadTime > 5000
+    isSlowPerformance: fps < 15 || metricsRef.current.loadTime > 5000,
   };
 };

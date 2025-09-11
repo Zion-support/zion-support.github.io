@@ -12,7 +12,7 @@ module.exports = {
         AUTOMATION_MODE: 'continuous',
         SCAN_INTERVAL: 300000, // 5 minutes
         LOG_LEVEL: 'info',
-        AUTO_FIX_ENABLED: 'true'
+        AUTO_FIX_ENABLED: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -29,7 +29,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // TypeScript Error Fixer
@@ -38,13 +38,25 @@ module.exports = {
       script: './scripts/automation/typescript-error-fixer.cjs',
       args: 'fix',
       cwd: './',
-      watch: ['src/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}', 'pages/**/*.{ts,tsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup', '*.tsbackup'],
+      watch: [
+        'src/**/*.{ts,tsx}',
+        'components/**/*.{ts,tsx}',
+        'pages/**/*.{ts,tsx}',
+      ],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.tsbackup',
+      ],
       env: {
         NODE_ENV: 'production',
         AUTOMATION_MODE: 'watch',
         FIX_INTERVAL: 60000, // 1 minute
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -61,7 +73,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Linting Error Fixer
@@ -70,13 +82,25 @@ module.exports = {
       script: './scripts/automation/linting-fix-automation.cjs',
       args: 'fix',
       cwd: './',
-      watch: ['src/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup', '*.lintbackup'],
+      watch: [
+        'src/**/*.{ts,tsx,js,jsx}',
+        'components/**/*.{ts,tsx,js,jsx}',
+        'pages/**/*.{ts,tsx,js,jsx}',
+      ],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.lintbackup',
+      ],
       env: {
         NODE_ENV: 'production',
         AUTOMATION_MODE: 'watch',
         FIX_INTERVAL: 120000, // 2 minutes
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -93,7 +117,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Scheduled Error Prevention Runner
@@ -107,7 +131,7 @@ module.exports = {
         NODE_ENV: 'production',
         SCHEDULE_MODE: 'interval',
         RUN_INTERVAL: 900000, // 15 minutes
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -124,7 +148,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // File Corruption Monitor and Fixer
@@ -134,12 +158,19 @@ module.exports = {
       args: 'scan',
       cwd: './',
       watch: ['src/**/*', 'components/**/*', 'pages/**/*'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup'],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+      ],
       env: {
         NODE_ENV: 'production',
         MONITOR_MODE: 'file-watch',
         SCAN_INTERVAL: 30000, // 30 seconds
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -156,7 +187,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Syntax Error Quick Fixer
@@ -166,12 +197,19 @@ module.exports = {
       args: 'scan',
       cwd: './',
       watch: ['src/**/*.{ts,tsx,js,jsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup'],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+      ],
       env: {
         NODE_ENV: 'production',
         QUICK_FIX_MODE: 'true',
         SCAN_INTERVAL: 45000, // 45 seconds
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -188,7 +226,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // JSX Syntax Fixer
@@ -198,12 +236,19 @@ module.exports = {
       args: 'fix',
       cwd: './',
       watch: ['src/**/*.{tsx,jsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup'],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+      ],
       env: {
         NODE_ENV: 'production',
         JSX_FIX_MODE: 'true',
         FIX_INTERVAL: 90000, // 1.5 minutes
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -220,7 +265,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Import Statement Fixer
@@ -230,12 +275,19 @@ module.exports = {
       args: 'fix',
       cwd: './',
       watch: ['src/**/*.{ts,tsx,js,jsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup'],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+      ],
       env: {
         NODE_ENV: 'production',
         IMPORT_FIX_MODE: 'true',
         FIX_INTERVAL: 180000, // 3 minutes
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -252,7 +304,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Error Prevention Dashboard
@@ -266,7 +318,7 @@ module.exports = {
         NODE_ENV: 'production',
         DASHBOARD_MODE: 'true',
         UPDATE_INTERVAL: 60000, // 1 minute
-        LOG_LEVEL: 'info'
+        LOG_LEVEL: 'info',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -283,8 +335,8 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
-    }
+      listen_timeout: 8000,
+    },
   ],
 
   deploy: {
@@ -294,9 +346,11 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app',
-      'pre-deploy-local': 'echo "Starting error prevention automation deployment"',
-      'post-deploy': 'npm install && pm2 reload ecosystem-error-prevention-automation.cjs --env production',
-      'pre-setup': 'echo "Setting up error prevention automation environment"'
+      'pre-deploy-local':
+        'echo "Starting error prevention automation deployment"',
+      'post-deploy':
+        'npm install && pm2 reload ecosystem-error-prevention-automation.cjs --env production',
+      'pre-setup': 'echo "Setting up error prevention automation environment"',
     },
     staging: {
       user: 'ubuntu',
@@ -304,9 +358,11 @@ module.exports = {
       ref: 'origin/develop',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app-staging',
-      'pre-deploy-local': 'echo "Starting error prevention automation deployment"',
-      'post-deploy': 'npm install && pm2 reload ecosystem-error-prevention-automation.cjs --env production',
-      'pre-setup': 'echo "Setting up error prevention automation environment"'
-    }
-  }
+      'pre-deploy-local':
+        'echo "Starting error prevention automation deployment"',
+      'post-deploy':
+        'npm install && pm2 reload ecosystem-error-prevention-automation.cjs --env production',
+      'pre-setup': 'echo "Setting up error prevention automation environment"',
+    },
+  },
 };

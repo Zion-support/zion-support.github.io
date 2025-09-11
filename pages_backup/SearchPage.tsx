@@ -9,13 +9,8 @@ import React, { useEffect } from 'react';
 const SearchPage: NextPageWithLayout = () => {
   const router = useRouter();
   const { q } = router.query;
-  const {
-    searchQuery,
-    setSearchQuery,
-    filteredListings,
-    isLoading,
-    error,
-  } = useMarketplaceSearch();
+  const { searchQuery, setSearchQuery, filteredListings, isLoading, error } =
+    useMarketplaceSearch();
 
   useEffect(() => {
     if (q) {
@@ -24,15 +19,19 @@ const SearchPage: NextPageWithLayout = () => {
   }, [q, setSearchQuery]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Search Results for "{searchQuery}"</h1>
+    <div className='container mx-auto px-4 py-8'>
+      <h1 className='text-3xl font-bold mb-8'>
+        Search Results for "{searchQuery}"
+      </h1>
       {isLoading && <p>Loading...</p>}
-      {error && <p className="text-red-500">Error loading results: {error.message}</p>}
+      {error && (
+        <p className='text-red-500'>Error loading results: {error.message}</p>
+      )}
       {!isLoading && !error && filteredListings.length === 0 && (
         <p>No results found for "{searchQuery}".</p>
       )}
       {!isLoading && !error && filteredListings.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
           {filteredListings.map((listing: ProductListing) => (
             <ListingCard key={listing.id} {...listing} />
           ))}

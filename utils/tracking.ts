@@ -2,7 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import type { BoardMetric, BoardName, JobMetrics } from './types/jobs';
 
-const METRICS_FILE = path.join(process.cwd(), 'automation_logs', 'job-metrics.json');
+const METRICS_FILE = path.join(
+  process.cwd(),
+  'automation_logs',
+  'job-metrics.json'
+);
 
 function ensureDir(filePath: string) {
   const dir = path.dirname(filePath);
@@ -25,7 +29,10 @@ function writeMetrics(data: Record<string, JobMetrics>) {
   fs.writeFileSync(METRICS_FILE, JSON.stringify(data, null, 2), 'utf8');
 }
 
-export function buildUtmUrl(baseUrl: string, params: { source: string; campaign?: string; medium?: string; jobId?: string }) {
+export function buildUtmUrl(
+  baseUrl: string,
+  params: { source: string; campaign?: string; medium?: string; jobId?: string }
+) {
   const url = new URL(baseUrl);
   url.searchParams.set('utm_source', params.source);
   if (params.campaign) url.searchParams.set('utm_campaign', params.campaign);
@@ -47,7 +54,12 @@ export function getJobMetrics(jobId: string): JobMetrics {
   return store[jobId];
 }
 
-export function incrementMetric(jobId: string, board: BoardName, field: 'clicks' | 'applications', by: number = 1) {
+export function incrementMetric(
+  jobId: string,
+  board: BoardName,
+  field: 'clicks' | 'applications',
+  by: number = 1
+) {
   const store = readMetrics();
   if (!store[jobId]) {
     store[jobId] = {
@@ -57,7 +69,7 @@ export function incrementMetric(jobId: string, board: BoardName, field: 'clicks'
     };
   }
   const metrics = store[jobId].metrics;
-  let entry: BoardMetric | undefined = metrics.find((m) => m.board === board);
+  let entry: BoardMetric | undefined = metrics.find(m => m.board === board);
   if (!entry) {
     entry = { board, clicks: 0, applications: 0 };
     metrics.push(entry);

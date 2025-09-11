@@ -17,32 +17,74 @@ function buildCards(workspaceRoot) {
   const cards = [];
 
   const internal = [
-    { href: '/automation', title: 'Automation Hub', desc: 'Live automations, schedulers and reports', check: path.join(pagesDir, 'automation', 'index.tsx') },
-    { href: '/site-health', title: 'Site Health', desc: 'A11y, performance, and link integrity', check: path.join(pagesDir, 'site-health.tsx') },
-    { href: '/reports/seo', title: 'AI SEO Auditor', desc: 'Continuous on-site improvements', check: path.join(pagesDir, 'reports', 'seo.tsx') },
-    { href: '/reports/ai-trends', title: 'AI Trends Radar', desc: 'Signals for new factories', check: path.join(pagesDir, 'reports', 'ai-trends.tsx') },
-    { href: '/newsroom', title: 'Newsroom', desc: 'Autonomous updates & releases', check: path.join(pagesDir, 'newsroom.tsx') },
-    { href: '/', title: 'Homepage', desc: 'Overview and quick links', check: path.join(pagesDir, 'index.tsx') },
+    {
+      href: '/automation',
+      title: 'Automation Hub',
+      desc: 'Live automations, schedulers and reports',
+      check: path.join(pagesDir, 'automation', 'index.tsx'),
+    },
+    {
+      href: '/site-health',
+      title: 'Site Health',
+      desc: 'A11y, performance, and link integrity',
+      check: path.join(pagesDir, 'site-health.tsx'),
+    },
+    {
+      href: '/reports/seo',
+      title: 'AI SEO Auditor',
+      desc: 'Continuous on-site improvements',
+      check: path.join(pagesDir, 'reports', 'seo.tsx'),
+    },
+    {
+      href: '/reports/ai-trends',
+      title: 'AI Trends Radar',
+      desc: 'Signals for new factories',
+      check: path.join(pagesDir, 'reports', 'ai-trends.tsx'),
+    },
+    {
+      href: '/newsroom',
+      title: 'Newsroom',
+      desc: 'Autonomous updates & releases',
+      check: path.join(pagesDir, 'newsroom.tsx'),
+    },
+    {
+      href: '/',
+      title: 'Homepage',
+      desc: 'Overview and quick links',
+      check: path.join(pagesDir, 'index.tsx'),
+    },
   ];
 
-  internal.forEach((c) => { if (fileExists(c.check)) cards.push({ type: 'internal', ...c }); });
+  internal.forEach(c => {
+    if (fileExists(c.check)) cards.push({ type: 'internal', ...c });
+  });
 
   // Netlify functions (treated as external anchors)
   const origin = process.env.CANONICAL_URL || '';
-  cards.push({ type: 'external', href: `${origin}/.netlify/functions/maintenance-scheduler`, title: 'Maintenance Scheduler', desc: 'Netlify scheduled jobs' });
-  cards.push({ type: 'external', href: `${origin}/.netlify/functions/marketing-scheduler`, title: 'Marketing Scheduler', desc: 'Campaigns & content' });
+  cards.push({
+    type: 'external',
+    href: `${origin}/.netlify/functions/maintenance-scheduler`,
+    title: 'Maintenance Scheduler',
+    desc: 'Netlify scheduled jobs',
+  });
+  cards.push({
+    type: 'external',
+    href: `${origin}/.netlify/functions/marketing-scheduler`,
+    title: 'Marketing Scheduler',
+    desc: 'Campaigns & content',
+  });
 
   return cards;
 }
 
 function renderCards(cards) {
   const lines = [];
-  cards.forEach((card) => {
+  cards.forEach(card => {
     const content = [
       '<div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />',
       `<div className="text-base font-semibold">${card.title}</div>`,
       `<div className="mt-1 text-sm text-white/75">${card.desc}</div>`,
-      '<div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>'
+      '<div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>',
     ].join('\n              ');
 
     if (card.type === 'internal') {
@@ -61,7 +103,13 @@ function renderCards(cards) {
 
 function main() {
   const workspaceRoot = path.resolve(__dirname, '..');
-  const frontPath = path.join(workspaceRoot, 'pages', 'main', 'front', 'index.tsx');
+  const frontPath = path.join(
+    workspaceRoot,
+    'pages',
+    'main',
+    'front',
+    'index.tsx'
+  );
   if (!fileExists(frontPath)) {
     console.error('pages/main/front/index.tsx not found. Exiting.');
     process.exit(0);
@@ -99,7 +147,7 @@ function main() {
     cardsMarkup,
     '   </div>',
     ' </section>',
-    ' '
+    ' ',
   ].join('\n');
 
   const updated = before + section + after;

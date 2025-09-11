@@ -5,4 +5,3 @@ export const LanguageDetectionPopup: React.FC = () => {
 };
 
 export default LanguageDetectionPopup;
-

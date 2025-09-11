@@ -2,10 +2,14 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('UI Evolution agent addressing no_dark_theme_support in /workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx');
+console.log(
+  'UI Evolution agent addressing no_dark_theme_support in /workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx'
+);
 // NOTE: This agent is intentionally conservative and uses regex-driven suggestions with a no-op fallback.
 // In a full implementation, this would apply a codemod or structured AST transform.
-const target = path.resolve('/workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx');
+const target = path.resolve(
+  '/workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx'
+);
 if (!fs.existsSync(target)) process.exit(0);
 let src = fs.readFileSync(target, 'utf8');
 let changed = false;
@@ -54,7 +58,11 @@ switch ('no_dark_theme_support') {
 
 if (changed) {
   fs.writeFileSync(target, src);
-  console.log('Applied minimal safe change for no_dark_theme_support in /workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx');
+  console.log(
+    'Applied minimal safe change for no_dark_theme_support in /workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx'
+  );
 } else {
-  console.log('No automatic change applied for no_dark_theme_support in /workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx');
+  console.log(
+    'No automatic change applied for no_dark_theme_support in /workspace/pages/auto/auto-update-2025-08-08t16-49-54-200z.tsx'
+  );
 }

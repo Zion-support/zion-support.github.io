@@ -9,15 +9,16 @@ class PerformanceMonitor {
     this.thresholds = {
       bundleSize: parseInt(process.env.BUNDLE_SIZE_THRESHOLD) || 5242880, // 5MB
       pageLoad: parseInt(process.env.PAGE_LOAD_THRESHOLD) || 3000, // 3s
-      coreWebVitals: parseFloat(process.env.CORE_WEB_VITALS_THRESHOLD) || 2.5
+      coreWebVitals: parseFloat(process.env.CORE_WEB_VITALS_THRESHOLD) || 2.5,
     };
-    
+
     this.metrics = new Map();
     this.alertCooldown = new Map();
     this.isMonitoring = false;
-    
+
     this.slackWebhook = process.env.SLACK_WEBHOOK_URL;
-    this.checkInterval = parseInt(process.env.PERFORMANCE_CHECK_INTERVAL) || 300000; // 5 minutes
+    this.checkInterval =
+      parseInt(process.env.PERFORMANCE_CHECK_INTERVAL) || 300000; // 5 minutes
   }
 
   async start() {
@@ -28,10 +29,10 @@ class PerformanceMonitor {
 
     console.log('🚀 Starting Performance Monitor...');
     this.isMonitoring = true;
-    
+
     // Initial performance check
     await this.performComprehensiveCheck();
-    
+
     // Set up periodic monitoring
     this.monitoringInterval = setInterval(async () => {
       try {
@@ -41,7 +42,9 @@ class PerformanceMonitor {
       }
     }, this.checkInterval);
 
-    console.log(`📊 Performance monitoring active (interval: ${this.checkInterval/1000}s)`);
+    console.log(
+      `📊 Performance monitoring active (interval: ${this.checkInterval / 1000}s)`
+    );
   }
 
   async stop() {
@@ -54,26 +57,26 @@ class PerformanceMonitor {
 
   async performComprehensiveCheck() {
     console.log('🔍 Performing comprehensive performance check...');
-    
+
     const startTime = performance.now();
-    
+
     try {
       // Collect all performance metrics
       const metrics = await this.collectMetrics();
-      
+
       // Store metrics with timestamp
       metrics.timestamp = new Date().toISOString();
       await this.storeMetrics(metrics);
-      
+
       // Check thresholds and trigger alerts
       await this.checkThresholds(metrics);
-      
+
       // Update performance dashboard
       await this.updateDashboard(metrics);
-      
+
       const duration = performance.now() - startTime;
       console.log(`✅ Performance check completed in ${duration.toFixed(2)}ms`);
-      
+
       return metrics;
     } catch (error) {
       console.error('❌ Performance check failed:', error);
@@ -89,7 +92,7 @@ class PerformanceMonitor {
       lighthouse: await this.getLighthouseScores(),
       dependencies: await this.analyzeDependencies(),
       codeQuality: await this.analyzeCodeQuality(),
-      performance: await this.getPerformanceMetrics()
+      performance: await this.getPerformanceMetrics(),
     };
 
     return metrics;
@@ -99,14 +102,18 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       const stats = await this.getDirectorySize(buildDir);
-      
+
       return {
         total: stats.total,
         static: stats.static || 0,
         chunks: stats.chunks || 0,
         threshold: this.thresholds.bundleSize,
-        status: stats.total > this.thresholds.bundleSize ? 'critical' : 
-                stats.total > this.thresholds.bundleSize * 0.8 ? 'warning' : 'good'
+        status:
+          stats.total > this.thresholds.bundleSize
+            ? 'critical'
+            : stats.total > this.thresholds.bundleSize * 0.8
+              ? 'warning'
+              : 'good',
       };
     } catch (error) {
       console.error('Bundle size check failed:', error);
@@ -116,13 +123,13 @@ class PerformanceMonitor {
 
   async getDirectorySize(dirPath) {
     let totalSize = 0;
-    
+
     try {
       const files = await fs.readdir(dirPath, { withFileTypes: true });
-      
+
       for (const file of files) {
         const filePath = path.join(dirPath, file.name);
-        
+
         if (file.isDirectory()) {
           const subDirSize = await this.getDirectorySize(filePath);
           totalSize += subDirSize.total;
@@ -135,21 +142,25 @@ class PerformanceMonitor {
       // Directory might not exist (e.g., not built yet)
       return { total: 0 };
     }
-    
+
     return { total: totalSize };
   }
 
   async getBuildMetrics() {
     try {
       // Read Next.js build info if available
-      const buildManifest = path.join(process.cwd(), '.next', 'build-manifest.json');
-      
+      const buildManifest = path.join(
+        process.cwd(),
+        '.next',
+        'build-manifest.json'
+      );
+
       try {
         const manifest = JSON.parse(await fs.readFile(buildManifest, 'utf8'));
         return {
           pages: Object.keys(manifest.pages || {}).length,
           chunks: Object.keys(manifest.chunks || {}).length,
-          buildTime: await this.getLastBuildTime()
+          buildTime: await this.getLastBuildTime(),
         };
       } catch {
         return { status: 'no_build' };
@@ -180,9 +191,9 @@ class PerformanceMonitor {
       coreWebVitals: {
         lcp: 2.1,
         fid: 85,
-        cls: 0.08
+        cls: 0.08,
       },
-      status: 'pending' // Would be 'complete' with real data
+      status: 'pending', // Would be 'complete' with real data
     };
   }
 
@@ -190,15 +201,15 @@ class PerformanceMonitor {
     try {
       const packagePath = path.join(process.cwd(), 'package.json');
       const packageData = JSON.parse(await fs.readFile(packagePath, 'utf8'));
-      
+
       const deps = packageData.dependencies || {};
       const devDeps = packageData.devDependencies || {};
-      
+
       return {
         total: Object.keys(deps).length,
         dev: Object.keys(devDeps).length,
         heavy: this.identifyHeavyDependencies(deps),
-        outdated: await this.checkOutdatedDependencies()
+        outdated: await this.checkOutdatedDependencies(),
       };
     } catch (error) {
       return { error: error.message };
@@ -207,11 +218,17 @@ class PerformanceMonitor {
 
   identifyHeavyDependencies(dependencies) {
     const heavyPackages = [
-      'three', 'recharts', '@chakra-ui/react', 'framer-motion', 
-      'react-player', 'ethers', 'axios', 'lodash'
+      'three',
+      'recharts',
+      '@chakra-ui/react',
+      'framer-motion',
+      'react-player',
+      'ethers',
+      'axios',
+      'lodash',
     ];
-    
-    return Object.keys(dependencies).filter(dep => 
+
+    return Object.keys(dependencies).filter(dep =>
       heavyPackages.some(heavy => dep.includes(heavy))
     );
   }
@@ -227,13 +244,13 @@ class PerformanceMonitor {
       // Basic code quality metrics
       const srcDir = path.join(process.cwd(), 'src');
       const files = await this.getFileCount(srcDir);
-      
+
       return {
         totalFiles: files.total,
         jsFiles: files.js,
         tsFiles: files.ts,
         componentFiles: files.components,
-        averageFileSize: files.averageSize
+        averageFileSize: files.averageSize,
       };
     } catch (error) {
       return { error: error.message };
@@ -242,13 +259,13 @@ class PerformanceMonitor {
 
   async getFileCount(dirPath) {
     let counts = { total: 0, js: 0, ts: 0, components: 0, totalSize: 0 };
-    
+
     try {
       const files = await fs.readdir(dirPath, { withFileTypes: true });
-      
+
       for (const file of files) {
         const filePath = path.join(dirPath, file.name);
-        
+
         if (file.isDirectory()) {
           const subCounts = await this.getFileCount(filePath);
           counts.total += subCounts.total;
@@ -260,12 +277,15 @@ class PerformanceMonitor {
           counts.total++;
           const stats = await fs.stat(filePath);
           counts.totalSize += stats.size;
-          
+
           if (file.name.endsWith('.js') || file.name.endsWith('.jsx')) {
             counts.js++;
           } else if (file.name.endsWith('.ts') || file.name.endsWith('.tsx')) {
             counts.ts++;
-            if (file.name.includes('Component') || filePath.includes('components')) {
+            if (
+              file.name.includes('Component') ||
+              filePath.includes('components')
+            ) {
               counts.components++;
             }
           }
@@ -274,7 +294,7 @@ class PerformanceMonitor {
     } catch (_error) {
       // Directory might not exist
     }
-    
+
     counts.averageSize = counts.total > 0 ? counts.totalSize / counts.total : 0;
     return counts;
   }
@@ -290,30 +310,33 @@ class PerformanceMonitor {
       return {
         loadTime: 0,
         renderTime: 0,
-        interactiveTime: 0
+        interactiveTime: 0,
       };
     }
   }
 
   async checkThresholds(metrics) {
     const alerts = [];
-    
+
     // Bundle size check
-    if (metrics.bundleSize && metrics.bundleSize.total > this.thresholds.bundleSize) {
+    if (
+      metrics.bundleSize &&
+      metrics.bundleSize.total > this.thresholds.bundleSize
+    ) {
       alerts.push({
         type: 'bundle_size',
         severity: 'critical',
         message: `Bundle size (${(metrics.bundleSize.total / 1024 / 1024).toFixed(2)}MB) exceeds threshold (${(this.thresholds.bundleSize / 1024 / 1024).toFixed(2)}MB)`,
         currentValue: metrics.bundleSize.total,
         threshold: this.thresholds.bundleSize,
-        component: 'bundle'
+        component: 'bundle',
       });
     }
 
     // Core Web Vitals check
     if (metrics.lighthouse && metrics.lighthouse.coreWebVitals) {
       const { lcp, cls } = metrics.lighthouse.coreWebVitals;
-      
+
       if (lcp > this.thresholds.coreWebVitals) {
         alerts.push({
           type: 'core_web_vitals',
@@ -321,10 +344,10 @@ class PerformanceMonitor {
           message: `LCP (${lcp}s) exceeds threshold (${this.thresholds.coreWebVitals}s)`,
           currentValue: lcp,
           threshold: this.thresholds.coreWebVitals,
-          component: 'lcp'
+          component: 'lcp',
         });
       }
-      
+
       if (cls > 0.1) {
         alerts.push({
           type: 'core_web_vitals',
@@ -332,7 +355,7 @@ class PerformanceMonitor {
           message: `CLS (${cls}) exceeds threshold (0.1)`,
           currentValue: cls,
           threshold: 0.1,
-          component: 'cls'
+          component: 'cls',
         });
       }
     }
@@ -349,7 +372,7 @@ class PerformanceMonitor {
     const alertKey = `${alert.type}_${alert.component}`;
     const cooldownMinutes = parseInt(process.env.ALERT_COOLDOWN_MINUTES) || 15;
     const now = Date.now();
-    
+
     // Check cooldown
     if (this.alertCooldown.has(alertKey)) {
       const lastAlert = this.alertCooldown.get(alertKey);
@@ -360,16 +383,19 @@ class PerformanceMonitor {
     }
 
     console.log(`🚨 Sending ${alert.severity} alert: ${alert.message}`);
-    
+
     try {
       // Send to Slack
       await this.sendSlackAlert(alert);
-      
+
       // Trigger auto-optimization if enabled
-      if (process.env.ENABLE_AUTO_OPTIMIZATION === 'true' && alert.severity === 'critical') {
+      if (
+        process.env.ENABLE_AUTO_OPTIMIZATION === 'true' &&
+        alert.severity === 'critical'
+      ) {
         await this.triggerAutoOptimization(alert);
       }
-      
+
       // Update cooldown
       this.alertCooldown.set(alertKey, now);
     } catch (error) {
@@ -385,7 +411,7 @@ class PerformanceMonitor {
 
     const emoji = alert.severity === 'critical' ? '🚨' : '⚠️';
     const color = alert.severity === 'critical' ? '#ff0000' : '#ffaa00';
-    
+
     const payload = {
       channel: process.env.SLACK_CHANNEL,
       username: 'Performance Monitor',
@@ -399,27 +425,27 @@ class PerformanceMonitor {
             {
               title: 'Current Value',
               value: alert.currentValue,
-              short: true
+              short: true,
             },
             {
               title: 'Threshold',
               value: alert.threshold,
-              short: true
+              short: true,
             },
             {
               title: 'Component',
               value: alert.component,
-              short: true
+              short: true,
             },
             {
               title: 'Severity',
               value: alert.severity,
-              short: true
-            }
+              short: true,
+            },
           ],
-          ts: Math.floor(Date.now() / 1000)
-        }
-      ]
+          ts: Math.floor(Date.now() / 1000),
+        },
+      ],
     };
 
     await axios.post(this.slackWebhook, payload);
@@ -427,13 +453,13 @@ class PerformanceMonitor {
 
   async triggerAutoOptimization(alert) {
     console.log(`🤖 Triggering auto-optimization for: ${alert.component}`);
-    
+
     try {
       // This would trigger the Cursor agent optimization
       await axios.post('http://localhost:3001/api/optimization/trigger', {
         target: alert.component,
         reason: 'auto_optimization',
-        alert: alert
+        alert: alert,
       });
     } catch (error) {
       console.error('Auto-optimization trigger failed:', error);
@@ -444,9 +470,13 @@ class PerformanceMonitor {
     try {
       const metricsPath = path.join(process.cwd(), 'performance-metrics.json');
       await fs.writeFile(metricsPath, JSON.stringify(metrics, null, 2));
-      
+
       // Also store historical data
-      const historyPath = path.join(process.cwd(), 'logs', 'performance-history.jsonl');
+      const historyPath = path.join(
+        process.cwd(),
+        'logs',
+        'performance-history.jsonl'
+      );
       await fs.appendFile(historyPath, JSON.stringify(metrics) + '\n');
     } catch (error) {
       console.error('Failed to store metrics:', error);
@@ -457,9 +487,11 @@ class PerformanceMonitor {
     // This would update a real-time dashboard
     // For now, just log summary
     console.log('📊 Performance Summary:', {
-      bundleSize: metrics.bundleSize ? `${(metrics.bundleSize.total / 1024 / 1024).toFixed(2)}MB` : 'N/A',
+      bundleSize: metrics.bundleSize
+        ? `${(metrics.bundleSize.total / 1024 / 1024).toFixed(2)}MB`
+        : 'N/A',
       status: metrics.bundleSize ? metrics.bundleSize.status : 'unknown',
-      timestamp: metrics.timestamp
+      timestamp: metrics.timestamp,
     });
   }
 
@@ -471,7 +503,7 @@ class PerformanceMonitor {
       username: 'Performance Monitor',
       icon_emoji: ':warning:',
       text: `❌ Performance monitoring error: ${error.message}`,
-      color: '#ff0000'
+      color: '#ff0000',
     };
 
     try {
@@ -487,12 +519,16 @@ class PerformanceMonitor {
 
   async getHistory(hours = 24) {
     try {
-      const historyPath = path.join(process.cwd(), 'logs', 'performance-history.jsonl');
+      const historyPath = path.join(
+        process.cwd(),
+        'logs',
+        'performance-history.jsonl'
+      );
       const content = await fs.readFile(historyPath, 'utf8');
       const lines = content.trim().split('\n');
-      
+
       const cutoff = new Date(Date.now() - hours * 60 * 60 * 1000);
-      
+
       return lines
         .map(line => JSON.parse(line))
         .filter(metric => new Date(metric.timestamp) > cutoff);

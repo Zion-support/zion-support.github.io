@@ -1,6 +1,6 @@
 {
   "issues": [],
-"recommendations": [
+  "recommendations": [
     "Add alt attributes to all images",
     "Use semantic HTML elements",
     "Ensure proper heading hierarchy",

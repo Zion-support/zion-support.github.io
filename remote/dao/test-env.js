@@ -20,7 +20,7 @@ async function main() {
   console.log('Synced proposals and votes over satellite link');
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error(err);
   process.exit(1);
 });

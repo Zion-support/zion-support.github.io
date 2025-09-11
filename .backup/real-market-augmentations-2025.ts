@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const realMarketAugmentations2025: MicroSaasService[] = [
@@ -21,7 +21,7 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
       'Churn and expansion tracking',
       'Cohorts and retention curves',
       'Plan analytics and trial funnels',
-      'Export to CSV/BigQuery and API'
+      'Export to CSV/BigQuery and API',
     ],
     popular: true,
     icon: '💳',
@@ -45,11 +45,12 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ingests Stripe events, aggregates KPIs, supports cohorts and exports.',
+    implementationDetails:
+      'Ingests Stripe events, aggregates KPIs, supports cohorts and exports.',
     launchDate: '2025-03-01',
     customers: 26,
     rating: 4.7,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'ai-churn-prediction',
@@ -64,7 +65,7 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
       'Signals from product usage and billing',
       'Alerts to Slack/Email with workflows',
       'Playbooks and next-best-action',
-      'APIs and CSV export'
+      'APIs and CSV export',
     ],
     popular: false,
     icon: '📉',
@@ -88,11 +89,12 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Feature store, explainable models, alerting, and integrations.',
+    implementationDetails:
+      'Feature store, explainable models, alerting, and integrations.',
     launchDate: '2025-03-10',
     customers: 12,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'privacy-session-replay',
@@ -107,7 +109,7 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
       'Cookie-less capture and consent tools',
       'Console/network capture for debugging',
       'Rage click and dead click detection',
-      'SDKs and export'
+      'SDKs and export',
     ],
     popular: true,
     icon: '🎥',
@@ -131,16 +133,18 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'On-device masking, region routing, and event streaming.',
+    implementationDetails:
+      'On-device masking, region routing, and event streaming.',
     launchDate: '2025-03-12',
     customers: 18,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-meeting-notes',
     name: 'AI Meeting Note Summarizer',
-    tagline: 'Auto-record, transcribe, and summarize Zoom/Meet calls with action items',
+    tagline:
+      'Auto-record, transcribe, and summarize Zoom/Meet calls with action items',
     price: '$19',
     period: '/user/month',
     description:
@@ -150,7 +154,7 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
       'Key decisions and action items',
       'CRM and task sync (HubSpot/Jira)',
       'Custom prompt templates',
-      'Multi-language support'
+      'Multi-language support',
     ],
     popular: false,
     icon: '📝',
@@ -174,16 +178,18 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Calendar hooks, call joiner, transcript pipeline, and summaries.',
+    implementationDetails:
+      'Calendar hooks, call joiner, transcript pipeline, and summaries.',
     launchDate: '2025-03-05',
     customers: 34,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'trial-to-paid-optimizer',
     name: 'Trial-to-Paid Optimizer',
-    tagline: 'Automated nudges, in-app guides, and experiments to lift conversion',
+    tagline:
+      'Automated nudges, in-app guides, and experiments to lift conversion',
     price: '$79',
     period: '/month',
     description:
@@ -193,7 +199,7 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
       'Email and Slack nudges',
       'Activation scoring and segments',
       'A/B experiments with guardrails',
-      'Analytics and cohort reporting'
+      'Analytics and cohort reporting',
     ],
     popular: false,
     icon: '🚀',
@@ -217,11 +223,11 @@ export const realMarketAugmentations2025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'SDK widgets, events, audience builder, and experiments.',
+    implementationDetails:
+      'SDK widgets, events, audience builder, and experiments.',
     launchDate: '2025-03-15',
     customers: 9,
     rating: 4.4,
-    reviews: 4
-  }
+    reviews: 4,
+  },
 ];
-

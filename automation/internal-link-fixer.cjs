@@ -5,11 +5,22 @@ const path = require('path');
 
 const WORKSPACE = path.resolve(__dirname, '..');
 const PAGES_DIR = path.join(WORKSPACE, 'pages');
-const REPORT_LATEST = path.join(WORKSPACE, 'data', 'reports', 'internal-links', 'latest.json');
+const REPORT_LATEST = path.join(
+  WORKSPACE,
+  'data',
+  'reports',
+  'internal-links',
+  'latest.json'
+);
 
-function ensureDir(dir) { fs.mkdirSync(dir, { recursive: true }); }
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 function writeFileIfMissing(filePath, content) {
-  try { fs.accessSync(filePath, fs.constants.F_OK); return false; } catch {}
+  try {
+    fs.accessSync(filePath, fs.constants.F_OK);
+    return false;
+  } catch {}
   ensureDir(path.dirname(filePath));
   fs.writeFileSync(filePath, content);
   return true;
@@ -58,9 +69,12 @@ export default function Page() {
 
 function main() {
   let report;
-  try { report = JSON.parse(fs.readFileSync(REPORT_LATEST, 'utf8')); }
-  catch {
-    console.error('No internal links report found. Run internal-link-crawler first.');
+  try {
+    report = JSON.parse(fs.readFileSync(REPORT_LATEST, 'utf8'));
+  } catch {
+    console.error(
+      'No internal links report found. Run internal-link-crawler first.'
+    );
     process.exit(0);
   }
 
@@ -71,7 +85,8 @@ function main() {
     path.join(PAGES_DIR, 'services', 'index.tsx'),
     createFuturisticPage({
       title: 'Services — Autonomous Solutions',
-      description: 'Explore autonomous services and accelerators powered by Zion.',
+      description:
+        'Explore autonomous services and accelerators powered by Zion.',
       body: `<section className="mx-auto max-w-7xl px-6 pb-16">
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Popular Services</h2>
   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -84,9 +99,11 @@ function main() {
       <Link key={s.href} href={s.href}><a className="group rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30"><div className="text-lg font-semibold">{s.title}</div><div className="mt-1 text-sm text-white/70">Open →</div></a></Link>
     ))}
   </div>
-</section>`
+</section>`,
     })
-  ) ? 1 : 0;
+  )
+    ? 1
+    : 0;
 
   created += writeFileIfMissing(
     path.join(PAGES_DIR, 'services', '[slug].tsx'),
@@ -120,30 +137,36 @@ export default function ServiceDetail() {
   );
 }
 `
-  ) ? 1 : 0;
+  )
+    ? 1
+    : 0;
 
   // Ensure /products index
   created += writeFileIfMissing(
     path.join(PAGES_DIR, 'products', 'index.tsx'),
     createFuturisticPage({
       title: 'Products — Intelligent Tools',
-      description: 'A showcase of intelligent, autonomous products and toolkits.',
+      description:
+        'A showcase of intelligent, autonomous products and toolkits.',
       body: `<section className="mx-auto max-w-7xl px-6 pb-20">
   <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {[{title:'Automation Dashboard',href:'/automation'},{title:'Site Health',href:'/site-health'},{title:'AI Trends',href:'/reports/ai-trends'}].map((p)=> (
       <Link key={p.title} href={p.href}><a className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30"><div className="text-lg font-semibold">{p.title}</div><div className="mt-1 text-sm text-white/75">Open →</div></a></Link>
     ))}
   </div>
-</section>`
+</section>`,
     })
-  ) ? 1 : 0;
+  )
+    ? 1
+    : 0;
 
   // Ensure /contact page
   created += writeFileIfMissing(
     path.join(PAGES_DIR, 'contact.tsx'),
     createFuturisticPage({
-      title: 'Contact — Let\'s Collaborate',
-      description: 'Reach out to discuss your autonomous roadmap and use‑cases.',
+      title: "Contact — Let's Collaborate",
+      description:
+        'Reach out to discuss your autonomous roadmap and use‑cases.',
       body: `<section className="mx-auto max-w-2xl px-6 pb-24">
   <form className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl space-y-4">
     <input placeholder="Name" className="w-full rounded-lg bg-black/20 border border-white/10 p-3 outline-none focus:border-cyan-400/40"/>
@@ -151,9 +174,11 @@ export default function ServiceDetail() {
     <textarea placeholder="How can we help?" rows="5" className="w-full rounded-lg bg-black/20 border border-white/10 p-3 outline-none focus:border-cyan-400/40"/>
     <button type="button" className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold">Send</button>
   </form>
-</section>`
+</section>`,
     })
-  ) ? 1 : 0;
+  )
+    ? 1
+    : 0;
 
   // Create generic placeholders for any remaining missing internal routes
   if (Array.isArray(report.missing)) {
@@ -161,22 +186,31 @@ export default function ServiceDetail() {
       const parts = route.split('/').filter(Boolean);
       const dir = path.join(PAGES_DIR, ...parts);
       const file = path.join(dir, 'index.tsx');
-      const title = parts.length ? parts.map(p => p.replace(/-/g,' ')).map(s => s.charAt(0).toUpperCase()+s.slice(1)).join(' / ') : 'Home';
+      const title = parts.length
+        ? parts
+            .map(p => p.replace(/-/g, ' '))
+            .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+            .join(' / ')
+        : 'Home';
       const description = `Autogenerated placeholder for ${route} — content will be enhanced by automations.`;
       const body = `<section className="mx-auto max-w-3xl px-6 pb-24 text-center"><p className="text-white/75">This page was created automatically to repair a broken internal link.</p></section>`;
-      const createdNow = writeFileIfMissing(file, createFuturisticPage({ title: `${title}`, description, body }));
+      const createdNow = writeFileIfMissing(
+        file,
+        createFuturisticPage({ title: `${title}`, description, body })
+      );
       if (createdNow) created += 1;
     }
   }
 
   // Normalize previously generated files with escaped JSX quotes
   const pagesToScan = [];
-  (function walk(dir){
+  (function walk(dir) {
     try {
       for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
         const full = path.join(dir, e.name);
         if (e.isDirectory()) walk(full);
-        else if (e.isFile() && /\.(tsx|jsx)$/.test(e.name)) pagesToScan.push(full);
+        else if (e.isFile() && /\.(tsx|jsx)$/.test(e.name))
+          pagesToScan.push(full);
       }
     } catch {}
   })(PAGES_DIR);
@@ -185,13 +219,16 @@ export default function ServiceDetail() {
     try {
       const src = fs.readFileSync(f, 'utf8');
       if (src.includes('className\\"') || src.includes('rows=\\"')) {
-        const fixed = src.replace(/className\\\"/g, 'className="').replace(/rows=\\\"/g, 'rows="');
+        const fixed = src
+          .replace(/className\\\"/g, 'className="')
+          .replace(/rows=\\\"/g, 'rows="');
         fs.writeFileSync(f, fixed);
         normalized += 1;
       }
     } catch {}
   }
-  if (normalized) console.log(`Normalized ${normalized} page files with escaped JSX quotes.`);
+  if (normalized)
+    console.log(`Normalized ${normalized} page files with escaped JSX quotes.`);
 
   console.log(`Internal link fixer completed. Files created: ${created}`);
 }

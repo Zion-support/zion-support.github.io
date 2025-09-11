@@ -3,7 +3,7 @@ import type { NextApiRequest } from 'next';
 export type GeoResult = {
   ip: string;
   countryCode?: string; // e.g., BR
-  country?: string;     // e.g., Brazil
+  country?: string; // e.g., Brazil
   region?: string;
   city?: string;
 };
@@ -27,6 +27,6 @@ export async function geolocateIp(ip?: string): Promise<GeoResult> {
 
 export function getIpFromRequest(req: NextApiRequest): string | undefined {
   const xff = (req.headers['x-forwarded-for'] as string) || '';
-  const parts = xff.split(',').map((p) => p.trim());
+  const parts = xff.split(',').map(p => p.trim());
   return parts[0] || (req.socket as any)?.remoteAddress || undefined;
 }

@@ -11,7 +11,7 @@ try {
   // The mock has a specific SDK_VERSION
   if (Sentry && Sentry.SDK_VERSION === '7.0.0-mock') {
     console.log(
-      'Comprehensive Sentry mock (src/utils/sentry-mock.ts) loaded via webpack alias.',
+      'Comprehensive Sentry mock (src/utils/sentry-mock.ts) loaded via webpack alias.'
     );
   } else if (Sentry) {
     console.log('Real Sentry SDK loaded.');
@@ -21,14 +21,14 @@ try {
 } catch (error) {
   console.error(
     'CRITICAL: Failed to require "@sentry/nextjs" (real SDK or webpack alias). Falling back to emergency inline mock.',
-    error,
+    error
   );
   // Emergency fallback to a very basic inline mock if require itself fails catastrophically.
   // This should ideally not be reached if webpack aliasing is working correctly.
   Sentry = {
     init: () =>
       console.warn(
-        'Sentry emergency inline mock: init called. Sentry is NOT operational.',
+        'Sentry emergency inline mock: init called. Sentry is NOT operational.'
       ),
     captureException: (err: any) =>
       console.warn('Sentry emergency inline mock: captureException', err),
@@ -60,13 +60,13 @@ export function register() {
   if (isInvalidDsn) {
     // Preserve backward-compatibility with existing unit tests
     console.warn(
-      'Warning: NEXT_PUBLIC_SENTRY_DSN is not set. Sentry will not be initialized.',
+      'Warning: NEXT_PUBLIC_SENTRY_DSN is not set. Sentry will not be initialized.'
     );
     if (process.env.NODE_ENV === 'development') {
       console.log('Sentry disabled in development (no valid DSN configured)');
     } else {
       console.warn(
-        'Sentry DSN not configured for production - error monitoring disabled',
+        'Sentry DSN not configured for production - error monitoring disabled'
       );
     }
     return;
@@ -75,12 +75,12 @@ export function register() {
   // Emit granular warnings when individual env vars are missing so that tests can assert on them
   if (!SENTRY_RELEASE) {
     console.warn(
-      'Warning: NEXT_PUBLIC_SENTRY_RELEASE is not set. Sentry will proceed without release information.',
+      'Warning: NEXT_PUBLIC_SENTRY_RELEASE is not set. Sentry will proceed without release information.'
     );
   }
   if (!SENTRY_ENVIRONMENT) {
     console.warn(
-      'Warning: NEXT_PUBLIC_SENTRY_ENVIRONMENT is not set. Sentry will proceed without environment information.',
+      'Warning: NEXT_PUBLIC_SENTRY_ENVIRONMENT is not set. Sentry will proceed without environment information.'
     );
   }
 
@@ -91,7 +91,7 @@ export function register() {
   }
 
   console.log(
-    `Initializing client-side Sentry. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`,
+    `Initializing client-side Sentry. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`
   );
 
   try {
@@ -121,7 +121,7 @@ export function register() {
     Sentry.setTag('runtime', 'browser');
 
     console.log(
-      `Sentry initialized successfully. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`,
+      `Sentry initialized successfully. Release: ${SENTRY_RELEASE}, Environment: ${SENTRY_ENVIRONMENT}`
     );
   } catch (error) {
     console.error('Failed to initialize Sentry:', error);

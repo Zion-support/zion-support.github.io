@@ -3,8 +3,15 @@ const { spawnSync } = require('child_process');
 
 function runNode(relativePath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relativePath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 exports.config = {
@@ -22,8 +29,14 @@ exports.handler = async () => {
     return status;
   };
 
-  step('automation:docs-drift-detector', () => runNode('automation/docs-drift-detector.cjs'));
+  step('automation:docs-drift-detector', () =>
+    runNode('automation/docs-drift-detector.cjs')
+  );
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+  return {
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs.join('\n'),
+  };
 };

@@ -15,7 +15,8 @@ interface TenantInfo {
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info, apikey, X-Client-Info',
+  'Access-Control-Allow-Headers':
+    'Content-Type, Authorization, x-client-info, apikey, X-Client-Info',
   'Access-Control-Max-Age': '86400',
   'Access-Control-Expose-Headers': 'Content-Length',
   'Access-Control-Allow-Credentials': 'true',
@@ -31,7 +32,7 @@ if (!supabaseUrl || !supabaseServiceKey) {
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-serve(async (req) => {
+serve(async req => {
   // Enhanced CORS preflight handling
   if (req.method === 'OPTIONS') {
     return new Response(null, {
@@ -44,11 +45,14 @@ serve(async (req) => {
     const url = new URL(req.url);
     const hostnameParam = url.searchParams.get('host');
     const subdomainParam = url.searchParams.get('subdomain');
-    
+
     // Get hostname from parameters or headers
     const forwardedHost = req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam || 
-      (forwardedHost ? forwardedHost.split(',')[0].trim().split(':')[0] : null) ||
+    const hostname =
+      hostnameParam ||
+      (forwardedHost
+        ? forwardedHost.split(',')[0].trim().split(':')[0]
+        : null) ||
       url.hostname;
 
     if (!hostname && !subdomainParam) {
@@ -62,7 +66,9 @@ serve(async (req) => {
       // Direct subdomain lookup with error handling
       const { data, error } = await supabase
         .from('whitelabel_tenants')
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
+        .select(
+          'id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset'
+        )
         .eq('subdomain', subdomainParam)
         .eq('is_active', true)
         .single();
@@ -77,7 +83,9 @@ serve(async (req) => {
       // Try matching custom domain first
       const { data, error } = await supabase
         .from('whitelabel_tenants')
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
+        .select(
+          'id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset'
+        )
         .eq('custom_domain', hostname)
         .eq('is_active', true)
         .single();
@@ -85,10 +93,15 @@ serve(async (req) => {
       // If no match on custom domain, try subdomain
       if (!data && !error) {
         const subdomain = hostname.split('.')[0];
-        if (subdomain && !['www', 'app', 'local', 'localhost'].includes(subdomain)) {
+        if (
+          subdomain &&
+          !['www', 'app', 'local', 'localhost'].includes(subdomain)
+        ) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
-            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
+            .select(
+              'id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset'
+            )
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
@@ -106,25 +119,25 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({
         tenant: tenantInfo,
-        status: 'success'
+        status: 'success',
       }),
       {
         headers: {
           'Content-Type': 'application/json',
           ...corsHeaders,
         },
-      },
+      }
     );
   } catch (error) {
     // console.error('Tenant detector error:', error);
-    
+
     // Enhanced error response
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         error: error.message || 'Internal server error',
         status: 'error',
         timestamp: new Date().toISOString(),
-        details: error.stack
+        details: error.stack,
       }),
       {
         status: error.message.includes('No hostname') ? 400 : 500,
@@ -132,7 +145,7 @@ serve(async (req) => {
           'Content-Type': 'application/json',
           ...corsHeaders,
         },
-      },
+      }
     );
   }
 });

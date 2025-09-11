@@ -25,7 +25,12 @@ export default async function handler(req, res) {
 
     fs.appendFileSync('service_requests.log', JSON.stringify(entry) + '\n');
 
-    res.status(200).json({ success: true, message: 'Service request submitted successfully' });
+    res
+      .status(200)
+      .json({
+        success: true,
+        message: 'Service request submitted successfully',
+      });
   } catch (error) {
     console.error('Service request API error:', error);
     res.status(500).json({ error: 'Failed to submit service request' });

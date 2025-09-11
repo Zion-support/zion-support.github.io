@@ -4,9 +4,20 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
-function read(file) { try { return fs.readFileSync(file, 'utf8'); } catch { return ''; } }
-function write(file, content) { ensureDir(path.dirname(file)); fs.writeFileSync(file, content); }
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
+}
+function read(file) {
+  try {
+    return fs.readFileSync(file, 'utf8');
+  } catch {
+    return '';
+  }
+}
+function write(file, content) {
+  ensureDir(path.dirname(file));
+  fs.writeFileSync(file, content);
+}
 
 function findAnchorsAndIds(content) {
   const anchors = [];
@@ -14,22 +25,27 @@ function findAnchorsAndIds(content) {
   // href="#id" or href="/path#id"
   const hrefRe = /href\s*=\s*"([^"]*#[^"]+)"/g;
   let m;
-  while ((m = hrefRe.exec(content))) { anchors.push(m[1]); }
+  while ((m = hrefRe.exec(content))) {
+    anchors.push(m[1]);
+  }
   // id="..."
   const idRe = /id\s*=\s*"([^"]+)"/g;
-  while ((m = idRe.exec(content))) { ids.add(m[1]); }
+  while ((m = idRe.exec(content))) {
+    ids.add(m[1]);
+  }
   return { anchors, ids };
 }
 
 function generateHtmlReport(results) {
-  const rows = results.map(r => {
-    const missingRows = r.missing.length
-      ? r.missing.map(x => `<li><code>${x}</code></li>`).join('')
-      : '<li><em>No missing anchors found</em></li>';
-    const unknownRows = r.unknown.length
-      ? r.unknown.map(x => `<li><code>${x}</code></li>`).join('')
-      : '';
-    return `
+  const rows = results
+    .map(r => {
+      const missingRows = r.missing.length
+        ? r.missing.map(x => `<li><code>${x}</code></li>`).join('')
+        : '<li><em>No missing anchors found</em></li>';
+      const unknownRows = r.unknown.length
+        ? r.unknown.map(x => `<li><code>${x}</code></li>`).join('')
+        : '';
+      return `
       <section class="card">
         <h2>${r.relPath}</h2>
         <div class="muted">Anchors: ${r.anchors.length} • IDs: ${r.ids.size}</div>
@@ -40,9 +56,10 @@ function generateHtmlReport(results) {
         </div>
       </section>
     `;
-  }).join('\n');
+    })
+    .join('\n');
 
-  const totalMissing = results.reduce((a,b)=>a + b.missing.length, 0);
+  const totalMissing = results.reduce((a, b) => a + b.missing.length, 0);
 
   return `<!doctype html>
 <html>
@@ -68,12 +85,19 @@ function generateHtmlReport(results) {
 </html>`;
 }
 
-(function main(){
+(function main() {
   const roots = [
     path.join(process.cwd(), 'pages'),
     path.join(process.cwd(), 'public'),
   ];
-  const files = roots.flatMap(root => glob.sync('**/*.{html,htm,tsx,jsx,md,mdx}', { cwd: root, absolute: true, dot: false, nodir: true }));
+  const files = roots.flatMap(root =>
+    glob.sync('**/*.{html,htm,tsx,jsx,md,mdx}', {
+      cwd: root,
+      absolute: true,
+      dot: false,
+      nodir: true,
+    })
+  );
   const results = [];
   for (const file of files) {
     const content = read(file);
@@ -98,6 +122,9 @@ function generateHtmlReport(results) {
   }
 
   const html = generateHtmlReport(results);
-  write(path.join(process.cwd(), 'public', 'reports', 'anchors', 'index.html'), html);
+  write(
+    path.join(process.cwd(), 'public', 'reports', 'anchors', 'index.html'),
+    html
+  );
   console.log(`[internal-anchors-auditor] scanned ${results.length} files`);
 })();

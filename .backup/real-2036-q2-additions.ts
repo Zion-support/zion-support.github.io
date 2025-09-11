@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2036Q2Additions: RealMarketService[] = [
@@ -55,7 +55,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$3,999',
     period: '/month',
-    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture, enabling ultra-efficient AI processing and real-time learning capabilities.',
+    description:
+      "Revolutionary neuromorphic computing platform that mimics the human brain's neural architecture, enabling ultra-efficient AI processing and real-time learning capabilities.",
     features: [
       'Spiking neural networks',
       'Real-time learning algorithms',
@@ -65,22 +66,26 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Hardware acceleration support',
       'Multi-modal sensor integration',
       'Edge computing optimization',
-      'Scalable neural topologies'
+      'Scalable neural topologies',
     ],
     popular: true,
     icon: '🧠⚡',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/neuromorphic-computing',
-    marketPosition: 'First commercial neuromorphic computing platform with enterprise applications.',
-    targetAudience: 'AI research labs, robotics companies, IoT manufacturers, autonomous vehicle developers',
+    marketPosition:
+      'First commercial neuromorphic computing platform with enterprise applications.',
+    targetAudience:
+      'AI research labs, robotics companies, IoT manufacturers, autonomous vehicle developers',
     trialDays: 45,
     setupTime: '2 weeks',
     category: 'Neuromorphic AI',
     realService: true,
     technology: ['C++, CUDA, OpenCL, Python, TensorFlow, PyTorch'],
     integrations: ['Intel Loihi, IBM TrueNorth, BrainChip, NVIDIA Jetson'],
-    useCases: ['Autonomous robotics, Edge AI, IoT intelligence, Cognitive computing'],
+    useCases: [
+      'Autonomous robotics, Edge AI, IoT intelligence, Cognitive computing',
+    ],
     roi: 'Reduce AI power consumption by 90% and improve real-time performance by 100x.',
     competitors: ['Intel Neuromorphic, IBM TrueNorth, BrainChip, SynSense'],
     marketSize: '$2.1B neuromorphic computing market',
@@ -88,11 +93,12 @@ export const real2036Q2Additions: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hardware-software platform with neuromorphic chips, development tools, and enterprise applications.',
+    implementationDetails:
+      'Hardware-software platform with neuromorphic chips, development tools, and enterprise applications.',
     launchDate: '2026-04-01',
     customers: 5,
     rating: 4.9,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'quantum-internet-protocol',
@@ -100,7 +106,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Secure quantum communication network infrastructure',
     price: '$4,999',
     period: '/month',
-    description: 'Advanced quantum internet protocol implementation that enables ultra-secure quantum communication, quantum key distribution, and quantum network routing across global infrastructure.',
+    description:
+      'Advanced quantum internet protocol implementation that enables ultra-secure quantum communication, quantum key distribution, and quantum network routing across global infrastructure.',
     features: [
       'Quantum key distribution (QKD)',
       'Quantum network routing',
@@ -110,34 +117,45 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Quantum internet protocols',
       'Post-quantum cryptography',
       'Quantum network security',
-      'Global quantum infrastructure'
+      'Global quantum infrastructure',
     ],
     popular: false,
     icon: '🌐⚛️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-internet',
-    marketPosition: 'Leading quantum internet protocol implementation for secure communication.',
-    targetAudience: 'Government agencies, financial institutions, telecommunications companies, defense contractors',
+    marketPosition:
+      'Leading quantum internet protocol implementation for secure communication.',
+    targetAudience:
+      'Government agencies, financial institutions, telecommunications companies, defense contractors',
     trialDays: 60,
     setupTime: '1 month',
     category: 'Quantum Communication',
     realService: true,
-    technology: ['C++, Python, Quantum protocols, Network protocols, Cryptography'],
-    integrations: ['Quantum hardware, Network infrastructure, Security systems, Communication protocols'],
-    useCases: ['Secure government communication, Financial transactions, Military operations, Critical infrastructure'],
+    technology: [
+      'C++, Python, Quantum protocols, Network protocols, Cryptography',
+    ],
+    integrations: [
+      'Quantum hardware, Network infrastructure, Security systems, Communication protocols',
+    ],
+    useCases: [
+      'Secure government communication, Financial transactions, Military operations, Critical infrastructure',
+    ],
     roi: 'Unbreakable security with quantum encryption and 99.999% uptime.',
-    competitors: ['ID Quantique, Toshiba, Chinese Academy of Sciences, Delft University'],
+    competitors: [
+      'ID Quantique, Toshiba, Chinese Academy of Sciences, Delft University',
+    ],
     marketSize: '$1.8B quantum communication market',
     growthRate: '300% YoY',
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise quantum network infrastructure with protocol implementation and security features.',
+    implementationDetails:
+      'Enterprise quantum network infrastructure with protocol implementation and security features.',
     launchDate: '2026-04-15',
     customers: 3,
     rating: 4.8,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'autonomous-ai-agents-platform',
@@ -145,7 +163,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Self-learning AI agents for complex business automation',
     price: '$1,899',
     period: '/month',
-    description: 'Platform for creating, deploying, and managing autonomous AI agents that can learn, adapt, and execute complex business processes without human intervention.',
+    description:
+      'Platform for creating, deploying, and managing autonomous AI agents that can learn, adapt, and execute complex business processes without human intervention.',
     features: [
       'Multi-agent orchestration',
       'Autonomous learning capabilities',
@@ -155,34 +174,43 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Continuous improvement',
       'Multi-modal interaction',
       'Scalable agent deployment',
-      'Performance monitoring'
+      'Performance monitoring',
     ],
     popular: true,
     icon: '🤖🎯',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/autonomous-ai-agents',
-    marketPosition: 'Leading platform for autonomous AI agents with enterprise-grade features.',
-    targetAudience: 'Enterprise automation teams, RPA developers, business process managers, AI engineers',
+    marketPosition:
+      'Leading platform for autonomous AI agents with enterprise-grade features.',
+    targetAudience:
+      'Enterprise automation teams, RPA developers, business process managers, AI engineers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI Automation',
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, LangChain, OpenAI, Anthropic'],
-    integrations: ['Salesforce, SAP, Microsoft 365, Slack, Teams, Email systems'],
-    useCases: ['Customer service automation, Process optimization, Data analysis, Decision support'],
+    integrations: [
+      'Salesforce, SAP, Microsoft 365, Slack, Teams, Email systems',
+    ],
+    useCases: [
+      'Customer service automation, Process optimization, Data analysis, Decision support',
+    ],
     roi: 'Automate 80% of repetitive tasks and improve efficiency by 300%.',
-    competitors: ['UiPath, Automation Anywhere, Blue Prism, Microsoft Power Automate'],
+    competitors: [
+      'UiPath, Automation Anywhere, Blue Prism, Microsoft Power Automate',
+    ],
     marketSize: '$15.2B RPA market',
     growthRate: '180% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native platform with AI agent development, deployment, and management capabilities.',
+    implementationDetails:
+      'Cloud-native platform with AI agent development, deployment, and management capabilities.',
     launchDate: '2026-04-20',
     customers: 78,
     rating: 4.7,
-    reviews: 42
+    reviews: 42,
   },
   {
     id: 'quantum-optimization-engine',
@@ -190,7 +218,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Solve complex optimization problems with quantum algorithms',
     price: '$2,799',
     period: '/month',
-    description: 'Advanced quantum optimization engine that leverages quantum computing to solve complex combinatorial optimization problems in logistics, finance, and manufacturing.',
+    description:
+      'Advanced quantum optimization engine that leverages quantum computing to solve complex combinatorial optimization problems in logistics, finance, and manufacturing.',
     features: [
       'Quantum annealing algorithms',
       'Combinatorial optimization',
@@ -200,22 +229,28 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Performance benchmarking',
       'API integration',
       'Scalable problem handling',
-      'Optimization analytics'
+      'Optimization analytics',
     ],
     popular: true,
     icon: '⚛️🎯',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-optimization',
-    marketPosition: 'Leading quantum optimization platform for enterprise applications.',
-    targetAudience: 'Logistics companies, financial institutions, manufacturing firms, research institutions',
+    marketPosition:
+      'Leading quantum optimization platform for enterprise applications.',
+    targetAudience:
+      'Logistics companies, financial institutions, manufacturing firms, research institutions',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Quantum Optimization',
     realService: true,
     technology: ['Python, Qiskit, D-Wave Ocean, C++, Optimization algorithms'],
-    integrations: ['D-Wave, IBM Quantum, AWS Braket, Azure Quantum, Custom solvers'],
-    useCases: ['Supply chain optimization, Portfolio optimization, Production scheduling, Route planning'],
+    integrations: [
+      'D-Wave, IBM Quantum, AWS Braket, Azure Quantum, Custom solvers',
+    ],
+    useCases: [
+      'Supply chain optimization, Portfolio optimization, Production scheduling, Route planning',
+    ],
     roi: 'Solve optimization problems 1000x faster than classical methods.',
     competitors: ['D-Wave, IBM Quantum, Google Quantum, Amazon Braket'],
     marketSize: '$3.2B optimization market',
@@ -223,11 +258,12 @@ export const real2036Q2Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with quantum optimization algorithms and comprehensive problem-solving capabilities.',
+    implementationDetails:
+      'Enterprise platform with quantum optimization algorithms and comprehensive problem-solving capabilities.',
     launchDate: '2026-05-01',
     customers: 34,
     rating: 4.8,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ai-powered-cybersecurity-threat-hunting',
@@ -235,7 +271,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Proactive threat detection and automated response',
     price: '$1,499',
     period: '/month',
-    description: 'Advanced cybersecurity platform that uses AI to proactively hunt for threats, analyze attack patterns, and automatically respond to security incidents in real-time.',
+    description:
+      'Advanced cybersecurity platform that uses AI to proactively hunt for threats, analyze attack patterns, and automatically respond to security incidents in real-time.',
     features: [
       'AI-powered threat hunting',
       'Behavioral analysis',
@@ -245,22 +282,28 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Predictive threat modeling',
       'Zero-day detection',
       'Compliance reporting',
-      'Multi-vector protection'
+      'Multi-vector protection',
     ],
     popular: true,
     icon: '🛡️🤖',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity',
-    marketPosition: 'Leading AI-powered cybersecurity with proactive threat hunting capabilities.',
-    targetAudience: 'Security operations centers, IT security teams, managed security providers, enterprises',
+    marketPosition:
+      'Leading AI-powered cybersecurity with proactive threat hunting capabilities.',
+    targetAudience:
+      'Security operations centers, IT security teams, managed security providers, enterprises',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, SIEM integration'],
+    technology: [
+      'Python, TensorFlow, PyTorch, Elasticsearch, SIEM integration',
+    ],
     integrations: ['Splunk, QRadar, LogRhythm, CrowdStrike, SentinelOne'],
-    useCases: ['Threat detection, Incident response, Security monitoring, Compliance'],
+    useCases: [
+      'Threat detection, Incident response, Security monitoring, Compliance',
+    ],
     roi: 'Reduce threat detection time by 90% and improve response accuracy by 95%.',
     competitors: ['Darktrace, CrowdStrike, SentinelOne, Cylance'],
     marketSize: '$22.4B cybersecurity market',
@@ -268,11 +311,12 @@ export const real2036Q2Additions: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise security platform with AI-powered threat detection and automated response capabilities.',
+    implementationDetails:
+      'Enterprise security platform with AI-powered threat detection and automated response capabilities.',
     launchDate: '2026-05-10',
     customers: 112,
     rating: 4.6,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-climate-modeling',
@@ -280,7 +324,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'High-precision climate prediction with quantum computing',
     price: '$3,299',
     period: '/month',
-    description: 'Advanced climate modeling platform that leverages quantum computing to provide high-precision weather forecasting, climate change analysis, and environmental impact assessment.',
+    description:
+      'Advanced climate modeling platform that leverages quantum computing to provide high-precision weather forecasting, climate change analysis, and environmental impact assessment.',
     features: [
       'Quantum atmospheric modeling',
       'High-precision forecasting',
@@ -290,22 +335,30 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Multi-scale modeling',
       'Predictive analytics',
       'Visualization tools',
-      'API access'
+      'API access',
     ],
     popular: false,
     icon: '🌍⚛️',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-climate-modeling',
-    marketPosition: 'First quantum-powered climate modeling platform for research and commercial use.',
-    targetAudience: 'Meteorological services, climate researchers, environmental agencies, insurance companies',
+    marketPosition:
+      'First quantum-powered climate modeling platform for research and commercial use.',
+    targetAudience:
+      'Meteorological services, climate researchers, environmental agencies, insurance companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Climate',
     realService: true,
-    technology: ['Python, Qiskit, Climate modeling libraries, Quantum algorithms'],
-    integrations: ['Weather APIs, Climate databases, Satellite data, Ocean buoys'],
-    useCases: ['Weather forecasting, Climate research, Environmental planning, Risk assessment'],
+    technology: [
+      'Python, Qiskit, Climate modeling libraries, Quantum algorithms',
+    ],
+    integrations: [
+      'Weather APIs, Climate databases, Satellite data, Ocean buoys',
+    ],
+    useCases: [
+      'Weather forecasting, Climate research, Environmental planning, Risk assessment',
+    ],
     roi: 'Improve forecast accuracy by 40% and reduce computational time by 100x.',
     competitors: ['ECMWF, NOAA, Met Office, Climate models'],
     marketSize: '$2.8B climate modeling market',
@@ -313,11 +366,12 @@ export const real2036Q2Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Research-grade platform with quantum algorithms and comprehensive climate modeling capabilities.',
+    implementationDetails:
+      'Research-grade platform with quantum algorithms and comprehensive climate modeling capabilities.',
     launchDate: '2026-05-15',
     customers: 12,
     rating: 4.7,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'autonomous-edge-ai-platform',
@@ -325,7 +379,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Intelligent AI processing at the edge of the network',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced edge AI platform that enables autonomous machine learning and inference at the edge, reducing latency and improving real-time decision-making capabilities.',
+    description:
+      'Advanced edge AI platform that enables autonomous machine learning and inference at the edge, reducing latency and improving real-time decision-making capabilities.',
     features: [
       'Edge AI processing',
       'Autonomous learning',
@@ -335,34 +390,43 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Federated learning',
       'Model optimization',
       'Edge security',
-      'Scalable deployment'
+      'Scalable deployment',
     ],
     popular: true,
     icon: '📱🤖',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/edge-ai-platform',
-    marketPosition: 'Leading autonomous edge AI platform with enterprise-grade features.',
-    targetAudience: 'IoT manufacturers, edge computing providers, mobile app developers, industrial companies',
+    marketPosition:
+      'Leading autonomous edge AI platform with enterprise-grade features.',
+    targetAudience:
+      'IoT manufacturers, edge computing providers, mobile app developers, industrial companies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Edge AI',
     realService: true,
-    technology: ['TensorFlow Lite, ONNX, Edge TPU, NVIDIA Jetson, ARM processors'],
+    technology: [
+      'TensorFlow Lite, ONNX, Edge TPU, NVIDIA Jetson, ARM processors',
+    ],
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Kubernetes, Docker'],
-    useCases: ['IoT intelligence, Mobile AI, Industrial automation, Smart cities'],
+    useCases: [
+      'IoT intelligence, Mobile AI, Industrial automation, Smart cities',
+    ],
     roi: 'Reduce latency by 80% and improve edge processing efficiency by 5x.',
-    competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Cloud IoT, NVIDIA Jetson'],
+    competitors: [
+      'AWS IoT Greengrass, Azure IoT Edge, Google Cloud IoT, NVIDIA Jetson',
+    ],
     marketSize: '$7.2B edge AI market',
     growthRate: '200% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge computing platform with AI processing, device management, and security features.',
+    implementationDetails:
+      'Edge computing platform with AI processing, device management, and security features.',
     launchDate: '2026-05-20',
     customers: 89,
     rating: 4.5,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'quantum-materials-simulation',
@@ -370,7 +434,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Accelerate materials discovery with quantum computing',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced materials simulation platform that uses quantum computing to model atomic and molecular structures, accelerating the discovery of new materials for various applications.',
+    description:
+      'Advanced materials simulation platform that uses quantum computing to model atomic and molecular structures, accelerating the discovery of new materials for various applications.',
     features: [
       'Quantum molecular dynamics',
       'Materials property prediction',
@@ -380,22 +445,30 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Mechanical property simulation',
       'Materials database',
       'Collaborative research tools',
-      'API access'
+      'API access',
     ],
     popular: false,
     icon: '🔬⚛️',
     color: 'from-amber-600 to-yellow-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/quantum-materials-simulation',
-    marketPosition: 'Leading quantum materials simulation platform for research and industry.',
-    targetAudience: 'Materials scientists, research institutions, manufacturing companies, chemical companies',
+    marketPosition:
+      'Leading quantum materials simulation platform for research and industry.',
+    targetAudience:
+      'Materials scientists, research institutions, manufacturing companies, chemical companies',
     trialDays: 45,
     setupTime: '2 weeks',
     category: 'Quantum Materials',
     realService: true,
-    technology: ['Python, Qiskit, Materials science libraries, Quantum algorithms'],
-    integrations: ['Materials databases, Lab equipment, Research tools, Publication systems'],
-    useCases: ['Materials discovery, Drug development, Electronics design, Energy storage'],
+    technology: [
+      'Python, Qiskit, Materials science libraries, Quantum algorithms',
+    ],
+    integrations: [
+      'Materials databases, Lab equipment, Research tools, Publication systems',
+    ],
+    useCases: [
+      'Materials discovery, Drug development, Electronics design, Energy storage',
+    ],
     roi: 'Accelerate materials discovery by 100x and reduce research costs by 70%.',
     competitors: ['Materials Project, AFLOW, OQMD, Quantum chemistry software'],
     marketSize: '$1.5B materials simulation market',
@@ -403,19 +476,22 @@ export const real2036Q2Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Research platform with quantum simulation algorithms and comprehensive materials modeling.',
+    implementationDetails:
+      'Research platform with quantum simulation algorithms and comprehensive materials modeling.',
     launchDate: '2026-06-01',
     customers: 8,
     rating: 4.8,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'ai-powered-digital-twin-platform',
     name: 'AI-Powered Digital Twin Platform',
-    tagline: 'Intelligent digital twins for predictive maintenance and optimization',
+    tagline:
+      'Intelligent digital twins for predictive maintenance and optimization',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced digital twin platform that uses AI to create intelligent virtual representations of physical assets, enabling predictive maintenance, optimization, and real-time monitoring.',
+    description:
+      'Advanced digital twin platform that uses AI to create intelligent virtual representations of physical assets, enabling predictive maintenance, optimization, and real-time monitoring.',
     features: [
       'AI-powered modeling',
       'Real-time monitoring',
@@ -425,34 +501,43 @@ export const real2036Q2Additions: RealMarketService[] = [
       'IoT integration',
       '3D visualization',
       'Collaborative workspace',
-      'API access'
+      'API access',
     ],
     popular: true,
     icon: '🔄🤖',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/digital-twin-platform',
-    marketPosition: 'Leading AI-powered digital twin platform with enterprise applications.',
-    targetAudience: 'Manufacturing companies, infrastructure operators, energy companies, smart city planners',
+    marketPosition:
+      'Leading AI-powered digital twin platform with enterprise applications.',
+    targetAudience:
+      'Manufacturing companies, infrastructure operators, energy companies, smart city planners',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Digital Twin',
     realService: true,
     technology: ['Unity3D, Unreal Engine, IoT platforms, AI/ML frameworks'],
-    integrations: ['IoT devices, SCADA systems, ERP systems, Building management systems'],
-    useCases: ['Predictive maintenance, Asset optimization, Process improvement, Risk management'],
+    integrations: [
+      'IoT devices, SCADA systems, ERP systems, Building management systems',
+    ],
+    useCases: [
+      'Predictive maintenance, Asset optimization, Process improvement, Risk management',
+    ],
     roi: 'Reduce maintenance costs by 30% and improve asset performance by 25%.',
-    competitors: ['Siemens Mindsphere, GE Digital, PTC ThingWorx, Microsoft Azure Digital Twins'],
+    competitors: [
+      'Siemens Mindsphere, GE Digital, PTC ThingWorx, Microsoft Azure Digital Twins',
+    ],
     marketSize: '$11.3B digital twin market',
     growthRate: '160% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with AI-powered modeling, real-time monitoring, and predictive analytics.',
+    implementationDetails:
+      'Enterprise platform with AI-powered modeling, real-time monitoring, and predictive analytics.',
     launchDate: '2026-06-10',
     customers: 67,
     rating: 4.6,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'quantum-logistics-optimization',
@@ -460,7 +545,8 @@ export const real2036Q2Additions: RealMarketService[] = [
     tagline: 'Revolutionary logistics optimization with quantum computing',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and supply chain optimization problems in real-time.',
+    description:
+      'Advanced logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and supply chain optimization problems in real-time.',
     features: [
       'Quantum routing algorithms',
       'Real-time optimization',
@@ -470,22 +556,28 @@ export const real2036Q2Additions: RealMarketService[] = [
       'Sustainability analysis',
       'Performance analytics',
       'API integration',
-      'Scalable solutions'
+      'Scalable solutions',
     ],
     popular: true,
     icon: '🚛⚛️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics',
-    marketPosition: 'First quantum-powered logistics optimization platform for enterprise use.',
-    targetAudience: 'Logistics companies, transportation providers, e-commerce companies, manufacturing firms',
+    marketPosition:
+      'First quantum-powered logistics optimization platform for enterprise use.',
+    targetAudience:
+      'Logistics companies, transportation providers, e-commerce companies, manufacturing firms',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Quantum Logistics',
     realService: true,
     technology: ['Python, Qiskit, Optimization algorithms, Logistics software'],
-    integrations: ['TMS systems, WMS systems, GPS tracking, Fleet management systems'],
-    useCases: ['Route optimization, Fleet management, Supply chain optimization, Last-mile delivery'],
+    integrations: [
+      'TMS systems, WMS systems, GPS tracking, Fleet management systems',
+    ],
+    useCases: [
+      'Route optimization, Fleet management, Supply chain optimization, Last-mile delivery',
+    ],
     roi: 'Reduce logistics costs by 25-40% and improve delivery efficiency by 50%.',
     competitors: ['Manhattan Associates, Blue Yonder, SAP, Oracle'],
     marketSize: '$8.9B logistics optimization market',
@@ -493,10 +585,11 @@ export const real2036Q2Additions: RealMarketService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with quantum optimization algorithms and comprehensive logistics management.',
+    implementationDetails:
+      'Enterprise platform with quantum optimization algorithms and comprehensive logistics management.',
     launchDate: '2026-06-15',
     customers: 45,
     rating: 4.7,
-    reviews: 23
-  }
+    reviews: 23,
+  },
 ];

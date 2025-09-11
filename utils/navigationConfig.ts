@@ -32,7 +32,7 @@ export const mainNavigation: MainNavigation = {
       href: '/',
       description: 'Welcome to Zion Tech Group',
       status: 'active',
-      priority: 1
+      priority: 1,
     },
     {
       id: 'about',
@@ -40,7 +40,7 @@ export const mainNavigation: MainNavigation = {
       href: '/about',
       description: 'Learn about our mission and vision',
       status: 'active',
-      priority: 2
+      priority: 2,
     },
     {
       id: 'services',
@@ -48,7 +48,7 @@ export const mainNavigation: MainNavigation = {
       href: '/services',
       description: 'Explore our comprehensive service offerings',
       status: 'active',
-      priority: 3
+      priority: 3,
     },
     {
       id: 'solutions',
@@ -56,7 +56,7 @@ export const mainNavigation: MainNavigation = {
       href: '/solutions',
       description: 'Industry-specific solutions and use cases',
       status: 'active',
-      priority: 4
+      priority: 4,
     },
     {
       id: 'pricing',
@@ -64,7 +64,7 @@ export const mainNavigation: MainNavigation = {
       href: '/pricing',
       description: 'Transparent pricing for all services',
       status: 'active',
-      priority: 5
+      priority: 5,
     },
     {
       id: 'contact',
@@ -72,8 +72,8 @@ export const mainNavigation: MainNavigation = {
       href: '/contact',
       description: 'Get in touch with our team',
       status: 'active',
-      priority: 6
-    }
+      priority: 6,
+    },
   ],
   services: [
     {
@@ -89,7 +89,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Advanced AI-powered research automation',
           status: 'active',
           priority: 1,
-          category: 'ai-automation'
+          category: 'ai-automation',
         },
         {
           id: 'advanced-ai-automation',
@@ -98,7 +98,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Comprehensive AI automation solutions',
           status: 'active',
           priority: 2,
-          category: 'ai-automation'
+          category: 'ai-automation',
         },
         {
           id: 'agentic-rag',
@@ -107,7 +107,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Intelligent retrieval-augmented generation',
           status: 'active',
           priority: 3,
-          category: 'ai-automation'
+          category: 'ai-automation',
         },
         {
           id: 'quantum-neural-network',
@@ -116,9 +116,9 @@ export const mainNavigation: MainNavigation = {
           description: 'Next-generation quantum computing solutions',
           status: 'beta',
           priority: 4,
-          category: 'ai-automation'
-        }
-      ]
+          category: 'ai-automation',
+        },
+      ],
     },
     {
       id: 'cybersecurity',
@@ -133,7 +133,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Comprehensive security protection',
           status: 'active',
           priority: 1,
-          category: 'cybersecurity'
+          category: 'cybersecurity',
         },
         {
           id: 'soc2-compliance',
@@ -142,9 +142,9 @@ export const mainNavigation: MainNavigation = {
           description: 'Automated compliance management',
           status: 'active',
           priority: 2,
-          category: 'cybersecurity'
-        }
-      ]
+          category: 'cybersecurity',
+        },
+      ],
     },
     {
       id: 'it-infrastructure',
@@ -159,7 +159,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Enterprise-grade infrastructure solutions',
           status: 'active',
           priority: 1,
-          category: 'it-infrastructure'
+          category: 'it-infrastructure',
         },
         {
           id: 'ai-powered-it-asset-management',
@@ -168,7 +168,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Intelligent asset tracking and management',
           status: 'active',
           priority: 2,
-          category: 'it-infrastructure'
+          category: 'it-infrastructure',
         },
         {
           id: '5g-enterprise-solutions',
@@ -177,9 +177,9 @@ export const mainNavigation: MainNavigation = {
           description: 'Next-generation network infrastructure',
           status: 'active',
           priority: 3,
-          category: 'it-infrastructure'
-        }
-      ]
+          category: 'it-infrastructure',
+        },
+      ],
     },
     {
       id: 'business-operations',
@@ -194,7 +194,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Self-managing business processes',
           status: 'beta',
           priority: 1,
-          category: 'business-operations'
+          category: 'business-operations',
         },
         {
           id: 'advanced-research-automation',
@@ -203,9 +203,9 @@ export const mainNavigation: MainNavigation = {
           description: 'Streamlined research workflows',
           status: 'active',
           priority: 2,
-          category: 'business-operations'
-        }
-      ]
+          category: 'business-operations',
+        },
+      ],
     },
     {
       id: 'tools-utilities',
@@ -220,7 +220,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Professional URL shortening service',
           status: 'active',
           priority: 1,
-          category: 'tools-utilities'
+          category: 'tools-utilities',
         },
         {
           id: 'website-performance-monitor',
@@ -229,7 +229,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Real-time performance tracking',
           status: 'active',
           priority: 2,
-          category: 'tools-utilities'
+          category: 'tools-utilities',
         },
         {
           id: 'wcag-accessibility-scanner',
@@ -238,7 +238,7 @@ export const mainNavigation: MainNavigation = {
           description: 'Web accessibility compliance checker',
           status: 'active',
           priority: 3,
-          category: 'tools-utilities'
+          category: 'tools-utilities',
         },
         {
           id: 'whitepaper-builder',
@@ -247,10 +247,10 @@ export const mainNavigation: MainNavigation = {
           description: 'Professional document creation tool',
           status: 'active',
           priority: 4,
-          category: 'tools-utilities'
-        }
-      ]
-    }
+          category: 'tools-utilities',
+        },
+      ],
+    },
   ],
   resources: [
     {
@@ -259,7 +259,7 @@ export const mainNavigation: MainNavigation = {
       href: '/blog',
       description: 'Latest insights and updates',
       status: 'active',
-      priority: 1
+      priority: 1,
     },
     {
       id: 'documentation',
@@ -267,7 +267,7 @@ export const mainNavigation: MainNavigation = {
       href: '/docs',
       description: 'Comprehensive guides and API docs',
       status: 'active',
-      priority: 2
+      priority: 2,
     },
     {
       id: 'case-studies',
@@ -275,7 +275,7 @@ export const mainNavigation: MainNavigation = {
       href: '/case-studies',
       description: 'Success stories and implementations',
       status: 'active',
-      priority: 3
+      priority: 3,
     },
     {
       id: 'whitepapers',
@@ -283,7 +283,7 @@ export const mainNavigation: MainNavigation = {
       href: '/whitepapers',
       description: 'In-depth technical research',
       status: 'active',
-      priority: 4
+      priority: 4,
     },
     {
       id: 'webinars',
@@ -291,8 +291,8 @@ export const mainNavigation: MainNavigation = {
       href: '/webinars',
       description: 'Educational sessions and demos',
       status: 'active',
-      priority: 5
-    }
+      priority: 5,
+    },
   ],
   company: [
     {
@@ -301,7 +301,7 @@ export const mainNavigation: MainNavigation = {
       href: '/about',
       description: 'Our story and mission',
       status: 'active',
-      priority: 1
+      priority: 1,
     },
     {
       id: 'team',
@@ -309,7 +309,7 @@ export const mainNavigation: MainNavigation = {
       href: '/team',
       description: 'Meet our experts',
       status: 'active',
-      priority: 2
+      priority: 2,
     },
     {
       id: 'careers',
@@ -317,7 +317,7 @@ export const mainNavigation: MainNavigation = {
       href: '/careers',
       description: 'Join our team',
       status: 'active',
-      priority: 3
+      priority: 3,
     },
     {
       id: 'newsroom',
@@ -325,7 +325,7 @@ export const mainNavigation: MainNavigation = {
       href: '/newsroom',
       description: 'Press releases and media',
       status: 'active',
-      priority: 4
+      priority: 4,
     },
     {
       id: 'trust',
@@ -333,9 +333,9 @@ export const mainNavigation: MainNavigation = {
       href: '/trust',
       description: 'Security and compliance',
       status: 'active',
-      priority: 5
-    }
-  ]
+      priority: 5,
+    },
+  ],
 };
 
 export const socialLinks = [
@@ -343,30 +343,30 @@ export const socialLinks = [
     id: 'linkedin',
     label: 'LinkedIn',
     href: 'https://linkedin.com/company/ziontechgroup',
-    icon: '🔗'
+    icon: '🔗',
   },
   {
     id: 'twitter',
     label: 'Twitter',
     href: 'https://twitter.com/ziontechgroup',
-    icon: '🐦'
+    icon: '🐦',
   },
   {
     id: 'github',
     label: 'GitHub',
     href: 'https://github.com/Zion-Holdings',
-    icon: '💻'
+    icon: '💻',
   },
   {
     id: 'youtube',
     label: 'YouTube',
     href: 'https://youtube.com/@ziontechgroup',
-    icon: '📺'
-  }
+    icon: '📺',
+  },
 ];
 
 export const contactInfo = {
   phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',
-  address: 'Zion Tech Group, Delaware, USA'
+  address: 'Zion Tech Group, Delaware, USA',
 };

@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const emergingTech2025Innovations: RealMarketService[] = [
@@ -12,10 +12,12 @@ export const emergingTech2025Innovations: RealMarketService[] = [
   {
     id: 'space-resource-intelligence-platform',
     name: 'Space Resource Intelligence Platform',
-    tagline: 'AI-powered platform for space resource discovery, mapping, and extraction planning',
+    tagline:
+      'AI-powered platform for space resource discovery, mapping, and extraction planning',
     price: '$2,499',
     period: '/month',
-    description: 'Revolutionary space technology platform that uses advanced AI and satellite data to identify, map, and plan extraction of valuable resources from asteroids, the Moon, and other celestial bodies.',
+    description:
+      'Revolutionary space technology platform that uses advanced AI and satellite data to identify, map, and plan extraction of valuable resources from asteroids, the Moon, and other celestial bodies.',
     features: [
       'AI-powered resource identification and mapping',
       'Satellite data analysis and processing',
@@ -25,44 +27,70 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Regulatory compliance and legal framework guidance',
       'Investment analysis and ROI projections',
       'Collaborative platform for space agencies and companies',
-      'Real-time space weather and environmental monitoring'
+      'Real-time space weather and environmental monitoring',
     ],
     popular: true,
     icon: '🚀🌌💎',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/space-resource-intelligence-platform',
-    marketPosition: 'Leading space resource intelligence platform with AI-powered discovery and planning capabilities.',
-    targetAudience: 'Space agencies, Mining companies, Investment firms, Research institutions',
+    marketPosition:
+      'Leading space resource intelligence platform with AI-powered discovery and planning capabilities.',
+    targetAudience:
+      'Space agencies, Mining companies, Investment firms, Research institutions',
     trialDays: 30,
     setupTime: '6 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Satellite APIs', '3D modeling', 'React', 'Node.js'],
-    integrations: ['NASA APIs', 'ESA data', 'Space weather services', 'Satellite imagery providers'],
-    useCases: ['Asteroid mining planning', 'Lunar resource mapping', 'Space investment analysis', 'Research and development'],
+    technology: [
+      'Python',
+      'TensorFlow',
+      'Satellite APIs',
+      '3D modeling',
+      'React',
+      'Node.js',
+    ],
+    integrations: [
+      'NASA APIs',
+      'ESA data',
+      'Space weather services',
+      'Satellite imagery providers',
+    ],
+    useCases: [
+      'Asteroid mining planning',
+      'Lunar resource mapping',
+      'Space investment analysis',
+      'Research and development',
+    ],
     roi: 'Accelerate space resource discovery by 80% and reduce exploration costs by 60%.',
-    competitors: ['Planetary Resources', 'Deep Space Industries', 'Asteroid Mining Corporation'],
+    competitors: [
+      'Planetary Resources',
+      'Deep Space Industries',
+      'Asteroid Mining Corporation',
+    ],
     marketSize: 'Global space mining market $3B+, growing 500% annually',
     growthRate: '800% YoY',
     variant: 'space-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced space technology platform with AI-powered resource intelligence, 3D modeling, and comprehensive planning tools.',
+    implementationDetails:
+      'Advanced space technology platform with AI-powered resource intelligence, 3D modeling, and comprehensive planning tools.',
     launchDate: '2025-10-01',
     customers: 45,
     rating: 4.9,
-    reviews: 38
+    reviews: 38,
   },
 
   // Metaverse Development Platform
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
-    tagline: 'Comprehensive platform for building, deploying, and managing metaverse experiences',
+    tagline:
+      'Comprehensive platform for building, deploying, and managing metaverse experiences',
     price: '$1,599',
     period: '/month',
-    description: 'Advanced metaverse development platform that enables creators and businesses to build immersive virtual worlds, deploy interactive experiences, and monetize digital assets.',
+    description:
+      'Advanced metaverse development platform that enables creators and businesses to build immersive virtual worlds, deploy interactive experiences, and monetize digital assets.',
     features: [
       '3D world building and design tools',
       'Avatar creation and customization',
@@ -72,22 +100,42 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Analytics and user behavior tracking',
       'Monetization and payment processing',
       'AI-powered content generation',
-      'VR/AR device optimization and support'
+      'VR/AR device optimization and support',
     ],
     popular: true,
     icon: '🌐👥🎮',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/metaverse-development-platform',
-    marketPosition: 'Leading metaverse development platform with comprehensive tools and deployment capabilities.',
-    targetAudience: 'Game developers, Brands and marketers, Educational institutions, Virtual event organizers',
+    marketPosition:
+      'Leading metaverse development platform with comprehensive tools and deployment capabilities.',
+    targetAudience:
+      'Game developers, Brands and marketers, Educational institutions, Virtual event organizers',
     trialDays: 30,
     setupTime: '4 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['Unity', 'Unreal Engine', 'WebGL', 'React', 'Node.js', 'Blockchain'],
-    integrations: ['Meta Quest', 'HTC Vive', 'Steam VR', 'WebXR', 'NFT marketplaces'],
-    useCases: ['Virtual events and conferences', 'Gaming and entertainment', 'Virtual real estate', 'Educational experiences'],
+    technology: [
+      'Unity',
+      'Unreal Engine',
+      'WebGL',
+      'React',
+      'Node.js',
+      'Blockchain',
+    ],
+    integrations: [
+      'Meta Quest',
+      'HTC Vive',
+      'Steam VR',
+      'WebXR',
+      'NFT marketplaces',
+    ],
+    useCases: [
+      'Virtual events and conferences',
+      'Gaming and entertainment',
+      'Virtual real estate',
+      'Educational experiences',
+    ],
     roi: 'Reduce metaverse development costs by 50% and accelerate time-to-market by 70%.',
     competitors: ['Roblox', 'Decentraland', 'The Sandbox', 'VRChat'],
     marketSize: 'Global metaverse market $45B+, growing 300% annually',
@@ -95,11 +143,12 @@ export const emergingTech2025Innovations: RealMarketService[] = [
     variant: 'metaverse-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Comprehensive metaverse platform with 3D development tools, social features, and monetization capabilities.',
+    implementationDetails:
+      'Comprehensive metaverse platform with 3D development tools, social features, and monetization capabilities.',
     launchDate: '2025-10-15',
     customers: 189,
     rating: 4.8,
-    reviews: 145
+    reviews: 145,
   },
 
   // Brain-Computer Interface Development Kit
@@ -109,7 +158,8 @@ export const emergingTech2025Innovations: RealMarketService[] = [
     tagline: 'Advanced BCI development platform for researchers and developers',
     price: '$3,999',
     period: '/month',
-    description: 'Cutting-edge brain-computer interface development kit that enables researchers and developers to create applications that can read brain signals and translate them into computer commands.',
+    description:
+      'Cutting-edge brain-computer interface development kit that enables researchers and developers to create applications that can read brain signals and translate them into computer commands.',
     features: [
       'High-precision EEG signal processing',
       'Real-time brain activity monitoring',
@@ -119,22 +169,41 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Data visualization and analysis',
       'Multi-user and multi-device support',
       'Security and privacy protection',
-      'Comprehensive documentation and tutorials'
+      'Comprehensive documentation and tutorials',
     ],
     popular: true,
     icon: '🧠💻🔌',
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/brain-computer-interface-devkit',
-    marketPosition: 'Leading BCI development platform with advanced signal processing and machine learning capabilities.',
-    targetAudience: 'Neuroscience researchers, Medical device developers, Gaming companies, Assistive technology developers',
+    marketPosition:
+      'Leading BCI development platform with advanced signal processing and machine learning capabilities.',
+    targetAudience:
+      'Neuroscience researchers, Medical device developers, Gaming companies, Assistive technology developers',
     trialDays: 30,
     setupTime: '8 weeks',
     category: 'Brain-Computer Interface',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Signal processing', 'React', 'Node.js', 'Hardware APIs'],
-    integrations: ['EEG devices', 'Medical equipment', 'Gaming platforms', 'Assistive technologies'],
-    useCases: ['Medical research', 'Assistive technology', 'Gaming and entertainment', 'Neuromarketing'],
+    technology: [
+      'Python',
+      'TensorFlow',
+      'Signal processing',
+      'React',
+      'Node.js',
+      'Hardware APIs',
+    ],
+    integrations: [
+      'EEG devices',
+      'Medical equipment',
+      'Gaming platforms',
+      'Assistive technologies',
+    ],
+    useCases: [
+      'Medical research',
+      'Assistive technology',
+      'Gaming and entertainment',
+      'Neuromarketing',
+    ],
     roi: 'Accelerate BCI research by 60% and reduce development costs by 40%.',
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'OpenBCI'],
     marketSize: 'Global BCI market $2B+, growing 400% annually',
@@ -142,21 +211,24 @@ export const emergingTech2025Innovations: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced BCI platform with high-precision signal processing, machine learning algorithms, and comprehensive development tools.',
+    implementationDetails:
+      'Advanced BCI platform with high-precision signal processing, machine learning algorithms, and comprehensive development tools.',
     launchDate: '2025-11-01',
     customers: 67,
     rating: 4.9,
-    reviews: 52
+    reviews: 52,
   },
 
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
-    tagline: 'Next-generation quantum-secured internet infrastructure and communication platform',
+    tagline:
+      'Next-generation quantum-secured internet infrastructure and communication platform',
     price: '$1,899',
     period: '/month',
-    description: 'Revolutionary quantum internet security platform that provides unhackable communication channels, quantum key distribution, and post-quantum cryptography for the future of secure internet.',
+    description:
+      'Revolutionary quantum internet security platform that provides unhackable communication channels, quantum key distribution, and post-quantum cryptography for the future of secure internet.',
     features: [
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography algorithms',
@@ -166,44 +238,70 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Multi-node quantum network support',
       'Integration with existing internet infrastructure',
       'Quantum network management and optimization',
-      'Comprehensive security auditing and compliance'
+      'Comprehensive security auditing and compliance',
     ],
     popular: true,
     icon: '🔐🌐⚛️',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
-    marketPosition: 'Leading quantum internet security platform with QKD and post-quantum cryptography.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
+    marketPosition:
+      'Leading quantum internet security platform with QKD and post-quantum cryptography.',
+    targetAudience:
+      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
     trialDays: 30,
     setupTime: '6 weeks',
     category: 'Quantum Internet',
     realService: true,
-    technology: ['Quantum protocols', 'Post-quantum algorithms', 'React', 'Node.js', 'Quantum hardware'],
-    integrations: ['Quantum networks', 'Internet infrastructure', 'Security systems', 'Government networks'],
-    useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data protection', 'Military communications'],
+    technology: [
+      'Quantum protocols',
+      'Post-quantum algorithms',
+      'React',
+      'Node.js',
+      'Quantum hardware',
+    ],
+    integrations: [
+      'Quantum networks',
+      'Internet infrastructure',
+      'Security systems',
+      'Government networks',
+    ],
+    useCases: [
+      'Secure government communications',
+      'Financial transactions',
+      'Healthcare data protection',
+      'Military communications',
+    ],
     roi: 'Provide unhackable security and reduce cybersecurity costs by 80%.',
-    competitors: ['ID Quantique', 'Qrypt', 'Quantum Xchange', 'Toshiba Quantum'],
+    competitors: [
+      'ID Quantique',
+      'Qrypt',
+      'Quantum Xchange',
+      'Toshiba Quantum',
+    ],
     marketSize: 'Global quantum internet market $5B+, growing 250% annually',
     growthRate: '400% YoY',
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced quantum internet platform with QKD, post-quantum cryptography, and comprehensive security features.',
+    implementationDetails:
+      'Advanced quantum internet platform with QKD, post-quantum cryptography, and comprehensive security features.',
     launchDate: '2025-11-15',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
 
   // Synthetic Biology Platform
   {
     id: 'synthetic-biology-platform',
     name: 'Synthetic Biology Platform',
-    tagline: 'AI-powered platform for designing, simulating, and optimizing synthetic biological systems',
+    tagline:
+      'AI-powered platform for designing, simulating, and optimizing synthetic biological systems',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced synthetic biology platform that enables researchers and companies to design, simulate, and optimize biological systems for applications in medicine, agriculture, and industrial biotechnology.',
+    description:
+      'Advanced synthetic biology platform that enables researchers and companies to design, simulate, and optimize biological systems for applications in medicine, agriculture, and industrial biotechnology.',
     features: [
       'AI-powered DNA sequence design',
       'Biological system simulation and modeling',
@@ -213,44 +311,71 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Biological circuit design and testing',
       'Regulatory compliance and safety assessment',
       'Collaborative research platform',
-      'Integration with laboratory automation systems'
+      'Integration with laboratory automation systems',
     ],
     popular: true,
     icon: '🧬🔬🤖',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
-    marketPosition: 'Leading synthetic biology platform with AI-powered design and optimization capabilities.',
-    targetAudience: 'Biotechnology companies, Pharmaceutical companies, Agricultural companies, Research institutions',
+    marketPosition:
+      'Leading synthetic biology platform with AI-powered design and optimization capabilities.',
+    targetAudience:
+      'Biotechnology companies, Pharmaceutical companies, Agricultural companies, Research institutions',
     trialDays: 30,
     setupTime: '8 weeks',
     category: 'Synthetic Biology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Bioinformatics tools', 'React', 'Node.js', 'Laboratory APIs'],
-    integrations: ['Laboratory equipment', 'DNA synthesis services', 'Gene editing tools', 'Research databases'],
-    useCases: ['Drug discovery', 'Agricultural biotechnology', 'Industrial biotechnology', 'Medical research'],
+    technology: [
+      'Python',
+      'TensorFlow',
+      'Bioinformatics tools',
+      'React',
+      'Node.js',
+      'Laboratory APIs',
+    ],
+    integrations: [
+      'Laboratory equipment',
+      'DNA synthesis services',
+      'Gene editing tools',
+      'Research databases',
+    ],
+    useCases: [
+      'Drug discovery',
+      'Agricultural biotechnology',
+      'Industrial biotechnology',
+      'Medical research',
+    ],
     roi: 'Accelerate synthetic biology research by 70% and reduce development costs by 50%.',
-    competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling', 'DNA Script'],
+    competitors: [
+      'Ginkgo Bioworks',
+      'Twist Bioscience',
+      'Benchling',
+      'DNA Script',
+    ],
     marketSize: 'Global synthetic biology market $15B+, growing 200% annually',
     growthRate: '350% YoY',
     variant: 'biotech-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced synthetic biology platform with AI-powered design, simulation, and comprehensive laboratory integration.',
+    implementationDetails:
+      'Advanced synthetic biology platform with AI-powered design, simulation, and comprehensive laboratory integration.',
     launchDate: '2025-12-01',
     customers: 123,
     rating: 4.8,
-    reviews: 98
+    reviews: 98,
   },
 
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Advanced AI platform for autonomous vehicle development, testing, and deployment',
+    tagline:
+      'Advanced AI platform for autonomous vehicle development, testing, and deployment',
     price: '$2,799',
     period: '/month',
-    description: 'Comprehensive autonomous vehicle AI platform that provides perception, planning, and control algorithms for self-driving cars, trucks, and other autonomous vehicles.',
+    description:
+      'Comprehensive autonomous vehicle AI platform that provides perception, planning, and control algorithms for self-driving cars, trucks, and other autonomous vehicles.',
     features: [
       'Computer vision and perception algorithms',
       'Path planning and navigation systems',
@@ -260,22 +385,41 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Safety and reliability monitoring',
       'Regulatory compliance and certification',
       'Fleet management and optimization',
-      'Integration with vehicle hardware platforms'
+      'Integration with vehicle hardware platforms',
     ],
     popular: true,
     icon: '🚗🤖🧠',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platform',
-    marketPosition: 'Leading autonomous vehicle AI platform with comprehensive perception, planning, and control capabilities.',
-    targetAudience: 'Automotive manufacturers, Trucking companies, Ride-sharing companies, Technology companies',
+    marketPosition:
+      'Leading autonomous vehicle AI platform with comprehensive perception, planning, and control capabilities.',
+    targetAudience:
+      'Automotive manufacturers, Trucking companies, Ride-sharing companies, Technology companies',
     trialDays: 30,
     setupTime: '10 weeks',
     category: 'Autonomous Vehicles',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer vision', 'React', 'Node.js', 'ROS'],
-    integrations: ['Vehicle platforms', 'Sensor systems', 'Simulation software', 'Cloud platforms'],
-    useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery robots', 'Agricultural vehicles'],
+    technology: [
+      'Python',
+      'TensorFlow',
+      'Computer vision',
+      'React',
+      'Node.js',
+      'ROS',
+    ],
+    integrations: [
+      'Vehicle platforms',
+      'Sensor systems',
+      'Simulation software',
+      'Cloud platforms',
+    ],
+    useCases: [
+      'Self-driving cars',
+      'Autonomous trucks',
+      'Delivery robots',
+      'Agricultural vehicles',
+    ],
     roi: 'Accelerate autonomous vehicle development by 60% and reduce testing costs by 70%.',
     competitors: ['Waymo', 'Tesla', 'Cruise', 'Aurora'],
     marketSize: 'Global autonomous vehicle market $50B+, growing 150% annually',
@@ -283,21 +427,24 @@ export const emergingTech2025Innovations: RealMarketService[] = [
     variant: 'autonomous-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced autonomous vehicle platform with comprehensive AI algorithms, simulation tools, and safety features.',
+    implementationDetails:
+      'Advanced autonomous vehicle platform with comprehensive AI algorithms, simulation tools, and safety features.',
     launchDate: '2025-12-15',
     customers: 156,
     rating: 4.8,
-    reviews: 134
+    reviews: 134,
   },
 
   // Digital Twin Platform
   {
     id: 'digital-twin-platform',
     name: 'Digital Twin Platform',
-    tagline: 'Comprehensive digital twin platform for industrial, infrastructure, and smart city applications',
+    tagline:
+      'Comprehensive digital twin platform for industrial, infrastructure, and smart city applications',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced digital twin platform that creates virtual replicas of physical assets, enabling real-time monitoring, predictive maintenance, and optimization of industrial processes and infrastructure.',
+    description:
+      'Advanced digital twin platform that creates virtual replicas of physical assets, enabling real-time monitoring, predictive maintenance, and optimization of industrial processes and infrastructure.',
     features: [
       '3D modeling and visualization',
       'Real-time data integration and synchronization',
@@ -307,22 +454,41 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Performance monitoring and optimization',
       'Collaborative platform for stakeholders',
       'Mobile and AR/VR applications',
-      'Integration with enterprise systems'
+      'Integration with enterprise systems',
     ],
     popular: true,
     icon: '🔄🏭🏙️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/digital-twin-platform',
-    marketPosition: 'Leading digital twin platform with comprehensive modeling, monitoring, and optimization capabilities.',
-    targetAudience: 'Manufacturing companies, Infrastructure operators, Smart city developers, Energy companies',
+    marketPosition:
+      'Leading digital twin platform with comprehensive modeling, monitoring, and optimization capabilities.',
+    targetAudience:
+      'Manufacturing companies, Infrastructure operators, Smart city developers, Energy companies',
     trialDays: 30,
     setupTime: '6 weeks',
     category: 'Digital Twins',
     realService: true,
-    technology: ['Python', 'Unity', 'React', 'Node.js', 'IoT platforms', '3D modeling'],
-    integrations: ['IoT devices', 'SCADA systems', 'ERP systems', 'Building management systems'],
-    useCases: ['Industrial monitoring', 'Infrastructure management', 'Smart city planning', 'Energy optimization'],
+    technology: [
+      'Python',
+      'Unity',
+      'React',
+      'Node.js',
+      'IoT platforms',
+      '3D modeling',
+    ],
+    integrations: [
+      'IoT devices',
+      'SCADA systems',
+      'ERP systems',
+      'Building management systems',
+    ],
+    useCases: [
+      'Industrial monitoring',
+      'Infrastructure management',
+      'Smart city planning',
+      'Energy optimization',
+    ],
     roi: 'Improve operational efficiency by 30% and reduce maintenance costs by 40%.',
     competitors: ['Siemens', 'GE Digital', 'PTC', 'Bentley Systems'],
     marketSize: 'Global digital twin market $20B+, growing 180% annually',
@@ -330,21 +496,24 @@ export const emergingTech2025Innovations: RealMarketService[] = [
     variant: 'digital-twin-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced digital twin platform with 3D modeling, real-time monitoring, and comprehensive analytics capabilities.',
+    implementationDetails:
+      'Advanced digital twin platform with 3D modeling, real-time monitoring, and comprehensive analytics capabilities.',
     launchDate: '2025-10-01',
     customers: 234,
     rating: 4.7,
-    reviews: 189
+    reviews: 189,
   },
 
   // Neuromorphic Computing Platform
   {
     id: 'neuromorphic-computing-platform',
     name: 'Neuromorphic Computing Platform',
-    tagline: 'Brain-inspired computing platform for energy-efficient AI and edge computing applications',
+    tagline:
+      'Brain-inspired computing platform for energy-efficient AI and edge computing applications',
     price: '$1,799',
     period: '/month',
-    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-low-power, high-efficiency AI processing in edge devices and IoT applications.',
+    description:
+      "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-low-power, high-efficiency AI processing in edge devices and IoT applications.",
     features: [
       'Spiking neural network algorithms',
       'Neuromorphic hardware simulation',
@@ -354,33 +523,53 @@ export const emergingTech2025Innovations: RealMarketService[] = [
       'Low-power consumption algorithms',
       'IoT device integration',
       'Performance benchmarking tools',
-      'Educational resources and tutorials'
+      'Educational resources and tutorials',
     ],
     popular: true,
     icon: '🧠⚡💻',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-300',
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform',
-    marketPosition: 'Leading neuromorphic computing platform with brain-inspired algorithms and energy-efficient processing.',
-    targetAudience: 'IoT device manufacturers, Edge computing companies, AI researchers, Technology companies',
+    marketPosition:
+      'Leading neuromorphic computing platform with brain-inspired algorithms and energy-efficient processing.',
+    targetAudience:
+      'IoT device manufacturers, Edge computing companies, AI researchers, Technology companies',
     trialDays: 30,
     setupTime: '8 weeks',
     category: 'Neuromorphic Computing',
     realService: true,
-    technology: ['Python', 'Neuromorphic algorithms', 'React', 'Node.js', 'Edge computing frameworks'],
-    integrations: ['IoT platforms', 'Edge devices', 'AI frameworks', 'Hardware platforms'],
-    useCases: ['IoT applications', 'Edge AI processing', 'Battery-powered devices', 'Real-time learning systems'],
+    technology: [
+      'Python',
+      'Neuromorphic algorithms',
+      'React',
+      'Node.js',
+      'Edge computing frameworks',
+    ],
+    integrations: [
+      'IoT platforms',
+      'Edge devices',
+      'AI frameworks',
+      'Hardware platforms',
+    ],
+    useCases: [
+      'IoT applications',
+      'Edge AI processing',
+      'Battery-powered devices',
+      'Real-time learning systems',
+    ],
     roi: 'Reduce power consumption by 80% and improve AI efficiency by 60%.',
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense'],
-    marketSize: 'Global neuromorphic computing market $8B+, growing 300% annually',
+    marketSize:
+      'Global neuromorphic computing market $8B+, growing 300% annually',
     growthRate: '450% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired algorithms, energy-efficient processing, and comprehensive development tools.',
+    implementationDetails:
+      'Advanced neuromorphic computing platform with brain-inspired algorithms, energy-efficient processing, and comprehensive development tools.',
     launchDate: '2025-11-01',
     customers: 89,
     rating: 4.8,
-    reviews: 67
-  }
+    reviews: 67,
+  },
 ];

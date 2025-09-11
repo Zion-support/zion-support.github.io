@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
   {
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
-    tagline: 'Automated code quality analysis with intelligent suggestions and security scanning',
+    tagline:
+      'Automated code quality analysis with intelligent suggestions and security scanning',
     price: '$199',
     period: '/month',
-    description: 'AI-powered code review platform that analyzes pull requests, identifies bugs, security vulnerabilities, and suggests improvements using advanced language models and static analysis.',
+    description:
+      'AI-powered code review platform that analyzes pull requests, identifies bugs, security vulnerabilities, and suggests improvements using advanced language models and static analysis.',
     features: [
       'Automated PR analysis and feedback',
       'Security vulnerability detection',
@@ -64,14 +66,15 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Integration with GitHub/GitLab',
       'Team collaboration tools',
       'Performance impact analysis',
-      'Compliance checking (SOC2, HIPAA)'
+      'Compliance checking (SOC2, HIPAA)',
     ],
     popular: true,
     icon: '🔍',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
-    marketPosition: 'Competes with CodeClimate, SonarQube; adds AI-powered insights and security focus.',
+    marketPosition:
+      'Competes with CodeClimate, SonarQube; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, Security teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -79,7 +82,9 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     realService: true,
     technology: ['Python, OpenAI, GitHub API, Static Analysis Tools'],
     integrations: ['GitHub, GitLab, Bitbucket, Slack, Teams'],
-    useCases: ['Code quality improvement, Security compliance, Team productivity'],
+    useCases: [
+      'Code quality improvement, Security compliance, Team productivity',
+    ],
     roi: 'Reduce code review time by 40-60% and catch 30% more issues.',
     competitors: ['CodeClimate, SonarQube, Snyk Code'],
     marketSize: '$15B+ code quality tools',
@@ -87,11 +92,12 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-repo analysis engine with AI model integration and custom rule engine.',
+    implementationDetails:
+      'Multi-repo analysis engine with AI model integration and custom rule engine.',
     launchDate: '2025-01-15',
     customers: 156,
     rating: 4.8,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-encryption-gateway',
@@ -99,7 +105,8 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     tagline: 'Post-quantum cryptography for future-proof data protection',
     price: '$399',
     period: '/month',
-    description: 'Advanced encryption gateway implementing post-quantum cryptographic algorithms, providing protection against both classical and quantum computing attacks.',
+    description:
+      'Advanced encryption gateway implementing post-quantum cryptographic algorithms, providing protection against both classical and quantum computing attacks.',
     features: [
       'Post-quantum algorithm support (CRYSTALS-Kyber, SPHINCS+)',
       'Hybrid encryption (classical + quantum-resistant)',
@@ -108,20 +115,24 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'File and database encryption',
       'Compliance reporting (FIPS, NIST)',
       'Performance monitoring',
-      'Zero-knowledge proof support'
+      'Zero-knowledge proof support',
     ],
     popular: false,
     icon: '🔐',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/quantum-encryption-gateway',
-    marketPosition: 'Early mover in post-quantum cryptography; specialized for future security needs.',
-    targetAudience: 'Financial institutions, Healthcare, Government, Enterprise security',
+    marketPosition:
+      'Early mover in post-quantum cryptography; specialized for future security needs.',
+    targetAudience:
+      'Financial institutions, Healthcare, Government, Enterprise security',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Rust, Go, Post-Quantum Algorithms, Hardware Security Modules'],
+    technology: [
+      'Rust, Go, Post-Quantum Algorithms, Hardware Security Modules',
+    ],
     integrations: ['AWS KMS, Azure Key Vault, HashiCorp Vault'],
     useCases: ['Data protection, Compliance, Future-proofing security'],
     roi: 'Protect against quantum threats and meet future compliance requirements.',
@@ -131,19 +142,22 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Custom post-quantum algorithm implementation with hardware acceleration.',
+    implementationDetails:
+      'Custom post-quantum algorithm implementation with hardware acceleration.',
     launchDate: '2025-02-01',
     customers: 23,
     rating: 4.9,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'edge-ai-inference-platform',
     name: 'Edge AI Inference Platform',
-    tagline: 'Deploy and manage AI models at the edge with real-time optimization',
+    tagline:
+      'Deploy and manage AI models at the edge with real-time optimization',
     price: '$299',
     period: '/month',
-    description: 'Platform for deploying, managing, and optimizing AI models on edge devices, IoT sensors, and edge computing infrastructure with minimal latency.',
+    description:
+      'Platform for deploying, managing, and optimizing AI models on edge devices, IoT sensors, and edge computing infrastructure with minimal latency.',
     features: [
       'Model optimization for edge devices',
       'Automatic model versioning and deployment',
@@ -152,14 +166,15 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Model compression and quantization',
       'Offline inference capabilities',
       'Multi-device synchronization',
-      'Energy efficiency optimization'
+      'Energy efficiency optimization',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/edge-ai-inference-platform',
-    marketPosition: 'Specialized edge AI platform; competes with AWS IoT Greengrass, Azure IoT Edge.',
+    marketPosition:
+      'Specialized edge AI platform; competes with AWS IoT Greengrass, Azure IoT Edge.',
     targetAudience: 'IoT companies, Manufacturing, Retail, Healthcare',
     trialDays: 21,
     setupTime: '3 days',
@@ -175,11 +190,12 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge runtime engine with model optimization pipeline and device management.',
+    implementationDetails:
+      'Edge runtime engine with model optimization pipeline and device management.',
     launchDate: '2025-01-20',
     customers: 78,
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'blockchain-identity-verification',
@@ -187,7 +203,8 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     tagline: 'Decentralized identity verification with zero-knowledge proofs',
     price: '$179',
     period: '/month',
-    description: 'Self-sovereign identity platform using blockchain and zero-knowledge proofs for secure, privacy-preserving identity verification without centralized authorities.',
+    description:
+      'Self-sovereign identity platform using blockchain and zero-knowledge proofs for secure, privacy-preserving identity verification without centralized authorities.',
     features: [
       'Decentralized identifier (DID) creation',
       'Zero-knowledge proof verification',
@@ -196,15 +213,17 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'API for integration',
       'Compliance frameworks (GDPR, CCPA)',
       'Identity wallet management',
-      'Audit trail and compliance reporting'
+      'Audit trail and compliance reporting',
     ],
     popular: false,
     icon: '🆔',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/blockchain-identity-verification',
-    marketPosition: 'Emerging Web3 identity solution; specialized for decentralized applications.',
-    targetAudience: 'DeFi platforms, DAOs, Web3 applications, Financial services',
+    marketPosition:
+      'Emerging Web3 identity solution; specialized for decentralized applications.',
+    targetAudience:
+      'DeFi platforms, DAOs, Web3 applications, Financial services',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Blockchain & Identity',
@@ -219,19 +238,22 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Smart contract-based identity system with ZK-proof verification engine.',
+    implementationDetails:
+      'Smart contract-based identity system with ZK-proof verification engine.',
     launchDate: '2025-02-10',
     customers: 34,
     rating: 4.6,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ai-content-moderation-suite',
     name: 'AI Content Moderation Suite',
-    tagline: 'Automated content filtering with context-aware AI and human oversight',
+    tagline:
+      'Automated content filtering with context-aware AI and human oversight',
     price: '$249',
     period: '/month',
-    description: 'Comprehensive content moderation platform using AI to detect inappropriate content, hate speech, and policy violations with human review workflows.',
+    description:
+      'Comprehensive content moderation platform using AI to detect inappropriate content, hate speech, and policy violations with human review workflows.',
     features: [
       'Multi-format content analysis (text, image, video)',
       'Context-aware AI detection',
@@ -240,14 +262,15 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Real-time moderation API',
       'Compliance reporting (COPPA, GDPR)',
       'Bias detection and mitigation',
-      'Multi-language support'
+      'Multi-language support',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-content-moderation-suite',
-    marketPosition: 'Competes with OpenAI Moderation, Amazon Rekognition; adds workflow management.',
+    marketPosition:
+      'Competes with OpenAI Moderation, Amazon Rekognition; adds workflow management.',
     targetAudience: 'Social media platforms, Marketplaces, Gaming companies',
     trialDays: 14,
     setupTime: '2 days',
@@ -263,19 +286,22 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-model AI pipeline with human review queue and policy engine.',
+    implementationDetails:
+      'Multi-model AI pipeline with human review queue and policy engine.',
     launchDate: '2025-01-25',
     customers: 92,
     rating: 4.7,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'mlops-pipeline-automation',
     name: 'MLOps Pipeline Automation',
-    tagline: 'End-to-end machine learning workflow automation from data to deployment',
+    tagline:
+      'End-to-end machine learning workflow automation from data to deployment',
     price: '$399',
     period: '/month',
-    description: 'Complete MLOps platform automating the entire ML lifecycle including data preprocessing, model training, validation, deployment, and monitoring.',
+    description:
+      'Complete MLOps platform automating the entire ML lifecycle including data preprocessing, model training, validation, deployment, and monitoring.',
     features: [
       'Automated data pipeline management',
       'Model training orchestration',
@@ -284,14 +310,15 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Model performance monitoring',
       'Data drift detection',
       'Reproducible experiments',
-      'Model registry and versioning'
+      'Model registry and versioning',
     ],
     popular: true,
     icon: '🔄',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/mlops-pipeline-automation',
-    marketPosition: 'Comprehensive MLOps solution; competes with MLflow, Kubeflow, Weights & Biases.',
+    marketPosition:
+      'Comprehensive MLOps solution; competes with MLflow, Kubeflow, Weights & Biases.',
     targetAudience: 'Data science teams, ML engineers, AI companies',
     trialDays: 21,
     setupTime: '1 week',
@@ -299,7 +326,9 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     realService: true,
     technology: ['Python, Kubernetes, Docker, MLflow, Kubeflow'],
     integrations: ['AWS SageMaker, Azure ML, Google AI Platform'],
-    useCases: ['ML workflow automation, Model lifecycle management, AI operations'],
+    useCases: [
+      'ML workflow automation, Model lifecycle management, AI operations',
+    ],
     roi: 'Accelerate ML development by 3-5x and reduce deployment failures by 80%.',
     competitors: ['MLflow, Kubeflow, Weights & Biases, Neptune'],
     marketSize: '$6B+ MLOps market',
@@ -307,19 +336,22 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Kubernetes-native MLOps platform with automated pipeline orchestration.',
+    implementationDetails:
+      'Kubernetes-native MLOps platform with automated pipeline orchestration.',
     launchDate: '2025-02-05',
     customers: 67,
     rating: 4.8,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform',
-    tagline: 'Hybrid quantum-classical ML for optimization and pattern recognition',
+    tagline:
+      'Hybrid quantum-classical ML for optimization and pattern recognition',
     price: '$599',
     period: '/month',
-    description: 'Platform combining quantum computing with classical machine learning for solving complex optimization problems, pattern recognition, and quantum advantage applications.',
+    description:
+      'Platform combining quantum computing with classical machine learning for solving complex optimization problems, pattern recognition, and quantum advantage applications.',
     features: [
       'Hybrid quantum-classical algorithms',
       'Quantum circuit optimization',
@@ -328,22 +360,26 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Multi-quantum backend support',
       'Performance analytics',
       'Algorithm templates',
-      'Research collaboration tools'
+      'Research collaboration tools',
     ],
     popular: false,
     icon: '⚛️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
-    marketPosition: 'Early quantum ML platform; specialized for quantum advantage applications.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',
+    marketPosition:
+      'Early quantum ML platform; specialized for quantum advantage applications.',
+    targetAudience:
+      'Research institutions, Pharmaceutical companies, Financial services',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum & AI',
     realService: true,
     technology: ['Qiskit, Cirq, PennyLane, Python, Quantum Algorithms'],
     integrations: ['IBM Quantum, Google Quantum, AWS Braket'],
-    useCases: ['Drug discovery, Portfolio optimization, Logistics optimization'],
+    useCases: [
+      'Drug discovery, Portfolio optimization, Logistics optimization',
+    ],
     roi: 'Solve previously intractable problems and gain quantum advantage insights.',
     competitors: ['Xanadu, Rigetti, D-Wave'],
     marketSize: '$1B+ quantum ML',
@@ -351,19 +387,22 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hybrid quantum-classical framework with algorithm optimization engine.',
+    implementationDetails:
+      'Hybrid quantum-classical framework with algorithm optimization engine.',
     launchDate: '2025-03-01',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-powered-legal-document-analysis',
     name: 'AI Legal Document Analysis',
-    tagline: 'Intelligent contract review and legal document analysis with risk assessment',
+    tagline:
+      'Intelligent contract review and legal document analysis with risk assessment',
     price: '$299',
     period: '/month',
-    description: 'AI platform for analyzing legal documents, contracts, and agreements to identify risks, extract key terms, and provide compliance insights.',
+    description:
+      'AI platform for analyzing legal documents, contracts, and agreements to identify risks, extract key terms, and provide compliance insights.',
     features: [
       'Contract risk assessment',
       'Key term extraction',
@@ -372,20 +411,23 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Legal research assistance',
       'Risk scoring and alerts',
       'Template generation',
-      'Multi-jurisdiction support'
+      'Multi-jurisdiction support',
     ],
     popular: true,
     icon: '⚖️',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/ai-legal-document-analysis',
-    marketPosition: 'Legal tech AI solution; competes with Kira Systems, eBrevia, Luminance.',
+    marketPosition:
+      'Legal tech AI solution; competes with Kira Systems, eBrevia, Luminance.',
     targetAudience: 'Law firms, Corporate legal departments, Compliance teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Legal Tech',
     realService: true,
-    technology: ['NLP, Machine Learning, Legal Ontologies, Document Processing'],
+    technology: [
+      'NLP, Machine Learning, Legal Ontologies, Document Processing',
+    ],
     integrations: ['DocuSign, Adobe Acrobat, Microsoft Word'],
     useCases: ['Contract review, Due diligence, Compliance monitoring'],
     roi: 'Reduce legal review time by 60-80% and improve risk detection by 40%.',
@@ -395,11 +437,12 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Legal document analysis engine with risk assessment algorithms.',
+    implementationDetails:
+      'Legal document analysis engine with risk assessment algorithms.',
     launchDate: '2025-02-15',
     customers: 45,
     rating: 4.7,
-    reviews: 23
+    reviews: 23,
   },
   {
     id: 'synthetic-data-generation-platform',
@@ -407,7 +450,8 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     tagline: 'Privacy-preserving synthetic data for AI training and testing',
     price: '$199',
     period: '/month',
-    description: 'Platform for generating high-quality synthetic data that preserves statistical properties while ensuring privacy and compliance with data protection regulations.',
+    description:
+      'Platform for generating high-quality synthetic data that preserves statistical properties while ensuring privacy and compliance with data protection regulations.',
     features: [
       'Multi-format data generation (tabular, image, text)',
       'Privacy-preserving algorithms',
@@ -416,14 +460,15 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Quality validation tools',
       'Compliance reporting (GDPR, HIPAA)',
       'API for integration',
-      'Data lineage tracking'
+      'Data lineage tracking',
     ],
     popular: false,
     icon: '🎭',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/synthetic-data-generation-platform',
-    marketPosition: 'Privacy-focused synthetic data; competes with Gretel, Mostly AI, Synthesized.',
+    marketPosition:
+      'Privacy-focused synthetic data; competes with Gretel, Mostly AI, Synthesized.',
     targetAudience: 'Healthcare, Financial services, Research institutions',
     trialDays: 21,
     setupTime: '3 days',
@@ -439,19 +484,22 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-algorithm synthetic data engine with privacy preservation.',
+    implementationDetails:
+      'Multi-algorithm synthetic data engine with privacy preservation.',
     launchDate: '2025-02-20',
     customers: 38,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'ai-powered-customer-churn-prediction',
     name: 'AI Customer Churn Prediction',
-    tagline: 'Predict and prevent customer churn with machine learning insights',
+    tagline:
+      'Predict and prevent customer churn with machine learning insights',
     price: '$159',
     period: '/month',
-    description: 'AI platform that analyzes customer behavior patterns to predict churn risk and provide actionable insights for retention strategies.',
+    description:
+      'AI platform that analyzes customer behavior patterns to predict churn risk and provide actionable insights for retention strategies.',
     features: [
       'Churn risk scoring',
       'Behavioral pattern analysis',
@@ -460,14 +508,15 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
       'Customer segmentation',
       'Real-time alerts',
       'ROI tracking',
-      'Integration with CRM systems'
+      'Integration with CRM systems',
     ],
     popular: true,
     icon: '📊',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-customer-churn-prediction',
-    marketPosition: 'Specialized churn prediction; competes with Gainsight, ChurnZero, Intercom.',
+    marketPosition:
+      'Specialized churn prediction; competes with Gainsight, ChurnZero, Intercom.',
     targetAudience: 'SaaS companies, E-commerce, Subscription businesses',
     trialDays: 14,
     setupTime: '2 days',
@@ -483,10 +532,11 @@ export const cuttingEdgeMicroSaasServices: CuttingEdgeMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML-powered churn prediction engine with behavioral analysis.',
+    implementationDetails:
+      'ML-powered churn prediction engine with behavioral analysis.',
     launchDate: '2025-01-30',
     customers: 89,
     rating: 4.7,
-    reviews: 52
-  }
+    reviews: 52,
+  },
 ];

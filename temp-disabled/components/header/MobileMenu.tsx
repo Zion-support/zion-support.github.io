@@ -1,11 +1,18 @@
-
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import {
+  Home,
+  Search,
+  BriefcaseIcon,
+  MessageSquare,
+  User,
+  X,
+  MessageCircle,
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 export interface MobileMenuProps {
   unreadCount?: number;
@@ -23,84 +30,92 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       key: 'home',
       href: '/',
       icon: Home,
-      matches: (path: string) => path === '/'
+      matches: (path: string) => path === '/',
     },
     {
       key: 'explore',
       href: '/talent',
       icon: Search,
-      matches: (path: string) => path.startsWith('/talent') || path.startsWith('/categories') || path.startsWith('/marketplace')
+      matches: (path: string) =>
+        path.startsWith('/talent') ||
+        path.startsWith('/categories') ||
+        path.startsWith('/marketplace'),
     },
     {
       key: 'community',
       href: '/community',
       icon: MessageCircle,
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+      matches: (path: string) =>
+        path.startsWith('/community') || path.startsWith('/forum'),
     },
     {
       key: 'post_job',
       href: '/post-job',
       icon: BriefcaseIcon,
       matches: (path: string) => path.startsWith('/post-job'),
-      authRequired: true
+      authRequired: true,
     },
     {
       key: 'messages',
       href: '/messages',
       icon: MessageSquare,
-      matches: (path: string) => path.startsWith('/messages') || path.startsWith('/inbox'),
+      matches: (path: string) =>
+        path.startsWith('/messages') || path.startsWith('/inbox'),
       badge: unreadCount,
-      authRequired: true
+      authRequired: true,
     },
     {
       key: 'dashboard',
       href: '/dashboard',
       icon: User,
       matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true
-    }
+      authRequired: true,
+    },
   ];
 
   const navItems = baseItems.map(item => ({
     ...item,
-    name:
-      item.key === 'explore'
-        ? t('general.explore')
-        : t(`nav.${item.key}`)
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`),
   }));
 
   // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
+  const visibleItems = navItems.filter(
+    item => !item.authRequired || (item.authRequired && isAuthenticated)
   );
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold">Menu</h2>
-        <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close menu" title="Close menu">
-          <X className="h-5 w-5" />
+    <div className='py-6'>
+      <div className='flex justify-between items-center px-6 mb-6'>
+        <h2 className='text-xl font-bold'>Menu</h2>
+        <Button
+          variant='ghost'
+          size='icon'
+          onClick={onClose}
+          aria-label='Close menu'
+          title='Close menu'
+        >
+          <X className='h-5 w-5' />
         </Button>
       </div>
-      
-      <nav className="space-y-1">
+
+      <nav className='space-y-1'>
         {visibleItems.map(item => (
           <Link
             key={item.name}
             to={item.href}
             className={cn(
-              "flex items-center px-6 py-3 text-base font-medium transition-colors", // Added transition-colors
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-background", // Added focus state, assuming mobile menu background is --background
+              'flex items-center px-6 py-3 text-base font-medium transition-colors', // Added transition-colors
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-background', // Added focus state, assuming mobile menu background is --background
               item.matches(location.pathname)
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan" // Active state - already good
-                : "text-slate-200 hover:bg-zion-purple/30 hover:text-white" // Default and Hover states
+                ? 'bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan' // Active state - already good
+                : 'text-slate-200 hover:bg-zion-purple/30 hover:text-white' // Default and Hover states
             )}
             onClick={onClose}
           >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" />
+            <div className='relative mr-4'>
+              <item.icon className='h-5 w-5' />
               {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                <span className='absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}

@@ -5,59 +5,103 @@ const missingServices = [
   {
     name: 'ai-financial-trading',
     title: 'AI Financial Trading',
-    description: 'Advanced AI-powered trading algorithms and financial market analysis.',
+    description:
+      'Advanced AI-powered trading algorithms and financial market analysis.',
     icon: 'TrendingUp',
     color: 'from-green-500 to-emerald-600',
     features: [
-      { title: 'Algorithmic Trading', description: 'AI-driven trading strategies and automated execution.' },
-      { title: 'Market Analysis', description: 'Real-time market data analysis and trend prediction.' },
-      { title: 'Risk Management', description: 'Advanced risk assessment and portfolio optimization.' }
-    ]
+      {
+        title: 'Algorithmic Trading',
+        description: 'AI-driven trading strategies and automated execution.',
+      },
+      {
+        title: 'Market Analysis',
+        description: 'Real-time market data analysis and trend prediction.',
+      },
+      {
+        title: 'Risk Management',
+        description: 'Advanced risk assessment and portfolio optimization.',
+      },
+    ],
   },
   {
     name: 'ai-supply-chain-optimization',
     title: 'AI Supply Chain Optimization',
-    description: 'Intelligent supply chain management with predictive analytics and automation.',
+    description:
+      'Intelligent supply chain management with predictive analytics and automation.',
     icon: 'Workflow',
     color: 'from-orange-500 to-red-600',
     features: [
-      { title: 'Demand Forecasting', description: 'AI-powered demand prediction and inventory optimization.' },
-      { title: 'Route Optimization', description: 'Intelligent logistics and transportation planning.' },
-      { title: 'Supplier Management', description: 'Automated supplier evaluation and relationship management.' }
-    ]
+      {
+        title: 'Demand Forecasting',
+        description: 'AI-powered demand prediction and inventory optimization.',
+      },
+      {
+        title: 'Route Optimization',
+        description: 'Intelligent logistics and transportation planning.',
+      },
+      {
+        title: 'Supplier Management',
+        description:
+          'Automated supplier evaluation and relationship management.',
+      },
+    ],
   },
   {
     name: 'micro-saas',
     title: 'Micro SaaS Products',
-    description: 'AI-powered micro SaaS solutions with transparent pricing and rapid deployment.',
+    description:
+      'AI-powered micro SaaS solutions with transparent pricing and rapid deployment.',
     icon: 'ShoppingCart',
     color: 'from-purple-500 to-pink-600',
     features: [
-      { title: 'Rapid Deployment', description: 'Quick setup and deployment of AI-powered SaaS solutions.' },
-      { title: 'Transparent Pricing', description: 'Clear, predictable pricing with no hidden costs.' },
-      { title: 'Scalable Solutions', description: 'Flexible scaling options to grow with your business.' }
-    ]
+      {
+        title: 'Rapid Deployment',
+        description: 'Quick setup and deployment of AI-powered SaaS solutions.',
+      },
+      {
+        title: 'Transparent Pricing',
+        description: 'Clear, predictable pricing with no hidden costs.',
+      },
+      {
+        title: 'Scalable Solutions',
+        description: 'Flexible scaling options to grow with your business.',
+      },
+    ],
   },
   {
     name: 'innovative-2025',
     title: 'Innovative Services 2025',
-    description: 'Cutting-edge AI services and solutions for the future of business.',
+    description:
+      'Cutting-edge AI services and solutions for the future of business.',
     icon: 'Rocket',
     color: 'from-indigo-500 to-purple-600',
     features: [
-      { title: 'Next-Gen AI', description: 'Latest AI technologies and innovative solutions.' },
-      { title: 'Future-Ready', description: 'Services designed for the evolving business landscape.' },
-      { title: 'Innovation Hub', description: 'Center for AI innovation and technological advancement.' }
-    ]
-  }
+      {
+        title: 'Next-Gen AI',
+        description: 'Latest AI technologies and innovative solutions.',
+      },
+      {
+        title: 'Future-Ready',
+        description: 'Services designed for the evolving business landscape.',
+      },
+      {
+        title: 'Innovation Hub',
+        description: 'Center for AI innovation and technological advancement.',
+      },
+    ],
+  },
 ];
 
-const generateServicePage = (service) => {
+const generateServicePage = service => {
   const template = `import React from 'react';
 import { motion } from 'framer-motion';
 import { ${service.icon}, Shield, Zap, CheckCircle, ArrowRight, Clock, Users } from 'lucide-react';
 
-const ${service.name.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}: React.FC = () => {
+const ${service.name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')}: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -81,7 +125,9 @@ const ${service.name.split('-').map(word => word.charAt(0).toUpperCase() + word.
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-${service.features.map((feature, index) => `
+${service.features
+  .map(
+    (feature, index) => `
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,7 +139,9 @@ ${service.features.map((feature, index) => `
             <p className="text-slate-300">
               ${feature.description}
             </p>
-          </motion.div>`).join('')}
+          </motion.div>`
+  )
+  .join('')}
         </div>
 
         <motion.div
@@ -112,7 +160,10 @@ ${service.features.map((feature, index) => `
   );
 };
 
-export default ${service.name.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')};
+export default ${service.name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')};
 `;
 
   return template;
@@ -122,7 +173,7 @@ export default ${service.name.split('-').map(word => word.charAt(0).toUpperCase(
 missingServices.forEach(service => {
   const fileName = `${service.name}.tsx`;
   const filePath = path.join('src/pages/services', fileName);
-  
+
   if (!fs.existsSync(filePath)) {
     const content = generateServicePage(service);
     fs.writeFileSync(filePath, content);

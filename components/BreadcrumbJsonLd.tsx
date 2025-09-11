@@ -29,7 +29,7 @@ const BreadcrumbJsonLd: React.FC<BreadcrumbJsonLdProps> = ({ breadcrumbs }) => {
   return (
     <Head>
       <script
-        type="application/ld+json"
+        type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </Head>

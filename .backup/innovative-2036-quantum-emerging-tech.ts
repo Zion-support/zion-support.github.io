@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
@@ -14,7 +14,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered financial trading and optimization',
     price: '$3,999',
     period: '/month',
-    description: 'Revolutionary quantum-powered financial trading platform that leverages quantum computing for portfolio optimization, risk assessment, and algorithmic trading. Achieves quantum advantage in financial markets.',
+    description:
+      'Revolutionary quantum-powered financial trading platform that leverages quantum computing for portfolio optimization, risk assessment, and algorithmic trading. Achieves quantum advantage in financial markets.',
     features: [
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
@@ -23,7 +24,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Quantum advantage analytics',
       'Multi-asset support',
       'Compliance monitoring',
-      'Performance analytics dashboard'
+      'Performance analytics dashboard',
     ],
     popular: true,
     icon: '💹',
@@ -31,14 +32,21 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',
     marketPosition: 'First quantum financial trading platform',
-    targetAudience: 'Hedge funds, Investment banks, Asset managers, Financial institutions',
+    targetAudience:
+      'Hedge funds, Investment banks, Asset managers, Financial institutions',
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Quantum & Financial Services',
     realService: true,
-    technology: ['Quantum Computing, Financial Modeling, Algorithmic Trading, Risk Management'],
-    integrations: ['Bloomberg, Reuters, Trading platforms, Risk management systems'],
-    useCases: ['Portfolio optimization, Risk management, Algorithmic trading, Market analysis'],
+    technology: [
+      'Quantum Computing, Financial Modeling, Algorithmic Trading, Risk Management',
+    ],
+    integrations: [
+      'Bloomberg, Reuters, Trading platforms, Risk management systems',
+    ],
+    useCases: [
+      'Portfolio optimization, Risk management, Algorithmic trading, Market analysis',
+    ],
     roi: 'Achieve quantum advantage in 6-12 months',
     competitors: ['None - First to market'],
     marketSize: '$150B quantum financial services market',
@@ -46,11 +54,12 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum financial trading platform with compliance tools',
+    implementationDetails:
+      'Complete quantum financial trading platform with compliance tools',
     launchDate: '2026-05-01',
     customers: 5,
     rating: 4.9,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'quantum-materials-discovery-platform',
@@ -58,7 +67,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered materials science and discovery',
     price: '$2,999',
     period: '/month',
-    description: 'Breakthrough quantum materials discovery platform that uses quantum computing to accelerate materials research, drug discovery, and chemical simulations. Solves previously impossible materials science problems.',
+    description:
+      'Breakthrough quantum materials discovery platform that uses quantum computing to accelerate materials research, drug discovery, and chemical simulations. Solves previously impossible materials science problems.',
     features: [
       'Quantum materials simulation',
       'Drug discovery acceleration',
@@ -67,7 +77,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Quantum chemistry calculations',
       'Research collaboration tools',
       'Performance analytics',
-      'Integration with research databases'
+      'Integration with research databases',
     ],
     popular: true,
     icon: '🧪',
@@ -75,14 +85,21 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platform',
     marketPosition: 'Leading quantum materials discovery platform',
-    targetAudience: 'Pharmaceutical companies, Materials science labs, Research institutions, Chemical companies',
+    targetAudience:
+      'Pharmaceutical companies, Materials science labs, Research institutions, Chemical companies',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Quantum & Materials Science',
     realService: true,
-    technology: ['Quantum Computing, Materials Science, Chemistry, Drug Discovery'],
-    integrations: ['Research databases, Laboratory systems, Chemical databases'],
-    useCases: ['Drug discovery, Materials research, Chemical simulation, Pharmaceutical development'],
+    technology: [
+      'Quantum Computing, Materials Science, Chemistry, Drug Discovery',
+    ],
+    integrations: [
+      'Research databases, Laboratory systems, Chemical databases',
+    ],
+    useCases: [
+      'Drug discovery, Materials research, Chemical simulation, Pharmaceutical development',
+    ],
     roi: 'Accelerate research by 500%',
     competitors: ['IBM Quantum, Google Quantum, Microsoft Quantum'],
     marketSize: '$120B quantum materials market',
@@ -90,11 +107,12 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum materials discovery platform with research tools',
+    implementationDetails:
+      'Complete quantum materials discovery platform with research tools',
     launchDate: '2026-04-01',
     customers: 12,
     rating: 4.8,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'quantum-bio-computing-platform',
@@ -102,7 +120,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered biological computing and simulation',
     price: '$2,499',
     period: '/month',
-    description: 'Revolutionary quantum bio-computing platform that combines quantum computing with biological systems for advanced simulations, drug discovery, and biological research. Unlocks new possibilities in life sciences.',
+    description:
+      'Revolutionary quantum bio-computing platform that combines quantum computing with biological systems for advanced simulations, drug discovery, and biological research. Unlocks new possibilities in life sciences.',
     features: [
       'Quantum biological simulation',
       'Protein folding optimization',
@@ -111,7 +130,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Quantum advantage in biology',
       'Research collaboration tools',
       'Performance analytics',
-      'Integration with biological databases'
+      'Integration with biological databases',
     ],
     popular: true,
     icon: '🧬',
@@ -119,14 +138,21 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/quantum-bio-computing-platform',
     marketPosition: 'First quantum bio-computing platform',
-    targetAudience: 'Biotech companies, Pharmaceutical companies, Research institutions, Healthcare',
+    targetAudience:
+      'Biotech companies, Pharmaceutical companies, Research institutions, Healthcare',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Quantum & Biotechnology',
     realService: true,
-    technology: ['Quantum Computing, Biotechnology, Bioinformatics, Drug Discovery'],
-    integrations: ['Biological databases, Laboratory systems, Research platforms'],
-    useCases: ['Protein folding, Drug discovery, Biological simulation, Healthcare research'],
+    technology: [
+      'Quantum Computing, Biotechnology, Bioinformatics, Drug Discovery',
+    ],
+    integrations: [
+      'Biological databases, Laboratory systems, Research platforms',
+    ],
+    useCases: [
+      'Protein folding, Drug discovery, Biological simulation, Healthcare research',
+    ],
     roi: 'Accelerate biological research by 400%',
     competitors: ['None - First to market'],
     marketSize: '$100B quantum biotechnology market',
@@ -134,11 +160,12 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum bio-computing platform with research tools',
+    implementationDetails:
+      'Complete quantum bio-computing platform with research tools',
     launchDate: '2026-04-15',
     customers: 8,
     rating: 4.9,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'quantum-internet-security-platform',
@@ -146,7 +173,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-secure internet infrastructure and protocols',
     price: '$1,999',
     period: '/month',
-    description: 'Advanced quantum internet security platform that implements quantum key distribution, quantum-resistant encryption, and quantum-secure communication protocols. Protects against future quantum attacks.',
+    description:
+      'Advanced quantum internet security platform that implements quantum key distribution, quantum-resistant encryption, and quantum-secure communication protocols. Protects against future quantum attacks.',
     features: [
       'Quantum key distribution',
       'Quantum-resistant encryption',
@@ -155,7 +183,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Threat detection and response',
       'Compliance frameworks',
       'Performance analytics',
-      'Integration with existing networks'
+      'Integration with existing networks',
     ],
     popular: true,
     icon: '🌐',
@@ -163,14 +191,21 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
     marketPosition: 'Leading quantum internet security platform',
-    targetAudience: 'Internet service providers, Government, Financial services, Healthcare',
+    targetAudience:
+      'Internet service providers, Government, Financial services, Healthcare',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum & Internet Security',
     realService: true,
-    technology: ['Quantum Computing, Quantum Key Distribution, Network Security, Cryptography'],
-    integrations: ['Network infrastructure, Security systems, Compliance platforms'],
-    useCases: ['Internet security, Government communications, Financial transactions, Healthcare data'],
+    technology: [
+      'Quantum Computing, Quantum Key Distribution, Network Security, Cryptography',
+    ],
+    integrations: [
+      'Network infrastructure, Security systems, Compliance platforms',
+    ],
+    useCases: [
+      'Internet security, Government communications, Financial transactions, Healthcare data',
+    ],
     roi: 'Future-proof internet security infrastructure',
     competitors: ['None - First to market'],
     marketSize: '$80B quantum internet security market',
@@ -178,11 +213,12 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum internet security platform with compliance tools',
+    implementationDetails:
+      'Complete quantum internet security platform with compliance tools',
     launchDate: '2026-03-15',
     customers: 15,
     rating: 4.8,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'quantum-iot-platform',
@@ -190,7 +226,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered IoT security and optimization',
     price: '$1,799',
     period: '/month',
-    description: 'Revolutionary quantum IoT platform that provides quantum-secure IoT device management, quantum-powered data processing, and advanced IoT analytics. Ensures IoT security in the quantum era.',
+    description:
+      'Revolutionary quantum IoT platform that provides quantum-secure IoT device management, quantum-powered data processing, and advanced IoT analytics. Ensures IoT security in the quantum era.',
     features: [
       'Quantum-secure IoT management',
       'Quantum data processing',
@@ -199,7 +236,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Performance analytics',
       'Scalability solutions',
       'Integration with IoT platforms',
-      'Real-time monitoring dashboard'
+      'Real-time monitoring dashboard',
     ],
     popular: true,
     icon: '📱',
@@ -226,7 +263,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     launchDate: '2026-03-01',
     customers: 18,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'quantum-logistics-optimization',
@@ -234,7 +271,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered logistics and supply chain optimization',
     price: '$2,299',
     period: '/month',
-    description: 'Advanced quantum logistics optimization platform that solves complex logistics problems, optimizes routes, and maximizes supply chain efficiency. Achieves quantum advantage in logistics operations.',
+    description:
+      'Advanced quantum logistics optimization platform that solves complex logistics problems, optimizes routes, and maximizes supply chain efficiency. Achieves quantum advantage in logistics operations.',
     features: [
       'Quantum route optimization',
       'Supply chain optimization',
@@ -243,7 +281,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Real-time optimization',
       'Multi-modal transportation',
       'Cost optimization',
-      'Integration with logistics systems'
+      'Integration with logistics systems',
     ],
     popular: true,
     icon: '🚛',
@@ -251,14 +289,21 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/quantum-logistics-optimization',
     marketPosition: 'Leading quantum logistics optimization platform',
-    targetAudience: 'Logistics companies, Supply chain managers, Transportation, E-commerce',
+    targetAudience:
+      'Logistics companies, Supply chain managers, Transportation, E-commerce',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum & Logistics',
     realService: true,
-    technology: ['Quantum Computing, Logistics, Optimization Algorithms, Supply Chain'],
-    integrations: ['Logistics systems, ERP platforms, Transportation management systems'],
-    useCases: ['Route optimization, Supply chain optimization, Transportation planning, Cost reduction'],
+    technology: [
+      'Quantum Computing, Logistics, Optimization Algorithms, Supply Chain',
+    ],
+    integrations: [
+      'Logistics systems, ERP platforms, Transportation management systems',
+    ],
+    useCases: [
+      'Route optimization, Supply chain optimization, Transportation planning, Cost reduction',
+    ],
     roi: 'Optimize logistics operations by 300%',
     competitors: ['None - First to market'],
     marketSize: '$110B quantum logistics market',
@@ -270,7 +315,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     launchDate: '2026-03-01',
     customers: 22,
     rating: 4.8,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'quantum-metaverse-platform',
@@ -278,7 +323,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered metaverse and virtual reality',
     price: '$1,599',
     period: '/month',
-    description: 'Revolutionary quantum metaverse platform that leverages quantum computing for advanced virtual reality, augmented reality, and metaverse experiences. Creates immersive quantum-powered digital worlds.',
+    description:
+      'Revolutionary quantum metaverse platform that leverages quantum computing for advanced virtual reality, augmented reality, and metaverse experiences. Creates immersive quantum-powered digital worlds.',
     features: [
       'Quantum-powered VR/AR',
       'Metaverse world creation',
@@ -287,7 +333,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Performance optimization',
       'Multi-user collaboration',
       'Integration with VR/AR devices',
-      'Content creation tools'
+      'Content creation tools',
     ],
     popular: true,
     icon: '🥽',
@@ -295,14 +341,19 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/quantum-metaverse-platform',
     marketPosition: 'First quantum metaverse platform',
-    targetAudience: 'Gaming companies, VR/AR developers, Metaverse platforms, Entertainment',
+    targetAudience:
+      'Gaming companies, VR/AR developers, Metaverse platforms, Entertainment',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum & Metaverse',
     realService: true,
-    technology: ['Quantum Computing, Virtual Reality, Augmented Reality, Metaverse'],
+    technology: [
+      'Quantum Computing, Virtual Reality, Augmented Reality, Metaverse',
+    ],
     integrations: ['VR/AR devices, Gaming platforms, Metaverse platforms'],
-    useCases: ['Gaming, Virtual reality, Augmented reality, Metaverse experiences'],
+    useCases: [
+      'Gaming, Virtual reality, Augmented reality, Metaverse experiences',
+    ],
     roi: 'Create immersive quantum-powered experiences',
     competitors: ['None - First to market'],
     marketSize: '$70B quantum metaverse market',
@@ -310,11 +361,12 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     variant: 'metaverse-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum metaverse platform with VR/AR tools',
+    implementationDetails:
+      'Complete quantum metaverse platform with VR/AR tools',
     launchDate: '2026-02-15',
     customers: 25,
     rating: 4.7,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'quantum-robotics-platform',
@@ -322,7 +374,8 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     tagline: 'Quantum-powered robotics and automation',
     price: '$2,799',
     period: '/month',
-    description: 'Advanced quantum robotics platform that uses quantum computing for robot control, path planning, and autonomous decision-making. Achieves quantum advantage in robotics and automation.',
+    description:
+      'Advanced quantum robotics platform that uses quantum computing for robot control, path planning, and autonomous decision-making. Achieves quantum advantage in robotics and automation.',
     features: [
       'Quantum robot control',
       'Path planning optimization',
@@ -331,7 +384,7 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
       'Real-time optimization',
       'Multi-robot coordination',
       'Integration with robotics systems',
-      'Safety and compliance tools'
+      'Safety and compliance tools',
     ],
     popular: true,
     icon: '🤖',
@@ -339,14 +392,19 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/services/quantum-robotics-platform',
     marketPosition: 'First quantum robotics platform',
-    targetAudience: 'Robotics companies, Manufacturing, Automation, Research institutions',
+    targetAudience:
+      'Robotics companies, Manufacturing, Automation, Research institutions',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Quantum & Robotics',
     realService: true,
     technology: ['Quantum Computing, Robotics, Automation, Control Systems'],
-    integrations: ['Robotics platforms, Manufacturing systems, Automation platforms'],
-    useCases: ['Manufacturing automation, Robot control, Path planning, Autonomous systems'],
+    integrations: [
+      'Robotics platforms, Manufacturing systems, Automation platforms',
+    ],
+    useCases: [
+      'Manufacturing automation, Robot control, Path planning, Autonomous systems',
+    ],
     roi: 'Achieve quantum advantage in robotics',
     competitors: ['None - First to market'],
     marketSize: '$100B quantum robotics market',
@@ -354,10 +412,11 @@ export const innovative2036QuantumEmergingTech: MicroSaasService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete quantum robotics platform with control tools',
+    implementationDetails:
+      'Complete quantum robotics platform with control tools',
     launchDate: '2026-04-01',
     customers: 10,
     rating: 4.9,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];

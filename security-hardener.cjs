@@ -11,18 +11,18 @@ const securityConfig = {
   // Content Security Policy
   csp: {
     'default-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'", "https://vercel.live"],
-    'style-src': ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-    'font-src': ["'self'", "https://fonts.gstatic.com"],
-    'img-src': ["'self'", "data:", "https:", "blob:"],
-    'connect-src': ["'self'", "https://api.zion.app"],
+    'script-src': ["'self'", "'unsafe-inline'", 'https://vercel.live'],
+    'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+    'font-src': ["'self'", 'https://fonts.gstatic.com'],
+    'img-src': ["'self'", 'data:', 'https:', 'blob:'],
+    'connect-src': ["'self'", 'https://api.zion.app'],
     'frame-src': ["'none'"],
     'object-src': ["'none'"],
     'base-uri': ["'self'"],
     'form-action': ["'self'"],
-    'frame-ancestors': ["'none'"]
+    'frame-ancestors': ["'none'"],
   },
-  
+
   // Security headers
   headers: {
     'X-Frame-Options': 'DENY',
@@ -30,21 +30,21 @@ const securityConfig = {
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
   },
-  
+
   // Environment variables security
   envSecurity: {
-    'NODE_ENV': 'production',
-    'NEXT_TELEMETRY_DISABLED': '1',
-    'NEXT_PRIVATE_STANDALONE': 'true'
-  }
+    NODE_ENV: 'production',
+    NEXT_TELEMETRY_DISABLED: '1',
+    NEXT_PRIVATE_STANDALONE: 'true',
+  },
 };
 
 // Create security middleware
 function createSecurityMiddleware() {
   console.log('🛡️  Creating security middleware...');
-  
+
   const middleware = `import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
@@ -93,16 +93,16 @@ export const config = {
 // Create security configuration for Next.js
 function updateNextConfigSecurity() {
   console.log('🔧 Updating Next.js configuration for security...');
-  
+
   const nextConfigPath = 'next.config.js';
   let nextConfig = '';
-  
+
   if (fs.existsSync(nextConfigPath)) {
     nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
   }
-  
+
   // Add security configurations
-const securityConfig = `;
+  const securityConfig = `;
 const nextConfig = {
   // Security configurations
   poweredByHeader: false,
@@ -160,8 +160,8 @@ module.exports = nextConfig;
 // Create security audit script
 function createSecurityAudit() {
   console.log('🔍 Creating security audit script...');
-  
-const auditScript = `#!/usr/bin/env node;
+
+  const auditScript = `#!/usr/bin/env node;
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -247,8 +247,8 @@ runSecurityChecks();
 // Create environment security checker
 function createEnvSecurityChecker() {
   console.log('🔐 Creating environment security checker...');
-  
-const envChecker = `#!/usr/bin/env node;
+
+  const envChecker = `#!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
@@ -422,8 +422,8 @@ runAllChecks();
 // Create security headers test
 function createSecurityHeadersTest() {
   console.log('🧪 Creating security headers test...');
-  
-const headersTest = `#!/usr/bin/env node;
+
+  const headersTest = `#!/usr/bin/env node;
 
 const https = require('https');
 const http = require('http');
@@ -529,7 +529,7 @@ async function main() {
     createSecurityAudit();
     createEnvSecurityChecker();
     createSecurityHeadersTest();
-    
+
     console.log('\n🎉 Security Hardener completed successfully!');
     console.log('\n📋 Created files:');
     console.log('   - middleware.ts');
@@ -537,7 +537,7 @@ async function main() {
     console.log('   - security-audit.cjs');
     console.log('   - env-security-checker.cjs');
     console.log('   - security-headers-test.cjs');
-    
+
     console.log('\n🔒 Security features added:');
     console.log('   - Content Security Policy (CSP)');
     console.log('   - Security headers');
@@ -546,13 +546,14 @@ async function main() {
     console.log('   - MIME type sniffing protection');
     console.log('   - Referrer policy');
     console.log('   - HSTS (HTTP Strict Transport Security)');
-    
+
     console.log('\n🚀 Next steps:');
     console.log('   1. Run: node security-audit.cjs');
     console.log('   2. Run: node env-security-checker.cjs');
-    console.log('   3. Run: node security-headers-test.cjs http://localhost:3000');
+    console.log(
+      '   3. Run: node security-headers-test.cjs http://localhost:3000'
+    );
     console.log('   4. Test: npm run build && npm start');
-    
   } catch (error) {
     console.error('❌ Security hardening failed:', error.message);
     process.exit(1);

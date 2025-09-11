@@ -10,15 +10,15 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error: any) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error: any, errorInfo: any) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if ((this.state as any).hasError) {
       return <div>Something went wrong.</div>;
@@ -27,7 +27,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ tracking_id = 'G-XXXXXXXXXX' }) => {
+const Analytics: React.FC<AnalyticsProps> = ({
+  tracking_id = 'G-XXXXXXXXXX',
+}) => {
   useEffect(() => {
     // Google Analytics initialization
     if (typeof window !== 'undefined' && tracking_id) {

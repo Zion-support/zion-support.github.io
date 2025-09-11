@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const newVerifiedServicesQ22025: GenericService[] = [
@@ -55,21 +55,23 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Manage affiliates, enforce attribution, automate commissions',
     price: '$99',
     period: '/month',
-    description: 'End-to-end affiliate tracking with cross-device attribution, fraud checks, dynamic coupons, and automated payouts. Integrates with Shopify, WooCommerce, and Stripe.',
+    description:
+      'End-to-end affiliate tracking with cross-device attribution, fraud checks, dynamic coupons, and automated payouts. Integrates with Shopify, WooCommerce, and Stripe.',
     features: [
       'Cross-device attribution & link tracking',
       'Auto-generated referral links & coupons',
       'Fraud heuristics and IP/device fingerprinting',
       'Commission tiers and automated payouts',
       'Real-time dashboards and cohort reports',
-      'Shopify/WooCommerce/Stripe integrations'
+      'Shopify/WooCommerce/Stripe integrations',
     ],
     popular: true,
     icon: '🤝',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/affiliate-tracking-suite',
-    marketPosition: 'Focused on SMBs needing transparent, fraud-resistant affiliate ops.',
+    marketPosition:
+      'Focused on SMBs needing transparent, fraud-resistant affiliate ops.',
     targetAudience: 'Ecommerce brands, DTC, marketplaces',
     trialDays: 14,
     setupTime: '1 day',
@@ -85,11 +87,12 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Server tags + webhook ingestion + commission engine.',
+    implementationDetails:
+      'Server tags + webhook ingestion + commission engine.',
     launchDate: '2025-03-01',
     customers: 42,
     rating: 4.7,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'returns-management-automation',
@@ -97,13 +100,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Self-serve returns, labels, restocking, and analytics',
     price: '$79',
     period: '/month',
-    description: 'Automate returns approvals, generate labels, track statuses, and analyze reasons. Reduces support load while improving CX.',
+    description:
+      'Automate returns approvals, generate labels, track statuses, and analyze reasons. Reduces support load while improving CX.',
     features: [
       'Self-service returns portal',
       'Auto-approve rules & RMA numbers',
       'Carrier label generation & tracking',
       'Refund/exchange flows & inventory updates',
-      'Return reasons analytics and alerts'
+      'Return reasons analytics and alerts',
     ],
     icon: '📦',
     color: 'from-emerald-600 to-teal-700',
@@ -129,7 +133,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-02-10',
     customers: 31,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'lead-followup-automation',
@@ -137,13 +141,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Multi-step email sequences with CRM sync and reply detection',
     price: '$49',
     period: '/month',
-    description: 'Automated email cadence with AI personalization, reply detection, and CRM sync for consistent lead nurturing.',
+    description:
+      'Automated email cadence with AI personalization, reply detection, and CRM sync for consistent lead nurturing.',
     features: [
       'Drip sequences with branching',
       'AI copy assists and merge tags',
       'Reply detection and auto-unenroll',
       'CRM sync (deals/tasks)',
-      'Open/click/reply analytics'
+      'Open/click/reply analytics',
     ],
     icon: '✉️',
     color: 'from-purple-600 to-pink-700',
@@ -169,7 +174,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-03-20',
     customers: 55,
     rating: 4.7,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'podcast-transcription-ai',
@@ -177,13 +182,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Fast, accurate, multi-speaker transcripts with SEO exports',
     price: '$29',
     period: '/month',
-    description: 'Upload audio, get time-stamped transcripts, speaker diarization, and SEO-ready summaries and snippets.',
+    description:
+      'Upload audio, get time-stamped transcripts, speaker diarization, and SEO-ready summaries and snippets.',
     features: [
       'Multi-speaker diarization',
       'Timestamps & topic segmentation',
       'SEO summaries and key quotes',
       'SRT, VTT, and DOCX export',
-      'Podcast host integrations'
+      'Podcast host integrations',
     ],
     icon: '🎙️',
     color: 'from-blue-600 to-cyan-700',
@@ -208,7 +214,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-01-15',
     customers: 76,
     rating: 4.6,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'freelancer-portfolio-builder',
@@ -216,13 +222,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'No-code, industry-grade portfolios that convert',
     price: '$9',
     period: '/month',
-    description: 'Curated templates for design, writing, dev, and photography. Drag-and-drop sections, case studies, and lead capture.',
+    description:
+      'Curated templates for design, writing, dev, and photography. Drag-and-drop sections, case studies, and lead capture.',
     features: [
       'Tailored templates per industry',
       'Case study modules and testimonials',
       'Custom domains & SEO basics',
       'Lead capture & calendar links',
-      'Analytics and heatmaps'
+      'Analytics and heatmaps',
     ],
     icon: '🧩',
     color: 'from-pink-600 to-fuchsia-700',
@@ -247,7 +254,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-04-01',
     customers: 24,
     rating: 4.5,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'micro-crm-local-business',
@@ -255,13 +262,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Contacts, appointments, reminders, and simple pipeline',
     price: '$19',
     period: '/month',
-    description: 'Lightweight CRM with SMS/email reminders, basic pipeline, and review prompts. Built for local SMBs.',
+    description:
+      'Lightweight CRM with SMS/email reminders, basic pipeline, and review prompts. Built for local SMBs.',
     features: [
       'Contacts and tags',
       'Appointment scheduling & reminders',
       'Simple pipeline and tasks',
       'Review prompts & feedback links',
-      'Email/SMS notifications'
+      'Email/SMS notifications',
     ],
     icon: '📇',
     color: 'from-amber-600 to-orange-700',
@@ -274,7 +282,11 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     realService: true,
     technology: ['Next.js', 'Supabase'],
     integrations: ['Google Calendar', 'Twilio'],
-    useCases: ['Missed appointment reduction', 'Lead tracking', 'Reviews growth'],
+    useCases: [
+      'Missed appointment reduction',
+      'Lead tracking',
+      'Reviews growth',
+    ],
     roi: 'Reduce no-shows 15–30% with automated reminders.',
     competitors: ['HubSpot Starter', 'Zoho Bigin'],
     marketSize: '$8B SMB CRM',
@@ -286,7 +298,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-03-05',
     customers: 39,
     rating: 4.5,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'website-analytics-smb',
@@ -294,13 +306,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Privacy-friendly dashboards non-technical owners love',
     price: '$12',
     period: '/month',
-    description: 'Simple reporting for owners: traffic, engagement, conversions, and marketing insights without complex setup.',
+    description:
+      'Simple reporting for owners: traffic, engagement, conversions, and marketing insights without complex setup.',
     features: [
       'Traffic & sources',
       'Engagement metrics (time, pages/session)',
       'Conversions: forms, calls, emails, downloads',
       'SEO and campaign insights',
-      'Scheduled email reports'
+      'Scheduled email reports',
     ],
     icon: '📊',
     color: 'from-sky-600 to-indigo-700',
@@ -325,7 +338,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-02-28',
     customers: 61,
     rating: 4.6,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'msps-helpdesk-lite',
@@ -333,13 +346,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Ticketing, SLAs, client portal—built for MSPs',
     price: '$59',
     period: '/agent/month',
-    description: 'MSP-focused ticketing with SLA timers, client-facing portal, knowledge base, and RMM-friendly integrations.',
+    description:
+      'MSP-focused ticketing with SLA timers, client-facing portal, knowledge base, and RMM-friendly integrations.',
     features: [
       'Email/portal/API ticketing',
       'SLAs & escalations',
       'Knowledge base (public/private)',
       'Client portal with reports',
-      'RMM integrations'
+      'RMM integrations',
     ],
     icon: '🛠️',
     color: 'from-lime-600 to-emerald-700',
@@ -352,7 +366,11 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     realService: true,
     technology: ['Next.js', 'Node.js'],
     integrations: ['Datto RMM', 'NinjaOne', 'TeamViewer'],
-    useCases: ['Streamline support', 'Client transparency', 'Faster resolution'],
+    useCases: [
+      'Streamline support',
+      'Client transparency',
+      'Faster resolution',
+    ],
     roi: 'Improve FCR by 10–20% with tailored workflows.',
     competitors: ['Freshdesk', 'Zendesk'],
     marketSize: '$15B helpdesk/ITSM',
@@ -364,7 +382,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-03-25',
     customers: 18,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'whatsapp-commerce-automation',
@@ -372,13 +390,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Catalog, carts, order status, and broadcasts over WhatsApp',
     price: '$39',
     period: '/month',
-    description: 'Enable WhatsApp-based catalogs, carts, order updates, and segmented broadcasts with opt-in compliance.',
+    description:
+      'Enable WhatsApp-based catalogs, carts, order updates, and segmented broadcasts with opt-in compliance.',
     features: [
       'Catalog sync and quick replies',
       'Cart creation and order updates',
       'Segmentation and broadcasts',
       'Opt-in/opt-out compliance',
-      'Analytics and conversions'
+      'Analytics and conversions',
     ],
     icon: '🟢',
     color: 'from-emerald-600 to-green-700',
@@ -403,7 +422,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-03-12',
     customers: 27,
     rating: 4.6,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'review-response-ai',
@@ -411,13 +430,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Personalized responses for Google/Yelp reviews at scale',
     price: '$25',
     period: '/location/month',
-    description: 'Generate empathetic, brand-safe replies for incoming reviews with approval workflows and multilingual support.',
+    description:
+      'Generate empathetic, brand-safe replies for incoming reviews with approval workflows and multilingual support.',
     features: [
       'Tone controls & brand rules',
       'Multilingual drafts',
       'Approval workflows',
       'Review trends & alerts',
-      'GMB/Yelp integrations'
+      'GMB/Yelp integrations',
     ],
     icon: '⭐',
     color: 'from-yellow-600 to-amber-700',
@@ -442,7 +462,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-02-02',
     customers: 33,
     rating: 4.5,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'invoice-ocr-to-quickbooks',
@@ -450,13 +470,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Parse invoices and sync to QuickBooks automatically',
     price: '$39',
     period: '/month',
-    description: 'Upload invoices or forward via email, extract structured data, and sync to QuickBooks with approval steps.',
+    description:
+      'Upload invoices or forward via email, extract structured data, and sync to QuickBooks with approval steps.',
     features: [
       'Email intake & file uploads',
       'OCR & entity extraction',
       'Vendor mapping and GL coding',
       'Approvals & audit log',
-      'QuickBooks sync'
+      'QuickBooks sync',
     ],
     icon: '🧾',
     color: 'from-indigo-600 to-violet-700',
@@ -481,7 +502,7 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-03-30',
     customers: 21,
     rating: 4.6,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'session-replay-heatmaps',
@@ -489,13 +510,14 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     tagline: 'Understand user behavior to fix UX and boost conversions',
     price: '$29',
     period: '/month',
-    description: 'Privacy-aware session replays, click/scroll heatmaps, and funnel drop-off analytics to prioritize UX fixes.',
+    description:
+      'Privacy-aware session replays, click/scroll heatmaps, and funnel drop-off analytics to prioritize UX fixes.',
     features: [
       'Session recordings with privacy filters',
       'Click/scroll heatmaps',
       'Funnels and form analytics',
       'Segmentation and cohorts',
-      'Issue tagging & shareable links'
+      'Issue tagging & shareable links',
     ],
     icon: '🔥',
     color: 'from-rose-600 to-red-700',
@@ -520,7 +542,6 @@ export const newVerifiedServicesQ22025: GenericService[] = [
     launchDate: '2025-04-05',
     customers: 12,
     rating: 4.4,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];
-

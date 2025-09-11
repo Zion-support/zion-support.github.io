@@ -17,7 +17,7 @@ describe('Error Handling', () => {
     // cy.wait('@getMarketplaceItems'); // Example: Wait for initial data
 
     // Check that the global error fallback is not visible
-    cy.contains("Oops! Something went wrong.").should('not.exist');
+    cy.contains('Oops! Something went wrong.').should('not.exist');
     cy.contains('button', 'Retry').should('not.exist');
 
     // Ensure some main content is visible to confirm the page loaded correctly
@@ -30,14 +30,22 @@ describe('Error Handling', () => {
     cy.visit('/test-error-render'); // This page is designed to throw an error
 
     // Assert that the global error fallback UI is visible
-    cy.contains("Oops! Something went wrong.", { timeout: 10000 }).should('be.visible');
-    cy.contains('Test error triggered on render', { timeout: 10000 }).should('be.visible'); // Message from ErrorTriggerComponent
+    cy.contains('Oops! Something went wrong.', { timeout: 10000 }).should(
+      'be.visible'
+    );
+    cy.contains('Test error triggered on render', { timeout: 10000 }).should(
+      'be.visible'
+    ); // Message from ErrorTriggerComponent
     cy.contains('button', 'Retry').should('be.visible').click();
 
     // After clicking "Retry" (which uses navigate(0)), the page reloads,
     // and ErrorTriggerComponent throws again. So, the fallback should still be visible.
-    cy.contains("Oops! Something went wrong.", { timeout: 10000 }).should('be.visible');
-    cy.contains('Test error triggered on render', { timeout: 10000 }).should('be.visible');
+    cy.contains('Oops! Something went wrong.', { timeout: 10000 }).should(
+      'be.visible'
+    );
+    cy.contains('Test error triggered on render', { timeout: 10000 }).should(
+      'be.visible'
+    );
     cy.contains('button', 'Retry').should('be.visible');
   });
 
@@ -45,13 +53,21 @@ describe('Error Handling', () => {
     cy.visit('/test-error-mount'); // This page is designed to throw an error on mount
 
     // Assert that the global error fallback UI is visible
-    cy.contains("Oops! Something went wrong.", { timeout: 10000 }).should('be.visible');
-    cy.contains('Test error triggered on mount', { timeout: 10000 }).should('be.visible'); // Message from ErrorTriggerComponent
+    cy.contains('Oops! Something went wrong.', { timeout: 10000 }).should(
+      'be.visible'
+    );
+    cy.contains('Test error triggered on mount', { timeout: 10000 }).should(
+      'be.visible'
+    ); // Message from ErrorTriggerComponent
     cy.contains('button', 'Retry').should('be.visible').click();
 
     // Similar to the render error, retrying will cause the component to error again on mount.
-    cy.contains("Oops! Something went wrong.", { timeout: 10000 }).should('be.visible');
-    cy.contains('Test error triggered on mount', { timeout: 10000 }).should('be.visible');
+    cy.contains('Oops! Something went wrong.', { timeout: 10000 }).should(
+      'be.visible'
+    );
+    cy.contains('Test error triggered on mount', { timeout: 10000 }).should(
+      'be.visible'
+    );
     cy.contains('button', 'Retry').should('be.visible');
   });
 });

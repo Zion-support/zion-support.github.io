@@ -14,7 +14,7 @@ export const usePerformance = () => {
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null
+    ttfb: null,
   });
 
   useEffect(() => {
@@ -26,25 +26,32 @@ export const usePerformance = () => {
         lcp: null,
         fid: null,
         cls: null,
-        ttfb: null
+        ttfb: null,
       };
 
       // Measure FCP
-      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+      const fcpEntry = performance.getEntriesByName(
+        'first-contentful-paint'
+      )[0];
       if (fcpEntry) {
         newMetrics.fcp = fcpEntry.startTime;
       }
 
       // Measure LCP
-      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      const lcpEntries = performance.getEntriesByType(
+        'largest-contentful-paint'
+      );
       if (lcpEntries.length > 0) {
         newMetrics.lcp = lcpEntries[lcpEntries.length - 1].startTime;
       }
 
       // Measure TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigationEntry = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
-        newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+        newMetrics.ttfb =
+          navigationEntry.responseStart - navigationEntry.requestStart;
       }
 
       setMetrics(newMetrics);
@@ -65,6 +72,6 @@ export const usePerformance = () => {
   return {
     metrics,
     isGoodPerformance: metrics.fcp && metrics.fcp < 1800, // FCP < 1.8s is good
-    isSlowPerformance: metrics.fcp && metrics.fcp > 3000 // FCP > 3s is slow
+    isSlowPerformance: metrics.fcp && metrics.fcp > 3000, // FCP > 3s is slow
   };
 };

@@ -7,7 +7,9 @@ const path = require('path');
 
 const ROOT = process.cwd();
 const REPORT_DIR = path.join(ROOT, 'public', 'reports', 'site-404-map');
-function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
+function ensureDir(p) {
+  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
+}
 ensureDir(REPORT_DIR);
 
 function collectRoutes() {
@@ -16,7 +18,9 @@ function collectRoutes() {
   function walk(dir, prefix = '') {
     if (!fs.existsSync(dir)) return;
     const entries = fs.readdirSync(dir, { withFileTypes: true });
-    const hasIndex = entries.some((e) => e.isFile() && /^index\.(tsx|ts|jsx|js)$/i.test(e.name));
+    const hasIndex = entries.some(
+      e => e.isFile() && /^index\.(tsx|ts|jsx|js)$/i.test(e.name)
+    );
     if (hasIndex && prefix) routes.add(prefix);
     for (const e of entries) {
       const full = path.join(dir, e.name);
@@ -62,10 +66,20 @@ async function checkStatuses(baseUrl, routes) {
 }
 
 (async function main() {
-  const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || 'https://ziontechgroup.com').replace(/\/$/, '');
+  const baseUrl = (
+    process.env.SITE_URL ||
+    process.env.URL ||
+    process.env.DEPLOY_PRIME_URL ||
+    'https://ziontechgroup.com'
+  ).replace(/\/$/, '');
   const routes = collectRoutes();
   const statuses = await checkStatuses(baseUrl, routes);
-  const report = { generatedAt: new Date().toISOString(), baseUrl, totals: { routes: routes.length }, statuses };
+  const report = {
+    generatedAt: new Date().toISOString(),
+    baseUrl,
+    totals: { routes: routes.length },
+    statuses,
+  };
   const outPath = path.join(REPORT_DIR, 'status.json');
   fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
   console.log(`Site 404 Map written to ${outPath}`);

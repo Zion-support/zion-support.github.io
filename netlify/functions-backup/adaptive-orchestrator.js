@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('adaptive-orchestrator function triggered');
-    
+
     // Adaptive orchestration logic simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Adaptive orchestrator executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         orchestration: {
           status: 'active',
           mode: 'adaptive',
-          lastUpdate: new Date().toISOString()
-        }
-      })
+          lastUpdate: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in adaptive-orchestrator:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'adaptive-orchestrator'
-      })
+        function: 'adaptive-orchestrator',
+      }),
     };
   }
 };

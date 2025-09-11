@@ -13,7 +13,7 @@ class SystemDiagnostic {
       dependencies: {},
       connections: {},
       files: {},
-      overall: 'unknown'
+      overall: 'unknown',
     };
   }
 
@@ -43,13 +43,13 @@ class SystemDiagnostic {
     const requiredVars = [
       'SLACK_BOT_TOKEN',
       'SLACK_WEBHOOK_URL',
-      'SLACK_CHANNEL'
+      'SLACK_CHANNEL',
     ];
 
     const optionalVars = [
       'CURSOR_API_KEY',
       'OPTIMIZATION_THRESHOLD',
-      'PERFORMANCE_CHECK_INTERVAL'
+      'PERFORMANCE_CHECK_INTERVAL',
     ];
 
     for (const varName of requiredVars) {
@@ -57,7 +57,7 @@ class SystemDiagnostic {
       this.results.environment[varName] = {
         status: value ? 'configured' : 'missing',
         required: true,
-        value: value ? `${value.substring(0, 10)}...` : undefined
+        value: value ? `${value.substring(0, 10)}...` : undefined,
       };
     }
 
@@ -66,7 +66,7 @@ class SystemDiagnostic {
       this.results.environment[varName] = {
         status: value ? 'configured' : 'default',
         required: false,
-        value: value ? `${value.substring(0, 10)}...` : undefined
+        value: value ? `${value.substring(0, 10)}...` : undefined,
       };
     }
 
@@ -81,7 +81,7 @@ class SystemDiagnostic {
       '@slack/web-api',
       'axios',
       'express',
-      'dotenv'
+      'dotenv',
     ];
 
     for (const dep of dependencies) {
@@ -89,9 +89,9 @@ class SystemDiagnostic {
         require.resolve(dep);
         this.results.dependencies[dep] = { status: 'installed' };
       } catch (_error) {
-        this.results.dependencies[dep] = { 
+        this.results.dependencies[dep] = {
           status: 'missing',
-          error: 'Module not found' 
+          error: 'Module not found',
         };
       }
     }
@@ -107,13 +107,13 @@ class SystemDiagnostic {
       'automation/slack/slack-bot.js',
       'automation/performance/monitor.js',
       '.cursor/rules/optimization/performance-optimization-agent.mdc',
-      '.cursor/rules/automation/slack-cursor-integration-agent.mdc'
+      '.cursor/rules/automation/slack-cursor-integration-agent.mdc',
     ];
 
     const optionalFiles = [
       '.env',
       'automation/.env.example',
-      'automation/package.json'
+      'automation/package.json',
     ];
 
     for (const file of requiredFiles) {
@@ -121,10 +121,10 @@ class SystemDiagnostic {
         await fs.access(file);
         this.results.files[file] = { status: 'exists', required: true };
       } catch (_error) {
-        this.results.files[file] = { 
-          status: 'missing', 
+        this.results.files[file] = {
+          status: 'missing',
           required: true,
-          error: 'File not found' 
+          error: 'File not found',
         };
       }
     }
@@ -134,9 +134,9 @@ class SystemDiagnostic {
         await fs.access(file);
         this.results.files[file] = { status: 'exists', required: false };
       } catch (_error) {
-        this.results.files[file] = { 
-          status: 'missing', 
-          required: false 
+        this.results.files[file] = {
+          status: 'missing',
+          required: false,
         };
       }
     }
@@ -153,14 +153,14 @@ class SystemDiagnostic {
         await this.testSlackWebhook();
         this.results.connections.slack_webhook = { status: 'connected' };
       } catch (error) {
-        this.results.connections.slack_webhook = { 
+        this.results.connections.slack_webhook = {
           status: 'failed',
-          error: error.message 
+          error: error.message,
         };
       }
     } else {
-      this.results.connections.slack_webhook = { 
-        status: 'not_configured' 
+      this.results.connections.slack_webhook = {
+        status: 'not_configured',
       };
     }
 
@@ -170,14 +170,14 @@ class SystemDiagnostic {
         await this.testCursorAPI();
         this.results.connections.cursor_api = { status: 'connected' };
       } catch (error) {
-        this.results.connections.cursor_api = { 
+        this.results.connections.cursor_api = {
           status: 'failed',
-          error: error.message 
+          error: error.message,
         };
       }
     } else {
-      this.results.connections.cursor_api = { 
-        status: 'not_configured' 
+      this.results.connections.cursor_api = {
+        status: 'not_configured',
       };
     }
 
@@ -186,9 +186,9 @@ class SystemDiagnostic {
       await this.testLocalServer();
       this.results.connections.local_server = { status: 'connected' };
     } catch (error) {
-      this.results.connections.local_server = { 
+      this.results.connections.local_server = {
         status: 'not_running',
-        error: error.message 
+        error: error.message,
       };
     }
 
@@ -199,11 +199,11 @@ class SystemDiagnostic {
     const payload = {
       text: '🔧 System diagnostic test - please ignore',
       username: 'System Diagnostic',
-      icon_emoji: ':gear:'
+      icon_emoji: ':gear:',
     };
 
     await axios.post(process.env.SLACK_WEBHOOK_URL, payload, {
-      timeout: 5000
+      timeout: 5000,
     });
   }
 
@@ -218,7 +218,7 @@ class SystemDiagnostic {
   async testLocalServer() {
     try {
       await axios.get('http://localhost:3001/health', {
-        timeout: 3000
+        timeout: 3000,
       });
     } catch (error) {
       throw new Error('Automation server not running');
@@ -279,17 +279,23 @@ class SystemDiagnostic {
       good: '🟡',
       fair: '🟠',
       poor: '🔴',
-      failed: '❌'
+      failed: '❌',
     };
 
-    console.log(`Overall Status: ${statusEmoji[this.results.overall]} ${this.results.overall.toUpperCase()} (${this.results.score}/100)`);
+    console.log(
+      `Overall Status: ${statusEmoji[this.results.overall]} ${this.results.overall.toUpperCase()} (${this.results.score}/100)`
+    );
     console.log('');
 
     // Environment Variables
     console.log('🌍 Environment Variables:');
     for (const [key, config] of Object.entries(this.results.environment)) {
-      const status = config.status === 'configured' ? '✅' : 
-                    config.status === 'missing' ? '❌' : '⚠️';
+      const status =
+        config.status === 'configured'
+          ? '✅'
+          : config.status === 'missing'
+            ? '❌'
+            : '⚠️';
       const required = config.required ? '(required)' : '(optional)';
       console.log(`  ${status} ${key} ${required}: ${config.status}`);
     }
@@ -316,8 +322,12 @@ class SystemDiagnostic {
     // Connections
     console.log('🔗 Connections:');
     for (const [key, config] of Object.entries(this.results.connections)) {
-      const status = config.status === 'connected' ? '✅' : 
-                    config.status === 'not_configured' ? '⚠️' : '❌';
+      const status =
+        config.status === 'connected'
+          ? '✅'
+          : config.status === 'not_configured'
+            ? '⚠️'
+            : '❌';
       console.log(`  ${status} ${key}: ${config.status}`);
     }
     console.log('');
@@ -374,7 +384,11 @@ class SystemDiagnostic {
   }
 
   async saveResults() {
-    const reportPath = path.join(process.cwd(), 'logs', 'diagnostic-report.json');
+    const reportPath = path.join(
+      process.cwd(),
+      'logs',
+      'diagnostic-report.json'
+    );
     await fs.writeFile(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`📄 Diagnostic report saved: ${reportPath}`);
   }
@@ -383,8 +397,9 @@ class SystemDiagnostic {
 // Run diagnostic if called directly
 if (require.main === module) {
   const diagnostic = new SystemDiagnostic();
-  diagnostic.run()
-    .then(async (results) => {
+  diagnostic
+    .run()
+    .then(async results => {
       await diagnostic.saveResults();
       process.exit(results.overall === 'failed' ? 1 : 0);
     })

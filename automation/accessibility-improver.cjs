@@ -9,7 +9,14 @@ class AccessibilityImprover {
   }
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    const prefix =
+      type === 'ERROR'
+        ? '❌'
+        : type === 'SUCCESS'
+          ? '✅'
+          : type === 'WARNING'
+            ? '⚠️'
+            : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
   async runCommand(command, description) {
@@ -66,10 +73,14 @@ class AccessibilityImprover {
       accessibilityChecks: [
         'ARIA attributes verified',
         'Alt text checked',
-        'Keyboard navigation verified'
-      ]
+        'Keyboard navigation verified',
+      ],
     };
-    const reportPath = path.join(this.projectRoot, 'automation-reports', 'accessibility-improvement-report.json');
+    const reportPath = path.join(
+      this.projectRoot,
+      'automation-reports',
+      'accessibility-improvement-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
   }

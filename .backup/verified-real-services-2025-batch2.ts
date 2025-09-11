@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const verifiedRealServices2025Batch2: RealMarketService[] = [
@@ -55,20 +55,22 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Safely roll out changes, run A/B tests, ship faster',
     price: '$299',
     period: '/month',
-    description: 'Implement feature flags, environments, gradual rollouts, and A/B testing with SDKs, governance, and audit trails. We integrate with LaunchDarkly, GrowthBook, or open-source options to match your budget.',
+    description:
+      'Implement feature flags, environments, gradual rollouts, and A/B testing with SDKs, governance, and audit trails. We integrate with LaunchDarkly, GrowthBook, or open-source options to match your budget.',
     features: [
       'Server and client SDKs with kill switches',
       'Targeting rules and progressive delivery',
       'A/B testing with metrics and guardrails',
       'Environments, approval workflows, and audit logs',
-      'Dashboards and data export to warehouse'
+      'Dashboards and data export to warehouse',
     ],
     popular: true,
     icon: '🚦',
     color: 'from-indigo-600 to-cyan-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/feature-flags-experimentation-starter',
-    marketPosition: 'Comparable to LaunchDarkly and GrowthBook; includes governance playbooks.',
+    marketPosition:
+      'Comparable to LaunchDarkly and GrowthBook; includes governance playbooks.',
     targetAudience: 'Product engineering and platform teams',
     trialDays: 14,
     setupTime: '1-3 days',
@@ -84,11 +86,12 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Production templates, SDK snippets, governance workflows',
+    implementationDetails:
+      'Production templates, SDK snippets, governance workflows',
     launchDate: '2025-02-01',
     customers: 42,
     rating: 4.8,
-    reviews: 120
+    reviews: 120,
   },
   {
     id: 'oncall-automation-roi-pack',
@@ -96,20 +99,22 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Lower MTTR with smart runbooks and alert hygiene',
     price: '$399',
     period: '/month',
-    description: 'Optimize alert routing, deduplication, and escalation with automated runbooks. Integrates with PagerDuty, Opsgenie, and Datadog for faster incident resolution.',
+    description:
+      'Optimize alert routing, deduplication, and escalation with automated runbooks. Integrates with PagerDuty, Opsgenie, and Datadog for faster incident resolution.',
     features: [
       'Alert deduplication and suppression',
       'Escalation policies and schedules',
       'Auto-runbooks and self-heal actions',
       'Post-incident analytics and SLOs',
-      'ChatOps integrations (Slack/MS Teams)'
+      'ChatOps integrations (Slack/MS Teams)',
     ],
     popular: false,
     icon: '📟',
     color: 'from-rose-600 to-orange-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/oncall-automation-roi-pack',
-    marketPosition: 'Builds atop PagerDuty/Opsgenie with automation and ROI reporting.',
+    marketPosition:
+      'Builds atop PagerDuty/Opsgenie with automation and ROI reporting.',
     targetAudience: 'SRE/DevOps teams',
     trialDays: 14,
     setupTime: '2-4 days',
@@ -129,7 +134,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 18,
     rating: 4.7,
-    reviews: 54
+    reviews: 54,
   },
   {
     id: 'email-warmup-deliverability-ops',
@@ -137,20 +142,22 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Improve inbox placement with policy, DNS, and warmup',
     price: '$249',
     period: '/month',
-    description: 'End-to-end deliverability including DMARC/DKIM/SPF, domain/IP warmup, suppression list hygiene, and seedlist monitoring with dashboards.',
+    description:
+      'End-to-end deliverability including DMARC/DKIM/SPF, domain/IP warmup, suppression list hygiene, and seedlist monitoring with dashboards.',
     features: [
       'DMARC/DKIM/SPF audit and fixes',
       'Domain/IP warmup schedules and sandbox',
       'Seedlist monitoring and Postmaster insights',
       'Bounce/complaint handling and list hygiene',
-      'ESP tuning (SendGrid, Postmark, Mailgun)'
+      'ESP tuning (SendGrid, Postmark, Mailgun)',
     ],
     popular: true,
     icon: '📧',
     color: 'from-cyan-600 to-emerald-600',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/email-warmup-deliverability-ops',
-    marketPosition: 'Comparable to Folderly and WarmupInbox; adds engineering fixes.',
+    marketPosition:
+      'Comparable to Folderly and WarmupInbox; adds engineering fixes.',
     targetAudience: 'Growth and platform teams',
     trialDays: 7,
     setupTime: '2 days',
@@ -170,7 +177,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 33,
     rating: 4.6,
-    reviews: 77
+    reviews: 77,
   },
   {
     id: 'feature-analytics-personalization-pack',
@@ -178,20 +185,22 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Ship personalized experiences with product analytics',
     price: '$349',
     period: '/month',
-    description: 'Implement identity resolution, product analytics, and on-site personalization. Integrates with Amplitude/Mixpanel and Mutiny/GrowthBook for data-driven UX.',
+    description:
+      'Implement identity resolution, product analytics, and on-site personalization. Integrates with Amplitude/Mixpanel and Mutiny/GrowthBook for data-driven UX.',
     features: [
       'Identity resolution and tracking plan',
       'Product analytics dashboards and funnels',
       'On-site personalization rules and experiments',
       'Data export to warehouse/lake',
-      'Privacy controls and consent management'
+      'Privacy controls and consent management',
     ],
     popular: false,
     icon: '📊',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/feature-analytics-personalization-pack',
-    marketPosition: 'Pairs Amplitude/Mixpanel with Mutiny/GrowthBook for outcomes.',
+    marketPosition:
+      'Pairs Amplitude/Mixpanel with Mutiny/GrowthBook for outcomes.',
     targetAudience: 'Product and growth teams',
     trialDays: 14,
     setupTime: '3-5 days',
@@ -211,7 +220,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 15,
     rating: 4.7,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'vector-db-cost-optimizer',
@@ -219,20 +228,22 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Reduce embedding and storage costs without losing accuracy',
     price: '$199',
     period: '/month',
-    description: 'Optimize dimension selection, sharding, and TTL based retention for Pinecone/Weaviate/Qdrant with traffic-aware caching and batch upserts.',
+    description:
+      'Optimize dimension selection, sharding, and TTL based retention for Pinecone/Weaviate/Qdrant with traffic-aware caching and batch upserts.',
     features: [
       'Embedding dimension audits and pruning',
       'Shard and pod sizing guidance',
       'Hot/cold tiering and TTL retention',
       'Traffic-aware caching and batching',
-      'Recall/latency A/B with eval datasets'
+      'Recall/latency A/B with eval datasets',
     ],
     popular: false,
     icon: '🧭',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/vector-db-cost-optimizer',
-    marketPosition: 'Complements Pinecone/Weaviate with pragmatic cost/perf tuning.',
+    marketPosition:
+      'Complements Pinecone/Weaviate with pragmatic cost/perf tuning.',
     targetAudience: 'AI platform and data teams',
     trialDays: 7,
     setupTime: '1-2 days',
@@ -252,7 +263,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 12,
     rating: 4.6,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'cloud-savings-finops-starter',
@@ -260,13 +271,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Immediate AWS/Azure/GCP savings with guardrails',
     price: '$299',
     period: '/month',
-    description: 'Rightsize compute/storage, switch pricing models (SP/RI), and implement budgets/alerts with dashboards and savings guardrails.',
+    description:
+      'Rightsize compute/storage, switch pricing models (SP/RI), and implement budgets/alerts with dashboards and savings guardrails.',
     features: [
       'EC2/Container rightsizing and schedules',
       'S3/Blob storage lifecycle and Glacier policies',
       'Budgets, alerts, and anomaly detection',
       'CUDOS/Kubecost dashboards',
-      'Governance guardrails and playbooks'
+      'Governance guardrails and playbooks',
     ],
     popular: true,
     icon: '💸',
@@ -293,7 +305,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 26,
     rating: 4.7,
-    reviews: 63
+    reviews: 63,
   },
   {
     id: 'api-security-hardening-pack',
@@ -301,13 +313,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Protect APIs with WAF, schema, and auth best-practices',
     price: '$449',
     period: '/month',
-    description: 'Harden APIs using Cloudflare/Fastly WAF, schema validation, auth scopes, and posture monitoring. Includes rate limiting, bot mitigation, and anomaly alerts.',
+    description:
+      'Harden APIs using Cloudflare/Fastly WAF, schema validation, auth scopes, and posture monitoring. Includes rate limiting, bot mitigation, and anomaly alerts.',
     features: [
       'WAF rulesets and anomaly detections',
       'Schema validation and contract testing',
       'mTLS/JWT scopes and key rotation',
       'Rate limits, bot mitigation',
-      'Runtime posture monitoring'
+      'Runtime posture monitoring',
     ],
     popular: false,
     icon: '🛡️',
@@ -334,7 +347,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 10,
     rating: 4.6,
-    reviews: 25
+    reviews: 25,
   },
   {
     id: 'data-quality-governance-kit',
@@ -342,13 +355,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Detect freshness, completeness, and lineage issues early',
     price: '$299',
     period: '/month',
-    description: 'Implement monitors for data quality KPIs, lineage mapping, and incident workflows. Integrates with dbt, Great Expectations, and modern catalogs.',
+    description:
+      'Implement monitors for data quality KPIs, lineage mapping, and incident workflows. Integrates with dbt, Great Expectations, and modern catalogs.',
     features: [
       'Freshness and completeness monitors',
       'Lineage visualization and alerts',
       'Incident workflows and runbooks',
       'dbt/GE integration and CI checks',
-      'Data contracts and SLAs'
+      'Data contracts and SLAs',
     ],
     popular: false,
     icon: '🧪',
@@ -375,7 +389,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 14,
     rating: 4.7,
-    reviews: 39
+    reviews: 39,
   },
   {
     id: 'llm-guardrails-redaction-appliance',
@@ -383,20 +397,22 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Keep secrets and PII out of prompts and logs',
     price: '$349',
     period: '/month',
-    description: 'Deploy a policy-driven redaction and guardrails gateway with PII detection, regex/patterns, and audit logs. Works with OpenAI/Anthropic/Google.',
+    description:
+      'Deploy a policy-driven redaction and guardrails gateway with PII detection, regex/patterns, and audit logs. Works with OpenAI/Anthropic/Google.',
     features: [
       'PII/secret detection and redaction',
       'Prompt/response policy enforcement',
       'Audit logs and incident hooks',
       'SDKs and gateway endpoints',
-      'Reports and governance artifacts'
+      'Reports and governance artifacts',
     ],
     popular: true,
     icon: '🧱',
     color: 'from-fuchsia-600 to-violet-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/services/llm-guardrails-redaction-appliance',
-    marketPosition: 'Complements OpenAI/Anthropic safety with enterprise controls.',
+    marketPosition:
+      'Complements OpenAI/Anthropic safety with enterprise controls.',
     targetAudience: 'AI platform and security teams',
     trialDays: 14,
     setupTime: '2-4 days',
@@ -416,7 +432,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 20,
     rating: 4.7,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'rag-evaluation-benchmarking-kit',
@@ -424,13 +440,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Measure retrieval quality, latency and hallucinations',
     price: '$249',
     period: '/month',
-    description: 'Set up offline/online evals for RAG systems with metrics (precision/recall, MRR), latency, and hallucination scoring using prompt-eval suites.',
+    description:
+      'Set up offline/online evals for RAG systems with metrics (precision/recall, MRR), latency, and hallucination scoring using prompt-eval suites.',
     features: [
       'Ground-truth datasets and metrics',
       'Latency/throughput benchmarks',
       'Hallucination checks and red teaming',
       'Cost/perf dashboards',
-      'CI/CD gates and alerts'
+      'CI/CD gates and alerts',
     ],
     popular: false,
     icon: '🧪',
@@ -457,7 +474,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 16,
     rating: 4.6,
-    reviews: 31
+    reviews: 31,
   },
   {
     id: 'web-performance-rum-synthetic-starter',
@@ -465,13 +482,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Instrument Core Web Vitals and synthetic checks',
     price: '$149',
     period: '/month',
-    description: 'Instrument web apps with RUM and synthetic tests. Track Core Web Vitals, alert on regressions, and integrate with CI to prevent slow releases.',
+    description:
+      'Instrument web apps with RUM and synthetic tests. Track Core Web Vitals, alert on regressions, and integrate with CI to prevent slow releases.',
     features: [
       'RUM instrumentation and dashboards',
       'Synthetic checks and schedules',
       'CWV tracking and alerts',
       'CI integration for performance budgets',
-      'Third-party impact analysis'
+      'Third-party impact analysis',
     ],
     popular: false,
     icon: '⚡',
@@ -498,7 +516,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 22,
     rating: 4.6,
-    reviews: 36
+    reviews: 36,
   },
   {
     id: 'pdf-rendering-observability-pro',
@@ -506,13 +524,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Ship reliable PDF/API rendering with clear budgets',
     price: '$179',
     period: '/month',
-    description: 'Harden and observe PDF rendering pipelines with queue backpressure, retries, cost controls, and quality checks across DocRaptor, PDFMonkey, or Gotenberg.',
+    description:
+      'Harden and observe PDF rendering pipelines with queue backpressure, retries, cost controls, and quality checks across DocRaptor, PDFMonkey, or Gotenberg.',
     features: [
       'Queue backpressure and retries',
       'Page/asset quality checks',
       'Cost controls and budgets',
       'Latency/error dashboards',
-      'Failover between vendors'
+      'Failover between vendors',
     ],
     popular: false,
     icon: '📄',
@@ -539,7 +558,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 11,
     rating: 4.5,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'identity-sso-scim-starter',
@@ -547,13 +566,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Add enterprise SSO and user provisioning fast',
     price: '$299',
     period: '/month',
-    description: 'Implement SSO (SAML/OIDC) and SCIM user provisioning with WorkOS/Auth0/Okta. Includes provider configs, test plans, and launch checklists.',
+    description:
+      'Implement SSO (SAML/OIDC) and SCIM user provisioning with WorkOS/Auth0/Okta. Includes provider configs, test plans, and launch checklists.',
     features: [
       'SSO (SAML/OIDC) provider configs',
       'SCIM provisioning and deprovisioning',
       'RBAC and Just-in-time (JIT) rules',
       'Tenant-ready settings and branding',
-      'Launch checklists and test plans'
+      'Launch checklists and test plans',
     ],
     popular: true,
     icon: '🔐',
@@ -580,7 +600,7 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 27,
     rating: 4.8,
-    reviews: 68
+    reviews: 68,
   },
   {
     id: 'developer-portal-api-hub',
@@ -588,13 +608,14 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     tagline: 'Centralize APIs, docs, keys, and usage analytics',
     price: '$399',
     period: '/month',
-    description: 'Launch a branded developer portal with API docs, key management, usage analytics, and webhooks catalogue. Includes audit logs and governance.',
+    description:
+      'Launch a branded developer portal with API docs, key management, usage analytics, and webhooks catalogue. Includes audit logs and governance.',
     features: [
       'Docs (Redoc/Stoplight) and examples',
       'Key management and rate limits',
       'Usage analytics and quotas',
       'Webhook catalogue and retries',
-      'Audit logs and governance'
+      'Audit logs and governance',
     ],
     popular: false,
     icon: '🧰',
@@ -621,7 +642,6 @@ export const verifiedRealServices2025Batch2: RealMarketService[] = [
     launchDate: '2025-02-01',
     customers: 9,
     rating: 4.5,
-    reviews: 17
-  }
+    reviews: 17,
+  },
 ];
-

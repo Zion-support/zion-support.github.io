@@ -1,14 +1,19 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Star, 
-  Palette, 
-  Eye, 
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from 'framer-motion';
+import {
+  Sparkles,
+  Zap,
+  Star,
+  Palette,
+  Eye,
   Layers,
   Settings,
-  X
+  X,
 } from 'lucide-react';
 
 interface UISettings {
@@ -30,11 +35,13 @@ export const ModernUIEnhancer: React.FC = () => {
     enhancedAnimations: true,
     modernShadows: true,
     colorThemes: true,
-    depthLayers: true
+    depthLayers: true,
   });
-  
+
   const [activeTheme, setActiveTheme] = useState('default');
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number }>>([]);
+  const [particles, setParticles] = useState<
+    Array<{ id: number; x: number; y: number; vx: number; vy: number }>
+  >([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -200]);
@@ -42,20 +49,20 @@ export const ModernUIEnhancer: React.FC = () => {
   useEffect(() => {
     // Initialize UI enhancements
     initializeUIEnhancements();
-    
+
     // Setup particle system
     if (settings.particleEffects) {
       setupParticleSystem();
     }
-    
+
     // Setup smooth scrolling
     if (settings.smoothScrolling) {
       setupSmoothScrolling();
     }
-    
+
     // Apply initial settings
     applyUISettings();
-    
+
     return () => {
       cleanupUIEnhancements();
     };
@@ -69,16 +76,16 @@ export const ModernUIEnhancer: React.FC = () => {
   const initializeUIEnhancements = () => {
     // Add CSS custom properties
     addCSSVariables();
-    
+
     // Add glassmorphism styles
     addGlassmorphismStyles();
-    
+
     // Add modern shadow styles
     addModernShadowStyles();
-    
+
     // Add depth layer styles
     addDepthLayerStyles();
-    
+
     // Add color theme styles
     addColorThemeStyles();
   };
@@ -295,49 +302,57 @@ export const ModernUIEnhancer: React.FC = () => {
     // Create floating particles
     const particleCount = 50;
     const newParticles = [];
-    
+
     for (let i = 0; i < particleCount; i++) {
       newParticles.push({
         id: i,
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5
+        vy: (Math.random() - 0.5) * 0.5,
       });
     }
-    
+
     setParticles(newParticles);
-    
+
     // Animate particles
     const animateParticles = () => {
-      setParticles(prev => prev.map(particle => ({
-        ...particle,
-        x: particle.x + particle.vx,
-        y: particle.y + particle.vy,
-        vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,
-        vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy
-      })));
+      setParticles(prev =>
+        prev.map(particle => ({
+          ...particle,
+          x: particle.x + particle.vx,
+          y: particle.y + particle.vy,
+          vx:
+            particle.x <= 0 || particle.x >= window.innerWidth
+              ? -particle.vx
+              : particle.vx,
+          vy:
+            particle.y <= 0 || particle.y >= window.innerHeight
+              ? -particle.vy
+              : particle.vy,
+        }))
+      );
     };
-    
+
     const interval = setInterval(animateParticles, 50);
-    
+
     return () => clearInterval(interval);
   };
 
   const setupSmoothScrolling = () => {
     // Add smooth scrolling to all anchor links
     const links = document.querySelectorAll('a[href^="#"]');
-    
+
     links.forEach(link => {
-      link.addEventListener('click', (e) => {
+      link.addEventListener('click', e => {
         e.preventDefault();
         const targetId = link.getAttribute('href')?.substring(1);
         const targetElement = document.getElementById(targetId || '');
-        
+
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
           });
         }
       });
@@ -346,42 +361,42 @@ export const ModernUIEnhancer: React.FC = () => {
 
   const applyUISettings = () => {
     const root = document.documentElement;
-    
+
     // Apply glassmorphism
     if (settings.glassmorphism) {
       root.classList.add('glassmorphism-enabled');
     } else {
       root.classList.remove('glassmorphism-enabled');
     }
-    
+
     // Apply enhanced animations
     if (settings.enhancedAnimations) {
       root.classList.add('enhanced-animations');
     } else {
       root.classList.remove('enhanced-animations');
     }
-    
+
     // Apply modern shadows
     if (settings.modernShadows) {
       root.classList.add('modern-shadows');
     } else {
       root.classList.remove('modern-shadows');
     }
-    
+
     // Apply depth layers
     if (settings.depthLayers) {
       root.classList.add('depth-layers');
     } else {
       root.classList.remove('depth-layers');
     }
-    
+
     // Apply color themes
     if (settings.colorThemes) {
       root.classList.add('color-themes');
     } else {
       root.classList.remove('color-themes');
     }
-    
+
     // Apply active theme
     root.className = root.className.replace(/theme-\w+/g, '');
     root.classList.add(`theme-${activeTheme}`);
@@ -391,10 +406,13 @@ export const ModernUIEnhancer: React.FC = () => {
     // Remove added styles
     const addedStyles = document.querySelectorAll('style[data-ui-enhancer]');
     addedStyles.forEach(style => style.remove());
-    
+
     // Remove added classes
     const root = document.documentElement;
-    root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '');
+    root.className = root.className.replace(
+      /ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g,
+      ''
+    );
   };
 
   const toggleSetting = (setting: keyof UISettings) => {
@@ -412,10 +430,10 @@ export const ModernUIEnhancer: React.FC = () => {
         whileHover={{ scale: 1.05, rotate: 5 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect"
-        aria-label="UI Enhancement settings"
+        className='fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect'
+        aria-label='UI Enhancement settings'
         aria-expanded={isOpen}
-        aria-controls="ui-enhancement-panel"
+        aria-controls='ui-enhancement-panel'
       >
         <Sparkles size={24} />
       </motion.button>
@@ -427,42 +445,48 @@ export const ModernUIEnhancer: React.FC = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-20 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl shadow-2xl p-6 w-80 z-50 border border-white/20 dark:border-gray-700/50 glass-effect"
-            role="dialog"
-            aria-labelledby="ui-enhancement-title"
-            aria-describedby="ui-enhancement-description"
+            className='fixed bottom-20 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl shadow-2xl p-6 w-80 z-50 border border-white/20 dark:border-gray-700/50 glass-effect'
+            role='dialog'
+            aria-labelledby='ui-enhancement-title'
+            aria-describedby='ui-enhancement-description'
           >
-            <div className="flex items-center justify-between mb-4">
-              <h2 id="ui-enhancement-title" className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                <Sparkles size={20} className="text-pink-500" />
+            <div className='flex items-center justify-between mb-4'>
+              <h2
+                id='ui-enhancement-title'
+                className='text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2'
+              >
+                <Sparkles size={20} className='text-pink-500' />
                 UI Enhancements
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:scale-110 transition-transform"
-                aria-label="Close UI enhancement panel"
+                className='text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:scale-110 transition-transform'
+                aria-label='Close UI enhancement panel'
               >
                 <X size={20} />
               </button>
             </div>
-            
-            <p id="ui-enhancement-description" className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+
+            <p
+              id='ui-enhancement-description'
+              className='text-sm text-gray-600 dark:text-gray-300 mb-4'
+            >
               Customize the visual experience with modern UI effects
             </p>
 
-            <div className="space-y-4">
+            <div className='space-y-4'>
               {/* Glassmorphism */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Layers size={20} className="text-blue-600" />
-                  <span className="text-sm font-medium">Glassmorphism</span>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
+                  <Layers size={20} className='text-blue-600' />
+                  <span className='text-sm font-medium'>Glassmorphism</span>
                 </div>
                 <button
                   onClick={() => toggleSetting('glassmorphism')}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.glassmorphism ? 'bg-blue-600' : 'bg-gray-300'
                   }`}
-                  role="switch"
+                  role='switch'
                   aria-checked={settings.glassmorphism}
                 >
                   <span
@@ -474,61 +498,67 @@ export const ModernUIEnhancer: React.FC = () => {
               </div>
 
               {/* Particle Effects */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Star size={20} className="text-yellow-600" />
-                  <span className="text-sm font-medium">Particle Effects</span>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
+                  <Star size={20} className='text-yellow-600' />
+                  <span className='text-sm font-medium'>Particle Effects</span>
                 </div>
                 <button
                   onClick={() => toggleSetting('particleEffects')}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.particleEffects ? 'bg-yellow-600' : 'bg-gray-300'
                   }`}
-                  role="switch"
+                  role='switch'
                   aria-checked={settings.particleEffects}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.particleEffects ? 'translate-x-6' : 'translate-x-1'
+                      settings.particleEffects
+                        ? 'translate-x-6'
+                        : 'translate-x-1'
                     }`}
                   />
                 </button>
               </div>
 
               {/* Enhanced Animations */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Zap size={20} className="text-green-600" />
-                  <span className="text-sm font-medium">Enhanced Animations</span>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
+                  <Zap size={20} className='text-green-600' />
+                  <span className='text-sm font-medium'>
+                    Enhanced Animations
+                  </span>
                 </div>
                 <button
                   onClick={() => toggleSetting('enhancedAnimations')}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.enhancedAnimations ? 'bg-green-600' : 'bg-gray-300'
                   }`}
-                  role="switch"
+                  role='switch'
                   aria-checked={settings.enhancedAnimations}
                 >
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.enhancedAnimations ? 'translate-x-6' : 'translate-x-1'
+                      settings.enhancedAnimations
+                        ? 'translate-x-6'
+                        : 'translate-x-1'
                     }`}
                   />
                 </button>
               </div>
 
               {/* Modern Shadows */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Eye size={20} className="text-purple-600" />
-                  <span className="text-sm font-medium">Modern Shadows</span>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
+                  <Eye size={20} className='text-purple-600' />
+                  <span className='text-sm font-medium'>Modern Shadows</span>
                 </div>
                 <button
                   onClick={() => toggleSetting('modernShadows')}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.modernShadows ? 'bg-purple-600' : 'bg-gray-300'
                   }`}
-                  role="switch"
+                  role='switch'
                   aria-checked={settings.modernShadows}
                 >
                   <span
@@ -540,17 +570,17 @@ export const ModernUIEnhancer: React.FC = () => {
               </div>
 
               {/* Depth Layers */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Settings size={20} className="text-indigo-600" />
-                  <span className="text-sm font-medium">Depth Layers</span>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
+                  <Settings size={20} className='text-indigo-600' />
+                  <span className='text-sm font-medium'>Depth Layers</span>
                 </div>
                 <button
                   onClick={() => toggleSetting('depthLayers')}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.depthLayers ? 'bg-indigo-600' : 'bg-gray-300'
                   }`}
-                  role="switch"
+                  role='switch'
                   aria-checked={settings.depthLayers}
                 >
                   <span
@@ -563,40 +593,42 @@ export const ModernUIEnhancer: React.FC = () => {
             </div>
 
             {/* Color Themes */}
-            <div className="mt-6">
-              <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <Palette size={16} className="text-pink-500" />
+            <div className='mt-6'>
+              <h3 className='text-sm font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>
+                <Palette size={16} className='text-pink-500' />
                 Color Themes
               </h3>
-              <div className="grid grid-cols-3 gap-2">
-                {['default', 'cyber', 'nature', 'sunset', 'ocean', 'dark'].map((theme) => (
-                  <button
-                    key={theme}
-                    onClick={() => changeTheme(theme)}
-                    className={`p-2 rounded-lg text-xs font-medium transition-all duration-200 ${
-                      activeTheme === theme
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg scale-105'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                    }`}
-                  >
-                    {theme.charAt(0).toUpperCase() + theme.slice(1)}
-                  </button>
-                ))}
+              <div className='grid grid-cols-3 gap-2'>
+                {['default', 'cyber', 'nature', 'sunset', 'ocean', 'dark'].map(
+                  theme => (
+                    <button
+                      key={theme}
+                      onClick={() => changeTheme(theme)}
+                      className={`p-2 rounded-lg text-xs font-medium transition-all duration-200 ${
+                        activeTheme === theme
+                          ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg scale-105'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      }`}
+                    >
+                      {theme.charAt(0).toUpperCase() + theme.slice(1)}
+                    </button>
+                  )
+                )}
               </div>
             </div>
 
             {/* Preview Section */}
-            <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg">
-              <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
+            <div className='mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg'>
+              <h3 className='text-sm font-medium text-gray-900 dark:text-white mb-2'>
                 Preview
               </h3>
-              <div className="space-y-2">
-                <div className="glass-card p-3 text-center">
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Glass Card</span>
+              <div className='space-y-2'>
+                <div className='glass-card p-3 text-center'>
+                  <span className='text-sm text-gray-700 dark:text-gray-300'>
+                    Glass Card
+                  </span>
                 </div>
-                <button className="glass-button w-full">
-                  Glass Button
-                </button>
+                <button className='glass-button w-full'>Glass Button</button>
               </div>
             </div>
           </motion.div>
@@ -605,11 +637,11 @@ export const ModernUIEnhancer: React.FC = () => {
 
       {/* Floating Particles */}
       {settings.particleEffects && (
-        <div className="fixed inset-0 pointer-events-none z-40">
-          {particles.map((particle) => (
+        <div className='fixed inset-0 pointer-events-none z-40'>
+          {particles.map(particle => (
             <motion.div
               key={particle.id}
-              className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
+              className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60'
               style={{
                 left: particle.x,
                 top: particle.y,
@@ -621,7 +653,7 @@ export const ModernUIEnhancer: React.FC = () => {
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: 'easeInOut',
               }}
             />
           ))}
@@ -630,9 +662,9 @@ export const ModernUIEnhancer: React.FC = () => {
 
       {/* Floating UI Elements */}
       {settings.depthLayers && (
-        <div className="fixed top-20 right-20 pointer-events-none z-30">
+        <div className='fixed top-20 right-20 pointer-events-none z-30'>
           <motion.div
-            className="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element"
+            className='w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element'
             animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
@@ -640,7 +672,7 @@ export const ModernUIEnhancer: React.FC = () => {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: 'easeInOut',
             }}
           />
         </div>

@@ -9,13 +9,13 @@ class MonitoringDashboard {
       system: {
         platform: process.platform,
         nodeVersion: process.version,
-        memory: process.memoryUsage()
+        memory: process.memoryUsage(),
       },
       project: {
         hasPackageJson: fs.existsSync('package.json'),
         hasNodeModules: fs.existsSync('node_modules'),
-        hasTsConfig: fs.existsSync('tsconfig.json')
-      }
+        hasTsConfig: fs.existsSync('tsconfig.json'),
+      },
     };
   }
 

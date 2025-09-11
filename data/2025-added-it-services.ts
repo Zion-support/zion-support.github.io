@@ -1,10 +1,10 @@
-import type { AdvancedITService } from './advanced-it-services'
+import type { AdvancedITService } from './advanced-it-services';
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const addedITServices2025: AdvancedITService[] = [
   {
     id: 'managed-mlops-platform',
@@ -12,21 +12,23 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Productionize models with CI/CD, monitoring, and governance',
     price: '$3,499',
     period: '/month',
-    description: 'End-to-end MLOps stack: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
+    description:
+      'End-to-end MLOps stack: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
     features: [
       'Model registry and lineage',
       'Data/Concept drift detection',
       'Shadow and canary deploys',
       'Feature store and embedding store',
       'Guardrails and evals',
-      'RBAC and audit logs'
+      'RBAC and audit logs',
     ],
     popular: true,
     icon: '🛠️',
     color: 'from-slate-600 to-blue-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/services/managed-mlops-platform',
-    marketPosition: 'Opinionated, secure, and done-for-you compared to DIY ML stacks',
+    marketPosition:
+      'Opinionated, secure, and done-for-you compared to DIY ML stacks',
     targetAudience: 'Mid-market and enterprise data teams',
     trialDays: 0,
     setupTime: '3–6 weeks',
@@ -42,11 +44,12 @@ export const addedITServices2025: AdvancedITService[] = [
     variant: 'enterprise-managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'IaC modules, secure networking, observability, and on-call SRE',
+    implementationDetails:
+      'IaC modules, secure networking, observability, and on-call SRE',
     launchDate: '2025-03-18',
     customers: 28,
     rating: 4.9,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'zero-trust-access-service',
@@ -54,20 +57,22 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Private, identity-aware access to internal apps without VPNs',
     price: '$2,199',
     period: '/month',
-    description: 'Deploys an identity-aware proxy, device posture checks, and per-request authN/Z with strong logging and SIEM integration.',
+    description:
+      'Deploys an identity-aware proxy, device posture checks, and per-request authN/Z with strong logging and SIEM integration.',
     features: [
       'mTLS and device posture',
       'Per-route policies',
       'Just-in-time access',
       'Session recording',
-      'SIEM integration'
+      'SIEM integration',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-amber-600 to-rose-700',
     textColor: 'text-amber-200',
     link: 'https://ziontechgroup.com/services/zero-trust-access-service',
-    marketPosition: 'Simpler than full SASE; faster rollout than DIY BeyondCorp',
+    marketPosition:
+      'Simpler than full SASE; faster rollout than DIY BeyondCorp',
     targetAudience: 'SaaS companies, regulated industries, remote teams',
     trialDays: 14,
     setupTime: '2 weeks',
@@ -83,11 +88,12 @@ export const addedITServices2025: AdvancedITService[] = [
     variant: 'managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Sidecar agents, IAP, policy as code, and logs pipeline',
+    implementationDetails:
+      'Sidecar agents, IAP, policy as code, and logs pipeline',
     launchDate: '2025-01-29',
     customers: 52,
     rating: 4.8,
-    reviews: 44
+    reviews: 44,
   },
   {
     id: 'sre-oncall-as-a-service',
@@ -95,13 +101,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Production-grade reliability with shared on-call and SLIs/SLOs',
     price: '$6,500',
     period: '/month',
-    description: 'We implement SLIs/SLOs, error budgets, and lightweight incident management. Shared on-call rotation with runbooks, automation, and postmortems.',
+    description:
+      'We implement SLIs/SLOs, error budgets, and lightweight incident management. Shared on-call rotation with runbooks, automation, and postmortems.',
     features: [
       'SLIs/SLOs and error budgets',
       'Incident response and runbooks',
       'Auto-remediation playbooks',
       'Observability setup (logs, traces, metrics)',
-      'Monthly reliability reviews'
+      'Monthly reliability reviews',
     ],
     popular: true,
     icon: '🧭',
@@ -124,11 +131,12 @@ export const addedITServices2025: AdvancedITService[] = [
     variant: 'managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Runbook library, on-call rotations, lightweight automation runners',
+    implementationDetails:
+      'Runbook library, on-call rotations, lightweight automation runners',
     launchDate: '2025-05-30',
     customers: 14,
     rating: 4.9,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'data-platform-accelerator',
@@ -136,13 +144,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Stand up a modern data stack in your cloud in weeks',
     price: '$4,800',
     period: '/month',
-    description: 'Opinionated, secure data platform blueprint with ingestion, transformation, and governance. Delivered with IaC and documentation.',
+    description:
+      'Opinionated, secure data platform blueprint with ingestion, transformation, and governance. Delivered with IaC and documentation.',
     features: [
       'Ingestion and CDC connectors',
       'dbt transformations and tests',
       'Data catalog and lineage',
       'Row/column-level security',
-      'Cost monitoring and quotas'
+      'Cost monitoring and quotas',
     ],
     popular: true,
     icon: '🗄️',
@@ -155,9 +164,18 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–6 weeks',
     category: 'Data',
     realService: true,
-    technology: ['Fivetran/Airbyte', 'dbt', 'Dagster/Airflow', 'Snowflake/BigQuery'],
+    technology: [
+      'Fivetran/Airbyte',
+      'dbt',
+      'Dagster/Airflow',
+      'Snowflake/BigQuery',
+    ],
     integrations: ['Looker', 'Tableau', 'Power BI'],
-    useCases: ['Product analytics', 'Finance reporting', 'LLM feature pipelines'],
+    useCases: [
+      'Product analytics',
+      'Finance reporting',
+      'LLM feature pipelines',
+    ],
     roi: 'Cut build time and maintenance cost 2–4x',
     competitors: ['Consultancies', 'DIY cloud blueprints'],
     marketSize: '$20B data services',
@@ -165,11 +183,12 @@ export const addedITServices2025: AdvancedITService[] = [
     variant: 'accelerator',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Terraform modules, secure networking, CI/CD, and docs',
+    implementationDetails:
+      'Terraform modules, secure networking, CI/CD, and docs',
     launchDate: '2025-06-02',
     customers: 9,
     rating: 4.8,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'managed-kubernetes-platform',
@@ -177,13 +196,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Secure, observable, cost-aware Kubernetes managed for you',
     price: '$5,900',
     period: '/month',
-    description: 'Hardened clusters with GitOps, autoscaling, cost controls, and golden paths. We operate, you ship.',
+    description:
+      'Hardened clusters with GitOps, autoscaling, cost controls, and golden paths. We operate, you ship.',
     features: [
       'GitOps and policy as code',
       'Cluster autoscaling and HPA/VPA',
       'Cost allocation and quotas',
       'Multi-env promotions',
-      '24/7 monitoring and on-call'
+      '24/7 monitoring and on-call',
     ],
     popular: true,
     icon: '☸️',
@@ -206,11 +226,12 @@ export const addedITServices2025: AdvancedITService[] = [
     variant: 'managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'IaC, GitOps pipelines, policy packs, golden templates',
+    implementationDetails:
+      'IaC, GitOps pipelines, policy packs, golden templates',
     launchDate: '2025-06-09',
     customers: 7,
     rating: 4.8,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'secure-data-mesh',
@@ -218,13 +239,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Domain-oriented data products with governance and lineage',
     price: '$7,400',
     period: '/month',
-    description: 'Blueprint and operate a governed data mesh with product SLAs, ownership, lineage, and secure access.',
+    description:
+      'Blueprint and operate a governed data mesh with product SLAs, ownership, lineage, and secure access.',
     features: [
       'Domain product templates',
       'Row/column security and masking',
       'Lineage and catalog',
       'Quality checks and SLAs',
-      'Self-serve access workflows'
+      'Self-serve access workflows',
     ],
     popular: false,
     icon: '🕸️',
@@ -251,7 +273,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-07',
     customers: 5,
     rating: 4.7,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'enterprise-sso-and-iam-hardening',
@@ -259,20 +281,22 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Design and implement robust identity with least privilege',
     price: '$3,200',
     period: '/month',
-    description: 'Modernize identity with SSO, SCIM, JIT, RBAC/ABAC, and device posture across apps and infra.',
+    description:
+      'Modernize identity with SSO, SCIM, JIT, RBAC/ABAC, and device posture across apps and infra.',
     features: [
       'SSO (SAML/OIDC) and SCIM',
       'RBAC/ABAC and group mapping',
       'Just-in-time access',
       'Device posture checks',
-      'Audit logging and reports'
+      'Audit logging and reports',
     ],
     popular: true,
     icon: '🔑',
     color: 'from-amber-700 to-orange-800',
     textColor: 'text-amber-200',
     link: 'https://ziontechgroup.com/services/enterprise-sso-and-iam-hardening',
-    marketPosition: 'Security-focused rollout with measurable reductions in access risk',
+    marketPosition:
+      'Security-focused rollout with measurable reductions in access risk',
     targetAudience: 'SaaS and regulated industries',
     trialDays: 0,
     setupTime: '3–5 weeks',
@@ -292,7 +316,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-06',
     customers: 12,
     rating: 4.8,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'managed-vulnerability-management',
@@ -300,13 +324,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Continuous scanning, prioritization, and remediation workflows',
     price: '$2,400',
     period: '/month',
-    description: 'Agentless and agent-based scanning across cloud and endpoints with risk-based prioritization, ticketing, and dashboards.',
+    description:
+      'Agentless and agent-based scanning across cloud and endpoints with risk-based prioritization, ticketing, and dashboards.',
     features: [
       'Cloud and endpoint scanning',
       'Risk-based scoring',
       'Ticketing integration',
       'SLA tracking and reports',
-      'Executive dashboards'
+      'Executive dashboards',
     ],
     popular: true,
     icon: '🛡️',
@@ -333,7 +358,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-15',
     customers: 18,
     rating: 4.7,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'managed-sase-lite',
@@ -341,13 +366,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Secure access, DNS filtering, and app gateway without complexity',
     price: '$3,100',
     period: '/month',
-    description: 'Identity-aware proxy, DNS filtering, and basic DLP with opinionated defaults and monthly reviews.',
+    description:
+      'Identity-aware proxy, DNS filtering, and basic DLP with opinionated defaults and monthly reviews.',
     features: [
       'Identity-aware proxy',
       'DNS and web filtering',
       'Basic DLP policies',
       'Device posture checks',
-      'Monthly security reviews'
+      'Monthly security reviews',
     ],
     popular: false,
     icon: '🛰️',
@@ -374,7 +400,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-18',
     customers: 10,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'data-quality-observability-service',
@@ -382,13 +408,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Detect schema drift, freshness, and anomalies with alerts',
     price: '$2,800',
     period: '/month',
-    description: 'Monitors pipelines and datasets for health issues and notifies owners with fixes and SLAs.',
+    description:
+      'Monitors pipelines and datasets for health issues and notifies owners with fixes and SLAs.',
     features: [
       'Freshness and volume checks',
       'Schema drift detection',
       'Anomaly detection',
       'Owner routing and SLAs',
-      'Data incident postmortems'
+      'Data incident postmortems',
     ],
     popular: true,
     icon: '📊',
@@ -415,7 +442,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-11',
     customers: 12,
     rating: 4.7,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'cost-aware-kubernetes-hardening',
@@ -423,13 +450,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Secure clusters with policies, budgets, and golden paths',
     price: '$3,700',
     period: '/month',
-    description: 'Implements policy packs, resource budgets, and guardrails that reduce both risk and spend, with dashboards for teams.',
+    description:
+      'Implements policy packs, resource budgets, and guardrails that reduce both risk and spend, with dashboards for teams.',
     features: [
       'Policy-as-code packs',
       'Quotas and budgets',
       'Admission controls',
       'Golden templates',
-      'Drift detection'
+      'Drift detection',
     ],
     popular: true,
     icon: '☸️',
@@ -456,21 +484,23 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-14',
     customers: 8,
     rating: 4.8,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'data-platform-modernization',
     name: 'Data Platform Modernization',
-    tagline: 'Warehouse, lakehouse, and ELT rebuilt for speed, cost, and governance',
+    tagline:
+      'Warehouse, lakehouse, and ELT rebuilt for speed, cost, and governance',
     price: '$7,500',
     period: '/month',
-    description: 'Design and implement a modern data stack with ingestion, transformation, governance, and observability tuned to your workloads and cost targets.',
+    description:
+      'Design and implement a modern data stack with ingestion, transformation, governance, and observability tuned to your workloads and cost targets.',
     features: [
       'Ingestion connectors and CDC',
       'dbt transformations and tests',
       'Cost and performance tuning',
       'Data contracts and lineage',
-      'Observability and SLAs'
+      'Observability and SLAs',
     ],
     popular: true,
     icon: '🗄️',
@@ -497,21 +527,23 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-05-10',
     customers: 17,
     rating: 4.8,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'sre-and-reliability-ops',
     name: 'SRE & Reliability Ops',
-    tagline: 'SLIs/SLOs, on-call, incident response, and performance engineering',
+    tagline:
+      'SLIs/SLOs, on-call, incident response, and performance engineering',
     price: '$4,500',
     period: '/month',
-    description: 'Establishes reliability fundamentals: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
+    description:
+      'Establishes reliability fundamentals: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
     features: [
       'SLIs/SLOs and error budgets',
       'On-call rotations and tooling',
       'Incident response and postmortems',
       'Capacity planning and load tests',
-      'Cost/perf optimizations'
+      'Cost/perf optimizations',
     ],
     popular: true,
     icon: '⚙️',
@@ -524,7 +556,12 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–6 weeks',
     category: 'SRE',
     realService: true,
-    technology: ['Kubernetes', 'Terraform', 'Prometheus/Grafana', 'OpenTelemetry'],
+    technology: [
+      'Kubernetes',
+      'Terraform',
+      'Prometheus/Grafana',
+      'OpenTelemetry',
+    ],
     integrations: ['PagerDuty', 'Datadog', 'New Relic', 'CloudWatch'],
     useCases: ['Uptime SLAs', 'Performance tuning', 'Cost stability'],
     roi: 'Reduces incidents 30–50% within 90 days',
@@ -534,25 +571,28 @@ export const addedITServices2025: AdvancedITService[] = [
     variant: 'managed-service',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Runbooks, SLO dashboards, incident tooling, training',
+    implementationDetails:
+      'Runbooks, SLO dashboards, incident tooling, training',
     launchDate: '2025-05-20',
     customers: 24,
     rating: 4.9,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'zero-trust-email-and-endpoint',
     name: 'Zero-Trust Email & Endpoint',
-    tagline: 'DMARC, DKIM, phishing simulation, EDR rollouts, and device posture',
+    tagline:
+      'DMARC, DKIM, phishing simulation, EDR rollouts, and device posture',
     price: '$2,900',
     period: '/month',
-    description: 'Harden email and endpoints with identity-aware protections, phishing exercises, and SOC-ready logging integrated with your SIEM.',
+    description:
+      'Harden email and endpoints with identity-aware protections, phishing exercises, and SOC-ready logging integrated with your SIEM.',
     features: [
       'DMARC/DKIM/SPF enforcement',
       'EDR deployment and baselines',
       'Phishing simulations and training',
       'SIEM integration and alerting',
-      'Playbooks and tabletop drills'
+      'Playbooks and tabletop drills',
     ],
     popular: false,
     icon: '🛡️',
@@ -565,7 +605,12 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–4 weeks',
     category: 'Security',
     realService: true,
-    technology: ['Okta/Entra', 'Google Workspace', 'CrowdStrike/SentinelOne', 'SIEM'],
+    technology: [
+      'Okta/Entra',
+      'Google Workspace',
+      'CrowdStrike/SentinelOne',
+      'SIEM',
+    ],
     integrations: ['Okta', 'Azure AD', 'Google Workspace', 'Splunk'],
     useCases: ['Phish resiliency', 'Device hygiene', 'Audit readiness'],
     roi: 'Reduces phishing risk by 60%+',
@@ -579,7 +624,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-05',
     customers: 13,
     rating: 4.7,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'managed-observability-platform',
@@ -587,20 +632,22 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Logs, metrics, traces, and SLOs delivered as a managed stack',
     price: '$3,900',
     period: '/month',
-    description: 'End-to-end observability with golden signals, SLO dashboards, and alert hygiene. We run the stack and partner with your teams for outcomes.',
+    description:
+      'End-to-end observability with golden signals, SLO dashboards, and alert hygiene. We run the stack and partner with your teams for outcomes.',
     features: [
       'Unified telemetry pipelines',
       'SLO dashboards and burn alerts',
       'Runbook-driven alerting',
       'Cost optimization of telemetry',
-      'Incident collaboration'
+      'Incident collaboration',
     ],
     popular: true,
     icon: '📊',
     color: 'from-indigo-700 to-blue-800',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/managed-observability-platform',
-    marketPosition: 'Outcome-oriented ops vs. tool resell; we tune signals and noise',
+    marketPosition:
+      'Outcome-oriented ops vs. tool resell; we tune signals and noise',
     targetAudience: 'SRE, platform, app teams',
     trialDays: 0,
     setupTime: '3–6 weeks',
@@ -620,7 +667,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-21',
     customers: 6,
     rating: 4.8,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'network-modernization-accelerator',
@@ -628,20 +675,22 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'SD-WAN, zero-trust, and cloud interconnect in weeks',
     price: '$6,800',
     period: '/month',
-    description: 'Blueprint and implement a modern, secure network fabric with SD-WAN, identity-aware access, and cloud interconnects.',
+    description:
+      'Blueprint and implement a modern, secure network fabric with SD-WAN, identity-aware access, and cloud interconnects.',
     features: [
       'SD-WAN rollout',
       'Identity-aware segmentation',
       'Cloud interconnects',
       'Observability and logs',
-      'Playbooks and training'
+      'Playbooks and training',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-cyan-700 to-blue-800',
     textColor: 'text-cyan-200',
     link: 'https://ziontechgroup.com/services/network-modernization-accelerator',
-    marketPosition: 'Pragmatic, cost-aware modernization vs. multi-year projects',
+    marketPosition:
+      'Pragmatic, cost-aware modernization vs. multi-year projects',
     targetAudience: 'Mid-market IT and security',
     trialDays: 0,
     setupTime: '4–8 weeks',
@@ -661,7 +710,7 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-22',
     customers: 4,
     rating: 4.7,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'data-governance-foundation',
@@ -669,13 +718,14 @@ export const addedITServices2025: AdvancedITService[] = [
     tagline: 'Catalog, lineage, access controls, and data contracts delivered',
     price: '$4,200',
     period: '/month',
-    description: 'Stand up pragmatic governance with a catalog, lineage, RBAC/ABAC, and data contracts with owners and SLAs.',
+    description:
+      'Stand up pragmatic governance with a catalog, lineage, RBAC/ABAC, and data contracts with owners and SLAs.',
     features: [
       'Data catalog and ownership',
       'Lineage and impact analysis',
       'RBAC/ABAC and masking',
       'Data contracts and SLAs',
-      'Audit logs and reviews'
+      'Audit logs and reviews',
     ],
     popular: true,
     icon: '📚',
@@ -702,6 +752,6 @@ export const addedITServices2025: AdvancedITService[] = [
     launchDate: '2025-06-23',
     customers: 3,
     rating: 4.8,
-    reviews: 2
-  }
-]
+    reviews: 2,
+  },
+];

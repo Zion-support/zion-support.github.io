@@ -1,10 +1,11 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
 
 interface NotifyParams {
@@ -14,18 +15,25 @@ interface NotifyParams {
   submittedBy?: string; // Optional: user info
 }
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
+serve(async req => {
+  if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { whitepaperId, sharableLink, tokenName, submittedBy }: NotifyParams = await req.json();
+    const { whitepaperId, sharableLink, tokenName, submittedBy }: NotifyParams =
+      await req.json();
 
     if (!whitepaperId || !sharableLink || !tokenName) {
       return new Response(
-        JSON.stringify({ error: "Missing required parameters for notification: whitepaperId, sharableLink, and tokenName are required." }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({
+          error:
+            'Missing required parameters for notification: whitepaperId, sharableLink, and tokenName are required.',
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
       );
     }
 
@@ -56,17 +64,18 @@ serve(async (req) => {
     //   .eq('id', whitepaperId);
     // if (updateError) throw new Error(`Failed to update whitepaper status: ${updateError.message}`);
 
-
     return new Response(
-      JSON.stringify({ message: "Notification request processed. Legal team would be notified in a real setup." }),
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      JSON.stringify({
+        message:
+          'Notification request processed. Legal team would be notified in a real setup.',
+      }),
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
-
   } catch (error) {
     // console.error("Error in notify-legal-team function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   }
 });

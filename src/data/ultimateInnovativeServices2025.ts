@@ -43,27 +43,78 @@ export const SERVICE_CATEGORIES = [
   'Robotics & Automation',
   'Biotechnology',
   'Space Technology',
-  'Green Technology'
+  'Green Technology',
 ];
 
 export const SERVICE_SUBCATEGORIES = {
-  'AI & Automation': ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation'],
-  'Quantum Computing': ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
-  'Blockchain & Web3': ['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
-  'Cybersecurity': ['Zero Trust Architecture', 'Threat Intelligence', 'Incident Response', 'Compliance Automation'],
-  'IoT & Edge Computing': ['Edge AI', 'Industrial IoT', 'Smart Cities', 'Connected Devices'],
-  'Metaverse & AR/VR': ['Virtual Worlds', 'Augmented Reality', 'Digital Twins', 'Virtual Events'],
-  'Robotics & Automation': ['Autonomous Systems', 'Collaborative Robots', 'Service Robots', 'Industrial Automation'],
-  'Biotechnology': ['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
-  'Space Technology': ['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
-  'Green Technology': ['Renewable Energy', 'Carbon Capture', 'Sustainable Materials', 'Clean Transportation']
+  'AI & Automation': [
+    'Machine Learning',
+    'Natural Language Processing',
+    'Computer Vision',
+    'Robotic Process Automation',
+  ],
+  'Quantum Computing': [
+    'Quantum Machine Learning',
+    'Quantum Cryptography',
+    'Quantum Simulation',
+    'Quantum Optimization',
+  ],
+  'Blockchain & Web3': [
+    'DeFi Platforms',
+    'NFT Marketplaces',
+    'Smart Contracts',
+    'Decentralized Identity',
+  ],
+  Cybersecurity: [
+    'Zero Trust Architecture',
+    'Threat Intelligence',
+    'Incident Response',
+    'Compliance Automation',
+  ],
+  'IoT & Edge Computing': [
+    'Edge AI',
+    'Industrial IoT',
+    'Smart Cities',
+    'Connected Devices',
+  ],
+  'Metaverse & AR/VR': [
+    'Virtual Worlds',
+    'Augmented Reality',
+    'Digital Twins',
+    'Virtual Events',
+  ],
+  'Robotics & Automation': [
+    'Autonomous Systems',
+    'Collaborative Robots',
+    'Service Robots',
+    'Industrial Automation',
+  ],
+  Biotechnology: [
+    'Gene Editing',
+    'Synthetic Biology',
+    'Bioinformatics',
+    'Drug Discovery',
+  ],
+  'Space Technology': [
+    'Satellite Systems',
+    'Space Mining',
+    'Space Tourism',
+    'Space Manufacturing',
+  ],
+  'Green Technology': [
+    'Renewable Energy',
+    'Carbon Capture',
+    'Sustainable Materials',
+    'Clean Transportation',
+  ],
 };
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
   {
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
-    description: 'Revolutionary AI system that autonomously manages entire business operations, making strategic decisions, optimizing processes, and driving growth without human intervention.',
+    description:
+      'Revolutionary AI system that autonomously manages entire business operations, making strategic decisions, optimizing processes, and driving growth without human intervention.',
     category: 'AI & Automation',
     subcategory: 'Machine Learning',
     price: 15000,
@@ -77,7 +128,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       '24/7 operational monitoring and management',
       'Multi-language support and global compliance',
       'Advanced risk assessment and mitigation',
-      'Seamless integration with existing systems'
+      'Seamless integration with existing systems',
     ],
     benefits: [
       '300-500% ROI within first year',
@@ -85,7 +136,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       '24/7 business optimization',
       'Data-driven strategic decisions',
       'Scalable across all business sizes',
-      'Compliance automation and risk reduction'
+      'Compliance automation and risk reduction',
     ],
     useCases: [
       'Enterprise business operations',
@@ -93,7 +144,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Multi-location business management',
       'Investment portfolio optimization',
       'Supply chain automation',
-      'Customer experience enhancement'
+      'Customer experience enhancement',
     ],
     targetAudience: [
       'Fortune 500 companies',
@@ -101,9 +152,15 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Multi-national corporations',
       'Investment firms',
       'Consulting companies',
-      'Government agencies'
+      'Government agencies',
     ],
-    tags: ['AI', 'Automation', 'Business Intelligence', 'Machine Learning', 'Autonomous Systems'],
+    tags: [
+      'AI',
+      'Automation',
+      'Business Intelligence',
+      'Machine Learning',
+      'Autonomous Systems',
+    ],
     estimatedDelivery: '4-6 weeks',
     supportLevel: '24/7 Premium Support with dedicated AI specialists',
     marketPrice: '$25,000 - $50,000/month',
@@ -112,26 +169,43 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     technicalSpecs: {
-      technology: ['Advanced AI/ML', 'Quantum Computing Ready', 'Blockchain Integration', 'Edge Computing'],
-      integrations: ['ERP Systems', 'CRM Platforms', 'Financial Systems', 'Cloud Services', 'IoT Devices'],
+      technology: [
+        'Advanced AI/ML',
+        'Quantum Computing Ready',
+        'Blockchain Integration',
+        'Edge Computing',
+      ],
+      integrations: [
+        'ERP Systems',
+        'CRM Platforms',
+        'Financial Systems',
+        'Cloud Services',
+        'IoT Devices',
+      ],
       apiEndpoints: 150,
       uptime: '99.99%',
-      security: ['Zero Trust Architecture', 'Quantum Encryption', 'AI-Powered Threat Detection', 'SOC 2 Type II']
+      security: [
+        'Zero Trust Architecture',
+        'Quantum Encryption',
+        'AI-Powered Threat Detection',
+        'SOC 2 Type II',
+      ],
     },
     competitors: ['No direct competitors - revolutionary technology'],
     caseStudies: [
       'Fortune 100 company achieved 400% ROI in 8 months',
       'Startup scaled from $1M to $50M revenue in 18 months',
-      'Government agency reduced operational costs by 85%'
-    ]
+      'Government agency reduced operational costs by 85%',
+    ],
   },
   {
     id: 'quantum-ai-platform',
     title: 'Quantum AI Platform',
-    description: 'Groundbreaking quantum computing platform that combines quantum algorithms with artificial intelligence to solve previously impossible computational problems.',
+    description:
+      'Groundbreaking quantum computing platform that combines quantum algorithms with artificial intelligence to solve previously impossible computational problems.',
     category: 'Quantum Computing',
     subcategory: 'Quantum Machine Learning',
     price: 25000,
@@ -145,7 +219,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Real-time quantum simulation',
       'Quantum cryptography integration',
       'Scalable quantum architecture',
-      'Advanced quantum error correction'
+      'Advanced quantum error correction',
     ],
     benefits: [
       '1000x faster than classical computing for specific problems',
@@ -153,7 +227,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Revolutionary drug discovery capabilities',
       'Advanced financial modeling and risk assessment',
       'Climate prediction and modeling',
-      'Materials science breakthroughs'
+      'Materials science breakthroughs',
     ],
     useCases: [
       'Drug discovery and pharmaceutical research',
@@ -161,7 +235,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Climate change prediction and modeling',
       'Materials science and nanotechnology',
       'Cryptography and cybersecurity',
-      'Artificial intelligence training'
+      'Artificial intelligence training',
     ],
     targetAudience: [
       'Pharmaceutical companies',
@@ -169,9 +243,15 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Research universities',
       'Government research labs',
       'Technology companies',
-      'Healthcare organizations'
+      'Healthcare organizations',
     ],
-    tags: ['Quantum Computing', 'AI', 'Machine Learning', 'Cryptography', 'Research'],
+    tags: [
+      'Quantum Computing',
+      'AI',
+      'Machine Learning',
+      'Cryptography',
+      'Research',
+    ],
     estimatedDelivery: '8-12 weeks',
     supportLevel: '24/7 Quantum Computing Specialists + Research Support',
     marketPrice: '$50,000 - $100,000/month',
@@ -180,20 +260,35 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     technicalSpecs: {
-      technology: ['Quantum Bits (Qubits)', 'Quantum Gates', 'Quantum Error Correction', 'Hybrid Quantum-Classical'],
-      integrations: ['Research Platforms', 'Cloud Services', 'Scientific Instruments', 'AI Frameworks'],
+      technology: [
+        'Quantum Bits (Qubits)',
+        'Quantum Gates',
+        'Quantum Error Correction',
+        'Hybrid Quantum-Classical',
+      ],
+      integrations: [
+        'Research Platforms',
+        'Cloud Services',
+        'Scientific Instruments',
+        'AI Frameworks',
+      ],
       apiEndpoints: 75,
       uptime: '99.9%',
-      security: ['Quantum Cryptography', 'Post-Quantum Security', 'Zero Trust Architecture']
-    }
+      security: [
+        'Quantum Cryptography',
+        'Post-Quantum Security',
+        'Zero Trust Architecture',
+      ],
+    },
   },
   {
     id: 'blockchain-autonomous-ecosystem',
     title: 'Blockchain Autonomous Ecosystem',
-    description: 'Complete decentralized ecosystem that autonomously manages financial transactions, smart contracts, and digital assets with zero human intervention.',
+    description:
+      'Complete decentralized ecosystem that autonomously manages financial transactions, smart contracts, and digital assets with zero human intervention.',
     category: 'Blockchain & Web3',
     subcategory: 'DeFi Platforms',
     price: 12000,
@@ -207,7 +302,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Decentralized governance',
       'Automated risk management',
       'Real-time market analysis',
-      'Multi-asset portfolio management'
+      'Multi-asset portfolio management',
     ],
     benefits: [
       'Eliminates human error in financial transactions',
@@ -215,7 +310,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Transparent and auditable operations',
       'Reduced transaction costs by 80%',
       'Global accessibility and inclusion',
-      'Programmable money and assets'
+      'Programmable money and assets',
     ],
     useCases: [
       'Decentralized finance (DeFi)',
@@ -223,7 +318,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Supply chain finance',
       'Cross-border payments',
       'Digital asset management',
-      'Decentralized insurance'
+      'Decentralized insurance',
     ],
     targetAudience: [
       'Financial institutions',
@@ -231,7 +326,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'E-commerce companies',
       'International businesses',
       'Cryptocurrency exchanges',
-      'Fintech startups'
+      'Fintech startups',
     ],
     tags: ['Blockchain', 'DeFi', 'Smart Contracts', 'Cryptocurrency', 'Web3'],
     estimatedDelivery: '6-8 weeks',
@@ -242,13 +337,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'quantum-cybersecurity-suite',
     title: 'Quantum Cybersecurity Suite',
-    description: 'Next-generation cybersecurity platform that uses quantum computing and AI to provide unbreakable protection against all known and future cyber threats.',
+    description:
+      'Next-generation cybersecurity platform that uses quantum computing and AI to provide unbreakable protection against all known and future cyber threats.',
     category: 'Cybersecurity',
     subcategory: 'Zero Trust Architecture',
     price: 18000,
@@ -262,7 +358,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Automated incident response',
       'Quantum key distribution',
       'Advanced threat hunting',
-      'Compliance automation'
+      'Compliance automation',
     ],
     benefits: [
       'Unbreakable quantum-resistant security',
@@ -270,7 +366,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Zero false positives',
       'Automated compliance and reporting',
       'Real-time threat intelligence',
-      'Future-proof security architecture'
+      'Future-proof security architecture',
     ],
     useCases: [
       'Government and military security',
@@ -278,7 +374,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Healthcare data security',
       'Critical infrastructure protection',
       'Enterprise security',
-      'Cloud security'
+      'Cloud security',
     ],
     targetAudience: [
       'Government agencies',
@@ -286,9 +382,15 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Healthcare organizations',
       'Defense contractors',
       'Large enterprises',
-      'Critical infrastructure'
+      'Critical infrastructure',
     ],
-    tags: ['Cybersecurity', 'Quantum Computing', 'AI', 'Zero Trust', 'Encryption'],
+    tags: [
+      'Cybersecurity',
+      'Quantum Computing',
+      'AI',
+      'Zero Trust',
+      'Encryption',
+    ],
     estimatedDelivery: '6-10 weeks',
     supportLevel: '24/7 Security Operations Center + Incident Response',
     marketPrice: '$30,000 - $60,000/month',
@@ -297,13 +399,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'iot-edge-intelligence-platform',
     title: 'IoT Edge Intelligence Platform',
-    description: 'Advanced IoT platform that processes data at the edge using AI, enabling real-time decision making and autonomous operation of connected devices.',
+    description:
+      'Advanced IoT platform that processes data at the edge using AI, enabling real-time decision making and autonomous operation of connected devices.',
     category: 'IoT & Edge Computing',
     subcategory: 'Edge AI',
     price: 8000,
@@ -317,7 +420,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Energy optimization',
       'Security at the edge',
       'Scalable architecture',
-      'Multi-protocol support'
+      'Multi-protocol support',
     ],
     benefits: [
       'Real-time decision making',
@@ -325,7 +428,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Enhanced privacy and security',
       'Scalable IoT deployments',
       'Predictive maintenance savings',
-      'Energy efficiency optimization'
+      'Energy efficiency optimization',
     ],
     useCases: [
       'Smart cities and infrastructure',
@@ -333,7 +436,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Connected vehicles and transportation',
       'Smart buildings and homes',
       'Healthcare monitoring',
-      'Environmental monitoring'
+      'Environmental monitoring',
     ],
     targetAudience: [
       'City governments',
@@ -341,7 +444,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Transportation companies',
       'Real estate developers',
       'Healthcare providers',
-      'Utility companies'
+      'Utility companies',
     ],
     tags: ['IoT', 'Edge Computing', 'AI', 'Smart Cities', 'Industrial IoT'],
     estimatedDelivery: '4-6 weeks',
@@ -352,13 +455,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'metaverse-creation-platform',
     title: 'Metaverse Creation Platform',
-    description: 'Comprehensive platform for building, managing, and monetizing immersive metaverse experiences with AI-powered content generation and virtual economy management.',
+    description:
+      'Comprehensive platform for building, managing, and monetizing immersive metaverse experiences with AI-powered content generation and virtual economy management.',
     category: 'Metaverse & AR/VR',
     subcategory: 'Virtual Worlds',
     price: 10000,
@@ -372,7 +476,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Digital asset marketplace',
       'Social interaction tools',
       'Analytics and insights',
-      'Monetization tools'
+      'Monetization tools',
     ],
     benefits: [
       'Rapid metaverse development',
@@ -380,7 +484,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Built-in monetization',
       'Scalable virtual experiences',
       'Cross-platform compatibility',
-      'Real-time collaboration'
+      'Real-time collaboration',
     ],
     useCases: [
       'Virtual events and conferences',
@@ -388,7 +492,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Virtual real estate',
       'Education and training',
       'Virtual commerce',
-      'Social networking'
+      'Social networking',
     ],
     targetAudience: [
       'Event organizers',
@@ -396,7 +500,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Real estate developers',
       'Educational institutions',
       'E-commerce companies',
-      'Social media platforms'
+      'Social media platforms',
     ],
     tags: ['Metaverse', 'AR/VR', 'Virtual Worlds', 'AI', 'Digital Assets'],
     estimatedDelivery: '8-12 weeks',
@@ -407,13 +511,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'autonomous-robotics-platform',
     title: 'Autonomous Robotics Platform',
-    description: 'Advanced robotics platform that enables robots to learn, adapt, and operate autonomously in various environments with minimal human supervision.',
+    description:
+      'Advanced robotics platform that enables robots to learn, adapt, and operate autonomously in various environments with minimal human supervision.',
     category: 'Robotics & Automation',
     subcategory: 'Autonomous Systems',
     price: 20000,
@@ -427,7 +532,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Collaborative operation',
       'Remote monitoring and control',
       'Predictive maintenance',
-      'Safety systems'
+      'Safety systems',
     ],
     benefits: [
       '24/7 autonomous operation',
@@ -435,7 +540,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Increased productivity and efficiency',
       'Enhanced safety in hazardous environments',
       'Scalable robotic workforce',
-      'Cost-effective automation'
+      'Cost-effective automation',
     ],
     useCases: [
       'Manufacturing and assembly',
@@ -443,7 +548,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Healthcare and surgery',
       'Agriculture and farming',
       'Construction and maintenance',
-      'Search and rescue'
+      'Search and rescue',
     ],
     targetAudience: [
       'Manufacturing companies',
@@ -451,9 +556,15 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Healthcare providers',
       'Agricultural companies',
       'Construction companies',
-      'Government agencies'
+      'Government agencies',
     ],
-    tags: ['Robotics', 'AI', 'Automation', 'Machine Learning', 'Autonomous Systems'],
+    tags: [
+      'Robotics',
+      'AI',
+      'Automation',
+      'Machine Learning',
+      'Autonomous Systems',
+    ],
     estimatedDelivery: '10-16 weeks',
     supportLevel: '24/7 Robotics Specialists + Remote Support',
     marketPrice: '$35,000 - $70,000/month',
@@ -462,13 +573,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'biotech-ai-platform',
     title: 'Biotech AI Platform',
-    description: 'Revolutionary platform that combines artificial intelligence with biotechnology to accelerate drug discovery, genetic research, and medical breakthroughs.',
+    description:
+      'Revolutionary platform that combines artificial intelligence with biotechnology to accelerate drug discovery, genetic research, and medical breakthroughs.',
     category: 'Biotechnology',
     subcategory: 'Drug Discovery',
     price: 30000,
@@ -482,7 +594,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Biomarker identification',
       'Drug repurposing',
       'Toxicology prediction',
-      'Regulatory compliance'
+      'Regulatory compliance',
     ],
     benefits: [
       '10x faster drug discovery',
@@ -490,7 +602,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Higher success rates',
       'Personalized medicine capabilities',
       'Faster regulatory approval',
-      'Life-saving breakthroughs'
+      'Life-saving breakthroughs',
     ],
     useCases: [
       'Pharmaceutical research',
@@ -498,7 +610,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Cancer treatment',
       'Rare disease research',
       'Vaccine development',
-      'Personalized medicine'
+      'Personalized medicine',
     ],
     targetAudience: [
       'Pharmaceutical companies',
@@ -506,7 +618,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Research universities',
       'Government research labs',
       'Healthcare organizations',
-      'Genetic testing companies'
+      'Genetic testing companies',
     ],
     tags: ['Biotechnology', 'AI', 'Drug Discovery', 'Genetics', 'Healthcare'],
     estimatedDelivery: '12-20 weeks',
@@ -517,13 +629,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'space-tech-platform',
     title: 'Space Technology Platform',
-    description: 'Advanced platform for satellite operations, space exploration, and space-based services using cutting-edge AI and quantum technologies.',
+    description:
+      'Advanced platform for satellite operations, space exploration, and space-based services using cutting-edge AI and quantum technologies.',
     category: 'Space Technology',
     subcategory: 'Satellite Systems',
     price: 25000,
@@ -537,7 +650,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Navigation and positioning',
       'Space weather monitoring',
       'Mission planning and execution',
-      'Data processing and analysis'
+      'Data processing and analysis',
     ],
     benefits: [
       'Global coverage and connectivity',
@@ -545,7 +658,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Advanced navigation systems',
       'Space exploration capabilities',
       'Environmental monitoring',
-      'Scientific research support'
+      'Scientific research support',
     ],
     useCases: [
       'Satellite communications',
@@ -553,7 +666,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Navigation and positioning',
       'Space exploration',
       'Climate research',
-      'Disaster response'
+      'Disaster response',
     ],
     targetAudience: [
       'Satellite companies',
@@ -561,9 +674,15 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Government space agencies',
       'Research institutions',
       'Defense contractors',
-      'Environmental organizations'
+      'Environmental organizations',
     ],
-    tags: ['Space Technology', 'Satellites', 'AI', 'Quantum Computing', 'Earth Observation'],
+    tags: [
+      'Space Technology',
+      'Satellites',
+      'AI',
+      'Quantum Computing',
+      'Earth Observation',
+    ],
     estimatedDelivery: '16-24 weeks',
     supportLevel: '24/7 Space Operations + Mission Support',
     marketPrice: '$40,000 - $80,000/month',
@@ -572,13 +691,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'green-tech-optimization-platform',
     title: 'Green Technology Optimization Platform',
-    description: 'Comprehensive platform that uses AI and advanced analytics to optimize renewable energy, carbon capture, and sustainable technology deployment.',
+    description:
+      'Comprehensive platform that uses AI and advanced analytics to optimize renewable energy, carbon capture, and sustainable technology deployment.',
     category: 'Green Technology',
     subcategory: 'Renewable Energy',
     price: 15000,
@@ -592,7 +712,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Carbon capture optimization',
       'Green building management',
       'Environmental impact assessment',
-      'Compliance and reporting'
+      'Compliance and reporting',
     ],
     benefits: [
       '30-50% energy cost reduction',
@@ -600,7 +720,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Regulatory compliance',
       'Enhanced sustainability reputation',
       'Operational efficiency gains',
-      'Environmental impact reduction'
+      'Environmental impact reduction',
     ],
     useCases: [
       'Renewable energy companies',
@@ -608,7 +728,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Commercial buildings',
       'Transportation companies',
       'Government agencies',
-      'Educational institutions'
+      'Educational institutions',
     ],
     targetAudience: [
       'Energy companies',
@@ -616,9 +736,15 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       'Real estate developers',
       'Transportation companies',
       'Government agencies',
-      'Educational institutions'
+      'Educational institutions',
     ],
-    tags: ['Green Technology', 'Renewable Energy', 'Sustainability', 'AI', 'Carbon Capture'],
+    tags: [
+      'Green Technology',
+      'Renewable Energy',
+      'Sustainability',
+      'AI',
+      'Carbon Capture',
+    ],
     estimatedDelivery: '6-10 weeks',
     supportLevel: '24/7 Sustainability Specialists + Environmental Monitoring',
     marketPrice: '$25,000 - $50,000/month',
@@ -627,7 +753,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    }
-  }
+      website: 'https://ziontechgroup.com',
+    },
+  },
 ];

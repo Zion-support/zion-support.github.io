@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('broken-image-scanner-runner function triggered');
-    
+
     // Broken image scanner runner simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Broken image scanner runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         runner: {
           status: 'active',
           scannerStatus: 'running',
-          lastRun: new Date().toISOString()
-        }
-      })
+          lastRun: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in broken-image-scanner-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'broken-image-scanner-runner'
-      })
+        function: 'broken-image-scanner-runner',
+      }),
     };
   }
 };

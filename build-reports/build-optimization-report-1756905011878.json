@@ -2,10 +2,7 @@
   "timestamp": "2025-09-03T13:10:11.878Z",
   "configAnalysis": {
     "success": true,
-    "foundConfigs": [
-      "vite.config.ts",
-      "next.config.js"
-    ],
+    "foundConfigs": ["vite.config.ts", "next.config.js"],
     "configAnalysis": {
       "vite.config.ts": {
         "size": 282,

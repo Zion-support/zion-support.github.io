@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 const supabaseUrl =
   process.env.SUPABASE_URL ||
   process.env.VITE_SUPABASE_URL ||
   process.env.NEXT_PUBLIC_SUPABASE_URL ||
-  "; const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ";
+  '; const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ';
 const supabase = createClient(supabaseUrl, serviceKey);
 async function handler(req, res) {
-  if (req.method !== "POST") {
+  if (req.method !== 'POST') {
     res.status(405).end();
     return;
   }
   const { email, items = [] } = req.body || {};
   if (!email) {
-    res.status(400).json({ error: "Missing email" });
+    res.status(400).json({ error: 'Missing email' });
     return;
   }
   const token = randomUUID();
@@ -20,14 +20,14 @@ async function handler(req, res) {
     ? items.reduce((s, i) => s + (i.price || 0) * (i.quantity || 1), 0)
     : 0;
   const { data, error } = await supabase
-    .from("orders")
-    .insert({ user_id: "null", email, items, total, status: "pending", token })
-    .select("id")
+    .from('orders')
+    .insert({ user_id: 'null', email, items, total, status: 'pending', token })
+    .select('id')
     .single();
   if (error || !data) {
-    res.status(500).json({ error: error?.message || "Failed to create order" });
+    res.status(500).json({ error: error?.message || 'Failed to create order' });
     return;
   }
-  res.status(200).json({ orderId: "data.id", token });
+  res.status(200).json({ orderId: 'data.id', token });
 }
 export default withErrorLogging(handler);

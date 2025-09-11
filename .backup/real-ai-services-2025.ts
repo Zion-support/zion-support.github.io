@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const realAIServices2025: RealAIService2025[] = [
   {
     id: 'ai-consciousness-evolution-2029',
     name: 'AI Consciousness Evolution 2029',
-    tagline: 'Revolutionary AI consciousness and emotional intelligence platform',
+    tagline:
+      'Revolutionary AI consciousness and emotional intelligence platform',
     price: '$4,999',
     period: '/month',
-    description: 'Breakthrough AI platform that develops consciousness and emotional intelligence capabilities. Features include consciousness mapping, emotional learning, and ethical AI development frameworks.',
+    description:
+      'Breakthrough AI platform that develops consciousness and emotional intelligence capabilities. Features include consciousness mapping, emotional learning, and ethical AI development frameworks.',
     features: [
       'Consciousness mapping and development',
       'Emotional intelligence training',
@@ -66,22 +68,30 @@ export const realAIServices2025: RealAIService2025[] = [
       'Consciousness metrics and analytics',
       'Integration with AI systems',
       'Custom consciousness models',
-      'Research collaboration tools'
+      'Research collaboration tools',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-consciousness-evolution-2029',
-    marketPosition: 'First-to-market AI consciousness platform. No direct competitors in consciousness development.',
-    targetAudience: 'AI research institutions, Technology companies, Government agencies, Research organizations',
+    marketPosition:
+      'First-to-market AI consciousness platform. No direct competitors in consciousness development.',
+    targetAudience:
+      'AI research institutions, Technology companies, Government agencies, Research organizations',
     trialDays: 60,
     setupTime: '1 month',
     category: 'AI Consciousness',
     realService: true,
-    technology: ['Advanced AI/ML, Consciousness research, Emotional AI, Python, TensorFlow, PyTorch'],
-    integrations: ['OpenAI, Anthropic, Google AI, Research platforms, Academic databases'],
-    useCases: ['AI consciousness research, Emotional AI development, Ethical AI frameworks'],
+    technology: [
+      'Advanced AI/ML, Consciousness research, Emotional AI, Python, TensorFlow, PyTorch',
+    ],
+    integrations: [
+      'OpenAI, Anthropic, Google AI, Research platforms, Academic databases',
+    ],
+    useCases: [
+      'AI consciousness research, Emotional AI development, Ethical AI frameworks',
+    ],
     roi: 'Accelerate AI consciousness research by 500% and enable breakthrough discoveries',
     competitors: ['No direct competitors in consciousness development'],
     marketSize: '$50B+ AI research market',
@@ -89,11 +99,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-revolutionary',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Revolutionary AI consciousness platform with consciousness mapping, emotional learning, and ethical development frameworks.',
+    implementationDetails:
+      'Revolutionary AI consciousness platform with consciousness mapping, emotional learning, and ethical development frameworks.',
     launchDate: '2024-12-01',
     customers: 15,
     rating: 5.0,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-emotional-intelligence-training',
@@ -101,7 +112,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Train AI systems to understand and respond to human emotions',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced AI emotional intelligence platform that teaches AI systems to recognize, understand, and respond appropriately to human emotions. Features include emotion recognition, empathy training, and emotional response generation.',
+    description:
+      'Advanced AI emotional intelligence platform that teaches AI systems to recognize, understand, and respond appropriately to human emotions. Features include emotion recognition, empathy training, and emotional response generation.',
     features: [
       'Emotion recognition and classification',
       'Empathy training algorithms',
@@ -112,22 +124,30 @@ export const realAIServices2025: RealAIService2025[] = [
       'Emotional intelligence metrics',
       'Custom emotion models',
       'Integration with AI systems',
-      'Emotional training datasets'
+      'Emotional training datasets',
     ],
     popular: true,
     icon: '❤️',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence-training',
-    marketPosition: 'Competes with Affectiva, Emotient, and Realeyes. Offers more comprehensive emotional training.',
-    targetAudience: 'AI companies, Customer service platforms, Healthcare AI, Educational AI',
+    marketPosition:
+      'Competes with Affectiva, Emotient, and Realeyes. Offers more comprehensive emotional training.',
+    targetAudience:
+      'AI companies, Customer service platforms, Healthcare AI, Educational AI',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI Emotional Intelligence',
     realService: true,
-    technology: ['Computer Vision, NLP, Machine Learning, Python, TensorFlow, PyTorch'],
-    integrations: ['OpenAI, Anthropic, Computer vision APIs, Speech recognition systems'],
-    useCases: ['Customer service AI, Healthcare AI, Educational AI, Social robots'],
+    technology: [
+      'Computer Vision, NLP, Machine Learning, Python, TensorFlow, PyTorch',
+    ],
+    integrations: [
+      'OpenAI, Anthropic, Computer vision APIs, Speech recognition systems',
+    ],
+    useCases: [
+      'Customer service AI, Healthcare AI, Educational AI, Social robots',
+    ],
     roi: 'Improve AI-human interaction by 300% and increase user satisfaction by 80%',
     competitors: ['Affectiva, Emotient, Realeyes, Kairos'],
     marketSize: '$15B+ emotional AI market',
@@ -135,11 +155,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI emotional intelligence platform with comprehensive emotion training, empathy development, and emotional response generation.',
+    implementationDetails:
+      'AI emotional intelligence platform with comprehensive emotion training, empathy development, and emotional response generation.',
     launchDate: '2024-11-20',
     customers: 45,
     rating: 4.9,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'ai-autonomous-research-assistant',
@@ -147,7 +168,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Fully autonomous AI research agent for scientific discovery',
     price: '$3,499',
     period: '/month',
-    description: 'Revolutionary AI research assistant that operates autonomously to conduct scientific research, analyze data, and generate insights. Features include autonomous hypothesis generation, experimental design, and research synthesis.',
+    description:
+      'Revolutionary AI research assistant that operates autonomously to conduct scientific research, analyze data, and generate insights. Features include autonomous hypothesis generation, experimental design, and research synthesis.',
     features: [
       'Autonomous hypothesis generation',
       'Experimental design automation',
@@ -158,22 +180,30 @@ export const realAIServices2025: RealAIService2025[] = [
       'Collaboration with researchers',
       'Integration with research tools',
       'Custom research domains',
-      'Autonomous learning capabilities'
+      'Autonomous learning capabilities',
     ],
     popular: true,
     icon: '🔬',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-research-assistant',
-    marketPosition: 'Competes with research tools but offers full autonomy. Unique in autonomous research capabilities.',
-    targetAudience: 'Research institutions, Universities, Pharmaceutical companies, Technology companies',
+    marketPosition:
+      'Competes with research tools but offers full autonomy. Unique in autonomous research capabilities.',
+    targetAudience:
+      'Research institutions, Universities, Pharmaceutical companies, Technology companies',
     trialDays: 45,
     setupTime: '3 weeks',
     category: 'AI Research',
     realService: true,
-    technology: ['Advanced AI/ML, NLP, Knowledge graphs, Python, Research databases, Scientific APIs'],
-    integrations: ['PubMed, arXiv, Research databases, Laboratory systems, Scientific tools'],
-    useCases: ['Scientific research, Drug discovery, Academic research, Technology development'],
+    technology: [
+      'Advanced AI/ML, NLP, Knowledge graphs, Python, Research databases, Scientific APIs',
+    ],
+    integrations: [
+      'PubMed, arXiv, Research databases, Laboratory systems, Scientific tools',
+    ],
+    useCases: [
+      'Scientific research, Drug discovery, Academic research, Technology development',
+    ],
     roi: 'Accelerate research by 400% and reduce research costs by 60%',
     competitors: ['Research tools but no autonomous research agents'],
     marketSize: '$200B+ research and development market',
@@ -181,11 +211,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Autonomous AI research platform with hypothesis generation, experimental design, and comprehensive research automation.',
+    implementationDetails:
+      'Autonomous AI research platform with hypothesis generation, experimental design, and comprehensive research automation.',
     launchDate: '2024-10-25',
     customers: 28,
     rating: 4.8,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'ai-predictive-maintenance-platform',
@@ -193,7 +224,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Predict equipment failures before they happen with AI',
     price: '$1,799',
     period: '/month',
-    description: 'Intelligent predictive maintenance platform that uses AI to predict equipment failures and optimize maintenance schedules. Features include failure prediction, maintenance optimization, and cost analysis.',
+    description:
+      'Intelligent predictive maintenance platform that uses AI to predict equipment failures and optimize maintenance schedules. Features include failure prediction, maintenance optimization, and cost analysis.',
     features: [
       'AI-powered failure prediction',
       'Maintenance schedule optimization',
@@ -204,22 +236,28 @@ export const realAIServices2025: RealAIService2025[] = [
       'Custom prediction models',
       'Maintenance recommendations',
       'Performance analytics',
-      'Mobile application'
+      'Mobile application',
     ],
     popular: true,
     icon: '🔧',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance-platform',
-    marketPosition: 'Competes with Uptake, C3.ai, and GE Digital. Offers better AI capabilities and cost optimization.',
-    targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies',
+    marketPosition:
+      'Competes with Uptake, C3.ai, and GE Digital. Offers better AI capabilities and cost optimization.',
+    targetAudience:
+      'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI Industrial',
     realService: true,
-    technology: ['AI/ML, IoT, Time series analysis, Python, TensorFlow, PyTorch'],
+    technology: [
+      'AI/ML, IoT, Time series analysis, Python, TensorFlow, PyTorch',
+    ],
     integrations: ['IoT platforms, SCADA systems, ERP systems, CMMS systems'],
-    useCases: ['Equipment maintenance, Industrial optimization, Cost reduction'],
+    useCases: [
+      'Equipment maintenance, Industrial optimization, Cost reduction',
+    ],
     roi: 'Reduce maintenance costs by 40% and prevent 90% of unplanned downtime',
     competitors: ['Uptake, C3.ai, GE Digital, Siemens Mindsphere'],
     marketSize: '$25B+ predictive maintenance market',
@@ -227,11 +265,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI predictive maintenance platform with failure prediction, maintenance optimization, and comprehensive cost analysis.',
+    implementationDetails:
+      'AI predictive maintenance platform with failure prediction, maintenance optimization, and comprehensive cost analysis.',
     launchDate: '2024-09-15',
     customers: 85,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'ai-content-personalization-engine',
@@ -239,7 +278,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Personalize content for every user with AI-powered insights',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced content personalization platform that uses AI to deliver personalized content experiences. Features include user behavior analysis, content recommendation, and dynamic content generation.',
+    description:
+      'Advanced content personalization platform that uses AI to deliver personalized content experiences. Features include user behavior analysis, content recommendation, and dynamic content generation.',
     features: [
       'User behavior analysis',
       'Content recommendation engine',
@@ -250,22 +290,28 @@ export const realAIServices2025: RealAIService2025[] = [
       'Real-time optimization',
       'Integration with CMS platforms',
       'Custom personalization rules',
-      'Performance tracking'
+      'Performance tracking',
     ],
     popular: false,
     icon: '🎯',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-content-personalization-engine',
-    marketPosition: 'Competes with Dynamic Yield, Optimizely, and Adobe Target. Offers better AI capabilities and automation.',
-    targetAudience: 'E-commerce companies, Media companies, Marketing teams, Content platforms',
+    marketPosition:
+      'Competes with Dynamic Yield, Optimizely, and Adobe Target. Offers better AI capabilities and automation.',
+    targetAudience:
+      'E-commerce companies, Media companies, Marketing teams, Content platforms',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI Content',
     realService: true,
     technology: ['AI/ML, NLP, Recommendation systems, Python, React, Node.js'],
-    integrations: ['Shopify, WordPress, Drupal, Salesforce, Marketing automation platforms'],
-    useCases: ['Content personalization, E-commerce optimization, Marketing automation'],
+    integrations: [
+      'Shopify, WordPress, Drupal, Salesforce, Marketing automation platforms',
+    ],
+    useCases: [
+      'Content personalization, E-commerce optimization, Marketing automation',
+    ],
     roi: 'Increase conversion rates by 35% and improve user engagement by 50%',
     competitors: ['Dynamic Yield, Optimizely, Adobe Target, Evergage'],
     marketSize: '$20B+ personalization market',
@@ -273,11 +319,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI content personalization platform with user behavior analysis, content recommendation, and dynamic optimization.',
+    implementationDetails:
+      'AI content personalization platform with user behavior analysis, content recommendation, and dynamic optimization.',
     launchDate: '2024-08-20',
     customers: 120,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'ai-autonomous-ecosystem-manager',
@@ -285,7 +332,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Autonomously manage complex business ecosystems with AI',
     price: '$2,499',
     period: '/month',
-    description: 'Intelligent ecosystem management platform that uses AI to autonomously manage complex business relationships, partnerships, and collaborations. Features include ecosystem mapping, relationship optimization, and autonomous decision making.',
+    description:
+      'Intelligent ecosystem management platform that uses AI to autonomously manage complex business relationships, partnerships, and collaborations. Features include ecosystem mapping, relationship optimization, and autonomous decision making.',
     features: [
       'Ecosystem mapping and visualization',
       'Relationship optimization',
@@ -296,22 +344,30 @@ export const realAIServices2025: RealAIService2025[] = [
       'Performance monitoring',
       'Integration with business systems',
       'Custom ecosystem models',
-      'Predictive analytics'
+      'Predictive analytics',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager',
-    marketPosition: 'Unique platform for autonomous ecosystem management. No direct competitors in autonomous ecosystem management.',
-    targetAudience: 'Large enterprises, Platform companies, Ecosystem builders, Business networks',
+    marketPosition:
+      'Unique platform for autonomous ecosystem management. No direct competitors in autonomous ecosystem management.',
+    targetAudience:
+      'Large enterprises, Platform companies, Ecosystem builders, Business networks',
     trialDays: 45,
     setupTime: '3 weeks',
     category: 'AI Ecosystem',
     realService: true,
-    technology: ['AI/ML, Network analysis, Graph databases, Python, Neo4j, GraphQL'],
-    integrations: ['CRM systems, ERP systems, Business intelligence tools, Collaboration platforms'],
-    useCases: ['Ecosystem management, Partnership optimization, Business network analysis'],
+    technology: [
+      'AI/ML, Network analysis, Graph databases, Python, Neo4j, GraphQL',
+    ],
+    integrations: [
+      'CRM systems, ERP systems, Business intelligence tools, Collaboration platforms',
+    ],
+    useCases: [
+      'Ecosystem management, Partnership optimization, Business network analysis',
+    ],
     roi: 'Optimize ecosystem relationships by 200% and increase collaboration efficiency by 150%',
     competitors: ['No direct competitors in autonomous ecosystem management'],
     marketSize: '$30B+ ecosystem management market',
@@ -319,11 +375,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Autonomous ecosystem management platform with relationship optimization, autonomous decision making, and comprehensive ecosystem analytics.',
+    implementationDetails:
+      'Autonomous ecosystem management platform with relationship optimization, autonomous decision making, and comprehensive ecosystem analytics.',
     launchDate: '2024-07-10',
     customers: 35,
     rating: 4.7,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-ethics-governance-framework',
@@ -331,7 +388,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Ensure ethical AI development with comprehensive governance',
     price: '$1,999',
     period: '/month',
-    description: 'Comprehensive AI ethics and governance platform that ensures responsible AI development and deployment. Features include ethical AI guidelines, bias detection, fairness monitoring, and compliance frameworks.',
+    description:
+      'Comprehensive AI ethics and governance platform that ensures responsible AI development and deployment. Features include ethical AI guidelines, bias detection, fairness monitoring, and compliance frameworks.',
     features: [
       'Ethical AI guidelines',
       'Bias detection and mitigation',
@@ -342,22 +400,30 @@ export const realAIServices2025: RealAIService2025[] = [
       'Accountability tracking',
       'Integration with AI systems',
       'Custom ethics frameworks',
-      'Ethical AI training'
+      'Ethical AI training',
     ],
     popular: true,
     icon: '⚖️',
     color: 'from-teal-600 to-cyan-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-ethics-governance-framework',
-    marketPosition: 'Competes with AI ethics tools but offers comprehensive governance. Leading in AI ethics and governance.',
-    targetAudience: 'AI companies, Government agencies, Healthcare organizations, Financial institutions',
+    marketPosition:
+      'Competes with AI ethics tools but offers comprehensive governance. Leading in AI ethics and governance.',
+    targetAudience:
+      'AI companies, Government agencies, Healthcare organizations, Financial institutions',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI Ethics',
     realService: true,
-    technology: ['AI/ML, Ethics frameworks, Bias detection, Python, Fairness algorithms'],
-    integrations: ['AI platforms, Compliance tools, Governance systems, Risk management platforms'],
-    useCases: ['AI ethics compliance, Bias mitigation, Responsible AI development'],
+    technology: [
+      'AI/ML, Ethics frameworks, Bias detection, Python, Fairness algorithms',
+    ],
+    integrations: [
+      'AI platforms, Compliance tools, Governance systems, Risk management platforms',
+    ],
+    useCases: [
+      'AI ethics compliance, Bias mitigation, Responsible AI development',
+    ],
     roi: 'Ensure AI compliance by 100% and reduce ethical risks by 90%',
     competitors: ['AI ethics tools but no comprehensive governance platforms'],
     marketSize: '$10B+ AI ethics market',
@@ -365,11 +431,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI ethics and governance platform with comprehensive bias detection, fairness monitoring, and ethical compliance frameworks.',
+    implementationDetails:
+      'AI ethics and governance platform with comprehensive bias detection, fairness monitoring, and ethical compliance frameworks.',
     launchDate: '2024-06-25',
     customers: 65,
     rating: 4.9,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'ai-customer-success-platform',
@@ -377,7 +444,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Predict churn and boost customer lifetime value with AI',
     price: '$899',
     period: '/month',
-    description: 'Intelligent customer success platform that uses AI to predict customer behavior, automate onboarding, and identify upsell opportunities. Features include churn prediction, customer health scoring, and engagement automation.',
+    description:
+      'Intelligent customer success platform that uses AI to predict customer behavior, automate onboarding, and identify upsell opportunities. Features include churn prediction, customer health scoring, and engagement automation.',
     features: [
       'AI-powered churn prediction',
       'Customer health scoring',
@@ -388,20 +456,24 @@ export const realAIServices2025: RealAIService2025[] = [
       'Real-time alerts',
       'Integration with CRM systems',
       'Custom success metrics',
-      'Performance analytics'
+      'Performance analytics',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-emerald-600 to-green-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-customer-success-platform',
-    marketPosition: 'Competes with Gainsight, Totango, and ChurnZero. Offers better AI capabilities and automation.',
-    targetAudience: 'SaaS companies, Subscription businesses, Customer success teams, B2B companies',
+    marketPosition:
+      'Competes with Gainsight, Totango, and ChurnZero. Offers better AI capabilities and automation.',
+    targetAudience:
+      'SaaS companies, Subscription businesses, Customer success teams, B2B companies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI Customer Success',
     realService: true,
-    technology: ['AI/ML, Predictive analytics, Customer analytics, Python, React, Node.js'],
+    technology: [
+      'AI/ML, Predictive analytics, Customer analytics, Python, React, Node.js',
+    ],
     integrations: ['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk'],
     useCases: ['Churn prevention, Customer onboarding, Revenue expansion'],
     roi: 'Reduce churn by 25% and increase upsell revenue by 40%',
@@ -411,11 +483,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI customer success platform with churn prediction, health scoring, and comprehensive engagement automation.',
+    implementationDetails:
+      'AI customer success platform with churn prediction, health scoring, and comprehensive engagement automation.',
     launchDate: '2024-05-15',
     customers: 95,
     rating: 4.8,
-    reviews: 73
+    reviews: 73,
   },
   {
     id: 'ai-sales-intelligence-platform',
@@ -423,7 +496,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Supercharge sales with AI-powered intelligence and automation',
     price: '$1,199',
     period: '/month',
-    description: 'Advanced sales intelligence platform that leverages AI to identify high-value prospects, automate lead scoring, and optimize sales processes. Features include predictive lead scoring, sales forecasting, and automated outreach.',
+    description:
+      'Advanced sales intelligence platform that leverages AI to identify high-value prospects, automate lead scoring, and optimize sales processes. Features include predictive lead scoring, sales forecasting, and automated outreach.',
     features: [
       'AI-powered lead scoring',
       'Predictive sales forecasting',
@@ -434,20 +508,23 @@ export const realAIServices2025: RealAIService2025[] = [
       'Email tracking and analytics',
       'Meeting scheduling automation',
       'Sales pipeline optimization',
-      'Competitive intelligence'
+      'Competitive intelligence',
     ],
     popular: true,
     icon: '🚀',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
-    marketPosition: 'Competes with HubSpot Sales Hub, Pipedrive, and SalesLoft. Offers better AI capabilities and automation.',
+    marketPosition:
+      'Competes with HubSpot Sales Hub, Pipedrive, and SalesLoft. Offers better AI capabilities and automation.',
     targetAudience: 'Sales teams, B2B companies, Sales managers, Entrepreneurs',
     trialDays: 14,
     setupTime: '3 hours',
     category: 'AI Sales',
     realService: true,
-    technology: ['AI/ML, Predictive analytics, Sales automation, Python, React, Node.js'],
+    technology: [
+      'AI/ML, Predictive analytics, Sales automation, Python, React, Node.js',
+    ],
     integrations: ['Salesforce, HubSpot, Pipedrive, Gmail, Outlook, LinkedIn'],
     useCases: ['Lead generation, Sales automation, Pipeline management'],
     roi: 'Increase sales productivity by 35% and improve conversion rates by 28%',
@@ -457,11 +534,12 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI sales intelligence platform with predictive analytics, automation workflows, and comprehensive CRM integration.',
+    implementationDetails:
+      'AI sales intelligence platform with predictive analytics, automation workflows, and comprehensive CRM integration.',
     launchDate: '2024-04-20',
     customers: 150,
     rating: 4.7,
-    reviews: 112
+    reviews: 112,
   },
   {
     id: 'ai-creativity-studio',
@@ -469,7 +547,8 @@ export const realAIServices2025: RealAIService2025[] = [
     tagline: 'Unleash creativity with AI-powered design and content generation',
     price: '$799',
     period: '/month',
-    description: 'Comprehensive AI creativity platform that generates designs, content, and creative assets. Features include AI design generation, content creation, creative collaboration, and brand consistency.',
+    description:
+      'Comprehensive AI creativity platform that generates designs, content, and creative assets. Features include AI design generation, content creation, creative collaboration, and brand consistency.',
     features: [
       'AI design generation',
       'Content creation automation',
@@ -480,20 +559,24 @@ export const realAIServices2025: RealAIService2025[] = [
       'Integration with design tools',
       'Custom creative models',
       'Performance analytics',
-      'Mobile application'
+      'Mobile application',
     ],
     popular: false,
     icon: '🎨',
     color: 'from-pink-600 to-rose-600',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-creativity-studio',
-    marketPosition: 'Competes with Canva, Figma, and Adobe Creative Cloud. Offers AI-first creative capabilities.',
-    targetAudience: 'Designers, Marketing teams, Creative agencies, Content creators',
+    marketPosition:
+      'Competes with Canva, Figma, and Adobe Creative Cloud. Offers AI-first creative capabilities.',
+    targetAudience:
+      'Designers, Marketing teams, Creative agencies, Content creators',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI Creative',
     realService: true,
-    technology: ['AI/ML, Computer vision, Generative AI, Python, React, Node.js'],
+    technology: [
+      'AI/ML, Computer vision, Generative AI, Python, React, Node.js',
+    ],
     integrations: ['Canva, Figma, Adobe Creative Cloud, Design platforms'],
     useCases: ['Design generation, Content creation, Creative collaboration'],
     roi: 'Increase creative output by 300% and reduce design time by 60%',
@@ -503,10 +586,11 @@ export const realAIServices2025: RealAIService2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI creativity platform with design generation, content creation, and comprehensive creative collaboration tools.',
+    implementationDetails:
+      'AI creativity platform with design generation, content creation, and comprehensive creative collaboration tools.',
     launchDate: '2024-03-30',
     customers: 85,
     rating: 4.6,
-    reviews: 67
-  }
+    reviews: 67,
+  },
 ];

@@ -24,6 +24,6 @@ export const BLOG_POSTS: BlogPost[] = [
     tags: ['welcome', 'introduction', 'technology'],
     author: 'Zion Tech Team',
     publishedAt: '2024-01-01',
-    readTime: 5
-  }
+    readTime: 5,
+  },
 ];

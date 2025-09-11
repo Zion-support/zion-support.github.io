@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('innovation-lab function triggered');
-    
+
     // Innovation lab simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Innovation lab executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         innovation: {
           status: 'active',
           experiments: 0,
-          lastExperiment: new Date().toISOString()
-        }
-      })
+          lastExperiment: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in innovation-lab:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'innovation-lab'
-      })
+        function: 'innovation-lab',
+      }),
     };
   }
 };

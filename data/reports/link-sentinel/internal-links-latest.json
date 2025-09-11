@@ -14,11 +14,7 @@
     "/reports/updates/update-2025-08-15-0507",
     "/reports/updates/update-2025-08-15-0508"
   ],
-  "routes": [
-    "",
-    "/comprehensive-2025-services-showcase",
-    "/pricing-2025"
-  ],
+  "routes": ["", "/comprehensive-2025-services-showcase", "/pricing-2025"],
   "scannedFiles": [
     "/home/runner/work/zion.app/zion.app/pages/_app.tsx",
     "/home/runner/work/zion.app/zion.app/pages/_document.tsx",

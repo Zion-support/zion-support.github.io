@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('knowledge-pack-runner function triggered');
-    
+
     // Knowledge pack simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Knowledge pack runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         knowledge: {
           status: 'active',
           packs: 0,
-          lastPack: new Date().toISOString()
-        }
-      })
+          lastPack: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in knowledge-pack-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'knowledge-pack-runner'
-      })
+        function: 'knowledge-pack-runner',
+      }),
     };
   }
 };

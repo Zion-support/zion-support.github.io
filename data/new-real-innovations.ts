@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const newRealInnovations: MicroSaasService[] = [
@@ -14,21 +14,23 @@ export const newRealInnovations: MicroSaasService[] = [
     tagline: 'Public status pages wired to SLOs and incidents',
     price: '$79',
     period: '/month',
-    description: 'Automate public status pages from SLOs and incidents with templates, RCAs, and subscriber notifications.',
+    description:
+      'Automate public status pages from SLOs and incidents with templates, RCAs, and subscriber notifications.',
     features: [
       'SLO-driven status updates',
       'Incident templates and RCAs',
       'Subscriber email and webhooks',
       'History and uptime exports',
       'Statuspage/Freshstatus integrations',
-      'CI/CD friendly configuration'
+      'CI/CD friendly configuration',
     ],
     popular: false,
     icon: '📣',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/status-pages-slo',
-    marketPosition: 'Cheaper, simpler alternative to standalone status tools with SLO-first framing.',
+    marketPosition:
+      'Cheaper, simpler alternative to standalone status tools with SLO-first framing.',
     targetAudience: 'SaaS, APIs, and platform teams with SLAs',
     trialDays: 7,
     setupTime: '20 minutes',
@@ -44,11 +46,12 @@ export const newRealInnovations: MicroSaasService[] = [
     variant: 'monitoring-futuristic' as any,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Connect SLOs to status updates with incident webhooks and templates.',
+    implementationDetails:
+      'Connect SLOs to status updates with incident webhooks and templates.',
     launchDate: '2024-09-01',
     customers: 140,
     rating: 4.6,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'webhook-relay-replay',
@@ -56,21 +59,23 @@ export const newRealInnovations: MicroSaasService[] = [
     tagline: 'Durable webhooks with retries, DLQs, and replays',
     price: '$59',
     period: '/month',
-    description: 'Never lose events again. Durable delivery with signed retries, DLQs, search, and replay for flaky receivers.',
+    description:
+      'Never lose events again. Durable delivery with signed retries, DLQs, search, and replay for flaky receivers.',
     features: [
       'HMAC signatures and rotation',
       'Backoff retries and DLQs',
       'Replay with idempotency keys',
       'Per-tenant rate limiting',
       'Event explorer and search',
-      'Slack/PagerDuty alerts'
+      'Slack/PagerDuty alerts',
     ],
     popular: true,
     icon: '🔁',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/webhook-relay-replay',
-    marketPosition: 'Developer-first reliability layer that complements queues and iPaaS.',
+    marketPosition:
+      'Developer-first reliability layer that complements queues and iPaaS.',
     targetAudience: 'Developers integrating external services',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -86,11 +91,12 @@ export const newRealInnovations: MicroSaasService[] = [
     variant: 'devops-futuristic' as any,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Signed endpoints with durable queues and replay APIs.',
+    implementationDetails:
+      'Signed endpoints with durable queues and replay APIs.',
     launchDate: '2024-08-01',
     customers: 310,
     rating: 4.7,
-    reviews: 102
+    reviews: 102,
   },
   {
     id: 'domain-dns-monitor',
@@ -98,14 +104,15 @@ export const newRealInnovations: MicroSaasService[] = [
     tagline: 'Expiry, NS drift, and records monitoring with alerts',
     price: '$19',
     period: '/month',
-    description: 'Track DNS and registrar data, detect drift, and alert before outages or expirations impact revenue.',
+    description:
+      'Track DNS and registrar data, detect drift, and alert before outages or expirations impact revenue.',
     features: [
       'Registrar expiry alarms',
       'NS/zone drift detection',
       'CAA/TXT/cert checks',
       'Change history and diffs',
       'Slack/email notifications',
-      'Simple REST and UI'
+      'Simple REST and UI',
     ],
     popular: false,
     icon: '🌐',
@@ -132,7 +139,7 @@ export const newRealInnovations: MicroSaasService[] = [
     launchDate: '2024-05-01',
     customers: 220,
     rating: 4.5,
-    reviews: 61
+    reviews: 61,
   },
   {
     id: 'browser-performance-monitor',
@@ -140,14 +147,15 @@ export const newRealInnovations: MicroSaasService[] = [
     tagline: 'RUM & Core Web Vitals with synthetic journeys',
     price: '$39',
     period: '/month',
-    description: 'Track real-user performance (LCP, INP, CLS) and run synthetic journeys with budgets, alerts, and dashboards.',
+    description:
+      'Track real-user performance (LCP, INP, CLS) and run synthetic journeys with budgets, alerts, and dashboards.',
     features: [
       'RUM snippet with privacy controls',
       'Synthetic flow recorder',
       'Budget-based alerts',
       'CWV trend dashboards',
       'Webhooks & Slack alerts',
-      'Report exports'
+      'Report exports',
     ],
     popular: false,
     icon: '⚡',
@@ -174,7 +182,6 @@ export const newRealInnovations: MicroSaasService[] = [
     launchDate: '2024-07-01',
     customers: 175,
     rating: 4.6,
-    reviews: 73
-  }
+    reviews: 73,
+  },
 ];
-

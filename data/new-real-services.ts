@@ -3,7 +3,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
@@ -12,7 +12,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199',
     period: '/month',
-    description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
+    description:
+      'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
     features: [
       'Prompt and response tracing',
       'Cost and token analytics',
@@ -21,21 +22,28 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Guardrail policy engine',
       'Drift and performance alerts',
       'SDKs for JS, Python, Go',
-      'Grafana and Datadog exporters'
+      'Grafana and Datadog exporters',
     ],
     popular: true,
     icon: '📈',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-observability-suite',
-    marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
+    marketPosition:
+      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
     targetAudience: 'AI product teams, platform engineers, data teams',
     trialDays: 21,
     setupTime: '1 day',
     category: 'AI & Machine Learning',
     realService: true,
     technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
-    integrations: ['OpenAI-compatible', 'LangChain', 'LlamaIndex', 'Datadog', 'Grafana'],
+    integrations: [
+      'OpenAI-compatible',
+      'LangChain',
+      'LlamaIndex',
+      'Datadog',
+      'Grafana',
+    ],
     useCases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
@@ -44,11 +52,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'quantum-holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
+    implementationDetails:
+      'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launchDate: '2025-01-10',
     customers: 32,
     rating: 4.8,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'ai-sales-email-copilot',
@@ -56,21 +65,23 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Personalized multi-touch outbound with real-time enrichment',
     price: '$129',
     period: '/month',
-    description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
+    description:
+      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
     features: [
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow-up scheduling',
       'A/B testing and analytics',
       'SPF/DKIM/DMARC checks',
-      'Inbox rotation support'
+      'Inbox rotation support',
     ],
     popular: false,
     icon: '✉️',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-sales-email-copilot',
-    marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
+    marketPosition:
+      'Lower cost with better personalization vs. Jasper and constant-contact tools.',
     targetAudience: 'B2B startups, agencies, SDR teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -86,11 +97,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.',
+    implementationDetails:
+      'Sequencer, enrichment adapters, and warm-up utilities.',
     launchDate: '2024-12-20',
     customers: 120,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'security-posture-as-code',
@@ -98,20 +110,22 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation',
     price: '$399',
     period: '/month',
-    description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
+    description:
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
     features: [
       'Policy packs for CIS/NIST',
       'Kubernetes and cloud posture',
       'Auto-remediation PRs',
       'Evidence collection and reports',
-      'SOC2/ISO 27001 export'
+      'SOC2/ISO 27001 export',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/security-posture-as-code',
-    marketPosition: 'Brings policy-as-code and compliance automation into one product.',
+    marketPosition:
+      'Brings policy-as-code and compliance automation into one product.',
     targetAudience: 'Platform teams, security engineers, compliance leads',
     trialDays: 21,
     setupTime: '1–3 days',
@@ -127,11 +141,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'neural-quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Policy engine plus cloud/K8s scanners and fix generators.',
+    implementationDetails:
+      'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
     customers: 18,
     rating: 4.6,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'etl-observability-starter',
@@ -139,19 +154,21 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Data pipeline health with schema change and freshness alerts',
     price: '$99',
     period: '/month',
-    description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
+    description:
+      'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
-      'Incident routing to Slack/Teams'
+      'Incident routing to Slack/Teams',
     ],
     popular: false,
     icon: '🗄️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/etl-observability-starter',
-    marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
+    marketPosition:
+      'Simpler and faster to adopt vs. enterprise data observability tools.',
     targetAudience: 'Analytics engineers, data teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -167,11 +184,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Light agents and metadata collectors with warehouse connectors.',
+    implementationDetails:
+      'Light agents and metadata collectors with warehouse connectors.',
     launchDate: '2025-01-12',
     customers: 25,
     rating: 4.5,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'api-performance-shield',
@@ -179,12 +197,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
     price: '$149',
     period: '/month',
-    description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
+    description:
+      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
     features: [
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
-      'Zero-downtime deploys with shadow traffic'
+      'Zero-downtime deploys with shadow traffic',
     ],
     popular: true,
     icon: '🛰️',
@@ -207,31 +226,35 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.',
+    implementationDetails:
+      'Managed edge configs and anomaly ML with safe rollout tools.',
     launchDate: '2025-01-15',
     customers: 14,
     rating: 4.7,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
-    tagline: 'Session insights, funnel auto-segmentation, and LLM-based insights',
+    tagline:
+      'Session insights, funnel auto-segmentation, and LLM-based insights',
     price: '$129',
     period: '/month',
-    description: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
+    description:
+      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
     features: [
       'Auto-segmentation and cohorts',
       'LLM query interface',
       'Retention and churn signals',
-      'Anomaly alerts to Slack/Teams'
+      'Anomaly alerts to Slack/Teams',
     ],
     popular: false,
     icon: '📊',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-product-analytics',
-    marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
+    marketPosition:
+      'Brings AI querying and anomaly detection without vendor lock-in.',
     targetAudience: 'Product teams, founders, analysts',
     trialDays: 14,
     setupTime: '1 day',
@@ -251,7 +274,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-02',
     customers: 41,
     rating: 4.6,
-    reviews: 20
+    reviews: 20,
   },
   {
     id: 'ai-support-deflection',
@@ -259,12 +282,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Self-serve answers with RAG, forms, and secure handoff',
     price: '$99',
     period: '/month',
-    description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
+    description:
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
     features: [
       'Multi-channel widgets',
       'Grounded answers with citations',
       'Secure human handoff',
-      'Analytics and CSAT tracking'
+      'Analytics and CSAT tracking',
     ],
     popular: true,
     icon: '💬',
@@ -291,7 +315,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2024-12-15',
     customers: 75,
     rating: 4.7,
-    reviews: 48
+    reviews: 48,
   },
   {
     id: 'cloud-cost-autopilot',
@@ -299,12 +323,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
     price: '$249',
     period: '/month',
-    description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
+    description:
+      'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan/RIs planning',
-      'Tag hygiene and showback'
+      'Tag hygiene and showback',
     ],
     popular: true,
     icon: '💸',
@@ -331,7 +356,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-03',
     customers: 19,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'privacy-vault',
@@ -339,19 +364,21 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Tokenize PII and control access with audit trails',
     price: '$179',
     period: '/month',
-    description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
+    description:
+      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [
       'Field-level encryption',
       'Tokenization APIs',
       'Consent enforcement',
-      'Audit trail and reporting'
+      'Audit trail and reporting',
     ],
     popular: false,
     icon: '🔏',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/privacy-vault',
-    marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
+    marketPosition:
+      'Developer-first alternative to heavy enterprise privacy suites.',
     targetAudience: 'Developers, privacy and legal teams',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -371,7 +398,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-07',
     customers: 9,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'ai-fraud-detection-lite',
@@ -379,12 +406,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Graph-based anomalies with explainability for SMBs',
     price: '$159',
     period: '/month',
-    description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
+    description:
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [
       'Graph-based anomaly detection',
       'Explainability reports',
       'Risk scoring API',
-      'Workflow actions and webhooks'
+      'Workflow actions and webhooks',
     ],
     popular: false,
     icon: '🧠',
@@ -407,11 +435,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.',
+    implementationDetails:
+      'Streaming and batch detectors with human-in-the-loop review.',
     launchDate: '2025-01-09',
     customers: 11,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'managed-postgres-ha-pro',
@@ -419,19 +448,21 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
     price: '$199',
     period: '/month',
-    description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
+    description:
+      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
     features: [
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
-      'Encryption and access controls'
+      'Encryption and access controls',
     ],
     popular: true,
     icon: '🗃️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/managed-postgres-ha',
-    marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
+    marketPosition:
+      'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
     targetAudience: 'Startups, SMBs, data teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -451,7 +482,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-16',
     customers: 8,
     rating: 4.6,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'browser-performance-monitor-pro',
@@ -459,12 +490,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'RUM, Core Web Vitals, and session replay',
     price: '$79',
     period: '/month',
-    description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
+    description:
+      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
-      'A/B test impact analysis'
+      'A/B test impact analysis',
     ],
     popular: true,
     icon: '⚡',
@@ -491,7 +523,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-17',
     customers: 12,
     rating: 4.5,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'seo-automation-studio',
@@ -499,12 +531,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Programmatic SEO, audits, and internal linking automation',
     price: '$99',
     period: '/month',
-    description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
+    description:
+      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
-      'Internal linking graph'
+      'Internal linking graph',
     ],
     popular: false,
     icon: '🔎',
@@ -531,7 +564,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-18',
     customers: 10,
     rating: 4.4,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'webhook-relay-replay-pro',
@@ -539,12 +572,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Reliable webhooks with DLQ and replays',
     price: '$59',
     period: '/month',
-    description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
+    description:
+      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
     features: [
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
-      'Fan-out and transformations'
+      'Fan-out and transformations',
     ],
     popular: true,
     icon: '🔁',
@@ -571,7 +605,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-19',
     customers: 7,
     rating: 4.6,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'pdf-render-api-pro',
@@ -579,12 +613,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Fast HTML-to-PDF with brand-safe templates',
     price: '$49',
     period: '/month',
-    description: 'Serverless HTML-to-PDF rendering with page numbers, headers/footers, and safe fonts. Great for invoices and reports.',
+    description:
+      'Serverless HTML-to-PDF rendering with page numbers, headers/footers, and safe fonts. Great for invoices and reports.',
     features: [
       'Serverless scale',
       'Template gallery',
       'Brand-safe fonts',
-      'Webhook on completion'
+      'Webhook on completion',
     ],
     popular: true,
     icon: '📄',
@@ -611,7 +646,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-18',
     customers: 22,
     rating: 4.6,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'api-observability-starter-pro',
@@ -619,12 +654,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Traces, metrics, logs for APIs without the bloat',
     price: '$99',
     period: '/month',
-    description: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.',
+    description:
+      'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.',
     features: [
       'Auto-instrumentation',
       'RED dashboards',
       'Error analytics',
-      'Exporters to APMs'
+      'Exporters to APMs',
     ],
     popular: false,
     icon: '🛰️',
@@ -651,7 +687,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-17',
     customers: 9,
     rating: 4.5,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'sso-in-a-box-pro',
@@ -659,12 +695,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
     price: '$149',
     period: '/month',
-    description: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
+    description:
+      'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
     features: [
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
-      'Customer sandbox'
+      'Customer sandbox',
     ],
     popular: true,
     icon: '🔐',
@@ -691,7 +728,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-17',
     customers: 6,
     rating: 4.7,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'it-asset-discovery-agent-pro',
@@ -699,12 +736,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Agentless discovery with CMDB sync',
     price: '$129',
     period: '/month',
-    description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
+    description:
+      'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
     features: [
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
-      'CMDB integrations'
+      'CMDB integrations',
     ],
     popular: false,
     icon: '🛰️',
@@ -731,7 +769,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-16',
     customers: 5,
     rating: 4.4,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'vendor-risk-automation-lite',
@@ -739,12 +777,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Questionnaires, evidence, and continuous monitoring',
     price: '$129',
     period: '/month',
-    description: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
+    description:
+      'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
     features: [
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
-      'Risk scoring'
+      'Risk scoring',
     ],
     popular: true,
     icon: '📋',
@@ -771,6 +810,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-19',
     customers: 6,
     rating: 4.5,
-    reviews: 3
-  }
+    reviews: 3,
+  },
 ];

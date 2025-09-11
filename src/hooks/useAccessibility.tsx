@@ -23,14 +23,14 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     enableScreenReaderSupport = true,
     enableHighContrast = true,
     enableReducedMotion = true,
-    enableLargeText = true
+    enableLargeText = true,
   } = options;
 
   const [features, setFeatures] = useState<AccessibilityFeatures>({
     isHighContrast: false,
     isReducedMotion: false,
     isLargeText: false,
-    isScreenReader: false
+    isScreenReader: false,
   });
 
   useEffect(() => {
@@ -47,7 +47,9 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Check for reduced motion preference
     const checkReducedMotion = () => {
       if (enableReducedMotion) {
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const mediaQuery = window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        );
         setFeatures(prev => ({ ...prev, isReducedMotion: mediaQuery.matches }));
       }
     };
@@ -55,7 +57,9 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Check for large text preference
     const checkLargeText = () => {
       if (enableLargeText) {
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: no-preference)');
+        const mediaQuery = window.matchMedia(
+          '(prefers-reduced-motion: no-preference)'
+        );
         setFeatures(prev => ({ ...prev, isLargeText: false })); // Simplified for now
       }
     };
@@ -63,9 +67,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Check for screen reader
     const checkScreenReader = () => {
       if (enableScreenReaderSupport) {
-        const hasScreenReader = window.navigator.userAgent.includes('NVDA') || 
-                               window.navigator.userAgent.includes('JAWS') ||
-                               window.navigator.userAgent.includes('VoiceOver');
+        const hasScreenReader =
+          window.navigator.userAgent.includes('NVDA') ||
+          window.navigator.userAgent.includes('JAWS') ||
+          window.navigator.userAgent.includes('VoiceOver');
         setFeatures(prev => ({ ...prev, isScreenReader: hasScreenReader }));
       }
     };
@@ -78,7 +83,9 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     // Set up media query listeners
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const reducedMotionQuery = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    );
 
     const handleHighContrastChange = (e: MediaQueryListEvent) => {
       setFeatures(prev => ({ ...prev, isHighContrast: e.matches }));
@@ -108,22 +115,42 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
-        highContrastQuery.removeEventListener('change', handleHighContrastChange);
-        reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+        highContrastQuery.removeEventListener(
+          'change',
+          handleHighContrastChange
+        );
+        reducedMotionQuery.removeEventListener(
+          'change',
+          handleReducedMotionChange
+        );
       };
     }
 
     return () => {
       highContrastQuery.removeEventListener('change', handleHighContrastChange);
-      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+      reducedMotionQuery.removeEventListener(
+        'change',
+        handleReducedMotionChange
+      );
     };
-  }, [enableKeyboardNavigation, enableFocusManagement, enableScreenReaderSupport, enableHighContrast, enableReducedMotion, enableLargeText]);
+  }, [
+    enableKeyboardNavigation,
+    enableFocusManagement,
+    enableScreenReaderSupport,
+    enableHighContrast,
+    enableReducedMotion,
+    enableLargeText,
+  ]);
 
   return {
     features,
-    isAccessible: features.isHighContrast || features.isReducedMotion || features.isLargeText || features.isScreenReader,
+    isAccessible:
+      features.isHighContrast ||
+      features.isReducedMotion ||
+      features.isLargeText ||
+      features.isScreenReader,
     enableKeyboardNavigation,
     enableFocusManagement,
-    enableScreenReaderSupport
+    enableScreenReaderSupport,
   };
 };

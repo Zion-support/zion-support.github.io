@@ -1,9 +1,7 @@
 {
   "timestamp": "2025-09-07T12:32:18.846Z",
   "duration": "98s",
-  "createdTests": [
-    "/workspace/src/__tests__/App.test.tsx"
-  ],
+  "createdTests": ["/workspace/src/__tests__/App.test.tsx"],
   "fixedFiles": [],
   "errors": [],
   "summary": {

@@ -14,13 +14,17 @@ interface FeedbackContextType {
   clearFeedbacks: () => void;
 }
 
-const FeedbackContext = createContext<FeedbackContextType | undefined>(undefined);
+const FeedbackContext = createContext<FeedbackContextType | undefined>(
+  undefined
+);
 
 interface FeedbackProviderProps {
   children: ReactNode;
 }
 
-export const FeedbackProvider: React.FC<FeedbackProviderProps> = ({ children }) => {
+export const FeedbackProvider: React.FC<FeedbackProviderProps> = ({
+  children,
+}) => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
 
   const addFeedback = (message: string, type: Feedback['type']) => {
@@ -28,7 +32,7 @@ export const FeedbackProvider: React.FC<FeedbackProviderProps> = ({ children }) 
       id: Date.now().toString(),
       message,
       type,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
     setFeedbacks(prev => [...prev, feedback]);
   };
@@ -45,7 +49,7 @@ export const FeedbackProvider: React.FC<FeedbackProviderProps> = ({ children }) 
     feedbacks,
     addFeedback,
     removeFeedback,
-    clearFeedbacks
+    clearFeedbacks,
   };
 
   return (

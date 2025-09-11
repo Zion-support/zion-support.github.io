@@ -2,7 +2,15 @@ export interface ZionService {
   id: string;
   title: string;
   description: string;
-  category: 'Micro SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech';
+  category:
+    | 'Micro SaaS'
+    | 'AI Solutions'
+    | 'IT Services'
+    | 'Cybersecurity'
+    | 'Cloud & DevOps'
+    | 'Digital Transformation'
+    | 'Industry Specific'
+    | 'Emerging Tech';
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
   features: string[];
@@ -25,7 +33,8 @@ export const zionTechGroup2025Services: ZionService[] = [
   {
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
-    description: 'Fully autonomous AI system that manages business operations, decision-making, and strategic planning with minimal human intervention.',
+    description:
+      'Fully autonomous AI system that manages business operations, decision-making, and strategic planning with minimal human intervention.',
     category: 'AI Solutions',
     price: '$2,500',
     billing: 'month',
@@ -37,7 +46,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Performance optimization algorithms',
       'Multi-channel communication management',
       'Risk assessment and mitigation',
-      'Compliance monitoring and reporting'
+      'Compliance monitoring and reporting',
     ],
     benefits: [
       '24/7 autonomous operation',
@@ -47,35 +56,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Scalable business management',
       'Real-time insights and alerts',
       'Proactive problem resolution',
-      'Continuous learning and improvement'
+      'Continuous learning and improvement',
     ],
     useCases: [
       'Small to medium business automation',
       'E-commerce operations management',
       'Service industry optimization',
       'Startup scaling and management',
-      'Multi-location business coordination'
+      'Multi-location business coordination',
     ],
     targetAudience: [
       'Small to medium businesses',
       'E-commerce companies',
       'Service-based organizations',
       'Startups and scale-ups',
-      'Multi-location businesses'
+      'Multi-location businesses',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Get AI Business Manager',
-    href: '/services/ai-autonomous-business-manager'
+    href: '/services/ai-autonomous-business-manager',
   },
   {
     id: 'ai-content-optimization-suite-pro',
     title: 'AI Content Optimization Suite Pro',
-    description: 'Advanced AI-powered content creation, optimization, and distribution platform for maximum engagement and conversion.',
+    description:
+      'Advanced AI-powered content creation, optimization, and distribution platform for maximum engagement and conversion.',
     category: 'AI Solutions',
     price: '$1,800',
     billing: 'month',
@@ -87,7 +97,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'A/B testing and optimization',
       'Content calendar management',
       'Social media automation',
-      'ROI tracking and reporting'
+      'ROI tracking and reporting',
     ],
     benefits: [
       'Increased content engagement',
@@ -97,35 +107,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Data-driven content strategy',
       'Multi-channel reach',
       'Automated optimization',
-      'Measurable results'
+      'Measurable results',
     ],
     useCases: [
       'Digital marketing agencies',
       'E-commerce businesses',
       'Content creators and publishers',
       'B2B marketing teams',
-      'Social media managers'
+      'Social media managers',
     ],
     targetAudience: [
       'Marketing agencies',
       'E-commerce companies',
       'Content creators',
       'B2B organizations',
-      'Social media teams'
+      'Social media teams',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Optimize Your Content',
-    href: '/services/ai-content-optimization-suite'
+    href: '/services/ai-content-optimization-suite',
   },
   {
     id: 'ai-customer-success-platform',
     title: 'AI Customer Success Platform',
-    description: 'Intelligent customer success management system that predicts churn, automates onboarding, and maximizes customer lifetime value.',
+    description:
+      'Intelligent customer success management system that predicts churn, automates onboarding, and maximizes customer lifetime value.',
     category: 'AI Solutions',
     price: '$2,200',
     billing: 'month',
@@ -137,7 +148,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Proactive issue detection',
       'Automated engagement campaigns',
       'Success metrics tracking',
-      'Integration with CRM systems'
+      'Integration with CRM systems',
     ],
     benefits: [
       'Reduced customer churn',
@@ -147,36 +158,37 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Data-driven insights',
       'Scalable customer management',
       'Proactive problem resolution',
-      'Improved retention rates'
+      'Improved retention rates',
     ],
     useCases: [
       'SaaS companies',
       'Subscription-based businesses',
       'B2B service providers',
       'E-commerce platforms',
-      'Software companies'
+      'Software companies',
     ],
     targetAudience: [
       'SaaS businesses',
       'Subscription companies',
       'B2B service providers',
       'E-commerce platforms',
-      'Software companies'
+      'Software companies',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Transform Customer Success',
-    href: '/services/ai-customer-success-platform'
+    href: '/services/ai-customer-success-platform',
   },
   // Cybersecurity & Compliance Solutions
   {
     id: 'zero-trust-network-architecture',
     title: 'Zero Trust Network Architecture',
-    description: 'Comprehensive zero-trust security implementation with continuous verification, micro-segmentation, and advanced threat detection.',
+    description:
+      'Comprehensive zero-trust security implementation with continuous verification, micro-segmentation, and advanced threat detection.',
     category: 'Cybersecurity',
     price: '$3,500',
     billing: 'month',
@@ -188,7 +200,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Automated incident response',
       'Compliance reporting',
       'Security policy management',
-      'Integration with existing systems'
+      'Integration with existing systems',
     ],
     benefits: [
       'Enhanced security posture',
@@ -198,35 +210,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Automated security responses',
       'Improved audit capabilities',
       'Scalable security architecture',
-      'Cost-effective protection'
+      'Cost-effective protection',
     ],
     useCases: [
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
       'Enterprise businesses',
-      'Compliance-focused industries'
+      'Compliance-focused industries',
     ],
     targetAudience: [
       'Financial services',
       'Healthcare organizations',
       'Government agencies',
       'Large enterprises',
-      'Compliance-focused businesses'
+      'Compliance-focused businesses',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Secure Your Network',
-    href: '/services/zero-trust-network-architecture'
+    href: '/services/zero-trust-network-architecture',
   },
   {
     id: 'ai-cybersecurity-threat-intelligence',
     title: 'AI Cybersecurity Threat Intelligence',
-    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection, analysis, and automated response capabilities.',
+    description:
+      'Advanced AI-powered threat intelligence platform that provides real-time threat detection, analysis, and automated response capabilities.',
     category: 'Cybersecurity',
     price: '$2,800',
     billing: 'month',
@@ -238,7 +251,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Vulnerability assessment',
       'Security posture monitoring',
       'Compliance reporting',
-      'Integration with security tools'
+      'Integration with security tools',
     ],
     benefits: [
       'Proactive threat detection',
@@ -248,36 +261,37 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Improved security posture',
       'Cost-effective protection',
       'Scalable security operations',
-      'Compliance support'
+      'Compliance support',
     ],
     useCases: [
       'Enterprise security operations',
       'Managed security services',
       'Critical infrastructure protection',
       'Financial security',
-      'Healthcare security'
+      'Healthcare security',
     ],
     targetAudience: [
       'Large enterprises',
       'Managed security providers',
       'Critical infrastructure',
       'Financial institutions',
-      'Healthcare organizations'
+      'Healthcare organizations',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Get Threat Intelligence',
-    href: '/services/ai-cybersecurity-threat-intelligence'
+    href: '/services/ai-cybersecurity-threat-intelligence',
   },
   // Cloud & DevOps Solutions
   {
     id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
-    description: 'Intelligent cloud cost optimization platform that provides real-time cost analysis, optimization recommendations, and automated cost management.',
+    description:
+      'Intelligent cloud cost optimization platform that provides real-time cost analysis, optimization recommendations, and automated cost management.',
     category: 'Cloud & DevOps',
     price: '$1,500',
     billing: 'month',
@@ -289,7 +303,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Multi-cloud cost management',
       'Automated scaling policies',
       'Cost allocation and reporting',
-      'Integration with cloud providers'
+      'Integration with cloud providers',
     ],
     benefits: [
       'Significant cost savings',
@@ -299,35 +313,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Predictable cloud spending',
       'Enhanced budgeting capabilities',
       'Multi-cloud cost control',
-      'ROI optimization'
+      'ROI optimization',
     ],
     useCases: [
       'Cloud-native applications',
       'Multi-cloud environments',
       'DevOps teams',
       'Enterprise cloud users',
-      'Startup cloud optimization'
+      'Startup cloud optimization',
     ],
     targetAudience: [
       'Cloud-native companies',
       'Multi-cloud users',
       'DevOps teams',
       'Enterprise cloud users',
-      'Startups and scale-ups'
+      'Startups and scale-ups',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Optimize Cloud Costs',
-    href: '/services/cloud-finops-optimizer'
+    href: '/services/cloud-finops-optimizer',
   },
   {
     id: 'ai-devops-automation-platform',
     title: 'AI DevOps Automation Platform',
-    description: 'Intelligent DevOps automation platform that streamlines development workflows, automates testing, and optimizes deployment processes.',
+    description:
+      'Intelligent DevOps automation platform that streamlines development workflows, automates testing, and optimizes deployment processes.',
     category: 'Cloud & DevOps',
     price: '$2,000',
     billing: 'month',
@@ -339,7 +354,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Automated rollback capabilities',
       'Integration with development tools',
       'Real-time deployment analytics',
-      'Security scanning integration'
+      'Security scanning integration',
     ],
     benefits: [
       'Faster development cycles',
@@ -349,36 +364,37 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Enhanced team productivity',
       'Better deployment visibility',
       'Reduced manual intervention',
-      'Improved security posture'
+      'Improved security posture',
     ],
     useCases: [
       'Software development teams',
       'DevOps engineering teams',
       'Continuous integration workflows',
       'Automated testing processes',
-      'Cloud deployment automation'
+      'Cloud deployment automation',
     ],
     targetAudience: [
       'Software development companies',
       'DevOps teams',
       'Engineering organizations',
       'Cloud-native companies',
-      'Technology startups'
+      'Technology startups',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Automate Your DevOps',
-    href: '/services/ai-devops-automation-platform'
+    href: '/services/ai-devops-automation-platform',
   },
   // Enterprise AI Solutions
   {
     id: 'ai-business-intelligence-analytics',
     title: 'AI Business Intelligence Analytics',
-    description: 'Advanced AI-powered business intelligence platform that provides deep insights, predictive analytics, and automated reporting capabilities.',
+    description:
+      'Advanced AI-powered business intelligence platform that provides deep insights, predictive analytics, and automated reporting capabilities.',
     category: 'AI Solutions',
     price: '$3,000',
     billing: 'month',
@@ -390,7 +406,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Natural language queries',
       'Data visualization tools',
       'Integration with data sources',
-      'Advanced machine learning models'
+      'Advanced machine learning models',
     ],
     benefits: [
       'Data-driven decision making',
@@ -400,35 +416,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Improved operational efficiency',
       'Enhanced strategic planning',
       'Reduced manual analysis',
-      'Scalable analytics platform'
+      'Scalable analytics platform',
     ],
     useCases: [
       'Enterprise analytics',
       'Business intelligence',
       'Data-driven decision making',
       'Performance monitoring',
-      'Strategic planning'
+      'Strategic planning',
     ],
     targetAudience: [
       'Large enterprises',
       'Data-driven organizations',
       'Business intelligence teams',
       'Executive leadership',
-      'Analytics departments'
+      'Analytics departments',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Get Business Intelligence',
-    href: '/services/ai-business-intelligence-analytics'
+    href: '/services/ai-business-intelligence-analytics',
   },
   {
     id: 'ai-workflow-orchestrator',
     title: 'AI Workflow Orchestrator',
-    description: 'Intelligent workflow automation platform that optimizes business processes, automates repetitive tasks, and improves operational efficiency.',
+    description:
+      'Intelligent workflow automation platform that optimizes business processes, automates repetitive tasks, and improves operational efficiency.',
     category: 'AI Solutions',
     price: '$2,200',
     billing: 'month',
@@ -440,7 +457,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Performance analytics',
       'Integration with business systems',
       'Custom workflow creation',
-      'Real-time process insights'
+      'Real-time process insights',
     ],
     benefits: [
       'Increased operational efficiency',
@@ -450,36 +467,37 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Enhanced process visibility',
       'Scalable automation',
       'Cost savings',
-      'Better compliance'
+      'Better compliance',
     ],
     useCases: [
       'Business process automation',
       'Workflow optimization',
       'Task automation',
       'Process monitoring',
-      'Operational efficiency'
+      'Operational efficiency',
     ],
     targetAudience: [
       'Business operations teams',
       'Process improvement teams',
       'Operations managers',
       'Business analysts',
-      'Efficiency-focused organizations'
+      'Efficiency-focused organizations',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Orchestrate Your Workflows',
-    href: '/services/ai-workflow-orchestrator'
+    href: '/services/ai-workflow-orchestrator',
   },
   // Industry-Specific Solutions
   {
     id: 'ai-healthcare-analytics-platform',
     title: 'AI Healthcare Analytics Platform',
-    description: 'Specialized AI platform for healthcare analytics, patient insights, and clinical decision support with HIPAA compliance.',
+    description:
+      'Specialized AI platform for healthcare analytics, patient insights, and clinical decision support with HIPAA compliance.',
     category: 'Industry Specific',
     price: '$4,000',
     billing: 'month',
@@ -491,7 +509,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Population health analytics',
       'Risk assessment models',
       'Integration with EHR systems',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     benefits: [
       'Improved patient outcomes',
@@ -501,35 +519,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Compliance with regulations',
       'Data-driven healthcare',
       'Population health insights',
-      'Risk mitigation'
+      'Risk mitigation',
     ],
     useCases: [
       'Healthcare organizations',
       'Hospitals and clinics',
       'Medical research',
       'Population health management',
-      'Clinical decision support'
+      'Clinical decision support',
     ],
     targetAudience: [
       'Healthcare organizations',
       'Hospitals and clinics',
       'Medical research institutions',
       'Population health managers',
-      'Clinical teams'
+      'Clinical teams',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Transform Healthcare Analytics',
-    href: '/services/ai-healthcare-analytics-platform'
+    href: '/services/ai-healthcare-analytics-platform',
   },
   {
     id: 'ai-financial-risk-management',
     title: 'AI Financial Risk Management',
-    description: 'Advanced AI platform for financial risk assessment, fraud detection, and regulatory compliance in financial services.',
+    description:
+      'Advanced AI platform for financial risk assessment, fraud detection, and regulatory compliance in financial services.',
     category: 'Industry Specific',
     price: '$3,500',
     billing: 'month',
@@ -541,7 +560,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Market risk modeling',
       'Credit risk assessment',
       'Integration with financial systems',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     benefits: [
       'Enhanced risk visibility',
@@ -551,36 +570,37 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Reduced financial losses',
       'Automated compliance',
       'Real-time risk monitoring',
-      'Data-driven decisions'
+      'Data-driven decisions',
     ],
     useCases: [
       'Banks and financial institutions',
       'Investment firms',
       'Insurance companies',
       'Credit unions',
-      'Financial services providers'
+      'Financial services providers',
     ],
     targetAudience: [
       'Financial institutions',
       'Investment firms',
       'Insurance companies',
       'Credit unions',
-      'Financial services'
+      'Financial services',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Manage Financial Risk',
-    href: '/services/ai-financial-risk-management'
+    href: '/services/ai-financial-risk-management',
   },
   // Emerging Technology Solutions
   {
     id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
-    description: 'Next-generation quantum computing platform for complex problem-solving, optimization, and advanced computational tasks.',
+    description:
+      'Next-generation quantum computing platform for complex problem-solving, optimization, and advanced computational tasks.',
     category: 'Emerging Tech',
     price: '$5,000',
     billing: 'month',
@@ -592,7 +612,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Optimization algorithms',
       'Quantum simulation',
       'Integration with classical systems',
-      'Advanced computational capabilities'
+      'Advanced computational capabilities',
     ],
     benefits: [
       'Exponential computational power',
@@ -602,35 +622,36 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Competitive edge',
       'Innovation leadership',
       'Research capabilities',
-      'Strategic advantage'
+      'Strategic advantage',
     ],
     useCases: [
       'Research institutions',
       'Technology companies',
       'Financial services',
       'Pharmaceutical research',
-      'Advanced computing'
+      'Advanced computing',
     ],
     targetAudience: [
       'Research institutions',
       'Technology companies',
       'Financial services',
       'Pharmaceutical companies',
-      'Advanced computing users'
+      'Advanced computing users',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Access Quantum Computing',
-    href: '/services/quantum-computing-platform'
+    href: '/services/quantum-computing-platform',
   },
   {
     id: 'blockchain-web3-solutions',
     title: 'Blockchain & Web3 Solutions',
-    description: 'Comprehensive blockchain and Web3 platform for decentralized applications, smart contracts, and digital asset management.',
+    description:
+      'Comprehensive blockchain and Web3 platform for decentralized applications, smart contracts, and digital asset management.',
     category: 'Emerging Tech',
     price: '$3,200',
     billing: 'month',
@@ -642,7 +663,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Web3 application development',
       'Digital asset management',
       'Cross-chain interoperability',
-      'Security and compliance'
+      'Security and compliance',
     ],
     benefits: [
       'Decentralized solutions',
@@ -652,35 +673,37 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Cost reduction',
       'Automated processes',
       'Global accessibility',
-      'Future-ready technology'
+      'Future-ready technology',
     ],
     useCases: [
       'DeFi applications',
       'NFT marketplaces',
       'Supply chain tracking',
       'Digital identity',
-      'Decentralized finance'
+      'Decentralized finance',
     ],
     targetAudience: [
       'Fintech companies',
       'Digital asset platforms',
       'Supply chain companies',
       'Identity verification services',
-      'Innovation-focused businesses'
+      'Innovation-focused businesses',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     ctaLabel: 'Build Web3 Solutions',
-    href: '/services/blockchain-web3-solutions'
-  }
+    href: '/services/blockchain-web3-solutions',
+  },
 ];
 
 export const getServicesByCategory = (category: ZionService['category']) => {
-  return zionTechGroup2025Services.filter(service => service.category === category);
+  return zionTechGroup2025Services.filter(
+    service => service.category === category
+  );
 };
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
@@ -692,10 +715,13 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 
 export const searchServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return zionTechGroup2025Services.filter(service =>
-    service.title.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.features.some(feature => feature.toLowerCase().includes(lowercaseQuery))
+  return zionTechGroup2025Services.filter(
+    service =>
+      service.title.toLowerCase().includes(lowercaseQuery) ||
+      service.description.toLowerCase().includes(lowercaseQuery) ||
+      service.category.toLowerCase().includes(lowercaseQuery) ||
+      service.features.some(feature =>
+        feature.toLowerCase().includes(lowercaseQuery)
+      )
   );
 };

@@ -22,10 +22,10 @@ export default function App(): React.JSX.Element {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/services' element={<ServicesPage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />

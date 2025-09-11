@@ -4,16 +4,27 @@ const fs = require('fs');
 function fixUnusedVariables(content) {
   // Fix unused function parameters
   content = content.replace(/\b(\w+)\s*:\s*[^,)]+\)\s*=>/g, (match, param) => {
-    if (param !== 'e' && param !== 'event' && param !== 'props' && param !== 'children') {
+    if (
+      param !== 'e' &&
+      param !== 'event' &&
+      param !== 'props' &&
+      param !== 'children'
+    ) {
       return match.replace(param, `_${param}`);
     }
     return match;
   });
 
   // Fix unused destructured variables
-  content = content.replace(/\{\s*(\w+)(\s*,\s*\w+)*\s*\}/g, (match) => {
+  content = content.replace(/\{\s*(\w+)(\s*,\s*\w+)*\s*\}/g, match => {
     return match.replace(/\b(\w+)\b/g, (varMatch, varName) => {
-      if (varName !== 'e' && varName !== 'event' && varName !== 'props' && varName !== 'children' && varName !== 'index') {
+      if (
+        varName !== 'e' &&
+        varName !== 'event' &&
+        varName !== 'props' &&
+        varName !== 'children' &&
+        varName !== 'index'
+      ) {
         return `_${varName}`;
       }
       return varName;
@@ -38,7 +49,7 @@ const files = [
   'src/main.tsx',
   'src/pages/About.tsx',
   'src/utils/errorHandler.ts',
-  'src/utils/security.ts'
+  'src/utils/security.ts',
 ];
 
 files.forEach(file => {

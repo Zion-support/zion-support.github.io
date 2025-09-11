@@ -26,11 +26,11 @@ export default async function handler(req, res) {
 
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object;
-      
+
       try {
         const file = path.join(process.cwd(), 'data', 'orders.json');
         const orders = JSON.parse(fs.readFileSync(file, 'utf8'));
-        
+
         const idx = orders.findIndex(order => order.id === session.id);
         if (idx !== -1) {
           orders[idx].status = 'paid';

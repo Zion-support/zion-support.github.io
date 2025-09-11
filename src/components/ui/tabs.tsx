@@ -15,7 +15,13 @@ interface TabsProps {
   className?: string;
 }
 
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {
+export function Tabs({
+  children,
+  defaultValue,
+  value,
+  onValueChange,
+  className = '',
+}: TabsProps) {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
   const handleTabChange = (tab: string) => {
@@ -27,9 +33,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 
   return (
     <TabsContext.Provider value={{ activeTab, setActiveTab: handleTabChange }}>
-      <div className={className}>
-        {children}
-      </div>
+      <div className={className}>{children}</div>
     </TabsContext.Provider>
   );
 }
@@ -53,7 +57,11 @@ interface TabsTriggerProps {
   className?: string;
 }
 
-export function TabsTrigger({ children, value, className = '' }: TabsTriggerProps) {
+export function TabsTrigger({
+  children,
+  value,
+  className = '',
+}: TabsTriggerProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
 
@@ -79,7 +87,11 @@ interface TabsContentProps {
   className?: string;
 }
 
-export function TabsContent({ children, value, className = '' }: TabsContentProps) {
+export function TabsContent({
+  children,
+  value,
+  className = '',
+}: TabsContentProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
 
@@ -87,9 +99,5 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
     return null;
   }
 
-  return (
-    <div className={`mt-4 ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`mt-4 ${className}`}>{children}</div>;
 }

@@ -24,7 +24,9 @@ interface FeedbackDoc extends Document {
   createdAt: Date;
 }
 
-const Feedback: Model<FeedbackDoc> = mongoose.models.Feedback || mongoose.model<FeedbackDoc>('Feedback', feedbackSchema);
+const Feedback: Model<FeedbackDoc> =
+  mongoose.models.Feedback ||
+  mongoose.model<FeedbackDoc>('Feedback', feedbackSchema);
 
 async function connect() {
   if (mongoose.connection.readyState === 0) {
@@ -51,7 +53,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const parsed = FeedbackValidator.safeParse(req.body);
   if (!parsed.success) {
-    const errorMessage = parsed.error?.errors?.[0]?.message || 'Invalid input data';
+    const errorMessage =
+      parsed.error?.errors?.[0]?.message || 'Invalid input data';
     return res.status(400).json({ error: errorMessage });
   }
 

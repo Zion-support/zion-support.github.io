@@ -7,7 +7,7 @@ console.log('🔧 Starting TypeScript error fixes...');
 const buttonFile = 'src/components/ui/Button.tsx';
 if (fs.existsSync(buttonFile)) {
   let content = fs.readFileSync(buttonFile, 'utf8');
-  
+
   // Add proper interface for Button props
   const buttonInterface = `
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -43,7 +43,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const appFile = 'src/App.tsx';
 if (fs.existsSync(appFile)) {
   let content = fs.readFileSync(appFile, 'utf8');
-  
+
   // Fix the lazy loading syntax
   content = content.replace(
     /const AIContentCreation = lazy\(\(\) => import\('\.\/pages\/services\/ai-content-creation'\)\.catch\(\(\) => \(\{ default: \(\) => <div>Error loading AI Content Creation<\/div> \}\)\)\);/,
@@ -58,7 +58,7 @@ if (fs.existsSync(appFile)) {
 const cloudDevOpsFile = 'src/pages/CloudDevOpsServices.tsx';
 if (fs.existsSync(cloudDevOpsFile)) {
   let content = fs.readFileSync(cloudDevOpsFile, 'utf8');
-  
+
   // Add missing imports and variables
   const imports = `import React, { useState, useMemo } from 'react';
 import { Search, Filter, DollarSign, Users, Clock, CheckCircle } from 'lucide-react';

@@ -12,7 +12,7 @@ module.exports = function cacheMiddleware(req, res, next) {
   }
 
   res.sendResponse = res.send;
-  res.send = (body) => {
+  res.send = body => {
     cache.set(key, body);
     res.setHeader('X-Cache', 'MISS');
     res.sendResponse(body);

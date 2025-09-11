@@ -5,13 +5,17 @@ interface AnalyticsContextType {
   trackPageView: (url: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined
+);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+}) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     console.log('Analytics Event:', eventName, properties);
   };
@@ -22,7 +26,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const value = {
     trackEvent,
-    trackPageView
+    trackPageView,
   };
 
   return (

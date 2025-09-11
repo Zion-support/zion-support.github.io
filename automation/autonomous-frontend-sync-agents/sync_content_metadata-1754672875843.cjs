@@ -6,6 +6,12 @@ try {
   const outDir = path.join(__dirname, '..', 'logs');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const fp = path.join(outDir, 'content-metadata-sync.log');
-  fs.appendFileSync(fp, '[' + new Date().toISOString() + '] synced content metadata\n');
+  fs.appendFileSync(
+    fp,
+    '[' + new Date().toISOString() + '] synced content metadata\n'
+  );
   console.log('[Agent] Content metadata sync complete');
-} catch (e) { console.error('[Agent] Content metadata sync failed:', e.message); process.exitCode = 0; }
+} catch (e) {
+  console.error('[Agent] Content metadata sync failed:', e.message);
+  process.exitCode = 0;
+}

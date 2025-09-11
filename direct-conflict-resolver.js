@@ -60,7 +60,9 @@ function findConflicts() {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', 'out'].includes(item)) {
+          if (
+            !['node_modules', '.git', 'dist', 'build', 'out'].includes(item)
+          ) {
             scan(fullPath);
           }
         } else if (stat.isFile()) {
@@ -96,7 +98,7 @@ if (conflictFiles.length > 0) {
   const batchSize = 100;
   for (let i = 0; i < conflictFiles.length; i += batchSize) {
     const batch = conflictFiles.slice(i, i + batchSize);
-    console.log(`Processing batch ${Math.floor(i/batchSize) + 1}...`);
+    console.log(`Processing batch ${Math.floor(i / batchSize) + 1}...`);
 
     for (const file of batch) {
       if (resolveConflicts(file)) {

@@ -3,7 +3,7 @@
  * @returns {Cypress.Promise<object>} A promise that resolves with a mock token object.
  */
 export const mockStripeTokenCreation = () => {
-  return new Cypress.Promise((resolve) => {
+  return new Cypress.Promise(resolve => {
     resolve({
       id: 'tok_mockToken123',
       card: {
@@ -25,8 +25,10 @@ export const mockStripeTokenCreation = () => {
  * Mocks the Stripe payment confirmation process.
  * @returns {Cypress.Promise<object>} A promise that resolves with a mock payment intent object.
  */
-export const mockStripePaymentConfirmation = (paymentMethodId = 'pm_mockPaymentMethod123') => {
-  return new Cypress.Promise((resolve) => {
+export const mockStripePaymentConfirmation = (
+  paymentMethodId = 'pm_mockPaymentMethod123'
+) => {
+  return new Cypress.Promise(resolve => {
     resolve({
       id: 'pi_mockPaymentIntent123',
       object: 'payment_intent',

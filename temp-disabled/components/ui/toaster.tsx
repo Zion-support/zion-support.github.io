@@ -1,11 +1,8 @@
-
-import * as React from "react";
-import { Toaster as HotToaster } from "react-hot-toast";
+import * as React from 'react';
+import { Toaster as HotToaster } from 'react-hot-toast';
 
 export function HotToasts() {
-  return (
-    <HotToaster position="top-right" />
-  );
+  return <HotToaster position='top-right' />;
 }
 import { cn } from '@/lib/utils';
 
@@ -32,7 +29,9 @@ export interface UseToasterReturn {
   dismiss: (id: string) => void;
 }
 
-const ToasterContext = React.createContext<UseToasterReturn | undefined>(undefined);
+const ToasterContext = React.createContext<UseToasterReturn | undefined>(
+  undefined
+);
 
 export const useToaster = (): UseToasterReturn => {
   const context = React.useContext(ToasterContext);
@@ -42,7 +41,9 @@ export const useToaster = (): UseToasterReturn => {
   return context;
 };
 
-export const ToasterProvider: React.FC<ToasterProviderProps> = ({ children }) => {
+export const ToasterProvider: React.FC<ToasterProviderProps> = ({
+  children,
+}) => {
   const [toasts, setToasts] = React.useState<Toast[]>([]);
 
   const toast = React.useCallback((toastData: Omit<Toast, 'id'>) => {
@@ -63,13 +64,11 @@ export const ToasterProvider: React.FC<ToasterProviderProps> = ({ children }) =>
   const value: UseToasterReturn = {
     toasts,
     toast,
-    dismiss
+    dismiss,
   };
 
   return (
-    <ToasterContext.Provider value={value}>
-      {children}
-    </ToasterContext.Provider>
+    <ToasterContext.Provider value={value}>{children}</ToasterContext.Provider>
   );
 };
 
@@ -77,30 +76,32 @@ export const Toaster: React.FC<ToasterProps> = ({ toasts, onDismiss }) => {
   if (toasts.length === 0) return null;
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
-      {toasts.map((toast) => (
+    <div className='fixed top-4 right-4 z-50 space-y-2'>
+      {toasts.map(toast => (
         <div
           key={toast.id}
           className={cn(
             'flex w-full max-w-sm items-center space-x-4 rounded-lg border bg-background p-4 shadow-lg',
-            toast.variant === 'destructive' && 'border-destructive bg-destructive text-destructive-foreground'
+            toast.variant === 'destructive' &&
+              'border-destructive bg-destructive text-destructive-foreground'
           )}
         >
-          <div className="flex-1 space-y-1">
+          <div className='flex-1 space-y-1'>
             {toast.title && (
-              <p className="text-sm font-medium leading-none">{toast.title}</p>
+              <p className='text-sm font-medium leading-none'>{toast.title}</p>
             )}
             {toast.description && (
-              <p className="text-sm text-muted-foreground">{toast.description}</p>
+              <p className='text-sm text-muted-foreground'>
+                {toast.description}
+              </p>
             )}
           </div>
           {toast.action}
           <button
             onClick={() => onDismiss(toast.id)}
-            className="rounded-md p-1 text-muted-foreground hover:text-foreground"
+            className='rounded-md p-1 text-muted-foreground hover:text-foreground'
           >
-            <span className="sr-only">Close</span>
-            ×
+            <span className='sr-only'>Close</span>×
           </button>
         </div>
       ))}

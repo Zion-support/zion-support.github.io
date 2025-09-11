@@ -9,7 +9,12 @@ export interface Notification {
   updated_at?: string;
 }
 
-export type FilterType = 'all' | 'unread' | 'messages' | 'onboarding' | 'system';
+export type FilterType =
+  | 'all'
+  | 'unread'
+  | 'messages'
+  | 'onboarding'
+  | 'system';
 
 export interface NotificationContextType {
   notifications: Notification[];

@@ -85,6 +85,8 @@ describe('Login Page Rendering and Basic Auth Attempt', () => {
     // extensive setup, this test case will be simplified to focus on the form's existence,
     // as established in the first test case. The error boundary is expected to catch
     // major issues.
-    cy.log('Skipping complex client-side auth error simulation for this test suite.');
+    cy.log(
+      'Skipping complex client-side auth error simulation for this test suite.'
+    );
   });
 });

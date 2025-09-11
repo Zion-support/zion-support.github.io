@@ -13,9 +13,15 @@ function fixSyntaxErrors(filePath) {
       // Fix object properties ending with semicolons
       { pattern: /(\w+);\s*}/g, replacement: '$1\n  }' },
       // Fix trailing commas in variable declarations
-      { pattern: /const\s+([^=]+)=\s*([^,]+),\s*$/gm, replacement: 'const $1= $2;' },
+      {
+        pattern: /const\s+([^=]+)=\s*([^,]+),\s*$/gm,
+        replacement: 'const $1= $2;',
+      },
       // Fix Content-Type headers
-      { pattern: /Content-Type([a-zA-Z\/\-]+)/g, replacement: 'Content-Type", "$1' },
+      {
+        pattern: /Content-Type([a-zA-Z\/\-]+)/g,
+        replacement: 'Content-Type", "$1',
+      },
       // Fix object literal syntax issues
       { pattern: /}\),\s*$/gm, replacement: '});' },
       // Fix missing commas in object literals
@@ -41,11 +47,11 @@ function fixSyntaxErrors(filePath) {
 
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       processDirectory(filePath);
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {

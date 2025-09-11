@@ -16,10 +16,11 @@ function handler(req: NextApiRequest, res: NextApiResponse) {
     `How does ${topic} change the way talent collaborates globally?`,
     `Can you share any visionary goals you have for the future?`,
     `What advice do you have for new builders in this space?`,
-    `Where can listeners learn more or get involved?`
+    `Where can listeners learn more or get involved?`,
   ];
 
-  const script = `Intro (0:00): Welcome to the Zion Podcast. Today we chat with ${invitee}.\n` +
+  const script =
+    `Intro (0:00): Welcome to the Zion Podcast. Today we chat with ${invitee}.\n` +
     `Questions: \n${questions.map((q, i) => `${i + 1}. ${q}`).join('\n')}\n` +
     `Closing (14:30): Thanks for joining us! Learn more at zion.community.`;
 

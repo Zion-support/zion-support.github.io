@@ -5,11 +5,15 @@ interface WhitelabelContextType {
   setTheme: (theme: string) => void;
 }
 
-const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(
+  undefined
+);
 
-export const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [theme, setTheme] = useState('default');
-  
+
   return (
     <WhitelabelContext.Provider value={{ theme, setTheme }}>
       {children}

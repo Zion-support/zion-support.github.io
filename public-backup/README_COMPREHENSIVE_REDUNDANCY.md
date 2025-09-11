@@ -30,6 +30,7 @@ ecosystem.comprehensive-redundancy.cjs          # Comprehensive PM2 ecosystem
 ## 🔧 Features
 
 ### Master Redundancy Orchestrator
+
 - **Unified Control**: Single point of control for all redundancy systems
 - **Health Monitoring**: Continuous monitoring of all subsystems
 - **Auto Recovery**: Automatic recovery when systems fail
@@ -37,6 +38,7 @@ ecosystem.comprehensive-redundancy.cjs          # Comprehensive PM2 ecosystem
 - **Centralized Logging**: Unified logging and monitoring
 
 ### Enhanced PM2 Redundancy
+
 - **Process Health Monitoring**: Monitors all PM2 processes
 - **Ecosystem Validation**: Validates PM2 ecosystem files
 - **Auto Recovery**: Automatically restarts failed processes
@@ -44,6 +46,7 @@ ecosystem.comprehensive-redundancy.cjs          # Comprehensive PM2 ecosystem
 - **Log Analysis**: Monitors PM2 logs for errors and triggers recovery
 
 ### Enhanced GitHub Actions Redundancy
+
 - **Workflow Validation**: Validates YAML syntax and structure
 - **API Health Checks**: Monitors GitHub API status
 - **Auto Triggering**: Automatically triggers workflows when needed
@@ -51,6 +54,7 @@ ecosystem.comprehensive-redundancy.cjs          # Comprehensive PM2 ecosystem
 - **Repository Sync**: Ensures repository is in sync with remote
 
 ### Enhanced Netlify Functions Redundancy
+
 - **Functions Manifest Management**: Monitors and regenerates functions manifest
 - **Deployment Health**: Checks Netlify deployment status
 - **Auto Regeneration**: Automatically regenerates outdated manifests
@@ -235,16 +239,19 @@ You can customize the behavior by modifying:
 ### Common Issues
 
 1. **PM2 Not Running**
+
    ```bash
    pm2 start
    ```
 
 2. **Missing Dependencies**
+
    ```bash
    npm install js-yaml
    ```
 
 3. **Permission Issues**
+
    ```bash
    chmod +x automation/start-comprehensive-redundancy.sh
    ```

@@ -10,7 +10,7 @@ function fixSyntaxErrors(filePath) {
     const fixes = [
       // Fix ;} patterns
       { pattern: /;\}/g, replacement: '}' },
-      // Fix ; ;} patterns  
+      // Fix ; ;} patterns
       { pattern: /; ;\}/g, replacement: '}' },
       // Fix return statements with ; ;}
       { pattern: /return ([^;]+); ;\}/g, replacement: 'return $1; }' },
@@ -37,11 +37,11 @@ function fixSyntaxErrors(filePath) {
 
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       processDirectory(filePath);
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {

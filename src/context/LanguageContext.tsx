@@ -6,7 +6,9 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 interface LanguageProviderProps {
   children: ReactNode;
@@ -24,7 +26,8 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       'nav.blog': 'Blog',
       'nav.community': 'Community',
       'home.hero.title': 'Transform Your Business with AI & IT Solutions',
-      'home.hero.subtitle': 'Cutting-edge technology solutions for modern businesses',
+      'home.hero.subtitle':
+        'Cutting-edge technology solutions for modern businesses',
       'home.tool_ai_matcher': 'AI Matcher',
       'home.tool_ai_matcher_desc': 'Find perfect matches',
       'home.tool_talent': 'Talent Directory',
@@ -49,7 +52,8 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       'nav.blog': 'Blog',
       'nav.community': 'Comunidad',
       'home.hero.title': 'Transforma tu Negocio con IA y Soluciones IT',
-      'home.hero.subtitle': 'Soluciones tecnológicas de vanguardia para empresas modernas',
+      'home.hero.subtitle':
+        'Soluciones tecnológicas de vanguardia para empresas modernas',
       'home.tool_ai_matcher': 'Buscador IA',
       'home.tool_ai_matcher_desc': 'Encuentra coincidencias perfectas',
       'home.tool_talent': 'Directorio de Talento',
@@ -60,11 +64,13 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       'home.tool_equipment_desc': 'Tecnología de vanguardia',
       'home.tool_chat_desc': 'Conecta y colabora',
       'services.ai.title': 'Servicios de IA',
-      'services.ai.description': 'Soluciones avanzadas de inteligencia artificial',
+      'services.ai.description':
+        'Soluciones avanzadas de inteligencia artificial',
       'services.it.title': 'Servicios IT',
       'services.it.description': 'Soluciones integrales de infraestructura IT',
       'services.saas.title': 'Micro SAAS',
-      'services.saas.description': 'Plataformas escalables de software como servicio',
+      'services.saas.description':
+        'Plataformas escalables de software como servicio',
     },
     fr: {
       'nav.home': 'Accueil',
@@ -73,8 +79,10 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       'nav.contact': 'Contact',
       'nav.blog': 'Blog',
       'nav.community': 'Communauté',
-      'home.hero.title': 'Transformez votre Entreprise avec l\'IA et les Solutions IT',
-      'home.hero.subtitle': 'Solutions technologiques de pointe pour les entreprises modernes',
+      'home.hero.title':
+        "Transformez votre Entreprise avec l'IA et les Solutions IT",
+      'home.hero.subtitle':
+        'Solutions technologiques de pointe pour les entreprises modernes',
       'home.tool_ai_matcher': 'Assortisseur IA',
       'home.tool_ai_matcher_desc': 'Trouvez des correspondances parfaites',
       'home.tool_talent': 'Répertoire des Talents',
@@ -85,11 +93,13 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       'home.tool_equipment_desc': 'Technologie de pointe',
       'home.tool_chat_desc': 'Connectez et collaborez',
       'services.ai.title': 'Services IA',
-      'services.ai.description': 'Solutions avancées d\'intelligence artificielle',
+      'services.ai.description':
+        "Solutions avancées d'intelligence artificielle",
       'services.it.title': 'Services IT',
-      'services.it.description': 'Solutions complètes d\'infrastructure IT',
+      'services.it.description': "Solutions complètes d'infrastructure IT",
       'services.saas.title': 'Micro SAAS',
-      'services.saas.description': 'Plateformes logicielles en tant que service évolutives',
+      'services.saas.description':
+        'Plateformes logicielles en tant que service évolutives',
     },
   };
 

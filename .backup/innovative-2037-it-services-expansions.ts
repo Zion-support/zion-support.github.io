@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
@@ -55,7 +55,8 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     tagline: 'Distributed quantum computing at the edge of the network',
     price: '$3,299',
     period: '/month',
-    description: 'Revolutionary edge computing platform that brings quantum computing capabilities to distributed locations for ultra-low latency processing.',
+    description:
+      'Revolutionary edge computing platform that brings quantum computing capabilities to distributed locations for ultra-low latency processing.',
     features: [
       'Quantum edge nodes deployment',
       'Distributed quantum processing',
@@ -65,34 +66,43 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
       'Autonomous edge management',
       'Quantum-secure communication',
       'Multi-location orchestration',
-      'Advanced edge analytics'
+      'Advanced edge analytics',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-edge-computing',
-    marketPosition: 'Premium alternative to AWS Greengrass, Azure IoT Edge, and Google Cloud IoT with quantum capabilities.',
-    targetAudience: 'IoT companies, edge computing providers, telecommunications, manufacturing',
+    marketPosition:
+      'Premium alternative to AWS Greengrass, Azure IoT Edge, and Google Cloud IoT with quantum capabilities.',
+    targetAudience:
+      'IoT companies, edge computing providers, telecommunications, manufacturing',
     trialDays: 21,
     setupTime: '5 days',
     category: 'Edge Computing',
     realService: true,
     technology: ['Quantum Computing, Edge AI, Kubernetes, Docker, Python, Go'],
-    integrations: ['AWS, Azure, GCP, IoT platforms, 5G networks, Industrial systems'],
-    useCases: ['IoT processing, Real-time analytics, Edge AI, Industrial automation'],
+    integrations: [
+      'AWS, Azure, GCP, IoT platforms, 5G networks, Industrial systems',
+    ],
+    useCases: [
+      'IoT processing, Real-time analytics, Edge AI, Industrial automation',
+    ],
     roi: 'Reduce latency by 90% and improve processing efficiency by 300%.',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],
+    competitors: [
+      'AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry',
+    ],
     marketSize: '$18B+ edge computing market',
     growthRate: '200% YoY',
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise edge computing platform with quantum processing, distributed architecture, and autonomous management.',
+    implementationDetails:
+      'Enterprise edge computing platform with quantum processing, distributed architecture, and autonomous management.',
     launchDate: '2025-01-10',
     customers: 89,
     rating: 4.9,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'autonomous-cloud-orchestrator',
@@ -100,7 +110,8 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     tagline: 'Self-managing multi-cloud infrastructure with AI intelligence',
     price: '$2,199',
     period: '/month',
-    description: 'Intelligent cloud orchestration platform that autonomously manages multi-cloud environments, optimizes costs, and ensures performance.',
+    description:
+      'Intelligent cloud orchestration platform that autonomously manages multi-cloud environments, optimizes costs, and ensures performance.',
     features: [
       'Multi-cloud management',
       'Autonomous cost optimization',
@@ -110,14 +121,15 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
       'Disaster recovery orchestration',
       'Real-time monitoring',
       'Predictive scaling',
-      'Advanced cost analytics'
+      'Advanced cost analytics',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-cloud-orchestrator',
-    marketPosition: 'Advanced alternative to Terraform, CloudFormation, and Ansible with autonomous AI capabilities.',
+    marketPosition:
+      'Advanced alternative to Terraform, CloudFormation, and Ansible with autonomous AI capabilities.',
     targetAudience: 'Cloud architects, DevOps teams, enterprises, MSPs',
     trialDays: 30,
     setupTime: '3 days',
@@ -125,7 +137,9 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     realService: true,
     technology: ['AI/ML, Kubernetes, Terraform, Python, Go, React, Node.js'],
     integrations: ['AWS, Azure, GCP, VMware, OpenStack, Kubernetes, Docker'],
-    useCases: ['Multi-cloud management, Cost optimization, Resource orchestration, Compliance automation'],
+    useCases: [
+      'Multi-cloud management, Cost optimization, Resource orchestration, Compliance automation',
+    ],
     roi: 'Reduce cloud costs by 40% and improve resource utilization by 60%.',
     competitors: ['Terraform, CloudFormation, Ansible, Chef, Puppet'],
     marketSize: '$22B+ cloud management market',
@@ -133,11 +147,12 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise cloud orchestration platform with autonomous AI, multi-cloud support, and advanced automation.',
+    implementationDetails:
+      'Enterprise cloud orchestration platform with autonomous AI, multi-cloud support, and advanced automation.',
     launchDate: '2025-01-15',
     customers: 234,
     rating: 4.8,
-    reviews: 178
+    reviews: 178,
   },
   {
     id: 'quantum-database-platform',
@@ -145,7 +160,8 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     tagline: 'Next-generation database with quantum computing acceleration',
     price: '$1,899',
     period: '/month',
-    description: 'Revolutionary database platform that leverages quantum computing for unprecedented query performance and data processing capabilities.',
+    description:
+      'Revolutionary database platform that leverages quantum computing for unprecedented query performance and data processing capabilities.',
     features: [
       'Quantum query optimization',
       'Quantum data encryption',
@@ -155,22 +171,30 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
       'Quantum-secure storage',
       'Advanced data visualization',
       'API-first architecture',
-      'Multi-model database support'
+      'Multi-model database support',
     ],
     popular: true,
     icon: '🗄️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/quantum-database-platform',
-    marketPosition: 'Premium alternative to Oracle, SQL Server, and PostgreSQL with quantum computing capabilities.',
-    targetAudience: 'Database administrators, data scientists, enterprises, financial institutions',
+    marketPosition:
+      'Premium alternative to Oracle, SQL Server, and PostgreSQL with quantum computing capabilities.',
+    targetAudience:
+      'Database administrators, data scientists, enterprises, financial institutions',
     trialDays: 21,
     setupTime: '2 days',
     category: 'Database Technology',
     realService: true,
-    technology: ['Quantum Computing, SQL, NoSQL, Python, React, Node.js, PostgreSQL'],
-    integrations: ['BI tools, ETL platforms, Data warehouses, Analytics platforms'],
-    useCases: ['Data analytics, Real-time processing, Financial modeling, Scientific computing'],
+    technology: [
+      'Quantum Computing, SQL, NoSQL, Python, React, Node.js, PostgreSQL',
+    ],
+    integrations: [
+      'BI tools, ETL platforms, Data warehouses, Analytics platforms',
+    ],
+    useCases: [
+      'Data analytics, Real-time processing, Financial modeling, Scientific computing',
+    ],
     roi: 'Improve query performance by 1000% and reduce storage costs by 50%.',
     competitors: ['Oracle, SQL Server, PostgreSQL, MySQL, MongoDB'],
     marketSize: '$30B+ database market',
@@ -178,11 +202,12 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise database platform with quantum computing integration, advanced analytics, and autonomous management.',
+    implementationDetails:
+      'Enterprise database platform with quantum computing integration, advanced analytics, and autonomous management.',
     launchDate: '2025-01-20',
     customers: 167,
     rating: 4.9,
-    reviews: 123
+    reviews: 123,
   },
   {
     id: 'autonomous-network-security',
@@ -190,7 +215,8 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     tagline: 'Self-defending networks with AI-powered threat prevention',
     price: '$1,499',
     period: '/month',
-    description: 'Intelligent network security platform that autonomously detects, prevents, and responds to threats in real-time.',
+    description:
+      'Intelligent network security platform that autonomously detects, prevents, and responds to threats in real-time.',
     features: [
       'Autonomous threat detection',
       'AI-powered intrusion prevention',
@@ -200,22 +226,26 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
       'Advanced threat intelligence',
       'Network segmentation',
       'Compliance automation',
-      'Security analytics dashboard'
+      'Security analytics dashboard',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/autonomous-network-security',
-    marketPosition: 'Advanced alternative to Cisco, Palo Alto Networks, and Fortinet with autonomous AI capabilities.',
-    targetAudience: 'Network administrators, security teams, enterprises, government agencies',
+    marketPosition:
+      'Advanced alternative to Cisco, Palo Alto Networks, and Fortinet with autonomous AI capabilities.',
+    targetAudience:
+      'Network administrators, security teams, enterprises, government agencies',
     trialDays: 30,
     setupTime: '1 day',
     category: 'Network Security',
     realService: true,
     technology: ['AI/ML, Network protocols, Python, Go, React, Node.js'],
     integrations: ['Firewalls, IDS/IPS, SIEM systems, Active Directory, LDAP'],
-    useCases: ['Threat prevention, Network monitoring, Incident response, Compliance management'],
+    useCases: [
+      'Threat prevention, Network monitoring, Incident response, Compliance management',
+    ],
     roi: 'Reduce security incidents by 95% and improve response time by 90%.',
     competitors: ['Cisco, Palo Alto Networks, Fortinet, Check Point, Juniper'],
     marketSize: '$28B+ network security market',
@@ -223,11 +253,12 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise network security platform with autonomous AI, real-time monitoring, and automated response.',
+    implementationDetails:
+      'Enterprise network security platform with autonomous AI, real-time monitoring, and automated response.',
     launchDate: '2025-01-25',
     customers: 298,
     rating: 4.8,
-    reviews: 234
+    reviews: 234,
   },
   {
     id: 'quantum-iot-platform',
@@ -235,7 +266,8 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     tagline: 'Quantum-powered Internet of Things with unlimited scalability',
     price: '$2,799',
     period: '/month',
-    description: 'Next-generation IoT platform that leverages quantum computing for unlimited device management and real-time data processing.',
+    description:
+      'Next-generation IoT platform that leverages quantum computing for unlimited device management and real-time data processing.',
     features: [
       'Quantum device management',
       'Unlimited IoT scalability',
@@ -245,22 +277,28 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
       'Advanced analytics engine',
       'Multi-protocol support',
       'Edge computing integration',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     popular: true,
     icon: '📡',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-iot-platform',
-    marketPosition: 'Premium alternative to AWS IoT, Azure IoT Hub, and Google Cloud IoT with quantum computing capabilities.',
-    targetAudience: 'IoT companies, smart city providers, industrial manufacturers, healthcare organizations',
+    marketPosition:
+      'Premium alternative to AWS IoT, Azure IoT Hub, and Google Cloud IoT with quantum computing capabilities.',
+    targetAudience:
+      'IoT companies, smart city providers, industrial manufacturers, healthcare organizations',
     trialDays: 21,
     setupTime: '3 days',
     category: 'IoT Platform',
     realService: true,
-    technology: ['Quantum Computing, IoT protocols, Python, React, Node.js, Kubernetes'],
+    technology: [
+      'Quantum Computing, IoT protocols, Python, React, Node.js, Kubernetes',
+    ],
     integrations: ['AWS, Azure, GCP, Industrial systems, Smart city platforms'],
-    useCases: ['Smart cities, Industrial IoT, Healthcare monitoring, Environmental sensing'],
+    useCases: [
+      'Smart cities, Industrial IoT, Healthcare monitoring, Environmental sensing',
+    ],
     roi: 'Increase IoT device capacity by 1000% and improve data processing by 500%.',
     competitors: ['AWS IoT, Azure IoT Hub, Google Cloud IoT, ThingWorx, PTC'],
     marketSize: '$35B+ IoT platform market',
@@ -268,11 +306,12 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise IoT platform with quantum computing integration, unlimited scalability, and advanced analytics.',
+    implementationDetails:
+      'Enterprise IoT platform with quantum computing integration, unlimited scalability, and advanced analytics.',
     launchDate: '2025-01-30',
     customers: 145,
     rating: 4.9,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'autonomous-data-center',
@@ -280,7 +319,8 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     tagline: 'Self-managing data center infrastructure with zero downtime',
     price: '$4,999',
     period: '/month',
-    description: 'Intelligent data center platform that autonomously manages infrastructure, ensures zero downtime, and optimizes performance.',
+    description:
+      'Intelligent data center platform that autonomously manages infrastructure, ensures zero downtime, and optimizes performance.',
     features: [
       'Autonomous infrastructure management',
       'Zero-downtime operations',
@@ -290,22 +330,30 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
       'Security automation',
       'Real-time monitoring',
       'Disaster recovery',
-      'Advanced analytics'
+      'Advanced analytics',
     ],
     popular: true,
     icon: '🏢',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-data-center',
-    marketPosition: 'Advanced alternative to traditional data center providers with autonomous AI capabilities.',
-    targetAudience: 'Enterprises, cloud providers, colocation companies, government agencies',
+    marketPosition:
+      'Advanced alternative to traditional data center providers with autonomous AI capabilities.',
+    targetAudience:
+      'Enterprises, cloud providers, colocation companies, government agencies',
     trialDays: 14,
     setupTime: '7 days',
     category: 'Data Center',
     realService: true,
-    technology: ['AI/ML, Infrastructure automation, Python, Go, React, Node.js'],
-    integrations: ['Monitoring systems, Power management, Cooling systems, Security systems'],
-    useCases: ['Enterprise hosting, Cloud infrastructure, Disaster recovery, High-performance computing'],
+    technology: [
+      'AI/ML, Infrastructure automation, Python, Go, React, Node.js',
+    ],
+    integrations: [
+      'Monitoring systems, Power management, Cooling systems, Security systems',
+    ],
+    useCases: [
+      'Enterprise hosting, Cloud infrastructure, Disaster recovery, High-performance computing',
+    ],
     roi: 'Reduce operational costs by 60% and improve uptime to 99.999%.',
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite'],
     marketSize: '$50B+ data center market',
@@ -313,10 +361,11 @@ export const innovative2037ITServicesExpansions: Innovative2037ITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise data center platform with autonomous AI, zero-downtime operations, and predictive maintenance.',
+    implementationDetails:
+      'Enterprise data center platform with autonomous AI, zero-downtime operations, and predictive maintenance.',
     launchDate: '2025-02-05',
     customers: 78,
     rating: 4.9,
-    reviews: 56
-  }
+    reviews: 56,
+  },
 ];

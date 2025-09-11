@@ -9,45 +9,42 @@ console.log('🔧 Starting comprehensive TypeScript and ESLint fixes...');
 // Function to fix common TypeScript issues
 function fixTypeScriptIssues() {
   console.log('📝 Fixing TypeScript issues...');
-  
+
   // Fix common patterns
   const fixes = [
     {
       pattern: /@typescript-eslint\/no-unsafe-assignment/g,
-      replacement: '@typescript-eslint/no-unsafe-assignment'
+      replacement: '@typescript-eslint/no-unsafe-assignment',
     },
     {
       pattern: /@typescript-eslint\/no-unsafe-member-access/g,
-      replacement: '@typescript-eslint/no-unsafe-member-access'
+      replacement: '@typescript-eslint/no-unsafe-member-access',
     },
     {
       pattern: /@typescript-eslint\/no-unsafe-call/g,
-      replacement: '@typescript-eslint/no-unsafe-call'
+      replacement: '@typescript-eslint/no-unsafe-call',
     },
     {
       pattern: /@typescript-eslint\/no-unsafe-argument/g,
-      replacement: '@typescript-eslint/no-unsafe-argument'
+      replacement: '@typescript-eslint/no-unsafe-argument',
     },
     {
       pattern: /@typescript-eslint\/no-unsafe-return/g,
-      replacement: '@typescript-eslint/no-unsafe-return'
+      replacement: '@typescript-eslint/no-unsafe-return',
     },
     {
       pattern: /@typescript-eslint\/no-explicit-any/g,
-      replacement: '@typescript-eslint/no-explicit-any'
+      replacement: '@typescript-eslint/no-explicit-any',
     },
     {
       pattern: /@typescript-eslint\/no-unused-vars/g,
-      replacement: '@typescript-eslint/no-unused-vars'
-    }
+      replacement: '@typescript-eslint/no-unused-vars',
+    },
   ];
 
   // Update ESLint config to be less strict for now
   const eslintConfig = {
-    extends: [
-      'eslint:recommended',
-      '@typescript-eslint/recommended'
-    ],
+    extends: ['eslint:recommended', '@typescript-eslint/recommended'],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint', 'react', 'react-hooks', 'react-refresh'],
     rules: {
@@ -68,37 +65,40 @@ function fixTypeScriptIssues() {
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': 'warn',
-      'no-unused-vars': 'off'
+      'no-unused-vars': 'off',
     },
     env: {
       browser: true,
       es2021: true,
-      node: true
+      node: true,
     },
     parserOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
       ecmaFeatures: {
-        jsx: true
+        jsx: true,
       },
-      project: './tsconfig.json'
+      project: './tsconfig.json',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   };
 
   // Write updated ESLint config
-  fs.writeFileSync('.eslintrc.cjs', `module.exports = ${JSON.stringify(eslintConfig, null, 2)};`);
+  fs.writeFileSync(
+    '.eslintrc.cjs',
+    `module.exports = ${JSON.stringify(eslintConfig, null, 2)};`
+  );
   console.log('✅ Updated ESLint configuration');
 }
 
 // Function to fix specific file issues
 function fixSpecificFiles() {
   console.log('🔧 Fixing specific file issues...');
-  
+
   // Fix vitest.config.ts
   const vitestConfig = `import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
@@ -236,14 +236,13 @@ async function main() {
     fixTypeScriptIssues();
     fixSpecificFiles();
     runLintFix();
-    
+
     console.log('🎉 TypeScript and ESLint fixes completed!');
     console.log('📊 Running final build test...');
-    
+
     // Test build
     execSync('npm run build', { stdio: 'inherit' });
     console.log('✅ Build successful after fixes!');
-    
   } catch (error) {
     console.error('❌ Error during fixes:', error.message);
     process.exit(1);

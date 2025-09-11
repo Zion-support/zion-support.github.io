@@ -9,7 +9,10 @@ describe('Forgot Password Page', () => {
     // Intercept the API call and mock a successful response
     cy.intercept('POST', '/api/auth/forgot', {
       statusCode: 200,
-      body: { message: 'If your email address exists in our system, you will receive a password reset link.' },
+      body: {
+        message:
+          'If your email address exists in our system, you will receive a password reset link.',
+      },
     }).as('forgotPasswordRequest');
 
     // Find the email input, type an email, and submit the form
@@ -24,11 +27,15 @@ describe('Forgot Password Page', () => {
     cy.wait('@forgotPasswordRequest');
 
     // Verify the success message is displayed
-    cy.contains('If your email address is registered, you will receive a password reset link shortly.').should('be.visible');
+    cy.contains(
+      'If your email address is registered, you will receive a password reset link shortly.'
+    ).should('be.visible');
 
     // Verify the button is re-enabled
     cy.get('button[type="submit"]').should('not.be.disabled');
-    cy.get('button[type="submit"]').contains('Send Reset Link').should('be.visible');
+    cy.get('button[type="submit"]')
+      .contains('Send Reset Link')
+      .should('be.visible');
   });
 
   it('should display an error message if the email is not provided (HTML5 validation)', () => {
@@ -42,7 +49,6 @@ describe('Forgot Password Page', () => {
     // Often, just checking for the :invalid pseudo-class is sufficient for HTML5 validation.
   });
 
-
   it('handles server errors without uncaught exceptions', () => {
     const errorStub = cy.stub();
     cy.on('uncaught:exception', errorStub);
@@ -50,7 +56,9 @@ describe('Forgot Password Page', () => {
     // Intercept the API call and mock an error response
     cy.intercept('POST', '/api/auth/forgot', {
       statusCode: 500,
-      body: { message: 'An internal server error occurred. Please try again later.' }, // This is the generic message from our API
+      body: {
+        message: 'An internal server error occurred. Please try again later.',
+      }, // This is the generic message from our API
     }).as('forgotPasswordError');
 
     cy.get('input#email').type('error@example.com');
@@ -69,11 +77,15 @@ describe('Forgot Password Page', () => {
     // However, the component's catch block might use a more generic message if err.message is not specific enough for the user.
     // The component's code: setError(err.message || 'Failed to send reset link. Please try again.');
     // So, if the API returns a message in the body, that should be displayed.
-    cy.contains('An internal server error occurred. Please try again later.').should('be.visible');
+    cy.contains(
+      'An internal server error occurred. Please try again later.'
+    ).should('be.visible');
 
     // Verify the button is re-enabled
     cy.get('button[type="submit"]').should('not.be.disabled');
-    cy.get('button[type="submit"]').contains('Send Reset Link').should('be.visible');
+    cy.get('button[type="submit"]')
+      .contains('Send Reset Link')
+      .should('be.visible');
 
     cy.then(() => {
       void expect(errorStub).not.to.have.been.called;
@@ -92,7 +104,9 @@ describe('Forgot Password Page', () => {
     cy.wait('@forgotPasswordNetworkError');
 
     // The component should display its default error message
-    cy.contains('Failed to send reset link. Please try again.').should('be.visible');
+    cy.contains('Failed to send reset link. Please try again.').should(
+      'be.visible'
+    );
     cy.get('button[type="submit"]').should('not.be.disabled');
   });
 });

@@ -1,32 +1,35 @@
-import type { InnovativeAIService } from './innovative-ai-services'
+import type { InnovativeAIService } from './innovative-ai-services';
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const addedAIServices2025: InnovativeAIService[] = [
   {
     id: 'agentic-customer-support-suite',
     name: 'Agentic Customer Support Suite',
-    tagline: 'LLM agents that resolve tickets end-to-end with approvals and guardrails',
+    tagline:
+      'LLM agents that resolve tickets end-to-end with approvals and guardrails',
     price: '$1,499',
     period: '/month',
-    description: 'Deploys task-specific agents across email, chat, and voice that triage, resolve, and summarize tickets. Human-in-the-loop approvals for sensitive actions.',
+    description:
+      'Deploys task-specific agents across email, chat, and voice that triage, resolve, and summarize tickets. Human-in-the-loop approvals for sensitive actions.',
     features: [
       'Multi-channel ingestion',
       'Action tools and approvals',
       'Knowledge grounding with evals',
       'Conversation memory and handoff',
       'CSAT/NPS analytics',
-      'PII redaction and compliance'
+      'PII redaction and compliance',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-cyan-700 to-indigo-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/agentic-customer-support-suite',
-    marketPosition: 'Higher resolution rate vs. generic chatbots due to tool use and approvals',
+    marketPosition:
+      'Higher resolution rate vs. generic chatbots due to tool use and approvals',
     targetAudience: 'E-commerce, SaaS, marketplaces, fintech',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -42,11 +45,12 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'agents-managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Tool-using agents with policy checks, sandboxed actions, and audit logs',
+    implementationDetails:
+      'Tool-using agents with policy checks, sandboxed actions, and audit logs',
     launchDate: '2025-03-04',
     customers: 64,
     rating: 4.8,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'ai-governance-and-risk-suite',
@@ -54,20 +58,22 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Policies, evaluations, and monitoring for safe AI at scale',
     price: '$1,999',
     period: '/month',
-    description: 'Centralized policy management, dataset/model governance, automated red-team tests, and live monitoring to meet internal and regulatory standards.',
+    description:
+      'Centralized policy management, dataset/model governance, automated red-team tests, and live monitoring to meet internal and regulatory standards.',
     features: [
       'Policy as code',
       'Automated evals and red-teams',
       'Bias/toxicity/PII tests',
       'Incident response playbooks',
-      'Model cards and approvals'
+      'Model cards and approvals',
     ],
     popular: false,
     icon: '⚖️',
     color: 'from-fuchsia-600 to-rose-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/services/ai-governance-and-risk-suite',
-    marketPosition: 'Practical guardrails and reporting for CIO/CISO requirements',
+    marketPosition:
+      'Practical guardrails and reporting for CIO/CISO requirements',
     targetAudience: 'Enterprise compliance, security, and data leaders',
     trialDays: 7,
     setupTime: '3–5 weeks',
@@ -83,32 +89,36 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'governance-managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Scanner, eval orchestrator, and dashboards with export to auditors',
+    implementationDetails:
+      'Scanner, eval orchestrator, and dashboards with export to auditors',
     launchDate: '2025-02-12',
     customers: 19,
     rating: 4.7,
-    reviews: 17
+    reviews: 17,
   },
   {
     id: 'marketing-content-studio',
     name: 'AI Marketing Content Studio',
-    tagline: 'On-brand content at scale with approvals and performance insights',
+    tagline:
+      'On-brand content at scale with approvals and performance insights',
     price: '$899',
     period: '/month',
-    description: 'Generate, review, and publish multi-channel content (blog, email, social) with brand guardrails and SEO insights.',
+    description:
+      'Generate, review, and publish multi-channel content (blog, email, social) with brand guardrails and SEO insights.',
     features: [
       'Brand style and tone controls',
       'Briefs and outlines from keywords',
       'SEO scoring and interlinking',
       'Multi-channel scheduler',
-      'Performance analytics'
+      'Performance analytics',
     ],
     popular: true,
     icon: '📝',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-200',
     link: 'https://ziontechgroup.com/services/ai-marketing-content-studio',
-    marketPosition: 'Guardrailed, workflow-first vs. generic content generators',
+    marketPosition:
+      'Guardrailed, workflow-first vs. generic content generators',
     targetAudience: 'Content teams, agencies, founders',
     trialDays: 14,
     setupTime: '3 days',
@@ -124,11 +134,12 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'studio-managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Templates, evals, and approval gates with audit logs',
+    implementationDetails:
+      'Templates, evals, and approval gates with audit logs',
     launchDate: '2025-05-20',
     customers: 73,
     rating: 4.7,
-    reviews: 40
+    reviews: 40,
   },
   {
     id: 'agentic-sales-engineer',
@@ -136,20 +147,22 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Pre-sales technical answers, demos, and POC scaffolds 24/7',
     price: '$1,299',
     period: '/month',
-    description: 'An on-demand AI sales engineer that answers technical questions, drafts diagrams, and scaffolds demo projects with safe sandboxes.',
+    description:
+      'An on-demand AI sales engineer that answers technical questions, drafts diagrams, and scaffolds demo projects with safe sandboxes.',
     features: [
       'Docs/RFC grounding',
       'Code and architecture snippets',
       'Sandboxed demo projects',
       'Security/compliance answers with citations',
-      'Handoff to human SE'
+      'Handoff to human SE',
     ],
     popular: false,
     icon: '🧪',
     color: 'from-indigo-700 to-blue-800',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/agentic-sales-engineer',
-    marketPosition: 'Bridges marketing and engineering with safe, useful outputs',
+    marketPosition:
+      'Bridges marketing and engineering with safe, useful outputs',
     targetAudience: 'Developer tools, B2B SaaS',
     trialDays: 7,
     setupTime: '1–2 weeks',
@@ -165,11 +178,12 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'agent-se',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Policy tools, sandboxed code execution, artifact export',
+    implementationDetails:
+      'Policy tools, sandboxed code execution, artifact export',
     launchDate: '2025-06-03',
     customers: 21,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-fraud-detection-workbench',
@@ -177,13 +191,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Detect anomalous behavior with explainable alerts and playbooks',
     price: '$2,499',
     period: '/month',
-    description: 'Streaming anomaly detection with feature stores, human-in-the-loop investigations, and action playbooks.',
+    description:
+      'Streaming anomaly detection with feature stores, human-in-the-loop investigations, and action playbooks.',
     features: [
       'Feature store and embeddings',
       'Streaming inference and alerts',
       'Case management',
       'Explainability and scorecards',
-      'Auto-remediation playbooks'
+      'Auto-remediation playbooks',
     ],
     popular: true,
     icon: '🕵️',
@@ -206,11 +221,12 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'risk-managed',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Feature pipelines, real-time scoring, case UI, actions',
+    implementationDetails:
+      'Feature pipelines, real-time scoring, case UI, actions',
     launchDate: '2025-06-11',
     customers: 11,
     rating: 4.7,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'agentic-finops-optimizer',
@@ -218,13 +234,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Autonomously rightsizes cloud resources with approvals',
     price: '$1,299',
     period: '/month',
-    description: 'Finds idle/overprovisioned resources, proposes savings, and executes cost actions with human approvals and rollback.',
+    description:
+      'Finds idle/overprovisioned resources, proposes savings, and executes cost actions with human approvals and rollback.',
     features: [
       'Idle/overprovision detection',
       'Savings plan recommendations',
       'Change tickets and approvals',
       'Rollback and drift checks',
-      'Savings dashboards'
+      'Savings dashboards',
     ],
     popular: true,
     icon: '💸',
@@ -251,7 +268,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-08',
     customers: 23,
     rating: 4.8,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'r-d-tooling-copilot',
@@ -259,20 +276,22 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Internal dev copilot with secure codebase grounding and actions',
     price: '$1,799',
     period: '/month',
-    description: 'Private, org-tuned coding assistant grounded on repos, RFCs, and incidents with safe tool use for refactors and runbooks.',
+    description:
+      'Private, org-tuned coding assistant grounded on repos, RFCs, and incidents with safe tool use for refactors and runbooks.',
     features: [
       'Repo-aware Q&A and snippets',
       'Refactor and test scaffolding',
       'Incident-aware suggestions',
       'Security policies and filters',
-      'IDE and chat integrations'
+      'IDE and chat integrations',
     ],
     popular: false,
     icon: '🧰',
     color: 'from-indigo-700 to-slate-800',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/r-d-tooling-copilot',
-    marketPosition: 'Safer than generic copilots with org context and guardrails',
+    marketPosition:
+      'Safer than generic copilots with org context and guardrails',
     targetAudience: 'Platform and product engineering teams',
     trialDays: 7,
     setupTime: '2–3 weeks',
@@ -292,7 +311,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-05',
     customers: 17,
     rating: 4.6,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'agentic-hr-recruiting-suite',
@@ -300,13 +319,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Source, screen, and schedule with bias-aware guardrails',
     price: '$1,099',
     period: '/month',
-    description: 'Multi-source candidate discovery, structured screening with explainable scores, and automated scheduling with hiring manager feedback loops.',
+    description:
+      'Multi-source candidate discovery, structured screening with explainable scores, and automated scheduling with hiring manager feedback loops.',
     features: [
       'Multi-site sourcing and enrichment',
       'Structured interviews with rubrics',
       'Bias checks and score explanations',
       'Auto scheduling and reminders',
-      'Offer letter drafting'
+      'Offer letter drafting',
     ],
     popular: true,
     icon: '🧑‍💼',
@@ -333,7 +353,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-13',
     customers: 31,
     rating: 4.7,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'agentic-ops-runbook-engine',
@@ -341,13 +361,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Execute runbooks with approvals, rollbacks, and observability',
     price: '$1,399',
     period: '/month',
-    description: 'Turns docs and tickets into executable, safe runbooks with approvals and automated rollback tied to SLOs and alerts.',
+    description:
+      'Turns docs and tickets into executable, safe runbooks with approvals and automated rollback tied to SLOs and alerts.',
     features: [
       'Doc-to-runbook compiler',
       'Guardrails and approvers',
       'Rollback and blast-radius checks',
       'SLO/SLA awareness',
-      'Post-incident summaries'
+      'Post-incident summaries',
     ],
     popular: true,
     icon: '🛠️',
@@ -374,7 +395,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-16',
     customers: 22,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'agentic-revenue-forecasting-studio',
@@ -382,13 +403,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Blend ML forecasts with scenario planning and explainability',
     price: '$1,699',
     period: '/month',
-    description: 'Unified forecasting for pipeline, retention, and costs with what-if scenarios and plan deltas explained in plain English.',
+    description:
+      'Unified forecasting for pipeline, retention, and costs with what-if scenarios and plan deltas explained in plain English.',
     features: [
       'Cohort-based forecasts',
       'Scenario planner with drivers',
       'Explainability and deltas',
       'CSV/BI exports',
-      'Approval workflows'
+      'Approval workflows',
     ],
     popular: false,
     icon: '📈',
@@ -415,7 +437,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-17',
     customers: 16,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'agentic-supply-chain-copilot',
@@ -423,13 +445,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Continuously optimize inventory and logistics with live signals',
     price: '$1,499',
     period: '/month',
-    description: 'Combines demand forecasting, supplier risk, and route optimization into agent actions with approvals and alerts.',
+    description:
+      'Combines demand forecasting, supplier risk, and route optimization into agent actions with approvals and alerts.',
     features: [
       'Demand and lead-time forecasts',
       'Supplier risk signals',
       'Route optimization',
       'Exception detection',
-      'Actionable alerts'
+      'Actionable alerts',
     ],
     popular: true,
     icon: '🚚',
@@ -456,21 +479,23 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-12',
     customers: 19,
     rating: 4.7,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
-    tagline: 'Answers technical questions, drafts diagrams, and builds demo scaffolds 24/7',
+    tagline:
+      'Answers technical questions, drafts diagrams, and builds demo scaffolds 24/7',
     price: '$1,299',
     period: '/month',
-    description: 'A tool-using agent that understands your product, answers RFP questions, creates architecture diagrams, and scaffolds demo repos for prospects.',
+    description:
+      'A tool-using agent that understands your product, answers RFP questions, creates architecture diagrams, and scaffolds demo repos for prospects.',
     features: [
       'Docs + code grounding',
       'Diagram generation',
       'Demo repo scaffolding',
       'Slack/Email handoff',
-      'Analytics and feedback loops'
+      'Analytics and feedback loops',
     ],
     popular: true,
     icon: '🧩',
@@ -493,25 +518,28 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Knowledge ingestion, agent tools, repo templates, export to PDF',
+    implementationDetails:
+      'Knowledge ingestion, agent tools, repo templates, export to PDF',
     launchDate: '2025-05-22',
     customers: 31,
     rating: 4.7,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ai-marketing-content-studio',
     name: 'AI Marketing Content Studio',
-    tagline: 'On-brand content at scale with SEO briefs, approvals, and analytics',
+    tagline:
+      'On-brand content at scale with SEO briefs, approvals, and analytics',
     price: '$899',
     period: '/month',
-    description: 'Generates on-brand content with competitive research, SEO brief generation, editorial calendars, and publishing workflows.',
+    description:
+      'Generates on-brand content with competitive research, SEO brief generation, editorial calendars, and publishing workflows.',
     features: [
       'Brand voice tuning',
       'Keyword and SERP analysis',
       'Content calendar planning',
       'Editor approvals and versioning',
-      'Performance analytics'
+      'Performance analytics',
     ],
     popular: true,
     icon: '✍️',
@@ -534,25 +562,28 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'marketing-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Brief generator, content drafts, review queues, publish connectors',
+    implementationDetails:
+      'Brief generator, content drafts, review queues, publish connectors',
     launchDate: '2025-04-28',
     customers: 76,
     rating: 4.6,
-    reviews: 44
+    reviews: 44,
   },
   {
     id: 'risk-and-compliance-copilot',
     name: 'Risk & Compliance Copilot',
-    tagline: 'Continuously assess AI risks, map controls, and generate audit evidence',
+    tagline:
+      'Continuously assess AI risks, map controls, and generate audit evidence',
     price: '$1,799',
     period: '/month',
-    description: 'Maps AI systems to risk frameworks, tracks controls, runs automated tests, and compiles audit packs for internal/external reviews.',
+    description:
+      'Maps AI systems to risk frameworks, tracks controls, runs automated tests, and compiles audit packs for internal/external reviews.',
     features: [
       'Control mapping to NIST/ISO/EU AI Act',
       'Automated eval runs and reports',
       'Evidence collection and storage',
       'Findings triage and assignments',
-      'Audit pack generation'
+      'Audit pack generation',
     ],
     popular: false,
     icon: '🧭',
@@ -575,11 +606,12 @@ export const addedAIServices2025: InnovativeAIService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'System registry, test runners, evidence store, reporting',
+    implementationDetails:
+      'System registry, test runners, evidence store, reporting',
     launchDate: '2025-05-30',
     customers: 19,
     rating: 4.8,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'autonomous-analytics-briefs',
@@ -587,13 +619,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Weekly plain-English insights from your data warehouse',
     price: '$1,099',
     period: '/month',
-    description: 'Connects to your warehouse and BI models to generate concise weekly briefs, anomalies, and recommended actions for business owners.',
+    description:
+      'Connects to your warehouse and BI models to generate concise weekly briefs, anomalies, and recommended actions for business owners.',
     features: [
       'KPI tracker and deltas',
       'Anomaly detection and root-cause hints',
       'Segment drilldowns',
       'Action recommendations',
-      'Email/Slack delivery with charts'
+      'Email/Slack delivery with charts',
     ],
     popular: true,
     icon: '📈',
@@ -620,7 +653,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-22',
     customers: 25,
     rating: 4.7,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'agentic-qa-and-test-writer',
@@ -628,13 +661,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Writes and maintains unit/e2e tests with CI integration',
     price: '$1,299',
     period: '/month',
-    description: 'Code-aware agent that proposes and updates tests, fixes flaky tests, and annotates PRs with coverage and risk notes.',
+    description:
+      'Code-aware agent that proposes and updates tests, fixes flaky tests, and annotates PRs with coverage and risk notes.',
     features: [
       'Repo-aware reasoning',
       'Test scaffolding and refactors',
       'Flake detection and fixes',
       'Coverage insights on PRs',
-      'CI integration'
+      'CI integration',
     ],
     popular: false,
     icon: '🧪',
@@ -661,7 +695,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-21',
     customers: 12,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-data-contracts-assistant',
@@ -669,13 +703,14 @@ export const addedAIServices2025: InnovativeAIService[] = [
     tagline: 'Defines, validates, and enforces data contracts with owners',
     price: '$1,499',
     period: '/month',
-    description: 'Schema and SLAs as contracts with validation, owner routing, and change management integrated with CI and catalogs.',
+    description:
+      'Schema and SLAs as contracts with validation, owner routing, and change management integrated with CI and catalogs.',
     features: [
       'Contract templates and registry',
       'Schema/SLI validation in CI',
       'Owner routing and SLAs',
       'Breaking change detection',
-      'Catalog and lineage sync'
+      'Catalog and lineage sync',
     ],
     popular: true,
     icon: '📜',
@@ -702,6 +737,6 @@ export const addedAIServices2025: InnovativeAIService[] = [
     launchDate: '2025-06-23',
     customers: 10,
     rating: 4.7,
-    reviews: 6
-  }
-]
+    reviews: 6,
+  },
+];

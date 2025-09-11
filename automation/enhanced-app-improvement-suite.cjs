@@ -17,14 +17,15 @@ class EnhancedAppImprovementSuite {
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const prefix = {
-      info: 'ℹ️',
-      success: '✅',
-      error: '❌',
-      warning: '⚠️',
-      progress: '🔄'
-    }[type] || 'ℹ️';
-    
+    const prefix =
+      {
+        info: 'ℹ️',
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        progress: '🔄',
+      }[type] || 'ℹ️';
+
     console.log(`[${timestamp}] ${prefix} ${message}`);
   }
 
@@ -32,10 +33,10 @@ class EnhancedAppImprovementSuite {
     try {
       this.log(`Running: ${description}`, 'progress');
       const startTime = Date.now();
-      const result = execSync(command, { 
-        cwd: this.projectRoot, 
+      const result = execSync(command, {
+        cwd: this.projectRoot,
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       const duration = Date.now() - startTime;
       this.log(`Completed: ${description} (${duration}ms)`, 'success');
@@ -49,7 +50,7 @@ class EnhancedAppImprovementSuite {
 
   async optimizeImages() {
     this.log('Starting image optimization...', 'progress');
-    
+
     try {
       // Create image optimization script if it doesn't exist
       const imageOptimizerScript = `
@@ -83,18 +84,21 @@ async function optimizeImages() {
 
 optimizeImages().catch(console.error);
 `;
-      
+
       fs.writeFileSync('scripts/optimize-images.cjs', imageOptimizerScript);
-      
+
       // Run image optimization
-      await this.runCommand('node scripts/optimize-images.cjs', 'Image optimization');
-      
+      await this.runCommand(
+        'node scripts/optimize-images.cjs',
+        'Image optimization'
+      );
+
       this.improvements.push({
         type: 'image-optimization',
         success: true,
-        description: 'Optimized images for better performance'
+        description: 'Optimized images for better performance',
       });
-      
+
       this.log('Image optimization completed', 'success');
     } catch (error) {
       this.log('Image optimization failed', 'error');
@@ -102,14 +106,14 @@ optimizeImages().catch(console.error);
         type: 'image-optimization',
         success: false,
         description: 'Failed to optimize images',
-        error: error.message
+        error: error.message,
       });
     }
   }
 
   async optimizeBundle() {
     this.log('Starting bundle optimization...', 'progress');
-    
+
     try {
       // Create bundle analyzer script
       const bundleAnalyzerScript = `
@@ -146,18 +150,21 @@ async function analyzeBundle() {
 
 analyzeBundle();
 `;
-      
+
       fs.writeFileSync('scripts/analyze-bundle.cjs', bundleAnalyzerScript);
-      
+
       // Run bundle analysis
-      await this.runCommand('node scripts/analyze-bundle.cjs', 'Bundle analysis');
-      
+      await this.runCommand(
+        'node scripts/analyze-bundle.cjs',
+        'Bundle analysis'
+      );
+
       this.improvements.push({
         type: 'bundle-optimization',
         success: true,
-        description: 'Analyzed and optimized bundle size'
+        description: 'Analyzed and optimized bundle size',
       });
-      
+
       this.log('Bundle optimization completed', 'success');
     } catch (error) {
       this.log('Bundle optimization failed', 'error');
@@ -165,14 +172,14 @@ analyzeBundle();
         type: 'bundle-optimization',
         success: false,
         description: 'Failed to optimize bundle',
-        error: error.message
+        error: error.message,
       });
     }
   }
 
   async improveSEO() {
     this.log('Starting SEO improvements...', 'progress');
-    
+
     try {
       // Create sitemap generator
       const sitemapGenerator = `
@@ -208,27 +215,30 @@ function generateSitemap() {
 
 generateSitemap();
 `;
-      
+
       fs.writeFileSync('scripts/generate-sitemap.cjs', sitemapGenerator);
-      
+
       // Generate sitemap
-      await this.runCommand('node scripts/generate-sitemap.cjs', 'Sitemap generation');
-      
+      await this.runCommand(
+        'node scripts/generate-sitemap.cjs',
+        'Sitemap generation'
+      );
+
       // Create robots.txt
       const robotsTxt = `User-agent: *
 Allow: /
 
 Sitemap: https://zion.app/sitemap.xml
 `;
-      
+
       fs.writeFileSync('public/robots.txt', robotsTxt);
-      
+
       this.improvements.push({
         type: 'seo-optimization',
         success: true,
-        description: 'Generated sitemap and robots.txt'
+        description: 'Generated sitemap and robots.txt',
       });
-      
+
       this.log('SEO improvements completed', 'success');
     } catch (error) {
       this.log('SEO improvements failed', 'error');
@@ -236,14 +246,14 @@ Sitemap: https://zion.app/sitemap.xml
         type: 'seo-optimization',
         success: false,
         description: 'Failed to improve SEO',
-        error: error.message
+        error: error.message,
       });
     }
   }
 
   async improveAccessibility() {
     this.log('Starting accessibility improvements...', 'progress');
-    
+
     try {
       // Create accessibility checker
       const accessibilityChecker = `
@@ -311,18 +321,21 @@ function findFiles(dir, ext) {
 
 checkAccessibility();
 `;
-      
+
       fs.writeFileSync('scripts/check-accessibility.cjs', accessibilityChecker);
-      
+
       // Run accessibility check
-      await this.runCommand('node scripts/check-accessibility.cjs', 'Accessibility check');
-      
+      await this.runCommand(
+        'node scripts/check-accessibility.cjs',
+        'Accessibility check'
+      );
+
       this.improvements.push({
         type: 'accessibility-improvement',
         success: true,
-        description: 'Checked and improved accessibility'
+        description: 'Checked and improved accessibility',
       });
-      
+
       this.log('Accessibility improvements completed', 'success');
     } catch (error) {
       this.log('Accessibility improvements failed', 'error');
@@ -330,14 +343,14 @@ checkAccessibility();
         type: 'accessibility-improvement',
         success: false,
         description: 'Failed to improve accessibility',
-        error: error.message
+        error: error.message,
       });
     }
   }
 
   async improvePerformance() {
     this.log('Starting performance improvements...', 'progress');
-    
+
     try {
       // Create performance optimizer
       const performanceOptimizer = `
@@ -413,18 +426,24 @@ function findUnusedClasses(cssContent) {
 
 optimizePerformance();
 `;
-      
-      fs.writeFileSync('scripts/optimize-performance.cjs', performanceOptimizer);
-      
+
+      fs.writeFileSync(
+        'scripts/optimize-performance.cjs',
+        performanceOptimizer
+      );
+
       // Run performance optimization
-      await this.runCommand('node scripts/optimize-performance.cjs', 'Performance optimization');
-      
+      await this.runCommand(
+        'node scripts/optimize-performance.cjs',
+        'Performance optimization'
+      );
+
       this.improvements.push({
         type: 'performance-optimization',
         success: true,
-        description: 'Optimized performance'
+        description: 'Optimized performance',
       });
-      
+
       this.log('Performance improvements completed', 'success');
     } catch (error) {
       this.log('Performance improvements failed', 'error');
@@ -432,7 +451,7 @@ optimizePerformance();
         type: 'performance-optimization',
         success: false,
         description: 'Failed to improve performance',
-        error: error.message
+        error: error.message,
       });
     }
   }
@@ -440,7 +459,7 @@ optimizePerformance();
   async generateReport() {
     const endTime = new Date();
     const totalDuration = endTime - this.startTime;
-    
+
     const report = {
       timestamp: endTime.toISOString(),
       totalDuration,
@@ -448,8 +467,8 @@ optimizePerformance();
       summary: {
         totalImprovements: this.improvements.length,
         successfulImprovements: this.improvements.filter(i => i.success).length,
-        failedImprovements: this.improvements.filter(i => !i.success).length
-      }
+        failedImprovements: this.improvements.filter(i => !i.success).length,
+      },
     };
 
     // Ensure reports directory exists
@@ -459,31 +478,40 @@ optimizePerformance();
     }
 
     // Save report
-    const reportPath = path.join(reportsDir, 'enhanced-app-improvement-report.json');
+    const reportPath = path.join(
+      reportsDir,
+      'enhanced-app-improvement-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     this.log(`Report saved to: ${reportPath}`, 'success');
     return report;
   }
 
   async run() {
     this.log('🚀 Starting Enhanced App Improvement Suite...', 'info');
-    
+
     try {
       await this.optimizeImages();
       await this.optimizeBundle();
       await this.improveSEO();
       await this.improveAccessibility();
       await this.improvePerformance();
-      
+
       const report = await this.generateReport();
-      
+
       this.log('🎉 Enhanced App Improvement Suite completed!', 'success');
-      this.log(`📊 Summary: ${report.summary.successfulImprovements}/${report.summary.totalImprovements} improvements successful`, 'info');
-      
+      this.log(
+        `📊 Summary: ${report.summary.successfulImprovements}/${report.summary.totalImprovements} improvements successful`,
+        'info'
+      );
+
       return report;
     } catch (error) {
-      this.log(`💥 Enhanced App Improvement Suite failed: ${error.message}`, 'error');
+      this.log(
+        `💥 Enhanced App Improvement Suite failed: ${error.message}`,
+        'error'
+      );
       throw error;
     }
   }

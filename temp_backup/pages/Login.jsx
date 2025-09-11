@@ -30,7 +30,8 @@ export default function Login() {
 
   useEffect(() => {
     // This effect handles navigation and actions AFTER authentication state is known
-    if (isLoading) { // Don't do anything while auth state is loading
+    if (isLoading) {
+      // Don't do anything while auth state is loading
       return;
     }
 
@@ -46,25 +47,40 @@ export default function Login() {
         const pathSegments = pathBeforeQuery.split('/');
         const productId = pathSegments[pathSegments.length - 1];
 
-        const product = productId && SAMPLE_EQUIPMENT[productId] ? SAMPLE_EQUIPMENT[productId] : null;
+        const product =
+          productId && SAMPLE_EQUIPMENT[productId]
+            ? SAMPLE_EQUIPMENT[productId]
+            : null;
 
         if (product) {
           dispatch({
             type: 'ADD_ITEM',
-            payload: { id: product.id, name: product.name, price: product.price, quantity: 1 }
+            payload: {
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              quantity: 1,
+            },
           });
           toast.success(`${product.name} added to cart!`);
           // Clear relevant query params before navigating to cart
           params.delete('next');
           params.delete('msg');
           const queryString = params.toString();
-          navigate(`/cart${queryString ? '?' + queryString : ''}`, { replace: true });
+          navigate(`/cart${queryString ? '?' + queryString : ''}`, {
+            replace: true,
+          });
         } else {
-          toast.error('Item details not found for cart. Redirecting to original page.');
+          toast.error(
+            'Item details not found for cart. Redirecting to original page.'
+          );
           // Clear our specific message before navigating
           params.delete('msg');
           const queryString = params.toString();
-          navigate(nextUrl.split('?')[0] + `${queryString ? '?' + queryString : ''}` , { replace: true });
+          navigate(
+            nextUrl.split('?')[0] + `${queryString ? '?' + queryString : ''}`,
+            { replace: true }
+          );
         }
       } else if (nextUrl) {
         navigate(nextUrl, { replace: true });
@@ -76,20 +92,28 @@ export default function Login() {
       }
     }
     // If not authenticated and not loading, LoginContent will be rendered.
-  }, [isAuthenticated, user, isLoading, navigate, dispatch, location.search, location.pathname]);
+  }, [
+    isAuthenticated,
+    user,
+    isLoading,
+    navigate,
+    dispatch,
+    location.search,
+    location.pathname,
+  ]);
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
-      <ErrorBoundary fallbackRender={(error) => (
-        <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>
-          <h1>Login Error</h1>
-          <p>Sorry, the login form could not be displayed due to an error.</p>
-          {process.env.NODE_ENV === 'development' && (
-            <pre>{error.stack}</pre>
-          )}
-        </div>
-      )}>
+      <ErrorBoundary
+        fallbackRender={error => (
+          <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>
+            <h1>Login Error</h1>
+            <p>Sorry, the login form could not be displayed due to an error.</p>
+            {process.env.NODE_ENV === 'development' && <pre>{error.stack}</pre>}
+          </div>
+        )}
+      >
         <LoginContent />
       </ErrorBoundary>
     );

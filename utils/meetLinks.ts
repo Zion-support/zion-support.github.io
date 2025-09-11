@@ -1,7 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export function generateZoomLink(): string {
-  const meetingId = Math.floor(100000000 + Math.random() * 900000000).toString();
+  const meetingId = Math.floor(
+    100000000 + Math.random() * 900000000
+  ).toString();
   return `https://zoom.us/j/${meetingId}`;
 }
 

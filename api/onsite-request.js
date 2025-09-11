@@ -31,7 +31,9 @@ const handler = async (req, res) => {
     });
 
     if (response.ok) {
-      res.status(200).json({ success: true, message: 'Request submitted successfully' });
+      res
+        .status(200)
+        .json({ success: true, message: 'Request submitted successfully' });
     } else {
       res.status(500).json({ error: 'Failed to submit request' });
     }

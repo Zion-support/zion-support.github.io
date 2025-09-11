@@ -5,7 +5,7 @@ const fs = require('fs');
 // Check if the file path is provided
 if (process.argv.length < 3) {
   console.error(
-    'Usage: node extractFailingCode.js <path_to_eslint_report.json>',
+    'Usage: node extractFailingCode.js <path_to_eslint_report.json>'
   );
   process.exit(1);
 }

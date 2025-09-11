@@ -17,15 +17,39 @@ export function startSystemMonitor() {
       const loadPerCore = load1 / cpuCores; // ~1.0 means fully loaded per core
 
       if (usedMemPct > 90) {
-        addAlert({ type: 'memory', level: 'critical', message: `High memory usage: ${usedMemPct.toFixed(1)}%`, value: usedMemPct, ts: Date.now() });
+        addAlert({
+          type: 'memory',
+          level: 'critical',
+          message: `High memory usage: ${usedMemPct.toFixed(1)}%`,
+          value: usedMemPct,
+          ts: Date.now(),
+        });
       } else if (usedMemPct > 80) {
-        addAlert({ type: 'memory', level: 'warning', message: `Elevated memory usage: ${usedMemPct.toFixed(1)}%`, value: usedMemPct, ts: Date.now() });
+        addAlert({
+          type: 'memory',
+          level: 'warning',
+          message: `Elevated memory usage: ${usedMemPct.toFixed(1)}%`,
+          value: usedMemPct,
+          ts: Date.now(),
+        });
       }
 
       if (loadPerCore > 1.5) {
-        addAlert({ type: 'cpu', level: 'critical', message: `High CPU load per core: ${loadPerCore.toFixed(2)}`, value: loadPerCore, ts: Date.now() });
+        addAlert({
+          type: 'cpu',
+          level: 'critical',
+          message: `High CPU load per core: ${loadPerCore.toFixed(2)}`,
+          value: loadPerCore,
+          ts: Date.now(),
+        });
       } else if (loadPerCore > 1.0) {
-        addAlert({ type: 'cpu', level: 'warning', message: `Elevated CPU load per core: ${loadPerCore.toFixed(2)}`, value: loadPerCore, ts: Date.now() });
+        addAlert({
+          type: 'cpu',
+          level: 'warning',
+          message: `Elevated CPU load per core: ${loadPerCore.toFixed(2)}`,
+          value: loadPerCore,
+          ts: Date.now(),
+        });
       }
 
       // Network monitoring placeholder; integrate Datadog or system-level metrics collectors for real data.

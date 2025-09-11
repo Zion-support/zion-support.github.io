@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
@@ -14,7 +14,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Advanced AI-powered content creation and optimization',
     price: '$299',
     period: '/month',
-    description: 'Revolutionary AI content generator that creates high-quality, engaging content for blogs, social media, marketing materials, and more. Includes SEO optimization, brand voice customization, and multi-language support.',
+    description:
+      'Revolutionary AI content generator that creates high-quality, engaging content for blogs, social media, marketing materials, and more. Includes SEO optimization, brand voice customization, and multi-language support.',
     features: [
       'AI-powered content creation',
       'SEO optimization',
@@ -23,7 +24,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Content templates library',
       'Plagiarism detection',
       'Performance analytics',
-      'Collaboration tools'
+      'Collaboration tools',
     ],
     popular: true,
     icon: '✍️',
@@ -38,7 +39,9 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     realService: true,
     technology: ['AI, NLP, Machine Learning, SEO Optimization'],
     integrations: ['WordPress, Shopify, HubSpot, Social media platforms'],
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'],
+    useCases: [
+      'Blog writing, Social media content, Marketing copy, Product descriptions',
+    ],
     roi: 'Increase content production by 500%',
     competitors: ['Jasper, Copy.ai, Writesonic'],
     marketSize: '$45B AI content creation market',
@@ -46,11 +49,12 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI content generation platform with SEO tools',
+    implementationDetails:
+      'Complete AI content generation platform with SEO tools',
     launchDate: '2026-01-01',
     customers: 120,
     rating: 4.8,
-    reviews: 85
+    reviews: 85,
   },
   {
     id: 'ai-code-review',
@@ -58,7 +62,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent code review and quality assurance',
     price: '$199',
     period: '/month',
-    description: 'Advanced AI-powered code review platform that automatically analyzes code quality, identifies bugs, suggests improvements, and ensures coding standards compliance. Supports multiple programming languages.',
+    description:
+      'Advanced AI-powered code review platform that automatically analyzes code quality, identifies bugs, suggests improvements, and ensures coding standards compliance. Supports multiple programming languages.',
     features: [
       'Automated code analysis',
       'Bug detection and suggestions',
@@ -67,7 +72,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Performance optimization tips',
       'Coding standards compliance',
       'Multi-language support',
-      'Integration with Git workflows'
+      'Integration with Git workflows',
     ],
     popular: true,
     icon: '🔍',
@@ -75,14 +80,17 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/ai-code-review',
     marketPosition: 'Advanced AI code review platform',
-    targetAudience: 'Developers, Software teams, Code review managers, QA engineers',
+    targetAudience:
+      'Developers, Software teams, Code review managers, QA engineers',
     trialDays: 14,
     setupTime: '1 day',
     category: 'AI & Development',
     realService: true,
     technology: ['AI, Static Analysis, Machine Learning, Code Quality'],
     integrations: ['GitHub, GitLab, Bitbucket, VS Code, IntelliJ'],
-    useCases: ['Code quality assurance, Bug prevention, Security scanning, Performance optimization'],
+    useCases: [
+      'Code quality assurance, Bug prevention, Security scanning, Performance optimization',
+    ],
     roi: 'Reduce code review time by 70%',
     competitors: ['SonarQube, CodeClimate, DeepCode'],
     marketSize: '$35B code quality market',
@@ -90,11 +98,12 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI code review platform with quality tools',
+    implementationDetails:
+      'Complete AI code review platform with quality tools',
     launchDate: '2026-01-01',
     customers: 95,
     rating: 4.7,
-    reviews: 68
+    reviews: 68,
   },
   {
     id: 'ai-financial-planning-platform',
@@ -102,7 +111,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent financial planning and investment optimization',
     price: '$399',
     period: '/month',
-    description: 'Revolutionary AI-powered financial planning platform that provides personalized financial advice, investment recommendations, and retirement planning. Uses advanced algorithms to optimize financial strategies.',
+    description:
+      'Revolutionary AI-powered financial planning platform that provides personalized financial advice, investment recommendations, and retirement planning. Uses advanced algorithms to optimize financial strategies.',
     features: [
       'Personalized financial planning',
       'Investment portfolio optimization',
@@ -111,7 +121,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Tax optimization strategies',
       'Goal tracking and monitoring',
       'Financial education resources',
-      'Integration with financial accounts'
+      'Integration with financial accounts',
     ],
     popular: true,
     icon: '📊',
@@ -119,14 +129,17 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     textColor: 'text-yellow-300',
     link: 'https://ziontechgroup.com/services/ai-financial-planning-platform',
     marketPosition: 'Advanced AI financial planning platform',
-    targetAudience: 'Individuals, Financial advisors, Small businesses, Financial planners',
+    targetAudience:
+      'Individuals, Financial advisors, Small businesses, Financial planners',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI & Financial Services',
     realService: true,
     technology: ['AI, Machine Learning, Financial Modeling, Risk Analysis'],
     integrations: ['Plaid, Yodlee, Financial institutions, Tax software'],
-    useCases: ['Personal financial planning, Investment optimization, Retirement planning, Tax planning'],
+    useCases: [
+      'Personal financial planning, Investment optimization, Retirement planning, Tax planning',
+    ],
     roi: 'Improve investment returns by 25%',
     competitors: ['Betterment, Wealthfront, Personal Capital'],
     marketSize: '$60B financial planning market',
@@ -134,11 +147,12 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'finance-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI financial planning platform with investment tools',
+    implementationDetails:
+      'Complete AI financial planning platform with investment tools',
     launchDate: '2026-01-15',
     customers: 75,
     rating: 4.8,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'ai-hr-analytics-platform',
@@ -146,7 +160,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent HR analytics and workforce optimization',
     price: '$549',
     period: '/month',
-    description: 'Advanced AI-powered HR analytics platform that provides insights into employee performance, engagement, retention, and workforce planning. Uses predictive analytics to optimize HR strategies.',
+    description:
+      'Advanced AI-powered HR analytics platform that provides insights into employee performance, engagement, retention, and workforce planning. Uses predictive analytics to optimize HR strategies.',
     features: [
       'Employee performance analytics',
       'Engagement and satisfaction tracking',
@@ -155,7 +170,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Recruitment optimization',
       'Diversity and inclusion analytics',
       'Compliance monitoring',
-      'Predictive HR insights'
+      'Predictive HR insights',
     ],
     popular: true,
     icon: '👥',
@@ -163,14 +178,17 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-hr-analytics-platform',
     marketPosition: 'Advanced AI HR analytics platform',
-    targetAudience: 'HR departments, Recruiters, Business leaders, HR consultants',
+    targetAudience:
+      'HR departments, Recruiters, Business leaders, HR consultants',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI & Human Resources',
     realService: true,
     technology: ['AI, Machine Learning, Predictive Analytics, HR Analytics'],
     integrations: ['Workday, BambooHR, ADP, Greenhouse'],
-    useCases: ['Employee analytics, Retention optimization, Recruitment improvement, Workforce planning'],
+    useCases: [
+      'Employee analytics, Retention optimization, Recruitment improvement, Workforce planning',
+    ],
     roi: 'Reduce employee turnover by 30%',
     competitors: ['Visier, Tableau, Power BI'],
     marketSize: '$50B HR analytics market',
@@ -178,11 +196,12 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'hr-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI HR analytics platform with predictive tools',
+    implementationDetails:
+      'Complete AI HR analytics platform with predictive tools',
     launchDate: '2026-01-20',
     customers: 65,
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-supply-chain-optimization',
@@ -190,7 +209,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent supply chain optimization and management',
     price: '$799',
     period: '/month',
-    description: 'Revolutionary AI-powered supply chain optimization platform that optimizes inventory management, demand forecasting, and logistics operations. Reduces costs and improves efficiency across the supply chain.',
+    description:
+      'Revolutionary AI-powered supply chain optimization platform that optimizes inventory management, demand forecasting, and logistics operations. Reduces costs and improves efficiency across the supply chain.',
     features: [
       'Demand forecasting optimization',
       'Inventory management automation',
@@ -199,7 +219,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Risk assessment and mitigation',
       'Cost optimization analysis',
       'Real-time supply chain monitoring',
-      'Predictive analytics dashboard'
+      'Predictive analytics dashboard',
     ],
     popular: true,
     icon: '🚚',
@@ -212,9 +232,13 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Supply Chain',
     realService: true,
-    technology: ['AI, Machine Learning, Optimization Algorithms, Supply Chain Analytics'],
+    technology: [
+      'AI, Machine Learning, Optimization Algorithms, Supply Chain Analytics',
+    ],
     integrations: ['SAP, Oracle, NetSuite, ERP systems'],
-    useCases: ['Inventory optimization, Demand forecasting, Logistics optimization, Cost reduction'],
+    useCases: [
+      'Inventory optimization, Demand forecasting, Logistics optimization, Cost reduction',
+    ],
     roi: 'Reduce supply chain costs by 25%',
     competitors: ['Blue Yonder, Manhattan Associates, SAP IBP'],
     marketSize: '$80B supply chain optimization market',
@@ -226,7 +250,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     launchDate: '2026-02-01',
     customers: 45,
     rating: 4.6,
-    reviews: 32
+    reviews: 32,
   },
   {
     id: 'ai-project-management-platform',
@@ -234,7 +258,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent project management and team collaboration',
     price: '$449',
     period: '/month',
-    description: 'Advanced AI-powered project management platform that optimizes project planning, resource allocation, and team collaboration. Uses predictive analytics to identify risks and optimize project delivery.',
+    description:
+      'Advanced AI-powered project management platform that optimizes project planning, resource allocation, and team collaboration. Uses predictive analytics to identify risks and optimize project delivery.',
     features: [
       'AI-powered project planning',
       'Resource allocation optimization',
@@ -243,7 +268,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Progress tracking automation',
       'Performance analytics',
       'Integration with development tools',
-      'Predictive project insights'
+      'Predictive project insights',
     ],
     popular: true,
     icon: '📋',
@@ -251,14 +276,19 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/ai-project-management-platform',
     marketPosition: 'Advanced AI project management platform',
-    targetAudience: 'Project managers, Development teams, Agencies, Consultants',
+    targetAudience:
+      'Project managers, Development teams, Agencies, Consultants',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI & Project Management',
     realService: true,
-    technology: ['AI, Machine Learning, Project Management, Collaboration Tools'],
+    technology: [
+      'AI, Machine Learning, Project Management, Collaboration Tools',
+    ],
     integrations: ['Jira, Asana, Trello, Slack, Microsoft Teams'],
-    useCases: ['Project planning, Resource optimization, Risk management, Team collaboration'],
+    useCases: [
+      'Project planning, Resource optimization, Risk management, Team collaboration',
+    ],
     roi: 'Improve project delivery by 40%',
     competitors: ['Monday.com, Asana, ClickUp'],
     marketSize: '$55B project management market',
@@ -266,11 +296,12 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'project-management-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI project management platform with collaboration tools',
+    implementationDetails:
+      'Complete AI project management platform with collaboration tools',
     launchDate: '2026-01-15',
     customers: 85,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'ai-customer-support-platform',
@@ -278,7 +309,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent customer support and service automation',
     price: '$399',
     period: '/month',
-    description: 'Revolutionary AI-powered customer support platform that provides intelligent chatbots, automated ticket routing, and customer service optimization. Improves customer satisfaction and reduces support costs.',
+    description:
+      'Revolutionary AI-powered customer support platform that provides intelligent chatbots, automated ticket routing, and customer service optimization. Improves customer satisfaction and reduces support costs.',
     features: [
       'Intelligent chatbot automation',
       'Automated ticket routing',
@@ -287,7 +319,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'Performance analytics',
       'Multi-channel support',
       'Integration with CRM systems',
-      'Customer satisfaction tracking'
+      'Customer satisfaction tracking',
     ],
     popular: true,
     icon: '🎧',
@@ -295,14 +327,17 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/ai-customer-support-platform',
     marketPosition: 'Advanced AI customer support platform',
-    targetAudience: 'Customer service teams, E-commerce, SaaS companies, Support agencies',
+    targetAudience:
+      'Customer service teams, E-commerce, SaaS companies, Support agencies',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI & Customer Support',
     realService: true,
     technology: ['AI, NLP, Chatbot Technology, Customer Service Analytics'],
     integrations: ['Zendesk, Freshdesk, Intercom, Salesforce'],
-    useCases: ['Customer support automation, Ticket management, Chatbot implementation, Support optimization'],
+    useCases: [
+      'Customer support automation, Ticket management, Chatbot implementation, Support optimization',
+    ],
     roi: 'Reduce support costs by 50%',
     competitors: ['Intercom, Zendesk, Freshdesk'],
     marketSize: '$65B customer support market',
@@ -310,11 +345,12 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'customer-service-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI customer support platform with automation tools',
+    implementationDetails:
+      'Complete AI customer support platform with automation tools',
     launchDate: '2026-01-20',
     customers: 95,
     rating: 4.6,
-    reviews: 65
+    reviews: 65,
   },
   {
     id: 'ai-marketing-automation-platform',
@@ -322,7 +358,8 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     tagline: 'Intelligent marketing automation and campaign optimization',
     price: '$599',
     period: '/month',
-    description: 'Advanced AI-powered marketing automation platform that optimizes email campaigns, social media marketing, and lead generation. Uses machine learning to improve marketing ROI and customer engagement.',
+    description:
+      'Advanced AI-powered marketing automation platform that optimizes email campaigns, social media marketing, and lead generation. Uses machine learning to improve marketing ROI and customer engagement.',
     features: [
       'AI-powered email optimization',
       'Social media automation',
@@ -331,7 +368,7 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
       'A/B testing automation',
       'Customer segmentation',
       'Marketing attribution modeling',
-      'ROI optimization tools'
+      'ROI optimization tools',
     ],
     popular: true,
     icon: '📢',
@@ -346,7 +383,9 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     realService: true,
     technology: ['AI, Machine Learning, Marketing Automation, Analytics'],
     integrations: ['Mailchimp, HubSpot, Salesforce, Facebook Ads, Google Ads'],
-    useCases: ['Email marketing, Social media automation, Lead generation, Campaign optimization'],
+    useCases: [
+      'Email marketing, Social media automation, Lead generation, Campaign optimization',
+    ],
     roi: 'Increase marketing ROI by 200%',
     competitors: ['HubSpot, Marketo, Pardot'],
     marketSize: '$75B marketing automation market',
@@ -354,10 +393,11 @@ export const innovative2036MicroSaasExpanded: MicroSaasService[] = [
     variant: 'marketing-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Complete AI marketing automation platform with optimization tools',
+    implementationDetails:
+      'Complete AI marketing automation platform with optimization tools',
     launchDate: '2026-02-01',
     customers: 110,
     rating: 4.8,
-    reviews: 78
-  }
+    reviews: 78,
+  },
 ];

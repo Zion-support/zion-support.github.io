@@ -1,14 +1,16 @@
-import * as Sentry from "npm:@sentry/deno@7.100.1"; // Using a recent version, can be updated
+import * as Sentry from 'npm:@sentry/deno@7.100.1'; // Using a recent version, can be updated
 
 // Ensure this DSN is set in your Supabase project's environment variables for functions
-const SENTRY_DSN_SUPABASE = Deno.env.get("SENTRY_DSN_SUPABASE");
-const SENTRY_ENVIRONMENT = Deno.env.get("SENTRY_ENVIRONMENT") || Deno.env.get("ENV") || "production";
-const SENTRY_RELEASE = Deno.env.get("SENTRY_RELEASE") || "supabase-functions@1.0.0"; // Example release
+const SENTRY_DSN_SUPABASE = Deno.env.get('SENTRY_DSN_SUPABASE');
+const SENTRY_ENVIRONMENT =
+  Deno.env.get('SENTRY_ENVIRONMENT') || Deno.env.get('ENV') || 'production';
+const SENTRY_RELEASE =
+  Deno.env.get('SENTRY_RELEASE') || 'supabase-functions@1.0.0'; // Example release
 
 let isSentryInitialized = false;
 
 export function initSentry() {
-  if (SENTRY_DSN_SUPABASE && !SENTRY_DSN_SUPABASE.includes("YOUR_SENTRY_DSN")) {
+  if (SENTRY_DSN_SUPABASE && !SENTRY_DSN_SUPABASE.includes('YOUR_SENTRY_DSN')) {
     if (isSentryInitialized) {
       // // console.log("Sentry already initialized for Supabase functions.");
       return;
@@ -30,8 +32,15 @@ export function initSentry() {
   }
 }
 
-export function captureSupabaseError(error: unknown, context?: Record<string, _unknown>) {
-  if (!isSentryInitialized && SENTRY_DSN_SUPABASE && !SENTRY_DSN_SUPABASE.includes("YOUR_SENTRY_DSN")) {
+export function captureSupabaseError(
+  error: unknown,
+  context?: Record<string, _unknown>
+) {
+  if (
+    !isSentryInitialized &&
+    SENTRY_DSN_SUPABASE &&
+    !SENTRY_DSN_SUPABASE.includes('YOUR_SENTRY_DSN')
+  ) {
     // Attempt to initialize if not already, useful for cold starts if init wasn't called explicitly
     // Be cautious with this in very high throughput functions to avoid repeated init attempts on every error
     // initSentry();
@@ -80,17 +89,25 @@ export function withSentry(handler: (req: Request) => Promise<Response>) {
 */
 
 // Structured logging helper
-export function logStructured(level: "INFO" | "ERROR" | "WARN" | "DEBUG", message: string, data?: Record<string, _unknown>, functionName?: string) {
+export function logStructured(
+  level: 'INFO' | 'ERROR' | 'WARN' | 'DEBUG',
+  message: string,
+  data?: Record<string, _unknown>,
+  functionName?: string
+) {
   const logEntry = {
     timestamp: new Date().toISOString(),
     level,
     message,
-    functionName: functionName || Deno.env.get("SUPABASE_FUNCTION_NAME") || "unknown_function",
+    functionName:
+      functionName ||
+      Deno.env.get('SUPABASE_FUNCTION_NAME') ||
+      'unknown_function',
     ...(data && { data }),
   };
-  if (level === "ERROR") {
+  if (level === 'ERROR') {
     // console.error(JSON.stringify(logEntry));
-  } else if (level === "WARN") {
+  } else if (level === 'WARN') {
     // console.warn(JSON.stringify(logEntry));
   } else {
     // console.log(JSON.stringify(logEntry));

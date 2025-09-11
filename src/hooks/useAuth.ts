@@ -28,7 +28,7 @@ export function useAuth() {
     const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
-      
+
       if (storedUser && token) {
         try {
           const user = JSON.parse(storedUser);
@@ -66,16 +66,16 @@ export function useAuth() {
       role: 'user',
       userType: 'creator',
     };
-    
+
     setAuthState({
       user: mockUser,
       isAuthenticated: true,
       isLoading: false,
     });
-    
+
     localStorage.setItem('authToken', 'dummy-token');
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    
+
     return mockUser;
   };
 
@@ -95,18 +95,18 @@ export function useAuth() {
       id: '1',
       email,
       name,
-      role: 'user'
+      role: 'user',
     };
-    
+
     setAuthState({
       user: mockUser,
       isAuthenticated: true,
       isLoading: false,
     });
-    
+
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken', 'dummy-token');
-    
+
     return mockUser;
   };
 
@@ -118,6 +118,6 @@ export function useAuth() {
     register,
     isAuthenticated: authState.isAuthenticated,
     isLoading: authState.isLoading,
-    isAdmin: authState.user?.role === 'admin'
+    isAdmin: authState.user?.role === 'admin',
   };
 }

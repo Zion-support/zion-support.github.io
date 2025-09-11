@@ -4,24 +4,30 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
 import { Progress } from './ui/progress';
-import { 
-  Shield, 
-  Lock, 
-  AlertTriangle, 
-  CheckCircle, 
-  Eye, 
+import {
+  Shield,
+  Lock,
+  AlertTriangle,
+  CheckCircle,
+  Eye,
   EyeOff,
   RefreshCw,
   Zap,
   ShieldCheck,
   Bug,
   Network,
-  Database
+  Database,
 } from 'lucide-react';
 
 interface SecurityThreat {
   id: string;
-  type: 'xss' | 'csrf' | 'injection' | 'authentication' | 'authorization' | 'data-leak';
+  type:
+    | 'xss'
+    | 'csrf'
+    | 'injection'
+    | 'authentication'
+    | 'authorization'
+    | 'data-leak';
   severity: 'critical' | 'high' | 'medium' | 'low';
   description: string;
   location: string;
@@ -44,7 +50,11 @@ interface SecurityCheck {
   status: 'pass' | 'fail' | 'warning';
   description: string;
   recommendation: string;
-  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
+  category:
+    | 'authentication'
+    | 'data-protection'
+    | 'network-security'
+    | 'compliance';
 }
 
 const SecurityEnhancer: React.FC = () => {
@@ -54,7 +64,7 @@ const SecurityEnhancer: React.FC = () => {
     threatsBlocked: 127,
     lastScan: new Date(),
     complianceScore: 92,
-    encryptionStrength: 256
+    encryptionStrength: 256,
   });
 
   const [threats, setThreats] = useState<SecurityThreat[]>([]);
@@ -72,7 +82,7 @@ const SecurityEnhancer: React.FC = () => {
         description: 'Potential XSS vulnerability in user input field',
         location: '/src/components/ContactForm.tsx:45',
         timestamp: new Date(Date.now() - 3600000),
-        status: 'active'
+        status: 'active',
       },
       {
         id: '2',
@@ -81,7 +91,7 @@ const SecurityEnhancer: React.FC = () => {
         description: 'Weak password policy detected',
         location: '/src/utils/auth.ts:23',
         timestamp: new Date(Date.now() - 7200000),
-        status: 'mitigated'
+        status: 'mitigated',
       },
       {
         id: '3',
@@ -90,8 +100,8 @@ const SecurityEnhancer: React.FC = () => {
         description: 'Sensitive data in console logs',
         location: '/src/components/Dashboard.tsx:67',
         timestamp: new Date(Date.now() - 10800000),
-        status: 'resolved'
-      }
+        status: 'resolved',
+      },
     ];
 
     setThreats(sampleThreats);
@@ -106,7 +116,7 @@ const SecurityEnhancer: React.FC = () => {
         status: 'pass',
         description: 'All traffic is properly encrypted with HTTPS',
         recommendation: 'Continue monitoring SSL certificate expiration',
-        category: 'network-security'
+        category: 'network-security',
       },
       {
         id: '2',
@@ -114,7 +124,7 @@ const SecurityEnhancer: React.FC = () => {
         status: 'warning',
         description: 'Some input fields lack proper validation',
         recommendation: 'Implement comprehensive input sanitization',
-        category: 'data-protection'
+        category: 'data-protection',
       },
       {
         id: '3',
@@ -122,7 +132,7 @@ const SecurityEnhancer: React.FC = () => {
         status: 'pass',
         description: 'JWT tokens are properly implemented with expiration',
         recommendation: 'Consider implementing refresh token rotation',
-        category: 'authentication'
+        category: 'authentication',
       },
       {
         id: '4',
@@ -130,7 +140,7 @@ const SecurityEnhancer: React.FC = () => {
         status: 'pass',
         description: 'Data handling practices comply with GDPR requirements',
         recommendation: 'Regular audit of data retention policies',
-        category: 'compliance'
+        category: 'compliance',
       },
       {
         id: '5',
@@ -138,8 +148,8 @@ const SecurityEnhancer: React.FC = () => {
         status: 'pass',
         description: 'Database queries are properly parameterized',
         recommendation: 'Continue using prepared statements',
-        category: 'data-protection'
-      }
+        category: 'data-protection',
+      },
     ];
 
     setSecurityChecks(checks);
@@ -147,75 +157,105 @@ const SecurityEnhancer: React.FC = () => {
 
   const runSecurityScan = useCallback(async () => {
     setIsScanning(true);
-    
+
     // Simulate security scan
     await new Promise(resolve => setTimeout(resolve, 3000));
-    
+
     // Update metrics with new scan results
     setMetrics(prev => ({
       ...prev,
-      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),
-      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),
+      overallScore: Math.max(
+        0,
+        Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)
+      ),
+      vulnerabilities: Math.max(
+        0,
+        prev.vulnerabilities + Math.floor(Math.random() * 3) - 1
+      ),
       threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
-      lastScan: new Date()
+      lastScan: new Date(),
     }));
 
     setIsScanning(false);
   }, []);
 
   const mitigateThreat = useCallback((threatId: string) => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'mitigated' as const }
-        : threat
-    ));
+    setThreats(prev =>
+      prev.map(threat =>
+        threat.id === threatId
+          ? { ...threat, status: 'mitigated' as const }
+          : threat
+      )
+    );
   }, []);
 
   const resolveThreat = useCallback((threatId: string) => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'resolved' as const }
-        : threat
-    ));
+    setThreats(prev =>
+      prev.map(threat =>
+        threat.id === threatId
+          ? { ...threat, status: 'resolved' as const }
+          : threat
+      )
+    );
   }, []);
 
   const getThreatIcon = (type: SecurityThreat['type']) => {
     switch (type) {
-      case 'xss': return <Bug className="h-4 w-4" />;
-      case 'csrf': return <Network className="h-4 w-4" />;
-      case 'injection': return <Database className="h-4 w-4" />;
-      case 'authentication': return <Lock className="h-4 w-4" />;
-      case 'authorization': return <Shield className="h-4 w-4" />;
-      case 'data-leak': return <Eye className="h-4 w-4" />;
-      default: return <AlertTriangle className="h-4 w-4" />;
+      case 'xss':
+        return <Bug className='h-4 w-4' />;
+      case 'csrf':
+        return <Network className='h-4 w-4' />;
+      case 'injection':
+        return <Database className='h-4 w-4' />;
+      case 'authentication':
+        return <Lock className='h-4 w-4' />;
+      case 'authorization':
+        return <Shield className='h-4 w-4' />;
+      case 'data-leak':
+        return <Eye className='h-4 w-4' />;
+      default:
+        return <AlertTriangle className='h-4 w-4' />;
     }
   };
 
   const getSeverityColor = (severity: SecurityThreat['severity']) => {
     switch (severity) {
-      case 'critical': return 'bg-red-500';
-      case 'high': return 'bg-orange-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'low': return 'bg-blue-500';
-      default: return 'bg-gray-500';
+      case 'critical':
+        return 'bg-red-500';
+      case 'high':
+        return 'bg-orange-500';
+      case 'medium':
+        return 'bg-yellow-500';
+      case 'low':
+        return 'bg-blue-500';
+      default:
+        return 'bg-gray-500';
     }
   };
 
   const getStatusColor = (status: SecurityThreat['status']) => {
     switch (status) {
-      case 'active': return 'bg-red-100 text-red-800';
-      case 'mitigated': return 'bg-yellow-100 text-yellow-800';
-      case 'resolved': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'active':
+        return 'bg-red-100 text-red-800';
+      case 'mitigated':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'resolved':
+        return 'bg-green-100 text-green-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
   const getCheckStatusIcon = (status: SecurityCheck['status']) => {
     switch (status) {
-      case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
-      case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
-      case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
-      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
+      case 'pass':
+        return <CheckCircle className='h-4 w-4 text-green-600' />;
+      case 'fail':
+        return <AlertTriangle className='h-4 w-4 text-red-600' />;
+      case 'warning':
+        return <AlertTriangle className='h-4 w-4 text-yellow-600' />;
+      default:
+        return <AlertTriangle className='h-4 w-4 text-gray-600' />;
     }
   };
 
@@ -227,79 +267,81 @@ const SecurityEnhancer: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className='space-y-6'>
       {/* Security Overview */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-                    <ShieldCheck className="h-5 w-5" />
-        Security Overview
+          <CardTitle className='flex items-center gap-2'>
+            <ShieldCheck className='h-5 w-5' />
+            Security Overview
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="text-center">
-              <div className={`text-3xl font-bold ${getSecurityScoreColor(metrics.overallScore)}`}>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-6'>
+            <div className='text-center'>
+              <div
+                className={`text-3xl font-bold ${getSecurityScoreColor(metrics.overallScore)}`}
+              >
                 {metrics.overallScore}
               </div>
-              <div className="text-sm text-gray-600">Security Score</div>
+              <div className='text-sm text-gray-600'>Security Score</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-red-600">
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-red-600'>
                 {metrics.vulnerabilities}
               </div>
-              <div className="text-sm text-gray-600">Vulnerabilities</div>
+              <div className='text-sm text-gray-600'>Vulnerabilities</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-green-600'>
                 {metrics.threatsBlocked}
               </div>
-              <div className="text-sm text-gray-600">Threats Blocked</div>
+              <div className='text-sm text-gray-600'>Threats Blocked</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-600'>
                 {metrics.encryptionStrength}
               </div>
-              <div className="text-sm text-gray-600">Encryption (bits)</div>
+              <div className='text-sm text-gray-600'>Encryption (bits)</div>
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className='space-y-4'>
             <div>
-              <div className="flex justify-between text-sm mb-2">
+              <div className='flex justify-between text-sm mb-2'>
                 <span>Overall Security</span>
                 <span>{metrics.overallScore}%</span>
               </div>
-              <Progress value={metrics.overallScore} className="w-full" />
+              <Progress value={metrics.overallScore} className='w-full' />
             </div>
             <div>
-              <div className="flex justify-between text-sm mb-2">
+              <div className='flex justify-between text-sm mb-2'>
                 <span>Compliance Score</span>
                 <span>{metrics.complianceScore}%</span>
               </div>
-              <Progress value={metrics.complianceScore} className="w-full" />
+              <Progress value={metrics.complianceScore} className='w-full' />
             </div>
           </div>
 
-          <div className="mt-4">
-            <Button 
-              onClick={runSecurityScan} 
+          <div className='mt-4'>
+            <Button
+              onClick={runSecurityScan}
               disabled={isScanning}
-              className="w-full"
+              className='w-full'
             >
               {isScanning ? (
                 <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                  <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
                   Scanning...
                 </>
               ) : (
                 <>
-                  <Zap className="h-4 w-4 mr-2" />
+                  <Zap className='h-4 w-4 mr-2' />
                   Run Security Scan
                 </>
               )}
             </Button>
-            <div className="text-xs text-gray-500 mt-2 text-center">
+            <div className='text-xs text-gray-500 mt-2 text-center'>
               Last scan: {metrics.lastScan.toLocaleString()}
             </div>
           </div>
@@ -309,26 +351,26 @@ const SecurityEnhancer: React.FC = () => {
       {/* Security Checks */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5" />
+          <CardTitle className='flex items-center gap-2'>
+            <Shield className='h-5 w-5' />
             Security Checks
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            {securityChecks.map((check) => (
-              <div key={check.id} className="border rounded-lg p-4">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
+          <div className='space-y-4'>
+            {securityChecks.map(check => (
+              <div key={check.id} className='border rounded-lg p-4'>
+                <div className='flex items-start justify-between'>
+                  <div className='flex-1'>
+                    <div className='flex items-center gap-2 mb-2'>
                       {getCheckStatusIcon(check.status)}
-                      <h4 className="font-semibold">{check.name}</h4>
-                      <Badge variant="outline">{check.category}</Badge>
+                      <h4 className='font-semibold'>{check.name}</h4>
+                      <Badge variant='outline'>{check.category}</Badge>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className='text-sm text-gray-600 mb-2'>
                       {check.description}
                     </p>
-                    <p className="text-sm text-blue-600">
+                    <p className='text-sm text-blue-600'>
                       <strong>Recommendation:</strong> {check.recommendation}
                     </p>
                   </div>
@@ -342,50 +384,59 @@ const SecurityEnhancer: React.FC = () => {
       {/* Security Threats */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5" />
+          <CardTitle className='flex items-center gap-2'>
+            <AlertTriangle className='h-5 w-5' />
             Security Threats
             <Button
-              variant="ghost"
-              size="sm"
+              variant='ghost'
+              size='sm'
               onClick={() => setShowThreats(!showThreats)}
             >
-              {showThreats ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              {showThreats ? (
+                <EyeOff className='h-4 w-4' />
+              ) : (
+                <Eye className='h-4 w-4' />
+              )}
             </Button>
           </CardTitle>
         </CardHeader>
         <CardContent>
           {showThreats && (
-            <div className="space-y-4">
-              {threats.map((threat) => (
-                <div key={threat.id} className="border rounded-lg p-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+            <div className='space-y-4'>
+              {threats.map(threat => (
+                <div key={threat.id} className='border rounded-lg p-4'>
+                  <div className='flex items-start justify-between'>
+                    <div className='flex-1'>
+                      <div className='flex items-center gap-2 mb-2'>
                         {getThreatIcon(threat.type)}
-                        <h4 className="font-semibold capitalize">{threat.type} Threat</h4>
-                        <Badge className={`${getSeverityColor(threat.severity)} text-white`}>
+                        <h4 className='font-semibold capitalize'>
+                          {threat.type} Threat
+                        </h4>
+                        <Badge
+                          className={`${getSeverityColor(threat.severity)} text-white`}
+                        >
                           {threat.severity}
                         </Badge>
                         <Badge className={getStatusColor(threat.status)}>
                           {threat.status}
                         </Badge>
                       </div>
-                      <p className="text-sm text-gray-600 mb-2">
+                      <p className='text-sm text-gray-600 mb-2'>
                         {threat.description}
                       </p>
-                      <div className="text-xs text-gray-500 mb-2">
+                      <div className='text-xs text-gray-500 mb-2'>
                         <strong>Location:</strong> {threat.location}
                       </div>
-                      <div className="text-xs text-gray-500">
-                        <strong>Detected:</strong> {threat.timestamp.toLocaleString()}
+                      <div className='text-xs text-gray-500'>
+                        <strong>Detected:</strong>{' '}
+                        {threat.timestamp.toLocaleString()}
                       </div>
                     </div>
-                    <div className="flex gap-2 ml-4">
+                    <div className='flex gap-2 ml-4'>
                       {threat.status === 'active' && (
                         <Button
-                          size="sm"
-                          variant="outline"
+                          size='sm'
+                          variant='outline'
                           onClick={() => mitigateThreat(threat.id)}
                         >
                           Mitigate
@@ -393,7 +444,7 @@ const SecurityEnhancer: React.FC = () => {
                       )}
                       {threat.status === 'mitigated' && (
                         <Button
-                          size="sm"
+                          size='sm'
                           onClick={() => resolveThreat(threat.id)}
                         >
                           Resolve
@@ -411,20 +462,22 @@ const SecurityEnhancer: React.FC = () => {
       {/* Security Alerts */}
       {metrics.vulnerabilities > 0 && (
         <Alert>
-          <AlertTriangle className="h-4 w-4" />
+          <AlertTriangle className='h-4 w-4' />
           <AlertDescription>
-            <strong>Security Alert:</strong> {metrics.vulnerabilities} active vulnerability(ies) detected. 
-            Please review and address these security issues immediately.
+            <strong>Security Alert:</strong> {metrics.vulnerabilities} active
+            vulnerability(ies) detected. Please review and address these
+            security issues immediately.
           </AlertDescription>
         </Alert>
       )}
 
       {metrics.overallScore < 70 && (
         <Alert>
-          <AlertTriangle className="h-4 w-4" />
+          <AlertTriangle className='h-4 w-4' />
           <AlertDescription>
-            <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
-            Consider running a comprehensive security audit and implementing the suggested improvements.
+            <strong>Security Warning:</strong> Your security score is below the
+            recommended threshold. Consider running a comprehensive security
+            audit and implementing the suggested improvements.
           </AlertDescription>
         </Alert>
       )}

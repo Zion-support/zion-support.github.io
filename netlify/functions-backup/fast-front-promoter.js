@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('fast-front-promoter function triggered');
-    
+
     // Fast front promotion simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Fast front promoter executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         promotion: {
           status: 'active',
           promotions: 0,
-          lastPromotion: new Date().toISOString()
-        }
-      })
+          lastPromotion: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in fast-front-promoter:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'fast-front-promoter'
-      })
+        function: 'fast-front-promoter',
+      }),
     };
   }
 };

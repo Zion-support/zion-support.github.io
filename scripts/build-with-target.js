@@ -26,7 +26,7 @@ try {
   // Run the Vite build with explicit target configuration
   const buildCommand = 'vite build --logLevel info';
   console.log(`🚀 Running: ${buildCommand}`);
-  
+
   execSync(buildCommand, {
     stdio: 'inherit',
     cwd: process.cwd(),
@@ -39,20 +39,19 @@ try {
       NODE_ENV: 'production',
       SKIP_TYPE_CHECK: 'true',
       ROLLUP_SKIP_NODEJS_NATIVE: 'true',
-    }
+    },
   });
 
   console.log('✅ Build completed successfully!');
-  
+
   // Run the Netlify file copy script
   console.log('📁 Copying Netlify files...');
   execSync('node scripts/copy-netlify-files.js', {
     stdio: 'inherit',
-    cwd: process.cwd()
+    cwd: process.cwd(),
   });
-  
+
   console.log('🎉 Build and file copy completed successfully!');
-  
 } catch (error) {
   console.error('❌ Build failed:', error.message);
   process.exit(1);

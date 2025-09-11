@@ -2,7 +2,7 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/link_audit"
 
 export const config = {
-  path: "/.netlify/functions/link_audit",
+  path: '/.netlify/functions/link_audit',
 };
 
 import type { Handler } from '@netlify/functions';
@@ -19,7 +19,8 @@ function normalize(url: string): string {
     if (u.origin !== new URL(BASE_URL).origin) return '';
     // Strip fragments and normalize trailing slash except root
     u.hash = '';
-    if (u.pathname.endsWith('/') && u.pathname !== '/') u.pathname = u.pathname.slice(0, -1);
+    if (u.pathname.endsWith('/') && u.pathname !== '/')
+      u.pathname = u.pathname.slice(0, -1);
     return u.toString();
   } catch {
     return '';
@@ -38,16 +39,29 @@ function extractLinks(html: string, currentUrl: string): string[] {
   return Array.from(links);
 }
 
-async function fetchWithTimeout(url: string, opts: RequestInit = {}): Promise<Response> {
+async function fetchWithTimeout(
+  url: string,
+  opts: RequestInit = {}
+): Promise<Response> {
   const ctrl = new AbortController();
   const id = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
     // Prefer HEAD to save bandwidth, fallback to GET on failure
-    const head = await fetch(url, { method: 'HEAD', signal: ctrl.signal, headers: { 'User-Agent': 'zion-app-link-audit' }, ...opts });
+    const head = await fetch(url, {
+      method: 'HEAD',
+      signal: ctrl.signal,
+      headers: { 'User-Agent': 'zion-app-link-audit' },
+      ...opts,
+    });
     if (head.ok || head.status >= 400) return head;
   } catch {}
   try {
-    const get = await fetch(url, { method: 'GET', signal: ctrl.signal, headers: { 'User-Agent': 'zion-app-link-audit' }, ...opts });
+    const get = await fetch(url, {
+      method: 'GET',
+      signal: ctrl.signal,
+      headers: { 'User-Agent': 'zion-app-link-audit' },
+      ...opts,
+    });
     return get;
   } finally {
     clearTimeout(id);
@@ -73,7 +87,9 @@ export const handler: Handler = async () => {
       visited.add(url);
       let html = '';
       try {
-        const res = await fetch(url, { headers: { 'User-Agent': 'zion-app-link-audit' } });
+        const res = await fetch(url, {
+          headers: { 'User-Agent': 'zion-app-link-audit' },
+        });
         if (!res.ok) continue;
         html = await res.text();
       } catch {
@@ -110,9 +126,17 @@ export const handler: Handler = async () => {
 
     const content = JSON.stringify(report, null, 2) + '\n';
     const dest = `data/reports/link-audit/link-audit-${ts()}.json`;
-    const commit = await commitToRepo({ path: dest, content, message: 'chore(link): automated link audit report', branch: 'main' });
+    const commit = await commitToRepo({
+      path: dest,
+      content,
+      message: 'chore(link): automated link audit report',
+      branch: 'main',
+    });
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length, commit }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, broken: broken.length, commit }),
+    };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };
   }

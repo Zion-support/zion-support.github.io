@@ -7,46 +7,50 @@ const filesToFix = [
     fixes: [
       {
         search: '}\n',
-        replace: '}'
-      }
-    ]
+        replace: '}',
+      },
+    ],
   },
   {
     file: 'pages/api/whitepaper/share.ts',
     fixes: [
       {
-        search: '  const url = `${process.env.NEXT_PUBLIC_BASE_URL || \'\'}/whitepaper/preview/${id}`;',
-        replace: '  const url = `${process.env.NEXT_PUBLIC_BASE_URL || \'\'}/whitepaper/preview/${id}`;'
-      }
-    ]
+        search:
+          "  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;",
+        replace:
+          "  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;",
+      },
+    ],
   },
   {
     file: 'utils/devAccess.ts',
     fixes: [
       {
-        search: 'export function getGitStatus(): { connected: boolean; branch?: string } {',
-        replace: 'export function getGitStatus(): { connected: boolean; branch?: string } {'
-      }
-    ]
+        search:
+          'export function getGitStatus(): { connected: boolean; branch?: string } {',
+        replace:
+          'export function getGitStatus(): { connected: boolean; branch?: string } {',
+      },
+    ],
   },
   {
     file: 'utils/fsdb.ts',
     fixes: [
       {
         search: '  await writeAllDisputes(all);',
-        replace: '  await writeAllDisputes(all);'
-      }
-    ]
+        replace: '  await writeAllDisputes(all);',
+      },
+    ],
   },
   {
     file: 'utils/moderationDb.ts',
     fixes: [
       {
         search: '  return flag;\n',
-        replace: '  return flag;'
-      }
-    ]
-  }
+        replace: '  return flag;',
+      },
+    ],
+  },
 ];
 let fixedCount = 0;
 let errorCount = 0;
@@ -92,7 +96,12 @@ const report = {
   timestamp: new Date().toISOString(),
   filesFixed: fixedCount,
   errors: errorCount,
-  fixedFiles: filesToFix.map(f => f.file)
+  fixedFiles: filesToFix.map(f => f.file),
 };
-fs.writeFileSync('ultimate-final-comprehensive-build-fix-report.json', JSON.stringify(report, null, 2));
-console.log('\n📄 Report saved to ultimate-final-comprehensive-build-fix-report.json');
+fs.writeFileSync(
+  'ultimate-final-comprehensive-build-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
+console.log(
+  '\n📄 Report saved to ultimate-final-comprehensive-build-fix-report.json'
+);
