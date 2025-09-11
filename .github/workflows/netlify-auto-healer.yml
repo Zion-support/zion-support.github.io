@@ -1,34 +1,35 @@
-name: netlify-auto-healer
-'on':
-  workflow_dispatch: null
+name: Netlify Auto Healer
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
 permissions:
-  contents: read
+  contents: write
   actions: read
-concurrency:
-  group: netlify-auto-healer-${{ github.ref }}
-  cancel-in-progress: true
+
 jobs:
   main:
+    name: Main Job
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Node
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: npm
+          cache: 'npm'
+
       - name: Install dependencies
-        run: npm ci
-      - name: Run netlify auto healer
-        run: 
-      - name: Upload results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: workflow-results
-          path: |
-            .github/workflows/
-          retention-days: 7
-    runs_on: ubuntu-latest
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+

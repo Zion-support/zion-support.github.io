@@ -1,31 +1,35 @@
-name: docs-intelligence
-'on':
+name: Docs Intelligence
+
+on:
   workflow_dispatch: {}
   schedule:
-    - cron: 0 */2 * * *
+    - cron: '*/10 * * * *'
+
 permissions:
-  contents: write
-  actions: read
-  pull-requests: write
+  contents: read
+
 concurrency:
-  group: workflow-${{ github.ref }}
-  cancel-in-progress: false
+  group: docs-intelligence-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   main:
     name: Main Job
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: npm
+          cache: 'npm'
+
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
-        run: echo "✅ Workflow completed successfully"
+        run: echo "Workflow completed successfully"

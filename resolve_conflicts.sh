@@ -1,24 +1,58 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing HEAD version
-echo "Resolving merge conflicts..."
+echo "🔧 Resolving all merge conflicts..."
 
-# Find all files with merge conflicts
-files_with_conflicts=$(find pages -name "*.tsx" | xargs grep -l "<<<<<<< HEAD")
+# Get all conflicted files
+CONFLICTED_FILES=$(git status --porcelain | grep "^UU" | awk '{print $2}')
 
-for file in $files_with_conflicts; do
-    echo "Processing $file..."
+echo "📋 Found $(echo "$CONFLICTED_FILES" | wc -l) conflicted files"
+
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    echo "🔧 Resolving conflicts in $file..."
     
-    # Remove conflict markers and choose HEAD version
-    # This is a simple approach - remove everything between ======= and >>>>>>> 
-    # and remove the <<<<<<< HEAD line
-    sed -i '/<<<<<<< HEAD/d' "$file"
-    sed -i '/=======/,/>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985/d' "$file"
-    
-    echo "Resolved conflicts in $file"
+    # Check if file has merge conflicts
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "⚠️  Found conflicts in $file, resolving..."
+        
+        # Create a backup of the conflicted file
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Strategy: Keep both versions where possible, prefer main branch for critical files
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            echo "📦 Critical file detected, keeping main version and merging dependencies..."
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            echo "⚙️  Config file detected, keeping main version..."
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        else
+            echo "📝 Regular file, attempting to merge both versions..."
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        fi
+        
+        echo "✅ Resolved conflicts in $file"
+    else
+        echo "✅ No conflicts found in $file"
+    fi
+}
+
+# Resolve conflicts in each file
+for file in $CONFLICTED_FILES; do
+    if [ -f "$file" ]; then
+        resolve_conflicts "$file"
+    fi
 done
 
-echo "Conflict resolution complete!"
+echo "✅ All conflicts resolved!"
+echo "📝 Adding resolved files..."
+
+# Add all resolved files
+git add .
+
+echo "🎉 Ready to commit the merge!"
+echo "💡 Run: git commit -m 'Merge remote main with local changes'"

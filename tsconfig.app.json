@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -22,9 +22,16 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"]
+      "@/pages/*": ["./src/pages/*", "./pages/*"],
+      "@/api/*": ["./src/api/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "next": ["../types/next"],
+      "next/*": ["../types/next/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom", "storybook__react"]
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "types": ["node"],
+    "composite": true,
+    "noEmit": true
   },
   "include": ["src", "pages", "types"]
 }

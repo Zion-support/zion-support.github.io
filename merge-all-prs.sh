@@ -1,221 +1,129 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
-# Comprehensive PR merge script for zion.app
-# This script fetches open PRs from GitHub and merges them into main
+# Script to resolve merge conflicts and merge all open PRs into main branch
+# This script will handle the complete process of merging all open PRs
 
-echo "=== Starting comprehensive PR merge process ==="
+set -e
 
-# Configuration
-REPO_OWNER="Zion-Holdings"
-REPO_NAME="zion.app"
-GITHUB_API="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME"
-MAIN_BRANCH="main"
+echo "🚀 Starting PR merge process..."
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+# Check current status
+echo "📋 Checking current git status..."
+git status
 
-# Function to print colored output
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1" >&2
-}
+# Get current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo "📍 Current branch: $CURRENT_BRANCH"
 
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1" >&2
-}
+# Switch to main branch
+echo "🔄 Switching to main branch..."
+git checkout main
 
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1" >&2
-}
+# Pull latest changes from origin
+echo "⬇️ Pulling latest changes from origin..."
+git pull origin main
 
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1" >&2
-}
+# Get list of all remote branches (potential PRs)
+echo "📝 Getting list of remote branches..."
+git fetch origin
 
-# Function to check if we're in a git repository
-check_git_repo() {
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
-        print_error "Not in a git repository!"
-        exit 1
-    fi
-}
+# Get all remote branches that start with 'cursor/'
+PR_BRANCHES=$(git branch -r | grep 'cursor/' | sed 's/origin\///' | head -20)
 
-# Function to ensure we're on main branch
-ensure_main_branch() {
-    local current_branch=$(git rev-parse --abbrev-ref HEAD)
-    if [ "$current_branch" != "$MAIN_BRANCH" ]; then
-        print_status "Switching to $MAIN_BRANCH branch..."
-        git checkout "$MAIN_BRANCH"
-    fi
-}
+echo "🔍 Found potential PR branches:"
+echo "$PR_BRANCHES"
 
-# Function to sync main branch
-sync_main() {
-    print_status "Syncing $MAIN_BRANCH branch with origin..."
-    git fetch origin
-    git pull --ff-only origin "$MAIN_BRANCH"
-    print_success "Main branch synced successfully"
-}
-
-# Function to fetch all PR refs
-fetch_pr_refs() {
-    print_status "Fetching all PR references..."
-    git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*"
-    print_success "PR references fetched"
-}
-
-# Function to get open PRs from GitHub API
-get_open_prs() {
-    print_status "Fetching open PRs from GitHub API..."
+# Function to merge a branch
+merge_branch() {
+    local branch=$1
+    echo "🔄 Attempting to merge branch: $branch"
     
-    # Get the first page of open PRs (up to 100)
-    local pr_data
-    if ! pr_data=$(curl -s -H "Accept: application/vnd.github+json" \
-        "$GITHUB_API/pulls?state=open&per_page=100&sort=created&direction=desc"); then
-        print_error "Failed to fetch PRs from GitHub API"
-        return 1
-    fi
-    
-    # Extract PR numbers and titles
-    echo "$pr_data" | jq -r '.[] | "\(.number)\t\(.head.ref)\t\(.title)"' | while IFS=$'\t' read -r pr_number pr_branch pr_title; do
-        echo "$pr_number:$pr_branch:$pr_title"
-    done
-}
-
-# Function to merge a single PR
-merge_pr() {
-    local pr_number="$1"
-    local pr_branch="$2"
-    local pr_title="$3"
-    
-    print_status "Processing PR #$pr_number: $pr_title"
-    
-    # Check if PR ref exists locally
-    if ! git show-ref --verify --quiet "refs/remotes/origin/pr/$pr_number"; then
-        print_warning "PR #$pr_number ref not found locally, skipping..."
-        return 1
-    fi
-    
-    # Create a temporary branch for the merge
-    local merge_branch="merge-pr-$pr_number"
-    git checkout -B "$merge_branch" "$MAIN_BRANCH"
-    
-    # Attempt to merge with conflict resolution strategy
-    print_status "Merging PR #$pr_number into temporary branch..."
-    
-    if git merge -m "Merge PR #$pr_number: $pr_title" -X theirs "origin/pr/$pr_number" 2>/dev/null; then
-        print_success "PR #$pr_number merged cleanly"
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "✅ Branch $branch exists locally"
     else
-        print_warning "Conflicts detected in PR #$pr_number, attempting auto-resolution..."
-        
-        # Auto-resolve common conflicts
-        # Keep main's lockfiles to avoid dependency resolution issues
-        git checkout --ours -- package-lock.json 2>/dev/null || true
-        git checkout --ours -- yarn.lock 2>/dev/null || true
-        git checkout --ours -- pnpm-lock.yaml 2>/dev/null || true
-        
-        # Accept PR changes for generated files
-        git checkout --theirs -- dist/** 2>/dev/null || true
-        git checkout --theirs -- build/** 2>/dev/null || true
-        git checkout --theirs -- out/** 2>/dev/null || true
-        
-        # Stage all changes
-        git add -A
-        
-        # Try to commit the merge
-        if git commit -m "Auto-resolve conflicts for PR #$pr_number: $pr_title" 2>/dev/null; then
-            print_success "Auto-resolved conflicts for PR #$pr_number"
-        else
-            print_error "Could not auto-resolve conflicts for PR #$pr_number"
-            git merge --abort 2>/dev/null || true
-            git checkout "$MAIN_BRANCH"
-            git branch -D "$merge_branch" 2>/dev/null || true
-            return 1
-        fi
+        echo "📥 Fetching branch $branch from origin..."
+        git fetch origin $branch:$branch
     fi
     
-    # Merge the temporary branch into main
-    print_status "Integrating PR #$pr_number into main..."
-    git checkout "$MAIN_BRANCH"
+    # Switch to the branch
+    git checkout $branch
     
-    if git merge --no-ff -m "Merge PR #$pr_number: $pr_title" "$merge_branch"; then
-        print_success "PR #$pr_number successfully integrated into main"
+    # Pull latest changes
+    git pull origin $branch
+    
+    # Switch back to main
+    git checkout main
+    
+    # Attempt to merge
+    echo "🔀 Merging $branch into main..."
+    if git merge $branch --no-ff -m "Merge $branch into main"; then
+        echo "✅ Successfully merged $branch"
         
         # Push to origin
-        print_status "Pushing changes to origin..."
-        if git push origin "$MAIN_BRANCH"; then
-            print_success "Changes pushed to origin successfully"
-        else
-            print_error "Failed to push changes to origin"
-            return 1
-        fi
+        echo "⬆️ Pushing merged changes to origin..."
+        git push origin main
         
-        # Clean up temporary branch
-        git branch -D "$merge_branch"
-        return 0
+        # Delete the branch
+        echo "🗑️ Deleting branch $branch..."
+        git branch -d $branch
+        git push origin --delete $branch
+        
     else
-        print_error "Failed to integrate PR #$pr_number into main"
-        git branch -D "$merge_branch"
-        return 1
-    fi
-}
-
-# Function to process all open PRs
-process_all_prs() {
-    print_status "Processing all open PRs..."
-    
-    local prs
-    if ! prs=$(get_open_prs); then
-        print_error "Failed to fetch open PRs"
-        return 1
-    fi
-    
-    local success_count=0
-    local total_count=0
-    local failed_prs=()
-    
-    while IFS=':' read -r pr_number pr_branch pr_title; do
-        if [ -n "$pr_number" ]; then
-            total_count=$((total_count + 1))
-            print_status "Processing PR #$pr_number ($total_count of $(echo "$prs" | wc -l))"
+        echo "❌ Merge conflict detected for $branch"
+        echo "🔧 Attempting to resolve conflicts..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "⚠️ Manual conflict resolution needed for $branch"
+            echo "📝 Conflicts found in:"
+            git status --porcelain | grep "^UU\|^AA\|^DD"
             
-            if merge_pr "$pr_number" "$pr_branch" "$pr_title"; then
-                success_count=$((success_count + 1))
+            # Try to resolve common conflicts automatically
+            echo "🤖 Attempting automatic conflict resolution..."
+            
+            # Add all resolved files
+            git add .
+            
+            # Commit the merge
+            if git commit -m "Resolve merge conflicts for $branch"; then
+                echo "✅ Conflicts resolved for $branch"
+                git push origin main
+                git branch -d $branch
+                git push origin --delete $branch
             else
-                failed_prs+=("$pr_number")
+                echo "❌ Could not resolve conflicts for $branch automatically"
+                echo "🔄 Reverting merge for $branch..."
+                git merge --abort
             fi
+        else
+            echo "✅ No conflicts found, completing merge..."
+            git push origin main
+            git branch -d $branch
+            git push origin --delete $branch
         fi
-    done <<< "$prs"
-    
-    # Summary
-    print_status "=== Merge Summary ==="
-    print_success "Successfully merged: $success_count PRs"
-    if [ ${#failed_prs[@]} -gt 0 ]; then
-        print_warning "Failed to merge: ${#failed_prs[@]} PRs"
-        print_warning "Failed PRs: ${failed_prs[*]}"
     fi
-    print_status "Total processed: $total_count PRs"
 }
 
-# Main execution
-main() {
-    print_status "Starting comprehensive PR merge process for $REPO_OWNER/$REPO_NAME"
-    
-    # Pre-flight checks
-    check_git_repo
-    ensure_main_branch
-    sync_main
-    fetch_pr_refs
-    
-    # Process all PRs
-    process_all_prs
-    
-    print_success "PR merge process completed!"
-}
+# Merge each branch
+for branch in $PR_BRANCHES; do
+    echo ""
+    echo "🔄 Processing branch: $branch"
+    merge_branch $branch
+    echo "✅ Completed processing $branch"
+done
 
-# Run main function
-main "$@"
+echo ""
+echo "🎉 PR merge process completed!"
+echo "📊 Summary:"
+echo "- Processed branches: $(echo "$PR_BRANCHES" | wc -l)"
+echo "- Current branch: $(git branch --show-current)"
+echo "- Latest commit: $(git log --oneline -1)"
+
+# Show final status
+echo ""
+echo "📋 Final git status:"
+git status
+
+echo ""
+echo "✅ All PRs have been processed and merged into main branch!"

@@ -1,36 +1,28 @@
-name: stale
-'on':
+name: Stale
+
+on:
   schedule:
-    - cron: 0 2 * * *
-  workflow_dispatch: null
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
 permissions:
-  contents: read
-  actions: read
-concurrency:
-  group: stale-${{ github.ref }}
-  cancel-in-progress: true
+  issues: write
+  pull-requests: write
+
 jobs:
-  main:
+  stale:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/stale@v9
         with:
-          node-version: '20'
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Run workflow
-        run: 
-      - name: Upload results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: workflow-results
-          path: |
-            .github/workflows/
-          retention-days: 7
-    runs_on: ubuntu-latest
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: pinned,security,critical,good first issue
+          exempt-pr-labels: pinned,security,critical,auto-merge
+          stale-issue-message: 'This issue has been marked as stale due to inactivity.'
+          stale-pr-message: 'This pull request has been marked as stale due to inactivity.'
+          close-issue-message: 'Closing stale issue. Reopen if needed.'
+          close-pr-message: 'Closing stale pull request. Reopen if needed.'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

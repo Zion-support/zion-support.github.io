@@ -16,24 +16,24 @@ This system provides **maximum redundancy** for continuously generating new serv
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ SERVICE GENERATION │
+│                    SERVICE GENERATION                       │
 ├─────────────────────────────────────────────────────────────┤
-│ Layer 1: PM2 Processes (Local) │
-│ ├── Ultra-Fast Service Generator │
-│ ├── Redundant Service Generator │
-│ └── Exponential Service Orchestrator │
+│  Layer 1: PM2 Processes (Local)                            │
+│  ├── Ultra-Fast Service Generator                          │
+│  ├── Redundant Service Generator                           │
+│  └── Exponential Service Orchestrator                      │
 ├─────────────────────────────────────────────────────────────┤
-│ Layer 2: GitHub Actions (Cloud) │
-│ ├── Ultra-Fast Service Generator (every 2 min) │
-│ ├── Redundant Service Generator (every odd minute) │
-│ ├── Continuous Service Factory (every 4 min) │
-│ └── Simple Service Generator (every 6 min) │
+│  Layer 2: GitHub Actions (Cloud)                           │
+│  ├── Ultra-Fast Service Generator (every 2 min)            │
+│  ├── Redundant Service Generator (every odd minute)        │
+│  ├── Continuous Service Factory (every 4 min)              │
+│  └── Simple Service Generator (every 6 min)                │
 ├─────────────────────────────────────────────────────────────┤
-│ Layer 3: Netlify Functions (Serverless) │
-│ └── Service Generator Function │
+│  Layer 3: Netlify Functions (Serverless)                   │
+│  └── Service Generator Function                            │
 ├─────────────────────────────────────────────────────────────┤
-│ Layer 4: Cron Jobs (Local) │
-│ └── Service Generator Cron (every minute) │
+│  Layer 4: Cron Jobs (Local)                                │
+│  └── Service Generator Cron (every minute)                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -96,14 +96,14 @@ node automation/exponential-autonomous-orchestrator.cjs
 
 ```json
 {
- "generation": {
- "enabled": true,
- "intervalSeconds": 30,
- "batchSize": 3,
- "exponentialGrowth": true,
- "maxServicesPerHour": 100,
- "maxServicesPerDay": 1000
- }
+  "generation": {
+    "enabled": true,
+    "intervalSeconds": 30,
+    "batchSize": 3,
+    "exponentialGrowth": true,
+    "maxServicesPerHour": 100,
+    "maxServicesPerDay": 1000
+  }
 }
 ```
 
@@ -111,13 +111,13 @@ node automation/exponential-autonomous-orchestrator.cjs
 
 ```json
 {
- "generation": {
- "enabled": true,
- "intervalMs": 15000,
- "batchSize": 5,
- "intelligentScaling": true,
- "maxConcurrent": 10
- }
+  "generation": {
+    "enabled": true,
+    "intervalMs": 15000,
+    "batchSize": 5,
+    "intelligentScaling": true,
+    "maxConcurrent": 10
+  }
 }
 ```
 
@@ -125,12 +125,12 @@ node automation/exponential-autonomous-orchestrator.cjs
 
 ```json
 {
- "generation": {
- "enabled": true,
- "intervalMs": 20000,
- "batchSize": 2,
- "maxServices": 1000
- }
+  "generation": {
+    "enabled": true,
+    "intervalMs": 20000,
+    "batchSize": 2,
+    "maxServices": 1000
+  }
 }
 ```
 
@@ -139,20 +139,20 @@ node automation/exponential-autonomous-orchestrator.cjs
 Each service generator creates:
 
 1. **Service Page** (`pages/services/{service-id}.tsx`)
-- React component with full UI
-- SEO optimized
-- Responsive design
-- Pricing plans
+   - React component with full UI
+   - SEO optimized
+   - Responsive design
+   - Pricing plans
 
 2. **Service Config** (`automation/services/{service-id}.json`)
-- Service metadata
-- Configuration data
-- Generation history
+   - Service metadata
+   - Configuration data
+   - Generation history
 
 3. **Service API** (`pages/api/services/{service-id}.ts`)
-- REST API endpoint
-- Service information
-- Contact form handling
+   - REST API endpoint
+   - Service information
+   - Contact form handling
 
 ## 🚀 Deployment
 
@@ -189,6 +189,7 @@ tail -f automation/logs/*.log
 ```
 
 ### Performance Metrics
+
 - **Generation Rate**: Services per minute
 - **Success Rate**: Successful generations
 - **Deployment Time**: Time to production
@@ -199,40 +200,41 @@ tail -f automation/logs/*.log
 ### Common Issues
 
 1. **Generator Not Running**
- ```bash
- # Check PM2 status
- pm2 status
- 
- # Check logs
- pm2 logs
- 
- # Restart generators
- pm2 restart all
- ```
+   ```bash
+   # Check PM2 status
+   pm2 status
+   
+   # Check logs
+   pm2 logs
+   
+   # Restart generators
+   pm2 restart all
+   ```
 
 2. **Services Not Being Created**
- ```bash
- # Check directory permissions
- ls -la pages/services/
- 
- # Check Node.js version
- node --version
- 
- # Run generator manually
- node automation/ultra-fast-service-generator.cjs
- ```
+   ```bash
+   # Check directory permissions
+   ls -la pages/services/
+   
+   # Check Node.js version
+   node --version
+   
+   # Run generator manually
+   node automation/ultra-fast-service-generator.cjs
+   ```
 
 3. **Git Issues**
- ```bash
- # Check git status
- git status
- 
- # Reset if needed
- git reset --hard HEAD
- git pull origin main
- ```
+   ```bash
+   # Check git status
+   git status
+   
+   # Reset if needed
+   git reset --hard HEAD
+   git pull origin main
+   ```
 
 ### Log Files
+
 - **PM2 Logs**: `~/.pm2/logs/`
 - **Generator Logs**: `automation/logs/`
 - **Cron Logs**: `automation/logs/cron.log`
@@ -271,6 +273,7 @@ The system automatically:
 ## 📈 Expected Results
 
 With all generators running:
+
 - **Services Generated**: 100+ per hour
 - **Generation Rate**: Every 15-30 seconds
 - **Uptime**: 99.9%+ (redundant systems)
