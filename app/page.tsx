@@ -197,7 +197,7 @@ export default function HomePage() {
           </div>
           
           {/* Additional Content Row */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8'>
             <ContentPreviewCard
               title='AI Implementation Checklist'
               description='Download our comprehensive 50-point checklist for successful AI implementation. Avoid common pitfalls and save time.'
@@ -205,6 +205,30 @@ export default function HomePage() {
               category='Free Resource'
               readTime='Download'
               icon='✅'
+            />
+            <ContentPreviewCard
+              title='Enterprise AI Automation Strategies 2025'
+              description='Comprehensive guide to implementing AI automation in enterprise environments with proven strategies.'
+              href='/blog/ai-automation-enterprise-2025'
+              category='Blog'
+              readTime='12 min read'
+              icon='🤖'
+            />
+            <ContentPreviewCard
+              title='Global Manufacturing AI Transformation'
+              description='How a Fortune 500 company achieved 40% cost reduction and 60% efficiency improvement through AI.'
+              href='/case-studies/global-manufacturing-ai-transformation'
+              category='Case Study'
+              readTime='8 min read'
+              icon='🏭'
+            />
+            <ContentPreviewCard
+              title='AI Implementation Roadmap 2025'
+              description='Complete step-by-step roadmap for implementing AI solutions with timelines and best practices.'
+              href='/resources/ai-implementation-roadmap'
+              category='Resource'
+              readTime='15 min read'
+              icon='🗺️'
             />
             <ContentPreviewCard
               title='Success Stories & Case Studies'
