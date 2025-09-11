@@ -66,12 +66,6 @@ merge_branch() {
     
     echo "🔄 Attempting to merge $branch..."
     
-    # Check if branch exists remotely
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        echo "❌ Branch $branch doesn't exist remotely, skipping..."
-        return 1
-    fi
-    
     # Fetch the latest version of the branch
     git fetch origin "$branch"
     
@@ -90,7 +84,6 @@ merge_branch() {
         if [ -n "$CONFLICTED_FILES" ]; then
             echo "📋 Conflicted files: $CONFLICTED_FILES"
             
-            # Resolve conflicts in each file
             for file in $CONFLICTED_FILES; do
                 if [ -f "$file" ]; then
                     resolve_conflicts "$file" "$branch"
@@ -142,9 +135,9 @@ awk '
 ' prs.json | while IFS='|' read -r pr_number branch_name; do
     if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
         echo ""
-        echo ""
+        echo "=========================================="
         echo "🔄 Processing PR #$pr_number from branch: $branch_name"
-        echo ""
+        echo "=========================================="
         
         if merge_branch "$branch_name"; then
             echo "✅ PR #$pr_number processed successfully"
@@ -152,7 +145,7 @@ awk '
             echo "❌ PR #$pr_number processing failed"
         fi
         
-        echo ""
+        echo "=========================================="
         echo ""
         
         # Push changes every 5 successful merges to avoid losing work
@@ -183,6 +176,5 @@ echo "🧹 Cleanup recommendations:"
 echo "   1. Review the merged changes: git log --oneline -20"
 echo "   2. Test the application thoroughly"
 echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   4. Close the merged PRs on GitHub"
-echo "   5. Consider cleaning up old feature branches"
-echo "   6. Run tests to ensure everything works correctly"
+echo "   4. Consider cleaning up old feature branches"
+echo "   5. Run tests to ensure everything works correctly"

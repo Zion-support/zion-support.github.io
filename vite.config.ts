@@ -1,182 +1,68 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'node:path';
-import { fileURLToPath, URL } from 'node:url';
-import { VitePWA } from 'vite-plugin-pwa';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      include: '**/*.{jsx,js,ts,tsx}',
-      fastRefresh: true,
-      jsxRuntime: 'automatic',
-    }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
-              },
-              cacheKeyWillBeUsed: async ({ request }) => {
-                return `${request.url}?v=1`;
-              },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
-              },
-            },
-          },
-          {
-            urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
-              },
-            },
-          },
-        ],
-      },
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-      manifest: {
-        name: 'Tech Solutions App',
-        short_name: 'TechSolutions',
-        description: 'A modern web application for tech solutions and services',
-        theme_color: '#3b82f6',
-        background_color: '#0f172a',
-        display: 'standalone',
-        orientation: 'portrait-primary',
-        scope: '/',
-        start_url: '/',
-        icons: [
-          {
-            src: 'icon-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-            purpose: 'maskable any',
-          },
-          {
-            src: 'icon-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable any',
-          },
-        ],
-      },
-    }),
-  ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-      '@pages': fileURLToPath(new URL('./src/pages', import.meta.url)),
-      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
-      '@hooks': fileURLToPath(new URL('./src/hooks', import.meta.url)),
-      '@types': fileURLToPath(new URL('./src/types', import.meta.url)),
-      '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
-      '@assets': fileURLToPath(new URL('./src/assets', import.meta.url))
-    }
-  },
-  css: {
-    postcss: false
-  },
-  esbuild: {
-    loader: 'tsx',
-    include: /src\/.*\.[jt]sx?$/,
-    exclude: [],
-  },
+  plugins: [react()],
+  root: '.',
+  base: '/',
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-collapsible',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-hover-card',
-            '@radix-ui/react-label',
-            '@radix-ui/react-menubar',
-            '@radix-ui/react-navigation-menu',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
-            '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
-            '@radix-ui/react-toggle',
-            '@radix-ui/react-tooltip',
-          ],
-          'animation-vendor': ['framer-motion'],
-          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          'icons-vendor': ['lucide-react'],
           'router-vendor': ['react-router-dom'],
+          'ui-vendor': ['framer-motion', 'lucide-react'],
+          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const name = assetInfo.name || '';
-          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
-          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
-          return 'assets/[name]-[hash].[ext]';
-        },
-      },
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `images/[name]-[hash][extname]`;
+          }
+          if (/css/i.test(ext)) {
+            return `css/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        }
+      }
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 2,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-      },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/,
-        },
-      },
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+      }
     },
-    chunkSizeWarningLimit: 1000,
-    reportCompressedSize: false,
-    emptyOutDir: true,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 1000
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
   },
   optimizeDeps: {
     include: [
@@ -185,13 +71,11 @@ export default defineConfig({
       'react-router-dom',
       'framer-motion',
       'lucide-react',
+      'date-fns',
       'clsx',
       'tailwind-merge'
     ],
-    exclude: ['@radix-ui/react-icons'],
-    esbuildOptions: {
-      target: 'esnext',
-    },
+    exclude: ['@vite/client', '@vite/env']
   },
   server: {
     port: 3000,
@@ -199,20 +83,28 @@ export default defineConfig({
     open: true,
     cors: true,
     hmr: {
-      overlay: false,
+      overlay: false
     },
-    fs: {
-      allow: ['..']
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
     }
   },
   preview: {
     port: 4173,
     host: true,
-    open: true,
+    open: true
+  },
+  css: {
+    devSourcemap: true,
+    postcss: './postcss.config.js'
   },
   define: {
-    __DEV__: JSON.stringify(import.meta.env.DEV),
-    __PROD__: JSON.stringify(import.meta.env.PROD),
-  },
-  envPrefix: ['VITE_', 'ZION_'],
-});
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  }
+})
