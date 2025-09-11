@@ -19,12 +19,68 @@ export default function ServicesAdvertisingPage() {
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
 				</div>
 
+				{/* September 2025 highlights */}
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">New in September 2025</h2>
+					<p className="text-slate-300">Fresh, validated offerings focused on immediate ROI and rapid deployment.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>SMB-friendly pricing, week-1 milestones, and transparent benchmarks</li>
+						<li>Backed by production-grade templates and reference architectures</li>
+					</ul>
+				</section>
+
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $50–$400/mo + API usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
+					</ul>
+				</section>
+
+				{/* New content additions */}
+				<section id="ai-rfp-response-copilot" className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">AI RFP Response Copilot</h2>
+					<p className="text-slate-300">Auto-draft compliant RFP responses with policy alignment, citations, and editable briefs.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $30–$150/mo</li>
+						<li>References: {ext('https://platform.openai.com/docs/pricing')}, {ext('https://workspace.google.com/pricing')}</li>
+					</ul>
+				</section>
+
+				<section id="sales-pipeline-enrichment" className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Sales Pipeline Enrichment</h2>
+					<p className="text-slate-300">Company and contact enrichment with news signals, technographics, and ICP scoring.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $49–$199/mo</li>
+						<li>References: {ext('https://www.clearbit.com/pricing')}, {ext('https://www.apollo.io/pricing')}</li>
+					</ul>
+				</section>
+
+				<section id="seo-change-monitor" className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">SEO Change Monitor</h2>
+					<p className="text-slate-300">Track diffs to titles, meta, schema, and internal links with alerting and rollbacks.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $15–$60/mo</li>
+						<li>References: {ext('https://www.contentkingapp.com/pricing/')}, {ext('https://www.semrush.com/prices/')}</li>
+					</ul>
+				</section>
+
+				<section id="release-notes-automation" className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Release Notes Automation</h2>
+					<p className="text-slate-300">Generate customer-friendly release notes from commits, PRs, and issues with categories and links.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $9–$49/mo</li>
+						<li>References: {ext('https://docs.github.com')}, {ext('https://www.atlassian.com/software/jira/pricing')}</li>
+					</ul>
+				</section>
+
+				<section id="churn-risk-alerts" className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Churn Risk Alerts</h2>
+					<p className="text-slate-300">Usage anomaly detection and health scoring to trigger success playbooks in your CRM.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $29–$199/mo</li>
+						<li>References: {ext('https://segment.com/pricing/')}, {ext('https://mixpanel.com/pricing/')}</li>
 					</ul>
 				</section>
 
