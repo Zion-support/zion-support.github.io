@@ -8,6 +8,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -153,14 +154,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest Content Section */}
-      <ContentShowcase
-        title="Latest Resources"
-        subtitle="Fresh insights, guides, and tools to accelerate your AI journey"
-        items={latestContent}
-        variant="default"
-        showViewAll={true}
-        viewAllHref="/resources"
+      {/* Interactive Content Section */}
+      <InteractiveContentShowcase
+        title="Explore Our AI Content Library"
+        subtitle="Discover, filter, and explore our comprehensive collection of AI insights, case studies, and resources"
+        items={[...featuredContent, ...trendingContent, ...latestContent]}
+        variant="interactive"
+        showFilters={true}
+        showStats={true}
+        showSearch={true}
+      />
+
+      {/* Newsletter Signup */}
+      <EnhancedNewsletterSignup
+        variant="hero"
+        showBenefits={true}
+        showTestimonials={true}
       />
 
       {/* CTA Section */}
