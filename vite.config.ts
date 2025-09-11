@@ -106,6 +106,7 @@ export default defineConfig({
     exclude: ['@radix-ui/react-icons']
   },
   server: {
+<<<<<<< HEAD
     port: 3000,
     host: true,
     open: true,
@@ -113,6 +114,11 @@ export default defineConfig({
     hmr: {
       overlay: false,
     }
+=======
+    port: Number(process.env.PORT) || 3000,
+    host: true,
+    open: false,
+>>>>>>> origin/chore/seo-vite-tweaks
   },
   preview: {
     port: 4173,
