@@ -124,10 +124,10 @@ export default function HomePage() {
               icon='🗺️'
             />
             <Card
-              title='GenAI Evals in Production: What Actually Works'
-              href='/blog/genai-evals-in-production'
-              description='Continuous eval loops that keep quality, safety, and costs in check.'
-              icon='🧪'
+              title='AI-Powered Customer Support Playbooks'
+              href='/blog/ai-customer-support-playbooks'
+              description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
+              icon='🎧'
             />
           </div>
         </div>
