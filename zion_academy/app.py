@@ -150,9 +150,10 @@ def api_complete_lesson():
                 )
                 db.session.add(cert)
 
+        progress_value = enrollment.progress
         db.session.commit()
 
-    return jsonify({'progress': enrollment.progress})
+    return jsonify({'progress': progress_value})
 
 
 @app.route('/api/progress/<int:user_id>')
