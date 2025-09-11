@@ -33,7 +33,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
-import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { SORT_OPTIONS } from "@/data/sortOptions",;
 import { SortDesc, ChevronDown } from 'lucide-react';

@@ -75,9 +75,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:
         return status
 
-import React from 'react';
 
-import React from "react",;
 
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {;

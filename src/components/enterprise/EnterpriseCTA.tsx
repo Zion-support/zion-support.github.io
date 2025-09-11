@@ -62,7 +62,6 @@ export function EnterpriseCTA() {
 
 import { Calendar } from 'lucide-react';
 
-import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
@@ -127,7 +126,6 @@ export function EnterpriseCTA() {
 
     </section>
 
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
@@ -243,7 +241,6 @@ export function EnterpriseCTA() {;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Calendar, ArrowRight } from 'lucide-react';
 export /**

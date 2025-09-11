@@ -4,7 +4,6 @@ const shareToTwitter = () => {
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';

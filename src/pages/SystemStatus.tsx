@@ -24,7 +24,7 @@ interface ServiceStatus {
   responseTime: number;
   lastUpdated: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentTypeg<div>;
 }
 
 interface Incident {

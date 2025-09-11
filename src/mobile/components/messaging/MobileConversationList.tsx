@@ -16,7 +16,6 @@
         </div>
       </div>
 
-import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -61,7 +60,6 @@ export function MobileConversationList(): any ({;
             Interviews;
           </Badge>;
           <Badge variant='outline' className='rounded-full px-3'>;
-import React from 'react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';

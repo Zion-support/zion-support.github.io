@@ -1,4 +1,3 @@
-import React from 'react';
 import { _Skeleton } from '../../components/ui/skeleton';
 export function TalentSkeleton() {
   return (

@@ -58,7 +58,6 @@ export function MobileFilterBar({
           className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />;
         <p id='mobile-talent-search-help' className='sr-only'>;
 
-import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from 'lucide-react';
 import { Input } from "@/components/ui/input",;
@@ -105,7 +104,6 @@ export function MobileFilterBar({;
   );
 }
 
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from 'lucide-react';
 import { Input } from '@/components / ui / input';

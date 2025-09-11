@@ -7,12 +7,12 @@ import { TrendingUp } from 'lucide-react';
 const services = [];
 const solutions = [];
  className?: string; placeholder?: string; showFilters?: boolean; onSearch?: (query: string, filters: SearchFilter s) => void; ';';
-}; interface SearchFilters { type: string[]; category: string[]; tags: string[];   }; export const SearchComponent: Reac t.FC<SearchComponentProps> = ({; className = '',; placeholder = 'Search for AI services, solutions, and more...',; showFilters = true,; onSearch; }) => {; const [query, setQuery] = useState<any>(''); const [isOpen, setIsOpen] = useState<any>(false); const [results, setResults] = useState<SearchResult[]>([]); const [filters, setFilters] = useState<SearchFilters>({; type: [],; category: [],; tags: []; }); const [showFiltersPanel, setShowFiltersPanel] = useState<any>(false); const [recentSearches, setRecentSearches] = useState<string[]>([]); const [trendingSearches, setTrendingSearches] = useState<string[]>([]); ; const _searchRef = useRef<HTMLDivElement>(null); const _inputRef = useRef<HTMLInputElement>(null); ;
+}; interface SearchFilters { type: string[]; category: string[]; tags: string[];   }; export const SearchComponent: Reac t.FC<SearchComponentProps> = ({; className = '',; placeholder = 'Search for AI services, solutions, and more...',; showFilters = true,; onSearch; }) => {; const [query, setQuery] = useStateg<div>(''); const [isOpen, setIsOpen] = useStateg<div>(false); const [results, setResults] = useState<SearchResult[]>([]); const [filters, setFilters] = useState<SearchFilters>({; type: [],; category: [],; tags: []; }); const [showFiltersPanel, setShowFiltersPanel] = useStateg<div>(false); const [recentSearches, setRecentSearches] = useState<string[]>([]); const [trendingSearches, setTrendingSearches] = useState<string[]>([]); ; const _searchRef = useRef<HTMLDivElement>(null); const _inputRef = useRef<HTMLInputElement>(null); ;
 </HTMLInputElement>
 </HTMLDivElement>
 </string>
-</any>
+</div>
 </SearchFilters>
 </SearchResult>
-</any>';
+</div>';
 </SearchComponentProps>;';;';

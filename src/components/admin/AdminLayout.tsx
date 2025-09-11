@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 const navItems = [
   { title: 'Products', href: '/admin/products' },

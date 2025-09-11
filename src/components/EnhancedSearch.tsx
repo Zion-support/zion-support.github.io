@@ -8,7 +8,7 @@ interface SearchResult {
 	description: string;
 	type: 'service' | 'page' | 'article' | 'ai-suggestion';
 	url: string;
-	icon?: React.ComponentType<any>;
+	icon?: React.ComponentTypeg<div>;
 	relevance: number;
 }
 

@@ -250,7 +250,7 @@ export function SmartContractBuilder(): any ({;
   const [deployedContractAddress, setDeployedContractAddress] = useState<string | null>(null);
   const [deploymentError, setDeploymentError] = useState<string | null>(null);
   const [populatedSolidityCode, setPopulatedSolidityCode] = useState<string | null>(null); // Bytecode from generate-smart-contract;
-  const [contractAbi, setContractAbi] = useState<any | null>(null); // ABI based on contractType;
+  const [contractAbi, setContractAbi] = useStateg<div | null>(null); // ABI based on contractType;
 
   // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment && deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts();
   // Prefill form with talent and client name(existing useEffect);

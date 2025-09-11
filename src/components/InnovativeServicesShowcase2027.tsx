@@ -29,7 +29,7 @@ import {
   getServicesByCategory,
 } from '../data/innovativeServices2027';
 
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+const categoryIcons: { [key: string]: React.ComponentTypeg<div> } = {
   'AI & Consciousness': Brain,
   'Quantum AI': Atom,
   'Autonomous AI': Cpu,

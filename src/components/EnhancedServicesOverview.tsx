@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   _ENHANCED_SERVICES,
   ENHANCED_SERVICE_CATEGORIES,

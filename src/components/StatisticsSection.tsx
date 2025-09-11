@@ -1,4 +1,3 @@
-import React from 'react';
 import { _Users, Globe, TrendingUp, Award } from 'lucide-react';
 
 import { TrendingUp } from 'lucide-react';

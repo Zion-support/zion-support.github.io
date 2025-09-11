@@ -181,7 +181,7 @@ export default function EnhancedAccessibilityEnhancer({
   const [wcagScore, setWcagScore] = useState({ A: 0, AA: 0, AAA: 0 });
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [voiceRecognition, setVoiceRecognition] = useState<any>(null);
+  const [voiceRecognition, setVoiceRecognition] = useStateg<div>(null);
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
 

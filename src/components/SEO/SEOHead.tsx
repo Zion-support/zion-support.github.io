@@ -1,4 +1,3 @@
-import React from 'react';
 import { _Helmet } from 'react-helmet-async';
 
 import SEO from '../components/SEO';

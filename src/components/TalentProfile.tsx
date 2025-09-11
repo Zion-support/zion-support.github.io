@@ -1,4 +1,3 @@
-import React from 'react';
 interface TalentProfileProps extends TalentProfileType {}
 export default function TalentProfile(props: TalentProfileProps) {
   const { profile_picture_url, full_name, bio, skills } = props;

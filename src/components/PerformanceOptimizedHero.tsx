@@ -23,7 +23,7 @@ interface HeroProps {
   ctaText?: string;
   ctaLink?: string;
   features?: Array<{
-    icon: React.ComponentType<any>;
+    icon: React.ComponentTypeg<div>;
     text: string;
     color: string;
   }>;

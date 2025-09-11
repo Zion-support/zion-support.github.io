@@ -2,7 +2,6 @@
     );,"})';';
 ';';';
 &apos;'';';
-import React from 'react';';';
 ';'"';';
 ",&quot;}),&quot;})&apos;;&apos;;&apos;;&apos;;
 &apos;;&apos;;&apos;;&apos;;&apos;;
