@@ -374,6 +374,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest Articles Teaser */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between mb-8'>
+            <h3 className='text-2xl font-bold text-gray-900'>Latest from the Blog</h3>
+            <Link href='/blog' className='text-blue-600 font-medium hover:underline'>View all</Link>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {[{
+              id: 'ai-productivity-playbook-2025',
+              title: 'AI Productivity Playbook 2025',
+              excerpt: 'Boost throughput with AI while keeping quality and costs in check.'
+            }, {
+              id: 'cloud-cost-optimization-2025',
+              title: 'Cloud Cost Optimization 2025',
+              excerpt: 'Cut 30–50% without downtime: quick wins and architecture moves.'
+            }, {
+              id: 'edge-ai-retail-2025',
+              title: 'Edge AI in Retail 2025',
+              excerpt: 'Real-time CX with privacy by design and on-device intelligence.'
+            }].map((post) => (
+              <Link key={post.id} href={`/blog/${post.id}`} className='group'>
+                <article className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>
+                  <h4 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600'>
+                    {post.title}
+                  </h4>
+                  <p className='text-gray-600 text-sm mb-3'>{post.excerpt}</p>
+                  <span className='text-blue-600 text-sm font-medium'>Read →</span>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Performance and Accessibility Components */}
       <PerformanceMonitor />
       <AccessibilityEnhancer />
