@@ -1,54 +1,21 @@
-// @ts-nocheck
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../components/SEO';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
-// Lazy load heavy components
-const ROICalculator = lazy(() => import('../components/ROICalculator'));
-const StructuredData = lazy(() => import('../components/StructuredData'));
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords: 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  openGraph: {
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    type: 'website',
+  },
+};
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
-      <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
-        url="/"
-      />
-      
-      <div className='min-h-screen bg-white'>
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
-          <StructuredData 
-            type="Organization" 
-            data={{
-              name: "Zion Tech Group",
-              description: "Transforming businesses through cutting-edge technology solutions",
-              url: "https://zion.app",
-              logo: "https://zion.app/images/zion-tech-group-logo.png",
-              sameAs: [
-                "https://twitter.com/ZionTechGroup",
-                "https://linkedin.com/company/zion-tech-group"
-              ]
-            }} 
-          />
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://zion.app",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://zion.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
-        </Suspense>
+    <div className='min-h-screen bg-white'>
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

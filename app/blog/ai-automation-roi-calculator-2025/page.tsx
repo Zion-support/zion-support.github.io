@@ -1,18 +1,20 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Automation ROI Calculator 2025 - Measure Your Business Impact',
+  description: 'Calculate the return on investment for AI automation projects with our comprehensive ROI calculator. Includes real-world examples and industry benchmarks.',
+  keywords: 'AI automation ROI, business automation calculator, AI investment return, automation cost savings, AI ROI metrics',
+  openGraph: {
+    title: 'AI Automation ROI Calculator 2025 - Measure Your Business Impact',
+    description: 'Calculate the return on investment for AI automation projects with our comprehensive ROI calculator.',
+    type: 'article',
+  },
+};
 
 export default function AIAutomationROICalculator2025() {
   return (
-    <ErrorBoundary>
-      <SEO
-        title="AI Automation ROI Calculator 2025 - Measure Your Business Impact"
-        description="Calculate the return on investment for AI automation projects with our comprehensive ROI calculator. Includes real-world examples and industry benchmarks."
-        keywords="AI automation ROI, business automation calculator, AI investment return, automation cost savings, AI ROI metrics"
-        url="/blog/ai-automation-roi-calculator-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="mb-8">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
@@ -283,6 +285,5 @@ export default function AIAutomationROICalculator2025() {
           </div>
         </div>
       </div>
-    </ErrorBoundary>
   );
 }
