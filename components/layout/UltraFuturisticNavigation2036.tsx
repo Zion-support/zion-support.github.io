@@ -62,17 +62,19 @@ import EnhancedSearch from '../EnhancedSearch';
     category: 'showcase',
     children: [
       { 
-        name: 'Services Showcase 2036', 
-        href: '/comprehensive-services-showcase-2036', 
-        description: 'Complete 2036 services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
+        name: 'Innovative 2027 Services', 
+        href: '/innovative-2027-services-showcase', 
+        description: 'Cutting-edge 2027 services showcase',
+        icon: <Star className="w-4 h-4" />,
+        featured: true,
+        badge: 'NEW'
       },
       { 
-        name: '2025 Services Showcase', 
+        name: 'Services Showcase', 
         href: '/comprehensive-services-showcase-2025', 
-        description: 'Previous services overview',
-        icon: <Grid className="w-4 h-4" />
+        description: 'Complete services overview',
+        icon: <Calculator className="w-4 h-4" />,
+        featured: true
       },
       { 
         name: 'Pricing Plans', 
