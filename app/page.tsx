@@ -112,22 +112,22 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
+              title='AI Sales Playbooks 2025: Sequencing, Scoring, and Agentic SDRs'
+              href='/blog/ai-sales-playbooks-2025'
+              description='Outbound frameworks with AI research, multi-channel cadences, and evals.'
+              icon='📈'
+            />
+            <Card
+              title='Data Governance for AI 2025: Practical, Lightweight Controls'
+              href='/blog/data-governance-for-ai-2025'
+              description='Trustable data flows, lineage, and access control for GenAI without ceremony.'
+              icon='🧭'
+            />
+            <Card
               title='LLM Cost Optimization Playbook: Cut Spend Without Losing Quality'
               href='/blog/llm-cost-optimization-playbook'
-              description='Reduce inference spend 20–50% with routing, retrieval, batching, and tight observability.'
+              description='Reduce inference spend 20–50% with routing, retrieval, batching, and observability.'
               icon='💰'
-            />
-            <Card
-              title='AI Governance Checklist 2025: Operationalize Policy With Evals'
-              href='/blog/ai-governance-checklist-2025'
-              description='A concise, actionable checklist to stand up pragmatic AI governance that accelerates delivery.'
-              icon='📋'
-            />
-            <Card
-              title='Startup Fundraising in 2025: Efficient Rounds in a Tough Market'
-              href='/blog/startup-fundraising-in-2025'
-              description='Prove traction, run a tight process, and negotiate governance to raise efficiently.'
-              icon='🚀'
             />
           </div>
         </div>

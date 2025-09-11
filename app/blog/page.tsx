@@ -3,6 +3,22 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'AI Sales Playbooks 2025: Sequencing, Scoring, and Agentic SDRs',
+    description:
+      'Proven outbound frameworks with AI-assisted research, multi-channel cadences, and evals.',
+    href: '/blog/ai-sales-playbooks-2025',
+    date: '2025-09-11',
+    tags: ['Sales', 'AI', 'Playbooks'],
+  },
+  {
+    title: 'Data Governance for AI 2025: Practical, Lightweight Controls',
+    description:
+      'Implement trustable data flows, lineage, and access control for GenAI without heavy ceremony.',
+    href: '/blog/data-governance-for-ai-2025',
+    date: '2025-09-11',
+    tags: ['Data', 'Governance', 'AI'],
+  },
+  {
     title: 'LLM Cost Optimization Playbook: Cut Spend Without Losing Quality',
     description:
       'Reduce inference spend 20–50% with routing, retrieval, batching, and tight observability.',
@@ -25,14 +41,6 @@ const posts = [
     href: '/blog/ai-copilots-for-engineering',
     date: '2025-09-11',
     tags: ['AI', 'DevEx', 'Productivity'],
-  },
-  {
-    title: 'AI Governance Checklist 2025: Operationalize Policy With Evals',
-    description:
-      'A concise, actionable checklist to stand up pragmatic AI governance that accelerates delivery.',
-    href: '/blog/ai-governance-checklist-2025',
-    date: '2025-09-11',
-    tags: ['AI', 'Governance', 'Risk'],
   },
   {
     title: 'Startup Fundraising in 2025: Efficient Rounds in a Tough Market',
@@ -105,14 +113,6 @@ const posts = [
     href: '/blog/serverless-for-ml-2025',
     date: '2025-09-11',
     tags: ['Serverless', 'ML', 'Cloud'],
-=======
-    title: 'AI Copilots for Engineering Teams',
-    description:
-      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
-    href: '/blog/ai-copilots-for-engineering',
-    date: '2025-09-11',
-    tags: ['AI', 'DevEx', 'Productivity'],
->>>>>>> origin/cursor/create-and-deploy-new-content-e0ec
   },
   {
     title: 'Practical AI Agents for Small Businesses',
