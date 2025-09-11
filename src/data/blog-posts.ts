@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '11',
+    title: 'GenAI in Production: SLAs, Costs, and Control in 2025',
+    slug: 'genai-in-production-slas-costs-control-2025',
+    excerpt:
+      'What changes when GenAI moves from pilots to P&L-backed products: SLOs, guardrails, and cost controls that stick.',
+    content:
+      'Pilots tolerate variance—products cannot. We cover request shaping, caching tiers, eval-driven release gates, fallback orchestration, and budget enforcement. Learn how teams keep latency predictable, quality measurable, and costs within guardrails while shipping faster.',
+    featuredImage: '/images/blog/genai-in-production.jpg',
+    category: 'AI',
+    tags: ['GenAI', 'SLOs', 'Cost Management'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 6,
+  },
+  {
+    id: '12',
+    title: 'Edge + AI: Personalization Without the Privacy Tradeoff',
+    slug: 'edge-ai-privacy-personalization',
+    excerpt:
+      'Run models near users, keep data local, and still learn globally. A practical blueprint for privacy-preserving personalization.',
+    content:
+      'We outline a pattern that blends edge inference, federated analytics, and anonymous feedback loops. Covering feature stores at the edge, secure aggregation, and rollout safety, we show how to ship fast UX while respecting user privacy and regional data rules.',
+    featuredImage: '/images/blog/edge-ai-privacy.jpg',
+    category: 'Product',
+    tags: ['Edge', 'Privacy', 'Personalization'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 5,
+  },
+  {
+    id: '13',
+    title: 'Shipping Safer: Incident-Ready CI/CD for High-Velocity Teams',
+    slug: 'incident-ready-cicd',
+    excerpt:
+      'Blueprint your pipelines with baked-in rollback, auto-verification, and guarded releases so speed never sacrifices safety.',
+    content:
+      'High velocity doesn’t need high risk. We cover pre-prod traffic mirrors, automated canaries, error budgets as deploy gates, and “fast rollback first” muscle memory. Includes reference configs and dashboards that make incidents rare and short.',
+    featuredImage: '/images/blog/incident-ready-cicd.jpg',
+    category: 'Engineering',
+    tags: ['DevOps', 'Reliability', 'CI/CD'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 6,
+  },
+  {
     id: '2',
     title: 'AI RFP Response Copilot: Win More, Write Less',
     slug: 'ai-rfp-response-copilot',

@@ -119,9 +119,9 @@ const HomePage: React.FC = () => {
               <div className="promo-card">
                 <div className="promo-content">
                   <h2 className="section-title">What’s New</h2>
-                  <p className="promo-text">Fresh insights on RAG systems, actionable observability, trustworthy AI UX, and serverless at scale.</p>
+                  <p className="promo-text">New on the blog: GenAI in production, privacy-first Edge AI personalization, and incident-ready CI/CD playbooks.</p>
                 </div>
-                <a href="/services-advertising" className="btn btn-primary">See What's New →</a>
+                <a href="/blog" className="btn btn-primary">Explore the latest posts →</a>
               </div>
             </div>
           </section>
