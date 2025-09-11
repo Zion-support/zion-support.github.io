@@ -1,14 +1,23 @@
 /* App.css - Main application styles */
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .app-header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.app-link {
+  color: #61dafb;
 }
 
 .app-main {
@@ -19,6 +28,28 @@
 
 .app-footer {
   margin-top: auto;
+}
+
+/* Futuristic theme styles */
+.bg-futuristic {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Loading states */
@@ -42,19 +73,29 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .app-header {
+    padding: 10px;
+  }
   .app-main {
     padding: 0;
   }
 }
 
-/* Dark mode support */
+/* Dark theme overrides */
+.dark {
+  color-scheme: dark;
+}
+
 .dark .app {
   background-color: #0a0a0a;
   color: #ffffff;
 }
 
-/* Accessibility */
+/* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
+  .loading-spinner {
+    animation: none;
+  }
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

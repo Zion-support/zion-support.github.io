@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+export interface EnhancedRealMicroSaasService {
+	id: string;
+	title: string;
+	category: string;
+}
+
+export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [];
+export const injectedAdditionalServices: EnhancedRealMicroSaasService[] = [];
+export const serviceCategories: string[] = [];
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2664,3 +2675,4 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

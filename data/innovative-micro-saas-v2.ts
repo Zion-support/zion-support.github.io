@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+export interface InnovativeMicroSaasV2 {
+	id: string;
+	title: string;
+	description: string;
+	category: string;
+	price: string;
+	rating: number;
+	reviews: number;
+}
+
+export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
@@ -1466,3 +1479,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

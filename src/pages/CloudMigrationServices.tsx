@@ -37,25 +37,25 @@ export default function CloudMigrationServices() {
             name: "AWS",
             description: "Amazon Web Services migration and optimization",
             icon: <Cloud className="h-8 w-8 text-zion-cyan"/>,
-            features["EC2", "RDS", "S3", "Lambda"]
+            features: ["EC2", "RDS", "S3", "Lambda"]
         },
         {
             name: "Azure",
             description: "Microsoft Azure cloud migration services",
             icon: <Cloud className="h-8 w-8 text-zion-purple"/>,
-            features["VM", "SQL Database", "Blob Storage", "Functions"]
+            features: ["VM", "SQL Database", "Blob Storage", "Functions"]
         },
         {
             name: "Google Cloud",
             description: "Google Cloud Platform migration solutions",
             icon: <Cloud className="h-8 w-8 text-zion-blue"/>,
-            features["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"]
+            features: ["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"]
         },
         {
             name: "Multi-Cloud",
             description: "Hybrid and multi-cloud migration strategies",
             icon: <Network className="h-8 w-8 text-zion-cyan"/>,
-            features["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
+            features: ["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
         }
     ];
     const pricingPlans = [
@@ -64,7 +64,7 @@ export default function CloudMigrationServices() {
             price: "$5,000",
             period: "one-time",
             description: "Essential cloud migration for small businesses",
-            features[
+            features: [
                 "Cloud assessment",
                 "Basic migration plan",
                 "Data migration",
@@ -78,7 +78,7 @@ export default function CloudMigrationServices() {
             price: "$15,000",
             period: "one-time",
             description: "Comprehensive migration for growing businesses",
-            features[
+            features: [
                 "Full cloud assessment",
                 "Detailed migration plan",
                 "Data & app migration",
@@ -93,7 +93,7 @@ export default function CloudMigrationServices() {
             price: "$50,000",
             period: "one-time",
             description: "Full-scale migration for large organizations",
-            features[
+            features: [
                 "Custom migration strategy",
                 "Multi-cloud migration",
                 "Advanced optimization",

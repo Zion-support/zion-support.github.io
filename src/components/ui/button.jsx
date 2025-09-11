@@ -1,3 +1,15 @@
+import React from 'react';
+
+export function Button({ 
+  children, 
+  variant = 'default', 
+  size = 'md', 
+  asChild = false, 
+  className = "", 
+  onClick, 
+  type = 'button', 
+  disabled = false 
+}) {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantClasses = {
@@ -37,3 +49,4 @@
       {children}
     </button>
   );
+}

@@ -1,122 +1,107 @@
 import React from 'react';
 
 const Pricing: React.FC = () => {
-  const plans = [
+  const servicePricing = [
     {
-      name: 'Starter',
-      price: '$999',
-      period: 'per month',
-      description: 'Perfect for small businesses getting started',
-      features: [
-        'Basic AI Integration',
-        'Email Support',
-        'Standard Security',
-        'Monthly Reports',
-        'Up to 5 Users'
-      ],
-      popular: false
+      service: "Micro SaaS Development",
+      starting: "$5,000",
+      monthly: "$2,500",
+      description: "End-to-end product development with billing, auth, and analytics"
     },
     {
-      name: 'Professional',
-      price: '$2,999',
-      period: 'per month',
-      description: 'Ideal for growing businesses with advanced needs',
-      features: [
-        'Advanced AI Solutions',
-        'Priority Support',
-        'Enhanced Security',
-        'Real-time Analytics',
-        'Up to 25 Users',
-        'Custom Integrations'
-      ],
-      popular: true
+      service: "AI Services",
+      starting: "$3,500",
+      monthly: "$1,500",
+      description: "Custom AI solutions, machine learning models, and automation"
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'contact us',
-      description: 'Tailored solutions for large organizations',
-      features: [
-        'Custom AI Development',
-        '24/7 Dedicated Support',
-        'Enterprise Security',
-        'Advanced Analytics',
-        'Unlimited Users',
-        'Custom Integrations',
-        'Dedicated Account Manager'
-      ],
-      popular: false
+      service: "Cloud Migration",
+      starting: "$2,500",
+      monthly: "$800",
+      description: "Seamless migration to cloud platforms with optimization"
+    },
+    {
+      service: "DevOps & Infrastructure",
+      starting: "$2,000",
+      monthly: "$1,200",
+      description: "CI/CD pipelines, monitoring, and infrastructure automation"
+    },
+    {
+      service: "Mobile Development",
+      starting: "$4,000",
+      monthly: "$1,800",
+      description: "Native and cross-platform mobile applications"
+    },
+    {
+      service: "Cybersecurity",
+      starting: "$3,000",
+      monthly: "$1,000",
+      description: "Security audits, penetration testing, and compliance"
     }
   ];
 
+  const features = [
+    "24/7 Support",
+    "Free Consultation",
+    "30-day Money Back Guarantee",
+    "Scalable Solutions",
+    "Regular Updates",
+    "Performance Monitoring"
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Pricing Plans</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include our core features with no hidden fees.
+          <h1 className="text-5xl font-extrabold mb-4">Pricing Plans</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our core features and support.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`bg-white rounded-lg shadow-md p-8 relative ${
-                plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-              
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <p className="text-gray-600 mb-4">{plan.description}</p>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                  <span className="text-gray-600 ml-2">{plan.period}</span>
-                </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {servicePricing.map((service, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">{service.service}</h3>
+              <div className="mb-4">
+                <span className="text-3xl font-bold text-blue-400">{service.starting}</span>
+                <span className="text-gray-300 ml-2">starting</span>
               </div>
-              
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-600">
-                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="text-center">
-                <button 
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
-                    plan.popular 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
-                  }`}
-                >
-                  Get Started
-                </button>
+              <div className="mb-4">
+                <span className="text-xl font-semibold text-green-400">{service.monthly}</span>
+                <span className="text-gray-300 ml-2">/month</span>
               </div>
+              <p className="text-gray-300 mb-6">{service.description}</p>
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                Get Started
+              </button>
             </div>
           ))}
         </div>
-        
-        <div className="text-center mt-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Need a Custom Solution?</h2>
-          <p className="text-gray-600 mb-6">
-            Contact us to discuss your specific requirements and get a tailored quote.
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+          <h2 className="text-3xl font-bold text-center mb-8">What's Included</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-gray-300">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today for a free consultation and custom quote.
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-            Contact Sales
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200">
+            Contact Us Now
           </button>
         </div>
       </div>

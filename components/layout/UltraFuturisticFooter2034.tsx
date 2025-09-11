@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
+=======
 
 <<<<<<< HEAD
 import React from 'react';
@@ -464,6 +467,7 @@ export default function UltraFuturisticFooter2034() {;
 
             <div className="lg:col-span-1">
               <motion.div
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -2116,6 +2120,26 @@ export default function UltraFuturisticFooter2034() {;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
   )}"';
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+export default function UltraFuturisticFooter2034() {
+	const year = new Date().getFullYear();
+	return (
+		<footer className="mt-16 border-t border-gray-800 text-gray-400 px-4 py-8">
+			<div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+				<p>&copy; {year} Zion Tech Group. All rights reserved.</p>
+				<nav className="flex items-center gap-6 text-sm">
+					<a href="/privacy" className="hover:text-white">Privacy</a>
+					<a href="/terms" className="hover:text-white">Terms</a>
+				</nav>
+			</div>
+		</footer>
+	);
+}
+>>>>>>> origin/chore/standardize-pages-router
+=======
 
 <<<<<<< HEAD
   );
@@ -2180,3 +2204,4 @@ export default function UltraFuturisticFooter2034() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

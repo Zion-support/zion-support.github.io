@@ -18,25 +18,27 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "incremental": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "src/main.tsx",
+    "src",
+    "pages",
+    "components",
+    "types",
+    ".next/types/**/*.ts",
     "src/App.tsx",
     "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
     ".next",
-    "out",
-    "src_disabled",
-    "broken_files_backup",
-    "components_backup",
-    "tests.disabled",
-    "automation",
-    "pages",
-    "data"
+    "out"
   ]
 }
