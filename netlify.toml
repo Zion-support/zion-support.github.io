@@ -48,10 +48,17 @@ VITE_LEGACY_BUILD = "false"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+<<<<<<< HEAD
 [[headers]]
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+=======
+# Scheduled Functions (cloud automations replacing GitHub Actions cadence)
+[[scheduled.functions]]
+  name = "homepage_advertiser"
+  schedule = "*/15 * * * *" # every 15 minutes
+>>>>>>> origin/chore/futuristic-automations
 
 [[headers]]
   for = "/assets/*"
@@ -93,8 +100,46 @@ VITE_LEGACY_BUILD = "false"
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+<<<<<<< HEAD
 # SPA fallback for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+=======
+# Very fast orchestrator for continuous homepage/front refresh
+[[scheduled.functions]]
+  name = "fast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+# Ensure continuous orchestrator runs frequently
+[[scheduled.functions]]
+  name = "continuous-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+# Fast refreshers for front systems and homepage
+[[scheduled.functions]]
+  name = "front-visionary-expander"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "home-visionary-expander"
+  schedule = "*/4 * * * *" # every 4 minutes
+
+# High-frequency tools
+[[scheduled.functions]]
+  name = "front-maximizer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "continuous-front-runner"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "readme-advertiser"
+  schedule = "13 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "front-ads-promoter"
+  schedule = "*/10 * * * *" # every 10 minutes
+>>>>>>> origin/chore/futuristic-automations

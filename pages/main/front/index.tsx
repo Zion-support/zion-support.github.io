@@ -325,7 +325,10 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/futuristic-automations
 
         {/* Floating Quick-Nav Dock */}
         <aside className="fixed left-4 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
@@ -1817,6 +1820,7 @@ export default function MainFrontIndex() {
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
+<<<<<<< HEAD
 
         {/* Feature Highlights (new) */}
         <motion.section
@@ -1847,6 +1851,8 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+=======
+>>>>>>> origin/chore/futuristic-automations
 
       </main>
       {/* Back to top */}

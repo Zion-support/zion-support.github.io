@@ -222,10 +222,19 @@
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
     "homepage:update": "node automation/homepage-updater.cjs",
+<<<<<<< HEAD
     "scan:todo": "node automation/todo-scanner.cjs",
     "scan:registry": "node automation/docs-pages-indexer.cjs",
     "scan:content": "npm run scan:todo && npm run scan:registry"
 >>>>>>> origin/chore/front-automation
+=======
+    "front:advertise": "node automation/front-index-advertiser.cjs",
+    "front:futurize": "node automation/front-futurizer.cjs",
+    "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
+    "front:directory": "node automation/front-index-directory-builder.cjs",
+    "front:continuous": "node automation/continuous-front-runner.cjs",
+    "front:continuous:fast": "node -e \"const cp=require('child_process'); const run=()=>cp.exec('node automation/continuous-front-runner.cjs',()=>{}); run(); setInterval(run, 1000*60*5);\""
+>>>>>>> origin/chore/futuristic-automations
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
