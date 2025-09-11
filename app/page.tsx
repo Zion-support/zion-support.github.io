@@ -111,6 +111,12 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
+              title='AI Copilots for Engineering Teams'
+              href='/blog/ai-copilots-for-engineering'
+              description='Deploy repo-aware copilots to accelerate reviews and reduce engineering toil.'
+              icon='🧭'
+            />
+            <Card
               title='AI-Powered Customer Support Playbooks'
               href='/blog/ai-customer-support-playbooks'
               description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'

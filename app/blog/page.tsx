@@ -2,6 +2,14 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'AI Copilots for Engineering Teams',
+    description:
+      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
+    date: '2025-09-11',
+    tags: ['AI', 'DevEx', 'Productivity'],
+  },
+  {
     title: 'Practical AI Agents for Small Businesses',
     description:
       'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
