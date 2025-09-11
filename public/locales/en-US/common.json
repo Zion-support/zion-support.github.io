@@ -19,7 +19,7 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-    "micro-saas": "Micro SAAS",
+    "services": "Services",
     "categories": "Categories",
     "talent": "Talent",
     "equipment": "Equipment",
@@ -106,9 +106,5 @@
     "edit": "Edit",
     "saved": "Saved",
     "changes_saved": "Translation changes have been saved"
-  },
-  "error_boundary": {
-    "message": "Something went wrong.",
-    "retry": "Retry"
   }
 }

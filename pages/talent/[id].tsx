@@ -41,9 +41,8 @@ const TalentProfilePage: React.FC = () => {
     }
   }, [id]);
 
-const TalentPage: React.FC = () => {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
+  if (loading) return <ProfileLoadingState />;
+  if (error || !profile) return <ProfileErrorState error={error} />;
 
   const { data, error, isLoading } = useSWR<TalentProfile | null>(
     id ? `/api/talent/${id}` : null,

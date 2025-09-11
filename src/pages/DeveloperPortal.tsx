@@ -1,7 +1,25 @@
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { 
+  Code, 
+  BookOpen, 
+  Zap, 
+  Shield, 
+  Users, 
+  MessageSquare, 
+  Github, 
+  ExternalLink,
+  Terminal,
+  Database,
+  Webhook,
+  Key,
+  Mail
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
@@ -70,13 +88,5 @@ export function DeveloperPortal() {
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>
-  );
-}
-
-export default function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>
-      <DeveloperPortal />
-    </ProtectedRoute>
   );
 }

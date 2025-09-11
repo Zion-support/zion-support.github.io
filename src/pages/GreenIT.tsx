@@ -1,58 +1,16 @@
 
-          {/* Case Study */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Success Story: TechCorp's Green Transformation
-            </h2>
-            <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    From High Energy Costs to Sustainable Success
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    TechCorp, a mid-sized software company, was struggling with skyrocketing energy bills 
-                    and wanted to improve their environmental impact. We helped them implement a comprehensive 
-                    green IT strategy.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-green-400">40%</div>
-                      <div className="text-zion-slate-light text-sm">Energy Reduction</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-400">$85K</div>
-                      <div className="text-zion-slate-light text-sm">Annual Savings</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-400">60%</div>
-                      <div className="text-zion-slate-light text-sm">Carbon Footprint</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-purple-400">12</div>
-                      <div className="text-zion-slate-light text-sm">Months ROI</div>
-                    </div>
-                  </div>
-                  <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Read Full Case Study
-                  </button>
-                </div>
-                <div className="bg-white/10 rounded-lg p-6">
-                  <blockquote className="text-zion-slate-light italic text-lg">
-                    "Zion Tech Group's green IT solutions transformed our infrastructure and significantly 
-                    reduced our environmental impact while saving us money. It's a win-win for our business 
-                    and the planet."
-                  </blockquote>
-                  <div className="mt-4 text-white font-semibold">
-                    — Sarah Johnson, CTO at TechCorp
-                  </div>
-=======
 
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from "next/link";
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function GreenIT() {
   const greenITSolutions = [
@@ -79,7 +37,7 @@ export default function GreenIT() {
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,11 +68,11 @@ export default function GreenIT() {
                     </Button>
                   </div>
                 </div>
-                <div className="rounded-lg overflow-hidden relative w-full h-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
-                    alt="Green IT sustainability"
-                    className="object-cover"
+                <div className="rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
+                    alt="Green IT sustainability" 
+                    className="object-cover w-full h-full"
                   />
                 </div>
               </div>
@@ -169,7 +127,7 @@ export default function GreenIT() {
               Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.
             </p>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
-              <Link href="/contact">Contact Our Team</Link>
+              <Link to="/contact">Contact Our Team</Link>
             </Button>
           </div>
         </div>

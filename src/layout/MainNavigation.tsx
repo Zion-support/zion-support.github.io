@@ -2,8 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
+import { MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface MainNavigationProps {
@@ -17,8 +16,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
   const baseLinks = [
     {
@@ -32,9 +29,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
     },
     {
       key: 'talent',
@@ -47,14 +44,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
-      key: 'portfolio',
-      href: '/portfolio',
-      matches: (path: string) => path.startsWith('/portfolio')
-    },
-    {
       key: 'community',
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      matches: (path: string) => path.startsWith('/contact')
     }
   ];
 
