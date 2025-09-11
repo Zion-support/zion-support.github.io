@@ -12,6 +12,12 @@ export default function BlogIndex() {
         <h1>Latest from the Blog</h1>
         <ul style={{ marginTop: '1rem', lineHeight: 1.8 }}>
           <li>
+            <a href="/blog/ai-enterprise-roadmap-2025">AI Enterprise Roadmap 2025</a>
+          </li>
+          <li>
+            <a href="/blog/edge-ai-inference-guide">Edge AI Inference Guide</a>
+          </li>
+          <li>
             <a href="/blog/generative-ai-security-best-practices">Generative AI Security Best Practices</a>
           </li>
           <li>
