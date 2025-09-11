@@ -137,4 +137,8 @@ function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
   } else {
     console.log('No updates required.');
   }
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> origin/chore/futuristic-front-and-netlify-automations

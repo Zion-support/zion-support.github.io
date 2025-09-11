@@ -9,10 +9,14 @@ function runNode(relPath, args = []) {
 
 exports.config = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   schedule: '*/20 * * * *', // every 20 minutes
 =======
   schedule: '*/45 * * * *', // every 45 minutes
 >>>>>>> origin/chore/front-automation
+=======
+  schedule: '*/15 * * * *', // every 15 minutes
+>>>>>>> origin/chore/futuristic-front-and-netlify-automations
 };
 
 exports.handler = async () => {

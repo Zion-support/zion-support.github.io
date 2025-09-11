@@ -132,6 +132,7 @@ VITE_LEGACY_BUILD = "false"
   schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
+<<<<<<< HEAD
   name = "continuous-front-runner"
   schedule = "*/3 * * * *" # every 3 minutes
 
@@ -143,3 +144,27 @@ VITE_LEGACY_BUILD = "false"
   name = "front-ads-promoter"
   schedule = "*/10 * * * *" # every 10 minutes
 >>>>>>> origin/chore/futuristic-automations
+=======
+  name = "frontpage-enhancer"
+  schedule = "*/60 * * * *" # every hour
+
+[[scheduled.functions]]
+  name = "front-enhancer"
+  schedule = "*/15 * * * *" # every 15 minutes (accelerated)
+
+[[scheduled.functions]]
+  name = "marketing-and-features-promo"
+  schedule = "0 */2 * * *" # every 2 hours
+
+[[scheduled.functions]]
+  name = "link-and-health-scheduler"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "homepage-updater-scheduler"
+  schedule = "0 4 * * *" # daily 04:00 UTC
+
+[[scheduled.functions]]
+  name = "front-index-scheduler"
+  schedule = "*/20 * * * *" # every 20 minutes
+>>>>>>> origin/chore/futuristic-front-and-netlify-automations
