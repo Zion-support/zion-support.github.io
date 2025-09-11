@@ -1,4 +1,3 @@
-import React from "react"
 import { _SEO } from "../components/SEO"
 
 import SEO from '../components/SEO';

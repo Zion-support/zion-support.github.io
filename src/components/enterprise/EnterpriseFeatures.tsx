@@ -1,5 +1,4 @@
 
-import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = [
@@ -88,7 +87,6 @@ export function EnterpriseFeatures() {;
             Built for Enterprise Needs;
           </h2>;
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>;
-import React from 'react';
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
   {
@@ -159,7 +157,6 @@ function EnterpriseFeatures() {
 
             </div>
 
-import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = [
@@ -215,7 +212,6 @@ export function EnterpriseFeatures() {
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
 
-import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
   {;

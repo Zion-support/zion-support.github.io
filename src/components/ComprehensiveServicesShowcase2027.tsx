@@ -47,7 +47,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+const categoryIcons: { [key: string]: React.ComponentTypeg<div> } = {
   'AI & Autonomous Systems': Brain,
   'Quantum Computing & AI': Cpu,
   'Blockchain & Web3': Database,

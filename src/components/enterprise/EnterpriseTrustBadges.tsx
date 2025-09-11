@@ -28,7 +28,6 @@ export function EnterpriseTrustBadges() {
             <CheckCircle className='h-5 w-5 text-primary' />
             <span className='font-medium'>HIPAA Compliant</span>          </div>
 
-import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 export function EnterpriseTrustBadges() {
@@ -61,7 +60,6 @@ export function EnterpriseTrustBadges() {
 
     </section>
 
-import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (
@@ -125,7 +123,6 @@ export function EnterpriseTrustBadges() {;
 
   );
 }
-import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export /**
  * EnterpriseTrustBadges - Function description

@@ -1,6 +1,5 @@
-import React from 'react';
 export function UserExperienceOptimizer("props": "any) {;
-  const [isOpen", setIsOpen] = useState<any>(false);
-  const [isFullscreen, setIsFullscreen] = useState<any>(false);
-  const [isAnalyzing, setIsAnalyzing] = useState<any>(false);
-  const [analysisComplete, setAnalysisComplete] = useState<any>(false);
+  const [isOpen", setIsOpen] = useStateg<div>(false);
+  const [isFullscreen, setIsFullscreen] = useStateg<div>(false);
+  const [isAnalyzing, setIsAnalyzing] = useStateg<div>(false);
+  const [analysisComplete, setAnalysisComplete] = useStateg<div>(false);

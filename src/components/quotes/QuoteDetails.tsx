@@ -5,7 +5,6 @@ interface QuoteDetailsProps {
   onClose: () => void
 
 };
-import React from "react";
 import { ;
   Dialog;
   DialogContent, ;
@@ -210,7 +209,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
 
-import React from './react';
 import {
   Dialog;
   DialogContent,

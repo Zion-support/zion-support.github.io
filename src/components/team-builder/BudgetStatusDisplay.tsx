@@ -1,4 +1,3 @@
-import React from 'react';
 ';
     min = parseFloat(budgetString.replace(/[>$,\soverk]/g, ''));';
      if (budgetString.includes('k')) min = kTo1000(budgetString);

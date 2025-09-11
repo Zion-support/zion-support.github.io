@@ -6,8 +6,8 @@
   FormControl;
   FormDescription;
 
-  control: Control<any>
-  setValue: UseFormSetValue<any>
+  control: Controlg<div>
+  setValue: UseFormSetValueg<div>
   skills: string[]
   yearsExperience: number
   location?: string
@@ -16,8 +16,8 @@ import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommende
 import { Card, CardContent } from "@/components/ui/card",
 
 interface RateOptimizationSectionProps {
-  control: Control<any>,
-  setValue: UseFormSetValue<any>,
+  control: Controlg<div>,
+  setValue: UseFormSetValueg<div>,
   skills: string[],
   yearsExperience: number,
   rateType: "hourly" | "fixed"
@@ -81,8 +81,8 @@ import {;
   FormDescription,;
   FormMessage;
 interface RateOptimizationSectionProps {;
-  control: Control<any>,;
-  setValue: UseFormSetValue<any>,;
+  control: Controlg<div>,;
+  setValue: UseFormSetValueg<div>,;
   skills: string[],;
   yearsExperience: number,;
             <FormControl>;

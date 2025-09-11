@@ -45,8 +45,8 @@ const solutions = [];
   Home;
 } from "lucide-react";
 const _EnhancedNavigation = ("props": "any) => {;
-  const [isOpen", setIsOpen] = useState<any>(false);
-  const [isScrolled, setIsScrolled] = useState<any>(false);
+  const [isOpen", setIsOpen] = useStateg<div>(false);
+  const [isScrolled, setIsScrolled] = useStateg<div>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {;
     const _handleScroll = ("props": "any) => {;
@@ -397,5 +397,5 @@ export default EnhancedNavigation;
 </ChevronDown>;
 </ChevronDown>;
 </string>;
-</any>;
-</any>
+</div>;
+</div>

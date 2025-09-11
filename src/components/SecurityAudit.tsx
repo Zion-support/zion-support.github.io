@@ -14,7 +14,7 @@ interface SecurityCheck {;
 ;
 const "SecurityAudit": "React.FC = ("props": any) => {;
   const [checks", setChecks] = useState<SecurityCheck[]>([]);
-  const [isLoading, setIsLoading] = useState<any>(true);
+  const [isLoading, setIsLoading] = useStateg<div>(true);
 ;
   useEffect(() => {;
     const _performSecurityChecks = async () => {;

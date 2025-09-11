@@ -6,7 +6,6 @@ jobs: { variant: "default" },
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
 
-import React from "react";
 import {;
   Table;
   TableBody;
@@ -16,7 +15,6 @@ import {;
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react';
-import React from "react";
 import {;
   Table,;
   TableBody,;
@@ -108,7 +106,6 @@ export function TeamActivity() {;
         <h3 className="text - xl font - medium">Recent Team Activity</h3>;
         <div className="flex items - center gap - 2">;
 
-import React from "react",;
 import {;
   Table,;
   TableBody,;

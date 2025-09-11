@@ -27,7 +27,7 @@ interface AIService {
     professional: number;
     enterprise: number;
   };
-  icon: React.ComponentType<any>;
+  icon: React.ComponentTypeg<div>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
 }

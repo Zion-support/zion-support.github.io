@@ -77,7 +77,7 @@ export function ChatAssistant({
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+  const recognitionRef = useRefg<div>(null);
 
   // Initialize speech recognition
   useEffect(() => {

@@ -49,7 +49,6 @@ interface ActiveFiltersProps {
         <ClickableBadge 
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
@@ -253,7 +252,6 @@ export function ActiveFilters({;
   );
 }
 
-import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
 import { X } from 'lucide-react';

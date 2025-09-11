@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { _Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 

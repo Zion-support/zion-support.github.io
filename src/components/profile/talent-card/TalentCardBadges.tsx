@@ -1,6 +1,4 @@
-import React from 'react';
 
-import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Award } from 'lucide-react'
 
@@ -19,7 +17,6 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
     </div>
   )
 }
-import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from 'lucide-react';
 interface TalentCardBadgesProps {;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { _motion } from 'framer-motion';
 import { _Link } from 'react-router-dom';
 import {
