@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 export default function ResearchPage() {
   const researchAreas = [
     {
@@ -48,7 +46,6 @@ export default function ResearchPage() {
       icon: "⚖️"
     }
   ];
-
   const publications = [
     {
       title: "Evolutionary Neural Architectures for Autonomous AI Systems",
@@ -83,7 +80,6 @@ export default function ResearchPage() {
       doi: "10.1016/bir.2023.004"
     }
   ];
-
   const researchPartners = [
     {
       name: "MIT AI Research Lab",
@@ -106,7 +102,6 @@ export default function ResearchPage() {
       logo: "💻"
     }
   ];
-
   const upcomingResearch = [
     {
       title: "AI Consciousness Evolution Platform 2025",
@@ -127,18 +122,14 @@ export default function ResearchPage() {
       status: "Research Phase"
     }
   ];
-=======
 export default function ResearchPage() {;
   return (;
->>>>>>> main
-
     <div className="min-h-screen bg-white">;
 export default /**
  * ResearchPage - Function description
  */
 function ResearchPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -152,7 +143,6 @@ function ResearchPage() {
           </p>
         </div>
       </div>
-
       {/* Research Areas */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -161,7 +151,6 @@ function ResearchPage() {
             Our multidisciplinary research spans the most exciting frontiers of AI and technology.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {researchAreas.map((area, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
@@ -187,7 +176,6 @@ function ResearchPage() {
           ))}
         </div>
       </div>
-
       {/* Publications */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -196,7 +184,6 @@ function ResearchPage() {
             Our research findings published in leading scientific journals and conferences.
           </p>
         </div>
-
         <div className="space-y-6">
           {publications.map((pub, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
@@ -224,7 +211,6 @@ function ResearchPage() {
           ))}
         </div>
       </div>
-
       {/* Research Partners */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -233,7 +219,6 @@ function ResearchPage() {
             Collaborating with leading institutions and organizations worldwide to advance AI research.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {researchPartners.map((partner, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300">
@@ -244,7 +229,6 @@ function ResearchPage() {
           ))}
         </div>
       </div>
-
       {/* Upcoming Research */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -253,7 +237,6 @@ function ResearchPage() {
             Exciting new research initiatives and projects currently in development.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {upcomingResearch.map((research, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
@@ -278,7 +261,6 @@ function ResearchPage() {
           ))}
         </div>
       </div>
-
       {/* Research Facilities */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -287,7 +269,6 @@ function ResearchPage() {
             State-of-the-art facilities and infrastructure supporting our cutting-edge research.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">AI Consciousness Lab</h3>
@@ -310,7 +291,6 @@ function ResearchPage() {
               </li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-white/10 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing Center</h3>
             <p className="text-gray-300 mb-6">
@@ -334,7 +314,6 @@ function ResearchPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -356,7 +335,6 @@ function ResearchPage() {
       </div>
     </div>
   );
-=======
     <div className="min - h-screen bg - white">;
 export default function ResearchPage() {return (;
 export default function ResearchPage() {;
@@ -688,5 +666,4 @@ export default function ResearchPage() {;
         </div>;
       </section>;
     </div>);
->>>>>>> main
 }

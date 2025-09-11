@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
->>>>>>> main
-
 export default function Document() {
     <Html lang='en'>;
       <Head>;
@@ -38,7 +34,6 @@ export default /**
  */
 function Document() {
   return (
-<<<<<<< HEAD
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -54,7 +49,6 @@ function Document() {
       </body>
     </Html>
   )
-=======
     <Html lang='en'>;
       <Head>;
         <link rel='icon' href='/favicon.ico' />;
@@ -83,27 +77,18 @@ function Document() {
         <NextScript />;
       </body>;
   );
->>>>>>> main
 }
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-
 import Document, {
-
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
-
 } from 'next/document';
-
-
     </Html>);
 }
-
-
 }
-
   );
 }
 }

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -21,19 +12,9 @@ import FaqSection from './src/components/FaqSection';
 import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function App(): React.JSX.Element {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
-=======
 import React, { JSX } from 'react';
-
-<<<<<<< HEAD
-=======
 export default function App(): JSX.Element {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   return (
     <main>
       <h1>Hello App</h1>
@@ -73,7 +54,6 @@ import {
   Database,
   BarChart3
 } from 'lucide-react';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
@@ -83,7 +63,6 @@ import Analytics from './components/Analytics';
 import SEOHead from './components/SEOHead';
 import AccessibilityProvider from './components/AccessibilityProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
 interface Service {
   title: string,
   description: string,
@@ -92,7 +71,6 @@ interface Service {
   href: string,
   color: string,
 }
-
 interface Testimonial {
   name: string,
   company: string,
@@ -100,7 +78,6 @@ interface Testimonial {
   rating: number,
   avatar?: string;
 }
-
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -110,9 +87,7 @@ interface Testimonial {
         />
         <Analytics trackingId="G-XXXXXXXXXX" />
         <AccessibilityEnhancer />
-        
         <Header />
-        
         <main>
           {/* Hero Section */}
           <section className="py-20 px-4 text-center relative overflow-hidden">
@@ -171,7 +146,6 @@ interface Testimonial {
                   Learn More
                 </Link>
               </motion.div>
-
               {/* Stats */}
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
@@ -189,7 +163,6 @@ interface Testimonial {
               </motion.div>
             </div>
           </section>
-
           {/* Services Section */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
@@ -204,7 +177,6 @@ interface Testimonial {
                   Comprehensive technology solutions designed to drive your business forward
                 </p>
               </motion.div>
-
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <motion.div
@@ -253,7 +225,6 @@ interface Testimonial {
               </div>
             </div>
           </section>
-
           {/* Testimonials Section */}
           <section className="py-20 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
@@ -266,7 +237,6 @@ interface Testimonial {
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">What Our Clients Say</h2>
                 <p className="text-xl text-slate-400">Trusted by businesses worldwide</p>
               </motion.div>
-
               <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
                   <motion.div
@@ -291,7 +261,6 @@ interface Testimonial {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -327,23 +296,17 @@ interface Testimonial {
             </div>
           </section>
         </main>
-
         <Footer />
         <PerformanceMonitor />
       </div>
     </AccessibilityProvider>
   );
 }
-=======
 export default function App() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   return (
-
     <main>
       <h1>Hello App</h1>
     </main>
-
-=======
 export default function App() {;
   return (
     <ErrorBoundary>;
@@ -364,11 +327,8 @@ export default function App() {;
         </div>;
       </Router>;
     </ErrorBoundary>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-<<<<<<< HEAD
-=======
 ;
 export default /**
  * App - Function description
@@ -379,7 +339,3 @@ function App() {
       <h1 > Hello App</h1>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

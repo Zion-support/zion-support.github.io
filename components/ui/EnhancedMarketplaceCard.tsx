@@ -1,41 +1,30 @@
-<<<<<<< HEAD
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
-
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
   image?: string;
 }
-
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
   return (
     <div className="rounded-xl border bg-white shadow-sm hover:shadow-md transition p-4 flex flex-col">
@@ -57,10 +46,7 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
           <div className="h-12 w-12 rounded bg-gray-200" />)};
-
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -189,8 +175,6 @@ import Image from 'next / image';
   );
 }
 export default EnhancedMarketplaceCard;
-<<<<<<< HEAD
-=======
   on_favorite;
 }) => {
   return (
@@ -227,9 +211,3 @@ export default EnhancedMarketplaceCard;
 ;
 export default EnhancedMarketplaceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

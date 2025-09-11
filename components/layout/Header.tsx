@@ -1,24 +1,19 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown, Zap, Globe, Shield } from 'lucide-react';
-
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
   const router = useRouter();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigation = [
     { name: 'Product', href: '#', hasDropdown: true },
     { name: 'Solutions', href: '/services' },
@@ -28,21 +23,13 @@ export default function Header() {
     { name: 'Pricing', href: '/pricing' },
     { name: 'Compare', href: '/pricing-comparison' },
   ];
-=======
-
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
-
-=======
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
@@ -56,11 +43,6 @@ export default function Header() {
               ))}
             </div>;
           </div>;
->>>>>>> main
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -70,8 +52,6 @@ export default function Header() {
             </button>;
           </div>;
         </div>;
-
-
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -102,18 +82,12 @@ export default function Header() {
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 hover:text-white"> {item && item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;
             </Link>;
           </div>;
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <nav className="hidden lg:flex items-center space-x-1">
             {/* Contact Info */}
             <div className="flex items-center space-x-4 mr-6">
@@ -144,7 +118,6 @@ export default Header;
                         (item.name === 'Solutions' && isSolutionsDropdownOpen) ? 'rotate-180' : ''
                       }`} />
                     </button>
-                    
                     {item.name === 'Product' && isProductDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-4">
                         <div className="grid gap-3">
@@ -171,7 +144,6 @@ export default Header;
                         </div>
                       </div>
                     )}
-
                     {isSaasToolsDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-4">
                         <div className="grid gap-3">
@@ -189,7 +161,6 @@ export default Header;
                         </div>
                       </div>
                     )}
-
                     {item.name === 'Solutions' && isSolutionsDropdownOpen && (
                       <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-4">
                         <div className="grid gap-3">
@@ -225,7 +196,6 @@ export default Header;
               </div>
             ))}
           </nav>
-
           {/* Contact Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -235,7 +205,6 @@ export default Header;
               Contact Us
             </Link>
           </div>
-
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link
@@ -251,7 +220,6 @@ export default Header;
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -278,7 +246,6 @@ export default Header;
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               )}
-=======
           <div className="hidden md:block">;
             <div className="ml - 10 flex items - baseline space - x-4">;
               {navigation.map ((item) => (
@@ -326,15 +293,10 @@ export default Header;
     </header>);
 }
 ;
-=======
-<<<<<<< HEAD
 export default Header;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
-<<<<<<< HEAD
 ;
           {/* Desktop Navigation */}
           <nav className=&quot;hidden md:flex items-center space-x-8&quot;>
@@ -348,19 +310,16 @@ export default Header;
               </a>
             ))}
           </nav>
-
           {/* CTA Button */}
           <div className=&quot;hidden md:block&quot;>
             <Button href=&quot;/contact&quot; variant=&quot;primary&quot; size=&quot;sm&quot;>
               Get Started
             </Button>
           </div>
-
           {/* Mobile Menu Button */}
           <button className=&quot;md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200&quot;>
             <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
->>>>>>> main
             </svg>
           </button>
         </div>
@@ -368,20 +327,16 @@ export default Header;
     </header>
   )
 },
-
 export default Header
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import React from 'react',
 import Link from 'next/link';
 import Button from '../ui/Button';
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 import { Menu, X } from 'lucide-react';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -432,7 +387,6 @@ import {Menu
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -442,7 +396,6 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
 }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-
 }, []);
   const navigation = [;
     { name: 'Home', href: '/' }
@@ -479,7 +432,6 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
 }
     { name: 'Team', href: '/team', icon: Award }
     { name: 'Contact', href: '/contact', icon: Phone }
-
   ];
   const serviceCategories = [;
     {name: 'Micro SaaS'
@@ -512,7 +464,6 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
     { name: 'Startup', href: '/solutions/startup' }
   ];
   const resourceCategories = [;
-
     { name: 'Documentation', href: '/docs' }
     { name: 'Blog', href: '/blog' }
     { name: 'Partners', href: '/partners' }
@@ -556,7 +507,6 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
               ))}
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -594,18 +544,7 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
     </header>
   );
 }
-<<<<<<< HEAD
-=======
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
-
 }
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

@@ -15,38 +15,26 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
   ];
-=======
     return this.props.children;
   }
 }
 import React from 'react';
-
 import { motion } from 'framer-motion';
-
-
 } from 'lucide-react';import Link from 'next/link';
-
-
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
-
 } from 'lucide-react';import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
->>>>>>> main
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -64,18 +52,12 @@ export default function Revolutionary2026ServicesShowcase() {
       }
     }
   };
-
-
-
-
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
-
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
       {/* Enhanced Background Effects */}
-
   };
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -88,21 +70,12 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>;
       <div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
-
-
-
-
         {/* Enhanced Header */}
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
-
         {/* Enhanced Header */}
-
-
         <motion.div
           className='text-center mb-20'
-
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -207,31 +180,18 @@ export default function Revolutionary2026ServicesShowcase() {
                 {metaverseDigitalRealityServices2026.length}
           className="text-center mb-20"
         >
-
             with our revolutionary solutions.;
           </p>;
-
-
-
-
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
-
-
           viewport={{ once: true }}
-
-
-
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-
-
           viewport={{ once: true }}
-
               </div>;
               <div className='text - gray - 400 text - sm'>Metaverse Services</div>;
             </div>;
@@ -297,17 +257,14 @@ export default function Revolutionary2026ServicesShowcase() {
                 key={service.id}
                 variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
-
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-
   const _itemVariants = {_hidden: { opacity: 0, _y: 20},
     visible: {_opacity: 1, _y: 0, _transition: {
         duration: 0.6}
     }
   },
-
   return (
     <section className=&quot;py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
       {/* Enhanced Background Effects */}
@@ -317,7 +274,6 @@ export default function Revolutionary2026ServicesShowcase() {
         <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse&quot;></div>
         <div className=&quot;absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
       </div>
-
       <div className=&quot;max-w-7xl mx-auto relative z-10&quot;>
         duration: 0.6
       }
@@ -326,9 +282,7 @@ export default function Revolutionary2026ServicesShowcase() {
         duration: 0.6,
       },
     },
-
   };
-
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Enhanced Background Effects */}
@@ -340,7 +294,6 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  }
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
-
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
@@ -353,16 +306,13 @@ export default function Revolutionary2026ServicesShowcase() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header */}
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
-
         {/* Enhanced Header */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-20'
-
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -442,13 +392,11 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
           </div>
         </motion.div>
-
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -496,16 +444,12 @@ export default function Revolutionary2026ServicesShowcase() {
                       <p className="text-blue-300 text-sm">{service.tagline}</p>
                     </div>
                   </div>
-                  
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
-
                   <div className="space-y-3 mb-6">
-
                   <div className="flex items-center justify-between mb-4">
                     <div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
@@ -598,13 +542,7 @@ export default function Revolutionary2026ServicesShowcase() {
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
-
-
-
-
-
           viewport={{ once: true }}
-
                       </span>;
                       <span className='text - gray - 400 text - sm'>;
                         ({service.reviews});
@@ -674,7 +612,6 @@ export default function Revolutionary2026ServicesShowcase() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-
           className="mb - 20";
         >;
           <div className="flex items - center space - x-3 mb - 12">;
@@ -699,12 +636,8 @@ export default function Revolutionary2026ServicesShowcase() {
                     <div className='text - 3xl'>{service.icon}</div>;
                     <div>;
                       <h4 className='text - xl font - bold text - white'>;
-
                   <Link 
                     href={service.link} 
-
-
-
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-12'>;
             <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>;
@@ -807,21 +740,14 @@ export default function Revolutionary2026ServicesShowcase() {
                   </Link>;
                 </div>;
               </motion && motion.div>;
-
             ))}
           </div>;
           <div className='text-center mt-8'>;
-
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
-
-
-
-
-
                       </span>;
                       <span className='text - gray - 400 text - sm'>;
                         ({service.reviews});
@@ -891,16 +817,11 @@ export default function Revolutionary2026ServicesShowcase() {
                 key={service.id}
                 variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
-
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-
                   <Link 
                     href={service.link} 
-
-
-
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-12'>;
             <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center'>;
@@ -1006,7 +927,6 @@ export default function Revolutionary2026ServicesShowcase() {
           <div className='text-center mt-8'>;
           <div className="text-center mt-8">
             <Link 
-
             </div>
           </div>
         </motion.div>
@@ -1047,9 +967,7 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>;
     </section>;
   );
-
 }
-
 }
   );
 }

@@ -1,19 +1,12 @@
-
-
-
-  const [isLoaded, setIsLoaded] = useState(false);
+const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
-
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
-
         }
       }
       { threshold }
     );
-
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
@@ -25,8 +18,6 @@
   }, [threshold]);
   const handleLoad = () => {;
     setIsLoaded(true);
-
-
         alt=""
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -49,18 +40,11 @@
         src={placeholder}
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
-
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
-
-
-
-
   useEffect__(() => {
     const _observer = new IntersectionObserver(_([entry]) => {
         if (entry.isIntersecting) {
@@ -70,7 +54,6 @@
       },
       { threshold }
     ),
-
     if (imgRef.current) {
       observer.observe(imgRef.current)
     }
@@ -79,17 +62,13 @@
       },
       {_threshold}
     );
-
     return () => observer.disconnect()
   }, [threshold]),
-
     return () => observer.disconnect()
   }, [threshold]),
-
   const handleLoad = () => {
     setIsLoaded(true)
   },
-
   return (
     <div className={_`relative overflow-hidden ${className}`}>
       {_/* Placeholder */}
@@ -100,19 +79,15 @@
           isLoaded ? 'opacity-0' : 'opacity-100'}`}
         style={_{ width, _height}}
       />
-      
       {_/* Actual Image */}
       {_isInView && (
       />
-
       {/* Actual Image */}
       {isInView && (
         <motion.img
-
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
-
     </div>
     </div>
           className='w - full h - full object - cover';
@@ -132,4 +107,4 @@ export default LazyImage);
 }
 ;
 export default LazyImage;
-;<<<<<<< HEAD
+;

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    try {}
+try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
       _console.error('Failed to write to log file:', error.message);',
@@ -58,37 +51,18 @@
         } else {}
           this.error(alert.message);,
         }
-
-=======
     } catch (error) {_;
-=======
-
-
 module.exports = HealthMonitor;
-
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }};
 ; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
-
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-
-=======
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
 ; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
-
-=======
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     }
     disk: {
@@ -105,9 +79,6 @@ module.exports = HealthMonitor;
 } catch (error) {this.log(`❌ Error running health monitor: ${error.message}`); process.exit(1)}}}
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
-<<<<<<< HEAD
-
-
       };
 ;
       return {;
@@ -120,8 +91,6 @@ const healthMonitor = new HealthMonitor();
         logFiles: [], totalSize: 0,
       ;
 };
-
-
 };
 ;
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {;
@@ -324,8 +293,6 @@ const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {;
   process.exit(1);
 });
-
-
   };
 ,
   async checkSystemResources() {,
@@ -744,8 +711,6 @@ const healthMonitor = new HealthMonitor(),;
 healthMonitor.run().catch(error => {,;
   process.exit(1),;
 }),;      // Parse memory info,
-
-
 ,
       // Parse memory info,
       const memLines = memInfo.split('\n'),
@@ -1144,37 +1109,30 @@ healthMonitor.run().catch(error => {,
   process.exit(1),
 }),
       return processes;
-
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
       return [];,
     }
   }
-
   async getResourceUsage() {}
     try {}
       const totalMem = os.totalmem();,
       const freeMem = os.freemem();,
       const usedMem = totalMem - freeMem;
       const memoryUsage = (usedMem / totalMem) * 100;
-
       // Get CPU usage (simplified);
       const cpus = os.cpus();
       let totalIdle = 0;
       let totalTick = 0;
-
       for (const cpu of, cpus) {}
         for (const type in cpu.times) {}
           totalTick += cpu.times[type];,
         }
         totalIdle += cpu.times.idle;,
       }
-
       const cpuUsage = 100 - ~~(100 * totalIdle / totalTick);
-
       // Get disk usage;
       const diskUsage = await this.getDiskUsage();
-
       return {}
         memoryUsage: memoryUsage,
         memoryTotal: totalMem,
@@ -1184,7 +1142,6 @@ healthMonitor.run().catch(error => {,
         diskUsage: diskUsage,
         loadAverage: os.loadavg(),
       };,
-
     } catch (error) {}
       this.error(`Failed to get resource usage: ${error.message}`);,
       return {}
@@ -1194,7 +1151,6 @@ healthMonitor.run().catch(error => {,
       };,
     }
   }
-
   async getDiskUsage() {}
     try {}
       const dfOutput = execSync('df -h /', { encoding: 'utf8' });',
@@ -1205,29 +1161,22 @@ healthMonitor.run().catch(error => {,
         const usageStr = parts[4]; // e.g., "45%"",
         return parseInt(usageStr.replace('%', ''));',
       }
-
       return 0;
-
     } catch (error) {}
       this.log(`Failed to get disk usage: ${error.message}`, 'WARNING');',
       return 0;,
     }
   }
-
   formatUptime(seconds) {}
     const days = Math.floor(seconds / 86400);,
     const hours = Math.floor((seconds % 86400) / 3600);,
     const minutes = Math.floor((seconds % 3600) / 60);
-
     return `${days}d ${hours}h ${minutes}m`;,
   }
-
   async checkApplicationHealth() {}
     this.log('Checking application health...');',
-
     try {}
       const healthChecks = [];,
-
       // Check if main application is running;
       try {}
         const pm2List = execSync('pm2 list', { encoding: 'utf8' });',
@@ -1239,7 +1188,6 @@ healthMonitor.run().catch(error => {,
       } catch (error) {}
         healthChecks.push({ name: 'Main App, status: 'error, error: error.message });',
       }
-
       // Check if build directory exists;
       const buildDirs = ['dist', 'build', 'out', '.next'];',
       let buildExists = false;,
@@ -1249,12 +1197,10 @@ healthMonitor.run().catch(error => {,
           break;,
         }
       }
-
       healthChecks.push({ }),
         name: 'Build Directory, ',
         status: buildExists ? 'healthy' : 'missing' ';,
       });,
-
       // Check log files;
       const logDir = 'logs/pm2';';
       const logFiles = fs.existsSync(logDir) ? fs.readdirSync(logDir) : [];,
@@ -1263,18 +1209,14 @@ healthMonitor.run().catch(error => {,
         status: logFiles.length > 0 ? 'healthy' : 'missing,',
         count: logFiles.length;,
       });,
-
       return healthChecks;
-
     } catch (error) {}
       this.error(`Application health check failed: ${error.message}`);,
       return [{ name: 'Health Check, status: 'error, error: error.message }];',
     }
   }
-
   async generateHealthReport() {}
     this.log('Generating health report...');',
-
     try {}
       const report = {}
         timestamp: new Date().toISOString(),
@@ -1287,11 +1229,9 @@ healthMonitor.run().catch(error => {,
           cwd: process.cwd(),
         }
 ;      };,
-
       // Calculate overall health score;
       let healthScore = 100;
       const alerts = report.systemHealth?.alerts || [];,
-
       for (const alert of, alerts) {}
         if (alert.level === 'warning') {',
 ;          healthScore -= 10;,
@@ -1299,45 +1239,34 @@ healthMonitor.run().catch(error => {,
           healthScore -= 25;,
         }
       }
-
       report.healthScore = Math.max(0, healthScore);,
-
       const reportFile = `health-reports/health-report-${Date.now()}.json`;,
       const reportDir = path.dirname(reportFile);,
-
       if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });,
       }
-
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
       this.log(`Health report saved to: ${reportFile}`);,
       this.log(`Overall health score: ${report.healthScore}/100`);,
-
       return report;
-
     } catch (error) {}
       this.error(`Failed to generate health report: ${error.message}`);,
       return null;,
     }
   }
-
   async start() {}
     this.log(`Starting ${this.processName}...`);,
-
     // Run initial health check;
     await this.generateHealthReport();
-
     // Set up periodic monitoring;
     const interval = 60 * 1000; // 1 minute;
     setInterval(async () => {}
       this.log('Running scheduled health check...');',
       await this.generateHealthReport();,
     }, interval);,
-
     this.log(`${this.processName} started successfully`);,
   }
 }
-
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const monitor = new HealthMonitor();,
@@ -1346,7 +1275,6 @@ if (require.main === module) {}
     process.exit(1);,
   });
 }
-
 module.exports = HealthMonitor;
 module.exports = HealthMonitor;
 ursor/add-new-services-and-deploy-updates-0462
@@ -2152,8 +2080,6 @@ healthMonitor.run().catch(error => {,;
       } else {,;
         this.log('\n✨ All systems are healthy!');
       }
-
-
       return processes;
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
@@ -2321,20 +2247,9 @@ if (require.main === module) {}
     process.exit(1);,
   });
 }
-
-
-
-
-
 healthMonitor.run().catch(error = > {process.exit(1)});
-
 healthMonitor.run().catch(error = > {process.exit(1)});
-
-
-
-
 healthMonitor.run().catch(error = > {process.exit(1)});
-
 healthMonitor.run().catch(error = > {process.exit(1)});
     usagePercent: Math && Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     },
@@ -2545,10 +2460,4 @@ const healthMonitor = new HealthMonitor(),;
 healthMonitor.run().catch(error => {,;
   process.exit(1);
 }),;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 healthMonitor.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20

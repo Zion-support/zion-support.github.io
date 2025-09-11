@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-
 export default function SolutionsPage() {
   const caseStudies = [
     {
@@ -43,7 +41,6 @@ export default function SolutionsPage() {
       image: "💊"
     }
   ];
-
   const industrySolutions = [
     {
       industry: "Healthcare",
@@ -106,7 +103,6 @@ export default function SolutionsPage() {
       icon: "🔬"
     }
   ];
-
   const technologies = [
     {
       name: "AI Autonomous Systems",
@@ -129,18 +125,14 @@ export default function SolutionsPage() {
       features: ["Real-time Analytics", "Predictive Modeling", "Data Visualization", "Automated Reporting"]
     }
   ];
-=======
 export default function SolutionsPage() {;
   return (;
->>>>>>> main
-
     <div className="min-h-screen bg-white">;
 export default /**
  * SolutionsPage - Function description
  */
 function SolutionsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen py-20">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -154,7 +146,6 @@ function SolutionsPage() {
           </p>
         </div>
       </div>
-
       {/* Case Studies */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -163,7 +154,6 @@ function SolutionsPage() {
             Real-world examples of how our AI solutions have transformed businesses and driven measurable results.
           </p>
         </div>
-
         <div className="space-y-8">
           {caseStudies.map((study, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
@@ -174,7 +164,6 @@ function SolutionsPage() {
                     <span className="text-blue-300 text-sm font-medium">{study.industry}</span>
                   </div>
                 </div>
-                
                 <div className="lg:col-span-2 space-y-6">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-3">{study.title}</h3>
@@ -206,7 +195,6 @@ function SolutionsPage() {
           ))}
         </div>
       </div>
-
       {/* Industry Solutions */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -215,7 +203,6 @@ function SolutionsPage() {
             Tailored AI solutions designed for specific industry challenges and requirements.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industrySolutions.map((industry, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
@@ -233,7 +220,6 @@ function SolutionsPage() {
           ))}
         </div>
       </div>
-
       {/* Technology Stack */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -242,7 +228,6 @@ function SolutionsPage() {
             Cutting-edge technologies that power our AI solutions and drive innovation.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {technologies.map((tech, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
@@ -262,7 +247,6 @@ function SolutionsPage() {
           ))}
         </div>
       </div>
-
       {/* Implementation Process */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="text-center mb-12">
@@ -271,7 +255,6 @@ function SolutionsPage() {
             Our proven methodology ensures successful deployment and maximum ROI from your AI investment.
           </p>
         </div>
-
         <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -283,7 +266,6 @@ function SolutionsPage() {
                 We analyze your business needs and identify the best AI solutions for your specific challenges.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
@@ -293,7 +275,6 @@ function SolutionsPage() {
                 Our team designs a customized solution architecture tailored to your business requirements.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
@@ -303,7 +284,6 @@ function SolutionsPage() {
                 We implement the solution with minimal disruption to your existing operations.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
@@ -316,7 +296,6 @@ function SolutionsPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
@@ -338,7 +317,6 @@ function SolutionsPage() {
       </div>
     </div>
   );
-=======
     <div className="min - h-screen bg - white">;
 export default function SolutionsPage() {return (;
 export default function SolutionsPage() {;
@@ -650,5 +628,4 @@ export default function SolutionsPage() {;
         </div>;
       </section>;
     </div>);
->>>>>>> main
 }

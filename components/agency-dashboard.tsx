@@ -1,29 +1,18 @@
 import type { GetServerSideProps } from 'next';
-
 export default function AgencyDashboardPage({ vendor }: Props) {
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
-
-
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null };
-
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
-
 export default function AgencyDashboardPage({ vendor }: Props) {
-
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
-
-
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
-
-
-
   async function saveProfile(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
     const formData = new FormData(e && e.currentTarget);
@@ -40,17 +29,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         .map(s => s && s.trim());
         .filter(Boolean),;
         .filter(Boolean),
-
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
-
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [;
@@ -61,20 +46,16 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
       about: String(formData && formData.get('about') || activeVendor && activeVendor.about || ''),;
       servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
         .split();
         .map(s => s && s.trim());
-
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-
-
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [;
@@ -92,7 +73,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setPkgPrice('');
   }
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
-
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -105,9 +85,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       </section>;
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
-
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
-
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [...(activeVendor.packages || []), {
@@ -116,15 +94,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       description: pkgDesc,
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
-
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>,
-
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault(),
     const formData = new FormData(e.currentTarget)
     const updated = {
       ...activeVendor,
-
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
       servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
@@ -198,7 +173,6 @@ setActiveVendor({ ...activeVendor, packages });
             className='border rounded px-3 py-2 bg-transparent';
           />;
           <div className='flex gap-2'>;
-
   return (
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
@@ -258,7 +232,6 @@ setActiveVendor({ ...activeVendor, packages });
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
         {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
       </div>;
-
       <section className="space-y-4">;
         <h2 className="text-lg font-medium">Profile</h2>;
         <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -279,11 +252,9 @@ setActiveVendor({ ...activeVendor, packages });
           </div>;
         </form>;
       </section>;
-
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
-
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -319,12 +290,9 @@ setActiveVendor({ ...activeVendor, packages });
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
-
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items || [])
-
-
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {;
@@ -343,13 +311,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
-
   }
-
   useEffect(() => {
-
   useEffect(() => {;
-
   }
     fetchItems();
   }, []);
@@ -372,8 +336,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
-
-
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -381,18 +343,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value='in_progress'>In Progress</option>;
             <option value='complete'>Complete</option>;
             <option value='lost'>Lost</option>          </select>;
-
-
             <option value="lead">Lead</option>;
             <option value="qualified">Qualified</option>;
             <option value="proposal">Proposal</option>;
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
-
-
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
@@ -418,7 +375,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
             <option value="lost">Lost</option>
         </div>
       ))}
-
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
@@ -441,13 +397,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
-
-
     </div>
-
-
-};>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        </div>))}
+};        </div>))}
     </div>);
 ;
 export const getServerSideProps: GetServerSideProps < Props> = async () => {
@@ -461,4 +412,4 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   const vendor = list_vendors ()[0] || null, // tie to auth later;
   return { props: { vendor } }
 }
-;<<<<<<< HEAD
+;
