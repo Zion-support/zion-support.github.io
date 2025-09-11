@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { _Link, useLocation } from 'react-router-dom';import {;
-
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { X } from 'lucide-react';
 
 interface SidebarProps {
