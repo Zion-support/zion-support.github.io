@@ -1,25 +1,28 @@
 import React from 'react';
-import { AppProps } from 'next/app';
-import Head from 'next/head';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import LoadingSpinner from './components/ui/loading-spinner';
-import '../styles/globals.css';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
+import './index.css';
 
-function App({ Component, pageProps }: AppProps) {
+function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<div>Something went wrong</div>}>
-        <Head>
-          <title>Zion Tech Group - Advanced Technology Solutions</title>
-          <meta name="description" content="Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+            </Routes>
+          </Layout>
+        </Router>
       </ErrorBoundary>
     </HelmetProvider>
   );
