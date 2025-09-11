@@ -8,6 +8,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import NewContentShowcase from '../components/NewContentShowcase';
 import TrendingContent from '../components/TrendingContent';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -1198,6 +1199,9 @@ export default function HomePage() {
               <span>→</span>
             </Link>
           </div>
+      {/* Enhanced Content Banner */}
+      <EnhancedContentBanner />
+
       {/* New Content Showcase */}
       <NewContentShowcase />
 

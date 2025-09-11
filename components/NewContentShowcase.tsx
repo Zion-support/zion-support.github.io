@@ -1,163 +1,133 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  title: string;
-  description: string;
-  href: string;
-  type: 'blog' | 'case-study' | 'resource';
-  readTime?: string;
-  isNew?: boolean;
-  icon: string;
-  category: string;
-}
-
-const contentItems: ContentItem[] = [
-  {
-    title: "AI Enterprise Transformation 2025",
-    description: "Complete implementation guide with 340% ROI and real case studies",
-    href: "/blog/ai-enterprise-transformation-2025",
-    type: "blog",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🏢",
-    category: "AI & Enterprise"
-  },
-  {
-    title: "AI Startup Funding Guide 2025",
-    description: "From seed to Series A with $47B market insights and pitch templates",
-    href: "/blog/ai-startup-funding-guide-2025",
-    type: "blog",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "💰",
-    category: "Startup Strategy"
-  },
-  {
-    title: "Financial Services AI Success",
-    description: "$50M cost savings, 300% efficiency gains - complete case study",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    type: "case-study",
-    isNew: true,
-    icon: "🏦",
-    category: "Case Study"
-  },
-  {
-    title: "AI Implementation Checklist",
-    description: "150+ actionable items for successful AI implementation",
-    href: "/resources/ai-implementation-checklist-2025",
-    type: "resource",
-    isNew: true,
-    icon: "📋",
-    category: "Free Resource"
-  },
-  {
-    title: "AI Customer Support Automation",
-    description: "Resolve faster, cut costs with intelligent automation",
-    href: "/blog/ai-customer-support-automation-2025",
-    type: "blog",
-    readTime: "9 min read",
-    isNew: true,
-    icon: "🎧",
-    category: "AI & Automation"
-  },
-  {
-    title: "LLM Guardrails in Production",
-    description: "Safety without blocking delivery in production systems",
-    href: "/blog/llm-guardrails-in-production-2025",
-    type: "blog",
-    readTime: "8 min read",
-    isNew: true,
-    icon: "🛡️",
-    category: "AI Engineering"
-  }
-];
-
 export default function NewContentShowcase() {
+  const newContent = [
+    {
+      title: "AI Cybersecurity Threats 2025",
+      description: "Protecting your business from emerging AI security risks",
+      href: "/blog/ai-cybersecurity-threats-2025",
+      type: "Article",
+      readTime: "15 min read",
+      icon: "🔒",
+      category: "Cybersecurity",
+      isNew: true
+    },
+    {
+      title: "AI Productivity Automation 2025",
+      description: "Transform your workflow with intelligent automation",
+      href: "/blog/ai-productivity-automation-2025",
+      type: "Article",
+      readTime: "18 min read",
+      icon: "⚡",
+      category: "Productivity",
+      isNew: true
+    },
+    {
+      title: "AI Customer Support Automation",
+      description: "Resolve faster, cut costs with intelligent support",
+      href: "/blog/ai-customer-support-automation-2025",
+      type: "Article",
+      readTime: "12 min read",
+      icon: "🎧",
+      category: "Customer Support",
+      isNew: true
+    },
+    {
+      title: "AI Manufacturing Success Story",
+      description: "40% cost reduction, 60% faster processing case study",
+      href: "/case-studies/ai-manufacturing-automation-success-2025",
+      type: "Case Study",
+      readTime: "15 min read",
+      icon: "🏭",
+      category: "Manufacturing",
+      isNew: true
+    },
+    {
+      title: "AI Implementation Checklist 2025",
+      description: "150+ actionable items for successful AI deployment",
+      href: "/resources/ai-implementation-checklist-2025",
+      type: "Resource",
+      readTime: "45 min to complete",
+      icon: "📋",
+      category: "Implementation",
+      isNew: true
+    },
+    {
+      title: "AI Enterprise Transformation 2025",
+      description: "Complete implementation guide with 340% ROI",
+      href: "/blog/ai-enterprise-transformation-2025",
+      type: "Article",
+      readTime: "18 min read",
+      icon: "🏢",
+      category: "Enterprise",
+      isNew: false
+    }
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 2025</span>
+    <div className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-red-100 text-red-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 JUST PUBLISHED</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            🚀 Fresh AI & Business Insights
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Fresh AI & Business Content
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            New this week: AI Enterprise Transformation Guide, Startup Funding Playbook, Financial Services Case Study, 
-            and our comprehensive 150-page AI Implementation Checklist. Expert insights to accelerate your growth.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Discover our latest expert insights, case studies, and resources. 
+            Fresh content published weekly to keep you ahead of the curve.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/blog"
-              className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-            >
-              📚 Read Latest Articles
-            </Link>
-            <Link
-              href="/resources"
-              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg" 
-            >
-              📋 Download Free Resources
-            </Link>
-          </div>
         </div>
 
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {contentItems.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {newContent.map((item, index) => (
             <Link key={index} href={item.href} className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 p-6 h-full">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform">{item.icon}</div>
-                  {item.isNew && (
-                    <span className="bg-white bg-opacity-20 text-white text-xs font-medium px-2 py-1 rounded-full">
-                      NEW
+                  <div className="text-3xl">{item.icon}</div>
+                  <div className="flex items-center gap-2">
+                    {item.isNew && (
+                      <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
+                        NEW
+                      </span>
+                    )}
+                    <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
+                      {item.type}
                     </span>
-                  )}
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm opacity-90 mb-3">{item.description}</p>
-                <div className="flex items-center justify-between text-xs opacity-75">
-                  <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-white">
+                
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between text-xs text-gray-500">
+                  <span className="bg-blue-50 text-blue-700 px-2 py-1 rounded">
                     {item.category}
                   </span>
-                  <div className="flex items-center gap-2">
-                    {item.readTime && <span>{item.readTime}</span>}
-                    {item.type === 'resource' && <span>Free Download</span>}
-                    {item.type === 'case-study' && <span>Case Study</span>}
-                  </div>
+                  <span>{item.readTime}</span>
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Additional CTA */}
-        <div className="text-center mt-12">
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Get Weekly AI Insights</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Join 10,000+ professionals who get our weekly AI insights, case studies, and free resources.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-sm opacity-75 mt-4">
-              No spam. Unsubscribe anytime. We respect your privacy.
-            </p>
-          </div>
+        <div className="text-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+          >
+            View All Content
+            <span>→</span>
+          </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
