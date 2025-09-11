@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://bolt.new.zion.app/sitemap.xml
+
+Sitemap: https://zion.app/sitemap.xml
 # Block access to admin areas
 Disallow: /admin/
 Disallow: /api/
