@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React,{ useEffect } from react\' interface AnalyticsProps {} export const \"Analytics\": React.FC<AnalyticsProps> = () => { useEffect(() => {\'',;
-const React,{ useEffect } from react" interface AnalyticsProps {} export const Analytics: React.FC<AnalyticsProps> = () => { useEffect(() => {"",;"""
-import _React,{ useEffect } from react' interface AnalyticsProps {} export const "Analytics": _React.FC<AnalyticsProps> = () => { useEffect(() => {'',;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

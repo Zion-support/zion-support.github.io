@@ -6,18 +6,18 @@ console.log('🚀 Conflict Resolver - Starting systematic conflict resolution...
 function resolveConflictsInFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) return false;
-    
+
     let content = fs.readFileSync(filePath, 'utf8');
     if (!content.includes('')) return false;
-    
+
     console.log(`🔧 Resolving: ${filePath}`);
-    
+
     // Keep incoming changes (after )
     const lines = content.split('\n');
     const resolved = [];
     let inConflict = false;
     let keepIncoming = false;
-    
+
     for (const line of lines) {
       if (line.includes('')) {
         inConflict = true;
@@ -31,12 +31,12 @@ function resolveConflictsInFile(filePath) {
         keepIncoming = false;
         continue;
       }
-      
+
       if (!inConflict || keepIncoming) {
         resolved.push(line);
       }
     }
-    
+
     const newContent = resolved.join('\n');
     fs.writeFileSync(filePath, newContent, 'utf8');
     console.log(`✅ Fixed: ${filePath}`);
@@ -49,14 +49,14 @@ function resolveConflictsInFile(filePath) {
 
 function findConflictFiles() {
   const conflictFiles = [];
-  
+
   function scanDirectory(dir) {
     try {
       const items = fs.readdirSync(dir);
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', 'out'].includes(item)) {
             scanDirectory(fullPath);
@@ -76,7 +76,7 @@ function findConflictFiles() {
       // Skip directories that can't be read
     }
   }
-  
+
   scanDirectory('/workspace');
   return conflictFiles;
 }
@@ -89,13 +89,13 @@ console.log(`Found ${conflictFiles.length} files with conflicts\n`);
 if (conflictFiles.length > 0) {
   console.log('📋 Step 2: Resolving conflicts...');
   let fixedCount = 0;
-  
+
   for (const file of conflictFiles) {
     if (resolveConflictsInFile(file)) {
       fixedCount++;
     }
   }
-  
+
   console.log(`\n✅ Fixed ${fixedCount} files with conflicts`);
 } else {
   console.log('✅ No conflicts found in main files');

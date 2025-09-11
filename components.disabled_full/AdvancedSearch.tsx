@@ -1,6 +1,9 @@
-<<<<<<< HEAD
-module.exports = {};
-=======
+:automation_backup/backups/file-sync/2025-08-25T15-27-04-843Z/src/components/CategoriesSection.tsx
 export {};
 module.exports = {};
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+module.exports = {};
+export {};
+module.exports = {};
+module.exports = {};
+export {};
+module.exports = {};

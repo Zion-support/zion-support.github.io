@@ -1,14 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-interface ServiceAdsProps {
-  services?: any[];
-}
-
-export default function ServiceAds({ services = [] }: ServiceAdsProps) {
-  return (
-    <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
-      <h3 className="text-xl font-semibold text-white mb-4">Featured Services</h3>
-      <p className="text-gray-300">Service advertisements will appear here.</p>
-    </div>
-  );
+export default function ServiceAds() {
+	return (
+		<section className="px-4 py-8 border-t border-gray-800 text-gray-300">
+			<div className="max-w-6xl mx-auto">
+				<h2 className="text-lg font-semibold mb-3 text-white">Sponsored</h2>
+				<p className="text-sm">Promoted services coming soon.</p>
+			</div>
+		</section>
+	)
 }

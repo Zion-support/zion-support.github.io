@@ -19,7 +19,3 @@ import React from "react";
             </Link>;
           </div>;
       </section>;
-    </MainLayout>;
-  )}
-
-"export default ITServicesPage

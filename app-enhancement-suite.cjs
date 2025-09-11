@@ -17,9 +17,6 @@ class AppEnhancementSuite {}
   };
   createSecurityEnhancements() {}
     this.log('🔒 Creating Security Enhancements');
-<<<<<<< HEAD
-=======
-
     // Create security headers configuration
     const securityConfig = {
       "headers": {
@@ -27,9 +24,7 @@ class AppEnhancementSuite {}
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-        'Content-Security-Policy':
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-          "default-src 'self'; script-src 'self' 'unsafe-inline'"},
+        'Content-Security-Policy':          "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
@@ -131,10 +126,6 @@ class AppEnhancementSuite {}
     this.createMonitoringScripts();
 
     const report = {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     const securityHeaders = {}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',

@@ -1,15 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-interface UltraQuantumHolographicBackgroundV4Props {
-  children: React.ReactNode;
-  variant?: string;
-  intensity?: string;
-}
-
-export default function UltraQuantumHolographicBackgroundV4({ children, variant = 'default', intensity = 'medium' }: UltraQuantumHolographicBackgroundV4Props) {
-  return (
-    <div className="min-h-screen bg-black text-white">
-      {children}
-    </div>
-  );
+export default function UltraQuantumHolographicBackgroundV4({ children }: { children: React.ReactNode }) {
+	return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900">{children}</div>
 }

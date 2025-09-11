@@ -1,1 +1,0 @@
-const defaultContent = { products: { icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>, title: "No Products Available", description: "We\"re loading our marketplace products.If this persists, there might be a connection issue.Try refreshing the page or check back soon for exciting new offerings!"}, ";"

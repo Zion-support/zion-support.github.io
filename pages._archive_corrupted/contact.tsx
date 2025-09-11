@@ -1,6 +1,13 @@
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -9,20 +16,24 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { 
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })""
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })""
-const \"ContactPage\": React.FC = () => {""
-import React from 'react
-import dynamic from 'next/dynamic
-import Head from 'next/head
-import Link from 'next/link
-import { motion } from 'framer-motion
+=======
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 
+
+
+
+=======
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import { 
   Phone, 
   Mail, 
@@ -32,27 +43,35 @@ import {
   Send,
   MessageCircle,
   Globe
-
-
-
+<<<<<<< HEAD
 
 } from 'lucide-react';
 
-
-
+=======
+<<<<<<< HEAD
+} from 'lucide-react'
+=======
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -78,9 +97,19 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -97,14 +126,20 @@ const "ContactPage": React.FC = () => {
     "Blockchain Technology",
     "Digital Transformation",
     "Consulting & Strategy"
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ]
+=======
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
 import React, { useState } from 'react';
@@ -155,6 +190,7 @@ const "ContactPage": React.FC = () => {;
     "Digital Transformation",;
     "Consulting & Strategy";
   ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   return (
     <>;
       <SEOtitle=\"Contact Us - Zion Tech Group\"
@@ -181,6 +217,10 @@ const "ContactPage": React.FC = () => {;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
+<<<<<<< HEAD
+
+
+=======
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ \"scale\": 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
@@ -201,21 +241,27 @@ const "ContactPage": React.FC = () => {;
               </motion.div>
             </div>
           </section>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -239,7 +285,8 @@ const "Contact": NextPage = () => {
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
-whileHover={{ scale: 1 && 1.05 }}
+=======
+                    whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ \"scale\": 0 && 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
                     <Phone className=\"w-5 h-5\"  />;
@@ -285,6 +332,7 @@ const "Contact": NextPage = () => {;
       \"title\": \'Business Hours\',;
       \"details\": \'Mon-Fri: 9AM-6PM PST\',;
       \"link\": null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
     }
   ];
   const offices = [{;
@@ -311,6 +359,7 @@ const "Contact": NextPage = () => {;
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
+
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -362,14 +411,13 @@ const "Contact": NextPage = () => {;
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                       First Name *;
                     </label>;
-
                     <input
                       type=\"text\"
                       id=\"firstName\"
                       name=\"firstName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
+                    />;
                   </div>;
                   <div>;
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -381,7 +429,7 @@ const "Contact": NextPage = () => {;
                       name=\"lastName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
+                    />;
                   </div>;
                 </div>;
                 <div>;
@@ -394,7 +442,7 @@ const "Contact": NextPage = () => {;
                     name=\"email\"
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
+                  />;
                 </div>;
                 <div>;
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -405,7 +453,7 @@ const "Contact": NextPage = () => {;
                     id=\"company\"
                     name=\"company\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
+                  />;
                 </div>;
                 <div>;
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -416,7 +464,7 @@ const "Contact": NextPage = () => {;
                     id=\"phone\"
                     name=\"phone\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
+                  />;
                 </div>;
                 <div>;
                   <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -448,10 +496,6 @@ const "Contact": NextPage = () => {;
                     rows={6}
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
-
-
-
-
                     placeholder=\"Tell us about your project or how we can help you...\"></textarea>;
                 </div>;
                 <button
@@ -497,6 +541,10 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
       {/* FAQ Section */}
+<<<<<<< HEAD
+
+
+=======
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -505,22 +553,28 @@ const "Contact": NextPage = () => {;
               Get answers to common questions about our services and process
             </p>
           </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -529,20 +583,35 @@ const "Contact": NextPage = () => {;
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -551,20 +620,35 @@ const "Contact": NextPage = () => {;
                 security patches, and technical support.
               </p>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -573,20 +657,35 @@ const "Contact": NextPage = () => {;
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -599,106 +698,7 @@ const "Contact": NextPage = () => {;
         </div>
       </section>
     </MainLayout>
-  );
-};
-          {/* Contact Information */}
-          <section className=\"py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Contact Information
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Multiple ways to reach us for your convenience
-                </p>
-              </motion.div>
->>>>>>> main
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
-                    className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
-                  >
-                    <div className=\"text-blue-600 mb-4 flex justify-center\">
-                      {info.icon}
-                    </div>
-                    <h3 className=\"text-xl font-bold text-gray-900 mb-3\">
-                      {info.title}
-                    </h3>
-                    {info.link ? (
-                      <a
-                        href={info.link}
-                        className=\"text-gray-600 \"hover\": tex t-blue-600 transition-colors whitespace-pre-line\"
-                      >
-                        {info.details}
-                      </a>
-                    ) : (
-                      <p className=\"text-gray-600 whitespace-pre-line\">
-                        {info.details}
-                      </p>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Contact Form */}
-          <section className=\"bg-gray-50 py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
->>>>>>> main
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-                <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                  className=\"bg-white rounded-xl shadow-lg p-8\"
-                >
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
-                    <div>
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Full Name *
-                      </label>
-                      <input type=\"text\"
-
+=======
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -761,6 +761,7 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   );
 };
           {/* Contact Information */}
@@ -769,6 +770,9 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
+
+=======
                 transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
                 className=\"text-center mb-16\"
               >
@@ -779,30 +783,31 @@ const "Contact": NextPage = () => {;
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
-
-
-
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+=======
+<<<<<<< HEAD
+=======
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 {contactInfo.map((info, index) => (
                   <motion.div
+=======
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -820,6 +825,7 @@ const "Contact": NextPage = () => {;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
                 {contactInfo && contactInfo.map((info, index) => (;
                   <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -853,6 +859,9 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
+
+=======
                 transition={{ \"duration\": 0.6 }}
                 className=\"text-center mb-16\"
               >
@@ -863,29 +872,30 @@ const "Contact": NextPage = () => {;
                   Fill out the form below and we\'ll get back to you within 24 hours
                 </p>
               </motion.div>
-
-
-
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+=======
+<<<<<<< HEAD
+=======
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                 <motion.form
+=======
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -902,6 +912,7 @@ const "Contact": NextPage = () => {;
               <div className=\"max-w-4xl mx-auto\">;
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -912,13 +923,12 @@ const "Contact": NextPage = () => {;
                         Full Name *;
                       </label>;
                       <inputtype=\"text\"
-
                         id=\"name\"
                         name=\"name\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your full name\"
-/>;
+                       />;
                     </div>;
                     <div>;
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -929,30 +939,42 @@ const "Contact": NextPage = () => {;
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-<div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 
+=======
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
                   </div>
->>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+<<<<<<< HEAD
+=======
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
-placeholder=\"your && your.email@example && example.com\"
+=======
+                        placeholder=\"your && your.email@example && example.com\"
                        />;
                     </div>;
                   </div>;
@@ -967,11 +989,12 @@ placeholder=\"your && your.email@example && example.com\"
                         Phone Number;
                       </label>;
                       <inputtype=\"tel\"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
-/>;
+                       />;
                     </div>;
                     <div>;
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -982,55 +1005,85 @@ placeholder=\"your && your.email@example && example.com\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
+<<<<<<< HEAD
 
+
+=======
                        />
                     </div>
                   </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                       Service Interest
                     </label>
+=======
+                       />;
+                    </div>;
+                  </div>;
+                  <div className=\"mb-6\">;
+                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                  <div className="mb-6">;
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
+                      Service Interest;
+                    </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <select
                       id=\"service\"
                       name=\"service\"
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                    >
-                      <option value=\"">Select a service</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\">;
+                      <option value=\"">Select a service</option>;
+                      {services && services.map((service, index) => (;
+                        <option key={index} value={service}>;
                           {service}
-                        </option>
+                        </option>;
                       ))}
+<<<<<<< HEAD
+
+
+=======
                     </select>
                   </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                       Message *
                     </label>
+=======
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -1039,18 +1092,20 @@ placeholder=\"your && your.email@example && example.com\"
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <textarea
                       id=\"message\"
                       name=\"message\"
                       rows={6}
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                      placeholder=\"Tell us about your project requirements...\"
-                    ></textarea>
-                  </div>
-                  <motion.button
+                      placeholder=\"Tell us about your project requirements...\"></textarea>;
+                  </div>;
+                  <motion&& motion.button
                     type=\"submit\"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+
+=======
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
@@ -1059,17 +1114,44 @@ placeholder=\"your && your.email@example && example.com\"
                     Send Message
                   </motion.button>
                 </motion.form>
->>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+
+=======
+<<<<<<< HEAD
+                    whileHover={{ scale: 1 && 1.02 }}
+                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
+                    <Send className=\"w-5 h-5\"  />;
+                    Send Message;
+                  </motion && motion.button>;
+                </motion && motion.form>;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+<<<<<<< HEAD
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1088,25 +1170,53 @@ placeholder=\"your && your.email@example && example.com\"
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
+              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>;
+                {isSubmitted ? (;
+                  <div className=\"text-center py-12\">;
+                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
+                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
+                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\"
@@ -1144,25 +1254,53 @@ placeholder=\"your && your.email@example && example.com\"
                           value={formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+<<<<<<< HEAD
+
+=======
                           placeholder=\"your@email.com\"
                         />
                       </div>
                     </div>
->>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+<<<<<<< HEAD
+=======
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
+                          placeholder=\"your@email && email.com\"
+                        />;
+                      </div>;
+                    </div>;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                      <div>;
+                        <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
+                          Company;
+                        </label>;
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1241,6 +1379,9 @@ placeholder=\"your && your.email@example && example.com\"
                 )}
               </div>
               {/* Contact Information */}
+<<<<<<< HEAD
+
+=======
               <div className=\"space-y-8\">
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
@@ -1248,17 +1389,28 @@ placeholder=\"your && your.email@example && example.com\"
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
->>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+<<<<<<< HEAD
+=======
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1274,10 +1426,49 @@ placeholder=\"your && your.email@example && example.com\"
                 </div>
               </div>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
           </section>
+              <div className=\"space-y-8\">;
+                <div>;
+                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>;
+                  <p className=\"text-lg text-gray-300 mb-8\">;
+                    We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.;
+                  </p>;
+                </div>;
+                <div className=\"space-y-6\">;
+                <div className="space-y-6">;
+                <div className=\"space-y-6\">;
+                <div className="space-y-6">;
+                <div className=\"space-y-6\">;
+                <div className="space-y-6">;
+                  {contactInfo && contactInfo.map((info, index) => (;
+                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">;
+                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">;
+                        <info && info.icon className=\"w-6 h-6 text-white\" />;
+                      </div>;
+                      <div>;
+                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info && info.title}</h3>;
+                        <p className=\"text-cyan-400 font-medium mb-1\">{info && info.details}</p>;
+                        <p className=\"text-gray-400 text-sm\">{info && info.description}</p>;
+                      </div>;
+                    </div>;
+                  ))}
+                </div>;
+              </div>;
+            </div>;
+          </section>;
           {/* Services Overview */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
@@ -1308,6 +1499,12 @@ placeholder=\"your && your.email@example && example.com\"
                     </h3>
                   </motion.div>
                 ))}
+<<<<<<< HEAD
+
+
+export default ContactPage
+
+=======
               </div>
             </div>
           </section>
@@ -1315,28 +1512,55 @@ placeholder=\"your && your.email@example && example.com\"
       </PageTransition>
     </>
   )
+<<<<<<< HEAD
 }
 export default ContactPage
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+export default ContactPage
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
           </div>
         </section>
       </div>
     </>
+=======
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </PageTransition>;
+    </>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 }
->>>>>>> main
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+export default ContactPage;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
+  );
+
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

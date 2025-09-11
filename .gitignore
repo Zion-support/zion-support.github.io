@@ -25,3 +25,8 @@ core
 
 # TypeScript build info
 *.tsbuildinfo
+
+# npm cache
+.npm-cache/
+core
+*.core

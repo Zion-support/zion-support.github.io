@@ -11,15 +11,6 @@
 // Run the fixer
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require(path')
-const { execSync } = require('child_process')
-
       /import\s*{\s*([^}]+)\s*}\s*from\s*[]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*[]([^')]
       
       /import\s*{[^}]+}\s*from\s*['"][^]
@@ -65,7 +56,3 @@ const { execSync } = require('child_process')
         line.includes()
         !line.endsWith()
         return line + 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
