@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-08-29T15:31:42.292Z",
+  "duration": 72007,
+  "qualityIssues": [
+    {
+      "type": "linting",
+      "status": "failure",
+      "message": "ESLint found issues",
+      "issues": [
+        "> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+      ],
+      "timestamp": "2025-08-29T15:30:30.550Z"
+    },
+    {
+      "type": "typescript",
+      "status": "failure",
+      "message": "TypeScript type checking failed",
+      "issues": [
+        "src/components/BenefitsSection.tsx(94,3): error TS1005: ',' expected.",
+        "src/components/FuturisticServicesShowcase.tsx(236,75): error TS1003: Identifier expected.",
+        "src/components/FuturisticServicesShowcase.tsx(236,129): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+        "src/components/FuturisticServicesShowcase.tsx(236,130): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+        "src/components/FuturisticServicesShowcase.tsx(282,75): error TS1003: Identifier expected.",
+        "src/components/FuturisticServicesShowcase.tsx(282,134): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+        "src/components/FuturisticServicesShowcase.tsx(282,135): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+        "src/layout/PrimaryNav.tsx(62,10): error TS17008: JSX element 'div' has no corresponding closing tag.",
+        "src/pages/ComprehensiveServicesOverview.tsx(32,3): error TS1128: Declaration or statement expected.",
+        "src/pages/ComprehensiveServicesOverview2027.tsx(482,2): error TS1005: '}' expected.",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(354,85): error TS1005: '}' expected.",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(355,19): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(355,21): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(356,17): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(358,19): error TS17002: Expected corresponding JSX closing tag for 'div'.",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(365,7): error TS1005: ')' expected.",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(714,5): error TS1128: Declaration or statement expected.",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(715,3): error TS1109: Expression expected.",
+        "src/pages/EnhancedComprehensiveServices2026.tsx(716,1): error TS1128: Declaration or statement expected.",
+        "src/pages/ForgotPassword.tsx(472,84): error TS1003: Identifier expected.",
+        "src/pages/ForgotPassword.tsx(472,316): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+        "src/pages/ForgotPassword.tsx(552,5): error TS1005: ')' expected.",
+        "src/pages/ForgotPassword.tsx(553,3): error TS1109: Expression expected.",
+        "src/pages/ForgotPassword.tsx(554,1): error TS1128: Declaration or statement expected.",
+        "src/pages/ServicesPage.tsx(303,81): error TS1003: Identifier expected.",
+        "src/pages/ServicesPage.tsx(303,132): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+        "src/pages/ServicesPage.tsx(303,133): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+        "src/pages/admin/SupportRequests.tsx(143,7): error TS2657: JSX expressions must have one parent element.",
+        "src/pages/services/Cybersecurity.tsx(154,13): error TS17002: Expected corresponding JSX closing tag for 'div'.",
+        "src/pages/solutions.tsx(651,5): error TS1128: Declaration or statement expected.",
+        "src/pages/solutions.tsx(652,3): error TS1109: Expression expected.",
+        "src/pages/solutions.tsx(653,1): error TS1128: Declaration or statement expected."
+      ],
+      "timestamp": "2025-08-29T15:30:38.331Z"
+    }
+  ],
+  "passedChecks": [
+    {
+      "type": "build",
+      "status": "success",
+      "message": "Build completed successfully",
+      "timestamp": "2025-08-29T15:31:13.599Z"
+    },
+    {
+      "type": "performance",
+      "status": "success",
+      "message": "Build size check completed",
+      "timestamp": "2025-08-29T15:31:42.291Z"
+    }
+  ],
+  "testResults": {
+    "passed": 0,
+    "failed": 0,
+    "total": 0
+  },
+  "totalIssues": 2,
+  "totalPassed": 2,
+  "status": "issues_found"
+}

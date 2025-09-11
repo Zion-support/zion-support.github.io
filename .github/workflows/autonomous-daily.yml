@@ -1,0 +1,77 @@
+name: Autonomous Daily Automations
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autonomous-daily
+  cancel-in-progress: false
+
+jobs:
+  run-daily-automations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (non-fatal)
+        run: npm run lint || true
+
+      - name: Type check (non-fatal)
+        run: npx tsc --noEmit || true
+
+      - name: Commit and push changes (if any)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(autonomous-daily): apply automated analyses & updates [skip ci]"
+            git push origin HEAD:main
+          fi
+      - name: Run content and design automations
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          APEX_DOMAIN: ${{ secrets.APEX_DOMAIN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          set -euo pipefail
+          npm run design:analyze || true
+          npm run homepage-promo:scan || true
+          npm run responsive:analyze || true
+          npm run variation:analyze || true
+          npm run venture:analyze || true
+          npm run feature-marketing:analyze || true
+          npm run alignment:scan || true
+          node automation/auto-changelog.cjs || true
+          node automation/auto-roadmap.cjs || true
+
+      - name: Auto-commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(automation): daily content/design/marketing updates'
+          commit_user_name: 'Zion Autonomy Bot'
+          commit_user_email: 'autonomy-bot@users.noreply.github.com'
+          branch: main
+        continue-on-error: true

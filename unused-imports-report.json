@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T06:11:41.841Z",
+  "totalFiles": 316,
+  "filesWithUnusedImports": 0,
+  "totalUnusedImports": 0,
+  "fileReports": [],
+  "recommendations": [
+    "Remove unused imports to reduce bundle size",
+    "Use ESLint with unused-imports plugin",
+    "Enable tree shaking in build configuration",
+    "Consider using automatic JSX runtime to remove React imports"
+  ]
+}

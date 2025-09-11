@@ -1,0 +1,528 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useState } from 'react';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Globe, 
+  Zap, 
+  Database, 
+  Smartphone, 
+  Code, 
+  Lock, 
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Network,
+  Palette,
+  BarChart3,
+  Sparkles,
+  Target,
+  Users,
+  CheckCircle
+} from 'lucide-react';
+
+const Products: NextPage = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const productCategories = [
+    { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },
+    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },
+    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },
+    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },
+    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },
+    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' }
+  ];
+
+  const products = [
+    {
+      id: 'zionai-content-studio',
+      name: 'ZionAI Content Studio',
+      category: 'ai',
+      tagline: 'AI-Powered Content Creation Platform',
+      description: 'Revolutionary AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns. Features advanced language models, content templates, and automated publishing workflows.',
+      price: '$299/month',
+      features: [
+        'AI Content Generation',
+        'SEO Optimization',
+        'Multi-Platform Publishing',
+        'Content Analytics',
+        'Brand Voice Customization',
+        'Plagiarism Detection',
+        'Social Media Integration',
+        'Automated Workflows'
+      ],
+      benefits: [
+        '10x faster content creation',
+        'Improved SEO rankings',
+        'Consistent brand messaging',
+        'Reduced content costs'
+      ],
+      icon: Brain,
+      color: 'from-blue-600 to-cyan-600',
+      demoUrl: '/demo/zionai-content-studio',
+      pricingUrl: '/pricing/zionai-content-studio'
+    },
+    {
+      id: 'smartlead-pro',
+      name: 'SmartLead Pro',
+      category: 'saas',
+      tagline: 'Intelligent Lead Generation & CRM',
+      description: 'Advanced lead generation platform with AI-powered scoring, automated follow-ups, and comprehensive CRM capabilities. Integrates with major marketing tools and provides actionable insights.',
+      price: '$199/month',
+      features: [
+        'AI Lead Scoring',
+        'Automated Follow-ups',
+        'CRM Integration',
+        'Email Campaigns',
+        'Lead Analytics',
+        'Social Media Monitoring',
+        'A/B Testing',
+        'ROI Tracking'
+      ],
+      benefits: [
+        '3x higher conversion rates',
+        'Automated lead nurturing',
+        'Comprehensive reporting',
+        'Seamless integrations'
+      ],
+      icon: Target,
+      color: 'from-green-600 to-teal-600',
+      demoUrl: '/demo/smartlead-pro',
+      pricingUrl: '/pricing/smartlead-pro'
+    },
+    {
+      id: 'codegenius-ai',
+      name: 'CodeGenius AI',
+      category: 'ai',
+      tagline: 'AI-Powered Code Generation & Review',
+      description: 'Intelligent coding assistant that generates, reviews, and optimizes code across multiple programming languages. Features include automated testing, documentation generation, and performance optimization.',
+      price: '$399/month',
+      features: [
+        'AI Code Generation',
+        'Code Review & Optimization',
+        'Automated Testing',
+        'Documentation Generation',
+        'Performance Analysis',
+        'Security Scanning',
+        'Multi-Language Support',
+        'Git Integration'
+      ],
+      benefits: [
+        '50% faster development',
+        'Reduced bug rates',
+        'Improved code quality',
+        'Automated documentation'
+      ],
+      icon: Code,
+      color: 'from-purple-600 to-pink-600',
+      demoUrl: '/demo/codegenius-ai',
+      pricingUrl: '/pricing/codegenius-ai'
+    },
+    {
+      id: 'taskmaster-ai',
+      name: 'TaskMaster AI',
+      category: 'automation',
+      tagline: 'Intelligent Task Management & Automation',
+      description: 'AI-driven project management platform that automates task assignment, tracks progress, and optimizes team workflows. Features intelligent scheduling, resource allocation, and predictive analytics.',
+      price: '$149/month',
+      features: [
+        'AI Task Assignment',
+        'Workflow Automation',
+        'Resource Optimization',
+        'Progress Tracking',
+        'Team Collaboration',
+        'Time Management',
+        'Performance Analytics',
+        'Integration Hub'
+      ],
+      benefits: [
+        '30% productivity increase',
+        'Automated task management',
+        'Better resource utilization',
+        'Improved team collaboration'
+      ],
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
+      demoUrl: '/demo/taskmaster-ai',
+      pricingUrl: '/pricing/taskmaster-ai'
+    },
+    {
+      id: 'secureshield-pro',
+      name: 'SecureShield Pro',
+      category: 'security',
+      tagline: 'Advanced Cybersecurity & Threat Detection',
+      description: 'Comprehensive cybersecurity platform with real-time threat detection, automated incident response, and compliance management. Protects against advanced persistent threats and provides detailed security analytics.',
+      price: '$499/month',
+      features: [
+        'Real-time Threat Detection',
+        'Automated Incident Response',
+        'Compliance Management',
+        'Vulnerability Assessment',
+        'Security Analytics',
+        'Threat Intelligence',
+        'Penetration Testing',
+        'Security Training'
+      ],
+      benefits: [
+        '99.9% threat detection rate',
+        'Automated security responses',
+        'Regulatory compliance',
+        'Reduced security risks'
+      ],
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      demoUrl: '/demo/secureshield-pro',
+      pricingUrl: '/pricing/secureshield-pro'
+    },
+    {
+      id: 'blockchainforge',
+      name: 'BlockchainForge',
+      category: 'saas',
+      tagline: 'Blockchain Development & Deployment Platform',
+      description: 'Comprehensive blockchain platform for building, testing, and deploying smart contracts and decentralized applications. Features include development tools, testing frameworks, and deployment automation.',
+      price: '$799/month',
+      features: [
+        'Smart Contract Development',
+        'DApp Creation Tools',
+        'Testing Frameworks',
+        'Deployment Automation',
+        'Blockchain Analytics',
+        'Multi-Chain Support',
+        'Security Auditing',
+        'Developer SDKs'
+      ],
+      benefits: [
+        'Faster blockchain development',
+        'Reduced deployment time',
+        'Enhanced security',
+        'Multi-chain compatibility'
+      ],
+      icon: Network,
+      color: 'from-violet-600 to-purple-600',
+      demoUrl: '/demo/blockchainforge',
+      pricingUrl: '/pricing/blockchainforge'
+    }
+  ];
+
+  const filteredProducts = activeCategory === 'all' 
+    ? products 
+    : products.filter(product => product.category === activeCategory);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <Head>
+        <title>Products - Zion Tech Group | AI, SaaS, Security Solutions</title>
+        <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI products, SaaS platforms, cybersecurity tools, blockchain development, Zion Tech Group products" />
+      </Head>
+
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative container mx-auto px-4 py-24 text-center text-white">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Our Products
+          </h1>
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+            Revolutionary technology products designed to transform how you work, create, and grow. 
+            From AI-powered solutions to enterprise-grade security, we deliver innovation that drives results.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="tel:+13024640950" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              📞 Call +1 (302) 464-0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              ✉️ Request Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Category Filter */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {productCategories.map((category) => {
+            const IconComponent = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  activeCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
+                    : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
+                }`}
+              >
+                <IconComponent className="w-5 h-5" />
+                <span>{category.name}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {filteredProducts.map((product) => {
+            const IconComponent = product.icon;
+            return (
+              <div
+                key={product.id}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <span className="text-3xl font-bold text-blue-400">{product.price}</span>
+                    <p className="text-gray-400 text-sm">per month</p>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
+                <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
+                <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
+                    Key Features
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {product.features.slice(0, 6).map((feature, index) => (
+                      <div key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <span className="truncate">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <TrendingUp className="w-5 h-5 text-green-400 mr-2" />
+                    Key Benefits
+                  </h4>
+                  <ul className="space-y-2">
+                    {product.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center text-gray-300">
+                        <span className="text-green-400 mr-2">→</span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex space-x-3">
+                  <a
+                    href={product.demoUrl}
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
+                  >
+                    🚀 Try Demo
+                  </a>
+                  <a
+                    href={product.pricingUrl}
+                    className="flex-1 bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-white/10 transition-colors"
+                  >
+                    💰 View Pricing
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Enterprise Solutions */}
+        <div className="mt-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Enterprise Solutions
+            </h2>
+            <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+              Need custom enterprise solutions? We offer tailored development, white-label options, 
+              and dedicated support for large organizations.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Custom Development</h3>
+                <p className="text-gray-300 text-sm">Tailored solutions built specifically for your business needs</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">White-Label Solutions</h3>
+                <p className="text-gray-300 text-sm">Rebrand our products as your own with custom integrations</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Dedicated Support</h3>
+                <p className="text-gray-300 text-sm">24/7 dedicated support team and priority response</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              >
+                📞 Call +1 (302) 464-0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry" 
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              >
+                ✉️ Enterprise Inquiry
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Comparison */}
+        <div className="mt-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Pricing Comparison
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/5 rounded-xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+                <div className="text-4xl font-bold text-blue-400 mb-6">$99<span className="text-lg text-gray-400">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Basic features
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Email support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Standard integrations
+                  </li>
+                </ul>
+                <a href="mailto:kleber@ziontechgroup.com?subject=Starter Plan" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors block">
+                  Get Started
+                </a>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 border border-white/20 transform scale-105">
+                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+                <div className="text-4xl font-bold text-white mb-6">$299<span className="text-lg text-blue-100">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    All Starter features
+                  </li>
+                  <li className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    Advanced analytics
+                  </li>
+                  <li className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    Priority support
+                  </li>
+                  <li className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    Custom integrations
+                  </li>
+                </ul>
+                <a href="mailto:kleber@ziontechgroup.com?subject=Professional Plan" className="w-full bg-white text-blue-600 text-center py-3 px-4 rounded-lg font-medium transition-colors block hover:bg-gray-100">
+                  Get Started
+                </a>
+              </div>
+
+              <div className="bg-white/5 rounded-xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-blue-400 mb-6">Custom</div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    All Professional features
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Custom development
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    Dedicated support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    SLA guarantees
+                  </li>
+                </ul>
+                <a href="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan" className="w-full bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors block hover:bg-white/10">
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl mb-8 text-gray-300">
+              Start your free trial today or schedule a personalized demo to see how our products 
+              can revolutionize your workflow and drive growth.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a 
+                href="tel:+13024640950" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              >
+                📞 Call +1 (302) 464-0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              >
+                ✉️ Schedule Demo
+              </a>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 text-sm">
+              <div>
+                <h3 className="text-white font-semibold mb-2">📍 Location</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">🌐 Website</h3>
+                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                  https://ziontechgroup.com
+                </a>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
+                <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Products;
