@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "../../src/lib/utils";
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
@@ -98,3 +99,10 @@ const CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
 );
 CardFooter.displayName = "CardFooter";
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+import React from 'react'
+
+export default function Card({ className = '', children }: { className?: string; children: React.ReactNode }) {
+	return <div className={`rounded border border-gray-800 bg-black/40 ${className}`}>{children}</div>
+}
+>>>>>>> origin/chore/standardize-pages-router

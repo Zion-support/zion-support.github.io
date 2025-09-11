@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
@@ -8,12 +9,16 @@ import TopContactBar from './TopContactBar';
 import PerformanceMonitor from '../PerformanceMonitor';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
+=======
+import React from 'react';
+>>>>>>> origin/chore/standardize-pages-router
 
 interface LayoutProps {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+<<<<<<< HEAD
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -125,4 +130,11 @@ export default function Layout({ children }: LayoutProps) {
       <CookieConsentBanner />
     </div>
   );
+=======
+	return (
+		<div className="min-h-screen bg-black text-white">
+			{children}
+		</div>
+	);
+>>>>>>> origin/chore/standardize-pages-router
 }

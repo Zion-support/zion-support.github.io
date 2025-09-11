@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "zion-tech-group-website",
+=======
+  "name": "bolt.new.zion.app",
+>>>>>>> origin/chore/standardize-pages-router
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -8,6 +12,7 @@
     "npm": ">=8.0.0"
   },
   "scripts": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
@@ -23,6 +28,12 @@
     "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+=======
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+>>>>>>> origin/chore/standardize-pages-router
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
@@ -52,12 +63,17 @@
     "mcp:monitor": "node automation/mcp-integration-orchestrator.js performance-monitor",
     "mcp:status": "node automation/mcp-integration-orchestrator.js status",
     "mcp:test": "node simple-mcp-test.js",
-    "google-docs:start": "node automation/launch-google-docs-automation.js",
-    "google-docs:dev": "nodemon automation/launch-google-docs-automation.js",
+    "google-docs:start": "node automation/launch-design-improvement-automation.js start",
+    "google-docs:dev": "nodemon automation/launch-design-improvement-automation.js",
     "google-docs:status": "node automation/check-google-docs-status.js",
     "google-docs:report": "node automation/generate-google-docs-report.js",
+<<<<<<< HEAD
     "google-docs:test": "node automation/test-google-docs-automation.js",
     "cursor:memory": "node run-cursor-memory-automation.js && node automation/cursor-rules-generator.cjs",
+=======
+    "google-docs:test": "node automation/test-linkedin-automation.js",
+    "cursor:memory": "node run-cursor-memory-automation.js",
+>>>>>>> origin/chore/standardize-pages-router
     "cursor:memory:dev": "nodemon run-cursor-memory-automation.js",
     "cursor:memory:config": "node -e \"console.log(JSON.stringify(require('./cursor-memory-config.json'), null, 2))\"",
     "cursor:memory:status": "node -e \"const fs = require('fs'); const path = './cursor-memory/memory-summary.json'; try { const data = JSON.parse(fs.readFileSync(path, 'utf8')); console.log('Memory Status:'); console.log('- Total entries:', data.totalEntries); console.log('- Categories:', Object.keys(data.categories).length); console.log('- High confidence:', data.confidenceDistribution.high); } catch(e) { console.log('No memory data found'); }\"",
@@ -251,6 +267,7 @@
 >>>>>>> origin/chore/internal-link-automation
   },
   "dependencies": {
+<<<<<<< HEAD
     "class-variance-authority": "^0.7.0",
 <<<<<<< HEAD
     "clsx": "^2.0.0",
@@ -295,5 +312,59 @@
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
+=======
+    "@google-analytics/data": "^5.2.0",
+    "@google/generative-ai": "^0.24.1",
+    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
+    "@modelcontextprotocol/server-memory": "^2025.8.4",
+    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.39.0",
+    "@types/react-datepicker": "^6.2.0",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
+    "child_process": "^1.0.2",
+    "chokidar": "^4.0.3",
+    "cron-parser": "^5.3.0",
+    "events": "^3.3.0",
+    "framer-motion": "^12.23.12",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.3.1",
+    "glob": "^11.0.3",
+    "https": "^1.0.0",
+    "import-fresh": "^3.3.1",
+    "lucide-react": "^0.536.0",
+    "next": "^14.2.10",
+    "node-cron": "^4.2.1",
+    "openai": "^5.11.0",
+    "path": "^0.12.7",
+    "postcss": "^8.4.35",
+    "react": "^18.3.1",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^18.3.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.2.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "^14.2.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.1.7",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+>>>>>>> origin/chore/standardize-pages-router
   }
 }

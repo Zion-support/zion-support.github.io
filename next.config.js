@@ -2,6 +2,7 @@
 const assetPrefix = process.env.ASSET_PREFIX || '';
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   async redirects() {
     return [
       { source: '/main', destination: '/', permanent: true },
@@ -11,6 +12,8 @@ const nextConfig = {
   },
   typescript: { ignoreBuildErrors: true },
 =======
+=======
+>>>>>>> origin/chore/standardize-pages-router
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -20,8 +23,12 @@ const nextConfig = {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
 	},
+	typescript: {
+		ignoreBuildErrors: true
+	},
 	eslint: {
 		ignoreDuringBuilds: true
+<<<<<<< HEAD
 	},
 	typescript: {
 		// Allow builds to pass even if there are type errors; CI can run type-check separately
@@ -38,8 +45,14 @@ const nextConfig = {
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
+=======
+>>>>>>> origin/chore/standardize-pages-router
 	}
 >>>>>>> origin/chore/stabilize-build-minimal-index
 };
 
+<<<<<<< HEAD
 module.exports = nextConfig;
+=======
+export default nextConfig;
+>>>>>>> origin/chore/standardize-pages-router
