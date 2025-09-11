@@ -19,7 +19,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   threshold = 0.1,
   className = '',
 }) => {
-  const [ref, isIntersecting] = useIntersectionObserver({
+  const [ref, isIntersecting] = useIntersectionObserver<HTMLDivElement>({
     threshold,
     freezeOnceVisible: true,
   });

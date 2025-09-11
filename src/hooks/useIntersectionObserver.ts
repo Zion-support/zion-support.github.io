@@ -12,7 +12,7 @@ interface UseIntersectionObserverOptions {
  * @param options - Intersection observer options
  * @returns [ref, isIntersecting, entry] tuple
  */
-export function useIntersectionObserver<T extends Element = HTMLDivElement>(
+export function useIntersectionObserver<T extends Element = Element>(
   options: UseIntersectionObserverOptions = {}
 ): [React.RefObject<T>, boolean, IntersectionObserverEntry | undefined] {
   const {
