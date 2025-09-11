@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <main id="main-content" className="min-h-screen bg-white">
       {/* Promotional Banner */}
       <ContentPromoBanner {...contentPromoBanners.newGuide} />
       
