@@ -5,21 +5,14 @@ export default function ResourcesPage() {
   const resources = [
     {
       id: 'ai-implementation-checklist',
-      title: 'AI Implementation Checklist 2025',
-      description: 'Complete step-by-step guide for successful AI deployment in your organization',
-      category: 'AI & Automation',
+      title: 'AI Implementation Checklist: Complete Success Guide',
+      description: 'Comprehensive step-by-step checklist covering every phase of AI implementation, from planning to optimization. Includes templates and expert tips.',
       type: 'Checklist',
-      downloadCount: '2.3K',
-      rating: 4.9,
+      downloadCount: '3,247',
+      size: '1.8 MB',
+      category: 'AI & Technology',
+      featured: true,
       icon: '✅',
-      color: 'blue',
-      features: [
-        'Pre-implementation planning',
-        'Technology selection criteria',
-        'Team training requirements',
-        'Risk assessment framework',
-        'Success metrics definition'
-      ]
     },
     {
       id: 'cloud-migration-playbook',
@@ -146,6 +139,78 @@ export default function ResourcesPage() {
         'Security integration',
         'Team collaboration practices'
       ]
+    },
+    {
+      id: 'ai-cost-optimization-toolkit',
+      title: 'AI Cost Optimization Toolkit 2025',
+      description: 'Complete toolkit to reduce AI infrastructure costs by 40-70% while improving performance',
+      category: 'AI & Automation',
+      type: 'Toolkit',
+      downloadCount: '3.2K',
+      rating: 4.9,
+      icon: '💰',
+      color: 'purple',
+      features: [
+        'Model selection framework',
+        'Prompt optimization techniques',
+        'Caching implementation guide',
+        'Cost monitoring dashboard',
+        'ROI calculation templates'
+      ]
+    },
+    {
+      id: 'enterprise-rag-implementation-guide',
+      title: 'Enterprise RAG Implementation Guide',
+      description: 'Step-by-step guide to building production-ready RAG systems with governance and cost controls',
+      category: 'AI & Automation',
+      type: 'Guide',
+      downloadCount: '2.8K',
+      rating: 4.8,
+      icon: '📚',
+      color: 'indigo',
+      features: [
+        'Reference architecture patterns',
+        'Hybrid retrieval strategies',
+        'Governance and compliance controls',
+        'Cost optimization techniques',
+        'Monitoring and evaluation framework'
+      ]
+    },
+    {
+      id: 'ai-automation-roi-calculator',
+      title: 'AI Automation ROI Calculator',
+      description: 'Interactive calculator to estimate potential savings and ROI from AI automation projects',
+      category: 'Business Strategy',
+      type: 'Calculator',
+      downloadCount: '4.1K',
+      rating: 4.9,
+      icon: '🧮',
+      color: 'green',
+      features: [
+        'Customizable cost inputs',
+        'Multiple scenario modeling',
+        'Payback period calculations',
+        'Risk assessment framework',
+        'Executive summary templates'
+      ]
+    },
+    {
+      id: 'startup-funding-ai-era-guide',
+      title: 'Startup Funding in the AI Era: Complete Guide',
+      description: 'Navigate the new funding landscape and position your AI startup for success in 2025',
+      category: 'Startup Strategy',
+      type: 'Guide',
+      downloadCount: '2.9K',
+      rating: 4.8,
+      icon: '🚀',
+      color: 'orange',
+      features: [
+        'AI startup valuation frameworks',
+        'Investor pitch templates',
+        'Due diligence preparation',
+        'Term sheet negotiation guide',
+        'Post-funding growth strategies'
+      ]
     }
   ];
 
@@ -175,7 +240,7 @@ export default function ResourcesPage() {
   };
 
   return (
-    <div className='min-h-screen bg-white'>
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -187,7 +252,7 @@ export default function ResourcesPage() {
               Download our comprehensive guides, checklists, and frameworks to accelerate 
               your business growth and technology implementation.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href='#resources'
                 className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
@@ -195,8 +260,8 @@ export default function ResourcesPage() {
                 Browse Resources
               </a>
               <Link
-                href='/contact'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+                href="/contact"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
               >
                 Request Custom Guide
               </Link>
@@ -218,7 +283,7 @@ export default function ResourcesPage() {
               <div className='text-gray-600'>Free Resources</div>
             </div>
             <div>
-              <div className='text-4xl font-bold text-blue-600 mb-2'>4.8</div>
+              <div className='text-4xl font-bold text-blue-600 mb-2'>4.9</div>
               <div className='text-gray-600'>Average Rating</div>
             </div>
             <div>
@@ -229,84 +294,36 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className='py-8 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-wrap gap-4 justify-center'>
-            {categories.map((category) => (
-              <button
-                key={category.name}
-                className='px-6 py-3 bg-white border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-colors'
-              >
-                <span className='font-medium text-gray-900'>{category.name}</span>
-                <span className='ml-2 text-sm text-gray-500'>({category.count})</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Resources Grid */}
-      <section id='resources' className='py-16'>
+      <section id="resources" className='py-16 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              Featured Resources
+              All Resources
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Hand-picked guides and tools that have helped thousands of businesses succeed
+              Browse our complete library of free resources, tools, and guides
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {resources.map((resource) => (
-              <div key={resource.id} className='bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-shadow'>
-                <div className='p-6'>
-                  <div className='flex items-start justify-between mb-4'>
+              <div key={resource.id} className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+                <div className='p-8'>
+                  <div className='flex items-center justify-between mb-4'>
                     <div className='text-4xl'>{resource.icon}</div>
-                    <div className={`px-3 py-1 rounded-full text-sm font-medium border ${getColorClasses(resource.color)}`}>
+                    <div className='flex items-center gap-1'>
+                      <span className='text-yellow-400'>★</span>
+                      <span className='text-sm text-gray-600'>{resource.rating}</span>
+                    </div>
+                  </div>
+                  <h3 className='text-xl font-bold text-gray-900 mb-2'>{resource.title}</h3>
+                  <p className='text-gray-600 mb-4'>{resource.description}</p>
+                  <div className='flex items-center justify-between text-sm text-gray-500 mb-4'>
+                    <span>{resource.downloadCount} downloads</span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getColorClasses(resource.color)}`}>
                       {resource.type}
-                    </div>
+                    </span>
                   </div>
-                  
-                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                    {resource.title}
-                  </h3>
-                  
-                  <p className='text-gray-600 mb-4 text-sm leading-relaxed'>
-                    {resource.description}
-                  </p>
-                  
-                  <div className='mb-4'>
-                    <div className='flex items-center gap-2 mb-2'>
-                      <span className='text-sm text-gray-500'>{resource.category}</span>
-                      <span className='text-gray-300'>•</span>
-                      <div className='flex items-center gap-1'>
-                        <span className='text-yellow-400'>★</span>
-                        <span className='text-sm text-gray-600'>{resource.rating}</span>
-                      </div>
-                      <span className='text-gray-300'>•</span>
-                      <span className='text-sm text-gray-500'>{resource.downloadCount} downloads</span>
-                    </div>
-                  </div>
-                  
-                  <div className='mb-6'>
-                    <h4 className='text-sm font-medium text-gray-900 mb-2'>What's included:</h4>
-                    <ul className='text-sm text-gray-600 space-y-1'>
-                      {resource.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className='flex items-center gap-2'>
-                          <span className='text-green-500'>✓</span>
-                          {feature}
-                        </li>
-                      ))}
-                      {resource.features.length > 3 && (
-                        <li className='text-gray-500 text-xs'>
-                          +{resource.features.length - 3} more items
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-                  
                   <button className='w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
                     Download Free
                   </button>
@@ -331,87 +348,11 @@ export default function ResourcesPage() {
             <input
               type='email'
               placeholder='Enter your email'
-              className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              className='flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-blue-300'
             />
             <button className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
               Subscribe
             </button>
-          </div>
-          <p className='text-sm text-blue-200 mt-4'>
-            No spam. Unsubscribe anytime. We respect your privacy.
-          </p>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              What Our Users Say
-            </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              See how our resources have helped businesses achieve their goals
-            </p>
-          </div>
-          
-          <div className='grid md:grid-cols-3 gap-8'>
-            <div className='bg-white p-6 rounded-lg shadow-sm'>
-              <div className='flex items-center mb-4'>
-                <div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4'>
-                  <span className='text-blue-600 font-bold'>JS</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-900'>John Smith</h4>
-                  <p className='text-sm text-gray-600'>CTO, TechStart Inc.</p>
-                </div>
-              </div>
-              <p className='text-gray-700 mb-4'>
-                "The AI Implementation Checklist saved us months of planning. We successfully 
-                deployed our first AI solution in just 6 weeks using their framework."
-              </p>
-              <div className='flex text-yellow-400'>
-                ★★★★★
-              </div>
-            </div>
-            
-            <div className='bg-white p-6 rounded-lg shadow-sm'>
-              <div className='flex items-center mb-4'>
-                <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4'>
-                  <span className='text-green-600 font-bold'>MJ</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-900'>Maria Johnson</h4>
-                  <p className='text-sm text-gray-600'>Founder, GrowthCo</p>
-                </div>
-              </div>
-              <p className='text-gray-700 mb-4'>
-                "The Growth Hacking Toolkit helped us scale from 0 to 10K users in 3 months. 
-                The frameworks are practical and actionable."
-              </p>
-              <div className='flex text-yellow-400'>
-                ★★★★★
-              </div>
-            </div>
-            
-            <div className='bg-white p-6 rounded-lg shadow-sm'>
-              <div className='flex items-center mb-4'>
-                <div className='w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4'>
-                  <span className='text-purple-600 font-bold'>DR</span>
-                </div>
-                <div>
-                  <h4 className='font-semibold text-gray-900'>David Rodriguez</h4>
-                  <p className='text-sm text-gray-600'>DevOps Lead, CloudCorp</p>
-                </div>
-              </div>
-              <p className='text-gray-700 mb-4'>
-                "The Cloud Migration Playbook made our infrastructure migration seamless. 
-                We reduced costs by 40% while improving performance."
-              </p>
-              <div className='flex text-yellow-400'>
-                ★★★★★
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -427,7 +368,7 @@ export default function ResourcesPage() {
               Can't find what you're looking for? Our team can create custom guides, 
               checklists, and frameworks tailored to your specific needs and industry.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href='/contact'
                 className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
@@ -438,7 +379,7 @@ export default function ResourcesPage() {
                 href='/services'
                 className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors'
               >
-                Explore Our Services
+                View Our Services
               </Link>
             </div>
           </div>
@@ -446,4 +387,17 @@ export default function ResourcesPage() {
       </section>
     </div>
   );
+}
+
+function getColorClasses(color: string) {
+  const colors = {
+    blue: 'bg-blue-50 border-blue-200 text-blue-800',
+    green: 'bg-green-50 border-green-200 text-green-800',
+    purple: 'bg-purple-50 border-purple-200 text-purple-800',
+    orange: 'bg-orange-50 border-orange-200 text-orange-800',
+    red: 'bg-red-50 border-red-200 text-red-800',
+    teal: 'bg-teal-50 border-teal-200 text-teal-800',
+    gray: 'bg-gray-50 border-gray-200 text-gray-800'
+  };
+  return colors[color as keyof typeof colors] || colors.blue;
 }

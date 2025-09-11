@@ -3,6 +3,84 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
+ 	  // New posts (2025-09)
+ 	  {
+ 	    id: 'ai-productivity-playbook-2025',
+ 	    title: 'AI Productivity Playbook 2025: Ship Faster Without Breaking Things',
+ 	    excerpt:
+ 	      'A pragmatic system to boost throughput with AI while keeping quality, guardrails, and budgets.',
+ 	    date: '2025-09-11',
+ 	    readTime: '9 min read',
+ 	    category: 'AI & Productivity',
+ 	    featured: true,
+ 	    image: '/api/placeholder/600/400',
+ 	  },
+ 	  {
+ 	    id: 'cloud-cost-optimization-2025',
+ 	    title: 'Cloud Cost Optimization 2025: Save 30–50% Without Downtime',
+ 	    excerpt:
+ 	      'Quick wins and architecture moves that cut spend across compute, storage, and networking.',
+ 	    date: '2025-09-11',
+ 	    readTime: '8 min read',
+ 	    category: 'Cloud & DevOps',
+ 	    featured: true,
+ 	    image: '/api/placeholder/600/400',
+ 	  },
+ 	  {
+ 	    id: 'edge-ai-retail-2025',
+ 	    title: 'Edge AI in Retail 2025: Real-Time CX With Privacy by Design',
+ 	    excerpt:
+ 	      'On-device intelligence to reduce latency, protect PII, and personalize experiences at scale.',
+ 	    date: '2025-09-11',
+ 	    readTime: '7 min read',
+ 	    category: 'Edge & IoT',
+ 	    featured: true,
+ 	    image: '/api/placeholder/600/400',
+ 	  },
+	  {
+	    id: 'ai-ops-runbooks-2025',
+	    title: 'AI Ops Runbooks 2025: Resolve Incidents Faster with Guardrails',
+	    excerpt:
+	      'Playbooks for LLM incidents: budget spikes, quality regressions, tool failures, and data drift.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Operations',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-seo-content-engine-2025',
+	    title: 'Startup SEO Content Engine 2025: Ship Weekly, Compound Traffic',
+	    excerpt:
+	      'A lean system to ideate, draft, and publish content that converts—without a big team.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'Growth',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-platform-engineering-2025',
+	    title: 'AI Platform Engineering in 2025: Reliable, Governed, Cost-Aware',
+	    excerpt:
+	      'Foundations, guardrails, and patterns to ship AI features safely at scale.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'customer-stories-automation-roi',
+	    title: 'Customer Stories: Real ROI from AI Automation',
+	    excerpt:
+	      'Three concise case studies across support, finance, and operations with measurable ROI.',
+	    date: '2025-09-11',
+	    readTime: '7 min read',
+	    category: 'Case Studies',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
 	  {
 	    id: 'enterprise-rag-architecture-2025',
 	    title: 'Enterprise RAG Architecture 2025: Reliable, Governed, and Cost-Aware',
@@ -15,6 +93,28 @@ export default function BlogPage() {
 	    image: '/api/placeholder/600/400',
 	  },
 	  // New posts (2025-09)
+	  {
+	    id: 'ai-architecture-cost-governance-2025',
+	    title: 'AI Architecture & Cost Governance in 2025',
+	    excerpt:
+	      'Guardrails, observability, and budgets that keep systems reliable and affordable.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-pricing-strategy-2025',
+	    title: 'Startup Pricing Strategy 2025: From Free to $1M ARR',
+	    excerpt:
+	      'Validate willingness to pay, package value, and scale pricing with confidence.',
+	    date: '2025-09-11',
+	    readTime: '7 min read',
+	    category: 'Growth',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
 	  {
 	    id: 'ai-content-strategy-2025',
 	    title: 'AI Content Strategy 2025: From Idea to Distribution',
@@ -289,40 +389,6 @@ export default function BlogPage() {
 	    date: '2025-01-27',
 	    readTime: '12 min read',
 	    category: 'Startup Strategy',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  // New articles added
-	  {
-	    id: 'ai-productivity-automation-2025',
-	    title: 'AI Productivity Automation: The 2025 Complete Guide',
-	    excerpt:
-	      'Discover how AI automation is revolutionizing workplace productivity in 2025 with practical strategies and implementation frameworks.',
-	    date: '2025-01-28',
-	    readTime: '12 min read',
-	    category: 'AI & Productivity',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'cloud-native-architecture-2025',
-	    title: 'Cloud-Native Architecture in 2025: Building for Scale and Resilience',
-	    excerpt:
-	      'Explore the latest trends and best practices in cloud-native architecture for scalable, resilient, and cost-effective systems.',
-	    date: '2025-01-28',
-	    readTime: '14 min read',
-	    category: 'Cloud & DevOps',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-growth-hacking-2025',
-	    title: 'Startup Growth Hacking in 2025: Data-Driven Strategies That Actually Work',
-	    excerpt:
-	      'Discover the latest growth hacking strategies driving explosive growth for startups with data-driven techniques and proven frameworks.',
-	    date: '2025-01-28',
-	    readTime: '11 min read',
-	    category: 'Growth & Marketing',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
 	  }
