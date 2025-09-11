@@ -11,6 +11,30 @@ const posts = [
     tags: ['AI', 'Security', 'Governance'],
   },
   {
+    title: 'Agentic Workflows in the Enterprise: Reliable, Observable, Governed',
+    description:
+      'Blueprint for agentic systems with reliability, observability, and governance at the core.',
+    href: '/blog/agentic-workflows-enterprise',
+    date: '2025-09-11',
+    tags: ['AI', 'Agents', 'Governance'],
+  },
+  {
+    title: 'AI Risk Register 2025: Practical Controls and Runbooks',
+    description:
+      'A pragmatic template for risks, owners, mitigations, and runbooks that scale.',
+    href: '/blog/ai-risk-register-2025',
+    date: '2025-09-11',
+    tags: ['AI', 'Governance', 'Risk'],
+  },
+  {
+    title: 'Zero-Trust AI Integrations: Safely Connecting to Your Systems',
+    description:
+      'Least privilege, short-lived creds, and policy approvals for safe integrations.',
+    href: '/blog/zero-trust-ai-integrations',
+    date: '2025-09-11',
+    tags: ['Security', 'AI', 'Integrations'],
+  },
+  {
     title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
     description:
       'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',

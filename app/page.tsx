@@ -118,16 +118,22 @@ export default function HomePage() {
               icon='🛡️'
             />
             <Card
-              title='AI Product Roadmaps That Actually Ship'
-              href='/blog/ai-product-roadmaps-that-ship'
-              description='Milestones and guardrails that keep AI features shipping with quality.'
-              icon='🗺️'
+              title='Agentic Workflows in the Enterprise: Reliable, Observable, Governed'
+              href='/blog/agentic-workflows-enterprise'
+              description='Blueprint for agentic systems with reliability, observability, and governance.'
+              icon='🧭'
             />
             <Card
               title='AI-Powered Customer Support Playbooks'
               href='/blog/ai-customer-support-playbooks'
               description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
               icon='🎧'
+            />
+            <Card
+              title='Zero-Trust AI Integrations: Safely Connecting to Your Systems'
+              href='/blog/zero-trust-ai-integrations'
+              description='Least privilege, short-lived creds, and policy approvals for safe integrations.'
+              icon='🔐'
             />
             <Card
               title='AI Automation for Businesses: Complete Guide'

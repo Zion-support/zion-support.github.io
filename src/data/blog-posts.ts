@@ -27,6 +27,51 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 5,
   },
   {
+    id: '14',
+    title: 'Agentic Workflows in the Enterprise: Reliable, Observable, Governed',
+    slug: 'agentic-workflows-enterprise',
+    excerpt:
+      'Blueprint for agentic systems with reliability, observability, and governance at the core.',
+    content:
+      'Agentic systems can deliver end-to-end outcomes when grounded by strong contracts, evals, and clear governance. This article outlines a production blueprint with structured tools, policy-based approvals, and robust observability for safe autonomy.',
+    featuredImage: '/images/blog/agentic-workflows.jpg',
+    category: 'AI',
+    tags: ['AI', 'Agents', 'Governance'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 6,
+  },
+  {
+    id: '15',
+    title: 'AI Risk Register 2025: Practical Controls and Runbooks',
+    slug: 'ai-risk-register-2025',
+    excerpt:
+      'A pragmatic template for risks, owners, mitigations, and runbooks that scale.',
+    content:
+      'A living AI risk register ties risks to concrete mitigations and runbooks. We provide a field-tested template covering prompt injection, privacy, and cost controls, with guidance on owners and SLAs.',
+    featuredImage: '/images/blog/ai-risk-register.jpg',
+    category: 'AI',
+    tags: ['AI', 'Governance', 'Risk'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 5,
+  },
+  {
+    id: '16',
+    title: 'Zero-Trust AI Integrations: Safely Connecting to Your Systems',
+    slug: 'zero-trust-ai-integrations',
+    excerpt:
+      'Least privilege, short-lived creds, and policy approvals for safe integrations.',
+    content:
+      'As AI features integrate with production systems, zero-trust becomes essential. We cover token exchange, granular scopes, immutable audits, and egress monitoring to keep integrations safe.',
+    featuredImage: '/images/blog/zero-trust-ai-integrations.jpg',
+    category: 'Security',
+    tags: ['Security', 'AI', 'Integrations'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-09-11',
+    readTime: 6,
+  },
+  {
     id: '11',
     title: 'GenAI in Production: SLAs, Costs, and Control in 2025',
     slug: 'genai-in-production-slas-costs-control-2025',
