@@ -76,10 +76,10 @@ export default function HomePage() {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
-                href='/content-showcase'
+                href='/blog'
                 className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
               >
-                📚 Explore All Content
+                📚 Read Latest Articles
               </Link>
               <Link
                 href='/resources'
