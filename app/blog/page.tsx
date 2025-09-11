@@ -4,6 +4,39 @@ import Link from 'next/link';
 export default function BlogPage() {
 	const blogPosts = [
 		{
+			id: 'ai-product-roadmap-2025',
+			title: 'AI Product Roadmap 2025: From MVP to Scale',
+			excerpt:
+				'A practical roadmap to align outcomes, add guardrails, and scale AI features with confidence.',
+			date: '2025-09-11',
+			readTime: '9 min read',
+			category: 'Product Strategy',
+			featured: true,
+			image: '/api/placeholder/600/400',
+		},
+		{
+			id: 'genai-evals-and-observability',
+			title: 'GenAI Evals & Observability: The Practical 2025 Guide',
+			excerpt:
+				'How to measure quality, cost, and safety with automated evals and rich telemetry.',
+			date: '2025-09-11',
+			readTime: '10 min read',
+			category: 'AI Engineering',
+			featured: true,
+			image: '/api/placeholder/600/400',
+		},
+		{
+			id: 'startup-go-to-market-2025',
+			title: 'Startup Go-To-Market in 2025: From 0 to 500 Customers',
+			excerpt:
+				'A simple, repeatable approach to early traction with ICP focus and 3 channels.',
+			date: '2025-09-11',
+			readTime: '8 min read',
+			category: 'Startup Strategy',
+			featured: true,
+			image: '/api/placeholder/600/400',
+		},
+		{
 			id: 'ai-transforming-business-2025',
 			title: 'How AI is Transforming Business Operations in 2025',
 			excerpt:

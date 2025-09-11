@@ -336,32 +336,32 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <Link href='/blog/ai-automation-enterprise-2025' className='group'>
+            <Link href='/blog/ai-product-roadmap-2025' className='group'>
               <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
                 <div className='text-sm font-medium text-blue-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Automation in Enterprise: Complete 2025 Guide</h3>
-                <p className='text-blue-800 mt-2'>Everything you need to know about implementing AI automation in your enterprise.</p>
+                <h3 className='text-xl font-semibold text-blue-900 group-hover:underline'>AI Product Roadmap 2025: From MVP to Scale</h3>
+                <p className='text-blue-800 mt-2'>Align outcomes, add guardrails, and scale AI features with confidence.</p>
               </div>
             </Link>
-            <Link href='/blog/startup-funding-ai-era' className='group'>
+            <Link href='/blog/genai-evals-and-observability' className='group'>
               <div className='rounded-lg border border-green-200 bg-green-50 p-6 hover:bg-green-100 transition-colors'>
                 <div className='text-sm font-medium text-green-700 mb-1'>New</div>
-                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>Startup Funding in the AI Era: Complete Guide</h3>
-                <p className='text-green-800 mt-2'>Navigate the new funding landscape and position your AI startup for success.</p>
+                <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>GenAI Evals & Observability: The Practical 2025 Guide</h3>
+                <p className='text-green-800 mt-2'>Measure quality, cost, and safety with evals and telemetry that matter.</p>
               </div>
             </Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='AI Agents in the Enterprise: Practical Playbooks for 2025'
-              href='/blog/ai-agents-in-enterprise-2025'
-              description='Architectures, guardrails, and KPIs to deploy reliable AI agents.'
+              title='Startup Go-To-Market in 2025: From 0 to 500 Customers'
+              href='/blog/startup-go-to-market-2025'
+              description='ICP focus, compelling offers, and three scalable channels to win early.'
               icon='🧠'
             />
             <Card
-              title='Startup Distribution in 2025: A Practical Playbook'
-              href='/blog/startup-distribution-playbook-2025'
-              description='The highest-leverage channels to reach 0 → 500 customers.'
+              title='AI Agents in the Enterprise: Practical Playbooks for 2025'
+              href='/blog/ai-agents-in-enterprise-2025'
+              description='Architectures, guardrails, and KPIs to deploy reliable AI agents.'
               icon='📈'
             />
             <Card
