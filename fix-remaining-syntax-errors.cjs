@@ -188,7 +188,6 @@ if (require.main === module) {
 }
 
 module.exports = { fixRemainingSyntax };
-=======
 const { execSync } = require('child_process');
 
 console.log('🔧 Fixing remaining syntax errors...');
@@ -257,8 +256,5 @@ for (const filePath of syntaxErrorFiles) {
 }
 
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors!`);
-=======
 fs.writeFileSync('/workspace/remaining-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to remaining-syntax-errors-fix-report.json');<<<<<<< HEAD=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

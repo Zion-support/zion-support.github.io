@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -581,7 +580,3 @@ if (require.main === module) {}
   const enhancer = new AICodeQualityEnhancer();
   enhancer.run()};
 ;
-<<<<<<< HEAD
-module.exports = AICodeQualityEnhancer;
-=======
-module.exports = AICodeQualityEnhancer;

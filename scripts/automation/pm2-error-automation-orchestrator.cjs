@@ -678,15 +678,3 @@ async function main() {
     // Keep the process running
     setInterval(() => {
       // Heartbeat
-<<<<<<< HEAD
-      .toISOString()}`)}, 300000); // Every 5 minutes
-=======      console.log(`💓 Orchestrator "heartbeat": ${new Date().toISOString()}`)}, 300000); // Every 5 minutes
-  } catch (error) {
-    console.error('❌ Orchestrator "failed": ', error.message);
-    process.exit(1)}
-}
-// Export for use by other modules
-module.exports = { PM2ErrorAutomationOrchestrator };
-// Run if called directly
-if (require.main === module) {
-  main()}

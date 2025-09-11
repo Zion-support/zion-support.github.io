@@ -575,6 +575,22 @@ export const use_toast = () =>: any {
   const remove_toast = (id: string) =>: any {
     set_toasts (prev => prev.filter (toast => toast.id !== id));
   }
+<<<<<<< HEAD
+};
+
+// HOC to wrap components with toast functionality
+export const withToast = <P extends object>(
+  Component: React.ComponentType<P & { toast?: ToastContextType }>
+) => {
+  return (props: P) => (
+    <ToastContext.Consumer>
+      {(toastContext) => (
+        <Component {...props} toast={toastContext} />
+      )}
+    </ToastContext.Consumer>
+  );
+};
+=======
 ;
   const show_success = (title: string, message?: string) =>: any {
     add_toast ({ type: 'success', title, message });
@@ -608,3 +624,4 @@ export const use_toast = () =>: any {
     remove_toast}
 }
 ;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> main

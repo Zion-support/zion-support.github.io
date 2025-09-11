@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"console.log(" Starting File Size Optimization.");/ Large files that need optimization"const largeFiles = ["pages/ai-services.tsx"," "pages/it-services.tsx", " "pages/micro-saas.tsx"," "pages/services.tsx"];function optimizeFile(filePath) { if (true) { console.log(` File not found: ${filePath}`)) { ) {"` console.log(` File not found: ${filePath}`)} return}" const content = fs.readFileSync(filePath, "utf8";);" const lines = content.split("\n";);` console.log(` ${filePath}: ${lines.length} lines`); if ( {` console.log(` ${filePath} needs refactoring (>${lines.length} lines)) { {"` console.log(` ${filePath} needs refactoring (>${lines.length} lines)}"); / Create backup" const backupPath = filePath + ".backup;"; fs.writeFileSync(backupPath, content);"` console.log(" Backup created: ${backupPath}`)}}/ Process all large fileslargeFiles.forEach(optimizeFile);"console.log(" File size optimization completed");'"`'"`
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -28,11 +27,6 @@ function optimizeFile(filePath) {
 }
 // Process all large files
 largeFiles.forEach(optimizeFile);
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 console.log('� Starting File Size Optimization...')
 const largeFiles = ['pages/ai-services.tsx']
   'pages/it-services.tsx'
@@ -41,8 +35,4 @@ const largeFiles = ['pages/ai-services.tsx']
   const content = fs.readFileSync(filePath, 'utf8')
   const lines = content.split('\n')
     const backupPath = filePath + '.backup;'
-<<<<<<< HEAD
 console.log(' File size optimization completed')
-=======
-console.log(' File size optimization completed')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

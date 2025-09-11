@@ -93,8 +93,4 @@ main().catch(error => {})
   log(`Link Checker Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -16,8 +16,4 @@ const path = require('path')
       execSync('pm2 save', { "stdio"})
       execSync('pm2 status', { "stdio"})
 // console.log('\n� Automation "Schedule")
-<<<<<<< HEAD
     console.log('\n  Useful PM2 "Commands")
-=======
-    console.log('\n  Useful PM2 "Commands")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
