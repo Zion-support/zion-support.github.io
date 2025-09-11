@@ -17,6 +17,30 @@ const posts = [
     date: '2025-09-11',
     tags: ['Cloud', 'FinOps', 'DevOps'],
   },
+  {
+    title: 'AI-Powered Customer Support Playbooks',
+    description:
+      'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    href: '/blog/ai-customer-support-playbooks',
+    date: '2025-09-11',
+    tags: ['AI', 'CX', 'Automation'],
+  },
+  {
+    title: 'AI Infrastructure Cost Controls That Actually Work',
+    description:
+      'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
+    href: '/blog/ai-infra-cost-controls',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'AI'],
+  },
+  {
+    title: 'Enterprise RAG Blueprint: From Pilot to Production',
+    description:
+      'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
+    href: '/blog/enterprise-rag-blueprint',
+    date: '2025-09-11',
+    tags: ['RAG', 'LLM', 'Architecture'],
+  },
 ];
 
 export default function BlogIndexPage() {
