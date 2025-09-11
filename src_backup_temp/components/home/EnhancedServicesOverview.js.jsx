@@ -1,3 +1,5 @@
+import React from 'react';'''';';
+import {Link} from 'react-router-dom';'''';';
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
 import {Button} from '../ui/button';
@@ -15,6 +17,11 @@ import {}
   Database,
   Zap,
   Eye,
+  Leaf,';
+  DollarSign,';';
+  ArrowRight,'';';
+  Star,''';';
+  Clock,'''';';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '../ui/button';
@@ -44,6 +51,46 @@ import {}
   Clock,'''
   Globe} from 'lucide-react';
 // Mock data for enhanced services;
+const EnhancedServicesOverview = ("props": "any) => {"}
+  // Get featured services (first 6);
+  const featuredServices = ENHANCED_SERVICES.slice(0, 6);
+  const getCategoryIcon = category => {}';
+    switch (category) {}';';
+'';';
+      case 'AI & Machine Learning': any;';';
+        return <Brain className="w-6 h-6"  />;'"""';';
+      case 'Cybersecurity':""""';';
+        return <Shield className="w-6 h-6"  />;'"""';';
+      case 'Cloud & DevOps':""""';';
+        return <Cloud className="w-6 h-6"  />;'"""';';
+      case 'Data & Analytics':""""';';
+        return <Database className="w-6 h-6"  />;'"""';';
+      case 'Blockchain & Web3':""""';';
+        return <Zap className="w-6 h-6"  />;'"""';';
+      case 'IoT & Edge Computing':""""';';
+        return <Eye className="w-6 h-6"  />;'"""';';
+      case 'Quantum Computing':""""';';
+        return <Brain className="w-6 h-6"  />;'"""';';
+      case 'AR/VR & Metaverse':""""';';
+        return <Eye className="w-6 h-6"  />;'"""';';
+      case 'Green Tech & Sustainability':""""';';
+        return <Leaf className="w-6 h-6"  />;'"""';';
+      case 'FinTech & Digital Banking':""""
+        return <DollarSign className="w-6 h-6"  />;"""
+      default:""""
+        return <Zap className="w-6 h-6"  />;
+    }
+  };
+  const getAvailabilityColor = availability => {}';
+    switch (availability) {}';';
+'';';
+      case 'immediate':''';';
+        return 'text-green-400';'';';
+      case 'within-week':''';';
+        return 'text-yellow-400';'';';
+      case 'within-month':''';';
+        return 'text-orange-400';'';';
+      default:''';';
   const getCategoryIcon = category => {}
     switch (category) {}
 ';
@@ -100,6 +147,14 @@ const EnhancedServicesOverview = (props: any) => {}
   };
   const getAvailabilityColor = availability => {}
     switch (availability) {}
+';
+      case 'immediate':'';
+        return 'text-green-400';';
+      case 'within-week':'';
+        return 'text-yellow-400';';
+      case 'within-month':'';
+        return 'text-orange-400';';
+      default:'';
       "default":'';
         return 'text-gray-400';
     }
@@ -137,6 +192,41 @@ const EnhancedServicesOverview = (props: any) => {}
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transform your business with our comprehensive suite of;
             next-generation technology services.From AI and cybersecurity to;
+            blockchain and quantum computing", we deliver innovative solutions;
+            that drive real business results.""";
+          </p>"""";
+          <div className="flex flex-wrap justify-center gap-4">"""";
+            <Link to="/enhanced-services">""";
+              <Button"""";
+                size="lg"""";
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": "from-zion-purple-light "hover":to-zion-purple text-white""";
+              >""";
+                Explore All Services"""";
+                <ArrowRight className="ml-2 w-4 h-4"  />;
+              </Button>;
+            </Link>""";
+            <Button"""";
+              size="lg"""";
+              variant="outline"""";
+              className="border-zion-cyan text-zion-cyan "hover":bg-zion-cyan/10""";
+            >;
+              Schedule Consultation;
+            </Button>;
+          </div>;
+        </div>;
+""";
+        {/* Featured Services Grid */"}"""";
+        <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8 mb-12">;
+          {featuredServices.map(service => (;
+            <Card""";
+              key={service.id"}"""";
+              className="bg-zion-blue-dark/50 border-zion-blue-light "hover": "border-zion-purple/50 transition-all duration-300 "hover":shadow-2xl "hover":shadow-zion-purple/20 "hover":-translate-y-2"""";
+            >"""";
+              <CardHeader className="pb-4">"""";
+                <div className="flex items-start justify-between mb-3">"""";
+                  <div className="flex items-center gap-2 text-zion-cyan">""";
+                    {getCategoryIcon(service.category)"}"""";
+                    <span className="text-sm font-medium">;
             blockchain and quantum computing, we deliver innovative solutions;
             that drive real business results."""
           </p>""""
@@ -195,6 +285,12 @@ const EnhancedServicesOverview = (props: any) => {}
               <CardContent className="space-y-4">"""
                 {/* Price and Rating */}""""
                 <div className="flex items-center justify-between">""""
+                  <div className="text-xl font-bold text-zion-cyan">"""';
+                    ${service.price.toLocaleString()}""""';';
+                    <span className="text-sm text-zion-slate-light font-normal">'';';
+                      /''';';
+                      {service.pricingModel === 'subscription'''';';
+                        ? 'month'''';';
                 </CardDescription>;
               </CardHeader>""";
 """";
@@ -253,6 +349,16 @@ const EnhancedServicesOverview = (props: any) => {}
                 {/* Availability and Location */}""""
                 <div className="flex items-center justify-between text-sm">
                   <div;
+                    className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}"""
+                  >""""';
+                    <Clock className="w-4 h-4"  />""""';';
+                    <span className="font-medium">'';';
+                      {service.availability === 'immediate'''';';
+                        ? 'Available Now'''';';
+                        : service.availability === 'within-week'''';';
+                          ? 'Within 1 Week'''';';
+                          : service.availability === 'within-month'''';';
+                            ? 'Within 1 Month'''';';
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}""";
                   >"""";
                     <Clock className="w-4 h-4"  />"""";
@@ -395,6 +501,43 @@ const EnhancedServicesOverview = (props: any) => {}
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
               Our team of technology experts is ready to help you implement;
               cutting-edge solutions that drive real business results. Contact;
+              us today for a free consultation.""";
+            </p>"""";
+            <div className="flex flex-wrap justify-center gap-4">""";
+              <Button"""";
+                size="lg"""";
+                className="bg-white text-zion-purple "hover": "bg-zion-slate-light""";
+              >;
+                Schedule Free Consultation;
+              </Button>""";
+              <Button"""";
+                size="lg"""";
+                variant="outline"""";
+                className="border-white text-white "hover":bg-white/10""";
+              >;
+                Download Service Catalog;
+              </Button>""";
+            </div>"""";
+            <div className="mt-6 text-zion-slate-light text-sm">"""";
+              <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center">"""";
+                <div className="flex items-center gap-2">"""";
+                  <Globe className="w-4 h-4 text-zion-cyan"  />;
+                  <span>+1 302 464 0950</span>""";
+                </div>"""";
+                <div className="flex items-center gap-2">"""";
+                  <Globe className="w-4 h-4 text-zion-cyan"  />;
+                  <span>kleber@ziontechgroup.com</span>""";
+                </div>"""";
+                <div className="flex items-center gap-2">"""";
+                  <Globe className="w-4 h-4 text-zion-cyan"  />;
+                  <span>"https"://ziontechgroup.com</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>)"};
               us today for a free consultation."""
             </p>""""
             <div className="flex flex-wrap justify-center gap-4">"""
@@ -436,13 +579,18 @@ export default EnhancedServicesOverview;
 ;
 export {EnhancedServicesOverview};
 ;
-
 export {EnhancedServicesOverview};
-
+;
 export {EnhancedServicesOverview};
-
+;
 export {EnhancedServicesOverview};
-
+export {EnhancedServicesOverview};';
+;';;';
+;
 export {EnhancedServicesOverview};
-
+;
+export {EnhancedServicesOverview};
+export {EnhancedServicesOverview};
+export {EnhancedServicesOverview};
+export {EnhancedServicesOverview};
 export {EnhancedServicesOverview};

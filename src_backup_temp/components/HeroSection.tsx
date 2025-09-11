@@ -127,7 +127,8 @@ const "heroSlides": "HeroSlid e[] = [  {;
           img.src = slide.image}) }) ;
 ;
           img.src = slide.image}) }
-    );      await Promise.all(imagePromises) ;
+    );
+      await Promise.all(imagePromises) ;
       setIsLoading(false) };
 ;
     preloadImages () }, [memoizedSlides]) ;
@@ -274,7 +275,15 @@ const "heroSlides": "HeroSlid e[] = [  {;
             </div>;
           </motion.div>;
         </div>;
-      </div>;      {/* Navigation Controls */}";
+      </div>;
+                "
+                <p className="text-slate-300">{currentSlideData.subtitle}</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      {/* Navigation Controls */}";
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">";
         <div className="flex space-x-2">;
           {memoizedSlides.map((_, index) => (;

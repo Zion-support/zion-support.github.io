@@ -27,6 +27,9 @@ export interface SearchResult {
   skills?: string[];
   keywords?: string[];
 }
+
+
+
   all: SearchResult[];
   talent: SearchResult[];
   jobs: SearchResult[];

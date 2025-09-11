@@ -79,7 +79,6 @@ import { motion } from "framer-motion";
       )
     }
   ];
-=======
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -202,8 +201,6 @@ export function Footer() {
     </footer>
   );
 }
-<<<<<<< HEAD
-=======
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
@@ -217,6 +214,3 @@ export function Footer() {
     </footer>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

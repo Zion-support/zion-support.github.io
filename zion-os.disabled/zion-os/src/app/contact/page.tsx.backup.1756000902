@@ -5,9 +5,6 @@ import { useState } from 'react';
 export default function ContactPage() {
   const [formData, setFormData] = useState({
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-=======
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -151,7 +148,6 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-white font-medium mb-2">
-=======
     setSubmitStatus('success');
     setIsSubmitting(false);
     
@@ -290,24 +286,6 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleInputChange}
               <div>
-<<<<<<< HEAD
-                <label htmlFor="company" className="block text-white font-medium mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-black/40 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
-                  placeholder="Enter your company name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-white font-medium mb-2">
-=======
                 <label htmlFor="service" className="block text-sm font-medium text-white mb-2">                  Service of Interest
                 </label>
                 <select
@@ -316,9 +294,6 @@ export default function ContactPage() {
                   value={formData.service}
                   onChange={handleInputChange}
               <div>
-<<<<<<< HEAD
-                <label htmlFor="message" className="block text-white font-medium mb-2">
-=======
                 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">                  Message *
                 </label>
                 <textarea
@@ -330,9 +305,6 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-<<<<<<< HEAD
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105"
-=======
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"              >
                 {isSubmitting ? 'Sending Message...' : 'Send Message'}
               </button>
@@ -366,7 +338,6 @@ export default function ContactPage() {
                 We typically respond to all inquiries within <span className="text-purple-400 font-semibold">24 hours</span>. 
                 For urgent matters, please call us directly.
               </p>
-=======
           <div>
             <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
             

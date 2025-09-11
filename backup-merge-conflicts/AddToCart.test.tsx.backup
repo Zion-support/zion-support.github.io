@@ -9,7 +9,4 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-merge-conflicts/AddToCart.test.tsx.backup
-}=======
 }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:pages_backup_conflicts/careers.tsx

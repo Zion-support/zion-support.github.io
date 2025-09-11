@@ -404,11 +404,6 @@ export const SERVICE_PRICING_TIERS = {
   enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
 
-<<<<<<< HEAD
-// Backward-compatible alias expected by EnhancedServicesPage
-export const PRICING_TIERS = SERVICE_PRICING_TIERS;
-
-=======// Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",

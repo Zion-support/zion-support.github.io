@@ -3,7 +3,6 @@ import {motion, AnimatePresence} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
                     else {;
-
                         link.status = 'healthy'"}
                 }
                 else if(href.startsWith('"javascript":')) {// JavaScript links';
@@ -28,33 +27,25 @@ export default function Page("props": "any) {;
         return links}, []);
     // Check if a link is working;
     const checkLink = useCallback(async (link) => {;
-
         if(link.url.startsWith('#')) {;
-
             // Internal anchor links;
             const targetElement = document.querySelector(link.url);
             if(targetElement) {;
-
                 return { ...link, "status": 'healthy', "lastChecked": "new Date() "}}
             else {;
-
                 return { ...link, "status": 'broken', "error": 'Target element not found', "lastChecked": "new Date() "}}
         }
         if(link.url.startsWith('"javascript":') || link.url.startsWith('"mailto":') || link.url.startsWith('"tel":')) {;
-
             return { ...link, "status": 'healthy', "lastChecked": "new Date() "}}
         try {;
-
             // For external and internal links, we'll simulate checking';
             // In a real implementation, you'd make actual HTTP requests';
             const isInternal = link.url.startsWith('/') || link.url.startsWith(window.location.origin);
             if(isInternal) {;
-
                 // Simulate internal link check;
                 await new Promise(resolve => setTimeout(resolve, 100));
                 return { ...link, "status": 'healthy', "lastChecked": "new Date() "}}
             else {;
-
                 // Simulate external link check;
                 await new Promise(resolve => setTimeout(resolve, 200));
                 // Simulate some broken external links;
@@ -62,13 +53,11 @@ export default function Page("props": "any) {;
                 if(random < 0.1) { // 10% chance of broken external link';
                     return { ...link, "status": 'broken', "error": 'Connection timeout', "lastChecked": "new Date() "}}
                 else {;
-
                     return { ...link, "status": 'healthy', "lastChecked": "new Date() "}}
             }
         }
         catch(error) {;
             return {;
-
                 ...link,;
                 "status": 'broken',;
                 "error": "error instanceof Error ? error.message : 'Unknown error'",;
@@ -82,7 +71,13 @@ export default function Page("props": "any) {;
         setLinks(allLinks);
         // Update stats;
         setStats({;
-
+            "total": "allLinks.length",;
+            "healthy": "0",;
+            "broken": "0",;
+            "checking": "0",;
+            "unknown": "allLinks.length;
+        "});
+        // Check links in batches to avoid overwhelming the system;
             total: allLinks.length,
             healthy: 0,
             broken: 0,
@@ -93,7 +88,6 @@ export default function Page("props": "any) {;
         // Check links in batches to avoid overwhelming the system
         const batchSize = 5;
         for(let i = 0; i < allLinks.length; i += batchSize) {;
-
             const batch = allLinks.slice(i, i + batchSize);
             // Mark batch as checking;
             setLinks(prev => prev.map(link => batch.some(batchLink => batchLink.url === link.url);
@@ -106,13 +100,15 @@ export default function Page("props": "any) {;
                 return checkedLink || link"}));
             // Update stats;
             setStats(prev => {;
-
                 const newStats = { ...prev };
                 checkedBatch.forEach(checkedLink => {if (checkedLink.status === 'healthy');
                         newStats.healthy++;
                     else if(checkedLink.status === 'broken');
                         newStats.broken++;
                     newStats.checking--;
+                    newStats.unknown--});
+                return newStats});
+            // Small delay between batches;
                     newStats.unknown--}
     );
                 return newStats}
@@ -123,17 +119,13 @@ export default function Page("props": "any) {;
         setIsChecking(false)}, [findAllLinks, checkLink]);
     // Auto-fix broken links;
     const autoFixBrokenLinks = useCallback(() => {;
-
         const brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
         const fixedCount = 0;
         brokenLinks.forEach(link => {;
-
             if (link.element && link.url.startsWith('#')) {;
-
                 // Fix broken anchor links;
                 const targetElement = document.getElementById(targetId);
                 if(!targetElement) {;
-
                     // Create a placeholder element';
                     const placeholder = document.createElement('div');
                     placeholder.id = targetId;
@@ -145,16 +137,16 @@ export default function Page("props": "any) {;
                     fixedCount++}
             }
             else if(link.element && link.url.startsWith('/')) {;
-
                 // Fix broken internal links by updating to a working page';
                 const workingPages = ['/',/about',/services',/contact',/home'];
                 const randomPage = workingPages[Math.floor(Math.random() * workingPages.length)];
                 if(randomPage !== link.url) {;
-
                     link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++}
             }
+        });
+        if(fixedCount > 0) {// Re-check links after fixes;
         }
     );
         if(fixedCount > 0) {// Re-check links after fixes
@@ -162,12 +154,16 @@ export default function Page("props": "any) {;
         return fixedCount}, [links, checkAllLinks]);
     // Highlight broken link in page;
     const highlightBrokenLink = useCallback((link) => {;
-
         if(!link.element);
             return;
         // Remove previous highlights';
         document.querySelectorAll('.broken-link-highlight').forEach(el => {;
-
+            el.classList.remove('broken-link-highlight')});
+        // Add highlight to selected element';
+        link.element.classList.add('broken-link-highlight');
+        // Scroll to element';
+        link.element.scrollIntoView({"behavior": 'smooth', "block": 'center'});
+        // Remove highlight after 3 seconds;
             el.classList.remove('broken-link-highlight')}
     );
         // Add highlight to selected element'
@@ -184,9 +180,7 @@ export default function Page("props": "any) {;
     }, [autoCheck, checkAllLinks]);
     // Get status color;
     const getStatusColor = ("props": "any) => {;
-
         switch(status) {;
-
             case 'healthy': return 'text-green-600 bg-green-100 "dark":bg-green-900/30';
             case 'broken': return 'text-red-600 bg-red-100 "dark":bg-red-900/30';
             case 'checking': return 'text-yellow-600 bg-yellow-100 "dark":bg-yellow-900/30';
@@ -194,9 +188,7 @@ export default function Page("props": "any) {;
     };
     // Get status icon;
     const getStatusIcon = ("props": "any) => {;
-
         switch(status) {;
-
             case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600" />;'";
             case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;'";
             case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;";
@@ -207,21 +199,15 @@ export default function Page("props": "any) {;
       <motion.button initial={{ "scale": "0 "}} animate={{ "scale": "1 "}} whileHover={{ "scale": "1.1 "}} whileTap={{ "scale": "0.9 "}} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 "hover": "bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className"}`}  aria-expanded={isOpen}>";
         <LinkIcon className="w-6 h-6" />;
       </motion.button>;
-
       {/* Broken Link Fixer Panel */}
       <AnimatePresence>;
         {isOpen && (<motion.div initial = {;
-
   { "opacity": "0", "scale": "0.8",;
   "y": "20;
-
 "}} animate = {;
-
   { "opacity": "1", "scale": "1",;
   "y": "0;
-
 "}} exit = {;
-
   { "opacity": "0", "scale": "0.8",;
   "y": "20;
 "}} className="fixed bottom-32 right-4 z-40 w-96 bg-white "dark": "bg-gray-900 rounded-lg shadow-xl border border-gray-200 "dark":border-gray-700">;
@@ -234,7 +220,6 @@ export default function Page("props": "any) {;
                 <XMarkIcon className="w-5 h-5" />;
               </button>;
             </div>;
-
             {/* Tabs */"}";
             <div className="flex border-b border-gray-200 "dark": "border-gray-700">'`;
               {['overview'",broken',healthy',actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab';
@@ -243,7 +228,6 @@ export default function Page("props": "any) {;
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>;
-
             {/* Content */}";
             <div className="p-4 max-h-96 overflow-y-auto">;
               {/* Overview Tab */}'";
@@ -286,7 +270,6 @@ export default function Page("props": "any) {;
                       </div>;
                     </div>;
                   </div>;
-
                   {/* Health Score */"}";
                   {stats.total > 0 && (<div className="p-4 bg-blue-50 "dark": "bg-blue-900/20 rounded-lg">";
                       <div className="text-center">";
@@ -377,7 +360,6 @@ export default function Page("props": "any) {;
                     <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500" />;
                     <p>Take action to fix broken links</p>;
                   </div>;
-
                   {/* Auto-fix Button */"}'";
                   {links.filter(link => link.status === 'broken' && link.fixable).length > 0 && (<button onClick={autoFixBrokenLinks} className="w-full bg-green-600 "hover": "bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Broken Links;
@@ -388,25 +370,21 @@ export default function Page("props": "any) {;
                     <ArrowPathIcon className="w-4 h-4 inline mr-2" />;
                     {isChecking ? 'Checking...' : 'Re-check Links'"}
                   </button>;
-
                   {/* Export Report */}
                   {links.length > 0 && (<button onClick={;
-
   () => {;
                         const report = {;
-
                             "timestamp": "new Date().toISOString()",;
                             stats,;
                             "links": "links.map(link => ({;
-
                                 "url": link.url",;
                                 "status": "link.status",;
                                 "error": "link.error",;
                                 "lastChecked": "link.lastChecked.toISOString()",;
   "fixable": "link.fixable;
-
 "}));
                         };
+                        const blob = new Blob([JSON.stringify(report, null, 2)], {"type": 'application/json'});
                         const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}
     );
                         const url = URL.createObjectURL(blob);
@@ -421,11 +399,9 @@ export default function Page("props": "any) {;
             </div>;
           </motion.div>)}
       </AnimatePresence>;
-
       {/* CSS for highlighting */}`;
       <style>{`;
         .broken-link-highlight {;
-
           "outline": "3px solid #f97316 !important;
           outline-"offset": 2px !important;
           background-"color": rgba(249", 115, 22, 0.1) !important;
@@ -434,7 +410,6 @@ export default function Page("props": "any) {;
         .link-target-placeholder {"animation": "pulse 2s infinite"}
 ;
         @keyframes pulse {;
-
           0%, 100% { "opacity": "1"}
           50% {"opacity": "0.7"}
         }`;
@@ -443,6 +418,5 @@ export default function Page("props": "any) {;
 export {BrokenLinkFixer};
 export default BrokenLinkFixer;
 }}}}}}}}}}}}'"`;
-
 </motion>;
 </motion>

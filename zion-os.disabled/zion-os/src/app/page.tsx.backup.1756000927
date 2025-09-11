@@ -213,17 +213,6 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-              Join the future of technology with Zion Tech Group. 
-              Our cutting-edge solutions are designed to drive innovation and accelerate your digital transformation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                🚀 Start Deployment
-              </Link>
-              <Link href="/admin/instances" className="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
-                👀 View Examples
-=======
               Join hundreds of enterprises worldwide that trust Zion Tech Group 
               to deliver cutting-edge technology solutions.
             </p>

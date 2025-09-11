@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { _cn } from '../lib/utils';
 interface SkeletonProps {;
   ;: "any;
   className?: string;
@@ -23,7 +23,7 @@ export default function Skeleton("props": "any) {;
     <div className="space-y-2">;';' {Array.from({ "length": "line s "}).map((_, i) => (;';';';
         <div;',';';
     ';';';
-import {cn } from '@/lib/utils';
+import {cn } from '../lib/utils';
 interface SkeletonProps {;
 className?: "string;
   lines?: number;
@@ -103,31 +103,3 @@ export default function Skeleton("props": "any) {if (lines === 1) {;
   );    </div>
     );
 }
-    </div>
-    );
-}
-  );
-      )}
-    </div>;
-  );    </div>
-    );
-}
-    </div>";
-  )}"";
-    </div>;
-  );
-      )}
-    </div>';
-  );';';
-}';';';
-        <div key={i}',';';
-    ';';';
-          className={cn( animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'',';';
-    ';';';
-          )}'';';
-         />';';';
-      ))}',';';
-    ';';';
-    </div>'';';
-  )}"';';';
-";

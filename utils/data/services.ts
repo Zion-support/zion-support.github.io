@@ -154,18 +154,3 @@ export const services: Service[] = [;
       avatar: "/favicon.svg",
       rating: 4.8;
 },
-    pricing: { from: 25000, currency: "USD", type: "fixed" }
-  }
-];
-
-export const getServicesByCategory = (categoryId: string): Service[] => {
-  return services.filter(service => service.category === categoryId);
-};
-
-export const getServiceById = (id: string): Service | undefined => {
-  return services.find(service => service.id === id);
-};
-
-export const getFeaturedServices = (): Service[] => {
-  return services.slice(0, 6); // Return first 6 services as featured
-};

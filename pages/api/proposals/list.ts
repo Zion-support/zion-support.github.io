@@ -1,0 +1,37 @@
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { listProposals } from "../../../utils/data/proposals";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+  }
+
+
+
+  try {
+    const proposals = await listProposals();
+    return res && res.status(200).json({ proposals });
+  } catch (error: any) {
+    return res
+      .status(500)
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { list_proposals  } from '../../../utils / data / proposals';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2

@@ -3,18 +3,4 @@
 
 
 
-=======
-<<<<<<< HEAD
-export interface AxiosErrorData { message?: string&apos;;&apos;,&quot;}),&quot;})&apos;;&apos;; export interface AxiosErrorData { message?: string&apos;;&apos;;&apos;; &apos}&apos;
-=======
-<<<<<<< HEAD
-module.exports = interface AxiosErrorData { message?: string";","}),"})";"; export interface AxiosErrorData { message?: string";";"; &apos}"'"'"
-=======
-export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''>>>>>>> main:src_backup_temp/lib/axios.ts
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
 export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/lib/axios.ts

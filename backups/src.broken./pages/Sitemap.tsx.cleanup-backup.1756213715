@@ -62,13 +62,9 @@ const Sitemap: React.FC = () => {
       ]
     }
   ];
-=======
-=======
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
-=======
 
   return (
         {/* Sitemap Sections */}
@@ -145,7 +141,6 @@ import { Footer } from "@/components/Footer";
           </h2>
           <p className="text-gray-300 mb-8">
             Can't find what you're looking for? Our team is here to help.
-==============import { 
   MapIcon, 
   CogIcon, 
   CubeIcon, 
@@ -470,7 +465,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </div>
-=======
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Contact Us
@@ -485,32 +479,15 @@ const Sitemap: React.FC = () => {
         </div>
       </section>
     </div>
-=======
-=======
     <AppLayout>
-<<<<<<< HEAD
-=======
     <>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
-=======
-=======
-=======
-=======
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-=======
         title="Sitemap | Zion Tech Group"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
@@ -574,9 +551,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </main>
-=======
-<<<<<<< HEAD
-=======
         canonical="https://ziontechgroup.com/sitemap"
       />
       <Header />
@@ -595,8 +569,6 @@ const Sitemap: React.FC = () => {
         </div>
       </main>
       <Footer />
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </>
   );
 };

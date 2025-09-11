@@ -2,7 +2,295 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 :src/components/Footer.tsx
 ';
-';';import { 
+';';
+import {;
+  Mail;
+  Phone;
+  MapPin;
+  Linkedin;
+  Twitter;
+  Github;
+  ArrowUp;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  Building;
+  Users;
+  FileText;
+  TrendingUp;
+  Briefcase;
+  Newspaper;
+  Target;
+  Heart;
+  DollarSign;
+  ExternalLink;
+} from 'lucide-react';
+;
+export function Footer() {;
+  const currentYear = new Date().getFullYear();
+;
+  const scrollToTop = () => {;
+    window.scrollTo({ "top": "0", "behavior": 'smooth' });
+  };
+;
+  return (;
+    <footer className="bg-gray-900 text-white relative overflow-hidden">;
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">;
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>;
+      </div>;
+      ;
+      <div className="relative z-10">;
+        <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-16">;
+          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-5 gap-8 "lg":gap-12">;
+            ;
+            {/* Company Info */"}
+            <div className=""lg": "col-span-2">;
+              <Link to="/" className="flex items-center space-x-3 mb-6 group">;
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300">;
+                  <Zap className="w-7 h-7 text-white" />;
+                </div>;
+                <h2 className="text-2xl font-bold text-white group-"hover":text-blue-400 transition-colors">;
+                  Zion Tech Group;
+                </h2>;
+              </Link>;
+              ;
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">;
+                Pioneering the future of technology with innovative AI", IT infrastructure, and cutting-edge Micro SaaS solutions that transform businesses worldwide.;
+              </p>;
+              ;
+              {/* Contact Information */}
+              <div className="space-y-4">;
+                <div className="flex items-center space-x-3 text-gray-300">;
+                  <Phone className="w-5 h-5 text-cyan-400" />;
+                  <a href=""tel": "+13024640950" className=""hover":text-cyan-400 transition-colors">;
+                    +1 302 464 0950;
+                  </a>;
+                </div>;
+                <div className="flex items-center space-x-3 text-gray-300">;
+                  <Mail className="w-5 h-5 text-cyan-400" />;
+                  <a href=""mailto":kleber@ziontechgroup.com" className=""hover":text-cyan-400 transition-colors">;
+                    kleber@ziontechgroup.com;
+                  </a>;
+                </div>;
+                <div className="flex items-start space-x-3 text-gray-300">;
+                  <MapPin className="w-5 h-5 text-cyan-400 mt-1" />;
+                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>;
+                </div>;
+              </div>;
+            </div>;
+            {/* Services */"}
+            <div>;
+              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">;
+                <Cloud className="w-5 h-5 mr-2 text-cyan-400" />;
+                Services;
+              </h3>;
+              <ul className="space-y-3">;
+                <li>;
+                  <Link to="/services" className="text-gray-300 "hover": "text-cyan-400 transition-colors flex items-center group">;
+                    <span>All Services</span>;
+                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-"hover":opacity-100 transition-opacity" />;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/new-services-2025" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <span>New Services 2025</span>;
+                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-"hover":opacity-100 transition-opacity" />;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/ai-services" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <Brain className="w-4 h-4 mr-2" />;
+                    <span>AI Services</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/it-services" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <Building className="w-4 h-4 mr-2" />;
+                    <span>IT Services</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/micro-saas" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <Zap className="w-4 h-4 mr-2" />;
+                    <span>Micro SaaS</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/solutions" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <Target className="w-4 h-4 mr-2" />;
+                    <span>Solutions</span>;
+                  </Link>;
+                </li>;
+              </ul>;
+            </div>;
+            {/* Company */"}
+            <div>;
+              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">;
+                <Users className="w-5 h-5 mr-2 text-cyan-400" />;
+                Company;
+              </h3>;
+              <ul className="space-y-3">;
+                <li>;
+                  <Link to="/about" className="text-gray-300 "hover": "text-cyan-400 transition-colors">;
+                    About Us;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/careers" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <Briefcase className="w-4 h-4 mr-2" />;
+                    <span>Careers</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/news" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <Newspaper className="w-4 h-4 mr-2" />;
+                    <span>News</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/contact" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
+                    Contact;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/help" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
+                    Help Center;
+                  </Link>;
+                </li>;
+              </ul>;
+            </div>;
+            {/* Resources */"}
+            <div>;
+              <h3 className="text-lg font-semibold text-white mb-6 flex items-center">;
+                <FileText className="w-5 h-5 mr-2 text-cyan-400" />;
+                Resources;
+              </h3>;
+              <ul className="space-y-3">;
+                <li>;
+                  <Link to="/pricing" className="text-gray-300 "hover": "text-cyan-400 transition-colors flex items-center group">;
+                    <DollarSign className="w-4 h-4 mr-2" />;
+                    <span>Pricing</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/comprehensive-pricing-guide-2025" className="text-gray-300 "hover":text-cyan-400 transition-colors flex items-center group">;
+                    <TrendingUp className="w-4 h-4 mr-2" />;
+                    <span>Pricing Guide 2025</span>;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/white-papers" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
+                    White Papers;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/faq" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
+                    FAQ;
+                  </Link>;
+                </li>;
+                <li>;
+                  <Link to="/request-quote" className="text-gray-300 "hover":text-cyan-400 transition-colors">;
+                    Request Quote;
+                  </Link>;
+                </li>;
+              </ul>;
+            </div>;
+          </div>;
+          {/* Social Media & Additional Links */"}
+          <div className="border-t border-gray-800 mt-12 pt-8">;
+            <div className="flex flex-col "lg": "flex-row justify-between items-center space-y-6 "lg":space-y-0">;
+              ;
+              {/* Social Media */"}
+              <div className="flex items-center space-x-6">;
+                <span className="text-gray-400 text-sm">Follow "us": "</span>;
+                <div className="flex space-x-4">;
+                  <a;
+                    href="#";
+                    className="text-gray-400 "hover":text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
+                    aria-label="LinkedIn";
+                  >;
+                    <Linkedin className="w-5 h-5" />;
+                  </a>;
+                  <a;
+                    href="#";
+                    className="text-gray-400 "hover":text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
+                    aria-label="Twitter";
+                  >;
+                    <Twitter className="w-5 h-5" />;
+                  </a>;
+                  <a;
+                    href="#";
+                    className="text-gray-400 "hover":text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
+                    aria-label="GitHub";
+                  >;
+                    <Github className="w-5 h-5" />;
+                  </a>;
+                </div>;
+              </div>;
+              {/* Legal Links */"}
+              <div className="flex flex-wrap items-center justify-center space-x-6 text-sm">;
+                <Link to="/privacy" className="text-gray-400 "hover": "text-cyan-400 transition-colors flex items-center">;
+                  <Shield className="w-4 h-4 mr-1" />;
+                  Privacy Policy;
+                </Link>;
+                <Link to="/terms" className="text-gray-400 "hover":text-cyan-400 transition-colors">;
+                  Terms of Service;
+                </Link>;
+                <Link to="/cookies" className="text-gray-400 "hover":text-cyan-400 transition-colors">;
+                  Cookie Policy;
+                </Link>;
+              </div>;
+              {/* Back to Top */"}
+              <button;
+                onClick={scrollToTop}
+                className="flex items-center space-x-2 text-gray-400 "hover": "text-cyan-400 transition-colors p-2 "hover":bg-gray-800 rounded-lg";
+                aria-label="Back to top";
+              >;
+                <ArrowUp className="w-4 h-4" />;
+                <span className="text-sm">Back to Top</span>;
+              </button>;
+            </div>;
+          </div>;
+          {/* Copyright */"}
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center">;
+            <div className="flex flex-col "md": "flex-row justify-between items-center space-y-4 "md":space-y-0">;
+              <p className="text-gray-400 text-sm flex items-center">;
+                © {currentYear"} Zion Tech Group. All rights reserved.;
+                <Heart className="w-4 h-4 mx-2 text-red-500" />;
+                Made with passion for innovation.;
+              </p>;
+              <div className="flex items-center space-x-4 text-sm text-gray-400">;
+                <span>Powered by cutting-edge technology</span>;
+                <div className="flex space-x-2">;
+                  <Brain className="w-4 h-4 text-cyan-400" />;
+                  <Cloud className="w-4 h-4 text-blue-400" />;
+                  <Shield className="w-4 h-4 text-green-400" />;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>;
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowUp,
+  Globe,
+import { 
   Mail, 
   Phone, 
   MapPin, 
@@ -10,13 +298,131 @@ import { Link } from 'react-router-dom';
   Twitter, 
   Github, 
   ArrowUp,
-:src/components/Footer.tsx  TrendingUp,
+:src/components/Footer.tsx
+  Shield,
+  Zap,
+  Brain,
+  Cloud,
+  Building,
+  Users,
+  FileText,
+:src/components/Footer.tsx
+  Video,
+  TestTube,
+  TrendingUp,
+  CheckCircle,
+  Briefcase,
+  Newspaper,
+  Target,
+  Rocket,
+  Heart,
+  DollarSign,
+import React, { useState } from 'react';
+import Link from 'next/link';
+  TrendingUp,
   Briefcase,
   Newspaper,
   Target,
   Heart,
 :src/components/Footer.tsx
-  DollarSign  Users,
+  DollarSign
+import { Zap, Phone, Mail, MapPin } from 'lucide-react';
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">Zion Tech Group</h2>
+            </Link>
+            <p className="text-gray-300 mb-6">
+              Pioneering the future of technology with innovative AI, IT, and Micro SaaS solutions.
+            </p>
+          </div>
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <ul className="space-y-3">
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400">IT Services</Link></li>
+              <li><Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400">Micro SaaS</Link></li>
+              <li><Link to="/solutions" className="text-gray-300 hover:text-cyan-400">Solutions</Link></li>
+            </ul>
+          </div>
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+            <ul className="space-y-3">
+              <li><Link to="/about" className="text-gray-300 hover:text-cyan-400">About Us</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400">Careers</Link></li>
+              <li><Link to="/news" className="text-gray-300 hover:text-cyan-400">News</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400">Contact</Link></li>
+            </ul>
+          </div>
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
+                <span className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Bottom Footer */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400">Privacy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400">Terms</Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400">Cookies</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Shield,
+  Code,
+  Building2,
+  FileText,
+  Users,
   HardDrive,
   TrendingUp,
   Building2,
@@ -37,7 +443,47 @@ import { Link } from 'react-router-dom';
   Lock,
   Eye,
   Atom,
-  Network,} from 'lucide-react';
+  Network,
+  ArrowUp,
+  Heart,
+  Star,
+  CheckCircle,
+  Award,
+  Rocket,
+  Target,
+  Handshake,
+  Lightbulb,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,';
+  ChevronDown';';
+  Palette,
+  ChevronDown
+:src/components/Footer.tsx
+} from 'lucide-react';
+export function Footer() {
+} from 'lucide-react';
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
   Server,
@@ -179,7 +625,8 @@ const socialLinks = [
 ];
 export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
-  const [showScrollTop, setShowScrollTop] = React.useState<any>(false);  Search,
+  const [showScrollTop, setShowScrollTop] = React.useState<any>(false);
+  Search,
   BarChart,
   Users2,
   Settings,
@@ -188,7 +635,6 @@ export function Footer(props: any) {
 } from 'lucide-react';
 export default function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
   // TODO: Add dependencies if needed
@@ -601,7 +1047,8 @@ const Footer = () => {
         { name: 'Blog', href: '/blog' },';';
         { name: 'Research', href: '/research-development' }
       ]
-    }  const socialLinks = [
+    }
+  const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
@@ -699,7 +1146,8 @@ const Footer = () => {
                 >
                   <social.icon className="w-5 h-5" />
                 </Link>
-              ))}            </div>
+              ))}
+            </div>
           </div>
           {/* Services */}
           <div className="space-y-4">
@@ -741,7 +1189,45 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}        {/* Contact & Social Section */}
+              ))}
+            </ul>
+          </div>
+          {/* Company */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Company
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Our Team</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Careers</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blog</Link></li>
+              <li><Link href="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Case Studies</Link></li>
+              <li><Link href="/partners" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Partners</Link></li>
+            </ul>
+          </div>
+          {/* Contact */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contact
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                  +1 302 464 0950
+                </a>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Mail className="w-5 h-5 text-blue-400"  />
+              <div>
+                <p className="text-white font-medium">Email</p>
+                <p className="text-gray-400 text-sm">contact@ziontechgroup.com</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5 text-blue-400"  />
+              <div>
+                <p className="text-white font-medium">Location</p>
+                <p className="text-gray-400 text-sm">San Francisco, CA</p>
+        {/* Contact & Social Section */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Information */}
@@ -920,7 +1406,8 @@ const Footer = () => {
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">';
-        <div className="absolute inset-0" style="{{{';';      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style="{{{';';
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style="{{{
           backgroundImage: `url("data; %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}"} />
       </div>
@@ -943,7 +1430,8 @@ const Footer = () => {
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Zion Tech Group
-                  </h3>                </div>
+                  </h3>
+                </div>
                 <p className="text-slate-300 text-lg leading-relaxed mb-6">
                   Leading the future of technology with cutting-edge AI solutions, 
                   quantum computing innovations, and transformative micro SAAS services.
@@ -1056,7 +1544,20 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="flex flex-col space-y-4"
             >
-              <h3 className="text-lg font-semibold text-white">Follow Us</h3>          <div>
+              <h3 className="text-lg font-semibold text-white">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-white">Follow Us
+              <div className="flex space-x-4">
+                {socialLinks.map((link) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}
+                  >
+          <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -1065,6 +1566,10 @@ const Footer = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    {link.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -1085,7 +1590,19 @@ const Footer = () => {
             </motion.div>
           </div>
         </div>
-        {/* Newsletter Signup */}            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+        {/* Newsletter Signup */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-t border-slate-700"
+        >
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Updated with Zion Tech Group
+            </h3>
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and technology trends delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -1231,6 +1748,97 @@ export function Footer(props: any) {
     window.scrollTo({ top: 0, behavior: 'smooth' }
     );
   };
+  const footerSections = [
+    {
+      title: "Services",
+      links: [
+        { name: "AI & Analytics", href: "/services/ai-analytics" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Cloud & DevOps", href: "/services/cloud-devops" },
+        { name: "IoT & Edge", href: "/services/iot-edge" },
+        { name: "Quantum Computing", href: "/services/quantum-computing" },
+        { name: "Blockchain", href: "/services/blockchain" },
+        { name: "Digital Twin", href: "/services/digital-twin" },
+        { name: "Sustainability", href: "/services/sustainability" }
+      ]
+    },
+    {
+      title: "Micro SAAS",
+      links: [
+        { name: "AI Business Intelligence", href: "/micro-saas/ai-business-intelligence" },
+        { name: "Customer Experience", href: "/micro-saas/customer-experience" },
+        { name: "Supply Chain", href: "/micro-saas/supply-chain" },
+        { name: "Cybersecurity", href: "/micro-saas/cybersecurity" },
+        { name: "IoT Edge Computing", href: "/micro-saas/iot-edge" }
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Careers", href: "/careers" },
+        { name: "Blog", href: "/blog" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Partners", href: "/partners" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { name: "Help Center", href: "/help" },
+        { name: "FAQ", href: "/faq" },
+        { name: "Contact Support", href: "/contact" },
+        { name: "Documentation", href: "/docs" },
+        { name: "API Reference", href: "/api" },
+        { name: "Status Page", href: "/status" }
+      ]
+    }
+  ];
+  const legalLinks = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Data Protection", href: "/data-protection" },
+    { name: "Accessibility", href: "/accessibility" }
+  ];
+  const socialLinks = [
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
+    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
+  ];
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold">Zion Tech Group</h3>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Leading the future of technology with innovative AI solutions, 
+              quantum computing, and cutting-edge digital transformation services.
+            </p>
+            <div className="flex space-x-4">
+:src/components/Footer.tsx
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+:src/components/Footer.tsx
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
@@ -1361,14 +1969,28 @@ export function Footer(props: any) {
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>              <ul className="space-y-2">
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
-                      {link.name}          {/* Services */}
+                      {link.name}
+                      to={link.href}
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
+                    >
+                      <span>{link.name}</span>
+                      <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+          {/* Services */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Services</h4>
             <ul className="space-y-2 text-sm">
@@ -1471,7 +2093,6 @@ export function Footer(props: any) {
             </ul>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1514,7 +2135,19 @@ export function Footer(props: any) {
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 Cookie Policy
               </Link>
-:src/components/Footer.tsxexport default Footer;
+:src/components/Footer.tsx
+            <div className="flex items-center space-x-6 text-sm">
+              <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</Link>
+              <Link href="/accessibility" className="text-gray-400 hover:text-blue-400 transition-colors">Accessibility</Link>
+              <Link href="/status" className="text-gray-400 hover:text-blue-400 transition-colors">System Status</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+</footer>
+  );
+};
+export default Footer;
       {/* Scroll to Top Button */}
       <button
         id="scroll-to-top"
@@ -1526,7 +2159,52 @@ export function Footer(props: any) {
       </button>
     </footer>
   );
-}    <footer className="bg-gray-900 text-white relative overflow-hidden">
+}
+        {/* Social Links */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+            <button
+              onClick={scrollToTop}
+              className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+            >
+              <span>Back to top</span>
+              <ArrowUp className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+        {/* Legal Links */}
+        <div className="border-t border-gray-800 mt-6 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-wrap justify-center md:justify-start space-x-6 mb-4 md:mb-0">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center space-x-2 text-gray-400 text-sm">
+              <span>© 2024 Zion Tech Group. Made with</span>
+              <Heart className="w-4 h-4 text-red-500" />
+              <span>for innovation.</span>
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
@@ -1717,6 +2395,16 @@ export function Footer(props: any) {
               </div>
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      {link.name}
                       to={link.href}
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
                     >
@@ -1728,7 +2416,8 @@ export function Footer(props: any) {
               </ul>
             </div>
           ))}
-        </div>        {/* Stats Section */}
+        </div>
+        {/* Stats Section */}
         <div className="border-t border-gray-800 mt-12 pt-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -1762,7 +2451,37 @@ export function Footer(props: any) {
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                 />
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300">
-Subscribe        {/* Bottom Bar */}
+Subscribe
+              <input type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               />
+              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+          {/* Copyright */}
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400 text-sm flex items-center">
+                © {currentYear} Zion Tech Group. All rights reserved.
+                <Heart className="w-4 h-4 mx-2 text-red-500" />
+                Made with passion for innovation.
+              </p>
+              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                <span>Powered by cutting-edge technology</span>
+                <div className="flex space-x-2">
+                  <Brain className="w-4 h-4 text-cyan-400" />
+                  <Cloud className="w-4 h-4 text-blue-400" />
+                  <Shield className="w-4 h-4 text-green-400" />
+                </div>
+              </div>
+{/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md: fle x-row justify-between items-center space-y-4 md: spac e-y-0">
+        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
@@ -1776,7 +2495,24 @@ Subscribe        {/* Bottom Bar */}
                 Terms of Service
               </Link>
               <Link to="/cookies" className="text-gray-400 hover: tex t-white transition-colors">
-Cookie Policy      </div>
+Cookie Policy
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
+            <div className="flex items-center space-x-6 text-sm">
+              <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</Link>
+              <Link href="/accessibility" className="text-gray-400 hover:text-blue-400 transition-colors">Accessibility</Link>
+              <Link href="/status" className="text-gray-400 hover:text-blue-400 transition-colors">System Status</Link>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -1827,7 +2563,8 @@ Cookie Policy      </div>
 </string>
 </Set>
 }
-};';;';
+}
+;';;';
 }
 };
 export default Footer;

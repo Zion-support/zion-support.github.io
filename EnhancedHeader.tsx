@@ -1,102 +1,108 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+;
 const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', dropdown: [
-      { name: 'AI Solutions', href: '/services/ai-services', description: 'Cutting-edge AI services' },
-      { name: 'IT & Security', href: '/services/it-services', description: 'Enterprise security & infrastructure' },
-      { name: 'Blockchain & Web3', href: '/services/blockchain-services', description: 'Next-gen blockchain solutions' },
-      { name: 'Sustainability', href: '/services/sustainability', description: 'Green tech solutions' },
-    ] },
-    { name: 'Solutions', href: '/solutions', dropdown: [
-      { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
-      { name: 'Startups', href: '/solutions/startups', description: 'Growth-focused solutions' },
-      { name: 'Government', href: '/solutions/government', description: 'Public sector solutions' },
-    ] },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
-  return (
-    <header className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-            </Link>
-          </div>
-
-          <nav className="hidden md:flex space-x-8">
-            {navigationItems.map(item => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
-                >
-                  {item.name}
-                </Link>
-                {item.dropdown && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    {item.dropdown.map(dropdownItem => (
-                      <Link
-                        key={dropdownItem.name}
-                        to={dropdownItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <div className="font-medium">{dropdownItem.name}</div>
-                        <div className="text-xs text-gray-500">{dropdownItem.description}</div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-gray-900"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigationItems.map(item => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-};
-
-export default EnhancedHeader;
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+  const [search_query, setSearchQuery] = useState ('');
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 20);
+    }
+    window.addEventListener ('scroll', handle_scroll);
+    return () => window.removeEventListener ('scroll', handle_scroll);
+  }, []);
+;
+  const navigation_items = [;
+;
+  const toggle_dropdown = (name: string) =>: any {
+    setActiveDropdown (active_dropdown === name ? null : name);
+  }
+;
+  const closeMobileMenu = () =>: any {
+    setIsOpen (false);
+    setActiveDropdown (null);
+  }
+;
+  const handle_search = (e: React.FormEvent) =>: any {
+    e.prevent_default ();
+    if () {) {
+  $2
+}
+      // Handle search logic here;
+      // console.log ('Searching for:', search_query);
+    }
+  }
+;
+          <Link href="/" className="flex items - center space - x-2">;
+            <div className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;
+              <span className="text - white font - bold text - sm">Z</span>;
+            </div>;
+            <span className="text - xl font - bold text - gray - 900">Zion Tech Group</span>;
+          </Link>;
+                  </Link>)}
+                {/* Dropdown Menu */}
+                <AnimatePresence>;
+                  {item.dropdown && active_dropdown === item.name && (
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: -10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: -10 }}
+                      className="absolute top - full left - 0 mt - 2 w - 64 bg - white rounded - lg shadow - lg border border - gray - 200 py - 2";
+                    >;
+                      {item.dropdown.map ((dropdown_item) => (
+                        <Link;
+                          key={dropdown_item.name}
+                          href={dropdown_item.href}
+                          className="block px - 4 py - 2 text - gray - 700 hover:bg - gray - 50 hover:text - blue - 600 transition - colors";
+                        >;
+                          <div className="font - medium">{dropdown_item.name}</div>;
+                          {dropdown_item.description && (
+                            <div className="text - sm text - gray - 500">{dropdown_item.description}</div>)}
+                        </Link>))}
+                    </motion.div>)}
+                </AnimatePresence>;
+              </div>))}
+          </nav>;
+          {/* Search and Actions */}
+          <div className="hidden lg:flex items - center space - x-4">;
+            <form on_submit={handle_search} className="relative">;
+              <input;
+                type="text";
+                value={search_query}
+                on_change={(e) => setSearchQuery (e.target.value)}
+                placeholder="Search...";
+                className="w - 64 px - 4 py - 2 pl - 10 pr - 4 text - sm border border - gray - 300 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+              />;
+              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
+            </form>;
+            <div className="flex items - center space - x-2">;
+              <button className="p - 2 text - gray - 700 hover:text - blue - 600 transition - colors">;
+                <User className="w - 5 h - 5" />;
+              </button>;
+              <button className="p - 2 text - gray - 700 hover:text - blue - 600 transition - colors">;
+                <ShoppingCart className="w - 5 h - 5" />;
+              </button>;
+              <button className="p - 2 text - gray - 700 hover:text - blue - 600 transition - colors">;
+                <Bell className="w - 5 h - 5" />;
+              </button>;
+            </div>;
+          </div>;
+          {/* Mobile Menu Button */}
+          <button;
+            on_click={() => setIsOpen (!is_open)}
+            className="lg:hidden p - 2 text - gray - 700 hover:text - blue - 600 transition - colors";
+          >;
+            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+          </button>;
+        </div>;
+                <form on_submit={handle_search} className="relative">;
+                  <input;
+                    type="text";
+                    value={search_query}
+                    on_change={(e) => setSearchQuery (e.target.value)}
+                    placeholder="Search...";
+                    className="w - full px - 4 py - 2 pl - 10 pr - 4 text - sm border border - gray - 300 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                  />;
+                  <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
+                </form>;

@@ -1,5 +1,114 @@
-import { useState,useEffect } from 'react'; interface User { id: string; email: string; name: string;" role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string } } interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading boolean'} } export function useAuth() { const [authState,setAuthState] = useState<AuthState>({ user: 'nul l',isAuthenticated: 'fals e',isLoading: tru e';'}); useEffect(() => { });';'} catch (error) {" console.error('Error parsing stored user: ',error); setAuthState({ user: 'nul l',isAuthenticated: 'fals e',isLoading: 'fals e' })} } else { setAuthState({ user: 'nul l',isAuthenticated: 'fals e',isLoading: 'fals e' });'} }; checkAuth();';'},[]); const login = async (email: 'string',password: string) => { }; setAuthState({ user: 'mockUse r',isAuthenticated: 'tru e',isLoading: fals e';'}); " localStorage.setItem('authToken','dummy-token'); localStorage.setItem('zion_user',JSON.stringify(mockUser)); return mockUser'}; const logout = () => { setAuthState({ user: 'nul l',isAuthenticated: 'fals e',isLoading false';'}); localStorage.removeItem('zion_user');" localStorage.removeItem('authToken');';'}; const register = async (email: 'string',password: 'string',name: string) => { }; setAuthState({ user: 'mockUse r',isAuthenticated: 'tru e',isLoading false';'}); localStorage.setItem('zion_user',JSON.stringify(mockUser));" localStorage.setItem('authToken','dummy-token'); return mockUser';'}; return { user: 'authStat e.user',loading: 'authStat e.isLoading',login,logout,register,isAuthenticated: 'authStat e.isAuthenticated',isLoading: 'authStat e.isLoading'," isAdmin authState.user?.role === 'admin' };'} ""';';
-import { useState,useEffect } from 'react'; interface User { "id": "string; "email": string; "name": string;" "role": 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string "} } interface AuthState { "user": "Use r | null; "isAuthenticated": boolean; isLoading boolean'"} } export function useAuth() { const [authState,setAuthState] = useState<AuthState>({ "user": 'nul l',"isAuthenticated": 'fals e',"isLoading": "tru e';'"}); useEffect(() => { });';'} catch (error) {" console.error('Error parsing stored "user": ',error); setAuthState({ "user": 'nul l',"isAuthenticated": 'fals e',"isLoading": 'fals e' })} } else { setAuthState({ "user": 'nul l',"isAuthenticated": 'fals e',"isLoading": 'fals e' });'} }; checkAuth();';'},[]); const login = async ("email": 'string',"password": "string) => { "}; setAuthState({ "user": 'mockUse r',"isAuthenticated": 'tru e',"isLoading": "fals e';'"}); " localStorage.setItem('authToken','dummy-token'); localStorage.setItem('zion_user',JSON.stringify(mockUser)); return mockUser'}; const logout = () => { setAuthState({ "user": 'nul l',"isAuthenticated": 'fals e',isLoading false';'}); localStorage.removeItem('zion_user');" localStorage.removeItem('authToken');';'}; const register = async ("email": 'string',"password": 'string',"name": "string) => { "}; setAuthState({ "user": 'mockUse r',"isAuthenticated": 'tru e',isLoading false';'}); localStorage.setItem('zion_user',JSON.stringify(mockUser));" localStorage.setItem('authToken','dummy-token'); return mockUser';'}; return { "user": 'authStat e.user',"loading": 'authStat e.isLoading',login,logout,register,"isAuthenticated": 'authStat e.isAuthenticated',"isLoading": 'authStat e.isLoading'," isAdmin authState.user?.role === 'admin' };'} ""';';
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import { useState,useEffect } from 'react'; interface User { id: string; email: string; name: string;" role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string';'} interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading boolean'} export function useAuth() { const [authState,setAuthState] = useState<AuthState>({ user: nul l,isAuthenticated: fals e,isLoading: tru e';'}); useEffect(() => { })} } else { setAuthState({ user: nul l,isAuthenticated: fals e,isLoading: fals e';'});'} }; checkAuth();';'},[]); const login = async (email: string,password: string) => { };'} ";';';';
+import { useState, useEffect, useCallback } from 'react';
+
+export interface User {
+  id: string;
+  email: string;
+  name?: string;
+  avatar?: string;
+}
+
+export interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
+
+export function useAuth() {
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    isAuthenticated: false,
+    isLoading: true,
+  });
+
+  const login = useCallback(async (email: string, password: string) => {
+    try {
+      setAuthState(prev => ({ ...prev, isLoading: true }));
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      const user: User = {
+        id: '1',
+        email,
+        name: email.split('@')[0],
+      };
+      
+      setAuthState({
+        user,
+        isAuthenticated: true,
+        isLoading: false,
+      });
+      
+      return { success: true, user };
+    } catch (error) {
+      setAuthState(prev => ({ ...prev, isLoading: false }));
+      return { success: false, error };
+    }
+  }, []);
+
+  const logout = useCallback(() => {
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+    });
+  }, []);
+
+  const signup = useCallback(async (email: string, password: string, name?: string) => {
+    try {
+      setAuthState(prev => ({ ...prev, isLoading: true }));
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      const user: User = {
+        id: '1',
+        email,
+        name: name || email.split('@')[0],
+      };
+      
+      setAuthState({
+        user,
+        isAuthenticated: true,
+        isLoading: false,
+      });
+      
+      return { success: true, user };
+    } catch (error) {
+      setAuthState(prev => ({ ...prev, isLoading: false }));
+      return { success: false, error };
+    }
+  }, []);
+
+  useEffect(() => {
+    // Check for existing session
+    const checkAuth = async () => {
+      try {
+        // Simulate checking for existing session
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // For now, no existing session
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
+      } catch (error) {
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
+      }
+    };
+
+    checkAuth();
+  }, []);
+
+  return {
+    ...authState,
+    login,
+    logout,
+    signup,
+  };
+}

@@ -1,4 +1,4 @@
-export const validators = {
+export const _validators = {
   email: (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email),
   sanitizeInput: (input) => input.replace(/[<>'";]/g, '').trim(),
   validateUrl: (url) => {

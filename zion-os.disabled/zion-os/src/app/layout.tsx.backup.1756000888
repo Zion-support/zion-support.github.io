@@ -19,7 +19,6 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
-=======
 import { Navigation } from "@/components/Navigation";
 import Link from "next/link";
 
@@ -81,12 +80,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main className="pt-20" role="main">
           {children}
         </main>
-<<<<<<< HEAD
-        
-        <footer className="border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20" role="contentinfo">
-          <div className="max-w-7xl mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-=======
         <footer className="border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20">
           <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -97,13 +90,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </p>
               {/* Services */}
               <div>
-<<<<<<< HEAD
-                <h4 className="font-semibold mb-3">Platform</h4>
-                <ul className="space-y-2 text-sm text-gray-400" role="list">
-                  <li><a href="/multiverse/launch" className="hover:text-white transition-colors" aria-label="Launch wizard">Launch Wizard</a></li>
-                  <li><a href="/admin/instances" className="hover:text-white transition-colors" aria-label="Manage instances">Instances</a></li>
-                  <li><a href="/admin/os-deploy" className="hover:text-white transition-colors" aria-label="Admin deploy">Admin Deploy</a></li>
-=======
                 <h4 className="font-semibold mb-4 text-white">Services</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><Link href="/ai-automation-services" className="hover:text-white transition-colors">AI Automation</Link></li>
@@ -118,23 +104,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div>
               {/* Company & Support */}
               <div>
-<<<<<<< HEAD
-                <h4 className="font-semibold mb-3">Support</h4>
-                <ul className="space-y-2 text-sm text-gray-400" role="list">
-                  <li><a href="/docs" className="hover:text-white transition-colors" aria-label="Documentation">Documentation</a></li>
-                  <li><a href="/api" className="hover:text-white transition-colors" aria-label="API Reference">API Reference</a></li>
-                  <li><a href="/community" className="hover:text-white transition-colors" aria-label="Community">Community</a></li>
-                  <li><a href="/contact" className="hover:text-white transition-colors" aria-label="Contact support">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
-              <p>&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
-              <div className="mt-2 space-x-4">
-                <a href="/privacy" className="hover:text-white transition-colors" aria-label="Privacy Policy">Privacy Policy</a>
-                <a href="/terms" className="hover:text-white transition-colors" aria-label="Terms of Service">Terms of Service</a>
-                <a href="/cookies" className="hover:text-white transition-colors" aria-label="Cookie Policy">Cookie Policy</a>
-=======
                 <h4 className="font-semibold mb-4 text-white">Company & Support</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>

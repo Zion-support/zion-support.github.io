@@ -1,11 +1,4 @@
 
-
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -401,12 +394,4 @@ class ErrorPreventionSystem {}
 
       process.exit(1)})};
 module.exports = ErrorPreventionSystem;
-
-module.exports = ErrorPreventionSystem;
-module.exports = ErrorPreventionSystem;
-module.exports = ErrorPreventionSystem;
-
-module.exports = ErrorPreventionSystem;
-module.exports = ErrorPreventionSystem;
-module.exports = ErrorPreventionSystem;
-
+module.exports = ErrorPreventionSystem;>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

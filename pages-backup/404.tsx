@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const Component = () => {;
 const Link = dynamic(() => import("next/link"), { ssr: false });
 }
-    { name: "Help Center", url: "/help", icon: FileText },
+    { name: "Help Center", url: "/help", icon: FileText }
     { name: "Privacy Policy", url: "/privacy", icon: Shield }
 
   ];
@@ -63,32 +63,3 @@ const Link = dynamic(() => import("next/link"), { ssr: false });
                   className="bg-white/10 hover: bg-white/20 p-4 rounded-lg transition-all duration-300 group">";
                   <link.icon className="w-6 h-6 text-blue-400 mx-auto mb-2 group-hover:text-blue-300" />";
                   <span className="text-white text-sm font-medium group-hover:text-blue-300">,
-                    {link.name}
-
-                  </span>;
-                </Link>;
-              ))}
-
-            </div>;
-          {/* comment */}";
-          <div className="mt-12 text-center">";
-            <p className="text-gray-300 mb-4">;
-              Still can&apos;t find what you&apos;re looking for?;
-            </p>";
-            <div className = "flex flex-col sm: flex-row gap-4 justify-center">";
-              <Link href="/contact;
-                className="text-blue-400 hover:text-blue-300 flex items-center justify-center">";
-                <Phone className="w-4 h-4 mr-2"  />;
-                Contact Support,
-              </Link>";
-              <Link href="mailto:kleber@ziontechgroup.com;
-                className="text-blue-400 hover:text-blue-300 flex items-center justify-center">";
-                <Mail className="w-4 h-4 mr-2"  />;
-                Email Us,
-              </Link>;
-            </div>;
-    </>;
-  ),
-";
-
-export default Component

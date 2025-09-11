@@ -225,21 +225,6 @@
         <motion .div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-"hover": "opacity-100 transition-opacity duration-300" initial={{ "opacity": 0 "}} whileHover={{ "opacity": "1 "}} />;
       </motion.div>;
     </motion.div>)}
-<<<<<<< HEAD:backup-merge-conflicts/3d-card-gallery.js.jsx.backup
-<<<<<<< HEAD
-;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</button>;
-</Card3D>;
-</motion>;
-</motion>;
-</Card3D>;
-</div>
-=======
-=======
 </motion>
 </motion>
 </motion>
@@ -249,6 +234,4 @@
 </motion>
 </motion>
 </Card3D>
-</div>=======
 
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/3d-card-gallery.js.jsx

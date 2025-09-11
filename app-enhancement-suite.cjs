@@ -126,10 +126,6 @@ class AppEnhancementSuite {}
     this.createMonitoringScripts();
 
     const report = {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     const securityHeaders = {}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',

@@ -1,29 +1,16 @@
-=======
     "media": query,
     "onchange": null,
     "addListener": global.global.global.jest.fn(), // deprecated
     "removeListener": global.global.global.jest.fn(), // deprecated
     "addEventListener": global.global.global.jest.fn(),
     "removeEventListener": global.global.global.jest.fn(),
-    "dispatchEvent": global.global.global.jest.fn()}))});>>>>>>> main:src_backup_temp/setupTests.js
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() { /* empty */ }
   disconnect() { /* empty */ }
   observe() { /* empty */ }
-<<<<<<< HEAD
-  unobserve() { /* empty */ }';
-};;';;';
-=======
 import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
   unobserve() { /* empty */ }
 };';';
 import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };';';
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
     );
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/setupTests.js

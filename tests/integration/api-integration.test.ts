@@ -13,4 +13,3 @@ describe('API Integration', () => {;
       expect(screen.getByText('test data')).toBeInTheDocument();
 });
 });
-});
