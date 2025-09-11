@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -14,10 +25,31 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import React from "react";
+import Layout from "../components/Layout";
+import React from 'react';
+
+
+
+
+import React from 'react';
+
+import Layout from '../components/Layout';
+
+import Layout from '../components/Layout';
+=======
     
     return this.props.children;
   }
@@ -34,6 +66,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import Head from 'next/head';
 import { useState } from 'react';
@@ -55,6 +88,20 @@ export default function Contact() {
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
+    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    hours: 'Mon-Fri: 9AM-6PM EST'
+  };
+
+  const services = [
+    'AI Services & Solutions',
+    'IT Infrastructure & Cloud',
+    'Micro SAAS Development',
+    'Digital Transformation',
+    'Cybersecurity Solutions',
+    'Data Analytics & Insights'
+  ];
+=======
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   };
@@ -118,11 +165,164 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 origin/main
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react";
 import Layout from "../components/Layout";
 export default function Contact() {
   return (
+<<<<<<< HEAD
+
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with our team for your technology needs.
+
+import React from 'react';
+    return this.props.children;
+  }
+}
+import React from "react";
+import Layout from "../components/Layout";
+import React from 'react';
+import React from "react";
+import Layout from "../components/Layout";
+import React from 'react';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+origin/automation-improvements-final
+
+import Head from 'next/head';
+import { useState } from 'react';
+import { ContactInfo } from '../types';
+=======
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import Layout from "../components/Layout";
+=======
+import React from 'react';
+
+=======
+
+
+
+=======
+import Head from 'next/head';
+import { useState } from 'react';
+import { ContactInfo } from '../types';
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+  const services = [
+    'AI Automation Platform',
+    'Cloud Infrastructure',
+    'Micro SaaS Development',
+    'Cybersecurity Solutions',
+    'Data Analytics & BI',
+    'Blockchain Solutions',
+    'Other'
+  ];
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  return (
+<<<<<<< HEAD
+    <Layout
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Contact Us
+            </h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with our team for your technology needs.
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+import React from "react";
+import Layout from "../components/Layout";
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+origin/automation-improvements-final
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with our team for your technology needs.
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+origin/main
+
+import React from "react";
+import Layout from "../components/Layout";
+export default function Contact() {
+  return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -144,6 +344,7 @@ export default function Contact() {
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
             </p>
+<<<<<<< HEAD
           </div>
           <Link href="/services" className="btn-secondary">
             Explore Our Services
@@ -152,6 +353,229 @@ export default function Contact() {
       </div>
     </>
   );
+<<<<<<< HEAD
+}
+}
+}
+=======
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import Head from 'next/head';
+const ContactPage: React.FC = () => {
+  return (
+    <>
+      <Head>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
+        />
+        <meta
+          name='keywords'
+          content='contact, consultation, micro SaaS, AI services, IT solutions, Zion Tech Group'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='canonical' href='http: s://ziontechgroup.com/contact' />
+      </Head>
+      <ErrorBoundary level='page'>
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+          <div className='container mx-auto px-4 py-16'>
+            <div className='max-w-4xl mx-auto'>
+              <h1 className='text-4xl: md:text-5xl font-bold text-center mb-8'>
+                Contact Us
+              </h1>
+              <p className='text-xl text-slate-300 text-center mb-12'>
+                Ready to transform your business? Get in touch with our experts.
+              </p>
+              <div className='grid: md:grid-cols-2 gap-12'>
+                <div>
+                  <h2 className='text-2xl font-bold mb-6'>Get In Touch</h2>
+                  <div className='space-y-6'>
+                    <div>
+                      <h3 className='text-lg font-semibold text-blue-400 mb-2'>
+                        Phone
+                      </h3>
+                      <a
+                        href='te: l:+13024640950'
+                        className='text-slate-300: hover:text-blue-400'
+                      >
+                        +1 302 464 0950
+                      </a>
+                    </div>
+                    <div>
+                      <h3 className='text-lg font-semibold text-blue-400 mb-2'>
+                        Email
+                      </h3>
+                      <a
+                        href='mailt: o:kleber@ziontechgroup.com'
+                        className='text-slate-300: hover:text-blue-400'
+                      >
+                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                    <div>
+                      <h3 className='text-lg font-semibold text-blue-400 mb-2'>
+                        Address
+                      </h3>
+                      <p className='text-slate-300'>
+                        364 E Main St STE 1008
+                        <br />
+                        Middletown, DE 19709
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className='text-lg font-semibold text-blue-400 mb-2'>
+                        Website
+                      </h3>
+                      <a
+                        href='http: s://ziontechgroup.com'
+                        className='text-slate-300: hover:text-blue-400'
+                      >
+                        http: s://ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h2 className='text-2xl font-bold mb-6'>Send us a Message</h2>
+                  <ContactForm />
+                </div>
+              </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+            </div>
+          </div>
+        </div>
+</div>
+    </>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              Contact Us;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+<<<<<<< HEAD
+=======
+
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    </>
+
+  );
+
+
+<<<<<<< HEAD
+  );
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * Contact - Function description
+ */
+function Contact() {
+  return (
+    <Layout;
+      title="Contact Us - Zion Tech Group";
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              Contact Us;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Get in touch with our team for your technology needs.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Contact page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+}
+    <>
+      <Head>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI automation, cloud infrastructure, micro SaaS development, and other technology solutions." />
+        <meta name="keywords" content="contact, consultation, AI services, cloud computing, micro SaaS, technology solutions" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+      </Head>
+      <div className="min-h-screen bg-slate-950 text-white">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
+          <div className="relative container mx-auto px-4 py-20">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+                Contact Us
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-gray-300">
+                Ready to transform your business? Let's talk.
+              </p>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                Get in touch with our team to discuss your project requirements and discover
+                how our technology solutions can accelerate your business growth.
+              </p>
+            </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          </div>
+          <Link href="/services" className="btn-secondary">
+            Explore Our Services
+          </Link>
+        </main>
+      </div>
+    </>
+  );
+<<<<<<< HEAD
+=======
 }
 }
 import Head from 'next/head';
@@ -556,6 +980,7 @@ const ContactPage: React.FC = () => {
     </Layout>;
     </>
   );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final

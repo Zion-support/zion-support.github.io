@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 import Link from "next/link";
 export const metadata = {title: "AI Consciousness Evolution - Zion Tech Group";
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.";
   keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"}
 export default function AIConsciousnessEvolutionPage() {return (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Consciousness Evolution - Zion Tech Group",;
@@ -10,9 +17,19 @@ export const metadata = {;
   keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},;
 export default function AIConsciousnessEvolutionPage() {;
   return (;
+<<<<<<< HEAD
+
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from './next / link';,
 export const metadata = {
   title: "AI Consciousness Evolution - Zion Tech Group",
@@ -25,7 +42,15 @@ function AIConsciousnessEvolutionPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
+<<<<<<< HEAD
+import Link from "next/link";
+export const metadata = {title: "AI Consciousness Evolution - Zion Tech Group";
+  description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.";
+  keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"}
+export default function AIConsciousnessEvolutionPage() {return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Consciousness Evolution - Zion Tech Group",;
@@ -36,14 +61,21 @@ export default function AIConsciousnessEvolutionPage() {;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
-        <div className="text-center mb-16">;
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-            <span className="gradient-text">AI Consciousness Evolution</span>;
+        <div className="text - center mb - 16">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+            <span className="gradient - text">AI Consciousness Evolution</span>;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
             Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness;
             Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness,;
             self-awareness, and cognitive evolution capabilities.;
+=======
+
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
+            Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness,
+            self - awareness, and cognitive evolution capabilities.;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </p>;
         </div>;
         {/* Overview Section */}

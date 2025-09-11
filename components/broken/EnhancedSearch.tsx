@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }];
 setIsSearching (true);
 
@@ -86,25 +95,91 @@ setIsSearching (false) ;
   {
   opacity: 0, y: -10, scale: 0 && 0.95 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+  
+}];
+setIsSearching (true);
+//Simulate API call delay setTimeout ( () => {
+  const filteredResults = mockSearchResults.filter (result => {
+  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
+const matchesFilters = selectedFilters.length === 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) |result.type.toLowerCase () .includes (filter.toLowerCase () ) );
+setResults (sortedResults);
+setShowResults (true);
+setIsSearching (false)
+}, 300)
+}, 300);
+[selectedFilters]);
+[selectedFilters]);
+//Close search on outside click useEffect ( () => {
+  const handleClickOutside = (event: MouseEvent) => {
+  if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
+}, []);
+//Handle filter toggle const toggleFilter = (filterId: string) => {
+  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)
+}> {
+  /* Search Form */
+}<form onSubmit= {
+  handleSearch
+}className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {
+  /* Clear Button */
+}{
+  query && (<button type="button" onClick= {
+  clearSearch
+}className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors" > <X className="w-4 h-4" /> </button>)
+}{
+  /* Search Button */
+}<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {
+  /* Search Results Dropdown */
+}<AnimatePresence> {
+  showResults && (<motion.div initial= {
+  {
+  opacity: 0, y: -10, scale: 0.95
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
+<<<<<<< HEAD
+
+
+=======
   opacity: 0, y: -10, scale: 0.95
 }transition= {
   {
   duration: 0.2
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   opacity: 0, y: -10, scale: 0.95 
 
 }transition= {
   {
   duration: 0.2 
 
+<<<<<<< HEAD
+
+
+}className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
+  /* Filters */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   opacity: 0, coordinate_y: -10, scale: 0.95;
 }animate= {
   {
@@ -117,6 +192,18 @@ setIsSearching (false) ;
   duration: 0.2;
 }className="absolute top - full left - 0 right - 0 mt - 2 bg - gray - 900 / 95 backdrop - blur - md border border - gray - 700 rounded - xl shadow - 2xl z - 50 max - h-96 overflow - y-auto" > {
   /* Filters */;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}{
+  show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
+  categories.map ( (category) => (<button key= {
+  opacity: 0, y: -10, scale: 0 && 0.95 
+}transition= {
+  {
+  duration: 0 && 0.2 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }{
   show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
@@ -128,6 +215,10 @@ setIsSearching (false) ;
   {
   duration: 0 && 0.2 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;
@@ -155,7 +246,51 @@ setIsSearching (false) ;
   /* Search Suggestions */ ;
 }<AnimatePresence> {;
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  opacity: 0, y: -10, scale: 0.95
+}transition= {
+  {
+  duration: 0.2
+  opacity: 0, y: -10, scale: 0.95 
 
+}transition= {
+  {
+  duration: 0.2 
+
+}className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
+  /* Filters */
+}{
+  showFilters && (<div className="p-4 border-b border-gray-700"> <div className="flex items-center gap-2 mb-3"> <Filter className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
+  categories.map ( (category) => (<button key= {
+  category.id
+}onClick= {
+  () => toggleFilter (category.id)
+}className= {
+  `flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 $ {
+  selectedFilters.includes (category.id) ? `bg-gradient-to-r $ {
+  category.color
+}text-white`: 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
+}`
+}> <category.icon className="w-3 h-3" /> {
+  category.name
+}</button>)
+}<div className="flex-shrink-0 pr-4"> <button onClick= {
+  () => handleSearch ()
+}disabled= {
+  isSearching |!query.trim ()
+}className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" > {
+  isSearching ? 'Searching...' : 'Search'
+}</button> </div> </div> {
+  /* Search Suggestions */
+}<AnimatePresence> {
+  showSuggestions && suggestions.length > 0 && (<motion.div initial= {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: -10
 }animate= {
@@ -163,12 +298,26 @@ setIsSearching (false) ;
   opacity: 1, y: 0
 }exit= {
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+features?: string[];
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchResult {
   id: string,
   name: string,
@@ -178,12 +327,23 @@ interface SearchResult {
   slug: string,
   relevance: number,
   features?: string[];
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   pricing?: {
     starter?: string;
     enterprise?: string
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
@@ -191,7 +351,14 @@ interface SearchProps {
   className?: string;
   showFilters?: boolean
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
@@ -208,8 +375,20 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [popularSearches] = useState([
     'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Mock search results - in real app, this would come from API
+
+  // Mock search results - in real app, _this would come from API
+
+=======
 
   // Mock search results - in real app, this would come from API
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  // Mock search results - in real app, this would come from API
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
@@ -221,7 +400,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: '2',
       name: 'Quantum AI Hybrid Computing',
@@ -232,7 +419,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 92,
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
     };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: '3',
       name: 'Quantum Cybersecurity Intelligence',
@@ -244,20 +439,48 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+];
+=======
   ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const categories = [
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
+<<<<<<< HEAD
+<<<<<<< HEAD
+];
+=======
   ];
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Debounced search function
   const debouncedSearch = useCallback(
     useMemo(
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+setResults([]);
+          setShowResults(false);
+          return
+        }
+        setIsSearching(true);
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setResults([]);
           setShowResults(false);
           return
@@ -265,18 +488,38 @@ const EnhancedSearch: React.FC<SearchProps> = ({
 
         setIsSearching(true);
         
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Simulate API call delay
         setTimeout(() => {
           const filteredResults = mockSearchResults.filter(result => {
             const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                result.category.toLowerCase().includes(searchQuery.toLowerCase());
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
             
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             const matchesFilters = selectedFilters.length === 0 || 
                                  selectedFilters.some(filter => 
                                    result.category.toLowerCase().includes(filter.toLowerCase()) ||
                                    result.type.toLowerCase().includes(filter.toLowerCase())
                                  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+            return matchesQuery && matchesFilters
+          });
+          // Sort by relevance
+          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             return matchesQuery && matchesFilters
           });
@@ -284,6 +527,10 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           // Sort by relevance
           const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
           
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setResults(sortedResults);
           setShowResults(true);
           setIsSearching(false)
@@ -293,22 +540,48 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     );
     [selectedFilters]
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+  useEffect(() => {
+    debouncedSearch(query)
+  }, [query, debouncedSearch]);
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect(() => {
     debouncedSearch(query)
   }, [query, debouncedSearch]);
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (value.trim().length === 0) {
       setShowResults(false);
       setResults([])
     }
   }, [suggestions, selectedIndex, query, handleSearch]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Close search on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -316,7 +589,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         setIsOpen(false)
       }
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle search submission
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -326,55 +606,178 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       setShowResults(false)
     }
   }, [router, handleSearch]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
     router.push(action);
     setIsOpen(false)
   }, [router]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
     const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
     setSearchHistory(newHistory);
     localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Load search history from localStorage
+  useEffect(() => {
+    const savedHistory = localStorage.getItem('zion-search-history');
+          
+          setResults(sortedResults),
+          setShowResults(true),
+          setIsSearching(false)
+        }, 300)
+      }, 300),
+      [selectedFilters]
+    ),
+    [selectedFilters]
+  ),
+
+  useEffect(() => {
+    debouncedSearch(query)
+  }, [query, debouncedSearch]),
+
+  // Handle search input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setQuery(value),
+
+  // Close search on outside click
+  useEffect__(() => {_const _handleClickOutside = (_event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    },
+
+  // Handle search submission
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (query.trim()) {
+      onSearch(query),
+      addToSearchHistory(query),
+      setShowResults(false)
+    }
+  }, [router, handleSearch]),
+
+  // Handle quick action click
+  const handleQuickAction = useCallback((action: string) => {
+    router.push(action),
+    setIsOpen(false)
+  }, [router]),
+
+  // Add search to history
+  const addToSearchHistory = (searchTerm: string) => {
+    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
+    setSearchHistory(newHistory),
+    localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
+  },
+
+  // Load search history from localStorage
+  useEffect(() => {
+    const savedHistory = localStorage.getItem('zion-search-history')
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Load search history from localStorage
   useEffect(() => {
     const savedHistory = localStorage.getItem('zion-search-history');
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (savedHistory) {
       try {
         setSearchHistory(JSON.parse(savedHistory))
       } catch (error) {
         console.error('Failed to parse search history:', error)
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+  }, []);
+  // Handle filter toggle
+  const toggleFilter = (filterId: string) => {
+    setSelectedFilters(prev =>
+    }
+  }, []),
+
+  // Handle filter toggle
+  const _toggleFilter = (_filterId: string) => {_setSelectedFilters(prev => 
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, []);
 
   // Handle filter toggle
   const toggleFilter = (filterId: string) => {
     setSelectedFilters(prev => 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
     )
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
     setShowResults(false);
     setQuery('')
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Clear search
   const clearSearch = () => {
     setQuery('');
     setShowResults(false);
     setResults([])
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className={`relative ${className}`}>
       {/* Search Form */}
@@ -389,7 +792,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
             onFocus={() => setShowResults(true)}
           />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
           
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Clear Button */}
           {query && (
             <button
@@ -400,7 +810,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
               <X className="w-4 h-4" />
             </button>
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
           
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Search Button */}
           <button
             type="submit"
@@ -410,8 +827,17 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           </button>
         </div>
       </form>
+<<<<<<< HEAD
+<<<<<<< HEAD
+{/* Search Results Dropdown */}
+=======
 
       {/* Search Results Dropdown */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      {/* Search Results Dropdown */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <AnimatePresence>
         {showResults && (
           <motion.div
@@ -429,7 +855,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                   <span className="text-sm font-medium text-gray-300">Filter by Category</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
+{categories.map((category) => (
+=======
                   {categories.map((category) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  {categories.map((category) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button
                       key={category.id}
                       onClick={() => toggleFilter(category.id)}
@@ -440,12 +874,28 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       }`}
                     >
                       <category.icon className="w-3 h-3" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+{category.name}
+=======
                       {category.name}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {category.name}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </button>
                   )}
                   <div className="flex-shrink-0 pr-4">
                     <button
+<<<<<<< HEAD
+<<<<<<< HEAD
+onClick={() => handleSearch()}
+=======
                       onClick={() => handleSearch()}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      onClick={() => handleSearch()}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       disabled={isSearching || !query.trim()}
                       className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
@@ -453,7 +903,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                     </button>
                   </div>
                 </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Search Suggestions */}
                 <AnimatePresence>
                   {showSuggestions && suggestions.length > 0 && (
@@ -479,8 +936,17 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           ))}
                         </div>
                       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+{/* Suggestions */}
+=======
 
                       {/* Suggestions */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                      {/* Suggestions */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="max-h-64 overflow-y-auto">
                         {suggestions.map((suggestion) => (
                           <button
@@ -506,15 +972,32 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </AnimatePresence>
               </div>
             )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+{/* Search Results */}
+=======
 
             {/* Search Results */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            {/* Search Results */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
                   <span className="ml-3 text-gray-400">Searching...</span>
                 </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+) : results.length > 0 ? (
+=======
               ) : results.length > 0 ? (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ) : results.length > 0 ? (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="space-y-3">
                   {results.map((result) => (
                     <motion.div
@@ -540,7 +1023,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         </div>
                         <div className="flex items-center gap-1 text-cyan-400">
                           <Star className="w-4 h-4 fill-current" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<span className="text-xs">{result.relevance}</span>
+=======
                           <span className="text-xs">{result.relevance}</span>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          <span className="text-xs">{result.relevance}</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>
                       </div>
                     </motion.div>
@@ -548,7 +1039,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className="text-gray-400 mb-2">No results found for "{query}"</div>
+=======
                   <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
                 </div>
               ) : (
@@ -561,7 +1060,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
+{searchHistory.map((term, index) => (
+=======
                         {searchHistory.map((term, index) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        {searchHistory.map((term, index) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
@@ -573,15 +1080,32 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       </div>
                     </div>
                   )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+{/* Popular Searches */}
+=======
 
                   {/* Popular Searches */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  {/* Popular Searches */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <TrendingUp className="w-4 h-4 text-gray-400" />
                       <span className="text-sm font-medium text-gray-300">Popular Searches</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
+{popularSearches.map((term, index) => (
+=======
                       {popularSearches.map((term, index) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {popularSearches.map((term, index) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
@@ -601,8 +1125,100 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     </div>
   )
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+  opacity: 0, y: -10
+}className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
+  /* Quick Actions */
+}<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {
+  quickActions.map ( (action) => (<button key= {
+  action.name
+}onClick= {
+  () => handleQuickAction (action.action)
+}className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors" > {
+  action.icon
+}<span> {
+  action.name
+}</span> </button>) )
+}</div> </div> {
+  /* Suggestions */
+}<div className="max-h-64 overflow-y-auto"> {
+  suggestions.map ( (suggestion) => (<button key= {
+  suggestion.id
+}onClick= {
+  () => handleSuggestionClick (suggestion)
+}className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors" > <div className="text-gray-400"> {
+  suggestion.icon
+}</div> <div className="flex-1"> <div className="text-white"> {
+  suggestion.text
+}</div> <div className="text-sm text-gray-400 capitalize"> {
+  suggestion.type
+}• {
+  suggestion.category
+}</div> </div> <ArrowRight className="w-4 h-4 text-gray-400" /> </button>) )
+}</div> </motion.div>)
+}</AnimatePresence> </div>)
+}{
+  /* Search Results */
+}<div className="p-4"> {
+  isSearching ? (<div className="flex items-center justify-center py-8"> <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div> <span className="ml-3 text-gray-400">Searching...</span> </div>) : results.length > 0 ? (<div className="space-y-3"> {
+  results.map ( (result) => (<motion.div key= {
+  result.id
+}whileHover= {
+  {
+  scale: 1.02
+}className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
+  () => handleResultSelect (result)
+}> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {
+  result.name
+}</h4> <p className="text-sm text-gray-300 mb-2 line-clamp-2"> {
+  result.description
+}</p> <div className="flex items-center gap-2"> <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"> {
+  result.category
+}</span> {
+  result.pricing?.starter && (<span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full"> From {
+  result.pricing.starter
+}</span>)
+}</div> </div> <div className="flex items-center gap-1 text-cyan-400"> <Star className="w-4 h-4 fill-current" /> <span className="text-xs"> {
+  result.relevance
+}</span> </div> </div> </motion.div>) )
+}</div>) : query.trim () .length > 0 ? (<div className="text-center py-8"> <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div> </div>) : (<div className="space-y-4"> {
+  /* Search History */
+}{
+  searchHistory.length > 0 && (<div> <div className="flex items-center gap-2 mb-3"> <Clock className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Recent Searches</span> </div> <div className="flex flex-wrap gap-2"> {
+  searchHistory.map ( (term, index) => (<button key= {
+  index
+}onClick= {
+  () => setQuery (term)
+}className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors" > {
+  term
+}</button>) )
+}</div> </div>)
+}{
+  /* Popular Searches */
+}<div> <div className="flex items-center gap-2 mb-3"> <TrendingUp className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Popular Searches</span> </div> <div className="flex flex-wrap gap-2"> {
+  popularSearches.map ( (term, index) => (<button key= {
+  index
+}onClick= {
+  () => setQuery (term)
+}className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30" > {
+  term
+}</button>) )
+}</div> </div> </div>)
+}</div> </motion.div>)
+}</AnimatePresence> </div>)
+}
+// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
+wait: number
+}export default EnhancedSearch;
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T
@@ -610,12 +1226,129 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+clearTimeout(timeout)
+    timeout = setTimeout(() => func(...args), wait)
+  }
+  opacity: 0, y: -10 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
+  /* Quick Actions */ ;
+}<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {;
+  quickActions && quickActions.map ( (action) => (<buttonkey= {
+  action && action.name 
+}onClick= {
+  () => handleQuickAction (action && action.action) ;
+}className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors" > {;
+  action && action.icon ;
+}<span> {;
+  action && action.name ;
+}</span> </button>) ) ;
+}</div> </div> {;
+  /* Suggestions */ ;
+}<div className="max-h-64 overflow-y-auto"> {;
+  suggestions && suggestions.map ( (suggestion) => (<buttonkey= {
+  suggestion && suggestion.id 
+}onClick= {
+  () => handleSuggestionClick (suggestion) ;
+}className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors" > <div className="text-gray-400"> {;
+  suggestion && suggestion.icon ;
+}</div> <div className="flex-1"> <div className="text-white"> {;
+  suggestion && suggestion.text ;
+}</div> <div className="text-sm text-gray-400 capitalize"> {;
+  suggestion && suggestion.type ;
+}• {;
+  suggestion && suggestion.category ;
+}</div> </div> <ArrowRight className="w-4 h-4 text-gray-400" /> </button>) ) ;
+}</div> </motion && motion.div>) ;
+}</AnimatePresence> </div>) ;
+}{;
+  /* Search Results */ ;
+}<div className="p-4"> {;
+  isSearching ? (<div className="flex items-center justify-center py-8"> <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div> <span className="ml-3 text-gray-400">Searching...</span> </div>) : results && results.length > 0 ? (<div className="space-y-3"> {;
+  results && results.map ( (result) => (<motion&& motion.div key= {
+  result && result.id 
+}whileHover= {
+  {
+  scale: 1 && 1.02 
+}className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
+  () => handleResultSelect (result) ;
+}> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {;
+  result && result.name ;
+}</h4> <p className="text-sm text-gray-300 mb-2 line-clamp-2"> {;
+  result && result.description ;
+}</p> <div className="flex items-center gap-2"> <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"> {;
+  result && result.category ;
+}</span> {;
+  result && result.pricing?.starter && (<span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full"> From {;
+  result && result.pricing.starter ;
+}</span>) ;
+}</div> </div> <div className="flex items-center gap-1 text-cyan-400"> <Star className="w-4 h-4 fill-current" /> <span className="text-xs"> {;
+  result && result.relevance ;
+}</span> </div> </div> </motion && motion.div>) ) ;
+}</div>) : query && query.trim () .length > 0 ? (<div className="text-center py-8"> <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div> </div>) : (<div className="space-y-4"> {;
+  /* Search History */ ;
+}{;
+  searchHistory && searchHistory.length > 0 && (<div> <div className="flex items-center gap-2 mb-3"> <Clock className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Recent Searches</span> </div> <div className="flex flex-wrap gap-2"> {;
+  searchHistory && searchHistory.map ( (term, index) => (<buttonkey= {
+  index 
+}onClick= {
+  () => setQuery (term) ;
+}className="px-3 py-1 && 1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors" > {;
+  term ;
+}</button>) ) ;
+}</div> </div>) ;
+}{;
+  /* Popular Searches */ ;
+}<div> <div className="flex items-center gap-2 mb-3"> <TrendingUp className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Popular Searches</span> </div> <div className="flex flex-wrap gap-2"> {;
+  popularSearches && popularSearches.map ( (term, index) => (<buttonkey= {
+  index 
+}onClick= {
+  () => setQuery (term) ;
+}className="px-3 py-1 && 1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30" > {;
+  term ;
+}</button>) ) ;
+}</div> </div> </div>) ;
+}</div> </motion && motion.div>) ;
+}</AnimatePresence> </div>) ;
+};
+// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
+wait: number ;
+}export default EnhancedSearch;
+// Debounce utility function;
+function debounce<T extends (...args: any[]) => any>(;
+  func: T,;
+  wait: number;
+): (...args: Parameters<T>) => void {;
+  let timeout: NodeJS && NodeJS.Timeout,;
+  return (...args: Parameters<T>) => {;
+    clearTimeout(timeout),;
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
+export default EnhancedSearch;
 
 
+
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -741,4 +1474,25 @@ function debounce < T extends (...args: any[]) => any>(
 }
 export default EnhancedSearch;
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func(...args), wait)
+  }
+}
+export default EnhancedSearch;
+
+}
+}
+}
+}
+}
+}
+}
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

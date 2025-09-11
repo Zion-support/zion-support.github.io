@@ -1,5 +1,12 @@
 import {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   LightBulbIcon,
   CpuChipIcon,
   AcademicCapIcon,
@@ -80,18 +87,36 @@ const research_impact = [;
     metric: 'Citations',
     value: '10, 000+',
     description: 'Academic citations demonstrating research influence'},
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     metric: 'Research Collaborations',
     value: '50+',
     description: 'Partnerships with leading academic institutions'}];
 const academic_partners = [;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     name: 'Stanford University'
     location: 'Stanford, CA'
@@ -108,6 +133,118 @@ const academic_partners = [;
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
+<<<<<<< HEAD
+
+    name: 'University of Tokyo',
+    location: 'Tokyo, Japan',
+    focus: 'Robotics & Autonomous Systems',
+    collaboration: 'Robotic learning and human - robot interaction'}];
+export default /**
+ * ResearchPage - Function description
+ */
+function ResearchPage() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return (
+    <div className=&quot;bg - black & quot;>;
+
+
+
+      {/* Hero section */}
+      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
+          <div className=&quot;text - center & quot;>;
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+              Research &{' '}
+
+
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Pushing the boundaries of artificial intelligence through groundbreaking research, 
+
+
+              innovative discoveries, and academic collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Research Focus Areas */}
+      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Research</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Focus Areas
+          </p>
+
+
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research spans the cutting edge of AI and technology, driving innovation 
+
+
+            and advancing the state of the art.
+          </p>
+        </div>
+        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
+          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+            {researchAreas.map((area) => (
+              <div key={area.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
+                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
+                  <area.icon className=&quot;h-8 w-8 text-blue-400&quot; />
+                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{area.name}</h3>
+                </div>
+                <p className=&quot;text-gray-300 mb-6&quot;>{area.description}</p>
+                <div className=&quot;space-y-2&quot;>
+                  {area.topics.map((topic) => (
+                    <div key={topic} className=&quot;flex items-center gap-2&quot;>
+                      <div className=&quot;h-1.5 w-1.5 bg-blue-400 rounded-full&quot;></div>
+                      <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
+                    </div>
+                  ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
+                Innovation;
+              </span>;
+            </h1>;
+            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
+              Pushing the boundaries of artificial intelligence through groundbreaking research,
+              innovative discoveries, and academic collaboration.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Research Focus Areas */}
+      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
+          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Research</h2>;
+          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
+            Focus Areas;
+          </p>;
+          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
+            Our research spans the cutting edge of AI and technology, driving innovation;
+            and advancing the state of the art.;
+          </p>;
+        </div>;
+        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
+          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
+            {research_areas.map ((area) => (
+              <div key={area.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
+                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
+                  <area.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
+                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{area.name}</h3>;
+    name: 'University of Tokyo'
+    location: 'Tokyo, Japan'
+    focus: 'Robotics & Autonomous Systems'
+    collaboration: 'Robotic learning and human-robot interaction'}]
+export default function ResearchPage() {
+
+export default function ResearchPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+=======
     name: 'University of Tokyo'
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
@@ -206,6 +343,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
     focus: 'Robotics & Autonomous Systems'
     collaboration: 'Robotic learning and human-robot interaction'}]
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
@@ -219,6 +357,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Innovation
               </span>
             </h1>
+            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+              Pushing the boundaries of artificial intelligence through groundbreaking research
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Pushing the boundaries of artificial intelligence through groundbreaking research, 
               innovative discoveries, and academic collaboration.
@@ -233,6 +373,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research spans the cutting edge of AI and technology, driving innovation
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research spans the cutting edge of AI and technology, driving innovation 
             and advancing the state of the art.
@@ -268,10 +410,18 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
@@ -295,6 +445,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
                     publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
                     'bg-gray-600/20 text-gray-400'
                   }`}>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {publication.impact}
                   </span>;
@@ -314,6 +469,15 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </Link>;
               </div>))}
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
@@ -359,8 +523,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
       {/* Research Impact */}
 
 
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -384,7 +551,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -404,8 +578,19 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <dd className=&quot;order - first text - 3xl font - bold tracking - tight text - white & quot;>{item.value}</dd>;
                 <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
               </div>))}
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Impact</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Research Influence
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research has made significant contributions to the field
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -432,8 +617,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
       {/* Academic Collaborations */}
 
 
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -459,7 +647,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <div className=&quot;space-y-3 text-gray-300&quot;>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
@@ -490,8 +685,19 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Collaborations</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Academic Partnerships
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            We collaborate with leading academic institutions worldwide to advance
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -532,8 +738,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
       {/* CTA section */}
 
 
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -562,7 +771,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
     </div>
   )
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
@@ -587,8 +803,18 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Join our research community
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Interested in collaborating on cutting-edge AI research?
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

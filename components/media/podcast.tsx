@@ -1,9 +1,24 @@
 
+<<<<<<< HEAD
+
+  if (loading) return <div>Loading episodes…</div>;
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -90,6 +105,10 @@ useEffect ( () => {
           </li>;
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -171,7 +190,10 @@ export default function PodcastIndexPage() {
                 {ep.audio?.mp3Url && (
                   <a href={ep.audio.mp3Url} className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot; download>
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 useEffect ( () => {
   const load = async () => {
   try {
@@ -234,22 +256,82 @@ useEffect ( () => {
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <a
+                    href={ep.audio.wavUrl}
+                    className='px-3 py-2 bg-gray-700 text-white rounded'
+                    download
+                  >                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+=======
                   <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <a
+                    href={ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded'
+                    download
+                  >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+=======
                   <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     MP4
                   </a>
                 )}
               </div>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className='mt-3 flex gap-4'>
+              <Link
+                href={`/media/podcast/${ep.id}`}
+                className='text-blue-600 underline'
+              >
+                View Transcript
+              </Link>            </div>            <div className="mt-3 flex gap-4">
+              <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+
+}
+;
+}
+}
+}
+}
+}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
             </div>
           </li>
 
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ))}
       </ul>;
     </div>;
@@ -356,3 +438,7 @@ if (return <div > Loading episodes…</div>) {
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

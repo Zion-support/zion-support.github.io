@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants';
 export interface SpaceColonization2029Service {;
   id: string;
@@ -31,6 +38,106 @@ export interface SpaceColonization2029Service {;
     email: string;
     address: string;
 
+<<<<<<< HEAD
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
+  // Space Colonization & Mining Services;
+  {  reviews: number;
+}
+export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
+  // Space Colonization & Mining Services;
+  {
+    id: 'mars - colonization - automation - platform',
+    name: 'Mars Colonization Automation Platform',
+    tagline: 'Automate Mars colonization process with AI and robotics',
+    price: '$99, 999',
+    period: '/month',
+    description:;
+      'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
+      'Autonomous habitat construction',
+      'AI - powered resource management',
+      'Life support system automation',
+      'Colony expansion planning',
+      'Robotic workforce management',
+      'Environmental monitoring AI',
+      'Supply chain automation',
+      'Emergency response systems',
+      'Colony health monitoring',
+      'Sustainable development AI',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from - red - 600 to - orange - 600',
+    text_color: 'text - red - 400',
+    link: 'https://ziontechgroup.com / mars - colonization - automation - platform',
+    market_position:;
+      'First Mars colonization automation platform. No direct competitors. Comparable to space infrastructure platforms ($80K+/month) but specialized in Mars colonization.',
+    target_audience:;
+      'Space agencies, Private space companies, Government organizations, Research institutions, Space mining companies, Colonization initiatives',
+    trial_days: 180,
+    setup_time: '6 - 12 months',
+    category: 'Space Colonization & Mining',
+    real_service: true,
+    technology: [;
+      'AI & Robotics',
+      'Space Technology',
+      'Autonomous Systems',
+      '3D Printing',
+      'Life Support Systems',
+      'Satellite Communication',
+    ],
+    integrations: [;
+      'NASA systems',
+      'SpaceX platforms',
+      'Satellite networks',
+      'Ground control systems',
+      'Research databases',
+      'Space monitoring tools',
+    ],
+    use_cases: [;
+      'Mars colonization',
+      'Space habitat construction',
+      'Resource extraction',
+      'Life support management',
+      'Colony expansion',
+      'Space research',
+    ],
+    roi: 'Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development.',
+    competitors: [;
+      'Space infrastructure platforms',
+      'Space research tools',
+      'Government space programs',
+    ],
+    market_size: '$100B space economy market',
+    growth_rate: '500% annual growth',
+    variant: 'space - futuristic',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Advanced Mars colonization platform with autonomous systems, AI - powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real - time communication and emergency response.',
+    launch_date: '2029 - 01 - 01',
+    customers: 8,
+    rating: 4 && 4.9,
+    reviews: 23,
+  },
+  {
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types / service - variants';
 
 export interface SpaceColonization2029Service {
@@ -45,6 +152,42 @@ export interface SpaceColonization2029Service {
     description:
 
   {
+<<<<<<< HEAD
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      'Real-time interplanetary communication',
+    id: 'interplanetary - communication - network',
+    name: 'Interplanetary Communication Network',
+    tagline: 'Real - time solar system communication network',
+    price: '$75, 999',
+    period: '/month',
+    description:;
+      'Revolutionary interplanetary communication network that enables real - time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI - powered routing for seamless interplanetary connectivity.',
+    features: [;
+      'Real - time interplanetary communication',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      'Quantum communication protocols',
+      'AI - powered routing optimization',
+      'Multi - planet network management',
+      'Satellite constellation control',
+      'Communication security protocols',
+      'Bandwidth optimization',
+      'Network redundancy systems',
+      'Real - time monitoring',
+      'Emergency communication channels',
+    ],
+    popular: true,
+    icon: '🌐',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - blue - 600 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / interplanetary - communication - network',
@@ -90,7 +233,14 @@ export interface SpaceColonization2029Service {
     growth_rate: '400% annual growth',
     variant: 'space - futuristic',
     contact_info: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -105,8 +255,16 @@ export interface SpaceColonization2029Service {
     reviews: 45,
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'space - mining - automation - platform',
     name: 'Space Mining Automation Platform',
     tagline: 'Automate asteroid and lunar mining operations',
@@ -115,7 +273,14 @@ export interface SpaceColonization2029Service {
     description:;
       'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI - powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',
     features: [;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Autonomous mining operations',
       'AI - powered resource detection',
       'Robotic mining equipment',
@@ -129,8 +294,16 @@ export interface SpaceColonization2029Service {
     ],
     popular: false,
     icon: '⛏️',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - yellow - 600 to - orange - 600',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / space - mining - automation - platform',
@@ -176,7 +349,14 @@ export interface SpaceColonization2029Service {
     growth_rate: '600% annual growth',
     variant: 'space - futuristic',
     contact_info: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -190,7 +370,14 @@ export interface SpaceColonization2029Service {
     rating: 4 && 4.7,
     reviews: 34,
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'AI-powered habitat design',
   // Space Architecture & Energy Services;
   {
@@ -203,7 +390,14 @@ export interface SpaceColonization2029Service {
       'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI - powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',
     features: [;
       'AI - powered habitat design',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Environmental simulation tools',
       'Material optimization AI',
       'Life support integration',
@@ -216,8 +410,16 @@ export interface SpaceColonization2029Service {
     ],
     popular: false,
     icon: '🏠',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - green - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / space - habitat - design - platform',
@@ -263,7 +465,14 @@ export interface SpaceColonization2029Service {
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
     contact_info: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -278,10 +487,19 @@ export interface SpaceColonization2029Service {
     reviews: 67,
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      'Multi-source energy harvesting',
+      'AI-powered energy optimization',
+=======
 
       'Multi-source energy harvesting',
       'AI-powered energy optimization',
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'space - energy - harvesting - platform',
     name: 'Space Energy Harvesting Platform',
     tagline: 'Harvest energy from space sources and celestial bodies',
@@ -292,7 +510,14 @@ export interface SpaceColonization2029Service {
     features: [;
       'Multi - source energy harvesting',
       'AI - powered energy optimization',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Advanced energy storage',
       'Power distribution systems',
       'Energy efficiency monitoring',
@@ -304,6 +529,11 @@ export interface SpaceColonization2029Service {
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
@@ -312,7 +542,34 @@ export interface SpaceColonization2029Service {
     rating: 4.8,
     reviews: 52,
   },;
+<<<<<<< HEAD
+
+
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
+    launchDate: '2029-03-01';
+    customers: 18;
+    rating: 4.8
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviews: 52
+
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    reviews: 52
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / space - energy - harvesting - platform',
@@ -421,13 +678,43 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '500% annual growth', variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com';
+    }
+];
+;
+  }
+];
+=======
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    real_implementation: true,
+    implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
+    launch_date: '2029 - 03 - 01';
+    customers: 18;
+    rating: 4.8,
+    reviews: 52;
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 =======
+;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     realImplementation: true
     implementationDetails:
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.'
@@ -671,15 +958,27 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
+    launchDate: '2029-03-01'
+    customers: 18
+    rating: 4.8
+    reviews: 52
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
     rating: 4.8,
     reviews: 52,
   },;
+<<<<<<< HEAD
+=======
 =======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -691,9 +990,15 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18;
     rating: 4.8
 
+<<<<<<< HEAD
+    reviews: 52
+  }
+];
+=======
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpaceColonization2029Service {;
   id: string,;
@@ -735,6 +1040,8 @@ export interface SpaceColonization2029Service {;
   rating: number,;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
 
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
@@ -777,6 +1084,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   // Space Colonization & Mining Services;

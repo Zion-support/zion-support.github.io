@@ -1,5 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { logWarn } from '@/utils/productionLogger'
+import { logWarn } from '@/utils/productionLogger'
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from '@/utils/productionLogger';
+ursor/fix-website-loading-errors-and-merge-6662
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from '@/utils/productionLogger';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { logWarn } from '@/utils/productionLogger',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface ServiceStatus {
+=======
 interface ServiceStatus {
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
   description: string
@@ -16,6 +37,8 @@ class ErrorBoundary extends React.Component {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 ;
@@ -24,6 +47,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
@@ -68,6 +92,18 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     
     return this.props.children;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        return <CheckCircle className="h-5 w-5 text-green-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />
+      default:;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />};
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
   )
@@ -367,7 +403,11 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
       </main>
     </>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { log_warn } from '@/utils / production_logger';
 interface ServiceStatus {
@@ -385,5 +425,82 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
 }
+<<<<<<< HEAD
+                  </CardContent>;
+                </Card>;
+              </div>;
+              <div className="text-center">;
+                <p className="text-zion-slate-light mb-4">;
+                  For detailed incident history and real-time updates:;
+                </p>;
+                <Button;
+                  variant="outline";
+                  asChild;
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                >;
+                  <a;
+                    href={statusUrl} ;
+                    target="_blank";
+                    rel="noopener noreferrer";
+                    className="flex items-center gap-2";
+                  >;
+                    <ExternalLink className="h-4 w-4" />;
+                    Visit Full Status Page;
+                  </a>;
+                </Button>;
+              </div>;
+            </>;
+          )}
+;
+          <div className="mt-12 text-center">;
+            <Card className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-white">Need Help?</CardTitle>;
+              </CardHeader>;
+              <CardContent className="space-y-4">;
+                <p className="text-zion-slate-light">;
+                  If you're experiencing issues not reflected here, please contact our support team.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                  >;
+                    <Link href="/contact">Contact Support</Link>;
+                  </Button>;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10";
+                  >;
+                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">;
+                      @ZionTechGroup;
+                    </a>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
   );
 }
+;
+;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

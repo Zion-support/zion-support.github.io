@@ -1,3 +1,79 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+import React, { useState, useEffect } from "react"
+import { safeStorage } from "@/utils/safeStorage"
+import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile"
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile",
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
+}
+import React, { useState, useEffect } from "react"
+import { safeStorage } from "@/utils/safeStorage"
+import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile"
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile",
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
+    // Only show banner on mobile devices and if it hasn't been dismissed before
+    if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
+      // Delay showing the banner by 2 seconds
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+  if (!isMobile |!isVisible) return null
+      }, 2000)
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile])
+  const dismissBanner = () => {
+    setIsVisible(false)
+    safeStorage.setItem("appBannerDismissed", "true")
+  }
+  // Only render on mobile devices
+  if (!isMobile |!isVisible) return null
+  if (!isMobile || !isVisible) return null
+      }, 2000),
+      
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile]),
+  
+  const dismissBanner = () => {
+    setIsVisible(false),
+    safeStorage.setItem("appBannerDismissed", "true")
+  },
+  
+  // Only render on mobile devices
+  if (!isMobile || !isVisible) return null,
+  
+  return (
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -23,12 +99,36 @@ return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+};
+'"};
+};
+  )
+  )
+}
+'"}
+}
+
+},
+import React, { useState, useEffect } from "react",;
+import { safeStorage } from "@/utils/safeStorage",;
+import { X } from 'lucide-react';
+import { useIsMobile } from "@/hooks/use-mobile",;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile";
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
@@ -76,10 +176,20 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 '"},;
 
 };
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Only render on mobile devices;
@@ -116,4 +226,12 @@ if (return null) {
 '"},
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

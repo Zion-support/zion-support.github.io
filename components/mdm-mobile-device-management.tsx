@@ -1,5 +1,40 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+
+import React from 'react';
+
+=======
 import React from 'react',
 import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 
 import {
@@ -11,7 +46,10 @@ import {
   ArrowRight,;
   Smartphone,;
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -21,16 +59,25 @@ import { extraServices } from '../data/extra-services';
 
 
 
+<<<<<<< HEAD
+export default function MDMPage() {
+  const service = extraServices.find(s =>
+    s.link.endsWith('/mdm-mobile-device-management')
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function MDMPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/mdm-mobile-device-management');
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -115,9 +162,28 @@ export default function MDMPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
+<<<<<<< HEAD
+import Head from 'next / head';
+import {
+<<<<<<< HEAD
+import React from 'react',
+import React from 'react';
+import Head from 'next/head';
+
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Smartphone;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 import Head from 'next / head';
 import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Phone,
   Mail,
   MapPin,
@@ -230,11 +296,23 @@ if (return null) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -254,6 +332,11 @@ export default function MDMPage() {;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/mdm-mobile-device-management" />
       </Head>
@@ -282,6 +365,10 @@ export default function MDMPage() {;
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -357,15 +444,47 @@ export default function MDMPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
               </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+
+
+}
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 }
 
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

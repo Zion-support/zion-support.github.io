@@ -1,16 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
 ;
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -26,12 +46,26 @@ interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Link>;
             {/* Submenu */}
             {item && item.submenu && activeItem === item && item.name && (;
               <motion&& motion.div
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -67,6 +101,21 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+};
+
+export default InteractiveNavigation;};
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -74,6 +123,14 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
+            <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
+            <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
 
@@ -160,8 +217,24 @@ const InteractiveNavigation: React.FC: = () => {";
 
 export default Component}
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default Component}
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default Component}
+
+export default Component}
+export default Component}
+;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

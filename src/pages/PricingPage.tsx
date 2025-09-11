@@ -1,19 +1,5 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
-const categoryIcons = {
-  'AI Business Solutions': Brain,
-    'IT Infrastructure': Cloud,
-    'Data Analytics': BarChart3,
-    'AI Development': Code,
-    'FinTech': DollarSign,
-    'HealthTech': Heart,
-    'E-commerce': ShoppingCart,
-  'EdTech': GraduationCap
+<<<<<<< HEAD
+import React from 'react';
 
 
 };
@@ -397,4 +383,19 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+<<<<<<< HEAD:src/pages/PricingPage.jsx
+    </div>);
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
+=======
+    
+    return this.props.children;
+  }
+}
+import React from 'react'; const PricingPage = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Pricing Plans </h1> <p className="text-xl text-gray-600"> Choose the perfect plan for your business needs. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Basic</h3> <p className="text-3xl font-bold text-gray-900 mb-4">$99/month</p> <ul className="space-y-2 text-gray-600"> <li>Basic AI solutions</li> <li>Email support</li> <li>Standard security</li> </ul> <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"> Get Started </button> </div> <div className="bg-white p-6 rounded-lg shadow-md border-2 border-blue-600"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional</h3> <p className="text-3xl font-bold text-gray-900 mb-4">$299/month</p> <ul className="space-y-2 text-gray-600"> <li>Advanced AI solutions</li> <li>Priority support</li> <li>Enhanced security</li> <li>Custom integrations</li> </ul> <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"> Get Started </button> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Enterprise</h3> <p className="text-3xl font-bold text-gray-900 mb-4">Custom</p> <ul className="space-y-2 text-gray-600"> <li>Full AI suite</li> <li>24/7 support</li> <li>Enterprise security</li> <li>Custom development</li> </ul> <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"> Contact Sales </button> </div> </div> </div> </div> )}; export default PricingPage;
+
+import React from 'react'; const PricingPage = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Pricing Plans </h1> <p className="text - xl text - gray - 600"> Choose the perfect plan for your business needs. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Basic</h3> <p className="text - 3xl font - bold text - gray - 900 mb - 4">$99 / month</p> <ul className="space - y-2 text - gray - 600"> <li > Basic AI solutions</li> <li > Email support</li> <li > Standard security</li> </ul> <button className="w - full mt - 4 bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700"> Get Started </button> </div> <div className="bg - white p - 6 rounded - lg shadow - md border - 2 border - blue - 600"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Professional</h3> <p className="text - 3xl font - bold text - gray - 900 mb - 4">$299 / month</p> <ul className="space - y-2 text - gray - 600"> <li > Advanced AI solutions</li> <li > Priority support</li> <li > Enhanced security</li> <li > Custom integrations</li> </ul> <button className="w - full mt - 4 bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700"> Get Started </button> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Enterprise</h3> <p className="text - 3xl font - bold text - gray - 900 mb - 4">Custom</p> <ul className="space - y-2 text - gray - 600"> <li > Full AI suite</li> <li > 24 / 7 support</li> <li > Enterprise security</li> <li > Custom development</li> </ul> <button className="w - full mt - 4 bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700"> Contact Sales </button> </div> </div> </div> </div> )} export default PricingPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
     </div>)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
