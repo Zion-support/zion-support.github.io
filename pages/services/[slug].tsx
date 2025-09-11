@@ -48,10 +48,16 @@ import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-ad
 import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
 import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
 import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batch';
-
 import { verifiedRealServices2025Batch3 } from '../../data/verified-real-services-2025-batch3';
-
 import { realAdditions2025Q3 } from '../../data/real-additions-2025-q3';
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+import { aiAutonomousEcosystemServices2029 } from '../../data/2029-ai-autonomous-ecosystem';
+import { emergingTechBreakthroughServices2029 } from '../../data/2029-emerging-tech-breakthroughs';
+import { practicalBusinessSolutionServices2029 } from '../../data/2029-practical-business-solutions';
+import { professionalServices } from '../../data/professional-services';
+import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
+import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
+import { realMarketServicesBatchQ4B2025 } from '../../data/real-market-services-batch-q4b-2025';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -83,6 +89,7 @@ function getAllServices(): Service[] {
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
 		.concat(real2025Q4AugmentedBatch as unknown as Service[])
+		.concat(realMarketServicesBatchQ4B2025 as unknown as Service[])
 		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
 		.concat(real2026Additions as unknown as Service[])
