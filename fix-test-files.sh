@@ -19,10 +19,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-// Basic test file - replace with actual component import
+// Basic test file - replace with actual tests
 describe('Component', () => {
-  test('renders without crashing', () => {
-    // Add your test here
+  it('renders without crashing', () => {
     expect(true).toBe(true);
   });
 });
@@ -31,7 +30,6 @@ EOF
     
     # Replace the original file
     mv "$file.tmp" "$file"
-    
     echo "Fixed: $file"
 done
 
