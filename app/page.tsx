@@ -56,7 +56,7 @@ export default function HomePage() {
               Comprehensive technology solutions tailored to your business needs
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             <Card
               title='Micro SaaS'
               href='/services/micro-saas'
@@ -68,6 +68,12 @@ export default function HomePage() {
               href='/services/ai-services'
               description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
               icon='🤖'
+            />
+            <Card
+              title='Edge Computing'
+              href='/services/edge-computing'
+              description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
+              icon='⚡'
             />
             <Card
               title='IT Services'
@@ -305,21 +311,21 @@ export default function HomePage() {
             </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
+            <Link href='/resources/ai-implementation-checklist' className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-all group'>
               <div className='text-3xl mb-2'>✅</div>
-              <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist</h3>
+              <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Implementation Checklist</h3>
               <p className='text-sm opacity-90'>Complete step-by-step guide for successful AI deployment</p>
-            </div>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
+            </Link>
+            <Link href='/blog/ai-automation-enterprise-2025' className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-all group'>
               <div className='text-3xl mb-2'>🤖</div>
-              <h3 className='text-lg font-semibold mb-2'>Enterprise AI Automation</h3>
+              <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Enterprise AI Automation</h3>
               <p className='text-sm opacity-90'>Comprehensive 2025 implementation guide with real case studies</p>
-            </div>
-            <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center'>
+            </Link>
+            <Link href='/blog/startup-funding-ai-era' className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-all group'>
               <div className='text-3xl mb-2'>💰</div>
-              <h3 className='text-lg font-semibold mb-2'>Startup Funding in AI Era</h3>
+              <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Startup Funding in AI Era</h3>
               <p className='text-sm opacity-90'>Complete guide to securing funding for AI startups</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
