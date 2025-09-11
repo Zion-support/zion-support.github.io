@@ -114,20 +114,19 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <ArticleCard
-              title='AI Infrastructure Blueprint for 2025'
-              href='/blog/ai-infrastructure-blueprint'
-              description='Design a scalable, cost-efficient AI stack with the right guardrails.'
+              title='LLM Cost Optimization Playbook'
+              href='/blog/llm-cost-optimization-playbook'
+              description='Cut LLM spend 20–50% via routing, retrieval, batching, and observability.'
             />
             <ArticleCard
-              title='Go-To-Market Playbook for Micro SaaS'
-              href='/blog/go-to-market-for-micro-saas'
-              description='Positioning, channels, and activation to land your first 200 customers.'
+              title='AI Governance Checklist 2025'
+              href='/blog/ai-governance-checklist-2025'
+              description='Operationalize policy with risk tiering, evals, and release gates.'
             />
-            <Card
-              title='GenAI in Production: SLAs, Costs, and Control in 2025'
-              href='/blog/genai-in-production-slas-costs-control-2025'
-              description='SLOs, guardrails, and budget enforcement to ship reliable GenAI products.'
-              icon='📊'
+            <ArticleCard
+              title='AI Copilots for Engineering Teams'
+              href='/blog/ai-copilots-for-engineering'
+              description='Secure, repo-aware copilots to speed reviews and reduce toil.'
             />
           </div>
         </div>
