@@ -48,15 +48,103 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', icon: null },
   ];
 
-  const serviceCategories = [
-    { name: 'AI & Machine Learning', href: '/services/ai', icon: Brain, description: 'Advanced AI solutions for business transformation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Next-gen security and threat protection' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Scalable cloud infrastructure and automation' },
-    { name: 'Quantum Computing', href: '/services/quantum', icon: Cpu, description: 'Cutting-edge quantum solutions' },
-    { name: 'Blockchain & Web3', href: '/services/blockchain', icon: Database, description: 'Decentralized technology solutions' },
-    { name: 'IoT & Edge Computing', href: '/services/iot', icon: Globe, description: 'Connected device ecosystems' },
-    { name: 'Space Technology', href: '/services/space', icon: Rocket, description: 'Space-based innovations' },
-    { name: 'Green Technology', href: '/services/green', icon: Sparkles, description: 'Sustainable tech solutions' },
+  const services = [
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Healthcare Platform', 
+      href: '/services/ai-healthcare-platform', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Content Creation', 
+      href: '/services/ai-content-creation', 
+      icon: PenTool, 
+      description: 'Content Generation & Optimization',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Services Showcase 2025', 
+      href: '/services/showcase-2025', 
+      icon: Star, 
+      description: 'Comprehensive 2025 Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Analytics Dashboard', 
+      href: '/analytics-dashboard', 
+      icon: BarChart3, 
+      description: 'Performance & ROI Metrics',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity', 
+      icon: Shield, 
+      description: 'AI-Powered Security',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge-computing', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    }
   ];
 
   const isActive = (path: string) => location.pathname === path;
