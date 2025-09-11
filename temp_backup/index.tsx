@@ -1,42 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function HomePage() {
-  return (
-        <div className="space-y-20">
-          {/* Hero */}
-          <FuturisticHero
-            title="Zion — The AI‑Powered Marketplace"
-            subtitle="Discover services, products, and expert talent. Automate workflows. Accelerate delivery."
-            className="bg-gradient-to-r from-indigo-700 via-fuchsia-600 to-cyan-600 text-white py-20 shadow-xl"
-          >
-            <div className="flex flex-col items-center gap-4">
-              <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/services" className="px-6 py-3 rounded-lg bg-white text-gray-900 font-semibold shadow hover:shadow-md transition">
-                  Explore Services
-                </Link>
-                <Link href="/products" className="px-6 py-3 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/15 transition">
-                  Browse Products
-                </Link>
-                <Link href="/talent" className="px-6 py-3 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/15 transition">
-                  Hire Talent
-                </Link>
-                <Link href="/automation" className="px-6 py-3 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/15 transition">
-                  Automation Dashboard
-                </Link>
-              </div>
-              <InteractiveSearch
-                placeholder="Search services, products, and resources..."
-                onSearch={(q) => {
-                  if (!q) return;
-                  // Simple client-side redirect to blog search or services for now
-                  window.location.href = `/blog`; // placeholder: central content hub
-                }}
-                className="w-full max-w-2xl"
-              />
-            </div>
-          </FuturisticHero>
-
           {/* Snapshot stats */}
           <section className="container mx-auto px-4">
             <InteractiveStats
@@ -760,14 +721,22 @@ export default function Home() {
       <UltraFuturisticFooter2029 />
     </>  );
 export default function HomePage() {
-	return (
-		<Layout>
+import Head from 'next/head'
+
+export default function Home() {	return (
+		<div className="min-h-screen bg-black text-white">
 			<Head>
-				<title>Zion Tech Group | Micro SaaS, AI, IT & Quantum Solutions</title>
-				<meta name="description" content="Real micro SaaS, AI, and IT services with transparent pricing and fast onboarding. Contact +1 302 464 0950 or kleber@ziontechgroup.com." />
-				<link rel="canonical" href="https://ziontechgroup.com/" />
+				<title>Zion Tech Group</title>
+				<meta name="description" content="Zion Tech Group website" />
 			</Head>
 			<Homepage2025 />
 		</Layout>
 	);
+}
+			<main className="max-w-3xl mx-auto px-4 py-16">
+				<h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>
+				<p className="text-gray-300">Site setup successful. More pages re-enabling soon.</p>
+			</main>
+		</div>
+	)
 }

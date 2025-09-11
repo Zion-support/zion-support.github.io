@@ -49,12 +49,6 @@ interface SEOProps {
   description: string;
   keywords?: string;
   canonical?: string;
-<<<<<<< HEAD
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noindex?: boolean;
-=======
   image?: string;
   type?: 'website' | 'article' | 'profile' | 'product';
   author?: string;
@@ -111,7 +105,6 @@ export function SEO({
       
       {/* Business Information */}
       <meta name="application-name" content={siteName} />
-=======
       <meta name="author" content={author || 'Zion Tech Group'} />
       
       {/* Canonical URL */}
@@ -188,7 +181,6 @@ export function SEO({
           })}
         </script>
       )}
-=======
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -212,7 +204,5 @@ export function SEO({
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======    </Helmet>
   );
 }

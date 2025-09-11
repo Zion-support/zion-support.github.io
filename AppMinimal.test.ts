@@ -14,4 +14,3 @@ describe('UnknownComponent', () => {;
     render(<UnknownComponent />);
     // Add interaction tests based on component functionality;
 });
-});

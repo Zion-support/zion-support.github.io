@@ -1,4 +1,5 @@
-// Hook for useReferrals,
-export const useUseReferrals: unknown = $2;
+// Hook for useReferrals,;
+export const useUseReferrals: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

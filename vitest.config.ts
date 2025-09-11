@@ -15,4 +15,3 @@ export { defineConfig };export default defineConfig({;
       provider: 'v8',,
 },,
 },,
-});

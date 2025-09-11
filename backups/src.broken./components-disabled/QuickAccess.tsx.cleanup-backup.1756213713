@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 const quickAccessItems = [
   {
     title: 'Find Talent',
@@ -188,8 +187,6 @@ export function QuickAccess() {
     </section>
   );
 }
-=======
-import React from 'react';=======
 
 import React from 'react';import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
 
@@ -288,13 +285,5 @@ export const QuickAccess: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

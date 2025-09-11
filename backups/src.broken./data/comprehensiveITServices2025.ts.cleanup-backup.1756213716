@@ -396,7 +396,6 @@ export interface ComprehensiveITService {
     estimatedDelivery: "4-8 weeks",
     supportLevel: "premium",
     marketPrice: "$999 - $4,000/month",
-=======
     technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
     integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
     compliance: ["Service level agreements", "Support standards", "User privacy"],
@@ -575,7 +574,6 @@ export interface ComprehensiveITService {
     estimatedDelivery: "2-4 weeks",
     supportLevel: "premium",
     marketPrice: "$799 - $3,000/month",
-=======
     technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
     integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
     compliance: ["Security standards", "Quality standards", "Industry regulations"],
@@ -759,8 +757,6 @@ export interface ComprehensiveITService {
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-=======    technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
     integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
     compliance: ["Project standards", "Quality standards", "Industry best practices"],
     roi: "600% within 12 months",
@@ -773,7 +769,6 @@ export interface ComprehensiveITService {
     customizationLevel: "Custom project management methodologies and tools",
     serviceLevel: "Comprehensive project management and support"
 export default COMPREHENSIVE_IT_SERVICES_2025;
-=======
     marketPrice: "$15,000/month (Industry average: $30,000/month)",
     competitors: ["Cisco DNA Center", "Juniper Contrail", "VMware NSX", "OpenDaylight"],
     roi: "300% ROI within 6 months",
@@ -1020,7 +1015,6 @@ export default COMPREHENSIVE_IT_SERVICES_2025;
       "Technology companies"
     ],
     tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -1090,7 +1084,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
 export default comprehensiveITServices2025;
-=======
     technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
     integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
     compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
@@ -1634,8 +1627,6 @@ export default comprehensiveITServices2025;
   }
 ];
 
-export default COMPREHENSIVE_IT_SERVICES_2025;>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
   }
 ];
 

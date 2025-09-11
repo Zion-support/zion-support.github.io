@@ -25,3 +25,12 @@ core
 
 # TypeScript build info
 *.tsbuildinfo
+
+# npm cache
+.npm-cache/
+
+# Large files and build artifacts
+.next/cache/
+deployment.tar.gz
+tsconfig.tsbuildinfo
+*.log

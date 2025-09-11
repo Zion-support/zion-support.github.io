@@ -49,7 +49,6 @@ export default function GreenIT() {
             <a href="#services" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-900 font-semibold rounded-lg transition-all duration-300">
               Learn More
             </a>
-=======
 const GreenIT: React.FC = () => {
   const greenServices = [
     {
@@ -176,31 +175,6 @@ const GreenIT: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Contact Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Ready to Go Green?</h2>
-          <p className="text-gray-300 mb-8">Contact us today to discuss your sustainable IT needs</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="flex items-center justify-center gap-3 text-gray-300">
-              <Phone className="w-5 h-5 text-green-400" />
-              <span>{contactInfo.mobile}</span>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-gray-300">
-              <Mail className="w-5 h-5 text-green-400" />
-              <span>{contactInfo.email}</span>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-gray-300">
-              <MapPin className="w-5 h-5 text-green-400" />
-              <span>{contactInfo.address}</span>
-            </div>
-          </div>
-          <a href="/contact" className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300">
-            Contact Us Today
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -369,8 +343,6 @@ const GreenIT: React.FC = () => {
               View Solutions
             </a>
           </div>
-=======
-=======import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $service: React.FC = () => {
@@ -395,11 +367,6 @@ const $service: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
-<<<<<<< HEAD
-export default GreenIT;
-=======
-export default $service;>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 };
 
 export default $service;

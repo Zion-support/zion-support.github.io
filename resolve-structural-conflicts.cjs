@@ -18,10 +18,6 @@ function resolveStructuralConflicts() {
       let content = fs.readFileSync(file, 'utf8');
       
       // Remove merge conflict markers
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-      content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
       
       // Clean up any remaining artifacts
       content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

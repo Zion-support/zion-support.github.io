@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react';
+import { _useState, useEffect } from 'react';
+
+import { Check } from 'lucide-react';
+import { useAuth } from '../hooks/useAuth';
 interface User {;
   "id": "string;
   "email": string;
@@ -21,19 +24,19 @@ export function useAuth() {;
   "});
   useEffect(() => {;
     // Check if user is logged in (e.g., check localStorage, cookies, etc.);
-    const storedUser = localStorage.getItem('user');
-    const token = localStorage.getItem('token');
+    const _storedUser = localStorage.getItem('user');
+    const _token = localStorage.getItem('token');
     ;
     if (storedUser && token) {;
       try {;
-        const user = JSON.parse(storedUser);
+        const _user = JSON.parse(storedUser);
         setAuthState({;
           user;
           "isAuthenticated": "true;
           "isLoading": false;
         "});
       } catch (error) {;
-        console.error('Error parsing stored "user":', error);
+        // console.error('Error parsing stored "user":', error);
         setAuthState({;
           "user": "null;
           "isAuthenticated": false;
@@ -48,12 +51,12 @@ export function useAuth() {;
       "});
     }
   }, []);
-  const login = async ("email": "string", "password": "string) => {;
+  const _login = async ("email": "string", "password": "string) => {;
     try {;
       setAuthState(prev => ({ ...prev", "isLoading": "true "}));
       ;
       // Simulate API call;
-      const response = await fetch('/api/auth/login', {;
+      const _response = await fetch('/api/auth/login', {;
         "method": 'POST';
         "headers": "{;
           'Content-Type': 'application/json';
@@ -62,9 +65,9 @@ export function useAuth() {;
       });
       ;
       if (response.ok) {;
-        const data = await response.json();
-        const user = data.user;
-        const token = data.token;
+        const _data = await response.json();
+        const _user = data.user;
+        const _token = data.token;
         ;
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', token);
@@ -80,12 +83,12 @@ export function useAuth() {;
         throw new Error('Login failed');
       }
     } catch (error) {;
-      console.error('Login "error":', error);
+      // console.error('Login "error":', error);
       setAuthState(prev => ({ ...prev, "isLoading": "false "}));
       return { "success": "false", "error": "error.message "}
     }
   }
-  const logout = () => {;
+  const _logout = () => {;
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     setAuthState({;
@@ -94,7 +97,7 @@ export function useAuth() {;
       "isLoading": false;
     "});
   }
-  const register = async ("userData": "{;
+  const _register = async ("userData": "{;
     "name": string;
     "email": string;
     "password": string;
@@ -103,7 +106,7 @@ export function useAuth() {;
     try {;
       setAuthState(prev => ({ ...prev, "isLoading": "true "}));
       ;
-      const response = await fetch('/api/auth/register', {;
+      const _response = await fetch('/api/auth/register', {;
         "method": 'POST';
         "headers": "{;
           'Content-Type': 'application/json';
@@ -112,9 +115,9 @@ export function useAuth() {;
       "});
       ;
       if (response.ok) {;
-        const data = await response.json();
-        const user = data.user;
-        const token = data.token;
+        const _data = await response.json();
+        const _user = data.user;
+        const _token = data.token;
         ;
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', token);
@@ -130,108 +133,9 @@ export function useAuth() {;
         throw new Error('Registration failed');
       }
     } catch (error) {;
-      console.error('Registration "error":', error);
+      // console.error('Registration "error":', error);
       setAuthState(prev => ({ ...prev, "isLoading": "false "}));
       return { "success": "false", "error": "error.message "}
     }
   }
   return {;
-    ...authState;
-    login;
-    logout;
-    register;
-  }
-}          setAuthState({
-            user: nul l,
-            isAuthenticated: fals e,
-            isLoading: fals e
-          }
-    );
-        }
-      } catch (error) {
-        console.error('Error parsing stored user:', error);
-        setAuthState({
-          user: nul l,
-          isAuthenticated: fals e,
-          isLoading: fals e
-        }
-    );
-      }
-    };
-    checkAuth();
-  }, []);
-          isLoading: fals e,
-        })}
-    };
-
-    checkAuth()}, []);
-    setAuthState({
-      user: mockUse r,
-      isAuthenticated: tru e,
-      isLoading: fals e
-    }
-    );
-    // Store user data in localStorage
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'mock-jwt-token');
-    return { success: tru e, user: mockUse r };
-  };
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
-    return { success: tru e, user: mockUse r }};
-    // Clear localStorage
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken');
-  };
-  const register = async (email: string, password: string, name: string) => {
-    // Mock registration - in real app this would call an API
-    const mockUser: Use r = {
-      id: '1',
-      email,
-      name,
-      role: 'user',
-      userType: 'individual',
-      displayName: nam e,
-      avatarUrl: '/default-avatar.png'
-    };
-    setAuthState({
-      user: mockUse r,
-      isAuthenticated: tru e,
-      isLoading: fals e
-    }
-    );
-    // Store user data in localStorage
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'mock-jwt-token');
-    return { success: tru e, user: mockUse r };
-  };
-  const updateProfile = (props: any) => {
-    if (authState.user) {
-      const updatedUser = { ...authState.user, ...updates };
-      setAuthState(prev => ({
-        ...prev,
-        user: updatedUse r
-      }));
-';
-      // Update localStorage';';
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));      // Update localStorage
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-    }
-  };
-  return {
-    ...authState,
-    login,
-    logout,
-    register,
-:src/hooks/useAuth.tsx
-    updateProfile}}
-'
-    updateProfile,
-  }}
-';
-</AuthState>';';
-    logout
-  };
-}
-</AuthState>

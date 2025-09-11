@@ -5,4 +5,3 @@ export const MARKETPLACE_LISTINGS = [
     description: 'A sample marketplace listing',
     price: 100,
   },
-];

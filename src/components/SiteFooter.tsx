@@ -1,9 +1,13 @@
 import React from 'react',;',';';
     ;
 import Link from 'next/link';
+
+import { Link } from 'react-router-dom';
+const services = [];
+const solutions = [];
 export function SiteFooter("props": "any) {';
-  const currentYear = new Date().getFullYear();';';
-  const navSections = [';';' {'",';';
+  const _currentYear = new Date().getFullYear();';';
+  const _navSections = [';';' {'",';';
     ';';';
       "title": 'Company',';';';
       "links": "['",';';
@@ -43,7 +47,7 @@ export function SiteFooter("props": "any) {';
 ]';
 }';';
 ]';';';
-  const social = [',';';
+  const _social = [',';';
     ';';' { "label": 'LinkedIn', "href": '"https": "//linkedin.com/company/zion-tech-group' "},',';';
     ';';' { "label": 'Twitter', "href": '"https": "//twitter.com/ziontechgroup' "},',';';
     ';';' { "label": 'GitHub', "href": '"https": "//github.com/ziontechgroup' "}

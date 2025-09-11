@@ -541,7 +541,6 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
                 <MessageCircle className="h-4 w-4 mr-2" />
                 Contact Sales
-=======
             <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -593,8 +592,6 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
       <DynamicListingPage 
         title="Comprehensive Micro SAAS Solutions"
         description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
@@ -605,7 +602,5 @@ export default function ServicesPage() {
       />
       
       <TrustedBySection />
-    </>=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

@@ -94,6 +94,23 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
+    return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>;
+      {/* Header */}";
+      <div className="flex items-center justify-between mb-6">;
+        <div>";
+          <h3 className="text-lg font-semibold text-white">Link Health Status</h3>";
+          <p className="text-sm text-gray-400">Monitoring the health of our website links</p>;
+        </div>";
+        <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-600 "hover": "bg-blue-700 "disabled":bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2">;
+          {isChecking ? (<>";
+              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />;
+              Checking...;
+            </>) : (<>";
+              <CheckCircle className="w-4 h-4" />;
+              Recheck;
+            </>)"}
+        </button>;
+      </div>;
     return (
         <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>
       {/* Header */}"
@@ -131,6 +148,14 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
       <div className="space-y-3">;
         {links.map((link, index) => {;
             const status = linkStatuses[index];
+            if(!status);
+                return null;";
+            return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg "hover": "border-white/20 transition-colors duration-300">";
+              <div className="flex items-center gap-3">;
+                {getStatusIcon(status.status)"}
+                <div>";
+                  <div className="text-white font-medium">{link.label}</div>";
+                  <div className="text-sm text-gray-400">{link.url}</div>";
             if(!status)
                 return null;"
             return (

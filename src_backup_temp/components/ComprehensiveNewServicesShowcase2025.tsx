@@ -326,7 +326,8 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
 }
 ;
 export default ComprehensiveNewServicesShowcase2025;
-export default ComprehensiveNewServicesShowcase2025;import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
+export default ComprehensiveNewServicesShowcase2025;
+import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page(props: any) {
 ;
   return ()
@@ -428,6 +429,20 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             Discover our comprehensive suite of innovative Micro SAAS, IT Infrastructure, and AI services 
             designed to transform your business and drive unprecedented growth.
           </p>
+        </div>
+        {/* Search and Filter Section */}"
+        <div className="mb-12">"
+          <div className="flex flex-col lg: fle x-row gap-4 items-center justify-between">
+            {/* Search */}"
+            <div className="relative flex-1 max-w-md">"
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />
+              <input"
+                type="text"
+                placeholder="Search services..."                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}"
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
+              />
+            </div>
             {/* Category Filter */}"
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
@@ -454,6 +469,48 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
                 <span className="font-semibold">Middletown, DE</span>
+              </div>
+            </div>
+            {/* Sort */}
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}"
+              className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
+            >"
+              <option value="featured">Featured First</option>"
+              <option value="price-low">Price: Low to High</option>"
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        {/* Services Grid */}"
+        <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
+          {filteredServices.map((service, index)  => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 2 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: inde x * 0.1 }}"
+              className="bg-gray-800 rounded-xl p-6 hover: b g-gray-700 transition-all duration-300 border border-gray-700 hover: borde r-cyan-500/30 group"
+            >
+              {/* Service Header */}"
+              <div className="flex items-start justify-between mb-4">"
+                <div className="flex items-center space-x-3">`
+                  <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-lg flex items-center justify-center text-2xl`}>
+                    {service.icon}
+                  </div>
+                  <div>"
+                    <h3 className="text-lg font-bold text-white group-hover: tex t-cyan-400 transition-colors">
+                      {service.title}
+                    "
+                    <p className="text-sm text-gray-400">{service.tagline}</p>
+                  </div>
+                </div>
+                {service.featured && ("
+                  <div className="flex items-center space-x-1 text-yellow-400">"
+                    <Star className="w-4 h-4 fill-current"   />"                    <span className="text-xs">Featured</span>
+                  </div>
+                )}
               </div>
               {/* Description */}"
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -489,7 +546,8 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                       +{service.features.length-3} more features
                         </div>
   );
-}                  {service.features.length > 3 && ("
+}
+                  {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length-3} more features
                     </div>) }
@@ -668,7 +726,14 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
 export default ComprehensiveNewServicesShowcase2025;'"`
 </motion>
 </motion>';
-</motion>;';;';</motion>
+</motion>;';;';
+        )}
+      </div>
+    </div>
+  );
+}
+export default ComprehensiveNewServicesShowcase2025;
+</motion>
 </motion>
 </motion>
 </motion>

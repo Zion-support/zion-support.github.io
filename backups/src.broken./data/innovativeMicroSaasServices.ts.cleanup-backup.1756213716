@@ -202,8 +202,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     title: "AI Predictive Maintenance Platform",
     description: "Intelligent maintenance platform that uses AI and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
     category: "AI & IoT",
-    subcategory: "Predictive Maintenance",==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     id: "ai-content-factory",
     title: "AI Content Factory Pro",
     description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content across multiple formats including blogs, social media, emails, and video scripts.",
@@ -291,7 +289,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     description: "Advanced sales intelligence platform that provides real-time insights, lead scoring, and predictive analytics to boost sales performance.",
     category: "AI Sales Intelligence",
     subcategory: "Business Intelligence",
-==============      "AI-powered failure prediction",
       "IoT sensor integration",
       "Real-time monitoring",
       "Maintenance scheduling",
@@ -641,8 +638,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
     marketPrice: "$899 - $2,999/month",
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Legal Document Analysis
   {
     id: "ai-legal-doc-analyzer",
@@ -757,7 +752,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$499 - $1,499/month",
-==============    },
     technology: ["React", "Node.js", "PostgreSQL", "Python", "Redis"],
     integrations: ["Shopify", "WooCommerce", "QuickBooks", "Xero", "ShipStation"],
     compliance: ["GDPR", "SOC 2"],
@@ -858,8 +852,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$199 - $699/month",
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     technology: ["Python", "React", "Node.js", "PostgreSQL", "BERT"],
     integrations: ["SurveyMonkey", "Typeform", "Google Forms", "Social media APIs"],
@@ -1406,7 +1398,6 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
     ],
     tags: ["Blockchain", "Supply Chain", "Traceability", "Transparency", "Compliance"],
     estimatedDelivery: "3-4 weeks",
-==============      "Emergency medicine doctors",
       "Healthcare administrators",
       "Medical imaging technicians"
     ],
@@ -1465,8 +1456,6 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/ai-mental-health"
-==============
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     aiScore: 99,
     rating: 4.9,
     reviewCount: 312,
@@ -1586,7 +1575,6 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
     ],
     pricingTier: 'Professional',
     website: 'https://ziontechgroup.com/services/digital-asset-manager',
-==============    reviewCount: 189,
     launchDate: '2024-02-01',
     status: 'Active',
     marketPrice: '$149 - $999/month',
@@ -1979,7 +1967,3 @@ export const INNOVATIVE_CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
