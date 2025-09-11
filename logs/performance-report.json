@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-09-11T11:34:03.754Z",
+  "timestamp": "2025-09-11T13:55:49.415Z",
   "bundleSize": {
-    "totalBytes": 6094543,
-    "totalSize": "5.81 MB",
-    "gzippedEstimate": 1828362,
+    "totalBytes": 6082534,
+    "totalSize": "5.80 MB",
+    "gzippedEstimate": 1824760,
     "gzippedSize": "1.74 MB",
     "fileCount": 190,
     "recommendations": [
@@ -24,9 +24,9 @@
     ]
   },
   "dependencies": {
-    "totalDependencies": 112,
+    "totalDependencies": 119,
     "productionDependencies": 93,
-    "devDependencies": 19,
+    "devDependencies": 26,
     "potentialUnused": []
   },
   "recommendations": [
