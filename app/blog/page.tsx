@@ -3,6 +3,40 @@ import Link from 'next/link';
 
 export default function BlogPage() {
 	const blogPosts = [
+ 	  // New posts (2025-09)
+ 	  {
+ 	    id: 'ai-productivity-playbook-2025',
+ 	    title: 'AI Productivity Playbook 2025: Ship Faster Without Breaking Things',
+ 	    excerpt:
+ 	      'A pragmatic system to boost throughput with AI while keeping quality, guardrails, and budgets.',
+ 	    date: '2025-09-11',
+ 	    readTime: '9 min read',
+ 	    category: 'AI & Productivity',
+ 	    featured: true,
+ 	    image: '/api/placeholder/600/400',
+ 	  },
+ 	  {
+ 	    id: 'cloud-cost-optimization-2025',
+ 	    title: 'Cloud Cost Optimization 2025: Save 30–50% Without Downtime',
+ 	    excerpt:
+ 	      'Quick wins and architecture moves that cut spend across compute, storage, and networking.',
+ 	    date: '2025-09-11',
+ 	    readTime: '8 min read',
+ 	    category: 'Cloud & DevOps',
+ 	    featured: true,
+ 	    image: '/api/placeholder/600/400',
+ 	  },
+ 	  {
+ 	    id: 'edge-ai-retail-2025',
+ 	    title: 'Edge AI in Retail 2025: Real-Time CX With Privacy by Design',
+ 	    excerpt:
+ 	      'On-device intelligence to reduce latency, protect PII, and personalize experiences at scale.',
+ 	    date: '2025-09-11',
+ 	    readTime: '7 min read',
+ 	    category: 'Edge & IoT',
+ 	    featured: true,
+ 	    image: '/api/placeholder/600/400',
+ 	  },
 	  {
 	    id: 'ai-ops-runbooks-2025',
 	    title: 'AI Ops Runbooks 2025: Resolve Incidents Faster with Guardrails',
