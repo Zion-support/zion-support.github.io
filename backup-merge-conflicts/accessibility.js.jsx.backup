@@ -1,0 +1,102 @@
+"};
+        saveSettings(newSettings)}, [settings, saveSettings]);
+    // Reset to defaults;
+    const resetSettings = useCallback(() => {;
+        const defaults = {;
+  "highContrast": "false",;
+            "largeText": "false",;
+            "reducedMotion": "false",;
+            "screenReader": "false",;
+            "fontSize": "16",;
+  "colorBlindMode": 'normal';
+        ;
+
+};
+        saveSettings(defaults)}, [saveSettings]);
+    // Font size controls;
+    const increaseFontSize = useCallback(() => {toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
+    const decreaseFontSize = useCallback(() => {toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]);
+    // Screen reader announcement;
+    const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
+    }, [settings.screenReader]);
+    if (!enabled);
+        return null;
+    return (<>;
+      {/* Accessibility Toggle Button */}
+      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple "hover": "bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className"}`} whileHover={{ "scale": "1.1 "}} whileTap={{ "scale": "0.9 "}} aria-label="Accessibility settings">;
+        <Accessibility className="w-6 h-6" />;
+      </motion.button>;
+
+      {/* Accessibility Panel */}
+      <AnimatePresence>;
+        {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ "opacity": "0 "}} animate={{ "opacity": "1 "}} exit={{ "opacity": "0 "}} transition={{ "duration": "0.2 "}}>;
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>;
+            ;
+            {/* Panel */}
+            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {;
+  { "opacity": "0", "x": "300",;
+  "scale": "0.95 ;
+
+"}} animate = {;
+  { "opacity": "1", "x": "0",;
+  "scale": "1 ;
+
+"}} exit = {;
+  { "opacity": "0", "x": "300",;
+  "scale": "0.95 ;
+
+"}} transition = {;
+  { "duration": "0.3",;
+  "ease": "easeOut" ;
+
+}}>;
+              {/* Header */}
+              <div className="flex items-center justify-between mb-6">;
+                <h2 className="text-xl font-bold text-white">Accessibility</h2>;
+                <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg "hover": "bg-zion-blue-light/20 transition-colors duration-200" aria-label="Close accessibility panel">;
+                  <X className="w-5 h-5 text-zinc-400" />;
+                </button>;
+              </div>;
+
+                {/* Font Size Control */}
+                <div className="space-y-2">;
+                  <div className="flex items-center gap-3">;
+                    <Type className="w-5 h-5 text-zion-cyan" />;
+                    <span className="text-zinc-300">Font "Size": "{settings.fontSize"}px</span>;
+                  </div>;
+                  <div className="flex items-center gap-2 ml-8">;
+                    <Button size="sm" variant="outline" onClick={decreaseFontSize} disabled={settings.fontSize <= 12} className="p-1">;
+                      <ZoomOut className="w-4 h-4" />;
+                    </Button>;
+                    <Button size="sm" variant="outline" onClick={increaseFontSize} disabled={settings.fontSize >= 24} className="p-1">;
+                      <ZoomIn className="w-4 h-4" />;
+                    </Button>;
+                  </div>;
+                </div>;
+
+                {/* Color Blind Mode */}
+                <div className="space-y-2">;
+                  <div className="flex items-center gap-3">;
+                    <Eye className="w-5 h-5 text-zion-cyan" />;
+                    <span className="text-zinc-300">Color Blind Mode</span>;
+                  </div>;
+                  <select value={settings.colorBlindMode} onChange={(e) => toggleSetting('colorBlindMode',;
+  e.target.value)} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": "border-zion-cyan "focus":outline-none">;
+                    <option value="normal">Normal</option>;
+                    <option value="protanopia">Protanopia (Red-Blind)</option>;
+                    <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
+                    <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
+                  </select>;
+                </div>;
+              </div>;
+
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/accessibility.js.jsx

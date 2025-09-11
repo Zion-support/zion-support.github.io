@@ -1,0 +1,69 @@
+{
+  "timestamp": 1757339401995,
+  "results": [
+    {
+      "url": "https://zion.app/",
+      "strategy": "mobile",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/",
+      "strategy": "desktop",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/automation",
+      "strategy": "mobile",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/automation",
+      "strategy": "desktop",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/main/front",
+      "strategy": "mobile",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/main/front",
+      "strategy": "desktop",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/reports/seo",
+      "strategy": "mobile",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    },
+    {
+      "url": "https://zion.app/reports/seo",
+      "strategy": "desktop",
+      "metrics": {
+        "error": true,
+        "message": "Request failed with status code 429"
+      }
+    }
+  ]
+}

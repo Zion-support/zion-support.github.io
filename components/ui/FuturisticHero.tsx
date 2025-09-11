@@ -1,25 +1,97 @@
-import { ReactNode } from "react";
 
-interface FuturisticHeroProps {
-  children: ReactNode;
-  title?: string;
-  subtitle?: string;
-  className?: string;
-}
-
-export default function FuturisticHero({ 
-  children, 
-  title, 
-  subtitle, 
-  className = "bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20" 
-}: FuturisticHeroProps) {
+export default function FuturisticHero() {
+=======
+=======
+export default function FuturisticHero() {
   return (
-    <div className={className}>
-      <div className="container mx-auto px-4 text-center">
-        {title && <h1 className="text-4xl md:text-6xl font-bold mb-6">{title}</h1>}
-        {subtitle && <p className="text-xl md:text-2xl mb-8 opacity-90">{subtitle}</p>}
-        {children}
-      </div>
-    </div>
+    <section className='relative py-20 sm:py-28'>;
+      <AnimatedBackground />;
+      <div className='text-center max-w-4xl mx-auto'>;
+        <h1 className='text-4xl sm:text-6xl font-extrabold tracking-tight'>;
+          Build and Hire with Zion AI Marketplace;
+        </h1>;
+        <p className='mt-4 text-lg text-gray-600 dark:text-gray-300'>;
+          Discover elite AI talent, launch projects faster, and grow your;
+          business.;
+        </p>;
+        <div className='mt-8 flex items-center justify-center gap-3'>;
+          <Link href='/partners'>;
+            <a className='px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-500'>;
+export default /**
+ * FuturisticHero - Function description
+ */
+function FuturisticHero() {
+  return (
+    <section className='relative py - 20 sm:py - 28'>;
+      <AnimatedBackground />;
+      <div className='text - center max - w-4xl mx - auto'>;
+        <h1 className='text - 4xl sm:text - 6xl font - extrabold tracking - tight'>;
+          Build and Hire with Zion AI Marketplace;
+        </h1>;
+        <p className='mt - 4 text - lg text - gray - 600 dark:text - gray - 300'>;
+          Discover elite AI talent, launch projects faster, and grow your;
+          business.;
+        </p>;
+        <div className='mt - 8 flex items - center justify - center gap - 3'>;
+          <Link href='/partners'>;
+            <a className='px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover:bg - indigo - 500'>;
+              Become a Partner;
+            </a>;
+          </Link>;
+          <Link href='/services'>;
+            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
+=======
+
+            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+              Explore Services;
+            </a>;
+          </Link>;
+        </div>;
   );
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+        <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
+          <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
+            Talent marketplace • Project accelerators • Secure contracts •;
+            Integrated AI toolchain          </p > export default /**
+ * FuturisticHero - Function description
+ */
+function FuturisticHero() {
+  return (
+    <section className="relative py - 20 sm:py - 28">;
+      <AnimatedBackground />;
+      <div className="text - center max - w-4xl mx - auto">;
+        <h1 className="text - 4xl sm:text - 6xl font - extrabold tracking - tight">;
+          Build and Hire with Zion AI Marketplace;
+        </h1>;
+        <p className="mt - 4 text - lg text - gray - 600 dark:text - gray - 300">;
+          Discover elite AI talent, launch projects faster, and grow your business.;
+        </p>;
+        <div className="mt - 8 flex items - center justify - center gap - 3">;
+          <Link href="/partners"><a className="px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover: bg - indigo - 500">Become a Partner</a></Link>;
+          <Link href="/services"><a className="px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900">Explore Services</a></Link>;
+        </div>;
+        <div className="mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow">;
+          <p className="text - sm text - gray - 700 dark:text - gray - 300">;
+            Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain;
+          </p>;
+        </div>;
+      </div>;
+    </section>);
+}
+
+}
+    </section>
+  );
+}
+}
+=======
+=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

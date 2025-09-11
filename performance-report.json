@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-09T23:37:37.077Z",
+  "metrics": {
+    "bundleSize": 73298
+  },
+  "recommendations": [
+    "Enable gzip compression",
+    "Use CDN for static assets",
+    "Implement lazy loading for images",
+    "Minify CSS and JavaScript",
+    "Use modern image formats (WebP, AVIF)"
+  ]
+}
