@@ -15,4 +15,3 @@ describe('fetchPostsByCategory', () => {;
     // Add error handling tests;
     expect(() => fetchPostsByCategory(undefined)).not.toThrow();
 });
-});

@@ -93,7 +93,8 @@ export function Services() {
     {
       title: 'AI Business Intelligence',
       description: 'Get insights from your data with AI-powered analytics',
-      href: '/services/ai-business-intelligence'export default function Services() {
+      href: '/services/ai-business-intelligence'
+export default function Services() {
   const services = [
     {
       title: "AI Solutions",

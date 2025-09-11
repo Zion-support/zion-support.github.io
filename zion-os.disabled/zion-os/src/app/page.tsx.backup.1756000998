@@ -85,7 +85,6 @@ export default function HomePage() {
       color: "indigo",
       bgColor: "bg-indigo-500/20",
       hoverBgColor: "group-hover:bg-indigo-500/30"
-=======
 "use client";
 
 import Link from "next/link";
@@ -336,7 +335,6 @@ export default function HomePage() {
                   <span className="text-gray-700">Future-proof technology stack</span>
                 </li>
               </ul>
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="hero-heading">
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in">
@@ -409,27 +407,6 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Join the AI revolution and unlock unprecedented growth opportunities
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-            >
-              Schedule a Consultation
-            </Link>
-            <Link 
-              href="/services" 
-              className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-            >
-              View All Services
-            </Link>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
@@ -448,7 +425,6 @@ export default function HomePage() {
                 View Examples
               </CTAButton>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
           </div>
         </div>
       </section>

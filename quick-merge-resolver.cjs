@@ -3,7 +3,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Quick Merge Conflict Resolver');
-console.log('=================================');
 
 class QuickMergeResolver {
   constructor() {
@@ -83,13 +82,6 @@ class QuickMergeResolver {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
-      );
-
-      // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs, '');
-      resolvedContent = resolvedContent.replace(/=======\n.*?\n>>>>>>> .*/gs, '');
 
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent);
@@ -180,7 +172,6 @@ class QuickMergeResolver {
     const duration = Math.round((endTime - this.startTime) / 1000);
 
     console.log('\n🎉 Quick Merge Resolution Complete!');
-    console.log('====================================');
     console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);

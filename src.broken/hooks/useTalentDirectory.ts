@@ -1,4 +1,5 @@
-// Hook for useTalentDirectory,
-export const useUseTalentDirectory: unknown = $2;
+// Hook for useTalentDirectory,;
+export const useUseTalentDirectory: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

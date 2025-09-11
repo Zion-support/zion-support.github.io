@@ -455,10 +455,6 @@ const MicroSaaS: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:backup-merge-conflicts/MicroSaaS.tsx.backup
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/pages/MicroSaaS.tsx
 ;
 const "MicroSaaS": "React.FC = () => {;
   return (;
@@ -470,7 +466,6 @@ const "MicroSaaS": "React.FC = () => {;
         <p className="text-xl text-gray-600 text-center">Coming soon...</p>;
       </div>;
     </div>;
->>>>>>> main
   );
 "};
 ;

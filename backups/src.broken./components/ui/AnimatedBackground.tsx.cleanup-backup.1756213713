@@ -19,14 +19,8 @@ export function NeonBorder({ className = '', children }: { className?: string; c
   return (
     <div className={`relative ${className}`}>
       {/* Neon border effect */}
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-blue-500 rounded-lg blur-sm opacity-50"></div>
-      <div className="relative bg-slate-800/90 rounded-lg border border-purple-500/30">
-=======
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
       <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
-=======
-=======import React, { useEffect, useRef } from 'react';
 
 interface AnimatedBackgroundProps {
   className?: string;
@@ -296,5 +290,3 @@ export function FloatingElement({ className = '', children }: { className?: stri
       {children}
     </div>
   );
-=======>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======}

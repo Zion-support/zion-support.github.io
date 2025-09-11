@@ -5,19 +5,21 @@ import React, { useState } from 'react';
 export /**;
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
+;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-  { opacity: 0,
-  y: 20;
-}}
+function FeaturedListingsSection("props": "any) {          initial = {;
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}        >";
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
+          transition={{ "duration": "0.6 "}}
+        >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Featured Services;
           </h2>";
@@ -101,20 +103,19 @@ import { motion, AnimatePresence  } from 'framer-motion';
         </div>;
         <motion.div;
           className="mt-16 text-center"          initial = {;
-  { opacity: 0,
-  y: 20;
-}}
+  { "opacity": "0",;
+  "y": "2 0;
+"}}
           whileInView = {;
-
-  { opacity: 1,
-  y: 0;
-}}
-          viewport={{ once: true }}
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
           transition = {;
-
-  { duration: 0.6,
-  delay: 0.4;
-}}        >;
+  { "duration": "0.6",;
+  "delay": "0.4;
+"}}
+        >;
           <Link            to="/services";
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover": "fro m-blue-700 "hover": t o-purple-700 transition-all duration-200 "hover": scal e-105";
           >;

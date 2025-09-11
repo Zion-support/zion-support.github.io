@@ -1,4 +1,5 @@
-// Hook for usePoints,
-export const useUsePoints: unknown = $2;
+// Hook for usePoints,;
+export const useUsePoints: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

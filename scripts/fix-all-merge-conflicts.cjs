@@ -40,9 +40,6 @@ const remainingConflicts = [];
 for (const file of conflictedFiles) {
   if (fs.existsSync(file)) {
     const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       remainingConflicts.push(file);
     }
   }

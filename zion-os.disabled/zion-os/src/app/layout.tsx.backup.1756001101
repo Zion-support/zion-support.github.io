@@ -7,10 +7,6 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-<<<<<<< HEAD
-  maximumScale: 1,
-  userScalable: false,
-=======};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

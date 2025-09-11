@@ -141,7 +141,58 @@ export function useAuth() {;
     logout;
     register;
   }
-}          setAuthState({
+}
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'user' | 'admin' | 'moderator';
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+}
+interface AuthState {
+  user: Use r | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
+export function useAuth(props: any) {
+  const [authState, setAuthState] = useState<AuthState>({
+    user: nul l,
+    isAuthenticated: fals e,
+    isLoading: tru e
+  }
+    );
+  useEffect(: unknown {
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+:src/hooks/useAuth.tsx
+      if(storedUser && token) {
+        try {
+          setAuthState({
+            user,
+            isAuthenticated: tru e,
+:src/hooks/useAuth.tsx
+            isLoading: fals e})} catch(error) {
+          // console.error('Error parsing stored user:', error);
+            isLoading: fals e,
+          })} catch(error) {
+          console.error('Error parsing stored user:', error);
+            isAuthenticated: true,
+            isLoading: false
+          });
+        } else {
+          setAuthState({
+            user: null,
+            isAuthenticated: false,
+            isLoading: false
+          });
+        }';
+      } catch (error) {';';
+        console.error('Error parsing stored user:', error);
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error);
+          setAuthState({
             user: nul l,
             isAuthenticated: fals e,
             isLoading: fals e
@@ -163,7 +214,6 @@ export function useAuth() {;
           isLoading: fals e,
         })}
     };
-
     checkAuth()}, []);
     setAuthState({
       user: mockUse r,
@@ -215,7 +265,26 @@ export function useAuth() {;
       }));
 ';
       // Update localStorage';';
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));      // Update localStorage
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
+      if (response.ok) {
+        const { user, token } = await response.json();
+        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('token', token);
+        setAuthState({
+          user,
+          isAuthenticated: true,
+          isLoading: false
+        });
+        return { success: true };
+      } else {
+        return { success: false, error: 'Login failed' };
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      return { success: false, error: 'Network error' };
+    }
+  };
+      // Update localStorage
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
     }
   };

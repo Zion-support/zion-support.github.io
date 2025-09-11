@@ -1,1 +1,0 @@
-import React from 'react'; import TalentDirectory from '@/pages/TalentDirectory'; import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(props: any) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)}

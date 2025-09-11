@@ -581,7 +581,6 @@
     },;
     "competitors": "["Google Speech-to-Text"", "Amazon Transcribe", "Microsoft Speech Services", "IBM Watson Speech"],;
     "marketSize": "$7.5 billion by 2025";
-=======
 export const AI_SERVICES: AIService[] = [;,
   // AI-Powered Chatbot & Virtual Assistant Platform;,
   {}
@@ -1571,8 +1570,6 @@ export const AI_SERVICES: AIService[] = [;,
     },
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],",
     marketSize: "$22.1 billion by 2025";,",
-=======
-=======export interface AIService {
   id: string;
   title: string;
   description: string;
@@ -2576,21 +2573,10 @@ export const AI_SERVICES: AIService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;SOC 2&quot;, &quot;ISO 27001&quot;, &quot;Data encryption&quot;, &quot;Secure communications&quot;]
     },
-<<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
-<<<<<<< HEAD
-    competitors: [&quot;CrowdStrike&quot;, &quot;Palo Alto Networks&quot;, &quot;IBM Security&quot;, &quot;Microsoft Sentinel&quot;],
-    marketSize: &quot;$22.1 billion by 2025&quot;
-=======
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
-    marketSize: "$22.1 billion by 2025">>>>>>> main:src_backup_temp/data/aiServicesData.ts
->>>>>>> main
->>>>>>> main
   }
 ];
->>>>>>> main
-=======
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
     marketSize: "$22.1 billion by 2025"
   }
 ];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/data/aiServicesData.ts
