@@ -27,7 +27,11 @@ function buildItems(repoUrl, workspaceRoot) {
     if (fileExists(c.check)) items.push({ type: 'internal', href: c.href, label: c.label });
   });
 
+<<<<<<< HEAD
   // External useful links (avoid GitHub Actions; prefer on-site resources)
+=======
+  // External useful links
+>>>>>>> origin/chore/futuristic-home-automations
   if (fileExists(path.join(workspaceRoot, 'docs'))) {
     items.push({ type: 'internal', href: '/docs', label: 'Docs — technical notes & guides' });
   }
