@@ -10,6 +10,8 @@ import ContentShowcase, { featuredContent, trendingContent, latestContent } from
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import TrendingContentShowcase from '../components/TrendingContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -58,8 +60,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
+      {/* Enhanced Content Promotion Banner - Top */}
+      <EnhancedContentPromotionBanner variant="featured" maxItems={4} />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -358,6 +360,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Trending Content Showcase */}
+      <TrendingContentShowcase maxItems={6} showMetrics={true} />
 
       {/* Success Stories Section */}
       <section className='py-16 bg-gradient-to-r from-green-50 to-blue-50'>
@@ -905,6 +910,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Latest Content Promotion Banner */}
+      <EnhancedContentPromotionBanner variant="latest" maxItems={4} />
 
       {/* Enhanced Newsletter Signup Section */}
       <EnhancedNewsletterSignup variant="default" showContentPreview={true} />
