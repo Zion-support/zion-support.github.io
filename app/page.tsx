@@ -114,16 +114,16 @@ export default function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='Practical AI Agents for Small Businesses'
-              href='/blog/ai-agents-for-smbs'
-              description='Deploy lightweight automations for support, sales, and back-office—safely.'
-              icon='🧩'
+              title='AI Agent Guardrails in Production'
+              href='/blog/ai-agent-guardrails-in-production'
+              description='Make agents predictable with scoped tools, approvals, evals, and budgets.'
+              icon='🛡️'
             />
             <Card
-              title='Production-Grade AI Agents: Observability and Safety'
-              href='/blog/production-grade-ai-agents'
-              description='Harden agents with logging, evals, guardrails, and predictable budgets.'
-              icon='🛡️'
+              title='Micro SaaS Distribution 2025'
+              href='/blog/startup-micro-saas-distribution-2025'
+              description='Repeatable channels to land the first 100–500 customers efficiently.'
+              icon='📈'
             />
             <Card
               title='AI Copilots for Engineering Teams'

@@ -4,6 +4,22 @@ import Link from 'next/link';
 
 const posts = [
   {
+    title: 'AI Agent Guardrails in Production: What Actually Works',
+    description:
+      'Practical controls for safe, reliable AI agents: scoping, approvals, evals, and budgets.',
+    href: '/blog/ai-agent-guardrails-in-production',
+    date: '2025-09-11',
+    tags: ['AI', 'Agents', 'Safety'],
+  },
+  {
+    title: 'Micro SaaS Distribution 2025: Repeatable Channels That Work',
+    description:
+      'A pragmatic playbook to get first 100–500 customers with efficient, compoundable channels.',
+    href: '/blog/startup-micro-saas-distribution-2025',
+    date: '2025-09-11',
+    tags: ['SaaS', 'Growth', 'Go-To-Market'],
+  },
+  {
     title: 'AI Sales Playbooks 2025: Sequencing, Scoring, and Agentic SDRs',
     description:
       'Proven outbound frameworks with AI-assisted research, multi-channel cadences, and evals.',
