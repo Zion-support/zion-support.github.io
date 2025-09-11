@@ -3,6 +3,8 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap

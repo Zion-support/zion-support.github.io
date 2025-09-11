@@ -1,88 +1,84 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { MapPin, Clock, DollarSign, Users, Zap, Heart, Globe, Shield } from 'lucide-react';
 
 export default function Careers() {
-  // Sample job listings
-  const jobs = {
-    engineering: [
-      {
-        title: "Senior Frontend Engineer",
-        location: "Remote",
-        type: "Full-time",
-        department: "Engineering",
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
-      },
-      {
-        title: "AI Research Engineer",
-        location: "San Francisco, CA",
-        type: "Full-time",
-        department: "Engineering",
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-      },
-      {
-        title: "Full Stack Developer",
-        location: "Remote",
-        type: "Full-time",
-        department: "Engineering",
-        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
-      }
-    ],
-    product: [
-      {
-        title: "Product Manager",
-        location: "New York, NY",
-        type: "Full-time",
-        department: "Product",
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
-      },
-      {
-        title: "UX/UI Designer",
-        location: "Remote",
-        type: "Full-time",
-        department: "Product",
-        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
-      }
-    ],
-    marketing: [
-      {
-        title: "Growth Marketing Manager",
-        location: "Remote",
-        type: "Full-time",
-        department: "Marketing",
-        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
-      },
-      {
-        title: "Content Strategist",
-        location: "London, UK",
-        type: "Full-time",
-        department: "Marketing",
-        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
-      }
-    ],
-    operations: [
-      {
-        title: "Community Manager",
-        location: "Remote",
-        type: "Full-time",
-        department: "Operations",
-        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
-      },
-      {
-        title: "Talent Acquisition Specialist",
-        location: "Remote",
-        type: "Full-time",
-        department: "Operations",
-        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
-      }
-    ]
-  };
+  const openPositions = [
+    {
+      id: 1,
+      title: "Senior AI Engineer",
+      department: "Engineering",
+      location: "Remote / San Francisco",
+      type: "Full-time",
+      salary: "$120k - $180k",
+      description: "Join our AI team to build cutting-edge machine learning models and algorithms that power our marketplace recommendations.",
+      requirements: ["5+ years ML/AI experience", "Python, TensorFlow, PyTorch", "PhD in Computer Science preferred"],
+      posted: "2 days ago"
+    },
+    {
+      id: 2,
+      title: "Frontend Developer",
+      department: "Engineering",
+      location: "Remote / New York",
+      type: "Full-time",
+      salary: "$90k - $140k",
+      description: "Build beautiful, responsive user interfaces using React and modern web technologies.",
+      requirements: ["3+ years React experience", "TypeScript, Tailwind CSS", "Performance optimization skills"],
+      posted: "1 week ago"
+    },
+    {
+      id: 3,
+      title: "Product Manager",
+      department: "Product",
+      location: "Remote / Austin",
+      type: "Full-time",
+      salary: "$100k - $150k",
+      description: "Drive product strategy and execution for our marketplace platform.",
+      requirements: ["5+ years PM experience", "Marketplace/B2B experience", "Data-driven decision making"],
+      posted: "3 days ago"
+    },
+    {
+      id: 4,
+      title: "DevOps Engineer",
+      department: "Engineering",
+      location: "Remote / Seattle",
+      type: "Full-time",
+      salary: "$110k - $160k",
+      description: "Build and maintain our cloud infrastructure and deployment pipelines.",
+      requirements: ["AWS/Azure experience", "Kubernetes, Docker", "CI/CD expertise"],
+      posted: "5 days ago"
+    },
+    {
+      id: 5,
+      title: "Marketing Specialist",
+      department: "Marketing",
+      location: "Remote / Los Angeles",
+      type: "Full-time",
+      salary: "$70k - $100k",
+      description: "Develop and execute marketing campaigns to grow our user base and brand awareness.",
+      requirements: ["3+ years marketing experience", "Digital marketing skills", "Analytics and reporting"],
+      posted: "1 week ago"
+    },
+    {
+      id: 6,
+      title: "Customer Success Manager",
+      department: "Customer Success",
+      location: "Remote / Chicago",
+      type: "Full-time",
+      salary: "$80k - $120k",
+      description: "Ensure customer satisfaction and help users maximize value from our platform.",
+      requirements: ["3+ years CS experience", "Strong communication skills", "Problem-solving mindset"],
+      posted: "4 days ago"
+    }
+  ];
 
-  // Benefits list
   const benefits = [
     {
+      icon: <Zap className="w-8 h-8 text-zion-cyan" />,
       title: "Flexible Work",
       description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
       icon: (
@@ -110,60 +106,67 @@ export default function Careers() {
       )
     },
     {
-      title: "Competitive Compensation",
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",
-      icon: (
-        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      )
+      icon: <Globe className="w-8 h-8 text-zion-purple" />,
+      title: "Global Team",
+      description: "Work with talented people from around the world"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-zion-cyan" />,
+      title: "Security",
+      description: "Competitive salary, equity, and retirement benefits"
     }
   ];
 
   return (
     <>
-      <SEO
-        title="Careers at Zion - Join Our Team"
-        description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
-        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
-        canonical="https://app.ziontechgroup.com/careers"
+      <SEO 
+        title="Careers - Join Zion Tech Group" 
+        description="Join our team and help build the future of AI and technology marketplace. Explore open positions and learn about our culture." 
+        keywords="careers, jobs, Zion Tech Group, AI jobs, tech jobs, remote jobs"
+        canonical="https://ziontechgroup.com/careers"
       />
+      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          {/* Hero Section */}
+          <div className="text-center mb-20">
             <GradientHeading>Join Our Team</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Help us build the future of AI and technology
+            <p className="mt-6 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Help us build the world's first free marketplace dedicated to high-tech and artificial intelligence. 
+              We're looking for passionate individuals who want to make a difference.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
-              <p className="text-zion-slate-light text-lg whitespace-pre-line">
-                {whyWork}
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden relative w-full h-full">
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80"
-                alt="Team collaboration"
-                className="object-cover"
-              />
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Badge variant="secondary" className="text-zion-cyan bg-zion-cyan/10">
+                Remote First
+              </Badge>
+              <Badge variant="secondary" className="text-zion-purple bg-zion-purple/10">
+                AI & Tech
+              </Badge>
+              <Badge variant="secondary" className="text-zion-cyan bg-zion-cyan/10">
+                Growth Mindset
+              </Badge>
+              <Badge variant="secondary" className="text-zion-purple bg-zion-purple/10">
+                Innovation
+              </Badge>
             </div>
           </div>
-          
-          <div className="mb-24">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Company Culture */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
-                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-zion-slate-light">{benefit.description}</p>
-                </div>
+                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-4">
+                      {benefit.icon}
+                    </div>
+                    <CardTitle className="text-zion-cyan">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-zion-slate-light">{benefit.description}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -223,4 +226,6 @@ export default function Careers() {
       </main>
     </>
   );
-}
+};
+
+export default Careers;

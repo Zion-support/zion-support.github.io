@@ -14,7 +14,6 @@ export interface InnovativeITService2024 {
 export const innovativeITServices2024: InnovativeITService2024[] = [
   // Autonomous DevOps Platform
   {
-=======
     id: 'cloud-automation-2024',
     name: 'Cloud Automation Platform 2024',
     tagline: 'Automate your cloud infrastructure',

@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SUBSCRIPTION_TIERS } from '@/data/comprehensiveServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
 import { 
   CheckCircle, 
   Star, 
@@ -19,8 +15,10 @@ import {
   ArrowUpRight,
   DollarSign,
   Clock,
-  Circle,
-  BarChart3
+  Users,
+  TrendingUp,
+  Award,
+  Zap as Lightning
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 

@@ -34,9 +34,17 @@ export default function GreenIT() {
   return (
     <>
       <SEO
-        title="Green IT Solutions - Sustainable Technology"
+        title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+=======
+        canonical="https://ziontechgroup.com/green-it"
+=======
+        canonical="https://ziontechgroup.com/green-it"
+=======
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -68,13 +76,13 @@ export default function GreenIT() {
                     </Button>
                   </div>
                 </div>
-                <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
-                    alt="Green IT sustainability" 
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1544191696-102dbdaeeaa5?auto=format&fit=crop&w=800&h=600" 
+                  alt="Green technology infrastructure" 
+                  className="object-cover w-full h-full"
+                />
               </div>
             </div>
             

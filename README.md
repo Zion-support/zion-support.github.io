@@ -1,100 +1,156 @@
 # Zion AI Marketplace
 
-Modern AI marketplace with autonomous cloud automations.
+# Zion Tech Group - Comprehensive IT & AI Services Platform
 
 ## 🚀 2025 Comprehensive Services Portfolio
 
-We've expanded our portfolio with **36+ innovative micro SAAS, IT, and AI services** designed to transform businesses across all industries.
+Zion Tech Group is a leading technology solutions provider offering comprehensive AI, cybersecurity, cloud, and digital transformation services. Our platform serves businesses worldwide with cutting-edge technology solutions designed to drive innovation and growth.
+
+**Website**: https://ziontechgroup.com  
+**Contact**: +1 302 464 0950 | kleber@ziontechgroup.com  
+**Address**: 364 E Main St STE 1008, Middletown DE 19709
+
+## 🌟 Our Service Portfolio
+
+### 🤖 AI & Machine Learning Services
+- **AI-Powered Business Process Automation Suite** - $299/month
+  - Reduce operational costs by 40-60%
+  - Increase productivity by 300%
+  - ROI within 3 months
+  
+- **Enterprise AI Content Generation Platform** - $199/month
+  - Save 80% on content creation time
+  - Improve SEO rankings by 200%
+  - Consistent brand messaging
+  
+- **AI Customer Behavior Analytics & Insights Platform** - $449/month
+  - Increase customer retention by 35%
+  - Boost customer lifetime value by 200%
+  - Reduce churn by 50%
+
+### 🔒 Cybersecurity Services
+- **Zero-Trust Security Architecture Implementation** - $2,500 (project-based)
+  - Reduce security incidents by 90%
+  - Meet compliance requirements
+  - Protect against insider threats
+  
+- **AI-Powered Advanced Threat Detection System** - $899/month
+  - Detect threats 10x faster
+  - Reduce false positives by 80%
+  - 24/7 automated protection
+
+### ☁️ Cloud & DevOps Services
+- **Multi-Cloud Management & Optimization Platform** - $399/month
+  - Reduce cloud costs by 30-40%
+  - Unified management interface
+  - Improved security posture
+  
+- **Enterprise DevOps Automation & CI/CD Pipeline** - $599/month
+  - Deploy 10x faster
+  - Reduce deployment failures by 90%
+  - Automated quality gates
+
+### 📊 Data & Analytics Services
+- **Real-Time Business Intelligence & Analytics Platform** - $299/month
+  - Instant business insights
+  - Data-driven decisions
+  - Improved operational efficiency
+  
+- **Enterprise Data Warehouse & ETL Solution** - $799/month
+  - Centralized data management
+  - Improved data quality
+  - Faster analytics
+
+### 🔄 Digital Transformation Services
+- **Digital Transformation Strategy & Implementation** - $1,500 (project-based)
+  - Improved operational efficiency
+  - Enhanced customer experience
+  - Competitive advantage
+
+### 🌐 IoT & Smart Solutions
+- **Enterprise IoT Platform & Smart Solutions** - $599/month
+  - Operational efficiency
+  - Predictive maintenance
+  - Cost reduction
+
+### ⛓️ Blockchain & Web3 Services
+- **Enterprise Blockchain & Web3 Development Services** - $899 (project-based)
+  - Transparent transactions
+  - Reduced costs
+  - Enhanced security
+
+## 🎯 Key Features
+
+- **Global Reach**: IT services available worldwide with local expertise
+- **24/7 Support**: Round-the-clock technical support and monitoring
+- **Enterprise-Grade**: SOC 2, ISO 27001, GDPR, HIPAA compliance
+- **AI-Powered**: Cutting-edge machine learning and automation
+- **Custom Solutions**: Tailored implementations for specific business needs
+- **Proven ROI**: Measurable business impact and cost savings
+
+## 🏆 Why Choose Zion Tech Group?
+
+- **15+ Years Experience**: Proven expertise in enterprise technology
+- **AI Innovation**: Leading-edge AI and machine learning solutions
+- **Global Support**: Worldwide services with local expertise
+- **Customer Success**: Dedicated teams ensuring project success
+- **Competitive Pricing**: Transparent pricing with volume discounts
+- **Custom Solutions**: Tailored implementations for your business
 
 ### **New Service Categories Added:**
 
--   **Frontend:** Next.js, React, TypeScript, Redux Toolkit, Chakra UI, Radix UI, Tailwind CSS
--   **Backend (Django):** Python, Django, Django REST Framework, PostgreSQL
--   **Backend (Node.js):** Node.js, Express.js, TypeScript, MongoDB (for `server/`), Next.js API Routes
--   **Database/BaaS:** PostgreSQL, MongoDB, Supabase, Prisma
--   **Authentication:** Supabase Auth (handles login, signup, password reset, social auth) with optional two-factor authentication for the IPO portal
--   **Monitoring:** Custom Node.js service, Sentry, Datadog
--   **CI/CD:** GitHub Actions, Netlify (including Lighthouse CI)
--   **Other:** IPFS, OrbitDB, Ethers.js, Elasticsearch
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com
 
-### **Key Highlights:**
-- **Real Implementation**: Production-ready services with proven ROI
-- **Competitive Pricing**: Starting from $199/month with free trials
-- **Market Leadership**: Competing with industry leaders (Tableau, HubSpot, Salesforce)
-- **AI-First Approach**: Cutting-edge technology across all services
+## 🔗 Quick Links
 
-## Environment Configuration
+- [Enhanced Services](/enhanced-services) - Complete service catalog
+- [Services Overview](/services-overview) - Detailed service information
+- [Services Pricing](/services-pricing) - Transparent pricing
+- [IT Onsite Services](/it-onsite-services) - Global IT support
+- [Request Quote](/request-quote) - Get custom pricing
 
-⚠️ **IMPORTANT**: This project uses **Supabase for authentication** and **Netlify for environment variable management**. Proper configuration is essential for the application to function correctly.
+---
 
-### Authentication Setup
+# Welcome to your Lovable project
 
-The application uses Supabase for all authentication functionality:
-- User registration and login
-- Email verification and password reset
-- Social authentication (Google, Facebook, GitHub, Microsoft, Twitter)
-- Session management and profile handling
+## Project info
 
-### Required Environment Variables
+**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
 
-A comprehensive list of environment variables can be found in the `.env.example` file. For local development, copy this file to `.env.local` and populate it with the necessary values. **Do not commit `.env.local` to version control.**
+## How can I edit this code?
 
-For production deployments, all variables are configured directly in Netlify's UI, so the repository no longer contains a `.env.local` file with secrets.
+There are several ways of editing your application.
 
-**Key variables include:**
+**Use Lovable**
 
--   **Supabase Configuration:**
-    -   `NEXT_PUBLIC_SUPABASE_URL`
-    -   `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-    -   `SUPABASE_SERVICE_ROLE_KEY` (for server-side operations)
--   **NextAuth.js Configuration:**
-    -   `NEXTAUTH_SECRET` (a randomly generated string for signing tokens)
-    -   `NEXTAUTH_URL` (the canonical URL of your application)
--   **OAuth Provider Credentials:**
-    -   `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`
-    -   `FACEBOOK_CLIENT_ID` & `FACEBOOK_CLIENT_SECRET`
-    -   `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`
-    -   `MICROSOFT_CLIENT_ID` & `MICROSOFT_CLIENT_SECRET` (and potentially `MICROSOFT_TENANT_ID`)
-    -   Other provider credentials as needed.
--   **Internal Authentication Service:**
-    -   `INTERNAL_AUTH_SERVICE_URL` (if used for specific flows like registration)
+Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
 
-Ensure all variables marked as required in `.env.example` or in specific documentation (like `docs/SUPABASE_AUTHENTICATION_SETUP.md`) are correctly set.
+Changes made via Lovable will be committed automatically to this repo.
 
-### 📚 Detailed Setup Guides
+**Use your preferred IDE**
 
-- **[Supabase Authentication Setup](docs/SUPABASE_AUTHENTICATION_SETUP.md)** - Complete guide for configuring Supabase authentication
-- **[Netlify Deployment Guide](docs/NETLIFY_DEPLOYMENT_GUIDE.md)** - Step-by-step Netlify deployment with environment variables
-- **[Optional Two-Factor Authentication](TWO_FACTOR_AUTHENTICATION_SUMMARY.md)** - Overview of enabling 2FA in the IPO portal
-- **[Logging Guidelines](docs/LOGGING_GUIDELINES.md)** - Usage instructions for the project logger
-- **Collect Logs** - `npm run logs:collect` bundles recent logs under `logs/archive/`
-- **Analyze Logs** - `npm run logs:summary` scans collected `.log` and `.txt` files, reports missing translation keys, and flags router context errors like `useNavigate()` without a `<Router>`
-- **Improved Analysis** - The log analyzer now highlights TypeScript compilation issues such as `Cannot find name` errors
-- **Health Check** - `npm run logs:health` prints a quick system status report
-- You can skip external connectivity tests by setting `DISABLE_EXTERNAL_SERVICE_CHECKS=true` when running
-  the health check (useful for offline environments)
-- **Health Summary** - `npm run logs:health:summary` writes a detailed report to `logs/health-summary.json`
-  including an overall project grade
-- **Missing Key Log** - Any translation keys not found at runtime are appended to `logs/missing-keys.log`
-- **Check for Missing Translations** - `npm run i18n:missing` verifies that all locales contain the same translation keys
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-### CDN for Static Assets
+Follow these steps:
 
-To improve performance, the application can serve static assets from a CDN.
-Set `NEXT_PUBLIC_CDN_URL` to your CDN domain (e.g., `https://cdn.yourdomain.com`).
-When this variable is provided in production builds, Next.js will prefix asset
-URLs so they are loaded from the CDN.
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-### Quick Setup Verification
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-After setting up environment variables, verify your configuration:
+# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
+./setup.sh npm  # Default and most compatible option
 
-```bash
-# Check environment setup
-npx ts-node --transpile-only scripts/check-env.ts
+# If you're using OpenAI Codex environments, a convenience script is available:
+./.codex/setup.sh  # Installs dependencies using npm
 
-# Test Supabase connection (in browser console)
-console.log('Supabase configured:', !!window.location.origin.includes('localhost') || !!process.env.NEXT_PUBLIC_SUPABASE_URL)
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev  # Use the same package manager you specified in setup.sh
 ```
 
 ## Getting Started
@@ -3572,3 +3628,7 @@ npm run cypress:run
 
 After running `npm run test`, open `coverage/lcov-report/index.html` in your
 browser to view detailed coverage information.
+
+When tests run on GitHub Actions, the workflow uploads the `coverage` directory
+using `actions/upload-artifact@v3`. Visit a workflow run and download the
+`coverage-report` artifact to retrieve the generated HTML coverage report.

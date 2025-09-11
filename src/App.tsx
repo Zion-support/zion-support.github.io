@@ -147,7 +147,13 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const FAQPage = React.lazy(() => import('./pages/FAQ'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const CareersPage = React.lazy(() => import('./pages/Careers'));
+const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
+const TermsPage = React.lazy(() => import('./pages/Terms'));
+const GreenITPage = React.lazy(() => import('./pages/GreenIT'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const CookiesPage = React.lazy(() => import('./pages/Cookies'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -233,9 +239,7 @@ const baseRoutes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
-  { path: '/enhanced-services', element: <EnhancedServicesShowcase /> },
-  { path: '/ai-services', element: <AIServicesPage /> },
-  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+  { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
@@ -245,14 +249,20 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
-  { path: '/comprehensive-contact', element: <ComprehensiveContact /> },
   { path: '/partners', element: <PartnersPage /> },
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/faq', element: <FAQPage /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/careers', element: <CareersPage /> },
+  { path: '/privacy', element: <PrivacyPage /> },
+  { path: '/terms', element: <TermsPage /> },
+  { path: '/green-it', element: <GreenITPage /> },
+  { path: '/help', element: <HelpCenterPage /> },
+  { path: '/cookies', element: <CookiesPage /> },
 ];
 
 const App = () => {

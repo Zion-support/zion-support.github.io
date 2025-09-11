@@ -14,7 +14,6 @@ export interface RealMicroSaasService2024 {
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   // AI-Powered Business Intelligence
   {
-=======
     id: 'ai-content-generator-2024',
     name: 'AI Content Generator 2024',
     tagline: 'Generate high-quality content with AI',
