@@ -109,18 +109,24 @@ export default function HomePage() {
               Fresh insights from our team on AI, cloud, and automation.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
-              title='Practical AI Agents for Small Businesses'
-              href='/blog/ai-agents-for-smbs'
-              description='Deploy lightweight agents to automate support, outreach, and back-office tasks.'
-              icon='🧠'
+              title='AI-Powered Customer Support Playbooks'
+              href='/blog/ai-customer-support-playbooks'
+              description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
+              icon='🎧'
             />
             <Card
-              title='Cloud Cost Optimization in 2025: Proven Playbook'
-              href='/blog/cloud-cost-optimization-2025'
-              description='Cut 20–40% of spend without sacrificing performance or developer velocity.'
-              icon='💸'
+              title='AI Infrastructure Cost Controls That Actually Work'
+              href='/blog/ai-infra-cost-controls'
+              description='Right-size tokens, cache, autoscale, and model tiering for 20–40% savings.'
+              icon='📉'
+            />
+            <Card
+              title='Enterprise RAG Blueprint: From Pilot to Production'
+              href='/blog/enterprise-rag-blueprint'
+              description='Architecture, hybrid retrieval, and rollout plan for regulated environments.'
+              icon='📘'
             />
           </div>
         </div>
