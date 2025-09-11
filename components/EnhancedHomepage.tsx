@@ -403,7 +403,7 @@ const EnhancedHomepage: React.FC = () => {
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 <motion.div
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}
